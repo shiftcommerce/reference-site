@@ -1,0 +1,10 @@
+#!/bin/bash
+# ensure docker-machine won't be used
+unset ${!DOCKER_*}
+
+# spin up our image
+if [ -f .env ]; then
+  docker-compose -f docker-compose.yml up --build
+else
+  docker-compose up --build
+fi

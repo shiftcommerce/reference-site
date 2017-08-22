@@ -1,0 +1,12 @@
+# Ignore Next
+.next/
+
+# Ignore Yarn
+/node_modules
+yarn-error.log
+
+# Ignore Jest snapshots
+**/__snapshots__
+
+# Ignore Mac files
+**.DS_Store

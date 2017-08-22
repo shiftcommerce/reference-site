@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Installing Yarn packages..."
+{
+  yarn install >/dev/null 2>&1 && echo "Installed Yarn packages."
+} || {
+  echo "Yarn installation failed."
+  exit 1
+}
+
+exec "$@"

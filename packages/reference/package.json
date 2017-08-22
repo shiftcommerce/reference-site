@@ -1,0 +1,19 @@
+{
+  "name": "shift-front-end-react",
+  "version": "0.0.1",
+  "main": "server.js",
+  "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
+  "author": "Shift Commerce",
+  "license": "MIT",
+  "scripts": {
+    "devserver": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "next": "^3.0.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
