@@ -3,10 +3,8 @@ version: '3'
 services:
   web:
     image: shift-front-end-react
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: bash -c "yarn run devserver"
+    build: .
+    command: yarn run devserver
     ports:
       - "3000:3000"
     entrypoint: ./bin/docker/yarn_entrypoint

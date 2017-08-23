@@ -4,6 +4,7 @@
 # Ignore Yarn
 /node_modules
 yarn-error.log
+/yarn_cache
 
 # Ignore Jest snapshots
 **/__snapshots__
