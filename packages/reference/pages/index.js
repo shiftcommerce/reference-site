@@ -1,3 +1,7 @@
+import Layout from '../components/Layout'
+
 export default () => (
-  <div>Welcome To Shift Commerce Front End React</div>
+  <Layout>
+    <div>Welcome To Shift Commerce Front End React</div>
+  </Layout>
 )
