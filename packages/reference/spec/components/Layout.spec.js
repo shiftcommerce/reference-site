@@ -1,6 +1,6 @@
-import Layout from "../../components/Layout"
+import Layout from '../../components/Layout'
 
-test("renders the header and footer", () => {
+test('renders the header and footer', () => {
   // arrange
 
   // act
@@ -13,7 +13,7 @@ test("renders the header and footer", () => {
   expect(wrapper.find('div.footer')).toIncludeText('Footer')
 })
 
-test("renders the children inside it", () => {
+test('renders the children inside it', () => {
   // arrange
 
   // act

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   # Breadcrumb Object
+   ========================================================================== */
+
+.o-breadcrumb {
+  display: flex;
+  align-self: center;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: .25rem;
+}
+
+.o-breadcrumb__item {
+  float: left;
+
+  &:not(:first-child) {
+    margin-left: 15px;
+
+    &:before {
+      position: relative;
+      right: 7.5px;
+      content: '>';
+      font-size: 13px;
+    }
+  }
+}
+
+.o-breadcrumb__link {
+  text-decoration: none;
+
+  &:hover {
+    color: $text-default;
+    & > span {
+      text-decoration: none;
+      color: $text-default;
+    }
+  }
+}

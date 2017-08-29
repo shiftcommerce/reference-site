@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Breadcrumb
+  trail={
+    Array [
+      Object {
+        "canonical_path": "/womens",
+        "id": 1,
+        "title": "Womens",
+      },
+      Object {
+        "canonical_path": "/products/textured-long-t-shirt",
+        "id": 2,
+        "title": "Textured Long T-Shirt",
+      },
+    ]
+  }
+>
+  <nav>
+    <ol
+      className="o-breadcrumb"
+    >
+      <li
+        className="o-breadcrumb__item"
+      >
+        <Link
+          href="/"
+        >
+          <a
+            className="o-breadcrumb__link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </Link>
+      </li>
+      <li
+        className="o-breadcrumb__item"
+      >
+        <Link
+          href="/womens"
+        >
+          <a
+            className="o-breadcrumb__link"
+            href="/womens"
+            onClick={[Function]}
+          >
+            Womens
+          </a>
+        </Link>
+      </li>
+      <li
+        className="o-breadcrumb__item"
+      >
+        <Link
+          href="/products/textured-long-t-shirt"
+        >
+          <a
+            className="o-breadcrumb__link"
+            href="/products/textured-long-t-shirt"
+            onClick={[Function]}
+          >
+            Textured Long T-Shirt
+          </a>
+        </Link>
+      </li>
+    </ol>
+  </nav>
+</Breadcrumb>
+`;

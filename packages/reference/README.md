@@ -48,3 +48,8 @@ You can run alternate jest test runners using the following commands:
 ./bin/dev/yarn run jest-watch
 ./bin/dev/yarn run jest-coverage
 ```
+
+To rebuild snapshots, you can run
+```bash
+./bin/dev/yarn run jest-update-snapshot
+```

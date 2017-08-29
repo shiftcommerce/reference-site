@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Button
+  label="ADD TO BAG"
+  status="positive"
+>
+  <button
+    className="o-button o-button--positive"
+    role="button"
+    tabIndex="0"
+  >
+    ADD TO BAG
+  </button>
+</Button>
+`;

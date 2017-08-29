@@ -1,0 +1,61 @@
+/* ==========================================================================
+   # Product Display Component
+   ========================================================================== */
+
+.c-product-display {
+  margin-bottom: 10px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.c-product-display__body {
+  margin-bottom: 10px;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+.c-product-display__details {
+  width: 100%;
+}
+
+.c-product-display__section {
+  border-top: 1px solid #eeeeee;
+  padding: 10px 15px;
+}
+
+.c-product-display__gallery {
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.c-product-display__price,
+.c-product-display__sku {
+  margin-top: 5px;
+}
+
+.c-product-display__sku {
+  & > span {
+    color: #ccc;
+  }
+}
+
+.c-product-display__colour,
+.c-product-display__size,
+.c-product-display__quantity {
+  width: 100%;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.c-product-display__add-button {
+  margin-top: 15px;
+}

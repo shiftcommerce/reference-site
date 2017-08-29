@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ProductDisplay
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "id": 1,
+          "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+        },
+      ],
+      "bundles": Array [
+        Object {
+          "id": 1,
+          "products": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "id": 2,
+                  "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+                },
+              ],
+              "canonical_path": "/products/stripe-shirt",
+              "id": 1,
+              "title": "Stripe Shirt",
+            },
+            Object {
+              "asset_files": Array [],
+              "canonical_path": "/products/slip-on-pump",
+              "id": 2,
+              "title": "Slip on Pump (no asset files example)",
+            },
+          ],
+          "title": "Mingo",
+        },
+      ],
+      "description": "Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.",
+      "id": 1,
+      "meta": Object {
+        "colour": "Blue",
+      },
+      "price": "£99",
+      "sku": "SKU2659078",
+      "title": "Textured Long T-Shirt",
+      "variants": Array [
+        Object {
+          "id": 1,
+          "size": "Size 8",
+          "title": "Small",
+        },
+        Object {
+          "id": 2,
+          "size": "Size 10",
+          "title": "Medium",
+        },
+        Object {
+          "id": 3,
+          "size": "Size 12",
+          "title": "Large",
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__gallery"
+      >
+        <div>
+          <ContentImage
+            alt="Textured Long T-Shirt"
+            aria-label="Textured Long T-Shirt"
+            height="705"
+            src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+            width="503"
+          >
+            <img
+              alt="Textured Long T-Shirt"
+              aria-label="Textured Long T-Shirt"
+              height="705"
+              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+              width="503"
+            />
+          </ContentImage>
+        </div>
+      </div>
+      <div
+        className="c-product-display__details"
+      >
+        <section
+          className="c-product-display__section"
+        >
+          <h1
+            aria-level="1"
+            role="heading"
+          >
+            Textured Long T-Shirt
+          </h1>
+          <div
+            className="c-product-display__sku"
+          >
+            <span>
+              SKU2659078
+            </span>
+          </div>
+          <div
+            className="c-product-display__price"
+          >
+            £99
+          </div>
+          <div
+            className="c-product-display__colour"
+          >
+            <strong>
+              Colour:
+            </strong>
+            <span>
+               
+              Blue
+               
+            </span>
+          </div>
+          <div
+            className="c-product-display__size"
+          >
+            <SizeSelector
+              aria-label="Size Selector"
+              name="line_item[item_id]"
+              prompt="Select a Size"
+              variants={
+                Array [
+                  Object {
+                    "id": 1,
+                    "size": "Size 8",
+                    "title": "Small",
+                  },
+                  Object {
+                    "id": 2,
+                    "size": "Size 10",
+                    "title": "Medium",
+                  },
+                  Object {
+                    "id": 3,
+                    "size": "Size 12",
+                    "title": "Large",
+                  },
+                ]
+              }
+            >
+              <select
+                aria-label="Size Selector"
+                name="line_item[item_id]"
+              >
+                <option
+                  aria-posinset="0"
+                  aria-setsize={3}
+                  role="option"
+                  value=""
+                >
+                  Select a Size
+                </option>
+                <option
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  role="option"
+                  value={1}
+                >
+                  Size 8
+                </option>
+                <option
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  role="option"
+                  value={2}
+                >
+                  Size 10
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  role="option"
+                  value={3}
+                >
+                  Size 12
+                </option>
+              </select>
+            </SizeSelector>
+          </div>
+          <div
+            className="c-product-display__quantity"
+          >
+            <DropdownSelect
+              aria-label="Quantity Selector"
+              name="line_item[unit_quantity]"
+              options={
+                Array [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                ]
+              }
+              prompt="Select a Quantity"
+            >
+              <select
+                aria-label="Quantity Selector"
+                name="line_item[unit_quantity]"
+                role="listbox"
+              >
+                <option
+                  aria-posinset="0"
+                  aria-setsize={5}
+                  role="option"
+                  value=""
+                >
+                  Select a Quantity
+                </option>
+                <option
+                  aria-posinset={1}
+                  aria-setsize={5}
+                  role="option"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={2}
+                  aria-setsize={5}
+                  role="option"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={5}
+                  role="option"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={5}
+                  role="option"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={5}
+                  role="option"
+                  value={5}
+                >
+                  5
+                </option>
+              </select>
+            </DropdownSelect>
+          </div>
+          <div
+            className="c-product-display__add-button"
+          >
+            <Button
+              aria-label="Add to Bag"
+              label="ADD TO BAG"
+              status="positive"
+            >
+              <button
+                aria-label="Add to Bag"
+                className="o-button o-button--positive"
+                role="button"
+                tabIndex="0"
+              >
+                ADD TO BAG
+              </button>
+            </Button>
+          </div>
+        </section>
+        <section
+          aria-label="Product Information"
+          className="c-product-display__section"
+        >
+          <h3>
+            Product Information
+          </h3>
+          Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.
+        </section>
+        <section
+          aria-label="Delivery Information"
+          className="c-product-display__section"
+        >
+          <DeliveryInformation>
+            <div>
+              <h3>
+                Delivery & Returns
+              </h3>
+              <p>
+                Click & collect for free from your local store in 5 working days. Delivery hours are between 8am-8pm, Monday-Friday.
+              </p>
+              <p>
+                Standard delivery will be charged at £3.95 regardless of how many items you order.
+              </p>
+              <p>
+                Next working day delivery will be charged at £4.95 regardless of how many items you order. Your order will be with you the next working day if you order before 4pm. Any orders placed after 4pm Thursday up to 4pm Sunday will be delivered Monday. Please note our Next Day Delivery service is not available on selected items due to their size or weight.
+              </p>
+            </div>
+          </DeliveryInformation>
+        </section>
+        <section
+          aria-label="Related Products"
+          className="c-product-display__section"
+        >
+          <RelatedProducts
+            bundles={
+              Array [
+                Object {
+                  "id": 1,
+                  "products": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "id": 2,
+                          "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+                        },
+                      ],
+                      "canonical_path": "/products/stripe-shirt",
+                      "id": 1,
+                      "title": "Stripe Shirt",
+                    },
+                    Object {
+                      "asset_files": Array [],
+                      "canonical_path": "/products/slip-on-pump",
+                      "id": 2,
+                      "title": "Slip on Pump (no asset files example)",
+                    },
+                  ],
+                  "title": "Mingo",
+                },
+              ]
+            }
+          >
+            <div>
+              <h3>
+                Related Products
+              </h3>
+              <ul>
+                <li>
+                  <ContentImage
+                    height="73"
+                    src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+                    width="73"
+                  >
+                    <img
+                      height="73"
+                      src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+                      width="73"
+                    />
+                  </ContentImage>
+                  <Link
+                    href="/products/stripe-shirt"
+                  >
+                    <a
+                      href="/products/stripe-shirt"
+                      onClick={[Function]}
+                    >
+                      Stripe Shirt
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <ContentImage
+                    height="73"
+                    width="73"
+                  >
+                    <img
+                      height="73"
+                      src="/static/placeholder.png"
+                      width="73"
+                    />
+                  </ContentImage>
+                  <Link
+                    href="/products/slip-on-pump"
+                  >
+                    <a
+                      href="/products/slip-on-pump"
+                      onClick={[Function]}
+                    >
+                      Slip on Pump (no asset files example)
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </RelatedProducts>
+        </section>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;

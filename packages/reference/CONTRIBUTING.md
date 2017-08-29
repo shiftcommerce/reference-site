@@ -2,7 +2,7 @@
 
 Bug reports and pull requests are welcome at https://github.com/shiftcommerce/shift-front-end-react. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-To contribute to the project, you will first need to fork the repository before creating a branch and submitting a pull request (PR). Forking allows you to freely experiment with changes without affecting the original project. 
+To contribute to the project, you will first need to fork the repository before creating a branch and submitting a pull request (PR). Forking allows you to freely experiment with changes without affecting the original project.
 
 For those just getting started, Github provides a guide to [forking a repository](https://help.github.com/articles/fork-a-repo/) as well as a [pull requests howto](https://help.github.com/articles/about-pull-requests/).
 
@@ -29,5 +29,5 @@ Run all the tests to assure nothing else was accidentally broken, this will be d
 To increase the chance of your pull request:
 
 * Write tests
-* Follow our style guide
+* Follow our style guide - We use [JavaScript Standard Style](https://github.com/standard/standard)(StandardJS). Run: `./bin/dev/lint` to lint all project files using StandardJS or `./bin/dev/lint /app/components/ExampleComponent.js` for a specific file.
 * Write clear commit messages

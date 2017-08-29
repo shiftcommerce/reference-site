@@ -1,6 +1,9 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import Script from './../utils/Script'
 
+// CSS
+import stylesheet from '../scss/main.scss'
+
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const {html, head, errorHtml, chunks} = renderPage()
@@ -39,9 +42,11 @@ export default class MyDocument extends Document {
 
     return (
       <html>
-        <Head />
-        <body>
+        <Head>
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+        </Head>
 
+        <body>
           {this.props.customValue}
           <Main />
           {serviceWorker}

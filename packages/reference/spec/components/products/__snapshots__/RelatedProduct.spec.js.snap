@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RelatedProducts
+  bundles={
+    Array [
+      Object {
+        "id": 1,
+        "products": Array [
+          Object {
+            "asset_files": Array [
+              Object {
+                "id": 2,
+                "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+              },
+            ],
+            "canonical_path": "/products/stripe-shirt",
+            "id": 1,
+            "title": "Stripe Shirt",
+          },
+          Object {
+            "asset_files": Array [],
+            "canonical_path": "/products/slip-on-pump",
+            "id": 2,
+            "title": "Slip on Pump (no asset files example)",
+          },
+        ],
+        "title": "Mingo",
+      },
+    ]
+  }
+>
+  <div>
+    <h3>
+      Related Products
+    </h3>
+    <ul>
+      <li>
+        <ContentImage
+          height="73"
+          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+          width="73"
+        >
+          <img
+            height="73"
+            src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+            width="73"
+          />
+        </ContentImage>
+        <Link
+          href="/products/stripe-shirt"
+        >
+          <a
+            href="/products/stripe-shirt"
+            onClick={[Function]}
+          >
+            Stripe Shirt
+          </a>
+        </Link>
+      </li>
+      <li>
+        <ContentImage
+          height="73"
+          width="73"
+        >
+          <img
+            height="73"
+            src="/static/placeholder.png"
+            width="73"
+          />
+        </ContentImage>
+        <Link
+          href="/products/slip-on-pump"
+        >
+          <a
+            href="/products/slip-on-pump"
+            onClick={[Function]}
+          >
+            Slip on Pump (no asset files example)
+          </a>
+        </Link>
+      </li>
+    </ul>
+  </div>
+</RelatedProducts>
+`;

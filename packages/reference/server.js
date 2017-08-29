@@ -10,6 +10,10 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
+  server.get('/products/:slug', (req, res) => {
+    return app.render(req, res, '/products/product', req.query)
+  })
+
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./static/serviceWorker.js').pipe(res)

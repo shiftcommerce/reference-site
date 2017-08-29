@@ -6,8 +6,5 @@
 yarn-error.log
 /yarn_cache
 
-# Ignore Jest snapshots
-**/__snapshots__
-
 # Ignore Mac files
 **.DS_Store
