@@ -1,17 +1,17 @@
 import { Component } from 'react'
 
 class Layout extends Component {
-  render() {
+  render () {
     return <div>
-      <div className="header">
+      <div className='header'>
         Header
       </div>
 
-      <div className="body">
+      <div className='body'>
         { this.props.children }
       </div>
 
-      <div className="footer">
+      <div className='footer'>
         Footer
       </div>
     </div>
