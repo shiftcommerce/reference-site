@@ -10,7 +10,7 @@ class SizeSelector extends Component {
   renderOptions (variants) {
     return (
       variants && variants.map((variant, idx) =>
-        <option role='option' key={idx} value={variant.id} aria-setsize={variants.length} aria-posinset={idx + 1}>{ variant.size }</option>
+        <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1}>{ variant.size }</option>
       )
     )
   }

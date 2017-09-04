@@ -1,5 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import Script from './../utils/Script'
+import configureStore from '../utils/configureStore'
+
+import { Provider } from 'react-redux'
 
 // CSS
 import stylesheet from '../scss/main.scss'
@@ -40,6 +43,7 @@ export default class MyDocument extends Document {
       </Script>
     }
 
+    const store = configureStore()
     return (
       <html>
         <Head>
@@ -47,10 +51,13 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
-          {this.props.customValue}
-          <Main />
-          {serviceWorker}
-          <NextScript />
+          <Provider store={store} >
+            <div>
+              <Main />
+              {serviceWorker}
+              <NextScript />
+            </div>
+          </Provider>
         </body>
       </html>
     )

@@ -14,7 +14,12 @@ import SizeSelector from '../../objects/SizeSelector'
 class ProductDisplay extends Component {
   render () {
     let {
-      product
+      product,
+      sku,
+      quantity,
+      changeQuantity,
+      changeSize,
+      addToBag
     } = this.props
 
     const quantityOptions = [ 1, 2, 3, 4, 5 ]
@@ -39,7 +44,7 @@ class ProductDisplay extends Component {
               </div>
 
               <div className='c-product-display__price'>
-                { product.price }
+                &pound;{ product.price }
               </div>
 
               <div className='c-product-display__colour'>
@@ -48,15 +53,15 @@ class ProductDisplay extends Component {
               </div>
 
               <div className='c-product-display__size'>
-                <SizeSelector name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />
+                <SizeSelector onChange={changeSize} value={sku} name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />
               </div>
 
               <div className='c-product-display__quantity'>
-                <DropdownSelect name='line_item[unit_quantity]' prompt='Select a Quantity' options={quantityOptions} aria-label='Quantity Selector' />
+                <DropdownSelect onChange={changeQuantity} value={quantity} name='line_item[unit_quantity]' prompt='Select a Quantity' options={quantityOptions} aria-label='Quantity Selector' />
               </div>
 
               <div className='c-product-display__add-button'>
-                <Button label='ADD TO BAG' status='positive' aria-label='Add to Bag' />
+                <Button label='ADD TO BAG' status='positive' aria-label='Add to Bag' onClick={addToBag} />
               </div>
             </section>
 

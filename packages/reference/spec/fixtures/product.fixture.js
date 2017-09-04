@@ -8,9 +8,9 @@ const Product = {
     'colour': 'Blue'
   },
   variants: [
-    { id: 1, title: 'Small', size: 'Size 8' },
-    { id: 2, title: 'Medium', size: 'Size 10' },
-    { id: 3, title: 'Large', size: 'Size 12' }
+    { sku: 1, title: 'Small', size: 'Size 8' },
+    { sku: 2, title: 'Medium', size: 'Size 10' },
+    { sku: 3, title: 'Large', size: 'Size 12' }
   ],
   bundles: [
     {

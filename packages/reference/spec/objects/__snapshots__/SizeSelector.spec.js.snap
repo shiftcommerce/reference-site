@@ -7,18 +7,18 @@ exports[`renders correctly 1`] = `
   variants={
     Array [
       Object {
-        "id": 1,
         "size": "Size 8",
+        "sku": 1,
         "title": "Small",
       },
       Object {
-        "id": 2,
         "size": "Size 10",
+        "sku": 2,
         "title": "Medium",
       },
       Object {
-        "id": 3,
         "size": "Size 12",
+        "sku": 3,
         "title": "Large",
       },
     ]

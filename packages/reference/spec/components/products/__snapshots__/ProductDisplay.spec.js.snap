@@ -2,6 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <ProductDisplay
+  addToBag={[Function]}
+  changeQuantity={[Function]}
+  changeSize={[Function]}
   product={
     Object {
       "asset_files": Array [
@@ -45,23 +48,26 @@ exports[`renders correctly 1`] = `
       "title": "Textured Long T-Shirt",
       "variants": Array [
         Object {
-          "id": 1,
           "size": "Size 8",
+          "sku": 1,
           "title": "Small",
         },
         Object {
-          "id": 2,
           "size": "Size 10",
+          "sku": 2,
           "title": "Medium",
         },
         Object {
-          "id": 3,
           "size": "Size 12",
+          "sku": 3,
           "title": "Large",
         },
       ],
     }
   }
+  quantity=""
+  size=""
+  sku=""
 >
   <div
     className="c-product-display"
@@ -112,6 +118,7 @@ exports[`renders correctly 1`] = `
           <div
             className="c-product-display__price"
           >
+            £
             £99
           </div>
           <div
@@ -132,22 +139,24 @@ exports[`renders correctly 1`] = `
             <SizeSelector
               aria-label="Size Selector"
               name="line_item[item_id]"
+              onChange={[Function]}
               prompt="Select a Size"
+              value=""
               variants={
                 Array [
                   Object {
-                    "id": 1,
                     "size": "Size 8",
+                    "sku": 1,
                     "title": "Small",
                   },
                   Object {
-                    "id": 2,
                     "size": "Size 10",
+                    "sku": 2,
                     "title": "Medium",
                   },
                   Object {
-                    "id": 3,
                     "size": "Size 12",
+                    "sku": 3,
                     "title": "Large",
                   },
                 ]
@@ -156,6 +165,8 @@ exports[`renders correctly 1`] = `
               <select
                 aria-label="Size Selector"
                 name="line_item[item_id]"
+                onChange={[Function]}
+                value=""
               >
                 <option
                   aria-posinset="0"
@@ -198,6 +209,7 @@ exports[`renders correctly 1`] = `
             <DropdownSelect
               aria-label="Quantity Selector"
               name="line_item[unit_quantity]"
+              onChange={[Function]}
               options={
                 Array [
                   1,
@@ -208,11 +220,14 @@ exports[`renders correctly 1`] = `
                 ]
               }
               prompt="Select a Quantity"
+              value=""
             >
               <select
                 aria-label="Quantity Selector"
                 name="line_item[unit_quantity]"
+                onChange={[Function]}
                 role="listbox"
+                value=""
               >
                 <option
                   aria-posinset="0"
@@ -271,11 +286,13 @@ exports[`renders correctly 1`] = `
             <Button
               aria-label="Add to Bag"
               label="ADD TO BAG"
+              onClick={[Function]}
               status="positive"
             >
               <button
                 aria-label="Add to Bag"
                 className="o-button o-button--positive"
+                onClick={[Function]}
                 role="button"
                 tabIndex="0"
               >
