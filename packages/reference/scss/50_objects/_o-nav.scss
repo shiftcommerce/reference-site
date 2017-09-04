@@ -1,0 +1,30 @@
+.o-nav {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin-top: 5px;
+  margin: 10px 0;
+  text-align: center
+}
+
+.o-nav__option {
+  padding: 10px 0;
+  width: 100%;
+  display: block;
+  border-top: 1px solid #ececec;
+
+  @include breakpoint(desktop) {
+    width: auto;
+    display: inline-block;
+    padding: 10px;
+    border-top: 0;
+    border-right: 1px solid #ececec;
+  }
+}
+
+.o-nav__option--first {
+  border-top: 0;
+
+  @include breakpoint(desktop) {
+    border-left: 1px solid #ececec;
+  }
+}

@@ -6,7 +6,7 @@ import RelatedProducts from './RelatedProducts'
 import DeliveryInformation from './DeliveryInformation'
 
 // Objects
-import ContentImage from '../../objects/ContentImage'
+import Image from '../../objects/Image'
 import Button from '../../objects/Button'
 import DropdownSelect from '../../objects/DropdownSelect'
 import SizeSelector from '../../objects/SizeSelector'
@@ -28,9 +28,7 @@ class ProductDisplay extends Component {
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
-            <div>
-              <ContentImage src={product.asset_files[0] && product.asset_files[0].url} alt={product.title} height='705' width='503' aria-label={product.title} />
-            </div>
+            <Image src={product.asset_files[0] && product.asset_files[0].url} alt={product.title} height={705} width={503} aria-label={product.title} />
           </div>
 
           <div className='c-product-display__details'>

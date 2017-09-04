@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
   status="positive"
 >
   <button
-    className="o-button o-button--positive"
+    className="c-button c-button--positive"
     role="button"
     tabIndex="0"
   >

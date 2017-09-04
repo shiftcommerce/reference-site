@@ -11,7 +11,7 @@ class Button extends Component {
     } = this.props
 
     return (
-      <button className={classNames('o-button', `o-button--${status}`)} tabIndex='0' role='button' {...otherProps} >
+      <button className={classNames('c-button', `c-button--${status}`)} tabIndex='0' role='button' {...otherProps} >
         { label }
       </button>
     )

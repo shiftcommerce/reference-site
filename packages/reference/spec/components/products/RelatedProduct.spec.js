@@ -2,7 +2,7 @@
 import RelatedProducts from '../../../components/products/RelatedProducts'
 
 // Objects
-import ContentImage from '../../../objects/ContentImage'
+import Image from '../../../objects/Image'
 
 // Fixtures
 import product from '../../fixtures/product.fixture'
@@ -15,5 +15,5 @@ test('renders correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<ContentImage src={product.bundles[0].products[0].asset_files[0].url} height='73' width='73' />)
+  expect(wrapper).toContainReact(<Image src={product.bundles[0].products[0].asset_files[0].url} height={73} width={73} />)
 })

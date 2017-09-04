@@ -3,7 +3,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
-import ContentImage from '../../objects/ContentImage'
+import Image from '../../objects/Image'
 
 class RelatedProducts extends Component {
   constructor (props) {
@@ -17,7 +17,7 @@ class RelatedProducts extends Component {
         bundle.products.map((product, idx) =>
           <li key={idx}>
 
-            <ContentImage src={product.asset_files[0] && product.asset_files[0].url} height='73' width='73' />
+            <Image src={product.asset_files[0] && product.asset_files[0].url} height={73} width={73} />
 
             <Link href={product.canonical_path} >
               <a>{ product.title }</a>

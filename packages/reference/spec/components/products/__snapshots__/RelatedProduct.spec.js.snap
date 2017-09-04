@@ -36,17 +36,17 @@ exports[`renders correctly 1`] = `
     </h3>
     <ul>
       <li>
-        <ContentImage
-          height="73"
+        <Image
+          height={73}
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-          width="73"
+          width={73}
         >
           <img
-            height="73"
+            height={73}
             src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-            width="73"
+            width={73}
           />
-        </ContentImage>
+        </Image>
         <Link
           href="/products/stripe-shirt"
         >
@@ -59,16 +59,21 @@ exports[`renders correctly 1`] = `
         </Link>
       </li>
       <li>
-        <ContentImage
-          height="73"
-          width="73"
+        <Image
+          height={73}
+          width={73}
         >
-          <img
-            height="73"
-            src="/static/placeholder.png"
-            width="73"
+          <div
+            className="c-dummy_image"
+            style={
+              Object {
+                "backgroundSize": 69.35,
+                "height": 73,
+                "width": 73,
+              }
+            }
           />
-        </ContentImage>
+        </Image>
         <Link
           href="/products/slip-on-pump"
         >

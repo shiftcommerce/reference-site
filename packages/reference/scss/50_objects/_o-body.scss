@@ -1,0 +1,8 @@
+.o-body {
+  width: 95%;
+  margin: 0 auto;
+
+  @include breakpoint(desktop) {
+    width: 80%;
+  }
+}
