@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Link from 'next/link'
 
 import Button from '../objects/Button'
-import ContentImage from '../objects/ContentImage'
+import Image from '../objects/Image'
 
 class Womens extends Component {
 
@@ -22,7 +22,7 @@ class Womens extends Component {
         </div>
         <div>
           <div>
-            <ContentImage src={url} alt='textured-long-t-shirt' height='350' width='250' aria-label='textured-long-t-shirt' />
+            <Image src={url} alt='textured-long-t-shirt' height='350' width='250' aria-label='textured-long-t-shirt' />
           </div>
           <Link href='/products/textured-long-t-shirt' >
             <a>
