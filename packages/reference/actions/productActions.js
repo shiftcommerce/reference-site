@@ -5,7 +5,7 @@ import * as types from '../constants/actionTypes'
 import { resetProcesses, setLoadingTo, setErroredTo } from './processingStateActions'
 
 // Libs
-import ApiClient from '../lib/apiClient'
+import ApiClient from '../lib/ApiClient'
 
 export function setProduct (data) {
   return {
