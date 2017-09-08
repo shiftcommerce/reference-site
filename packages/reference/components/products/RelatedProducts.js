@@ -13,7 +13,7 @@ class RelatedProducts extends Component {
 
   renderRelatedProducts (bundles) {
     return (
-      bundles && bundles.map((bundle) =>
+      bundles.map((bundle) =>
         bundle.products.map((product, idx) =>
           <li key={idx}>
 
@@ -33,15 +33,19 @@ class RelatedProducts extends Component {
       bundles
     } = this.props
 
-    return (
-      <div>
-        <h3>Related Products</h3>
+    if (bundles) {
+      return (
+        <div>
+          <h3>Related Products</h3>
 
-        <ul>
-          { this.renderRelatedProducts(bundles) }
-        </ul>
-      </div>
-    )
+          <ul>
+            { this.renderRelatedProducts(bundles) }
+          </ul>
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 }
 

@@ -10,7 +10,7 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
-  server.get('/products/:slug', (req, res) => {
+  server.get('/products/:id', (req, res) => {
     return app.render(req, res, '/products/product', req.query)
   })
 

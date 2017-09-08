@@ -1,16 +1,45 @@
 const Product = {
   id: 1,
   title: 'Textured Long T-Shirt',
-  description: 'Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.',
-  sku: 'SKU2659078',
   price: '£99',
-  meta: {
-    'colour': 'Blue'
+  meta_data: {
+    eu: {
+      colour: 'Blue',
+      sku: 'SKU2659078',
+      description: 'Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.'
+    }
   },
   variants: [
-    { sku: 1, title: 'Small', size: 'Size 8' },
-    { sku: 2, title: 'Medium', size: 'Size 10' },
-    { sku: 3, title: 'Large', size: 'Size 12' }
+    {
+      sku: 1,
+      title: 'Small',
+      meta_data: {
+        eu: {
+          size: 'Size 8',
+          price: 10.00
+        }
+      }
+    },
+    {
+      sku: 2,
+      title: 'Medium',
+      meta_data: {
+        eu: {
+          size: 'Size 10',
+          price: 11.00
+        }
+      }
+    },
+    {
+      sku: 3,
+      title: 'Large',
+      meta_data: {
+        eu: {
+          size: 'Size 12',
+          price: 12.00
+        }
+      }
+    }
   ],
   bundles: [
     {

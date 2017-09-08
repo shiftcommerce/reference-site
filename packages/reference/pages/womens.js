@@ -7,7 +7,6 @@ import Button from '../objects/Button'
 import Image from '../objects/Image'
 
 class Womens extends Component {
-
   render () {
     let url = 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg'
     return (

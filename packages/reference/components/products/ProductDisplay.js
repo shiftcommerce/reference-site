@@ -4,6 +4,7 @@ import { Component } from 'react'
 // Components
 import RelatedProducts from './RelatedProducts'
 import DeliveryInformation from './DeliveryInformation'
+import ProductPrice from './ProductPrice'
 
 // Objects
 import Image from '../../objects/Image'
@@ -38,16 +39,16 @@ class ProductDisplay extends Component {
               </h1>
 
               <div className='c-product-display__sku'>
-                <span>{ product.sku }</span>
+                <span>{ product.meta_data.eu.sku }</span>
               </div>
 
               <div className='c-product-display__price'>
-                &pound;{ product.price }
+                <ProductPrice variants={product.variants} />
               </div>
 
               <div className='c-product-display__colour'>
                 <strong>Colour:</strong>
-                <span> { product.meta.colour } </span>
+                <span> { product.meta_data.eu.colour } </span>
               </div>
 
               <div className='c-product-display__size'>
@@ -65,7 +66,7 @@ class ProductDisplay extends Component {
 
             <section className='c-product-display__section' aria-label='Product Information'>
               <h3>Product Information</h3>
-              { product.description }
+              { product.meta_data.eu.description }
             </section>
 
             <section className='c-product-display__section' aria-label='Delivery Information'>

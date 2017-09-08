@@ -15,11 +15,11 @@ class NavBar extends Component {
     ]
 
     return navOptions.map((navOption, index) =>
-      <NavBarOption key={ index } index={ index } title={ navOption.title } link={ navOption.link } />
+      <NavBarOption key={index} index={index} title={navOption.title} link={navOption.link} />
     )
   }
 
-  render() {
+  render () {
     return <div className='o-nav' role='navigation' >
       { this.renderNavOptions() }
     </div>

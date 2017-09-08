@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 export default class cartTable extends Component {
   renderLineItems () {

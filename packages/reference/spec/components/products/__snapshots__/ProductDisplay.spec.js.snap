@@ -38,27 +38,44 @@ exports[`renders correctly 1`] = `
           "title": "Mingo",
         },
       ],
-      "description": "Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.",
       "id": 1,
-      "meta": Object {
-        "colour": "Blue",
+      "meta_data": Object {
+        "eu": Object {
+          "colour": "Blue",
+          "description": "Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.",
+          "sku": "SKU2659078",
+        },
       },
       "price": "£99",
-      "sku": "SKU2659078",
       "title": "Textured Long T-Shirt",
       "variants": Array [
         Object {
-          "size": "Size 8",
+          "meta_data": Object {
+            "eu": Object {
+              "price": 10,
+              "size": "Size 8",
+            },
+          },
           "sku": 1,
           "title": "Small",
         },
         Object {
-          "size": "Size 10",
+          "meta_data": Object {
+            "eu": Object {
+              "price": 11,
+              "size": "Size 10",
+            },
+          },
           "sku": 2,
           "title": "Medium",
         },
         Object {
-          "size": "Size 12",
+          "meta_data": Object {
+            "eu": Object {
+              "price": 12,
+              "size": "Size 12",
+            },
+          },
           "sku": 3,
           "title": "Large",
         },
@@ -116,8 +133,53 @@ exports[`renders correctly 1`] = `
           <div
             className="c-product-display__price"
           >
-            £
-            £99
+            <ProductPrice
+              variants={
+                Array [
+                  Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 10,
+                        "size": "Size 8",
+                      },
+                    },
+                    "sku": 1,
+                    "title": "Small",
+                  },
+                  Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 11,
+                        "size": "Size 10",
+                      },
+                    },
+                    "sku": 2,
+                    "title": "Medium",
+                  },
+                  Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 12,
+                        "size": "Size 12",
+                      },
+                    },
+                    "sku": 3,
+                    "title": "Large",
+                  },
+                ]
+              }
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  10.00
+                   - £
+                  12.00
+                </span>
+              </div>
+            </ProductPrice>
           </div>
           <div
             className="c-product-display__colour"
@@ -143,17 +205,32 @@ exports[`renders correctly 1`] = `
               variants={
                 Array [
                   Object {
-                    "size": "Size 8",
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 10,
+                        "size": "Size 8",
+                      },
+                    },
                     "sku": 1,
                     "title": "Small",
                   },
                   Object {
-                    "size": "Size 10",
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 11,
+                        "size": "Size 10",
+                      },
+                    },
                     "sku": 2,
                     "title": "Medium",
                   },
                   Object {
-                    "size": "Size 12",
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 12,
+                        "size": "Size 12",
+                      },
+                    },
                     "sku": 3,
                     "title": "Large",
                   },
@@ -177,6 +254,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={1}
                   aria-setsize={3}
+                  data-price={10}
                   role="option"
                   value={1}
                 >
@@ -185,6 +263,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={2}
                   aria-setsize={3}
+                  data-price={11}
                   role="option"
                   value={2}
                 >
@@ -193,6 +272,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={3}
                   aria-setsize={3}
+                  data-price={12}
                   role="option"
                   value={3}
                 >

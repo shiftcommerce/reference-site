@@ -24,14 +24,14 @@ test('renders correctly', () => {
 
   // Act
   const wrapper = mount(
-    <ProductDisplay product={product} changeQuantity={emptyFunction} changeSize={emptyFunction} addToBag={emptyFunction} { ...value } />
+    <ProductDisplay product={product} changeQuantity={emptyFunction} changeSize={emptyFunction} addToBag={emptyFunction} {...value} />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText(product.title)
-  expect(wrapper).toIncludeText(product.sku)
-  expect(wrapper).toIncludeText(product.description)
+  expect(wrapper).toIncludeText(product.meta_data.eu.sku)
+  expect(wrapper).toIncludeText(product.meta_data.eu.description)
   expect(wrapper).toContainReact(<Image src={product.asset_files[0].url} alt={product.title} height={705} width={503} aria-label={product.title} />)
   expect(wrapper).toContainReact(<SizeSelector onChange={emptyFunction} value='' name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />)
   expect(wrapper).toContainReact(<DropdownSelect onChange={emptyFunction} value='' name='line_item[unit_quantity]' prompt='Select a Quantity' options={quantityOptions} aria-label='Quantity Selector' />)

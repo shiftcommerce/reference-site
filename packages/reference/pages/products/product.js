@@ -1,7 +1,6 @@
 // Libraries
 import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
-import Link from 'next/link'
 
 // Components
 import Layout from '../../components/Layout'
@@ -10,14 +9,12 @@ import ProductDisplay from '../../components/products/ProductDisplay'
 // Objects
 import Breadcrumb from '../../objects/Breadcrumb'
 
-// actions
+// Actions
 import { addToCart } from '../../actions/cartActions'
+import { readProduct } from '../../actions/productActions'
 
-// utils
-import configureStore from '../../utils/configureStore'
-
-// Product
-import product from '../../static/product.json'
+// Utils
+import { configureStore } from '../../utils/configureStore'
 
 class Product extends Component {
   constructor () {
@@ -25,7 +22,8 @@ class Product extends Component {
     this.state = {
       sku: '',
       size: '',
-      quantity: ''
+      quantity: '',
+      price: ''
     }
 
     this.changeQuantity = this.changeQuantity.bind(this)
@@ -33,8 +31,17 @@ class Product extends Component {
     this.addToBag = this.addToBag.bind(this)
   }
 
+  static async getInitialProps ({ store, req }) {
+    if (req.params.id) {
+      await store.dispatch(readProduct(req.params.id))
+    } else {
+      return { product: {} }
+    }
+  }
+
   addToBag () {
-    let { quantity, sku, size } = this.state
+    let { quantity, sku, size, price } = this.state
+    let { product } = this.props
 
     if (quantity !== '' && sku !== '') {
       const lineItem = {
@@ -42,12 +49,14 @@ class Product extends Component {
         title: product.title,
         size: size,
         quantity: parseInt(quantity),
-        price: product.price,
+        price: price,
         image_url: product.asset_files[0].url
       }
       this.props.dispatch(addToCart(lineItem))
     } else {
+      /*eslint-disable */
       alert('Please select the size and quantity')
+      /*eslint-enable */
     }
   }
 
@@ -56,7 +65,11 @@ class Product extends Component {
   }
 
   changeSize (e) {
-    this.setState({ sku: e.target.value, size: e.target.options[e.target.selectedIndex].text })
+    this.setState({
+      sku: e.target.value,
+      size: e.target.options[e.target.selectedIndex].text,
+      price: e.target.options[e.target.selectedIndex].dataset.price
+    })
   }
 
   render () {
@@ -65,23 +78,42 @@ class Product extends Component {
                                   { id: 2, title: 'Textured Long T-Shirt', canonical_path: '/products/textured-long-t-shirt' }
     ]
 
-    return (
-      <Layout>
-        <div>
-          <Breadcrumb trail={breadcrumbMenuTrail} />
-        </div>
-        <Link href='/cart'>
-          <a> Cart page </a>
-        </Link>
-        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} { ...this.state } />
-      </Layout>
-    )
+    let {
+      product,
+      process
+    } = this.props
+
+    if (process.errored || Object.keys(product).length === 0) {
+      return (
+        <Layout>
+          <h1>Unable to load product.</h1>
+        </Layout>
+      )
+    } else if (process.loading) {
+      return (
+        <Layout>
+          <h1>Loading product...</h1>
+        </Layout>
+      )
+    } else {
+      return (
+        <Layout>
+          <div>
+            <Breadcrumb trail={breadcrumbMenuTrail} />
+          </div>
+
+          <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} {...this.state} />
+        </Layout>
+      )
+    }
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart || {}
+    process: state.process || {},
+    cart: state.cart || {},
+    product: state.product || {}
   }
 }
 

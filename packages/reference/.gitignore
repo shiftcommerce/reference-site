@@ -1,6 +1,9 @@
 # Ignore Next
 .next/
 
+# Ignore Env file
+.env
+
 # Ignore Yarn
 /node_modules
 yarn-error.log

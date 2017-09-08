@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+
+// Scripts
 import Script from './../utils/Script'
-import configureStore from '../utils/configureStore'
+import { configureStore } from '../utils/configureStore'
 
 import { Provider } from 'react-redux'
 

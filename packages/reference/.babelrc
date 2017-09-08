@@ -1,7 +1,8 @@
 {
   "env": {
     "development": {
-      "presets": "next/babel"
+      "presets": "next/babel",
+      "plugins": ["inline-dotenv"]
     },
     "production": {
       "presets": "next/babel"
@@ -10,7 +11,8 @@
       "presets": [
         ["env", { "modules": "commonjs" }],
         "next/babel"
-      ]
+      ],
+      "plugins": ["transform-inline-environment-variables"]
     }
   },
   "plugins": [

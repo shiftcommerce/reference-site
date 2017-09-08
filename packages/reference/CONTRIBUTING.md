@@ -1,4 +1,4 @@
-#### How to contribute
+## How to contribute
 
 Bug reports and pull requests are welcome at https://github.com/shiftcommerce/shift-front-end-react. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
@@ -29,5 +29,9 @@ Run all the tests to assure nothing else was accidentally broken, this will be d
 To increase the chance of your pull request:
 
 * Write tests
-* Follow our style guide - We use [JavaScript Standard Style](https://github.com/standard/standard)(StandardJS). Run: `./bin/dev/lint` to lint all project files using StandardJS or `./bin/dev/lint /app/components/ExampleComponent.js` for a specific file.
 * Write clear commit messages
+* Follow our style guide - We use [JavaScript Standard Style](https://github.com/standard/standard).
+    Run: `./bin/dev/lint` to lint all project files using StandardJS
+    OR `./bin/dev/lint /app/components/ExampleComponent.js` for a specific file.
+
+    [![JavaScript Style Guide - Standard Style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)

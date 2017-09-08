@@ -1,0 +1,9 @@
+{
+  'plugins': ['react'],
+  'extends': ['standard'],
+  'rules': {
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'padded-blocks': ['error', { blocks: 'never', classes: 'never', switches: 'never' }]
+  }
+}

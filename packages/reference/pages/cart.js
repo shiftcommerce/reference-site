@@ -1,10 +1,11 @@
+// Libraries
 import React, { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 
-// utils
-import configureStore from '../utils/configureStore'
+// Utils
+import { configureStore } from '../utils/configureStore'
 
-// actions
+// Actions
 import { readCart } from '../actions/cartActions'
 
 // Components

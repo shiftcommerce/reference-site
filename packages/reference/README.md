@@ -1,3 +1,5 @@
+[ ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)[ ![Code Climate](https://codeclimate.com/repos/59afd402570e4e0296000b5d/badges/ddb538f31d467ab460b5/gpa.svg)](https://codeclimate.com/repos/59afd402570e4e0296000b5d/feed)
+
 # Shift Front End React
 
 ## Getting started
@@ -31,6 +33,13 @@ cd shift-front-end-react
 ```
 
 You should now be able to interact with the web interface via [http://localhost:3000](http://localhost:3000).
+
+* **Add API Environment Variables:**
+Connect to your API Host by adding the following environment variables in your `.env` file.
+```
+API_HOST=http://<DOCKER_HOST_IP_ADDRESS>:<PORT>
+API_ACCESS_TOKEN=<API_AUTH_ACCESS_TOKEN>
+```
 
 **Testing**
 

@@ -7,17 +7,32 @@ exports[`renders correctly 1`] = `
   variants={
     Array [
       Object {
-        "size": "Size 8",
+        "meta_data": Object {
+          "eu": Object {
+            "price": 10,
+            "size": "Size 8",
+          },
+        },
         "sku": 1,
         "title": "Small",
       },
       Object {
-        "size": "Size 10",
+        "meta_data": Object {
+          "eu": Object {
+            "price": 11,
+            "size": "Size 10",
+          },
+        },
         "sku": 2,
         "title": "Medium",
       },
       Object {
-        "size": "Size 12",
+        "meta_data": Object {
+          "eu": Object {
+            "price": 12,
+            "size": "Size 12",
+          },
+        },
         "sku": 3,
         "title": "Large",
       },
@@ -38,6 +53,7 @@ exports[`renders correctly 1`] = `
     <option
       aria-posinset={1}
       aria-setsize={3}
+      data-price={10}
       role="option"
       value={1}
     >
@@ -46,6 +62,7 @@ exports[`renders correctly 1`] = `
     <option
       aria-posinset={2}
       aria-setsize={3}
+      data-price={11}
       role="option"
       value={2}
     >
@@ -54,6 +71,7 @@ exports[`renders correctly 1`] = `
     <option
       aria-posinset={3}
       aria-setsize={3}
+      data-price={12}
       role="option"
       value={3}
     >
