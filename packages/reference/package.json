@@ -48,7 +48,7 @@
     "setupFiles": [
       "./spec/support/jestSetup.js"
     ],
-    "testRegex": "/spec/(components|objects|reducers|lib)/.+\\.spec\\.js$",
+    "testRegex": "/spec/(components|objects|reducers|pages|lib|actions)/.+\\.spec\\.js$",
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "<rootDir>/spec/support/jestFileMock.js"
     }
@@ -66,6 +66,7 @@
     "jest-enzyme": "^3.8.0",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
+    "sinon": "3.2.1",
     "standard": "^10.0.3"
   }
 }

@@ -1,31 +1,38 @@
 // Libraries
-import React, { Component } from 'react'
+import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 
 // Utils
 import { configureStore } from '../utils/configureStore'
 
 // Actions
-import { readCart } from '../actions/cartActions'
+import { updateQuantity } from '../actions/cartActions'
 
 // Components
 import Layout from '../components/Layout'
-import CartTable from '../components/cartTable.js'
+import CartTable from '../components/cart/CartTable.js'
 
-class CartPage extends Component {
-  componentDidMount () {
-    this.props.dispatch(readCart())
+export class CartPage extends Component {
+  constructor (props) {
+    super(props)
+
+    this.updateQuantity = this.updateQuantity.bind(this)
+  }
+
+  updateQuantity (e) {
+    const lineItem = {
+      sku: e.target.dataset.variant,
+      quantity: parseInt(e.target.value, 10)
+    }
+    this.props.dispatch(updateQuantity(lineItem))
   }
 
   render () {
-    let cart = this.props.cart
+    const cart = this.props.cart
+
     return (
       <Layout>
-        <h1>
-          My Bag
-        </h1>
-        {cart.lineItems.length} item in your bag
-        <CartTable cart={cart} />
+        <CartTable cart={cart} updateQuantity={this.updateQuantity} />
       </Layout>
     )
   }

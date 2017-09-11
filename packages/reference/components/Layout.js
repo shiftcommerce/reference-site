@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from '../objects/Image'
 
 // components
-import Minibag from '../components/Minibag'
+import MiniBag from '../components/MiniBag'
 import NavBar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
 
@@ -26,7 +26,7 @@ class Layout extends Component {
             <SearchBar />
           </span>
           <span className='o-header__minibag'>
-            <Minibag />
+            <MiniBag />
           </span>
         </div>
 

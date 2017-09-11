@@ -1,0 +1,8 @@
+.u-text-color{
+  &--green {
+    color: $text-success;
+  }
+  &--red {
+    color: $text-error;
+  }
+}

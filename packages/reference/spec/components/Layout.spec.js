@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout'
 import NavBar from '../../components/NavBar'
-import Minibag from '../../components/Minibag'
+import MiniBag from '../../components/MiniBag'
 import Image from '../../objects/Image'
 import SearchBar from '../../components/SearchBar'
 
@@ -18,7 +18,7 @@ test('renders the header', () => {
   expect(header).toBePresent()
   expect(header).toContainReact(<Image width={ 250 } height={ 35 } />)
   expect(header).toContainReact(<SearchBar />)
-  expect(header).toContainReact(<Minibag />)
+  expect(header).toContainReact(<MiniBag />)
 })
 
 test('renders the navbar', () => {

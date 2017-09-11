@@ -50,7 +50,8 @@ class Product extends Component {
         size: size,
         quantity: parseInt(quantity),
         price: price,
-        image_url: product.asset_files[0].url
+        imageUrl: product.asset_files[0].url,
+        productSku: product.sku
       }
       this.props.dispatch(addToCart(lineItem))
     } else {

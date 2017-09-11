@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the correct message when line items are available in cart 1`] = `
+<CartTable
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "imageUrl": "",
+          "price": 10,
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+    }
+  }
+  updateQuantity={[Function]}
+>
+  <section>
+    <section
+      className="c-cart-table__header"
+    >
+      <div
+        className="u-float--left"
+      >
+        <h1>
+           My Bag 
+        </h1>
+      </div>
+      <div
+        className="u-float--right"
+      >
+        <h4>
+           
+          <b>
+            1
+             
+            item
+          </b>
+           in your bag 
+        </h4>
+      </div>
+    </section>
+    <section
+      className="u-float-clear"
+    >
+      <LineItems
+        aria-label="Line Items"
+        cart={
+          Object {
+            "lineItems": Array [
+              Object {
+                "discount": 0,
+                "imageUrl": "",
+                "price": 10,
+                "quantity": 2,
+                "size": "size - 8",
+                "sku": "123",
+                "title": "test",
+              },
+            ],
+          }
+        }
+        updateQuantity={[Function]}
+      >
+        <table
+          className="c-line-items"
+        >
+          <thead>
+            <tr
+              className="c-line-items__header"
+            >
+              <th
+                scope="col"
+              >
+                Your Items
+              </th>
+              <th
+                scope="col"
+              >
+                Size
+              </th>
+              <th
+                scope="col"
+              >
+                Quantity
+              </th>
+              <th
+                scope="col"
+              >
+                You save
+              </th>
+              <th
+                scope="col"
+              >
+                Subtotal
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="c-line-items__column"
+            >
+              <td
+                aria-label="test"
+              >
+                <Link
+                  href="/products/undefined"
+                >
+                  <a
+                    href="/products/undefined"
+                    onClick={[Function]}
+                  >
+                    <Image
+                      alt="test"
+                      aria-label="test"
+                      className="c-line-items__image"
+                      src=""
+                    >
+                      <div
+                        className="c-dummy_image c-line-items__image"
+                        style={
+                          Object {
+                            "backgroundSize": 150,
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </Image>
+                    test
+                  </a>
+                </Link>
+              </td>
+              <td>
+                size - 8
+              </td>
+              <td>
+                <select
+                  data-variant="123"
+                  onChange={[Function]}
+                  value={2}
+                >
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={0}
+                    value={0}
+                  >
+                    0
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={1}
+                    value={1}
+                  >
+                    1
+                  </option>
+                  <option
+                    aria-posinset={3}
+                    aria-setsize={2}
+                    value={2}
+                  >
+                    2
+                  </option>
+                  <option
+                    aria-posinset={4}
+                    aria-setsize={3}
+                    value={3}
+                  >
+                    3
+                  </option>
+                  <option
+                    aria-posinset={5}
+                    aria-setsize={4}
+                    value={4}
+                  >
+                    4
+                  </option>
+                  <option
+                    aria-posinset={6}
+                    aria-setsize={5}
+                    value={5}
+                  >
+                    5
+                  </option>
+                  <option
+                    aria-posinset={7}
+                    aria-setsize={6}
+                    value={6}
+                  >
+                    6
+                  </option>
+                  <option
+                    aria-posinset={8}
+                    aria-setsize={7}
+                    value={7}
+                  >
+                    7
+                  </option>
+                  <option
+                    aria-posinset={9}
+                    aria-setsize={8}
+                    value={8}
+                  >
+                    8
+                  </option>
+                  <option
+                    aria-posinset={10}
+                    aria-setsize={9}
+                    value={9}
+                  >
+                    9
+                  </option>
+                  <option
+                    aria-posinset={11}
+                    aria-setsize={10}
+                    value={10}
+                  >
+                    10
+                  </option>
+                </select>
+              </td>
+              <td>
+                -£
+                0
+              </td>
+              <td>
+                £
+                20
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </LineItems>
+      <CartSummary
+        aria-label="Cart Summary"
+        cart={
+          Object {
+            "lineItems": Array [
+              Object {
+                "discount": 0,
+                "imageUrl": "",
+                "price": 10,
+                "quantity": 2,
+                "size": "size - 8",
+                "sku": "123",
+                "title": "test",
+              },
+            ],
+          }
+        }
+        updateQuantity={[Function]}
+      >
+        <section
+          className="c-cart-summary"
+        >
+          <dl>
+            <dt>
+               Sub total: 
+            </dt>
+            <dd>
+               £
+              20
+               
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+               Tax applied: 
+            </dt>
+            <dd
+              className="u-text-color--red"
+            >
+               +£
+              0
+               
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+               Amount you saved on this purchase: 
+            </dt>
+            <dd
+              className="u-text-color--green"
+            >
+               -£
+              0
+               
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+               Total amount to be paid: 
+            </dt>
+            <dd>
+               
+              <b>
+                £
+                20
+              </b>
+               
+            </dd>
+          </dl>
+        </section>
+      </CartSummary>
+    </section>
+  </section>
+</CartTable>
+`;
+
+exports[`renders the exception messages when no line items are available 1`] = `
+<CartTable
+  cart={
+    Object {
+      "lineItems": Array [],
+    }
+  }
+>
+  <section>
+    <section
+      className="c-cart-table__header"
+    >
+      <div
+        className="u-float--left"
+      >
+        <h1>
+           My Bag 
+        </h1>
+      </div>
+      <div
+        className="u-float--right"
+      >
+        <h4>
+           
+          <b>
+            0
+             
+            items
+          </b>
+           in your bag 
+        </h4>
+      </div>
+    </section>
+    <CartNoData>
+      <section
+        className="c-cart-no-data"
+      >
+        <p>
+          You have no items in your cart. If you are expecting items in it, please refresh.
+        </p>
+        <p>
+          If issue still persists, please check with our customer care.
+        </p>
+      </section>
+    </CartNoData>
+  </section>
+</CartTable>
+`;

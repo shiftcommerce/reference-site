@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the minibag links 1`] = `
+<div>
+  <Link
+    href="/cart"
+  >
+    <a
+      aria-label="View your cart"
+    >
+      View Your Bag
+      <span
+        style={
+          Object {
+            "marginLeft": "5px",
+            "marginRight": "5px",
+          }
+        }
+      >
+        (
+        1
+        )
+      </span>
+    </a>
+  </Link>
+  <Link
+    href="/checkout"
+  >
+    <a
+      aria-label="Go to checkout"
+      className="c-button c-button--negative c-button--lrg"
+    >
+      CHECKOUT
+    </a>
+  </Link>
+</div>
+`;

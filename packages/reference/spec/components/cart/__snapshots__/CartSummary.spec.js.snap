@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct values when line items are available 1`] = `
+<CartSummary
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 2,
+          "imageUrl": "",
+          "price": 10,
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+    }
+  }
+  updateQuantity={[Function]}
+>
+  <section
+    className="c-cart-summary"
+  >
+    <dl>
+      <dt>
+         Sub total: 
+      </dt>
+      <dd>
+         £
+        20
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Tax applied: 
+      </dt>
+      <dd
+        className="u-text-color--red"
+      >
+         +£
+        0
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Amount you saved on this purchase: 
+      </dt>
+      <dd
+        className="u-text-color--green"
+      >
+         -£
+        4
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Total amount to be paid: 
+      </dt>
+      <dd>
+         
+        <b>
+          £
+          16
+        </b>
+         
+      </dd>
+    </dl>
+  </section>
+</CartSummary>
+`;
+
+exports[`renders correct values when no line items are available 1`] = `
+<CartSummary
+  cart={
+    Object {
+      "lineItems": Array [],
+    }
+  }
+>
+  <section
+    className="c-cart-summary"
+  >
+    <dl>
+      <dt>
+         Sub total: 
+      </dt>
+      <dd>
+         £
+        0
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Tax applied: 
+      </dt>
+      <dd
+        className="u-text-color--red"
+      >
+         +£
+        0
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Amount you saved on this purchase: 
+      </dt>
+      <dd
+        className="u-text-color--green"
+      >
+         -£
+        0
+         
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+         Total amount to be paid: 
+      </dt>
+      <dd>
+         
+        <b>
+          £
+          0
+        </b>
+         
+      </dd>
+    </dl>
+  </section>
+</CartSummary>
+`;

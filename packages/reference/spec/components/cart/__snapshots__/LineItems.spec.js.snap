@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders line items correctly, on initial load 1`] = `
+<LineItems
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "imageUrl": "",
+          "price": 10,
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+    }
+  }
+  updateQuantity={[Function]}
+>
+  <table
+    className="c-line-items"
+  >
+    <thead>
+      <tr
+        className="c-line-items__header"
+      >
+        <th
+          scope="col"
+        >
+          Your Items
+        </th>
+        <th
+          scope="col"
+        >
+          Size
+        </th>
+        <th
+          scope="col"
+        >
+          Quantity
+        </th>
+        <th
+          scope="col"
+        >
+          You save
+        </th>
+        <th
+          scope="col"
+        >
+          Subtotal
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="c-line-items__column"
+      >
+        <td
+          aria-label="test"
+        >
+          <Link
+            href="/products/undefined"
+          >
+            <a
+              href="/products/undefined"
+              onClick={[Function]}
+            >
+              <Image
+                alt="test"
+                aria-label="test"
+                className="c-line-items__image"
+                src=""
+              >
+                <div
+                  className="c-dummy_image c-line-items__image"
+                  style={
+                    Object {
+                      "backgroundSize": 150,
+                      "height": undefined,
+                      "width": undefined,
+                    }
+                  }
+                />
+              </Image>
+              test
+            </a>
+          </Link>
+        </td>
+        <td>
+          size - 8
+        </td>
+        <td>
+          <select
+            data-variant="123"
+            onChange={[Function]}
+            value={2}
+          >
+            <option
+              aria-posinset={1}
+              aria-setsize={0}
+              value={0}
+            >
+              0
+            </option>
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              value={1}
+            >
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </td>
+        <td>
+          -£
+          0
+        </td>
+        <td>
+          £
+          20
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</LineItems>
+`;
+
+exports[`trigger updateQuantity function, on change of line item quantity 1`] = `
+<LineItems
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "imageUrl": "",
+          "price": 10,
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+    }
+  }
+  updateQuantity={[Function]}
+>
+  <table
+    className="c-line-items"
+  >
+    <thead>
+      <tr
+        className="c-line-items__header"
+      >
+        <th
+          scope="col"
+        >
+          Your Items
+        </th>
+        <th
+          scope="col"
+        >
+          Size
+        </th>
+        <th
+          scope="col"
+        >
+          Quantity
+        </th>
+        <th
+          scope="col"
+        >
+          You save
+        </th>
+        <th
+          scope="col"
+        >
+          Subtotal
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="c-line-items__column"
+      >
+        <td
+          aria-label="test"
+        >
+          <Link
+            href="/products/undefined"
+          >
+            <a
+              href="/products/undefined"
+              onClick={[Function]}
+            >
+              <Image
+                alt="test"
+                aria-label="test"
+                className="c-line-items__image"
+                src=""
+              >
+                <div
+                  className="c-dummy_image c-line-items__image"
+                  style={
+                    Object {
+                      "backgroundSize": 150,
+                      "height": undefined,
+                      "width": undefined,
+                    }
+                  }
+                />
+              </Image>
+              test
+            </a>
+          </Link>
+        </td>
+        <td>
+          size - 8
+        </td>
+        <td>
+          <select
+            data-variant="123"
+            onChange={[Function]}
+            value={2}
+          >
+            <option
+              aria-posinset={1}
+              aria-setsize={0}
+              value={0}
+            >
+              0
+            </option>
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              value={1}
+            >
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </td>
+        <td>
+          -£
+          0
+        </td>
+        <td>
+          £
+          20
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</LineItems>
+`;

@@ -1,8 +1,14 @@
 import { Component } from 'react'
-
-import Layout from '../components/Layout'
+import withRedux from 'next-redux-wrapper'
 import Link from 'next/link'
 
+// utils
+import configureStore from '../utils/configureStore'
+
+// Components
+import Layout from '../components/Layout'
+
+// Objects
 import Button from '../objects/Button'
 import Image from '../objects/Image'
 
@@ -34,4 +40,4 @@ class Womens extends Component {
   }
 }
 
-export default Womens
+export default withRedux(configureStore)(Womens)

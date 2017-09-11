@@ -1,10 +1,14 @@
 // Libraries
 import { Component } from 'react'
+import withRedux from 'next-redux-wrapper'
+
+// utils
+import { configureStore } from '../utils/configureStore'
 
 // Components
 import Layout from '../components/Layout'
 
-class Home extends Component {
+class Index extends Component {
   render () {
     return (
       <Layout>
@@ -14,4 +18,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default withRedux(configureStore)(Index)

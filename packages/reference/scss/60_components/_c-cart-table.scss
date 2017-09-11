@@ -1,0 +1,12 @@
+.c-cart-table {
+  display: grid;
+  width: 100% !important;
+  margin: 15px 0px;
+  padding: 15px 0px;
+  border-top: 1px solid #eee;
+  &__header {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #eee; 
+  }
+}
