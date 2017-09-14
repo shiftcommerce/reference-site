@@ -14,6 +14,14 @@ app.prepare().then(() => {
     return app.render(req, res, '/products/product', req.query)
   })
 
+  server.get('/categories/:id', (req, res) => {
+    return app.render(req, res, '/categories/category', req.query)
+  })
+
+  server.get('/search', (req, res) => {
+    return app.render(req, res, '/search', req.query)
+  })
+
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./static/serviceWorker.js').pipe(res)

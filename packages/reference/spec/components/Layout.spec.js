@@ -8,7 +8,7 @@ test('renders the header', () => {
   // arrange
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Layout />
   )
 
@@ -16,8 +16,8 @@ test('renders the header', () => {
 
   // assert
   expect(header).toBePresent()
-  expect(header).toContainReact(<Image width={ 250 } height={ 35 } />)
-  expect(header).toContainReact(<SearchBar />)
+  expect(header).toIncludeText('Search')
+  expect(header).toContainReact(<Image width={250} height={35} />)
   expect(header).toContainReact(<MiniBag />)
 })
 

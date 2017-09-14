@@ -1,3 +1,4 @@
+// Libraries
 import { Component } from 'react'
 import Link from 'next/link'
 import withRedux from 'next-redux-wrapper'
@@ -5,7 +6,7 @@ import withRedux from 'next-redux-wrapper'
 // Actions
 import { readCart } from '../actions/cartActions'
 
-// utils
+// Utils
 import { configureStore } from '../utils/configureStore'
 
 export class MiniBag extends Component {

@@ -1,10 +1,11 @@
+// Libraries
 import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
 import Image from '../../objects/Image'
 
-export default class LineItems extends Component {
+class LineItems extends Component {
   renderOptions (lineItem) {
     return <select value={lineItem.quantity} onChange={this.props.updateQuantity} data-variant={lineItem.sku}>
       {
@@ -78,3 +79,5 @@ export default class LineItems extends Component {
     }
   }
 }
+
+export default LineItems

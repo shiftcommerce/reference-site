@@ -4,5 +4,6 @@ services:
     ports:
       - "3000:3000"
     entrypoint: ./bin/docker/yarn_entrypoint
+    encrypted_env_file: .env.encrypted
     volumes:
       - .:/app

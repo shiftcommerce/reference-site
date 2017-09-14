@@ -1,6 +1,7 @@
+// Libraries
 import { Component } from 'react'
 
-export default class CartSummary extends Component {
+class CartSummary extends Component {
   calculateSummary () {
     const lineItems = this.props.cart.lineItems
     let [ total, discount, tax, subTotal ] = [ 0, 0, 0, 0 ]
@@ -38,3 +39,5 @@ export default class CartSummary extends Component {
     )
   }
 }
+
+export default CartSummary

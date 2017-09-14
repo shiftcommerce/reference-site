@@ -1,0 +1,888 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="s-algolia_instantsearch"
+>
+  <CreateInstantSearchServer
+    apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+    appId="latency"
+    indexName="ikea"
+    resultState={
+      Object {
+        "_originalResponse": Object {
+          "results": Array [
+            Object {
+              "exhaustiveFacetsCount": true,
+              "exhaustiveNbHits": false,
+              "facets": Object {
+                "category": Object {
+                  "Decoration": 880,
+                  "Textiles & Rugs": 760,
+                },
+                "materials": Object {
+                  "100 % polyester": 527,
+                  "Polypropylene": 602,
+                },
+                "sizes": Object {
+                  "20x20\\"": 61,
+                  "6\\"": 67,
+                },
+                "type": Object {
+                  "Frame, white": 17,
+                  "Mirror": 20,
+                },
+              },
+              "hits": Array [
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "LEGITIM",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "",
+                    },
+                  },
+                  "category": "Cooking",
+                  "colors": Array [],
+                  "description": "",
+                  "ikea_id": "90202268",
+                  "image": "http://www.ikea.com/us/en/images/products/legitim-chopping-board-white__0119427_PE275744_S4.JPG",
+                  "materials": Array [
+                    "Polyethylene",
+                  ],
+                  "name": "LEGITIM",
+                  "objectID": "509665190",
+                  "price": 1.49,
+                  "rating": 5,
+                  "share_count": 31625,
+                  "sizes": Array [
+                    "13 ½x9 ½\\"",
+                  ],
+                  "sub_category": "Cooking > Knives & chopping boards",
+                  "type": "Chopping board, white",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "RODD",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "",
+                    },
+                  },
+                  "category": "Lighting",
+                  "colors": Array [],
+                  "description": "",
+                  "ikea_id": "70192406",
+                  "image": "http://www.ikea.com/us/en/images/products/rodd-floor-lamp-base-black__0120136_PE276562_S4.JPG",
+                  "materials": Array [
+                    "EVA plastic",
+                  ],
+                  "name": "RODD",
+                  "objectID": "509659230",
+                  "price": 25,
+                  "rating": 5,
+                  "share_count": 31625,
+                  "sizes": Array [],
+                  "sub_category": "Lighting > Shades, bases & cords",
+                  "type": "Floor lamp base, black",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "UNG DRILL",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Can be used in high humidity areas. Safety film reduces",
+                    },
+                  },
+                  "category": "Decoration",
+                  "colors": Array [],
+                  "description": "Can be used in high humidity areas. Safety film reduces damage if glass is broken.",
+                  "ikea_id": "40213759",
+                  "image": "http://www.ikea.com/us/en/images/products/ung-drill-mirror-black__0129203_PE283223_S4.JPG",
+                  "materials": Array [
+                    "Polystyrene",
+                    "Glass",
+                  ],
+                  "name": "UNG DRILL",
+                  "objectID": "509674970",
+                  "price": 39.99,
+                  "rating": 4,
+                  "share_count": 1645,
+                  "sizes": Array [
+                    "23 1/4x33 1/2\\"",
+                  ],
+                  "sub_category": "Decoration > Mirrors",
+                  "type": "Mirror, oval, black",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "KLADD PRICKAR",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "The touch and close fastening makes it easy to put",
+                    },
+                  },
+                  "category": "Eating",
+                  "colors": Array [],
+                  "description": "The touch and close fastening makes it easy to put on and take off.",
+                  "ikea_id": "70179754",
+                  "image": "http://www.ikea.com/us/en/images/products/kladd-prickar-bib-blue__0105547_PE252951_S4.JPG",
+                  "materials": Array [
+                    "100 % polyester",
+                  ],
+                  "name": "KLADD PRICKAR",
+                  "objectID": "509686240",
+                  "price": 5.99,
+                  "rating": 4,
+                  "share_count": 1526,
+                  "sizes": Array [],
+                  "sub_category": "Eating > Children's tableware",
+                  "type": "Bib, blue, red",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "PRESSA",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Suitable for both indoor and outdoor use. Simple to fold",
+                    },
+                  },
+                  "category": "Laundry",
+                  "colors": Array [],
+                  "description": "Suitable for both indoor and outdoor use. Simple to fold up and put away.",
+                  "ikea_id": "80189663",
+                  "image": "http://www.ikea.com/us/en/images/products/pressa-hanging-dryer-with-clothes-clips-assorted-colors__0106889_PE256270_S4.JPG",
+                  "materials": Array [
+                    "Polypropylene",
+                    "Reinforced polypropylene",
+                  ],
+                  "name": "PRESSA",
+                  "objectID": "509646420",
+                  "price": 4.99,
+                  "rating": 5,
+                  "share_count": 1481,
+                  "sizes": Array [],
+                  "sub_category": "Laundry > Laundry & cleaning",
+                  "type": "Hanging dryer with 16 clothes clips, assorted colors",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "TÅSTRUP",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "The thick pile dampens sound and provides a soft surface",
+                    },
+                  },
+                  "category": "Textiles & Rugs",
+                  "colors": Array [],
+                  "description": "The thick pile dampens sound and provides a soft surface to walk on.",
+                  "ikea_id": "70251740",
+                  "image": "http://www.ikea.com/us/en/images/products/tastrup-rug-low-pile-assorted-colors__0185525_PE337535_S4.JPG",
+                  "materials": Array [
+                    "100 % polypropylene",
+                    "Synthetic latex",
+                  ],
+                  "name": "TÅSTRUP",
+                  "objectID": "509629250",
+                  "price": 49.99,
+                  "rating": 4,
+                  "share_count": 1472,
+                  "sizes": Array [
+                    "4' 4\\"x6' 5\\"",
+                  ],
+                  "sub_category": "Textiles & Rugs > Rugs",
+                  "type": "Rug, low pile, multicolor",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "FÖRHÖJA",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Gives you extra storage, utility and work space. You can",
+                    },
+                  },
+                  "category": "Kitchen & appliances",
+                  "colors": Array [],
+                  "description": "Gives you extra storage, utility and work space. You can quickly view and access what's inside because the drawers can be pulled out from both sides.",
+                  "ikea_id": "80035920",
+                  "image": "http://www.ikea.com/us/en/images/products/forhoja-kitchen-cart__38532_PE130363_S4.JPG",
+                  "materials": Array [
+                    "Solid birch, Oil",
+                  ],
+                  "name": "FÖRHÖJA",
+                  "objectID": "509642300",
+                  "price": 99.99,
+                  "rating": 4,
+                  "share_count": 1359,
+                  "sizes": Array [
+                    "39 3/8x16 7/8\\"",
+                  ],
+                  "sub_category": "Kitchen & appliances > Kitchen islands & carts",
+                  "type": "Kitchen cart, birch",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "DIGNITET",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Complete set with hardware and curtain wire; ready to mount",
+                    },
+                  },
+                  "category": "Textiles & Rugs",
+                  "colors": Array [],
+                  "description": "Complete set with hardware and curtain wire; ready to mount to wall or ceiling.",
+                  "ikea_id": "60075295",
+                  "image": "http://www.ikea.com/us/en/images/products/dignitet-curtain-wire__0091163_PE226437_S4.JPG",
+                  "materials": Array [
+                    "Stainless steel",
+                  ],
+                  "name": "DIGNITET",
+                  "objectID": "509633840",
+                  "price": 12.99,
+                  "rating": 5,
+                  "share_count": 1343,
+                  "sizes": Array [
+                    "197\\"",
+                  ],
+                  "sub_category": "Textiles & Rugs > Curtain rods & rails",
+                  "type": "Curtain wire, stainless steel",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "IKEA PS 2014",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "You can easily switch between a brighter general light and",
+                    },
+                  },
+                  "category": "Lighting",
+                  "colors": Array [
+                    "White/turquoise",
+                  ],
+                  "description": "You can easily switch between a brighter general light and a softer mood light by just pulling the strings.",
+                  "ikea_id": "60251123",
+                  "image": "http://www.ikea.com/us/en/images/products/ikea-ps-pendant-lamp-white__0238901_PE378511_S4.JPG",
+                  "materials": Array [
+                    "ABS plastic",
+                  ],
+                  "name": "IKEA PS 2014",
+                  "objectID": "509661390",
+                  "price": 69.99,
+                  "rating": 4,
+                  "share_count": 1266,
+                  "sizes": Array [],
+                  "sub_category": "Lighting > Ceiling lights",
+                  "type": "Pendant lamp, white, turquoise",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "PREMIÄR",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Motif created by Skip Nall. With a large picture you",
+                    },
+                  },
+                  "category": "Decoration",
+                  "colors": Array [],
+                  "description": "Motif created by Skip Nall. With a large picture you can create mood and atmosphere in a whole room.",
+                  "ikea_id": "30173216",
+                  "image": "http://www.ikea.com/us/en/images/products/premiar-picture__0104392_PE251375_S4.JPG",
+                  "materials": Array [
+                    "100 % polypropylene",
+                    "Aluminum",
+                  ],
+                  "name": "PREMIÄR",
+                  "objectID": "509668460",
+                  "price": 149,
+                  "rating": 4,
+                  "share_count": 1258,
+                  "sizes": Array [
+                    "78 ¾x55\\"",
+                  ],
+                  "sub_category": "Decoration > Frames & pictures",
+                  "type": "Picture, jungle journey",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "TORVA",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "All soft toys are good at hugging, comforting and listening",
+                    },
+                  },
+                  "category": "Winter holidays",
+                  "colors": Array [],
+                  "description": "All soft toys are good at hugging, comforting and listening and are fond of play and mischief. In addition, they are reliable and tested for safety.",
+                  "ikea_id": "00195757",
+                  "image": "http://www.ikea.com/us/en/images/products/torva-soft-toy-green__0118546_PE274408_S4.JPG",
+                  "materials": Array [
+                    "100 % polyester",
+                    "Polyester fiber fill",
+                  ],
+                  "name": "TORVA",
+                  "objectID": "509680250",
+                  "price": 9.99,
+                  "rating": 5,
+                  "share_count": 1228,
+                  "sizes": Array [],
+                  "sub_category": "Winter holidays > Toys & play",
+                  "type": "Soft toy, broccoli, green",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "BYÅS",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "The open compartment has an adjustable shelf for your media",
+                    },
+                  },
+                  "category": "Living room",
+                  "colors": Array [],
+                  "description": "The open compartment has an adjustable shelf for your media equiptment, game consoles, etc.",
+                  "ikea_id": "80227797",
+                  "image": "http://www.ikea.com/us/en/images/products/byas-tv-unit-white__0144833_PE304277_S4.JPG",
+                  "materials": Array [
+                    "Particleboard, Acrylic paint, ABS plastic",
+                    "Particleboard, Fiberboard, Paper, Acrylic paint, ABS plastic",
+                    "Particleboard, Fiberboard, Acrylic paint, ABS plastic",
+                    "Fiberboard, Foil, ABS plastic",
+                    "Fiberboard, Acrylic paint",
+                    "Particleboard, Foil",
+                  ],
+                  "name": "BYÅS",
+                  "objectID": "509648800",
+                  "price": 119,
+                  "rating": 5,
+                  "share_count": 1180,
+                  "sizes": Array [
+                    "63x16 1/2x17 3/4\\"",
+                  ],
+                  "sub_category": "Living room > TV & media furniture",
+                  "type": "TV unit, high gloss white",
+                },
+              ],
+              "hitsPerPage": 36,
+              "index": "ikea",
+              "nbHits": 4618,
+              "nbPages": 28,
+              "page": 0,
+              "params": "query=&hitsPerPage=36&maxValuesPerFacet=20&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22type%22%2C%22sizes%22%2C%22materials%22%2C%22category%22%5D&tagFilters=",
+              "processingTimeMS": 38,
+              "query": "",
+            },
+          ],
+        },
+        "content": Object {
+          "_rawResults": Array [
+            Object {
+              "exhaustiveFacetsCount": true,
+              "exhaustiveNbHits": false,
+              "facets": Object {
+                "category": Object {
+                  "Decoration": 880,
+                },
+                "materials": Object {
+                  "Polypropylene": 602,
+                },
+                "sizes": Object {
+                  "6\\"": 67,
+                },
+                "type": Object {
+                  "Mirror": 20,
+                },
+              },
+              "hits": Array [
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "LEKPLATS",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "The latex backing keeps the rug in place when the",
+                    },
+                  },
+                  "category": "Textiles & Rugs",
+                  "colors": Array [],
+                  "description": "The latex backing keeps the rug in place when the child runs/plays on it.",
+                  "ikea_id": "20101871",
+                  "image": "http://www.ikea.com/us/en/images/products/lekplats-rug-low-pile-assorted-colors__54851_PE159658_S4.JPG",
+                  "materials": Array [
+                    "100 % nylon",
+                    "Latex",
+                  ],
+                  "name": "LEKPLATS",
+                  "objectID": "509632780",
+                  "price": 14.99,
+                  "rating": 5,
+                  "share_count": 1144,
+                  "sizes": Array [
+                    "4' 4\\"x4' 7\\"",
+                  ],
+                  "sub_category": "Textiles & Rugs > Children's textiles",
+                  "type": "Rug, low pile, multicolor",
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "name": Object {
+                      "matchLevel": "none",
+                      "matchedWords": Array [],
+                      "value": "IKEA PS MASKROS",
+                    },
+                  },
+                  "_snippetResult": Object {
+                    "description": Object {
+                      "matchLevel": "none",
+                      "value": "Projects decorative patterns onto the ceiling and on the wall.",
+                    },
+                  },
+                  "category": "Lighting",
+                  "colors": Array [],
+                  "description": "Projects decorative patterns onto the ceiling and on the wall.",
+                  "ikea_id": "90147465",
+                  "image": "http://www.ikea.com/us/en/images/products/ikea-ps-maskros-pendant-lamp__0091262_PE226703_S4.JPG",
+                  "materials": Array [
+                    "Polypropylene",
+                    "Steel, Nickel plated",
+                  ],
+                  "name": "IKEA PS MASKROS",
+                  "objectID": "509661660",
+                  "price": 89.99,
+                  "rating": 4,
+                  "share_count": 1126,
+                  "sizes": Array [],
+                  "sub_category": "Lighting > Ceiling lights",
+                  "type": "Pendant lamp",
+                },
+              ],
+              "hitsPerPage": 36,
+              "index": "ikea",
+              "nbHits": 4618,
+              "nbPages": 28,
+              "page": 0,
+              "params": "query=&hitsPerPage=36&maxValuesPerFacet=20&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22type%22%2C%22sizes%22%2C%22materials%22%2C%22category%22%5D&tagFilters=",
+              "processingTimeMS": 38,
+              "query": "",
+            },
+          ],
+          "_state": Object {
+            "disjunctiveFacets": Array [
+              "type",
+              "sizes",
+              "materials",
+            ],
+            "disjunctiveFacetsRefinements": Object {},
+            "facets": Array [],
+            "facetsExcludes": Object {},
+            "facetsRefinements": Object {},
+            "hierarchicalFacets": Array [
+              Object {
+                "attributes": Array [
+                  "category",
+                  "sub_category",
+                  "sub_sub_category",
+                ],
+                "name": "category",
+                "rootPath": null,
+                "separator": " > ",
+                "showParentLevel": false,
+              },
+            ],
+            "hierarchicalFacetsRefinements": Object {},
+            "highlightPostTag": "</ais-highlight-0000000000>",
+            "highlightPreTag": "<ais-highlight-0000000000>",
+            "hitsPerPage": 36,
+            "index": "ikea",
+            "maxValuesPerFacet": 20,
+            "numericRefinements": Object {},
+            "page": 0,
+            "query": "",
+            "tagRefinements": Array [],
+          },
+          "disjunctiveFacets": Array [
+            Object {
+              "data": Object {
+                "Frame, white": 17,
+                "Mirror": 20,
+              },
+              "exhaustive": true,
+              "name": "type",
+            },
+            Object {
+              "data": Object {
+                "20x20\\"": 61,
+                "6\\"": 67,
+              },
+              "exhaustive": true,
+              "name": "sizes",
+            },
+          ],
+          "exhaustiveFacetsCount": true,
+          "exhaustiveNbHits": false,
+          "facets": Array [],
+          "hierarchicalFacets": Array [
+            Object {
+              "count": null,
+              "data": Array [
+                Object {
+                  "count": 319,
+                  "data": null,
+                  "isRefined": false,
+                  "name": "Bathroom",
+                  "path": "Bathroom",
+                },
+                Object {
+                  "count": 41,
+                  "data": null,
+                  "isRefined": false,
+                  "name": "Bedroom",
+                  "path": "Bedroom",
+                },
+              ],
+              "isRefined": true,
+              "name": "category",
+              "path": null,
+            },
+          ],
+          "hits": Array [
+            Object {
+              "_highlightResult": Object {
+                "name": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "LEGITIM",
+                },
+              },
+              "_snippetResult": Object {
+                "description": Object {
+                  "matchLevel": "none",
+                  "value": "",
+                },
+              },
+              "category": "Cooking",
+              "description": "",
+              "ikea_id": "90202268",
+              "image": "http://www.ikea.com/us/en/images/products/legitim-chopping-board-white__0119427_PE275744_S4.JPG",
+              "materials": Array [
+                "Polyethylene",
+              ],
+              "name": "LEGITIM",
+              "objectID": "509665190",
+              "price": 1.49,
+              "rating": 5,
+              "share_count": 31625,
+              "sub_category": "Cooking > Knives & chopping boards",
+              "type": "Chopping board, white",
+            },
+            Object {
+              "_highlightResult": Object {
+                "name": Object {
+                  "matchLevel": "none",
+                  "matchedWords": Array [],
+                  "value": "RODD",
+                },
+              },
+              "_snippetResult": Object {
+                "description": Object {
+                  "matchLevel": "none",
+                  "value": "",
+                },
+              },
+              "category": "Lighting",
+              "colors": Array [],
+              "description": "",
+              "ikea_id": "70192406",
+              "image": "http://www.ikea.com/us/en/images/products/rodd-floor-lamp-base-black__0120136_PE276562_S4.JPG",
+              "materials": Array [
+                "EVA plastic",
+                "Cast iron, Acrylic coating",
+              ],
+              "name": "RODD",
+              "objectID": "509659230",
+              "price": 25,
+              "rating": 5,
+              "share_count": 31625,
+              "sizes": Array [],
+              "sub_category": "Lighting > Shades, bases & cords",
+              "type": "Floor lamp base, black",
+            },
+          ],
+          "hitsPerPage": 36,
+          "index": "ikea",
+          "nbHits": 4618,
+          "nbPages": 28,
+          "page": 0,
+          "processingTimeMS": 38,
+          "query": "",
+        },
+        "state": Object {
+          "disjunctiveFacets": Array [
+            "type",
+            "sizes",
+            "materials",
+          ],
+          "disjunctiveFacetsRefinements": Object {},
+          "facets": Array [],
+          "facetsExcludes": Object {},
+          "facetsRefinements": Object {},
+          "hierarchicalFacets": Array [
+            Object {
+              "attributes": Array [
+                "category",
+                "sub_category",
+                "sub_sub_category",
+              ],
+              "name": "category",
+              "rootPath": null,
+              "separator": " > ",
+              "showParentLevel": false,
+            },
+          ],
+          "hierarchicalFacetsRefinements": Object {},
+          "highlightPostTag": "</ais-highlight-0000000000>",
+          "highlightPreTag": "<ais-highlight-0000000000>",
+          "hitsPerPage": 36,
+          "index": "ikea",
+          "maxValuesPerFacet": 20,
+          "numericRefinements": Object {},
+          "page": 0,
+          "query": "",
+          "tagRefinements": Array [],
+        },
+      }
+    }
+    searchState={Object {}}
+  >
+    <AlgoliaConfigure(UnknownComponent)
+      hitsPerPage="36"
+    />
+    <section
+      className="o-product_list"
+    >
+      <section
+        className="o-product_list__container"
+      >
+        <section
+          className="o-product_list__actions--filter"
+        >
+          <div
+            className="o-product_list__current_refinements"
+          >
+            <AlgoliaCurrentRefinements(Translatable(CurrentRefinements))
+              transformItems={[Function]}
+            />
+            <AlgoliaCurrentRefinements(Translatable(ClearAll))
+              transformItems={[Function]}
+            />
+          </div>
+          <h2>
+            Category
+          </h2>
+          <AlgoliaHierarchicalMenu(Translatable(HierarchicalMenu))
+            attributes={
+              Array [
+                "category",
+                "sub_category",
+                "sub_sub_category",
+              ]
+            }
+            defaultRefinement="Bathroom"
+            limitMax={20}
+            limitMin={10}
+            rootPath="Bathroom"
+            selector=">"
+            separator=" > "
+            showMore={true}
+            showParentLevel={false}
+          />
+          <h2>
+            Type
+          </h2>
+          <AlgoliaRefinementList(Translatable(RefinementList))
+            attributeName="type"
+            limitMax={20}
+            limitMin={10}
+            operator="or"
+            showMore={false}
+          />
+          <h2>
+            Size
+          </h2>
+          <AlgoliaRefinementList(Translatable(RefinementList))
+            attributeName="sizes"
+            limitMax={20}
+            limitMin={10}
+            operator="or"
+            showMore={false}
+          />
+          <h2>
+            Material
+          </h2>
+          <AlgoliaRefinementList(Translatable(RefinementList))
+            attributeName="materials"
+            limitMax={20}
+            limitMin={10}
+            operator="or"
+            showMore={false}
+          />
+        </section>
+        <section
+          className="o-product_list__products"
+        >
+          <section
+            className="o-product_list__actions--sort o-row"
+          >
+            <div
+              role="pagination"
+            >
+              <AlgoliaPagination(Translatable(Pagination)) />
+            </div>
+            <div
+              role="Sort"
+            >
+              <AlgoliaSortBy(SortBy)
+                defaultRefinement="ikea"
+                items={
+                  Array [
+                    Object {
+                      "label": "Featured",
+                      "value": "ikea",
+                    },
+                    Object {
+                      "label": "Price asc.",
+                      "value": "ikea_price_asc",
+                    },
+                    Object {
+                      "label": "Price desc.",
+                      "value": "ikea_price_desc",
+                    },
+                  ]
+                }
+              />
+            </div>
+          </section>
+          <section
+            className="o-product_list-message o-row"
+            role="message"
+          />
+          <section
+            role="product list"
+          >
+            <AlgoliaHits(Hits)
+              hitComponent={[Function]}
+            />
+          </section>
+          <section
+            className="o-product_list__actions--sort o-row"
+          >
+            <div
+              role="pagination"
+            >
+              <AlgoliaPagination(Translatable(Pagination)) />
+            </div>
+            <div
+              role="Sort"
+            >
+              <AlgoliaSortBy(SortBy)
+                defaultRefinement="ikea"
+                items={
+                  Array [
+                    Object {
+                      "label": "Featured",
+                      "value": "ikea",
+                    },
+                    Object {
+                      "label": "Price asc.",
+                      "value": "ikea_price_asc",
+                    },
+                    Object {
+                      "label": "Price desc.",
+                      "value": "ikea_price_desc",
+                    },
+                  ]
+                }
+              />
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </CreateInstantSearchServer>
+</div>
+`;

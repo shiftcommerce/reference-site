@@ -1,0 +1,33 @@
+.ais-RefinementList {
+
+  &__root {}
+
+  &__items {}
+
+  &__item {
+    input[type=checkbox] {
+      display: none;
+    }
+  }
+
+  &__itemCheckbox {
+
+    &Selected {}
+  }
+
+  &__itemBox {
+
+    &Selected {}
+  }
+
+  &__itemLabel {
+
+    &Selected {}
+  }
+
+  &__itemCount {
+
+    &Selected {}
+  }
+
+}

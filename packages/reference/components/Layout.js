@@ -2,28 +2,33 @@
 import { Component } from 'react'
 import Link from 'next/link'
 
-// objects
+// Objects
 import Image from '../objects/Image'
 
-// components
+// Components
 import MiniBag from '../components/MiniBag'
 import NavBar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
 
 class Layout extends Component {
   render () {
+    let {
+      searchObject,
+      onSearchQueryChange
+    } = this.props
+
     return (
       <div>
         <div className='o-header'>
           <span className='o-header__logo'>
-            <Link href="/">
+            <Link href='/'>
               <a>
-                <Image width={ 250 } height={ 35 } />
+                <Image width={250} height={35} />
               </a>
             </Link>
           </span>
           <span className='o-header__search'>
-            <SearchBar />
+            <SearchBar queryObject={searchObject} onChange={onSearchQueryChange} {...this.props} />
           </span>
           <span className='o-header__minibag'>
             <MiniBag />

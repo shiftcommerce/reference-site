@@ -1,0 +1,27 @@
+/* -----GRID SYSTEM----- */ 
+
+// 12 columns, 100/12
+
+// Desktop 1024 - 
+// Mobile 
+// Tablet 
+
+
+// pull
+// push
+// normal
+
+
+@mixin grids($columns) {
+  .o-grid{
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+.o-row {
+  width: 100%;
+  display: flex;
+}

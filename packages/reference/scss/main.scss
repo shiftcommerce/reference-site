@@ -10,19 +10,23 @@
 @import '50_objects/_o-body';
 @import '50_objects/_o-breadcrumb';
 @import '50_objects/_o-footer';
+@import '50_objects/_o-grid';
 @import '50_objects/_o-header';
 @import '50_objects/_o-nav';
+@import '50_objects/_o-product_list';
 
-@import "60_components/_c-button";
-@import '60_components/_c-product-price';
-@import "60_components/_c-product-display";
-@import "60_components/_c-dummy_image";
-@import "60_components/_c-title";
-@import "60_components/_c-cart-table";
-@import "60_components/_c-line-items";
-@import "60_components/_c-cart-summary";
+@import '60_components/_c-button';
 @import "60_components/_c-cart-no-data";
+@import "60_components/_c-cart-summary";
+@import "60_components/_c-cart-table";
+@import '60_components/_c-image';
+@import "60_components/_c-line-items";
+@import '60_components/_c-product';
+@import '60_components/_c-product-price';
+@import '60_components/_c-product-display';
+@import '60_components/_c-title';
+
+@import '65_scopes/_algolia_instantsearch';
 
 @import "70_utilities/_u-float";
 @import "70_utilities/_u-text-color";
-

@@ -29,7 +29,7 @@ class Womens extends Component {
           <div>
             <Image src={url} alt='textured-long-t-shirt' height='350' width='250' aria-label='textured-long-t-shirt' />
           </div>
-          <Link href='/products/textured-long-t-shirt' >
+          <Link href='/products/708a0142-e60f-4332-9a8b-1359c5af9ec4' >
             <a>
               <Button label='Textured Long T Shirt' status='info' />
             </a>

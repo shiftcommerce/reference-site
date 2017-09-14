@@ -5,7 +5,7 @@ test('renders the correct output', () => {
 
   // act
   const wrapper = mount(
-    <ExampleComponent this={1} that={2} />
+    <ExampleComponent thisProp={1} thatProp={2} />
   )
 
   // assert

@@ -124,7 +124,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         className="c-dummy_image c-line-items__image"
                         style={
                           Object {
-                            "backgroundSize": 150,
                             "height": undefined,
                             "width": undefined,
                           }

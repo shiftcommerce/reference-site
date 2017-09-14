@@ -1,6 +1,7 @@
+// Libraries
 import { Component } from 'react'
 
-export default class CartNoData extends Component {
+class CartNoData extends Component {
   render () {
     return (
       <section className='c-cart-no-data'>
@@ -14,3 +15,5 @@ export default class CartNoData extends Component {
     )
   }
 }
+
+export default CartNoData

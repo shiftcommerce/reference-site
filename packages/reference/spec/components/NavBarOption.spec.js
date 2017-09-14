@@ -18,9 +18,10 @@ test('renders the link with extra class if index is 0', () => {
 
   // act
   const wrapper = shallow(
-    <NavBarOption title='Mens' link='/mens' index={ 0 } />
+    <NavBarOption title='Mens' link='/mens' index={0} />
   )
 
   // assert
+  expect(wrapper).toMatchSnapshot()
   expect(wrapper).toContainReact(<Link href='/mens'><a className='o-nav__option o-nav__option--first'>Mens</a></Link>)
 })

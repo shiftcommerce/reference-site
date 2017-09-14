@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the header 1`] = `
+<form
+  action="/search"
+  method="get"
+  onSubmit={[Function]}
+  role="search"
+>
+  <input
+    aria-label="search text"
+    name="query"
+    onChange={[Function]}
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
+  <button
+    className="c-button c-button--lrg"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

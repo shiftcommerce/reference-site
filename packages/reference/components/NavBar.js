@@ -1,3 +1,4 @@
+// Libraries
 import { Component } from 'react'
 
 // Objects
@@ -6,9 +7,9 @@ import NavBarOption from './NavBarOption'
 class NavBar extends Component {
   renderNavOptions () {
     const navOptions = [
-      { title: 'Mens', link: '/mens' },
+      { title: 'Mens', link: '/categories/mens' },
       { title: 'Womens', link: '/womens' },
-      { title: 'Boys', link: '/boys' },
+      { title: 'Bathroom', link: '/categories/Bathroom' },
       { title: 'Girls', link: '/girls' },
       { title: 'Other', link: '/other' },
       { title: 'Offers', link: '/offers' }
@@ -20,9 +21,11 @@ class NavBar extends Component {
   }
 
   render () {
-    return <div className='o-nav' role='navigation' >
-      { this.renderNavOptions() }
-    </div>
+    return (
+      <div className='o-nav' role='navigation' >
+        { this.renderNavOptions() }
+      </div>
+    )
   }
 }
 

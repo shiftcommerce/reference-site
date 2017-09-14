@@ -1,3 +1,4 @@
+// Libraries
 import { Component } from 'react'
 
 // Components
@@ -5,7 +6,7 @@ import LineItems from './LineItems'
 import CartSummary from './CartSummary'
 import CartNoData from './CartNoData'
 
-export default class CartTable extends Component {
+class CartTable extends Component {
   renderCartData () {
     const cart = this.props.cart
 
@@ -13,8 +14,8 @@ export default class CartTable extends Component {
       return <CartNoData />
     } else {
       return <section className='u-float-clear'>
-        <LineItems { ...this.props } aria-label='Line Items' />
-        <CartSummary { ...this.props } aria-label='Cart Summary' />
+        <LineItems {...this.props} aria-label='Line Items' />
+        <CartSummary {...this.props} aria-label='Cart Summary' />
       </section>
     }
   }
@@ -39,3 +40,5 @@ export default class CartTable extends Component {
     )
   }
 }
+
+export default CartTable

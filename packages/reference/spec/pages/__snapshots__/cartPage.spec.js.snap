@@ -43,7 +43,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   className="c-dummy_image"
                   style={
                     Object {
-                      "backgroundSize": 33.25,
                       "height": 35,
                       "width": 250,
                     }
@@ -57,26 +56,27 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           className="o-header__search"
         >
           <SearchBar>
-            <span
+            <form
+              action="/search"
+              method="get"
+              onSubmit={[Function]}
               role="search"
             >
               <input
                 aria-label="search text"
+                name="query"
+                onChange={[Function]}
                 placeholder="Search..."
                 type="search"
+                value=""
               />
-              <Link
-                href="/search"
+              <button
+                className="c-button c-button--lrg"
+                type="submit"
               >
-                <a
-                  className="c-button c-button--lrg"
-                  href="/search"
-                  onClick={[Function]}
-                >
-                  Search
-                </a>
-              </Link>
-            </span>
+                Search
+              </button>
+            </form>
           </SearchBar>
         </span>
         <span
@@ -153,15 +153,15 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         >
           <NavBarOption
             index={0}
-            link="/mens"
+            link="/categories/mens"
             title="Mens"
           >
             <Link
-              href="/mens"
+              href="/categories/mens"
             >
               <a
                 className="o-nav__option o-nav__option--first"
-                href="/mens"
+                href="/categories/mens"
                 onClick={[Function]}
               >
                 Mens
@@ -187,18 +187,18 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           </NavBarOption>
           <NavBarOption
             index={2}
-            link="/boys"
-            title="Boys"
+            link="/categories/Bathroom"
+            title="Bathroom"
           >
             <Link
-              href="/boys"
+              href="/categories/Bathroom"
             >
               <a
                 className="o-nav__option"
-                href="/boys"
+                href="/categories/Bathroom"
                 onClick={[Function]}
               >
-                Boys
+                Bathroom
               </a>
             </Link>
           </NavBarOption>
@@ -383,7 +383,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                                 className="c-dummy_image c-line-items__image"
                                 style={
                                   Object {
-                                    "backgroundSize": 150,
                                     "height": undefined,
                                     "width": undefined,
                                   }

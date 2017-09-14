@@ -102,13 +102,23 @@ exports[`renders correctly 1`] = `
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
           width={503}
         >
-          <img
-            alt="Textured Long T-Shirt"
-            aria-label="Textured Long T-Shirt"
-            height={705}
-            src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
-            width={503}
-          />
+          <div
+            style={
+              Object {
+                "height": 705,
+                "width": 503,
+              }
+            }
+          >
+            <img
+              alt="Textured Long T-Shirt"
+              aria-label="Textured Long T-Shirt"
+              className="c-image"
+              height={705}
+              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+              width={503}
+            />
+          </div>
         </Image>
       </div>
       <div
@@ -453,11 +463,21 @@ exports[`renders correctly 1`] = `
                     src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
                     width={73}
                   >
-                    <img
-                      height={73}
-                      src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-                      width={73}
-                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 73,
+                          "width": 73,
+                        }
+                      }
+                    >
+                      <img
+                        className="c-image"
+                        height={73}
+                        src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+                        width={73}
+                      />
+                    </div>
                   </Image>
                   <Link
                     href="/products/stripe-shirt"
@@ -479,7 +499,6 @@ exports[`renders correctly 1`] = `
                       className="c-dummy_image"
                       style={
                         Object {
-                          "backgroundSize": 69.35,
                           "height": 73,
                           "width": 73,
                         }

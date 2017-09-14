@@ -3,30 +3,29 @@ import classNames from 'classnames'
 
 class Image extends Component {
   styles () {
-    let basicStyles = {
+    return {
       height: this.props.height,
       width: this.props.width
-    }
-
-    if (basicStyles.height < 200) {
-      return { ...basicStyles, backgroundSize: ((basicStyles.height * 19) / 20) }
-    } else if (basicStyles.width < 200) {
-      return { ...basicStyles, backgroundSize: ((basicStyles.width * 19) / 20) }
-    } else {
-      return { ...basicStyles, backgroundSize: 150 }
     }
   }
 
   render () {
     let {
       src,
-      className
+      className,
+      ...otherProps
     } = this.props
 
     if (src) {
-      return <img {...this.props} />
+      return (
+        <div className={className} style={this.styles()} >
+          <img src={src} className='c-image' {...otherProps} />
+        </div>
+      )
     } else {
-      return <div className={classNames('c-dummy_image', className)} style={this.styles()} />
+      return (
+        <div className={classNames('c-dummy_image', className)} style={this.styles()} />
+      )
     }
   }
 }

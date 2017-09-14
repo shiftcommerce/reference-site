@@ -2,9 +2,16 @@ import { Component } from 'react'
 
 class ExampleComponent extends Component {
   render () {
-    return <div>
-      The output of { this.props.this } + { this.props.that } is { this.props.this + this.props.that }
-    </div>
+    let {
+      thisProp,
+      thatProp
+    } = this.props
+
+    return (
+      <div>
+        `The output of {thisProp} + {thatProp} is {thisProp + thatProp}`
+      </div>
+    )
   }
 }
 

@@ -18,12 +18,12 @@ test('renders image if url provided', () => {
 
   // act
   const wrapper = shallow(
-    <Image src='www.someimageurl.com' className="c-some_class" height='auto' width='90%' />
+    <Image src='www.someimageurl.com' className='c-some_class' height='auto' width='90%' />
   )
 
   // assert
   expect(wrapper.find('img')).toHaveProp('src', 'www.someimageurl.com')
   expect(wrapper.find('img')).toHaveProp('height', 'auto')
   expect(wrapper.find('img')).toHaveProp('width', '90%')
-  expect(wrapper.find('img')).toHaveClassName('c-some_class')
+  expect(wrapper.find('div')).toHaveClassName('c-some_class')
 })

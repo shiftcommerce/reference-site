@@ -10,6 +10,6 @@ test('renders the header', () => {
   )
 
   // assert
-  expect(wrapper).toContainReact(<input type="search" aria-label='search text' placeholder="Search..." />)
-  expect(wrapper).toContainReact(<Link href='/search'><a className='c-button c-button--lrg'>Search</a></Link>)
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Search')
 })
