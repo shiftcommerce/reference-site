@@ -3,14 +3,16 @@ import { combineReducers } from 'redux'
 
 // Reducers
 import setCart from './setCart'
-import setCategory from '../reducers/setCategory'
+import setCategory from './setCategory'
+import setCategories from './setCategories'
 import setProcessingState from './setProcessingState'
 import setProduct from './setProduct'
-import setSearchState from '../reducers/setSearchState'
+import setSearchState from './setSearchState'
 
 const rootReducer = combineReducers({
   cart: setCart,
   category: setCategory,
+  categories: setCategories,
   process: setProcessingState,
   product: setProduct,
   search: setSearchState

@@ -1,5 +1,5 @@
 // actionTypes
-import * as actionTypes from '../constants/actionTypes'
+import * as actionTypes from './actionTypes'
 
 // cartHandler
 import * as cartHandler from './../lib/cartHandler'

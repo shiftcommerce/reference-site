@@ -3,10 +3,10 @@ import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 
 // utils
-import { configureStore } from '../utils/configureStore'
+import { configureStore } from '../../utils/configureStore'
 
 // Components
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 
 class Index extends Component {
   render () {

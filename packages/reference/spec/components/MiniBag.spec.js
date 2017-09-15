@@ -13,7 +13,8 @@ test('renders the minibag links', () => {
         sku: '123',
         image_url: '',
         size: 'size - 8',
-        productSku: '1231'
+        productSku: '1231',
+        productID: 1
       }
     ]
   }
@@ -56,7 +57,8 @@ test('renders the line item quantity as expected, where are items', () => {
         sku: '123',
         image_url: '',
         size: 'size - 8',
-        productSku: '1231'
+        productSku: '1231',
+        productID: 1
       }
     ]
   }

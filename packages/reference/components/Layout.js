@@ -7,7 +7,7 @@ import Image from '../objects/Image'
 
 // Components
 import MiniBag from '../components/MiniBag'
-import NavBar from '../components/NavBar'
+import NavBar from './navigation/NavBar'
 import SearchBar from '../components/SearchBar'
 
 class Layout extends Component {
@@ -21,7 +21,7 @@ class Layout extends Component {
       <div>
         <div className='o-header'>
           <span className='o-header__logo'>
-            <Link href='/'>
+            <Link href='/home/index' as='/'>
               <a>
                 <Image width={250} height={35} />
               </a>

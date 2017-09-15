@@ -22,7 +22,7 @@ class LineItems extends Component {
     const cartData = this.props.cart.lineItems.map((lineItem, index) =>
       <tr key={index} className='c-line-items__column'>
         <td aria-label={lineItem.title}>
-          <Link href={`/products/${lineItem.productSku}`}>
+          <Link href={`/products/product?${lineItem.productID}`} as={`/products/${lineItem.productID}`}>
             <a>
               <Image src={lineItem.imageUrl} alt={lineItem.title} className='c-line-items__image' aria-label={lineItem.title} />
               { lineItem.title }

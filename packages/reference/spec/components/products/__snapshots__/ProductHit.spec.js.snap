@@ -63,7 +63,8 @@ exports[`renders correctly 1`] = `
     className="c-product"
   >
     <Link
-      href="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
+      as="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
+      href="/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4"
     >
       <a
         href="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"

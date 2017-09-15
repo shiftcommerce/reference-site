@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the navbar 1`] = `
+<div>
+  <div
+    className="o-header"
+  >
+    <span
+      className="o-header__logo"
+    >
+      <Link
+        as="/"
+        href="/home/index"
+      >
+        <a>
+          <Image
+            height={35}
+            width={250}
+          />
+        </a>
+      </Link>
+    </span>
+    <span
+      className="o-header__search"
+    >
+      <SearchBar />
+    </span>
+    <span
+      className="o-header__minibag"
+    >
+      <WrappedCmp />
+    </span>
+  </div>
+  <Connect(NavBar) />
+  <div
+    className="o-body"
+  />
+  <div
+    className="o-footer"
+  >
+    Footer
+  </div>
+</div>
+`;

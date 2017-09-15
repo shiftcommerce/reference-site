@@ -1,20 +1,23 @@
+// Components
 import Layout from '../../components/Layout'
-import NavBar from '../../components/NavBar'
+import NavBar from '../../components/navigation/NavBar'
 import MiniBag from '../../components/MiniBag'
-import Image from '../../objects/Image'
 import SearchBar from '../../components/SearchBar'
 
-test('renders the header', () => {
-  // arrange
+// Objects
+import Image from '../../objects/Image'
 
-  // act
-  const wrapper = mount(
+test('renders the header', () => {
+  // Arrange
+
+  // Act
+  const wrapper = shallow(
     <Layout />
   )
 
   const header = wrapper.find('div.o-header')
 
-  // assert
+  // Assert
   expect(header).toBePresent()
   expect(header).toIncludeText('Search')
   expect(header).toContainReact(<Image width={250} height={35} />)
@@ -22,33 +25,32 @@ test('renders the header', () => {
 })
 
 test('renders the navbar', () => {
-  // arrange
+  // Arrange
 
-  // act
-  const wrapper = shallow(
-    <Layout />
-  )
+  // Act
+  const wrapper = shallow(<Layout />)
 
-  // assert
-  expect(wrapper).toContainReact(<NavBar />)
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find(NavBar)).toBePresent()
 })
 
 test('renders the footer', () => {
-  // arrange
+  // Arrange
 
-  // act
+  // Act
   const wrapper = shallow(
     <Layout />
   )
 
-  // assert
+  // Assert
   expect(wrapper.find('div.o-footer')).toIncludeText('Footer')
 })
 
 test('renders the children inside it', () => {
-  // arrange
+  // Arrange
 
-  // act
+  // Act
   const wrapper = shallow(
     <Layout>
       Content

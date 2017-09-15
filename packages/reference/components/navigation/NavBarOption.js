@@ -6,13 +6,14 @@ import classNames from 'classnames'
 class NavBarOption extends Component {
   render () {
     let {
-      link,
+      href,
+      as,
       title,
       index
     } = this.props
 
     return (
-      <Link href={link}>
+      <Link href={href} as={as}>
         <a className={classNames('o-nav__option', { 'o-nav__option--first': index === 0 })} >
           { title }
         </a>

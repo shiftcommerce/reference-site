@@ -1,6 +1,6 @@
 
 import * as cartActions from '../../actions/cartActions'
-import * as actionTypes from '../../constants/actionTypes'
+import * as actionTypes from '../../actions/actionTypes'
 
 // Mock localforage module
 jest.mock('../../lib/localforage')

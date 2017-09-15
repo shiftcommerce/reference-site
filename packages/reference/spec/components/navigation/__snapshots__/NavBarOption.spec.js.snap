@@ -2,7 +2,8 @@
 
 exports[`renders the link with extra class if index is 0 1`] = `
 <Link
-  href="/mens"
+  as="/categories/mens"
+  href="/categories/category?id=mens"
 >
   <a
     className="o-nav__option o-nav__option--first"

@@ -10,12 +10,16 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
+  server.get('/', (req, res) => {
+    return app.render(req, res, '/home/index', req.query)
+  })
+
   server.get('/products/:id', (req, res) => {
-    return app.render(req, res, '/products/product', req.query)
+    return app.render(req, res, '/products/product', Object.assign(req.query, req.params))
   })
 
   server.get('/categories/:id', (req, res) => {
-    return app.render(req, res, '/categories/category', req.query)
+    return app.render(req, res, '/categories/category', Object.assign(req.query, req.params))
   })
 
   server.get('/search', (req, res) => {

@@ -1,18 +1,18 @@
-// Reducer
-import { parseJsonApiResource, parseJsonApiResources } from '../../lib/jsonApiParsers'
+// Libs
+import JsonApiParser from '../../lib/JsonApiParser'
 
 // Fixtures
 import productsPayload from '../fixtures/products_payload.fixture'
 import productPayload from '../fixtures/product_payload.fixture'
 
-describe('parseJsonApiResources', () => {
+describe('JsonApiParser', () => {
   test('it parses a JSON API resource collection correctly', () => {
     // Arrange
     const payloadData = productsPayload.data
     const payloadLinks = productsPayload.links
 
     // Act
-    const { data, pagination } = parseJsonApiResources(productsPayload)
+    const { data, pagination } = new JsonApiParser().parse(productsPayload)
 
     // Assert
     expect(Array.isArray(data)).toBe(true)
@@ -41,13 +41,11 @@ describe('parseJsonApiResources', () => {
       expect(parsedAssetFiles.length).toBe(payloadResourceRelationships.asset_files.data.length)
     })
   })
-})
 
-describe('parseJsonApiResource', () => {
   test('it parses a JSON API resource correctly', () => {
     // Arrange & Act
     const payloadResourceData = productPayload.data
-    const parsedResource = parseJsonApiResource(productPayload)
+    const parsedResource = new JsonApiParser().parse(productPayload)
     const parsedVariants = parsedResource.variants
     const parsedAssetFiles = parsedResource.asset_files
 

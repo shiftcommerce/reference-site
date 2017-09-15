@@ -31,9 +31,9 @@ class Product extends Component {
     this.addToBag = this.addToBag.bind(this)
   }
 
-  static async getInitialProps ({ store, req }) {
-    if (req.params.id) {
-      await store.dispatch(readProduct(req.params.id))
+  static async getInitialProps ({ store, query }) {
+    if (query.id) {
+      await store.dispatch(readProduct(query.id))
     } else {
       return { product: {} }
     }
@@ -51,7 +51,8 @@ class Product extends Component {
         quantity: parseInt(quantity),
         price: price,
         imageUrl: product.asset_files[0].url,
-        productSku: product.sku
+        productSku: product.sku,
+        productID: product.id
       }
       this.props.dispatch(addToCart(lineItem))
     } else {
@@ -75,8 +76,8 @@ class Product extends Component {
 
   render () {
     const breadcrumbMenuTrail = [
-                                  { id: 1, title: 'Womens', canonical_path: '/womens' },
-                                  { id: 2, title: 'Textured Long T-Shirt', canonical_path: '/products/textured-long-t-shirt' }
+      { id: 1, title: 'Dresses', canonical_path: '/categories/61af1530-a9e8-44f2-a5c0-a0e7fe8f397b' },
+      { id: 2, title: 'Textured Long T-Shirt', canonical_path: '/products/708a0142-e60f-4332-9a8b-1359c5af9ec4' }
     ]
 
     let {

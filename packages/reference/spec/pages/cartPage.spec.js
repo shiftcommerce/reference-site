@@ -1,33 +1,31 @@
+// Libraries
+import { Provider } from 'react-redux'
+import { createMockStore } from 'redux-test-utils'
+
 // Pages
 import { CartPage } from '../../pages/cart'
-// actions
+
+// Actions
 import { updateQuantity } from '../../actions/cartActions'
 
+// Fixtures
+import cart from '../fixtures/cart.fixture'
+
 test('dispatch updateQuantity action on changing line item quantity', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'test',
-        price: 10,
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8',
-        productSku: '1231'
-      }
-    ]
-  }
+  // Arrange
+  const initialState = {}
   const expectedFunction = updateQuantity().toString()
   const updateQuantitySpy = jest.spyOn(CartPage.prototype, 'updateQuantity')
   const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
-  // act
+  // Act
   const wrapper = mount(
-    <CartPage cart={cart} dispatch={dispatch} />
+    <Provider store={createMockStore(initialState)}>
+      <CartPage cart={cart} dispatch={dispatch} />
+    </Provider>
   )
 
+  // Assert
   expect(wrapper).toMatchSnapshot()
 
   // Verify if cart line items are available

@@ -24,7 +24,7 @@ class ProductHit extends Component {
 
     return (
       <section className='c-product'>
-        <Link href='/products/708a0142-e60f-4332-9a8b-1359c5af9ec4' >
+        <Link href='/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4' as='/products/708a0142-e60f-4332-9a8b-1359c5af9ec4'>
           <a>
             <div className='c-product__image-container'>
               <Image className='c-product__image' src={hit.image} />

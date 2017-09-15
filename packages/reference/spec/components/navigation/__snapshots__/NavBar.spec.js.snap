@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the nav bar options 1`] = `
+<Connect(NavBar)>
+  <NavBar
+    categories={
+      Array [
+        Object {
+          "id": 1,
+          "reference": "Bathroom",
+          "title": "Bathroom",
+        },
+      ]
+    }
+    dispatch={[Function]}
+  >
+    <div
+      className="o-nav"
+      role="navigation"
+    >
+      <NavBarOption
+        as="/categories/1"
+        href="/categories/category?id=1"
+        index={0}
+        title="Bathroom"
+      >
+        <Link
+          as="/categories/1"
+          href="/categories/category?id=1"
+        >
+          <a
+            className="o-nav__option o-nav__option--first"
+            href="/categories/1"
+            onClick={[Function]}
+          >
+            Bathroom
+          </a>
+        </Link>
+      </NavBarOption>
+    </div>
+  </NavBar>
+</Connect(NavBar)>
+`;

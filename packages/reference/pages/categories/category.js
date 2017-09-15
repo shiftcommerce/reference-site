@@ -6,7 +6,7 @@ import qs from 'qs'
 
 // Actions
 import { setSearchState } from '../../actions/searchActions'
-import { fetchCategory } from '../../actions/categoryActions'
+import { readCategory } from '../../actions/categoryActions'
 
 // Components
 import Layout from '../../components/Layout'
@@ -22,10 +22,10 @@ import Breadcrumb from '../../objects/Breadcrumb'
 import { configureStore } from '../../utils/configureStore'
 
 class Category extends Component {
-  static async getInitialProps ({ store, req, query, url }) {
+  static async getInitialProps ({ store, query, url }) {
     const searchState = query
     const resultState = await findResultsState(PLP, { searchState })
-    await store.dispatch(fetchCategory(req.params.id))
+    await store.dispatch(readCategory(query.id))
     store.dispatch(setSearchState(searchState))
 
     return {
@@ -37,9 +37,14 @@ class Category extends Component {
 
   onSearchStateChange (searchState) {
     delete searchState.configure
+    delete searchState.id
+
     let searchObject = trimObject(searchState)
-    let as = `/categories/${this.props.category.id}?${qs.stringify(searchObject)}`
     let href = `/categories/category?id=${this.props.category.id}`
+
+    // Using `category.reference` in order for current algolia implementation to work
+    let as = `/categories/${this.props.category.reference}?${qs.stringify(searchObject)}`
+
     Router.push(href, as, {shallow: true})
     this.props.dispatch(setSearchState(searchObject))
   }

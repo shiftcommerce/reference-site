@@ -30,7 +30,7 @@ class Breadcrumb extends Component {
       <nav>
         <ol className={'o-breadcrumb'} {...otherProps}>
           <li className='o-breadcrumb__item'>
-            <Link href='/' >
+            <Link href='/home/index' as='/'>
               <a className='o-breadcrumb__link'>Home</a>
             </Link>
           </li>

@@ -5,12 +5,12 @@ exports[`renders correctly 1`] = `
   trail={
     Array [
       Object {
-        "canonical_path": "/womens",
+        "canonical_path": "/categories/womens",
         "id": 1,
         "title": "Womens",
       },
       Object {
-        "canonical_path": "/products/textured-long-t-shirt",
+        "canonical_path": "/products/708a0142-e60f-4332-9a8b-1359c5af9ec4",
         "id": 2,
         "title": "Textured Long T-Shirt",
       },
@@ -25,7 +25,8 @@ exports[`renders correctly 1`] = `
         className="o-breadcrumb__item"
       >
         <Link
-          href="/"
+          as="/"
+          href="/home/index"
         >
           <a
             className="o-breadcrumb__link"
@@ -40,11 +41,11 @@ exports[`renders correctly 1`] = `
         className="o-breadcrumb__item"
       >
         <Link
-          href="/womens"
+          href="/categories/womens"
         >
           <a
             className="o-breadcrumb__link"
-            href="/womens"
+            href="/categories/womens"
             onClick={[Function]}
           >
             Womens
@@ -55,11 +56,11 @@ exports[`renders correctly 1`] = `
         className="o-breadcrumb__item"
       >
         <Link
-          href="/products/textured-long-t-shirt"
+          href="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
         >
           <a
             className="o-breadcrumb__link"
-            href="/products/textured-long-t-shirt"
+            href="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
             onClick={[Function]}
           >
             Textured Long T-Shirt
