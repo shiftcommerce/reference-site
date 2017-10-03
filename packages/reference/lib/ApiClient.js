@@ -4,8 +4,10 @@ import fetch from 'isomorphic-fetch'
 
 class ApiClient {
   constructor (options = {}) {
-    this.host = options.host || process.env.API_HOST
-    this.access_token = options.access_token || process.env.API_ACCESS_TOKEN
+    // if there is any external host (other than shift apps) we explicitly want to set,
+    // then it needs to be passed to this class. If not, then the call will be handled
+    // by express server with the host set to express host
+    this.host = options.host || process.env.LOCAL_API_HOST
   }
 
   read (endpoint, queryObject = {}, options = {}) {
@@ -14,18 +16,18 @@ class ApiClient {
     return this.sendRequest(formattedEndpoint, options)
   }
 
-  post (endpoint, options = {}) {
+  post (endpoint, body = {}, options = {}) {
     options['method'] = 'POST'
+    options['body'] = body
     return this.sendRequest(endpoint, options)
   }
 
   async sendRequest (endpoint, options = {}) {
-    const url = this.host + endpoint
     const defaultHeaders = {
       'Content-Type': 'application/vnd.api+json',
-      'Accept': 'application/vnd.api+json',
-      'Authorization': `Bearer ${this.access_token}`
+      'Accept': 'application/vnd.api+json'
     }
+    const url = `${this.host}${endpoint}`
     const headers = options.headers || defaultHeaders
     const method = options.method || 'GET'
     const body = JSON.stringify(options.body)
@@ -36,7 +38,8 @@ class ApiClient {
 
   encodeParams (endpoint, queryObject = {}) {
     if (Object.keys(queryObject).length > 0) {
-      endpoint += '?' + qs.stringify(queryObject)
+      const query = qs.stringify(queryObject)
+      endpoint = `${endpoint}?${query}`
     }
     return endpoint
   }

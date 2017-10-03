@@ -6,7 +6,7 @@ import { readEndpoint } from './apiActions'
 
 export function readProduct (productID) {
   const request = {
-    endpoint: `/pim/v1/products/${productID}.json_api`,
+    endpoint: `/getProduct/${productID}`,
     query: {
       include: 'variants,asset_files'
     },

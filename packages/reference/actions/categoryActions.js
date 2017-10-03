@@ -6,7 +6,7 @@ import { readEndpoint } from './apiActions'
 
 export function readCategories () {
   const request = {
-    endpoint: '/pim/v1/categories.json_api',
+    endpoint: '/getCategories',
     query: {
       fields: {
         categories: 'id,title,reference'
@@ -19,7 +19,7 @@ export function readCategories () {
 
 export function readCategory (categoryID) {
   const request = {
-    endpoint: `/pim/v1/categories/${categoryID}.json_api`,
+    endpoint: `/getCategory/${categoryID}`,
     query: {
       fields: {
         categories: 'id,title,reference'

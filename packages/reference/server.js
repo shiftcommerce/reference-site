@@ -2,6 +2,10 @@ const express = require('express')
 const next = require('next')
 const { createReadStream } = require('fs')
 
+// Custom route handlers
+const productHandler = require('./routeHandlers/productHandler')
+const categoryHandler = require('./routeHandlers/categoryHandler')
+
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -30,6 +34,11 @@ app.prepare().then(() => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./static/serviceWorker.js').pipe(res)
   })
+
+  // Routes for local API calls
+  server.get('/getProduct/:id', productHandler.getProductRenderer(app))
+  server.get('/getCategory/:id', categoryHandler.getCategoryRenderer(app))
+  server.get('/getCategories', categoryHandler.getCategoriesRenderer(app))
 
   server.get('*', (req, res) => {
     return handle(req, res)
