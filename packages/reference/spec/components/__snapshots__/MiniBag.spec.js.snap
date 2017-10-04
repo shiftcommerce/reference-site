@@ -1,5 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders a disabled checkout button where cart is empty 1`] = `
+<MiniBag
+  cart={
+    Object {
+      "lineItems": Array [],
+    }
+  }
+  dispatch={[Function]}
+>
+  <div>
+    <Link
+      href="/cart"
+    >
+      <a
+        aria-label="View your cart"
+        href="/cart"
+        onClick={[Function]}
+      >
+        View Your Bag
+        <span
+          style={
+            Object {
+              "marginLeft": "5px",
+              "marginRight": "5px",
+            }
+          }
+        >
+          (
+          0
+          )
+        </span>
+      </a>
+    </Link>
+    <div
+      aria-label="Go to checkout"
+      className="c-button c-button--negative c-button--lrg c-button--disabled"
+    >
+      CHECKOUT
+    </div>
+  </div>
+</MiniBag>
+`;
+
+exports[`renders an active checkout button where cart has items 1`] = `
+<MiniBag
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "image_url": "",
+          "price": 10,
+          "productID": 1,
+          "productSku": "1231",
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+    }
+  }
+  dispatch={[Function]}
+>
+  <div>
+    <Link
+      href="/cart"
+    >
+      <a
+        aria-label="View your cart"
+        href="/cart"
+        onClick={[Function]}
+      >
+        View Your Bag
+        <span
+          style={
+            Object {
+              "marginLeft": "5px",
+              "marginRight": "5px",
+            }
+          }
+        >
+          (
+          1
+          )
+        </span>
+      </a>
+    </Link>
+    <Link
+      href="/checkout"
+    >
+      <a
+        aria-label="Go to checkout"
+        className="c-button c-button--negative c-button--lrg"
+        href="/checkout"
+        onClick={[Function]}
+      >
+        CHECKOUT
+      </a>
+    </Link>
+  </div>
+</MiniBag>
+`;
+
 exports[`renders the minibag links 1`] = `
 <div>
   <Link

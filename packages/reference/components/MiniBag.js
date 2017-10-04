@@ -14,6 +14,20 @@ export class MiniBag extends Component {
     this.props.dispatch(readCart())
   }
 
+  renderCheckoutButton () {
+    if (this.props.cart.lineItems.length > 0) {
+      return <Link href='/checkout'>
+        <a className='c-button c-button--negative c-button--lrg' aria-label='Go to checkout'>
+          CHECKOUT
+        </a>
+      </Link>
+    } else {
+      return <div className='c-button c-button--negative c-button--lrg c-button--disabled' aria-label='Go to checkout'>
+        CHECKOUT
+      </div>
+    }
+  }
+
   render () {
     return <div>
       <Link href='/cart'>
@@ -24,11 +38,7 @@ export class MiniBag extends Component {
           </span>
         </a>
       </Link>
-      <Link href='/checkout'>
-        <a className='c-button c-button--negative c-button--lrg' aria-label='Go to checkout'>
-          CHECKOUT
-        </a>
-      </Link>
+      { this.renderCheckoutButton() }
     </div>
   }
 }

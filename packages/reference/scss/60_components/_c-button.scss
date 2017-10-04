@@ -60,4 +60,9 @@
     padding: 0.5rem 0.75rem;
   }
 
+  &--disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
 }
