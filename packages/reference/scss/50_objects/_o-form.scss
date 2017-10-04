@@ -1,0 +1,19 @@
+.o-form {
+  width: 100%;
+  padding: 0 10%;
+  margin-top: 10px;
+
+  &__wrapper {
+    border: 1px solid #000;
+    padding: 10px 30px;
+  }
+
+  &__input-group {
+    padding-top: 10px;
+
+    input[type="text"], select {
+      display: block;
+      width: 100%;
+    }
+  }
+}
