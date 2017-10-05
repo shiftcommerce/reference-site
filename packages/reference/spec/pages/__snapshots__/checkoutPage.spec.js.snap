@@ -555,7 +555,9 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                    Shipping: 
                 </dt>
                 <dd>
-                   Enter address 
+                   
+                  Enter address
+                   
                 </dd>
               </dl>
               <dl

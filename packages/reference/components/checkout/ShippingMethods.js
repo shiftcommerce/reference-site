@@ -1,8 +1,8 @@
 // Libraries
 import { Component } from 'react'
 
-// Shipping methods
-import ShippingMethodsJson from './../../static/shippingMethods.json'
+// Fixtures
+import ShippingMethodsJson from '../../static/shippingMethods.json'
 
 export default class ShippingMethods extends Component {
   constructor (props) {

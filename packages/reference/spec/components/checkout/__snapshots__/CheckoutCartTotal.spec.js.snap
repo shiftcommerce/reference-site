@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the correct checkout cart total with multiple line items 1`] = `
+exports[`renders the correct checkout cart costs with shipping address completed 1`] = `
 <CheckoutCartTotal
   cart={
     Object {
@@ -18,6 +18,14 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
           "title": "Pretend Product",
         },
       ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+      },
+      "shippingMethod": Object {},
     }
   }
 >
@@ -59,7 +67,199 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
            Shipping: 
         </dt>
         <dd>
-           Enter address 
+           
+          Select shipping method
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="o-checkout-cart-total__total"
+      >
+        <dt>
+           You Pay: 
+        </dt>
+        <dd>
+           
+          <b>
+            £
+            25
+          </b>
+           
+        </dd>
+      </dl>
+    </div>
+  </div>
+</CheckoutCartTotal>
+`;
+
+exports[`renders the correct checkout cart costs with shipping method selected 1`] = `
+<CheckoutCartTotal
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": 10,
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": 5,
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+      },
+      "shippingMethod": Object {
+        "cost": 3.45,
+        "delivery_date": "Monday 3rd December",
+        "id": "1",
+        "title": "Super Saver",
+        "value": "super_saver",
+      },
+    }
+  }
+>
+  <div
+    aria-label="Cart total summary"
+    className="o-checkout-cart-total"
+  >
+    <div
+      className="o-checkout-cart-total__wrapper"
+    >
+      <dl
+        aria-label="Subtotal"
+      >
+        <dt>
+           Subtotal: 
+        </dt>
+        <dd>
+           £
+          25
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="VAT"
+      >
+        <dt>
+           VAT: 
+        </dt>
+        <dd>
+           £
+          0
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping: 
+        </dt>
+        <dd>
+           
+          £3.45
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="o-checkout-cart-total__total"
+      >
+        <dt>
+           You Pay: 
+        </dt>
+        <dd>
+           
+          <b>
+            £
+            28.45
+          </b>
+           
+        </dd>
+      </dl>
+    </div>
+  </div>
+</CheckoutCartTotal>
+`;
+
+exports[`renders the correct checkout cart total with multiple line items 1`] = `
+<CheckoutCartTotal
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": 10,
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": 5,
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {},
+      "shippingMethod": Object {},
+    }
+  }
+>
+  <div
+    aria-label="Cart total summary"
+    className="o-checkout-cart-total"
+  >
+    <div
+      className="o-checkout-cart-total__wrapper"
+    >
+      <dl
+        aria-label="Subtotal"
+      >
+        <dt>
+           Subtotal: 
+        </dt>
+        <dd>
+           £
+          25
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="VAT"
+      >
+        <dt>
+           VAT: 
+        </dt>
+        <dd>
+           £
+          0
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping: 
+        </dt>
+        <dd>
+           
+          Enter address
+           
         </dd>
       </dl>
       <dl
@@ -98,6 +298,11 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
           "title": "Test Product",
         },
       ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {},
     }
   }
   title="Checkout Cart Summary"
@@ -140,7 +345,9 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
            Shipping: 
         </dt>
         <dd>
-           Enter address 
+           
+          Enter address
+           
         </dd>
       </dl>
       <dl
