@@ -1,6 +1,5 @@
 // Libraries
 import { Component } from 'react'
-import { connect } from 'react-redux'
 import classNames from 'classnames'
 
 // Components
@@ -11,7 +10,7 @@ import CheckboxInputGroup from './CheckboxInputGroup'
 // Actions
 import { showField, toggleCollapsed } from '../../actions/checkoutActions'
 
-class AddressForm extends Component {
+export default class AddressForm extends Component {
   constructor () {
     super()
     this.onShowField        = this.onShowField.bind(this)
@@ -68,6 +67,7 @@ class AddressForm extends Component {
               fieldValue={address.country}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <InputGroup
@@ -76,6 +76,7 @@ class AddressForm extends Component {
               fieldValue={address.fullName}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             {!(address.companyNameShown) &&
@@ -92,6 +93,7 @@ class AddressForm extends Component {
                 fieldName='companyName'
                 fieldValue={address.companyName}
                 formName={formName}
+                dispatch = {this.props.dispatch}
               />
             }
 
@@ -101,6 +103,7 @@ class AddressForm extends Component {
               fieldValue={address.address1}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             {!(address.address2Shown) &&
@@ -117,6 +120,7 @@ class AddressForm extends Component {
                 fieldName='address2'
                 fieldValue={address.address2}
                 formName={formName}
+                dispatch = {this.props.dispatch}
               />
             }
 
@@ -126,6 +130,7 @@ class AddressForm extends Component {
               fieldValue={address.postCode}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <InputGroup
@@ -134,6 +139,7 @@ class AddressForm extends Component {
               fieldValue={address.city}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <InputGroup
@@ -142,6 +148,7 @@ class AddressForm extends Component {
               fieldValue={address.county}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <InputGroup
@@ -150,6 +157,7 @@ class AddressForm extends Component {
               fieldValue={address.phone}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <InputGroup
@@ -158,6 +166,7 @@ class AddressForm extends Component {
               fieldValue={address.email}
               formName={formName}
               required='true'
+              dispatch = {this.props.dispatch}
             />
 
             <p>
@@ -171,6 +180,7 @@ class AddressForm extends Component {
                   fieldName='newsletterOptIn'
                   fieldValue={address.newsletterOptIn}
                   formName={formName}
+                  dispatch = {this.props.dispatch}
                 />
 
                 <div className='o-form__input-group'>
@@ -186,11 +196,3 @@ class AddressForm extends Component {
     )
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    checkout: state.checkout
-  }
-}
-
-export default connect(mapStateToProps)(AddressForm)

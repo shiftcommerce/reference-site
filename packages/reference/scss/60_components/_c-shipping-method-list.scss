@@ -1,0 +1,38 @@
+.c-shipping-method-list {
+
+  &__item-count {
+    float: right;
+  }
+
+  &__input-group {
+    padding: 10px;
+    border: 1px solid;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    input {
+      float: left;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+  &__title {
+    display: block;
+    font-weight: bold;
+  }
+  &__cost {
+    float: right;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  &__delivery-date-label {
+    display: inline;
+    font-weight: bold;
+  }
+  &__delivery-date {
+    display: inline;
+  }
+}

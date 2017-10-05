@@ -1,6 +1,9 @@
 // actionTypes
 import * as actionTypes from './actionTypes'
 
+// checkout Handler
+import * as checkoutHandler from './../lib/checkoutHandler'
+
 // localForage
 import LocalForage from '../lib/localforage'
 const localForage = new LocalForage()
@@ -56,6 +59,23 @@ export function storeCheckout (checkout) {
   }
 }
 
+// set shipping method details
+export function setShippingMethod (shippingMethod) {
+  return (dispatch, getState) => {
+    const checkout = checkoutHandler.updateShippingMethod(getState().checkout, shippingMethod)
+    dispatch(storeShippingMethod(checkout))
+    storeCheckoutInLocalStorage(checkout)
+  }
+}
+
+// Store shipping method details
+export function storeShippingMethod (checkout) {
+  return {
+    payload: checkout,
+    type: actionTypes.SET_SHIPPING_METHOD
+  }
+}
+
 // Stores checkout in indexedDB, eventually we can update and/or duplicate this for API?
 export function storeCheckoutInLocalStorage (checkout) {
   localForage.setValue('checkout', checkout)
@@ -75,7 +95,8 @@ export function readCheckoutFromLocalStorage () {
             billingAddress: {},
             paymentMethod: {
               shippingAddressAsBillingAddress: true
-            }
+            },
+            shippingMethod: {}
           }
         }
         // update local redux store

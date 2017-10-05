@@ -1,11 +1,10 @@
 // Libraries
 import { Component } from 'react'
-import { connect } from 'react-redux'
 
 // Actions
 import { inputChange, inputComplete } from '../../actions/checkoutActions'
 
-class CheckboxInputGroup extends Component {
+export default class CheckboxInputGroup extends Component {
   constructor () {
     super()
     this.onInputChange   = this.onInputChange.bind(this)
@@ -37,11 +36,3 @@ class CheckboxInputGroup extends Component {
     )
   }
 }
-
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapDispatchToProps)(CheckboxInputGroup)

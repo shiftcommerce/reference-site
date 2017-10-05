@@ -1,0 +1,78 @@
+// Libraries
+import { Component } from 'react'
+
+// Shipping methods
+import ShippingMethodsJson from './../../static/shippingMethods.json'
+
+export default class ShippingMethods extends Component {
+  constructor (props) {
+    super(props)
+
+    const preSelectedShippingMethod = props.checkout.shippingMethod
+    const firstShippingMethod = ShippingMethodsJson.shippingMethods[0]
+
+    this.state = {
+      shippingMethods: ShippingMethodsJson.shippingMethods,
+      selectedShippingMethod: preSelectedShippingMethod || firstShippingMethod
+    }
+  }
+
+  componentWillReceiveProps (props) {
+    const shippingMethod = props.checkout.shippingMethod
+    if (shippingMethod !== this.state.selectedShippingMethod) {
+      this.setState({ selectedShippingMethod: shippingMethod })
+    }
+  }
+
+  setShippingMethod (shippingMethod) {
+    this.props.setShippingMethod(shippingMethod)
+    this.setState({ selectedShippingMethod: shippingMethod })
+  }
+
+  renderShippingMethods () {
+    const shippingMethods = this.state.shippingMethods
+    const selectedShippingMethod = this.state.selectedShippingMethod
+
+    const shippingMethodsOutput = shippingMethods.map((method) =>
+      <div className='o-form__input-group c-shipping-method-list__input-group'
+        key={method.id} onClick={() => this.setShippingMethod(method)}
+        aria-label={method.value}>
+        <input id={method.id} value={method.value} type='radio'
+          name='shipping_method'
+          checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
+        <label htmlFor={method.value}>
+          <span className='c-shipping-method-list__cost'>&pound;{method.cost}</span>
+          <span className='c-shipping-method-list__title'>{method.title}</span>
+          <span className='c-shipping-method-list__delivery-date-label'>Estimated Delivery: </span>
+          <span className='c-shipping-method-list__delivery-date'>{method.delivery_date}</span>
+        </label>
+      </div>
+    )
+
+    return shippingMethodsOutput
+  }
+
+  render () {
+    const itemCount = this.props.cart.lineItems.length
+    const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
+
+    return (
+      <div className='o-form' aria-label='Shipping Methods'>
+        <h3>Your Shipping Method</h3>
+        <form className='o-form__wrapper c-shipping-method-list'>
+          <p>📍 Shipping from ...
+            <span className='c-shipping-method-list__item-count'>
+              {itemCountText}
+            </span>
+          </p>
+
+          {this.renderShippingMethods()}
+
+          <button type='submit'>
+            Continue to Payment
+          </button>
+        </form>
+      </div>
+    )
+  }
+}

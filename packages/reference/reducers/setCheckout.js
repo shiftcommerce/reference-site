@@ -50,6 +50,11 @@ export default function setCheckout (state = initialState, action) {
       newState.updatedAt = new Date()
       return newState
 
+    case types.SET_SHIPPING_METHOD:
+      Object.assign(newState.shippingMethod, action.payload.shippingMethod)
+      newState.updatedAt = new Date()
+      return newState
+
     // For storing checkout loaded from indexedDB
     case types.STORE_CHECKOUT:
       newState = action.checkout

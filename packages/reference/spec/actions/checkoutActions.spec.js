@@ -50,3 +50,32 @@ test('return SET_CHECKOUT_INPUT_VALUE on calling inputChange()', () => {
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ payload: expectedPayload, type: actionTypes.SET_CHECKOUT_INPUT_VALUE })
 })
+
+test('return SET_SHIPPING_METHOD on calling storeShippingMethod()', () =>{
+  // arrange
+  const dispatch = jest.fn()
+  const checkout = {
+    shippingAddress: {
+      firstName: 'George'
+    }
+  }
+  const getState = () => ({ checkout: checkout })
+
+  const shippingMethod = {
+    id: '1'
+  }
+  const fn = checkoutActions.setShippingMethod(shippingMethod)
+  const expectedPayload = {
+    shippingMethod: shippingMethod,
+    shippingAddress: {
+      firstName: 'George'
+    }
+  }
+
+  // act
+  fn(dispatch, getState)
+
+  // assert
+  expect(fn).toEqual(expect.any(Function))
+  expect(dispatch).toHaveBeenCalledWith({ payload: expectedPayload, type: actionTypes.SET_SHIPPING_METHOD })
+})

@@ -1,12 +1,11 @@
 // Libraries
 import { Component } from 'react'
-import { connect } from 'react-redux'
 import classNames from 'classnames'
 
 // Actions
 import { inputChange, inputComplete } from '../../actions/checkoutActions'
 
-class InputGroup extends Component {
+export default class InputGroup extends Component {
   constructor () {
     super()
     this.onInputChange   = this.onInputChange.bind(this)
@@ -40,11 +39,3 @@ class InputGroup extends Component {
     )
   }
 }
-
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapDispatchToProps)(InputGroup)

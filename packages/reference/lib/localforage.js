@@ -6,6 +6,7 @@ class LocalForage {
   }
 
   // Set the driver to indexedDB
+  // TODO: Fix '.default.config(...).then is not a function' error here?
   initLocalForage () {
     localforage.config({
       driver: localforage.INDEXEDDB,

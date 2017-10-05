@@ -1,18 +1,14 @@
 import AddressForm from '../../../components/checkout/AddressForm'
-import { createMockStore } from 'redux-test-utils'
 
 test('renders the correct base form elements', () => {
   // Arrange
-  const state = {
-    checkout:
-    {
-      testAddress: {}
-    }
+  const checkout = {
+    testAddress: {}
   }
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' />, { context: { store: createMockStore(state) } }
+    <AddressForm formName='testAddress' checkout={checkout} />
   )
 
   // assert
@@ -42,16 +38,13 @@ test('renders the values from the state', () => {
     phone: '01234567890',
     email: 'test@example.com'
   }
-  const state = {
-    checkout: {
-      testAddress: address
-    }
+  const checkout = {
+    testAddress: address
   }
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' />,
-    { context: { store: createMockStore(state) } }
+    <AddressForm formName='testAddress' checkout={checkout} />
   )
 
   // assert
@@ -67,17 +60,13 @@ test('renders the values from the state', () => {
 
 test('renders additional elements for shipping form', () => {
   // Arrange
-  const state = {
-    checkout:
-    {
-      shippingAddress: {}
-    }
+  const checkout = {
+    shippingAddress: {}
   }
 
   // Act
   const wrapper = mount(
-    <AddressForm formName='shippingAddress' addressType='shipping'/>,
-    { context: { store: createMockStore(state) } }
+    <AddressForm formName='shippingAddress' addressType='shipping' checkout={checkout} />
   )
 
   // Assert - Additional fields for shipping form:
@@ -93,16 +82,13 @@ test('renders the additional company / address2 fields when enabled', () => {
     address2: 'Test Address Line 2',
     address2Shown: true
   }
-  const state = {
-    checkout: {
-      testAddress: address
-    }
+  const checkout = {
+    testAddress: address
   }
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' />,
-    { context: { store: createMockStore(state) } }
+    <AddressForm formName='testAddress' checkout={checkout} />
   )
 
   // Assert - additional enabled fields:
@@ -116,16 +102,13 @@ test('does not render the additional company / address2 fields when not enabled'
     companyNameShown: false,
     address2Shown: false
   }
-  const state = {
-    checkout: {
-      testAddress: address
-    }
+  const checkout = {
+    testAddress: address
   }
 
   // Act
   const wrapper = mount(
-    <AddressForm formName='testAddress' />,
-    { context: { store: createMockStore(state) } }
+    <AddressForm formName='testAddress' checkout={checkout} />
   )
 
   // Assert - Input fields are not rendered:
@@ -138,16 +121,13 @@ test('renders the collapsed version of the form when collapsed = true', () => {
   const address = {
     collapsed: true
   }
-  const state = {
-    checkout: {
-      testAddress: address
-    }
+  const checkout = {
+    testAddress: address
   }
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' />,
-    { context: { store: createMockStore(state) } }
+    <AddressForm formName='testAddress' checkout={checkout} />
   )
 
   // Assert - Edit button present:

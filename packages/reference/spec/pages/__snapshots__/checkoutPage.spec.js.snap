@@ -1,0 +1,694 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getAction": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "isActionDispatched": [Function],
+      "isActionTypeDispatched": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CheckoutPage
+    cart={
+      Object {
+        "lineItems": Array [
+          Object {
+            "discount": 0,
+            "imageUrl": "",
+            "price": 10,
+            "productID": 1,
+            "productSku": "1231",
+            "quantity": 2,
+            "size": "size - 8",
+            "sku": "123",
+            "title": "test",
+          },
+        ],
+      }
+    }
+    checkout={
+      Object {
+        "shippingAddress": Object {},
+        "shippingMethod": Object {},
+      }
+    }
+    dispatch={[Function]}
+  >
+    <div>
+      <div
+        className="o-header"
+      >
+        <span
+          className="o-header__logo"
+        >
+          <Link
+            as="/"
+            href="/home/index"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <Image
+                height={80}
+                width={200}
+              >
+                <div
+                  className="c-dummy_image"
+                  style={
+                    Object {
+                      "height": 80,
+                      "width": 200,
+                    }
+                  }
+                />
+              </Image>
+            </a>
+          </Link>
+        </span>
+      </div>
+      <div>
+        <AddressForm
+          addressType="shipping"
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+          formName="shippingAddress"
+          title="Shipping Address"
+        >
+          <div
+            className="o-form"
+          >
+            <h3>
+              Shipping Address
+            </h3>
+            <form
+              className="o-form__wrapper"
+            >
+              <SelectInputGroup
+                dispatch={[Function]}
+                fieldLabel="Country"
+                fieldName="country"
+                formName="shippingAddress"
+                options={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "title": "United Kingdom",
+                      "value": "GB",
+                    },
+                    Object {
+                      "id": 2,
+                      "title": "United States",
+                      "value": "US",
+                    },
+                  ]
+                }
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="country"
+                  >
+                    Country
+                     *
+                  </label>
+                  <select
+                    id="country"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                  >
+                    <option
+                      value="GB"
+                    >
+                      United Kingdom
+                    </option>
+                    <option
+                      value="US"
+                    >
+                      United States
+                    </option>
+                  </select>
+                </div>
+              </SelectInputGroup>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="Full Name"
+                fieldName="fullName"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="fullName"
+                  >
+                    Full Name
+                     *
+                  </label>
+                  <input
+                    id="fullName"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <p>
+                  + Add Company Name (optional)
+                </p>
+              </a>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="Address 1"
+                fieldName="address1"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="address1"
+                  >
+                    Address 1
+                     *
+                  </label>
+                  <input
+                    id="address1"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <p>
+                  + Add Address 2 (optional)
+                </p>
+              </a>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="Post Code"
+                fieldName="postCode"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="postCode"
+                  >
+                    Post Code
+                     *
+                  </label>
+                  <input
+                    id="postCode"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="City"
+                fieldName="city"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="city"
+                  >
+                    City
+                     *
+                  </label>
+                  <input
+                    id="city"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="County"
+                fieldName="county"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="county"
+                  >
+                    County
+                     *
+                  </label>
+                  <input
+                    id="county"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="Phone"
+                fieldName="phone"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="phone"
+                  >
+                    Phone
+                     *
+                  </label>
+                  <input
+                    id="phone"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                dispatch={[Function]}
+                fieldLabel="Email"
+                fieldName="email"
+                formName="shippingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="email"
+                  >
+                    Email
+                     *
+                  </label>
+                  <input
+                    id="email"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <p>
+                * Denotes required fields
+              </p>
+              <div>
+                <CheckboxInputGroup
+                  dispatch={[Function]}
+                  fieldLabel="Sign up for Weekly Newsletters (optional)"
+                  fieldName="newsletterOptIn"
+                  formName="shippingAddress"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <input
+                      id="newsletterOptIn"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="newsletterOptIn"
+                    >
+                      Sign up for Weekly Newsletters (optional)
+                    </label>
+                  </div>
+                </CheckboxInputGroup>
+                <div
+                  className="o-form__input-group"
+                >
+                  <button
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    View Shipping Options
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </AddressForm>
+        <ShippingMethods
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+          setShippingMethod={[Function]}
+        >
+          <div
+            aria-label="Shipping Methods"
+            className="o-form"
+          >
+            <h3>
+              Your Shipping Method
+            </h3>
+            <form
+              className="o-form__wrapper c-shipping-method-list"
+            >
+              <p>
+                📍 Shipping from ...
+                <span
+                  className="c-shipping-method-list__item-count"
+                >
+                  1 item
+                </span>
+              </p>
+              <div
+                aria-label="super_saver"
+                className="o-form__input-group c-shipping-method-list__input-group"
+                onClick={[Function]}
+              >
+                <input
+                  checked={false}
+                  id="1"
+                  name="shipping_method"
+                  onChange={[Function]}
+                  type="radio"
+                  value="super_saver"
+                />
+                <label
+                  htmlFor="super_saver"
+                >
+                  <span
+                    className="c-shipping-method-list__cost"
+                  >
+                    £
+                    3.45
+                  </span>
+                  <span
+                    className="c-shipping-method-list__title"
+                  >
+                    Super Saver
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date-label"
+                  >
+                    Estimated Delivery: 
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date"
+                  >
+                    Monday 3rd December
+                  </span>
+                </label>
+              </div>
+              <div
+                aria-label="ups_next_day"
+                className="o-form__input-group c-shipping-method-list__input-group"
+                onClick={[Function]}
+              >
+                <input
+                  checked={false}
+                  id="2"
+                  name="shipping_method"
+                  onChange={[Function]}
+                  type="radio"
+                  value="ups_next_day"
+                />
+                <label
+                  htmlFor="ups_next_day"
+                >
+                  <span
+                    className="c-shipping-method-list__cost"
+                  >
+                    £
+                    5.45
+                  </span>
+                  <span
+                    className="c-shipping-method-list__title"
+                  >
+                    UPS Next Day
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date-label"
+                  >
+                    Estimated Delivery: 
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date"
+                  >
+                    Sunday 2nd December
+                  </span>
+                </label>
+              </div>
+              <div
+                aria-label="ups_next_day_before_noon"
+                className="o-form__input-group c-shipping-method-list__input-group"
+                onClick={[Function]}
+              >
+                <input
+                  checked={false}
+                  id="3"
+                  name="shipping_method"
+                  onChange={[Function]}
+                  type="radio"
+                  value="ups_next_day_before_noon"
+                />
+                <label
+                  htmlFor="ups_next_day_before_noon"
+                >
+                  <span
+                    className="c-shipping-method-list__cost"
+                  >
+                    £
+                    8.45
+                  </span>
+                  <span
+                    className="c-shipping-method-list__title"
+                  >
+                    UPS Next Day Before Noon
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date-label"
+                  >
+                    Estimated Delivery: 
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date"
+                  >
+                    Sunday 2nd December
+                  </span>
+                </label>
+              </div>
+              <div
+                aria-label="ups_same_day"
+                className="o-form__input-group c-shipping-method-list__input-group"
+                onClick={[Function]}
+              >
+                <input
+                  checked={false}
+                  id="4"
+                  name="shipping_method"
+                  onChange={[Function]}
+                  type="radio"
+                  value="ups_same_day"
+                />
+                <label
+                  htmlFor="ups_same_day"
+                >
+                  <span
+                    className="c-shipping-method-list__cost"
+                  >
+                    £
+                    10.45
+                  </span>
+                  <span
+                    className="c-shipping-method-list__title"
+                  >
+                    UPS Same Day
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date-label"
+                  >
+                    Estimated Delivery: 
+                  </span>
+                  <span
+                    className="c-shipping-method-list__delivery-date"
+                  >
+                    Today
+                  </span>
+                </label>
+              </div>
+              <button
+                type="submit"
+              >
+                Continue to Payment
+              </button>
+            </form>
+          </div>
+        </ShippingMethods>
+        <CheckoutCartTotal
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+        >
+          <div
+            aria-label="Cart total summary"
+            className="o-checkout-cart-total"
+          >
+            <div
+              className="o-checkout-cart-total__wrapper"
+            >
+              <dl
+                aria-label="Subtotal"
+              >
+                <dt>
+                   Subtotal: 
+                </dt>
+                <dd>
+                   £
+                  20
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="VAT"
+              >
+                <dt>
+                   VAT: 
+                </dt>
+                <dd>
+                   £
+                  0
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="Shipping cost"
+              >
+                <dt>
+                   Shipping: 
+                </dt>
+                <dd>
+                   Enter address 
+                </dd>
+              </dl>
+              <dl
+                aria-label="Total"
+                className="o-checkout-cart-total__total"
+              >
+                <dt>
+                   You Pay: 
+                </dt>
+                <dd>
+                   
+                  <b>
+                    £
+                    20
+                  </b>
+                   
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </CheckoutCartTotal>
+      </div>
+    </div>
+  </CheckoutPage>
+</Provider>
+`;
