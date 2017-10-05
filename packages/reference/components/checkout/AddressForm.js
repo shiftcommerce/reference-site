@@ -13,8 +13,8 @@ import { showField, toggleCollapsed } from '../../actions/checkoutActions'
 export default class AddressForm extends Component {
   constructor () {
     super()
-    this.onShowField        = this.onShowField.bind(this)
-    this.onToggleCollapsed  = this.onToggleCollapsed.bind(this)
+    this.onShowField = this.onShowField.bind(this)
+    this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
   }
 
   onShowField (fieldName) {
@@ -30,17 +30,14 @@ export default class AddressForm extends Component {
   }
 
   render () {
-    const { checkout } = this.props
-    const addressType  = this.props.addressType
-    const formName     = this.props.formName
-    const className    = this.props.className
-    const address      = checkout[this.props.formName]
-    const collapsed    = address.collapsed
+    const {checkout, addressType, formName, className} = this.props
+    const address = checkout[this.props.formName]
+    const collapsed = address.collapsed
 
     // Example data
     const countries = [
       { id: 1, title: 'United Kingdom', value: 'GB' },
-      { id: 2, title: 'United States',  value: 'US' }
+      { id: 2, title: 'United States', value: 'US' }
     ]
 
     return (

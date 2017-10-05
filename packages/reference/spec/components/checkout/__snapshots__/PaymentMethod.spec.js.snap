@@ -1,0 +1,781 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does not render address summary when shippingAsBilling is true 1`] = `
+<PaymentMethod
+  checkout={
+    Object {
+      "billingAddress": Object {},
+      "paymentMethod": Object {
+        "shippingAddressAsBillingAddress": false,
+      },
+      "shippingAddress": Object {
+        "address1": "Test Address 1",
+        "address2": "Test Address 2",
+        "city": "Test City",
+        "fullName": "Test Name",
+        "postCode": "Test Postcode",
+      },
+    }
+  }
+>
+  <div
+    aria-label="Payment method"
+    className="o-form"
+  >
+    <h3>
+      Payment Method
+    </h3>
+    <div>
+      <button
+        aria-label="Use credit or debit card"
+        className="c-button"
+      >
+        Credit / Debit card
+      </button>
+      <button
+        aria-label="Use paypal"
+        className="c-button c-button--disabled"
+        disabled="disabled"
+      >
+        Paypal
+      </button>
+      <div
+        className="o-form__wrapper"
+      >
+        <form>
+          <div
+            className="o-form__input-group"
+          >
+            <label
+              aria-label="Credit or debit card number"
+              htmlFor="card_number"
+            >
+              Credit / Debit Card Number *
+            </label>
+            <input
+              id="card_number"
+              required="required"
+              type="text"
+            />
+          </div>
+          <div
+            className="o-payment-method__security-fields"
+          >
+            <label
+              aria-label="Card expiry date"
+              className="o-payment-method__label"
+              htmlFor="expiry_month"
+            >
+              Expiration *
+            </label>
+            <select
+              aria-label="Expiry month"
+              className="o-payment-method__input"
+              id="expiry_month"
+              required="required"
+            >
+              <option
+                value={NaN}
+              />
+              <option
+                value={1}
+              >
+                01
+              </option>
+              <option
+                value={2}
+              >
+                02
+              </option>
+              <option
+                value={3}
+              >
+                03
+              </option>
+              <option
+                value={4}
+              >
+                04
+              </option>
+              <option
+                value={5}
+              >
+                05
+              </option>
+              <option
+                value={6}
+              >
+                06
+              </option>
+              <option
+                value={7}
+              >
+                07
+              </option>
+              <option
+                value={8}
+              >
+                08
+              </option>
+              <option
+                value={9}
+              >
+                09
+              </option>
+              <option
+                value={10}
+              >
+                10
+              </option>
+              <option
+                value={11}
+              >
+                11
+              </option>
+              <option
+                value={12}
+              >
+                12
+              </option>
+            </select>
+            <span
+              className="o-payment-method__text"
+            >
+              /
+            </span>
+            <select
+              aria-label="Expiry year"
+              className="o-payment-method__input"
+              id="expiry_year"
+              required="required"
+            >
+              <option
+                value={NaN}
+              />
+              <option
+                value={17}
+              >
+                17
+              </option>
+              <option
+                value={18}
+              >
+                18
+              </option>
+              <option
+                value={19}
+              >
+                19
+              </option>
+              <option
+                value={20}
+              >
+                20
+              </option>
+              <option
+                value={21}
+              >
+                21
+              </option>
+              <option
+                value={22}
+              >
+                22
+              </option>
+            </select>
+            <label
+              aria-label="CVV security code"
+              className="o-payment-method__label-cvv"
+              htmlFor="cvv"
+            >
+              CVV *
+              <span
+                className="o-payment-method__text"
+              >
+                Hint
+              </span>
+            </label>
+            <input
+              className="o-payment-method__input"
+              id="cvv"
+              required="required"
+              type="text"
+            />
+          </div>
+          <div
+            className="o-form__input-group"
+          >
+            <label>
+              Billing address *
+            </label>
+          </div>
+          <CheckboxInputGroup
+            fieldLabel="Same as shipping address"
+            fieldName="shippingAddressAsBillingAddress"
+            fieldValue={false}
+          >
+            <div
+              className="o-form__input-group"
+            >
+              <input
+                checked={false}
+                id="shippingAddressAsBillingAddress"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="shippingAddressAsBillingAddress"
+              >
+                Same as shipping address
+              </label>
+            </div>
+          </CheckboxInputGroup>
+        </form>
+        <AddressForm
+          addressType="billing"
+          aria-label="Billing address form"
+          checkout={
+            Object {
+              "billingAddress": Object {},
+              "paymentMethod": Object {
+                "shippingAddressAsBillingAddress": false,
+              },
+              "shippingAddress": Object {
+                "address1": "Test Address 1",
+                "address2": "Test Address 2",
+                "city": "Test City",
+                "fullName": "Test Name",
+                "postCode": "Test Postcode",
+              },
+            }
+          }
+          formName="billingAddress"
+          title="Billing Address"
+        >
+          <div
+            className="o-form"
+          >
+            <h3>
+              Billing Address
+            </h3>
+            <form
+              className="o-form__wrapper"
+            >
+              <SelectInputGroup
+                fieldLabel="Country"
+                fieldName="country"
+                formName="billingAddress"
+                options={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "title": "United Kingdom",
+                      "value": "GB",
+                    },
+                    Object {
+                      "id": 2,
+                      "title": "United States",
+                      "value": "US",
+                    },
+                  ]
+                }
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="country"
+                  >
+                    Country
+                     *
+                  </label>
+                  <select
+                    id="country"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                  >
+                    <option
+                      value="GB"
+                    >
+                      United Kingdom
+                    </option>
+                    <option
+                      value="US"
+                    >
+                      United States
+                    </option>
+                  </select>
+                </div>
+              </SelectInputGroup>
+              <InputGroup
+                fieldLabel="Full Name"
+                fieldName="fullName"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="fullName"
+                  >
+                    Full Name
+                     *
+                  </label>
+                  <input
+                    id="fullName"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <p>
+                  + Add Company Name (optional)
+                </p>
+              </a>
+              <InputGroup
+                fieldLabel="Address 1"
+                fieldName="address1"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="address1"
+                  >
+                    Address 1
+                     *
+                  </label>
+                  <input
+                    id="address1"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <p>
+                  + Add Address 2 (optional)
+                </p>
+              </a>
+              <InputGroup
+                fieldLabel="Post Code"
+                fieldName="postCode"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="postCode"
+                  >
+                    Post Code
+                     *
+                  </label>
+                  <input
+                    id="postCode"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                fieldLabel="City"
+                fieldName="city"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="city"
+                  >
+                    City
+                     *
+                  </label>
+                  <input
+                    id="city"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                fieldLabel="County"
+                fieldName="county"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="county"
+                  >
+                    County
+                     *
+                  </label>
+                  <input
+                    id="county"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                fieldLabel="Phone"
+                fieldName="phone"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="phone"
+                  >
+                    Phone
+                     *
+                  </label>
+                  <input
+                    id="phone"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <InputGroup
+                fieldLabel="Email"
+                fieldName="email"
+                formName="billingAddress"
+                required="true"
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    htmlFor="email"
+                  >
+                    Email
+                     *
+                  </label>
+                  <input
+                    id="email"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required="true"
+                    type="text"
+                  />
+                </div>
+              </InputGroup>
+              <p>
+                * Denotes required fields
+              </p>
+            </form>
+          </div>
+        </AddressForm>
+      </div>
+    </div>
+    <div
+      aria-label="Use gift card or rewards code"
+      className="o-form__wrapper"
+    >
+      <p>
+        + Use a Gift Card / Rewards Code
+      </p>
+    </div>
+  </div>
+</PaymentMethod>
+`;
+
+exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
+<PaymentMethod
+  checkout={
+    Object {
+      "billingAddress": Object {},
+      "paymentMethod": Object {
+        "shippingAddressAsBillingAddress": "true",
+      },
+      "shippingAddress": Object {
+        "address1": "Test Address 1",
+        "address2": "Test Address 2",
+        "city": "Test City",
+        "fullName": "Test Name",
+        "postCode": "Test Postcode",
+      },
+    }
+  }
+>
+  <div
+    aria-label="Payment method"
+    className="o-form"
+  >
+    <h3>
+      Payment Method
+    </h3>
+    <div>
+      <button
+        aria-label="Use credit or debit card"
+        className="c-button"
+      >
+        Credit / Debit card
+      </button>
+      <button
+        aria-label="Use paypal"
+        className="c-button c-button--disabled"
+        disabled="disabled"
+      >
+        Paypal
+      </button>
+      <div
+        className="o-form__wrapper"
+      >
+        <form>
+          <div
+            className="o-form__input-group"
+          >
+            <label
+              aria-label="Credit or debit card number"
+              htmlFor="card_number"
+            >
+              Credit / Debit Card Number *
+            </label>
+            <input
+              id="card_number"
+              required="required"
+              type="text"
+            />
+          </div>
+          <div
+            className="o-payment-method__security-fields"
+          >
+            <label
+              aria-label="Card expiry date"
+              className="o-payment-method__label"
+              htmlFor="expiry_month"
+            >
+              Expiration *
+            </label>
+            <select
+              aria-label="Expiry month"
+              className="o-payment-method__input"
+              id="expiry_month"
+              required="required"
+            >
+              <option
+                value={NaN}
+              />
+              <option
+                value={1}
+              >
+                01
+              </option>
+              <option
+                value={2}
+              >
+                02
+              </option>
+              <option
+                value={3}
+              >
+                03
+              </option>
+              <option
+                value={4}
+              >
+                04
+              </option>
+              <option
+                value={5}
+              >
+                05
+              </option>
+              <option
+                value={6}
+              >
+                06
+              </option>
+              <option
+                value={7}
+              >
+                07
+              </option>
+              <option
+                value={8}
+              >
+                08
+              </option>
+              <option
+                value={9}
+              >
+                09
+              </option>
+              <option
+                value={10}
+              >
+                10
+              </option>
+              <option
+                value={11}
+              >
+                11
+              </option>
+              <option
+                value={12}
+              >
+                12
+              </option>
+            </select>
+            <span
+              className="o-payment-method__text"
+            >
+              /
+            </span>
+            <select
+              aria-label="Expiry year"
+              className="o-payment-method__input"
+              id="expiry_year"
+              required="required"
+            >
+              <option
+                value={NaN}
+              />
+              <option
+                value={17}
+              >
+                17
+              </option>
+              <option
+                value={18}
+              >
+                18
+              </option>
+              <option
+                value={19}
+              >
+                19
+              </option>
+              <option
+                value={20}
+              >
+                20
+              </option>
+              <option
+                value={21}
+              >
+                21
+              </option>
+              <option
+                value={22}
+              >
+                22
+              </option>
+            </select>
+            <label
+              aria-label="CVV security code"
+              className="o-payment-method__label-cvv"
+              htmlFor="cvv"
+            >
+              CVV *
+              <span
+                className="o-payment-method__text"
+              >
+                Hint
+              </span>
+            </label>
+            <input
+              className="o-payment-method__input"
+              id="cvv"
+              required="required"
+              type="text"
+            />
+          </div>
+          <div
+            className="o-form__input-group"
+          >
+            <label>
+              Billing address *
+            </label>
+          </div>
+          <CheckboxInputGroup
+            fieldLabel="Same as shipping address"
+            fieldName="shippingAddressAsBillingAddress"
+            fieldValue="true"
+          >
+            <div
+              className="o-form__input-group"
+            >
+              <input
+                checked="true"
+                id="shippingAddressAsBillingAddress"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                htmlFor="shippingAddressAsBillingAddress"
+              >
+                Same as shipping address
+              </label>
+            </div>
+          </CheckboxInputGroup>
+        </form>
+        <div
+          aria-label="Shipping address to be used for billing"
+          className="o-payment-method__address-summary"
+        >
+          <h4>
+            Test Name
+          </h4>
+          <p>
+            Test Address 1
+          </p>
+          <p>
+            Test Address 2
+          </p>
+          <p>
+            Test City
+          </p>
+          <p>
+            Test Postcode
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-label="Use gift card or rewards code"
+      className="o-form__wrapper"
+    >
+      <p>
+        + Use a Gift Card / Rewards Code
+      </p>
+    </div>
+  </div>
+</PaymentMethod>
+`;

@@ -1,6 +1,8 @@
 const Checkout = {
   shippingAddress: {},
-  shippingMethod: {}
+  shippingMethod: {},
+  billingAddress: {},
+  paymentMethod: {}
 }
 
 export default Checkout
