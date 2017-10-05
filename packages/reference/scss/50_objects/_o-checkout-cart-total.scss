@@ -1,0 +1,23 @@
+.o-checkout-cart-total {
+  padding: 0 10%;
+  margin-top: 10px;
+
+  &__wrapper {
+    border: 1px solid #000;
+    padding: 10px 30px;
+
+    dt {
+      float: left;
+      clear: left;
+    }
+    dd {
+      text-align: right;
+      margin-left: 50%;
+    }
+  }
+
+  &__total {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+  }
+}

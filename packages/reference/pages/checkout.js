@@ -8,16 +8,19 @@ import { configureStore } from '../utils/configureStore'
 
 // Actions
 import { readCheckoutFromLocalStorage } from '../actions/checkoutActions'
+import { readCart } from '../actions/cartActions'
 
 // Objects
 import Image from '../objects/Image'
 
 // Components
 import AddressForm from '../components/checkout/AddressForm.js'
+import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal.js'
 
 export class CheckoutPage extends Component {
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
+    this.props.dispatch(readCart())
   }
 
   render () {
@@ -34,6 +37,7 @@ export class CheckoutPage extends Component {
         </div>
         <div>
           <AddressForm title='Shipping Address' formName='shippingAddress' addressType='shipping' dispatch={this.props.dispatch} />
+          <CheckoutCartTotal {...this.props} />
         </div>
       </div>
     )
@@ -42,7 +46,8 @@ export class CheckoutPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    checkout: state.checkout || {}
+    checkout: state.checkout || {},
+    cart: state.cart || {}
   }
 }
 

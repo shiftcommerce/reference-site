@@ -1,21 +1,10 @@
 // Libraries
 import { Component } from 'react'
+import { calculateCartSummary } from '../../lib/calculateCartSummary'
 
 class CartSummary extends Component {
-  calculateSummary () {
-    const lineItems = this.props.cart.lineItems
-    let [ total, discount, tax, subTotal ] = [ 0, 0, 0, 0 ]
-
-    lineItems.map((li, index) => {
-      subTotal += (li.quantity * li.price)
-      discount += (li.quantity * (li.discount || 0))
-    })
-    total = subTotal - discount + tax
-    return { subTotal, total, tax, discount }
-  }
-
   render () {
-    const { subTotal, total, tax, discount } = this.calculateSummary()
+    const { subTotal, total, tax, discount } = calculateCartSummary(this.props.cart)
 
     return (
       <section className='c-cart-summary'>
