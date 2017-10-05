@@ -15,8 +15,9 @@ import Image from '../objects/Image'
 
 // Components
 import AddressForm from '../components/checkout/AddressForm.js'
-import ShippingMethods from '../components/checkout/ShippingMethods.js'
+import CheckoutCart from '../components/checkout/CheckoutCart.js'
 import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal.js'
+import ShippingMethods from '../components/checkout/ShippingMethods.js'
 
 export class CheckoutPage extends Component {
   constructor (props) {
@@ -47,8 +48,9 @@ export class CheckoutPage extends Component {
         </div>
         <div>
           <AddressForm { ...this.props } title='Shipping Address' formName='shippingAddress' addressType='shipping' dispatch={this.props.dispatch} />
-          <ShippingMethods { ...this.props } setShippingMethod={this.setShippingMethod} />
+          <CheckoutCart title='Your Cart' {...this.props} />
           <CheckoutCartTotal {...this.props} />
+          <ShippingMethods { ...this.props } setShippingMethod={this.setShippingMethod} />
         </div>
       </div>
     )

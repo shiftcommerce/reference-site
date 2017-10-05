@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the correct checkout cart summary with multiple line items 1`] = `
+<CheckoutCart
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": 10,
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": 5,
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+>
+  <div
+    aria-label="Cart items summary"
+    className="o-checkout-cart"
+  >
+    <h3 />
+    <Link
+      href="/cart"
+    >
+      <a
+        aria-label="Edit your cart"
+        className="c-button"
+        href="/cart"
+        onClick={[Function]}
+      >
+        Edit
+      </a>
+    </Link>
+    <div
+      className="o-checkout-cart__wrapper"
+    >
+      <div
+        aria-label="Product"
+      >
+        <Image
+          aria-label="Product image"
+          className="o-checkout-cart__image"
+          height={80}
+          width={80}
+        >
+          <div
+            className="c-dummy_image o-checkout-cart__image"
+            style={
+              Object {
+                "height": 80,
+                "width": 80,
+              }
+            }
+          />
+        </Image>
+        <ul
+          className="o-checkout-cart__info"
+        >
+          <li
+            aria-label="Product title"
+          >
+            Test Product
+          </li>
+          <li
+            aria-label="Quantity"
+          >
+            Qty: 
+            2
+          </li>
+          <li
+            aria-label="Price"
+          >
+            Price: £
+            10
+          </li>
+          <li
+            aria-label="Subtotal"
+          >
+            Subtotal: £
+            20
+          </li>
+        </ul>
+      </div>
+      <div
+        aria-label="Product"
+      >
+        <Image
+          aria-label="Product image"
+          className="o-checkout-cart__image"
+          height={80}
+          width={80}
+        >
+          <div
+            className="c-dummy_image o-checkout-cart__image"
+            style={
+              Object {
+                "height": 80,
+                "width": 80,
+              }
+            }
+          />
+        </Image>
+        <ul
+          className="o-checkout-cart__info"
+        >
+          <li
+            aria-label="Product title"
+          >
+            Pretend Product
+          </li>
+          <li
+            aria-label="Quantity"
+          >
+            Qty: 
+            1
+          </li>
+          <li
+            aria-label="Price"
+          >
+            Price: £
+            5
+          </li>
+          <li
+            aria-label="Subtotal"
+          >
+            Subtotal: £
+            5
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</CheckoutCart>
+`;
+
+exports[`renders the correct checkout cart summary with single line item 1`] = `
+<CheckoutCart
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "imageUrl": "",
+          "price": 10,
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "Test Product",
+        },
+      ],
+    }
+  }
+  title="Checkout Cart Summary"
+>
+  <div
+    aria-label="Cart items summary"
+    className="o-checkout-cart"
+  >
+    <h3>
+      Checkout Cart Summary
+    </h3>
+    <Link
+      href="/cart"
+    >
+      <a
+        aria-label="Edit your cart"
+        className="c-button"
+        href="/cart"
+        onClick={[Function]}
+      >
+        Edit
+      </a>
+    </Link>
+    <div
+      className="o-checkout-cart__wrapper"
+    >
+      <div
+        aria-label="Product"
+      >
+        <Image
+          aria-label="Product image"
+          className="o-checkout-cart__image"
+          height={80}
+          width={80}
+        >
+          <div
+            className="c-dummy_image o-checkout-cart__image"
+            style={
+              Object {
+                "height": 80,
+                "width": 80,
+              }
+            }
+          />
+        </Image>
+        <ul
+          className="o-checkout-cart__info"
+        >
+          <li
+            aria-label="Product title"
+          >
+            Test Product
+          </li>
+          <li
+            aria-label="Quantity"
+          >
+            Qty: 
+            2
+          </li>
+          <li
+            aria-label="Price"
+          >
+            Price: £
+            10
+          </li>
+          <li
+            aria-label="Subtotal"
+          >
+            Subtotal: £
+            20
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</CheckoutCart>
+`;

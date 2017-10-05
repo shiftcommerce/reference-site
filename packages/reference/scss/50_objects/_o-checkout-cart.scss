@@ -1,0 +1,15 @@
+.o-checkout-cart {
+  width: 100%;
+  padding: 0 10%;
+  margin-top: 10px;
+
+  &__wrapper {
+    border: 1px solid #000;
+    padding: 10px 30px;
+  }
+
+  &__info {
+    display: inline-block;
+    list-style: none;
+  }
+}

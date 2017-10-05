@@ -392,6 +392,191 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
             </form>
           </div>
         </AddressForm>
+        <CheckoutCart
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+          title="Your Cart"
+        >
+          <div
+            aria-label="Cart items summary"
+            className="o-checkout-cart"
+          >
+            <h3>
+              Your Cart
+            </h3>
+            <Link
+              href="/cart"
+            >
+              <a
+                aria-label="Edit your cart"
+                className="c-button"
+                href="/cart"
+                onClick={[Function]}
+              >
+                Edit
+              </a>
+            </Link>
+            <div
+              className="o-checkout-cart__wrapper"
+            >
+              <div
+                aria-label="Product"
+              >
+                <Image
+                  aria-label="Product image"
+                  className="o-checkout-cart__image"
+                  height={80}
+                  width={80}
+                >
+                  <div
+                    className="c-dummy_image o-checkout-cart__image"
+                    style={
+                      Object {
+                        "height": 80,
+                        "width": 80,
+                      }
+                    }
+                  />
+                </Image>
+                <ul
+                  className="o-checkout-cart__info"
+                >
+                  <li
+                    aria-label="Product title"
+                  >
+                    test
+                  </li>
+                  <li
+                    aria-label="Quantity"
+                  >
+                    Qty: 
+                    2
+                  </li>
+                  <li
+                    aria-label="Price"
+                  >
+                    Price: £
+                    10
+                  </li>
+                  <li
+                    aria-label="Subtotal"
+                  >
+                    Subtotal: £
+                    20
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </CheckoutCart>
+        <CheckoutCartTotal
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+        >
+          <div
+            aria-label="Cart total summary"
+            className="o-checkout-cart-total"
+          >
+            <div
+              className="o-checkout-cart-total__wrapper"
+            >
+              <dl
+                aria-label="Subtotal"
+              >
+                <dt>
+                   Subtotal: 
+                </dt>
+                <dd>
+                   £
+                  20
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="VAT"
+              >
+                <dt>
+                   VAT: 
+                </dt>
+                <dd>
+                   £
+                  0
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="Shipping cost"
+              >
+                <dt>
+                   Shipping: 
+                </dt>
+                <dd>
+                   Enter address 
+                </dd>
+              </dl>
+              <dl
+                aria-label="Total"
+                className="o-checkout-cart-total__total"
+              >
+                <dt>
+                   You Pay: 
+                </dt>
+                <dd>
+                   
+                  <b>
+                    £
+                    20
+                  </b>
+                   
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </CheckoutCartTotal>
         <ShippingMethods
           cart={
             Object {
@@ -601,92 +786,6 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
             </form>
           </div>
         </ShippingMethods>
-        <CheckoutCartTotal
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-        >
-          <div
-            aria-label="Cart total summary"
-            className="o-checkout-cart-total"
-          >
-            <div
-              className="o-checkout-cart-total__wrapper"
-            >
-              <dl
-                aria-label="Subtotal"
-              >
-                <dt>
-                   Subtotal: 
-                </dt>
-                <dd>
-                   £
-                  20
-                   
-                </dd>
-              </dl>
-              <dl
-                aria-label="VAT"
-              >
-                <dt>
-                   VAT: 
-                </dt>
-                <dd>
-                   £
-                  0
-                   
-                </dd>
-              </dl>
-              <dl
-                aria-label="Shipping cost"
-              >
-                <dt>
-                   Shipping: 
-                </dt>
-                <dd>
-                   Enter address 
-                </dd>
-              </dl>
-              <dl
-                aria-label="Total"
-                className="o-checkout-cart-total__total"
-              >
-                <dt>
-                   You Pay: 
-                </dt>
-                <dd>
-                   
-                  <b>
-                    £
-                    20
-                  </b>
-                   
-                </dd>
-              </dl>
-            </div>
-          </div>
-        </CheckoutCartTotal>
       </div>
     </div>
   </CheckoutPage>
