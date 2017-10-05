@@ -1,3 +1,5 @@
+const fetch = require('isomorphic-fetch')
+const ServerJsonApiParser = require('./lib/ServerJsonApiParser.js')
 const express = require('express')
 const next = require('next')
 const { createReadStream } = require('fs')
@@ -18,14 +20,6 @@ app.prepare().then(() => {
     return app.render(req, res, '/home/index', req.query)
   })
 
-  server.get('/products/:id', (req, res) => {
-    return app.render(req, res, '/products/product', Object.assign(req.query, req.params))
-  })
-
-  server.get('/categories/:id', (req, res) => {
-    return app.render(req, res, '/categories/category', Object.assign(req.query, req.params))
-  })
-
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)
   })
@@ -40,8 +34,50 @@ app.prepare().then(() => {
   server.get('/getCategory/:id', categoryHandler.getCategoryRenderer(app))
   server.get('/getCategories', categoryHandler.getCategoriesRenderer(app))
 
+  // if we need to specify routes e.g /search, they need to be placed above this.
   server.get('*', (req, res) => {
-    return handle(req, res)
+    const accessToken = process.env.CMS_ACCESS_TOKEN
+    const headers = {
+      'Content-Type': 'application/vnd.api+json',
+      'Accept': 'application/vnd.api+json',
+      'Authorization': `Bearer ${accessToken}`
+    }
+
+    function directRouting (router) {
+      if (router.status_code === 200) {
+        if (router.page.resource_type === 'Product') {
+          return app.render(req, res, '/products/product', Object.assign(req.query, { id: router.page.resource_id }))
+        } else if (router.page.resource_type === 'Category') {
+          return app.render(req, res, '/categories/category', Object.assign(req.query, { id: router.page.resource_id }))
+        }
+      } else if (router.status_code === 301 || router.status_code === 302) {
+        return res.redirect(router.status_code, router.redirect.destination)
+      } else {
+        return handle(req, res)
+      }
+    }
+
+    async function fetchCmsData (url, headers) {
+      try {
+        let response = await fetch(url, {
+          method: 'GET',
+          headers: headers,
+          timeout: 5000
+        })
+        if (response.ok) {
+          let data = await response.json()
+          let router = new ServerJsonApiParser().parse(data)
+
+          return directRouting(router)
+        } else {
+          throw new Error(response.errors)
+        }
+      } catch (errors) {
+        console.log('Error is', errors)
+      }
+    }
+
+    fetchCmsData(process.env.CMS_API_STAGING_URL + `${req.url}?include=page,redirect`, headers)
   })
 
   server.listen(port, (err) => {

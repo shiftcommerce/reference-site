@@ -1,4 +1,4 @@
-class JsonApiParser {
+class ServerJsonApiParser {
   parse (payload) {
     if (Array.isArray(payload.data)) {
       return this.parseCollection(payload)
@@ -83,4 +83,4 @@ class JsonApiParser {
   }
 }
 
-export default JsonApiParser
+module.exports = ServerJsonApiParser
