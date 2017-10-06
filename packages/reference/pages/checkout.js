@@ -14,6 +14,7 @@ import { readCart } from '../actions/cartActions'
 import Image from '../objects/Image'
 
 // Components
+import CheckoutSteps from '../components/checkout/CheckoutSteps.js'
 import AddressForm from '../components/checkout/AddressForm.js'
 import CheckoutCart from '../components/checkout/CheckoutCart.js'
 import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal.js'
@@ -55,12 +56,13 @@ export class CheckoutPage extends Component {
               </a>
             </Link>
           </span>
+          <CheckoutSteps { ...this.props } />
         </div>
         <div>
           <AddressForm {...this.props} title='Shipping Address' formName='shippingAddress' addressType='shipping' dispatch={this.props.dispatch} />
           <CheckoutCart title='Your Cart' {...this.props} />
           <CheckoutCartTotal {...this.props} />
-          <ShippingMethods {...this.props} setShippingMethod={this.setShippingMethod} />
+          <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
           <PaymentMethod formName='paymentMethod' {...this.props} />
 
           {!paymentMethodCollapsed &&

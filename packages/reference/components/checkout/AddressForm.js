@@ -18,15 +18,11 @@ export default class AddressForm extends Component {
   }
 
   onShowField (fieldName) {
-    return (
-      this.props.dispatch(showField(this.props.formName, fieldName))
-    )
+    this.props.dispatch(showField(this.props.formName, fieldName))
   }
 
   onToggleCollapsed () {
-    return (
-      this.props.dispatch(toggleCollapsed(this.props.formName))
-    )
+    this.props.dispatch(toggleCollapsed(this.props.formName))
   }
 
   render () {
@@ -44,7 +40,7 @@ export default class AddressForm extends Component {
       <div className={classNames('o-form', className)}>
         <h3>{this.props.title}</h3>
         {collapsed &&
-          <button onClick={this.onToggleCollapsed}>Edit</button>
+          <button className='c-button' onClick={this.onToggleCollapsed}>Edit</button>
         }
 
         {collapsed && addressType === 'shipping' &&
@@ -64,7 +60,7 @@ export default class AddressForm extends Component {
               fieldValue={address.country}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <InputGroup
@@ -73,7 +69,7 @@ export default class AddressForm extends Component {
               fieldValue={address.fullName}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             {!(address.companyNameShown) &&
@@ -90,7 +86,7 @@ export default class AddressForm extends Component {
                 fieldName='companyName'
                 fieldValue={address.companyName}
                 formName={formName}
-                dispatch = {this.props.dispatch}
+                dispatch={this.props.dispatch}
               />
             }
 
@@ -100,7 +96,7 @@ export default class AddressForm extends Component {
               fieldValue={address.address1}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             {!(address.address2Shown) &&
@@ -117,7 +113,7 @@ export default class AddressForm extends Component {
                 fieldName='address2'
                 fieldValue={address.address2}
                 formName={formName}
-                dispatch = {this.props.dispatch}
+                dispatch={this.props.dispatch}
               />
             }
 
@@ -127,7 +123,7 @@ export default class AddressForm extends Component {
               fieldValue={address.postCode}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <InputGroup
@@ -136,7 +132,7 @@ export default class AddressForm extends Component {
               fieldValue={address.city}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <InputGroup
@@ -145,7 +141,7 @@ export default class AddressForm extends Component {
               fieldValue={address.county}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <InputGroup
@@ -154,7 +150,7 @@ export default class AddressForm extends Component {
               fieldValue={address.phone}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <InputGroup
@@ -163,7 +159,7 @@ export default class AddressForm extends Component {
               fieldValue={address.email}
               formName={formName}
               required='true'
-              dispatch = {this.props.dispatch}
+              dispatch={this.props.dispatch}
             />
 
             <p>
@@ -177,11 +173,11 @@ export default class AddressForm extends Component {
                   fieldName='newsletterOptIn'
                   fieldValue={address.newsletterOptIn}
                   formName={formName}
-                  dispatch = {this.props.dispatch}
+                  dispatch={this.props.dispatch}
                 />
 
                 <div className='o-form__input-group'>
-                  <button onClick={this.onToggleCollapsed} type='submit'>
+                  <button className='c-button' onClick={this.onToggleCollapsed} type='submit'>
                     View Shipping Options
                   </button>
                 </div>

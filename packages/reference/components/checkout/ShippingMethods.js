@@ -4,12 +4,17 @@ import { Component } from 'react'
 // Fixtures
 import ShippingMethodsJson from '../../static/shippingMethods.json'
 
+// Actions
+import { toggleCollapsed } from '../../actions/checkoutActions'
+
 export default class ShippingMethods extends Component {
   constructor (props) {
     super(props)
 
     const preSelectedShippingMethod = props.checkout.shippingMethod
     const firstShippingMethod = ShippingMethodsJson.shippingMethods[0]
+
+    this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
 
     this.state = {
       shippingMethods: ShippingMethodsJson.shippingMethods,
@@ -27,6 +32,10 @@ export default class ShippingMethods extends Component {
   setShippingMethod (shippingMethod) {
     this.props.setShippingMethod(shippingMethod)
     this.setState({ selectedShippingMethod: shippingMethod })
+  }
+
+  onToggleCollapsed () {
+    this.props.dispatch(toggleCollapsed(this.props.formName))
   }
 
   renderShippingMethods () {
@@ -55,23 +64,41 @@ export default class ShippingMethods extends Component {
   render () {
     const itemCount = this.props.cart.lineItems.length
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
+    const selectedShippingMethod = this.state.selectedShippingMethod
+    const collapsed = this.props.checkout.shippingMethod.collapsed
 
     return (
       <div className='o-form' aria-label='Shipping Methods'>
         <h3>Your Shipping Method</h3>
-        <form className='o-form__wrapper c-shipping-method-list'>
-          <p>📍 Shipping from ...
-            <span className='c-shipping-method-list__item-count'>
-              {itemCountText}
-            </span>
-          </p>
 
-          {this.renderShippingMethods()}
+        {collapsed &&
+          <div>
+            <button aria-label='Edit your shipping method' className='c-button' onClick={this.onToggleCollapsed} type='button'>
+              Edit
+            </button>
 
-          <button type='submit'>
-            Continue to Payment
-          </button>
-        </form>
+            <div className='o-form__wrapper'>
+              <p className='u-bold'>{selectedShippingMethod.title}</p>
+              <p><span className='u-bold'>Estimated Delivery</span>: {selectedShippingMethod.delivery_date}</p>
+            </div>
+          </div>
+        }
+
+        {!collapsed &&
+          <form className='o-form__wrapper c-shipping-method-list'>
+            <p>📍 Shipping from ...
+              <span className='c-shipping-method-list__item-count'>
+                {itemCountText}
+              </span>
+            </p>
+
+            {this.renderShippingMethods()}
+
+            <button aria-label='Continue to payment' className='c-button' onClick={this.onToggleCollapsed} type='button'>
+              Continue to Payment
+            </button>
+          </form>
+        }
       </div>
     )
   }

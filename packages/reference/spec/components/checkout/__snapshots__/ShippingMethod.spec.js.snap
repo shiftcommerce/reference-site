@@ -7,17 +7,21 @@ exports[`display pre selected shipping method as selected option on page load 1`
       "lineItems": Array [],
     }
   }
-  checkout={Object {}}
-  setShippingMethod={[Function]}
-  state={
+  checkout={
     Object {
-      "selectedShippingMethod": Object {
+      "shippingMethod": Object {
+        "collapsed": false,
         "cost": 3.45,
         "delivery_date": "Monday 3rd December",
         "id": "1",
         "title": "Super Saver",
         "value": "super_saver",
       },
+    }
+  }
+  setShippingMethod={[Function]}
+  state={
+    Object {
       "shippingMethods": Array [
         Object {
           "cost": 3.45,
@@ -226,11 +230,78 @@ exports[`display pre selected shipping method as selected option on page load 1`
         </label>
       </div>
       <button
-        type="submit"
+        aria-label="Continue to payment"
+        className="c-button"
+        onClick={[Function]}
+        type="button"
       >
         Continue to Payment
       </button>
     </form>
+  </div>
+</ShippingMethods>
+`;
+
+exports[`render collapsed view as expected 1`] = `
+<ShippingMethods
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "id": "1",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingMethod": Object {
+        "collapsed": true,
+        "cost": 3.45,
+        "delivery_date": "Monday 3rd December",
+        "id": "1",
+        "title": "Super Saver",
+        "value": "super_saver",
+      },
+    }
+  }
+  state={Object {}}
+>
+  <div
+    aria-label="Shipping Methods"
+    className="o-form"
+  >
+    <h3>
+      Your Shipping Method
+    </h3>
+    <div>
+      <button
+        aria-label="Edit your shipping method"
+        className="c-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Edit
+      </button>
+      <div
+        className="o-form__wrapper"
+      >
+        <p
+          className="u-bold"
+        >
+          Super Saver
+        </p>
+        <p>
+          <span
+            className="u-bold"
+          >
+            Estimated Delivery
+          </span>
+          : 
+          Monday 3rd December
+        </p>
+      </div>
+    </div>
   </div>
 </ShippingMethods>
 `;
@@ -246,10 +317,15 @@ exports[`render shipping methods as expected 1`] = `
       ],
     }
   }
-  checkout={Object {}}
+  checkout={
+    Object {
+      "shippingMethod": Object {},
+    }
+  }
   setShippingMethod={[Function]}
   state={
     Object {
+      "collapsed": false,
       "shippingMethods": Array [
         Object {
           "cost": 3.45,
@@ -307,7 +383,7 @@ exports[`render shipping methods as expected 1`] = `
         onClick={[Function]}
       >
         <input
-          checked={true}
+          checked={false}
           id="1"
           name="shipping_method"
           onChange={[Function]}
@@ -458,7 +534,10 @@ exports[`render shipping methods as expected 1`] = `
         </label>
       </div>
       <button
-        type="submit"
+        aria-label="Continue to payment"
+        className="c-button"
+        onClick={[Function]}
+        type="button"
       >
         Continue to Payment
       </button>
@@ -474,7 +553,13 @@ exports[`renders line item quantity as expected 1`] = `
       "lineItems": Array [],
     }
   }
-  checkout={Object {}}
+  checkout={
+    Object {
+      "shippingMethod": Object {
+        "collapsed": false,
+      },
+    }
+  }
   setShippingMethod={[Function]}
   state={
     Object {
@@ -535,7 +620,7 @@ exports[`renders line item quantity as expected 1`] = `
         onClick={[Function]}
       >
         <input
-          checked={true}
+          checked={false}
           id="1"
           name="shipping_method"
           onChange={[Function]}
@@ -686,7 +771,10 @@ exports[`renders line item quantity as expected 1`] = `
         </label>
       </div>
       <button
-        type="submit"
+        aria-label="Continue to payment"
+        className="c-button"
+        onClick={[Function]}
+        type="button"
       >
         Continue to Payment
       </button>
@@ -702,7 +790,13 @@ exports[`should be able to select a shipping method 1`] = `
       "lineItems": Array [],
     }
   }
-  checkout={Object {}}
+  checkout={
+    Object {
+      "shippingMethod": Object {
+        "collapsed": false,
+      },
+    }
+  }
   setShippingMethod={[Function]}
   state={
     Object {
@@ -915,7 +1009,10 @@ exports[`should be able to select a shipping method 1`] = `
         </label>
       </div>
       <button
-        type="submit"
+        aria-label="Continue to payment"
+        className="c-button"
+        onClick={[Function]}
+        type="button"
       >
         Continue to Payment
       </button>

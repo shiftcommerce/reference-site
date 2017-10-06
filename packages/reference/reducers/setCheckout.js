@@ -27,7 +27,14 @@ const initialState = {
   paymentMethod: {
     shippingAddressAsBillingAddress: 'true',
     collapsed: false
-  }
+  },
+  currentStep: 1
+}
+
+const mapComponentsToNextStep = {
+  shippingAddress: 2, // 'View Shipping Options'
+  shippingMethod: 3, // 'Continue to Payment'
+  paymentMethod: 4 // 'Review Your Order'
 }
 
 export default function setCheckout (state = initialState, action) {
@@ -45,8 +52,15 @@ export default function setCheckout (state = initialState, action) {
       return newState
 
     case types.TOGGLE_CHECKOUT_COMPONENT_COLLAPSED:
-      const newValue = !newState[action.payload.componentName].collapsed
-      newState[action.payload.componentName].collapsed = newValue
+      const componentName = action.payload.componentName
+      const newCollapsedValue = !newState[componentName].collapsed
+      const newStep = mapComponentsToNextStep[componentName]
+      // If component has just been collapsed, and the component name maps to a step,
+      // and we're not going back to edit an old step
+      if (newCollapsedValue && newStep && newState.currentStep < newStep) {
+        newState.currentStep = newStep
+      }
+      newState[componentName].collapsed = newCollapsedValue
       newState.updatedAt = new Date()
       return newState
 

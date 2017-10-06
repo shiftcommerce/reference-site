@@ -74,6 +74,111 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
             </a>
           </Link>
         </span>
+        <CheckoutSteps
+          cart={
+            Object {
+              "lineItems": Array [
+                Object {
+                  "discount": 0,
+                  "imageUrl": "",
+                  "price": 10,
+                  "productID": 1,
+                  "productSku": "1231",
+                  "quantity": 2,
+                  "size": "size - 8",
+                  "sku": "123",
+                  "title": "test",
+                },
+              ],
+            }
+          }
+          checkout={
+            Object {
+              "billingAddress": Object {},
+              "paymentMethod": Object {},
+              "shippingAddress": Object {},
+              "shippingMethod": Object {},
+            }
+          }
+          dispatch={[Function]}
+        >
+          <div
+            className="c-step-indicators"
+          >
+            <div
+              className="o-header__step"
+            >
+              <div
+                className="c-step-indicator"
+              >
+                <div
+                  className="c-step-indicator__position"
+                >
+                  1
+                </div>
+                <div
+                  className="c-step-indicator__subtitle"
+                >
+                  Shipping Address
+                </div>
+              </div>
+            </div>
+            <div
+              className="o-header__step"
+            >
+              <div
+                className="c-step-indicator"
+              >
+                <div
+                  className="c-step-indicator__position"
+                >
+                  2
+                </div>
+                <div
+                  className="c-step-indicator__subtitle"
+                >
+                  Shipping Method
+                </div>
+              </div>
+            </div>
+            <div
+              className="o-header__step"
+            >
+              <div
+                className="c-step-indicator"
+              >
+                <div
+                  className="c-step-indicator__position"
+                >
+                  3
+                </div>
+                <div
+                  className="c-step-indicator__subtitle"
+                >
+                  Payment
+                </div>
+              </div>
+            </div>
+            <div
+              className="o-header__step"
+            >
+              <div
+                className="c-step-indicator"
+              >
+                <div
+                  className="c-step-indicator__position"
+                >
+                  4
+                </div>
+                <div
+                  className="c-step-indicator__subtitle"
+                >
+                  Review & Submit
+                </div>
+              </div>
+            </div>
+          </div>
+        </CheckoutSteps>
       </div>
       <div>
         <AddressForm
@@ -386,6 +491,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                   className="o-form__input-group"
                 >
                   <button
+                    className="c-button"
                     onClick={[Function]}
                     type="submit"
                   >
@@ -614,6 +720,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
             }
           }
           dispatch={[Function]}
+          formName="shippingMethod"
           setShippingMethod={[Function]}
         >
           <div
@@ -791,7 +898,10 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                 </label>
               </div>
               <button
-                type="submit"
+                aria-label="Continue to payment"
+                className="c-button"
+                onClick={[Function]}
+                type="button"
               >
                 Continue to Payment
               </button>

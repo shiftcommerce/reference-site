@@ -1,0 +1,31 @@
+.c-step-indicators {
+  display: inline;
+
+  .c-step-indicator {
+    color: #777;
+
+    a, a:link, a:hover, a:visited {
+      color: inherit
+    }
+
+    &__position {
+      display: block;
+      margin: 0 auto;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      border: 1px solid ;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: center;
+    }
+
+    &__subtitle {
+      padding-top: 5px;
+    }
+
+    &--active {
+      color: #000;
+    }
+  }
+}

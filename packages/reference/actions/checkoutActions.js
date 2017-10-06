@@ -96,7 +96,8 @@ export function readCheckoutFromLocalStorage () {
             paymentMethod: {
               shippingAddressAsBillingAddress: true
             },
-            shippingMethod: {}
+            shippingMethod: {},
+            currentStep: 1
           }
         }
         // update local redux store
