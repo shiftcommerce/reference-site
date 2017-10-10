@@ -51,7 +51,6 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-          <link rel='stylesheet' href='https://unpkg.com/react-instantsearch-theme-algolia@4.0.0/style.min.css' />
         </Head>
 
         <body>

@@ -1,11 +1,11 @@
 // Component
-import RelatedProducts from '../../../components/products/RelatedProducts'
+import RelatedProducts from '../../../../components/products/pdp/RelatedProducts'
 
 // Objects
-import Image from '../../../objects/Image'
+import Image from '../../../../objects/Image'
 
 // Fixtures
-import product from '../../fixtures/product.fixture'
+import product from '../../../fixtures/product.fixture'
 
 test('renders correctly', () => {
   // Arrange & Act

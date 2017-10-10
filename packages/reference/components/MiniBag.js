@@ -1,45 +1,51 @@
 // Libraries
 import { Component } from 'react'
+import { connect } from 'react-redux'
 import Link from 'next/link'
-import withRedux from 'next-redux-wrapper'
+import classNames from 'classnames'
 
 // Actions
 import { readCart } from '../actions/cartActions'
-
-// Utils
-import { configureStore } from '../utils/configureStore'
 
 export class MiniBag extends Component {
   componentDidMount () {
     this.props.dispatch(readCart())
   }
 
-  renderCheckoutButton () {
-    if (this.props.cart.lineItems.length > 0) {
-      return <Link href='/checkout'>
-        <a className='c-button c-button--negative c-button--lrg' aria-label='Go to checkout'>
-          CHECKOUT
-        </a>
-      </Link>
-    } else {
-      return <div className='c-button c-button--negative c-button--lrg c-button--disabled' aria-label='Go to checkout'>
-        CHECKOUT
-      </div>
-    }
-  }
-
-  render () {
-    return <div>
+  renderViewYourBagLink (lineItemCount) {
+    return (
       <Link href='/cart'>
         <a aria-label='View your cart'>
           View Your Bag
           <span style={{marginLeft: '5px', marginRight: '5px'}}>
-            ({ this.props.cart.lineItems.length })
+            ({ lineItemCount })
           </span>
         </a>
       </Link>
-      { this.renderCheckoutButton() }
-    </div>
+    )
+  }
+
+  renderCheckoutButton (lineItemCount) {
+    return (
+      <Link href={(lineItemCount > 0) ? '/checkout' : ''}>
+        <a className={classNames('o-button o-button--negative o-button--lrg', {'o-button--disabled': (lineItemCount === 0)})} aria-label='Go to checkout'>
+          CHECKOUT
+        </a>
+      </Link>
+    )
+  }
+
+  render () {
+    let { cart } = this.props
+    let lineItems = cart.lineItems
+    let lineItemCount = (lineItems && lineItems.length) || 0
+
+    return (
+      <div>
+        { this.renderViewYourBagLink(lineItemCount) }
+        { this.renderCheckoutButton(lineItemCount) }
+      </div>
+    )
   }
 }
 
@@ -49,4 +55,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default withRedux(configureStore, mapStateToProps)(MiniBag)
+export default connect(mapStateToProps)(MiniBag)

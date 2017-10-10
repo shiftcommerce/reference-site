@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the header 1`] = `
+<SearchBar>
+  <form
+    action="/search"
+    method="get"
+    onSubmit={[Function]}
+    role="search"
+  >
+    <div
+      className="c-searchbar"
+    >
+      <input
+        aria-label="search text"
+        className="c-searchbar--input"
+        name="query"
+        onChange={[Function]}
+        placeholder="Enter Keyword Or Product Code"
+        type="search"
+        value=""
+      />
+      <Button
+        label="Search"
+        size="lrg"
+        status="dark"
+      >
+        <button
+          className="o-button o-button--dark o-button--lrg"
+          role="button"
+          tabIndex="0"
+        >
+          Search
+        </button>
+      </Button>
+    </div>
+  </form>
+</SearchBar>
+`;

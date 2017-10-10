@@ -1,0 +1,600 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="s-algolia_instantsearch"
+>
+  <CreateInstantSearchServer
+    apiKey="d3d6a8fe127394940245b920ad9c8fab"
+    appId="A6OLVXF8F8"
+    indexName="test_variants"
+    resultState={
+      Object {
+        "_originalResponse": Object {
+          "results": Array [
+            Object {
+              "exhaustiveFacetsCount": true,
+              "exhaustiveNbHits": false,
+              "facets": Object {
+                "category_ids": Object {
+                  "22bca338-b578-4aee-a302-992764fa3e72": 3,
+                },
+                "variant.meta_data.eu.size": Object {
+                  "Size 10": 1,
+                  "Size 8": 2,
+                },
+              },
+              "hits": Array [
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "meta_data": Object {
+                        "eu": Object {
+                          "sku": Object {
+                            "matchLevel": "none",
+                            "matchedWords": Array [],
+                            "value": "SK8407636324",
+                          },
+                        },
+                      },
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "Long Shirt",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [
+                    "22bca338-b578-4aee-a302-992764fa3e72",
+                  ],
+                  "objectID": "a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e",
+                  "product": Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "colour": "Blue",
+                        "description": "Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.",
+                        "sku": "SK8407636324",
+                      },
+                    },
+                    "reference": "long_shirt",
+                    "title": "Long Shirt",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 50,
+                        "size": "Size 10",
+                      },
+                    },
+                    "sku": "SK8407636324-2",
+                    "title": "Medium",
+                  },
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "First_product_22hhh-hu",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [],
+                  "objectID": "7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03",
+                  "product": Object {
+                    "meta_data": Object {},
+                    "reference": "product_test_898-2345ng",
+                    "title": "First_product_22hhh-hu",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {},
+                    "sku": "variant_253-7345-22343",
+                    "title": "Variant-51342-48998",
+                  },
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "First_product1324",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [],
+                  "objectID": "3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe",
+                  "product": Object {
+                    "meta_data": Object {},
+                    "reference": "product_2345ng",
+                    "title": "First_product1324",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {},
+                    "sku": "variant_2592343",
+                    "title": "Varian8992458",
+                  },
+                },
+              ],
+              "hitsPerPage": 36,
+              "index": "test_variants",
+              "nbHits": 3,
+              "nbPages": 1,
+              "page": 0,
+              "params": "query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22variant.meta_data.eu.colour%22%2C%22variant.meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=",
+              "processingTimeMS": 1,
+              "query": "",
+            },
+          ],
+        },
+        "content": Object {
+          "_rawResults": Array [
+            Object {
+              "exhaustiveFacetsCount": true,
+              "exhaustiveNbHits": false,
+              "facets": Object {
+                "category_ids": Object {
+                  "22bca338-b578-4aee-a302-992764fa3e72": 3,
+                },
+                "variant.meta_data.eu.size": Object {
+                  "Size 10": 1,
+                  "Size 8": 2,
+                },
+              },
+              "hits": Array [
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "meta_data": Object {
+                        "eu": Object {
+                          "sku": Object {
+                            "matchLevel": "none",
+                            "matchedWords": Array [],
+                            "value": "SK8407636324",
+                          },
+                        },
+                      },
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "Long Shirt",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [
+                    "22bca338-b578-4aee-a302-992764fa3e72",
+                  ],
+                  "objectID": "a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e",
+                  "product": Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "colour": "Blue",
+                        "description": "Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.",
+                        "sku": "SK8407636324",
+                      },
+                    },
+                    "reference": "long_shirt",
+                    "title": "Long Shirt",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {
+                      "eu": Object {
+                        "price": 50,
+                        "size": "Size 10",
+                      },
+                    },
+                    "sku": "SK8407636324-2",
+                    "title": "Medium",
+                  },
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "First_product_22hhh-hu",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [],
+                  "objectID": "7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03",
+                  "product": Object {
+                    "meta_data": Object {},
+                    "reference": "product_test_898-2345ng",
+                    "title": "First_product_22hhh-hu",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {},
+                    "sku": "variant_253-7345-22343",
+                    "title": "Variant-51342-48998",
+                  },
+                },
+                Object {
+                  "_highlightResult": Object {
+                    "product": Object {
+                      "title": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "First_product1324",
+                      },
+                    },
+                  },
+                  "assets": Array [],
+                  "category_ids": Array [],
+                  "objectID": "3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe",
+                  "product": Object {
+                    "meta_data": Object {},
+                    "reference": "product_2345ng",
+                    "title": "First_product1324",
+                  },
+                  "variant": Object {
+                    "meta_data": Object {},
+                    "sku": "variant_2592343",
+                    "title": "Varian8992458",
+                  },
+                },
+              ],
+              "hitsPerPage": 36,
+              "index": "test_variants",
+              "nbHits": 3,
+              "nbPages": 1,
+              "page": 0,
+              "params": "query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22variant.meta_data.eu.colour%22%2C%22variant.meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=",
+              "processingTimeMS": 1,
+              "query": "",
+            },
+          ],
+          "_state": Object {
+            "disjunctiveFacets": Array [
+              "variant.meta_data.eu.colour",
+              "variant.meta_data.eu.size",
+            ],
+            "disjunctiveFacetsRefinements": Object {},
+            "facets": Array [],
+            "facetsExcludes": Object {},
+            "facetsRefinements": Object {},
+            "hierarchicalFacets": Array [
+              Object {
+                "attributes": Array [
+                  "category_ids",
+                ],
+                "name": "category_ids",
+                "rootPath": null,
+                "separator": " > ",
+                "showParentLevel": false,
+              },
+            ],
+            "hierarchicalFacetsRefinements": Object {},
+            "highlightPostTag": "</ais-highlight-0000000000>",
+            "highlightPreTag": "<ais-highlight-0000000000>",
+            "hitsPerPage": 36,
+            "index": "test_variants",
+            "maxValuesPerFacet": 10,
+            "numericRefinements": Object {},
+            "page": 0,
+            "query": "",
+            "tagRefinements": Array [],
+          },
+          "disjunctiveFacets": Array [
+            Object {
+              "data": Object {
+                "Size 10": 1,
+                "Size 8": 2,
+              },
+              "exhaustive": true,
+              "name": "variant.meta_data.eu.size",
+            },
+          ],
+          "exhaustiveFacetsCount": true,
+          "exhaustiveNbHits": false,
+          "facets": Array [],
+          "hierarchicalFacets": Array [
+            Object {
+              "count": null,
+              "data": Array [
+                Object {
+                  "count": 3,
+                  "data": null,
+                  "isRefined": false,
+                  "name": "22bca338-b578-4aee-a302-992764fa3e72",
+                  "path": "22bca338-b578-4aee-a302-992764fa3e72",
+                },
+              ],
+              "isRefined": true,
+              "name": "category_ids",
+              "path": null,
+            },
+          ],
+          "hits": Array [
+            Object {
+              "_highlightResult": Object {
+                "product": Object {
+                  "meta_data": Object {
+                    "eu": Object {
+                      "sku": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "SK8407636324",
+                      },
+                    },
+                  },
+                  "title": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "Long Shirt",
+                  },
+                },
+              },
+              "assets": Array [],
+              "category_ids": Array [
+                "22bca338-b578-4aee-a302-992764fa3e72",
+              ],
+              "objectID": "a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e",
+              "product": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "colour": "Blue",
+                    "description": "Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.",
+                    "sku": "SK8407636324",
+                  },
+                },
+                "reference": "long_shirt",
+                "title": "Long Shirt",
+              },
+              "variant": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "price": 50,
+                    "size": "Size 10",
+                  },
+                },
+                "sku": "SK8407636324-2",
+                "title": "Medium",
+              },
+            },
+            Object {
+              "_highlightResult": Object {
+                "product": Object {
+                  "title": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "First_product_22hhh-hu",
+                  },
+                },
+              },
+              "assets": Array [],
+              "category_ids": Array [],
+              "objectID": "7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03",
+              "product": Object {
+                "meta_data": Object {},
+                "reference": "product_test_898-2345ng",
+                "title": "First_product_22hhh-hu",
+              },
+              "variant": Object {
+                "meta_data": Object {},
+                "sku": "variant_253-7345-22343",
+                "title": "Variant-51342-48998",
+              },
+            },
+            Object {
+              "_highlightResult": Object {
+                "product": Object {
+                  "title": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "First_product1324",
+                  },
+                },
+              },
+              "assets": Array [],
+              "category_ids": Array [],
+              "objectID": "3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe",
+              "product": Object {
+                "meta_data": Object {},
+                "reference": "product_2345ng",
+                "title": "First_product1324",
+              },
+              "variant": Object {
+                "meta_data": Object {},
+                "sku": "variant_2592343",
+                "title": "Varian8992458",
+              },
+            },
+          ],
+          "hitsPerPage": 36,
+          "index": "test_variants",
+          "nbHits": 3,
+          "nbPages": 1,
+          "page": 0,
+          "processingTimeMS": 1,
+          "query": "",
+        },
+        "state": Object {
+          "disjunctiveFacets": Array [
+            "variant.meta_data.eu.colour",
+            "variant.meta_data.eu.size",
+          ],
+          "disjunctiveFacetsRefinements": Object {},
+          "facets": Array [],
+          "facetsExcludes": Object {},
+          "facetsRefinements": Object {},
+          "hierarchicalFacets": Array [
+            Object {
+              "attributes": Array [
+                "category_ids",
+              ],
+              "name": "category_ids",
+              "rootPath": null,
+              "separator": " > ",
+              "showParentLevel": false,
+            },
+          ],
+          "hierarchicalFacetsRefinements": Object {},
+          "highlightPostTag": "</ais-highlight-0000000000>",
+          "highlightPreTag": "<ais-highlight-0000000000>",
+          "hitsPerPage": 36,
+          "index": "test_variants",
+          "maxValuesPerFacet": 10,
+          "numericRefinements": Object {},
+          "page": 0,
+          "query": "",
+          "tagRefinements": Array [],
+        },
+      }
+    }
+    searchState={Object {}}
+  >
+    <AlgoliaConfigure(UnknownComponent)
+      hitsPerPage="36"
+    />
+    <div
+      className="c-product_list"
+    >
+      <div
+        className="c-product_list__container"
+      >
+        <section
+          className="c-product_list__sidebar"
+        >
+          <div
+            className="c-product_list__sidebar--filter"
+          >
+            <AlgoliaCurrentRefinements(Translatable(ClearAll))
+              clearsQuery={true}
+            />
+            <AlgoliaHierarchicalMenu(Translatable(HierarchicalMenu))
+              attributes={
+                Array [
+                  "category_ids",
+                ]
+              }
+              limitMax={20}
+              limitMin={0}
+              rootPath={null}
+              selector=">"
+              separator=" > "
+              showMore={false}
+              showParentLevel={false}
+            />
+            <p
+              className="c-product_list__sidebar--filter-title"
+            >
+              Colour
+            </p>
+            <AlgoliaRefinementList(Translatable(RefinementList))
+              attributeName="product.meta_data.eu.colour"
+              limitMax={20}
+              limitMin={10}
+              operator="or"
+              showMore={false}
+            />
+            <p
+              className="c-product_list__sidebar--filter-title"
+            >
+              Size
+            </p>
+            <AlgoliaRefinementList(Translatable(RefinementList))
+              attributeName="variant.meta_data.eu.size"
+              limitMax={20}
+              limitMin={10}
+              operator="or"
+              showMore={false}
+            />
+          </div>
+        </section>
+        <section
+          className="c-product_list__listing"
+        >
+          <div
+            className="c-product_list__listing--stats"
+            role="Search Statistics"
+          />
+          <div
+            className="c-product_list__actions"
+          >
+            <div
+              className="c-product_list__actions--pagination"
+              role="pagination"
+            >
+              <AlgoliaPagination(Translatable(Pagination)) />
+            </div>
+            <div
+              className="c-product_list__actions--sort"
+              role="Sort"
+            >
+              <AlgoliaSortBy(SortBy)
+                defaultRefinement="test_variants"
+                items={
+                  Array [
+                    Object {
+                      "label": "SortBy",
+                      "value": "test_variants",
+                    },
+                    Object {
+                      "label": "Price: Low-High",
+                      "value": "test_variants_by_price_asc",
+                    },
+                    Object {
+                      "label": "Price: High-Low",
+                      "value": "test_variants_by_price_desc",
+                    },
+                  ]
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="c-product_list__products"
+            role="product list"
+          >
+            <AlgoliaHits(Hits)
+              hitComponent={[Function]}
+            />
+          </div>
+          <div
+            className="c-product_list__actions"
+          >
+            <div
+              className="c-product_list__actions--pagination"
+              role="pagination"
+            >
+              <AlgoliaPagination(Translatable(Pagination)) />
+            </div>
+            <div
+              className="c-product_list__actions--sort"
+              role="Sort"
+            >
+              <AlgoliaSortBy(SortBy)
+                defaultRefinement="test_variants"
+                items={
+                  Array [
+                    Object {
+                      "label": "SortBy",
+                      "value": "test_variants",
+                    },
+                    Object {
+                      "label": "Price: Low-High",
+                      "value": "test_variants_by_price_asc",
+                    },
+                    Object {
+                      "label": "Price: High-Low",
+                      "value": "test_variants_by_price_desc",
+                    },
+                  ]
+                }
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </CreateInstantSearchServer>
+</div>
+`;

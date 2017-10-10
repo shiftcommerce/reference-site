@@ -6,9 +6,9 @@ import Link from 'next/link'
 import Image from '../objects/Image'
 
 // Components
-import MiniBag from '../components/MiniBag'
+import MiniBag from './MiniBag'
 import NavBar from './navigation/NavBar'
-import SearchBar from '../components/SearchBar'
+import SearchBar from './search/SearchBar'
 
 class Layout extends Component {
   render () {
@@ -23,7 +23,7 @@ class Layout extends Component {
           <span className='o-header__logo'>
             <Link href='/home/index' as='/'>
               <a>
-                <Image width={250} height={35} />
+                <Image width={52} height={59} src='/static/logo.svg' />
               </a>
             </Link>
           </span>

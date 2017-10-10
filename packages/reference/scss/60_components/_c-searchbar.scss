@@ -1,0 +1,25 @@
+/* ==========================================================================
+   # SearchBar Component
+   ========================================================================== */
+
+.c-searchbar {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0;
+
+  &--input {
+    width: 70%;
+    border-radius: 0;
+    border-width: .07143rem;
+    border-style: solid;
+    border-color: $border-default;
+    background-color: $background-white;
+    padding: 0 15px;
+    line-height: 38px;
+    margin: 0 5px 0 0;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    font-size: 15px;
+    color: $background-dark;
+  }
+}

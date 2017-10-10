@@ -8,7 +8,12 @@ export function readProduct (productID) {
   const request = {
     endpoint: `/getProduct/${productID}`,
     query: {
-      include: 'variants,asset_files'
+      include: 'categories,variants,asset_files',
+      fields: {
+        categories: 'id,title',
+        variants: 'id,meta_data',
+        asset_files: 'url,alt_text'
+      }
     },
     successActionType: types.SET_PRODUCT
   }

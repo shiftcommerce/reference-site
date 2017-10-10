@@ -1,5 +1,5 @@
 .o-header {
-  width: 95%;
+  width: 100%;
   margin: 20px auto;
   @include breakpoint(desktop) {
     width: 80%;
@@ -9,13 +9,15 @@
 .o-header__logo {
   width: 100%;
   display: inline-block;
-  text-align: center;
+  position: relative;
+  left: 45%;
 
   @include breakpoint(desktop) {
-    width: 20%;
-    text-align: left;
+    width: 33.3%;
+    left: 0;
   }
 }
+
 .o-header__search {
   width: 100%;
   display: inline-block;
@@ -35,12 +37,18 @@
   margin-top: 5px;
   vertical-align: top;
 
+  a {
+    text-transform: uppercase;
+    padding: 15px;
+  }
+
   @include breakpoint(desktop) {
     width: 33.3%;
     text-align: right;
     margin-top: 0;
   }
 }
+
 .o-header__step {
   width: 100%;
   display: inline-block;

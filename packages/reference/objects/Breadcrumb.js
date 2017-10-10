@@ -12,7 +12,7 @@ class Breadcrumb extends Component {
     return (
       trail && trail.map((crumb, idx) =>
         <li key={idx} className='o-breadcrumb__item'>
-          <Link href={crumb.canonical_path} >
+          <Link href={`${crumb.page}?id=${crumb.id}`} as={crumb.canonical_path} >
             <a className='o-breadcrumb__link'>{ crumb.title }</a>
           </Link>
         </li>

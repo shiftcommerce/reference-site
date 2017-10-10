@@ -4,7 +4,7 @@ import withRedux from 'next-redux-wrapper'
 
 // Components
 import Layout from '../../components/Layout'
-import ProductDisplay from '../../components/products/ProductDisplay'
+import ProductDisplay from '../../components/products/pdp/ProductDisplay'
 
 // Objects
 import Breadcrumb from '../../objects/Breadcrumb'
@@ -50,7 +50,7 @@ class Product extends Component {
         size: size,
         quantity: parseInt(quantity),
         price: price,
-        imageUrl: product.asset_files[0].url,
+        imageUrl: (product.asset_files[0] && product.asset_files[0].url),
         productSku: product.sku,
         productID: product.id
       }
@@ -75,15 +75,17 @@ class Product extends Component {
   }
 
   render () {
-    const breadcrumbMenuTrail = [
-      { id: 1, title: 'Dresses', canonical_path: '/categories/61af1530-a9e8-44f2-a5c0-a0e7fe8f397b' },
-      { id: 2, title: 'Textured Long T-Shirt', canonical_path: '/products/708a0142-e60f-4332-9a8b-1359c5af9ec4' }
-    ]
-
     let {
       product,
       process
     } = this.props
+
+    let category = (product.categories && product.categories[0])
+
+    const breadcrumbMenuTrail = [
+      { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' },
+      { id: product.id, title: product.title, canonical_path: `/products/${product.id}`, page: '/products/product' }
+    ]
 
     if (process.errored || Object.keys(product).length === 0) {
       return (

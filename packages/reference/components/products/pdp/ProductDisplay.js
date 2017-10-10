@@ -7,10 +7,10 @@ import DeliveryInformation from './DeliveryInformation'
 import ProductPrice from './ProductPrice'
 
 // Objects
-import Image from '../../objects/Image'
-import Button from '../../objects/Button'
-import DropdownSelect from '../../objects/DropdownSelect'
-import SizeSelector from '../../objects/SizeSelector'
+import Image from '../../../objects/Image'
+import Button from '../../../objects/Button'
+import DropdownSelect from '../../../objects/DropdownSelect'
+import SizeSelector from '../../../objects/SizeSelector'
 
 class ProductDisplay extends Component {
   render () {

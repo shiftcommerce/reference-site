@@ -1,10 +1,8 @@
 /* ==========================================================================
    # Button Object
    ========================================================================== */
-
-.c-button {
+.o-button {
   cursor: pointer;
-
   display: inline-block;
   padding: 0.3rem 0.8rem;
   border: 1px solid #999;
@@ -32,7 +30,8 @@
     info:     (background-color: $background-info, color: #fff),
     positive: (background-color: $background-positive, color: #fff),
     negative: (background-color: $background-negative, color: #fff),
-    warning:  (background-color: $background-warning, color: #fff)
+    warning:  (background-color: $background-warning, color: #fff),
+    dark:     (background-color: $background-dark, color: #fff)
   );
 
   @each $key in map-keys($color-variations) {

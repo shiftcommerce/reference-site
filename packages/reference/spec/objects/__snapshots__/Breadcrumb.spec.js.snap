@@ -5,13 +5,15 @@ exports[`renders correctly 1`] = `
   trail={
     Array [
       Object {
-        "canonical_path": "/categories/womens",
-        "id": 1,
+        "canonical_path": "/categories/22bca338-b578-4aee-a302-992764fa3e72",
+        "id": "22bca338-b578-4aee-a302-992764fa3e72",
+        "page": "/categories/category",
         "title": "Womens",
       },
       Object {
         "canonical_path": "/products/708a0142-e60f-4332-9a8b-1359c5af9ec4",
-        "id": 2,
+        "id": "708a0142-e60f-4332-9a8b-1359c5af9ec4",
+        "page": "/products/product",
         "title": "Textured Long T-Shirt",
       },
     ]
@@ -41,11 +43,12 @@ exports[`renders correctly 1`] = `
         className="o-breadcrumb__item"
       >
         <Link
-          href="/categories/womens"
+          as="/categories/22bca338-b578-4aee-a302-992764fa3e72"
+          href="/categories/category?id=22bca338-b578-4aee-a302-992764fa3e72"
         >
           <a
             className="o-breadcrumb__link"
-            href="/categories/womens"
+            href="/categories/22bca338-b578-4aee-a302-992764fa3e72"
             onClick={[Function]}
           >
             Womens
@@ -56,7 +59,8 @@ exports[`renders correctly 1`] = `
         className="o-breadcrumb__item"
       >
         <Link
-          href="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
+          as="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
+          href="/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4"
         >
           <a
             className="o-breadcrumb__link"

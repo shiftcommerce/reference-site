@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="c-product"
+>
+  <Link
+    as="/products/a2d8d304-19eb-4a98-ae77-d7db53715cc4"
+    href="/products/product?id=a2d8d304-19eb-4a98-ae77-d7db53715cc4"
+  >
+    <a>
+      <div
+        className="c-product__image-container"
+      >
+        <Image
+          className="c-product__image"
+          src="/static/placeholder.png"
+        />
+      </div>
+      <div
+        className="c-product__title"
+      >
+        <AlgoliaHighlighter(Highlight)
+          attributeName="product.title"
+          hit={
+            Object {
+              "_highlightResult": Object {
+                "product": Object {
+                  "meta_data": Object {
+                    "eu": Object {
+                      "sku": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "SK8407636324",
+                      },
+                    },
+                  },
+                  "title": Object {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": Array [
+                      "long",
+                    ],
+                    "value": "<ais-highlight-0000000000>Long</ais-highlight-0000000000> Shirt",
+                  },
+                },
+                "variant": Object {
+                  "sku": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "SK8407636324-2",
+                  },
+                },
+              },
+              "assets": Array [],
+              "category_ids": Array [
+                "22bca338-b578-4aee-a302-992764fa3e72",
+              ],
+              "objectID": "a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e",
+              "product": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "colour": "Blue",
+                    "description": "Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.",
+                    "sku": "SK8407636324",
+                  },
+                },
+                "reference": "long_shirt",
+                "title": "Long Shirt",
+              },
+              "variant": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "price": 50,
+                    "size": "Size 10",
+                  },
+                },
+                "sku": "SK8407636324-2",
+                "title": "Medium",
+              },
+            }
+          }
+        />
+      </div>
+      <div
+        className="c-product__sku"
+      >
+        <AlgoliaHighlighter(Highlight)
+          attributeName="product.meta_data.eu.sku"
+          hit={
+            Object {
+              "_highlightResult": Object {
+                "product": Object {
+                  "meta_data": Object {
+                    "eu": Object {
+                      "sku": Object {
+                        "matchLevel": "none",
+                        "matchedWords": Array [],
+                        "value": "SK8407636324",
+                      },
+                    },
+                  },
+                  "title": Object {
+                    "fullyHighlighted": false,
+                    "matchLevel": "full",
+                    "matchedWords": Array [
+                      "long",
+                    ],
+                    "value": "<ais-highlight-0000000000>Long</ais-highlight-0000000000> Shirt",
+                  },
+                },
+                "variant": Object {
+                  "sku": Object {
+                    "matchLevel": "none",
+                    "matchedWords": Array [],
+                    "value": "SK8407636324-2",
+                  },
+                },
+              },
+              "assets": Array [],
+              "category_ids": Array [
+                "22bca338-b578-4aee-a302-992764fa3e72",
+              ],
+              "objectID": "a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e",
+              "product": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "colour": "Blue",
+                    "description": "Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.",
+                    "sku": "SK8407636324",
+                  },
+                },
+                "reference": "long_shirt",
+                "title": "Long Shirt",
+              },
+              "variant": Object {
+                "meta_data": Object {
+                  "eu": Object {
+                    "price": 50,
+                    "size": "Size 10",
+                  },
+                },
+                "sku": "SK8407636324-2",
+                "title": "Medium",
+              },
+            }
+          }
+        />
+      </div>
+      <div
+        className="c-product__price"
+      >
+        £
+        50.00
+      </div>
+      <div
+        className="c-product__view-details"
+      >
+        <Button
+          label="View"
+        />
+      </div>
+      <span
+        className="c-product__rating--empty"
+      >
+        ★
+      </span>
+      <span
+        className="c-product__rating--empty"
+      >
+        ★
+      </span>
+      <span
+        className="c-product__rating--empty"
+      >
+        ★
+      </span>
+      <span
+        className="c-product__rating--empty"
+      >
+        ★
+      </span>
+      <span
+        className="c-product__rating--empty"
+      >
+        ★
+      </span>
+    </a>
+  </Link>
+</div>
+`;

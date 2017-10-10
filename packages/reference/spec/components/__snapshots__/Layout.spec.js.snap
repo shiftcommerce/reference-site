@@ -14,8 +14,9 @@ exports[`renders the navbar 1`] = `
       >
         <a>
           <Image
-            height={35}
-            width={250}
+            height={59}
+            src="/static/logo.svg"
+            width={52}
           />
         </a>
       </Link>
@@ -28,7 +29,7 @@ exports[`renders the navbar 1`] = `
     <span
       className="o-header__minibag"
     >
-      <WrappedCmp />
+      <Connect(MiniBag) />
     </span>
   </div>
   <Connect(NavBar) />

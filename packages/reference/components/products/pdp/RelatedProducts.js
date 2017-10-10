@@ -3,7 +3,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
-import Image from '../../objects/Image'
+import Image from '../../../objects/Image'
 
 class RelatedProducts extends Component {
   constructor (props) {

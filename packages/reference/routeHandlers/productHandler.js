@@ -7,7 +7,7 @@ const api = require('./../constants/apiUrls')
 function getProductRenderer (nextApp) {
   return (req, res) => {
     const productID = req.params.id
-    const baseUrl = `${process.env.API_HOST}${api.ProductUrl}/${productID}.json_api`
+    const baseUrl = `${api.Host}${api.ProductUrl}/${productID}.json_api`
 
     fetchData.getData(req, baseUrl, res)
   }

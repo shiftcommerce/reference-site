@@ -1,11 +1,11 @@
-import SearchBar from '../../components/SearchBar'
+import SearchBar from '../../../components/search/SearchBar'
 import Link from 'next/link'
 
 test('renders the header', () => {
   // arrange
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <SearchBar />
   )
 

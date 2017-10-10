@@ -35,7 +35,7 @@ class HeroImage extends Component {
         </div>
 
         <Link href={linkUrl} >
-          <a className='c-button c-button--lrg'>
+          <a className='o-button o-button--lrg'>
             {linkText}
           </a>
         </Link>

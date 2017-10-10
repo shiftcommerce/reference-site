@@ -12,8 +12,8 @@ test('renders the full component', () => {
 
   // assert
   expect(wrapper).toBePresent()
-  expect(wrapper).toContainReact(<Link href='/mens'><a><Image src='www.someimageurl.com' width='90%' height={ 450 } /></a></Link>)
+  expect(wrapper).toContainReact(<Link href='/mens'><a><Image src='www.someimageurl.com' width='90%' height={450} /></a></Link>)
   expect(wrapper.find('div.c-title')).toIncludeText('Title')
   expect(wrapper).toIncludeText('Important Text')
-  expect(wrapper).toContainReact(<Link href='/more_mens'><a className="c-button c-button--lrg">Click Me Please</a></Link>)
+  expect(wrapper).toContainReact(<Link href='/more_mens'><a className='o-button o-button--lrg'>Click Me Please</a></Link>)
 })

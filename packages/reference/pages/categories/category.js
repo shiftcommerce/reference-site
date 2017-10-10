@@ -10,7 +10,7 @@ import { readCategory } from '../../actions/categoryActions'
 
 // Components
 import Layout from '../../components/Layout'
-import { PLP, findResultsState } from '../../components/products/PLP'
+import { ProductListing, findResultsState } from '../../components/products/plp/ProductListing'
 
 // Lib
 import trimObject from '../../lib/trimObject'
@@ -24,7 +24,7 @@ import { configureStore } from '../../utils/configureStore'
 class Category extends Component {
   static async getInitialProps ({ store, query, url }) {
     const searchState = query
-    const resultState = await findResultsState(PLP, { searchState })
+    const resultState = await findResultsState(ProductListing, { searchState })
     await store.dispatch(readCategory(query.id))
     store.dispatch(setSearchState(searchState))
 
@@ -41,9 +41,7 @@ class Category extends Component {
 
     let searchObject = trimObject(searchState)
     let href = `/categories/category?id=${this.props.category.id}`
-
-    // Using `category.reference` in order for current algolia implementation to work
-    let as = `/categories/${this.props.category.reference}?${qs.stringify(searchObject)}`
+    let as = `/categories/${this.props.category.id}?${qs.stringify(searchObject)}`
 
     Router.push(href, as, {shallow: true})
     this.props.dispatch(setSearchState(searchObject))
@@ -57,17 +55,17 @@ class Category extends Component {
     } = this.props
 
     let BreadcrumbTrail = [
-      { id: 1, title: category.title, canonical_path: `/categories/${category.id}` }
+      { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' }
     ]
 
     return (
       <Layout>
         <Breadcrumb trail={BreadcrumbTrail} />
-        <PLP
+        <ProductListing
           searchState={search}
           onSearchStateChange={this.onSearchStateChange.bind(this)}
           resultState={resultState}
-          category={category.reference}
+          categoryID={category.id}
         />
       </Layout>
     )

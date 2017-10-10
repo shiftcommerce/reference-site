@@ -51,18 +51,25 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 onClick={[Function]}
               >
                 <Image
-                  height={35}
-                  width={250}
+                  height={59}
+                  src="/static/logo.svg"
+                  width={52}
                 >
                   <div
-                    className="c-dummy_image"
                     style={
                       Object {
-                        "height": 35,
-                        "width": 250,
+                        "height": 59,
+                        "width": 52,
                       }
                     }
-                  />
+                  >
+                    <img
+                      className="c-image"
+                      height={59}
+                      src="/static/logo.svg"
+                      width={52}
+                    />
+                  </div>
                 </Image>
               </a>
             </Link>
@@ -77,82 +84,82 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 onSubmit={[Function]}
                 role="search"
               >
-                <input
-                  aria-label="search text"
-                  name="query"
-                  onChange={[Function]}
-                  placeholder="Search..."
-                  type="search"
-                  value=""
-                />
-                <button
-                  className="c-button c-button--lrg"
-                  type="submit"
+                <div
+                  className="c-searchbar"
                 >
-                  Search
-                </button>
+                  <input
+                    aria-label="search text"
+                    className="c-searchbar--input"
+                    name="query"
+                    onChange={[Function]}
+                    placeholder="Enter Keyword Or Product Code"
+                    type="search"
+                    value=""
+                  />
+                  <Button
+                    label="Search"
+                    size="lrg"
+                    status="dark"
+                  >
+                    <button
+                      className="o-button o-button--dark o-button--lrg"
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Search
+                    </button>
+                  </Button>
+                </div>
               </form>
             </SearchBar>
           </span>
           <span
             className="o-header__minibag"
           >
-            <WrappedCmp>
-              <Provider
-                store={
-                  Object {
-                    "dispatch": [Function],
-                    "getState": [Function],
-                    "replaceReducer": [Function],
-                    "subscribe": [Function],
-                    Symbol(observable): [Function],
-                  }
-                }
+            <Connect(MiniBag)>
+              <MiniBag
+                cart={Object {}}
+                dispatch={[Function]}
               >
-                <Connect(MiniBag)>
-                  <MiniBag
-                    cart={
-                      Object {
-                        "lineItems": Array [],
-                      }
-                    }
-                    dispatch={[Function]}
+                <div>
+                  <Link
+                    href="/cart"
                   >
-                    <div>
-                      <Link
-                        href="/cart"
+                    <a
+                      aria-label="View your cart"
+                      href="/cart"
+                      onClick={[Function]}
+                    >
+                      View Your Bag
+                      <span
+                        style={
+                          Object {
+                            "marginLeft": "5px",
+                            "marginRight": "5px",
+                          }
+                        }
                       >
-                        <a
-                          aria-label="View your cart"
-                          href="/cart"
-                          onClick={[Function]}
-                        >
-                          View Your Bag
-                          <span
-                            style={
-                              Object {
-                                "marginLeft": "5px",
-                                "marginRight": "5px",
-                              }
-                            }
-                          >
-                            (
-                            0
-                            )
-                          </span>
-                        </a>
-                      </Link>
-                      <div
-                        aria-label="Go to checkout"
-                        className="c-button c-button--negative c-button--lrg c-button--disabled"
-                      >
-                        CHECKOUT
-                      </div>
-                    </div>
-                  </MiniBag>
-                </Connect(MiniBag)>
-              </Provider>
-            </WrappedCmp>
+                        (
+                        0
+                        )
+                      </span>
+                    </a>
+                  </Link>
+                  <Link
+                    href=""
+                  >
+                    <a
+                      aria-label="Go to checkout"
+                      className="o-button o-button--negative o-button--lrg o-button--disabled"
+                      href=""
+                      onClick={[Function]}
+                    >
+                      CHECKOUT
+                    </a>
+                  </Link>
+                </div>
+              </MiniBag>
+            </Connect(MiniBag)>
           </span>
         </div>
         <Connect(NavBar)>

@@ -1,16 +1,16 @@
 // Component
-import ProductDisplay from '../../../components/products/ProductDisplay'
-import RelatedProducts from '../../../components/products/RelatedProducts'
-import DeliveryInformation from '../../../components/products/DeliveryInformation'
+import ProductDisplay from '../../../../components/products/pdp/ProductDisplay'
+import RelatedProducts from '../../../../components/products/pdp/RelatedProducts'
+import DeliveryInformation from '../../../../components/products/pdp/DeliveryInformation'
 
 // Objects
-import Image from '../../../objects/Image'
-import Button from '../../../objects/Button'
-import DropdownSelect from '../../../objects/DropdownSelect'
-import SizeSelector from '../../../objects/SizeSelector'
+import Image from '../../../../objects/Image'
+import Button from '../../../../objects/Button'
+import DropdownSelect from '../../../../objects/DropdownSelect'
+import SizeSelector from '../../../../objects/SizeSelector'
 
 // Fixtures
-import product from '../../fixtures/product.fixture'
+import product from '../../../fixtures/product.fixture'
 
 test('renders correctly', () => {
   // Arrange

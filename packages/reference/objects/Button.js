@@ -7,11 +7,12 @@ class Button extends Component {
     let {
       status,
       label,
+      size,
       ...otherProps
     } = this.props
 
     return (
-      <button className={classNames('c-button', `c-button--${status}`)} tabIndex='0' role='button' {...otherProps} >
+      <button className={classNames('o-button', `o-button--${status}`, `o-button--${size}`)} tabIndex='0' role='button' {...otherProps} >
         { label }
       </button>
     )

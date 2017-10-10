@@ -9,7 +9,7 @@ import { setSearchState, setSearchQuery } from '../actions/searchActions'
 
 // Components
 import Layout from '../components/Layout'
-import { PLP, findResultsState } from '../components/products/PLP'
+import { ProductListing, findResultsState } from '../components/products/plp/ProductListing'
 
 // Lib
 import trimObject from '../lib/trimObject'
@@ -23,7 +23,7 @@ import { configureStore } from '../utils/configureStore'
 class Search extends Component {
   static async getInitialProps ({ store, req, query, url }) {
     const searchState = query
-    const resultState = await findResultsState(PLP, { searchState })
+    const resultState = await findResultsState(ProductListing, { searchState })
     store.dispatch(setSearchState(searchState))
     return { search: searchState, resultState: resultState, url: url }
   }
@@ -47,6 +47,26 @@ class Search extends Component {
     this.props.dispatch(setSearchState(searchObject))
   }
 
+  renderNoResults (search) {
+    return (
+      <div className='c-product_list__products--no-results'>
+        <h2>Oh no! Nothing matches {`'${search.query || ''}'`}</h2>
+      </div>
+    )
+  }
+
+  renderSearchResults (search, resultState) {
+    return (
+      <div>
+        {
+          (search.query !== undefined) && (resultState.content.hits.length !== 0)
+          ? <ProductListing searchState={search} onSearchStateChange={this.onSearchStateChange.bind(this)} resultState={resultState} />
+          : this.renderNoResults(search)
+        }
+      </div>
+    )
+  }
+
   render () {
     let {
       search,
@@ -60,11 +80,7 @@ class Search extends Component {
     return (
       <Layout searchObject={search} onSearchQueryChange={this.onSearchQueryChange.bind(this)}>
         <Breadcrumb trail={BreadcrumbTrail} />
-        <PLP
-          searchState={search}
-          onSearchStateChange={this.onSearchStateChange.bind(this)}
-          resultState={resultState}
-        />
+        { this.renderSearchResults(search, resultState) }
       </Layout>
     )
   }

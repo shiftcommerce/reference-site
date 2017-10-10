@@ -6,7 +6,7 @@ const api = require('./../constants/apiUrls')
 // Fetch all the categories
 function getCategoriesRenderer (nextApp) {
   return (req, res) => {
-    const baseUrl = `${process.env.API_HOST}${api.CategoryUrl}.json_api`
+    const baseUrl = `${api.Host}${api.CategoryUrl}.json_api`
     getData(req, baseUrl, res)
   }
 }
@@ -15,7 +15,7 @@ function getCategoriesRenderer (nextApp) {
 function getCategoryRenderer (nextApp) {
   return (req, res) => {
     const categoryId = req.params.id
-    const baseUrl = `${process.env.API_HOST}${api.CategoryUrl}/${categoryId}.json_api`
+    const baseUrl = `${api.Host}${api.CategoryUrl}/${categoryId}.json_api`
     getData(req, baseUrl, res)
   }
 }

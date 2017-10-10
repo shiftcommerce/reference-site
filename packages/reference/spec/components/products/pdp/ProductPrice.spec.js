@@ -1,9 +1,9 @@
 // Component
-import ProductPrice from '../../../components/products/ProductPrice'
+import ProductPrice from '../../../../components/products/pdp/ProductPrice'
 
 // Fixtures
-import variants_with_similar_price from '../../fixtures/variants_with_similar_price.fixture'
-import variants_with_different_prices from '../../fixtures/variants_with_different_prices.fixture'
+import variants_with_similar_price from '../../../fixtures/variants_with_similar_price.fixture'
+import variants_with_different_prices from '../../../fixtures/variants_with_different_prices.fixture'
 
 test('renders correctly if variants have similar price', () => {
   // Act

@@ -1,23 +1,32 @@
+/* ==========================================================================
+   # Nav Object
+   ========================================================================== */
+
 .o-nav {
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
+  border-top: 1px solid $border-default;
+  border-bottom: 1px solid $border-default;
   margin-top: 5px;
   margin: 10px 0;
-  text-align: center
+  text-align: center;
 }
 
 .o-nav__option {
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
   display: block;
-  border-top: 1px solid #ececec;
+  text-transform: uppercase;
+  color: $text-dark;
+
+  &:hover {
+    border-top: 1px solid $text-error;
+  }
 
   @include breakpoint(desktop) {
     width: auto;
     display: inline-block;
-    padding: 10px;
     border-top: 0;
-    border-right: 1px solid #ececec;
+    padding: 15px;
+    border-right: 1px solid $border-default;
   }
 }
 
@@ -25,6 +34,6 @@
   border-top: 0;
 
   @include breakpoint(desktop) {
-    border-left: 1px solid #ececec;
+    border-left: 1px solid $border-default;
   }
 }

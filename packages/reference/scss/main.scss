@@ -10,17 +10,16 @@
 
 @import '50_objects/_o-body';
 @import '50_objects/_o-breadcrumb';
+@import '50_objects/_o-button';
 @import '50_objects/_o-footer';
 @import '50_objects/_o-grid';
 @import '50_objects/_o-header';
 @import '50_objects/_o-nav';
-@import '50_objects/_o-product_list';
 @import '50_objects/_o-form';
 @import '50_objects/_o-payment-method';
 @import '50_objects/_o-checkout-cart';
 @import '50_objects/_o-checkout-cart-total';
 
-@import '60_components/_c-button';
 @import "60_components/_c-cart-no-data";
 @import "60_components/_c-cart-summary";
 @import "60_components/_c-cart-table";
@@ -29,7 +28,9 @@
 @import '60_components/_c-product';
 @import '60_components/_c-product-price';
 @import '60_components/_c-product-display';
+@import '60_components/_c-product_list';
 @import '60_components/_c-title';
+@import '60_components/_c-searchbar';
 @import '60_components/_c-shipping-method-list';
 @import '60_components/_c-step-indicators';
 
