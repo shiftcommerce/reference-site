@@ -5,20 +5,22 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
   // arrange
   const checkout = {
     shippingAddress: {
-      fullName: 'Test Name',
-      address1: 'Test Address 1',
-      address2: 'Test Address 2',
+      full_name: 'Test Name',
+      line_1: 'Test Address 1',
+      line_2: 'Test Address 2',
       city: 'Test City',
-      postCode: 'Test Postcode'
+      zipcode: 'Test Postcode'
     },
     billingAddress: {},
+    shippingAddressAsBillingAddress: true,
     paymentMethod: {
-      shippingAddressAsBillingAddress: 'true'
+      collapsed: false
     }
   }
+  const setShippingBillingAddress = () => {}
 
   // act
-  const wrapper = mount(<PaymentMethod checkout={checkout} />)
+  const wrapper = mount(<PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} />)
 
   // assert
   expect(wrapper).toMatchSnapshot()
@@ -29,24 +31,26 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
   expect(wrapper).toIncludeText('Test Postcode')
 })
 
-test('Does not render address summary when shippingAsBilling is true', () => {
+test('Does not render address summary when shippingAsBilling is false', () => {
   // arrange
   const checkout = {
     shippingAddress: {
-      fullName: 'Test Name',
-      address1: 'Test Address 1',
-      address2: 'Test Address 2',
+      full_name: 'Test Name',
+      line_1: 'Test Address 1',
+      line_2: 'Test Address 2',
       city: 'Test City',
-      postCode: 'Test Postcode'
+      zipcode: 'Test Postcode'
     },
     billingAddress: {},
+    shippingAddressAsBillingAddress: false,
     paymentMethod: {
-      shippingAddressAsBillingAddress: false
+      collapsed: false
     }
   }
+  const setShippingBillingAddress = () => {}
 
   // act
-  const wrapper = mount(<PaymentMethod checkout={checkout} />)
+  const wrapper = mount(<PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} />)
 
   // assert
   expect(wrapper).toMatchSnapshot()

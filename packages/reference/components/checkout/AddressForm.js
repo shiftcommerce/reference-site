@@ -2,78 +2,72 @@
 import { Component } from 'react'
 import classNames from 'classnames'
 
-// Components
-import InputGroup from './InputGroup'
-import SelectInputGroup from './SelectInputGroup'
-import CheckboxInputGroup from './CheckboxInputGroup'
+// Objects
+import Input from './../../objects/Input'
+import DropdownSelect from './../../objects/DropdownSelect'
 
-// Actions
-import { showField, toggleCollapsed } from '../../actions/checkoutActions'
+// Json
+import Countries from './../../static/countries.json'
 
 export default class AddressForm extends Component {
-  constructor () {
-    super()
-    this.onShowField = this.onShowField.bind(this)
-    this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
-  }
-
-  onShowField (fieldName) {
-    this.props.dispatch(showField(this.props.formName, fieldName))
-  }
-
-  onToggleCollapsed () {
-    this.props.dispatch(toggleCollapsed(this.props.formName))
-  }
-
   render () {
-    const {checkout, addressType, formName, className} = this.props
+    const { checkout,
+      addressType,
+      formName,
+      className,
+      onChange,
+      onBlur,
+      onToggleCollapsed,
+      onShowField } = this.props
     const address = checkout[this.props.formName]
     const collapsed = address.collapsed
 
     // Example data
-    const countries = [
-      { id: 1, title: 'United Kingdom', value: 'GB' },
-      { id: 2, title: 'United States', value: 'US' }
-    ]
+    const countries = Countries
 
     return (
       <div className={classNames('o-form', className)}>
         <h3>{this.props.title}</h3>
         {collapsed &&
-          <button className='c-button' onClick={this.onToggleCollapsed}>Edit</button>
+          <button className='c-button' onClick={() => onToggleCollapsed(formName)}>Edit</button>
         }
 
         {collapsed && addressType === 'shipping' &&
           <div className='o-form__wrapper'>
-            <span className='u-bold'>{address.fullName} </span>
-            <span>{address.address1}, {address.city}, {address.postCode}</span>
+            <span className='u-bold'>{address.full_name} </span>
+            <span>{address.line_1}, {address.city}, {address.zipcode}</span>
           </div>
         }
 
         {!collapsed &&
           <form className='o-form__wrapper'>
 
-            <SelectInputGroup
+            <DropdownSelect
               options={countries}
-              fieldLabel='Country'
-              fieldName='country'
-              fieldValue={address.country}
+              label='Country'
+              name='country_code'
+              value={address.country_code}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
+              prompt='Select country'
             />
 
-            <InputGroup
-              fieldLabel='Full Name'
-              fieldName='fullName'
-              fieldValue={address.fullName}
+            <Input
+              label='Full Name'
+              className='o-form__input-block'
+              name='full_name'
+              type='text'
+              value={address.full_name}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
             {!(address.companyNameShown) &&
-              <a href='#' onClick={() => { this.onShowField('companyNameShown') } }>
+              <a href='#' onClick={() => { onShowField(formName, 'companyNameShown') }}>
                 <p>
                   + Add Company Name (optional)
                 </p>
@@ -81,26 +75,32 @@ export default class AddressForm extends Component {
             }
 
             {address.companyNameShown &&
-              <InputGroup
-                fieldLabel='Company Name'
-                fieldName='companyName'
-                fieldValue={address.companyName}
+              <Input
+                label='Company Name'
+                className='o-form__input-block'
+                name='companyName'
+                type='text'
+                value={address.companyName}
                 formName={formName}
-                dispatch={this.props.dispatch}
+                onChange={onChange}
+                onBlur={onBlur}
               />
             }
 
-            <InputGroup
-              fieldLabel='Address 1'
-              fieldName='address1'
-              fieldValue={address.address1}
+            <Input
+              label='Address 1'
+              className='o-form__input-block'
+              name='line_1'
+              type='text'
+              value={address.line_1}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
             {!(address.address2Shown) &&
-              <a href='#' onClick={() => { this.onShowField('address2Shown') } }>
+              <a href='#' onClick={() => { onShowField(formName, 'address2Shown') }}>
                 <p>
                   + Add Address 2 (optional)
                 </p>
@@ -108,58 +108,78 @@ export default class AddressForm extends Component {
             }
 
             {address.address2Shown &&
-              <InputGroup
-                fieldLabel='Address 2'
-                fieldName='address2'
-                fieldValue={address.address2}
+              <Input
+                label='Address 2'
+                className='o-form__input-block'
+                name='line_2'
+                type='text'
+                value={address.line_2}
                 formName={formName}
-                dispatch={this.props.dispatch}
+                onChange={onChange}
+                onBlur={onBlur}
               />
             }
 
-            <InputGroup
-              fieldLabel='Post Code'
-              fieldName='postCode'
-              fieldValue={address.postCode}
+            <Input
+              label='Post Code'
+              className='o-form__input-block'
+              name='zipcode'
+              type='text'
+              value={address.zipcode}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
-            <InputGroup
-              fieldLabel='City'
-              fieldName='city'
-              fieldValue={address.city}
+            <Input
+              label='City'
+              className='o-form__input-block'
+              name='city'
+              type='text'
+              value={address.city}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
-            <InputGroup
-              fieldLabel='County'
-              fieldName='county'
-              fieldValue={address.county}
+            <Input
+              label='County'
+              className='o-form__input-block'
+              name='state'
+              type='text'
+              value={address.state}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
-            <InputGroup
-              fieldLabel='Phone'
-              fieldName='phone'
-              fieldValue={address.phone}
+            <Input
+              label='Phone'
+              className='o-form__input-block'
+              name='primary_phone'
+              type='tel'
+              value={address.primary_phone}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              placeholder='In case Questions Arise'
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
-            <InputGroup
-              fieldLabel='Email'
-              fieldName='email'
-              fieldValue={address.email}
+            <Input
+              label='Email'
+              className='o-form__input-block'
+              name='email'
+              type='email'
+              value={address.email}
               formName={formName}
               required='true'
-              dispatch={this.props.dispatch}
+              placeholder='To Receive Order Confirmation'
+              onChange={onChange}
+              onBlur={onBlur}
             />
 
             <p>
@@ -168,16 +188,19 @@ export default class AddressForm extends Component {
 
             {addressType === 'shipping' &&
               <div>
-                <CheckboxInputGroup
-                  fieldLabel='Sign up for Weekly Newsletters (optional)'
-                  fieldName='newsletterOptIn'
-                  fieldValue={address.newsletterOptIn}
+                <Input
+                  type='checkbox'
+                  className='o-form__input-inline'
+                  label='Sign up for Weekly Newsletters (optional)'
+                  name='newsletterOptIn'
+                  value={address.newsletterOptIn}
                   formName={formName}
-                  dispatch={this.props.dispatch}
+                  onChange={onChange}
+                  onBlur={onBlur}
                 />
 
                 <div className='o-form__input-group'>
-                  <button className='c-button' onClick={this.onToggleCollapsed} type='submit'>
+                  <button className='c-button' onClick={() => onToggleCollapsed(formName)} type='submit'>
                     View Shipping Options
                   </button>
                 </div>

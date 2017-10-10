@@ -10,7 +10,7 @@ class CheckoutCartTotal extends Component {
     let shippingText = ''
     if (!this.props.checkout.shippingAddress.collapsed) {
       shippingText = 'Enter address'
-    } else if (!this.props.checkout.shippingMethod.cost) {
+    } else if (!this.props.checkout.shippingMethod.retail_price_inc_tax) {
       shippingText = 'Select shipping method'
     } else {
       shippingText = `£${totals.shipping}`

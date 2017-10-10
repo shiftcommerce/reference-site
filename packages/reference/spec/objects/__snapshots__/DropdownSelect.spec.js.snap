@@ -14,58 +14,66 @@ exports[`renders correctly 1`] = `
   }
   prompt="Select a Quantity"
 >
-  <select
-    name="line_item[unit_quantity]"
-    role="listbox"
+  <div
+    className="o-form__input-group"
   >
-    <option
-      aria-posinset="0"
-      aria-setsize={5}
-      role="option"
-      value=""
+    <select
+      className="o-form__input-block o-form__input-field"
+      id="line_item[unit_quantity]"
+      name="line_item[unit_quantity]"
+      onBlur={[Function]}
+      onChange={[Function]}
+      role="listbox"
     >
-      Select a Quantity
-    </option>
-    <option
-      aria-posinset={1}
-      aria-setsize={5}
-      role="option"
-      value={1}
-    >
-      1
-    </option>
-    <option
-      aria-posinset={2}
-      aria-setsize={5}
-      role="option"
-      value={2}
-    >
-      2
-    </option>
-    <option
-      aria-posinset={3}
-      aria-setsize={5}
-      role="option"
-      value={3}
-    >
-      3
-    </option>
-    <option
-      aria-posinset={4}
-      aria-setsize={5}
-      role="option"
-      value={4}
-    >
-      4
-    </option>
-    <option
-      aria-posinset={5}
-      aria-setsize={5}
-      role="option"
-      value={5}
-    >
-      5
-    </option>
-  </select>
+      <option
+        aria-posinset="0"
+        aria-setsize={5}
+        role="option"
+        value=""
+      >
+        Select a Quantity
+      </option>
+      <option
+        aria-posinset={1}
+        aria-setsize={5}
+        role="option"
+        value={1}
+      >
+        1
+      </option>
+      <option
+        aria-posinset={2}
+        aria-setsize={5}
+        role="option"
+        value={2}
+      >
+        2
+      </option>
+      <option
+        aria-posinset={3}
+        aria-setsize={5}
+        role="option"
+        value={3}
+      >
+        3
+      </option>
+      <option
+        aria-posinset={4}
+        aria-setsize={5}
+        role="option"
+        value={4}
+      >
+        4
+      </option>
+      <option
+        aria-posinset={5}
+        aria-setsize={5}
+        role="option"
+        value={5}
+      >
+        5
+      </option>
+    </select>
+  </div>
 </DropdownSelect>
 `;

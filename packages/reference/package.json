@@ -6,7 +6,7 @@
   "author": "Shift Commerce",
   "license": "MIT",
   "scripts": {
-    "devserver": "NODE_ENV=development node server.js",
+    "devserver": "npm rebuild node-sass && NODE_ENV=development node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "jest": "jest",

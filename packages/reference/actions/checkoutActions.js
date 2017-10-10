@@ -110,3 +110,20 @@ export function readCheckoutFromLocalStorage () {
     return checkout
   }
 }
+
+export function setShippingBillingAddress (formName, fieldName, fieldValue) {
+  return (dispatch, getState) => {
+    dispatch(setBillingAsShippingKey(formName, fieldName, fieldValue))
+  }
+}
+
+function setBillingAsShippingKey (formName, fieldName, fieldValue) {
+  return {
+    type: actionTypes.SET_SHIPPING_AS_BILLING_KEY,
+    payload: {
+      formName: formName,
+      fieldName: fieldName,
+      fieldValue: fieldValue
+    }
+  }
+}

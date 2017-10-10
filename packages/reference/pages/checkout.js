@@ -7,7 +7,13 @@ import Link from 'next/link'
 import { configureStore } from '../utils/configureStore'
 
 // Actions
-import { readCheckoutFromLocalStorage, toggleCollapsed, setShippingMethod } from '../actions/checkoutActions'
+import { readCheckoutFromLocalStorage,
+  toggleCollapsed,
+  setShippingMethod,
+  setShippingBillingAddress,
+  inputChange,
+  inputComplete,
+  showField } from '../actions/checkoutActions'
 import { readCart } from '../actions/cartActions'
 
 // Objects
@@ -22,11 +28,15 @@ import ShippingMethods from '../components/checkout/ShippingMethods.js'
 import PaymentMethod from '../components/checkout/PaymentMethod.js'
 
 export class CheckoutPage extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
     this.setShippingMethod = this.setShippingMethod.bind(this)
+    this.onInputChange = this.onInputChange.bind(this)
+    this.onInputBlur = this.onInputBlur.bind(this)
+    this.onShowField = this.onShowField.bind(this)
+    this.setBillingShippingAddress = this.setBillingShippingAddress.bind(this)
   }
 
   componentDidMount () {
@@ -40,6 +50,22 @@ export class CheckoutPage extends Component {
 
   setShippingMethod (shippingMethod) {
     this.props.dispatch(setShippingMethod(shippingMethod))
+  }
+
+  onInputChange (event, formName, fieldName) {
+    this.props.dispatch(inputChange(formName, fieldName, event.target.value))
+  }
+
+  onInputBlur () {
+    this.props.dispatch(inputComplete())
+  }
+
+  onShowField (formName, fieldName) {
+    this.props.dispatch(showField(formName, fieldName))
+  }
+
+  setBillingShippingAddress (event, formName, fieldName) {
+    this.props.dispatch(setShippingBillingAddress(formName, fieldName, event.target.checked))
   }
 
   render () {
@@ -56,14 +82,28 @@ export class CheckoutPage extends Component {
               </a>
             </Link>
           </span>
-          <CheckoutSteps { ...this.props } />
+          <CheckoutSteps {...this.props} />
         </div>
         <div>
-          <AddressForm {...this.props} title='Shipping Address' formName='shippingAddress' addressType='shipping' dispatch={this.props.dispatch} />
+          <AddressForm {...this.props}
+            title='Shipping Address'
+            formName='shippingAddress'
+            addressType='shipping'
+            onChange={this.onInputChange}
+            onBlur={this.onInputBlur}
+            onShowField={this.onShowField}
+            onToggleCollapsed={this.onToggleCollapsed}
+          />
           <CheckoutCart title='Your Cart' {...this.props} />
           <CheckoutCartTotal {...this.props} />
           <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
-          <PaymentMethod formName='paymentMethod' {...this.props} />
+          <PaymentMethod
+            formName='paymentMethod'
+            {...this.props}
+            setBillingShippingAddress={this.setBillingShippingAddress}
+            onChange={this.onInputChange}
+            onBlur={this.onInputBlur}
+          />
 
           {!paymentMethodCollapsed &&
             <div className='o-form'>

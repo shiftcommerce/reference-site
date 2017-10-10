@@ -2,17 +2,17 @@
 import * as types from '../actions/actionTypes'
 
 const addressFormFields = {
-  country: '',
-  fullName: '',
+  country_code: '',
+  full_name: '',
   companyName: '',
   companyNameShown: '',
-  address1: '',
-  address2: '',
+  line_1: '',
+  line_2: '',
   address2Shown: '',
-  postCode: '',
+  zipcode: '',
   city: '',
-  county: '',
-  phone: '',
+  state: '',
+  primary_phone: '',
   email: '',
   newsletterOptIn: '',
   collapsed: false
@@ -24,8 +24,8 @@ const initialState = {
     collapsed: false
   },
   billingAddress: addressFormFields,
+  shippingAddressAsBillingAddress: true,
   paymentMethod: {
-    shippingAddressAsBillingAddress: 'true',
     collapsed: false
   },
   currentStep: 1
@@ -66,6 +66,11 @@ export default function setCheckout (state = initialState, action) {
 
     case types.SET_SHIPPING_METHOD:
       Object.assign(newState.shippingMethod, action.payload.shippingMethod)
+      newState.updatedAt = new Date()
+      return newState
+
+    case types.SET_SHIPPING_AS_BILLING_KEY:
+      newState[action.payload.fieldName] = action.payload.fieldValue
       newState.updatedAt = new Date()
       return newState
 

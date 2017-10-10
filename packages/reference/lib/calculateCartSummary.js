@@ -1,7 +1,7 @@
 export function calculateCartSummary (cart, checkout = {}) {
   const lineItems = cart.lineItems
   const shippingMethod = checkout.shippingMethod || {}
-  const shipping = shippingMethod.cost || 0
+  const shipping = shippingMethod.retail_price_inc_tax || 0
 
   let [ total, discount, tax, subTotal ] = [ 0, 0, 0, 0 ]
 

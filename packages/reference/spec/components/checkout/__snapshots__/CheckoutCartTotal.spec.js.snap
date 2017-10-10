@@ -119,11 +119,15 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         "collapsed": true,
       },
       "shippingMethod": Object {
-        "cost": 3.45,
-        "delivery_date": "Monday 3rd December",
+        "delivery_date": "Sunday 2nd December",
         "id": "1",
-        "title": "Super Saver",
-        "value": "super_saver",
+        "name": "Super Saver",
+        "paid_price_inc_tax": 3.45,
+        "reference": "super_saver",
+        "retail_price_inc_tax": 3.45,
+        "sku": "super_saver",
+        "tax_amount": 2,
+        "tax_percentage": 20,
       },
     }
   }

@@ -11,10 +11,27 @@
 
   &__input-group {
     padding-top: 10px;
+  }
 
-    input[type="text"], select {
-      display: block;
-      width: 100%;
-    }
+  &__label {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+  }
+
+  &__input-field {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid;
+    border-radius: 3px;
+  }
+
+  &__input-block {
+    display: block;
+    width: 100%;
+  }
+
+  &__input-inline {
+    display: inline;
   }
 }

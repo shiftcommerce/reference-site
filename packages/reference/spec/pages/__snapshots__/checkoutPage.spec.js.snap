@@ -210,6 +210,10 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
           }
           dispatch={[Function]}
           formName="shippingAddress"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onShowField={[Function]}
+          onToggleCollapsed={[Function]}
           title="Shipping Address"
         >
           <div
@@ -221,11 +225,12 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
             <form
               className="o-form__wrapper"
             >
-              <SelectInputGroup
-                dispatch={[Function]}
-                fieldLabel="Country"
-                fieldName="country"
+              <DropdownSelect
                 formName="shippingAddress"
+                label="Country"
+                name="country_code"
+                onBlur={[Function]}
+                onChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -240,61 +245,101 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     },
                   ]
                 }
+                prompt="Select country"
                 required="true"
               >
                 <div
                   className="o-form__input-group"
                 >
                   <label
-                    htmlFor="country"
+                    className="o-form__label"
+                    htmlFor="country_code"
                   >
                     Country
                      *
                   </label>
                   <select
-                    id="country"
+                    className="o-form__input-block o-form__input-field"
+                    id="country_code"
+                    name="country_code"
                     onBlur={[Function]}
                     onChange={[Function]}
                     required="true"
+                    role="listbox"
                   >
                     <option
-                      value="GB"
+                      aria-posinset="0"
+                      aria-setsize={2}
+                      role="option"
+                      value=""
+                    >
+                      Select country
+                    </option>
+                    <option
+                      aria-posinset={1}
+                      aria-setsize={2}
+                      role="option"
+                      value={
+                        Object {
+                          "id": 1,
+                          "title": "United Kingdom",
+                          "value": "GB",
+                        }
+                      }
                     >
                       United Kingdom
                     </option>
                     <option
-                      value="US"
+                      aria-posinset={2}
+                      aria-setsize={2}
+                      role="option"
+                      value={
+                        Object {
+                          "id": 2,
+                          "title": "United States",
+                          "value": "US",
+                        }
+                      }
                     >
                       United States
                     </option>
                   </select>
                 </div>
-              </SelectInputGroup>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="Full Name"
-                fieldName="fullName"
+              </DropdownSelect>
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="Full Name"
+                name="full_name"
+                onBlur={[Function]}
+                onChange={[Function]}
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="fullName"
-                  >
-                    Full Name
-                     *
-                  </label>
-                  <input
-                    id="fullName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="full_name"
+                    >
+                      Full Name
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="full_name"
+                      name="full_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <a
                 href="#"
                 onClick={[Function]}
@@ -303,31 +348,40 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                   + Add Company Name (optional)
                 </p>
               </a>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="Address 1"
-                fieldName="address1"
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="Address 1"
+                name="line_1"
+                onBlur={[Function]}
+                onChange={[Function]}
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="address1"
-                  >
-                    Address 1
-                     *
-                  </label>
-                  <input
-                    id="address1"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="line_1"
+                    >
+                      Address 1
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="line_1"
+                      name="line_1"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <a
                 href="#"
                 onClick={[Function]}
@@ -336,157 +390,215 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                   + Add Address 2 (optional)
                 </p>
               </a>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="Post Code"
-                fieldName="postCode"
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="Post Code"
+                name="zipcode"
+                onBlur={[Function]}
+                onChange={[Function]}
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="postCode"
-                  >
-                    Post Code
-                     *
-                  </label>
-                  <input
-                    id="postCode"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="zipcode"
+                    >
+                      Post Code
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="zipcode"
+                      name="zipcode"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="City"
-                fieldName="city"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="City"
+                name="city"
+                onBlur={[Function]}
+                onChange={[Function]}
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="city"
-                  >
-                    City
-                     *
-                  </label>
-                  <input
-                    id="city"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="city"
+                    >
+                      City
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="city"
+                      name="city"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="County"
-                fieldName="county"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="County"
+                name="state"
+                onBlur={[Function]}
+                onChange={[Function]}
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="county"
-                  >
-                    County
-                     *
-                  </label>
-                  <input
-                    id="county"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="state"
+                    >
+                      County
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="state"
+                      name="state"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="Phone"
-                fieldName="phone"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="Phone"
+                name="primary_phone"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="In case Questions Arise"
                 required="true"
+                type="tel"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="phone"
-                  >
-                    Phone
-                     *
-                  </label>
-                  <input
-                    id="phone"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="primary_phone"
+                    >
+                      Phone
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="primary_phone"
+                      name="primary_phone"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="In case Questions Arise"
+                      required="true"
+                      type="tel"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                dispatch={[Function]}
-                fieldLabel="Email"
-                fieldName="email"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="shippingAddress"
+                label="Email"
+                name="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="To Receive Order Confirmation"
                 required="true"
+                type="email"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="email"
-                  >
-                    Email
-                     *
-                  </label>
-                  <input
-                    id="email"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="email"
+                    >
+                      Email
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="To Receive Order Confirmation"
+                      required="true"
+                      type="email"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <p>
                 * Denotes required fields
               </p>
               <div>
-                <CheckboxInputGroup
-                  dispatch={[Function]}
-                  fieldLabel="Sign up for Weekly Newsletters (optional)"
-                  fieldName="newsletterOptIn"
+                <Input
+                  className="o-form__input-inline"
                   formName="shippingAddress"
+                  label="Sign up for Weekly Newsletters (optional)"
+                  name="newsletterOptIn"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
                 >
                   <div
                     className="o-form__input-group"
                   >
-                    <input
-                      id="newsletterOptIn"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      type="checkbox"
-                    />
-                    <label
-                      htmlFor="newsletterOptIn"
-                    >
-                      Sign up for Weekly Newsletters (optional)
-                    </label>
+                    <div>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-inline"
+                        id="newsletterOptIn"
+                        name="newsletterOptIn"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        type="checkbox"
+                      />
+                      <label
+                        className="o-form__label"
+                        htmlFor="newsletterOptIn"
+                      >
+                        Sign up for Weekly Newsletters (optional)
+                      </label>
+                    </div>
                   </div>
-                </CheckboxInputGroup>
+                </Input>
                 <div
                   className="o-form__input-group"
                 >
@@ -776,7 +888,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                   <span
                     className="c-shipping-method-list__delivery-date"
                   >
-                    Monday 3rd December
+                    Sunday 2nd December
                   </span>
                 </label>
               </div>
@@ -878,7 +990,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     className="c-shipping-method-list__cost"
                   >
                     £
-                    10.45
+                    8.45
                   </span>
                   <span
                     className="c-shipping-method-list__title"
@@ -893,7 +1005,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                   <span
                     className="c-shipping-method-list__delivery-date"
                   >
-                    Today
+                    Sunday 2nd December
                   </span>
                 </label>
               </div>
@@ -936,6 +1048,9 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
           }
           dispatch={[Function]}
           formName="paymentMethod"
+          onBlur={[Function]}
+          onChange={[Function]}
+          setBillingShippingAddress={[Function]}
         >
           <div
             aria-label="Payment method"
@@ -1128,28 +1243,36 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                       Billing address *
                     </label>
                   </div>
-                  <CheckboxInputGroup
-                    dispatch={[Function]}
-                    fieldLabel="Same as shipping address"
-                    fieldName="shippingAddressAsBillingAddress"
+                  <Input
                     formName="paymentMethod"
+                    label="Same as shipping address"
+                    name="shippingAddressAsBillingAddress"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    type="checkbox"
                   >
                     <div
                       className="o-form__input-group"
                     >
-                      <input
-                        id="shippingAddressAsBillingAddress"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        type="checkbox"
-                      />
-                      <label
-                        htmlFor="shippingAddressAsBillingAddress"
-                      >
-                        Same as shipping address
-                      </label>
+                      <div>
+                        <input
+                          checked={false}
+                          className="o-form__input-field"
+                          id="shippingAddressAsBillingAddress"
+                          name="shippingAddressAsBillingAddress"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                        <label
+                          className="o-form__label"
+                          htmlFor="shippingAddressAsBillingAddress"
+                        >
+                          Same as shipping address
+                        </label>
+                      </div>
                     </div>
-                  </CheckboxInputGroup>
+                  </Input>
                 </form>
                 <AddressForm
                   addressType="billing"
@@ -1162,8 +1285,9 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                       "shippingMethod": Object {},
                     }
                   }
-                  dispatch={[Function]}
                   formName="billingAddress"
+                  onBlur={[Function]}
+                  onChange={[Function]}
                   title="Billing Address"
                 >
                   <div
@@ -1175,11 +1299,12 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     <form
                       className="o-form__wrapper"
                     >
-                      <SelectInputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Country"
-                        fieldName="country"
+                      <DropdownSelect
                         formName="billingAddress"
+                        label="Country"
+                        name="country_code"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         options={
                           Array [
                             Object {
@@ -1194,61 +1319,101 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             },
                           ]
                         }
+                        prompt="Select country"
                         required="true"
                       >
                         <div
                           className="o-form__input-group"
                         >
                           <label
-                            htmlFor="country"
+                            className="o-form__label"
+                            htmlFor="country_code"
                           >
                             Country
                              *
                           </label>
                           <select
-                            id="country"
+                            className="o-form__input-block o-form__input-field"
+                            id="country_code"
+                            name="country_code"
                             onBlur={[Function]}
                             onChange={[Function]}
                             required="true"
+                            role="listbox"
                           >
                             <option
-                              value="GB"
+                              aria-posinset="0"
+                              aria-setsize={2}
+                              role="option"
+                              value=""
+                            >
+                              Select country
+                            </option>
+                            <option
+                              aria-posinset={1}
+                              aria-setsize={2}
+                              role="option"
+                              value={
+                                Object {
+                                  "id": 1,
+                                  "title": "United Kingdom",
+                                  "value": "GB",
+                                }
+                              }
                             >
                               United Kingdom
                             </option>
                             <option
-                              value="US"
+                              aria-posinset={2}
+                              aria-setsize={2}
+                              role="option"
+                              value={
+                                Object {
+                                  "id": 2,
+                                  "title": "United States",
+                                  "value": "US",
+                                }
+                              }
                             >
                               United States
                             </option>
                           </select>
                         </div>
-                      </SelectInputGroup>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Full Name"
-                        fieldName="fullName"
+                      </DropdownSelect>
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="Full Name"
+                        name="full_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         required="true"
+                        type="text"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="fullName"
-                          >
-                            Full Name
-                             *
-                          </label>
-                          <input
-                            id="fullName"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="full_name"
+                            >
+                              Full Name
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="full_name"
+                              name="full_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              type="text"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
+                      </Input>
                       <a
                         href="#"
                         onClick={[Function]}
@@ -1257,31 +1422,40 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           + Add Company Name (optional)
                         </p>
                       </a>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Address 1"
-                        fieldName="address1"
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="Address 1"
+                        name="line_1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         required="true"
+                        type="text"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="address1"
-                          >
-                            Address 1
-                             *
-                          </label>
-                          <input
-                            id="address1"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="line_1"
+                            >
+                              Address 1
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="line_1"
+                              name="line_1"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              type="text"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
+                      </Input>
                       <a
                         href="#"
                         onClick={[Function]}
@@ -1290,131 +1464,180 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           + Add Address 2 (optional)
                         </p>
                       </a>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Post Code"
-                        fieldName="postCode"
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="Post Code"
+                        name="zipcode"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         required="true"
+                        type="text"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="postCode"
-                          >
-                            Post Code
-                             *
-                          </label>
-                          <input
-                            id="postCode"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="zipcode"
+                            >
+                              Post Code
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="zipcode"
+                              name="zipcode"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              type="text"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="City"
-                        fieldName="city"
+                      </Input>
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="City"
+                        name="city"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         required="true"
+                        type="text"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="city"
-                          >
-                            City
-                             *
-                          </label>
-                          <input
-                            id="city"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="city"
+                            >
+                              City
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="city"
+                              name="city"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              type="text"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="County"
-                        fieldName="county"
+                      </Input>
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="County"
+                        name="state"
+                        onBlur={[Function]}
+                        onChange={[Function]}
                         required="true"
+                        type="text"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="county"
-                          >
-                            County
-                             *
-                          </label>
-                          <input
-                            id="county"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="state"
+                            >
+                              County
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="state"
+                              name="state"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              type="text"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Phone"
-                        fieldName="phone"
+                      </Input>
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="Phone"
+                        name="primary_phone"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="In case Questions Arise"
                         required="true"
+                        type="tel"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="phone"
-                          >
-                            Phone
-                             *
-                          </label>
-                          <input
-                            id="phone"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="primary_phone"
+                            >
+                              Phone
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="primary_phone"
+                              name="primary_phone"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="In case Questions Arise"
+                              required="true"
+                              type="tel"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
-                      <InputGroup
-                        dispatch={[Function]}
-                        fieldLabel="Email"
-                        fieldName="email"
+                      </Input>
+                      <Input
+                        className="o-form__input-block"
                         formName="billingAddress"
+                        label="Email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="To Receive Order Confirmation"
                         required="true"
+                        type="email"
                       >
                         <div
                           className="o-form__input-group"
                         >
-                          <label
-                            htmlFor="email"
-                          >
-                            Email
-                             *
-                          </label>
-                          <input
-                            id="email"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
-                          />
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="email"
+                            >
+                              Email
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="email"
+                              name="email"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="To Receive Order Confirmation"
+                              required="true"
+                              type="email"
+                            />
+                          </div>
                         </div>
-                      </InputGroup>
+                      </Input>
                       <p>
                         * Denotes required fields
                       </p>

@@ -1,22 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Does not render address summary when shippingAsBilling is true 1`] = `
+exports[`Does not render address summary when shippingAsBilling is false 1`] = `
 <PaymentMethod
   checkout={
     Object {
       "billingAddress": Object {},
       "paymentMethod": Object {
-        "shippingAddressAsBillingAddress": false,
+        "collapsed": false,
       },
       "shippingAddress": Object {
-        "address1": "Test Address 1",
-        "address2": "Test Address 2",
         "city": "Test City",
-        "fullName": "Test Name",
-        "postCode": "Test Postcode",
+        "full_name": "Test Name",
+        "line_1": "Test Address 1",
+        "line_2": "Test Address 2",
+        "zipcode": "Test Postcode",
       },
+      "shippingAddressAsBillingAddress": false,
     }
   }
+  setShippingBillingAddress={[Function]}
 >
   <div
     aria-label="Payment method"
@@ -209,28 +211,35 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
               Billing address *
             </label>
           </div>
-          <CheckboxInputGroup
-            fieldLabel="Same as shipping address"
-            fieldName="shippingAddressAsBillingAddress"
-            fieldValue={false}
+          <Input
+            label="Same as shipping address"
+            name="shippingAddressAsBillingAddress"
+            type="checkbox"
+            value={false}
           >
             <div
               className="o-form__input-group"
             >
-              <input
-                checked={false}
-                id="shippingAddressAsBillingAddress"
-                onBlur={[Function]}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                htmlFor="shippingAddressAsBillingAddress"
-              >
-                Same as shipping address
-              </label>
+              <div>
+                <input
+                  checked={false}
+                  className="o-form__input-field"
+                  id="shippingAddressAsBillingAddress"
+                  name="shippingAddressAsBillingAddress"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                  value={false}
+                />
+                <label
+                  className="o-form__label"
+                  htmlFor="shippingAddressAsBillingAddress"
+                >
+                  Same as shipping address
+                </label>
+              </div>
             </div>
-          </CheckboxInputGroup>
+          </Input>
         </form>
         <AddressForm
           addressType="billing"
@@ -239,15 +248,16 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
             Object {
               "billingAddress": Object {},
               "paymentMethod": Object {
-                "shippingAddressAsBillingAddress": false,
+                "collapsed": false,
               },
               "shippingAddress": Object {
-                "address1": "Test Address 1",
-                "address2": "Test Address 2",
                 "city": "Test City",
-                "fullName": "Test Name",
-                "postCode": "Test Postcode",
+                "full_name": "Test Name",
+                "line_1": "Test Address 1",
+                "line_2": "Test Address 2",
+                "zipcode": "Test Postcode",
               },
+              "shippingAddressAsBillingAddress": false,
             }
           }
           formName="billingAddress"
@@ -262,10 +272,10 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
             <form
               className="o-form__wrapper"
             >
-              <SelectInputGroup
-                fieldLabel="Country"
-                fieldName="country"
+              <DropdownSelect
                 formName="billingAddress"
+                label="Country"
+                name="country_code"
                 options={
                   Array [
                     Object {
@@ -280,60 +290,99 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
                     },
                   ]
                 }
+                prompt="Select country"
                 required="true"
               >
                 <div
                   className="o-form__input-group"
                 >
                   <label
-                    htmlFor="country"
+                    className="o-form__label"
+                    htmlFor="country_code"
                   >
                     Country
                      *
                   </label>
                   <select
-                    id="country"
+                    className="o-form__input-block o-form__input-field"
+                    id="country_code"
+                    name="country_code"
                     onBlur={[Function]}
                     onChange={[Function]}
                     required="true"
+                    role="listbox"
                   >
                     <option
-                      value="GB"
+                      aria-posinset="0"
+                      aria-setsize={2}
+                      role="option"
+                      value=""
+                    >
+                      Select country
+                    </option>
+                    <option
+                      aria-posinset={1}
+                      aria-setsize={2}
+                      role="option"
+                      value={
+                        Object {
+                          "id": 1,
+                          "title": "United Kingdom",
+                          "value": "GB",
+                        }
+                      }
                     >
                       United Kingdom
                     </option>
                     <option
-                      value="US"
+                      aria-posinset={2}
+                      aria-setsize={2}
+                      role="option"
+                      value={
+                        Object {
+                          "id": 2,
+                          "title": "United States",
+                          "value": "US",
+                        }
+                      }
                     >
                       United States
                     </option>
                   </select>
                 </div>
-              </SelectInputGroup>
-              <InputGroup
-                fieldLabel="Full Name"
-                fieldName="fullName"
+              </DropdownSelect>
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="Full Name"
+                name="full_name"
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="fullName"
-                  >
-                    Full Name
-                     *
-                  </label>
-                  <input
-                    id="fullName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="full_name"
+                    >
+                      Full Name
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="full_name"
+                      name="full_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <a
                 href="#"
                 onClick={[Function]}
@@ -342,30 +391,38 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
                   + Add Company Name (optional)
                 </p>
               </a>
-              <InputGroup
-                fieldLabel="Address 1"
-                fieldName="address1"
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="Address 1"
+                name="line_1"
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="address1"
-                  >
-                    Address 1
-                     *
-                  </label>
-                  <input
-                    id="address1"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="line_1"
+                    >
+                      Address 1
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="line_1"
+                      name="line_1"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <a
                 href="#"
                 onClick={[Function]}
@@ -374,126 +431,170 @@ exports[`Does not render address summary when shippingAsBilling is true 1`] = `
                   + Add Address 2 (optional)
                 </p>
               </a>
-              <InputGroup
-                fieldLabel="Post Code"
-                fieldName="postCode"
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="Post Code"
+                name="zipcode"
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="postCode"
-                  >
-                    Post Code
-                     *
-                  </label>
-                  <input
-                    id="postCode"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="zipcode"
+                    >
+                      Post Code
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="zipcode"
+                      name="zipcode"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                fieldLabel="City"
-                fieldName="city"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="City"
+                name="city"
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="city"
-                  >
-                    City
-                     *
-                  </label>
-                  <input
-                    id="city"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="city"
+                    >
+                      City
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="city"
+                      name="city"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                fieldLabel="County"
-                fieldName="county"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="County"
+                name="state"
                 required="true"
+                type="text"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="county"
-                  >
-                    County
-                     *
-                  </label>
-                  <input
-                    id="county"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="state"
+                    >
+                      County
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="state"
+                      name="state"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      type="text"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                fieldLabel="Phone"
-                fieldName="phone"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="Phone"
+                name="primary_phone"
+                placeholder="In case Questions Arise"
                 required="true"
+                type="tel"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="phone"
-                  >
-                    Phone
-                     *
-                  </label>
-                  <input
-                    id="phone"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="primary_phone"
+                    >
+                      Phone
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="primary_phone"
+                      name="primary_phone"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="In case Questions Arise"
+                      required="true"
+                      type="tel"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
-              <InputGroup
-                fieldLabel="Email"
-                fieldName="email"
+              </Input>
+              <Input
+                className="o-form__input-block"
                 formName="billingAddress"
+                label="Email"
+                name="email"
+                placeholder="To Receive Order Confirmation"
                 required="true"
+                type="email"
               >
                 <div
                   className="o-form__input-group"
                 >
-                  <label
-                    htmlFor="email"
-                  >
-                    Email
-                     *
-                  </label>
-                  <input
-                    id="email"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
-                  />
+                  <div>
+                    <label
+                      className="o-form__label"
+                      htmlFor="email"
+                    >
+                      Email
+                       *
+                    </label>
+                    <input
+                      checked={false}
+                      className="o-form__input-field o-form__input-block"
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="To Receive Order Confirmation"
+                      required="true"
+                      type="email"
+                    />
+                  </div>
                 </div>
-              </InputGroup>
+              </Input>
               <p>
                 * Denotes required fields
               </p>
@@ -520,17 +621,19 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
     Object {
       "billingAddress": Object {},
       "paymentMethod": Object {
-        "shippingAddressAsBillingAddress": "true",
+        "collapsed": false,
       },
       "shippingAddress": Object {
-        "address1": "Test Address 1",
-        "address2": "Test Address 2",
         "city": "Test City",
-        "fullName": "Test Name",
-        "postCode": "Test Postcode",
+        "full_name": "Test Name",
+        "line_1": "Test Address 1",
+        "line_2": "Test Address 2",
+        "zipcode": "Test Postcode",
       },
+      "shippingAddressAsBillingAddress": true,
     }
   }
+  setShippingBillingAddress={[Function]}
 >
   <div
     aria-label="Payment method"
@@ -723,28 +826,35 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
               Billing address *
             </label>
           </div>
-          <CheckboxInputGroup
-            fieldLabel="Same as shipping address"
-            fieldName="shippingAddressAsBillingAddress"
-            fieldValue="true"
+          <Input
+            label="Same as shipping address"
+            name="shippingAddressAsBillingAddress"
+            type="checkbox"
+            value={true}
           >
             <div
               className="o-form__input-group"
             >
-              <input
-                checked="true"
-                id="shippingAddressAsBillingAddress"
-                onBlur={[Function]}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                htmlFor="shippingAddressAsBillingAddress"
-              >
-                Same as shipping address
-              </label>
+              <div>
+                <input
+                  checked={true}
+                  className="o-form__input-field"
+                  id="shippingAddressAsBillingAddress"
+                  name="shippingAddressAsBillingAddress"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                  value={true}
+                />
+                <label
+                  className="o-form__label"
+                  htmlFor="shippingAddressAsBillingAddress"
+                >
+                  Same as shipping address
+                </label>
+              </div>
             </div>
-          </CheckboxInputGroup>
+          </Input>
         </form>
         <div
           aria-label="Shipping address to be used for billing"

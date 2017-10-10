@@ -2,31 +2,47 @@
   "shippingMethods": [
     {
       "id": "1",
-      "value": "super_saver",
-      "title": "Super Saver",
-      "delivery_date": "Monday 3rd December",
-      "cost": 3.45
+      "name": "Super Saver",
+      "retail_price_inc_tax": 3.45,
+      "paid_price_inc_tax": 3.45,
+      "tax_amount": 2.00,
+      "tax_percentage": 20.00,
+      "sku": "super_saver",
+      "reference": "super_saver",
+      "delivery_date": "Sunday 2nd December"
     },
     {
       "id": "2",
-      "value": "ups_next_day",
-      "title": "UPS Next Day",
-      "delivery_date": "Sunday 2nd December",
-      "cost": 5.45
+      "name": "UPS Next Day",
+      "retail_price_inc_tax": 5.45,
+      "paid_price_inc_tax": 5.45,
+      "tax_amount": 2.00,
+      "tax_percentage": 20.00,
+      "sku": "ups_next_day",
+      "reference": "ups_next_day",
+      "delivery_date": "Sunday 2nd December"
     },
     {
       "id": "3",
-      "value": "ups_next_day_before_noon",
-      "title": "UPS Next Day Before Noon",
-      "delivery_date": "Sunday 2nd December",
-      "cost": 8.45
+      "name": "UPS Next Day Before Noon",
+      "retail_price_inc_tax": 8.45,
+      "paid_price_inc_tax": 8.45,
+      "tax_amount": 2.00,
+      "tax_percentage": 20.00,
+      "sku": "ups_next_day_before_noon",
+      "reference": "ups_next_day_before_noon",
+      "delivery_date": "Sunday 2nd December"
     },
     {
       "id": "4",
-      "value": "ups_same_day",
-      "title": "UPS Same Day",
-      "delivery_date": "Today",
-      "cost": 10.45
+      "name": "UPS Same Day",
+      "retail_price_inc_tax": 8.45,
+      "paid_price_inc_tax": 8.45,
+      "tax_amount": 2.00,
+      "tax_percentage": 20.00,
+      "sku": "ups_same_day",
+      "delivery_date": "Sunday 2nd December",
+      "reference": "ups_same_day"
     }
   ]
 }

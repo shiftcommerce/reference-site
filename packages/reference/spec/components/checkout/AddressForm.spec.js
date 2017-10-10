@@ -29,13 +29,13 @@ test('renders the correct base form elements', () => {
 test('renders the values from the state', () => {
   // Arrange
   const address = {
-    country: 'GB',
-    fullName: 'Test Name',
-    address1: 'Test House',
-    postCode: 'TEST POSTCODE',
+    country_code: 'GB',
+    full_name: 'Test Name',
+    line_1: 'Test House',
+    zipcode: 'TEST POSTCODE',
     city: 'Leeds',
-    county: 'Yorkshire',
-    phone: '01234567890',
+    state: 'Yorkshire',
+    primary_phone: '01234567890',
     email: 'test@example.com'
   }
   const checkout = {
@@ -48,13 +48,13 @@ test('renders the values from the state', () => {
   )
 
   // assert
-  expect(wrapper.find('#country')).toHaveValue(address.country)
-  expect(wrapper.find('#fullName')).toHaveValue(address.fullName)
-  expect(wrapper.find('#address1')).toHaveValue(address.address1)
-  expect(wrapper.find('#postCode')).toHaveValue(address.postCode)
+  expect(wrapper.find('#country_code')).toHaveValue(address.country_code)
+  expect(wrapper.find('#full_name')).toHaveValue(address.full_name)
+  expect(wrapper.find('#line_1')).toHaveValue(address.line_1)
+  expect(wrapper.find('#zipcode')).toHaveValue(address.zipcode)
   expect(wrapper.find('#city')).toHaveValue(address.city)
-  expect(wrapper.find('#county')).toHaveValue(address.county)
-  expect(wrapper.find('#phone')).toHaveValue(address.phone)
+  expect(wrapper.find('#state')).toHaveValue(address.state)
+  expect(wrapper.find('#primary_phone')).toHaveValue(address.primary_phone)
   expect(wrapper.find('#email')).toHaveValue(address.email)
 })
 
@@ -79,7 +79,7 @@ test('renders the additional company / address2 fields when enabled', () => {
   const address = {
     companyName: 'Test Company',
     companyNameShown: true,
-    address2: 'Test Address Line 2',
+    line_2: 'Test Address Line 2',
     address2Shown: true
   }
   const checkout = {
@@ -93,7 +93,7 @@ test('renders the additional company / address2 fields when enabled', () => {
 
   // Assert - additional enabled fields:
   expect(wrapper.find('#companyName')).toHaveValue(address.companyName)
-  expect(wrapper.find('#address2')).toHaveValue(address.address2)
+  expect(wrapper.find('#line_2')).toHaveValue(address.line_2)
 })
 
 test('does not render the additional company / address2 fields when not enabled', () => {
@@ -113,7 +113,7 @@ test('does not render the additional company / address2 fields when not enabled'
 
   // Assert - Input fields are not rendered:
   expect(wrapper.find('#companyName').length).toEqual(0)
-  expect(wrapper.find('#address2').length).toEqual(0)
+  expect(wrapper.find('#line_2').length).toEqual(0)
 })
 
 test('renders the collapsed version of the form when collapsed = true', () => {
@@ -133,5 +133,5 @@ test('renders the collapsed version of the form when collapsed = true', () => {
   // Assert - Edit button present:
   expect(wrapper).toHaveText("Edit")
   // An input field is not rendered:
-  expect(wrapper.find('#fullName').length).toEqual(0)
+  expect(wrapper.find('#full_name').length).toEqual(0)
 })

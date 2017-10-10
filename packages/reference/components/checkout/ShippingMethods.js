@@ -4,17 +4,12 @@ import { Component } from 'react'
 // Fixtures
 import ShippingMethodsJson from '../../static/shippingMethods.json'
 
-// Actions
-import { toggleCollapsed } from '../../actions/checkoutActions'
-
 export default class ShippingMethods extends Component {
   constructor (props) {
     super(props)
 
     const preSelectedShippingMethod = props.checkout.shippingMethod
     const firstShippingMethod = ShippingMethodsJson.shippingMethods[0]
-
-    this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
 
     this.state = {
       shippingMethods: ShippingMethodsJson.shippingMethods,
@@ -34,10 +29,6 @@ export default class ShippingMethods extends Component {
     this.setState({ selectedShippingMethod: shippingMethod })
   }
 
-  onToggleCollapsed () {
-    this.props.dispatch(toggleCollapsed(this.props.formName))
-  }
-
   renderShippingMethods () {
     const shippingMethods = this.state.shippingMethods
     const selectedShippingMethod = this.state.selectedShippingMethod
@@ -45,13 +36,13 @@ export default class ShippingMethods extends Component {
     const shippingMethodsOutput = shippingMethods.map((method) =>
       <div className='o-form__input-group c-shipping-method-list__input-group'
         key={method.id} onClick={() => this.setShippingMethod(method)}
-        aria-label={method.value}>
-        <input id={method.id} value={method.value} type='radio'
+        aria-label={method.sku}>
+        <input id={method.id} value={method.sku} type='radio'
           name='shipping_method'
           checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
-        <label htmlFor={method.value}>
-          <span className='c-shipping-method-list__cost'>&pound;{method.cost}</span>
-          <span className='c-shipping-method-list__title'>{method.title}</span>
+        <label htmlFor={method.sku}>
+          <span className='c-shipping-method-list__cost'>&pound;{method.retail_price_inc_tax}</span>
+          <span className='c-shipping-method-list__title'>{method.name}</span>
           <span className='c-shipping-method-list__delivery-date-label'>Estimated Delivery: </span>
           <span className='c-shipping-method-list__delivery-date'>{method.delivery_date}</span>
         </label>
@@ -66,6 +57,7 @@ export default class ShippingMethods extends Component {
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
     const selectedShippingMethod = this.state.selectedShippingMethod
     const collapsed = this.props.checkout.shippingMethod.collapsed
+    const formName = this.props.formName
 
     return (
       <div className='o-form' aria-label='Shipping Methods'>
@@ -73,7 +65,7 @@ export default class ShippingMethods extends Component {
 
         {collapsed &&
           <div>
-            <button aria-label='Edit your shipping method' className='c-button' onClick={this.onToggleCollapsed} type='button'>
+            <button aria-label='Edit your shipping method' className='c-button' onClick={() => this.props.onToggleCollapsed(formName)} type='button'>
               Edit
             </button>
 
@@ -94,7 +86,7 @@ export default class ShippingMethods extends Component {
 
             {this.renderShippingMethods()}
 
-            <button aria-label='Continue to payment' className='c-button' onClick={this.onToggleCollapsed} type='button'>
+            <button aria-label='Continue to payment' className='c-button' onClick={() => this.props.onToggleCollapsed(formName)} type='button'>
               Continue to Payment
             </button>
           </form>

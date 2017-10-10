@@ -3,23 +3,11 @@ import { Component } from 'react'
 
 // Components
 import AddressForm from './AddressForm'
-import CheckboxInputGroup from './CheckboxInputGroup'
 
-// Actions
-import { toggleCollapsed } from '../../actions/checkoutActions'
+// Objects
+import Input from './../../objects/Input'
 
 export default class PaymentMethod extends Component {
-  onToggleCollapsed () {
-    return (
-      this.props.dispatch(toggleCollapsed(this.props.formName))
-    )
-  }
-
-  constructor () {
-    super()
-    this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
-  }
-
   renderSecurityFields () {
     // Example data
     const months = [
@@ -63,10 +51,16 @@ export default class PaymentMethod extends Component {
   }
 
   render () {
-    const {checkout, formName} = this.props
+    const { checkout,
+      formName,
+      onBlur,
+      onChange,
+      onShowField,
+      onToggleCollapsed,
+      setBillingShippingAddress } = this.props
     const paymentMethod = checkout.paymentMethod
     const shippingAddress = checkout.shippingAddress
-    const billingAddress = paymentMethod.shippingAddressAsBillingAddress ? shippingAddress : checkout.billingAddress
+    const billingAddress = checkout.shippingAddressAsBillingAddress ? shippingAddress : checkout.billingAddress
     const collapsed = paymentMethod.collapsed
 
     return <div aria-label='Payment method' className='o-form'>
@@ -74,7 +68,7 @@ export default class PaymentMethod extends Component {
 
       {collapsed &&
         <div>
-          <button aria-label='Edit payment method' className='c-button' onClick={this.onToggleCollapsed}>Edit</button>
+          <button aria-label='Edit payment method' className='c-button' onClick={() => onToggleCollapsed(formName)}>Edit</button>
 
           <div aria-label='Payment method summary' className='o-form__wrapper'>
             <p>
@@ -82,8 +76,8 @@ export default class PaymentMethod extends Component {
               <span>Exp: 01/24</span>
             </p>
             <p>
-              <span className='u-bold'>Billing address: {billingAddress.fullName}, </span>
-              <span>{billingAddress.address1}, {billingAddress.city}, {billingAddress.postCode}</span>
+              <span className='u-bold'>Billing address: {billingAddress.full_name}, </span>
+              <span>{billingAddress.line_1}, {billingAddress.city}, {billingAddress.zipcode}</span>
             </p>
           </div>
         </div>
@@ -107,27 +101,39 @@ export default class PaymentMethod extends Component {
                 <label>Billing address *</label>
               </div>
 
-              <CheckboxInputGroup
-                fieldLabel='Same as shipping address'
-                fieldName='shippingAddressAsBillingAddress'
-                fieldValue={paymentMethod.shippingAddressAsBillingAddress}
+              <Input
+                type='checkbox'
+                label='Same as shipping address'
+                name='shippingAddressAsBillingAddress'
+                value={checkout.shippingAddressAsBillingAddress}
                 formName={formName}
-                dispatch={this.props.dispatch}
+                onChange={setBillingShippingAddress}
+                onBlur={onBlur}
               />
             </form>
 
-            {paymentMethod.shippingAddressAsBillingAddress &&
+            {checkout.shippingAddressAsBillingAddress &&
               <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary'>
-                <h4>{shippingAddress.fullName}</h4>
-                <p>{shippingAddress.address1}</p>
-                <p>{shippingAddress.address2}</p>
+                <h4>{shippingAddress.full_name}</h4>
+                <p>{shippingAddress.line_1}</p>
+                <p>{shippingAddress.line_2}</p>
                 <p>{shippingAddress.city}</p>
-                <p>{shippingAddress.postCode}</p>
+                <p>{shippingAddress.zipcode}</p>
               </div>
             }
 
-            {!(paymentMethod.shippingAddressAsBillingAddress) &&
-              <AddressForm aria-label='Billing address form' checkout={this.props.checkout} title='Billing Address' formName='billingAddress' addressType='billing' dispatch={this.props.dispatch} />
+            {!(checkout.shippingAddressAsBillingAddress) &&
+              <AddressForm
+                aria-label='Billing address form'
+                checkout={checkout}
+                title='Billing Address'
+                formName='billingAddress'
+                addressType='billing'
+                onChange={onChange}
+                onBlur={onBlur}
+                onShowField={onShowField}
+                onToggleCollapsed={onToggleCollapsed}
+              />
             }
           </div>
         </div>
