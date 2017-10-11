@@ -35,7 +35,8 @@ app.prepare().then(() => {
   server.get('/getCategories', categoryHandler.getCategoriesRenderer(app))
 
   // if we need to specify routes e.g /search, they need to be placed above this.
-  server.get('*', (req, res) => {
+  // Get any route that isn't for static assets or _next
+  server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     const accessToken = process.env.CMS_ACCESS_TOKEN
     const headers = {
       'Content-Type': 'application/vnd.api+json',
@@ -44,6 +45,9 @@ app.prepare().then(() => {
     }
 
     function directRouting (router) {
+      // Set the headers returned from the CMS
+      res.set(router.headers)
+
       if (router.status_code === 200) {
         if (router.page.resource_type === 'Product') {
           return app.render(req, res, '/products/product', Object.assign(req.query, { id: router.page.resource_id }))
@@ -67,7 +71,6 @@ app.prepare().then(() => {
         if (response.ok) {
           let data = await response.json()
           let router = new ServerJsonApiParser().parse(data)
-
           return directRouting(router)
         } else {
           throw new Error(response.errors)
@@ -76,8 +79,11 @@ app.prepare().then(() => {
         console.log('Error is', errors)
       }
     }
+    fetchCmsData(`${process.env.CMS_API_STAGING_URL}${req.url}?include=page,redirect`, headers)
+  })
 
-    fetchCmsData(process.env.CMS_API_STAGING_URL + `${req.url}?include=page,redirect`, headers)
+  server.get('*', (req, res) => {
+    return handle(req, res)
   })
 
   server.listen(port, (err) => {
