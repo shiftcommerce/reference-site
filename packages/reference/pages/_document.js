@@ -51,6 +51,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
 
         <body>

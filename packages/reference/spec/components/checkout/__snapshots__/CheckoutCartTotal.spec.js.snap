@@ -29,67 +29,69 @@ exports[`renders the correct checkout cart costs with shipping address completed
     }
   }
 >
-  <div
-    aria-label="Cart total summary"
-    className="o-checkout-cart-total"
-  >
+  <Sticker>
     <div
-      className="o-checkout-cart-total__wrapper"
+      aria-label="Cart total summary"
+      className="o-checkout-cart-total u-sticky"
     >
-      <dl
-        aria-label="Subtotal"
+      <div
+        className="o-checkout-cart-total__wrapper"
       >
-        <dt>
-           Subtotal: 
-        </dt>
-        <dd>
-           £
-          25
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="VAT"
-      >
-        <dt>
-           VAT: 
-        </dt>
-        <dd>
-           £
-          0
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping: 
-        </dt>
-        <dd>
-           
-          Select shipping method
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="o-checkout-cart-total__total"
-      >
-        <dt>
-           You Pay: 
-        </dt>
-        <dd>
-           
-          <b>
-            £
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Subtotal: 
+          </dt>
+          <dd>
+             £
             25
-          </b>
-           
-        </dd>
-      </dl>
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="VAT"
+        >
+          <dt>
+             VAT: 
+          </dt>
+          <dd>
+             £
+            0
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping: 
+          </dt>
+          <dd>
+             
+            Select shipping method
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="o-checkout-cart-total__total"
+        >
+          <dt>
+             You Pay: 
+          </dt>
+          <dd>
+             
+            <b>
+              £
+              25
+            </b>
+             
+          </dd>
+        </dl>
+      </div>
     </div>
-  </div>
+  </Sticker>
 </CheckoutCartTotal>
 `;
 
@@ -132,67 +134,69 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
     }
   }
 >
-  <div
-    aria-label="Cart total summary"
-    className="o-checkout-cart-total"
-  >
+  <Sticker>
     <div
-      className="o-checkout-cart-total__wrapper"
+      aria-label="Cart total summary"
+      className="o-checkout-cart-total u-sticky"
     >
-      <dl
-        aria-label="Subtotal"
+      <div
+        className="o-checkout-cart-total__wrapper"
       >
-        <dt>
-           Subtotal: 
-        </dt>
-        <dd>
-           £
-          25
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="VAT"
-      >
-        <dt>
-           VAT: 
-        </dt>
-        <dd>
-           £
-          0
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping: 
-        </dt>
-        <dd>
-           
-          £3.45
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="o-checkout-cart-total__total"
-      >
-        <dt>
-           You Pay: 
-        </dt>
-        <dd>
-           
-          <b>
-            £
-            28.45
-          </b>
-           
-        </dd>
-      </dl>
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Subtotal: 
+          </dt>
+          <dd>
+             £
+            25
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="VAT"
+        >
+          <dt>
+             VAT: 
+          </dt>
+          <dd>
+             £
+            0
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping: 
+          </dt>
+          <dd>
+             
+            £3.45
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="o-checkout-cart-total__total"
+        >
+          <dt>
+             You Pay: 
+          </dt>
+          <dd>
+             
+            <b>
+              £
+              28.45
+            </b>
+             
+          </dd>
+        </dl>
+      </div>
     </div>
-  </div>
+  </Sticker>
 </CheckoutCartTotal>
 `;
 
@@ -223,67 +227,69 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
     }
   }
 >
-  <div
-    aria-label="Cart total summary"
-    className="o-checkout-cart-total"
-  >
+  <Sticker>
     <div
-      className="o-checkout-cart-total__wrapper"
+      aria-label="Cart total summary"
+      className="o-checkout-cart-total u-sticky"
     >
-      <dl
-        aria-label="Subtotal"
+      <div
+        className="o-checkout-cart-total__wrapper"
       >
-        <dt>
-           Subtotal: 
-        </dt>
-        <dd>
-           £
-          25
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="VAT"
-      >
-        <dt>
-           VAT: 
-        </dt>
-        <dd>
-           £
-          0
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping: 
-        </dt>
-        <dd>
-           
-          Enter address
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="o-checkout-cart-total__total"
-      >
-        <dt>
-           You Pay: 
-        </dt>
-        <dd>
-           
-          <b>
-            £
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Subtotal: 
+          </dt>
+          <dd>
+             £
             25
-          </b>
-           
-        </dd>
-      </dl>
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="VAT"
+        >
+          <dt>
+             VAT: 
+          </dt>
+          <dd>
+             £
+            0
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping: 
+          </dt>
+          <dd>
+             
+            Enter address
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="o-checkout-cart-total__total"
+        >
+          <dt>
+             You Pay: 
+          </dt>
+          <dd>
+             
+            <b>
+              £
+              25
+            </b>
+             
+          </dd>
+        </dl>
+      </div>
     </div>
-  </div>
+  </Sticker>
 </CheckoutCartTotal>
 `;
 
@@ -311,66 +317,68 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
   }
   title="Checkout Cart Summary"
 >
-  <div
-    aria-label="Cart total summary"
-    className="o-checkout-cart-total"
-  >
+  <Sticker>
     <div
-      className="o-checkout-cart-total__wrapper"
+      aria-label="Cart total summary"
+      className="o-checkout-cart-total u-sticky"
     >
-      <dl
-        aria-label="Subtotal"
+      <div
+        className="o-checkout-cart-total__wrapper"
       >
-        <dt>
-           Subtotal: 
-        </dt>
-        <dd>
-           £
-          20
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="VAT"
-      >
-        <dt>
-           VAT: 
-        </dt>
-        <dd>
-           £
-          0
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping: 
-        </dt>
-        <dd>
-           
-          Enter address
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="o-checkout-cart-total__total"
-      >
-        <dt>
-           You Pay: 
-        </dt>
-        <dd>
-           
-          <b>
-            £
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Subtotal: 
+          </dt>
+          <dd>
+             £
             20
-          </b>
-           
-        </dd>
-      </dl>
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="VAT"
+        >
+          <dt>
+             VAT: 
+          </dt>
+          <dd>
+             £
+            0
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping: 
+          </dt>
+          <dd>
+             
+            Enter address
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="o-checkout-cart-total__total"
+        >
+          <dt>
+             You Pay: 
+          </dt>
+          <dd>
+             
+            <b>
+              £
+              20
+            </b>
+             
+          </dd>
+        </dl>
+      </div>
     </div>
-  </div>
+  </Sticker>
 </CheckoutCartTotal>
 `;

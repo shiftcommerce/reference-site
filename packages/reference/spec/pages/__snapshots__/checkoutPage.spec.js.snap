@@ -180,1073 +180,404 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
           </div>
         </CheckoutSteps>
       </div>
-      <div>
-        <AddressForm
-          addressType="shipping"
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "billingAddress": Object {},
-              "paymentMethod": Object {},
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-          formName="shippingAddress"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onShowField={[Function]}
-          onToggleCollapsed={[Function]}
-          title="Shipping Address"
+      <div
+        className="o-grid-container"
+      >
+        <div
+          className="o-col-1-13 o-col-1-9-l"
         >
-          <div
-            className="o-form"
+          <AddressForm
+            addressType="shipping"
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+              }
+            }
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {},
+                "shippingAddress": Object {},
+                "shippingMethod": Object {},
+              }
+            }
+            dispatch={[Function]}
+            formName="shippingAddress"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onShowField={[Function]}
+            onToggleCollapsed={[Function]}
+            title="Shipping Address"
           >
-            <h3>
-              Shipping Address
-            </h3>
-            <form
-              className="o-form__wrapper"
+            <div
+              className="o-form"
             >
-              <DropdownSelect
-                formName="shippingAddress"
-                label="Country"
-                name="country_code"
-                onBlur={[Function]}
-                onChange={[Function]}
-                options={
-                  Array [
-                    Object {
-                      "id": 1,
-                      "title": "United Kingdom",
-                      "value": "GB",
-                    },
-                    Object {
-                      "id": 2,
-                      "title": "United States",
-                      "value": "US",
-                    },
-                  ]
-                }
-                prompt="Select country"
-                required="true"
+              <h3>
+                Shipping Address
+              </h3>
+              <form
+                className="o-form__wrapper"
               >
-                <div
-                  className="o-form__input-group"
-                >
-                  <label
-                    className="o-form__label"
-                    htmlFor="country_code"
-                  >
-                    Country
-                     *
-                  </label>
-                  <select
-                    className="o-form__input-block o-form__input-field"
-                    id="country_code"
-                    name="country_code"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    role="listbox"
-                  >
-                    <option
-                      aria-posinset="0"
-                      aria-setsize={2}
-                      role="option"
-                      value=""
-                    >
-                      Select country
-                    </option>
-                    <option
-                      aria-posinset={1}
-                      aria-setsize={2}
-                      role="option"
-                      value={
-                        Object {
-                          "id": 1,
-                          "title": "United Kingdom",
-                          "value": "GB",
-                        }
-                      }
-                    >
-                      United Kingdom
-                    </option>
-                    <option
-                      aria-posinset={2}
-                      aria-setsize={2}
-                      role="option"
-                      value={
-                        Object {
-                          "id": 2,
-                          "title": "United States",
-                          "value": "US",
-                        }
-                      }
-                    >
-                      United States
-                    </option>
-                  </select>
-                </div>
-              </DropdownSelect>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="Full Name"
-                name="full_name"
-                onBlur={[Function]}
-                onChange={[Function]}
-                required="true"
-                type="text"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="full_name"
-                    >
-                      Full Name
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="full_name"
-                      name="full_name"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <p>
-                  + Add Company Name (optional)
-                </p>
-              </a>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="Address 1"
-                name="line_1"
-                onBlur={[Function]}
-                onChange={[Function]}
-                required="true"
-                type="text"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="line_1"
-                    >
-                      Address 1
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="line_1"
-                      name="line_1"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <a
-                href="#"
-                onClick={[Function]}
-              >
-                <p>
-                  + Add Address 2 (optional)
-                </p>
-              </a>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="Post Code"
-                name="zipcode"
-                onBlur={[Function]}
-                onChange={[Function]}
-                required="true"
-                type="text"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="zipcode"
-                    >
-                      Post Code
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="zipcode"
-                      name="zipcode"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="City"
-                name="city"
-                onBlur={[Function]}
-                onChange={[Function]}
-                required="true"
-                type="text"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="city"
-                    >
-                      City
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="city"
-                      name="city"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="County"
-                name="state"
-                onBlur={[Function]}
-                onChange={[Function]}
-                required="true"
-                type="text"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="state"
-                    >
-                      County
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="state"
-                      name="state"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="Phone"
-                name="primary_phone"
-                onBlur={[Function]}
-                onChange={[Function]}
-                placeholder="In case Questions Arise"
-                required="true"
-                type="tel"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="primary_phone"
-                    >
-                      Phone
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="primary_phone"
-                      name="primary_phone"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="In case Questions Arise"
-                      required="true"
-                      type="tel"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <Input
-                className="o-form__input-block"
-                formName="shippingAddress"
-                label="Email"
-                name="email"
-                onBlur={[Function]}
-                onChange={[Function]}
-                placeholder="To Receive Order Confirmation"
-                required="true"
-                type="email"
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="email"
-                    >
-                      Email
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="email"
-                      name="email"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="To Receive Order Confirmation"
-                      required="true"
-                      type="email"
-                    />
-                  </div>
-                </div>
-              </Input>
-              <p>
-                * Denotes required fields
-              </p>
-              <div>
-                <Input
-                  className="o-form__input-inline"
+                <DropdownSelect
                   formName="shippingAddress"
-                  label="Sign up for Weekly Newsletters (optional)"
-                  name="newsletterOptIn"
+                  label="Country"
+                  name="country_code"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  type="checkbox"
+                  options={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "title": "United Kingdom",
+                        "value": "GB",
+                      },
+                      Object {
+                        "id": 2,
+                        "title": "United States",
+                        "value": "US",
+                      },
+                    ]
+                  }
+                  prompt="Select country"
+                  required="true"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <label
+                      className="o-form__label"
+                      htmlFor="country_code"
+                    >
+                      Country
+                       *
+                    </label>
+                    <select
+                      className="o-form__input-block o-form__input-field"
+                      id="country_code"
+                      name="country_code"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required="true"
+                      role="listbox"
+                    >
+                      <option
+                        aria-posinset="0"
+                        aria-setsize={2}
+                        role="option"
+                        value=""
+                      >
+                        Select country
+                      </option>
+                      <option
+                        aria-posinset={1}
+                        aria-setsize={2}
+                        role="option"
+                        value={
+                          Object {
+                            "id": 1,
+                            "title": "United Kingdom",
+                            "value": "GB",
+                          }
+                        }
+                      >
+                        United Kingdom
+                      </option>
+                      <option
+                        aria-posinset={2}
+                        aria-setsize={2}
+                        role="option"
+                        value={
+                          Object {
+                            "id": 2,
+                            "title": "United States",
+                            "value": "US",
+                          }
+                        }
+                      >
+                        United States
+                      </option>
+                    </select>
+                  </div>
+                </DropdownSelect>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="Full Name"
+                  name="full_name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="true"
+                  type="text"
                 >
                   <div
                     className="o-form__input-group"
                   >
                     <div>
-                      <input
-                        checked={false}
-                        className="o-form__input-field o-form__input-inline"
-                        id="newsletterOptIn"
-                        name="newsletterOptIn"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        type="checkbox"
-                      />
                       <label
                         className="o-form__label"
-                        htmlFor="newsletterOptIn"
+                        htmlFor="full_name"
                       >
-                        Sign up for Weekly Newsletters (optional)
+                        Full Name
+                         *
                       </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="full_name"
+                        name="full_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required="true"
+                        type="text"
+                      />
                     </div>
                   </div>
                 </Input>
-                <div
-                  className="o-form__input-group"
+                <a
+                  href="#"
+                  onClick={[Function]}
                 >
-                  <button
-                    className="c-button"
-                    onClick={[Function]}
-                    type="submit"
-                  >
-                    View Shipping Options
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </AddressForm>
-        <CheckoutCart
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "billingAddress": Object {},
-              "paymentMethod": Object {},
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-          title="Your Cart"
-        >
-          <div
-            aria-label="Cart items summary"
-            className="o-checkout-cart"
-          >
-            <h3>
-              Your Cart
-            </h3>
-            <Link
-              href="/cart"
-            >
-              <a
-                aria-label="Edit your cart"
-                className="c-button"
-                href="/cart"
-                onClick={[Function]}
-              >
-                Edit
-              </a>
-            </Link>
-            <div
-              className="o-checkout-cart__wrapper"
-            >
-              <div
-                aria-label="Product"
-              >
-                <Image
-                  aria-label="Product image"
-                  className="o-checkout-cart__image"
-                  height={80}
-                  width={80}
-                >
-                  <div
-                    className="c-dummy_image o-checkout-cart__image"
-                    style={
-                      Object {
-                        "height": 80,
-                        "width": 80,
-                      }
-                    }
-                  />
-                </Image>
-                <ul
-                  className="o-checkout-cart__info"
-                >
-                  <li
-                    aria-label="Product title"
-                  >
-                    test
-                  </li>
-                  <li
-                    aria-label="Quantity"
-                  >
-                    Qty: 
-                    2
-                  </li>
-                  <li
-                    aria-label="Price"
-                  >
-                    Price: £
-                    10
-                  </li>
-                  <li
-                    aria-label="Subtotal"
-                  >
-                    Subtotal: £
-                    20
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </CheckoutCart>
-        <CheckoutCartTotal
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "billingAddress": Object {},
-              "paymentMethod": Object {},
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-        >
-          <div
-            aria-label="Cart total summary"
-            className="o-checkout-cart-total"
-          >
-            <div
-              className="o-checkout-cart-total__wrapper"
-            >
-              <dl
-                aria-label="Subtotal"
-              >
-                <dt>
-                   Subtotal: 
-                </dt>
-                <dd>
-                   £
-                  20
-                   
-                </dd>
-              </dl>
-              <dl
-                aria-label="VAT"
-              >
-                <dt>
-                   VAT: 
-                </dt>
-                <dd>
-                   £
-                  0
-                   
-                </dd>
-              </dl>
-              <dl
-                aria-label="Shipping cost"
-              >
-                <dt>
-                   Shipping: 
-                </dt>
-                <dd>
-                   
-                  Enter address
-                   
-                </dd>
-              </dl>
-              <dl
-                aria-label="Total"
-                className="o-checkout-cart-total__total"
-              >
-                <dt>
-                   You Pay: 
-                </dt>
-                <dd>
-                   
-                  <b>
-                    £
-                    20
-                  </b>
-                   
-                </dd>
-              </dl>
-            </div>
-          </div>
-        </CheckoutCartTotal>
-        <ShippingMethods
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "billingAddress": Object {},
-              "paymentMethod": Object {},
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-          formName="shippingMethod"
-          setShippingMethod={[Function]}
-        >
-          <div
-            aria-label="Shipping Methods"
-            className="o-form"
-          >
-            <h3>
-              Your Shipping Method
-            </h3>
-            <form
-              className="o-form__wrapper c-shipping-method-list"
-            >
-              <p>
-                📍 Shipping from ...
-                <span
-                  className="c-shipping-method-list__item-count"
-                >
-                  1 item
-                </span>
-              </p>
-              <div
-                aria-label="super_saver"
-                className="o-form__input-group c-shipping-method-list__input-group"
-                onClick={[Function]}
-              >
-                <input
-                  checked={false}
-                  id="1"
-                  name="shipping_method"
+                  <p>
+                    + Add Company Name (optional)
+                  </p>
+                </a>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="Address 1"
+                  name="line_1"
+                  onBlur={[Function]}
                   onChange={[Function]}
-                  type="radio"
-                  value="super_saver"
-                />
-                <label
-                  htmlFor="super_saver"
+                  required="true"
+                  type="text"
                 >
-                  <span
-                    className="c-shipping-method-list__cost"
-                  >
-                    £
-                    3.45
-                  </span>
-                  <span
-                    className="c-shipping-method-list__title"
-                  >
-                    Super Saver
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date-label"
-                  >
-                    Estimated Delivery: 
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date"
-                  >
-                    Sunday 2nd December
-                  </span>
-                </label>
-              </div>
-              <div
-                aria-label="ups_next_day"
-                className="o-form__input-group c-shipping-method-list__input-group"
-                onClick={[Function]}
-              >
-                <input
-                  checked={false}
-                  id="2"
-                  name="shipping_method"
-                  onChange={[Function]}
-                  type="radio"
-                  value="ups_next_day"
-                />
-                <label
-                  htmlFor="ups_next_day"
-                >
-                  <span
-                    className="c-shipping-method-list__cost"
-                  >
-                    £
-                    5.45
-                  </span>
-                  <span
-                    className="c-shipping-method-list__title"
-                  >
-                    UPS Next Day
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date-label"
-                  >
-                    Estimated Delivery: 
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date"
-                  >
-                    Sunday 2nd December
-                  </span>
-                </label>
-              </div>
-              <div
-                aria-label="ups_next_day_before_noon"
-                className="o-form__input-group c-shipping-method-list__input-group"
-                onClick={[Function]}
-              >
-                <input
-                  checked={false}
-                  id="3"
-                  name="shipping_method"
-                  onChange={[Function]}
-                  type="radio"
-                  value="ups_next_day_before_noon"
-                />
-                <label
-                  htmlFor="ups_next_day_before_noon"
-                >
-                  <span
-                    className="c-shipping-method-list__cost"
-                  >
-                    £
-                    8.45
-                  </span>
-                  <span
-                    className="c-shipping-method-list__title"
-                  >
-                    UPS Next Day Before Noon
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date-label"
-                  >
-                    Estimated Delivery: 
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date"
-                  >
-                    Sunday 2nd December
-                  </span>
-                </label>
-              </div>
-              <div
-                aria-label="ups_same_day"
-                className="o-form__input-group c-shipping-method-list__input-group"
-                onClick={[Function]}
-              >
-                <input
-                  checked={false}
-                  id="4"
-                  name="shipping_method"
-                  onChange={[Function]}
-                  type="radio"
-                  value="ups_same_day"
-                />
-                <label
-                  htmlFor="ups_same_day"
-                >
-                  <span
-                    className="c-shipping-method-list__cost"
-                  >
-                    £
-                    8.45
-                  </span>
-                  <span
-                    className="c-shipping-method-list__title"
-                  >
-                    UPS Same Day
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date-label"
-                  >
-                    Estimated Delivery: 
-                  </span>
-                  <span
-                    className="c-shipping-method-list__delivery-date"
-                  >
-                    Sunday 2nd December
-                  </span>
-                </label>
-              </div>
-              <button
-                aria-label="Continue to payment"
-                className="c-button"
-                onClick={[Function]}
-                type="button"
-              >
-                Continue to Payment
-              </button>
-            </form>
-          </div>
-        </ShippingMethods>
-        <PaymentMethod
-          cart={
-            Object {
-              "lineItems": Array [
-                Object {
-                  "discount": 0,
-                  "imageUrl": "",
-                  "price": 10,
-                  "productID": 1,
-                  "productSku": "1231",
-                  "quantity": 2,
-                  "size": "size - 8",
-                  "sku": "123",
-                  "title": "test",
-                },
-              ],
-            }
-          }
-          checkout={
-            Object {
-              "billingAddress": Object {},
-              "paymentMethod": Object {},
-              "shippingAddress": Object {},
-              "shippingMethod": Object {},
-            }
-          }
-          dispatch={[Function]}
-          formName="paymentMethod"
-          onBlur={[Function]}
-          onChange={[Function]}
-          setBillingShippingAddress={[Function]}
-        >
-          <div
-            aria-label="Payment method"
-            className="o-form"
-          >
-            <h3>
-              Payment Method
-            </h3>
-            <div>
-              <button
-                aria-label="Use credit or debit card"
-                className="c-button"
-              >
-                Credit / Debit card
-              </button>
-              <button
-                aria-label="Use paypal"
-                className="c-button c-button--disabled"
-                disabled="disabled"
-              >
-                Paypal
-              </button>
-              <div
-                className="o-form__wrapper"
-              >
-                <form>
                   <div
                     className="o-form__input-group"
                   >
-                    <label
-                      aria-label="Credit or debit card number"
-                      htmlFor="card_number"
-                    >
-                      Credit / Debit Card Number *
-                    </label>
-                    <input
-                      id="card_number"
-                      required="required"
-                      type="text"
-                    />
-                  </div>
-                  <div
-                    className="o-payment-method__security-fields"
-                  >
-                    <label
-                      aria-label="Card expiry date"
-                      className="o-payment-method__label"
-                      htmlFor="expiry_month"
-                    >
-                      Expiration *
-                    </label>
-                    <select
-                      aria-label="Expiry month"
-                      className="o-payment-method__input"
-                      id="expiry_month"
-                      required="required"
-                    >
-                      <option
-                        value={NaN}
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="line_1"
+                      >
+                        Address 1
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="line_1"
+                        name="line_1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required="true"
+                        type="text"
                       />
-                      <option
-                        value={1}
-                      >
-                        01
-                      </option>
-                      <option
-                        value={2}
-                      >
-                        02
-                      </option>
-                      <option
-                        value={3}
-                      >
-                        03
-                      </option>
-                      <option
-                        value={4}
-                      >
-                        04
-                      </option>
-                      <option
-                        value={5}
-                      >
-                        05
-                      </option>
-                      <option
-                        value={6}
-                      >
-                        06
-                      </option>
-                      <option
-                        value={7}
-                      >
-                        07
-                      </option>
-                      <option
-                        value={8}
-                      >
-                        08
-                      </option>
-                      <option
-                        value={9}
-                      >
-                        09
-                      </option>
-                      <option
-                        value={10}
-                      >
-                        10
-                      </option>
-                      <option
-                        value={11}
-                      >
-                        11
-                      </option>
-                      <option
-                        value={12}
-                      >
-                        12
-                      </option>
-                    </select>
-                    <span
-                      className="o-payment-method__text"
-                    >
-                      /
-                    </span>
-                    <select
-                      aria-label="Expiry year"
-                      className="o-payment-method__input"
-                      id="expiry_year"
-                      required="required"
-                    >
-                      <option
-                        value={NaN}
-                      />
-                      <option
-                        value={17}
-                      >
-                        17
-                      </option>
-                      <option
-                        value={18}
-                      >
-                        18
-                      </option>
-                      <option
-                        value={19}
-                      >
-                        19
-                      </option>
-                      <option
-                        value={20}
-                      >
-                        20
-                      </option>
-                      <option
-                        value={21}
-                      >
-                        21
-                      </option>
-                      <option
-                        value={22}
-                      >
-                        22
-                      </option>
-                    </select>
-                    <label
-                      aria-label="CVV security code"
-                      className="o-payment-method__label-cvv"
-                      htmlFor="cvv"
-                    >
-                      CVV *
-                      <span
-                        className="o-payment-method__text"
-                      >
-                        Hint
-                      </span>
-                    </label>
-                    <input
-                      className="o-payment-method__input"
-                      id="cvv"
-                      required="required"
-                      type="text"
-                    />
+                    </div>
                   </div>
+                </Input>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <p>
+                    + Add Address 2 (optional)
+                  </p>
+                </a>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="Post Code"
+                  name="zipcode"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="true"
+                  type="text"
+                >
                   <div
                     className="o-form__input-group"
                   >
-                    <label>
-                      Billing address *
-                    </label>
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="zipcode"
+                      >
+                        Post Code
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="zipcode"
+                        name="zipcode"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required="true"
+                        type="text"
+                      />
+                    </div>
                   </div>
+                </Input>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="City"
+                  name="city"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="true"
+                  type="text"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="city"
+                      >
+                        City
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="city"
+                        name="city"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required="true"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </Input>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="County"
+                  name="state"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="true"
+                  type="text"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="state"
+                      >
+                        County
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="state"
+                        name="state"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required="true"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </Input>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="Phone"
+                  name="primary_phone"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="In case Questions Arise"
+                  required="true"
+                  type="tel"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="primary_phone"
+                      >
+                        Phone
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="primary_phone"
+                        name="primary_phone"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="In case Questions Arise"
+                        required="true"
+                        type="tel"
+                      />
+                    </div>
+                  </div>
+                </Input>
+                <Input
+                  className="o-form__input-block"
+                  formName="shippingAddress"
+                  label="Email"
+                  name="email"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="To Receive Order Confirmation"
+                  required="true"
+                  type="email"
+                >
+                  <div
+                    className="o-form__input-group"
+                  >
+                    <div>
+                      <label
+                        className="o-form__label"
+                        htmlFor="email"
+                      >
+                        Email
+                         *
+                      </label>
+                      <input
+                        checked={false}
+                        className="o-form__input-field o-form__input-block"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="To Receive Order Confirmation"
+                        required="true"
+                        type="email"
+                      />
+                    </div>
+                  </div>
+                </Input>
+                <p>
+                  * Denotes required fields
+                </p>
+                <div>
                   <Input
-                    formName="paymentMethod"
-                    label="Same as shipping address"
-                    name="shippingAddressAsBillingAddress"
+                    className="o-form__input-inline"
+                    formName="shippingAddress"
+                    label="Sign up for Weekly Newsletters (optional)"
+                    name="newsletterOptIn"
                     onBlur={[Function]}
                     onChange={[Function]}
                     type="checkbox"
@@ -1257,414 +588,1095 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                       <div>
                         <input
                           checked={false}
-                          className="o-form__input-field"
-                          id="shippingAddressAsBillingAddress"
-                          name="shippingAddressAsBillingAddress"
+                          className="o-form__input-field o-form__input-inline"
+                          id="newsletterOptIn"
+                          name="newsletterOptIn"
                           onBlur={[Function]}
                           onChange={[Function]}
                           type="checkbox"
                         />
                         <label
                           className="o-form__label"
-                          htmlFor="shippingAddressAsBillingAddress"
+                          htmlFor="newsletterOptIn"
                         >
-                          Same as shipping address
+                          Sign up for Weekly Newsletters (optional)
                         </label>
                       </div>
                     </div>
                   </Input>
-                </form>
-                <AddressForm
-                  addressType="billing"
-                  aria-label="Billing address form"
-                  checkout={
-                    Object {
-                      "billingAddress": Object {},
-                      "paymentMethod": Object {},
-                      "shippingAddress": Object {},
-                      "shippingMethod": Object {},
-                    }
-                  }
-                  formName="billingAddress"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  title="Billing Address"
-                >
                   <div
-                    className="o-form"
+                    className="o-form__input-group"
                   >
-                    <h3>
-                      Billing Address
-                    </h3>
-                    <form
-                      className="o-form__wrapper"
+                    <button
+                      className="c-button"
+                      onClick={[Function]}
+                      type="submit"
                     >
-                      <DropdownSelect
-                        formName="billingAddress"
-                        label="Country"
-                        name="country_code"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        options={
-                          Array [
-                            Object {
-                              "id": 1,
-                              "title": "United Kingdom",
-                              "value": "GB",
-                            },
-                            Object {
-                              "id": 2,
-                              "title": "United States",
-                              "value": "US",
-                            },
-                          ]
-                        }
-                        prompt="Select country"
-                        required="true"
+                      View Shipping Options
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </AddressForm>
+          <ShippingMethods
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+              }
+            }
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {},
+                "shippingAddress": Object {},
+                "shippingMethod": Object {},
+              }
+            }
+            dispatch={[Function]}
+            formName="shippingMethod"
+            setShippingMethod={[Function]}
+          >
+            <div
+              aria-label="Shipping Methods"
+              className="o-form"
+            >
+              <h3>
+                Your Shipping Method
+              </h3>
+              <form
+                className="o-form__wrapper c-shipping-method-list"
+              >
+                <p>
+                  📍 Shipping from ...
+                  <span
+                    className="c-shipping-method-list__item-count"
+                  >
+                    1 item
+                  </span>
+                </p>
+                <div
+                  aria-label="super_saver"
+                  className="o-form__input-group c-shipping-method-list__input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    checked={false}
+                    id="1"
+                    name="shipping_method"
+                    onChange={[Function]}
+                    type="radio"
+                    value="super_saver"
+                  />
+                  <label
+                    htmlFor="super_saver"
+                  >
+                    <span
+                      className="c-shipping-method-list__cost"
+                    >
+                      £
+                      3.45
+                    </span>
+                    <span
+                      className="c-shipping-method-list__title"
+                    >
+                      Super Saver
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date-label"
+                    >
+                      Estimated Delivery: 
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date"
+                    >
+                      Sunday 2nd December
+                    </span>
+                  </label>
+                </div>
+                <div
+                  aria-label="ups_next_day"
+                  className="o-form__input-group c-shipping-method-list__input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    checked={false}
+                    id="2"
+                    name="shipping_method"
+                    onChange={[Function]}
+                    type="radio"
+                    value="ups_next_day"
+                  />
+                  <label
+                    htmlFor="ups_next_day"
+                  >
+                    <span
+                      className="c-shipping-method-list__cost"
+                    >
+                      £
+                      5.45
+                    </span>
+                    <span
+                      className="c-shipping-method-list__title"
+                    >
+                      UPS Next Day
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date-label"
+                    >
+                      Estimated Delivery: 
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date"
+                    >
+                      Sunday 2nd December
+                    </span>
+                  </label>
+                </div>
+                <div
+                  aria-label="ups_next_day_before_noon"
+                  className="o-form__input-group c-shipping-method-list__input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    checked={false}
+                    id="3"
+                    name="shipping_method"
+                    onChange={[Function]}
+                    type="radio"
+                    value="ups_next_day_before_noon"
+                  />
+                  <label
+                    htmlFor="ups_next_day_before_noon"
+                  >
+                    <span
+                      className="c-shipping-method-list__cost"
+                    >
+                      £
+                      8.45
+                    </span>
+                    <span
+                      className="c-shipping-method-list__title"
+                    >
+                      UPS Next Day Before Noon
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date-label"
+                    >
+                      Estimated Delivery: 
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date"
+                    >
+                      Sunday 2nd December
+                    </span>
+                  </label>
+                </div>
+                <div
+                  aria-label="ups_same_day"
+                  className="o-form__input-group c-shipping-method-list__input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    checked={false}
+                    id="4"
+                    name="shipping_method"
+                    onChange={[Function]}
+                    type="radio"
+                    value="ups_same_day"
+                  />
+                  <label
+                    htmlFor="ups_same_day"
+                  >
+                    <span
+                      className="c-shipping-method-list__cost"
+                    >
+                      £
+                      8.45
+                    </span>
+                    <span
+                      className="c-shipping-method-list__title"
+                    >
+                      UPS Same Day
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date-label"
+                    >
+                      Estimated Delivery: 
+                    </span>
+                    <span
+                      className="c-shipping-method-list__delivery-date"
+                    >
+                      Sunday 2nd December
+                    </span>
+                  </label>
+                </div>
+                <button
+                  aria-label="Continue to payment"
+                  className="c-button"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Continue to Payment
+                </button>
+              </form>
+            </div>
+          </ShippingMethods>
+          <PaymentMethod
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+              }
+            }
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {},
+                "shippingAddress": Object {},
+                "shippingMethod": Object {},
+              }
+            }
+            dispatch={[Function]}
+            formName="paymentMethod"
+            onBlur={[Function]}
+            onChange={[Function]}
+            setBillingShippingAddress={[Function]}
+          >
+            <div
+              aria-label="Payment method"
+              className="o-form"
+            >
+              <h3>
+                Payment Method
+              </h3>
+              <div>
+                <button
+                  aria-label="Use credit or debit card"
+                  className="c-button"
+                >
+                  Credit / Debit card
+                </button>
+                <button
+                  aria-label="Use paypal"
+                  className="c-button c-button--disabled"
+                  disabled="disabled"
+                >
+                  Paypal
+                </button>
+                <div
+                  className="o-form__wrapper"
+                >
+                  <form>
+                    <div
+                      className="o-form__input-group"
+                    >
+                      <label
+                        aria-label="Credit or debit card number"
+                        htmlFor="card_number"
                       >
-                        <div
-                          className="o-form__input-group"
+                        Credit / Debit Card Number *
+                      </label>
+                      <input
+                        id="card_number"
+                        required="required"
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      className="o-payment-method__security-fields"
+                    >
+                      <label
+                        aria-label="Card expiry date"
+                        className="o-payment-method__label"
+                        htmlFor="expiry_month"
+                      >
+                        Expiration *
+                      </label>
+                      <select
+                        aria-label="Expiry month"
+                        className="o-payment-method__input"
+                        id="expiry_month"
+                        required="required"
+                      >
+                        <option
+                          value={NaN}
+                        />
+                        <option
+                          value={1}
                         >
-                          <label
-                            className="o-form__label"
-                            htmlFor="country_code"
-                          >
-                            Country
-                             *
-                          </label>
-                          <select
-                            className="o-form__input-block o-form__input-field"
-                            id="country_code"
-                            name="country_code"
+                          01
+                        </option>
+                        <option
+                          value={2}
+                        >
+                          02
+                        </option>
+                        <option
+                          value={3}
+                        >
+                          03
+                        </option>
+                        <option
+                          value={4}
+                        >
+                          04
+                        </option>
+                        <option
+                          value={5}
+                        >
+                          05
+                        </option>
+                        <option
+                          value={6}
+                        >
+                          06
+                        </option>
+                        <option
+                          value={7}
+                        >
+                          07
+                        </option>
+                        <option
+                          value={8}
+                        >
+                          08
+                        </option>
+                        <option
+                          value={9}
+                        >
+                          09
+                        </option>
+                        <option
+                          value={10}
+                        >
+                          10
+                        </option>
+                        <option
+                          value={11}
+                        >
+                          11
+                        </option>
+                        <option
+                          value={12}
+                        >
+                          12
+                        </option>
+                      </select>
+                      <span
+                        className="o-payment-method__text"
+                      >
+                        /
+                      </span>
+                      <select
+                        aria-label="Expiry year"
+                        className="o-payment-method__input"
+                        id="expiry_year"
+                        required="required"
+                      >
+                        <option
+                          value={NaN}
+                        />
+                        <option
+                          value={17}
+                        >
+                          17
+                        </option>
+                        <option
+                          value={18}
+                        >
+                          18
+                        </option>
+                        <option
+                          value={19}
+                        >
+                          19
+                        </option>
+                        <option
+                          value={20}
+                        >
+                          20
+                        </option>
+                        <option
+                          value={21}
+                        >
+                          21
+                        </option>
+                        <option
+                          value={22}
+                        >
+                          22
+                        </option>
+                      </select>
+                      <label
+                        aria-label="CVV security code"
+                        className="o-payment-method__label-cvv"
+                        htmlFor="cvv"
+                      >
+                        CVV *
+                        <span
+                          className="o-payment-method__text"
+                        >
+                          Hint
+                        </span>
+                      </label>
+                      <input
+                        className="o-payment-method__input"
+                        id="cvv"
+                        required="required"
+                        type="text"
+                      />
+                    </div>
+                    <div
+                      className="o-form__input-group"
+                    >
+                      <label>
+                        Billing address *
+                      </label>
+                    </div>
+                    <Input
+                      formName="paymentMethod"
+                      label="Same as shipping address"
+                      name="shippingAddressAsBillingAddress"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="checkbox"
+                    >
+                      <div
+                        className="o-form__input-group"
+                      >
+                        <div>
+                          <input
+                            checked={false}
+                            className="o-form__input-field"
+                            id="shippingAddressAsBillingAddress"
+                            name="shippingAddressAsBillingAddress"
                             onBlur={[Function]}
                             onChange={[Function]}
-                            required="true"
-                            role="listbox"
+                            type="checkbox"
+                          />
+                          <label
+                            className="o-form__label"
+                            htmlFor="shippingAddressAsBillingAddress"
                           >
-                            <option
-                              aria-posinset="0"
-                              aria-setsize={2}
-                              role="option"
-                              value=""
+                            Same as shipping address
+                          </label>
+                        </div>
+                      </div>
+                    </Input>
+                  </form>
+                  <AddressForm
+                    addressType="billing"
+                    aria-label="Billing address form"
+                    checkout={
+                      Object {
+                        "billingAddress": Object {},
+                        "paymentMethod": Object {},
+                        "shippingAddress": Object {},
+                        "shippingMethod": Object {},
+                      }
+                    }
+                    formName="billingAddress"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    title="Billing Address"
+                  >
+                    <div
+                      className="o-form"
+                    >
+                      <h3>
+                        Billing Address
+                      </h3>
+                      <form
+                        className="o-form__wrapper"
+                      >
+                        <DropdownSelect
+                          formName="billingAddress"
+                          label="Country"
+                          name="country_code"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "id": 1,
+                                "title": "United Kingdom",
+                                "value": "GB",
+                              },
+                              Object {
+                                "id": 2,
+                                "title": "United States",
+                                "value": "US",
+                              },
+                            ]
+                          }
+                          prompt="Select country"
+                          required="true"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <label
+                              className="o-form__label"
+                              htmlFor="country_code"
                             >
-                              Select country
-                            </option>
-                            <option
-                              aria-posinset={1}
-                              aria-setsize={2}
-                              role="option"
-                              value={
-                                Object {
-                                  "id": 1,
-                                  "title": "United Kingdom",
-                                  "value": "GB",
+                              Country
+                               *
+                            </label>
+                            <select
+                              className="o-form__input-block o-form__input-field"
+                              id="country_code"
+                              name="country_code"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required="true"
+                              role="listbox"
+                            >
+                              <option
+                                aria-posinset="0"
+                                aria-setsize={2}
+                                role="option"
+                                value=""
+                              >
+                                Select country
+                              </option>
+                              <option
+                                aria-posinset={1}
+                                aria-setsize={2}
+                                role="option"
+                                value={
+                                  Object {
+                                    "id": 1,
+                                    "title": "United Kingdom",
+                                    "value": "GB",
+                                  }
                                 }
-                              }
-                            >
-                              United Kingdom
-                            </option>
-                            <option
-                              aria-posinset={2}
-                              aria-setsize={2}
-                              role="option"
-                              value={
-                                Object {
-                                  "id": 2,
-                                  "title": "United States",
-                                  "value": "US",
+                              >
+                                United Kingdom
+                              </option>
+                              <option
+                                aria-posinset={2}
+                                aria-setsize={2}
+                                role="option"
+                                value={
+                                  Object {
+                                    "id": 2,
+                                    "title": "United States",
+                                    "value": "US",
+                                  }
                                 }
-                              }
-                            >
-                              United States
-                            </option>
-                          </select>
-                        </div>
-                      </DropdownSelect>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Full Name"
-                        name="full_name"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="full_name"
-                            >
-                              Full Name
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="full_name"
-                              name="full_name"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              required="true"
-                              type="text"
-                            />
+                              >
+                                United States
+                              </option>
+                            </select>
                           </div>
-                        </div>
-                      </Input>
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
+                        </DropdownSelect>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Full Name"
+                          name="full_name"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required="true"
+                          type="text"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="full_name"
+                              >
+                                Full Name
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="full_name"
+                                name="full_name"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required="true"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          <p>
+                            + Add Company Name (optional)
+                          </p>
+                        </a>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Address 1"
+                          name="line_1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required="true"
+                          type="text"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="line_1"
+                              >
+                                Address 1
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="line_1"
+                                name="line_1"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required="true"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          <p>
+                            + Add Address 2 (optional)
+                          </p>
+                        </a>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Post Code"
+                          name="zipcode"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required="true"
+                          type="text"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="zipcode"
+                              >
+                                Post Code
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="zipcode"
+                                name="zipcode"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required="true"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="City"
+                          name="city"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required="true"
+                          type="text"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="city"
+                              >
+                                City
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="city"
+                                name="city"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required="true"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="County"
+                          name="state"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required="true"
+                          type="text"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="state"
+                              >
+                                County
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="state"
+                                name="state"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required="true"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Phone"
+                          name="primary_phone"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="In case Questions Arise"
+                          required="true"
+                          type="tel"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="primary_phone"
+                              >
+                                Phone
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="primary_phone"
+                                name="primary_phone"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="In case Questions Arise"
+                                required="true"
+                                type="tel"
+                              />
+                            </div>
+                          </div>
+                        </Input>
+                        <Input
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Email"
+                          name="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="To Receive Order Confirmation"
+                          required="true"
+                          type="email"
+                        >
+                          <div
+                            className="o-form__input-group"
+                          >
+                            <div>
+                              <label
+                                className="o-form__label"
+                                htmlFor="email"
+                              >
+                                Email
+                                 *
+                              </label>
+                              <input
+                                checked={false}
+                                className="o-form__input-field o-form__input-block"
+                                id="email"
+                                name="email"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="To Receive Order Confirmation"
+                                required="true"
+                                type="email"
+                              />
+                            </div>
+                          </div>
+                        </Input>
                         <p>
-                          + Add Company Name (optional)
+                          * Denotes required fields
                         </p>
-                      </a>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Address 1"
-                        name="line_1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="line_1"
-                            >
-                              Address 1
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="line_1"
-                              name="line_1"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              required="true"
-                              type="text"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        <p>
-                          + Add Address 2 (optional)
-                        </p>
-                      </a>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Post Code"
-                        name="zipcode"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="zipcode"
-                            >
-                              Post Code
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="zipcode"
-                              name="zipcode"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              required="true"
-                              type="text"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="City"
-                        name="city"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="city"
-                            >
-                              City
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="city"
-                              name="city"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              required="true"
-                              type="text"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="County"
-                        name="state"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="state"
-                            >
-                              County
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="state"
-                              name="state"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              required="true"
-                              type="text"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Phone"
-                        name="primary_phone"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="In case Questions Arise"
-                        required="true"
-                        type="tel"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="primary_phone"
-                            >
-                              Phone
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="primary_phone"
-                              name="primary_phone"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              placeholder="In case Questions Arise"
-                              required="true"
-                              type="tel"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Email"
-                        name="email"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="To Receive Order Confirmation"
-                        required="true"
-                        type="email"
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="email"
-                            >
-                              Email
-                               *
-                            </label>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="email"
-                              name="email"
-                              onBlur={[Function]}
-                              onChange={[Function]}
-                              placeholder="To Receive Order Confirmation"
-                              required="true"
-                              type="email"
-                            />
-                          </div>
-                        </div>
-                      </Input>
-                      <p>
-                        * Denotes required fields
-                      </p>
-                    </form>
-                  </div>
-                </AddressForm>
+                      </form>
+                    </div>
+                  </AddressForm>
+                </div>
+              </div>
+              <div
+                aria-label="Use gift card or rewards code"
+                className="o-form__wrapper"
+              >
+                <p>
+                  + Use a Gift Card / Rewards Code
+                </p>
               </div>
             </div>
-            <div
-              aria-label="Use gift card or rewards code"
-              className="o-form__wrapper"
-            >
-              <p>
-                + Use a Gift Card / Rewards Code
-              </p>
-            </div>
-          </div>
-        </PaymentMethod>
-        <div
-          className="o-form"
-        >
-          <button
-            className="c-button"
-            onClick={[Function]}
+          </PaymentMethod>
+          <div
+            className="o-form"
           >
-            Review Your Order
-          </button>
+            <button
+              className="c-button"
+              onClick={[Function]}
+            >
+              Review Your Order
+            </button>
+          </div>
+        </div>
+        <div
+          className="o-col-1-13 o-col-9-13-l"
+        >
+          <CheckoutCart
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+              }
+            }
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {},
+                "shippingAddress": Object {},
+                "shippingMethod": Object {},
+              }
+            }
+            dispatch={[Function]}
+            title="Your Cart"
+          >
+            <div
+              aria-label="Cart items summary"
+              className="o-checkout-cart"
+            >
+              <h3>
+                Your Cart
+              </h3>
+              <Link
+                href="/cart"
+              >
+                <a
+                  aria-label="Edit your cart"
+                  className="c-button"
+                  href="/cart"
+                  onClick={[Function]}
+                >
+                  Edit
+                </a>
+              </Link>
+              <div
+                className="o-checkout-cart__wrapper"
+              >
+                <div
+                  aria-label="Product"
+                >
+                  <Image
+                    aria-label="Product image"
+                    className="o-checkout-cart__image"
+                    height={80}
+                    width={80}
+                  >
+                    <div
+                      className="c-dummy_image o-checkout-cart__image"
+                      style={
+                        Object {
+                          "height": 80,
+                          "width": 80,
+                        }
+                      }
+                    />
+                  </Image>
+                  <ul
+                    className="o-checkout-cart__info"
+                  >
+                    <li
+                      aria-label="Product title"
+                    >
+                      test
+                    </li>
+                    <li
+                      aria-label="Quantity"
+                    >
+                      Qty: 
+                      2
+                    </li>
+                    <li
+                      aria-label="Price"
+                    >
+                      Price: £
+                      10
+                    </li>
+                    <li
+                      aria-label="Subtotal"
+                    >
+                      Subtotal: £
+                      20
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CheckoutCart>
+          <CheckoutCartTotal
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+              }
+            }
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {},
+                "shippingAddress": Object {},
+                "shippingMethod": Object {},
+              }
+            }
+            dispatch={[Function]}
+          >
+            <Sticker>
+              <div
+                aria-label="Cart total summary"
+                className="o-checkout-cart-total u-sticky"
+              >
+                <div
+                  className="o-checkout-cart-total__wrapper"
+                >
+                  <dl
+                    aria-label="Subtotal"
+                  >
+                    <dt>
+                       Subtotal: 
+                    </dt>
+                    <dd>
+                       £
+                      20
+                       
+                    </dd>
+                  </dl>
+                  <dl
+                    aria-label="VAT"
+                  >
+                    <dt>
+                       VAT: 
+                    </dt>
+                    <dd>
+                       £
+                      0
+                       
+                    </dd>
+                  </dl>
+                  <dl
+                    aria-label="Shipping cost"
+                  >
+                    <dt>
+                       Shipping: 
+                    </dt>
+                    <dd>
+                       
+                      Enter address
+                       
+                    </dd>
+                  </dl>
+                  <dl
+                    aria-label="Total"
+                    className="o-checkout-cart-total__total"
+                  >
+                    <dt>
+                       You Pay: 
+                    </dt>
+                    <dd>
+                       
+                      <b>
+                        £
+                        20
+                      </b>
+                       
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </Sticker>
+          </CheckoutCartTotal>
         </div>
       </div>
     </div>

@@ -84,32 +84,35 @@ export class CheckoutPage extends Component {
           </span>
           <CheckoutSteps {...this.props} />
         </div>
-        <div>
-          <AddressForm {...this.props}
-            title='Shipping Address'
-            formName='shippingAddress'
-            addressType='shipping'
-            onChange={this.onInputChange}
-            onBlur={this.onInputBlur}
-            onShowField={this.onShowField}
-            onToggleCollapsed={this.onToggleCollapsed}
-          />
-          <CheckoutCart title='Your Cart' {...this.props} />
-          <CheckoutCartTotal {...this.props} />
-          <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
-          <PaymentMethod
-            formName='paymentMethod'
-            {...this.props}
-            setBillingShippingAddress={this.setBillingShippingAddress}
-            onChange={this.onInputChange}
-            onBlur={this.onInputBlur}
-          />
-
-          {!paymentMethodCollapsed &&
-            <div className='o-form'>
-              <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
-            </div>
-          }
+        <div className="o-grid-container">
+          <div className="o-col-1-13 o-col-1-9-l">
+            <AddressForm {...this.props}
+              title='Shipping Address'
+              formName='shippingAddress'
+              addressType='shipping'
+              onChange={this.onInputChange}
+              onBlur={this.onInputBlur}
+              onShowField={this.onShowField}
+              onToggleCollapsed={this.onToggleCollapsed}
+            />
+            <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
+            <PaymentMethod
+              formName='paymentMethod'
+              {...this.props}
+              setBillingShippingAddress={this.setBillingShippingAddress}
+              onChange={this.onInputChange}
+              onBlur={this.onInputBlur}
+            />
+            {!paymentMethodCollapsed &&
+              <div className='o-form'>
+                <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
+              </div>
+            }
+          </div>
+          <div className="o-col-1-13 o-col-9-13-l">
+            <CheckoutCart title='Your Cart' {...this.props} />
+            <CheckoutCartTotal {...this.props} />
+          </div>
         </div>
       </div>
     )
