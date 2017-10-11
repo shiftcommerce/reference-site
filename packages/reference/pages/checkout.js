@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
+import Router from 'next/router'
 import Link from 'next/link'
 
 // Utils
@@ -42,6 +43,8 @@ export class CheckoutPage extends Component {
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
     this.props.dispatch(readCart())
+
+    if (this.props.cart.lineItems.length === 0) Router.push('/cart')
   }
 
   onToggleCollapsed (componentName) {
@@ -69,51 +72,56 @@ export class CheckoutPage extends Component {
   }
 
   render () {
-    const checkout = this.props.checkout
+    const { checkout, cart } = this.props
+    const hasLineItems = cart.lineItems.length > 0
     const paymentMethodCollapsed = checkout.paymentMethod.collapsed
 
     return (
       <div>
-        <div className='o-header'>
-          <span className='o-header__logo'>
-            <Link href='/home/index' as='/'>
-              <a>
-                <Image width={200} height={80} />
-              </a>
-            </Link>
-          </span>
-          <CheckoutSteps {...this.props} />
-        </div>
-        <div className="o-grid-container">
-          <div className="o-col-1-13 o-col-1-9-l">
-            <AddressForm {...this.props}
-              title='Shipping Address'
-              formName='shippingAddress'
-              addressType='shipping'
-              onChange={this.onInputChange}
-              onBlur={this.onInputBlur}
-              onShowField={this.onShowField}
-              onToggleCollapsed={this.onToggleCollapsed}
-            />
-            <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
-            <PaymentMethod
-              formName='paymentMethod'
-              {...this.props}
-              setBillingShippingAddress={this.setBillingShippingAddress}
-              onChange={this.onInputChange}
-              onBlur={this.onInputBlur}
-            />
-            {!paymentMethodCollapsed &&
-              <div className='o-form'>
-                <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
+        {hasLineItems &&
+          <div>
+            <div className='o-header'>
+              <span className='o-header__logo'>
+                <Link href='/home/index' as='/'>
+                  <a>
+                    <Image width={200} height={80} />
+                  </a>
+                </Link>
+              </span>
+              <CheckoutSteps {...this.props} />
+            </div>
+            <div className="o-grid-container">
+              <div className="o-col-1-13 o-col-1-9-l">
+                <AddressForm {...this.props}
+                  title='Shipping Address'
+                  formName='shippingAddress'
+                  addressType='shipping'
+                  onChange={this.onInputChange}
+                  onBlur={this.onInputBlur}
+                  onShowField={this.onShowField}
+                  onToggleCollapsed={this.onToggleCollapsed}
+                />
+                <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
+                <PaymentMethod
+                  formName='paymentMethod'
+                  {...this.props}
+                  setBillingShippingAddress={this.setBillingShippingAddress}
+                  onChange={this.onInputChange}
+                  onBlur={this.onInputBlur}
+                />
+                {!paymentMethodCollapsed &&
+                  <div className='o-form'>
+                    <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
+                  </div>
+                }
               </div>
-            }
+              <div className="o-col-1-13 o-col-9-13-l">
+                <CheckoutCart title='Your Cart' {...this.props} />
+                <CheckoutCartTotal {...this.props} />
+              </div>
+            </div>
           </div>
-          <div className="o-col-1-13 o-col-9-13-l">
-            <CheckoutCart title='Your Cart' {...this.props} />
-            <CheckoutCartTotal {...this.props} />
-          </div>
-        </div>
+        }
       </div>
     )
   }

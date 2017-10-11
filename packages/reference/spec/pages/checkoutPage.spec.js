@@ -1,6 +1,7 @@
 // Libraries
 import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
+import Router from 'next/router'
 
 // Pages
 import { CheckoutPage } from '../../pages/checkout'
@@ -50,4 +51,43 @@ test('dispatch setShippingMethod action on changing sipping method', () => {
 
   // Verify if the dispatch function has dispatched updateQuantity action.
   expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
+})
+
+test('redirects to cart page when lineItems is empty', () => {
+  // Arrange
+  
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
+  const cart = {
+    lineItems: []
+  }
+  const checkout = {
+    shippingAddress: {
+      collapsed: false
+    },
+    shippingMethod: {
+      collapsed: false
+    },
+    billingAddress: {
+      collapsed: false
+    },
+    paymentMethod: {
+      collapsed: false
+    },
+    currentStep: 1
+  }
+  const dispatch = jest.fn()
+
+  // Act
+  const wrapper = mount(
+    <CheckoutPage dispatch={dispatch} cart={cart} checkout={checkout} />
+  )
+
+  // Assert - verify that only one redirect happens
+  expect(Router.router.push.mock.calls.length).toBe(1)
+
+  // Assert - verify that the redirect goes to the cart page
+  expect(Router.router.push.mock.calls[0][0]).toBe('/cart')
 })

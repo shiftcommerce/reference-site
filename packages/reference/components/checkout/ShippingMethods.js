@@ -83,8 +83,9 @@ export default class ShippingMethods extends Component {
                 {itemCountText}
               </span>
             </p>
-
-            {this.renderShippingMethods()}
+            <div>
+              {this.renderShippingMethods()}
+            </div>
 
             <button aria-label='Continue to payment' className='c-button' onClick={() => this.props.onToggleCollapsed(formName)} type='button'>
               Continue to Payment
