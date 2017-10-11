@@ -1,5 +1,5 @@
 // Actions
-import { resetProcesses, setLoadingTo, setErroredTo } from './processingStateActions'
+import { setLoadingTo, setErroredTo } from './processingStateActions'
 
 // Libs
 import ApiClient from '../lib/ApiClient'
@@ -7,7 +7,6 @@ import JsonApiParser from '../lib/JsonApiParser'
 
 export const readEndpoint = (request) => {
   return (dispatch, getState) => {
-    dispatch(resetProcesses())
     dispatch(setLoadingTo(true))
 
     return new ApiClient().read(request.endpoint, request.query)

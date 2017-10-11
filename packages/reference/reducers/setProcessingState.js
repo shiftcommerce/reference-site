@@ -14,9 +14,6 @@ export default function setProcessingState (state = initialState, action) {
     case types.SET_PROCESS_ERRORED:
       return Object.assign({}, state, { errored: action.errored })
 
-    case types.RESET_PROCESSES:
-      return state
-
     default:
       return state
   }

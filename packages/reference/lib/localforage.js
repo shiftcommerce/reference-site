@@ -2,7 +2,9 @@ import localforage from 'localforage'
 
 class LocalForage {
   constructor () {
-    this.initLocalForage()
+    if (typeof window !== 'undefined') {
+      this.initLocalForage()
+    }
   }
 
   // Set the driver to indexedDB

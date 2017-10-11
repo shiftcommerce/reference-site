@@ -2,6 +2,7 @@
 
 exports[`renders the navbar 1`] = `
 <div>
+  <CustomHead />
   <div
     className="o-header"
   >

@@ -21,6 +21,7 @@ import { readCart } from '../actions/cartActions'
 import Image from '../objects/Image'
 
 // Components
+import CustomHead from '../components/CustomHead'
 import CheckoutSteps from '../components/checkout/CheckoutSteps.js'
 import AddressForm from '../components/checkout/AddressForm.js'
 import CheckoutCart from '../components/checkout/CheckoutCart.js'
@@ -78,6 +79,7 @@ export class CheckoutPage extends Component {
 
     return (
       <div>
+        <CustomHead />
         {hasLineItems &&
           <div>
             <div className='o-header'>

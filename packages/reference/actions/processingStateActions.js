@@ -14,9 +14,3 @@ export function setErroredTo (boolean) {
     errored: boolean
   }
 }
-
-export function resetProcesses () {
-  return {
-    type: types.RESET_PROCESSES
-  }
-}

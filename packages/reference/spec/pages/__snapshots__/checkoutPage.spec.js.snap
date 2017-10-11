@@ -43,6 +43,11 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
     dispatch={[Function]}
   >
     <div>
+      <CustomHead>
+        <SideEffect(Head)>
+          <Head />
+        </SideEffect(Head)>
+      </CustomHead>
       <div>
         <div
           className="o-header"
