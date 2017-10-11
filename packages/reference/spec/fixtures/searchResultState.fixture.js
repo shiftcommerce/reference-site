@@ -5,51 +5,52 @@ const searchResultState = {
         'hits': [
           {
             'category_ids': [
-              '22bca338-b578-4aee-a302-992764fa3e72'
+              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
             ],
-            'product': {
-              'title': 'Long Shirt',
-              'reference': 'long_shirt',
-              'meta_data': {
-                'eu': {
-                  'sku': 'SK8407636324',
-                  'colour': 'Blue',
-                  'description': 'Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.'
-                }
+            'product_title': 'Field Jacket',
+            'product_reference': 'field_jacket',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S2658012',
+                'colour': 'Stone',
+                'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
               }
             },
-            'variant': {
-              'sku': 'SK8407636324-2',
-              'title': 'Medium',
-              'meta_data': {
-                'eu': {
-                  'size': 'Size 10',
-                  'price': 50
-                }
+            'variant_sku': 'S2658012-1',
+            'variant_title': 'Medium',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Medium',
+                'price': 60
               }
             },
-            'assets': [
+            'product_assets': [
+              {
+                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+                'alt_text': 'Field Jacket',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [
 
             ],
-            'objectID': 'a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e',
+            'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'Long Shirt',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Field Jacket',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
-                },
-                'meta_data': {
-                  'eu': {
-                    'sku': {
-                      'value': 'SK8407636324',
-                      'matchLevel': 'none',
-                      'matchedWords': [
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S2658012',
+                    'matchLevel': 'none',
+                    'matchedWords': [
 
-                      ]
-                    }
+                    ]
                   }
                 }
               }
@@ -57,68 +58,102 @@ const searchResultState = {
           },
           {
             'category_ids': [
-
+              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
             ],
-            'product': {
-              'title': 'First_product_22hhh-hu',
-              'reference': 'product_test_898-2345ng',
-              'meta_data': {
-
+            'product_title': 'Quilted Shacket',
+            'product_reference': 'quilted_shacket1',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S26591711',
+                'colour': 'Navy',
+                'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
               }
             },
-            'variant': {
-              'sku': 'variant_253-7345-22343',
-              'title': 'Variant-51342-48998',
-              'meta_data': {
-
+            'variant_sku': 'S26591711-1',
+            'variant_title': 'Small',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Small',
+                'price': 70
               }
             },
-            'assets': [
+            'product_assets': [
 
             ],
-            'objectID': '7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03',
+            'variant_assets': [
+
+            ],
+            'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'First_product_22hhh-hu',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Quilted Shacket',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S26591711',
+                    'matchLevel': 'none',
+                    'matchedWords': [
+
+                    ]
+                  }
                 }
               }
             }
           },
           {
             'category_ids': [
-
+              '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
             ],
-            'product': {
-              'title': 'First_product1324',
-              'reference': 'product_2345ng',
-              'meta_data': {
-
+            'product_title': 'Short Sleeve T-Shirt',
+            'product_reference': 'short_sleeve_print_t_shirt_1',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S26584011',
+                'colour': 'Khakhi',
+                'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
               }
             },
-            'variant': {
-              'sku': 'variant_2592343',
-              'title': 'Varian8992458',
-              'meta_data': {
-
+            'variant_sku': 'S26584011-1',
+            'variant_title': 'Size 8',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Size 8',
+                'price': 40
               }
             },
-            'assets': [
+            'product_assets': [
+              {
+                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+                'alt_text': 'Bell Sleeve Dress',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [
 
             ],
-            'objectID': '3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe',
+            'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'First_product1324',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Short Sleeve T-Shirt',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S26584011',
+                    'matchLevel': 'none',
+                    'matchedWords': [
+
+                    ]
+                  }
                 }
               }
             }
@@ -131,17 +166,24 @@ const searchResultState = {
         'processingTimeMS': 1,
         'facets': {
           'category_ids': {
-            '22bca338-b578-4aee-a302-992764fa3e72': 3
+            '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee': 3,
+            '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b': 1
           },
-          'variant.meta_data.eu.size': {
-            'Size 8': 2,
-            'Size 10': 1
+          'variant_meta_data.eu.size': {
+            'Small': 2,
+            'Medium': 1,
+            'Size 8': 1
+          },
+          'product_meta_data.eu.colour': {
+            'Stone': 2,
+            'Khakhi': 1,
+            'Navy': 1
           }
         },
         'exhaustiveFacetsCount': true,
         'exhaustiveNbHits': false,
         'query': '',
-        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22variant.meta_data.eu.colour%22%2C%22variant.meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
+        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22product_meta_data.eu.colour%22%2C%22variant_meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
         'index': 'test_variants'
       }
     ],
@@ -149,51 +191,52 @@ const searchResultState = {
     'hits': [
       {
         'category_ids': [
-          '22bca338-b578-4aee-a302-992764fa3e72'
+          '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
         ],
-        'product': {
-          'title': 'Long Shirt',
-          'reference': 'long_shirt',
-          'meta_data': {
-            'eu': {
-              'sku': 'SK8407636324',
-              'colour': 'Blue',
-              'description': 'Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.'
-            }
+        'product_title': 'Field Jacket',
+        'product_reference': 'field_jacket',
+        'product_meta_data': {
+          'eu': {
+            'sku': 'S2658012',
+            'colour': 'Stone',
+            'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
           }
         },
-        'variant': {
-          'sku': 'SK8407636324-2',
-          'title': 'Medium',
-          'meta_data': {
-            'eu': {
-              'size': 'Size 10',
-              'price': 50
-            }
+        'variant_sku': 'S2658012-1',
+        'variant_title': 'Medium',
+        'variant_meta_data': {
+          'eu': {
+            'size': 'Medium',
+            'price': 60
           }
         },
-        'assets': [
+        'product_assets': [
+          {
+            'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+            'alt_text': 'Field Jacket',
+            'sort_position': 1
+          }
+        ],
+        'variant_assets': [
 
         ],
-        'objectID': 'a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e',
+        'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
         '_highlightResult': {
-          'product': {
-            'title': {
-              'value': 'Long Shirt',
-              'matchLevel': 'none',
-              'matchedWords': [
+          'product_title': {
+            'value': 'Field Jacket',
+            'matchLevel': 'none',
+            'matchedWords': [
 
-              ]
-            },
-            'meta_data': {
-              'eu': {
-                'sku': {
-                  'value': 'SK8407636324',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+            ]
+          },
+          'product_meta_data': {
+            'eu': {
+              'sku': {
+                'value': 'S2658012',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
-                }
+                ]
               }
             }
           }
@@ -201,68 +244,102 @@ const searchResultState = {
       },
       {
         'category_ids': [
-
+          '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
         ],
-        'product': {
-          'title': 'First_product_22hhh-hu',
-          'reference': 'product_test_898-2345ng',
-          'meta_data': {
-
+        'product_title': 'Quilted Shacket',
+        'product_reference': 'quilted_shacket1',
+        'product_meta_data': {
+          'eu': {
+            'sku': 'S26591711',
+            'colour': 'Navy',
+            'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
           }
         },
-        'variant': {
-          'sku': 'variant_253-7345-22343',
-          'title': 'Variant-51342-48998',
-          'meta_data': {
-
+        'variant_sku': 'S26591711-1',
+        'variant_title': 'Small',
+        'variant_meta_data': {
+          'eu': {
+            'size': 'Small',
+            'price': 70
           }
         },
-        'assets': [
+        'product_assets': [
 
         ],
-        'objectID': '7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03',
+        'variant_assets': [
+
+        ],
+        'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
         '_highlightResult': {
-          'product': {
-            'title': {
-              'value': 'First_product_22hhh-hu',
-              'matchLevel': 'none',
-              'matchedWords': [
+          'product_title': {
+            'value': 'Quilted Shacket',
+            'matchLevel': 'none',
+            'matchedWords': [
 
-              ]
+            ]
+          },
+          'product_meta_data': {
+            'eu': {
+              'sku': {
+                'value': 'S26591711',
+                'matchLevel': 'none',
+                'matchedWords': [
+
+                ]
+              }
             }
           }
         }
       },
       {
         'category_ids': [
-
+          '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
         ],
-        'product': {
-          'title': 'First_product1324',
-          'reference': 'product_2345ng',
-          'meta_data': {
-
+        'product_title': 'Short Sleeve T-Shirt',
+        'product_reference': 'short_sleeve_print_t_shirt_1',
+        'product_meta_data': {
+          'eu': {
+            'sku': 'S26584011',
+            'colour': 'Khakhi',
+            'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
           }
         },
-        'variant': {
-          'sku': 'variant_2592343',
-          'title': 'Varian8992458',
-          'meta_data': {
-
+        'variant_sku': 'S26584011-1',
+        'variant_title': 'Size 8',
+        'variant_meta_data': {
+          'eu': {
+            'size': 'Size 8',
+            'price': 40
           }
         },
-        'assets': [
+        'product_assets': [
+          {
+            'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+            'alt_text': 'Bell Sleeve Dress',
+            'sort_position': 1
+          }
+        ],
+        'variant_assets': [
 
         ],
-        'objectID': '3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe',
+        'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
         '_highlightResult': {
-          'product': {
-            'title': {
-              'value': 'First_product1324',
-              'matchLevel': 'none',
-              'matchedWords': [
+          'product_title': {
+            'value': 'Short Sleeve T-Shirt',
+            'matchLevel': 'none',
+            'matchedWords': [
 
-              ]
+            ]
+          },
+          'product_meta_data': {
+            'eu': {
+              'sku': {
+                'value': 'S26584011',
+                'matchLevel': 'none',
+                'matchedWords': [
+
+                ]
+              }
             }
           }
         }
@@ -278,10 +355,20 @@ const searchResultState = {
     'exhaustiveNbHits': false,
     'disjunctiveFacets': [
       {
-        'name': 'variant.meta_data.eu.size',
+        'name': 'product_meta_data.eu.colour',
         'data': {
-          'Size 8': 2,
-          'Size 10': 1
+          'Stone': 2,
+          'Khakhi': 1,
+          'Navy': 1
+        },
+        'exhaustive': true
+      },
+      {
+        'name': 'variant_meta_data.eu.size',
+        'data': {
+          'Small': 2,
+          'Medium': 1,
+          'Size 8': 1
         },
         'exhaustive': true
       }
@@ -294,9 +381,16 @@ const searchResultState = {
         'path': null,
         'data': [
           {
-            'name': '22bca338-b578-4aee-a302-992764fa3e72',
-            'path': '22bca338-b578-4aee-a302-992764fa3e72',
+            'name': '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee',
+            'path': '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee',
             'count': 3,
+            'isRefined': false,
+            'data': null
+          },
+          {
+            'name': '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b',
+            'path': '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b',
+            'count': 1,
             'isRefined': false,
             'data': null
           }
@@ -313,8 +407,8 @@ const searchResultState = {
 
       ],
       'disjunctiveFacets': [
-        'variant.meta_data.eu.colour',
-        'variant.meta_data.eu.size'
+        'product_meta_data.eu.colour',
+        'variant_meta_data.eu.size'
       ],
       'hierarchicalFacets': [
         {
@@ -359,8 +453,8 @@ const searchResultState = {
 
     ],
     'disjunctiveFacets': [
-      'variant.meta_data.eu.colour',
-      'variant.meta_data.eu.size'
+      'product_meta_data.eu.colour',
+      'variant_meta_data.eu.size'
     ],
     'hierarchicalFacets': [
       {
@@ -403,51 +497,52 @@ const searchResultState = {
         'hits': [
           {
             'category_ids': [
-              '22bca338-b578-4aee-a302-992764fa3e72'
+              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
             ],
-            'product': {
-              'title': 'Long Shirt',
-              'reference': 'long_shirt',
-              'meta_data': {
-                'eu': {
-                  'sku': 'SK8407636324',
-                  'colour': 'Blue',
-                  'description': 'Combining comfort and practicality, this grey marl textured shirt is a go-to everyday essential.'
-                }
+            'product_title': 'Field Jacket',
+            'product_reference': 'field_jacket',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S2658012',
+                'colour': 'Stone',
+                'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
               }
             },
-            'variant': {
-              'sku': 'SK8407636324-2',
-              'title': 'Medium',
-              'meta_data': {
-                'eu': {
-                  'size': 'Size 10',
-                  'price': 50
-                }
+            'variant_sku': 'S2658012-1',
+            'variant_title': 'Medium',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Medium',
+                'price': 60
               }
             },
-            'assets': [
+            'product_assets': [
+              {
+                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+                'alt_text': 'Field Jacket',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [
 
             ],
-            'objectID': 'a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e',
+            'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'Long Shirt',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Field Jacket',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
-                },
-                'meta_data': {
-                  'eu': {
-                    'sku': {
-                      'value': 'SK8407636324',
-                      'matchLevel': 'none',
-                      'matchedWords': [
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S2658012',
+                    'matchLevel': 'none',
+                    'matchedWords': [
 
-                      ]
-                    }
+                    ]
                   }
                 }
               }
@@ -455,68 +550,102 @@ const searchResultState = {
           },
           {
             'category_ids': [
-
+              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
             ],
-            'product': {
-              'title': 'First_product_22hhh-hu',
-              'reference': 'product_test_898-2345ng',
-              'meta_data': {
-
+            'product_title': 'Quilted Shacket',
+            'product_reference': 'quilted_shacket1',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S26591711',
+                'colour': 'Navy',
+                'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
               }
             },
-            'variant': {
-              'sku': 'variant_253-7345-22343',
-              'title': 'Variant-51342-48998',
-              'meta_data': {
-
+            'variant_sku': 'S26591711-1',
+            'variant_title': 'Small',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Small',
+                'price': 70
               }
             },
-            'assets': [
+            'product_assets': [
 
             ],
-            'objectID': '7018b6de-f53b-4ad8-90eb-7eb844e633ca_60587f6d-5b06-4d50-acb9-f2423f8b3c03',
+            'variant_assets': [
+
+            ],
+            'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'First_product_22hhh-hu',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Quilted Shacket',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S26591711',
+                    'matchLevel': 'none',
+                    'matchedWords': [
+
+                    ]
+                  }
                 }
               }
             }
           },
           {
             'category_ids': [
-
+              '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
             ],
-            'product': {
-              'title': 'First_product1324',
-              'reference': 'product_2345ng',
-              'meta_data': {
-
+            'product_title': 'Short Sleeve T-Shirt',
+            'product_reference': 'short_sleeve_print_t_shirt_1',
+            'product_meta_data': {
+              'eu': {
+                'sku': 'S26584011',
+                'colour': 'Khakhi',
+                'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
               }
             },
-            'variant': {
-              'sku': 'variant_2592343',
-              'title': 'Varian8992458',
-              'meta_data': {
-
+            'variant_sku': 'S26584011-1',
+            'variant_title': 'Size 8',
+            'variant_meta_data': {
+              'eu': {
+                'size': 'Size 8',
+                'price': 40
               }
             },
-            'assets': [
+            'product_assets': [
+              {
+                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
+                'alt_text': 'Bell Sleeve Dress',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [
 
             ],
-            'objectID': '3772c507-3da1-4b9b-98c3-b9a0e5f141bb_280edece-371b-4681-9f6c-ed8902eaa6fe',
+            'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
             '_highlightResult': {
-              'product': {
-                'title': {
-                  'value': 'First_product1324',
-                  'matchLevel': 'none',
-                  'matchedWords': [
+              'product_title': {
+                'value': 'Short Sleeve T-Shirt',
+                'matchLevel': 'none',
+                'matchedWords': [
 
-                  ]
+                ]
+              },
+              'product_meta_data': {
+                'eu': {
+                  'sku': {
+                    'value': 'S26584011',
+                    'matchLevel': 'none',
+                    'matchedWords': [
+
+                    ]
+                  }
                 }
               }
             }
@@ -529,17 +658,24 @@ const searchResultState = {
         'processingTimeMS': 1,
         'facets': {
           'category_ids': {
-            '22bca338-b578-4aee-a302-992764fa3e72': 3
+            '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee': 3,
+            '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b': 1
           },
-          'variant.meta_data.eu.size': {
-            'Size 8': 2,
-            'Size 10': 1
+          'variant_meta_data.eu.size': {
+            'Small': 2,
+            'Medium': 1,
+            'Size 8': 1
+          },
+          'product_meta_data.eu.colour': {
+            'Stone': 2,
+            'Khakhi': 1,
+            'Navy': 1
           }
         },
         'exhaustiveFacetsCount': true,
         'exhaustiveNbHits': false,
         'query': '',
-        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22variant.meta_data.eu.colour%22%2C%22variant.meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
+        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22product_meta_data.eu.colour%22%2C%22variant_meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
         'index': 'test_variants'
       }
     ]

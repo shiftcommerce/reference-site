@@ -10,7 +10,7 @@ import Button from '../../../objects/Button'
 
 class Product extends Component {
   renderAssetFile (hit) {
-    let asset = hit.assets[0]
+    let asset = hit.product_assets[0]
 
     return (
       <div className='c-product__image-container'>
@@ -25,7 +25,7 @@ class Product extends Component {
   }
 
   renderProductPrice (hit) {
-    let metaData = hit.variant.meta_data
+    let metaData = hit.variant_meta_data
     let price = ((metaData && metaData.eu && metaData.eu.price) || 0).toFixed(2)
 
     return (
@@ -36,7 +36,7 @@ class Product extends Component {
   }
 
   renderRatingStars (hit) {
-    let rating = (hit.product.rating || 0)
+    let rating = (hit.product_rating || 0)
 
     return (
       [1, 2, 3, 4, 5].map((key, index) =>
@@ -61,11 +61,11 @@ class Product extends Component {
             { this.renderAssetFile(hit) }
 
             <div className='c-product__title'>
-              <Highlight attributeName='product.title' hit={hit} />
+              <Highlight attributeName='product_title' hit={hit} />
             </div>
 
             <div className='c-product__sku'>
-              <Highlight attributeName='product.meta_data.eu.sku' hit={hit} />
+              <Highlight attributeName='product_meta_data.eu.sku' hit={hit} />
             </div>
 
             { this.renderProductPrice(hit) }

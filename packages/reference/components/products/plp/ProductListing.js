@@ -33,10 +33,10 @@ class ProductListing extends Component {
         />
 
         <p className='c-product_list__sidebar--filter-title'>Colour</p>
-        <RefinementList attributeName='product.meta_data.eu.colour' />
+        <RefinementList attributeName='product_meta_data.eu.colour' />
 
         <p className='c-product_list__sidebar--filter-title'>Size</p>
-        <RefinementList attributeName='variant.meta_data.eu.size' />
+        <RefinementList attributeName='variant_meta_data.eu.size' />
       </div>
     )
   }
