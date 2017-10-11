@@ -5,7 +5,8 @@
       "plugins": ["inline-dotenv"]
     },
     "production": {
-      "presets": "next/babel"
+      "presets": "next/babel",
+      "plugins": ["inline-dotenv"]
     },
     "test": {
       "presets": [
@@ -17,5 +18,5 @@
   },
   "plugins": [
     ["transform-define"]
-  ],
+  ]
 }

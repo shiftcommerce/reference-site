@@ -5,6 +5,9 @@
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
   "author": "Shift Commerce",
   "license": "MIT",
+  "engines": {
+    "node": "^8.6.0"
+  },
   "scripts": {
     "devserver": "npm rebuild node-sass && NODE_ENV=development node server.js",
     "build": "next build",
