@@ -48,23 +48,41 @@ export default class AddressForm extends Component {
               name='country_code'
               value={address.country_code}
               formName={formName}
-              required='true'
+              required={true}
               onChange={onChange}
               onBlur={onBlur}
               prompt='Select country'
             />
 
-            <Input
-              label='Full Name'
-              className='o-form__input-block'
-              name='full_name'
-              type='text'
-              value={address.full_name}
-              formName={formName}
-              required='true'
-              onChange={onChange}
-              onBlur={onBlur}
-            />
+            <div className='o-flex o-flex__space-between'>
+              <div className='o-flex-full-width-s'>
+                <Input
+                  label='First Name'
+                  className='o-form__input-block'
+                  name='first_name'
+                  type='text'
+                  value={address.first_name}
+                  formName={formName}
+                  required={true}
+                  onChange={onChange}
+                  onBlur={onBlur}
+                />
+              </div>
+
+              <div className="o-flex-full-width-s">
+                <Input
+                  label='Last Name'
+                  className='o-form__input-block'
+                  name='last_name'
+                  type='text'
+                  value={address.last_name}
+                  formName={formName}
+                  required={true}
+                  onChange={onChange}
+                  onBlur={onBlur}
+                />
+              </div>
+            </div>
 
             {!(address.companyNameShown) &&
               <a href='#' onClick={() => { onShowField(formName, 'companyNameShown') }}>
@@ -94,7 +112,7 @@ export default class AddressForm extends Component {
               type='text'
               value={address.line_1}
               formName={formName}
-              required='true'
+              required={true}
               onChange={onChange}
               onBlur={onBlur}
             />
@@ -127,7 +145,7 @@ export default class AddressForm extends Component {
               type='text'
               value={address.zipcode}
               formName={formName}
-              required='true'
+              required={true}
               onChange={onChange}
               onBlur={onBlur}
             />
@@ -139,7 +157,7 @@ export default class AddressForm extends Component {
               type='text'
               value={address.city}
               formName={formName}
-              required='true'
+              required={true}
               onChange={onChange}
               onBlur={onBlur}
             />
@@ -151,7 +169,7 @@ export default class AddressForm extends Component {
               type='text'
               value={address.state}
               formName={formName}
-              required='true'
+              required={true}
               onChange={onChange}
               onBlur={onBlur}
             />
@@ -163,7 +181,7 @@ export default class AddressForm extends Component {
               type='tel'
               value={address.primary_phone}
               formName={formName}
-              required='true'
+              required={true}
               placeholder='In case Questions Arise'
               onChange={onChange}
               onBlur={onBlur}
@@ -176,7 +194,7 @@ export default class AddressForm extends Component {
               type='email'
               value={address.email}
               formName={formName}
-              required='true'
+              required={true}
               placeholder='To Receive Order Confirmation'
               onChange={onChange}
               onBlur={onBlur}

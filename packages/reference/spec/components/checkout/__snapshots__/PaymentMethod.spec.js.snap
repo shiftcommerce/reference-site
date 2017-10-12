@@ -291,7 +291,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   ]
                 }
                 prompt="Select country"
-                required="true"
+                required={true}
               >
                 <div
                   className="o-form__input-group"
@@ -309,7 +309,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     name="country_code"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required="true"
+                    required={true}
                     role="listbox"
                   >
                     <option
@@ -351,38 +351,82 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   </select>
                 </div>
               </DropdownSelect>
-              <Input
-                className="o-form__input-block"
-                formName="billingAddress"
-                label="Full Name"
-                name="full_name"
-                required="true"
-                type="text"
+              <div
+                className="o-flex o-flex__space-between"
               >
                 <div
-                  className="o-form__input-group"
+                  className="o-flex-full-width-s"
                 >
-                  <div>
-                    <label
-                      className="o-form__label"
-                      htmlFor="full_name"
+                  <Input
+                    className="o-form__input-block"
+                    formName="billingAddress"
+                    label="First Name"
+                    name="first_name"
+                    required={true}
+                    type="text"
+                  >
+                    <div
+                      className="o-form__input-group"
                     >
-                      Full Name
-                       *
-                    </label>
-                    <input
-                      checked={false}
-                      className="o-form__input-field o-form__input-block"
-                      id="full_name"
-                      name="full_name"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      required="true"
-                      type="text"
-                    />
-                  </div>
+                      <div>
+                        <label
+                          className="o-form__label"
+                          htmlFor="first_name"
+                        >
+                          First Name
+                           *
+                        </label>
+                        <input
+                          checked={false}
+                          className="o-form__input-field o-form__input-block"
+                          id="first_name"
+                          name="first_name"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </Input>
                 </div>
-              </Input>
+                <div
+                  className="o-flex-full-width-s"
+                >
+                  <Input
+                    className="o-form__input-block"
+                    formName="billingAddress"
+                    label="Last Name"
+                    name="last_name"
+                    required={true}
+                    type="text"
+                  >
+                    <div
+                      className="o-form__input-group"
+                    >
+                      <div>
+                        <label
+                          className="o-form__label"
+                          htmlFor="last_name"
+                        >
+                          Last Name
+                           *
+                        </label>
+                        <input
+                          checked={false}
+                          className="o-form__input-field o-form__input-block"
+                          id="last_name"
+                          name="last_name"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </Input>
+                </div>
+              </div>
               <a
                 href="#"
                 onClick={[Function]}
@@ -396,7 +440,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Address 1"
                 name="line_1"
-                required="true"
+                required={true}
                 type="text"
               >
                 <div
@@ -417,7 +461,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="line_1"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       type="text"
                     />
                   </div>
@@ -436,7 +480,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Post Code"
                 name="zipcode"
-                required="true"
+                required={true}
                 type="text"
               >
                 <div
@@ -457,7 +501,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="zipcode"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       type="text"
                     />
                   </div>
@@ -468,7 +512,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="City"
                 name="city"
-                required="true"
+                required={true}
                 type="text"
               >
                 <div
@@ -489,7 +533,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="city"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       type="text"
                     />
                   </div>
@@ -500,7 +544,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="County"
                 name="state"
-                required="true"
+                required={true}
                 type="text"
               >
                 <div
@@ -521,7 +565,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="state"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       type="text"
                     />
                   </div>
@@ -533,7 +577,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 label="Phone"
                 name="primary_phone"
                 placeholder="In case Questions Arise"
-                required="true"
+                required={true}
                 type="tel"
               >
                 <div
@@ -555,7 +599,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       onBlur={[Function]}
                       onChange={[Function]}
                       placeholder="In case Questions Arise"
-                      required="true"
+                      required={true}
                       type="tel"
                     />
                   </div>
@@ -567,7 +611,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 label="Email"
                 name="email"
                 placeholder="To Receive Order Confirmation"
-                required="true"
+                required={true}
                 type="email"
               >
                 <div
@@ -589,7 +633,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       onBlur={[Function]}
                       onChange={[Function]}
                       placeholder="To Receive Order Confirmation"
-                      required="true"
+                      required={true}
                       type="email"
                     />
                   </div>

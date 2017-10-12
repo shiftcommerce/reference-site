@@ -412,7 +412,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     ]
                   }
                   prompt="Select country"
-                  required="true"
+                  required={true}
                   value="GBP"
                 >
                   <div
@@ -431,7 +431,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                       name="country_code"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       role="listbox"
                       value="GBP"
                     >
@@ -474,40 +474,90 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </select>
                   </div>
                 </DropdownSelect>
-                <Input
-                  className="o-form__input-block"
-                  formName="shippingAddress"
-                  label="Full Name"
-                  name="full_name"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  required="true"
-                  type="text"
+                <div
+                  className="o-flex o-flex__space-between"
                 >
                   <div
-                    className="o-form__input-group"
+                    className="o-flex-full-width-s"
                   >
-                    <div>
-                      <label
-                        className="o-form__label"
-                        htmlFor="full_name"
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="First Name"
+                      name="first_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
                       >
-                        Full Name
-                         *
-                      </label>
-                      <input
-                        checked={false}
-                        className="o-form__input-field o-form__input-block"
-                        id="full_name"
-                        name="full_name"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      />
-                    </div>
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="first_name"
+                          >
+                            First Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="first_name"
+                            name="first_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
                   </div>
-                </Input>
+                  <div
+                    className="o-flex-full-width-s"
+                  >
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="Last Name"
+                      name="last_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
+                      >
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="last_name"
+                          >
+                            Last Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="last_name"
+                            name="last_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
+                  </div>
+                </div>
                 <a
                   href="#"
                   onClick={[Function]}
@@ -523,7 +573,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   name="line_1"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                 >
@@ -545,7 +595,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         name="line_1"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                       />
@@ -567,7 +617,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   name="zipcode"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="LS10 1QN"
                 >
@@ -589,7 +639,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         name="zipcode"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="LS10 1QN"
                       />
@@ -603,7 +653,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   name="city"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Leeds"
                 >
@@ -625,7 +675,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         name="city"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Leeds"
                       />
@@ -639,7 +689,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   name="state"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Yorkshire"
                 >
@@ -661,7 +711,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         name="state"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Yorkshire"
                       />
@@ -676,7 +726,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="In case Questions Arise"
-                  required="true"
+                  required={true}
                   type="tel"
                   value="7761410740"
                 >
@@ -699,7 +749,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="In case Questions Arise"
-                        required="true"
+                        required={true}
                         type="tel"
                         value="7761410740"
                       />
@@ -714,7 +764,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="To Receive Order Confirmation"
-                  required="true"
+                  required={true}
                   type="email"
                 >
                   <div
@@ -736,7 +786,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="To Receive Order Confirmation"
-                        required="true"
+                        required={true}
                         type="email"
                       />
                     </div>
@@ -1476,7 +1526,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                             ]
                           }
                           prompt="Select country"
-                          required="true"
+                          required={true}
                           value="GBP"
                         >
                           <div
@@ -1495,7 +1545,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                               name="country_code"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              required="true"
+                              required={true}
                               role="listbox"
                               value="GBP"
                             >
@@ -1538,40 +1588,90 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                             </select>
                           </div>
                         </DropdownSelect>
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Full Name"
-                          name="full_name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required="true"
-                          type="text"
+                        <div
+                          className="o-flex o-flex__space-between"
                         >
                           <div
-                            className="o-form__input-group"
+                            className="o-flex-full-width-s"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="full_name"
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="First Name"
+                              name="first_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
                               >
-                                Full Name
-                                 *
-                              </label>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="full_name"
-                                name="full_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                required="true"
-                                type="text"
-                              />
-                            </div>
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="first_name"
+                                  >
+                                    First Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="first_name"
+                                    name="first_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
                           </div>
-                        </Input>
+                          <div
+                            className="o-flex-full-width-s"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Last Name"
+                              name="last_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="last_name"
+                                  >
+                                    Last Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="last_name"
+                                    name="last_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
+                          </div>
+                        </div>
                         <a
                           href="#"
                           onClick={[Function]}
@@ -1587,7 +1687,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           name="line_1"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                         >
@@ -1609,7 +1709,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 name="line_1"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                               />
@@ -1631,7 +1731,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           name="zipcode"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="LS10 1QN"
                         >
@@ -1653,7 +1753,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 name="zipcode"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="LS10 1QN"
                               />
@@ -1667,7 +1767,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           name="city"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Leeds"
                         >
@@ -1689,7 +1789,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 name="city"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Leeds"
                               />
@@ -1703,7 +1803,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           name="state"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Yorkshire"
                         >
@@ -1725,7 +1825,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Yorkshire"
                               />
@@ -1740,7 +1840,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="In case Questions Arise"
-                          required="true"
+                          required={true}
                           type="tel"
                           value="7761410740"
                         >
@@ -1763,7 +1863,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="In case Questions Arise"
-                                required="true"
+                                required={true}
                                 type="tel"
                                 value="7761410740"
                               />
@@ -1778,7 +1878,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="To Receive Order Confirmation"
-                          required="true"
+                          required={true}
                           type="email"
                         >
                           <div
@@ -1800,7 +1900,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="To Receive Order Confirmation"
-                                required="true"
+                                required={true}
                                 type="email"
                               />
                             </div>
@@ -2580,7 +2680,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                       ]
                     }
                     prompt="Select country"
-                    required="true"
+                    required={true}
                     value="GBP"
                   >
                     <div
@@ -2599,7 +2699,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                         name="country_code"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         role="listbox"
                         value="GBP"
                       >
@@ -2642,40 +2742,90 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                       </select>
                     </div>
                   </DropdownSelect>
-                  <Input
-                    className="o-form__input-block"
-                    formName="shippingAddress"
-                    label="Full Name"
-                    name="full_name"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    required="true"
-                    type="text"
+                  <div
+                    className="o-flex o-flex__space-between"
                   >
                     <div
-                      className="o-form__input-group"
+                      className="o-flex-full-width-s"
                     >
-                      <div>
-                        <label
-                          className="o-form__label"
-                          htmlFor="full_name"
+                      <Input
+                        className="o-form__input-block"
+                        formName="shippingAddress"
+                        label="First Name"
+                        name="first_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required={true}
+                        type="text"
+                        value="Prasanna Gaddam"
+                      >
+                        <div
+                          className="o-form__input-group"
                         >
-                          Full Name
-                           *
-                        </label>
-                        <input
-                          checked={false}
-                          className="o-form__input-field o-form__input-block"
-                          id="full_name"
-                          name="full_name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required="true"
-                          type="text"
-                        />
-                      </div>
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="first_name"
+                            >
+                              First Name
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="first_name"
+                              name="first_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            />
+                          </div>
+                        </div>
+                      </Input>
                     </div>
-                  </Input>
+                    <div
+                      className="o-flex-full-width-s"
+                    >
+                      <Input
+                        className="o-form__input-block"
+                        formName="shippingAddress"
+                        label="Last Name"
+                        name="last_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        required={true}
+                        type="text"
+                        value="Prasanna Gaddam"
+                      >
+                        <div
+                          className="o-form__input-group"
+                        >
+                          <div>
+                            <label
+                              className="o-form__label"
+                              htmlFor="last_name"
+                            >
+                              Last Name
+                               *
+                            </label>
+                            <input
+                              checked={false}
+                              className="o-form__input-field o-form__input-block"
+                              id="last_name"
+                              name="last_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            />
+                          </div>
+                        </div>
+                      </Input>
+                    </div>
+                  </div>
                   <a
                     href="#"
                     onClick={[Function]}
@@ -2691,7 +2841,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     name="line_1"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required="true"
+                    required={true}
                     type="text"
                     value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                   >
@@ -2713,7 +2863,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           name="line_1"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                         />
@@ -2735,7 +2885,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     name="zipcode"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required="true"
+                    required={true}
                     type="text"
                     value="LS10 1QN"
                   >
@@ -2757,7 +2907,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           name="zipcode"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="LS10 1QN"
                         />
@@ -2771,7 +2921,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     name="city"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required="true"
+                    required={true}
                     type="text"
                     value="Leeds"
                   >
@@ -2793,7 +2943,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           name="city"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Leeds"
                         />
@@ -2807,7 +2957,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     name="state"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required="true"
+                    required={true}
                     type="text"
                     value="Yorkshire"
                   >
@@ -2829,7 +2979,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           name="state"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Yorkshire"
                         />
@@ -2844,7 +2994,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     placeholder="In case Questions Arise"
-                    required="true"
+                    required={true}
                     type="tel"
                     value="7761410740"
                   >
@@ -2867,7 +3017,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="In case Questions Arise"
-                          required="true"
+                          required={true}
                           type="tel"
                           value="7761410740"
                         />
@@ -2882,7 +3032,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     placeholder="To Receive Order Confirmation"
-                    required="true"
+                    required={true}
                     type="email"
                   >
                     <div
@@ -2904,7 +3054,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="To Receive Order Confirmation"
-                          required="true"
+                          required={true}
                           type="email"
                         />
                       </div>
@@ -3642,7 +3792,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                               ]
                             }
                             prompt="Select country"
-                            required="true"
+                            required={true}
                             value="GBP"
                           >
                             <div
@@ -3661,7 +3811,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                 name="country_code"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 role="listbox"
                                 value="GBP"
                               >
@@ -3704,40 +3854,90 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                               </select>
                             </div>
                           </DropdownSelect>
-                          <Input
-                            className="o-form__input-block"
-                            formName="billingAddress"
-                            label="Full Name"
-                            name="full_name"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            required="true"
-                            type="text"
+                          <div
+                            className="o-flex o-flex__space-between"
                           >
                             <div
-                              className="o-form__input-group"
+                              className="o-flex-full-width-s"
                             >
-                              <div>
-                                <label
-                                  className="o-form__label"
-                                  htmlFor="full_name"
+                              <Input
+                                className="o-form__input-block"
+                                formName="billingAddress"
+                                label="First Name"
+                                name="first_name"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required={true}
+                                type="text"
+                                value="Prasanna Gaddam"
+                              >
+                                <div
+                                  className="o-form__input-group"
                                 >
-                                  Full Name
-                                   *
-                                </label>
-                                <input
-                                  checked={false}
-                                  className="o-form__input-field o-form__input-block"
-                                  id="full_name"
-                                  name="full_name"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  required="true"
-                                  type="text"
-                                />
-                              </div>
+                                  <div>
+                                    <label
+                                      className="o-form__label"
+                                      htmlFor="first_name"
+                                    >
+                                      First Name
+                                       *
+                                    </label>
+                                    <input
+                                      checked={false}
+                                      className="o-form__input-field o-form__input-block"
+                                      id="first_name"
+                                      name="first_name"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      required={true}
+                                      type="text"
+                                      value="Prasanna Gaddam"
+                                    />
+                                  </div>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
+                            <div
+                              className="o-flex-full-width-s"
+                            >
+                              <Input
+                                className="o-form__input-block"
+                                formName="billingAddress"
+                                label="Last Name"
+                                name="last_name"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                required={true}
+                                type="text"
+                                value="Prasanna Gaddam"
+                              >
+                                <div
+                                  className="o-form__input-group"
+                                >
+                                  <div>
+                                    <label
+                                      className="o-form__label"
+                                      htmlFor="last_name"
+                                    >
+                                      Last Name
+                                       *
+                                    </label>
+                                    <input
+                                      checked={false}
+                                      className="o-form__input-field o-form__input-block"
+                                      id="last_name"
+                                      name="last_name"
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      required={true}
+                                      type="text"
+                                      value="Prasanna Gaddam"
+                                    />
+                                  </div>
+                                </div>
+                              </Input>
+                            </div>
+                          </div>
                           <a
                             href="#"
                             onClick={[Function]}
@@ -3753,7 +3953,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             name="line_1"
                             onBlur={[Function]}
                             onChange={[Function]}
-                            required="true"
+                            required={true}
                             type="text"
                             value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                           >
@@ -3775,7 +3975,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   name="line_1"
                                   onBlur={[Function]}
                                   onChange={[Function]}
-                                  required="true"
+                                  required={true}
                                   type="text"
                                   value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                                 />
@@ -3797,7 +3997,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             name="zipcode"
                             onBlur={[Function]}
                             onChange={[Function]}
-                            required="true"
+                            required={true}
                             type="text"
                             value="LS10 1QN"
                           >
@@ -3819,7 +4019,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   name="zipcode"
                                   onBlur={[Function]}
                                   onChange={[Function]}
-                                  required="true"
+                                  required={true}
                                   type="text"
                                   value="LS10 1QN"
                                 />
@@ -3833,7 +4033,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             name="city"
                             onBlur={[Function]}
                             onChange={[Function]}
-                            required="true"
+                            required={true}
                             type="text"
                             value="Leeds"
                           >
@@ -3855,7 +4055,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   name="city"
                                   onBlur={[Function]}
                                   onChange={[Function]}
-                                  required="true"
+                                  required={true}
                                   type="text"
                                   value="Leeds"
                                 />
@@ -3869,7 +4069,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             name="state"
                             onBlur={[Function]}
                             onChange={[Function]}
-                            required="true"
+                            required={true}
                             type="text"
                             value="Yorkshire"
                           >
@@ -3891,7 +4091,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   name="state"
                                   onBlur={[Function]}
                                   onChange={[Function]}
-                                  required="true"
+                                  required={true}
                                   type="text"
                                   value="Yorkshire"
                                 />
@@ -3906,7 +4106,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="In case Questions Arise"
-                            required="true"
+                            required={true}
                             type="tel"
                             value="7761410740"
                           >
@@ -3929,7 +4129,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   placeholder="In case Questions Arise"
-                                  required="true"
+                                  required={true}
                                   type="tel"
                                   value="7761410740"
                                 />
@@ -3944,7 +4144,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="To Receive Order Confirmation"
-                            required="true"
+                            required={true}
                             type="email"
                           >
                             <div
@@ -3966,7 +4166,7 @@ exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   placeholder="To Receive Order Confirmation"
-                                  required="true"
+                                  required={true}
                                   type="email"
                                 />
                               </div>
@@ -4735,7 +4935,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     ]
                   }
                   prompt="Select country"
-                  required="true"
+                  required={true}
                   value="GBP"
                 >
                   <div
@@ -4754,7 +4954,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                       name="country_code"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       role="listbox"
                       value="GBP"
                     >
@@ -4797,40 +4997,90 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </select>
                   </div>
                 </DropdownSelect>
-                <Input
-                  className="o-form__input-block"
-                  formName="shippingAddress"
-                  label="Full Name"
-                  name="full_name"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  required="true"
-                  type="text"
+                <div
+                  className="o-flex o-flex__space-between"
                 >
                   <div
-                    className="o-form__input-group"
+                    className="o-flex-full-width-s"
                   >
-                    <div>
-                      <label
-                        className="o-form__label"
-                        htmlFor="full_name"
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="First Name"
+                      name="first_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
                       >
-                        Full Name
-                         *
-                      </label>
-                      <input
-                        checked={false}
-                        className="o-form__input-field o-form__input-block"
-                        id="full_name"
-                        name="full_name"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      />
-                    </div>
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="first_name"
+                          >
+                            First Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="first_name"
+                            name="first_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
                   </div>
-                </Input>
+                  <div
+                    className="o-flex-full-width-s"
+                  >
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="Last Name"
+                      name="last_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
+                      >
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="last_name"
+                          >
+                            Last Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="last_name"
+                            name="last_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
+                  </div>
+                </div>
                 <a
                   href="#"
                   onClick={[Function]}
@@ -4846,7 +5096,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   name="line_1"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                 >
@@ -4868,7 +5118,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         name="line_1"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                       />
@@ -4890,7 +5140,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   name="zipcode"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="LS10 1QN"
                 >
@@ -4912,7 +5162,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         name="zipcode"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="LS10 1QN"
                       />
@@ -4926,7 +5176,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   name="city"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Leeds"
                 >
@@ -4948,7 +5198,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         name="city"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Leeds"
                       />
@@ -4962,7 +5212,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   name="state"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Yorkshire"
                 >
@@ -4984,7 +5234,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         name="state"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Yorkshire"
                       />
@@ -4999,7 +5249,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="In case Questions Arise"
-                  required="true"
+                  required={true}
                   type="tel"
                   value="7761410740"
                 >
@@ -5022,7 +5272,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="In case Questions Arise"
-                        required="true"
+                        required={true}
                         type="tel"
                         value="7761410740"
                       />
@@ -5037,7 +5287,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="To Receive Order Confirmation"
-                  required="true"
+                  required={true}
                   type="email"
                 >
                   <div
@@ -5059,7 +5309,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="To Receive Order Confirmation"
-                        required="true"
+                        required={true}
                         type="email"
                       />
                     </div>
@@ -5799,7 +6049,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                             ]
                           }
                           prompt="Select country"
-                          required="true"
+                          required={true}
                           value="GBP"
                         >
                           <div
@@ -5818,7 +6068,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                               name="country_code"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              required="true"
+                              required={true}
                               role="listbox"
                               value="GBP"
                             >
@@ -5861,40 +6111,90 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                             </select>
                           </div>
                         </DropdownSelect>
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Full Name"
-                          name="full_name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required="true"
-                          type="text"
+                        <div
+                          className="o-flex o-flex__space-between"
                         >
                           <div
-                            className="o-form__input-group"
+                            className="o-flex-full-width-s"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="full_name"
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="First Name"
+                              name="first_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
                               >
-                                Full Name
-                                 *
-                              </label>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="full_name"
-                                name="full_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                required="true"
-                                type="text"
-                              />
-                            </div>
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="first_name"
+                                  >
+                                    First Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="first_name"
+                                    name="first_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
                           </div>
-                        </Input>
+                          <div
+                            className="o-flex-full-width-s"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Last Name"
+                              name="last_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="last_name"
+                                  >
+                                    Last Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="last_name"
+                                    name="last_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
+                          </div>
+                        </div>
                         <a
                           href="#"
                           onClick={[Function]}
@@ -5910,7 +6210,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           name="line_1"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                         >
@@ -5932,7 +6232,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 name="line_1"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                               />
@@ -5954,7 +6254,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           name="zipcode"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="LS10 1QN"
                         >
@@ -5976,7 +6276,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 name="zipcode"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="LS10 1QN"
                               />
@@ -5990,7 +6290,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           name="city"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Leeds"
                         >
@@ -6012,7 +6312,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 name="city"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Leeds"
                               />
@@ -6026,7 +6326,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           name="state"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Yorkshire"
                         >
@@ -6048,7 +6348,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Yorkshire"
                               />
@@ -6063,7 +6363,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="In case Questions Arise"
-                          required="true"
+                          required={true}
                           type="tel"
                           value="7761410740"
                         >
@@ -6086,7 +6386,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="In case Questions Arise"
-                                required="true"
+                                required={true}
                                 type="tel"
                                 value="7761410740"
                               />
@@ -6101,7 +6401,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="To Receive Order Confirmation"
-                          required="true"
+                          required={true}
                           type="email"
                         >
                           <div
@@ -6123,7 +6423,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="To Receive Order Confirmation"
-                                required="true"
+                                required={true}
                                 type="email"
                               />
                             </div>
@@ -7082,7 +7382,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     ]
                   }
                   prompt="Select country"
-                  required="true"
+                  required={true}
                   value="GBP"
                 >
                   <div
@@ -7101,7 +7401,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                       name="country_code"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       role="listbox"
                       value="GBP"
                     >
@@ -7144,40 +7444,90 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </select>
                   </div>
                 </DropdownSelect>
-                <Input
-                  className="o-form__input-block"
-                  formName="shippingAddress"
-                  label="Full Name"
-                  name="full_name"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  required="true"
-                  type="text"
+                <div
+                  className="o-flex o-flex__space-between"
                 >
                   <div
-                    className="o-form__input-group"
+                    className="o-flex-full-width-s"
                   >
-                    <div>
-                      <label
-                        className="o-form__label"
-                        htmlFor="full_name"
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="First Name"
+                      name="first_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
                       >
-                        Full Name
-                         *
-                      </label>
-                      <input
-                        checked={false}
-                        className="o-form__input-field o-form__input-block"
-                        id="full_name"
-                        name="full_name"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      />
-                    </div>
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="first_name"
+                          >
+                            First Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="first_name"
+                            name="first_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
                   </div>
-                </Input>
+                  <div
+                    className="o-flex-full-width-s"
+                  >
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="Last Name"
+                      name="last_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
+                      >
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="last_name"
+                          >
+                            Last Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="last_name"
+                            name="last_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
+                  </div>
+                </div>
                 <a
                   href="#"
                   onClick={[Function]}
@@ -7193,7 +7543,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   name="line_1"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                 >
@@ -7215,7 +7565,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         name="line_1"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                       />
@@ -7237,7 +7587,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   name="zipcode"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="LS10 1QN"
                 >
@@ -7259,7 +7609,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         name="zipcode"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="LS10 1QN"
                       />
@@ -7273,7 +7623,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   name="city"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Leeds"
                 >
@@ -7295,7 +7645,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         name="city"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Leeds"
                       />
@@ -7309,7 +7659,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   name="state"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Yorkshire"
                 >
@@ -7331,7 +7681,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         name="state"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Yorkshire"
                       />
@@ -7346,7 +7696,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="In case Questions Arise"
-                  required="true"
+                  required={true}
                   type="tel"
                   value="7761410740"
                 >
@@ -7369,7 +7719,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="In case Questions Arise"
-                        required="true"
+                        required={true}
                         type="tel"
                         value="7761410740"
                       />
@@ -7384,7 +7734,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="To Receive Order Confirmation"
-                  required="true"
+                  required={true}
                   type="email"
                 >
                   <div
@@ -7406,7 +7756,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="To Receive Order Confirmation"
-                        required="true"
+                        required={true}
                         type="email"
                       />
                     </div>
@@ -8272,7 +8622,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                             ]
                           }
                           prompt="Select country"
-                          required="true"
+                          required={true}
                           value="GBP"
                         >
                           <div
@@ -8291,7 +8641,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                               name="country_code"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              required="true"
+                              required={true}
                               role="listbox"
                               value="GBP"
                             >
@@ -8334,40 +8684,90 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                             </select>
                           </div>
                         </DropdownSelect>
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Full Name"
-                          name="full_name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required="true"
-                          type="text"
+                        <div
+                          className="o-flex o-flex__space-between"
                         >
                           <div
-                            className="o-form__input-group"
+                            className="o-flex-full-width-s"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="full_name"
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="First Name"
+                              name="first_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
                               >
-                                Full Name
-                                 *
-                              </label>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="full_name"
-                                name="full_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                required="true"
-                                type="text"
-                              />
-                            </div>
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="first_name"
+                                  >
+                                    First Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="first_name"
+                                    name="first_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
                           </div>
-                        </Input>
+                          <div
+                            className="o-flex-full-width-s"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Last Name"
+                              name="last_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="last_name"
+                                  >
+                                    Last Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="last_name"
+                                    name="last_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
+                          </div>
+                        </div>
                         <a
                           href="#"
                           onClick={[Function]}
@@ -8383,7 +8783,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           name="line_1"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                         >
@@ -8405,7 +8805,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 name="line_1"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                               />
@@ -8427,7 +8827,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           name="zipcode"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="LS10 1QN"
                         >
@@ -8449,7 +8849,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 name="zipcode"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="LS10 1QN"
                               />
@@ -8463,7 +8863,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           name="city"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Leeds"
                         >
@@ -8485,7 +8885,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 name="city"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Leeds"
                               />
@@ -8499,7 +8899,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           name="state"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Yorkshire"
                         >
@@ -8521,7 +8921,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Yorkshire"
                               />
@@ -8536,7 +8936,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="In case Questions Arise"
-                          required="true"
+                          required={true}
                           type="tel"
                           value="7761410740"
                         >
@@ -8559,7 +8959,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="In case Questions Arise"
-                                required="true"
+                                required={true}
                                 type="tel"
                                 value="7761410740"
                               />
@@ -8574,7 +8974,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="To Receive Order Confirmation"
-                          required="true"
+                          required={true}
                           type="email"
                         >
                           <div
@@ -8596,7 +8996,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="To Receive Order Confirmation"
-                                required="true"
+                                required={true}
                                 type="email"
                               />
                             </div>
@@ -9681,7 +10081,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     ]
                   }
                   prompt="Select country"
-                  required="true"
+                  required={true}
                   value="GBP"
                 >
                   <div
@@ -9700,7 +10100,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                       name="country_code"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      required="true"
+                      required={true}
                       role="listbox"
                       value="GBP"
                     >
@@ -9743,40 +10143,90 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </select>
                   </div>
                 </DropdownSelect>
-                <Input
-                  className="o-form__input-block"
-                  formName="shippingAddress"
-                  label="Full Name"
-                  name="full_name"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  required="true"
-                  type="text"
+                <div
+                  className="o-flex o-flex__space-between"
                 >
                   <div
-                    className="o-form__input-group"
+                    className="o-flex-full-width-s"
                   >
-                    <div>
-                      <label
-                        className="o-form__label"
-                        htmlFor="full_name"
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="First Name"
+                      name="first_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
                       >
-                        Full Name
-                         *
-                      </label>
-                      <input
-                        checked={false}
-                        className="o-form__input-field o-form__input-block"
-                        id="full_name"
-                        name="full_name"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        required="true"
-                        type="text"
-                      />
-                    </div>
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="first_name"
+                          >
+                            First Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="first_name"
+                            name="first_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
                   </div>
-                </Input>
+                  <div
+                    className="o-flex-full-width-s"
+                  >
+                    <Input
+                      className="o-form__input-block"
+                      formName="shippingAddress"
+                      label="Last Name"
+                      name="last_name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      required={true}
+                      type="text"
+                      value="Prasanna Gaddam"
+                    >
+                      <div
+                        className="o-form__input-group"
+                      >
+                        <div>
+                          <label
+                            className="o-form__label"
+                            htmlFor="last_name"
+                          >
+                            Last Name
+                             *
+                          </label>
+                          <input
+                            checked={false}
+                            className="o-form__input-field o-form__input-block"
+                            id="last_name"
+                            name="last_name"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            required={true}
+                            type="text"
+                            value="Prasanna Gaddam"
+                          />
+                        </div>
+                      </div>
+                    </Input>
+                  </div>
+                </div>
                 <a
                   href="#"
                   onClick={[Function]}
@@ -9792,7 +10242,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   name="line_1"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                 >
@@ -9814,7 +10264,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         name="line_1"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                       />
@@ -9836,7 +10286,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   name="zipcode"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="LS10 1QN"
                 >
@@ -9858,7 +10308,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         name="zipcode"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="LS10 1QN"
                       />
@@ -9872,7 +10322,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   name="city"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Leeds"
                 >
@@ -9894,7 +10344,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         name="city"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Leeds"
                       />
@@ -9908,7 +10358,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   name="state"
                   onBlur={[Function]}
                   onChange={[Function]}
-                  required="true"
+                  required={true}
                   type="text"
                   value="Yorkshire"
                 >
@@ -9930,7 +10380,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         name="state"
                         onBlur={[Function]}
                         onChange={[Function]}
-                        required="true"
+                        required={true}
                         type="text"
                         value="Yorkshire"
                       />
@@ -9945,7 +10395,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="In case Questions Arise"
-                  required="true"
+                  required={true}
                   type="tel"
                   value="7761410740"
                 >
@@ -9968,7 +10418,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="In case Questions Arise"
-                        required="true"
+                        required={true}
                         type="tel"
                         value="7761410740"
                       />
@@ -9983,7 +10433,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="To Receive Order Confirmation"
-                  required="true"
+                  required={true}
                   type="email"
                 >
                   <div
@@ -10005,7 +10455,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="To Receive Order Confirmation"
-                        required="true"
+                        required={true}
                         type="email"
                       />
                     </div>
@@ -10871,7 +11321,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                             ]
                           }
                           prompt="Select country"
-                          required="true"
+                          required={true}
                           value="GBP"
                         >
                           <div
@@ -10890,7 +11340,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                               name="country_code"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              required="true"
+                              required={true}
                               role="listbox"
                               value="GBP"
                             >
@@ -10933,40 +11383,90 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                             </select>
                           </div>
                         </DropdownSelect>
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Full Name"
-                          name="full_name"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required="true"
-                          type="text"
+                        <div
+                          className="o-flex o-flex__space-between"
                         >
                           <div
-                            className="o-form__input-group"
+                            className="o-flex-full-width-s"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="full_name"
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="First Name"
+                              name="first_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
                               >
-                                Full Name
-                                 *
-                              </label>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="full_name"
-                                name="full_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                required="true"
-                                type="text"
-                              />
-                            </div>
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="first_name"
+                                  >
+                                    First Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="first_name"
+                                    name="first_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
                           </div>
-                        </Input>
+                          <div
+                            className="o-flex-full-width-s"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Last Name"
+                              name="last_name"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              required={true}
+                              type="text"
+                              value="Prasanna Gaddam"
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <div>
+                                  <label
+                                    className="o-form__label"
+                                    htmlFor="last_name"
+                                  >
+                                    Last Name
+                                     *
+                                  </label>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="last_name"
+                                    name="last_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value="Prasanna Gaddam"
+                                  />
+                                </div>
+                              </div>
+                            </Input>
+                          </div>
+                        </div>
                         <a
                           href="#"
                           onClick={[Function]}
@@ -10982,7 +11482,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           name="line_1"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                         >
@@ -11004,7 +11504,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 name="line_1"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Apartment 19, Waterloo Court, 17 Hunslet Road"
                               />
@@ -11026,7 +11526,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           name="zipcode"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="LS10 1QN"
                         >
@@ -11048,7 +11548,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 name="zipcode"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="LS10 1QN"
                               />
@@ -11062,7 +11562,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           name="city"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Leeds"
                         >
@@ -11084,7 +11584,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 name="city"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Leeds"
                               />
@@ -11098,7 +11598,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           name="state"
                           onBlur={[Function]}
                           onChange={[Function]}
-                          required="true"
+                          required={true}
                           type="text"
                           value="Yorkshire"
                         >
@@ -11120,7 +11620,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                required="true"
+                                required={true}
                                 type="text"
                                 value="Yorkshire"
                               />
@@ -11135,7 +11635,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="In case Questions Arise"
-                          required="true"
+                          required={true}
                           type="tel"
                           value="7761410740"
                         >
@@ -11158,7 +11658,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="In case Questions Arise"
-                                required="true"
+                                required={true}
                                 type="tel"
                                 value="7761410740"
                               />
@@ -11173,7 +11673,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="To Receive Order Confirmation"
-                          required="true"
+                          required={true}
                           type="email"
                         >
                           <div
@@ -11195,7 +11695,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="To Receive Order Confirmation"
-                                required="true"
+                                required={true}
                                 type="email"
                               />
                             </div>

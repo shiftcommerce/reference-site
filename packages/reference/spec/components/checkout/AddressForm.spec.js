@@ -13,7 +13,8 @@ test('renders the correct base form elements', () => {
 
   // assert
   expect(wrapper).toIncludeText('Country')
-  expect(wrapper).toIncludeText('Full Name')
+  expect(wrapper).toIncludeText('First Name')
+  expect(wrapper).toIncludeText('Last Name')
   expect(wrapper).toIncludeText('Add Company Name')
   expect(wrapper).toIncludeText('Address 1')
   expect(wrapper).toIncludeText('Add Address 2')
@@ -30,7 +31,8 @@ test('renders the values from the state', () => {
   // Arrange
   const address = {
     country_code: 'GB',
-    full_name: 'Test Name',
+    first_name: 'First Name',
+    last_name: 'Last Name',
     line_1: 'Test House',
     zipcode: 'TEST POSTCODE',
     city: 'Leeds',
@@ -49,7 +51,8 @@ test('renders the values from the state', () => {
 
   // assert
   expect(wrapper.find('#country_code')).toHaveValue(address.country_code)
-  expect(wrapper.find('#full_name')).toHaveValue(address.full_name)
+  expect(wrapper.find('#first_name')).toHaveValue(address.first_name)
+  expect(wrapper.find('#last_name')).toHaveValue(address.last_name)
   expect(wrapper.find('#line_1')).toHaveValue(address.line_1)
   expect(wrapper.find('#zipcode')).toHaveValue(address.zipcode)
   expect(wrapper.find('#city')).toHaveValue(address.city)

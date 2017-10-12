@@ -3,7 +3,8 @@ import * as types from '../actions/actionTypes'
 
 const addressFormFields = {
   country_code: '',
-  full_name: '',
+  first_name: '',
+  last_name: '',
   companyName: '',
   companyNameShown: '',
   line_1: '',
