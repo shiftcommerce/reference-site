@@ -40,16 +40,17 @@ export function initiateCheckout () {
   }
 }
 
-// This function will be called my minibag on every page load
+// This function will be called by minibag on every page load
 // It will initialize cart lineitems
 export function readCart () {
   return (dispatch, getState) => {
     let cart = getState().cart
+
     // check if local redux has line items
     if (cart.lineItems.length === 0) {
       // check if indexedDB, if local redux store dont have line item
       // This is to ensure, we dont miss line items on page refresh
-      localForage.getValue('cart').then((cart) => {
+      return localForage.getValue('cart').then((cart) => {
         // if indexedDB also dont have lineitems,
         // initalize cart
         if (cart === null) {
@@ -57,13 +58,15 @@ export function readCart () {
         }
         // update local redux store
         dispatch(storeCart(cart))
+
+        return cart
       })
     // if local redux store has line items,
     // dispatch them
     } else {
       dispatch(storeCart(cart))
+      return Promise.resolve(cart)
     }
-    return cart
   }
 }
 

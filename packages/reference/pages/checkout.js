@@ -45,10 +45,9 @@ export class CheckoutPage extends Component {
 
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
-    this.props.dispatch(readCart())
-    if (this.props.cart.lineItems.length === 0) {
-      Router.push('/cart')
-    }
+    this.props.dispatch(readCart()).then((cart) => {
+      if (cart.lineItems.length === 0) Router.push('/cart')
+    })
   }
 
   componentWillReceiveProps (props) {

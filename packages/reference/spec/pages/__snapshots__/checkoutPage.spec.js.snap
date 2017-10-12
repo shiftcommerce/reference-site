@@ -2258,7 +2258,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
 </CheckoutPage>
 `;
 
-exports[`dispatch setShippingMethod action on changing sipping method 1`] = `
+exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
 <Provider
   store={
     Object {

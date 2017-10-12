@@ -15,12 +15,12 @@ import cart from '../fixtures/cart.fixture'
 import checkout from '../fixtures/checkout.fixture'
 import shippingMethods from '../fixtures/shippingMethods.fixture'
 
-test('dispatch setShippingMethod action on changing sipping method', () => {
+test('dispatch setShippingMethod action on changing shipping method', () => {
   // Arrange
   const initialState = {}
   const expectedFunction = setShippingMethod().toString()
   const setShippingMethodSpy = jest.spyOn(CheckoutPage.prototype, 'setShippingMethod')
-  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const selectedShippingMethod = shippingMethods.shippingMethods[0]
 
   // Act
@@ -74,7 +74,9 @@ test('redirects to cart page when lineItems is empty', () => {
     },
     currentStep: 1
   }
-  const dispatch = jest.fn()
+
+  // Mock out dispatch to synchronusly return a promise-like object
+  const dispatch = jest.fn().mockImplementation((updateSpy) => ({ then: (f) => f(cart) }))
 
   // Mock next.js router
   const mockedRouter = { push: jest.fn() }
@@ -97,7 +99,7 @@ test('redirects to order confirmation page, on creating an order', () => {
   const initialState = {
     order: {}
   }
-  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {}
   const newOrder = {
     id: 2332423424234,
@@ -133,7 +135,7 @@ test('should not redirect to order confirmation page, if no new order got create
   const initialState = {
     order: {}
   }
-  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
     ...checkout
@@ -161,7 +163,7 @@ test('should redirect to order confirmation page, if new order got created', () 
   const initialState = {
     order: {}
   }
-  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
     ...checkout
@@ -199,7 +201,7 @@ test('dispatch intializeCart action on creating an order', () => {
   // Arrange
   const expectedFunction = initializeCart().toString()
   const componentWillReceivePropsSpy = jest.spyOn(CheckoutPage.prototype, 'componentWillReceiveProps')
-  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
     ...checkout
