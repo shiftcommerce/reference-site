@@ -56,7 +56,7 @@ function prepareLineItems (cart) {
 function prepareCustomerDetails (address) {
   return {
     email: address.email,
-    name: address.full_name,
+    name: `${address.first_name} ${address.last_name}`,
     external_id: '123'
   }
 }
@@ -99,11 +99,10 @@ function prepareShippingAddress (address) {
   )
 }
 
-// TODO: Integrate first_name and last_name
 function prepareAddress (address) {
   return {
-    first_name: address.full_name,
-    last_name: address.full_name,
+    first_name: address.first_name,
+    last_name: address.last_name,
     line_1: address.line_1,
     line_2: address.line_2,
     city: address.city,
