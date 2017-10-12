@@ -2,7 +2,11 @@
 import * as actionTypes from './actionTypes'
 
 // cartHandler
-import * as cartHandler from './../lib/cartHandler'
+import * as cartHandler from './handlers/cartHandler'
+
+// initial states
+import { cartInitialState } from './../reducers/setCart'
+import { checkoutInitialState } from './../reducers/setCheckout'
 
 // localForage
 import LocalForage from '../lib/localforage'
@@ -24,6 +28,18 @@ export function storeCart (cart) {
   }
 }
 
+export function initiateCart () {
+  return {
+    type: actionTypes.INITIATE_CART
+  }
+}
+
+export function initiateCheckout () {
+  return {
+    type: actionTypes.INITIATE_CHECKOUT
+  }
+}
+
 // This function will be called my minibag on every page load
 // It will initialize cart lineitems
 export function readCart () {
@@ -37,7 +53,7 @@ export function readCart () {
         // if indexedDB also dont have lineitems,
         // initalize cart
         if (cart === null) {
-          cart = { lineItems: [] }
+          dispatch(initializeCart())
         }
         // update local redux store
         dispatch(storeCart(cart))
@@ -66,6 +82,15 @@ export function updateQuantity (lineItem) {
     let cart = getState().cart
     cart = cartHandler.updateCart(cart, lineItem)
     dispatchUpdate(cart, dispatch)
+  }
+}
+
+export function initializeCart () {
+  return (dispatch) => {
+    dispatch(initiateCart())
+    dispatch(initiateCheckout())
+    localForage.setValue('cart', cartInitialState)
+    localForage.setValue('checkout', checkoutInitialState)
   }
 }
 

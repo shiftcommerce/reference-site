@@ -15,7 +15,8 @@ import { readCheckoutFromLocalStorage,
   inputChange,
   inputComplete,
   showField } from '../actions/checkoutActions'
-import { readCart } from '../actions/cartActions'
+import { readCart, initializeCart } from '../actions/cartActions'
+import { createOrder } from '../actions/orderActions'
 
 // Objects
 import Image from '../objects/Image'
@@ -30,8 +31,8 @@ import ShippingMethods from '../components/checkout/ShippingMethods.js'
 import PaymentMethod from '../components/checkout/PaymentMethod.js'
 
 export class CheckoutPage extends Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
 
     this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
     this.setShippingMethod = this.setShippingMethod.bind(this)
@@ -39,13 +40,26 @@ export class CheckoutPage extends Component {
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
     this.setBillingShippingAddress = this.setBillingShippingAddress.bind(this)
+    this.convertToOrder = this.convertToOrder.bind(this)
   }
 
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
     this.props.dispatch(readCart())
+    if (this.props.cart.lineItems.length === 0) {
+      Router.push('/cart')
+    }
+  }
 
-    if (this.props.cart.lineItems.length === 0) Router.push('/cart')
+  componentWillReceiveProps (props) {
+    const prevOrder = this.props.order
+    const newOrder = props.order
+    // Only when new order got created,
+    // Redirect to order confirmation page
+    if (newOrder && newOrder.id && newOrder.id !== prevOrder.id) {
+      Router.push('/order')
+      props.dispatch(initializeCart())
+    }
   }
 
   onToggleCollapsed (componentName) {
@@ -62,6 +76,10 @@ export class CheckoutPage extends Component {
 
   onInputBlur () {
     this.props.dispatch(inputComplete())
+  }
+
+  convertToOrder (event) {
+    this.props.dispatch(createOrder(this.props.cart, this.props.checkout))
   }
 
   onShowField (formName, fieldName) {
@@ -92,8 +110,8 @@ export class CheckoutPage extends Component {
               </span>
               <CheckoutSteps {...this.props} />
             </div>
-            <div className="o-grid-container">
-              <div className="o-col-1-13 o-col-1-9-l">
+            <div className='o-grid-container'>
+              <div className='o-col-1-13 o-col-1-9-l'>
                 <AddressForm {...this.props}
                   title='Shipping Address'
                   formName='shippingAddress'
@@ -117,9 +135,9 @@ export class CheckoutPage extends Component {
                   </div>
                 }
               </div>
-              <div className="o-col-1-13 o-col-9-13-l">
+              <div className='o-col-1-13 o-col-9-13-l'>
                 <CheckoutCart title='Your Cart' {...this.props} />
-                <CheckoutCartTotal {...this.props} />
+                <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} />
               </div>
             </div>
           </div>
@@ -132,7 +150,8 @@ export class CheckoutPage extends Component {
 const mapStateToProps = (state) => {
   return {
     checkout: state.checkout || {},
-    cart: state.cart || {}
+    cart: state.cart || {},
+    order: state.order
   }
 }
 

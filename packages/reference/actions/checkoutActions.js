@@ -2,7 +2,7 @@
 import * as actionTypes from './actionTypes'
 
 // checkout Handler
-import * as checkoutHandler from './../lib/checkoutHandler'
+import * as checkoutHandler from './handlers/checkoutHandler'
 
 // localForage
 import LocalForage from '../lib/localforage'
@@ -93,9 +93,8 @@ export function readCheckoutFromLocalStorage () {
           checkout = {
             shippingAddress: {},
             billingAddress: {},
-            paymentMethod: {
-              shippingAddressAsBillingAddress: true
-            },
+            paymentMethod: {},
+            shippingAddressAsBillingAddress: true,
             shippingMethod: {},
             currentStep: 1
           }

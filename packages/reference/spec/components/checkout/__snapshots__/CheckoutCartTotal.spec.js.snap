@@ -88,6 +88,12 @@ exports[`renders the correct checkout cart costs with shipping address completed
             </b>
              
           </dd>
+          <div>
+            <input
+              type="button"
+              value="Create Order"
+            />
+          </div>
         </dl>
       </div>
     </div>
@@ -193,6 +199,12 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
             </b>
              
           </dd>
+          <div>
+            <input
+              type="button"
+              value="Create Order"
+            />
+          </div>
         </dl>
       </div>
     </div>
@@ -286,6 +298,12 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
             </b>
              
           </dd>
+          <div>
+            <input
+              type="button"
+              value="Create Order"
+            />
+          </div>
         </dl>
       </div>
     </div>
@@ -376,6 +394,12 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
             </b>
              
           </dd>
+          <div>
+            <input
+              type="button"
+              value="Create Order"
+            />
+          </div>
         </dl>
       </div>
     </div>

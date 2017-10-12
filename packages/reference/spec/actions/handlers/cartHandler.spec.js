@@ -1,4 +1,4 @@
-import * as cartHandler from '../../lib/cartHandler'
+import * as cartHandler from '../../../actions/handlers/cartHandler'
 
 describe('addToCart()', () => {
   test('add line items to cart, when initial cart is empty', () => {

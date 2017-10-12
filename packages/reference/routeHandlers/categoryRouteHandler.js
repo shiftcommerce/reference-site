@@ -1,4 +1,4 @@
-const { getData } = require('./../lib/fetchData')
+const { getData } = require('./../lib/ApiServer')
 
 // Product api urls
 const api = require('./../constants/apiUrls')

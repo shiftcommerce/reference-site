@@ -14,13 +14,34 @@ export const readEndpoint = (request) => {
         dispatch(setLoadingTo(false))
         if (response.status === 200) {
           const parsedPayload = new JsonApiParser().parse(response.data)
-
           dispatch({ type: request.successActionType, payload: parsedPayload })
         } else {
           dispatch(setErroredTo(true))
         }
       })
       .catch(() => {
+        dispatch(setLoadingTo(false))
+        dispatch(setErroredTo(true))
+      })
+  }
+}
+
+export const postEndpoint = (request) => {
+  return (dispatch, getState) => {
+    dispatch(setLoadingTo(true))
+    return new ApiClient().post(request.endpoint, request.body)
+      .then((response) => {
+        dispatch(setLoadingTo(false))
+        if (response.status === 200) {
+          const parsedData = JSON.parse(response.data.data)
+          const parsedPayload = new JsonApiParser().parse(parsedData.data)
+          dispatch({ type: request.successActionType, payload: parsedPayload })
+        } else {
+          dispatch(setErroredTo(true))
+        }
+      })
+      .catch((error) => {
+        console.log(error)
         dispatch(setLoadingTo(false))
         dispatch(setErroredTo(true))
       })

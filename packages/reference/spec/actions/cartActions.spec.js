@@ -99,3 +99,31 @@ test('return  UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', (
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': expectedCart, type: actionTypes.UPDATE_CART_LINE_ITEMS })
 })
+
+test('return INITIALIZE_CART action type on calling initializeCart()', () => {
+  // arrange
+  const fn = cartActions.initializeCart()
+  const dispatch = jest.fn()
+  const getState = () => ({ })
+
+  // act
+  fn(dispatch, getState)
+
+  // asset
+  expect(fn).toEqual(expect.any(Function))
+  expect(dispatch).toHaveBeenCalledWith({ type: actionTypes.INITIATE_CART })
+})
+
+test('return INITIALIZE_CHECKOUT action type on calling initializeCart()', () => {
+  // arrange
+  const fn = cartActions.initializeCart()
+  const dispatch = jest.fn()
+  const getState = () => ({ })
+
+  // act
+  fn(dispatch, getState)
+
+  // asset
+  expect(fn).toEqual(expect.any(Function))
+  expect(dispatch).toHaveBeenCalledWith({ type: actionTypes.INITIATE_CHECKOUT })
+})

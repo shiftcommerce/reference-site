@@ -18,7 +18,7 @@ const addressFormFields = {
   collapsed: false
 }
 
-const initialState = {
+export const checkoutInitialState = {
   shippingAddress: addressFormFields,
   shippingMethod: {
     collapsed: false
@@ -37,7 +37,7 @@ const mapComponentsToNextStep = {
   paymentMethod: 4 // 'Review Your Order'
 }
 
-export default function setCheckout (state = initialState, action) {
+export default function setCheckout (state = checkoutInitialState, action) {
   let newState = Object.assign({}, state)
 
   switch (action.type) {
@@ -78,6 +78,9 @@ export default function setCheckout (state = initialState, action) {
     case types.STORE_CHECKOUT:
       newState = action.checkout
       return newState
+
+    case types.INITIATE_CHECKOUT:
+      return checkoutInitialState
 
     default:
       return newState

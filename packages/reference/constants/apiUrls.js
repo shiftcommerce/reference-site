@@ -3,5 +3,6 @@
 module.exports = {
   Host: process.env.API_HOST,
   CategoryUrl: '/pim/v1/categories',
-  ProductUrl: '/pim/v1/products'
+  ProductUrl: '/pim/v1/products',
+  CreateOrderUrl: '/oms/v1/create_order'
 }

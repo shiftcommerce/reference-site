@@ -8,6 +8,7 @@ import { CheckoutPage } from '../../pages/checkout'
 
 // Actions
 import { setShippingMethod } from '../../actions/checkoutActions'
+import { initializeCart } from '../../actions/cartActions'
 
 // Fixtures
 import cart from '../fixtures/cart.fixture'
@@ -55,11 +56,6 @@ test('dispatch setShippingMethod action on changing sipping method', () => {
 
 test('redirects to cart page when lineItems is empty', () => {
   // Arrange
-  
-  // Mock next.js router
-  const mockedRouter = { push: jest.fn() }
-  Router.router = mockedRouter
-
   const cart = {
     lineItems: []
   }
@@ -80,6 +76,10 @@ test('redirects to cart page when lineItems is empty', () => {
   }
   const dispatch = jest.fn()
 
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
   // Act
   const wrapper = mount(
     <CheckoutPage dispatch={dispatch} cart={cart} checkout={checkout} />
@@ -90,4 +90,144 @@ test('redirects to cart page when lineItems is empty', () => {
 
   // Assert - verify that the redirect goes to the cart page
   expect(Router.router.push.mock.calls[0][0]).toBe('/cart')
+})
+
+test('redirects to order confirmation page, on creating an order', () => {
+  // Arrange
+  const initialState = {
+    order: {}
+  }
+  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const order = {}
+  const newOrder = {
+    id: 2332423424234,
+    ...checkout
+  }
+
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
+  // Act
+  const wrapper = mount(
+    <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+
+  wrapper.setProps({
+    order: newOrder
+  })
+
+  // Assert - verify that only one redirect happens
+  expect(Router.router.push.mock.calls.length).toBe(1)
+
+  // Assert - verify that the redirect goes to the order confirmation page
+  expect(Router.router.push.mock.calls[0][0]).toBe('/order')
+
+})
+
+test('should not redirect to order confirmation page, if no new order got created', () => {
+  // Arrange
+  const initialState = {
+    order: {}
+  }
+  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const order = {
+    id: 2332423424234,
+    ...checkout
+  }
+
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
+  // Act
+  const wrapper = mount(
+    <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+
+  // Assert - verify that only one redirect happens
+  expect(Router.router.push.mock.calls.length).toBe(0)
+
+})
+
+test('should redirect to order confirmation page, if new order got created', () => {
+  // Arrange
+  const initialState = {
+    order: {}
+  }
+  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const order = {
+    id: 2332423424234,
+    ...checkout
+  }
+  const newOrder = {
+    id: 1231312321,
+    ...checkout
+  }
+
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
+  // Act
+  const wrapper = mount(
+    <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+
+  wrapper.setProps({
+    order: newOrder
+  })
+
+  // Assert - verify that only one redirect happens
+  expect(Router.router.push.mock.calls.length).toBe(1)
+
+  // Assert - verify that the redirect goes to the order confirmation page
+  expect(Router.router.push.mock.calls[0][0]).toBe('/order')
+
+})
+
+test('dispatch intializeCart action on creating an order', () => {
+  // Arrange
+  const expectedFunction = initializeCart().toString()
+  const componentWillReceivePropsSpy = jest.spyOn(CheckoutPage.prototype, 'componentWillReceiveProps')
+  const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const order = {
+    id: 2332423424234,
+    ...checkout
+  }
+
+  // Act
+  const wrapper = mount(
+    <CheckoutPage checkout={checkout} cart={cart} order={{}} dispatch={dispatch} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+
+  // To clear the logs of dispatch being called on component mount
+  dispatch.mockClear()
+
+  wrapper.setProps({
+    order: order
+  })
+
+  // Verify if componentWillRecieveProps method is called on order creation
+  expect(componentWillReceivePropsSpy).toHaveBeenCalled()
+
+  expect(dispatch).toHaveBeenCalled()
+
+  // Verify it dispatch method called a function
+  expect(dispatch.mock.calls[0][0]).toEqual(expect.any(Function))
+
+  // Verify if the dispatch function has dispatched updateQuantity action.
+  expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
 })

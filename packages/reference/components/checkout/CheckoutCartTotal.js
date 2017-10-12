@@ -5,13 +5,13 @@ import Sticky from 'react-stickyfill'
 
 class CheckoutCartTotal extends Component {
   render () {
-    const totals = calculateCartSummary(this.props.cart, this.props.checkout)
-
+    const { cart, checkout, convertToOrder } = this.props
+    const totals = calculateCartSummary(cart, checkout)
     // TODO: This can be replaced with 'shippingAddress.valid' once validations are in place
     let shippingText = ''
-    if (!this.props.checkout.shippingAddress.collapsed) {
+    if (!checkout.shippingAddress.collapsed) {
       shippingText = 'Enter address'
-    } else if (!this.props.checkout.shippingMethod.retail_price_inc_tax) {
+    } else if (!checkout.shippingMethod.retail_price_inc_tax) {
       shippingText = 'Select shipping method'
     } else {
       shippingText = `£${totals.shipping}`
@@ -36,6 +36,9 @@ class CheckoutCartTotal extends Component {
             <dl aria-label='Total' className='o-checkout-cart-total__total'>
               <dt> You Pay: </dt>
               <dd> <b>&pound;{totals.total}</b> </dd>
+              <div>
+                <input type='button' onClick={convertToOrder} value='Create Order' />
+              </div>
             </dl>
           </div>
         </div>

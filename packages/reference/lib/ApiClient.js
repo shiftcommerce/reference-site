@@ -1,6 +1,6 @@
 // Libraries
 import qs from 'qs'
-import fetch from 'isomorphic-fetch'
+import axios from 'axios'
 
 class ApiClient {
   constructor (options = {}) {
@@ -13,27 +13,34 @@ class ApiClient {
   read (endpoint, queryObject = {}, options = {}) {
     options['method'] = 'GET'
     const formattedEndpoint = this.encodeParams(endpoint, queryObject)
-    return this.sendRequest(formattedEndpoint, options)
+    return this.getRequest(formattedEndpoint, options)
   }
 
   post (endpoint, body = {}, options = {}) {
-    options['method'] = 'POST'
     options['body'] = body
-    return this.sendRequest(endpoint, options)
+    return this.postRequest(endpoint, options)
   }
 
-  async sendRequest (endpoint, options = {}) {
-    const defaultHeaders = {
-      'Content-Type': 'application/vnd.api+json',
-      'Accept': 'application/vnd.api+json'
-    }
+  async getRequest (endpoint, options = {}) {
     const url = `${this.host}${endpoint}`
-    const headers = options.headers || defaultHeaders
-    const method = options.method || 'GET'
     const body = JSON.stringify(options.body)
-    const response = await fetch(url, { headers: headers, method: method, body: body })
-    const data = await response.json()
-    return { status: response.status, data }
+    const response = await axios.get(url, { body: body })
+    return { status: response.status, data: response.data }
+  }
+
+  async postRequest (endpoint, options = {}) {
+    const url = `${this.host}${endpoint}`
+    const body = JSON.stringify(options.body)
+    let response = ''
+    await axios.post(url, { body: body })
+    .then((res) => {
+      response = res
+    })
+    .catch((error) => {
+      console.log('Error while fetching data')
+      response = error
+    })
+    return { status: response.status, data: response }
   }
 
   encodeParams (endpoint, queryObject = {}) {

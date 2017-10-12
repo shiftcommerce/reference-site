@@ -3,10 +3,12 @@ const ServerJsonApiParser = require('./lib/ServerJsonApiParser.js')
 const express = require('express')
 const next = require('next')
 const { createReadStream } = require('fs')
+const bodyParser = require('body-parser')
 
 // Custom route handlers
-const productHandler = require('./routeHandlers/productHandler')
-const categoryHandler = require('./routeHandlers/categoryHandler')
+const productHandler = require('./routeHandlers/productRouteHandler')
+const categoryHandler = require('./routeHandlers/categoryRouteHandler')
+const orderHandler = require('./routeHandlers/orderRouteHandler')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -15,6 +17,8 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = express()
+  server.use(bodyParser.json())
+  server.use(bodyParser.urlencoded({ extended: true }))
 
   server.get('/', (req, res) => {
     return app.render(req, res, '/home/index', req.query)
@@ -33,6 +37,7 @@ app.prepare().then(() => {
   server.get('/getProduct/:id', productHandler.getProductRenderer(app))
   server.get('/getCategory/:id', categoryHandler.getCategoryRenderer(app))
   server.get('/getCategories', categoryHandler.getCategoriesRenderer(app))
+  server.post('/createOrder', orderHandler.createOrderRenderer(app))
 
   // if we need to specify routes e.g /search, they need to be placed above this.
   // Get any route that isn't for static assets or _next

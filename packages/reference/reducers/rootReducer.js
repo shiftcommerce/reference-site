@@ -9,6 +9,7 @@ import setProcessingState from './setProcessingState'
 import setProduct from './setProduct'
 import setSearchState from './setSearchState'
 import setCheckout from './setCheckout'
+import setOrder from './setOrder'
 
 const rootReducer = combineReducers({
   cart: setCart,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   process: setProcessingState,
   product: setProduct,
   search: setSearchState,
-  checkout: setCheckout
+  checkout: setCheckout,
+  order: setOrder
 })
 
 export default rootReducer
