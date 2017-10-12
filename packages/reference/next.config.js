@@ -1,8 +1,20 @@
 const path = require('path')
 const glob = require('glob')
+const windows = process.env.WINDOWS
 
 module.exports = {
   assetPrefix: process.env.ASSET_HOST || '',
+
+  webpackDevMiddleware: (config) => {
+    if (windows) {
+      config.watchOptions = {
+        ignored: /node_modules/,
+        poll: 500,
+        aggregateTimeout: 300
+      }
+    }
+    return config
+  },
 
   webpack: (config, { dev }) => {
     config.module.rules.push(
