@@ -37,7 +37,7 @@ export default class ShippingMethods extends Component {
       <div className='o-form__input-group c-shipping-method-list__input-group'
         key={method.id} onClick={() => this.setShippingMethod(method)}
         aria-label={method.sku}>
-        <input id={method.id} value={method.sku} type='radio'
+        <input id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
           name='shipping_method'
           checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
         <label htmlFor={method.sku}>
@@ -70,7 +70,7 @@ export default class ShippingMethods extends Component {
             </button>
 
             <div className='o-form__wrapper'>
-              <p className='u-bold'>{selectedShippingMethod.title}</p>
+              <p className='u-bold'>{selectedShippingMethod.name}</p>
               <p><span className='u-bold'>Estimated Delivery</span>: {selectedShippingMethod.delivery_date}</p>
             </div>
           </div>

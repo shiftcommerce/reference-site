@@ -43,6 +43,7 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
     >
       <div
         aria-label="Product"
+        key="0"
       >
         <Image
           aria-label="Product image"
@@ -90,6 +91,7 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
       </div>
       <div
         aria-label="Product"
+        key="1"
       >
         <Image
           aria-label="Product image"
@@ -183,6 +185,7 @@ exports[`renders the correct checkout cart summary with single line item 1`] = `
     >
       <div
         aria-label="Product"
+        key="0"
       >
         <Image
           aria-label="Product image"

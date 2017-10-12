@@ -40,7 +40,7 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   dispatch.mockClear()
 
   // Trigger quantity change
-  wrapper.find(`input[id="${selectedShippingMethod.id}"]`).simulate('change', {target: { checked: true }})
+  wrapper.find(`input[id="${selectedShippingMethod.sku}_${selectedShippingMethod.id}"]`).simulate('change', {target: { checked: true }})
 
   // Verify if setShippingMethod method is getting clicking shipping method
   expect(setShippingMethodSpy).toHaveBeenCalled()

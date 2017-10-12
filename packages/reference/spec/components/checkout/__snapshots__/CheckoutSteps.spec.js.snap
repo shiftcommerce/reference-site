@@ -6,6 +6,7 @@ exports[`Renders current step 1 correctly 1`] = `
 >
   <div
     className="o-header__step"
+    key="0"
   >
     <div
       className="c-step-indicator c-step-indicator--active"
@@ -24,6 +25,7 @@ exports[`Renders current step 1 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="1"
   >
     <div
       className="c-step-indicator"
@@ -42,6 +44,7 @@ exports[`Renders current step 1 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="2"
   >
     <div
       className="c-step-indicator"
@@ -60,6 +63,7 @@ exports[`Renders current step 1 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="3"
   >
     <div
       className="c-step-indicator"
@@ -85,6 +89,7 @@ exports[`Renders current step 2 correctly 1`] = `
 >
   <div
     className="o-header__step"
+    key="0"
   >
     <div
       className="c-step-indicator"
@@ -103,6 +108,7 @@ exports[`Renders current step 2 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="1"
   >
     <div
       className="c-step-indicator c-step-indicator--active"
@@ -121,6 +127,7 @@ exports[`Renders current step 2 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="2"
   >
     <div
       className="c-step-indicator"
@@ -139,6 +146,7 @@ exports[`Renders current step 2 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="3"
   >
     <div
       className="c-step-indicator"
@@ -164,6 +172,7 @@ exports[`Renders current step 3 correctly 1`] = `
 >
   <div
     className="o-header__step"
+    key="0"
   >
     <div
       className="c-step-indicator"
@@ -182,6 +191,7 @@ exports[`Renders current step 3 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="1"
   >
     <div
       className="c-step-indicator"
@@ -200,6 +210,7 @@ exports[`Renders current step 3 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="2"
   >
     <div
       className="c-step-indicator c-step-indicator--active"
@@ -218,6 +229,7 @@ exports[`Renders current step 3 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="3"
   >
     <div
       className="c-step-indicator"
@@ -243,6 +255,7 @@ exports[`Renders current step 4 correctly 1`] = `
 >
   <div
     className="o-header__step"
+    key="0"
   >
     <div
       className="c-step-indicator"
@@ -261,6 +274,7 @@ exports[`Renders current step 4 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="1"
   >
     <div
       className="c-step-indicator"
@@ -279,6 +293,7 @@ exports[`Renders current step 4 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="2"
   >
     <div
       className="c-step-indicator"
@@ -297,6 +312,7 @@ exports[`Renders current step 4 correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="3"
   >
     <div
       className="c-step-indicator c-step-indicator--active"
@@ -322,6 +338,7 @@ exports[`Renders steps correctly 1`] = `
 >
   <div
     className="o-header__step"
+    key="0"
   >
     <div
       className="c-step-indicator"
@@ -340,6 +357,7 @@ exports[`Renders steps correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="1"
   >
     <div
       className="c-step-indicator c-step-indicator--active"
@@ -358,6 +376,7 @@ exports[`Renders steps correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="2"
   >
     <div
       className="c-step-indicator"
@@ -376,6 +395,7 @@ exports[`Renders steps correctly 1`] = `
   </div>
   <div
     className="o-header__step"
+    key="3"
   >
     <div
       className="c-step-indicator"

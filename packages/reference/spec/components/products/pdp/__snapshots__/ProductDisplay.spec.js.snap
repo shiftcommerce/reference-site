@@ -103,6 +103,7 @@ exports[`renders correctly 1`] = `
           width={503}
         >
           <div
+            className={undefined}
             style={
               Object {
                 "height": 705,
@@ -265,6 +266,7 @@ exports[`renders correctly 1`] = `
                   aria-posinset={1}
                   aria-setsize={3}
                   data-price={10}
+                  key="0"
                   role="option"
                   value={1}
                 >
@@ -274,6 +276,7 @@ exports[`renders correctly 1`] = `
                   aria-posinset={2}
                   aria-setsize={3}
                   data-price={11}
+                  key="1"
                   role="option"
                   value={2}
                 >
@@ -283,6 +286,7 @@ exports[`renders correctly 1`] = `
                   aria-posinset={3}
                   aria-setsize={3}
                   data-price={12}
+                  key="2"
                   role="option"
                   value={3}
                 >
@@ -319,6 +323,7 @@ exports[`renders correctly 1`] = `
                   name="line_item[unit_quantity]"
                   onBlur={[Function]}
                   onChange={[Function]}
+                  required={undefined}
                   role="listbox"
                   value=""
                 >
@@ -326,13 +331,13 @@ exports[`renders correctly 1`] = `
                     aria-posinset="0"
                     aria-setsize={5}
                     role="option"
-                    value=""
                   >
                     Select a Quantity
                   </option>
                   <option
                     aria-posinset={1}
                     aria-setsize={5}
+                    key="0"
                     role="option"
                     value={1}
                   >
@@ -341,6 +346,7 @@ exports[`renders correctly 1`] = `
                   <option
                     aria-posinset={2}
                     aria-setsize={5}
+                    key="1"
                     role="option"
                     value={2}
                   >
@@ -349,6 +355,7 @@ exports[`renders correctly 1`] = `
                   <option
                     aria-posinset={3}
                     aria-setsize={5}
+                    key="2"
                     role="option"
                     value={3}
                   >
@@ -357,6 +364,7 @@ exports[`renders correctly 1`] = `
                   <option
                     aria-posinset={4}
                     aria-setsize={5}
+                    key="3"
                     role="option"
                     value={4}
                   >
@@ -365,6 +373,7 @@ exports[`renders correctly 1`] = `
                   <option
                     aria-posinset={5}
                     aria-setsize={5}
+                    key="4"
                     role="option"
                     value={5}
                   >
@@ -463,13 +472,16 @@ exports[`renders correctly 1`] = `
                 Related Products
               </h3>
               <ul>
-                <li>
+                <li
+                  key="0"
+                >
                   <Image
                     height={73}
                     src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
                     width={73}
                   >
                     <div
+                      className={undefined}
                       style={
                         Object {
                           "height": 73,
@@ -496,9 +508,12 @@ exports[`renders correctly 1`] = `
                     </a>
                   </Link>
                 </li>
-                <li>
+                <li
+                  key="1"
+                >
                   <Image
                     height={73}
+                    src={undefined}
                     width={73}
                   >
                     <div

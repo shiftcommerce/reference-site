@@ -35,10 +35,11 @@ export default class Input extends Component {
     const { inputId, value, name, required, placeholder, className } = this.props
     const type = this.props.type || 'text'
     const id = inputId || name
+    let fieldValue = value || ''
 
     return (
-      <input value={value}
-        checked={value === true}
+      <input value={fieldValue}
+        checked={fieldValue === true}
         className={classNames('o-form__input-field', className)}
         type={type}
         id={id}

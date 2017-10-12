@@ -70,121 +70,261 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               Expiration *
             </label>
-            <select
+            <DropdownSelect
               aria-label="Expiry month"
               className="o-payment-method__input"
               id="expiry_month"
+              name="expiry_month"
+              options={
+                Array [
+                  "01",
+                  "02",
+                  "03",
+                  "04",
+                  "05",
+                  "06",
+                  "07",
+                  "08",
+                  "09",
+                  "10",
+                  "11",
+                  "12",
+                ]
+              }
+              prompt="Select a Month"
               required="required"
             >
-              <option
-                value={NaN}
-              />
-              <option
-                value={1}
+              <div
+                className="o-form__input-group"
               >
-                01
-              </option>
-              <option
-                value={2}
-              >
-                02
-              </option>
-              <option
-                value={3}
-              >
-                03
-              </option>
-              <option
-                value={4}
-              >
-                04
-              </option>
-              <option
-                value={5}
-              >
-                05
-              </option>
-              <option
-                value={6}
-              >
-                06
-              </option>
-              <option
-                value={7}
-              >
-                07
-              </option>
-              <option
-                value={8}
-              >
-                08
-              </option>
-              <option
-                value={9}
-              >
-                09
-              </option>
-              <option
-                value={10}
-              >
-                10
-              </option>
-              <option
-                value={11}
-              >
-                11
-              </option>
-              <option
-                value={12}
-              >
-                12
-              </option>
-            </select>
+                <select
+                  className="o-form__input-block o-form__input-field"
+                  id="expiry_month"
+                  name="expiry_month"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="required"
+                  role="listbox"
+                  value={undefined}
+                >
+                  <option
+                    aria-posinset="0"
+                    aria-setsize={12}
+                    role="option"
+                  >
+                    Select a Month
+                  </option>
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={12}
+                    key="0"
+                    role="option"
+                    value="01"
+                  >
+                    01
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={12}
+                    key="1"
+                    role="option"
+                    value="02"
+                  >
+                    02
+                  </option>
+                  <option
+                    aria-posinset={3}
+                    aria-setsize={12}
+                    key="2"
+                    role="option"
+                    value="03"
+                  >
+                    03
+                  </option>
+                  <option
+                    aria-posinset={4}
+                    aria-setsize={12}
+                    key="3"
+                    role="option"
+                    value="04"
+                  >
+                    04
+                  </option>
+                  <option
+                    aria-posinset={5}
+                    aria-setsize={12}
+                    key="4"
+                    role="option"
+                    value="05"
+                  >
+                    05
+                  </option>
+                  <option
+                    aria-posinset={6}
+                    aria-setsize={12}
+                    key="5"
+                    role="option"
+                    value="06"
+                  >
+                    06
+                  </option>
+                  <option
+                    aria-posinset={7}
+                    aria-setsize={12}
+                    key="6"
+                    role="option"
+                    value="07"
+                  >
+                    07
+                  </option>
+                  <option
+                    aria-posinset={8}
+                    aria-setsize={12}
+                    key="7"
+                    role="option"
+                    value="08"
+                  >
+                    08
+                  </option>
+                  <option
+                    aria-posinset={9}
+                    aria-setsize={12}
+                    key="8"
+                    role="option"
+                    value="09"
+                  >
+                    09
+                  </option>
+                  <option
+                    aria-posinset={10}
+                    aria-setsize={12}
+                    key="9"
+                    role="option"
+                    value="10"
+                  >
+                    10
+                  </option>
+                  <option
+                    aria-posinset={11}
+                    aria-setsize={12}
+                    key="10"
+                    role="option"
+                    value="11"
+                  >
+                    11
+                  </option>
+                  <option
+                    aria-posinset={12}
+                    aria-setsize={12}
+                    key="11"
+                    role="option"
+                    value="12"
+                  >
+                    12
+                  </option>
+                </select>
+              </div>
+            </DropdownSelect>
             <span
               className="o-payment-method__text"
             >
               /
             </span>
-            <select
+            <DropdownSelect
               aria-label="Expiry year"
               className="o-payment-method__input"
               id="expiry_year"
+              name="expiry_year"
+              options={
+                Array [
+                  "17",
+                  "18",
+                  "19",
+                  "20",
+                  "21",
+                  "22",
+                ]
+              }
+              prompt="Select a Year"
               required="required"
             >
-              <option
-                value={NaN}
-              />
-              <option
-                value={17}
+              <div
+                className="o-form__input-group"
               >
-                17
-              </option>
-              <option
-                value={18}
-              >
-                18
-              </option>
-              <option
-                value={19}
-              >
-                19
-              </option>
-              <option
-                value={20}
-              >
-                20
-              </option>
-              <option
-                value={21}
-              >
-                21
-              </option>
-              <option
-                value={22}
-              >
-                22
-              </option>
-            </select>
+                <select
+                  className="o-form__input-block o-form__input-field"
+                  id="expiry_year"
+                  name="expiry_year"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="required"
+                  role="listbox"
+                  value={undefined}
+                >
+                  <option
+                    aria-posinset="0"
+                    aria-setsize={6}
+                    role="option"
+                  >
+                    Select a Year
+                  </option>
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={6}
+                    key="0"
+                    role="option"
+                    value="17"
+                  >
+                    17
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={6}
+                    key="1"
+                    role="option"
+                    value="18"
+                  >
+                    18
+                  </option>
+                  <option
+                    aria-posinset={3}
+                    aria-setsize={6}
+                    key="2"
+                    role="option"
+                    value="19"
+                  >
+                    19
+                  </option>
+                  <option
+                    aria-posinset={4}
+                    aria-setsize={6}
+                    key="3"
+                    role="option"
+                    value="20"
+                  >
+                    20
+                  </option>
+                  <option
+                    aria-posinset={5}
+                    aria-setsize={6}
+                    key="4"
+                    role="option"
+                    value="21"
+                  >
+                    21
+                  </option>
+                  <option
+                    aria-posinset={6}
+                    aria-setsize={6}
+                    key="5"
+                    role="option"
+                    value="22"
+                  >
+                    22
+                  </option>
+                </select>
+              </div>
+            </DropdownSelect>
             <label
               aria-label="CVV security code"
               className="o-payment-method__label-cvv"
@@ -212,8 +352,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             </label>
           </div>
           <Input
+            formName={undefined}
             label="Same as shipping address"
             name="shippingAddressAsBillingAddress"
+            onBlur={undefined}
+            onChange={undefined}
             type="checkbox"
             value={false}
           >
@@ -228,8 +371,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   name="shippingAddressAsBillingAddress"
                   onBlur={[Function]}
                   onChange={[Function]}
+                  placeholder={undefined}
+                  required={undefined}
                   type="checkbox"
-                  value={false}
+                  value=""
                 />
                 <label
                   className="o-form__label"
@@ -261,6 +406,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             }
           }
           formName="billingAddress"
+          onBlur={undefined}
+          onChange={undefined}
+          onShowField={undefined}
+          onToggleCollapsed={undefined}
           title="Billing Address"
         >
           <div
@@ -276,6 +425,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Country"
                 name="country_code"
+                onBlur={undefined}
+                onChange={undefined}
                 options={
                   Array [
                     Object {
@@ -292,6 +443,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 }
                 prompt="Select country"
                 required={true}
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -311,18 +463,19 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     onChange={[Function]}
                     required={true}
                     role="listbox"
+                    value={undefined}
                   >
                     <option
                       aria-posinset="0"
                       aria-setsize={2}
                       role="option"
-                      value=""
                     >
                       Select country
                     </option>
                     <option
                       aria-posinset={1}
                       aria-setsize={2}
+                      key="0"
                       role="option"
                       value={
                         Object {
@@ -337,6 +490,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     <option
                       aria-posinset={2}
                       aria-setsize={2}
+                      key="1"
                       role="option"
                       value={
                         Object {
@@ -362,8 +516,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     formName="billingAddress"
                     label="First Name"
                     name="first_name"
+                    onBlur={undefined}
+                    onChange={undefined}
                     required={true}
                     type="text"
+                    value={undefined}
                   >
                     <div
                       className="o-form__input-group"
@@ -383,8 +540,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           name="first_name"
                           onBlur={[Function]}
                           onChange={[Function]}
+                          placeholder={undefined}
                           required={true}
                           type="text"
+                          value=""
                         />
                       </div>
                     </div>
@@ -398,8 +557,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     formName="billingAddress"
                     label="Last Name"
                     name="last_name"
+                    onBlur={undefined}
+                    onChange={undefined}
                     required={true}
                     type="text"
+                    value={undefined}
                   >
                     <div
                       className="o-form__input-group"
@@ -419,8 +581,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           name="last_name"
                           onBlur={[Function]}
                           onChange={[Function]}
+                          placeholder={undefined}
                           required={true}
                           type="text"
+                          value=""
                         />
                       </div>
                     </div>
@@ -440,8 +604,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Address 1"
                 name="line_1"
+                onBlur={undefined}
+                onChange={undefined}
                 required={true}
                 type="text"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -461,8 +628,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="line_1"
                       onBlur={[Function]}
                       onChange={[Function]}
+                      placeholder={undefined}
                       required={true}
                       type="text"
+                      value=""
                     />
                   </div>
                 </div>
@@ -480,8 +649,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Post Code"
                 name="zipcode"
+                onBlur={undefined}
+                onChange={undefined}
                 required={true}
                 type="text"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -501,8 +673,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="zipcode"
                       onBlur={[Function]}
                       onChange={[Function]}
+                      placeholder={undefined}
                       required={true}
                       type="text"
+                      value=""
                     />
                   </div>
                 </div>
@@ -512,8 +686,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="City"
                 name="city"
+                onBlur={undefined}
+                onChange={undefined}
                 required={true}
                 type="text"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -533,8 +710,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="city"
                       onBlur={[Function]}
                       onChange={[Function]}
+                      placeholder={undefined}
                       required={true}
                       type="text"
+                      value=""
                     />
                   </div>
                 </div>
@@ -544,8 +723,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="County"
                 name="state"
+                onBlur={undefined}
+                onChange={undefined}
                 required={true}
                 type="text"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -565,8 +747,10 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       name="state"
                       onBlur={[Function]}
                       onChange={[Function]}
+                      placeholder={undefined}
                       required={true}
                       type="text"
+                      value=""
                     />
                   </div>
                 </div>
@@ -576,9 +760,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Phone"
                 name="primary_phone"
+                onBlur={undefined}
+                onChange={undefined}
                 placeholder="In case Questions Arise"
                 required={true}
                 type="tel"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -601,6 +788,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       placeholder="In case Questions Arise"
                       required={true}
                       type="tel"
+                      value=""
                     />
                   </div>
                 </div>
@@ -610,9 +798,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 formName="billingAddress"
                 label="Email"
                 name="email"
+                onBlur={undefined}
+                onChange={undefined}
                 placeholder="To Receive Order Confirmation"
                 required={true}
                 type="email"
+                value={undefined}
               >
                 <div
                   className="o-form__input-group"
@@ -635,6 +826,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       placeholder="To Receive Order Confirmation"
                       required={true}
                       type="email"
+                      value=""
                     />
                   </div>
                 </div>
@@ -729,121 +921,261 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               Expiration *
             </label>
-            <select
+            <DropdownSelect
               aria-label="Expiry month"
               className="o-payment-method__input"
               id="expiry_month"
+              name="expiry_month"
+              options={
+                Array [
+                  "01",
+                  "02",
+                  "03",
+                  "04",
+                  "05",
+                  "06",
+                  "07",
+                  "08",
+                  "09",
+                  "10",
+                  "11",
+                  "12",
+                ]
+              }
+              prompt="Select a Month"
               required="required"
             >
-              <option
-                value={NaN}
-              />
-              <option
-                value={1}
+              <div
+                className="o-form__input-group"
               >
-                01
-              </option>
-              <option
-                value={2}
-              >
-                02
-              </option>
-              <option
-                value={3}
-              >
-                03
-              </option>
-              <option
-                value={4}
-              >
-                04
-              </option>
-              <option
-                value={5}
-              >
-                05
-              </option>
-              <option
-                value={6}
-              >
-                06
-              </option>
-              <option
-                value={7}
-              >
-                07
-              </option>
-              <option
-                value={8}
-              >
-                08
-              </option>
-              <option
-                value={9}
-              >
-                09
-              </option>
-              <option
-                value={10}
-              >
-                10
-              </option>
-              <option
-                value={11}
-              >
-                11
-              </option>
-              <option
-                value={12}
-              >
-                12
-              </option>
-            </select>
+                <select
+                  className="o-form__input-block o-form__input-field"
+                  id="expiry_month"
+                  name="expiry_month"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="required"
+                  role="listbox"
+                  value={undefined}
+                >
+                  <option
+                    aria-posinset="0"
+                    aria-setsize={12}
+                    role="option"
+                  >
+                    Select a Month
+                  </option>
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={12}
+                    key="0"
+                    role="option"
+                    value="01"
+                  >
+                    01
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={12}
+                    key="1"
+                    role="option"
+                    value="02"
+                  >
+                    02
+                  </option>
+                  <option
+                    aria-posinset={3}
+                    aria-setsize={12}
+                    key="2"
+                    role="option"
+                    value="03"
+                  >
+                    03
+                  </option>
+                  <option
+                    aria-posinset={4}
+                    aria-setsize={12}
+                    key="3"
+                    role="option"
+                    value="04"
+                  >
+                    04
+                  </option>
+                  <option
+                    aria-posinset={5}
+                    aria-setsize={12}
+                    key="4"
+                    role="option"
+                    value="05"
+                  >
+                    05
+                  </option>
+                  <option
+                    aria-posinset={6}
+                    aria-setsize={12}
+                    key="5"
+                    role="option"
+                    value="06"
+                  >
+                    06
+                  </option>
+                  <option
+                    aria-posinset={7}
+                    aria-setsize={12}
+                    key="6"
+                    role="option"
+                    value="07"
+                  >
+                    07
+                  </option>
+                  <option
+                    aria-posinset={8}
+                    aria-setsize={12}
+                    key="7"
+                    role="option"
+                    value="08"
+                  >
+                    08
+                  </option>
+                  <option
+                    aria-posinset={9}
+                    aria-setsize={12}
+                    key="8"
+                    role="option"
+                    value="09"
+                  >
+                    09
+                  </option>
+                  <option
+                    aria-posinset={10}
+                    aria-setsize={12}
+                    key="9"
+                    role="option"
+                    value="10"
+                  >
+                    10
+                  </option>
+                  <option
+                    aria-posinset={11}
+                    aria-setsize={12}
+                    key="10"
+                    role="option"
+                    value="11"
+                  >
+                    11
+                  </option>
+                  <option
+                    aria-posinset={12}
+                    aria-setsize={12}
+                    key="11"
+                    role="option"
+                    value="12"
+                  >
+                    12
+                  </option>
+                </select>
+              </div>
+            </DropdownSelect>
             <span
               className="o-payment-method__text"
             >
               /
             </span>
-            <select
+            <DropdownSelect
               aria-label="Expiry year"
               className="o-payment-method__input"
               id="expiry_year"
+              name="expiry_year"
+              options={
+                Array [
+                  "17",
+                  "18",
+                  "19",
+                  "20",
+                  "21",
+                  "22",
+                ]
+              }
+              prompt="Select a Year"
               required="required"
             >
-              <option
-                value={NaN}
-              />
-              <option
-                value={17}
+              <div
+                className="o-form__input-group"
               >
-                17
-              </option>
-              <option
-                value={18}
-              >
-                18
-              </option>
-              <option
-                value={19}
-              >
-                19
-              </option>
-              <option
-                value={20}
-              >
-                20
-              </option>
-              <option
-                value={21}
-              >
-                21
-              </option>
-              <option
-                value={22}
-              >
-                22
-              </option>
-            </select>
+                <select
+                  className="o-form__input-block o-form__input-field"
+                  id="expiry_year"
+                  name="expiry_year"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  required="required"
+                  role="listbox"
+                  value={undefined}
+                >
+                  <option
+                    aria-posinset="0"
+                    aria-setsize={6}
+                    role="option"
+                  >
+                    Select a Year
+                  </option>
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={6}
+                    key="0"
+                    role="option"
+                    value="17"
+                  >
+                    17
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={6}
+                    key="1"
+                    role="option"
+                    value="18"
+                  >
+                    18
+                  </option>
+                  <option
+                    aria-posinset={3}
+                    aria-setsize={6}
+                    key="2"
+                    role="option"
+                    value="19"
+                  >
+                    19
+                  </option>
+                  <option
+                    aria-posinset={4}
+                    aria-setsize={6}
+                    key="3"
+                    role="option"
+                    value="20"
+                  >
+                    20
+                  </option>
+                  <option
+                    aria-posinset={5}
+                    aria-setsize={6}
+                    key="4"
+                    role="option"
+                    value="21"
+                  >
+                    21
+                  </option>
+                  <option
+                    aria-posinset={6}
+                    aria-setsize={6}
+                    key="5"
+                    role="option"
+                    value="22"
+                  >
+                    22
+                  </option>
+                </select>
+              </div>
+            </DropdownSelect>
             <label
               aria-label="CVV security code"
               className="o-payment-method__label-cvv"
@@ -871,8 +1203,11 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             </label>
           </div>
           <Input
+            formName={undefined}
             label="Same as shipping address"
             name="shippingAddressAsBillingAddress"
+            onBlur={undefined}
+            onChange={undefined}
             type="checkbox"
             value={true}
           >
@@ -887,6 +1222,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                   name="shippingAddressAsBillingAddress"
                   onBlur={[Function]}
                   onChange={[Function]}
+                  placeholder={undefined}
+                  required={undefined}
                   type="checkbox"
                   value={true}
                 />

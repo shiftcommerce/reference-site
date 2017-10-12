@@ -22,6 +22,7 @@ exports[`renders the nav bar options 1`] = `
         as="/categories/1"
         href="/categories/category?id=1"
         index={0}
+        key="0"
         title="Bathroom"
       >
         <Link

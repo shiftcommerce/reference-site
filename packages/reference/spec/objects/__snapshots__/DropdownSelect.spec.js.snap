@@ -23,19 +23,21 @@ exports[`renders correctly 1`] = `
       name="line_item[unit_quantity]"
       onBlur={[Function]}
       onChange={[Function]}
+      required={undefined}
       role="listbox"
+      value={undefined}
     >
       <option
         aria-posinset="0"
         aria-setsize={5}
         role="option"
-        value=""
       >
         Select a Quantity
       </option>
       <option
         aria-posinset={1}
         aria-setsize={5}
+        key="0"
         role="option"
         value={1}
       >
@@ -44,6 +46,7 @@ exports[`renders correctly 1`] = `
       <option
         aria-posinset={2}
         aria-setsize={5}
+        key="1"
         role="option"
         value={2}
       >
@@ -52,6 +55,7 @@ exports[`renders correctly 1`] = `
       <option
         aria-posinset={3}
         aria-setsize={5}
+        key="2"
         role="option"
         value={3}
       >
@@ -60,6 +64,7 @@ exports[`renders correctly 1`] = `
       <option
         aria-posinset={4}
         aria-setsize={5}
+        key="3"
         role="option"
         value={4}
       >
@@ -68,6 +73,7 @@ exports[`renders correctly 1`] = `
       <option
         aria-posinset={5}
         aria-setsize={5}
+        key="4"
         role="option"
         value={5}
       >

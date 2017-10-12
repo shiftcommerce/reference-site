@@ -162,26 +162,31 @@ exports[`renders correctly 1`] = `
       </div>
       <span
         className="c-product__rating--empty"
+        key="1"
       >
         ★
       </span>
       <span
         className="c-product__rating--empty"
+        key="2"
       >
         ★
       </span>
       <span
         className="c-product__rating--empty"
+        key="3"
       >
         ★
       </span>
       <span
         className="c-product__rating--empty"
+        key="4"
       >
         ★
       </span>
       <span
         className="c-product__rating--empty"
+        key="5"
       >
         ★
       </span>

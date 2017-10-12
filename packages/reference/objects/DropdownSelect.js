@@ -66,7 +66,7 @@ export default class DropdownSelect extends Component {
           onBlur={this.triggerBlur}
           >
 
-          <option role='option' value='' aria-setsize={options.length} aria-posinset='0'>{ prompt }</option>
+          <option role='option' aria-setsize={options.length} aria-posinset='0'>{ prompt }</option>
 
           { this.renderOptions(options) }
 

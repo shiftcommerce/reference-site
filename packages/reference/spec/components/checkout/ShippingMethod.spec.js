@@ -5,8 +5,9 @@ import ShippingMethod from '../../../components/checkout/ShippingMethods'
 import ShippingMethodsJson from '../../fixtures/shippingMethods.fixture'
 
 test('render shipping methods as expected', () => {
-  // arrange
+  // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods
+  const selectedShippingMethod = shippingMethods[0]
   const state = {
     shippingMethods: shippingMethods,
     collapsed: false
@@ -25,23 +26,24 @@ test('render shipping methods as expected', () => {
     shippingMethod: {}
   }
 
-  // act
+  // Act
   const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('1 item')
-  expect(wrapper).toIncludeText(shippingMethods[0].title)
+  expect(wrapper).toIncludeText(selectedShippingMethod.name)
 })
 
 test('render collapsed view as expected', () => {
-  // arrange
+  // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods
+  const selectedShippingMethod = shippingMethods[0]
   const state = {}
 
   const checkout = {
     shippingMethod: {
-      ...shippingMethods[0],
+      ...selectedShippingMethod,
       collapsed: true
     }
   }
@@ -54,21 +56,21 @@ test('render collapsed view as expected', () => {
     ]
   }
 
-  // act
+  // Act
   const wrapper = mount(<ShippingMethod state={state} cart={cart} checkout={checkout} />)
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(shippingMethods[0].title)
-  expect(wrapper).toIncludeText(shippingMethods[0].delivery_date)
+  expect(wrapper).toIncludeText(selectedShippingMethod.name)
+  expect(wrapper).toIncludeText(selectedShippingMethod.delivery_date)
   expect(wrapper).toIncludeText('Edit')
-  expect(wrapper).not.toIncludeText(shippingMethods[1].title)
+  expect(wrapper).not.toIncludeText(shippingMethods[1].name)
   expect(wrapper).not.toIncludeText('Shipping from')
   expect(wrapper).not.toIncludeText('Continue to Payment')
 })
 
 test('renders line item quantity as expected', () => {
-  // arrange
+  // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods
   const state = {
     shippingMethods: shippingMethods
@@ -85,17 +87,18 @@ test('renders line item quantity as expected', () => {
     }
   }
 
-  // act
+  // Act
   const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('0 items')
 })
 
 test('display pre selected shipping method as selected option on page load', () => {
-  // arrange
+  // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods
+  const selectedShippingMethod = shippingMethods[0]
   const state = {
     shippingMethods: shippingMethods
   }
@@ -107,25 +110,23 @@ test('display pre selected shipping method as selected option on page load', () 
 
   const checkout = {
     shippingMethod: {
-      ...shippingMethods[0],
+      ...selectedShippingMethod,
       collapsed: false
     }
   }
 
-  const selectedShippingMethod = shippingMethods[0]
-
-  // act
+  // Act
   const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
-  const shippingNode = wrapper.find(`#${selectedShippingMethod.id}`)
+  const shippingNode = wrapper.find(`#${selectedShippingMethod.sku}_${selectedShippingMethod.id}`)
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(shippingMethods[1].title)
+  expect(wrapper).toIncludeText(selectedShippingMethod.name)
   expect(shippingNode.props().checked).toBe(true)
 })
 
 test('should be able to select a shipping method', () => {
-  // arrange
+  // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods
   const state = {
     shippingMethods: shippingMethods,
@@ -144,14 +145,16 @@ test('should be able to select a shipping method', () => {
   }
   const selectedShippingMethod = shippingMethods[0]
 
-  // act
+  // Act
   const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
-  const shippingNode = wrapper.find(`#${selectedShippingMethod.id}`)
-  shippingNode.simulate('change', { trigger: { checked: true } })
 
-  // assert
+  wrapper.find(`input[id="${selectedShippingMethod.sku}_${selectedShippingMethod.id}"]`).simulate('change', {target: { checked: true }})
+
+  const shippingNode = wrapper.find(`#${selectedShippingMethod.sku}_${selectedShippingMethod.id}`)
+
+  // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(shippingMethods[1].title)
-  expect(shippingNode.props().checked).toBe(true)
+  expect(wrapper).toIncludeText(selectedShippingMethod.name)
   expect(wrapper.state().selectedShippingMethod.id).toBe(selectedShippingMethod.id)
+  expect(shippingNode.props().checked).toBe(true)
 })

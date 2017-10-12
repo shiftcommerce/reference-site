@@ -35,13 +35,16 @@ exports[`renders correctly 1`] = `
       Related Products
     </h3>
     <ul>
-      <li>
+      <li
+        key="0"
+      >
         <Image
           height={73}
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
           width={73}
         >
           <div
+            className={undefined}
             style={
               Object {
                 "height": 73,
@@ -68,9 +71,12 @@ exports[`renders correctly 1`] = `
           </a>
         </Link>
       </li>
-      <li>
+      <li
+        key="1"
+      >
         <Image
           height={73}
+          src={undefined}
           width={73}
         >
           <div

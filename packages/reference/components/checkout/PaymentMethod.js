@@ -6,48 +6,51 @@ import AddressForm from './AddressForm'
 
 // Objects
 import Input from './../../objects/Input'
+import DropdownSelect from './../../objects/DropdownSelect'
 
 export default class PaymentMethod extends Component {
   renderSecurityFields () {
     // Example data
     const months = [
-      '', '01', '02', '03', '04', '05', '06',
+      '01', '02', '03', '04', '05', '06',
       '07', '08', '09', '10', '11', '12'
     ]
 
-    const years = [ '', '17', '18', '19', '20', '21', '22' ]
+    const years = [ '17', '18', '19', '20', '21', '22' ]
 
-    const monthDropdown = months.map((month, index) =>
-      <option value={parseInt(month)} key={index}>
-        {month}
-      </option>
+    return (
+      <div className='o-payment-method__security-fields'>
+        <label className='o-payment-method__label' aria-label='Card expiry date' htmlFor='expiry_month'>Expiration *</label>
+        <DropdownSelect
+          className='o-payment-method__input'
+          name='expiry_month'
+          prompt='Select a Month'
+          options={months}
+          id='expiry_month'
+          required='required'
+          aria-label='Expiry month'
+        />
+
+        <span className='o-payment-method__text'>
+          /
+        </span>
+        <DropdownSelect
+          className='o-payment-method__input'
+          name='expiry_year'
+          prompt='Select a Year'
+          options={years}
+          id='expiry_year'
+          required='required'
+          aria-label='Expiry year'
+        />
+
+        <label className='o-payment-method__label-cvv' aria-label='CVV security code' htmlFor='cvv'>
+          CVV *
+          <span className='o-payment-method__text'>Hint</span>
+        </label>
+        <input className='o-payment-method__input' type='text' id='cvv' required='required' />
+      </div>
     )
-
-    const yearDropdown = years.map((year, index) =>
-      <option value={parseInt(year)} key={index}>
-        {year}
-      </option>
-    )
-
-    return <div className='o-payment-method__security-fields'>
-      <label className='o-payment-method__label' aria-label='Card expiry date' htmlFor='expiry_month'>Expiration *</label>
-      <select className='o-payment-method__input' aria-label='Expiry month' id='expiry_month' required='required'>
-        {monthDropdown}
-      </select>
-      <span className='o-payment-method__text'>
-        /
-      </span>
-
-      <select className='o-payment-method__input' aria-label='Expiry year' id='expiry_year' required='required'>
-        {yearDropdown}
-      </select>
-
-      <label className='o-payment-method__label-cvv' aria-label='CVV security code' htmlFor='cvv'>
-        CVV *
-        <span className='o-payment-method__text'>Hint</span>
-      </label>
-      <input className='o-payment-method__input' type='text' id='cvv' required='required' />
-    </div>
   }
 
   render () {

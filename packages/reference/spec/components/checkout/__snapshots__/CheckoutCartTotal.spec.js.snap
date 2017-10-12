@@ -90,6 +90,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
           </dd>
           <div>
             <input
+              onClick={undefined}
               type="button"
               value="Create Order"
             />
@@ -201,6 +202,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
           </dd>
           <div>
             <input
+              onClick={undefined}
               type="button"
               value="Create Order"
             />
@@ -300,6 +302,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
           </dd>
           <div>
             <input
+              onClick={undefined}
               type="button"
               value="Create Order"
             />
@@ -396,6 +399,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
           </dd>
           <div>
             <input
+              onClick={undefined}
               type="button"
               value="Create Order"
             />

@@ -56,6 +56,7 @@ exports[`renders line items correctly, on initial load 1`] = `
     <tbody>
       <tr
         className="c-line-items__column"
+        key="0"
       >
         <td
           aria-label="test"
@@ -100,6 +101,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={1}
               aria-setsize={0}
+              key="0"
               value={0}
             >
               0
@@ -107,6 +109,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={2}
               aria-setsize={1}
+              key="1"
               value={1}
             >
               1
@@ -114,6 +117,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={3}
               aria-setsize={2}
+              key="2"
               value={2}
             >
               2
@@ -121,6 +125,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={4}
               aria-setsize={3}
+              key="3"
               value={3}
             >
               3
@@ -128,6 +133,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={5}
               aria-setsize={4}
+              key="4"
               value={4}
             >
               4
@@ -135,6 +141,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={6}
               aria-setsize={5}
+              key="5"
               value={5}
             >
               5
@@ -142,6 +149,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={7}
               aria-setsize={6}
+              key="6"
               value={6}
             >
               6
@@ -149,6 +157,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={8}
               aria-setsize={7}
+              key="7"
               value={7}
             >
               7
@@ -156,6 +165,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={9}
               aria-setsize={8}
+              key="8"
               value={8}
             >
               8
@@ -163,6 +173,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={10}
               aria-setsize={9}
+              key="9"
               value={9}
             >
               9
@@ -170,6 +181,7 @@ exports[`renders line items correctly, on initial load 1`] = `
             <option
               aria-posinset={11}
               aria-setsize={10}
+              key="10"
               value={10}
             >
               10
@@ -246,6 +258,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
     <tbody>
       <tr
         className="c-line-items__column"
+        key="0"
       >
         <td
           aria-label="test"
@@ -290,6 +303,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={1}
               aria-setsize={0}
+              key="0"
               value={0}
             >
               0
@@ -297,6 +311,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={2}
               aria-setsize={1}
+              key="1"
               value={1}
             >
               1
@@ -304,6 +319,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={3}
               aria-setsize={2}
+              key="2"
               value={2}
             >
               2
@@ -311,6 +327,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={4}
               aria-setsize={3}
+              key="3"
               value={3}
             >
               3
@@ -318,6 +335,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={5}
               aria-setsize={4}
+              key="4"
               value={4}
             >
               4
@@ -325,6 +343,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={6}
               aria-setsize={5}
+              key="5"
               value={5}
             >
               5
@@ -332,6 +351,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={7}
               aria-setsize={6}
+              key="6"
               value={6}
             >
               6
@@ -339,6 +359,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={8}
               aria-setsize={7}
+              key="7"
               value={7}
             >
               7
@@ -346,6 +367,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={9}
               aria-setsize={8}
+              key="8"
               value={8}
             >
               8
@@ -353,6 +375,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={10}
               aria-setsize={9}
+              key="9"
               value={9}
             >
               9
@@ -360,6 +383,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <option
               aria-posinset={11}
               aria-setsize={10}
+              key="10"
               value={10}
             >
               10
