@@ -5,6 +5,7 @@ const productSearchHit = {
   ],
   'product_title': 'Textured Long T-Shirt',
   'product_reference': 'product_reference',
+  'product_path': '/products/product_reference',
   'product_meta_data': {
     'eu': {
       'colour': 'Blue',

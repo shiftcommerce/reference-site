@@ -94,11 +94,11 @@ class ProductListing extends Component {
 
           <div className='c-product_list'>
             <div className='c-product_list__container'>
-              <section className='c-product_list__sidebar'>
+              <aside className='c-product_list__sidebar'>
                 { this.renderFacets(categoryID) }
-              </section>
+              </aside>
 
-              <section className='c-product_list__listing'>
+              <main className='c-product_list__listing'>
                 { this.renderSearchStatistics(searchState) }
 
                 { this.renderActions() }
@@ -108,7 +108,7 @@ class ProductListing extends Component {
                 </div>
 
                 { this.renderActions() }
-              </section>
+              </main>
             </div>
           </div>
 

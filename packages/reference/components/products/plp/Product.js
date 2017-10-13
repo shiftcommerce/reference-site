@@ -56,7 +56,7 @@ class Product extends Component {
 
     return (
       <div className='c-product'>
-        <Link href={`/products/product?id=${productID}`} as={`/products/${productID}`}>
+        <Link href={`/products/product?id=${productID}`} as={hit.product_path}>
           <a>
             { this.renderAssetFile(hit) }
 

@@ -67,6 +67,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S2658012",
                     },
                   },
+                  "product_path": "/products/field_jacket",
                   "product_reference": "field_jacket",
                   "product_title": "Field Jacket",
                   "variant_assets": Array [],
@@ -108,6 +109,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S26591711",
                     },
                   },
+                  "product_path": "/products/quilted_shacket1",
                   "product_reference": "quilted_shacket1",
                   "product_title": "Quilted Shacket",
                   "variant_assets": Array [],
@@ -155,6 +157,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S26584011",
                     },
                   },
+                  "product_path": "/products/short_sleeve_print_t_shirt_1",
                   "product_reference": "short_sleeve_print_t_shirt_1",
                   "product_title": "Short Sleeve T-Shirt",
                   "variant_assets": Array [],
@@ -236,6 +239,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S2658012",
                     },
                   },
+                  "product_path": "/products/field_jacket",
                   "product_reference": "field_jacket",
                   "product_title": "Field Jacket",
                   "variant_assets": Array [],
@@ -277,6 +281,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S26591711",
                     },
                   },
+                  "product_path": "/products/quilted_shacket1",
                   "product_reference": "quilted_shacket1",
                   "product_title": "Quilted Shacket",
                   "variant_assets": Array [],
@@ -324,6 +329,7 @@ exports[`renders correctly 1`] = `
                       "sku": "S26584011",
                     },
                   },
+                  "product_path": "/products/short_sleeve_print_t_shirt_1",
                   "product_reference": "short_sleeve_print_t_shirt_1",
                   "product_title": "Short Sleeve T-Shirt",
                   "variant_assets": Array [],
@@ -461,6 +467,7 @@ exports[`renders correctly 1`] = `
                   "sku": "S2658012",
                 },
               },
+              "product_path": "/products/short_sleeve_print_t_shirt_1",
               "product_reference": "field_jacket",
               "product_title": "Field Jacket",
               "variant_assets": Array [],
@@ -502,6 +509,7 @@ exports[`renders correctly 1`] = `
                   "sku": "S26591711",
                 },
               },
+              "product_path": "/products/quilted_shacket1",
               "product_reference": "quilted_shacket1",
               "product_title": "Quilted Shacket",
               "variant_assets": Array [],
@@ -549,6 +557,7 @@ exports[`renders correctly 1`] = `
                   "sku": "S26584011",
                 },
               },
+              "product_path": "/products/short_sleeve_print_t_shirt_1",
               "product_reference": "short_sleeve_print_t_shirt_1",
               "product_title": "Short Sleeve T-Shirt",
               "variant_assets": Array [],
@@ -614,7 +623,7 @@ exports[`renders correctly 1`] = `
       <div
         className="c-product_list__container"
       >
-        <section
+        <aside
           className="c-product_list__sidebar"
         >
           <div
@@ -662,8 +671,8 @@ exports[`renders correctly 1`] = `
               showMore={false}
             />
           </div>
-        </section>
-        <section
+        </aside>
+        <main
           className="c-product_list__listing"
         >
           <div
@@ -746,7 +755,7 @@ exports[`renders correctly 1`] = `
               />
             </div>
           </div>
-        </section>
+        </main>
       </div>
     </div>
   </CreateInstantSearchServer>

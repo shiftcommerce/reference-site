@@ -23,13 +23,20 @@ class ProductDisplay extends Component {
       addToBag
     } = this.props
 
+    const assetFile = product.asset_files[0]
+
     const quantityOptions = [ 1, 2, 3, 4, 5 ]
 
     return (
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
-            <Image src={product.asset_files[0] && product.asset_files[0].url} alt={product.title} height={705} width={503} aria-label={product.title} />
+            <Image
+              src={assetFile && assetFile.url}
+              alt={(assetFile && assetFile.alt_text) || product.title}
+              height={705}
+              width={503}
+              aria-label={product.title} />
           </div>
 
           <div className='c-product-display__details'>

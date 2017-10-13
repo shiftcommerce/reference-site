@@ -9,6 +9,7 @@ const searchResultState = {
             ],
             'product_title': 'Field Jacket',
             'product_reference': 'field_jacket',
+            'product_path': '/products/field_jacket',
             'product_meta_data': {
               'eu': {
                 'sku': 'S2658012',
@@ -62,6 +63,7 @@ const searchResultState = {
             ],
             'product_title': 'Quilted Shacket',
             'product_reference': 'quilted_shacket1',
+            'product_path': '/products/quilted_shacket1',
             'product_meta_data': {
               'eu': {
                 'sku': 'S26591711',
@@ -111,6 +113,7 @@ const searchResultState = {
             ],
             'product_title': 'Short Sleeve T-Shirt',
             'product_reference': 'short_sleeve_print_t_shirt_1',
+            'product_path': '/products/short_sleeve_print_t_shirt_1',
             'product_meta_data': {
               'eu': {
                 'sku': 'S26584011',
@@ -195,6 +198,7 @@ const searchResultState = {
         ],
         'product_title': 'Field Jacket',
         'product_reference': 'field_jacket',
+        'product_path': '/products/short_sleeve_print_t_shirt_1',
         'product_meta_data': {
           'eu': {
             'sku': 'S2658012',
@@ -248,6 +252,7 @@ const searchResultState = {
         ],
         'product_title': 'Quilted Shacket',
         'product_reference': 'quilted_shacket1',
+        'product_path': '/products/quilted_shacket1',
         'product_meta_data': {
           'eu': {
             'sku': 'S26591711',
@@ -297,6 +302,7 @@ const searchResultState = {
         ],
         'product_title': 'Short Sleeve T-Shirt',
         'product_reference': 'short_sleeve_print_t_shirt_1',
+        'product_path': '/products/short_sleeve_print_t_shirt_1',
         'product_meta_data': {
           'eu': {
             'sku': 'S26584011',
@@ -501,6 +507,7 @@ const searchResultState = {
             ],
             'product_title': 'Field Jacket',
             'product_reference': 'field_jacket',
+            'product_path': '/products/field_jacket',
             'product_meta_data': {
               'eu': {
                 'sku': 'S2658012',
@@ -554,6 +561,7 @@ const searchResultState = {
             ],
             'product_title': 'Quilted Shacket',
             'product_reference': 'quilted_shacket1',
+            'product_path': '/products/quilted_shacket1',
             'product_meta_data': {
               'eu': {
                 'sku': 'S26591711',
@@ -603,6 +611,7 @@ const searchResultState = {
             ],
             'product_title': 'Short Sleeve T-Shirt',
             'product_reference': 'short_sleeve_print_t_shirt_1',
+            'product_path': '/products/short_sleeve_print_t_shirt_1',
             'product_meta_data': {
               'eu': {
                 'sku': 'S26584011',
