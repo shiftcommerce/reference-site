@@ -8,6 +8,7 @@
   margin-top: 5px;
   margin: 10px 0;
   text-align: center;
+  font-size: 13px
 }
 
 .o-nav__option {
@@ -25,7 +26,7 @@
     width: auto;
     display: inline-block;
     border-top: 0;
-    padding: 15px;
+    padding: 1.25em .75em;
     border-right: 1px solid $border-default;
   }
 }
