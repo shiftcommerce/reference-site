@@ -9,7 +9,6 @@
    ========================================================================== */
 
 .s-algolia_instantsearch {
-  @import "react-instantsearch-theme-algolia/style.scss";
   @import "./algolia_instantsearch/_ais-ClearAll";
   @import "./algolia_instantsearch/_ais-CurrentRefinements";
   @import "./algolia_instantsearch/_ais-Hits";
