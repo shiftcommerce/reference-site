@@ -4,13 +4,17 @@ exports[`renders the nav bar options 1`] = `
 <Connect(NavBar)>
   <NavBar
     categories={
-      Array [
-        Object {
-          "id": 1,
-          "reference": "Bathroom",
-          "title": "Bathroom",
-        },
-      ]
+      Object {
+        "data": Array [
+          Object {
+            "id": 1,
+            "reference": "Bathroom",
+            "title": "Bathroom",
+          },
+        ],
+        "error": false,
+        "loading": false,
+      }
     }
     dispatch={[Function]}
   >

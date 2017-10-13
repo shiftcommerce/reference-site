@@ -13,22 +13,28 @@ class NavBar extends Component {
     this.props.dispatch(readCategories())
   }
 
+  componentDidCatch (error, info) {
+    console.log(error)
+  }
+
   renderNavOptions (categories) {
     return (
-      categories.map((category, index) =>
+      categories.data.map((category, index) =>
         <NavBarOption key={index} index={index} title={category.title} href={`/categories/category?id=${category.id}`} as={`/categories/${category.id}`} />
       )
     )
   }
 
   render () {
-    let {
+    const {
       categories
     } = this.props
 
+    const hasData = categories.data && categories.data.length > 0
+
     return (
       <div className='o-nav' role='navigation' >
-        { this.renderNavOptions(categories) }
+        { hasData && this.renderNavOptions(categories) }
       </div>
     )
   }

@@ -17,11 +17,16 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
   const expectedFunction = updateQuantity().toString()
   const updateQuantitySpy = jest.spyOn(CartPage.prototype, 'updateQuantity')
   const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
+  const categories = {
+    loading: false,
+    error: false,
+    data: []
+  }
 
   // Act
   const wrapper = mount(
     <Provider store={createMockStore(initialState)}>
-      <CartPage cart={cart} dispatch={dispatch} />
+      <CartPage cart={cart} categories={categories} dispatch={dispatch} />
     </Provider>
   )
 

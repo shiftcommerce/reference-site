@@ -14,7 +14,7 @@ export function readCategories () {
     },
     successActionType: types.SET_CATEGORIES
   }
-  return readEndpoint(request)
+  return readEndpoint(request, request.successActionType)
 }
 
 export function readCategory (categoryID) {
@@ -27,5 +27,5 @@ export function readCategory (categoryID) {
     },
     successActionType: types.SET_CATEGORY
   }
-  return readEndpoint(request)
+  return readEndpoint(request, request.successActionType)
 }

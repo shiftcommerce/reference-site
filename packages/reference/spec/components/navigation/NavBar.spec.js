@@ -10,7 +10,11 @@ import categories from '../../fixtures/categories.fixture'
 test('renders the nav bar options', () => {
   // Arrange
   const initialState = {
-    categories: categories
+    categories: {
+      loading: false,
+      error: false,
+      data: categories
+    }
   }
 
   const context = {

@@ -1,6 +1,6 @@
 const path = require('path')
 const glob = require('glob')
-const windows = process.env.WINDOWS
+const windows = process.env.WINDOWS || false
 
 module.exports = {
   assetPrefix: process.env.ASSET_HOST || '',

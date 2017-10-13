@@ -1,7 +1,10 @@
 // actionTypes
 import * as types from '../actions/actionTypes'
 
-export const initialState = {}
+export const initialState = {
+  loading: false,
+  error: false
+}
 
 export default function setCategory (state = initialState, action) {
   switch (action.type) {

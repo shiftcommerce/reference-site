@@ -76,10 +76,8 @@ class Product extends Component {
 
   render () {
     let {
-      product,
-      process
+      product
     } = this.props
-
     let category = (product.categories && product.categories[0])
 
     const breadcrumbMenuTrail = [
@@ -87,13 +85,13 @@ class Product extends Component {
       { id: product.id, title: product.title, canonical_path: `/products/${product.id}`, page: '/products/product' }
     ]
 
-    if (process.errored || Object.keys(product).length === 0) {
+    if (product.error || Object.keys(product).length === 0) {
       return (
         <Layout>
           <h1>Unable to load product.</h1>
         </Layout>
       )
-    } else if (process.loading) {
+    } else if (product.loading) {
       return (
         <Layout>
           <h1>Loading product...</h1>
@@ -115,7 +113,6 @@ class Product extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    process: state.process || {},
     cart: state.cart || {},
     product: state.product || {}
   }

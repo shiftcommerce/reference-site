@@ -33,6 +33,14 @@ app.prepare().then(() => {
     createReadStream('./static/serviceWorker.js').pipe(res)
   })
 
+  // server.get('/products/:id', (req, res) => {
+  //   return app.render(req, res, '/products/product', Object.assign(req.query, { id: req.params.id }))
+  // })
+
+  server.get('/categories/:id', (req, res) => {
+    return app.render(req, res, '/categories/category', Object.assign(req.query, { id: req.params.id }))
+  })
+
   // Routes for local API calls
   server.get('/getProduct/:id', productHandler.getProductRenderer(app))
   server.get('/getCategory/:id', categoryHandler.getCategoryRenderer(app))
