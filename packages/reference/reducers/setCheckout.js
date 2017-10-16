@@ -27,7 +27,8 @@ export const checkoutInitialState = {
   billingAddress: addressFormFields,
   shippingAddressAsBillingAddress: true,
   paymentMethod: {
-    collapsed: false
+    collapsed: false,
+    selectedMethod: 'card'
   },
   currentStep: 1
 }
@@ -82,6 +83,10 @@ export default function setCheckout (state = checkoutInitialState, action) {
 
     case types.INITIATE_CHECKOUT:
       return checkoutInitialState
+
+    case types.CHANGE_PAYMENT_METHOD:
+      newState.paymentMethod.selectedMethod = action.paymentMethod
+      return newState
 
     default:
       return newState

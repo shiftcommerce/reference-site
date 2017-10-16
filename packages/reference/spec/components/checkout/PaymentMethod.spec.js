@@ -1,11 +1,15 @@
 // Components
 import PaymentMethod from '../../../components/checkout/PaymentMethod'
 
+// Mock Stripe checkout
+jest.mock('../../../components/checkout/StripeWrapper', () => (() => <p>Mocked Card Fields</p>))
+
 test('Renders correct address summary when shippingAsBilling is true', () => {
   // arrange
   const checkout = {
     shippingAddress: {
-      full_name: 'Test Name',
+      first_name: 'Test First Name',
+      last_name: 'Test Last Name',
       line_1: 'Test Address 1',
       line_2: 'Test Address 2',
       city: 'Test City',
@@ -14,7 +18,8 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
     billingAddress: {},
     shippingAddressAsBillingAddress: true,
     paymentMethod: {
-      collapsed: false
+      collapsed: false,
+      selectedMethod: 'card'
     }
   }
   const setShippingBillingAddress = () => {}
@@ -24,7 +29,8 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Test Name')
+  expect(wrapper).toIncludeText('Test First Name')
+  expect(wrapper).toIncludeText('Test Last Name')
   expect(wrapper).toIncludeText('Test Address 1')
   expect(wrapper).toIncludeText('Test Address 2')
   expect(wrapper).toIncludeText('Test City')
@@ -35,7 +41,8 @@ test('Does not render address summary when shippingAsBilling is false', () => {
   // arrange
   const checkout = {
     shippingAddress: {
-      full_name: 'Test Name',
+      first_name: 'Test First Name',
+      last_name: 'Test Last Name',
       line_1: 'Test Address 1',
       line_2: 'Test Address 2',
       city: 'Test City',
@@ -44,7 +51,8 @@ test('Does not render address summary when shippingAsBilling is false', () => {
     billingAddress: {},
     shippingAddressAsBillingAddress: false,
     paymentMethod: {
-      collapsed: false
+      collapsed: false,
+      selectedMethod: 'card'
     }
   }
   const setShippingBillingAddress = () => {}
@@ -54,5 +62,6 @@ test('Does not render address summary when shippingAsBilling is false', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).not.toIncludeText('Test Name')
+  expect(wrapper).not.toIncludeText('Test First Name')
+  expect(wrapper).not.toIncludeText('Test Last Name')
 })

@@ -12,6 +12,7 @@ import { readCheckoutFromLocalStorage,
   toggleCollapsed,
   setShippingMethod,
   setShippingBillingAddress,
+  changePaymentMethod,
   inputChange,
   inputComplete,
   showField } from '../actions/checkoutActions'
@@ -41,6 +42,7 @@ export class CheckoutPage extends Component {
     this.onShowField = this.onShowField.bind(this)
     this.setBillingShippingAddress = this.setBillingShippingAddress.bind(this)
     this.convertToOrder = this.convertToOrder.bind(this)
+    this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
   }
 
   componentDidMount () {
@@ -85,6 +87,10 @@ export class CheckoutPage extends Component {
     this.props.dispatch(showField(formName, fieldName))
   }
 
+  onPaymentMethodChanged (paymentMethod) {
+    this.props.dispatch(changePaymentMethod(paymentMethod))
+  }
+
   setBillingShippingAddress (event, formName, fieldName) {
     this.props.dispatch(setShippingBillingAddress(formName, fieldName, event.target.checked))
   }
@@ -127,6 +133,7 @@ export class CheckoutPage extends Component {
                   setBillingShippingAddress={this.setBillingShippingAddress}
                   onChange={this.onInputChange}
                   onBlur={this.onInputBlur}
+                  onPaymentMethodChanged={this.onPaymentMethodChanged}
                 />
                 {!paymentMethodCollapsed &&
                   <div className='o-form'>

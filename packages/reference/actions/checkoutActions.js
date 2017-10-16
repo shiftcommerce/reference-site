@@ -126,3 +126,10 @@ function setBillingAsShippingKey (formName, fieldName, fieldValue) {
     }
   }
 }
+
+export function changePaymentMethod (paymentMethod) {
+  return {
+    type: actionTypes.CHANGE_PAYMENT_METHOD,
+    paymentMethod: paymentMethod
+  }
+}
