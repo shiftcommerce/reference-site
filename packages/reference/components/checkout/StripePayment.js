@@ -39,8 +39,7 @@ class StripePayment extends Component {
 
         {checkout.shippingAddressAsBillingAddress &&
           <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary'>
-            <h4>{shippingAddress.first_name}</h4>
-            <h4>{shippingAddress.last_name}</h4>
+            <h4>{`${shippingAddress.first_name} ${shippingAddress.last_name}`}</h4>
             <p>{shippingAddress.line_1}</p>
             <p>{shippingAddress.line_2}</p>
             <p>{shippingAddress.city}</p>

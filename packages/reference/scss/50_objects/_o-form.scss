@@ -20,9 +20,14 @@
 
   &__input-field {
     padding: 5px;
-    margin: 5px 0;
+    margin: 10px 0;
     border: 1px solid;
     border-radius: 3px;
+
+    &__error {
+      color: $text-error;
+      margin-bottom: 10px;
+    }
   }
 
   &__input-block {

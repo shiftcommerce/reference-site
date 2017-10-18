@@ -727,10 +727,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             className="o-payment-method__address-summary"
           >
             <h4>
-              Test First Name
-            </h4>
-            <h4>
-              Test Last Name
+              Test First Name Test Last Name
             </h4>
             <p>
               Test Address 1
