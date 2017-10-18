@@ -22,17 +22,17 @@ function formatUrl (url, request) {
 
 // Merge any optional headers passed in
 function formatHeaders (headers) {
-  return Object.assign(defaultHeaders, headers)
+  return Object.assign({}, defaultHeaders, headers)
 }
 
 function getData (request, url, response, options = {}) {
   axios.get(formatUrl(url, request), { headers: formatHeaders(options.headers) })
   .then((res) => {
-    response.json(JSON.parse(CircularJSON.stringify(res.data)))
+    sendData(response, res.data)
   })
   .catch((error) => {
     console.log('Error while fetching data')
-    response.json(error)
+    sendData(response, error)
   })
 }
 
@@ -44,8 +44,12 @@ function postData (request, url, response, options = {}) {
   })
   .catch((error) => {
     console.log('Error while posting data')
-    response.json(error)
+    sendData(response, error)
   })
+}
+
+function sendData (response, data) {
+  response.json(JSON.parse(CircularJSON.stringify(data)))
 }
 
 module.exports = { getData, postData }

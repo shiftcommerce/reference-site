@@ -4,6 +4,9 @@ import { Component } from 'react'
 // Redux
 import withRedux from 'next-redux-wrapper'
 
+// Components
+import Layout from '../components/Layout'
+
 // Utils
 import { configureStore } from '../utils/configureStore'
 
@@ -12,9 +15,9 @@ class OrderPage extends Component {
     const order = this.props.order
 
     return (
-      <section>
+      <Layout>
         Order has been created: #{order.id}
-      </section>
+      </Layout>
     )
   }
 }
