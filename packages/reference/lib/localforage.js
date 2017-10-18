@@ -8,12 +8,11 @@ class LocalForage {
   }
 
   // Set the driver to indexedDB
-  // TODO: Fix '.default.config(...).then is not a function' error here?
   initLocalForage () {
     localforage.config({
       driver: localforage.INDEXEDDB,
       name: 'CART'
-    }).then(() => localforage.ready())
+    })
   }
 
   // Set the key and value in the indexedDB

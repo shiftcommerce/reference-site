@@ -1,6 +1,8 @@
 engines:
   eslint:
     enabled: true
+  duplication:
+    enabled: true
 
 ratings:
    paths:
@@ -10,3 +12,11 @@ exclude_paths:
 - spec/
 - bin/
 - static/
+
+
+
+
+
+
+
+
