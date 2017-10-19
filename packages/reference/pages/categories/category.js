@@ -57,18 +57,31 @@ class Category extends Component {
     let BreadcrumbTrail = [
       { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' }
     ]
-
-    return (
-      <Layout>
-        <Breadcrumb trail={BreadcrumbTrail} />
-        <ProductListing
-          searchState={search}
-          onSearchStateChange={this.onSearchStateChange.bind(this)}
-          resultState={resultState}
-          categoryID={category.id}
-        />
-      </Layout>
-    )
+    if (category.loading) {
+      return (
+        <Layout>
+          <p>Loading...</p>
+        </Layout>
+      )
+    } else if (category.error) {
+      return (
+        <Layout>
+          <p>{category.error}</p>
+        </Layout>
+      )
+    } else {
+      return (
+        <Layout>
+          <Breadcrumb trail={BreadcrumbTrail} />
+          <ProductListing
+            searchState={search}
+            onSearchStateChange={this.onSearchStateChange.bind(this)}
+            resultState={resultState}
+            categoryID={category.id}
+          />
+        </Layout>
+      )
+    }
   }
 }
 

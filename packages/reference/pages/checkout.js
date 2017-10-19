@@ -100,56 +100,66 @@ export class CheckoutPage extends Component {
     const hasLineItems = cart.lineItems.length > 0
     const paymentMethodCollapsed = checkout.paymentMethod.collapsed
 
-    return (
-      <div>
-        <CustomHead />
-        {hasLineItems &&
-          <div>
-            <div className='o-header'>
-              <span className='o-header__logo'>
-                <Link href='/home/index' as='/'>
-                  <a>
-                    <Image width={200} height={80} />
-                  </a>
-                </Link>
-              </span>
-              <CheckoutSteps {...this.props} />
-            </div>
-            <div className='o-grid-container'>
-              <div className='o-col-1-13 o-col-1-9-l'>
-                <AddressForm {...this.props}
-                  title='Shipping Address'
-                  formName='shippingAddress'
-                  addressType='shipping'
-                  onChange={this.onInputChange}
-                  onBlur={this.onInputBlur}
-                  onShowField={this.onShowField}
-                  onToggleCollapsed={this.onToggleCollapsed}
-                />
-                <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
-                <PaymentMethod
-                  formName='paymentMethod'
-                  {...this.props}
-                  setBillingShippingAddress={this.setBillingShippingAddress}
-                  onChange={this.onInputChange}
-                  onBlur={this.onInputBlur}
-                  onPaymentMethodChanged={this.onPaymentMethodChanged}
-                />
-                {!paymentMethodCollapsed &&
-                  <div className='o-form'>
-                    <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
-                  </div>
-                }
+    if (checkout.loading) {
+      return (
+        <p>loading...</p>
+      )
+    } else if (checkout.error) {
+      return (
+        <p>{checkout.error}</p>
+      )
+    } else {
+      return (
+        <div>
+          <CustomHead />
+          {hasLineItems &&
+            <div>
+              <div className='o-header'>
+                <span className='o-header__logo'>
+                  <Link href='/home/index' as='/'>
+                    <a>
+                      <Image width={200} height={80} />
+                    </a>
+                  </Link>
+                </span>
+                <CheckoutSteps {...this.props} />
               </div>
-              <div className='o-col-1-13 o-col-9-13-l'>
-                <CheckoutCart title='Your Cart' {...this.props} />
-                <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} />
+              <div className='o-grid-container'>
+                <div className='o-col-1-13 o-col-1-9-l'>
+                  <AddressForm {...this.props}
+                    title='Shipping Address'
+                    formName='shippingAddress'
+                    addressType='shipping'
+                    onChange={this.onInputChange}
+                    onBlur={this.onInputBlur}
+                    onShowField={this.onShowField}
+                    onToggleCollapsed={this.onToggleCollapsed}
+                  />
+                  <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
+                  <PaymentMethod
+                    formName='paymentMethod'
+                    {...this.props}
+                    setBillingShippingAddress={this.setBillingShippingAddress}
+                    onChange={this.onInputChange}
+                    onBlur={this.onInputBlur}
+                    onPaymentMethodChanged={this.onPaymentMethodChanged}
+                  />
+                  {!paymentMethodCollapsed &&
+                    <div className='o-form'>
+                      <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
+                    </div>
+                  }
+                </div>
+                <div className='o-col-1-13 o-col-9-13-l'>
+                  <CheckoutCart title='Your Cart' {...this.props} />
+                  <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} />
+                </div>
               </div>
             </div>
-          </div>
-        }
-      </div>
-    )
+          }
+        </div>
+      )
+    }
   }
 }
 

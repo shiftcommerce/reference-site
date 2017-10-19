@@ -32,13 +32,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         ],
       }
     }
-    categories={
-      Object {
-        "data": Array [],
-        "error": false,
-        "loading": false,
-      }
-    }
     dispatch={[Function]}
   >
     <Layout>
@@ -180,7 +173,13 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         </div>
         <Connect(NavBar)>
           <NavBar
-            categories={Array []}
+            categories={
+              Object {
+                "data": Array [],
+                "error": false,
+                "loading": false,
+              }
+            }
             dispatch={[Function]}
           >
             <div

@@ -8,11 +8,11 @@ export const readEndpoint = (request) => {
 
     return new ApiClient().read(request.endpoint, request.query)
       .then((response) => {
-        dispatch(setLoadingTo(false, request.successActionType))
-        if (response.status === 200) {
+        if (response.status === 200 || response.status === 304) {
           const parsedPayload = new JsonApiParser().parse(response.data)
-          dispatch({ type: request.successActionType, payload: parsedPayload })
+          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload, {loading: false}) })
         } else {
+          dispatch(setLoadingTo(false, request.successActionType))
           dispatch(setErroredTo(true, request.successActionType))
         }
       })
@@ -28,12 +28,12 @@ export const postEndpoint = (request) => {
     dispatch(setLoadingTo(true, request.successActionType))
     return new ApiClient().post(request.endpoint, request.body)
       .then((response) => {
-        dispatch(setLoadingTo(false, request.successActionType))
         if (response.status === 200) {
           const parsedData = JSON.parse(response.data.data)
           const parsedPayload = new JsonApiParser().parse(parsedData.data)
-          dispatch({ type: request.successActionType, payload: parsedPayload })
+          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload, {loading: false}) })
         } else {
+          dispatch(setLoadingTo(false, request.successActionType))
           dispatch(setErroredTo(true, request.successActionType))
         }
       })
@@ -47,13 +47,17 @@ export const postEndpoint = (request) => {
 function setLoadingTo (boolean, actionType) {
   return {
     type: actionType,
-    loading: boolean
+    payload: {
+      loading: boolean
+    }
   }
 }
 
 function setErroredTo (boolean, actionType) {
   return {
     type: actionType,
-    errored: boolean
+    payload: {
+      error: boolean
+    }
   }
 }

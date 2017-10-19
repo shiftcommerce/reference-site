@@ -77,12 +77,27 @@ class Search extends Component {
       { id: 1, title: `Search: '${search.query || ''}'`, canonical_path: this.breadcrumbCanonicalPath(search) }
     ]
 
-    return (
-      <Layout searchObject={search} onSearchQueryChange={this.onSearchQueryChange.bind(this)}>
-        <Breadcrumb trail={BreadcrumbTrail} />
-        { this.renderSearchResults(search, resultState) }
-      </Layout>
-    )
+    // TODO: Push search results into search object
+    if (search.loading) {
+      return (
+        <Layout>
+          <p>Loading...</p>
+        </Layout>
+      )
+    } else if (search.error) {
+      return (
+        <Layout>
+          <p>{search.error}</p>
+        </Layout>
+      )
+    } else {
+      return (
+        <Layout searchObject={search} onSearchQueryChange={this.onSearchQueryChange.bind(this)}>
+          <Breadcrumb trail={BreadcrumbTrail} />
+          { this.renderSearchResults(search, resultState) }
+        </Layout>
+      )
+    }
   }
 }
 

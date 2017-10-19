@@ -30,13 +30,21 @@ class NavBar extends Component {
       categories
     } = this.props
 
-    const hasData = categories.data && categories.data.length > 0
-
-    return (
-      <div className='o-nav' role='navigation' >
-        { hasData && this.renderNavOptions(categories) }
-      </div>
-    )
+    if (categories.loading) {
+      return (
+        <p>Loading...</p>
+      )
+    } else if (categories.error) {
+      return (
+        <p>{categories.error}</p>
+      )
+    } else {
+      return (
+        <div className='o-nav' role='navigation' >
+          { this.renderNavOptions(categories) }
+        </div>
+      )
+    }
   }
 }
 

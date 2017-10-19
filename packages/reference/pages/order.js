@@ -14,11 +14,25 @@ class OrderPage extends Component {
   render () {
     const order = this.props.order
 
-    return (
-      <Layout>
-        Order has been created: #{order.id}
-      </Layout>
-    )
+    if (order.loading) {
+      return (
+        <Layout>
+          <p>Loading...</p>
+        </Layout>
+      )
+    } else if (order.error) {
+      return (
+        <Layout>
+          <p>{order.error}</p>
+        </Layout>
+      )
+    } else {
+      return (
+        <Layout>
+          Order has been created: #{order.id}
+        </Layout>
+      )
+    }
   }
 }
 

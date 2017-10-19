@@ -16,7 +16,7 @@ const localForage = new LocalForage()
 export function updateCart (cart) {
   return {
     type: actionTypes.UPDATE_CART_LINE_ITEMS,
-    cart: cart
+    cart: Object.assign({}, cart, {loading: false})
   }
 }
 
@@ -24,7 +24,7 @@ export function updateCart (cart) {
 export function storeCart (cart) {
   return {
     type: actionTypes.STORE_CART,
-    cart: cart
+    cart: Object.assign({}, cart, {loading: false})
   }
 }
 

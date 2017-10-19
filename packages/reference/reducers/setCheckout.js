@@ -20,6 +20,8 @@ const addressFormFields = {
 }
 
 export const checkoutInitialState = {
+  loading: true,
+  error: false,
   shippingAddress: addressFormFields,
   shippingMethod: {
     collapsed: false

@@ -2,7 +2,7 @@
 import * as types from '../actions/actionTypes'
 
 export const initialState = {
-  loading: false,
+  loading: true,
   error: false,
   data: []
 }

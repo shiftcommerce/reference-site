@@ -30,11 +30,25 @@ export class CartPage extends Component {
   render () {
     const cart = this.props.cart
 
-    return (
-      <Layout>
-        <CartTable cart={cart} updateQuantity={this.updateQuantity} />
-      </Layout>
-    )
+    if (cart.loading) {
+      return (
+        <Layout>
+          <p>loading...</p>
+        </Layout>
+      )
+    } else if (cart.error) {
+      return (
+        <Layout>
+          <p>{cart.error}</p>
+        </Layout>
+      )
+    } else {
+      return (
+        <Layout>
+          <CartTable cart={cart} updateQuantity={this.updateQuantity} />
+        </Layout>
+      )
+    }
   }
 }
 
