@@ -6,7 +6,7 @@ import qs from 'qs'
 
 // Actions
 import { setSearchState } from '../../actions/searchActions'
-import { readCategory } from '../../actions/categoryActions'
+import { readCategory, readCategories } from '../../actions/categoryActions'
 
 // Components
 import Layout from '../../components/Layout'
@@ -25,6 +25,7 @@ class Category extends Component {
   static async getInitialProps ({ store, query, url }) {
     const searchState = query
     const resultState = await findResultsState(ProductListing, { searchState })
+    await store.dispatch(readCategories(store))
     await store.dispatch(readCategory(query.id))
     store.dispatch(setSearchState(searchState))
 

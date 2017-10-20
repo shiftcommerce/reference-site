@@ -12,6 +12,7 @@ import Breadcrumb from '../../objects/Breadcrumb'
 // Actions
 import { addToCart } from '../../actions/cartActions'
 import { readProduct } from '../../actions/productActions'
+import { readCategories } from '../../actions/categoryActions'
 
 // Utils
 import { configureStore } from '../../utils/configureStore'
@@ -32,6 +33,7 @@ class Product extends Component {
   }
 
   static async getInitialProps ({ store, query }) {
+    await store.dispatch(readCategories(store))
     if (query.id) {
       await store.dispatch(readProduct(query.id))
     } else {

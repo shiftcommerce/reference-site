@@ -10,7 +10,7 @@ class CustomHead extends Component {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       <style dangerouslySetInnerHTML={{ __html: searchStylesheet }} />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <script src="https://js.stripe.com/v3/"></script>
+      <script src='https://js.stripe.com/v3/' />
     </Head>
   }
 }

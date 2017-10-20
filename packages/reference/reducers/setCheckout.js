@@ -84,7 +84,7 @@ export default function setCheckout (state = checkoutInitialState, action) {
       return newState
 
     case types.INITIATE_CHECKOUT:
-      return checkoutInitialState
+      return Object.assign({}, checkoutInitialState, {loading: false})
 
     case types.CHANGE_PAYMENT_METHOD:
       newState.paymentMethod.selectedMethod = action.paymentMethod

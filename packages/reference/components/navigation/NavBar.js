@@ -5,18 +5,7 @@ import { connect } from 'react-redux'
 // Objects
 import NavBarOption from './NavBarOption'
 
-// Actions
-import { readCategories } from '../../actions/categoryActions'
-
 class NavBar extends Component {
-  componentDidMount () {
-    this.props.dispatch(readCategories())
-  }
-
-  componentDidCatch (error, info) {
-    console.log(error)
-  }
-
   renderNavOptions (categories) {
     return (
       categories.data.map((category, index) =>

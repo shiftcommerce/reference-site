@@ -55,7 +55,7 @@ export function inputComplete () {
 export function storeCheckout (checkout) {
   return {
     type: actionTypes.STORE_CHECKOUT,
-    checkout: checkout
+    checkout: Object.assign({}, checkout, {loading: false})
   }
 }
 
@@ -90,23 +90,22 @@ export function readCheckoutFromLocalStorage () {
       localForage.getValue('checkout').then((checkout) => {
         // if indexedDB is also empty, initialize an empty checkout
         if (checkout === null) {
-          checkout = {
-            shippingAddress: {},
-            billingAddress: {},
-            paymentMethod: {},
-            shippingAddressAsBillingAddress: true,
-            shippingMethod: {},
-            currentStep: 1
-          }
+          dispatch(initiateCheckout())
+        } else {
+          // update local redux store
+          dispatch(storeCheckout(checkout))
         }
-        // update local redux store
-        dispatch(storeCheckout(checkout))
       })
     // if local redux store has checkout data, dispatch it
     } else {
       dispatch(storeCheckout(checkout))
     }
     return checkout
+  }
+}
+export function initiateCheckout () {
+  return {
+    type: actionTypes.INITIATE_CHECKOUT
   }
 }
 

@@ -7,10 +7,17 @@ import withRedux from 'next-redux-wrapper'
 // Components
 import Layout from '../components/Layout'
 
+// Actions
+import { readCategories } from '../actions/categoryActions'
+
 // Utils
 import { configureStore } from '../utils/configureStore'
 
 class OrderPage extends Component {
+  static async getInitialProps ({ store }) {
+    await store.dispatch(readCategories(store))
+  }
+
   render () {
     const order = this.props.order
 

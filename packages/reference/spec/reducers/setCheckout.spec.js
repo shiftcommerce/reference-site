@@ -7,10 +7,12 @@ test('returns empty on dispatching INITIALIZE_CHECKOUT action', () => {
     type: actionTypes.INITIATE_CHECKOUT
   }
 
+  const expectedResult = Object.assign({}, checkoutInitialState, {loading: false})
+
   // Act
   const result = setCheckout({}, payload)
 
   // Assert
-  expect(result).toEqual(checkoutInitialState)
+  expect(result).toEqual(expectedResult)
   expect(result.billingAddress.email).toBe('')
 })

@@ -6,6 +6,7 @@ import qs from 'qs'
 
 // Actions
 import { setSearchState, setSearchQuery } from '../actions/searchActions'
+import { readCategories } from '../actions/categoryActions'
 
 // Components
 import Layout from '../components/Layout'
@@ -25,6 +26,7 @@ class Search extends Component {
     const searchState = query
     const resultState = await findResultsState(ProductListing, { searchState })
     store.dispatch(setSearchState(searchState))
+    await store.dispatch(readCategories(store))
     return { search: searchState, resultState: resultState, url: url }
   }
 

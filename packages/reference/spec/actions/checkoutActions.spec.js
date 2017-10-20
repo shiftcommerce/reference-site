@@ -12,6 +12,7 @@ test('return STORE_CHECKOUT action type on calling readCheckoutFromLocalStorage(
     shippingAddress: {
       fullName: 'Test Name'
     },
+    loading: false,
     updatedAt: new Date()
   }
   const getState = () => ({ checkout: checkout })

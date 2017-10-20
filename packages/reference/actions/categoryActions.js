@@ -4,17 +4,27 @@ import * as types from './actionTypes'
 // Actions
 import { readEndpoint } from './apiActions'
 
-export function readCategories () {
-  const request = {
-    endpoint: '/getCategories',
-    query: {
-      fields: {
-        categories: 'id,title,reference'
+export function readCategories (store) {
+  const categories = store.getState().categories.data
+  if (categories.length === 0) {
+    const request = {
+      endpoint: '/getCategories',
+      query: {
+        fields: {
+          categories: 'id,title,reference'
+        }
+      },
+      successActionType: types.SET_CATEGORIES
+    }
+    return readEndpoint(request, request.successActionType)
+  } else {
+    return {
+      type: types.SET_CATEGORIES,
+      payload: {
+        data: categories
       }
-    },
-    successActionType: types.SET_CATEGORIES
+    }
   }
-  return readEndpoint(request, request.successActionType)
 }
 
 export function readCategory (categoryID) {
