@@ -5,7 +5,7 @@ const VariantsWithSimilarPrice = [
     meta_data: {
       eu: {
         size: 'Size 8',
-        price: 10.00
+        price: 1000
       }
     }
   },
@@ -15,7 +15,7 @@ const VariantsWithSimilarPrice = [
     meta_data: {
       eu: {
         size: 'Size 10',
-        price: 10.00
+        price: 1000
       }
     }
   },
@@ -25,7 +25,7 @@ const VariantsWithSimilarPrice = [
     meta_data: {
       eu: {
         size: 'Size 12',
-        price: 10.00
+        price: 1000
       }
     }
   }

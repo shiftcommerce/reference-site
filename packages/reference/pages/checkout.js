@@ -17,7 +17,12 @@ import { readCheckoutFromLocalStorage,
   inputComplete,
   showField } from '../actions/checkoutActions'
 import { readCart, initializeCart } from '../actions/cartActions'
-import { createOrder } from '../actions/orderActions'
+import {
+  createOrder,
+  requestCardToken,
+  setCardToken,
+  setPaymentError
+} from '../actions/orderActions'
 
 // Objects
 import Image from '../objects/Image'
@@ -43,6 +48,7 @@ export class CheckoutPage extends Component {
     this.setBillingShippingAddress = this.setBillingShippingAddress.bind(this)
     this.convertToOrder = this.convertToOrder.bind(this)
     this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
+    this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
   }
 
   componentDidMount () {
@@ -80,7 +86,11 @@ export class CheckoutPage extends Component {
   }
 
   convertToOrder (event) {
-    this.props.dispatch(createOrder(this.props.cart, this.props.checkout))
+    if (this.props.checkout.paymentMethod.selectedMethod === 'card') {
+      this.props.dispatch(requestCardToken(true))
+    } else {
+      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order))
+    }
   }
 
   onShowField (formName, fieldName) {
@@ -93,6 +103,15 @@ export class CheckoutPage extends Component {
 
   setBillingShippingAddress (event, formName, fieldName) {
     this.props.dispatch(setShippingBillingAddress(formName, fieldName, event.target.checked))
+  }
+
+  onCardTokenReceived ({error, token}) {
+    if (error) {
+      this.props.dispatch(setPaymentError(error.message))
+    } else {
+      this.props.dispatch(setCardToken(token))
+    }
+    this.props.dispatch(requestCardToken(false))
   }
 
   render () {
@@ -143,6 +162,7 @@ export class CheckoutPage extends Component {
                     onChange={this.onInputChange}
                     onBlur={this.onInputBlur}
                     onPaymentMethodChanged={this.onPaymentMethodChanged}
+                    onCardTokenReceived={this.onCardTokenReceived}
                   />
                   {!paymentMethodCollapsed &&
                     <div className='o-form'>

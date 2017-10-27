@@ -1,31 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the correct checkout cart costs with shipping address completed 1`] = `
+exports[`renders payment errors 1`] = `
 <CheckoutCartTotal
   cart={
     Object {
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 10,
+          "imageUrl": "",
+          "price": 1000,
           "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
           "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": 5,
-          "quantity": 1,
-          "title": "Pretend Product",
         },
       ],
     }
   }
   checkout={
     Object {
-      "shippingAddress": Object {
-        "collapsed": true,
-      },
-      "shippingMethod": Object {},
+      "shippingAddress": Object {},
+    }
+  }
+  order={
+    Object {
+      "paymentError": "Payment authentication failed",
     }
   }
 >
@@ -45,7 +44,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
           </dt>
           <dd>
              £
-            25
+            20.00
              
           </dd>
         </dl>
@@ -57,7 +56,115 @@ exports[`renders the correct checkout cart costs with shipping address completed
           </dt>
           <dd>
              £
-            0
+            0.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping: 
+          </dt>
+          <dd>
+             
+            Enter address
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="o-checkout-cart-total__total"
+        >
+          <dt>
+             You Pay: 
+          </dt>
+          <dd>
+             
+            <b>
+              £
+              20.00
+            </b>
+             
+          </dd>
+          <div>
+            <input
+              onClick={undefined}
+              type="button"
+              value="Create Order"
+            />
+          </div>
+        </dl>
+        <div
+          className="c-checkout-cart-total__payment-error"
+        >
+          Payment authentication failed
+        </div>
+      </div>
+    </div>
+  </Sticker>
+</CheckoutCartTotal>
+`;
+
+exports[`renders the correct checkout cart costs with shipping address completed 1`] = `
+<CheckoutCartTotal
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": 1000,
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": 500,
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+      },
+      "shippingMethod": Object {},
+    }
+  }
+  order={Object {}}
+>
+  <Sticker>
+    <div
+      aria-label="Cart total summary"
+      className="o-checkout-cart-total u-sticky"
+    >
+      <div
+        className="o-checkout-cart-total__wrapper"
+      >
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Subtotal: 
+          </dt>
+          <dd>
+             £
+            25.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="VAT"
+        >
+          <dt>
+             VAT: 
+          </dt>
+          <dd>
+             £
+            0.00
              
           </dd>
         </dl>
@@ -84,7 +191,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
              
             <b>
               £
-              25
+              25.00
             </b>
              
           </dd>
@@ -109,13 +216,13 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 10,
+          "price": 1000,
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 5,
+          "price": 500,
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -131,15 +238,16 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         "delivery_date": "Sunday 2nd December",
         "id": "1",
         "name": "Super Saver",
-        "paid_price_inc_tax": 3.45,
+        "paid_price_inc_tax": 345,
         "reference": "super_saver",
-        "retail_price_inc_tax": 3.45,
+        "retail_price_inc_tax": 345,
         "sku": "super_saver",
-        "tax_amount": 2,
+        "tax_amount": 200,
         "tax_percentage": 20,
       },
     }
   }
+  order={Object {}}
 >
   <Sticker>
     <div
@@ -157,7 +265,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
           </dt>
           <dd>
              £
-            25
+            25.00
              
           </dd>
         </dl>
@@ -169,7 +277,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
           </dt>
           <dd>
              £
-            0
+            0.00
              
           </dd>
         </dl>
@@ -221,13 +329,13 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 10,
+          "price": 1000,
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 5,
+          "price": 500,
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -240,6 +348,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       "shippingMethod": Object {},
     }
   }
+  order={Object {}}
 >
   <Sticker>
     <div
@@ -257,7 +366,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
           </dt>
           <dd>
              £
-            25
+            25.00
              
           </dd>
         </dl>
@@ -269,7 +378,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
           </dt>
           <dd>
              £
-            0
+            0.00
              
           </dd>
         </dl>
@@ -296,7 +405,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
              
             <b>
               £
-              25
+              25.00
             </b>
              
           </dd>
@@ -322,7 +431,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         Object {
           "discount": 0,
           "imageUrl": "",
-          "price": 10,
+          "price": 1000,
           "quantity": 2,
           "size": "size - 8",
           "sku": "123",
@@ -336,6 +445,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
       "shippingAddress": Object {},
     }
   }
+  order={Object {}}
   title="Checkout Cart Summary"
 >
   <Sticker>
@@ -354,7 +464,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
           </dt>
           <dd>
              £
-            20
+            20.00
              
           </dd>
         </dl>
@@ -366,7 +476,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
           </dt>
           <dd>
              £
-            0
+            0.00
              
           </dd>
         </dl>
@@ -393,7 +503,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
              
             <b>
               £
-              20
+              20.00
             </b>
              
           </dd>

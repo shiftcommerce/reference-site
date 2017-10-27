@@ -1220,6 +1220,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             dispatch={[Function]}
             formName="paymentMethod"
             onBlur={[Function]}
+            onCardTokenReceived={[Function]}
             onChange={[Function]}
             onPaymentMethodChanged={[Function]}
             order={Object {}}
@@ -1544,7 +1545,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      20
+                      0.20
                        
                     </dd>
                   </dl>
@@ -1556,7 +1557,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      0
+                      0.00
                        
                     </dd>
                   </dl>
@@ -1583,7 +1584,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                        
                       <b>
                         £
-                        25.45
+                        0.25
                       </b>
                        
                     </dd>
@@ -1702,6 +1703,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
       }
     }
     dispatch={[Function]}
+    order={Object {}}
   >
     <div>
       <CustomHead>
@@ -1823,6 +1825,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               }
             }
             dispatch={[Function]}
+            order={Object {}}
           >
             <div
               className="c-step-indicators"
@@ -2000,6 +2003,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               onChange={[Function]}
               onShowField={[Function]}
               onToggleCollapsed={[Function]}
+              order={Object {}}
               title="Shipping Address"
             >
               <div
@@ -2558,6 +2562,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               }
               dispatch={[Function]}
               formName="shippingMethod"
+              order={Object {}}
               setShippingMethod={[Function]}
             >
               <div
@@ -2835,8 +2840,10 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               dispatch={[Function]}
               formName="paymentMethod"
               onBlur={[Function]}
+              onCardTokenReceived={[Function]}
               onChange={[Function]}
               onPaymentMethodChanged={[Function]}
+              order={Object {}}
               setBillingShippingAddress={[Function]}
             >
               <div
@@ -2981,6 +2988,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 }
               }
               dispatch={[Function]}
+              order={Object {}}
               title="Your Cart"
             >
               <div
@@ -3139,6 +3147,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               }
               convertToOrder={[Function]}
               dispatch={[Function]}
+              order={Object {}}
             >
               <Sticker>
                 <div
@@ -3156,7 +3165,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </dt>
                       <dd>
                          £
-                        20
+                        0.20
                          
                       </dd>
                     </dl>
@@ -3168,7 +3177,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </dt>
                       <dd>
                          £
-                        0
+                        0.00
                          
                       </dd>
                     </dl>
@@ -3195,7 +3204,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                          
                         <b>
                           £
-                          25.45
+                          0.25
                         </b>
                          
                       </dd>
@@ -4439,6 +4448,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             dispatch={[Function]}
             formName="paymentMethod"
             onBlur={[Function]}
+            onCardTokenReceived={[Function]}
             onChange={[Function]}
             onPaymentMethodChanged={[Function]}
             order={Object {}}
@@ -4763,7 +4773,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      20
+                      0.20
                        
                     </dd>
                   </dl>
@@ -4775,7 +4785,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      0
+                      0.00
                        
                     </dd>
                   </dl>
@@ -4802,7 +4812,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                        
                       <b>
                         £
-                        25.45
+                        0.25
                       </b>
                        
                     </dd>
@@ -6297,6 +6307,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             dispatch={[Function]}
             formName="paymentMethod"
             onBlur={[Function]}
+            onCardTokenReceived={[Function]}
             onChange={[Function]}
             onPaymentMethodChanged={[Function]}
             order={
@@ -6810,7 +6821,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </dt>
                     <dd>
                        £
-                      20
+                      0.20
                        
                     </dd>
                   </dl>
@@ -6822,7 +6833,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </dt>
                     <dd>
                        £
-                      0
+                      0.00
                        
                     </dd>
                   </dl>
@@ -6849,7 +6860,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                        
                       <b>
                         £
-                        25.45
+                        0.25
                       </b>
                        
                     </dd>
@@ -8344,6 +8355,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             dispatch={[Function]}
             formName="paymentMethod"
             onBlur={[Function]}
+            onCardTokenReceived={[Function]}
             onChange={[Function]}
             onPaymentMethodChanged={[Function]}
             order={
@@ -8857,7 +8869,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </dt>
                     <dd>
                        £
-                      20
+                      0.20
                        
                     </dd>
                   </dl>
@@ -8869,7 +8881,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </dt>
                     <dd>
                        £
-                      0
+                      0.00
                        
                     </dd>
                   </dl>
@@ -8896,7 +8908,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                        
                       <b>
                         £
-                        25.45
+                        0.25
                       </b>
                        
                     </dd>

@@ -13,6 +13,7 @@ import { initializeCart } from '../../actions/cartActions'
 // Fixtures
 import cart from '../fixtures/cart.fixture'
 import checkout from '../fixtures/checkout.fixture'
+import order from '../fixtures/order.fixture'
 import shippingMethods from '../fixtures/shippingMethods.fixture'
 
 test('dispatch setShippingMethod action on changing shipping method', () => {
@@ -26,7 +27,7 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   // Act
   const wrapper = mount(
     <Provider store={createMockStore(initialState)}>
-      <CheckoutPage checkout={checkout} cart={cart} dispatch={dispatch} />
+      <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
     </Provider>
   )
 

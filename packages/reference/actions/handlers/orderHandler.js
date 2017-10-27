@@ -2,13 +2,13 @@
 import { randomUUID } from './../../utils/randomUUID'
 import pick from './../../utils/pick'
 
-export function convertCheckoutToOrder (cart, checkout) {
+export function convertCheckoutToOrder (cart, checkout, order) {
   // This is to ensure billing address has correctly set
   if (checkout.shippingAddressAsBillingAddress === true) {
     checkout.billingAddress = checkout.shippingAddress
   }
 
-  const order = {
+  const orderPayload = {
     data: {
       type: 'oms/create_order',
       attributes: {
@@ -26,7 +26,12 @@ export function convertCheckoutToOrder (cart, checkout) {
       }
     }
   }
-  return order
+
+  return {
+    order_payload: orderPayload,
+    payment_method: checkout.paymentMethod.selectedMethod,
+    card_token: order.cardToken
+  }
 }
 
 function prepareLineItems (cart) {
@@ -80,10 +85,10 @@ function getTotalPrice (cart, checkout) {
   let totalAmount = 0
   if (lineItems.length > 0) {
     for (let lineItem of lineItems) {
-      totalAmount += lineItem.price
+      totalAmount += parseInt(lineItem.price * lineItem.quantity)
     }
   }
-  totalAmount += checkout.shippingMethod.retail_price_inc_tax
+  totalAmount += parseInt(checkout.shippingMethod.retail_price_inc_tax)
   return totalAmount
 }
 

@@ -20,7 +20,7 @@ test('return STORE_CHECKOUT action type on calling readCheckoutFromLocalStorage(
   // Act
   fn(dispatch, getState)
 
-  // Asset
+  // Assert
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ checkout: checkout, type: actionTypes.STORE_CHECKOUT })
 })

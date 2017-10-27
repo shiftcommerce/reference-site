@@ -241,7 +241,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
               </td>
               <td>
                 £
-                20
+                0.20
               </td>
             </tr>
           </tbody>
@@ -275,7 +275,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
             </dt>
             <dd>
                £
-              20
+              0.20
                
             </dd>
           </dl>
@@ -287,7 +287,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
               className="u-text-color--red"
             >
                +£
-              0
+              0.00
                
             </dd>
           </dl>
@@ -299,7 +299,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
               className="u-text-color--green"
             >
                -£
-              0
+              0.00
                
             </dd>
           </dl>
@@ -311,7 +311,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                
               <b>
                 £
-                20
+                0.20
               </b>
                
             </dd>

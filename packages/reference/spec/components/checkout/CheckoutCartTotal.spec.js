@@ -10,7 +10,7 @@ test('renders the correct checkout cart total with single line item', () => {
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: 1000,
         discount: 0,
         quantity: 2,
         sku: '123',
@@ -24,11 +24,13 @@ test('renders the correct checkout cart total with single line item', () => {
     shippingAddress: {}
   }
 
+  const order = {}
+
   const updateQuantity = () => {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} title="Checkout Cart Summary" />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} title="Checkout Cart Summary" />
   )
 
   // assert
@@ -45,13 +47,13 @@ test('renders the correct checkout cart total with multiple line items', () => {
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: 1000,
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 5,
+        price: 500,
         discount: 0,
         quantity: 1
       }
@@ -63,11 +65,13 @@ test('renders the correct checkout cart total with multiple line items', () => {
     shippingMethod: {}
   }
 
+  const order = {}
+
   const updateQuantity = () => {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
   )
 
   // assert
@@ -84,13 +88,13 @@ test('renders the correct checkout cart costs with shipping address completed', 
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: 1000,
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 5,
+        price: 500,
         discount: 0,
         quantity: 1
       }
@@ -104,11 +108,13 @@ test('renders the correct checkout cart costs with shipping address completed', 
     shippingMethod: {}
   }
 
+  const order = {}
+
   const updateQuantity = () => {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
   )
 
   // assert
@@ -125,13 +131,13 @@ test('renders the correct checkout cart costs with shipping method selected', ()
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: 1000,
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 5,
+        price: 500,
         discount: 0,
         quantity: 1
       }
@@ -145,11 +151,13 @@ test('renders the correct checkout cart costs with shipping method selected', ()
     shippingMethod: shippingMethods[0]
   }
 
+  const order = {}
+
   const updateQuantity = () => {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
   )
 
   // assert
@@ -158,4 +166,40 @@ test('renders the correct checkout cart costs with shipping method selected', ()
   expect(wrapper).toIncludeText('VAT:  £0')
   expect(wrapper).toIncludeText('Shipping:  £3.45')
   expect(wrapper).toIncludeText('You Pay:  £28.45')
+})
+
+test('renders payment errors', () => {
+  // arrange
+  const cart = {
+    lineItems: [
+      {
+        title: 'Test Product',
+        price: 1000,
+        discount: 0,
+        quantity: 2,
+        sku: '123',
+        imageUrl: '',
+        size: 'size - 8'
+      }
+    ]
+  }
+
+  const checkout = {
+    shippingAddress: {}
+  }
+
+  const order = {
+    paymentError: 'Payment authentication failed'
+  }
+
+  const updateQuantity = () => {}
+
+  // act
+  const wrapper = mount(
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
+  )
+
+  // assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Payment authentication failed')
 })

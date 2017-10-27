@@ -13,7 +13,11 @@ class StripeWrapper extends Component {
     return (
       <StripeProvider apiKey={StripeApiKey}>
         <Elements>
-          <StripeCardFields />
+          <StripeCardFields
+            cardTokenRequested={this.props.cardTokenRequested}
+            onCardTokenReceived={this.props.onCardTokenReceived}
+            billingAddress = {this.props.checkout.billingAddress}
+          />
         </Elements>
       </StripeProvider>
     )

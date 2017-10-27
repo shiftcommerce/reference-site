@@ -21,7 +21,11 @@ class StripePayment extends Component {
 
     return (
       <div className='o-form__wrapper'>
-        <StripeWrapper />
+        <StripeWrapper
+          cardTokenRequested = {this.props.order.cardTokenRequested}
+          onCardTokenReceived = {this.props.onCardTokenReceived}
+          checkout = {this.props.checkout}
+        />
 
         <div className='o-form__input-group'>
           <label>Billing address *</label>

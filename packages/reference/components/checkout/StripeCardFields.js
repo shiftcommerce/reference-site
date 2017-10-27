@@ -22,6 +22,22 @@ class StripeCardFields extends Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (!this.props.cardTokenRequested && nextProps.cardTokenRequested) {
+      this.props.stripe.createToken({
+        name: `${this.props.billingAddress.first_name} ${this.props.billingAddress.last_name}`,
+        address_city: this.props.billingAddress.city,
+        address_country: this.props.billingAddress.country_code,
+        address_line1: this.props.billingAddress.line_1,
+        address_line2: this.props.billingAddress.line_2,
+        address_state: this.props.billingAddress.state,
+        address_zip: this.props.billingAddress.zipcode
+      }).then(({token, error}) => {
+        this.props.onCardTokenReceived(error ? {error} : {token})
+      })
+    }
+  }
+
   handleChange (fieldName, e) {
     let errorMessage = (e.error ? e.error.message : '')
 

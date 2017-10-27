@@ -25,9 +25,9 @@ test('renders correct values when line items are available', () => {
     lineItems: [
       {
         title: 'test',
-        price: 10,
-        discount: 2,
-        quantity: 2,
+        price: 1000,
+        discount: 200,
+        quantity: 200,
         sku: '123',
         imageUrl: '',
         size: 'size - 8'

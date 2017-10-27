@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
         className="c-product__price"
       >
         £
-        10.00
+        0.10
       </div>
       <div
         className="c-product__view-details"

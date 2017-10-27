@@ -6,10 +6,10 @@ exports[`renders correct values when line items are available 1`] = `
     Object {
       "lineItems": Array [
         Object {
-          "discount": 2,
+          "discount": 200,
           "imageUrl": "",
-          "price": 10,
-          "quantity": 2,
+          "price": 1000,
+          "quantity": 200,
           "size": "size - 8",
           "sku": "123",
           "title": "test",
@@ -28,7 +28,7 @@ exports[`renders correct values when line items are available 1`] = `
       </dt>
       <dd>
          £
-        20
+        2000.00
          
       </dd>
     </dl>
@@ -40,7 +40,7 @@ exports[`renders correct values when line items are available 1`] = `
         className="u-text-color--red"
       >
          +£
-        0
+        0.00
          
       </dd>
     </dl>
@@ -52,7 +52,7 @@ exports[`renders correct values when line items are available 1`] = `
         className="u-text-color--green"
       >
          -£
-        4
+        400.00
          
       </dd>
     </dl>
@@ -64,7 +64,7 @@ exports[`renders correct values when line items are available 1`] = `
          
         <b>
           £
-          16
+          1600.00
         </b>
          
       </dd>
@@ -90,7 +90,7 @@ exports[`renders correct values when no line items are available 1`] = `
       </dt>
       <dd>
          £
-        0
+        0.00
          
       </dd>
     </dl>
@@ -102,7 +102,7 @@ exports[`renders correct values when no line items are available 1`] = `
         className="u-text-color--red"
       >
          +£
-        0
+        0.00
          
       </dd>
     </dl>
@@ -114,7 +114,7 @@ exports[`renders correct values when no line items are available 1`] = `
         className="u-text-color--green"
       >
          -£
-        0
+        0.00
          
       </dd>
     </dl>
@@ -126,7 +126,7 @@ exports[`renders correct values when no line items are available 1`] = `
          
         <b>
           £
-          0
+          0.00
         </b>
          
       </dd>

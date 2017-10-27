@@ -194,7 +194,7 @@ exports[`renders line items correctly, on initial load 1`] = `
         </td>
         <td>
           £
-          20
+          0.20
         </td>
       </tr>
     </tbody>
@@ -396,7 +396,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
         </td>
         <td>
           £
-          20
+          0.20
         </td>
       </tr>
     </tbody>

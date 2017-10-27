@@ -20,6 +20,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
       "shippingAddressAsBillingAddress": false,
     }
   }
+  order={
+    Object {
+      "cardTokenRequested": false,
+    }
+  }
   setShippingBillingAddress={[Function]}
 >
   <div
@@ -76,12 +81,38 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             "shippingAddressAsBillingAddress": false,
           }
         }
+        order={
+          Object {
+            "cardTokenRequested": false,
+          }
+        }
         setShippingBillingAddress={[Function]}
       >
         <div
           className="o-form__wrapper"
         >
-          <Component>
+          <Component
+            cardTokenRequested={false}
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {
+                  "collapsed": false,
+                  "selectedMethod": "card",
+                },
+                "shippingAddress": Object {
+                  "city": "Test City",
+                  "first_name": "Test First Name",
+                  "last_name": "Test Last Name",
+                  "line_1": "Test Address 1",
+                  "line_2": "Test Address 2",
+                  "zipcode": "Test Postcode",
+                },
+                "shippingAddressAsBillingAddress": false,
+              }
+            }
+            onCardTokenReceived={undefined}
+          >
             <p>
               Mocked Card Fields
             </p>
@@ -615,6 +646,11 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
       "shippingAddressAsBillingAddress": true,
     }
   }
+  order={
+    Object {
+      "cardTokenRequested": false,
+    }
+  }
   setShippingBillingAddress={[Function]}
 >
   <div
@@ -671,12 +707,38 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             "shippingAddressAsBillingAddress": true,
           }
         }
+        order={
+          Object {
+            "cardTokenRequested": false,
+          }
+        }
         setShippingBillingAddress={[Function]}
       >
         <div
           className="o-form__wrapper"
         >
-          <Component>
+          <Component
+            cardTokenRequested={false}
+            checkout={
+              Object {
+                "billingAddress": Object {},
+                "paymentMethod": Object {
+                  "collapsed": false,
+                  "selectedMethod": "card",
+                },
+                "shippingAddress": Object {
+                  "city": "Test City",
+                  "first_name": "Test First Name",
+                  "last_name": "Test Last Name",
+                  "line_1": "Test Address 1",
+                  "line_2": "Test Address 2",
+                  "zipcode": "Test Postcode",
+                },
+                "shippingAddressAsBillingAddress": true,
+              }
+            }
+            onCardTokenReceived={undefined}
+          >
             <p>
               Mocked Card Fields
             </p>

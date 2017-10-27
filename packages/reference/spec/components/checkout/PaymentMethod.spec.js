@@ -2,7 +2,7 @@
 import PaymentMethod from '../../../components/checkout/PaymentMethod'
 
 // Mock Stripe checkout
-jest.mock('../../../components/checkout/StripeWrapper', () => (() => <p>Mocked Card Fields</p>))
+jest.mock('../../../components/checkout/StripeWrapper', () => ((props) => <p>Mocked Card Fields</p>))
 
 test('Renders correct address summary when shippingAsBilling is true', () => {
   // arrange
@@ -23,9 +23,16 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
     }
   }
   const setShippingBillingAddress = () => {}
+  const order = {
+    cardTokenRequested: false
+  }
 
   // act
-  const wrapper = mount(<PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} />)
+  const wrapper = mount(<PaymentMethod
+    checkout={checkout}
+    setShippingBillingAddress={setShippingBillingAddress}
+    order={order}
+  />)
 
   // assert
   expect(wrapper).toMatchSnapshot()
@@ -56,9 +63,16 @@ test('Does not render address summary when shippingAsBilling is false', () => {
     }
   }
   const setShippingBillingAddress = () => {}
+  const order = {
+    cardTokenRequested: false
+  }
 
   // act
-  const wrapper = mount(<PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} />)
+  const wrapper = mount(<PaymentMethod
+    checkout={checkout}
+    setShippingBillingAddress={setShippingBillingAddress}
+    order={order}
+  />)
 
   // assert
   expect(wrapper).toMatchSnapshot()

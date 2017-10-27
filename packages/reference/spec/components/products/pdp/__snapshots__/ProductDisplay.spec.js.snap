@@ -185,9 +185,9 @@ exports[`renders correctly 1`] = `
               >
                 <span>
                   £
-                  10.00
+                  0.10
                    - £
-                  12.00
+                  0.12
                 </span>
               </div>
             </ProductPrice>

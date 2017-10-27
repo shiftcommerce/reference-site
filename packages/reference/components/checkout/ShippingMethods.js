@@ -1,5 +1,6 @@
 // Libraries
 import { Component } from 'react'
+import { penceToPounds } from '../../lib/penceToPounds'
 
 // Fixtures
 import ShippingMethodsJson from '../../static/shippingMethods.json'
@@ -41,7 +42,7 @@ export default class ShippingMethods extends Component {
           name='shipping_method'
           checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
         <label htmlFor={method.sku}>
-          <span className='c-shipping-method-list__cost'>&pound;{method.retail_price_inc_tax}</span>
+          <span className='c-shipping-method-list__cost'>&pound;{penceToPounds(method.retail_price_inc_tax)}</span>
           <span className='c-shipping-method-list__title'>{method.name}</span>
           <span className='c-shipping-method-list__delivery-date-label'>Estimated Delivery: </span>
           <span className='c-shipping-method-list__delivery-date'>{method.delivery_date}</span>
