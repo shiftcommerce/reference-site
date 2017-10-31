@@ -88,11 +88,27 @@ exports[`renders payment errors 1`] = `
              
           </dd>
           <div>
-            <input
+            <Button
+              aria-label="Place Order"
+              disabled={true}
+              label="Place Order"
               onClick={undefined}
+              size="lrg"
+              status="disabled"
               type="button"
-              value="Create Order"
-            />
+            >
+              <button
+                aria-label="Place Order"
+                className="o-button o-button--disabled o-button--lrg"
+                disabled={true}
+                onClick={undefined}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Place Order
+              </button>
+            </Button>
           </div>
         </dl>
         <div
@@ -129,7 +145,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
   checkout={
     Object {
       "shippingAddress": Object {
-        "collapsed": true,
+        "completed": true,
       },
       "shippingMethod": Object {},
     }
@@ -196,11 +212,27 @@ exports[`renders the correct checkout cart costs with shipping address completed
              
           </dd>
           <div>
-            <input
+            <Button
+              aria-label="Place Order"
+              disabled={true}
+              label="Place Order"
               onClick={undefined}
+              size="lrg"
+              status="disabled"
               type="button"
-              value="Create Order"
-            />
+            >
+              <button
+                aria-label="Place Order"
+                className="o-button o-button--disabled o-button--lrg"
+                disabled={true}
+                onClick={undefined}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Place Order
+              </button>
+            </Button>
           </div>
         </dl>
       </div>
@@ -232,7 +264,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
   checkout={
     Object {
       "shippingAddress": Object {
-        "collapsed": true,
+        "completed": true,
       },
       "shippingMethod": Object {
         "delivery_date": "Sunday 2nd December",
@@ -309,11 +341,27 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
              
           </dd>
           <div>
-            <input
+            <Button
+              aria-label="Place Order"
+              disabled={true}
+              label="Place Order"
               onClick={undefined}
+              size="lrg"
+              status="disabled"
               type="button"
-              value="Create Order"
-            />
+            >
+              <button
+                aria-label="Place Order"
+                className="o-button o-button--disabled o-button--lrg"
+                disabled={true}
+                onClick={undefined}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Place Order
+              </button>
+            </Button>
           </div>
         </dl>
       </div>
@@ -410,11 +458,27 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
              
           </dd>
           <div>
-            <input
+            <Button
+              aria-label="Place Order"
+              disabled={true}
+              label="Place Order"
               onClick={undefined}
+              size="lrg"
+              status="disabled"
               type="button"
-              value="Create Order"
-            />
+            >
+              <button
+                aria-label="Place Order"
+                className="o-button o-button--disabled o-button--lrg"
+                disabled={true}
+                onClick={undefined}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Place Order
+              </button>
+            </Button>
           </div>
         </dl>
       </div>
@@ -508,11 +572,27 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
              
           </dd>
           <div>
-            <input
+            <Button
+              aria-label="Place Order"
+              disabled={true}
+              label="Place Order"
               onClick={undefined}
+              size="lrg"
+              status="disabled"
               type="button"
-              value="Create Order"
-            />
+            >
+              <button
+                aria-label="Place Order"
+                className="o-button o-button--disabled o-button--lrg"
+                disabled={true}
+                onClick={undefined}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Place Order
+              </button>
+            </Button>
           </div>
         </dl>
       </div>

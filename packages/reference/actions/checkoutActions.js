@@ -13,6 +13,13 @@ export function inputChange (formName, fieldName, fieldValue) {
     dispatch(storeInputChange(formName, fieldName, fieldValue))
   }
 }
+
+export function setValidationMessage (formName, fieldName, errorMessage) {
+  return (dispatch) => {
+    dispatch(storeValidationMessage(formName, fieldName, errorMessage))
+  }
+}
+
 // Store the input change info in the local redux store
 export function storeInputChange (formName, fieldName, fieldValue) {
   return {
@@ -21,6 +28,17 @@ export function storeInputChange (formName, fieldName, fieldValue) {
       formName: formName,
       fieldName: fieldName,
       fieldValue: fieldValue
+    }
+  }
+}
+
+export function storeValidationMessage (formName, fieldName, validationMessage) {
+  return {
+    type: actionTypes.SET_CHECKOUT_INPUT_VALIDATION_MESSAGE,
+    payload: {
+      formName: formName,
+      fieldName: fieldName,
+      validationMessage: validationMessage
     }
   }
 }
@@ -35,10 +53,11 @@ export function showField (formName, fieldName) {
   }
 }
 
-export function toggleCollapsed (componentName) {
+export function toggleCollapsed (eventType, componentName) {
   return {
     type: actionTypes.TOGGLE_CHECKOUT_COMPONENT_COLLAPSED,
     payload: {
+      eventType: eventType,
       componentName: componentName
     }
   }

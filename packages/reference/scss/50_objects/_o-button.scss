@@ -7,18 +7,18 @@
   padding: 0.3rem 0.8rem;
   border: 1px solid #999;
   border-radius: 0.2rem;
-
+  margin: 10px auto;
   font-size: 0.75rem;
 
   $base-color: #f7f7f7;
-  $text-color: #354052;
 
-  border-color: #CED0DA;
+  border-color: $text-primary;
   background: linear-gradient(to bottom, lighten($base-color, 5%), $base-color);
-  color: $text-color;
+  color: $text-primary;
 
   &:hover {
-    border-color: darken(#CED0DA, 15%);
+    margin: 10px auto;
+    border-color: darken($text-primary, 10%);;
     background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);
   }
 
@@ -28,6 +28,8 @@
 
   $color-variations: (
     info:     (background-color: $background-info, color: #fff),
+    disabled: (background-color: $background-disabled, color: #fff),
+    primary:  (background-color: $background-primary, color: #fff),
     positive: (background-color: $background-positive, color: #fff),
     negative: (background-color: $background-negative, color: #fff),
     warning:  (background-color: $background-warning, color: #fff),

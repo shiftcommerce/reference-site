@@ -1,5 +1,12 @@
 .c-shipping-method-list {
 
+  &__header {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-dark;
+  }
+
   &__item-count {
     float: right;
   }

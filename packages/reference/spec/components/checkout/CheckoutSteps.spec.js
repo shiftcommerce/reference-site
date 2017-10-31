@@ -4,7 +4,15 @@ import CheckoutSteps from '../../../components/checkout/CheckoutSteps'
 test('Renders steps correctly', () => {
   // arrange
   const checkout = {
-    currentStep: 2
+    loading: true,
+    error: false,
+    shippingAddress: { collapsed: true, completed: false },
+    shippingMethod: { collapsed: true, completed: false },
+    billingAddress: { collapsed: true, completed: false },
+    shippingAddressAsBillingAddress: true,
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    reviewOrder: { collapsed: true, completed: false },
+    currentStep: 1
   }
 
   // act
@@ -21,6 +29,14 @@ test('Renders steps correctly', () => {
 test('Renders current step 1 correctly', () => {
   // arrange
   const checkout = {
+    loading: true,
+    error: false,
+    shippingAddress: { collapsed: true, completed: false },
+    shippingMethod: { collapsed: true, completed: false },
+    billingAddress: { collapsed: true, completed: false },
+    shippingAddressAsBillingAddress: true,
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    reviewOrder: { collapsed: true, completed: false },
     currentStep: 1
   }
 
@@ -35,6 +51,14 @@ test('Renders current step 1 correctly', () => {
 test('Renders current step 2 correctly', () => {
   // arrange
   const checkout = {
+    loading: true,
+    error: false,
+    shippingAddress: { collapsed: true, completed: true },
+    shippingMethod: { collapsed: true, completed: false },
+    billingAddress: { collapsed: true, completed: false },
+    shippingAddressAsBillingAddress: true,
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    reviewOrder: { collapsed: true, completed: false },
     currentStep: 2
   }
 
@@ -49,6 +73,14 @@ test('Renders current step 2 correctly', () => {
 test('Renders current step 3 correctly', () => {
   // arrange
   const checkout = {
+    loading: true,
+    error: false,
+    shippingAddress: { collapsed: true, completed: true },
+    shippingMethod: { collapsed: true, completed: true },
+    billingAddress: { collapsed: true, completed: false },
+    shippingAddressAsBillingAddress: true,
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    reviewOrder: { collapsed: true, completed: false },
     currentStep: 3
   }
 
@@ -63,6 +95,14 @@ test('Renders current step 3 correctly', () => {
 test('Renders current step 4 correctly', () => {
   // arrange
   const checkout = {
+    loading: true,
+    error: false,
+    shippingAddress: { collapsed: true, completed: true },
+    shippingMethod: { collapsed: true, completed: true },
+    billingAddress: { collapsed: true, completed: true },
+    shippingAddressAsBillingAddress: true,
+    paymentMethod: { collapsed: true, completed: true, selectedMethod: 'card'},
+    reviewOrder: { collapsed: true, completed: false },
     currentStep: 4
   }
 

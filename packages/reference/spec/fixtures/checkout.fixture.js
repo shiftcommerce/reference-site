@@ -29,7 +29,9 @@ const Checkout = {
     'tax_amount': 2,
     'tax_percentage': 20,
     'sku': 'ups_next_day',
-    'reference': 'ups_next_day'
+    'reference': 'ups_next_day',
+    'collapsed': false,
+    'completed': true
   },
   'billingAddress': {
     'label': 'BILLING_LABEL',
@@ -41,7 +43,10 @@ const Checkout = {
     'state': 'Yorkshire',
     'zipcode': 'LS10 1QN',
     'country_code': 'GBP',
-    'primary_phone': '7761410740'
+    'primary_phone': '7761410740',
+    'collapsed': true,
+    'completed': true,
+    'errors': {}
   },
   'shippingAddress': {
     'label': 'BILLING_LABEL',
@@ -53,11 +58,21 @@ const Checkout = {
     'state': 'Yorkshire',
     'zipcode': 'LS10 1QN',
     'country_code': 'GBP',
-    'primary_phone': '7761410740'
+    'primary_phone': '7761410740',
+    'collapsed': true,
+    'completed': true
   },
   'paymentMethod': {
-    'collapsed': false
-  }
+    'collapsed': true,
+    'completed': false
+  },
+  'reviewOrder': {
+    collapsed: true,
+    completed: false
+  },
+  'loading': false,
+  'error': false,
+  'currentStep': 2
 }
 
 export default Checkout

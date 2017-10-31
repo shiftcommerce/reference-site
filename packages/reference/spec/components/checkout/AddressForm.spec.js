@@ -3,7 +3,11 @@ import AddressForm from '../../../components/checkout/AddressForm'
 test('renders the correct base form elements', () => {
   // Arrange
   const checkout = {
-    testAddress: {}
+    testAddress: {
+      collapsed: false,
+      completed: false,
+      errors: {}
+    }
   }
 
   // act
@@ -24,7 +28,6 @@ test('renders the correct base form elements', () => {
   expect(wrapper).toIncludeText('Phone')
   expect(wrapper).toIncludeText('Email')
   expect(wrapper).toIncludeText('Country')
-
 })
 
 test('renders the values from the state', () => {
@@ -38,7 +41,10 @@ test('renders the values from the state', () => {
     city: 'Leeds',
     state: 'Yorkshire',
     primary_phone: '01234567890',
-    email: 'test@example.com'
+    email: 'test@example.com',
+    collapsed: false,
+    completed: false,
+    errors: {}
   }
   const checkout = {
     testAddress: address
@@ -64,7 +70,11 @@ test('renders the values from the state', () => {
 test('renders additional elements for shipping form', () => {
   // Arrange
   const checkout = {
-    shippingAddress: {}
+    shippingAddress: {
+      collapsed: false,
+      completed: false,
+      errors: {}
+    }
   }
 
   // Act
@@ -83,7 +93,10 @@ test('renders the additional company / address2 fields when enabled', () => {
     companyName: 'Test Company',
     companyNameShown: true,
     line_2: 'Test Address Line 2',
-    address2Shown: true
+    address2Shown: true,
+    collapsed: false,
+    completed: false,
+    errors: {}
   }
   const checkout = {
     testAddress: address
@@ -103,7 +116,10 @@ test('does not render the additional company / address2 fields when not enabled'
   // Arrange
   const address = {
     companyNameShown: false,
-    address2Shown: false
+    address2Shown: false,
+    collapsed: false,
+    completed: false,
+    errors: {}
   }
   const checkout = {
     testAddress: address
@@ -122,7 +138,9 @@ test('does not render the additional company / address2 fields when not enabled'
 test('renders the collapsed version of the form when collapsed = true', () => {
   // Arrange
   const address = {
-    collapsed: true
+    collapsed: true,
+    completed: false,
+    errors: {}
   }
   const checkout = {
     testAddress: address
@@ -134,7 +152,7 @@ test('renders the collapsed version of the form when collapsed = true', () => {
   )
 
   // Assert - Edit button present:
-  expect(wrapper).toHaveText("Edit")
+  expect(wrapper).toHaveText('Edit')
   // An input field is not rendered:
   expect(wrapper.find('#full_name').length).toEqual(0)
 })

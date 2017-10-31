@@ -6,11 +6,15 @@ import Router from 'next/router'
 // Utils
 import { configureStore } from '../utils/configureStore'
 
+// Libs
+import InputFieldValidator from '../lib/InputFieldValidator'
+
 // Actions
 import { readCheckoutFromLocalStorage,
   toggleCollapsed,
   setShippingMethod,
   setShippingBillingAddress,
+  setValidationMessage,
   changePaymentMethod,
   inputChange,
   inputComplete,
@@ -24,16 +28,17 @@ import {
 } from '../actions/orderActions'
 
 // Objects
+import Button from '../objects/Button'
 import Logo from '../objects/Logo'
 
 // Components
 import CustomHead from '../components/CustomHead'
-import CheckoutSteps from '../components/checkout/CheckoutSteps.js'
-import AddressForm from '../components/checkout/AddressForm.js'
-import CheckoutCart from '../components/checkout/CheckoutCart.js'
-import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal.js'
-import ShippingMethods from '../components/checkout/ShippingMethods.js'
-import PaymentMethod from '../components/checkout/PaymentMethod.js'
+import CheckoutSteps from '../components/checkout/CheckoutSteps'
+import AddressForm from '../components/checkout/AddressForm'
+import CheckoutCart from '../components/checkout/CheckoutCart'
+import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal'
+import ShippingMethods from '../components/checkout/ShippingMethods'
+import PaymentMethod from '../components/checkout/PaymentMethod'
 
 export class CheckoutPage extends Component {
   constructor () {
@@ -68,19 +73,25 @@ export class CheckoutPage extends Component {
     }
   }
 
-  onToggleCollapsed (componentName) {
-    this.props.dispatch(toggleCollapsed(componentName))
+  onToggleCollapsed (eventType, componentName) {
+    this.props.dispatch(toggleCollapsed(eventType, componentName))
   }
 
   setShippingMethod (shippingMethod) {
     this.props.dispatch(setShippingMethod(shippingMethod))
   }
 
-  onInputChange (event, formName, fieldName) {
-    this.props.dispatch(inputChange(formName, fieldName, event.target.value))
+  onInputChange (event, formName, fieldName, fieldValue) {
+    this.props.dispatch(inputChange(formName, fieldName, fieldValue))
   }
 
-  onInputBlur () {
+  validateInput (formName, fieldName, fieldValue, rules) {
+    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate()
+    this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
+  }
+
+  onInputBlur (event, formName, fieldName, fieldValue, rules) {
+    this.validateInput(formName, fieldName, fieldValue, rules)
     this.props.dispatch(inputComplete())
   }
 
@@ -120,7 +131,10 @@ export class CheckoutPage extends Component {
 
     if (checkout.loading) {
       return (
-        <p>loading...</p>
+        <div>
+          <CustomHead />
+          loading...
+        </div>
       )
     } else if (checkout.error) {
       return (
@@ -147,7 +161,12 @@ export class CheckoutPage extends Component {
                     onShowField={this.onShowField}
                     onToggleCollapsed={this.onToggleCollapsed}
                   />
-                  <ShippingMethods {...this.props} formName='shippingMethod' setShippingMethod={this.setShippingMethod} />
+                  <ShippingMethods
+                    {...this.props}
+                    formName='shippingMethod'
+                    setShippingMethod={this.setShippingMethod}
+                    onToggleCollapsed={this.onToggleCollapsed}
+                  />
                   <PaymentMethod
                     formName='paymentMethod'
                     {...this.props}
@@ -155,11 +174,19 @@ export class CheckoutPage extends Component {
                     onChange={this.onInputChange}
                     onBlur={this.onInputBlur}
                     onPaymentMethodChanged={this.onPaymentMethodChanged}
+                    onToggleCollapsed={this.onToggleCollapsed}
                     onCardTokenReceived={this.onCardTokenReceived}
                   />
                   {!paymentMethodCollapsed &&
                     <div className='o-form'>
-                      <button className='c-button' onClick={() => { this.onToggleCollapsed('paymentMethod') }}>Review Your Order</button>
+                      <Button
+                        aria-label='Review Your Order'
+                        label='Review Your Order'
+                        size='lrg'
+                        status='primary'
+                        type='submit'
+                        onClick={() => { this.onToggleCollapsed('complete', 'paymentMethod') }}
+                      />
                     </div>
                   }
                 </div>

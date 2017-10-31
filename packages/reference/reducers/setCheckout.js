@@ -1,6 +1,9 @@
 // actionTypes
 import * as types from '../actions/actionTypes'
 
+// libs
+import CheckoutStepTransitionManager from '../lib/CheckoutStepTransitionManager'
+
 const addressFormFields = {
   country_code: '',
   first_name: '',
@@ -15,30 +18,36 @@ const addressFormFields = {
   state: '',
   primary_phone: '',
   email: '',
-  newsletterOptIn: '',
-  collapsed: false
+  newsletterOptIn: false,
+  collapsed: false,
+  completed: false,
+  errors: {}
 }
 
 export const checkoutInitialState = {
   loading: true,
   error: false,
-  shippingAddress: addressFormFields,
-  shippingMethod: {
-    collapsed: false
+  shippingAddress: {
+    ...addressFormFields
   },
-  billingAddress: addressFormFields,
-  shippingAddressAsBillingAddress: true,
+  shippingMethod: {
+    collapsed: true,
+    completed: false
+  },
+  billingAddress: {
+    ...addressFormFields
+  },
+  shippingAddressAsBillingAddress: false,
   paymentMethod: {
-    collapsed: false,
+    collapsed: true,
+    completed: false,
     selectedMethod: 'card'
   },
+  reviewOrder: {
+    collapsed: true,
+    completed: false
+  },
   currentStep: 1
-}
-
-const mapComponentsToNextStep = {
-  shippingAddress: 2, // 'View Shipping Options'
-  shippingMethod: 3, // 'Continue to Payment'
-  paymentMethod: 4 // 'Review Your Order'
 }
 
 export default function setCheckout (state = checkoutInitialState, action) {
@@ -50,23 +59,19 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.updatedAt = new Date()
       return newState
 
+    case types.SET_CHECKOUT_INPUT_VALIDATION_MESSAGE:
+      let errors = Object.assign({}, newState[action.payload.formName]['errors'], { [action.payload.fieldName]: action.payload.validationMessage })
+      Object.assign(newState[action.payload.formName], { errors: errors })
+      newState.updatedAt = new Date()
+      return newState
+
     case types.SET_CHECKOUT_INPUT_SHOWN:
       newState[action.payload.formName][action.payload.fieldName] = true
       newState.updatedAt = new Date()
       return newState
 
     case types.TOGGLE_CHECKOUT_COMPONENT_COLLAPSED:
-      const componentName = action.payload.componentName
-      const newCollapsedValue = !newState[componentName].collapsed
-      const newStep = mapComponentsToNextStep[componentName]
-      // If component has just been collapsed, and the component name maps to a step,
-      // and we're not going back to edit an old step
-      if (newCollapsedValue && newStep && newState.currentStep < newStep) {
-        newState.currentStep = newStep
-      }
-      newState[componentName].collapsed = newCollapsedValue
-      newState.updatedAt = new Date()
-      return newState
+      return new CheckoutStepTransitionManager(action.payload.eventType, action.payload.componentName, newState).call()
 
     case types.SET_SHIPPING_METHOD:
       Object.assign(newState.shippingMethod, action.payload.shippingMethod)
@@ -75,6 +80,11 @@ export default function setCheckout (state = checkoutInitialState, action) {
 
     case types.SET_SHIPPING_AS_BILLING_KEY:
       newState[action.payload.fieldName] = action.payload.fieldValue
+      if (action.payload.fieldValue) {
+        Object.assign(newState.billingAddress, newState.shippingAddress, { collapsed: false })
+      } else {
+        Object.assign(newState.billingAddress, addressFormFields)
+      }
       newState.updatedAt = new Date()
       return newState
 

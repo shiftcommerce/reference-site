@@ -7,10 +7,10 @@ class CheckoutSteps extends Component {
     const currentStep = this.props.checkout.currentStep
 
     const checkoutSteps = [
-      { position: 1, title: 'Shipping Address' },
-      { position: 2, title: 'Shipping Method' },
-      { position: 3, title: 'Payment' },
-      { position: 4, title: 'Review & Submit' }
+      { position: 1, title: 'Shipping Address', componentName: 'shippingAddress' },
+      { position: 2, title: 'Shipping Method', componentName: 'shippingMethod' },
+      { position: 3, title: 'Payment', componentName: 'paymentMethod' },
+      { position: 4, title: 'Review & Submit', componentName: 'reviewOrder' }
     ]
 
     const checkoutData = checkoutSteps.map((step, index) =>
@@ -23,23 +23,28 @@ class CheckoutSteps extends Component {
   }
 
   renderCheckoutStep (step, currentStep) {
-    const content = step.position < currentStep ? '✓' : step.position
+    const stepCompleted = this.props.checkout[step.componentName].completed
+    const content = stepCompleted ? '✓' : step.position
     const active = step.position === currentStep
 
-    return <div className={classNames('c-step-indicator', {'c-step-indicator--active': active})}>
-      <div className='c-step-indicator__position'>
-        { content }
+    return (
+      <div className={classNames('c-step-indicator', { 'c-step-indicator--active': active, 'c-step-indicator--completed': stepCompleted })}>
+        <div className='c-step-indicator__position'>
+          { content }
+        </div>
+        <div className='c-step-indicator__subtitle'>
+          { step.title }
+        </div>
       </div>
-      <div className='c-step-indicator__subtitle'>
-        { step.title }
-      </div>
-    </div>
+    )
   }
 
   render () {
-    return <div className='c-step-indicators'>
-      { this.renderCheckoutSteps() }
-    </div>
+    return (
+      <div className='c-step-indicators__steps'>
+        { this.renderCheckoutSteps() }
+      </div>
+    )
   }
 }
 

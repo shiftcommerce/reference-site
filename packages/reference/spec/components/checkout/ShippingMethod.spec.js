@@ -23,6 +23,10 @@ test('render shipping methods as expected', () => {
   }
 
   const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
     shippingMethod: {}
   }
 
@@ -42,6 +46,10 @@ test('render collapsed view as expected', () => {
   const state = {}
 
   const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
     shippingMethod: {
       ...selectedShippingMethod,
       collapsed: true
@@ -82,6 +90,10 @@ test('renders line item quantity as expected', () => {
   }
 
   const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
     shippingMethod: {
       collapsed: false
     }
@@ -109,6 +121,10 @@ test('display pre selected shipping method as selected option on page load', () 
   }
 
   const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
     shippingMethod: {
       ...selectedShippingMethod,
       collapsed: false
@@ -139,6 +155,10 @@ test('should be able to select a shipping method', () => {
   }
 
   const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
     shippingMethod: {
       collapsed: false
     }

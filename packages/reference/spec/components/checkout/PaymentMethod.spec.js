@@ -2,7 +2,7 @@
 import PaymentMethod from '../../../components/checkout/PaymentMethod'
 
 // Mock Stripe checkout
-jest.mock('../../../components/checkout/StripeWrapper', () => ((props) => <p>Mocked Card Fields</p>))
+jest.mock('../../../components/checkout/StripeWrapper', () => (props) => <p>Mocked Card Fields</p>)
 
 test('Renders correct address summary when shippingAsBilling is true', () => {
   // arrange
@@ -13,12 +13,20 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
       line_1: 'Test Address 1',
       line_2: 'Test Address 2',
       city: 'Test City',
-      zipcode: 'Test Postcode'
+      zipcode: 'Test Postcode',
+      collapsed: true,
+      completed: true,
+      errors: {}
     },
     billingAddress: {},
     shippingAddressAsBillingAddress: true,
+    shippingMethod: {
+      collapsed: true,
+      completed: true
+    },
     paymentMethod: {
       collapsed: false,
+      completed: false,
       selectedMethod: 'card'
     }
   }
@@ -53,12 +61,24 @@ test('Does not render address summary when shippingAsBilling is false', () => {
       line_1: 'Test Address 1',
       line_2: 'Test Address 2',
       city: 'Test City',
-      zipcode: 'Test Postcode'
+      zipcode: 'Test Postcode',
+      collapsed: true,
+      completed: true,
+      errors: {}
     },
-    billingAddress: {},
+    billingAddress: {
+      collapsed: false,
+      completed: false,
+      errors: {}
+    },
+    shippingMethod: {
+      collapsed: true,
+      completed: true
+    },
     shippingAddressAsBillingAddress: false,
     paymentMethod: {
       collapsed: false,
+      completed: false,
       selectedMethod: 'card'
     }
   }

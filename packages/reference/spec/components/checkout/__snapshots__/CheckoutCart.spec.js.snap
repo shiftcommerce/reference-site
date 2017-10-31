@@ -25,42 +25,55 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
     aria-label="Cart items summary"
     className="o-checkout-cart"
   >
-    <h3 />
-    <Link
-      href="/cart"
+    <div
+      className="o-checkout-cart__header"
     >
-      <a
-        aria-label="Edit your cart"
-        className="c-button"
-        href="/cart"
-        onClick={[Function]}
-      >
-        Edit
-      </a>
-    </Link>
+      <div>
+        <h2 />
+      </div>
+      <div>
+        <Link
+          href="/cart"
+        >
+          <a
+            aria-label="Edit your cart"
+            className="o-button o-button--lrg"
+            href="/cart"
+            onClick={[Function]}
+          >
+            Edit Cart
+          </a>
+        </Link>
+      </div>
+    </div>
     <div
       className="o-checkout-cart__wrapper"
     >
       <div
         aria-label="Product"
+        className="o-checkout-cart__product"
         key="0"
       >
-        <Image
-          aria-label="Product image"
+        <div
           className="o-checkout-cart__image"
-          height={80}
-          width={80}
         >
-          <div
-            className="c-dummy_image o-checkout-cart__image"
-            style={
-              Object {
-                "height": 80,
-                "width": 80,
+          <Image
+            alt="Test Product"
+            aria-label="Test Product"
+            src={undefined}
+            width={80}
+          >
+            <div
+              className="c-dummy_image"
+              style={
+                Object {
+                  "height": undefined,
+                  "width": 80,
+                }
               }
-            }
-          />
-        </Image>
+            />
+          </Image>
+        </div>
         <ul
           className="o-checkout-cart__info"
         >
@@ -91,24 +104,29 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
       </div>
       <div
         aria-label="Product"
+        className="o-checkout-cart__product"
         key="1"
       >
-        <Image
-          aria-label="Product image"
+        <div
           className="o-checkout-cart__image"
-          height={80}
-          width={80}
         >
-          <div
-            className="c-dummy_image o-checkout-cart__image"
-            style={
-              Object {
-                "height": 80,
-                "width": 80,
+          <Image
+            alt="Pretend Product"
+            aria-label="Pretend Product"
+            src={undefined}
+            width={80}
+          >
+            <div
+              className="c-dummy_image"
+              style={
+                Object {
+                  "height": undefined,
+                  "width": 80,
+                }
               }
-            }
-          />
-        </Image>
+            />
+          </Image>
+        </div>
         <ul
           className="o-checkout-cart__info"
         >
@@ -165,44 +183,57 @@ exports[`renders the correct checkout cart summary with single line item 1`] = `
     aria-label="Cart items summary"
     className="o-checkout-cart"
   >
-    <h3>
-      Checkout Cart Summary
-    </h3>
-    <Link
-      href="/cart"
+    <div
+      className="o-checkout-cart__header"
     >
-      <a
-        aria-label="Edit your cart"
-        className="c-button"
-        href="/cart"
-        onClick={[Function]}
-      >
-        Edit
-      </a>
-    </Link>
+      <div>
+        <h2>
+          Checkout Cart Summary
+        </h2>
+      </div>
+      <div>
+        <Link
+          href="/cart"
+        >
+          <a
+            aria-label="Edit your cart"
+            className="o-button o-button--lrg"
+            href="/cart"
+            onClick={[Function]}
+          >
+            Edit Cart
+          </a>
+        </Link>
+      </div>
+    </div>
     <div
       className="o-checkout-cart__wrapper"
     >
       <div
         aria-label="Product"
+        className="o-checkout-cart__product"
         key="0"
       >
-        <Image
-          aria-label="Product image"
+        <div
           className="o-checkout-cart__image"
-          height={80}
-          width={80}
         >
-          <div
-            className="c-dummy_image o-checkout-cart__image"
-            style={
-              Object {
-                "height": 80,
-                "width": 80,
+          <Image
+            alt="Test Product"
+            aria-label="Test Product"
+            src=""
+            width={80}
+          >
+            <div
+              className="c-dummy_image"
+              style={
+                Object {
+                  "height": undefined,
+                  "width": 80,
+                }
               }
-            }
-          />
-        </Image>
+            />
+          </Image>
+        </div>
         <ul
           className="o-checkout-cart__info"
         >

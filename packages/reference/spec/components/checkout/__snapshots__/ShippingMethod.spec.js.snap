@@ -9,6 +9,10 @@ exports[`display pre selected shipping method as selected option on page load 1`
   }
   checkout={
     Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
       "shippingMethod": Object {
         "collapsed": false,
         "delivery_date": "Sunday 2nd December",
@@ -79,191 +83,222 @@ exports[`display pre selected shipping method as selected option on page load 1`
     aria-label="Shipping Methods"
     className="o-form"
   >
-    <h3>
-      Your Shipping Method
-    </h3>
-    <form
-      className="o-form__wrapper c-shipping-method-list"
+    <div
+      className="o-form__header"
     >
-      <p>
-        📍 Shipping from ...
-        <span
-          className="c-shipping-method-list__item-count"
-        >
-          0 items
-        </span>
-      </p>
       <div>
-        <div
-          aria-label="super_saver"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="1"
-          onClick={[Function]}
-        >
-          <input
-            checked={true}
-            id="super_saver_1"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="super_saver"
-          />
-          <label
-            htmlFor="super_saver"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              3.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              Super Saver
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="2"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_2"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day"
-          />
-          <label
-            htmlFor="ups_next_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              5.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day_before_noon"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_before_noon_3"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day_before_noon"
-          />
-          <label
-            htmlFor="ups_next_day_before_noon"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day Before Noon
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_same_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="4"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_same_day_4"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_same_day"
-          />
-          <label
-            htmlFor="ups_same_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Same Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
+        <h2>
+          Your Shipping Method
+        </h2>
       </div>
-      <button
-        aria-label="Continue to payment"
-        className="c-button"
-        onClick={[Function]}
-        type="button"
+      <div>
+        <undefined />
+      </div>
+    </div>
+    <div>
+      <undefined />
+    </div>
+    <div>
+      <form
+        className="o-form__wrapper c-shipping-method-list"
       >
-        Continue to Payment
-      </button>
-    </form>
+        <div
+          className="c-shipping-method-list__header u-bold"
+        >
+          📍 Shipping from ...
+          <span
+            className="c-shipping-method-list__item-count"
+          >
+            0 items
+          </span>
+        </div>
+        <div>
+          <div
+            aria-label="super_saver"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="1"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              id="super_saver_1"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="super_saver"
+            />
+            <label
+              htmlFor="super_saver"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                3.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                Super Saver
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="2"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_2"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day"
+            />
+            <label
+              htmlFor="ups_next_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                5.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day_before_noon"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="3"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_before_noon_3"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day_before_noon"
+            />
+            <label
+              htmlFor="ups_next_day_before_noon"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day Before Noon
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_same_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="4"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_same_day_4"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_same_day"
+            />
+            <label
+              htmlFor="ups_same_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Same Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-form__input-group"
+        >
+          <Button
+            aria-label="Continue to payment"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            status="primary"
+            type="submit"
+          >
+            <button
+              aria-label="Continue to payment"
+              className="o-button o-button--primary o-button--lrg"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="submit"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
   </div>
 </ShippingMethods>
 `;
@@ -281,6 +316,10 @@ exports[`render collapsed view as expected 1`] = `
   }
   checkout={
     Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
       "shippingMethod": Object {
         "collapsed": true,
         "delivery_date": "Sunday 2nd December",
@@ -301,18 +340,34 @@ exports[`render collapsed view as expected 1`] = `
     aria-label="Shipping Methods"
     className="o-form"
   >
-    <h3>
-      Your Shipping Method
-    </h3>
+    <div
+      className="o-form__header"
+    >
+      <div>
+        <h2>
+          Your Shipping Method
+        </h2>
+      </div>
+      <div>
+        <Button
+          aria-label="Edit your shipping method"
+          label="Edit"
+          onClick={[Function]}
+          size="lrg"
+        >
+          <button
+            aria-label="Edit your shipping method"
+            className="o-button o-button--undefined o-button--lrg"
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Edit
+          </button>
+        </Button>
+      </div>
+    </div>
     <div>
-      <button
-        aria-label="Edit your shipping method"
-        className="c-button"
-        onClick={[Function]}
-        type="button"
-      >
-        Edit
-      </button>
       <div
         className="o-form__wrapper"
       >
@@ -332,6 +387,9 @@ exports[`render collapsed view as expected 1`] = `
         </p>
       </div>
     </div>
+    <div>
+      <undefined />
+    </div>
   </div>
 </ShippingMethods>
 `;
@@ -349,6 +407,10 @@ exports[`render shipping methods as expected 1`] = `
   }
   checkout={
     Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
       "shippingMethod": Object {},
     }
   }
@@ -409,191 +471,218 @@ exports[`render shipping methods as expected 1`] = `
     aria-label="Shipping Methods"
     className="o-form"
   >
-    <h3>
-      Your Shipping Method
-    </h3>
-    <form
-      className="o-form__wrapper c-shipping-method-list"
+    <div
+      className="o-form__header"
     >
-      <p>
-        📍 Shipping from ...
-        <span
-          className="c-shipping-method-list__item-count"
-        >
-          1 item
-        </span>
-      </p>
       <div>
-        <div
-          aria-label="super_saver"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="1"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="super_saver_1"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="super_saver"
-          />
-          <label
-            htmlFor="super_saver"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              3.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              Super Saver
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="2"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_2"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day"
-          />
-          <label
-            htmlFor="ups_next_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              5.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day_before_noon"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_before_noon_3"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day_before_noon"
-          />
-          <label
-            htmlFor="ups_next_day_before_noon"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day Before Noon
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_same_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="4"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_same_day_4"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_same_day"
-          />
-          <label
-            htmlFor="ups_same_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Same Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
+        <h2>
+          Your Shipping Method
+        </h2>
       </div>
-      <button
-        aria-label="Continue to payment"
-        className="c-button"
-        onClick={[Function]}
-        type="button"
+      <div />
+    </div>
+    <div />
+    <div>
+      <form
+        className="o-form__wrapper c-shipping-method-list"
       >
-        Continue to Payment
-      </button>
-    </form>
+        <div
+          className="c-shipping-method-list__header u-bold"
+        >
+          📍 Shipping from ...
+          <span
+            className="c-shipping-method-list__item-count"
+          >
+            1 item
+          </span>
+        </div>
+        <div>
+          <div
+            aria-label="super_saver"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="1"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              id="super_saver_1"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="super_saver"
+            />
+            <label
+              htmlFor="super_saver"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                3.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                Super Saver
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="2"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_2"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day"
+            />
+            <label
+              htmlFor="ups_next_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                5.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day_before_noon"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="3"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_before_noon_3"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day_before_noon"
+            />
+            <label
+              htmlFor="ups_next_day_before_noon"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day Before Noon
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_same_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="4"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_same_day_4"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_same_day"
+            />
+            <label
+              htmlFor="ups_same_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Same Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-form__input-group"
+        >
+          <Button
+            aria-label="Continue to payment"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            status="primary"
+            type="submit"
+          >
+            <button
+              aria-label="Continue to payment"
+              className="o-button o-button--primary o-button--lrg"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="submit"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
   </div>
 </ShippingMethods>
 `;
@@ -607,6 +696,10 @@ exports[`renders line item quantity as expected 1`] = `
   }
   checkout={
     Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
       "shippingMethod": Object {
         "collapsed": false,
       },
@@ -668,191 +761,222 @@ exports[`renders line item quantity as expected 1`] = `
     aria-label="Shipping Methods"
     className="o-form"
   >
-    <h3>
-      Your Shipping Method
-    </h3>
-    <form
-      className="o-form__wrapper c-shipping-method-list"
+    <div
+      className="o-form__header"
     >
-      <p>
-        📍 Shipping from ...
-        <span
-          className="c-shipping-method-list__item-count"
-        >
-          0 items
-        </span>
-      </p>
       <div>
-        <div
-          aria-label="super_saver"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="1"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="super_saver_1"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="super_saver"
-          />
-          <label
-            htmlFor="super_saver"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              3.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              Super Saver
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="2"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_2"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day"
-          />
-          <label
-            htmlFor="ups_next_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              5.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day_before_noon"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_before_noon_3"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day_before_noon"
-          />
-          <label
-            htmlFor="ups_next_day_before_noon"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day Before Noon
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_same_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="4"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_same_day_4"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_same_day"
-          />
-          <label
-            htmlFor="ups_same_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Same Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
+        <h2>
+          Your Shipping Method
+        </h2>
       </div>
-      <button
-        aria-label="Continue to payment"
-        className="c-button"
-        onClick={[Function]}
-        type="button"
+      <div>
+        <undefined />
+      </div>
+    </div>
+    <div>
+      <undefined />
+    </div>
+    <div>
+      <form
+        className="o-form__wrapper c-shipping-method-list"
       >
-        Continue to Payment
-      </button>
-    </form>
+        <div
+          className="c-shipping-method-list__header u-bold"
+        >
+          📍 Shipping from ...
+          <span
+            className="c-shipping-method-list__item-count"
+          >
+            0 items
+          </span>
+        </div>
+        <div>
+          <div
+            aria-label="super_saver"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="1"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              id="super_saver_1"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="super_saver"
+            />
+            <label
+              htmlFor="super_saver"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                3.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                Super Saver
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="2"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_2"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day"
+            />
+            <label
+              htmlFor="ups_next_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                5.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day_before_noon"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="3"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_before_noon_3"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day_before_noon"
+            />
+            <label
+              htmlFor="ups_next_day_before_noon"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day Before Noon
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_same_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="4"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_same_day_4"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_same_day"
+            />
+            <label
+              htmlFor="ups_same_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Same Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-form__input-group"
+        >
+          <Button
+            aria-label="Continue to payment"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            status="primary"
+            type="submit"
+          >
+            <button
+              aria-label="Continue to payment"
+              className="o-button o-button--primary o-button--lrg"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="submit"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
   </div>
 </ShippingMethods>
 `;
@@ -866,6 +990,10 @@ exports[`should be able to select a shipping method 1`] = `
   }
   checkout={
     Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
       "shippingMethod": Object {
         "collapsed": false,
       },
@@ -928,191 +1056,222 @@ exports[`should be able to select a shipping method 1`] = `
     aria-label="Shipping Methods"
     className="o-form"
   >
-    <h3>
-      Your Shipping Method
-    </h3>
-    <form
-      className="o-form__wrapper c-shipping-method-list"
+    <div
+      className="o-form__header"
     >
-      <p>
-        📍 Shipping from ...
-        <span
-          className="c-shipping-method-list__item-count"
-        >
-          0 items
-        </span>
-      </p>
       <div>
-        <div
-          aria-label="super_saver"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="1"
-          onClick={[Function]}
-        >
-          <input
-            checked={true}
-            id="super_saver_1"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="super_saver"
-          />
-          <label
-            htmlFor="super_saver"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              3.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              Super Saver
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="2"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_2"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day"
-          />
-          <label
-            htmlFor="ups_next_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              5.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_next_day_before_noon"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_next_day_before_noon_3"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_next_day_before_noon"
-          />
-          <label
-            htmlFor="ups_next_day_before_noon"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Next Day Before Noon
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
-        <div
-          aria-label="ups_same_day"
-          className="o-form__input-group c-shipping-method-list__input-group"
-          key="4"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            id="ups_same_day_4"
-            name="shipping_method"
-            onChange={[Function]}
-            type="radio"
-            value="ups_same_day"
-          />
-          <label
-            htmlFor="ups_same_day"
-          >
-            <span
-              className="c-shipping-method-list__cost"
-            >
-              £
-              8.45
-            </span>
-            <span
-              className="c-shipping-method-list__title"
-            >
-              UPS Same Day
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date-label"
-            >
-              Estimated Delivery: 
-            </span>
-            <span
-              className="c-shipping-method-list__delivery-date"
-            >
-              Sunday 2nd December
-            </span>
-          </label>
-        </div>
+        <h2>
+          Your Shipping Method
+        </h2>
       </div>
-      <button
-        aria-label="Continue to payment"
-        className="c-button"
-        onClick={[Function]}
-        type="button"
+      <div>
+        <undefined />
+      </div>
+    </div>
+    <div>
+      <undefined />
+    </div>
+    <div>
+      <form
+        className="o-form__wrapper c-shipping-method-list"
       >
-        Continue to Payment
-      </button>
-    </form>
+        <div
+          className="c-shipping-method-list__header u-bold"
+        >
+          📍 Shipping from ...
+          <span
+            className="c-shipping-method-list__item-count"
+          >
+            0 items
+          </span>
+        </div>
+        <div>
+          <div
+            aria-label="super_saver"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="1"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              id="super_saver_1"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="super_saver"
+            />
+            <label
+              htmlFor="super_saver"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                3.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                Super Saver
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="2"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_2"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day"
+            />
+            <label
+              htmlFor="ups_next_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                5.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_next_day_before_noon"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="3"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_next_day_before_noon_3"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_next_day_before_noon"
+            />
+            <label
+              htmlFor="ups_next_day_before_noon"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Next Day Before Noon
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+          <div
+            aria-label="ups_same_day"
+            className="o-form__input-group c-shipping-method-list__input-group"
+            key="4"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              id="ups_same_day_4"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="ups_same_day"
+            />
+            <label
+              htmlFor="ups_same_day"
+            >
+              <span
+                className="c-shipping-method-list__cost"
+              >
+                £
+                8.45
+              </span>
+              <span
+                className="c-shipping-method-list__title"
+              >
+                UPS Same Day
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date-label"
+              >
+                Estimated Delivery: 
+              </span>
+              <span
+                className="c-shipping-method-list__delivery-date"
+              >
+                Sunday 2nd December
+              </span>
+            </label>
+          </div>
+        </div>
+        <div
+          className="o-form__input-group"
+        >
+          <Button
+            aria-label="Continue to payment"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            status="primary"
+            type="submit"
+          >
+            <button
+              aria-label="Continue to payment"
+              className="o-button o-button--primary o-button--lrg"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="submit"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
   </div>
 </ShippingMethods>
 `;

@@ -63,7 +63,7 @@ class StripeCardFields extends Component {
         <CardNumberElement
           className={classNames('o-form__input-field', { 'o-form__input-field__error': (errors.CardNumberElement !== '') })}
           onChange={this.handleChange.bind(this, 'CardNumberElement')}
-         />
+        />
       </label>
 
       { this.renderValidationMessageFor('CardNumberElement') }

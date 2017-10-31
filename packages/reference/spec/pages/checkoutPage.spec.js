@@ -62,16 +62,22 @@ test('redirects to cart page when lineItems is empty', () => {
   }
   const checkout = {
     shippingAddress: {
-      collapsed: false
+      collapsed: false,
+      completed: false,
+      errors: {}
     },
     shippingMethod: {
-      collapsed: false
+      collapsed: false,
+      completed: false
     },
     billingAddress: {
-      collapsed: false
+      collapsed: false,
+      completed: false,
+      errors: {}
     },
     paymentMethod: {
-      collapsed: false
+      collapsed: false,
+      completed: false
     },
     currentStep: 1
   }
@@ -128,7 +134,6 @@ test('redirects to order confirmation page, on creating an order', () => {
 
   // Assert - verify that the redirect goes to the order confirmation page
   expect(Router.router.push.mock.calls[0][0]).toBe('/order')
-
 })
 
 test('should not redirect to order confirmation page, if no new order got created', () => {
@@ -156,7 +161,6 @@ test('should not redirect to order confirmation page, if no new order got create
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(0)
-
 })
 
 test('should redirect to order confirmation page, if new order got created', () => {
@@ -195,7 +199,6 @@ test('should redirect to order confirmation page, if new order got created', () 
 
   // Assert - verify that the redirect goes to the order confirmation page
   expect(Router.router.push.mock.calls[0][0]).toBe('/order')
-
 })
 
 test('dispatch intializeCart action on creating an order', () => {

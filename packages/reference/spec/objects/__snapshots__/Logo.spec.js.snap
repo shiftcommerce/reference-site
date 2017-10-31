@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Logo
+  className="o-header__logo"
+>
+  <div
+    className="o-header__logo"
+  >
+    <Link
+      as="/"
+      href="/home/index"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <Image
+          height={79}
+          src="/static/logo.svg"
+          width={72}
+        >
+          <div
+            className={undefined}
+            style={
+              Object {
+                "height": 79,
+                "width": 72,
+              }
+            }
+          >
+            <img
+              className="c-image"
+              height={79}
+              src="/static/logo.svg"
+              width={72}
+            />
+          </div>
+        </Image>
+      </a>
+    </Link>
+  </div>
+</Logo>
+`;

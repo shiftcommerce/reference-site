@@ -103,7 +103,7 @@ test('renders the correct checkout cart costs with shipping address completed', 
 
   const checkout = {
     shippingAddress: {
-      collapsed: true
+      completed: true
     },
     shippingMethod: {}
   }
@@ -146,7 +146,7 @@ test('renders the correct checkout cart costs with shipping method selected', ()
 
   const checkout = {
     shippingAddress: {
-      collapsed: true
+      completed: true
     },
     shippingMethod: shippingMethods[0]
   }

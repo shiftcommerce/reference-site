@@ -6,7 +6,7 @@ import StripeWrapper from './StripeWrapper'
 import AddressForm from './AddressForm'
 
 // Objects
-import Input from './../../objects/Input'
+import Checkbox from './../../objects/Checkbox'
 
 class StripePayment extends Component {
   render () {
@@ -31,11 +31,11 @@ class StripePayment extends Component {
           <label>Billing address *</label>
         </div>
 
-        <Input
+        <Checkbox
           type='checkbox'
           label='Same as shipping address'
           name='shippingAddressAsBillingAddress'
-          value={checkout.shippingAddressAsBillingAddress}
+          checked={!!checkout.shippingAddressAsBillingAddress}
           formName={formName}
           onChange={setBillingShippingAddress}
           onBlur={onBlur}
