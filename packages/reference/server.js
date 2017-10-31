@@ -30,7 +30,7 @@ app.prepare().then(() => {
 
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
-    createReadStream('./static/serviceWorker.js').pipe(res)
+    createReadStream('./serviceWorker.js').pipe(res)
   })
 
   // server.get('/products/:id', (req, res) => {
