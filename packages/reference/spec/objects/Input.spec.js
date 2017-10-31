@@ -7,7 +7,7 @@ test('renders text input field containing value', () => {
   const value = Math.random().toString(36).substring(2, 12)
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input value={value} />
   )
 
@@ -20,7 +20,7 @@ test('renders text input field containing placeholder', () => {
   const placeholder = Math.random().toString(36).substring(2, 12)
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input placeholder={placeholder} />
   )
 
@@ -33,7 +33,7 @@ test('renders text input field with given name', () => {
   const name = Math.random().toString(36).substring(2, 12)
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input name={name} />
   )
 
@@ -45,7 +45,7 @@ test('defaults to text type', () => {
   // arrange
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input />
   )
 
@@ -57,7 +57,7 @@ test('sets input field type when passed in', () => {
   // arrange
   const type = 'number'
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input type={type} />
   )
 
@@ -70,7 +70,7 @@ test('renders text input label containing label text', () => {
   const label = 'My Input'
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input label={label} />
   )
 
@@ -84,7 +84,7 @@ test('renders text input label for a specific input name', () => {
   const name = 'my_input_id'
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <Input label={label} name={name} />
   )
 

@@ -3,7 +3,10 @@ engines:
     enabled: true
   duplication:
     enabled: true
-
+    config:
+      languages:
+        javascript:
+          mass_threshold: 300
 ratings:
    paths:
    - "**.js"

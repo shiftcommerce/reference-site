@@ -2,9 +2,12 @@
 import { Component } from 'react'
 import classNames from 'classnames'
 
-export default class Input extends Component {
-  constructor () {
-    super()
+// HOC
+import { withValidationMessage } from './withValidationMessage'
+
+class Input extends Component {
+  constructor (props) {
+    super(props)
 
     this.triggerChange = this.triggerChange.bind(this)
     this.triggerBlur = this.triggerBlur.bind(this)
@@ -12,15 +15,19 @@ export default class Input extends Component {
 
   triggerChange (event) {
     const { formName, name, onChange } = this.props
+    const value = event.target.value
+
     if (onChange) {
-      onChange(event, formName, name)
+      onChange(event, formName, name, value)
     }
   }
 
   triggerBlur (event) {
-    const { formName, name, onBlur } = this.props
+    const { formName, name, rules, onBlur } = this.props
+    const value = event.target.value
+
     if (onBlur) {
-      onBlur(event, formName, name)
+      onBlur(event, formName, name, value, rules)
     }
   }
 
@@ -32,15 +39,16 @@ export default class Input extends Component {
   }
 
   renderInputField () {
-    const { inputId, value, name, required, placeholder, className } = this.props
+    const { inputId, value, name, required, placeholder, className, validationMessage } = this.props
     const type = this.props.type || 'text'
     const id = inputId || name
     let fieldValue = value || ''
+    let validationErrorPresent = (validationMessage !== undefined) && (validationMessage !== '')
 
     return (
       <input value={fieldValue}
         checked={fieldValue === true}
-        className={classNames('o-form__input-field', className)}
+        className={classNames('o-form__input-field', className, { 'o-form__input-field__error': validationErrorPresent })}
         type={type}
         id={id}
         name={name}
@@ -53,7 +61,7 @@ export default class Input extends Component {
   }
 
   render () {
-    const hidden = this.props.hidden
+    const { hidden, renderValidationMessage } = this.props
     const type = this.props.type || 'text'
 
     let inputFields = ''
@@ -73,7 +81,10 @@ export default class Input extends Component {
     return (
       <div className={classNames('o-form__input-group', {'u-hidden': hidden})}>
         { inputFields }
+        { renderValidationMessage() }
       </div>
     )
   }
 }
+
+export default withValidationMessage()(Input)
