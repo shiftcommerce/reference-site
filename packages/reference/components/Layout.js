@@ -1,12 +1,11 @@
 // Libraries
 import { Component } from 'react'
-import Link from 'next/link'
 
 // Scripts
 import Script from './../utils/Script'
 
 // Objects
-import Image from '../objects/Image'
+import Logo from '../objects/Logo'
 
 // Components
 import MiniBag from './MiniBag'
@@ -55,13 +54,7 @@ class Layout extends Component {
         <CustomHead />
         {serviceWorker}
         <div className='o-header'>
-          <span className='o-header__logo'>
-            <Link href='/home/index' as='/'>
-              <a>
-                <Image width={52} height={59} src='/static/logo.svg' />
-              </a>
-            </Link>
-          </span>
+          <Logo className='o-header__logo' />
           <span className='o-header__search'>
             <SearchBar queryObject={searchObject} onChange={onSearchQueryChange} {...this.props} />
           </span>

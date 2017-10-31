@@ -95,34 +95,46 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
       <div
         className="o-header"
       >
-        <span
-          className="o-header__logo"
+        <Logo
+          className="c-step-indicators__logo u-text-color--primary"
         >
-          <Link
-            as="/"
-            href="/home/index"
+          <div
+            className="c-step-indicators__logo u-text-color--primary"
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <Link
+              as="/"
+              href="/home/index"
             >
-              <Image
-                height={80}
-                width={200}
+              <a
+                href="/"
+                onClick={[Function]}
               >
-                <div
-                  className="c-dummy_image"
-                  style={
-                    Object {
-                      "height": 80,
-                      "width": 200,
+                <Image
+                  height={79}
+                  src="/static/logo.svg"
+                  width={72}
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "height": 79,
+                        "width": 72,
+                      }
                     }
-                  }
-                />
-              </Image>
-            </a>
-          </Link>
-        </span>
+                  >
+                    <img
+                      className="c-image"
+                      height={79}
+                      src="/static/logo.svg"
+                      width={72}
+                    />
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </Logo>
         <CheckoutSteps
           cart={
             Object {
@@ -1715,34 +1727,46 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
         <div
           className="o-header"
         >
-          <span
-            className="o-header__logo"
+          <Logo
+            className="c-step-indicators__logo u-text-color--primary"
           >
-            <Link
-              as="/"
-              href="/home/index"
+            <div
+              className="c-step-indicators__logo u-text-color--primary"
             >
-              <a
-                href="/"
-                onClick={[Function]}
+              <Link
+                as="/"
+                href="/home/index"
               >
-                <Image
-                  height={80}
-                  width={200}
+                <a
+                  href="/"
+                  onClick={[Function]}
                 >
-                  <div
-                    className="c-dummy_image"
-                    style={
-                      Object {
-                        "height": 80,
-                        "width": 200,
+                  <Image
+                    height={79}
+                    src="/static/logo.svg"
+                    width={72}
+                  >
+                    <div
+                      className={undefined}
+                      style={
+                        Object {
+                          "height": 79,
+                          "width": 72,
+                        }
                       }
-                    }
-                  />
-                </Image>
-              </a>
-            </Link>
-          </span>
+                    >
+                      <img
+                        className="c-image"
+                        height={79}
+                        src="/static/logo.svg"
+                        width={72}
+                      />
+                    </div>
+                  </Image>
+                </a>
+              </Link>
+            </div>
+          </Logo>
           <CheckoutSteps
             cart={
               Object {
@@ -3323,34 +3347,46 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
       <div
         className="o-header"
       >
-        <span
-          className="o-header__logo"
+        <Logo
+          className="c-step-indicators__logo u-text-color--primary"
         >
-          <Link
-            as="/"
-            href="/home/index"
+          <div
+            className="c-step-indicators__logo u-text-color--primary"
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <Link
+              as="/"
+              href="/home/index"
             >
-              <Image
-                height={80}
-                width={200}
+              <a
+                href="/"
+                onClick={[Function]}
               >
-                <div
-                  className="c-dummy_image"
-                  style={
-                    Object {
-                      "height": 80,
-                      "width": 200,
+                <Image
+                  height={79}
+                  src="/static/logo.svg"
+                  width={72}
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "height": 79,
+                        "width": 72,
+                      }
                     }
-                  }
-                />
-              </Image>
-            </a>
-          </Link>
-        </span>
+                  >
+                    <img
+                      className="c-image"
+                      height={79}
+                      src="/static/logo.svg"
+                      width={72}
+                    />
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </Logo>
         <CheckoutSteps
           cart={
             Object {
@@ -4993,34 +5029,46 @@ exports[`should not redirect to order confirmation page, if no new order got cre
       <div
         className="o-header"
       >
-        <span
-          className="o-header__logo"
+        <Logo
+          className="c-step-indicators__logo u-text-color--primary"
         >
-          <Link
-            as="/"
-            href="/home/index"
+          <div
+            className="c-step-indicators__logo u-text-color--primary"
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <Link
+              as="/"
+              href="/home/index"
             >
-              <Image
-                height={80}
-                width={200}
+              <a
+                href="/"
+                onClick={[Function]}
               >
-                <div
-                  className="c-dummy_image"
-                  style={
-                    Object {
-                      "height": 80,
-                      "width": 200,
+                <Image
+                  height={79}
+                  src="/static/logo.svg"
+                  width={72}
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "height": 79,
+                        "width": 72,
+                      }
                     }
-                  }
-                />
-              </Image>
-            </a>
-          </Link>
-        </span>
+                  >
+                    <img
+                      className="c-image"
+                      height={79}
+                      src="/static/logo.svg"
+                      width={72}
+                    />
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </Logo>
         <CheckoutSteps
           cart={
             Object {
@@ -7041,34 +7089,46 @@ exports[`should redirect to order confirmation page, if new order got created 1`
       <div
         className="o-header"
       >
-        <span
-          className="o-header__logo"
+        <Logo
+          className="c-step-indicators__logo u-text-color--primary"
         >
-          <Link
-            as="/"
-            href="/home/index"
+          <div
+            className="c-step-indicators__logo u-text-color--primary"
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <Link
+              as="/"
+              href="/home/index"
             >
-              <Image
-                height={80}
-                width={200}
+              <a
+                href="/"
+                onClick={[Function]}
               >
-                <div
-                  className="c-dummy_image"
-                  style={
-                    Object {
-                      "height": 80,
-                      "width": 200,
+                <Image
+                  height={79}
+                  src="/static/logo.svg"
+                  width={72}
+                >
+                  <div
+                    className={undefined}
+                    style={
+                      Object {
+                        "height": 79,
+                        "width": 72,
+                      }
                     }
-                  }
-                />
-              </Image>
-            </a>
-          </Link>
-        </span>
+                  >
+                    <img
+                      className="c-image"
+                      height={79}
+                      src="/static/logo.svg"
+                      width={72}
+                    />
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </Logo>
         <CheckoutSteps
           cart={
             Object {

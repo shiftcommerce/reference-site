@@ -44,42 +44,46 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         <div
           className="o-header"
         >
-          <span
+          <Logo
             className="o-header__logo"
           >
-            <Link
-              as="/"
-              href="/home/index"
+            <div
+              className="o-header__logo"
             >
-              <a
-                href="/"
-                onClick={[Function]}
+              <Link
+                as="/"
+                href="/home/index"
               >
-                <Image
-                  height={59}
-                  src="/static/logo.svg"
-                  width={52}
+                <a
+                  href="/"
+                  onClick={[Function]}
                 >
-                  <div
-                    className={undefined}
-                    style={
-                      Object {
-                        "height": 59,
-                        "width": 52,
-                      }
-                    }
+                  <Image
+                    height={79}
+                    src="/static/logo.svg"
+                    width={72}
                   >
-                    <img
-                      className="c-image"
-                      height={59}
-                      src="/static/logo.svg"
-                      width={52}
-                    />
-                  </div>
-                </Image>
-              </a>
-            </Link>
-          </span>
+                    <div
+                      className={undefined}
+                      style={
+                        Object {
+                          "height": 79,
+                          "width": 72,
+                        }
+                      }
+                    >
+                      <img
+                        className="c-image"
+                        height={79}
+                        src="/static/logo.svg"
+                        width={72}
+                      />
+                    </div>
+                  </Image>
+                </a>
+              </Link>
+            </div>
+          </Logo>
           <span
             className="o-header__search"
           >

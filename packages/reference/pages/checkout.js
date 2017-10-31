@@ -2,7 +2,6 @@
 import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 import Router from 'next/router'
-import Link from 'next/link'
 
 // Utils
 import { configureStore } from '../utils/configureStore'
@@ -25,7 +24,7 @@ import {
 } from '../actions/orderActions'
 
 // Objects
-import Image from '../objects/Image'
+import Logo from '../objects/Logo'
 
 // Components
 import CustomHead from '../components/CustomHead'
@@ -134,13 +133,7 @@ export class CheckoutPage extends Component {
           {hasLineItems &&
             <div>
               <div className='o-header'>
-                <span className='o-header__logo'>
-                  <Link href='/home/index' as='/'>
-                    <a>
-                      <Image width={200} height={80} />
-                    </a>
-                  </Link>
-                </span>
+                <Logo className='c-step-indicators__logo u-text-color--primary' />
                 <CheckoutSteps {...this.props} />
               </div>
               <div className='o-grid-container'>

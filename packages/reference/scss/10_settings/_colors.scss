@@ -2,22 +2,30 @@
    # Colour Settings
    ========================================================================== */
 
-$text-default: #7F8FA4;
-$text-focus: #354052;
-$text-error: #ff0000;
-$text-success: #009900;
-$text-dark: #383838;
-$text-gold: #e68a00;
-
-$background-light: #EFF3F6;
-$background-info: #4598B8;
-$background-positive: #45B854;
-$background-warning: #F7BF47;
-$background-negative: #D55742;
-$background-white: #ffffff;
-$background-dark: #737376;
-
-$border-highlight: #1990EA;
-$border-divider: #EFF3F6;
-$border-shadow: #DFE2E5;
-$border-default: #DADADA;
+   $text-default: #7F8FA4;
+   $text-focus: #354052;
+   $text-error: #ff0000;
+   $text-success: #009900;
+   $text-dark: #383838;
+   $text-gold: #e68a00;
+   $text-info: #4598B8;
+   $text-primary: #4285f4;
+   
+   $background-disabled: #8BC0DD;
+   $background-light: #F8FDFF;
+   $background-info: #4598B8;
+   $background-positive: #45B854;
+   $background-warning: #F7BF47;
+   $background-negative: #D55742;
+   $background-white: #ffffff;
+   $background-dark: #737376;
+   $background-primary: #4285f4;
+   $background-grey: #E4E4E4;
+   $background-light-grey: #EEEFF3;
+   
+   $border-highlight: #1990EA;
+   $border-divider: #EFF3F6;
+   $border-shadow: #DFE2E5;
+   $border-default: #DADADA;
+   $border-dark: #000000;
+   $border-error: #ff0000;
