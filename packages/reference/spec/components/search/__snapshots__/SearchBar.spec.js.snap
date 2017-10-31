@@ -23,10 +23,10 @@ exports[`renders the header 1`] = `
       <Button
         label="Search"
         size="lrg"
-        status="dark"
+        status="primary"
       >
         <button
-          className="o-button o-button--dark o-button--lrg"
+          className="o-button o-button--primary o-button--lrg"
           role="button"
           tabIndex="0"
         >

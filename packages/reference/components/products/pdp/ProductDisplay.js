@@ -67,7 +67,7 @@ class ProductDisplay extends Component {
               </div>
 
               <div className='c-product-display__add-button'>
-                <Button label='ADD TO BAG' status='positive' aria-label='Add to Bag' onClick={addToBag} />
+                <Button label='ADD TO BAG' status='primary' size='lrg' aria-label='Add to Bag' onClick={addToBag} />
               </div>
             </section>
 

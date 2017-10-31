@@ -23,7 +23,7 @@ class Product extends Component {
     this.state = {
       sku: '',
       size: '',
-      quantity: '',
+      quantity: 1,
       price: ''
     }
 
@@ -59,7 +59,7 @@ class Product extends Component {
       this.props.dispatch(addToCart(lineItem))
     } else {
       /*eslint-disable */
-      alert('Please select the size and quantity')
+      alert('Please select a size')
       /*eslint-enable */
     }
   }
