@@ -35,7 +35,7 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   expect(wrapper).toMatchSnapshot()
 
   // Verify if cart line items are available
-  expect(wrapper).toIncludeText('1 item')
+  expect(wrapper).toIncludeText('2 items')
 
   // To clear the logs of dispatch being called on component mount
   dispatch.mockClear()
@@ -58,7 +58,8 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
 test('redirects to cart page when lineItems is empty', () => {
   // Arrange
   const cart = {
-    lineItems: []
+    lineItems: [],
+    totalQuantity: 0
   }
   const checkout = {
     shippingAddress: {

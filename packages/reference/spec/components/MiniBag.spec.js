@@ -16,7 +16,8 @@ test('renders the minibag links', () => {
         productSku: '1231',
         productID: 1
       }
-    ]
+    ],
+    totalQuantity: 0
   }
   const dispatch = () => {}
 
@@ -32,7 +33,8 @@ test('renders the minibag links', () => {
 test('renders the minibag links', () => {
   // arrange
   const cart = {
-    lineItems: []
+    lineItems: [],
+    totalQuantity: 0
   }
   const dispatch = () => {}
 
@@ -60,7 +62,8 @@ test('renders the line item quantity as expected, where are items', () => {
         productSku: '1231',
         productID: 1
       }
-    ]
+    ],
+    totalQuantity: 2
   }
   const dispatch = () => {}
 
@@ -70,7 +73,7 @@ test('renders the line item quantity as expected, where are items', () => {
   )
 
   // assert
-  expect(wrapper).toIncludeText('View Your Bag(1)')
+  expect(wrapper).toIncludeText('View Your Bag(2)')
 })
 
 test('renders an active checkout button where cart has items', () => {
@@ -88,7 +91,8 @@ test('renders an active checkout button where cart has items', () => {
         productSku: '1231',
         productID: 1
       }
-    ]
+    ],
+    totalQuantity: 2
   }
   const dispatch = () => {}
 
@@ -106,7 +110,8 @@ test('renders an active checkout button where cart has items', () => {
 test('renders a disabled checkout button where cart is empty', () => {
   // arrange
   const cart = {
-    lineItems: []
+    lineItems: [],
+    totalQuantity: 0
   }
   const dispatch = () => {}
 

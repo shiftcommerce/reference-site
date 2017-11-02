@@ -35,7 +35,7 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
   expect(wrapper).toMatchSnapshot()
 
   // Verify if cart line items are available
-  expect(wrapper).toIncludeText('1 item in your bag')
+  expect(wrapper).toIncludeText('2 items in your bag')
 
   // To clear the logs of dispatch being called on component mount
   dispatch.mockClear()

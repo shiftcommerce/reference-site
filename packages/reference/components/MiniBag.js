@@ -37,8 +37,7 @@ export class MiniBag extends Component {
 
   render () {
     let { cart } = this.props
-    let lineItems = cart.lineItems
-    let lineItemCount = (lineItems && lineItems.length) || 0
+    let lineItemCount = cart.totalQuantity
 
     return (
       <div>

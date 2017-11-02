@@ -109,7 +109,7 @@ exports[`display pre selected shipping method as selected option on page load 1`
           <span
             className="c-shipping-method-list__item-count"
           >
-            0 items
+            undefined items
           </span>
         </div>
         <div>
@@ -405,6 +405,7 @@ exports[`render shipping methods as expected 1`] = `
           "id": "1",
         },
       ],
+      "totalQuantity": 1,
     }
   }
   checkout={
@@ -695,6 +696,7 @@ exports[`renders line item quantity as expected 1`] = `
   cart={
     Object {
       "lineItems": Array [],
+      "totalQuantity": 0,
     }
   }
   checkout={
@@ -1086,7 +1088,7 @@ exports[`should be able to select a shipping method 1`] = `
           <span
             className="c-shipping-method-list__item-count"
           >
-            0 items
+            undefined items
           </span>
         </div>
         <div>

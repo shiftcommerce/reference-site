@@ -3,7 +3,7 @@ import * as cartHandler from '../../../actions/handlers/cartHandler'
 describe('addToCart()', () => {
   test('add line items to cart, when initial cart is empty', () => {
     // arrange
-    const cart = { lineItems: [] }
+    const cart = { lineItems: [], totalQuantity: 0 }
     const lineItemToAdd = {
       title: 'test',
       price: 10,
@@ -24,7 +24,8 @@ describe('addToCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 5
     }
 
     // act
@@ -47,7 +48,8 @@ describe('addToCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 2
     }
     const lineItemToAdd = {
       title: 'test',
@@ -69,7 +71,8 @@ describe('addToCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 7
     }
 
     // act
@@ -92,7 +95,8 @@ describe('addToCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 2
     }
     const lineItemToAdd = {
       title: 'test',
@@ -123,7 +127,8 @@ describe('addToCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 7
     }
 
     // act
@@ -148,7 +153,8 @@ describe('updateCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 2
     }
     const lineItemToAdd = {
       quantity: 5,
@@ -165,7 +171,8 @@ describe('updateCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 5
     }
 
     // act
@@ -188,13 +195,14 @@ describe('updateCart()', () => {
           imageUrl: '',
           size: 'size - 8'
         }
-      ]
+      ],
+      totalQuantity: 2
     }
     const lineItemToAdd = {
       quantity: 0,
       sku: '123'
     }
-    const expectedCart = { lineItems: [] }
+    const expectedCart = { lineItems: [], totalQuantity: 0 }
 
     // act
     const resultCart = cartHandler.updateCart(cart, lineItemToAdd, {})

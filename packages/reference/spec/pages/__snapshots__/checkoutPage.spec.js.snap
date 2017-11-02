@@ -17,6 +17,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -168,6 +169,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -358,6 +360,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -522,6 +525,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -640,7 +644,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -849,6 +853,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -1050,6 +1055,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -1238,6 +1244,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -1435,6 +1442,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -1588,6 +1596,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -1780,6 +1789,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -1946,6 +1956,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -2066,7 +2077,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -2275,6 +2286,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -2478,6 +2490,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -2668,6 +2681,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -2867,6 +2881,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -3016,6 +3031,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -3204,6 +3220,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -3366,6 +3383,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -3482,7 +3500,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -3691,6 +3709,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -3909,6 +3928,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -4095,6 +4115,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -4303,6 +4324,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             "title": "test",
           },
         ],
+        "totalQuantity": 2,
       }
     }
     checkout={
@@ -4452,6 +4474,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -4640,6 +4663,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       "title": "test",
                     },
                   ],
+                  "totalQuantity": 2,
                 }
               }
               checkout={
@@ -4802,6 +4826,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       "title": "test",
                     },
                   ],
+                  "totalQuantity": 2,
                 }
               }
               checkout={
@@ -4918,7 +4943,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       <span
                         className="c-shipping-method-list__item-count"
                       >
-                        1 item
+                        2 items
                       </span>
                     </div>
                     <div>
@@ -5127,6 +5152,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       "title": "test",
                     },
                   ],
+                  "totalQuantity": 2,
                 }
               }
               checkout={
@@ -5345,6 +5371,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       "title": "test",
                     },
                   ],
+                  "totalQuantity": 2,
                 }
               }
               checkout={
@@ -5531,6 +5558,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       "title": "test",
                     },
                   ],
+                  "totalQuantity": 2,
                 }
               }
               checkout={
@@ -5727,6 +5755,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -5876,6 +5905,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -6064,6 +6094,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -6226,6 +6257,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -6342,7 +6374,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -6551,6 +6583,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -6769,6 +6802,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -6955,6 +6989,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -7150,6 +7185,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -7377,6 +7413,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -7643,6 +7680,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -7883,6 +7921,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -8077,7 +8116,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -8286,6 +8325,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -8582,6 +8622,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -8846,6 +8887,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -9119,6 +9161,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   checkout={
@@ -9346,6 +9389,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   "title": "test",
                 },
               ],
+              "totalQuantity": 2,
             }
           }
           checkout={
@@ -9612,6 +9656,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -9852,6 +9897,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -10046,7 +10092,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     <span
                       className="c-shipping-method-list__item-count"
                     >
-                      1 item
+                      2 items
                     </span>
                   </div>
                   <div>
@@ -10255,6 +10301,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -10551,6 +10598,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={
@@ -10815,6 +10863,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             checkout={

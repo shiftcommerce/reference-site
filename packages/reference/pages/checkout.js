@@ -60,7 +60,7 @@ export class CheckoutPage extends Component {
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
     this.props.dispatch(readCart()).then((cart) => {
-      if (cart.lineItems.length === 0) Router.push('/cart')
+      if (cart.totalQuantity === 0) Router.push('/cart')
     })
   }
 
@@ -139,7 +139,7 @@ export class CheckoutPage extends Component {
 
   render () {
     const { checkout, cart } = this.props
-    const hasLineItems = cart.lineItems.length > 0
+    const hasLineItems = cart.totalQuantity > 0
     const paymentMethodCollapsed = checkout.paymentMethod.collapsed
     if (checkout.loading) {
       return (

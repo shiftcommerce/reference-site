@@ -4,7 +4,8 @@ import * as types from '../actions/actionTypes'
 export const cartInitialState = {
   loading: true,
   error: false,
-  lineItems: []
+  lineItems: [],
+  totalQuantity: 0
 }
 
 export default function setCart (state = cartInitialState, action) {
@@ -12,6 +13,7 @@ export default function setCart (state = cartInitialState, action) {
   switch (action.type) {
     case types.UPDATE_CART_LINE_ITEMS:
       newState.lineItems = action.cart.lineItems
+      newState.totalQuantity = action.cart.totalQuantity
       return newState
 
     case types.STORE_CART:

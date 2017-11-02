@@ -6,7 +6,8 @@ import CartSummary from '../../../components/cart/CartSummary'
 test('renders the exception messages when no line items are available', () => {
   // arrange
   const cart = {
-    lineItems: []
+    lineItems: [],
+    totalQuantity: 0
   }
 
   const updateQuantity = () => {}
@@ -38,7 +39,8 @@ test('renders the correct message when line items are available in cart', () => 
         imageUrl: '',
         size: 'size - 8'
       }
-    ]
+    ],
+    totalQuantity: 2
   }
 
   const updateQuantity = () => {}
@@ -51,7 +53,7 @@ test('renders the correct message when line items are available in cart', () => 
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('My Bag')
-  expect(wrapper).toIncludeText('1 item in your bag')
+  expect(wrapper).toIncludeText('2 items in your bag')
   expect(wrapper).not.toContainReact(<CartNoData />)
   expect(wrapper).toContainReact(<LineItems cart={cart} updateQuantity={updateQuantity} aria-label='Line Items' />)
   expect(wrapper).toContainReact(<CartSummary cart={cart} updateQuantity={updateQuantity} aria-label='Cart Summary' />)

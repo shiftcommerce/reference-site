@@ -19,7 +19,8 @@ test('render shipping methods as expected', () => {
       {
         id: '1'
       }
-    ]
+    ],
+    totalQuantity: 1
   }
 
   const checkout = {
@@ -86,7 +87,8 @@ test('renders line item quantity as expected', () => {
   const setShippingMethod = () => {}
 
   const cart = {
-    lineItems: []
+    lineItems: [],
+    totalQuantity: 0
   }
 
   const checkout = {

@@ -85,7 +85,7 @@ export default class ShippingMethods extends Component {
   renderForm () {
     const { checkout, cart, formName, onToggleCollapsed } = this.props
     const collapsed = checkout.shippingMethod.collapsed
-    const itemCount = cart.lineItems.length
+    const itemCount = cart.totalQuantity
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
 
     return (

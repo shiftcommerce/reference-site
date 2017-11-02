@@ -10,7 +10,7 @@ class CartTable extends Component {
   renderCartData () {
     const cart = this.props.cart
 
-    if (cart.lineItems.length === 0) {
+    if (cart.totalQuantity === 0) {
       return <CartNoData />
     } else {
       return <section className='u-float-clear'>
@@ -23,7 +23,7 @@ class CartTable extends Component {
     const {
       cart
     } = this.props
-    const itemsKey = cart.lineItems.length === 1 ? 'item' : 'items'
+    const itemsKey = cart.totalQuantity === 1 ? 'item' : 'items'
 
     return (
       <section>
@@ -32,7 +32,7 @@ class CartTable extends Component {
             <h1> My Bag </h1>
           </div>
           <div className='u-float--right'>
-            <h4> <b>{ cart.lineItems.length } { itemsKey }</b> in your bag </h4>
+            <h4> <b>{ cart.totalQuantity } { itemsKey }</b> in your bag </h4>
           </div>
         </section>
         { this.renderCartData() }

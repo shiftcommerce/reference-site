@@ -50,7 +50,7 @@ class LineItems extends Component {
   render () {
     const cart = this.props.cart
 
-    if (cart.lineItems.length === 0) {
+    if (cart.totalQuantity === 0) {
       return null
     } else {
       return <table className='c-line-items'>

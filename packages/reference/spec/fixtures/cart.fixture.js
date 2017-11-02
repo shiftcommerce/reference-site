@@ -11,7 +11,8 @@ const Cart = {
       productSku: '1231',
       productID: 1
     }
-  ]
+  ],
+  totalQuantity: 2
 }
 
 export default Cart

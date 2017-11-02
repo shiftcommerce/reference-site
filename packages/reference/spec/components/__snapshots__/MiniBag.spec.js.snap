@@ -5,6 +5,7 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
   cart={
     Object {
       "lineItems": Array [],
+      "totalQuantity": 0,
     }
   }
   dispatch={[Function]}
@@ -66,6 +67,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   dispatch={[Function]}
@@ -89,7 +91,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
           }
         >
           (
-          1
+          2
           )
         </span>
       </a>
@@ -128,17 +130,17 @@ exports[`renders the minibag links 1`] = `
         }
       >
         (
-        1
+        0
         )
       </span>
     </a>
   </Link>
   <Link
-    href="/checkout"
+    href=""
   >
     <a
       aria-label="Go to checkout"
-      className="o-button o-button--negative o-button--lrg"
+      className="o-button o-button--negative o-button--lrg o-button--disabled"
     >
       CHECKOUT
     </a>

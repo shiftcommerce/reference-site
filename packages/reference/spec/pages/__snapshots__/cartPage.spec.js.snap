@@ -30,6 +30,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             "title": "test",
           },
         ],
+        "totalQuantity": 2,
       }
     }
     dispatch={[Function]}
@@ -154,7 +155,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         }
                       >
                         (
-                        0
                         )
                       </span>
                     </a>
@@ -164,7 +164,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   >
                     <a
                       aria-label="Go to checkout"
-                      className="o-button o-button--negative o-button--lrg o-button--disabled"
+                      className="o-button o-button--negative o-button--lrg"
                       href=""
                       onClick={[Function]}
                     >
@@ -212,6 +212,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     "title": "test",
                   },
                 ],
+                "totalQuantity": 2,
               }
             }
             updateQuantity={[Function]}
@@ -233,9 +234,9 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   <h4>
                      
                     <b>
-                      1
+                      2
                        
-                      item
+                      items
                     </b>
                      in your bag 
                   </h4>
@@ -261,6 +262,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           "title": "test",
                         },
                       ],
+                      "totalQuantity": 2,
                     }
                   }
                   updateQuantity={[Function]}
@@ -463,6 +465,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           "title": "test",
                         },
                       ],
+                      "totalQuantity": 2,
                     }
                   }
                   updateQuantity={[Function]}

@@ -15,6 +15,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
           "title": "test",
         },
       ],
+      "totalQuantity": 2,
     }
   }
   updateQuantity={[Function]}
@@ -36,9 +37,9 @@ exports[`renders the correct message when line items are available in cart 1`] =
         <h4>
            
           <b>
-            1
+            2
              
-            item
+            items
           </b>
            in your bag 
         </h4>
@@ -62,6 +63,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 "title": "test",
               },
             ],
+            "totalQuantity": 2,
           }
         }
         updateQuantity={[Function]}
@@ -262,6 +264,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 "title": "test",
               },
             ],
+            "totalQuantity": 2,
           }
         }
         updateQuantity={[Function]}
@@ -328,6 +331,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
   cart={
     Object {
       "lineItems": Array [],
+      "totalQuantity": 0,
     }
   }
 >

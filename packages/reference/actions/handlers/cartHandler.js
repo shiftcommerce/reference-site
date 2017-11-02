@@ -12,7 +12,7 @@ export function addToCart (cart, lineItem) {
     cart.lineItems.push(lineItem)
   }
 
-  return cart
+  return calculateTotalQuantity(cart)
 }
 
 export function updateCart (cart, lineItem) {
@@ -34,5 +34,10 @@ export function updateCart (cart, lineItem) {
   if (existingLineItemIndex !== -1) {
     cart.lineItems.splice(existingLineItemIndex, 1)
   }
+  return calculateTotalQuantity(cart)
+}
+
+function calculateTotalQuantity (cart) {
+  cart.totalQuantity = cart.lineItems.reduce((totalQuantity, li) => totalQuantity + li.quantity, 0)
   return cart
 }

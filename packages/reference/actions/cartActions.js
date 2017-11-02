@@ -47,7 +47,7 @@ export function readCart () {
     let cart = getState().cart
 
     // check if local redux has line items
-    if (cart.lineItems.length === 0) {
+    if (cart.totalQuantity === 0) {
       // check if indexedDB, if local redux store dont have line item
       // This is to ensure, we dont miss line items on page refresh
       return localForage.getValue('cart').then((cart) => {
