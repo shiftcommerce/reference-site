@@ -12,25 +12,14 @@ import Button from '../../objects/Button'
 
 export default class PaymentMethod extends Component {
   renderFormHeader () {
-    const { checkout, formName, onToggleCollapsed } = this.props
-    const collapsed = checkout.paymentMethod.collapsed
+    const { formName, onToggleCollapsed } = this.props
     return (
-      <div className='o-form__header'>
-        <div>
-          <h2>Payment Method</h2>
-        </div>
-
-        <div>
-          { collapsed &&
-            <Button
-              aria-label='Edit your payment method'
-              label='Edit'
-              size='lrg'
-              onClick={() => onToggleCollapsed('edit', formName)}
-            />
-          }
-        </div>
-      </div>
+      <Button
+        aria-label='Edit your payment method'
+        label='Edit'
+        size='lrg'
+        onClick={() => onToggleCollapsed('edit', formName)}
+      />
     )
   }
 
@@ -60,17 +49,20 @@ export default class PaymentMethod extends Component {
 
   renderFormSummary () {
     const { checkout, order } = this.props
-    const collapsed = checkout.paymentMethod.collapsed
     const billingAddress = checkout.billingAddress
+    const paymentMode = checkout.paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
+
     return (
-      <div>
-        { collapsed &&
-          <div className={classNames('o-form__wrapper', {'o-form__error': order.paymentError !== ''})}>
-            <span className='u-bold'>Billing Address: </span>
-            <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
-            <span>{ billingAddress.line_1 }, { billingAddress.city }, { billingAddress.zipcode }</span>
-          </div>
-        }
+      <div className={classNames('o-form__wrapper', { 'o-form__error': order.paymentError !== null })}>
+        <p>
+          <span className='u-bold'> Payment Mode: </span>
+          <span> { paymentMode } </span>
+        </p>
+        <p>
+          <span className='u-bold'>Billing Address: </span>
+          <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
+          <span>{ billingAddress.line_1 }, { billingAddress.city }, { billingAddress.zipcode }</span>
+        </p>
       </div>
     )
   }
@@ -89,13 +81,20 @@ export default class PaymentMethod extends Component {
     const {
       checkout
     } = this.props
-
+    const collapsed = checkout.paymentMethod.collapsed
     return (
       <div aria-label='Payment method' className={classNames('o-form', { 'o-form__hidden': !checkout.shippingMethod.completed })}>
-        { this.renderFormHeader() }
-        { this.renderFormSummary() }
+        <div className='o-form__header'>
+          <div>
+            <h2>Payment Method</h2>
+          </div>
+          <div>
+            { collapsed && this.renderFormHeader() }
+          </div>
+        </div>
+        { collapsed && this.renderFormSummary() }
         { this.renderPaymentMethodSelector() }
-        { this.renderGiftCardSection() }
+        { !collapsed && this.renderGiftCardSection() }
       </div>
     )
   }

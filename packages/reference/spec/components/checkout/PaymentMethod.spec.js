@@ -1,6 +1,10 @@
 // Components
 import PaymentMethod from '../../../components/checkout/PaymentMethod'
 
+// Fixtures
+import order from '../../fixtures/order.fixture'
+import checkoutData from '../../fixtures/checkout.fixture'
+
 // Mock Stripe checkout
 jest.mock('../../../components/checkout/StripeWrapper', () => (props) => <p>Mocked Card Fields</p>)
 
@@ -83,10 +87,7 @@ test('Does not render address summary when shippingAsBilling is false', () => {
     }
   }
   const setShippingBillingAddress = () => {}
-  const order = {
-    cardTokenRequested: false
-  }
-
+ 
   // act
   const wrapper = mount(<PaymentMethod
     checkout={checkout}
@@ -98,4 +99,26 @@ test('Does not render address summary when shippingAsBilling is false', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).not.toIncludeText('Test First Name')
   expect(wrapper).not.toIncludeText('Test Last Name')
+})
+
+test('renders payment summary on collapsing', () => {
+  // Arrange
+  const setShippingBillingAddress = () => {}
+  const checkout = Object.assign({}, checkoutData, {
+    paymentMethod: {
+      ...checkoutData.paymentMethod,
+      collapsed: true,
+      selectedMethod: 'card'
+    }
+  })
+
+  // Act
+  const wrapper = mount(
+    <PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Payment Mode:')
+  expect(wrapper).toIncludeText('Credit/Debit Card')
 })

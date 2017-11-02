@@ -99,7 +99,7 @@ exports[`renders payment errors 1`] = `
             >
               <button
                 aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg"
+                className="o-button o-button--disabled o-button--lrg o-button--disabled"
                 disabled={true}
                 onClick={undefined}
                 role="button"
@@ -223,7 +223,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
             >
               <button
                 aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg"
+                className="o-button o-button--disabled o-button--lrg o-button--disabled"
                 disabled={true}
                 onClick={undefined}
                 role="button"
@@ -352,7 +352,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
             >
               <button
                 aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg"
+                className="o-button o-button--disabled o-button--lrg o-button--disabled"
                 disabled={true}
                 onClick={undefined}
                 role="button"
@@ -469,7 +469,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
             >
               <button
                 aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg"
+                className="o-button o-button--disabled o-button--lrg o-button--disabled"
                 disabled={true}
                 onClick={undefined}
                 role="button"
@@ -583,7 +583,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
             >
               <button
                 aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg"
+                className="o-button o-button--disabled o-button--lrg o-button--disabled"
                 disabled={true}
                 onClick={undefined}
                 role="button"

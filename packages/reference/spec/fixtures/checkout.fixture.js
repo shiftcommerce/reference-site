@@ -43,7 +43,7 @@ const Checkout = {
     'state': 'Yorkshire',
     'zipcode': 'LS10 1QN',
     'country_code': 'GBP',
-    'primary_phone': '7761410740',
+    'primary_phone': '07400000000',
     'collapsed': true,
     'completed': true,
     'errors': {}
@@ -58,7 +58,7 @@ const Checkout = {
     'state': 'Yorkshire',
     'zipcode': 'LS10 1QN',
     'country_code': 'GBP',
-    'primary_phone': '7761410740',
+    'primary_phone': '07400000000',
     'collapsed': true,
     'completed': true
   },

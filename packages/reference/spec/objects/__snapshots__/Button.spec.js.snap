@@ -1,12 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button by default disabled should be false 1`] = `
+<Button
+  label="Enabled Button"
+>
+  <button
+    className="o-button o-button--primary o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
+  >
+    Enabled Button
+  </button>
+</Button>
+`;
+
+exports[`Button by default should be of large size 1`] = `
+<Button
+  label="Large Button"
+>
+  <button
+    className="o-button o-button--primary o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
+  >
+    Large Button
+  </button>
+</Button>
+`;
+
+exports[`Button by default status should be primary 1`] = `
+<Button
+  label="Primary Button"
+>
+  <button
+    className="o-button o-button--primary o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
+  >
+    Primary Button
+  </button>
+</Button>
+`;
+
+exports[`disabled button 1`] = `
+<Button
+  disabled="true"
+  label="Testing Button"
+>
+  <button
+    className="o-button o-button--primary o-button--lrg o-button--disabled"
+    disabled="true"
+    role="button"
+    tabIndex="0"
+  >
+    Testing Button
+  </button>
+</Button>
+`;
+
 exports[`renders correctly 1`] = `
 <Button
   label="ADD TO BAG"
   status="positive"
 >
   <button
-    className="o-button o-button--positive o-button--undefined"
+    className="o-button o-button--positive o-button--lrg"
+    disabled={false}
     role="button"
     tabIndex="0"
   >

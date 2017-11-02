@@ -8,11 +8,23 @@ class Button extends Component {
       status,
       label,
       size,
+      disabled,
+      className,
       ...otherProps
     } = this.props
 
+    disabled = disabled || false
+    status = status || 'primary'
+    size = size || 'lrg'
+
     return (
-      <button className={classNames('o-button', `o-button--${status}`, `o-button--${size}`)} tabIndex='0' role='button' {...otherProps} >
+      <button
+        className={classNames(className, 'o-button', `o-button--${status}`, `o-button--${size}`, {'o-button--disabled': disabled})}
+        tabIndex='0'
+        role='button'
+        disabled={disabled}
+        {...otherProps}
+      >
         { label }
       </button>
     )

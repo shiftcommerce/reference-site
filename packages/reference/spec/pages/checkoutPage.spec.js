@@ -237,3 +237,57 @@ test('dispatch intializeCart action on creating an order', () => {
   // Verify if the dispatch function has dispatched updateQuantity action.
   expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
 })
+
+
+describe('Review Your Order button', () => {
+  test('should be disabled if there is any error in billing address', () => {
+    // Arrange
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const newCheckout = Object.assign({}, checkout, {
+      paymentMethod: {
+        ...checkout.paymentMethod,
+        collapsed: false
+      },
+      billingAddress: {
+        ...checkout.billingAddress,
+        errors: {
+          first_name: 'please fill the details'
+        }
+      }
+    })
+
+    // Act
+    const wrapper = mount(
+      <CheckoutPage checkout={newCheckout} order={order} cart={cart} dispatch={dispatch} />
+    )
+
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('button#review_order')).toBeDisabled()
+  })
+
+  test('should be disabled if there is any error in card details', () => {
+    // Arrange
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const newCheckout = Object.assign({}, checkout, {
+      paymentMethod: {
+        ...checkout.paymentMethod,
+        collapsed: false
+      }
+    })
+
+    const newOrder = {
+      ...order,
+      card_errors: true
+    }
+
+    // Act
+    const wrapper = mount(
+      <CheckoutPage checkout={newCheckout} order={newOrder} cart={cart} dispatch={dispatch} />
+    )
+
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('button#review_order')).toBeDisabled()
+  })
+})

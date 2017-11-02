@@ -24,7 +24,8 @@ import {
   createOrder,
   requestCardToken,
   setCardToken,
-  setPaymentError
+  setPaymentError,
+  setCardErrors
 } from '../actions/orderActions'
 
 // Objects
@@ -53,6 +54,7 @@ export class CheckoutPage extends Component {
     this.convertToOrder = this.convertToOrder.bind(this)
     this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
     this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
+    this.setCardErrors = this.setCardErrors.bind(this)
   }
 
   componentDidMount () {
@@ -124,11 +126,21 @@ export class CheckoutPage extends Component {
     this.props.dispatch(requestCardToken(false))
   }
 
+  setCardErrors (error) {
+    this.props.dispatch(setCardErrors(error))
+  }
+
+  isPaymentValid () {
+    let billingAddressErrors = this.props.checkout.billingAddress.errors
+    const isCardValid = !this.props.order.card_errors
+    const isBillingAddressValid = Object.keys(billingAddressErrors).every((key) => billingAddressErrors[key] === '') === true
+    return isBillingAddressValid && isCardValid
+  }
+
   render () {
     const { checkout, cart } = this.props
     const hasLineItems = cart.lineItems.length > 0
     const paymentMethodCollapsed = checkout.paymentMethod.collapsed
-
     if (checkout.loading) {
       return (
         <div>
@@ -176,6 +188,7 @@ export class CheckoutPage extends Component {
                     onPaymentMethodChanged={this.onPaymentMethodChanged}
                     onToggleCollapsed={this.onToggleCollapsed}
                     onCardTokenReceived={this.onCardTokenReceived}
+                    setCardErrors={this.setCardErrors}
                   />
                   {!paymentMethodCollapsed &&
                     <div className='o-form'>
@@ -185,6 +198,8 @@ export class CheckoutPage extends Component {
                         size='lrg'
                         status='primary'
                         type='submit'
+                        id='review_order'
+                        disabled={!this.isPaymentValid()}
                         onClick={() => { this.onToggleCollapsed('complete', 'paymentMethod') }}
                       />
                     </div>

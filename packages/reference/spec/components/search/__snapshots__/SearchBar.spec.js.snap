@@ -27,6 +27,7 @@ exports[`renders the header 1`] = `
       >
         <button
           className="o-button o-button--primary o-button--lrg"
+          disabled={false}
           role="button"
           tabIndex="0"
         >

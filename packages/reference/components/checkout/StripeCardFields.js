@@ -18,20 +18,27 @@ class StripeCardFields extends Component {
         CardNumberElement: '',
         CardExpiryElement: '',
         CardCVCElement: ''
+      },
+      dataAvailable: {
+        CardNumberElement: false,
+        CardExpiryElement: false,
+        CardCVCElement: false
       }
     }
   }
 
   componentWillReceiveProps (nextProps) {
     if (!this.props.cardTokenRequested && nextProps.cardTokenRequested) {
+      const billingAddress = this.props.billingAddress
+
       this.props.stripe.createToken({
-        name: `${this.props.billingAddress.first_name} ${this.props.billingAddress.last_name}`,
-        address_city: this.props.billingAddress.city,
-        address_country: this.props.billingAddress.country_code,
-        address_line1: this.props.billingAddress.line_1,
-        address_line2: this.props.billingAddress.line_2,
-        address_state: this.props.billingAddress.state,
-        address_zip: this.props.billingAddress.zipcode
+        name: `${billingAddress.first_name} ${billingAddress.last_name}`,
+        address_city: billingAddress.city,
+        address_country: billingAddress.country_code,
+        address_line1: billingAddress.line_1,
+        address_line2: billingAddress.line_2,
+        address_state: billingAddress.state,
+        address_zip: billingAddress.zipcode
       }).then(({token, error}) => {
         this.props.onCardTokenReceived(error ? {error} : {token})
       })
@@ -40,10 +47,20 @@ class StripeCardFields extends Component {
 
   handleChange (fieldName, e) {
     let errorMessage = (e.error ? e.error.message : '')
-
     this.setState({
-      errors: Object.assign(this.state.errors, { [fieldName]: errorMessage })
+      errors: Object.assign(this.state.errors, { [fieldName]: errorMessage }),
+      dataAvailable: Object.assign(this.state.dataAvailable, {[fieldName]: !e.empty})
     })
+
+    this.checkDataValidity()
+  }
+
+  checkDataValidity () {
+    const errors = this.state.errors
+    const dataAvailable = this.state.dataAvailable
+    const error = Object.keys(errors).every((key) => errors[key] === '') === true
+    const allFields = Object.keys(dataAvailable).every((key) => dataAvailable[key] === true) === true
+    this.props.setCardErrors(!(error && allFields))
   }
 
   renderValidationMessageFor (fieldName) {

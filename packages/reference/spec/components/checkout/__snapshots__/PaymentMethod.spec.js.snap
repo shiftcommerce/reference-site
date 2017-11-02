@@ -32,11 +32,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
       },
     }
   }
-  order={
-    Object {
-      "cardTokenRequested": false,
-    }
-  }
+  order={Object {}}
   setShippingBillingAddress={[Function]}
 >
   <div
@@ -54,9 +50,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
       <div>
         <undefined />
       </div>
-    </div>
-    <div>
-      <undefined />
     </div>
     <div
       style={
@@ -123,18 +116,14 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             },
           }
         }
-        order={
-          Object {
-            "cardTokenRequested": false,
-          }
-        }
+        order={Object {}}
         setShippingBillingAddress={[Function]}
       >
         <div
           className="o-form__wrapper"
         >
           <Component
-            cardTokenRequested={false}
+            cardTokenRequested={undefined}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -166,6 +155,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
               }
             }
             onCardTokenReceived={undefined}
+            setCardErrors={undefined}
           >
             <p>
               Mocked Card Fields
@@ -1043,9 +1033,6 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
         <undefined />
       </div>
     </div>
-    <div>
-      <undefined />
-    </div>
     <div
       style={
         Object {
@@ -1146,6 +1133,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
               }
             }
             onCardTokenReceived={undefined}
+            setCardErrors={undefined}
           >
             <p>
               Mocked Card Fields
@@ -1230,6 +1218,547 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
       <p>
         + Use a Gift Card / Rewards Code
       </p>
+    </div>
+  </div>
+</PaymentMethod>
+`;
+
+exports[`renders payment summary on collapsing 1`] = `
+<PaymentMethod
+  checkout={
+    Object {
+      "billingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "errors": Object {},
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "currency": "GBP",
+      "currentStep": 2,
+      "customer": Object {
+        "email": "customer@example.com",
+        "external_id": "123",
+        "name": "John Doe",
+      },
+      "error": false,
+      "lineItems": Array [
+        Object {
+          "currency": "GBP",
+          "paid_price_inc_tax": "10",
+          "quantity": 3,
+          "retail_price_inc_tax": "10",
+          "sku": "SK840763631-2",
+          "tax_amount": 0,
+          "tax_percentage": 0,
+          "title": "Textured Long T Shirt",
+        },
+      ],
+      "loading": false,
+      "paid_price_inc_tax": "0105.45",
+      "paymentMethod": Object {
+        "collapsed": true,
+        "completed": false,
+        "selectedMethod": "card",
+      },
+      "request_uuid": 6765757657657,
+      "retail_price_inc_tax": "0105.45",
+      "reviewOrder": Object {
+        "collapsed": true,
+        "completed": false,
+      },
+      "shippingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "shippingMethod": Object {
+        "collapsed": false,
+        "completed": true,
+        "id": "2",
+        "name": "UPS Next Day",
+        "paid_price_inc_tax": 5.45,
+        "reference": "ups_next_day",
+        "retail_price_inc_tax": 5.45,
+        "sku": "ups_next_day",
+        "tax_amount": 2,
+        "tax_percentage": 20,
+      },
+      "tax_amount": 0,
+    }
+  }
+  order={Object {}}
+  setShippingBillingAddress={[Function]}
+>
+  <div
+    aria-label="Payment method"
+    className="o-form"
+  >
+    <div
+      className="o-form__header"
+    >
+      <div>
+        <h2>
+          Payment Method
+        </h2>
+      </div>
+      <div>
+        <Button
+          aria-label="Edit your payment method"
+          label="Edit"
+          onClick={[Function]}
+          size="lrg"
+        >
+          <button
+            aria-label="Edit your payment method"
+            className="o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Edit
+          </button>
+        </Button>
+      </div>
+    </div>
+    <div
+      className="o-form__wrapper o-form__error"
+    >
+      <p>
+        <span
+          className="u-bold"
+        >
+           Payment Mode: 
+        </span>
+        <span>
+           
+          Credit/Debit Card
+           
+        </span>
+      </p>
+      <p>
+        <span
+          className="u-bold"
+        >
+          Billing Address: 
+        </span>
+        <span
+          className="u-bold"
+        >
+          Prasanna Gaddam
+           
+          Prasanna Gaddam
+           
+        </span>
+        <span>
+          Apartment 19, Waterloo Court, 17 Hunslet Road
+          , 
+          Leeds
+          , 
+          LS10 1QN
+        </span>
+      </p>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <PaymentMethodSelector
+        currentMethod="card"
+        onPaymentMethodChanged={undefined}
+      >
+        <div
+          className="o-form"
+        >
+          <div
+            aria-label="Use credit or debit card"
+            className="c-payment-method-button c-payment-method-button__active"
+            onClick={[Function]}
+          >
+            <span>
+              Credit/Debit Card
+            </span>
+          </div>
+          <div
+            aria-label="Use paypal"
+            className="c-payment-method-button "
+            onClick={[Function]}
+          >
+            <span>
+              PayPal
+            </span>
+          </div>
+        </div>
+      </PaymentMethodSelector>
+      <StripePayment
+        checkout={
+          Object {
+            "billingAddress": Object {
+              "city": "Leeds",
+              "collapsed": true,
+              "completed": true,
+              "country_code": "GBP",
+              "errors": Object {},
+              "first_name": "Prasanna Gaddam",
+              "label": "BILLING_LABEL",
+              "last_name": "Prasanna Gaddam",
+              "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+              "line_2": "Hunslet",
+              "primary_phone": "07400000000",
+              "state": "Yorkshire",
+              "zipcode": "LS10 1QN",
+            },
+            "currency": "GBP",
+            "currentStep": 2,
+            "customer": Object {
+              "email": "customer@example.com",
+              "external_id": "123",
+              "name": "John Doe",
+            },
+            "error": false,
+            "lineItems": Array [
+              Object {
+                "currency": "GBP",
+                "paid_price_inc_tax": "10",
+                "quantity": 3,
+                "retail_price_inc_tax": "10",
+                "sku": "SK840763631-2",
+                "tax_amount": 0,
+                "tax_percentage": 0,
+                "title": "Textured Long T Shirt",
+              },
+            ],
+            "loading": false,
+            "paid_price_inc_tax": "0105.45",
+            "paymentMethod": Object {
+              "collapsed": true,
+              "completed": false,
+              "selectedMethod": "card",
+            },
+            "request_uuid": 6765757657657,
+            "retail_price_inc_tax": "0105.45",
+            "reviewOrder": Object {
+              "collapsed": true,
+              "completed": false,
+            },
+            "shippingAddress": Object {
+              "city": "Leeds",
+              "collapsed": true,
+              "completed": true,
+              "country_code": "GBP",
+              "first_name": "Prasanna Gaddam",
+              "label": "BILLING_LABEL",
+              "last_name": "Prasanna Gaddam",
+              "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+              "line_2": "Hunslet",
+              "primary_phone": "07400000000",
+              "state": "Yorkshire",
+              "zipcode": "LS10 1QN",
+            },
+            "shippingMethod": Object {
+              "collapsed": false,
+              "completed": true,
+              "id": "2",
+              "name": "UPS Next Day",
+              "paid_price_inc_tax": 5.45,
+              "reference": "ups_next_day",
+              "retail_price_inc_tax": 5.45,
+              "sku": "ups_next_day",
+              "tax_amount": 2,
+              "tax_percentage": 20,
+            },
+            "tax_amount": 0,
+          }
+        }
+        order={Object {}}
+        setShippingBillingAddress={[Function]}
+      >
+        <div
+          className="o-form__wrapper"
+        >
+          <Component
+            cardTokenRequested={undefined}
+            checkout={
+              Object {
+                "billingAddress": Object {
+                  "city": "Leeds",
+                  "collapsed": true,
+                  "completed": true,
+                  "country_code": "GBP",
+                  "errors": Object {},
+                  "first_name": "Prasanna Gaddam",
+                  "label": "BILLING_LABEL",
+                  "last_name": "Prasanna Gaddam",
+                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                  "line_2": "Hunslet",
+                  "primary_phone": "07400000000",
+                  "state": "Yorkshire",
+                  "zipcode": "LS10 1QN",
+                },
+                "currency": "GBP",
+                "currentStep": 2,
+                "customer": Object {
+                  "email": "customer@example.com",
+                  "external_id": "123",
+                  "name": "John Doe",
+                },
+                "error": false,
+                "lineItems": Array [
+                  Object {
+                    "currency": "GBP",
+                    "paid_price_inc_tax": "10",
+                    "quantity": 3,
+                    "retail_price_inc_tax": "10",
+                    "sku": "SK840763631-2",
+                    "tax_amount": 0,
+                    "tax_percentage": 0,
+                    "title": "Textured Long T Shirt",
+                  },
+                ],
+                "loading": false,
+                "paid_price_inc_tax": "0105.45",
+                "paymentMethod": Object {
+                  "collapsed": true,
+                  "completed": false,
+                  "selectedMethod": "card",
+                },
+                "request_uuid": 6765757657657,
+                "retail_price_inc_tax": "0105.45",
+                "reviewOrder": Object {
+                  "collapsed": true,
+                  "completed": false,
+                },
+                "shippingAddress": Object {
+                  "city": "Leeds",
+                  "collapsed": true,
+                  "completed": true,
+                  "country_code": "GBP",
+                  "first_name": "Prasanna Gaddam",
+                  "label": "BILLING_LABEL",
+                  "last_name": "Prasanna Gaddam",
+                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                  "line_2": "Hunslet",
+                  "primary_phone": "07400000000",
+                  "state": "Yorkshire",
+                  "zipcode": "LS10 1QN",
+                },
+                "shippingMethod": Object {
+                  "collapsed": false,
+                  "completed": true,
+                  "id": "2",
+                  "name": "UPS Next Day",
+                  "paid_price_inc_tax": 5.45,
+                  "reference": "ups_next_day",
+                  "retail_price_inc_tax": 5.45,
+                  "sku": "ups_next_day",
+                  "tax_amount": 2,
+                  "tax_percentage": 20,
+                },
+                "tax_amount": 0,
+              }
+            }
+            onCardTokenReceived={undefined}
+            setCardErrors={undefined}
+          >
+            <p>
+              Mocked Card Fields
+            </p>
+          </Component>
+          <div
+            className="o-form__input-group"
+          >
+            <label>
+              Billing address *
+            </label>
+          </div>
+          <_class
+            checked={false}
+            formName={undefined}
+            label="Same as shipping address"
+            name="shippingAddressAsBillingAddress"
+            onBlur={undefined}
+            onChange={undefined}
+            type="checkbox"
+          >
+            <Checkbox
+              checked={false}
+              formName={undefined}
+              label="Same as shipping address"
+              name="shippingAddressAsBillingAddress"
+              onBlur={undefined}
+              onChange={undefined}
+              renderValidationMessage={[Function]}
+              type="checkbox"
+            >
+              <div
+                className="o-form__input-group"
+              >
+                <label
+                  className="o-form__label"
+                  htmlFor="shippingAddressAsBillingAddress"
+                >
+                  <input
+                    checked={false}
+                    className="o-form__checkbox"
+                    id="shippingAddressAsBillingAddress"
+                    name="shippingAddressAsBillingAddress"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    required={undefined}
+                    type="checkbox"
+                  />
+                  Same as shipping address
+                   
+                </label>
+              </div>
+            </Checkbox>
+          </_class>
+          <AddressForm
+            addressType="billing"
+            aria-label="Billing address form"
+            checkout={
+              Object {
+                "billingAddress": Object {
+                  "city": "Leeds",
+                  "collapsed": true,
+                  "completed": true,
+                  "country_code": "GBP",
+                  "errors": Object {},
+                  "first_name": "Prasanna Gaddam",
+                  "label": "BILLING_LABEL",
+                  "last_name": "Prasanna Gaddam",
+                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                  "line_2": "Hunslet",
+                  "primary_phone": "07400000000",
+                  "state": "Yorkshire",
+                  "zipcode": "LS10 1QN",
+                },
+                "currency": "GBP",
+                "currentStep": 2,
+                "customer": Object {
+                  "email": "customer@example.com",
+                  "external_id": "123",
+                  "name": "John Doe",
+                },
+                "error": false,
+                "lineItems": Array [
+                  Object {
+                    "currency": "GBP",
+                    "paid_price_inc_tax": "10",
+                    "quantity": 3,
+                    "retail_price_inc_tax": "10",
+                    "sku": "SK840763631-2",
+                    "tax_amount": 0,
+                    "tax_percentage": 0,
+                    "title": "Textured Long T Shirt",
+                  },
+                ],
+                "loading": false,
+                "paid_price_inc_tax": "0105.45",
+                "paymentMethod": Object {
+                  "collapsed": true,
+                  "completed": false,
+                  "selectedMethod": "card",
+                },
+                "request_uuid": 6765757657657,
+                "retail_price_inc_tax": "0105.45",
+                "reviewOrder": Object {
+                  "collapsed": true,
+                  "completed": false,
+                },
+                "shippingAddress": Object {
+                  "city": "Leeds",
+                  "collapsed": true,
+                  "completed": true,
+                  "country_code": "GBP",
+                  "first_name": "Prasanna Gaddam",
+                  "label": "BILLING_LABEL",
+                  "last_name": "Prasanna Gaddam",
+                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                  "line_2": "Hunslet",
+                  "primary_phone": "07400000000",
+                  "state": "Yorkshire",
+                  "zipcode": "LS10 1QN",
+                },
+                "shippingMethod": Object {
+                  "collapsed": false,
+                  "completed": true,
+                  "id": "2",
+                  "name": "UPS Next Day",
+                  "paid_price_inc_tax": 5.45,
+                  "reference": "ups_next_day",
+                  "retail_price_inc_tax": 5.45,
+                  "sku": "ups_next_day",
+                  "tax_amount": 2,
+                  "tax_percentage": 20,
+                },
+                "tax_amount": 0,
+              }
+            }
+            formName="billingAddress"
+            onBlur={undefined}
+            onChange={undefined}
+            onShowField={undefined}
+            onToggleCollapsed={undefined}
+            title="Billing Address"
+          >
+            <div
+              className="o-form"
+            >
+              <div
+                className="o-form__header"
+              >
+                <div>
+                  <h2>
+                    Billing Address
+                  </h2>
+                </div>
+                <div>
+                  <Button
+                    label="Edit"
+                    onClick={[Function]}
+                    size="lrg"
+                  >
+                    <button
+                      className="o-button o-button--primary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Edit
+                    </button>
+                  </Button>
+                </div>
+              </div>
+              <div>
+                <undefined />
+              </div>
+            </div>
+          </AddressForm>
+        </div>
+      </StripePayment>
     </div>
   </div>
 </PaymentMethod>

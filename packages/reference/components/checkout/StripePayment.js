@@ -16,15 +16,19 @@ class StripePayment extends Component {
       onChange,
       onShowField,
       onToggleCollapsed,
-      setBillingShippingAddress } = this.props
+      setBillingShippingAddress,
+      onCardTokenReceived,
+      setCardErrors,
+      order } = this.props
     const shippingAddress = checkout.shippingAddress
 
     return (
       <div className='o-form__wrapper'>
         <StripeWrapper
-          cardTokenRequested = {this.props.order.cardTokenRequested}
-          onCardTokenReceived = {this.props.onCardTokenReceived}
-          checkout = {this.props.checkout}
+          cardTokenRequested={order.cardTokenRequested}
+          onCardTokenReceived={onCardTokenReceived}
+          setCardErrors={setCardErrors}
+          checkout={checkout}
         />
 
         <div className='o-form__input-group'>

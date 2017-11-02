@@ -415,6 +415,7 @@ exports[`renders correctly 1`] = `
               <button
                 aria-label="Add to Bag"
                 className="o-button o-button--primary o-button--lrg"
+                disabled={false}
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"

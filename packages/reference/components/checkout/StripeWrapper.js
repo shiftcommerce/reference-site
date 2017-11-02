@@ -10,13 +10,20 @@ import paymentConfig from '../../constants/paymentConfig'
 
 class StripeWrapper extends Component {
   renderStripeForm (StripeApiKey) {
+    const {
+      cardTokenRequested,
+      onCardTokenReceived,
+      setCardErrors,
+      checkout
+    } = this.props
     return (
       <StripeProvider apiKey={StripeApiKey}>
         <Elements>
           <StripeCardFields
-            cardTokenRequested={this.props.cardTokenRequested}
-            onCardTokenReceived={this.props.onCardTokenReceived}
-            billingAddress = {this.props.checkout.billingAddress}
+            cardTokenRequested={cardTokenRequested}
+            onCardTokenReceived={onCardTokenReceived}
+            setCardErrors={setCardErrors}
+            billingAddress={checkout.billingAddress}
           />
         </Elements>
       </StripeProvider>

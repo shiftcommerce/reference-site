@@ -39,3 +39,10 @@ export function setPaymentError (message) {
     value: message
   }
 }
+
+export function setCardErrors (boolean) {
+  return {
+    type: types.CARD_ERRORS,
+    errors: boolean
+  }
+}

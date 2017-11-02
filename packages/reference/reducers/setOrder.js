@@ -6,7 +6,8 @@ export const initialState = {
   cardToken: {},
   paymentError: null,
   loading: true,
-  error: false
+  error: false,
+  card_errors: true
 }
 
 export default function setOrder (state = initialState, action) {
@@ -22,6 +23,10 @@ export default function setOrder (state = initialState, action) {
 
     case types.SET_PAYMENT_ERROR:
       return Object.assign({}, state, {paymentError: action.value})
+
+    case types.CARD_ERRORS:
+      return Object.assign({}, state, {card_errors: action.errors})
+
     default:
       return state
   }

@@ -288,6 +288,7 @@ exports[`display pre selected shipping method as selected option on page load 1`
             <button
               aria-label="Continue to payment"
               className="o-button o-button--primary o-button--lrg"
+              disabled={false}
               onClick={[Function]}
               role="button"
               tabIndex="0"
@@ -357,7 +358,8 @@ exports[`render collapsed view as expected 1`] = `
         >
           <button
             aria-label="Edit your shipping method"
-            className="o-button o-button--undefined o-button--lrg"
+            className="o-button o-button--primary o-button--lrg"
+            disabled={false}
             onClick={[Function]}
             role="button"
             tabIndex="0"
@@ -672,6 +674,7 @@ exports[`render shipping methods as expected 1`] = `
             <button
               aria-label="Continue to payment"
               className="o-button o-button--primary o-button--lrg"
+              disabled={false}
               onClick={[Function]}
               role="button"
               tabIndex="0"
@@ -966,6 +969,7 @@ exports[`renders line item quantity as expected 1`] = `
             <button
               aria-label="Continue to payment"
               className="o-button o-button--primary o-button--lrg"
+              disabled={false}
               onClick={[Function]}
               role="button"
               tabIndex="0"
@@ -1261,6 +1265,7 @@ exports[`should be able to select a shipping method 1`] = `
             <button
               aria-label="Continue to payment"
               className="o-button o-button--primary o-button--lrg"
+              disabled={false}
               onClick={[Function]}
               role="button"
               tabIndex="0"
