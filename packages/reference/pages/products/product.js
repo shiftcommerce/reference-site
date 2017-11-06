@@ -17,7 +17,7 @@ import { readCategories } from '../../actions/categoryActions'
 // Utils
 import { configureStore } from '../../utils/configureStore'
 
-class Product extends Component {
+export class Product extends Component {
   constructor () {
     super()
     this.state = {
@@ -82,24 +82,23 @@ class Product extends Component {
     } = this.props
     let category = (product.categories && product.categories[0])
 
-    const breadcrumbMenuTrail = [
-      { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' },
-      { id: product.id, title: product.title, canonical_path: `/products/${product.id}`, page: '/products/product' }
-    ]
-
-    if (product.error || Object.keys(product).length === 0) {
-      return (
-        <Layout>
-          <h1>Unable to load product.</h1>
-        </Layout>
-      )
-    } else if (product.loading) {
+    if (product.loading) {
       return (
         <Layout>
           <h1>Loading product...</h1>
         </Layout>
       )
+    } else if (product.error || Object.keys(product).length === 0) {
+      return (
+        <Layout>
+          <h1>Unable to load product.</h1>
+        </Layout>
+      )
     } else {
+      const breadcrumbMenuTrail = [
+        { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' },
+        { id: product.id, title: product.title, canonical_path: `/products/${product.id}`, page: '/products/product' }
+      ]
       return (
         <Layout>
           <div>

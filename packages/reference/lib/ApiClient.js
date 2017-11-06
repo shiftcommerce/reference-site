@@ -25,6 +25,10 @@ class ApiClient {
     const url = `${this.host}${endpoint}`
     const body = JSON.stringify(options.body)
     const response = await axios.get(url, { body: body })
+      // .catch((error) => {
+      //   console.log('API CLIENT: Error while fetching data')
+      //   return error
+      // })
     return { status: response.status, data: response.data }
   }
 
@@ -33,13 +37,13 @@ class ApiClient {
     const body = JSON.stringify(options.body)
     let response = ''
     await axios.post(url, { body: body })
-    .then((res) => {
-      response = res
-    })
-    .catch((error) => {
-      console.log('Error while fetching data')
-      response = error
-    })
+      .then((res) => {
+        response = res
+      })
+      .catch((error) => {
+        console.log('Error while posting data')
+        response = error
+      })
     return { status: response.status, data: response }
   }
 

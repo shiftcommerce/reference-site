@@ -25,7 +25,10 @@ class NavBar extends Component {
       )
     } else if (categories.error) {
       return (
-        <p>{categories.error}</p>
+        <p style={{'textAlign': 'center'}} >
+          Sorry! There is an error in loading menus
+          {categories.error}
+        </p>
       )
     } else {
       return (

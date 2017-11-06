@@ -27,25 +27,25 @@ function formatHeaders (headers) {
 
 function getData (request, url, response, options = {}) {
   axios.get(formatUrl(url, request), { headers: formatHeaders(options.headers) })
-  .then((res) => {
-    sendData(response, res.data)
-  })
-  .catch((error) => {
-    console.log('Error while fetching data')
-    sendData(response, error)
-  })
+    .then((res) => {
+      sendData(response, res.data)
+    })
+    .catch((error) => {
+      console.log('Error while fetching data')
+      sendData(response, error)
+    })
 }
 
 function postData (request, url, response, options = {}) {
   const method = request.method || 'POST'
   axios(formatUrl(url, request), { headers: formatHeaders(options.headers), method: method, data: request.body })
-  .then((res) => {
-    response.json(CircularJSON.stringify(res))
-  })
-  .catch((error) => {
-    console.log('Error while posting data')
-    sendData(response, error)
-  })
+    .then((res) => {
+      response.json(CircularJSON.stringify(res))
+    })
+    .catch((error) => {
+      console.log('Error while posting data')
+      sendData(response, error)
+    })
 }
 
 function sendData (response, data) {

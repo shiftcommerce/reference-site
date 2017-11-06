@@ -8,9 +8,9 @@ export const readEndpoint = (request) => {
 
     return new ApiClient().read(request.endpoint, request.query)
       .then((response) => {
-        if (response.status === 200 || response.status === 304) {
+        if ((response.data.response && (response.data.response.status === 200 || response.data.response.status === 304)) || (!response.data.response && response.status === 200)) {
           const parsedPayload = new JsonApiParser().parse(response.data)
-          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload, {loading: false}) })
+          dispatch(sendResponse(parsedPayload, request.successActionType))
         } else {
           dispatch(setLoadingTo(false, request.successActionType))
           dispatch(setErroredTo(true, request.successActionType))
@@ -41,6 +41,13 @@ export const postEndpoint = (request) => {
         dispatch(setLoadingTo(false, request.successActionType))
         dispatch(setErroredTo(true, request.successActionType))
       })
+  }
+}
+
+export function sendResponse (parsedPayload, actionType) {
+  return {
+    type: actionType,
+    payload: Object.assign({}, parsedPayload, {loading: false})
   }
 }
 
