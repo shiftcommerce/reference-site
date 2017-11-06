@@ -13,6 +13,14 @@ class DropdownSelect extends Component {
     this.triggerChange = this.triggerChange.bind(this)
   }
 
+  renderOptions (options) {
+    return (
+      options && options.map((option, idx) =>
+        <option role='option' key={idx} value={option.value || option} aria-setsize={options.length} aria-posinset={idx + 1} >{ option.title || option }</option>
+      )
+    )
+  }
+
   triggerChange (event) {
     const { formName, name, onChange } = this.props
     if (onChange) {
@@ -25,14 +33,6 @@ class DropdownSelect extends Component {
     if (onBlur) {
       onBlur(event, formName, name, event.target.value, rules)
     }
-  }
-
-  renderOptions (options) {
-    return (
-      options && options.map((option, idx) =>
-        <option role='option' key={idx} value={option.value} aria-setsize={options.length} aria-posinset={idx + 1} >{ option.title || option }</option>
-      )
-    )
   }
 
   renderDropdown () {

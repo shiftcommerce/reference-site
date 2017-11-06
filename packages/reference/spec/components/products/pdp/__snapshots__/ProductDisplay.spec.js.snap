@@ -357,7 +357,7 @@ exports[`renders correctly 1`] = `
                       aria-setsize={5}
                       key="0"
                       role="option"
-                      value={undefined}
+                      value={1}
                     >
                       1
                     </option>
@@ -366,7 +366,7 @@ exports[`renders correctly 1`] = `
                       aria-setsize={5}
                       key="1"
                       role="option"
-                      value={undefined}
+                      value={2}
                     >
                       2
                     </option>
@@ -375,7 +375,7 @@ exports[`renders correctly 1`] = `
                       aria-setsize={5}
                       key="2"
                       role="option"
-                      value={undefined}
+                      value={3}
                     >
                       3
                     </option>
@@ -384,7 +384,7 @@ exports[`renders correctly 1`] = `
                       aria-setsize={5}
                       key="3"
                       role="option"
-                      value={undefined}
+                      value={4}
                     >
                       4
                     </option>
@@ -393,7 +393,7 @@ exports[`renders correctly 1`] = `
                       aria-setsize={5}
                       key="4"
                       role="option"
-                      value={undefined}
+                      value={5}
                     >
                       5
                     </option>
