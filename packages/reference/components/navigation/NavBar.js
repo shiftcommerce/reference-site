@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import NavBarOption from './NavBarOption'
 
 class NavBar extends Component {
-  renderNavOptions (categories) {
+  renderNavOptions (menuItems) {
     return (
-      categories.data.map((category, index) =>
-        <NavBarOption key={index} index={index} title={category.title} href={`/categories/category?id=${category.id}`} as={`/categories/${category.id}`} />
+      menuItems.map((menuItems, index) =>
+        <NavBarOption key={index} index={index} title={menuItems.title} href={`/categories/menuItems?id=${menuItems.id}`} as={`/categories/${menuItems.id}`} />
       )
     )
   }
@@ -18,6 +18,8 @@ class NavBar extends Component {
     const {
       categories
     } = this.props
+
+    const [{ menu_items }] = categories.data
 
     if (categories.loading) {
       return (
@@ -33,7 +35,7 @@ class NavBar extends Component {
     } else {
       return (
         <div className='o-nav' role='navigation' >
-          { this.renderNavOptions(categories) }
+          { this.renderNavOptions(menu_items) }
         </div>
       )
     }
@@ -41,8 +43,15 @@ class NavBar extends Component {
 }
 
 const mapStateToProps = (state) => {
+  // Look into https://github.com/reduxjs/reselect to reduce expensive selectors
+  if (!state.categories && !state.categories.data) {
+    return {
+      categories: {}
+    }
+  }
+
   return {
-    categories: state.categories || []
+    categories: state.categories || {}
   }
 }
 

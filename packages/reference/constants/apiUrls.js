@@ -2,7 +2,7 @@
 // Note: All external endpoints are expected to be listed here.
 module.exports = {
   Host: process.env.API_HOST,
-  CategoryUrl: '/pim/v1/categories',
-  ProductUrl: '/pim/v1/products',
-  CreateOrderUrl: '/oms/v1/create_order'
+  CategoryUrl: `/${process.env.API_TENANT}/v1/menus`,
+  ProductUrl: `/${process.env.API_TENANT}/v1/products`,
+  CreateOrderUrl: `/${process.env.API_TENANT}/v1/create_order`
 }

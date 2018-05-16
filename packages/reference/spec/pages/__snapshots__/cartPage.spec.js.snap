@@ -180,7 +180,21 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           <NavBar
             categories={
               Object {
-                "data": Array [],
+                "data": Array [
+                  Object {
+                    "menu_items": Array [
+                      Object {
+                        "menu_items": Array [
+                          Object {
+                            "id": 1,
+                            "reference": "Bathroom",
+                            "title": "Bathroom",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
                 "error": false,
                 "loading": false,
               }
@@ -190,7 +204,26 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             <div
               className="o-nav"
               role="navigation"
-            />
+            >
+              <NavBarOption
+                as="/categories/undefined"
+                href="/categories/menuItems?id=undefined"
+                index={0}
+                key="0"
+                title={undefined}
+              >
+                <Link
+                  as="/categories/undefined"
+                  href="/categories/menuItems?id=undefined"
+                >
+                  <a
+                    className="o-nav__option o-nav__option--first"
+                    href="/categories/undefined"
+                    onClick={[Function]}
+                  />
+                </Link>
+              </NavBarOption>
+            </div>
           </NavBar>
         </Connect(NavBar)>
         <div

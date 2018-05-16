@@ -104,9 +104,9 @@ test('redirects to cart page when lineItems is empty', () => {
 
 test('redirects to order confirmation page, on creating an order', () => {
   // Arrange
-  const initialState = {
-    order: {}
-  }
+  // const initialState = {
+  //   order: {}
+  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {}
   const newOrder = {
@@ -139,9 +139,9 @@ test('redirects to order confirmation page, on creating an order', () => {
 
 test('should not redirect to order confirmation page, if no new order got created', () => {
   // Arrange
-  const initialState = {
-    order: {}
-  }
+  // const initialState = {
+  //   order: {}
+  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
@@ -166,9 +166,9 @@ test('should not redirect to order confirmation page, if no new order got create
 
 test('should redirect to order confirmation page, if new order got created', () => {
   // Arrange
-  const initialState = {
-    order: {}
-  }
+  // const initialState = {
+  //   order: {}
+  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
@@ -238,7 +238,6 @@ test('dispatch intializeCart action on creating an order', () => {
   // Verify if the dispatch function has dispatched updateQuantity action.
   expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
 })
-
 
 describe('Review Your Order button', () => {
   test('should be disabled if there is any error in billing address', () => {

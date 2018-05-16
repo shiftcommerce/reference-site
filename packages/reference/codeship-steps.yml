@@ -1,5 +1,5 @@
-- type: serial
+- name: tests
+  type: serial
   steps:
-  - name: Specs
-    service: web
+  - service: web
     command: yarn run jest

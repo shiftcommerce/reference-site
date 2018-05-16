@@ -169,7 +169,17 @@ exports[`Processing state handling: displays error message, when there is an err
           <NavBar
             categories={
               Object {
-                "data": Array [],
+                "data": Array [
+                  Object {
+                    "menu_items": Array [
+                      Object {
+                        "id": 1,
+                        "reference": "Bathroom",
+                        "title": "Bathroom",
+                      },
+                    ],
+                  },
+                ],
                 "error": false,
                 "loading": false,
               }
@@ -179,7 +189,28 @@ exports[`Processing state handling: displays error message, when there is an err
             <div
               className="o-nav"
               role="navigation"
-            />
+            >
+              <NavBarOption
+                as="/categories/1"
+                href="/categories/menuItems?id=1"
+                index={0}
+                key="0"
+                title="Bathroom"
+              >
+                <Link
+                  as="/categories/1"
+                  href="/categories/menuItems?id=1"
+                >
+                  <a
+                    className="o-nav__option o-nav__option--first"
+                    href="/categories/1"
+                    onClick={[Function]}
+                  >
+                    Bathroom
+                  </a>
+                </Link>
+              </NavBarOption>
+            </div>
           </NavBar>
         </Connect(NavBar)>
         <div
@@ -369,7 +400,17 @@ exports[`Processing state handling: displays loading message, when there is no e
           <NavBar
             categories={
               Object {
-                "data": Array [],
+                "data": Array [
+                  Object {
+                    "menu_items": Array [
+                      Object {
+                        "id": 1,
+                        "reference": "Bathroom",
+                        "title": "Bathroom",
+                      },
+                    ],
+                  },
+                ],
                 "error": false,
                 "loading": false,
               }
@@ -379,7 +420,28 @@ exports[`Processing state handling: displays loading message, when there is no e
             <div
               className="o-nav"
               role="navigation"
-            />
+            >
+              <NavBarOption
+                as="/categories/1"
+                href="/categories/menuItems?id=1"
+                index={0}
+                key="0"
+                title="Bathroom"
+              >
+                <Link
+                  as="/categories/1"
+                  href="/categories/menuItems?id=1"
+                >
+                  <a
+                    className="o-nav__option o-nav__option--first"
+                    href="/categories/1"
+                    onClick={[Function]}
+                  >
+                    Bathroom
+                  </a>
+                </Link>
+              </NavBarOption>
+            </div>
           </NavBar>
         </Connect(NavBar)>
         <div
@@ -563,7 +625,17 @@ exports[`Processing state handling: displays relevant message, when product data
           <NavBar
             categories={
               Object {
-                "data": Array [],
+                "data": Array [
+                  Object {
+                    "menu_items": Array [
+                      Object {
+                        "id": 1,
+                        "reference": "Bathroom",
+                        "title": "Bathroom",
+                      },
+                    ],
+                  },
+                ],
                 "error": false,
                 "loading": false,
               }
@@ -573,7 +645,28 @@ exports[`Processing state handling: displays relevant message, when product data
             <div
               className="o-nav"
               role="navigation"
-            />
+            >
+              <NavBarOption
+                as="/categories/1"
+                href="/categories/menuItems?id=1"
+                index={0}
+                key="0"
+                title="Bathroom"
+              >
+                <Link
+                  as="/categories/1"
+                  href="/categories/menuItems?id=1"
+                >
+                  <a
+                    className="o-nav__option o-nav__option--first"
+                    href="/categories/1"
+                    onClick={[Function]}
+                  >
+                    Bathroom
+                  </a>
+                </Link>
+              </NavBarOption>
+            </div>
           </NavBar>
         </Connect(NavBar)>
         <div

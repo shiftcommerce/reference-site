@@ -7,9 +7,13 @@ exports[`renders the nav bar options 1`] = `
       Object {
         "data": Array [
           Object {
-            "id": 1,
-            "reference": "Bathroom",
-            "title": "Bathroom",
+            "menu_items": Array [
+              Object {
+                "id": 1,
+                "reference": "Bathroom",
+                "title": "Bathroom",
+              },
+            ],
           },
         ],
         "error": false,
@@ -24,14 +28,14 @@ exports[`renders the nav bar options 1`] = `
     >
       <NavBarOption
         as="/categories/1"
-        href="/categories/category?id=1"
+        href="/categories/menuItems?id=1"
         index={0}
         key="0"
         title="Bathroom"
       >
         <Link
           as="/categories/1"
-          href="/categories/category?id=1"
+          href="/categories/menuItems?id=1"
         >
           <a
             className="o-nav__option o-nav__option--first"

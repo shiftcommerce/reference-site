@@ -6,7 +6,8 @@ import { createMockStore } from 'redux-test-utils'
 import { Product } from './../../pages/products/product'
 
 // fixtures
-import cart from './../fixtures/cart.fixture'
+// import cart from './../fixtures/cart.fixture'
+import categories from './../fixtures/categories.fixture'
 
 describe('Processing state handling:', () => {
   test('displays loading message, when there is no error and product is loading from db', () => {
@@ -15,7 +16,7 @@ describe('Processing state handling:', () => {
       categories: {
         loading: false,
         error: false,
-        data: []
+        data: categories
       }
     }
     const product = {
@@ -42,7 +43,7 @@ describe('Processing state handling:', () => {
       categories: {
         loading: false,
         error: false,
-        data: []
+        data: categories
       }
     }
     const product = {
@@ -69,7 +70,7 @@ describe('Processing state handling:', () => {
       categories: {
         loading: false,
         error: false,
-        data: []
+        data: categories
       }
     }
     const product = {}

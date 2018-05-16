@@ -14,13 +14,13 @@ test('renders correctly', () => {
 test('disabled button', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='Testing Button' disabled='true'/>
+    <Button label='Testing Button' disabled='true' />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('button')).toHaveClassName('o-button--disabled')
-  expect(wrapper.find('button')).toHaveProp('disabled', "true")
+  expect(wrapper.find('button')).toHaveProp('disabled', 'true')
 })
 
 describe('Button by default', () => {

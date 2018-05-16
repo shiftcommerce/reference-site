@@ -38,7 +38,7 @@ test('dispatch SET_CARD_TOKEN and make the api call on calling setCardToken()', 
   const order = 'order'
 
   const getState = () => ({checkout: checkout, cart: cart, order: order})
-  
+
   fn(dispatch, getState)
 
   // Assert

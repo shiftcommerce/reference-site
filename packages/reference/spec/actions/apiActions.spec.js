@@ -1,9 +1,6 @@
 // Actions
 import * as apiActions from './../../actions/apiActions'
 
-// ApiClient
-import ApiClient from './../../lib/ApiClient'
-
 describe('Read Endpoint', () => {
   test('dispatch loading to true, on initial call', () => {
     // Arrange

@@ -16,11 +16,9 @@ test('renders the correct checkout cart summary with single line item', () => {
     ]
   }
 
-  const updateQuantity = () => {}
-
   // act
   const wrapper = mount(
-    <CheckoutCart cart={cart} title="Checkout Cart Summary" />
+    <CheckoutCart cart={cart} title='Checkout Cart Summary' />
   )
 
   // assert
@@ -49,8 +47,6 @@ test('renders the correct checkout cart summary with multiple line items', () =>
       }
     ]
   }
-
-  const updateQuantity = () => {}
 
   // act
   const wrapper = mount(

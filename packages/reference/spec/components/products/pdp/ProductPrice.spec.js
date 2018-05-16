@@ -2,13 +2,13 @@
 import ProductPrice from '../../../../components/products/pdp/ProductPrice'
 
 // Fixtures
-import variants_with_similar_price from '../../../fixtures/variants_with_similar_price.fixture'
-import variants_with_different_prices from '../../../fixtures/variants_with_different_prices.fixture'
+import VariantsWithSimilarPrice from '../../../fixtures/variants_with_similar_price.fixture'
+import VariantsWithDifferentPrices from '../../../fixtures/variants_with_different_prices.fixture'
 
 test('renders correctly if variants have similar price', () => {
   // Act
   const wrapper = mount(
-    <ProductPrice variants={variants_with_similar_price} />
+    <ProductPrice variants={VariantsWithSimilarPrice} />
   )
 
   // Assert
@@ -19,7 +19,7 @@ test('renders correctly if variants have similar price', () => {
 test('renders correctly if variants have different prices', () => {
   // Act
   const wrapper = mount(
-    <ProductPrice variants={variants_with_different_prices} />
+    <ProductPrice variants={VariantsWithDifferentPrices} />
   )
 
   // Assert

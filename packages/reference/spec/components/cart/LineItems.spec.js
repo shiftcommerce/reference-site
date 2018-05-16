@@ -18,7 +18,7 @@ test('renders line items correctly, on initial load', () => {
   }
 
   const updateQuantity = () => {}
-  
+
   // act
   const wrapper = mount(
     <LineItems cart={cart} updateQuantity={updateQuantity} />

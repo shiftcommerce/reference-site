@@ -26,11 +26,9 @@ test('renders the correct checkout cart total with single line item', () => {
 
   const order = {}
 
-  const updateQuantity = () => {}
-
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} title="Checkout Cart Summary" />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} title='Checkout Cart Summary' />
   )
 
   // assert
@@ -66,8 +64,6 @@ test('renders the correct checkout cart total with multiple line items', () => {
   }
 
   const order = {}
-
-  const updateQuantity = () => {}
 
   // act
   const wrapper = mount(
@@ -110,8 +106,6 @@ test('renders the correct checkout cart costs with shipping address completed', 
 
   const order = {}
 
-  const updateQuantity = () => {}
-
   // act
   const wrapper = mount(
     <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
@@ -153,8 +147,6 @@ test('renders the correct checkout cart costs with shipping method selected', ()
 
   const order = {}
 
-  const updateQuantity = () => {}
-
   // act
   const wrapper = mount(
     <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
@@ -191,8 +183,6 @@ test('renders payment errors', () => {
   const order = {
     paymentError: 'Payment authentication failed'
   }
-
-  const updateQuantity = () => {}
 
   // act
   const wrapper = mount(

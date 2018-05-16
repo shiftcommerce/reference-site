@@ -1,5 +1,4 @@
 import { MiniBag } from '../../components/MiniBag'
-import Link from 'next/link'
 
 test('renders the minibag links', () => {
   // arrange

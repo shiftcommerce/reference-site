@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   className="s-algolia_instantsearch"
 >
   <CreateInstantSearchServer
-    apiKey="d3d6a8fe127394940245b920ad9c8fab"
-    appId="A6OLVXF8F8"
-    indexName="test_variants"
     resultState={
       Object {
         "_originalResponse": Object {
@@ -693,20 +690,19 @@ exports[`renders correctly 1`] = `
               role="Sort"
             >
               <AlgoliaSortBy(SortBy)
-                defaultRefinement="test_variants"
                 items={
                   Array [
                     Object {
                       "label": "SortBy",
-                      "value": "test_variants",
+                      "value": undefined,
                     },
                     Object {
                       "label": "Price: Low-High",
-                      "value": "test_variants_by_price_asc",
+                      "value": "undefined_by_price_asc",
                     },
                     Object {
                       "label": "Price: High-Low",
-                      "value": "test_variants_by_price_desc",
+                      "value": "undefined_by_price_desc",
                     },
                   ]
                 }
@@ -735,20 +731,19 @@ exports[`renders correctly 1`] = `
               role="Sort"
             >
               <AlgoliaSortBy(SortBy)
-                defaultRefinement="test_variants"
                 items={
                   Array [
                     Object {
                       "label": "SortBy",
-                      "value": "test_variants",
+                      "value": undefined,
                     },
                     Object {
                       "label": "Price: Low-High",
-                      "value": "test_variants_by_price_asc",
+                      "value": "undefined_by_price_asc",
                     },
                     Object {
                       "label": "Price: High-Low",
-                      "value": "test_variants_by_price_desc",
+                      "value": "undefined_by_price_desc",
                     },
                   ]
                 }

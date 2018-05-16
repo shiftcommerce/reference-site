@@ -1,3 +1,6 @@
+// Config
+import { menuRequest } from '../requests/apiRequests'
+
 // actionTypes
 import * as types from './actionTypes'
 
@@ -7,16 +10,7 @@ import { readEndpoint } from './apiActions'
 export function readCategories (store) {
   const categories = store.getState().categories.data
   if (categories.length === 0) {
-    const request = {
-      endpoint: '/getCategories',
-      query: {
-        fields: {
-          categories: 'id,title,reference'
-        }
-      },
-      successActionType: types.SET_CATEGORIES
-    }
-    return readEndpoint(request, request.successActionType)
+    return readEndpoint(menuRequest, menuRequest.successActionType)
   } else {
     return {
       type: types.SET_CATEGORIES,

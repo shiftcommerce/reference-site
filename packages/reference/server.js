@@ -21,7 +21,7 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }))
 
   server.get('/', (req, res) => {
-    return app.render(req, res, '/home/index', req.query)
+    return app.render(req, res, '/', req.query)
   })
 
   server.get('/search', (req, res) => {

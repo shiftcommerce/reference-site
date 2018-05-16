@@ -52,7 +52,7 @@ test('return SET_CHECKOUT_INPUT_VALUE on calling inputChange()', () => {
   expect(dispatch).toHaveBeenCalledWith({ payload: expectedPayload, type: actionTypes.SET_CHECKOUT_INPUT_VALUE })
 })
 
-test('return SET_SHIPPING_METHOD on calling storeShippingMethod()', () =>{
+test('return SET_SHIPPING_METHOD on calling storeShippingMethod()', () => {
   // arrange
   const dispatch = jest.fn()
   const checkout = {

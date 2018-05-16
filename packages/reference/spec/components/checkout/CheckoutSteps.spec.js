@@ -10,7 +10,7 @@ test('Renders steps correctly', () => {
     shippingMethod: { collapsed: true, completed: false },
     billingAddress: { collapsed: true, completed: false },
     shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
     reviewOrder: { collapsed: true, completed: false },
     currentStep: 1
   }
@@ -35,7 +35,7 @@ test('Renders current step 1 correctly', () => {
     shippingMethod: { collapsed: true, completed: false },
     billingAddress: { collapsed: true, completed: false },
     shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
     reviewOrder: { collapsed: true, completed: false },
     currentStep: 1
   }
@@ -57,7 +57,7 @@ test('Renders current step 2 correctly', () => {
     shippingMethod: { collapsed: true, completed: false },
     billingAddress: { collapsed: true, completed: false },
     shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
     reviewOrder: { collapsed: true, completed: false },
     currentStep: 2
   }
@@ -79,7 +79,7 @@ test('Renders current step 3 correctly', () => {
     shippingMethod: { collapsed: true, completed: true },
     billingAddress: { collapsed: true, completed: false },
     shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card'},
+    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
     reviewOrder: { collapsed: true, completed: false },
     currentStep: 3
   }
@@ -101,7 +101,7 @@ test('Renders current step 4 correctly', () => {
     shippingMethod: { collapsed: true, completed: true },
     billingAddress: { collapsed: true, completed: true },
     shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: true, selectedMethod: 'card'},
+    paymentMethod: { collapsed: true, completed: true, selectedMethod: 'card' },
     reviewOrder: { collapsed: true, completed: false },
     currentStep: 4
   }

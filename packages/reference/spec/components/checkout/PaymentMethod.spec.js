@@ -87,7 +87,7 @@ test('Does not render address summary when shippingAsBilling is false', () => {
     }
   }
   const setShippingBillingAddress = () => {}
- 
+
   // act
   const wrapper = mount(<PaymentMethod
     checkout={checkout}
