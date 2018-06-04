@@ -25,11 +25,13 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   const selectedShippingMethod = shippingMethods.shippingMethods[0]
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <Provider store={createMockStore(initialState)}>
       <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
     </Provider>
   )
+  /* eslint-enable no-unused-vars */
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -91,9 +93,11 @@ test('redirects to cart page when lineItems is empty', () => {
   Router.router = mockedRouter
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <CheckoutPage dispatch={dispatch} cart={cart} checkout={checkout} />
   )
+  /* eslint-enable no-unused-vars */
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)
@@ -119,10 +123,11 @@ test('redirects to order confirmation page, on creating an order', () => {
   Router.router = mockedRouter
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
-
+  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 
@@ -153,10 +158,11 @@ test('should not redirect to order confirmation page, if no new order got create
   Router.router = mockedRouter
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
-
+  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 
@@ -184,9 +190,11 @@ test('should redirect to order confirmation page, if new order got created', () 
   Router.router = mockedRouter
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
+  /* eslint-enable no-unused-vars */
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -213,10 +221,11 @@ test('dispatch intializeCart action on creating an order', () => {
   }
 
   // Act
+  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <CheckoutPage checkout={checkout} cart={cart} order={{}} dispatch={dispatch} />
   )
-
+  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 
@@ -257,10 +266,11 @@ describe('Review Your Order button', () => {
     })
 
     // Act
+    /* eslint-disable no-unused-vars */
     const wrapper = mount(
       <CheckoutPage checkout={newCheckout} order={order} cart={cart} dispatch={dispatch} />
     )
-
+    /* eslint-enable no-unused-vars */
     // Assert
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('button#review_order')).toBeDisabled()
@@ -282,10 +292,11 @@ describe('Review Your Order button', () => {
     }
 
     // Act
+    /* eslint-disable no-unused-vars */
     const wrapper = mount(
       <CheckoutPage checkout={newCheckout} order={newOrder} cart={cart} dispatch={dispatch} />
     )
-
+    /* eslint-enable no-unused-vars */
     // Assert
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('button#review_order')).toBeDisabled()

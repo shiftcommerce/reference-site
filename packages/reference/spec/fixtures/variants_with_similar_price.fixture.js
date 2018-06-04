@@ -1,33 +1,23 @@
+import { fixedPrice } from '../../lib/fixedPrice'
+
 const VariantsWithSimilarPrice = [
   {
     sku: 1,
     title: 'Small',
-    meta_data: {
-      eu: {
-        size: 'Size 8',
-        price: 1000
-      }
-    }
+    size: 'Size 8',
+    price: fixedPrice(10.0)
   },
   {
     sku: 2,
     title: 'Medium',
-    meta_data: {
-      eu: {
-        size: 'Size 10',
-        price: 1000
-      }
-    }
+    size: 'Size 10',
+    price: fixedPrice(10.0)
   },
   {
     sku: 3,
     title: 'Large',
-    meta_data: {
-      eu: {
-        size: 'Size 12',
-        price: 1000
-      }
-    }
+    size: 'Size 12',
+    price: fixedPrice(10.0)
   }
 ]
 

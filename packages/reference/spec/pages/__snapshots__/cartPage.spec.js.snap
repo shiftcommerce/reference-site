@@ -475,7 +475,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         </td>
                         <td>
                           £
-                          0.20
+                          20.00
                         </td>
                       </tr>
                     </tbody>
@@ -512,7 +512,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       </dt>
                       <dd>
                          £
-                        0.20
+                        20.00
                          
                       </dd>
                     </dl>
@@ -548,7 +548,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                          
                         <b>
                           £
-                          0.20
+                          20.00
                         </b>
                          
                       </dd>

@@ -1,7 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { calculateCartSummary } from '../../lib/calculateCartSummary'
-import { penceToPounds } from '../../lib/penceToPounds'
+import { fixedPrice } from '../../lib/fixedPrice'
 import Sticky from 'react-stickyfill'
 
 // Objects
@@ -23,7 +23,7 @@ class CheckoutCartTotal extends Component {
     } else if (!checkout.shippingMethod.retail_price_inc_tax) {
       shippingText = 'Select shipping method'
     } else {
-      shippingText = `£${penceToPounds(totals.shipping)}`
+      shippingText = `£${fixedPrice(totals.shipping)}`
     }
 
     const isValidOrder = this.validOrder(checkout, order)
@@ -33,11 +33,11 @@ class CheckoutCartTotal extends Component {
           <div className='o-checkout-cart-total__wrapper'>
             <dl aria-label='Subtotal'>
               <dt> Subtotal: </dt>
-              <dd> &pound;{ penceToPounds(totals.subTotal) } </dd>
+              <dd> &pound;{ fixedPrice(totals.subTotal) } </dd>
             </dl>
             <dl aria-label='VAT'>
               <dt> VAT: </dt>
-              <dd> &pound;{ penceToPounds(totals.tax) } </dd>
+              <dd> &pound;{ fixedPrice(totals.tax) } </dd>
             </dl>
             <dl aria-label='Shipping cost'>
               <dt> Shipping: </dt>
@@ -45,7 +45,7 @@ class CheckoutCartTotal extends Component {
             </dl>
             <dl aria-label='Total' className='o-checkout-cart-total__total'>
               <dt> You Pay: </dt>
-              <dd> <b>&pound;{ penceToPounds(totals.total) }</b> </dd>
+              <dd> <b>&pound;{ fixedPrice(totals.total) }</b> </dd>
               <div>
                 <Button
                   aria-label='Place Order'

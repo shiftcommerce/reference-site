@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import Button from '../../objects/Button'
 
 // Libs
-import { penceToPounds } from '../../lib/penceToPounds'
+import { fixedPrice } from '../../lib/fixedPrice'
 
 // Fixtures
 import ShippingMethodsJson from '../../static/shippingMethods.json'
@@ -28,7 +28,7 @@ export default class ShippingMethods extends Component {
   shippingMethod () {
     const { checkout, setShippingMethod } = this.props
     const preSelectedShippingMethod = checkout.shippingMethod
-    const defaultShippingMethod = this.availableShippingMethods()[0]
+    const defaultShippingMethod = this.availableShippingMethods() || [0]
 
     if (preSelectedShippingMethod && (preSelectedShippingMethod.id !== undefined)) {
       return preSelectedShippingMethod
@@ -130,7 +130,7 @@ export default class ShippingMethods extends Component {
           name='shipping_method'
           checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
         <label htmlFor={method.sku}>
-          <span className='c-shipping-method-list__cost'>&pound;{ penceToPounds(method.retail_price_inc_tax) }</span>
+          <span className='c-shipping-method-list__cost'>&pound;{ fixedPrice(method.retail_price_inc_tax) }</span>
           <span className='c-shipping-method-list__title'>{ method.name }</span>
           <span className='c-shipping-method-list__delivery-date-label'>Estimated Delivery: </span>
           <span className='c-shipping-method-list__delivery-date'>{ method.delivery_date }</span>

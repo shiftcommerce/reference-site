@@ -8,7 +8,7 @@ exports[`renders payment errors 1`] = `
         Object {
           "discount": 0,
           "imageUrl": "",
-          "price": 1000,
+          "price": "10.00",
           "quantity": 2,
           "size": "size - 8",
           "sku": "123",
@@ -129,13 +129,13 @@ exports[`renders the correct checkout cart costs with shipping address completed
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 1000,
+          "price": "10.00",
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 500,
+          "price": "5.00",
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -248,13 +248,13 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 1000,
+          "price": "10.00",
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 500,
+          "price": "5.00",
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -270,11 +270,11 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         "delivery_date": "Sunday 2nd December",
         "id": "1",
         "name": "Super Saver",
-        "paid_price_inc_tax": 345,
+        "paid_price_inc_tax": 3.45,
         "reference": "super_saver",
-        "retail_price_inc_tax": 345,
+        "retail_price_inc_tax": 3.45,
         "sku": "super_saver",
-        "tax_amount": 200,
+        "tax_amount": 2,
         "tax_percentage": 20,
       },
     }
@@ -377,13 +377,13 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 1000,
+          "price": "10.00",
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 500,
+          "price": "5.00",
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -495,7 +495,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         Object {
           "discount": 0,
           "imageUrl": "",
-          "price": 1000,
+          "price": "10.00",
           "quantity": 2,
           "size": "size - 8",
           "sku": "123",

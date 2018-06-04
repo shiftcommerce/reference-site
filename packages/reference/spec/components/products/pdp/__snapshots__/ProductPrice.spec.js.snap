@@ -5,32 +5,20 @@ exports[`renders correctly if variants have different prices 1`] = `
   variants={
     Array [
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1000,
-            "size": "Size 8",
-          },
-        },
+        "price": "10.00",
+        "size": "Size 8",
         "sku": 1,
         "title": "Small",
       },
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1100,
-            "size": "Size 10",
-          },
-        },
+        "price": "11.00",
+        "size": "Size 10",
         "sku": 2,
         "title": "Medium",
       },
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1200,
-            "size": "Size 12",
-          },
-        },
+        "price": "12.00",
+        "size": "Size 12",
         "sku": 3,
         "title": "Large",
       },
@@ -55,32 +43,20 @@ exports[`renders correctly if variants have similar price 1`] = `
   variants={
     Array [
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1000,
-            "size": "Size 8",
-          },
-        },
+        "price": "10.00",
+        "size": "Size 8",
         "sku": 1,
         "title": "Small",
       },
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1000,
-            "size": "Size 10",
-          },
-        },
+        "price": "10.00",
+        "size": "Size 10",
         "sku": 2,
         "title": "Medium",
       },
       Object {
-        "meta_data": Object {
-          "eu": Object {
-            "price": 1000,
-            "size": "Size 12",
-          },
-        },
+        "price": "10.00",
+        "size": "Size 12",
         "sku": 3,
         "title": "Large",
       },

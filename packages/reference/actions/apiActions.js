@@ -5,7 +5,6 @@ import JsonApiParser from '../lib/JsonApiParser'
 export const readEndpoint = (request) => {
   return (dispatch, getState) => {
     dispatch(setLoadingTo(true, request.successActionType))
-
     return new ApiClient().read(request.endpoint, request.query)
       .then((response) => {
         if ((response.data.response && (response.data.response.status === 200 || response.data.response.status === 304)) || (!response.data.response && response.status === 200)) {

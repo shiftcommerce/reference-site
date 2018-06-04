@@ -1,21 +1,9 @@
-// actionTypes
-import * as types from './actionTypes'
+// Config
+import { productRequest } from '../requests/apiRequests'
 
 // Actions
 import { readEndpoint } from './apiActions'
 
-export function readProduct (productID) {
-  const request = {
-    endpoint: `/getProduct/${productID}`,
-    query: {
-      include: 'categories,variants,asset_files',
-      fields: {
-        categories: 'id,title',
-        variants: 'id,meta_data',
-        asset_files: 'url,alt_text'
-      }
-    },
-    successActionType: types.SET_PRODUCT
-  }
-  return readEndpoint(request)
+export function readProduct (productId) {
+  return readEndpoint(productRequest(productId))
 }

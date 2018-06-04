@@ -1,5 +1,7 @@
 import CartSummary from '../../../components/cart/CartSummary'
 
+import { fixedPrice } from '../../../lib/fixedPrice'
+
 test('renders correct values when no line items are available', () => {
   // arrange
   const cart = {
@@ -25,9 +27,9 @@ test('renders correct values when line items are available', () => {
     lineItems: [
       {
         title: 'test',
-        price: 1000,
-        discount: 200,
-        quantity: 200,
+        price: fixedPrice(10.0),
+        discount: fixedPrice(2.0),
+        quantity: 2,
         sku: '123',
         imageUrl: '',
         size: 'size - 8'

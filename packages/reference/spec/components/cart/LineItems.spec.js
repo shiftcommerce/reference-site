@@ -1,13 +1,15 @@
 import LineItems from '../../../components/cart/LineItems'
 import Image from '../../../objects/Image'
 
+import { fixedPrice } from '../../../lib/fixedPrice'
+
 test('renders line items correctly, on initial load', () => {
   // arrange
   const cart = {
     lineItems: [
       {
         title: 'test',
-        price: 10,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
         sku: '123',
@@ -41,7 +43,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
     lineItems: [
       {
         title: 'test',
-        price: 10,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
         sku: '123',

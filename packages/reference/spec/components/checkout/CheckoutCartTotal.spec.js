@@ -4,13 +4,15 @@ import CheckoutCartTotal from '../../../components/checkout/CheckoutCartTotal'
 // Fixtures
 import { shippingMethods } from '../../../static/shippingMethods.json'
 
+import { fixedPrice } from '../../../lib/fixedPrice'
+
 test('renders the correct checkout cart total with single line item', () => {
   // arrange
   const cart = {
     lineItems: [
       {
         title: 'Test Product',
-        price: 1000,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
         sku: '123',
@@ -45,13 +47,13 @@ test('renders the correct checkout cart total with multiple line items', () => {
     lineItems: [
       {
         title: 'Test Product',
-        price: 1000,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 500,
+        price: fixedPrice(5.0),
         discount: 0,
         quantity: 1
       }
@@ -84,13 +86,13 @@ test('renders the correct checkout cart costs with shipping address completed', 
     lineItems: [
       {
         title: 'Test Product',
-        price: 1000,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 500,
+        price: fixedPrice(5.0),
         discount: 0,
         quantity: 1
       }
@@ -125,13 +127,13 @@ test('renders the correct checkout cart costs with shipping method selected', ()
     lineItems: [
       {
         title: 'Test Product',
-        price: 1000,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 500,
+        price: fixedPrice(5.0),
         discount: 0,
         quantity: 1
       }
@@ -166,7 +168,7 @@ test('renders payment errors', () => {
     lineItems: [
       {
         title: 'Test Product',
-        price: 1000,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
         sku: '123',

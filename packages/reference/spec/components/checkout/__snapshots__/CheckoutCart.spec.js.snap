@@ -7,13 +7,13 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
       "lineItems": Array [
         Object {
           "discount": 0,
-          "price": 10,
+          "price": "10.00",
           "quantity": 2,
           "title": "Test Product",
         },
         Object {
           "discount": 0,
-          "price": 5,
+          "price": "5.00",
           "quantity": 1,
           "title": "Pretend Product",
         },
@@ -92,7 +92,7 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
             aria-label="Price"
           >
             Price: £
-            10
+            10.00
           </li>
           <li
             aria-label="Subtotal"
@@ -145,7 +145,7 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
             aria-label="Price"
           >
             Price: £
-            5
+            5.00
           </li>
           <li
             aria-label="Subtotal"
@@ -168,7 +168,7 @@ exports[`renders the correct checkout cart summary with single line item 1`] = `
         Object {
           "discount": 0,
           "imageUrl": "",
-          "price": 10,
+          "price": "10.00",
           "quantity": 2,
           "size": "size - 8",
           "sku": "123",
@@ -252,7 +252,7 @@ exports[`renders the correct checkout cart summary with single line item 1`] = `
             aria-label="Price"
           >
             Price: £
-            10
+            10.00
           </li>
           <li
             aria-label="Subtotal"

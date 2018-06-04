@@ -33,9 +33,9 @@ app.prepare().then(() => {
     createReadStream('./serviceWorker.js').pipe(res)
   })
 
-  // server.get('/products/:id', (req, res) => {
-  //   return app.render(req, res, '/products/product', Object.assign(req.query, { id: req.params.id }))
-  // })
+  server.get('/products/:id', (req, res) => {
+    return app.render(req, res, '/products/product', Object.assign(req.query, { id: req.params.id }))
+  })
 
   server.get('/categories/:id', (req, res) => {
     return app.render(req, res, '/categories/category', Object.assign(req.query, { id: req.params.id }))

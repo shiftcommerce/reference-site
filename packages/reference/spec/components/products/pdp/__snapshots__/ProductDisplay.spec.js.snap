@@ -9,8 +9,9 @@ exports[`renders correctly 1`] = `
     Object {
       "asset_files": Array [
         Object {
-          "id": 1,
-          "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+          "alt_text": "Textured Long T-Shirt",
+          "asset_file": "S2623408_C29P_Alt2.jpg",
+          "canonical_path": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
         },
       ],
       "bundles": Array [
@@ -38,44 +39,43 @@ exports[`renders correctly 1`] = `
           "title": "Mingo",
         },
       ],
+      "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
       "id": 1,
-      "meta_data": Object {
-        "eu": Object {
-          "colour": "Blue",
-          "description": "Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.",
-          "sku": "SKU2659078",
+      "meta_attributes": Object {
+        "master_colour": Object {
+          "value": "Stone",
         },
       },
-      "price": "£99",
+      "price": "99.00",
       "title": "Textured Long T-Shirt",
       "variants": Array [
         Object {
-          "meta_data": Object {
-            "eu": Object {
-              "price": 10,
-              "size": "Size 8",
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 8",
             },
           },
+          "price": "10.00",
           "sku": 1,
           "title": "Small",
         },
         Object {
-          "meta_data": Object {
-            "eu": Object {
-              "price": 11,
-              "size": "Size 10",
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 10",
             },
           },
+          "price": "11.00",
           "sku": 2,
           "title": "Medium",
         },
         Object {
-          "meta_data": Object {
-            "eu": Object {
-              "price": 12,
-              "size": "Size 12",
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 12",
             },
           },
+          "price": "12.00",
           "sku": 3,
           "title": "Large",
         },
@@ -83,7 +83,7 @@ exports[`renders correctly 1`] = `
     }
   }
   quantity=""
-  size=""
+  size="Small"
   sku=""
 >
   <div
@@ -98,12 +98,13 @@ exports[`renders correctly 1`] = `
         <Image
           alt="Textured Long T-Shirt"
           aria-label="Textured Long T-Shirt"
+          className="c-image"
           height={705}
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
           width={503}
         >
           <div
-            className={undefined}
+            className="c-image"
             style={
               Object {
                 "height": 705,
@@ -137,9 +138,7 @@ exports[`renders correctly 1`] = `
           <div
             className="c-product-display__sku"
           >
-            <span>
-              SKU2659078
-            </span>
+            <span />
           </div>
           <div
             className="c-product-display__price"
@@ -148,32 +147,32 @@ exports[`renders correctly 1`] = `
               variants={
                 Array [
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 10,
-                        "size": "Size 8",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 8",
                       },
                     },
+                    "price": "10.00",
                     "sku": 1,
                     "title": "Small",
                   },
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 11,
-                        "size": "Size 10",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 10",
                       },
                     },
+                    "price": "11.00",
                     "sku": 2,
                     "title": "Medium",
                   },
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 12,
-                        "size": "Size 12",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 12",
                       },
                     },
+                    "price": "12.00",
                     "sku": 3,
                     "title": "Large",
                   },
@@ -185,13 +184,21 @@ exports[`renders correctly 1`] = `
               >
                 <span>
                   £
-                  0.10
+                  10.00
                    - £
-                  0.12
+                  12.00
                 </span>
               </div>
             </ProductPrice>
           </div>
+          <div
+            className="c-product-display__description"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+              }
+            }
+          />
           <div
             className="c-product-display__colour"
           >
@@ -200,7 +207,7 @@ exports[`renders correctly 1`] = `
             </strong>
             <span>
                
-              Blue
+              Stone
                
             </span>
           </div>
@@ -216,32 +223,32 @@ exports[`renders correctly 1`] = `
               variants={
                 Array [
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 10,
-                        "size": "Size 8",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 8",
                       },
                     },
+                    "price": "10.00",
                     "sku": 1,
                     "title": "Small",
                   },
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 11,
-                        "size": "Size 10",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 10",
                       },
                     },
+                    "price": "11.00",
                     "sku": 2,
                     "title": "Medium",
                   },
                   Object {
-                    "meta_data": Object {
-                      "eu": Object {
-                        "price": 12,
-                        "size": "Size 12",
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 12",
                       },
                     },
+                    "price": "12.00",
                     "sku": 3,
                     "title": "Large",
                   },
@@ -265,7 +272,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={1}
                   aria-setsize={3}
-                  data-price={10}
+                  data-price="10.00"
                   key="0"
                   role="option"
                   value={1}
@@ -275,7 +282,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={2}
                   aria-setsize={3}
-                  data-price={11}
+                  data-price="11.00"
                   key="1"
                   role="option"
                   value={2}
@@ -285,7 +292,7 @@ exports[`renders correctly 1`] = `
                 <option
                   aria-posinset={3}
                   aria-setsize={3}
-                  data-price={12}
+                  data-price="12.00"
                   key="2"
                   role="option"
                   value={3}
@@ -426,15 +433,6 @@ exports[`renders correctly 1`] = `
           </div>
         </section>
         <section
-          aria-label="Product Information"
-          className="c-product-display__section"
-        >
-          <h3>
-            Product Information
-          </h3>
-          Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.
-        </section>
-        <section
           aria-label="Delivery Information"
           className="c-product-display__section"
         >
@@ -454,113 +452,6 @@ exports[`renders correctly 1`] = `
               </p>
             </div>
           </DeliveryInformation>
-        </section>
-        <section
-          aria-label="Related Products"
-          className="c-product-display__section"
-        >
-          <RelatedProducts
-            bundles={
-              Array [
-                Object {
-                  "id": 1,
-                  "products": Array [
-                    Object {
-                      "asset_files": Array [
-                        Object {
-                          "id": 2,
-                          "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-                        },
-                      ],
-                      "canonical_path": "/products/stripe-shirt",
-                      "id": 1,
-                      "title": "Stripe Shirt",
-                    },
-                    Object {
-                      "asset_files": Array [],
-                      "canonical_path": "/products/slip-on-pump",
-                      "id": 2,
-                      "title": "Slip on Pump (no asset files example)",
-                    },
-                  ],
-                  "title": "Mingo",
-                },
-              ]
-            }
-          >
-            <div>
-              <h3>
-                Related Products
-              </h3>
-              <ul>
-                <li
-                  key="0"
-                >
-                  <Image
-                    height={73}
-                    src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-                    width={73}
-                  >
-                    <div
-                      className={undefined}
-                      style={
-                        Object {
-                          "height": 73,
-                          "width": 73,
-                        }
-                      }
-                    >
-                      <img
-                        className="c-image"
-                        height={73}
-                        src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-                        width={73}
-                      />
-                    </div>
-                  </Image>
-                  <Link
-                    href="/products/stripe-shirt"
-                  >
-                    <a
-                      href="/products/stripe-shirt"
-                      onClick={[Function]}
-                    >
-                      Stripe Shirt
-                    </a>
-                  </Link>
-                </li>
-                <li
-                  key="1"
-                >
-                  <Image
-                    height={73}
-                    src={undefined}
-                    width={73}
-                  >
-                    <div
-                      className="c-dummy_image"
-                      style={
-                        Object {
-                          "height": 73,
-                          "width": 73,
-                        }
-                      }
-                    />
-                  </Image>
-                  <Link
-                    href="/products/slip-on-pump"
-                  >
-                    <a
-                      href="/products/slip-on-pump"
-                      onClick={[Function]}
-                    >
-                      Slip on Pump (no asset files example)
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </RelatedProducts>
         </section>
       </div>
     </div>

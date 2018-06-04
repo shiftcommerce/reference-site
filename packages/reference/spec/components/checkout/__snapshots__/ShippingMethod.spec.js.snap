@@ -507,7 +507,7 @@ exports[`render shipping methods as expected 1`] = `
             onClick={[Function]}
           >
             <input
-              checked={true}
+              checked={false}
               id="super_saver_1"
               name="shipping_method"
               onChange={[Function]}
@@ -803,7 +803,7 @@ exports[`renders line item quantity as expected 1`] = `
             onClick={[Function]}
           >
             <input
-              checked={true}
+              checked={false}
               id="super_saver_1"
               name="shipping_method"
               onChange={[Function]}

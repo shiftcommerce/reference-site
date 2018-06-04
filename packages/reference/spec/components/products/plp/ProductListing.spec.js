@@ -7,7 +7,12 @@ import resultState from '../../../fixtures/searchResultState.fixture'
 test('renders correctly', () => {
   // Arrange
   const searchState = {}
-  const category = 'Bathroom'
+  const category = {
+    data: {
+      id: 1,
+      title: 'Bathroom'
+    }
+  }
 
   // Act
   const wrapper = shallow(

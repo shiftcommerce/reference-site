@@ -1,12 +1,14 @@
 import CheckoutCart from '../../../components/checkout/CheckoutCart'
 
+import { fixedPrice } from '../../../lib/fixedPrice'
+
 test('renders the correct checkout cart summary with single line item', () => {
   // arrange
   const cart = {
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
         sku: '123',
@@ -35,13 +37,13 @@ test('renders the correct checkout cart summary with multiple line items', () =>
     lineItems: [
       {
         title: 'Test Product',
-        price: 10,
+        price: fixedPrice(10.0),
         discount: 0,
         quantity: 2
       },
       {
         title: 'Pretend Product',
-        price: 5,
+        price: fixedPrice(5.0),
         discount: 0,
         quantity: 1
       }

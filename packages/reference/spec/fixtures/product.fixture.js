@@ -1,42 +1,43 @@
+import { fixedPrice } from '../../lib/fixedPrice'
+
 const Product = {
   id: 1,
   title: 'Textured Long T-Shirt',
-  price: '£99',
-  meta_data: {
-    eu: {
-      colour: 'Blue',
-      sku: 'SKU2659078',
-      description: 'Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.'
+  description: 'Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.',
+  price: fixedPrice(99.0),
+  meta_attributes: {
+    master_colour: {
+      value: 'Stone'
     }
   },
   variants: [
     {
       sku: 1,
       title: 'Small',
-      meta_data: {
-        eu: {
-          size: 'Size 8',
-          price: 10.00
+      price: fixedPrice(10.0),
+      meta_attributes: {
+        size: {
+          value: 'Size 8'
         }
       }
     },
     {
       sku: 2,
       title: 'Medium',
-      meta_data: {
-        eu: {
-          size: 'Size 10',
-          price: 11.00
+      price: fixedPrice(11.0),
+      meta_attributes: {
+        size: {
+          value: 'Size 10'
         }
       }
     },
     {
       sku: 3,
       title: 'Large',
-      meta_data: {
-        eu: {
-          size: 'Size 12',
-          price: 12.00
+      price: fixedPrice(12.0),
+      meta_attributes: {
+        size: {
+          value: 'Size 12'
         }
       }
     }
@@ -65,8 +66,9 @@ const Product = {
   ],
   asset_files: [
     {
-      id: 1,
-      url: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg'
+      asset_file: 'S2623408_C29P_Alt2.jpg',
+      alt_text: 'Textured Long T-Shirt',
+      canonical_path: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg'
     }
   ]
 }

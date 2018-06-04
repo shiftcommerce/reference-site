@@ -1,0 +1,6 @@
+.c-product-listing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+}

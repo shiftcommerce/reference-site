@@ -18,7 +18,7 @@ const productSearchHit = {
   'variant_meta_data': {
     'eu': {
       'size': 'Size 8',
-      'price': 10.00
+      'price': 10.0
     }
   },
   'product_assets': [

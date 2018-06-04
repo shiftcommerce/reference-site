@@ -6,9 +6,6 @@ import withRedux from 'next-redux-wrapper'
 import Layout from '../../components/Layout'
 import ProductDisplay from '../../components/products/pdp/ProductDisplay'
 
-// Objects
-import Breadcrumb from '../../objects/Breadcrumb'
-
 // Actions
 import { addToCart } from '../../actions/cartActions'
 import { readProduct } from '../../actions/productActions'
@@ -80,7 +77,6 @@ export class Product extends Component {
     let {
       product
     } = this.props
-    let category = (product.categories && product.categories[0])
 
     if (product.loading) {
       return (
@@ -95,16 +91,8 @@ export class Product extends Component {
         </Layout>
       )
     } else {
-      const breadcrumbMenuTrail = [
-        { id: category.id, title: category.title, canonical_path: `/categories/${category.id}`, page: '/categories/category' },
-        { id: product.id, title: product.title, canonical_path: `/products/${product.id}`, page: '/products/product' }
-      ]
       return (
         <Layout>
-          <div>
-            <Breadcrumb trail={breadcrumbMenuTrail} />
-          </div>
-
           <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} {...this.state} />
         </Layout>
       )

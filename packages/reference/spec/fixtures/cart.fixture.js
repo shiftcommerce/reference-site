@@ -2,7 +2,7 @@ const Cart = {
   lineItems: [
     {
       title: 'test',
-      price: 10,
+      price: 10.0,
       discount: 0,
       quantity: 2,
       sku: '123',

@@ -1,0 +1,16 @@
+.c-product-listing-card {
+  &__title,
+  &__view-details,
+  &__price,
+  &__rating {
+    text-align: center;
+  }
+}
+
+.c-product-listing-card__rating--fill {
+  color: $text-gold;
+}
+
+.c-product-listing-card__rating--empty {
+  color: $text-default;
+}

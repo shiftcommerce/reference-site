@@ -1347,7 +1347,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -1371,7 +1371,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -1386,7 +1386,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>
@@ -2786,7 +2786,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -2810,7 +2810,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -2825,7 +2825,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>
@@ -4216,7 +4216,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -4240,7 +4240,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -4255,7 +4255,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>
@@ -5659,7 +5659,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </dt>
                       <dd>
                          £
-                        0.20
+                        20.00
                          
                       </dd>
                     </dl>
@@ -5683,7 +5683,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </dt>
                       <dd>
                          
-                        £0.05
+                        £5.45
                          
                       </dd>
                     </dl>
@@ -5698,7 +5698,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                          
                         <b>
                           £
-                          0.25
+                          25.45
                         </b>
                          
                       </dd>
@@ -7090,7 +7090,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -7114,7 +7114,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -7129,7 +7129,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>
@@ -9066,7 +9066,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -9090,7 +9090,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -9105,7 +9105,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>
@@ -11042,7 +11042,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </dt>
                     <dd>
                        £
-                      0.20
+                      20.00
                        
                     </dd>
                   </dl>
@@ -11066,7 +11066,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </dt>
                     <dd>
                        
-                      £0.05
+                      £5.45
                        
                     </dd>
                   </dl>
@@ -11081,7 +11081,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                        
                       <b>
                         £
-                        0.25
+                        25.45
                       </b>
                        
                     </dd>

@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProductListingCard correctly 1`] = `
+<ProductListingCard
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "alt_text": "Textured Long T-Shirt",
+          "asset_file": "S2623408_C29P_Alt2.jpg",
+          "canonical_path": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+        },
+      ],
+      "bundles": Array [
+        Object {
+          "id": 1,
+          "products": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "id": 2,
+                  "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+                },
+              ],
+              "canonical_path": "/products/stripe-shirt",
+              "id": 1,
+              "title": "Stripe Shirt",
+            },
+            Object {
+              "asset_files": Array [],
+              "canonical_path": "/products/slip-on-pump",
+              "id": 2,
+              "title": "Slip on Pump (no asset files example)",
+            },
+          ],
+          "title": "Mingo",
+        },
+      ],
+      "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+      "id": 1,
+      "meta_attributes": Object {
+        "master_colour": Object {
+          "value": "Stone",
+        },
+      },
+      "price": "99.00",
+      "title": "Textured Long T-Shirt",
+      "variants": Array [
+        Object {
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 8",
+            },
+          },
+          "price": "10.00",
+          "sku": 1,
+          "title": "Small",
+        },
+        Object {
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 10",
+            },
+          },
+          "price": "11.00",
+          "sku": 2,
+          "title": "Medium",
+        },
+        Object {
+          "meta_attributes": Object {
+            "size": Object {
+              "value": "Size 12",
+            },
+          },
+          "price": "12.00",
+          "sku": 3,
+          "title": "Large",
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="c-product-listing-card"
+  >
+    <div
+      className="c-product-listing-card__body"
+    >
+      <div
+        className="c-product-listing-card__gallery  c-image"
+      >
+        <Image
+          alt="Textured Long T-Shirt"
+          aria-label="Textured Long T-Shirt"
+          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+        >
+          <div
+            className={undefined}
+            style={
+              Object {
+                "height": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <img
+              alt="Textured Long T-Shirt"
+              aria-label="Textured Long T-Shirt"
+              className="c-image"
+              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+            />
+          </div>
+        </Image>
+      </div>
+      <div
+        className="c-product-listing-card__title"
+      >
+        <p
+          aria-level="1"
+          role="heading"
+        >
+          Textured Long T-Shirt
+        </p>
+      </div>
+      <div
+        className="c-product-listing-card__price"
+      >
+        <ProductPrice
+          variants={
+            Array [
+              Object {
+                "meta_attributes": Object {
+                  "size": Object {
+                    "value": "Size 8",
+                  },
+                },
+                "price": "10.00",
+                "sku": 1,
+                "title": "Small",
+              },
+              Object {
+                "meta_attributes": Object {
+                  "size": Object {
+                    "value": "Size 10",
+                  },
+                },
+                "price": "11.00",
+                "sku": 2,
+                "title": "Medium",
+              },
+              Object {
+                "meta_attributes": Object {
+                  "size": Object {
+                    "value": "Size 12",
+                  },
+                },
+                "price": "12.00",
+                "sku": 3,
+                "title": "Large",
+              },
+            ]
+          }
+        >
+          <div
+            className="c-product-price"
+          >
+            <span>
+              £
+              10.00
+               - £
+              12.00
+            </span>
+          </div>
+        </ProductPrice>
+      </div>
+      <div
+        className="c-product-listing-card__view-details"
+      >
+        <Link
+          href="/products/1"
+        >
+          <Button
+            aria-label="View"
+            label="View"
+            onClick={[Function]}
+            size="lrg"
+            status="primary"
+          >
+            <button
+              aria-label="View"
+              className="o-button o-button--primary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              View
+            </button>
+          </Button>
+        </Link>
+      </div>
+      <div
+        className="c-product-listing-card__rating"
+      >
+        <span
+          className="c-product-listing-card__rating--empty"
+          key="1"
+        >
+          ★
+        </span>
+        <span
+          className="c-product-listing-card__rating--empty"
+          key="2"
+        >
+          ★
+        </span>
+        <span
+          className="c-product-listing-card__rating--empty"
+          key="3"
+        >
+          ★
+        </span>
+        <span
+          className="c-product-listing-card__rating--empty"
+          key="4"
+        >
+          ★
+        </span>
+        <span
+          className="c-product-listing-card__rating--empty"
+          key="5"
+        >
+          ★
+        </span>
+      </div>
+    </div>
+  </div>
+</ProductListingCard>
+`;

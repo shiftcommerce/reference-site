@@ -1,7 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import Link from 'next/link'
-import { penceToPounds } from '../../lib/penceToPounds'
+import { fixedPrice } from '../../lib/fixedPrice'
 
 // Objects
 import Image from '../../objects/Image'
@@ -40,7 +40,7 @@ class LineItems extends Component {
           -&pound;{ (lineItem.discount || 0) * lineItem.quantity }
         </td>
         <td>
-          &pound;{ penceToPounds(lineItem.price * lineItem.quantity) }
+          &pound;{ fixedPrice(lineItem.price * lineItem.quantity) }
         </td>
       </tr>
     )

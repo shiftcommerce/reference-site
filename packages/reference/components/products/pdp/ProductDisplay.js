@@ -2,7 +2,6 @@
 import { Component } from 'react'
 
 // Components
-import RelatedProducts from './RelatedProducts'
 import DeliveryInformation from './DeliveryInformation'
 import ProductPrice from './ProductPrice'
 
@@ -27,13 +26,18 @@ class ProductDisplay extends Component {
 
     const quantityOptions = [ 1, 2, 3, 4, 5 ]
 
+    function productDescription () {
+      return { __html: product.description }
+    }
+
     return (
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
             <Image
-              src={assetFile && assetFile.url}
+              src={assetFile && assetFile.canonical_path}
               alt={(assetFile && assetFile.alt_text) || product.title}
+              className='c-image'
               height={705}
               width={503}
               aria-label={product.title} />
@@ -46,16 +50,18 @@ class ProductDisplay extends Component {
               </h1>
 
               <div className='c-product-display__sku'>
-                <span>{ product.meta_data.eu.sku }</span>
+                <span>{ sku }</span>
               </div>
 
               <div className='c-product-display__price'>
                 <ProductPrice variants={product.variants} />
               </div>
 
+              <div className='c-product-display__description' dangerouslySetInnerHTML={productDescription()} />
+
               <div className='c-product-display__colour'>
                 <strong>Colour:</strong>
-                <span> { product.meta_data.eu.colour } </span>
+                <span> {product.meta_attributes.master_colour.value} </span>
               </div>
 
               <div className='c-product-display__size'>
@@ -71,18 +77,10 @@ class ProductDisplay extends Component {
               </div>
             </section>
 
-            <section className='c-product-display__section' aria-label='Product Information'>
-              <h3>Product Information</h3>
-              { product.meta_data.eu.description }
-            </section>
-
             <section className='c-product-display__section' aria-label='Delivery Information'>
               <DeliveryInformation />
             </section>
 
-            <section className='c-product-display__section' aria-label='Related Products'>
-              <RelatedProducts bundles={product.bundles} />
-            </section>
           </div>
         </div>
       </div>

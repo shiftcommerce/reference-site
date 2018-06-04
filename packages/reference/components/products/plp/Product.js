@@ -26,7 +26,7 @@ class Product extends Component {
 
   renderProductPrice (hit) {
     let metaData = hit.variant_meta_data
-    let price = (((metaData && metaData.eu && metaData.eu.price) || 0) / 100).toFixed(2)
+    let price = (((metaData && metaData.eu && metaData.eu.price) || 0))
 
     return (
       <div className='c-product__price'>

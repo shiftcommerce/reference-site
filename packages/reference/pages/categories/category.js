@@ -10,7 +10,7 @@ import { readCategory, readCategories } from '../../actions/categoryActions'
 
 // Components
 import Layout from '../../components/Layout'
-import { ProductListing, findResultsState } from '../../components/products/plp/ProductListing'
+import ProductListingCard from '../../components/products/plp/ProductListingCard'
 
 // Lib
 import trimObject from '../../lib/trimObject'
@@ -23,16 +23,15 @@ import { configureStore } from '../../utils/configureStore'
 
 class Category extends Component {
   static async getInitialProps ({ store, query, url }) {
-    const searchState = query
-    const resultState = await findResultsState(ProductListing, { searchState })
     await store.dispatch(readCategories(store))
-    await store.dispatch(readCategory(query.id))
-    store.dispatch(setSearchState(searchState))
-
-    return {
-      category: store.getState().category,
-      search: searchState,
-      resultState: resultState
+    if (query.id) {
+      await store.dispatch(readCategory({
+        categoryId: query.id,
+        pageNumber: query.page,
+        pageSize: query.pageSize
+      }))
+    } else {
+      return { product: {} }
     }
   }
 
@@ -49,10 +48,8 @@ class Category extends Component {
   }
 
   render () {
-    let {
-      category,
-      search,
-      resultState
+    const {
+      category
     } = this.props
 
     let BreadcrumbTrail = [
@@ -73,13 +70,12 @@ class Category extends Component {
     } else {
       return (
         <Layout>
+          <div className='c-product-listing'>
+            {category.data.map((product, index) => {
+              return <ProductListingCard product={product} key={index} />
+            })}
+          </div>
           <Breadcrumb trail={BreadcrumbTrail} />
-          <ProductListing
-            searchState={search}
-            onSearchStateChange={this.onSearchStateChange.bind(this)}
-            resultState={resultState}
-            categoryID={category.id}
-          />
         </Layout>
       )
     }
@@ -88,7 +84,6 @@ class Category extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    search: state.search || undefined,
     category: state.category || undefined
   }
 }
