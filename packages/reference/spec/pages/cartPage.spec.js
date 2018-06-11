@@ -10,19 +10,15 @@ import { updateQuantity } from '../../actions/cartActions'
 
 // Fixtures
 import cart from '../fixtures/cart.fixture'
-import categories from '../fixtures/categories.fixture'
+import menu from '../fixtures/menu.fixture'
 
 test('dispatch updateQuantity action on changing line item quantity', () => {
   // Arrange
   const initialState = {
-    categories: {
+    menu: {
       loading: false,
       error: false,
-      data: [
-        {
-          menu_items: categories
-        }
-      ]
+      data: menu
     }
   }
   const expectedFunction = updateQuantity().toString()

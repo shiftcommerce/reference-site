@@ -178,19 +178,17 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         </div>
         <Connect(NavBar)>
           <NavBar
-            categories={
+            dispatch={[Function]}
+            menu={
               Object {
                 "data": Array [
                   Object {
                     "menu_items": Array [
                       Object {
-                        "menu_items": Array [
-                          Object {
-                            "id": 1,
-                            "reference": "Bathroom",
-                            "title": "Bathroom",
-                          },
-                        ],
+                        "canonical_path": "/categories/1",
+                        "id": 1,
+                        "reference": "Bathroom",
+                        "title": "Bathroom",
                       },
                     ],
                   },
@@ -199,28 +197,29 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 "loading": false,
               }
             }
-            dispatch={[Function]}
           >
             <div
               className="o-nav"
               role="navigation"
             >
               <NavBarOption
-                as="/categories/undefined"
-                href="/categories/menuItems?id=undefined"
+                as="/categories/1"
+                href="/categories/1"
                 index={0}
                 key="0"
-                title={undefined}
+                title="Bathroom"
               >
                 <Link
-                  as="/categories/undefined"
-                  href="/categories/menuItems?id=undefined"
+                  as="/categories/1"
+                  href="/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
-                    href="/categories/undefined"
+                    href="/categories/1"
                     onClick={[Function]}
-                  />
+                  >
+                    Bathroom
+                  </a>
                 </Link>
               </NavBarOption>
             </div>

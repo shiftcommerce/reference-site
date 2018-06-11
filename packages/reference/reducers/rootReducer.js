@@ -4,20 +4,22 @@ import { combineReducers } from 'redux'
 // Reducers
 import setCart from './setCart'
 import setCategory from './setCategory'
-import setCategories from './setCategories'
+import setCheckout from './setCheckout'
+import setMenu from './setMenu'
+import setOrder from './setOrder'
+import setPage from './setPage'
 import setProduct from './setProduct'
 import setSearchState from './setSearchState'
-import setCheckout from './setCheckout'
-import setOrder from './setOrder'
 
 const rootReducer = combineReducers({
   cart: setCart,
   category: setCategory,
-  categories: setCategories,
-  product: setProduct,
-  search: setSearchState,
   checkout: setCheckout,
-  order: setOrder
+  menu: setMenu,
+  order: setOrder,
+  page: setPage,
+  product: setProduct,
+  search: setSearchState
 })
 
 export default rootReducer

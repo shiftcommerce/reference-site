@@ -8,14 +8,14 @@ import withRedux from 'next-redux-wrapper'
 import Layout from '../components/Layout'
 
 // Actions
-import { readCategories } from '../actions/categoryActions'
+import { readMenu } from '../actions/menuActions'
 
 // Utils
 import { configureStore } from '../utils/configureStore'
 
 class OrderPage extends Component {
   static async getInitialProps ({ store }) {
-    await store.dispatch(readCategories(store))
+    await store.dispatch(readMenu(store))
   }
 
   render () {

@@ -8,7 +8,7 @@ describe('Read Endpoint', () => {
       endpoint: `/testEndpoint`,
       query: {
         fields: {
-          categories: 'id,title'
+          menu: 'id,title'
         }
       },
       successActionType: 'SET_TEST'

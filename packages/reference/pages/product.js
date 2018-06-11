@@ -3,16 +3,16 @@ import { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 
 // Components
-import Layout from '../../components/Layout'
-import ProductDisplay from '../../components/products/pdp/ProductDisplay'
+import Layout from '../components/Layout'
+import ProductDisplay from '../components/products/pdp/ProductDisplay'
 
 // Actions
-import { addToCart } from '../../actions/cartActions'
-import { readProduct } from '../../actions/productActions'
-import { readCategories } from '../../actions/categoryActions'
+import { addToCart } from '../actions/cartActions'
+import { readProduct } from '../actions/productActions'
+import { readMenu } from '../actions/menuActions'
 
 // Utils
-import { configureStore } from '../../utils/configureStore'
+import { configureStore } from '../utils/configureStore'
 
 export class Product extends Component {
   constructor () {
@@ -30,12 +30,8 @@ export class Product extends Component {
   }
 
   static async getInitialProps ({ store, query }) {
-    await store.dispatch(readCategories(store))
-    if (query.id) {
-      await store.dispatch(readProduct(query.id))
-    } else {
-      return { product: {} }
-    }
+    await store.dispatch(readMenu(store))
+    await store.dispatch(readProduct(query.id))
   }
 
   addToBag () {

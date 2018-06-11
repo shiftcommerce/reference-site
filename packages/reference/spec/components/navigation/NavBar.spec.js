@@ -5,15 +5,15 @@ import { createMockStore } from 'redux-test-utils'
 import NavBar from '../../../components/navigation/NavBar'
 
 // Fixtures
-import categories from '../../fixtures/categories.fixture'
+import menu from '../../fixtures/menu.fixture'
 
 test('renders the nav bar options', () => {
   // Arrange
   const initialState = {
-    categories: {
+    menu: {
       loading: false,
       error: false,
-      data: categories
+      data: menu
     }
   }
 

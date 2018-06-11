@@ -167,12 +167,14 @@ exports[`Processing state handling: displays error message, when there is an err
         </div>
         <Connect(NavBar)>
           <NavBar
-            categories={
+            dispatch={[Function]}
+            menu={
               Object {
                 "data": Array [
                   Object {
                     "menu_items": Array [
                       Object {
+                        "canonical_path": "/categories/1",
                         "id": 1,
                         "reference": "Bathroom",
                         "title": "Bathroom",
@@ -184,7 +186,6 @@ exports[`Processing state handling: displays error message, when there is an err
                 "loading": false,
               }
             }
-            dispatch={[Function]}
           >
             <div
               className="o-nav"
@@ -192,14 +193,14 @@ exports[`Processing state handling: displays error message, when there is an err
             >
               <NavBarOption
                 as="/categories/1"
-                href="/categories/menuItems?id=1"
+                href="/categories/1"
                 index={0}
                 key="0"
                 title="Bathroom"
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/menuItems?id=1"
+                  href="/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
@@ -398,12 +399,14 @@ exports[`Processing state handling: displays loading message, when there is no e
         </div>
         <Connect(NavBar)>
           <NavBar
-            categories={
+            dispatch={[Function]}
+            menu={
               Object {
                 "data": Array [
                   Object {
                     "menu_items": Array [
                       Object {
+                        "canonical_path": "/categories/1",
                         "id": 1,
                         "reference": "Bathroom",
                         "title": "Bathroom",
@@ -415,7 +418,6 @@ exports[`Processing state handling: displays loading message, when there is no e
                 "loading": false,
               }
             }
-            dispatch={[Function]}
           >
             <div
               className="o-nav"
@@ -423,14 +425,14 @@ exports[`Processing state handling: displays loading message, when there is no e
             >
               <NavBarOption
                 as="/categories/1"
-                href="/categories/menuItems?id=1"
+                href="/categories/1"
                 index={0}
                 key="0"
                 title="Bathroom"
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/menuItems?id=1"
+                  href="/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
@@ -623,12 +625,14 @@ exports[`Processing state handling: displays relevant message, when product data
         </div>
         <Connect(NavBar)>
           <NavBar
-            categories={
+            dispatch={[Function]}
+            menu={
               Object {
                 "data": Array [
                   Object {
                     "menu_items": Array [
                       Object {
+                        "canonical_path": "/categories/1",
                         "id": 1,
                         "reference": "Bathroom",
                         "title": "Bathroom",
@@ -640,7 +644,6 @@ exports[`Processing state handling: displays relevant message, when product data
                 "loading": false,
               }
             }
-            dispatch={[Function]}
           >
             <div
               className="o-nav"
@@ -648,14 +651,14 @@ exports[`Processing state handling: displays relevant message, when product data
             >
               <NavBarOption
                 as="/categories/1"
-                href="/categories/menuItems?id=1"
+                href="/categories/1"
                 index={0}
                 key="0"
                 title="Bathroom"
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/menuItems?id=1"
+                  href="/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"

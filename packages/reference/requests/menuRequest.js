@@ -1,5 +1,5 @@
 // Config
-import { MenuUrl, ProductUrl } from '../constants/apiUrls'
+import { MenuUrl } from '../constants/apiUrls'
 import * as types from '../actions/actionTypes'
 
 export const menuRequest = {
@@ -18,15 +18,5 @@ export const menuRequest = {
     },
     include: 'menu_items.json_api'
   },
-  successActionType: types.SET_CATEGORIES
-}
-
-export const productRequest = (productId) => {
-  return {
-    endpoint: `${ProductUrl}/${productId}`,
-    query: {
-      include: 'asset_files,variants,bundles,template,meta.*'
-    },
-    successActionType: types.SET_PRODUCT
-  }
+  successActionType: types.SET_MENU
 }

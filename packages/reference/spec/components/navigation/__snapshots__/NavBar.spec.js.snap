@@ -3,12 +3,14 @@
 exports[`renders the nav bar options 1`] = `
 <Connect(NavBar)>
   <NavBar
-    categories={
+    dispatch={[Function]}
+    menu={
       Object {
         "data": Array [
           Object {
             "menu_items": Array [
               Object {
+                "canonical_path": "/categories/1",
                 "id": 1,
                 "reference": "Bathroom",
                 "title": "Bathroom",
@@ -20,7 +22,6 @@ exports[`renders the nav bar options 1`] = `
         "loading": false,
       }
     }
-    dispatch={[Function]}
   >
     <div
       className="o-nav"
@@ -28,14 +29,14 @@ exports[`renders the nav bar options 1`] = `
     >
       <NavBarOption
         as="/categories/1"
-        href="/categories/menuItems?id=1"
+        href="/categories/1"
         index={0}
         key="0"
         title="Bathroom"
       >
         <Link
           as="/categories/1"
-          href="/categories/menuItems?id=1"
+          href="/categories/1"
         >
           <a
             className="o-nav__option o-nav__option--first"

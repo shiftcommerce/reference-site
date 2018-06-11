@@ -1,5 +1,5 @@
 // Config
-import { productRequest } from '../requests/apiRequests'
+import { productRequest } from '../requests/productRequest'
 
 // Actions
 import { readEndpoint } from './apiActions'

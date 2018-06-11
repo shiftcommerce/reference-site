@@ -8,28 +8,28 @@ import NavBarOption from './NavBarOption'
 class NavBar extends Component {
   renderNavOptions (menuItems) {
     return (
-      menuItems.map((menuItems, index) =>
-        <NavBarOption key={index} index={index} title={menuItems.title} href={`/categories/menuItems?id=${menuItems.id}`} as={`/categories/${menuItems.id}`} />
+      menuItems.map((menuItem, index) =>
+        <NavBarOption key={index} index={index} title={menuItem.title} href={menuItem.canonical_path} as={menuItem.canonical_path} />
       )
     )
   }
 
   render () {
     const {
-      categories
+      menu
     } = this.props
 
-    const [{ menu_items }] = categories.data
+    const [{ menu_items }] = menu.data
 
-    if (categories.loading) {
+    if (menu.loading) {
       return (
         <p>Loading...</p>
       )
-    } else if (categories.error) {
+    } else if (menu.error) {
       return (
         <p style={{'textAlign': 'center'}} >
           Sorry! There is an error in loading menus
-          {categories.error}
+          {menu.error}
         </p>
       )
     } else {
@@ -44,14 +44,14 @@ class NavBar extends Component {
 
 const mapStateToProps = (state) => {
   // Look into https://github.com/reduxjs/reselect to reduce expensive selectors
-  if (!state.categories && !state.categories.data) {
+  if (!state.menu && !state.menu.data) {
     return {
-      categories: {}
+      menu: {}
     }
   }
 
   return {
-    categories: state.categories || {}
+    menu: state.menu || {}
   }
 }
 

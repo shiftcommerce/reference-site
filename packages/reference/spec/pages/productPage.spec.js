@@ -3,20 +3,20 @@ import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Page
-import { Product } from './../../pages/products/product'
+import { Product } from './../../pages/product'
 
 // fixtures
 // import cart from './../fixtures/cart.fixture'
-import categories from './../fixtures/categories.fixture'
+import menu from './../fixtures/menu.fixture'
 
 describe('Processing state handling:', () => {
   test('displays loading message, when there is no error and product is loading from db', () => {
     // Arrange
     const initialState = {
-      categories: {
+      menu: {
         loading: false,
         error: false,
-        data: categories
+        data: menu
       }
     }
     const product = {
@@ -40,10 +40,10 @@ describe('Processing state handling:', () => {
   test('displays error message, when there is an error in loading product', () => {
     // Arrange
     const initialState = {
-      categories: {
+      menu: {
         loading: false,
         error: false,
-        data: categories
+        data: menu
       }
     }
     const product = {
@@ -67,10 +67,10 @@ describe('Processing state handling:', () => {
   test('displays relevant message, when product data is empty', () => {
     // Arrange
     const initialState = {
-      categories: {
+      menu: {
         loading: false,
         error: false,
-        data: categories
+        data: menu
       }
     }
     const product = {}

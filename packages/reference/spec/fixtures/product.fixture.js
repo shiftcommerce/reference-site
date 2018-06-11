@@ -2,6 +2,7 @@ import { fixedPrice } from '../../lib/fixedPrice'
 
 const Product = {
   id: 1,
+  canonical_path: '1',
   title: 'Textured Long T-Shirt',
   description: 'Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.',
   price: fixedPrice(99.0),

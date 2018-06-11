@@ -7,9 +7,9 @@ export const initialState = {
   data: []
 }
 
-export default function setCategories (state = initialState, action) {
+export default function setMenu (state = initialState, action) {
   switch (action.type) {
-    case types.SET_CATEGORIES:
+    case types.SET_MENU:
       return Object.assign({}, state, action.payload)
 
     default:

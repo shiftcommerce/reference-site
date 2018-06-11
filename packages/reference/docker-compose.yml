@@ -4,7 +4,7 @@ services:
   web:
     image: shift-front-end-react
     build: .
-    command: yarn run devserver
+    command: nodemon -w server.js devserver
     ports:
       - "3000:3000"
     entrypoint: ./bin/docker/yarn_entrypoint

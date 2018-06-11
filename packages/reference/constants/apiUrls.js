@@ -5,5 +5,7 @@ module.exports = {
   MenuUrl: `/${process.env.API_TENANT}/v1/menus`,
   ProductUrl: `/${process.env.API_TENANT}/v1/products`,
   CreateOrderUrl: `/${process.env.API_TENANT}/v1/create_order`,
-  CategoryUrl: `/${process.env.API_TENANT}/v1/category_trees/reference:web/categories`
+  CategoryUrl: `/${process.env.API_TENANT}/v1/category_trees/reference:web/categories`,
+  SlugUrl: `/${process.env.API_TENANT}/v1/slugs`,
+  PageUrl: `/${process.env.API_TENANT}/v1/static_pages`
 }

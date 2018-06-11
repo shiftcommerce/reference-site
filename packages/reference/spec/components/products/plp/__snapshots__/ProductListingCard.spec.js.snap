@@ -36,6 +36,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           "title": "Mingo",
         },
       ],
+      "canonical_path": "1",
       "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
       "id": 1,
       "meta_attributes": Object {
@@ -177,7 +178,7 @@ exports[`renders ProductListingCard correctly 1`] = `
         className="c-product-listing-card__view-details"
       >
         <Link
-          href="/products/1"
+          href="1"
         >
           <Button
             aria-label="View"

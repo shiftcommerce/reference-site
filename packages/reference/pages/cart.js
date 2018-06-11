@@ -7,7 +7,7 @@ import { configureStore } from '../utils/configureStore'
 
 // Actions
 import { updateQuantity } from '../actions/cartActions'
-import { readCategories } from '../actions/categoryActions'
+import { readMenu } from '../actions/menuActions'
 
 // Components
 import Layout from '../components/Layout'
@@ -15,7 +15,7 @@ import CartTable from '../components/cart/CartTable.js'
 
 export class CartPage extends Component {
   static async getInitialProps ({ store }) {
-    await store.dispatch(readCategories(store))
+    await store.dispatch(readMenu(store))
   }
 
   constructor (props) {

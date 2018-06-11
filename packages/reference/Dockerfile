@@ -11,6 +11,9 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 # Install basic packages
 RUN apt-get update -qq && apt-get install -y --no-install-recommends yarn
 
+#Install nodemon to hot reload on server changes
+RUN npm install -g nodemon
+
 # Configure the main working directory
 ENV app /app
 RUN mkdir $app
