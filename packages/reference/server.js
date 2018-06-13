@@ -28,6 +28,10 @@ app.prepare().then(() => {
     createReadStream('./serviceWorker.js').pipe(res)
   })
 
+  server.get('/slug', (req, res) => {
+    return app.render(req, res, '/slug', req.query)
+  })
+
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     const slug = req.url
 
@@ -42,7 +46,7 @@ app.prepare().then(() => {
           case 'Category':
             return app.render(req, res, '/category', Object.assign(req.query, { id: resource_id }))
           case 'StaticPage':
-            return app.render(req, res, '/page', Object.assign(req.query, { id: resource_id }))
+            return app.render(req, res, '/staticpage', Object.assign(req.query, { id: resource_id }))
         }
       }
 

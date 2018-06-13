@@ -9,11 +9,11 @@ test('renders the links', () => {
 
   // Act
   const wrapper = shallow(
-    <NavBarOption title='Mens' href='/categories/category?id=mens' as='/categories/mens' />
+    <NavBarOption title='Mens' href='/categories/mens' as='/categories/mens' />
   )
 
   // Assert
-  expect(wrapper).toContainReact(<Link href='/categories/category?id=mens' as='/categories/mens'><a className='o-nav__option'>Mens</a></Link>)
+  expect(wrapper).toContainReact(<Link href='/slug?slug=/categories/mens' as='/categories/mens'><a className='o-nav__option'>Mens</a></Link>)
 })
 
 test('renders the link with extra class if index is 0', () => {
@@ -21,10 +21,10 @@ test('renders the link with extra class if index is 0', () => {
 
   // Act
   const wrapper = shallow(
-    <NavBarOption index={0} title='Mens' href='/categories/category?id=mens' as='/categories/mens' />
+    <NavBarOption index={0} title='Mens' href='/categories/mens' as='/categories/mens' />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Link href='/categories/category?id=mens' as='/categories/mens'><a className='o-nav__option o-nav__option--first'>Mens</a></Link>)
+  expect(wrapper).toContainReact(<Link href='/slug?slug=/categories/mens' as='/categories/mens'><a className='o-nav__option o-nav__option--first'>Mens</a></Link>)
 })

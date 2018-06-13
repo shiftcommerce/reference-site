@@ -10,6 +10,7 @@ import setOrder from './setOrder'
 import setPage from './setPage'
 import setProduct from './setProduct'
 import setSearchState from './setSearchState'
+import setSlug from './setSlug'
 
 const rootReducer = combineReducers({
   cart: setCart,
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
   order: setOrder,
   page: setPage,
   product: setProduct,
-  search: setSearchState
+  search: setSearchState,
+  slug: setSlug
 })
 
 export default rootReducer

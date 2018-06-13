@@ -2,15 +2,12 @@
 import qs from 'qs'
 import axios from 'axios'
 
-// Config
-import { Host } from '../constants/apiUrls'
-
 class ApiClient {
   constructor (options = {}) {
     // if there is any external host (other than shift apps) we explicitly want to set,
     // then it needs to be passed to this class. If not, then the call will be handled
     // by express server with the host set to express host
-    this.host = options.host || Host
+    this.host = options.host || process.env.API_HOST
     this.client = axios.create({
       baseURL: this.host,
       headers: {

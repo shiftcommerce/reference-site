@@ -16,7 +16,7 @@ export const menuRequest = {
         }
       }
     },
-    include: 'menu_items.json_api'
+    include: 'menu_items'
   },
   successActionType: types.SET_MENU
 }

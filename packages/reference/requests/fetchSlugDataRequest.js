@@ -6,6 +6,11 @@ const auth = {
   password: process.env.API_ACCESS_TOKEN
 }
 
+const headers = {
+  'Content-Type': 'application/vnd.api+json',
+  'Accept': 'application/vnd.api+json'
+}
+
 const page = {
   number: 1,
   size: 1
@@ -13,11 +18,6 @@ const page = {
 
 const fields = {
   slugs: 'resource_type,resource_id,active,slug'
-}
-
-const headers = {
-  'Content-Type': 'application/vnd.api+json',
-  'Accept': 'application/vnd.api+json'
 }
 
 const fetchSlugData = async slug => {
@@ -28,7 +28,6 @@ const fetchSlugData = async slug => {
     page: page,
     fields: fields
   }
-
   const query = qs.stringify(queryObject)
 
   try {

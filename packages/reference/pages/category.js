@@ -13,7 +13,7 @@ import ProductListingCard from '../components/products/plp/ProductListingCard'
 // Utils
 import { configureStore } from '../utils/configureStore'
 
-const productListingLoading = (
+const ProductListingLoading = (
   <Layout>
     <p>Loading...</p>
   </Layout>
@@ -31,7 +31,7 @@ class Category extends Component {
     } = this.props
 
     if (category.loading) {
-      return productListingLoading
+      return ProductListingLoading
     } else if (category.error) {
       return (
         <Layout>

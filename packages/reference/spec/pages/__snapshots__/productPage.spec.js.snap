@@ -200,7 +200,7 @@ exports[`Processing state handling: displays error message, when there is an err
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/1"
+                  href="/slug?slug=/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
@@ -432,7 +432,7 @@ exports[`Processing state handling: displays loading message, when there is no e
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/1"
+                  href="/slug?slug=/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
@@ -658,7 +658,7 @@ exports[`Processing state handling: displays relevant message, when product data
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/1"
+                  href="/slug?slug=/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"

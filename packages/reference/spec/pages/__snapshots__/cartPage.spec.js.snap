@@ -211,7 +211,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
               >
                 <Link
                   as="/categories/1"
-                  href="/categories/1"
+                  href="/slug?slug=/categories/1"
                 >
                   <a
                     className="o-nav__option o-nav__option--first"
