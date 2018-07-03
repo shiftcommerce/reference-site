@@ -35,7 +35,7 @@ class ProductDisplay extends Component {
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
             <Image
-              src={assetFile && assetFile.canonical_path}
+              src={assetFile && assetFile.s3_url}
               alt={(assetFile && assetFile.alt_text) || product.title}
               className='c-image'
               height={705}

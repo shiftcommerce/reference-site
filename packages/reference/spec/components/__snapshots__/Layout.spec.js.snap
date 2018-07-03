@@ -1,5 +1,204 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders the children inside it 1`] = `
+<div>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
+    <Logo
+      className="o-header__logo"
+    />
+    <span
+      className="o-header__search"
+    >
+      <SearchBar
+        dispatch={[Function]}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+      >
+        Content
+      </SearchBar>
+    </span>
+    <span
+      className="o-header__minibag"
+    >
+      <Connect(MiniBag) />
+    </span>
+  </div>
+  <Connect(NavBar) />
+  <div
+    className="o-body"
+  >
+    Content
+  </div>
+  <div
+    className="o-footer"
+  >
+    Footer
+  </div>
+</div>
+`;
+
+exports[`renders the footer 1`] = `
+<div>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
+    <Logo
+      className="o-header__logo"
+    />
+    <span
+      className="o-header__search"
+    >
+      <SearchBar
+        dispatch={[Function]}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+      />
+    </span>
+    <span
+      className="o-header__minibag"
+    >
+      <Connect(MiniBag) />
+    </span>
+  </div>
+  <Connect(NavBar) />
+  <div
+    className="o-body"
+  />
+  <div
+    className="o-footer"
+  >
+    Footer
+  </div>
+</div>
+`;
+
+exports[`renders the header 1`] = `
+<div>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
+    <Logo
+      className="o-header__logo"
+    />
+    <span
+      className="o-header__search"
+    >
+      <SearchBar
+        dispatch={[Function]}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+      />
+    </span>
+    <span
+      className="o-header__minibag"
+    >
+      <Connect(MiniBag) />
+    </span>
+  </div>
+  <Connect(NavBar) />
+  <div
+    className="o-body"
+  />
+  <div
+    className="o-footer"
+  >
+    Footer
+  </div>
+</div>
+`;
+
 exports[`renders the navbar 1`] = `
 <div>
   <CustomHead />
@@ -12,7 +211,40 @@ exports[`renders the navbar 1`] = `
     <span
       className="o-header__search"
     >
-      <SearchBar />
+      <SearchBar
+        dispatch={[Function]}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+      />
     </span>
     <span
       className="o-header__minibag"

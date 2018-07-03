@@ -4,3 +4,21 @@
   grid-gap: 15px;
   grid-auto-rows: minmax(100px, auto);
 }
+
+@media (max-width: 768px) {
+  .c-product-listing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+@media (max-width: 420px) {
+  .c-product-listing {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}

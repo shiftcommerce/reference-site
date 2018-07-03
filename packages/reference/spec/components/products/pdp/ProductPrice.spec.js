@@ -2,8 +2,8 @@
 import ProductPrice from '../../../../components/products/pdp/ProductPrice'
 
 // Fixtures
-import VariantsWithSimilarPrice from '../../../fixtures/variants_with_similar_price.fixture'
-import VariantsWithDifferentPrices from '../../../fixtures/variants_with_different_prices.fixture'
+import VariantsWithSimilarPrice from '../../../fixtures/variantsWithSimilarPrice.fixture'
+import VariantsWithDifferentPrices from '../../../fixtures/variantsWithDifferentPrices.fixture'
 
 test('renders correctly if variants have similar price', () => {
   // Act

@@ -19,10 +19,11 @@ describe('Processing state handling:', () => {
         data: menu
       }
     }
+
     const product = {
       loading: true,
       error: false,
-      product: []
+      data: []
     }
     const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
@@ -46,10 +47,11 @@ describe('Processing state handling:', () => {
         data: menu
       }
     }
+
     const product = {
       loading: false,
       error: true,
-      product: []
+      data: []
     }
     const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
@@ -73,7 +75,10 @@ describe('Processing state handling:', () => {
         data: menu
       }
     }
-    const product = {}
+
+    const product = {
+    }
+
     const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
     // Act

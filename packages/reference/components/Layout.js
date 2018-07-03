@@ -1,6 +1,6 @@
 // Libraries
 import { Component } from 'react'
-
+import { connect } from 'react-redux'
 // Scripts
 import Script from './../utils/Script'
 
@@ -77,4 +77,4 @@ class Layout extends Component {
   }
 }
 
-export default Layout
+export default connect(state => state)(Layout)

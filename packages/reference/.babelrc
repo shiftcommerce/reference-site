@@ -10,7 +10,7 @@
     },
     "test": {
       "presets": [
-        ["@babel/env", { "modules": "commonjs" }],
+        ["@babel/preset-env", { "modules": "commonjs" }],
         ["next/babel"]
       ],
       "plugins": ["transform-inline-environment-variables"]

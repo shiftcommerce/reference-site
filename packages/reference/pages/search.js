@@ -1,12 +1,11 @@
 // Libraries
 import { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 import Router from 'next/router'
 import qs from 'qs'
 
 // Actions
 import { setSearchState, setSearchQuery } from '../actions/searchActions'
-import { readMenu } from '../actions/menuActions'
 
 // Components
 import Layout from '../components/Layout'
@@ -18,15 +17,11 @@ import trimObject from '../lib/trimObject'
 // Objects
 import Breadcrumb from '../objects/Breadcrumb'
 
-// Utils
-import { configureStore } from '../utils/configureStore'
-
 class Search extends Component {
   static async getInitialProps ({ store, req, query, url }) {
     const searchState = query
     const resultState = await findResultsState(ProductListing, { searchState })
     store.dispatch(setSearchState(searchState))
-    await store.dispatch(readMenu(store))
     return { search: searchState, resultState: resultState, url: url }
   }
 
@@ -115,4 +110,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default withRedux(configureStore, mapStateToProps, mapDispatchToProps)(Search)
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

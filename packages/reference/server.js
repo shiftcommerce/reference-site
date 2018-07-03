@@ -7,7 +7,11 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const fetchSlugData = require('./requests/fetchSlugDataRequest')
+const fetchData = require('./requests/fetchDataRequest')
+const api = require('./constants/apiUrls')
+
+// Custom Route Handlers
+const handler = require('./routeHandlers/routeHandler')
 
 app.prepare().then(() => {
   const server = express()
@@ -23,21 +27,27 @@ app.prepare().then(() => {
     return app.render(req, res, '/search', req.query)
   })
 
+  server.get('/slug', (req, res) => {
+    return app.render(req, res, '/slug', req.query)
+  })
+
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./serviceWorker.js').pipe(res)
   })
 
-  server.get('/slug', (req, res) => {
-    return app.render(req, res, '/slug', req.query)
-  })
+  server.get('/getCategory', handler.getRenderer(api.CategoryUrl))
+  server.get('/getMenus', handler.getRenderer(api.MenuUrl))
+  server.get('/getProduct/:id', handler.getRenderer(api.ProductUrl))
+  server.get('/getSlug', handler.getRenderer(api.SlugUrl))
+  server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     const slug = req.url
 
     const directRouting = async (page) => {
-      const { resource_id, active } = page.data.data.attributes
-      const resourceType = page.data.data.attributes.resource_type
+      const { resource_id, active } = page.data.data[0].attributes
+      const resourceType = page.data.data[0].attributes.resource_type
 
       if (page.status === 200 && active === true) {
         switch (resourceType) {
@@ -57,7 +67,22 @@ app.prepare().then(() => {
       return handle(req, res)
     }
 
-    return fetchSlugData(slug).then(directRouting)
+    const queryObject = {
+      filter: {
+        path: slug
+      },
+      page: {
+        number: 1,
+        size: 1
+      },
+      fields: {
+        slugs: 'resource_type,resource_id,active,slug'
+      }
+    }
+
+    const url = `${process.env.API_TENANT}/v1/slugs`
+
+    return fetchData(queryObject, url).then(directRouting)
   })
 
   server.get('*', (req, res) => {

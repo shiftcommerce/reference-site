@@ -1,9 +1,8 @@
 // Config
-import { MenuUrl } from '../constants/apiUrls'
 import * as types from '../actions/actionTypes'
 
 export const menuRequest = {
-  endpoint: MenuUrl,
+  endpoint: '/getMenus',
   query: {
     fields: {
       menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
@@ -18,5 +17,6 @@ export const menuRequest = {
     },
     include: 'menu_items'
   },
+  requestActionType: types.GET_MENU,
   successActionType: types.SET_MENU
 }

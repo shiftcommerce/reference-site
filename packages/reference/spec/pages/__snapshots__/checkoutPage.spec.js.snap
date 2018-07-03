@@ -101,7 +101,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
     }
   }
   dispatch={[Function]}
-  order={Object {}}
+  order={
+    Object {
+      "cardErrors": false,
+      "cardTokenRequested": false,
+    }
+  }
 >
   <div>
     <CustomHead>
@@ -120,33 +125,38 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>
@@ -253,7 +263,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             }
           }
           dispatch={[Function]}
-          order={Object {}}
+          order={
+            Object {
+              "cardErrors": false,
+              "cardTokenRequested": false,
+            }
+          }
         >
           <div
             className="c-step-indicators__steps"
@@ -449,7 +464,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             onChange={[Function]}
             onShowField={[Function]}
             onToggleCollapsed={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
             title="Shipping Address"
           >
             <div
@@ -611,7 +631,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             dispatch={[Function]}
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
             setShippingMethod={[Function]}
           >
             <div
@@ -943,7 +968,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             onChange={[Function]}
             onPaymentMethodChanged={[Function]}
             onToggleCollapsed={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
             setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
@@ -1139,7 +1169,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
               }
             }
             dispatch={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
             title="Your Cart"
           >
             <div
@@ -1329,7 +1364,12 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             }
             convertToOrder={[Function]}
             dispatch={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
           >
             <Sticker>
               <div
@@ -1526,7 +1566,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
   dispatch={[Function]}
   order={
     Object {
-      "card_errors": true,
+      "cardErrors": true,
+      "cardTokenRequested": false,
     }
   }
 >
@@ -1547,33 +1588,38 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>
@@ -1680,7 +1726,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
           dispatch={[Function]}
           order={
             Object {
-              "card_errors": true,
+              "cardErrors": true,
+              "cardTokenRequested": false,
             }
           }
         >
@@ -1878,7 +1925,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             onToggleCollapsed={[Function]}
             order={
               Object {
-                "card_errors": true,
+                "cardErrors": true,
+                "cardTokenRequested": false,
               }
             }
             title="Shipping Address"
@@ -2042,7 +2090,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             onToggleCollapsed={[Function]}
             order={
               Object {
-                "card_errors": true,
+                "cardErrors": true,
+                "cardTokenRequested": false,
               }
             }
             setShippingMethod={[Function]}
@@ -2376,7 +2425,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             onToggleCollapsed={[Function]}
             order={
               Object {
-                "card_errors": true,
+                "cardErrors": true,
+                "cardTokenRequested": false,
               }
             }
             setBillingShippingAddress={[Function]}
@@ -2574,7 +2624,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             dispatch={[Function]}
             order={
               Object {
-                "card_errors": true,
+                "cardErrors": true,
+                "cardTokenRequested": false,
               }
             }
             title="Your Cart"
@@ -2766,7 +2817,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             dispatch={[Function]}
             order={
               Object {
-                "card_errors": true,
+                "cardErrors": true,
+                "cardTokenRequested": false,
               }
             }
           >
@@ -2982,33 +3034,38 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>
@@ -4406,7 +4463,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
       }
     }
     dispatch={[Function]}
-    order={Object {}}
+    order={
+      Object {
+        "cardErrors": false,
+        "cardTokenRequested": false,
+      }
+    }
   >
     <div>
       <CustomHead>
@@ -4425,33 +4487,38 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               className="c-step-indicators__logo u-text-color--primary"
             >
               <Link
-                as="/"
-                href="/home/index"
+                href="/"
               >
                 <a
                   href="/"
                   onClick={[Function]}
                 >
                   <Image
-                    height={79}
+                    height={75}
                     src="/static/logo.svg"
-                    width={72}
+                    width={120}
                   >
                     <div
                       className={undefined}
-                      style={
-                        Object {
-                          "height": 79,
-                          "width": 72,
-                        }
-                      }
                     >
-                      <img
-                        className="c-image"
-                        height={79}
-                        src="/static/logo.svg"
-                        width={72}
-                      />
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
                     </div>
                   </Image>
                 </a>
@@ -4556,7 +4623,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               }
             }
             dispatch={[Function]}
-            order={Object {}}
+            order={
+              Object {
+                "cardErrors": false,
+                "cardTokenRequested": false,
+              }
+            }
           >
             <div
               className="c-step-indicators__steps"
@@ -4750,7 +4822,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               onChange={[Function]}
               onShowField={[Function]}
               onToggleCollapsed={[Function]}
-              order={Object {}}
+              order={
+                Object {
+                  "cardErrors": false,
+                  "cardTokenRequested": false,
+                }
+              }
               title="Shipping Address"
             >
               <div
@@ -4910,7 +4987,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               dispatch={[Function]}
               formName="shippingMethod"
               onToggleCollapsed={[Function]}
-              order={Object {}}
+              order={
+                Object {
+                  "cardErrors": false,
+                  "cardTokenRequested": false,
+                }
+              }
               setShippingMethod={[Function]}
             >
               <div
@@ -5240,7 +5322,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               onChange={[Function]}
               onPaymentMethodChanged={[Function]}
               onToggleCollapsed={[Function]}
-              order={Object {}}
+              order={
+                Object {
+                  "cardErrors": false,
+                  "cardTokenRequested": false,
+                }
+              }
               setBillingShippingAddress={[Function]}
               setCardErrors={[Function]}
             >
@@ -5453,7 +5540,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 }
               }
               dispatch={[Function]}
-              order={Object {}}
+              order={
+                Object {
+                  "cardErrors": false,
+                  "cardTokenRequested": false,
+                }
+              }
               title="Your Cart"
             >
               <div
@@ -5641,7 +5733,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               }
               convertToOrder={[Function]}
               dispatch={[Function]}
-              order={Object {}}
+              order={
+                Object {
+                  "cardErrors": false,
+                  "cardTokenRequested": false,
+                }
+              }
             >
               <Sticker>
                 <div
@@ -5856,33 +5953,38 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>
@@ -7364,33 +7466,38 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>
@@ -9340,33 +9447,38 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              as="/"
-              href="/home/index"
+              href="/"
             >
               <a
                 href="/"
                 onClick={[Function]}
               >
                 <Image
-                  height={79}
+                  height={75}
                   src="/static/logo.svg"
-                  width={72}
+                  width={120}
                 >
                   <div
                     className={undefined}
-                    style={
-                      Object {
-                        "height": 79,
-                        "width": 72,
-                      }
-                    }
                   >
-                    <img
-                      className="c-image"
-                      height={79}
-                      src="/static/logo.svg"
-                      width={72}
-                    />
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
                   </div>
                 </Image>
               </a>

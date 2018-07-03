@@ -1,21 +1,15 @@
 // Libraries
 import { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
-
-// Utils
-import { configureStore } from '../utils/configureStore'
+import { connect } from 'react-redux'
 
 // Actions
 import { updateQuantity } from '../actions/cartActions'
-import { readMenu } from '../actions/menuActions'
 
 // Components
-import Layout from '../components/Layout'
 import CartTable from '../components/cart/CartTable.js'
 
 export class CartPage extends Component {
-  static async getInitialProps ({ store }) {
-    await store.dispatch(readMenu(store))
+  static async getInitialProps ({ store, isServer, pathname, query }) {
   }
 
   constructor (props) {
@@ -37,21 +31,15 @@ export class CartPage extends Component {
 
     if (cart.loading) {
       return (
-        <Layout>
-          <p>loading...</p>
-        </Layout>
+        <p>loading...</p>
       )
     } else if (cart.error) {
       return (
-        <Layout>
-          <p>{cart.error}</p>
-        </Layout>
+        <p>{cart.error}</p>
       )
     } else {
       return (
-        <Layout>
-          <CartTable cart={cart} updateQuantity={this.updateQuantity} />
-        </Layout>
+        <CartTable cart={cart} updateQuantity={this.updateQuantity} />
       )
     }
   }
@@ -59,7 +47,7 @@ export class CartPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart || {}
+    cart: state.cart
   }
 }
 
@@ -69,4 +57,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default withRedux(configureStore, mapStateToProps, mapDispatchToProps)(CartPage)
+export default connect(mapStateToProps, mapDispatchToProps)(CartPage)

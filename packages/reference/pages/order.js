@@ -2,20 +2,13 @@
 import { Component } from 'react'
 
 // Redux
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 
 // Components
 import Layout from '../components/Layout'
 
-// Actions
-import { readMenu } from '../actions/menuActions'
-
-// Utils
-import { configureStore } from '../utils/configureStore'
-
 class OrderPage extends Component {
-  static async getInitialProps ({ store }) {
-    await store.dispatch(readMenu(store))
+  static async getInitialProps ({ store, isServer, pathname, query }) {
   }
 
   render () {
@@ -45,8 +38,8 @@ class OrderPage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    order: state.order || {}
+    order: state.order
   }
 }
 
-export default withRedux(configureStore, mapStateToProps)(OrderPage)
+export default connect(mapStateToProps)(OrderPage)

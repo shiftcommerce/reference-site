@@ -2,8 +2,8 @@
 import JsonApiParser from '../../lib/JsonApiParser'
 
 // Fixtures
-import productsPayload from '../fixtures/products_payload.fixture'
-import productPayload from '../fixtures/product_payload.fixture'
+import productsPayload from '../fixtures/productsPayload.fixture'
+import productPayload from '../fixtures/productPayload.fixture'
 
 describe('JsonApiParser', () => {
   test('it parses a JSON API resource collection correctly', () => {

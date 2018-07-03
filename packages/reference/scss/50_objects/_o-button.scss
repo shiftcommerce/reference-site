@@ -18,7 +18,7 @@
   &:hover {
     margin: 10px auto;
     border-color: darken($text-primary, 10%);;
-    background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);
+    background: linear-gradient(to bottom, lighten($base-color, 20%), $base-color);
   }
 
   &:focus {

@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import classNames from 'classnames'
+import LazyLoad from 'react-lazyload'
 
 class Image extends Component {
   styles () {
@@ -18,8 +19,10 @@ class Image extends Component {
 
     if (src) {
       return (
-        <div className={className} style={this.styles()} >
-          <img src={src} className='c-image' {...otherProps} />
+        <div className={className} >
+          <LazyLoad height={200}>
+            <img src={src} className='c-image' {...otherProps} />
+          </LazyLoad>
         </div>
       )
     } else {

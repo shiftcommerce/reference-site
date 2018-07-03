@@ -4,20 +4,20 @@ import JsonApiParser from '../lib/JsonApiParser'
 
 export const readEndpoint = (request) => {
   return (dispatch, getState) => {
-    dispatch(setLoadingTo(true, request.successActionType))
+    dispatch(setLoadingTo(true, request.requestActionType))
     return new ApiClient().read(request.endpoint, request.query)
       .then((response) => {
-        if ((response.data.response && (response.data.response.status === 200 || response.data.response.status === 304)) || (!response.data.response && response.status === 200)) {
+        if ((response.status === 200 || response.status === 304) || (!response.data && response.status === 200)) {
           const parsedPayload = new JsonApiParser().parse(response.data)
           dispatch(sendResponse(parsedPayload, request.successActionType))
         } else {
           dispatch(setLoadingTo(false, request.successActionType))
-          dispatch(setErroredTo(true, request.successActionType))
+          dispatch(setErroredTo(true, request.errorActionType))
         }
       })
       .catch(() => {
         dispatch(setLoadingTo(false, request.successActionType))
-        dispatch(setErroredTo(true, request.successActionType))
+        dispatch(setErroredTo(true, request.errorActionType))
       })
   }
 }
@@ -46,7 +46,7 @@ export const postEndpoint = (request) => {
 export function sendResponse (parsedPayload, actionType) {
   return {
     type: actionType,
-    payload: Object.assign({}, parsedPayload, {loading: false})
+    payload: Object.assign({}, {data: parsedPayload}, {loading: false})
   }
 }
 

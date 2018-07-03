@@ -45,19 +45,25 @@ exports[`renders correctly 1`] = `
         >
           <div
             className={undefined}
-            style={
-              Object {
-                "height": 73,
-                "width": 73,
-              }
-            }
           >
-            <img
-              className="c-image"
-              height={73}
-              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-              width={73}
-            />
+            <LazyLoad
+              height={200}
+              offset={0}
+              once={false}
+              overflow={false}
+              resize={false}
+              scroll={true}
+              unmountIfInvisible={false}
+            >
+              <div
+                className="lazyload-placeholder"
+                style={
+                  Object {
+                    "height": 200,
+                  }
+                }
+              />
+            </LazyLoad>
           </div>
         </Image>
         <Link

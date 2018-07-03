@@ -1,10 +1,7 @@
 // Libraries
 import { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 import Router from 'next/router'
-
-// Utils
-import { configureStore } from '../utils/configureStore'
 
 // Libs
 import InputFieldValidator from '../lib/InputFieldValidator'
@@ -132,7 +129,7 @@ export class CheckoutPage extends Component {
 
   isPaymentValid () {
     let billingAddressErrors = this.props.checkout.billingAddress.errors
-    const isCardValid = !this.props.order.card_errors
+    const isCardValid = !this.props.order.cardErrors
     const isBillingAddressValid = Object.keys(billingAddressErrors).every((key) => billingAddressErrors[key] === '') === true
     return isBillingAddressValid && isCardValid
   }
@@ -222,7 +219,7 @@ const mapStateToProps = (state) => {
   return {
     checkout: state.checkout || {},
     cart: state.cart || {},
-    order: state.order
+    order: state.order || {}
   }
 }
 
@@ -232,4 +229,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default withRedux(configureStore, mapStateToProps, mapDispatchToProps)(CheckoutPage)
+export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage)

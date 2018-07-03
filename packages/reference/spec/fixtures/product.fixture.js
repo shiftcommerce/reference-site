@@ -69,7 +69,7 @@ const Product = {
     {
       asset_file: 'S2623408_C29P_Alt2.jpg',
       alt_text: 'Textured Long T-Shirt',
-      canonical_path: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg'
+      s3_url: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg'
     }
   ]
 }

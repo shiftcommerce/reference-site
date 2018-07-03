@@ -1,5 +1,4 @@
 import qs from 'qs'
-import { SlugUrl } from '../constants/apiUrls'
 
 import * as types from '../actions/actionTypes'
 
@@ -18,7 +17,8 @@ export const slugRequest = (slug) => {
   }
   const query = qs.stringify(queryObject)
   return {
-    endpoint: `${SlugUrl}?${query}`,
+    endpoint: `/getSlug/?${query}`,
+    requestActionType: types.GET_SLUG,
     successActionType: types.SET_SLUG
   }
 }

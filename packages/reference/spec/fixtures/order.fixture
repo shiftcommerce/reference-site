@@ -1,4 +1,0 @@
-const Order = {
-  card_errors: false,
-  cardTokenRequested: false
-}

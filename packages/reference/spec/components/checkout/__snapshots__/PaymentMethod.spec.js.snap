@@ -32,7 +32,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
       },
     }
   }
-  order={Object {}}
+  order={
+    Object {
+      "cardErrors": false,
+      "cardTokenRequested": false,
+    }
+  }
   setShippingBillingAddress={[Function]}
 >
   <div
@@ -116,14 +121,19 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             },
           }
         }
-        order={Object {}}
+        order={
+          Object {
+            "cardErrors": false,
+            "cardTokenRequested": false,
+          }
+        }
         setShippingBillingAddress={[Function]}
       >
         <div
           className="o-form__wrapper"
         >
           <Component
-            cardTokenRequested={undefined}
+            cardTokenRequested={false}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -1304,7 +1314,12 @@ exports[`renders payment summary on collapsing 1`] = `
       "tax_amount": 0,
     }
   }
-  order={Object {}}
+  order={
+    Object {
+      "cardErrors": false,
+      "cardTokenRequested": false,
+    }
+  }
   setShippingBillingAddress={[Function]}
 >
   <div
@@ -1491,14 +1506,19 @@ exports[`renders payment summary on collapsing 1`] = `
             "tax_amount": 0,
           }
         }
-        order={Object {}}
+        order={
+          Object {
+            "cardErrors": false,
+            "cardTokenRequested": false,
+          }
+        }
         setShippingBillingAddress={[Function]}
       >
         <div
           className="o-form__wrapper"
         >
           <Component
-            cardTokenRequested={undefined}
+            cardTokenRequested={false}
             checkout={
               Object {
                 "billingAddress": Object {

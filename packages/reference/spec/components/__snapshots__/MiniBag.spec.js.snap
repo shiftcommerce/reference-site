@@ -39,7 +39,7 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
     >
       <a
         aria-label="Go to checkout"
-        className="o-button o-button--negative o-button--lrg o-button--disabled"
+        className="o-button o-button--primary o-button--lrg o-button--disabled"
         href=""
         onClick={[Function]}
       >
@@ -101,7 +101,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
     >
       <a
         aria-label="Go to checkout"
-        className="o-button o-button--negative o-button--lrg"
+        className="o-button o-button--primary o-button--lrg"
         href="/checkout"
         onClick={[Function]}
       >
@@ -140,7 +140,7 @@ exports[`renders the minibag links 1`] = `
   >
     <a
       aria-label="Go to checkout"
-      className="o-button o-button--negative o-button--lrg o-button--disabled"
+      className="o-button o-button--primary o-button--lrg o-button--disabled"
     >
       CHECKOUT
     </a>

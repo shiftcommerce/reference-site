@@ -15,11 +15,9 @@ class NavBar extends Component {
   }
 
   render () {
-    const {
-      menu
-    } = this.props
+    const menu = this.props.menu.data.data[0]
 
-    const [{ menu_items }] = menu.data
+    const menuItems = menu.menu_items
 
     if (menu.loading) {
       return (
@@ -35,7 +33,7 @@ class NavBar extends Component {
     } else {
       return (
         <div className='o-nav' role='navigation' >
-          { this.renderNavOptions(menu_items) }
+          { this.renderNavOptions(menuItems) }
         </div>
       )
     }

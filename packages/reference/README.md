@@ -39,6 +39,7 @@ Connect to your API Host by adding the following environment variables in your `
 ```
 API_HOST=http://<DOCKER_HOST_IP_ADDRESS>:<PORT>
 API_ACCESS_TOKEN=<API_AUTH_ACCESS_TOKEN>
+API_HOST_PROXY=<localhost>:<PORT>
 ```
 
 **Testing**

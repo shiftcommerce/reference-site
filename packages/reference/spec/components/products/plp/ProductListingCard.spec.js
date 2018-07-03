@@ -19,7 +19,7 @@ test('renders ProductListingCard correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Image src={product.asset_files[0].canonical_path} alt={product.title} aria-label={product.title} />)
+  expect(wrapper).toContainReact(<Image className='c-product-listing-card__image' src={product.asset_files[0].s3_url} alt={product.title} aria-label={product.title} />)
   expect(wrapper).toIncludeText(product.title)
   expect(wrapper).toIncludeText('£10.00')
   expect(wrapper.find('Button')).toMatchElement(<Button label='View' status='primary' size='lrg' aria-label='View' onClick={emptyFunction} />)

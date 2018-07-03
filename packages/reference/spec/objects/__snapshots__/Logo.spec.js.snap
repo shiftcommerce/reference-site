@@ -8,33 +8,38 @@ exports[`renders correctly 1`] = `
     className="o-header__logo"
   >
     <Link
-      as="/"
-      href="/home/index"
+      href="/"
     >
       <a
         href="/"
         onClick={[Function]}
       >
         <Image
-          height={79}
+          height={75}
           src="/static/logo.svg"
-          width={72}
+          width={120}
         >
           <div
             className={undefined}
-            style={
-              Object {
-                "height": 79,
-                "width": 72,
-              }
-            }
           >
-            <img
-              className="c-image"
-              height={79}
-              src="/static/logo.svg"
-              width={72}
-            />
+            <LazyLoad
+              height={200}
+              offset={0}
+              once={false}
+              overflow={false}
+              resize={false}
+              scroll={true}
+              unmountIfInvisible={false}
+            >
+              <div
+                className="lazyload-placeholder"
+                style={
+                  Object {
+                    "height": 200,
+                  }
+                }
+              />
+            </LazyLoad>
           </div>
         </Image>
       </a>

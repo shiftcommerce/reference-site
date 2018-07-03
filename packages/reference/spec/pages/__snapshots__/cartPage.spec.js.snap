@@ -35,200 +35,57 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
     }
     dispatch={[Function]}
   >
-    <Layout>
-      <div>
-        <CustomHead>
-          <SideEffect(Head)>
-            <Head />
-          </SideEffect(Head)>
-        </CustomHead>
-        <div
-          className="o-header"
+    <CartTable
+      cart={
+        Object {
+          "lineItems": Array [
+            Object {
+              "discount": 0,
+              "imageUrl": "",
+              "price": 10,
+              "productID": 1,
+              "productSku": "1231",
+              "quantity": 2,
+              "size": "size - 8",
+              "sku": "123",
+              "title": "test",
+            },
+          ],
+          "totalQuantity": 2,
+        }
+      }
+      updateQuantity={[Function]}
+    >
+      <section>
+        <section
+          className="c-cart-table__header"
         >
-          <Logo
-            className="o-header__logo"
+          <div
+            className="u-float--left"
           >
-            <div
-              className="o-header__logo"
-            >
-              <Link
-                as="/"
-                href="/home/index"
-              >
-                <a
-                  href="/"
-                  onClick={[Function]}
-                >
-                  <Image
-                    height={79}
-                    src="/static/logo.svg"
-                    width={72}
-                  >
-                    <div
-                      className={undefined}
-                      style={
-                        Object {
-                          "height": 79,
-                          "width": 72,
-                        }
-                      }
-                    >
-                      <img
-                        className="c-image"
-                        height={79}
-                        src="/static/logo.svg"
-                        width={72}
-                      />
-                    </div>
-                  </Image>
-                </a>
-              </Link>
-            </div>
-          </Logo>
-          <span
-            className="o-header__search"
+            <h1>
+               My Bag 
+            </h1>
+          </div>
+          <div
+            className="u-float--right"
           >
-            <SearchBar
-              onChange={undefined}
-              queryObject={undefined}
-            >
-              <form
-                action="/search"
-                method="get"
-                onSubmit={[Function]}
-                role="search"
-              >
-                <div
-                  className="c-searchbar"
-                >
-                  <input
-                    aria-label="search text"
-                    className="c-searchbar--input"
-                    name="query"
-                    onChange={[Function]}
-                    placeholder="Enter Keyword Or Product Code"
-                    type="search"
-                    value=""
-                  />
-                  <Button
-                    label="Search"
-                    size="lrg"
-                    status="primary"
-                  >
-                    <button
-                      className="o-button o-button--primary o-button--lrg"
-                      disabled={false}
-                      role="button"
-                      tabIndex="0"
-                    >
-                      Search
-                    </button>
-                  </Button>
-                </div>
-              </form>
-            </SearchBar>
-          </span>
-          <span
-            className="o-header__minibag"
-          >
-            <Connect(MiniBag)>
-              <MiniBag
-                cart={Object {}}
-                dispatch={[Function]}
-              >
-                <div>
-                  <Link
-                    href="/cart"
-                  >
-                    <a
-                      aria-label="View your cart"
-                      href="/cart"
-                      onClick={[Function]}
-                    >
-                      View Your Bag
-                      <span
-                        style={
-                          Object {
-                            "marginLeft": "5px",
-                            "marginRight": "5px",
-                          }
-                        }
-                      >
-                        (
-                        )
-                      </span>
-                    </a>
-                  </Link>
-                  <Link
-                    href=""
-                  >
-                    <a
-                      aria-label="Go to checkout"
-                      className="o-button o-button--negative o-button--lrg"
-                      href=""
-                      onClick={[Function]}
-                    >
-                      CHECKOUT
-                    </a>
-                  </Link>
-                </div>
-              </MiniBag>
-            </Connect(MiniBag)>
-          </span>
-        </div>
-        <Connect(NavBar)>
-          <NavBar
-            dispatch={[Function]}
-            menu={
-              Object {
-                "data": Array [
-                  Object {
-                    "menu_items": Array [
-                      Object {
-                        "canonical_path": "/categories/1",
-                        "id": 1,
-                        "reference": "Bathroom",
-                        "title": "Bathroom",
-                      },
-                    ],
-                  },
-                ],
-                "error": false,
-                "loading": false,
-              }
-            }
-          >
-            <div
-              className="o-nav"
-              role="navigation"
-            >
-              <NavBarOption
-                as="/categories/1"
-                href="/categories/1"
-                index={0}
-                key="0"
-                title="Bathroom"
-              >
-                <Link
-                  as="/categories/1"
-                  href="/slug?slug=/categories/1"
-                >
-                  <a
-                    className="o-nav__option o-nav__option--first"
-                    href="/categories/1"
-                    onClick={[Function]}
-                  >
-                    Bathroom
-                  </a>
-                </Link>
-              </NavBarOption>
-            </div>
-          </NavBar>
-        </Connect(NavBar)>
-        <div
-          className="o-body"
+            <h4>
+               
+              <b>
+                2
+                 
+                items
+              </b>
+               in your bag 
+            </h4>
+          </div>
+        </section>
+        <section
+          className="u-float-clear"
         >
-          <CartTable
+          <LineItems
+            aria-label="Line Items"
             cart={
               Object {
                 "lineItems": Array [
@@ -249,322 +106,264 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             }
             updateQuantity={[Function]}
           >
-            <section>
-              <section
-                className="c-cart-table__header"
-              >
-                <div
-                  className="u-float--left"
+            <table
+              className="c-line-items"
+            >
+              <thead>
+                <tr
+                  className="c-line-items__header"
                 >
-                  <h1>
-                     My Bag 
-                  </h1>
-                </div>
-                <div
-                  className="u-float--right"
-                >
-                  <h4>
-                     
-                    <b>
-                      2
-                       
-                      items
-                    </b>
-                     in your bag 
-                  </h4>
-                </div>
-              </section>
-              <section
-                className="u-float-clear"
-              >
-                <LineItems
-                  aria-label="Line Items"
-                  cart={
-                    Object {
-                      "lineItems": Array [
-                        Object {
-                          "discount": 0,
-                          "imageUrl": "",
-                          "price": 10,
-                          "productID": 1,
-                          "productSku": "1231",
-                          "quantity": 2,
-                          "size": "size - 8",
-                          "sku": "123",
-                          "title": "test",
-                        },
-                      ],
-                      "totalQuantity": 2,
-                    }
-                  }
-                  updateQuantity={[Function]}
-                >
-                  <table
-                    className="c-line-items"
+                  <th
+                    scope="col"
                   >
-                    <thead>
-                      <tr
-                        className="c-line-items__header"
+                    Your Items
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Size
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Quantity
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    You save
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Subtotal
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  className="c-line-items__column"
+                  key="0"
+                >
+                  <td
+                    aria-label="test"
+                  >
+                    <Link
+                      as="/products/1"
+                      href="/products/product?1"
+                    >
+                      <a
+                        href="/products/1"
+                        onClick={[Function]}
                       >
-                        <th
-                          scope="col"
-                        >
-                          Your Items
-                        </th>
-                        <th
-                          scope="col"
-                        >
-                          Size
-                        </th>
-                        <th
-                          scope="col"
-                        >
-                          Quantity
-                        </th>
-                        <th
-                          scope="col"
-                        >
-                          You save
-                        </th>
-                        <th
-                          scope="col"
-                        >
-                          Subtotal
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr
-                        className="c-line-items__column"
-                        key="0"
-                      >
-                        <td
+                        <Image
+                          alt="test"
                           aria-label="test"
+                          className="c-line-items__image"
+                          src=""
                         >
-                          <Link
-                            as="/products/1"
-                            href="/products/product?1"
-                          >
-                            <a
-                              href="/products/1"
-                              onClick={[Function]}
-                            >
-                              <Image
-                                alt="test"
-                                aria-label="test"
-                                className="c-line-items__image"
-                                src=""
-                              >
-                                <div
-                                  className="c-dummy_image c-line-items__image"
-                                  style={
-                                    Object {
-                                      "height": undefined,
-                                      "width": undefined,
-                                    }
-                                  }
-                                />
-                              </Image>
-                              test
-                            </a>
-                          </Link>
-                        </td>
-                        <td>
-                          size - 8
-                        </td>
-                        <td>
-                          <select
-                            data-variant="123"
-                            onChange={[Function]}
-                            value={2}
-                          >
-                            <option
-                              aria-posinset={1}
-                              aria-setsize={0}
-                              key="0"
-                              value={0}
-                            >
-                              0
-                            </option>
-                            <option
-                              aria-posinset={2}
-                              aria-setsize={1}
-                              key="1"
-                              value={1}
-                            >
-                              1
-                            </option>
-                            <option
-                              aria-posinset={3}
-                              aria-setsize={2}
-                              key="2"
-                              value={2}
-                            >
-                              2
-                            </option>
-                            <option
-                              aria-posinset={4}
-                              aria-setsize={3}
-                              key="3"
-                              value={3}
-                            >
-                              3
-                            </option>
-                            <option
-                              aria-posinset={5}
-                              aria-setsize={4}
-                              key="4"
-                              value={4}
-                            >
-                              4
-                            </option>
-                            <option
-                              aria-posinset={6}
-                              aria-setsize={5}
-                              key="5"
-                              value={5}
-                            >
-                              5
-                            </option>
-                            <option
-                              aria-posinset={7}
-                              aria-setsize={6}
-                              key="6"
-                              value={6}
-                            >
-                              6
-                            </option>
-                            <option
-                              aria-posinset={8}
-                              aria-setsize={7}
-                              key="7"
-                              value={7}
-                            >
-                              7
-                            </option>
-                            <option
-                              aria-posinset={9}
-                              aria-setsize={8}
-                              key="8"
-                              value={8}
-                            >
-                              8
-                            </option>
-                            <option
-                              aria-posinset={10}
-                              aria-setsize={9}
-                              key="9"
-                              value={9}
-                            >
-                              9
-                            </option>
-                            <option
-                              aria-posinset={11}
-                              aria-setsize={10}
-                              key="10"
-                              value={10}
-                            >
-                              10
-                            </option>
-                          </select>
-                        </td>
-                        <td>
-                          -£
-                          0
-                        </td>
-                        <td>
-                          £
-                          20.00
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </LineItems>
-                <CartSummary
-                  aria-label="Cart Summary"
-                  cart={
-                    Object {
-                      "lineItems": Array [
-                        Object {
-                          "discount": 0,
-                          "imageUrl": "",
-                          "price": 10,
-                          "productID": 1,
-                          "productSku": "1231",
-                          "quantity": 2,
-                          "size": "size - 8",
-                          "sku": "123",
-                          "title": "test",
-                        },
-                      ],
-                      "totalQuantity": 2,
-                    }
-                  }
-                  updateQuantity={[Function]}
+                          <div
+                            className="c-dummy_image c-line-items__image"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
+                            }
+                          />
+                        </Image>
+                        test
+                      </a>
+                    </Link>
+                  </td>
+                  <td>
+                    size - 8
+                  </td>
+                  <td>
+                    <select
+                      data-variant="123"
+                      onChange={[Function]}
+                      value={2}
+                    >
+                      <option
+                        aria-posinset={1}
+                        aria-setsize={0}
+                        key="0"
+                        value={0}
+                      >
+                        0
+                      </option>
+                      <option
+                        aria-posinset={2}
+                        aria-setsize={1}
+                        key="1"
+                        value={1}
+                      >
+                        1
+                      </option>
+                      <option
+                        aria-posinset={3}
+                        aria-setsize={2}
+                        key="2"
+                        value={2}
+                      >
+                        2
+                      </option>
+                      <option
+                        aria-posinset={4}
+                        aria-setsize={3}
+                        key="3"
+                        value={3}
+                      >
+                        3
+                      </option>
+                      <option
+                        aria-posinset={5}
+                        aria-setsize={4}
+                        key="4"
+                        value={4}
+                      >
+                        4
+                      </option>
+                      <option
+                        aria-posinset={6}
+                        aria-setsize={5}
+                        key="5"
+                        value={5}
+                      >
+                        5
+                      </option>
+                      <option
+                        aria-posinset={7}
+                        aria-setsize={6}
+                        key="6"
+                        value={6}
+                      >
+                        6
+                      </option>
+                      <option
+                        aria-posinset={8}
+                        aria-setsize={7}
+                        key="7"
+                        value={7}
+                      >
+                        7
+                      </option>
+                      <option
+                        aria-posinset={9}
+                        aria-setsize={8}
+                        key="8"
+                        value={8}
+                      >
+                        8
+                      </option>
+                      <option
+                        aria-posinset={10}
+                        aria-setsize={9}
+                        key="9"
+                        value={9}
+                      >
+                        9
+                      </option>
+                      <option
+                        aria-posinset={11}
+                        aria-setsize={10}
+                        key="10"
+                        value={10}
+                      >
+                        10
+                      </option>
+                    </select>
+                  </td>
+                  <td>
+                    -£
+                    0
+                  </td>
+                  <td>
+                    £
+                    20.00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </LineItems>
+          <CartSummary
+            aria-label="Cart Summary"
+            cart={
+              Object {
+                "lineItems": Array [
+                  Object {
+                    "discount": 0,
+                    "imageUrl": "",
+                    "price": 10,
+                    "productID": 1,
+                    "productSku": "1231",
+                    "quantity": 2,
+                    "size": "size - 8",
+                    "sku": "123",
+                    "title": "test",
+                  },
+                ],
+                "totalQuantity": 2,
+              }
+            }
+            updateQuantity={[Function]}
+          >
+            <section
+              className="c-cart-summary"
+            >
+              <dl>
+                <dt>
+                   Sub total: 
+                </dt>
+                <dd>
+                   £
+                  20.00
+                   
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                   Tax applied: 
+                </dt>
+                <dd
+                  className="u-text-color--red"
                 >
-                  <section
-                    className="c-cart-summary"
-                  >
-                    <dl>
-                      <dt>
-                         Sub total: 
-                      </dt>
-                      <dd>
-                         £
-                        20.00
-                         
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>
-                         Tax applied: 
-                      </dt>
-                      <dd
-                        className="u-text-color--red"
-                      >
-                         +£
-                        0.00
-                         
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>
-                         Amount you saved on this purchase: 
-                      </dt>
-                      <dd
-                        className="u-text-color--green"
-                      >
-                         -£
-                        0.00
-                         
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>
-                         Total amount to be paid: 
-                      </dt>
-                      <dd>
-                         
-                        <b>
-                          £
-                          20.00
-                        </b>
-                         
-                      </dd>
-                    </dl>
-                  </section>
-                </CartSummary>
-              </section>
+                   +£
+                  0.00
+                   
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                   Amount you saved on this purchase: 
+                </dt>
+                <dd
+                  className="u-text-color--green"
+                >
+                   -£
+                  0.00
+                   
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                   Total amount to be paid: 
+                </dt>
+                <dd>
+                   
+                  <b>
+                    £
+                    20.00
+                  </b>
+                   
+                </dd>
+              </dl>
             </section>
-          </CartTable>
-        </div>
-        <div
-          className="o-footer"
-        >
-          Footer
-        </div>
-      </div>
-    </Layout>
+          </CartSummary>
+        </section>
+      </section>
+    </CartTable>
   </CartPage>
 </Provider>
 `;

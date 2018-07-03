@@ -288,7 +288,7 @@ describe('Review Your Order button', () => {
 
     const newOrder = {
       ...order,
-      card_errors: true
+      cardErrors: true
     }
 
     // Act

@@ -34,8 +34,8 @@ class ProductListingCard extends React.Component {
       <div className='c-product-listing-card'>
         <div className='c-product-listing-card__body'>
           <div className='c-product-listing-card__gallery  c-image'>
-            <Image
-              src={assetFile && assetFile.canonical_path}
+            <Image className='c-product-listing-card__image'
+              src={assetFile && assetFile.s3_url}
               alt={(assetFile && assetFile.alt_text) || product.title}
               aria-label={product.title} />
           </div>
@@ -50,7 +50,7 @@ class ProductListingCard extends React.Component {
           </div>
 
           <div className='c-product-listing-card__view-details'>
-            <Link href={product.canonical_path}>
+            <Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}>
               <Button label='View' status='primary' size='lrg' aria-label='View' />
             </Link>
           </div>

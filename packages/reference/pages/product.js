@@ -1,22 +1,17 @@
 // Libraries
 import { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 
 // Components
-import Layout from '../components/Layout'
 import ProductDisplay from '../components/products/pdp/ProductDisplay'
 
 // Actions
 import { addToCart } from '../actions/cartActions'
 import { readProduct } from '../actions/productActions'
-import { readMenu } from '../actions/menuActions'
-
-// Utils
-import { configureStore } from '../utils/configureStore'
 
 export class Product extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       sku: '',
       size: '',
@@ -29,14 +24,13 @@ export class Product extends Component {
     this.addToBag = this.addToBag.bind(this)
   }
 
-  static async getInitialProps ({ store, query }) {
-    await store.dispatch(readMenu(store))
+  static async getInitialProps ({ store, isServer, pathname, query }) {
     await store.dispatch(readProduct(query.id))
   }
 
   addToBag () {
-    let { quantity, sku, size, price } = this.state
-    let { product } = this.props
+    const { quantity, sku, size, price } = this.state
+    const product = this.props.product
 
     if (quantity !== '' && sku !== '') {
       const lineItem = {
@@ -45,7 +39,7 @@ export class Product extends Component {
         size: size,
         quantity: parseInt(quantity),
         price: price,
-        imageUrl: (product.asset_files[0] && product.asset_files[0].url),
+        imageUrl: (product.asset_files[0] && product.asset_files[0].s3_url),
         productSku: product.sku,
         productID: product.id
       }
@@ -70,27 +64,20 @@ export class Product extends Component {
   }
 
   render () {
-    let {
-      product
-    } = this.props
+    const product = this.props.product
+    const { loading, error } = this.props.product
 
-    if (product.loading) {
+    if (loading) {
       return (
-        <Layout>
-          <h1>Loading product...</h1>
-        </Layout>
+        <h1>Loading product...</h1>
       )
-    } else if (product.error || Object.keys(product).length === 0) {
+    } else if (error || Object.keys(product).length === 0) {
       return (
-        <Layout>
-          <h1>Unable to load product.</h1>
-        </Layout>
+        <h1>Unable to load product.</h1>
       )
     } else {
       return (
-        <Layout>
-          <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} {...this.state} />
-        </Layout>
+        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} {...this.state} />
       )
     }
   }
@@ -98,15 +85,8 @@ export class Product extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart || {},
-    product: state.product || {}
+    product: state.product.data
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default withRedux(configureStore, mapStateToProps, mapDispatchToProps)(Product)
+export default connect(mapStateToProps)(Product)

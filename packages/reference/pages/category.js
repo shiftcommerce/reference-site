@@ -1,52 +1,37 @@
 // Libraries
 import { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 
 // Actions
 import { readCategory } from '../actions/categoryActions'
-import { readMenu } from '../actions/menuActions'
 
 // Components
-import Layout from '../components/Layout'
 import ProductListingCard from '../components/products/plp/ProductListingCard'
 
-// Utils
-import { configureStore } from '../utils/configureStore'
-
-const ProductListingLoading = (
-  <Layout>
-    <p>Loading...</p>
-  </Layout>
-)
-
 class Category extends Component {
-  static async getInitialProps ({ store, query }) {
-    await store.dispatch(readMenu(store))
-    await store.dispatch(readCategory({ categoryId: query.id }))
+  static async getInitialProps ({ store, isServer, pathname, query }) {
+    await store.dispatch(readCategory(query.id))
   }
 
   render () {
-    const {
-      category
-    } = this.props
+    const category = this.props.category.data
+    const { loading, error } = this.props.category.data
 
-    if (category.loading) {
-      return ProductListingLoading
-    } else if (category.error) {
+    if (loading) {
       return (
-        <Layout>
-          <p>{category.error}</p>
-        </Layout>
+        <h1>Loading</h1>
+      )
+    } else if (error) {
+      return (
+        <p>{error}</p>
       )
     } else {
       return (
-        <Layout>
-          <div className='c-product-listing'>
-            {category.data.map((product, index) => {
-              return <ProductListingCard product={product} key={index} />
-            })}
-          </div>
-        </Layout>
+        <div className='c-product-listing'>
+          {category.map((product, index) => {
+            return <ProductListingCard product={product} key={index} />
+          })}
+        </div>
       )
     }
   }
@@ -54,7 +39,7 @@ class Category extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category || undefined
+    category: state.category.data || {}
   }
 }
 
@@ -64,4 +49,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default withRedux(configureStore, mapStateToProps, mapDispatchToProps)(Category)
+export default connect(mapStateToProps, mapDispatchToProps)(Category)

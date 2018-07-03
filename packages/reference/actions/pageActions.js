@@ -1,16 +1,9 @@
-// actionTypes
-import * as types from './actionTypes'
+// Config
+import { pageRequest } from '../requests/pageRequest'
 
 // Actions
-import { PageUrl } from '../constants/apiUrls'
 import { readEndpoint } from './apiActions'
 
-export function readPage (store, query) {
-  return readEndpoint({
-    endpoint: `${PageUrl}/${query.id}`,
-    query: {
-      include: 'template,meta.*'
-    },
-    successActionType: types.SET_PAGE
-  })
+export function readPage (pageId) {
+  return readEndpoint(pageRequest(pageId))
 }

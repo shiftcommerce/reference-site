@@ -8,7 +8,7 @@ exports[`renders ProductListingCard correctly 1`] = `
         Object {
           "alt_text": "Textured Long T-Shirt",
           "asset_file": "S2623408_C29P_Alt2.jpg",
-          "canonical_path": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+          "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
         },
       ],
       "bundles": Array [
@@ -93,23 +93,30 @@ exports[`renders ProductListingCard correctly 1`] = `
         <Image
           alt="Textured Long T-Shirt"
           aria-label="Textured Long T-Shirt"
+          className="c-product-listing-card__image"
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
         >
           <div
-            className={undefined}
-            style={
-              Object {
-                "height": undefined,
-                "width": undefined,
-              }
-            }
+            className="c-product-listing-card__image"
           >
-            <img
-              alt="Textured Long T-Shirt"
-              aria-label="Textured Long T-Shirt"
-              className="c-image"
-              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
-            />
+            <LazyLoad
+              height={200}
+              offset={0}
+              once={false}
+              overflow={false}
+              resize={false}
+              scroll={true}
+              unmountIfInvisible={false}
+            >
+              <div
+                className="lazyload-placeholder"
+                style={
+                  Object {
+                    "height": 200,
+                  }
+                }
+              />
+            </LazyLoad>
           </div>
         </Image>
       </div>
@@ -178,7 +185,8 @@ exports[`renders ProductListingCard correctly 1`] = `
         className="c-product-listing-card__view-details"
       >
         <Link
-          href="1"
+          as="1"
+          href="/slug?slug=1"
         >
           <Button
             aria-label="View"
