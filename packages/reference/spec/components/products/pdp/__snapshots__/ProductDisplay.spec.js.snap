@@ -96,37 +96,271 @@ exports[`renders correctly 1`] = `
       <div
         className="c-product-display__gallery"
       >
-        <Image
-          alt="Textured Long T-Shirt"
-          aria-label="Textured Long T-Shirt"
-          className="c-image"
-          height={705}
-          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
-          width={503}
+        <div
+          className="c-carousel"
         >
-          <div
-            className="c-image"
-          >
-            <LazyLoad
-              height={200}
-              offset={0}
-              once={false}
-              overflow={false}
-              resize={false}
-              scroll={true}
-              unmountIfInvisible={false}
-            >
-              <div
-                className="lazyload-placeholder"
-                style={
+          <Carousel
+            className="c-carousel-slider"
+            product={
+              Object {
+                "asset_files": Array [
                   Object {
-                    "height": 200,
-                  }
-                }
-              />
-            </LazyLoad>
-          </div>
-        </Image>
+                    "alt_text": "Textured Long T-Shirt",
+                    "asset_file": "S2623408_C29P_Alt2.jpg",
+                    "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+                  },
+                ],
+                "bundles": Array [
+                  Object {
+                    "id": 1,
+                    "products": Array [
+                      Object {
+                        "asset_files": Array [
+                          Object {
+                            "id": 2,
+                            "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+                          },
+                        ],
+                        "canonical_path": "/products/stripe-shirt",
+                        "id": 1,
+                        "title": "Stripe Shirt",
+                      },
+                      Object {
+                        "asset_files": Array [],
+                        "canonical_path": "/products/slip-on-pump",
+                        "id": 2,
+                        "title": "Slip on Pump (no asset files example)",
+                      },
+                    ],
+                    "title": "Mingo",
+                  },
+                ],
+                "canonical_path": "1",
+                "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+                "id": 1,
+                "meta_attributes": Object {
+                  "master_colour": Object {
+                    "value": "Stone",
+                  },
+                },
+                "price": "99.00",
+                "title": "Textured Long T-Shirt",
+                "variants": Array [
+                  Object {
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 8",
+                      },
+                    },
+                    "price": "10.00",
+                    "sku": 1,
+                    "title": "Small",
+                  },
+                  Object {
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 10",
+                      },
+                    },
+                    "price": "11.00",
+                    "sku": 2,
+                    "title": "Medium",
+                  },
+                  Object {
+                    "meta_attributes": Object {
+                      "size": Object {
+                        "value": "Size 12",
+                      },
+                    },
+                    "price": "12.00",
+                    "sku": 3,
+                    "title": "Large",
+                  },
+                ],
+              }
+            }
+          >
+            <div>
+              <Slider
+                arrows={true}
+                dots={true}
+                fade={true}
+                infinite={true}
+                slidesToScroll={1}
+                slidesToShow={1}
+                speed={500}
+              >
+                <InnerSlider
+                  accessibility={true}
+                  adaptiveHeight={false}
+                  afterChange={null}
+                  appendDots={[Function]}
+                  arrows={true}
+                  autoplay={false}
+                  autoplaySpeed={3000}
+                  beforeChange={null}
+                  centerMode={false}
+                  centerPadding="50px"
+                  className=""
+                  cssEase="ease"
+                  customPaging={[Function]}
+                  dots={true}
+                  dotsClass="slick-dots"
+                  draggable={true}
+                  easing="linear"
+                  edgeFriction={0.35}
+                  fade={true}
+                  focusOnSelect={false}
+                  infinite={true}
+                  initialSlide={0}
+                  lazyLoad={null}
+                  nextArrow={null}
+                  onEdge={null}
+                  onInit={null}
+                  onLazyLoadError={null}
+                  onReInit={null}
+                  pauseOnDotsHover={false}
+                  pauseOnFocus={false}
+                  pauseOnHover={true}
+                  prevArrow={null}
+                  responsive={null}
+                  rows={1}
+                  rtl={false}
+                  slide="div"
+                  slidesPerRow={1}
+                  slidesToScroll={1}
+                  slidesToShow={1}
+                  speed={500}
+                  swipe={true}
+                  swipeEvent={null}
+                  swipeToSlide={false}
+                  touchMove={true}
+                  touchThreshold={5}
+                  unslick={true}
+                  useCSS={true}
+                  useTransform={true}
+                  variableWidth={false}
+                  vertical={false}
+                  waitForAnimate={true}
+                >
+                  <div
+                    className="slick-slider slick-initialized"
+                  >
+                    <div
+                      className="slick-list"
+                    >
+                      <Track
+                        centerMode={false}
+                        centerPadding="50px"
+                        cssEase="ease"
+                        currentSlide={0}
+                        fade={true}
+                        focusOnSelect={null}
+                        infinite={true}
+                        lazyLoad={null}
+                        lazyLoadedList={Array []}
+                        listHeight={0}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
+                        rtl={false}
+                        slideCount={1}
+                        slideHeight={0}
+                        slideWidth={0}
+                        slidesToScroll={1}
+                        slidesToShow={1}
+                        speed={500}
+                        trackStyle={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        unslick={true}
+                        variableWidth={false}
+                        vertical={false}
+                      >
+                        <div
+                          className="slick-track"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          style={
+                            Object {
+                              "opacity": 1,
+                            }
+                          }
+                        >
+                          <div
+                            aria-hidden={false}
+                            className="slick-slide slick-active slick-current"
+                            data-index={0}
+                            key="original0"
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "WebkitTransition": "opacity 500ms ease, visibility 500ms ease",
+                                "left": -0,
+                                "opacity": 1,
+                                "outline": "none",
+                                "position": "relative",
+                                "transition": "opacity 500ms ease, visibility 500ms ease",
+                                "width": 0,
+                              }
+                            }
+                            tabIndex="-1"
+                          >
+                            <div
+                              key="0"
+                            >
+                              <div
+                                key="0"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                    "width": "100%",
+                                  }
+                                }
+                                tabIndex={-1}
+                              >
+                                <Image
+                                  className="c-slider-image"
+                                  src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+                                >
+                                  <div
+                                    className="c-slider-image"
+                                  >
+                                    <LazyLoad
+                                      height={200}
+                                      offset={0}
+                                      once={false}
+                                      overflow={false}
+                                      resize={false}
+                                      scroll={true}
+                                      unmountIfInvisible={false}
+                                    >
+                                      <div
+                                        className="lazyload-placeholder"
+                                        style={
+                                          Object {
+                                            "height": 200,
+                                          }
+                                        }
+                                      />
+                                    </LazyLoad>
+                                  </div>
+                                </Image>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </Track>
+                    </div>
+                  </div>
+                </InnerSlider>
+              </Slider>
+            </div>
+          </Carousel>
+        </div>
       </div>
       <div
         className="c-product-display__details"

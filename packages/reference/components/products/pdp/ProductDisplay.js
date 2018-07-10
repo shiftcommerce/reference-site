@@ -4,9 +4,9 @@ import { Component } from 'react'
 // Components
 import DeliveryInformation from './DeliveryInformation'
 import ProductPrice from './ProductPrice'
+import Carousel from './Carousel'
 
 // Objects
-import Image from '../../../objects/Image'
 import Button from '../../../objects/Button'
 import DropdownSelect from '../../../objects/DropdownSelect'
 import SizeSelector from '../../../objects/SizeSelector'
@@ -22,8 +22,6 @@ class ProductDisplay extends Component {
       addToBag
     } = this.props
 
-    const assetFile = product.asset_files[0]
-
     const quantityOptions = [ 1, 2, 3, 4, 5 ]
 
     function productDescription () {
@@ -34,15 +32,10 @@ class ProductDisplay extends Component {
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
-            <Image
-              src={assetFile && assetFile.s3_url}
-              alt={(assetFile && assetFile.alt_text) || product.title}
-              className='c-image'
-              height={705}
-              width={503}
-              aria-label={product.title} />
+            <div className='c-carousel'>
+              <Carousel className='c-carousel-slider' product={product} />
+            </div>
           </div>
-
           <div className='c-product-display__details'>
             <section className='c-product-display__section'>
               <h1 role='heading' aria-level='1'>

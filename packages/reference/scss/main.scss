@@ -41,7 +41,9 @@
 @import '60_components/_c-card-expiry-field';
 @import '60_components/_c-cvv-field';
 @import '60_components/_c-checkout-cart-total';
-
+@import '60_components/_c-carousel';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 @import '65_scopes/_algolia_instantsearch';
 
