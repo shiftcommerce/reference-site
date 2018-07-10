@@ -2,7 +2,6 @@
 import * as types from '../actions/actionTypes'
 
 export const cartInitialState = {
-  loading: true,
   error: false,
   lineItems: [],
   totalQuantity: 0
@@ -20,7 +19,7 @@ export default function setCart (state = cartInitialState, action) {
       return Object.assign({}, state, action.cart)
 
     case types.INITIATE_CART:
-      return Object.assign({}, cartInitialState, {loading: false})
+      return Object.assign({}, cartInitialState)
 
     default:
       return newState

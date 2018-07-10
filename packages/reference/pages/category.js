@@ -6,20 +6,32 @@ import { connect } from 'react-redux'
 import { readCategory } from '../actions/categoryActions'
 
 // Components
+import Loading from '../components/Loading'
 import ProductListingCard from '../components/products/plp/ProductListingCard'
 
 class Category extends Component {
-  static async getInitialProps ({ store, isServer, pathname, query }) {
-    await store.dispatch(readCategory(query.id))
+  static async getInitialProps ({ reduxStore, req, query }) {
+    const id = query.id
+    const isServer = !!req
+    if (isServer) {
+      await reduxStore.dispatch(readCategory(id))
+    }
+    return {id: id}
+  }
+
+  componentDidMount () {
+    const { dispatch, id } = this.props
+
+    dispatch(readCategory(id))
   }
 
   render () {
-    const category = this.props.category.data
-    const { loading, error } = this.props.category.data
+    const category = this.props.data
+    const { loading, error } = this.props
 
     if (loading) {
       return (
-        <h1>Loading</h1>
+        <Loading />
       )
     } else if (error) {
       return (
@@ -37,16 +49,10 @@ class Category extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    category: state.category.data || {}
-  }
+function mapStateToProps (state) {
+  const { category } = state
+
+  return category
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Category)
+export default connect(mapStateToProps)(Category)

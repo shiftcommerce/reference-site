@@ -6,7 +6,7 @@ test('returns empty on dispatching INITIALIZE_CART action', () => {
   const payload = {
     type: actionTypes.INITIATE_CART
   }
-  const expectResults = Object.assign({}, cartInitialState, {loading: false})
+  const expectResults = Object.assign({}, cartInitialState)
 
   // Act
   const result = setCart({}, payload)

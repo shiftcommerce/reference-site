@@ -25,7 +25,6 @@ const addressFormFields = {
 }
 
 export const checkoutInitialState = {
-  loading: true,
   error: false,
   shippingAddress: {
     ...addressFormFields
@@ -94,7 +93,7 @@ export default function setCheckout (state = checkoutInitialState, action) {
       return newState
 
     case types.INITIATE_CHECKOUT:
-      return Object.assign({}, checkoutInitialState, {loading: false})
+      return Object.assign({}, checkoutInitialState)
 
     case types.CHANGE_PAYMENT_METHOD:
       newState.paymentMethod.selectedMethod = action.paymentMethod

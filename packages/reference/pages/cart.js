@@ -6,10 +6,12 @@ import { connect } from 'react-redux'
 import { updateQuantity } from '../actions/cartActions'
 
 // Components
-import CartTable from '../components/cart/CartTable.js'
+import CartTable from '../components/cart/CartTable'
+import Loading from '../components/Loading'
 
 export class CartPage extends Component {
   static async getInitialProps ({ store, isServer, pathname, query }) {
+    return {}
   }
 
   constructor (props) {
@@ -27,15 +29,15 @@ export class CartPage extends Component {
   }
 
   render () {
-    const cart = this.props.cart
+    const { cart, cart: { loading, error } } = this.props
 
-    if (cart.loading) {
+    if (loading) {
       return (
-        <p>loading...</p>
+        <Loading />
       )
-    } else if (cart.error) {
+    } else if (error) {
       return (
-        <p>{cart.error}</p>
+        <p>{error}</p>
       )
     } else {
       return (
@@ -51,10 +53,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartPage)
+export default connect(mapStateToProps)(CartPage)

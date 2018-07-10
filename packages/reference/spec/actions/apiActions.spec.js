@@ -34,10 +34,7 @@ describe('Read Endpoint', () => {
     // Assert
     expect(fn).toEqual(expect.any(Function))
     expect(dispatch).toHaveBeenCalledWith({
-      type: 'GET_TEST',
-      payload: {
-        loading: true
-      }
+      type: 'GET_TEST'
     })
   })
 })

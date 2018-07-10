@@ -5,21 +5,15 @@ import { createMockStore } from 'redux-test-utils'
 // Page
 import { Product } from './../../pages/product'
 
+// Comonents
+import Loading from './../../components/Loading'
+
 // fixtures
-// import cart from './../fixtures/cart.fixture'
 import menu from './../fixtures/menu.fixture'
 
 describe('Processing state handling:', () => {
-  test('displays loading message, when there is no error and product is loading from db', () => {
+  test('displays loading spinner, when there is no error and product is loading from db', () => {
     // Arrange
-    const initialState = {
-      menu: {
-        loading: false,
-        error: false,
-        data: menu
-      }
-    }
-
     const product = {
       loading: true,
       error: false,
@@ -29,14 +23,12 @@ describe('Processing state handling:', () => {
 
     // Act
     const wrapper = mount(
-      <Provider store={createMockStore(initialState)}>
-        <Product product={product} dispatch={dispatch} />
-      </Provider>
+      <Loading product={product} dispatch={dispatch} />
     )
 
     // Assert
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper).toIncludeText('Loading product...')
+    expect(wrapper.find('.c-loading')).toHaveClassName('c-loading')
   })
   test('displays error message, when there is an error in loading product', () => {
     // Arrange

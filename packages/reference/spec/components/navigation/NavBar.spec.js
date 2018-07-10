@@ -10,11 +10,9 @@ import menu from '../../fixtures/menu.fixture'
 test('renders the nav bar options', () => {
   // Arrange
   const initialState = {
-    menu: {
-      loading: false,
-      error: false,
-      data: menu
-    }
+    loading: false,
+    error: false,
+    menu: menu
   }
 
   const context = {

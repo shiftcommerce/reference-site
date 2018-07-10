@@ -5,7 +5,6 @@ export const initialState = {
   cardTokenRequested: false,
   cardToken: {},
   paymentError: null,
-  loading: true,
   error: false,
   card_errors: true
 }

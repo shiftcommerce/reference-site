@@ -77,4 +77,4 @@ class Layout extends Component {
   }
 }
 
-export default connect(state => state)(Layout)
+export default connect()(Layout)

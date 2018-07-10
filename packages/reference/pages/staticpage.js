@@ -3,25 +3,33 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Components
+import Loading from '../components/Loading'
 import PageTemplates from '../components/pages'
 
 // Actions
 import { readPage } from '../actions/pageActions'
 
-export class Page extends Component {
-  static async getInitialProps ({ store, isServer, pathname, query }) {
-    await store.dispatch(readPage(query.id))
+class Page extends Component {
+  static async getInitialProps ({ reduxStore, req, query }) {
+    const { id } = query
+    const isServer = !!req
+    if (isServer) {
+      await reduxStore.dispatch(readPage(id))
+    }
+    return {id: id}
+  }
+
+  componentDidMount () {
+    const { dispatch, id } = this.props
+    dispatch(readPage(id))
   }
 
   render () {
-    const { loading } = this.props.page.data
-    const page = this.props.page.data
-
-    const { template } = page
+    const { page, page: { loading, template } } = this.props
 
     if (loading) {
       return (
-        <h1>Loading page...</h1>
+        <Loading />
       )
     } else {
       const TemplateRenderer = PageTemplates[template.reference]
@@ -33,16 +41,10 @@ export class Page extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    page: state.page
-  }
+function mapStateToProps (state) {
+  const { page } = state
+
+  return { page }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Page)
+export default connect(mapStateToProps)(Page)

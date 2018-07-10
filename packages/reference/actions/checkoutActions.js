@@ -74,7 +74,7 @@ export function inputComplete () {
 export function storeCheckout (checkout) {
   return {
     type: actionTypes.STORE_CHECKOUT,
-    checkout: Object.assign({}, checkout, {loading: false})
+    checkout: Object.assign({}, checkout)
   }
 }
 

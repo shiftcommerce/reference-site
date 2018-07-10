@@ -6,22 +6,18 @@ exports[`renders the nav bar options 1`] = `
     dispatch={[Function]}
     menu={
       Object {
-        "data": Object {
-          "data": Array [
-            Object {
-              "menu_items": Array [
-                Object {
-                  "canonical_path": "/categories/1",
-                  "id": 1,
-                  "reference": "Bathroom",
-                  "title": "Bathroom",
-                },
-              ],
-            },
-          ],
-        },
-        "error": false,
-        "loading": false,
+        "data": Array [
+          Object {
+            "menu_items": Array [
+              Object {
+                "canonical_path": "/categories/1",
+                "id": 1,
+                "reference": "Bathroom",
+                "title": "Bathroom",
+              },
+            ],
+          },
+        ],
       }
     }
   >

@@ -2,6 +2,8 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Loading from '../Loading'
+
 // Objects
 import NavBarOption from './NavBarOption'
 
@@ -15,13 +17,14 @@ class NavBar extends Component {
   }
 
   render () {
-    const menu = this.props.menu.data.data[0]
+    const {loading} = this.props.menu.data
+    const menu = this.props.menu.data[0]
 
     const menuItems = menu.menu_items
 
-    if (menu.loading) {
+    if (loading) {
       return (
-        <p>Loading...</p>
+        <Loading />
       )
     } else if (menu.error) {
       return (
@@ -40,17 +43,9 @@ class NavBar extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  // Look into https://github.com/reduxjs/reselect to reduce expensive selectors
-  if (!state.menu && !state.menu.data) {
-    return {
-      menu: {}
-    }
-  }
-
-  return {
-    menu: state.menu || {}
-  }
+function mapStateToProps (state) {
+  const { menu } = state
+  return { menu }
 }
 
 export default connect(mapStateToProps)(NavBar)

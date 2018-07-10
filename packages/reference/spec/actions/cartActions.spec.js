@@ -19,8 +19,7 @@ test('return STORE_CART action type on calling readCart()', () => {
         imageUrl: '',
         size: 'size - 8'
       }
-    ],
-    loading: false
+    ]
   }
   const getState = () => ({ cart: cart })
 
@@ -55,7 +54,6 @@ test('return UPDATE_CART_LINE_ITEMS action type on calling addToCart()', () => {
   // asset
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': { 'lineItems': [lineItemToAdd],
-    'loading': false,
     totalQuantity: 2 },
     type: actionTypes.UPDATE_CART_LINE_ITEMS })
 })
@@ -91,7 +89,6 @@ test('return  UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', (
         size: 'size - 8'
       }
     ],
-    loading: false,
     totalQuantity: 3
   }
   const dispatch = jest.fn()

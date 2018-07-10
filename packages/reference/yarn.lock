@@ -5583,9 +5583,9 @@ next-redux-wrapper@^2.0.0-beta.6:
   dependencies:
     "@babel/runtime" "^7.0.0-beta.42"
 
-next@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/next/-/next-6.1.0.tgz#89d9c267f693b2b99d1cdbc52f7eb219b66c3e16"
+next@^6.1.1-canary.0:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/next/-/next-6.1.1.tgz#b86d6b773871cfeb189b926eb7089d12f291668e"
   dependencies:
     "@babel/core" "7.0.0-beta.42"
     "@babel/plugin-proposal-class-properties" "7.0.0-beta.42"
@@ -6804,6 +6804,10 @@ react-lazyload@^2.3.0:
 react-lifecycles-compat@3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-loading@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-2.0.2.tgz#bc6d908fa316e1ccd677b7567792049a9bb4be0d"
 
 react-redux@^5.0.7:
   version "5.0.7"

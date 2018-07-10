@@ -7,8 +7,8 @@ import { connect } from 'react-redux'
 import { readSlug } from '../actions/slugActions'
 
 export class Slug extends Component {
-  static async getInitialProps ({ store, isServer, pathname, query }) {
-    await store.dispatch(readSlug(query.slug))
+  static async getInitialProps ({ reduxStore, req, query }) {
+    await reduxStore.dispatch(readSlug(query.slug))
 
     return {
       url: query.slug
@@ -18,7 +18,8 @@ export class Slug extends Component {
   componentDidMount () {
     const slug = this.props.slug.data[0]
     const { url } = this.props
-    Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}}`, url, {shallow: true})
+
+    Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}`, url, {shallow: true})
   }
 
   render () {
@@ -26,16 +27,9 @@ export class Slug extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    slug: state.slug.data
-  }
+function mapStateToProps (state) {
+  const { slug } = state
+  return { slug }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Slug)
+export default connect(mapStateToProps)(Slug)

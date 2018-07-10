@@ -7,7 +7,7 @@ test('returns empty on dispatching INITIALIZE_CHECKOUT action', () => {
     type: actionTypes.INITIATE_CHECKOUT
   }
 
-  const expectedResult = Object.assign({}, checkoutInitialState, {loading: false})
+  const expectedResult = Object.assign({}, checkoutInitialState)
 
   // Act
   const result = setCheckout({}, payload)

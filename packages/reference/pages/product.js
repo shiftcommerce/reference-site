@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Components
+import Loading from '../components/Loading'
 import ProductDisplay from '../components/products/pdp/ProductDisplay'
 
 // Actions
@@ -24,8 +25,20 @@ export class Product extends Component {
     this.addToBag = this.addToBag.bind(this)
   }
 
-  static async getInitialProps ({ store, isServer, pathname, query }) {
-    await store.dispatch(readProduct(query.id))
+  static async getInitialProps ({ reduxStore, req, query }) {
+    const {id} = query
+    const isServer = !!req
+
+    if (isServer) {
+      await reduxStore.dispatch(readProduct(id))
+    }
+
+    return {id: id}
+  }
+
+  componentDidMount () {
+    const {dispatch, id} = this.props
+    dispatch(readProduct(id))
   }
 
   addToBag () {
@@ -64,12 +77,11 @@ export class Product extends Component {
   }
 
   render () {
-    const product = this.props.product
-    const { loading, error } = this.props.product
+    const { product, product: { loading, error } } = this.props
 
     if (loading) {
       return (
-        <h1>Loading product...</h1>
+        <Loading />
       )
     } else if (error || Object.keys(product).length === 0) {
       return (
@@ -83,10 +95,9 @@ export class Product extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    product: state.product.data
-  }
+function mapStateToProps (state) {
+  const { menu, product } = state
+  return { menu, product }
 }
 
 export default connect(mapStateToProps)(Product)

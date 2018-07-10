@@ -2,9 +2,7 @@
 import * as types from '../actions/actionTypes'
 
 export const initialState = {
-  loading: true,
-  error: false,
-  data: []
+  error: false
 }
 
 export default function setSlug (state = initialState, action) {

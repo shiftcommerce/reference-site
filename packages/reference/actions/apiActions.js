@@ -4,19 +4,19 @@ import JsonApiParser from '../lib/JsonApiParser'
 
 export const readEndpoint = (request) => {
   return (dispatch, getState) => {
-    dispatch(setLoadingTo(true, request.requestActionType))
+    dispatch(fetching(request.requestActionType))
     return new ApiClient().read(request.endpoint, request.query)
       .then((response) => {
         if ((response.status === 200 || response.status === 304) || (!response.data && response.status === 200)) {
           const parsedPayload = new JsonApiParser().parse(response.data)
           dispatch(sendResponse(parsedPayload, request.successActionType))
         } else {
-          dispatch(setLoadingTo(false, request.successActionType))
-          dispatch(setErroredTo(true, request.errorActionType))
+          dispatch(fetching(request.successActionType))
+          dispatch(setErroredTo(request.errorActionType))
         }
       })
       .catch(() => {
-        dispatch(setLoadingTo(false, request.successActionType))
+        dispatch(fetching(false, request.successActionType))
         dispatch(setErroredTo(true, request.errorActionType))
       })
   }
@@ -24,20 +24,20 @@ export const readEndpoint = (request) => {
 
 export const postEndpoint = (request) => {
   return (dispatch, getState) => {
-    dispatch(setLoadingTo(true, request.successActionType))
+    dispatch(fetching(request.successActionType))
     return new ApiClient().post(request.endpoint, request.body)
       .then((response) => {
         if (response.status === 200) {
           const parsedData = JSON.parse(response.data.data)
           const parsedPayload = new JsonApiParser().parse(parsedData.data)
-          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload, {loading: false}) })
+          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload) })
         } else {
-          dispatch(setLoadingTo(false, request.successActionType))
+          dispatch(fetching(false, request.successActionType))
           dispatch(setErroredTo(true, request.successActionType))
         }
       })
       .catch(() => {
-        dispatch(setLoadingTo(false, request.successActionType))
+        dispatch(fetching(false, request.successActionType))
         dispatch(setErroredTo(true, request.successActionType))
       })
   }
@@ -46,16 +46,13 @@ export const postEndpoint = (request) => {
 export function sendResponse (parsedPayload, actionType) {
   return {
     type: actionType,
-    payload: Object.assign({}, {data: parsedPayload}, {loading: false})
+    payload: parsedPayload
   }
 }
 
-function setLoadingTo (boolean, actionType) {
+function fetching (actionType) {
   return {
-    type: actionType,
-    payload: {
-      loading: boolean
-    }
+    type: actionType
   }
 }
 

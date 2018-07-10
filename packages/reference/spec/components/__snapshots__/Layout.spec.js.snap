@@ -24,27 +24,6 @@ exports[`renders the children inside it 1`] = `
             "subscribe": [Function],
           }
         }
-        storeSubscription={
-          Subscription {
-            "listeners": Object {
-              "clear": [Function],
-              "get": [Function],
-              "notify": [Function],
-              "subscribe": [Function],
-            },
-            "onStateChange": [Function],
-            "parentSub": undefined,
-            "store": Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            },
-            "unsubscribe": [Function],
-          }
-        }
       >
         Content
       </SearchBar>
@@ -93,27 +72,6 @@ exports[`renders the footer 1`] = `
             "subscribe": [Function],
           }
         }
-        storeSubscription={
-          Subscription {
-            "listeners": Object {
-              "clear": [Function],
-              "get": [Function],
-              "notify": [Function],
-              "subscribe": [Function],
-            },
-            "onStateChange": [Function],
-            "parentSub": undefined,
-            "store": Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            },
-            "unsubscribe": [Function],
-          }
-        }
       />
     </span>
     <span
@@ -158,27 +116,6 @@ exports[`renders the header 1`] = `
             "subscribe": [Function],
           }
         }
-        storeSubscription={
-          Subscription {
-            "listeners": Object {
-              "clear": [Function],
-              "get": [Function],
-              "notify": [Function],
-              "subscribe": [Function],
-            },
-            "onStateChange": [Function],
-            "parentSub": undefined,
-            "store": Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            },
-            "unsubscribe": [Function],
-          }
-        }
       />
     </span>
     <span
@@ -221,27 +158,6 @@ exports[`renders the navbar 1`] = `
             "getState": [Function],
             "replaceReducer": [Function],
             "subscribe": [Function],
-          }
-        }
-        storeSubscription={
-          Subscription {
-            "listeners": Object {
-              "clear": [Function],
-              "get": [Function],
-              "notify": [Function],
-              "subscribe": [Function],
-            },
-            "onStateChange": [Function],
-            "parentSub": undefined,
-            "store": Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            },
-            "unsubscribe": [Function],
           }
         }
       />
