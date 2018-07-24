@@ -16,6 +16,7 @@ class StripeWrapper extends Component {
       setCardErrors,
       checkout
     } = this.props
+
     return (
       <StripeProvider apiKey={StripeApiKey}>
         <Elements>

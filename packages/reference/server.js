@@ -42,9 +42,8 @@ app.prepare().then(() => {
   server.get('/getSlug', handler.getRenderer(api.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
 
-  server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
+  server.get(/^(?!.*_next\/|.*static\/).*$/, (req, res) => {
     const slug = req.url
-
     const directRouting = async (page) => {
       const { resource_id, active } = page.data.data[0].attributes
       const resourceType = page.data.data[0].attributes.resource_type
@@ -82,7 +81,7 @@ app.prepare().then(() => {
 
     const url = `${process.env.API_TENANT}/v1/slugs`
 
-    return fetchData(queryObject, url).then(directRouting)
+    return fetchData(queryObject, url).then(directRouting).catch((error) => { console.log('Error is', error) })
   })
 
   server.get('*', (req, res) => {

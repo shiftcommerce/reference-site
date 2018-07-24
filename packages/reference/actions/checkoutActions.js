@@ -128,15 +128,9 @@ export function initiateCheckout () {
   }
 }
 
-export function setShippingBillingAddress (formName, fieldName, fieldValue) {
-  return (dispatch, getState) => {
-    dispatch(setBillingAsShippingKey(formName, fieldName, fieldValue))
-  }
-}
-
-function setBillingAsShippingKey (formName, fieldName, fieldValue) {
+export function changeBillingAddress (formName, fieldName, fieldValue) {
   return {
-    type: actionTypes.SET_SHIPPING_AS_BILLING_KEY,
+    type: actionTypes.CHANGE_BILLING_ADDRESS,
     payload: {
       formName: formName,
       fieldName: fieldName,

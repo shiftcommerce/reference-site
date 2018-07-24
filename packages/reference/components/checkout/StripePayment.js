@@ -16,8 +16,8 @@ class StripePayment extends Component {
       onChange,
       onShowField,
       onToggleCollapsed,
-      setBillingShippingAddress,
       onCardTokenReceived,
+      changeBillingAddress,
       setCardErrors,
       order } = this.props
     const shippingAddress = checkout.shippingAddress
@@ -41,7 +41,7 @@ class StripePayment extends Component {
           name='shippingAddressAsBillingAddress'
           checked={!!checkout.shippingAddressAsBillingAddress}
           formName={formName}
-          onChange={setBillingShippingAddress}
+          onChange={changeBillingAddress}
           onBlur={onBlur}
         />
 

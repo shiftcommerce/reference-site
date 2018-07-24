@@ -881,6 +881,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -974,7 +975,6 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "cardTokenRequested": false,
               }
             }
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div
@@ -2338,6 +2338,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -2429,7 +2430,6 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "cardTokenRequested": false,
               }
             }
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div
@@ -3769,6 +3769,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -3855,7 +3856,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             onPaymentMethodChanged={[Function]}
             onToggleCollapsed={[Function]}
             order={Object {}}
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div
@@ -5237,6 +5237,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "totalQuantity": 2,
                 }
               }
+              changeBillingAddress={[Function]}
               checkout={
                 Object {
                   "billingAddress": Object {
@@ -5328,7 +5329,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "cardTokenRequested": false,
                 }
               }
-              setBillingShippingAddress={[Function]}
               setCardErrors={[Function]}
             >
               <div
@@ -6688,6 +6688,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -6774,7 +6775,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             onPaymentMethodChanged={[Function]}
             onToggleCollapsed={[Function]}
             order={Object {}}
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div
@@ -8435,6 +8435,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -8599,7 +8600,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "tax_amount": 0,
               }
             }
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div
@@ -10416,6 +10416,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "totalQuantity": 2,
               }
             }
+            changeBillingAddress={[Function]}
             checkout={
               Object {
                 "billingAddress": Object {
@@ -10580,7 +10581,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "tax_amount": 0,
               }
             }
-            setBillingShippingAddress={[Function]}
             setCardErrors={[Function]}
           >
             <div

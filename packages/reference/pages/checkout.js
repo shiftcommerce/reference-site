@@ -10,7 +10,7 @@ import InputFieldValidator from '../lib/InputFieldValidator'
 import { readCheckoutFromLocalStorage,
   toggleCollapsed,
   setShippingMethod,
-  setShippingBillingAddress,
+  changeBillingAddress,
   setValidationMessage,
   changePaymentMethod,
   inputChange,
@@ -47,7 +47,7 @@ export class CheckoutPage extends Component {
     this.onInputChange = this.onInputChange.bind(this)
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
-    this.setBillingShippingAddress = this.setBillingShippingAddress.bind(this)
+    this.changeBillingAddress = this.changeBillingAddress.bind(this)
     this.convertToOrder = this.convertToOrder.bind(this)
     this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
     this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
@@ -110,10 +110,6 @@ export class CheckoutPage extends Component {
     this.props.dispatch(changePaymentMethod(paymentMethod))
   }
 
-  setBillingShippingAddress (event, formName, fieldName) {
-    this.props.dispatch(setShippingBillingAddress(formName, fieldName, event.target.checked))
-  }
-
   onCardTokenReceived ({error, token}) {
     if (error) {
       this.props.dispatch(setPaymentError(error.message))
@@ -125,6 +121,10 @@ export class CheckoutPage extends Component {
 
   setCardErrors (error) {
     this.props.dispatch(setCardErrors(error))
+  }
+
+  changeBillingAddress (event, formName, fieldName) {
+    this.props.dispatch(changeBillingAddress(formName, fieldName, event.target.checked))
   }
 
   isPaymentValid () {
@@ -179,7 +179,7 @@ export class CheckoutPage extends Component {
                   <PaymentMethod
                     formName='paymentMethod'
                     {...this.props}
-                    setBillingShippingAddress={this.setBillingShippingAddress}
+                    changeBillingAddress={this.changeBillingAddress}
                     onChange={this.onInputChange}
                     onBlur={this.onInputBlur}
                     onPaymentMethodChanged={this.onPaymentMethodChanged}

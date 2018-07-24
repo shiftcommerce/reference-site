@@ -36,7 +36,7 @@ export const checkoutInitialState = {
   billingAddress: {
     ...addressFormFields
   },
-  shippingAddressAsBillingAddress: false,
+  shippingAddressAsBillingAddress: true,
   paymentMethod: {
     collapsed: true,
     completed: false,
@@ -55,6 +55,7 @@ export default function setCheckout (state = checkoutInitialState, action) {
   switch (action.type) {
     case types.SET_CHECKOUT_INPUT_VALUE:
       newState[action.payload.formName][action.payload.fieldName] = action.payload.fieldValue
+      newState.billingAddress[action.payload.fieldName] = action.payload.fieldValue
       newState.updatedAt = new Date()
       return newState
 
@@ -77,7 +78,7 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.updatedAt = new Date()
       return newState
 
-    case types.SET_SHIPPING_AS_BILLING_KEY:
+    case types.CHANGE_BILLING_ADDRESS:
       newState[action.payload.fieldName] = action.payload.fieldValue
       if (action.payload.fieldValue) {
         Object.assign(newState.billingAddress, newState.shippingAddress, { collapsed: false })

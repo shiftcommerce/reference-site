@@ -2,39 +2,41 @@
 
 exports[`renders the children inside it 1`] = `
 <div>
-  <CustomHead />
-  <div
-    className="o-header"
-  >
-    <Logo
-      className="o-header__logo"
-    />
-    <span
-      className="o-header__search"
+  <div>
+    <CustomHead />
+    <div
+      className="o-header"
     >
-      <SearchBar
-        dispatch={[Function]}
-        store={
-          Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          }
-        }
+      <Logo
+        className="o-header__logo"
+      />
+      <span
+        className="o-header__search"
       >
-        Content
-      </SearchBar>
-    </span>
-    <span
-      className="o-header__minibag"
-    >
-      <Connect(MiniBag) />
-    </span>
+        <SearchBar
+          dispatch={[Function]}
+          store={
+            Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        >
+          Content
+        </SearchBar>
+      </span>
+      <span
+        className="o-header__minibag"
+      >
+        <Connect(MiniBag) />
+      </span>
+    </div>
+    <Connect(NavBar) />
   </div>
-  <Connect(NavBar) />
   <div
     className="o-body"
   >
@@ -50,37 +52,39 @@ exports[`renders the children inside it 1`] = `
 
 exports[`renders the footer 1`] = `
 <div>
-  <CustomHead />
-  <div
-    className="o-header"
-  >
-    <Logo
-      className="o-header__logo"
-    />
-    <span
-      className="o-header__search"
+  <div>
+    <CustomHead />
+    <div
+      className="o-header"
     >
-      <SearchBar
-        dispatch={[Function]}
-        store={
-          Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          }
-        }
+      <Logo
+        className="o-header__logo"
       />
-    </span>
-    <span
-      className="o-header__minibag"
-    >
-      <Connect(MiniBag) />
-    </span>
+      <span
+        className="o-header__search"
+      >
+        <SearchBar
+          dispatch={[Function]}
+          store={
+            Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        />
+      </span>
+      <span
+        className="o-header__minibag"
+      >
+        <Connect(MiniBag) />
+      </span>
+    </div>
+    <Connect(NavBar) />
   </div>
-  <Connect(NavBar) />
   <div
     className="o-body"
   />
@@ -94,37 +98,39 @@ exports[`renders the footer 1`] = `
 
 exports[`renders the header 1`] = `
 <div>
-  <CustomHead />
-  <div
-    className="o-header"
-  >
-    <Logo
-      className="o-header__logo"
-    />
-    <span
-      className="o-header__search"
+  <div>
+    <CustomHead />
+    <div
+      className="o-header"
     >
-      <SearchBar
-        dispatch={[Function]}
-        store={
-          Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          }
-        }
+      <Logo
+        className="o-header__logo"
       />
-    </span>
-    <span
-      className="o-header__minibag"
-    >
-      <Connect(MiniBag) />
-    </span>
+      <span
+        className="o-header__search"
+      >
+        <SearchBar
+          dispatch={[Function]}
+          store={
+            Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        />
+      </span>
+      <span
+        className="o-header__minibag"
+      >
+        <Connect(MiniBag) />
+      </span>
+    </div>
+    <Connect(NavBar) />
   </div>
-  <Connect(NavBar) />
   <div
     className="o-body"
   />
@@ -138,37 +144,39 @@ exports[`renders the header 1`] = `
 
 exports[`renders the navbar 1`] = `
 <div>
-  <CustomHead />
-  <div
-    className="o-header"
-  >
-    <Logo
-      className="o-header__logo"
-    />
-    <span
-      className="o-header__search"
+  <div>
+    <CustomHead />
+    <div
+      className="o-header"
     >
-      <SearchBar
-        dispatch={[Function]}
-        store={
-          Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          }
-        }
+      <Logo
+        className="o-header__logo"
       />
-    </span>
-    <span
-      className="o-header__minibag"
-    >
-      <Connect(MiniBag) />
-    </span>
+      <span
+        className="o-header__search"
+      >
+        <SearchBar
+          dispatch={[Function]}
+          store={
+            Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        />
+      </span>
+      <span
+        className="o-header__minibag"
+      >
+        <Connect(MiniBag) />
+      </span>
+    </div>
+    <Connect(NavBar) />
   </div>
-  <Connect(NavBar) />
   <div
     className="o-body"
   />

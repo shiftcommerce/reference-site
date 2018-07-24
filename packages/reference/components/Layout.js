@@ -1,8 +1,6 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
-// Scripts
-import Script from './../utils/Script'
 
 // Objects
 import Logo from '../objects/Logo'
@@ -14,45 +12,40 @@ import SearchBar from './search/SearchBar'
 import CustomHead from './CustomHead'
 
 class Layout extends Component {
-  render () {
-    let {
-      searchObject,
-      onSearchQueryChange
-    } = this.props
-
-    let serviceWorker = null
+  serviceWorker () {
     // Install service worker only in production environment
     if (process.env.NODE_ENV === 'production') {
-      serviceWorker = <Script>
-        {
-          () => {
-            // Registration of service worker
-            if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-              navigator.serviceWorker.getRegistration('/app').then(registration => {
-                // Check if service worker has already registered
-                // register only if not yet done
-                if (registration === undefined) {
-                  navigator.serviceWorker.register('/serviceWorker.js', { scope: '/' }).then(registration => {
-                    // Successfully registered the Service Worker
-                    console.log('Service Worker registration successful with scope: ', registration.scope)
-                  }).catch(err => {
-                    // Failed to register the Service Worker
-                    console.log('Service Worker registration failed: ', err)
-                  })
-                }
-              })
-            } else {
-              console.log('Service workers are not supported.')
-            }
+      // Registration of service worker
+      if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration('/app').then(registration => {
+          // Check if service worker has already registered
+          // register only if not yet done
+          if (registration === undefined) {
+            navigator.serviceWorker.register('/serviceWorker.js', { scope: '/' }).then(registration => {
+              // Successfully registered the Service Worker
+              console.log('Service Worker registration successful with scope: ', registration.scope)
+            }).catch(err => {
+              // Failed to register the Service Worker
+              console.log('Service Worker registration failed: ', err)
+            })
           }
-        }
-      </Script>
+        })
+      } else {
+        console.log('Service workers are not supported.')
+      }
     }
+  }
 
-    return (
-      <div>
+  renderHeader () {
+    if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
+      const {
+        searchObject,
+        onSearchQueryChange
+      } = this.props
+
+      return <div>
         <CustomHead />
-        {serviceWorker}
+        {this.serviceWorker()}
         <div className='o-header'>
           <Logo className='o-header__logo' />
           <span className='o-header__search'>
@@ -64,7 +57,14 @@ class Layout extends Component {
         </div>
 
         <NavBar />
+      </div>
+    }
+  }
 
+  render () {
+    return (
+      <div>
+        {this.renderHeader()}
         <div className='o-body'>
           { this.props.children }
         </div>
