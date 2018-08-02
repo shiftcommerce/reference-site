@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "development": {
       "presets": ["next/babel"],
@@ -9,10 +9,7 @@
       "plugins": ["inline-dotenv"]
     },
     "test": {
-      "presets": [
-        ["@babel/preset-env", { "modules": "commonjs" }],
-        ["next/babel"]
-      ],
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]],
       "plugins": ["transform-inline-environment-variables"]
     }
   },

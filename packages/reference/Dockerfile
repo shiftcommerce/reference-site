@@ -1,4 +1,5 @@
-FROM node:8.4.0-slim
+# Latest version
+FROM node:10.7.0-slim
 LABEL maintainer "team@shiftcommerce.com"
 
 # Install essentials and cURL

@@ -11,7 +11,7 @@ test('renders the full component', () => {
   )
 
   // assert
-  expect(wrapper).toBePresent()
+  expect(wrapper).toExist()
   expect(wrapper).toContainReact(<Link href='/mens'><a><Image src='www.someimageurl.com' width='90%' height={450} /></a></Link>)
   expect(wrapper.find('div.c-title')).toIncludeText('Title')
   expect(wrapper).toIncludeText('Important Text')

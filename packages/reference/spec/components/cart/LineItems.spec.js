@@ -56,7 +56,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   const updateQuantity = jest.fn()
 
   // act
-  const wrapper = mount(
+  const wrapper = shallow(
     <LineItems cart={cart} updateQuantity={updateQuantity} />
   )
 

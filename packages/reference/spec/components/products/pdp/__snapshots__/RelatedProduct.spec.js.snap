@@ -43,9 +43,7 @@ exports[`renders correctly 1`] = `
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
           width={73}
         >
-          <div
-            className={undefined}
-          >
+          <div>
             <LazyLoad
               height={200}
               offset={0}
@@ -82,7 +80,6 @@ exports[`renders correctly 1`] = `
       >
         <Image
           height={73}
-          src={undefined}
           width={73}
         >
           <div

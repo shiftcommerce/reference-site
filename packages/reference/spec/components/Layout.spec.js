@@ -22,10 +22,10 @@ test('renders the header', () => {
   const header = wrapper.find('div.o-header')
 
   // Assert
-  expect(header).toBePresent()
+  expect(header).toExist()
   expect(header).toIncludeText('Search')
   expect(header).toContainReact(<Logo className='o-header__logo' />)
-  expect(header.find(MiniBag)).toBePresent()
+  expect(header.find(MiniBag)).toExist()
   expect(wrapper).toMatchSnapshot()
 })
 
@@ -39,7 +39,7 @@ test('renders the navbar', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find(NavBar)).toBePresent()
+  expect(wrapper.find(NavBar)).toExist()
 })
 
 test('renders the footer', () => {

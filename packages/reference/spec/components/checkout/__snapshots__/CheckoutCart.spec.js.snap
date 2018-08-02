@@ -60,7 +60,6 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
           <Image
             alt="Test Product"
             aria-label="Test Product"
-            src={undefined}
             width={80}
           >
             <div
@@ -113,7 +112,6 @@ exports[`renders the correct checkout cart summary with multiple line items 1`] 
           <Image
             alt="Pretend Product"
             aria-label="Pretend Product"
-            src={undefined}
             width={80}
           >
             <div

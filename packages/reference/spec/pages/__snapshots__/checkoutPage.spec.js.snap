@@ -100,7 +100,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={
     Object {
       "cardErrors": false,
@@ -136,9 +147,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -262,7 +271,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={
             Object {
               "cardErrors": false,
@@ -458,7 +478,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -628,7 +659,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={
@@ -651,13 +693,9 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -962,7 +1000,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -989,9 +1038,7 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                     Payment Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
               <div
                 style={
@@ -1001,7 +1048,6 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -1168,7 +1214,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "cardErrors": false,
@@ -1363,7 +1420,18 @@ exports[`Review Your Order button should be disabled if there is any error in bi
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "cardErrors": false,
@@ -1563,7 +1631,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={
     Object {
       "cardErrors": true,
@@ -1599,9 +1678,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -1723,7 +1800,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={
             Object {
               "cardErrors": true,
@@ -1917,7 +2005,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -2085,7 +2184,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={
@@ -2108,13 +2218,9 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -2417,7 +2523,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -2444,9 +2561,7 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                     Payment Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
               <div
                 style={
@@ -2456,7 +2571,6 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -2621,7 +2735,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "cardErrors": true,
@@ -2814,7 +2939,18 @@ exports[`Review Your Order button should be disabled if there is any error in ca
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "cardErrors": true,
@@ -3014,7 +3150,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={Object {}}
 >
   <div>
@@ -3045,9 +3192,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -3169,7 +3314,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={Object {}}
         >
           <div
@@ -3358,7 +3514,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -3521,7 +3688,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={Object {}}
@@ -3539,13 +3717,9 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -3848,7 +4022,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -3936,7 +4121,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -4066,7 +4250,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={Object {}}
             title="Your Cart"
           >
@@ -4254,7 +4449,18 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={Object {}}
           >
             <Sticker>
@@ -4462,7 +4668,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
         "tax_amount": 0,
       }
     }
-    dispatch={[Function]}
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+          Array [
+            [Function],
+          ],
+        ],
+      }
+    }
     order={
       Object {
         "cardErrors": false,
@@ -4498,9 +4715,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     src="/static/logo.svg"
                     width={120}
                   >
-                    <div
-                      className={undefined}
-                    >
+                    <div>
                       <LazyLoad
                         height={200}
                         offset={0}
@@ -4622,7 +4837,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "cardErrors": false,
@@ -4816,7 +5042,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "tax_amount": 0,
                 }
               }
-              dispatch={[Function]}
+              dispatch={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                }
+              }
               formName="shippingAddress"
               onBlur={[Function]}
               onChange={[Function]}
@@ -4984,7 +5221,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "tax_amount": 0,
                 }
               }
-              dispatch={[Function]}
+              dispatch={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                }
+              }
               formName="shippingMethod"
               onToggleCollapsed={[Function]}
               order={
@@ -5007,13 +5255,9 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       Your Shipping Method
                     </h2>
                   </div>
-                  <div>
-                    <undefined />
-                  </div>
+                  <div />
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
                 <div>
                   <form
                     className="o-form__wrapper c-shipping-method-list"
@@ -5316,7 +5560,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "tax_amount": 0,
                 }
               }
-              dispatch={[Function]}
+              dispatch={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                }
+              }
               formName="paymentMethod"
               onBlur={[Function]}
               onCardTokenReceived={[Function]}
@@ -5409,7 +5664,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   }
                 >
                   <PaymentMethodSelector
-                    currentMethod={undefined}
                     onPaymentMethodChanged={[Function]}
                   >
                     <div
@@ -5539,7 +5793,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   "tax_amount": 0,
                 }
               }
-              dispatch={[Function]}
+              dispatch={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                }
+              }
               order={
                 Object {
                   "cardErrors": false,
@@ -5732,7 +5997,18 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 }
               }
               convertToOrder={[Function]}
-              dispatch={[Function]}
+              dispatch={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      [Function],
+                    ],
+                    Array [
+                      [Function],
+                    ],
+                  ],
+                }
+              }
               order={
                 Object {
                   "cardErrors": false,
@@ -5933,7 +6209,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={Object {}}
 >
   <div>
@@ -5964,9 +6251,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -6088,7 +6373,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={Object {}}
         >
           <div
@@ -6277,7 +6573,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -6440,7 +6747,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={Object {}}
@@ -6458,13 +6776,9 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -6767,7 +7081,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -6855,7 +7180,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -6985,7 +7309,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={Object {}}
             title="Your Cart"
           >
@@ -7173,7 +7508,18 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={Object {}}
           >
             <Sticker>
@@ -7368,7 +7714,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={
     Object {
       "billingAddress": Object {
@@ -7477,9 +7834,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -7601,7 +7956,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={
             Object {
               "billingAddress": Object {
@@ -7868,7 +8234,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -8109,7 +8486,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={
@@ -8205,13 +8593,9 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -8514,7 +8898,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -8680,7 +9075,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -8810,7 +9204,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "billingAddress": Object {
@@ -9076,7 +9481,18 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "billingAddress": Object {
@@ -9349,7 +9765,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
       "tax_amount": 0,
     }
   }
-  dispatch={[Function]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+        Array [
+          [Function],
+        ],
+      ],
+    }
+  }
   order={
     Object {
       "billingAddress": Object {
@@ -9458,9 +9885,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   src="/static/logo.svg"
                   width={120}
                 >
-                  <div
-                    className={undefined}
-                  >
+                  <div>
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -9582,7 +10007,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               "tax_amount": 0,
             }
           }
-          dispatch={[Function]}
+          dispatch={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  [Function],
+                ],
+                Array [
+                  [Function],
+                ],
+              ],
+            }
+          }
           order={
             Object {
               "billingAddress": Object {
@@ -9849,7 +10285,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingAddress"
             onBlur={[Function]}
             onChange={[Function]}
@@ -10090,7 +10537,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="shippingMethod"
             onToggleCollapsed={[Function]}
             order={
@@ -10186,13 +10644,9 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     Your Shipping Method
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <div>
                 <form
                   className="o-form__wrapper c-shipping-method-list"
@@ -10495,7 +10949,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             formName="paymentMethod"
             onBlur={[Function]}
             onCardTokenReceived={[Function]}
@@ -10661,7 +11126,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 }
               >
                 <PaymentMethodSelector
-                  currentMethod={undefined}
                   onPaymentMethodChanged={[Function]}
                 >
                   <div
@@ -10791,7 +11255,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 "tax_amount": 0,
               }
             }
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "billingAddress": Object {
@@ -11057,7 +11532,18 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               }
             }
             convertToOrder={[Function]}
-            dispatch={[Function]}
+            dispatch={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    [Function],
+                  ],
+                  Array [
+                    [Function],
+                  ],
+                ],
+              }
+            }
             order={
               Object {
                 "billingAddress": Object {

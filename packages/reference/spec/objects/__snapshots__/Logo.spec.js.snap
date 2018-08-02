@@ -19,9 +19,7 @@ exports[`renders correctly 1`] = `
           src="/static/logo.svg"
           width={120}
         >
-          <div
-            className={undefined}
-          >
+          <div>
             <LazyLoad
               height={200}
               offset={0}

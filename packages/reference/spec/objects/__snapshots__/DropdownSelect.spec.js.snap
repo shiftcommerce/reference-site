@@ -37,9 +37,7 @@ exports[`renders correctly 1`] = `
         name="line_item[unit_quantity]"
         onBlur={[Function]}
         onChange={[Function]}
-        required={undefined}
         role="listbox"
-        value={undefined}
       >
         <option
           aria-posinset="0"

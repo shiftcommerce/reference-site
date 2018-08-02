@@ -26,7 +26,6 @@ exports[`renders correctly 1`] = `
           name="newsletterOptIn"
           onBlur={[Function]}
           onChange={[Function]}
-          required={undefined}
           type="checkbox"
         />
         Sign up for Weekly Newsletters (optional)

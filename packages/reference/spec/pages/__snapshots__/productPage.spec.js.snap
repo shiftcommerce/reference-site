@@ -15,7 +15,15 @@ exports[`Processing state handling: displays error message, when there is an err
   }
 >
   <Product
-    dispatch={[Function]}
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      }
+    }
     product={
       Object {
         "data": Array [],
@@ -33,7 +41,7 @@ exports[`Processing state handling: displays error message, when there is an err
 
 exports[`Processing state handling: displays loading spinner, when there is no error and product is loading from db 1`] = `
 <Loading
-  dispatch={[Function]}
+  dispatch={[MockFunction]}
   product={
     Object {
       "data": Array [],
@@ -90,7 +98,15 @@ exports[`Processing state handling: displays relevant message, when product data
   }
 >
   <Product
-    dispatch={[Function]}
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      }
+    }
     product={Object {}}
   >
     <h1>

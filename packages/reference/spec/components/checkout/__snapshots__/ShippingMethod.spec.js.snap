@@ -91,13 +91,9 @@ exports[`display pre selected shipping method as selected option on page load 1`
           Your Shipping Method
         </h2>
       </div>
-      <div>
-        <undefined />
-      </div>
+      <div />
     </div>
-    <div>
-      <undefined />
-    </div>
+    <div />
     <div>
       <form
         className="o-form__wrapper c-shipping-method-list"
@@ -389,9 +385,7 @@ exports[`render collapsed view as expected 1`] = `
         </p>
       </div>
     </div>
-    <div>
-      <undefined />
-    </div>
+    <div />
   </div>
 </ShippingMethods>
 `;
@@ -774,13 +768,9 @@ exports[`renders line item quantity as expected 1`] = `
           Your Shipping Method
         </h2>
       </div>
-      <div>
-        <undefined />
-      </div>
+      <div />
     </div>
-    <div>
-      <undefined />
-    </div>
+    <div />
     <div>
       <form
         className="o-form__wrapper c-shipping-method-list"
@@ -1070,13 +1060,9 @@ exports[`should be able to select a shipping method 1`] = `
           Your Shipping Method
         </h2>
       </div>
-      <div>
-        <undefined />
-      </div>
+      <div />
     </div>
-    <div>
-      <undefined />
-    </div>
+    <div />
     <div>
       <form
         className="o-form__wrapper c-shipping-method-list"

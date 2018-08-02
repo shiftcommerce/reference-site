@@ -52,9 +52,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
           Payment Method
         </h2>
       </div>
-      <div>
-        <undefined />
-      </div>
+      <div />
     </div>
     <div
       style={
@@ -65,7 +63,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
     >
       <PaymentMethodSelector
         currentMethod="card"
-        onPaymentMethodChanged={undefined}
       >
         <div
           className="o-form"
@@ -164,8 +161,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 },
               }
             }
-            onCardTokenReceived={undefined}
-            setCardErrors={undefined}
           >
             <p>
               Mocked Card Fields
@@ -180,20 +175,14 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
           </div>
           <_class
             checked={false}
-            formName={undefined}
             label="Same as shipping address"
             name="shippingAddressAsBillingAddress"
-            onBlur={undefined}
-            onChange={undefined}
             type="checkbox"
           >
             <Checkbox
               checked={false}
-              formName={undefined}
               label="Same as shipping address"
               name="shippingAddressAsBillingAddress"
-              onBlur={undefined}
-              onChange={undefined}
               renderValidationMessage={[Function]}
               type="checkbox"
             >
@@ -211,7 +200,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     name="shippingAddressAsBillingAddress"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required={undefined}
                     type="checkbox"
                   />
                   Same as shipping address
@@ -254,10 +242,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
               }
             }
             formName="billingAddress"
-            onBlur={undefined}
-            onChange={undefined}
-            onShowField={undefined}
-            onToggleCollapsed={undefined}
             title="Billing Address"
           >
             <div
@@ -271,13 +255,9 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     Billing Address
                   </h2>
                 </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
               <form
                 className="o-form__wrapper"
               >
@@ -286,8 +266,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     formName="billingAddress"
                     label="Country"
                     name="country_code"
-                    onBlur={undefined}
-                    onChange={undefined}
                     options={
                       Array [
                         Object {
@@ -309,15 +287,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         "required": true,
                       }
                     }
-                    validationMessage={undefined}
-                    value={undefined}
                   >
                     <DropdownSelect
                       formName="billingAddress"
                       label="Country"
                       name="country_code"
-                      onBlur={undefined}
-                      onChange={undefined}
                       options={
                         Array [
                           Object {
@@ -340,8 +314,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           "required": true,
                         }
                       }
-                      validationMessage={undefined}
-                      value={undefined}
                     >
                       <div
                         className="o-form__input-group"
@@ -361,7 +333,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           onChange={[Function]}
                           required={true}
                           role="listbox"
-                          value={undefined}
                         >
                           <option
                             aria-posinset="0"
@@ -407,8 +378,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="First Name"
                         name="first_name"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
@@ -416,17 +385,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="First Name"
                           name="first_name"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -435,9 +399,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               "required": true,
                             }
                           }
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -457,7 +418,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="first_name"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="text"
                                 value=""
@@ -478,8 +438,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="Last Name"
                         name="last_name"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
@@ -487,17 +445,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Last Name"
                           name="last_name"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -506,9 +459,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               "required": true,
                             }
                           }
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -528,7 +478,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="last_name"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="text"
                                 value=""
@@ -557,25 +506,18 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       formName="billingAddress"
                       label="Address 1"
                       name="line_1"
-                      onBlur={undefined}
-                      onChange={undefined}
                       required={true}
                       rules={
                         Object {
                           "required": true,
                         }
                       }
-                      type={undefined}
-                      validationMessage={undefined}
-                      value={undefined}
                     >
                       <Input
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Address 1"
                         name="line_1"
-                        onBlur={undefined}
-                        onChange={undefined}
                         renderValidationMessage={[Function]}
                         required={true}
                         rules={
@@ -583,9 +525,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <div
                           className="o-form__input-group"
@@ -605,7 +544,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               name="line_1"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              placeholder={undefined}
                               required={true}
                               type="text"
                               value=""
@@ -636,8 +574,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="Post Code"
                         name="zipcode"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
@@ -645,17 +581,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Post Code"
                           name="zipcode"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -664,9 +595,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               "required": true,
                             }
                           }
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -686,7 +614,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="zipcode"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="text"
                                 value=""
@@ -706,25 +633,18 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="City"
                         name="city"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="City"
                           name="city"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -732,9 +652,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               "required": true,
                             }
                           }
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -754,7 +671,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="city"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="text"
                                 value=""
@@ -774,27 +690,13 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="County"
                         name="state"
-                        onBlur={undefined}
-                        onChange={undefined}
-                        required={undefined}
-                        rules={undefined}
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="County"
                           name="state"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
-                          required={undefined}
-                          rules={undefined}
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -813,8 +715,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
-                                required={undefined}
                                 type="text"
                                 value=""
                               />
@@ -833,8 +733,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="Phone"
                         name="primary_phone"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
@@ -842,17 +740,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             "required": true,
                           }
                         }
-                        type={undefined}
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Phone"
                           name="primary_phone"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -861,9 +754,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               "required": true,
                             }
                           }
-                          type={undefined}
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -883,7 +773,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="primary_phone"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="text"
                                 value=""
@@ -903,8 +792,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         formName="billingAddress"
                         label="Email"
                         name="email"
-                        onBlur={undefined}
-                        onChange={undefined}
                         required={true}
                         rules={
                           Object {
@@ -913,16 +800,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           }
                         }
                         type="email"
-                        validationMessage={undefined}
-                        value={undefined}
                       >
                         <Input
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Email"
                           name="email"
-                          onBlur={undefined}
-                          onChange={undefined}
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
@@ -932,8 +815,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             }
                           }
                           type="email"
-                          validationMessage={undefined}
-                          value={undefined}
                         >
                           <div
                             className="o-form__input-group"
@@ -953,7 +834,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="email"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder={undefined}
                                 required={true}
                                 type="email"
                                 value=""
@@ -968,12 +848,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 <p>
                   * Denotes required fields
                 </p>
-                <div>
-                  <undefined />
-                </div>
-                <div>
-                  <undefined />
-                </div>
+                <div />
+                <div />
               </form>
             </div>
           </AddressForm>
@@ -1039,9 +915,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
           Payment Method
         </h2>
       </div>
-      <div>
-        <undefined />
-      </div>
+      <div />
     </div>
     <div
       style={
@@ -1052,7 +926,6 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
     >
       <PaymentMethodSelector
         currentMethod="card"
-        onPaymentMethodChanged={undefined}
       >
         <div
           className="o-form"
@@ -1142,8 +1015,6 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 },
               }
             }
-            onCardTokenReceived={undefined}
-            setCardErrors={undefined}
           >
             <p>
               Mocked Card Fields
@@ -1158,20 +1029,14 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
           </div>
           <_class
             checked={true}
-            formName={undefined}
             label="Same as shipping address"
             name="shippingAddressAsBillingAddress"
-            onBlur={undefined}
-            onChange={undefined}
             type="checkbox"
           >
             <Checkbox
               checked={true}
-              formName={undefined}
               label="Same as shipping address"
               name="shippingAddressAsBillingAddress"
-              onBlur={undefined}
-              onChange={undefined}
               renderValidationMessage={[Function]}
               type="checkbox"
             >
@@ -1189,7 +1054,6 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                     name="shippingAddressAsBillingAddress"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required={undefined}
                     type="checkbox"
                   />
                   Same as shipping address
@@ -1401,7 +1265,6 @@ exports[`renders payment summary on collapsing 1`] = `
     >
       <PaymentMethodSelector
         currentMethod="card"
-        onPaymentMethodChanged={undefined}
       >
         <div
           className="o-form"
@@ -1598,8 +1461,6 @@ exports[`renders payment summary on collapsing 1`] = `
                 "tax_amount": 0,
               }
             }
-            onCardTokenReceived={undefined}
-            setCardErrors={undefined}
           >
             <p>
               Mocked Card Fields
@@ -1614,20 +1475,14 @@ exports[`renders payment summary on collapsing 1`] = `
           </div>
           <_class
             checked={false}
-            formName={undefined}
             label="Same as shipping address"
             name="shippingAddressAsBillingAddress"
-            onBlur={undefined}
-            onChange={undefined}
             type="checkbox"
           >
             <Checkbox
               checked={false}
-              formName={undefined}
               label="Same as shipping address"
               name="shippingAddressAsBillingAddress"
-              onBlur={undefined}
-              onChange={undefined}
               renderValidationMessage={[Function]}
               type="checkbox"
             >
@@ -1645,7 +1500,6 @@ exports[`renders payment summary on collapsing 1`] = `
                     name="shippingAddressAsBillingAddress"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    required={undefined}
                     type="checkbox"
                   />
                   Same as shipping address
@@ -1737,10 +1591,6 @@ exports[`renders payment summary on collapsing 1`] = `
               }
             }
             formName="billingAddress"
-            onBlur={undefined}
-            onChange={undefined}
-            onShowField={undefined}
-            onToggleCollapsed={undefined}
             title="Billing Address"
           >
             <div
@@ -1772,9 +1622,7 @@ exports[`renders payment summary on collapsing 1`] = `
                   </Button>
                 </div>
               </div>
-              <div>
-                <undefined />
-              </div>
+              <div />
             </div>
           </AddressForm>
         </div>

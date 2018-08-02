@@ -33,7 +33,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         "totalQuantity": 2,
       }
     }
-    dispatch={[Function]}
+    dispatch={[MockFunction]}
   >
     <CartTable
       cart={
