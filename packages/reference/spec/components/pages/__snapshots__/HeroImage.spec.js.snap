@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the full HeroImage component 1`] = `
+<HeroImage
+  hero={
+    Object {
+      "id": "14_6",
+      "image": Array [
+        Object {
+          "asset_file": "1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "created_at": "2017-12-18T11:29:27Z",
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "Week-44-Department-Homeware-2_24.jpg",
+          "file_content_size": 354806,
+          "id": "157604",
+          "image_height": 1483,
+          "image_width": 2396,
+          "reference": "26418193-2571-4bb8-943b-bb567065c4f8",
+          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "updated_at": "2017-12-18T11:29:27Z",
+        },
+      ],
+      "link1_text": "shop glassware",
+      "link1_url": Array [
+        Object {
+          "canonical_path": "/homeware/dining/glassware",
+          "id": "/homeware/dining/glassware",
+          "path": "/homeware/dining/glassware",
+          "url": "/homeware/dining/glassware",
+        },
+      ],
+      "reference": "full_image__text_below",
+      "title": "TOP OF THE GLASS",
+    }
+  }
+>
+  <div>
+    <div
+      className="c-hero"
+    >
+      <Image
+        className="c-hero__image"
+        src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
+      >
+        <div
+          className="c-hero__image"
+        >
+          <LazyLoad
+            height={200}
+            offset={0}
+            once={false}
+            overflow={false}
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <div
+              className="lazyload-placeholder"
+              style={
+                Object {
+                  "height": 200,
+                }
+              }
+            />
+          </LazyLoad>
+        </div>
+      </Image>
+      <div
+        className="c-hero__button"
+      >
+        <Link
+          as="/homeware/dining/glassware"
+          href="/slug?slug=/homeware/dining/glassware"
+        >
+          <Button
+            aria-label="shop glassware"
+            className="c-hero__button-icon"
+            label="shop glassware"
+            onClick={[Function]}
+            size="lrg"
+            status="warning"
+          >
+            <button
+              aria-label="shop glassware"
+              className="c-hero__button-icon o-button o-button--warning o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              shop glassware
+            </button>
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</HeroImage>
+`;

@@ -17,7 +17,11 @@ export class Slug extends Component {
 
   componentDidMount () {
     const slug = this.props.slug.data[0]
-    const { url } = this.props
+    let { url } = this.props
+
+    if (url === '/homepage') {
+      url = '/'
+    }
 
     Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}`, url, {shallow: true})
   }

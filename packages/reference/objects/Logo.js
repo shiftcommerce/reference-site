@@ -12,7 +12,7 @@ class Logo extends Component {
 
     return (
       <div className={className}>
-        <Link href='/'>
+        <Link href='/slug?slug=/homepage' as='/' >
           <a>
             <Image width={120} height={75} src={logoSrc} />
           </a>

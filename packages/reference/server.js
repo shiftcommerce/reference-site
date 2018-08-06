@@ -9,8 +9,6 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const fetchData = require('./requests/fetchDataRequest')
 const api = require('./constants/apiUrls')
-
-// Custom Route Handlers
 const handler = require('./routeHandlers/routeHandler')
 
 app.prepare().then(() => {
@@ -18,10 +16,6 @@ app.prepare().then(() => {
 
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-
-  server.get('/', (req, res) => {
-    return app.render(req, res, '/', req.query)
-  })
 
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)
@@ -42,13 +36,18 @@ app.prepare().then(() => {
   server.get('/getSlug', handler.getRenderer(api.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
 
-  server.get(/^(?!.*_next\/|.*static\/).*$/, (req, res) => {
-    const slug = req.url
+  server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
+    let slug = req.url
+
+    if (slug === '/') {
+      slug = '/homepage'
+    }
+
     const directRouting = async (page) => {
-      const { resource_id, active } = page.data.data[0].attributes
+      const { resource_id } = page.data.data[0].attributes
       const resourceType = page.data.data[0].attributes.resource_type
 
-      if (page.status === 200 && active === true) {
+      if (page.status === 200) {
         switch (resourceType) {
           case 'Product':
             return app.render(req, res, '/product', Object.assign(req.query, { id: resource_id }))

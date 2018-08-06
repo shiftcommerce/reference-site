@@ -8,7 +8,8 @@ exports[`renders correctly 1`] = `
     className="o-header__logo"
   >
     <Link
-      href="/"
+      as="/"
+      href="/slug?slug=/homepage"
     >
       <a
         href="/"

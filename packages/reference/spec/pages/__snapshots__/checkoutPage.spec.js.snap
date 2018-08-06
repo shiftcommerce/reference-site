@@ -136,7 +136,8 @@ exports[`Review Your Order button should be disabled if there is any error in bi
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
@@ -1667,7 +1668,8 @@ exports[`Review Your Order button should be disabled if there is any error in ca
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
@@ -3181,7 +3183,8 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
@@ -4704,7 +4707,8 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               className="c-step-indicators__logo u-text-color--primary"
             >
               <Link
-                href="/"
+                as="/"
+                href="/slug?slug=/homepage"
               >
                 <a
                   href="/"
@@ -6240,7 +6244,8 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
@@ -7823,7 +7828,8 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
@@ -9874,7 +9880,8 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             className="c-step-indicators__logo u-text-color--primary"
           >
             <Link
-              href="/"
+              as="/"
+              href="/slug?slug=/homepage"
             >
               <a
                 href="/"
