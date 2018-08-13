@@ -3,3 +3,8 @@
   steps:
   - service: web
     command: yarn run jest
+- name: deploy
+  tag: develop
+  service: herokudeployment
+  command: codeship_heroku deploy /deploy shift-front-end-staging
+
