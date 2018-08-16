@@ -6,7 +6,8 @@ export const initialState = {
   cardToken: {},
   paymentError: null,
   error: false,
-  card_errors: true
+  card_errors: true,
+  loading: false
 }
 
 export default function setOrder (state = initialState, action) {

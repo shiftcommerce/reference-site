@@ -4,42 +4,33 @@ import { Component } from 'react'
 // Redux
 import { connect } from 'react-redux'
 
-// Components
-import Layout from '../components/Layout'
-
 class OrderPage extends Component {
-  static async getInitialProps ({ store, isServer, pathname, query }) {
+  static async getInitialProps ({ reduxStore, req, query }) {
+    return {}
   }
 
   render () {
-    const order = this.props.order
+    const order = this.props
 
     if (order.loading) {
       return (
-        <Layout>
-          <p>Loading...</p>
-        </Layout>
+        <p>Loading...</p>
       )
     } else if (order.error) {
       return (
-        <Layout>
-          <p>{order.error}</p>
-        </Layout>
+        <p>{order.error}</p>
       )
     } else {
       return (
-        <Layout>
-          Order has been created: #{order.id}
-        </Layout>
+        <div>Order has been created: #{order.id}</div>
       )
     }
   }
 }
 
 const mapStateToProps = (state) => {
-  return {
-    order: state.order
-  }
+  const { order } = state
+  return order
 }
 
 export default connect(mapStateToProps)(OrderPage)

@@ -13,19 +13,7 @@ exports[`renders the children inside it 1`] = `
       <span
         className="o-header__search"
       >
-        <SearchBar
-          dispatch={[Function]}
-          store={
-            Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            }
-          }
-        >
+        <SearchBar>
           Content
         </SearchBar>
       </span>
@@ -63,19 +51,7 @@ exports[`renders the footer 1`] = `
       <span
         className="o-header__search"
       >
-        <SearchBar
-          dispatch={[Function]}
-          store={
-            Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            }
-          }
-        />
+        <SearchBar />
       </span>
       <span
         className="o-header__minibag"
@@ -109,19 +85,7 @@ exports[`renders the header 1`] = `
       <span
         className="o-header__search"
       >
-        <SearchBar
-          dispatch={[Function]}
-          store={
-            Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            }
-          }
-        />
+        <SearchBar />
       </span>
       <span
         className="o-header__minibag"
@@ -155,19 +119,7 @@ exports[`renders the navbar 1`] = `
       <span
         className="o-header__search"
       >
-        <SearchBar
-          dispatch={[Function]}
-          store={
-            Object {
-              "clearActions": [Function],
-              "dispatch": [Function],
-              "getActions": [Function],
-              "getState": [Function],
-              "replaceReducer": [Function],
-              "subscribe": [Function],
-            }
-          }
-        />
+        <SearchBar />
       </span>
       <span
         className="o-header__minibag"

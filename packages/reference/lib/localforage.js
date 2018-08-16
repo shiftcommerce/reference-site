@@ -18,7 +18,6 @@ class LocalForage {
   // Set the key and value in the indexedDB
   setValue (key, value) {
     localforage.setItem(key, value).then((value) => {
-      console.log(value)
     }).catch((err) => {
       console.log('Error in setting key value:', err)
     })

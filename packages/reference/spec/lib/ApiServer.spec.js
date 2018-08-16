@@ -2,7 +2,7 @@ import axios from 'axios'
 import nock from 'nock'
 import httpAdapter from 'axios/lib/adapters/http'
 
-import fetchData from '../../requests/fetchDataRequest'
+import { fetchData } from '../../lib/ApiServer'
 
 axios.defaults.adapter = httpAdapter
 

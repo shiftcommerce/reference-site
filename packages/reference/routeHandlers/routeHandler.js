@@ -1,4 +1,4 @@
-const fetchData = require('../requests/fetchDataRequest')
+const { fetchData } = require('../lib/ApiServer')
 
 function getRenderer (url) {
   return async (req, res) => {

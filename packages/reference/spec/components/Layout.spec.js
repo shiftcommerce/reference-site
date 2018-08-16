@@ -1,23 +1,19 @@
-import configureStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
 
 // Components
-import Layout from '../../components/Layout'
+import { Layout } from '../../components/Layout'
 import NavBar from '../../components/navigation/NavBar'
 import MiniBag from '../../components/MiniBag'
 
 // Objects
 import Logo from '../../objects/Logo'
 
-const store = configureStore([thunk])()
-
 test('renders the header', () => {
   // Arrange
 
   // Act
   const wrapper = shallow(
-    <Layout store={store} />
-  ).dive()
+    <Layout />
+  )
 
   const header = wrapper.find('div.o-header')
 
@@ -34,8 +30,8 @@ test('renders the navbar', () => {
 
   // Act
   const wrapper = shallow(
-    <Layout store={store} />
-  ).dive()
+    <Layout />
+  )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -47,8 +43,8 @@ test('renders the footer', () => {
 
   // Act
   const wrapper = shallow(
-    <Layout store={store} />
-  ).dive()
+    <Layout />
+  )
 
   // Assert
   expect(wrapper.find('div.o-footer')).toIncludeText('Footer')
@@ -60,10 +56,10 @@ test('renders the children inside it', () => {
 
   // Act
   const wrapper = shallow(
-    <Layout store={store} >
+    <Layout>
       Content
     </Layout>
-  ).dive()
+  )
 
   // assert
   expect(wrapper.find('div.o-body')).toIncludeText('Content')

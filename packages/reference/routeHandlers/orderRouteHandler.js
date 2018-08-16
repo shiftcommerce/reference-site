@@ -1,56 +1,60 @@
-const fetchData = require('./../lib/ApiServer')
+const { postData } = require('./../lib/ApiServer')
 const stripe = require('stripe')(process.env.SECRET_STRIPE_API_KEY)
 
 // Product api urls
 const api = require('./../constants/apiUrls')
 
 // Fetch product details basing on the product id set in the params
-function createOrderRenderer (nextApp) {
+function createOrderRenderer () {
   return (req, res) => {
-    const body = JSON.parse(req.body.body)
-    const orderPayload = body.order_payload
+    const body = req.body
+    const orderPayload = {data: body.data}
     const cardToken = body.card_token
     const paymentMethod = body.payment_method
 
     if (paymentMethod === 'card') {
       stripe.charges.create({
-        amount: orderPayload.data.attributes.paid_price_inc_tax,
+        amount: Math.round(orderPayload.data.attributes.total * 100),
         currency: orderPayload.data.attributes.currency,
         source: cardToken.id,
         capture: false
       }, (err, charge) => {
         if (err) {
-          console.log(JSON.stringify(err))
+          console.log(err)
           res.json(err)
         } else {
-          orderPayload.data.attributes.transaction = {
-            payment_gateway: 'stripe',
-            action: 'auth',
-            tokens: {
-              charge: charge
+          orderPayload.data.attributes.payment_transactions_resources = [{
+            attributes: {
+              payment_gateway_reference: 'secure_trading_payment_pages',
+              transaction_type: 'authorisation',
+              gateway_response: {
+                charge: charge
+              },
+              status: 'success',
+              amount: orderPayload.data.attributes.total,
+              currency: orderPayload.data.attributes.currency
             },
-            amount: orderPayload.data.attributes.paid_price_inc_tax,
-            currency: orderPayload.data.attributes.currency
-          }
-          placeOrder(req, res, orderPayload)
+            type: 'payment_transactions'
+          }]
+          orderPayload.data.attributes.ip_address = cardToken.client_ip
+          placeOrder(req, res, orderPayload).catch((error) => {
+            console.log('Error is ', error)
+          })
         }
       })
     } else {
-      placeOrder(req, res, orderPayload)
+      placeOrder(req, res, orderPayload).catch((error) => {
+        console.log('Error is ', error)
+      })
     }
   }
+}
+
+async function placeOrder (req, res, orderPayload) {
+  const url = `${api.CreateOrderUrl}.json_api`
+  req.body = orderPayload
+  let data = await postData(req.body, url)
+  return res.status(201).send(data)
 }
 
 module.exports = { createOrderRenderer }
-
-function placeOrder (req, res, orderPayload) {
-  const baseUrl = `${process.env.API_HOST}${api.CreateOrderUrl}.json_api`
-  req.body = orderPayload
-  // TODO: Remove this once auth app integrated
-  const options = {
-    headers: {
-      Authorization: `Bearer ${process.env.OMS_ACCESS_TOKEN}`
-    }
-  }
-  fetchData.postData(req, baseUrl, res, options)
-}

@@ -27,9 +27,8 @@ export const postEndpoint = (request) => {
     dispatch(fetching(request.successActionType))
     return new ApiClient().post(request.endpoint, request.body)
       .then((response) => {
-        if (response.status === 200) {
-          const parsedData = JSON.parse(response.data.data)
-          const parsedPayload = new JsonApiParser().parse(parsedData.data)
+        if (response.status === 201) {
+          const parsedPayload = new JsonApiParser().parse(response.data.data.data)
           dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload) })
         } else {
           dispatch(fetching(false, request.successActionType))

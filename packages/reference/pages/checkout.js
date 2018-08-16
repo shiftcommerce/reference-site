@@ -39,6 +39,9 @@ import ShippingMethods from '../components/checkout/ShippingMethods'
 import PaymentMethod from '../components/checkout/PaymentMethod'
 
 export class CheckoutPage extends Component {
+  static async getInitialProps ({ reduxStore }) {
+    return {}
+  }
   constructor () {
     super()
 
@@ -98,7 +101,7 @@ export class CheckoutPage extends Component {
     if (this.props.checkout.paymentMethod.selectedMethod === 'card') {
       this.props.dispatch(requestCardToken(true))
     } else {
-      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order))
+      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order, this.props.ip))
     }
   }
 
@@ -219,7 +222,8 @@ const mapStateToProps = (state) => {
   return {
     checkout: state.checkout || {},
     cart: state.cart || {},
-    order: state.order || {}
+    order: state.order || {},
+    ip: state.ip
   }
 }
 

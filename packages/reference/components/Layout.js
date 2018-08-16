@@ -11,7 +11,7 @@ import NavBar from './navigation/NavBar'
 import SearchBar from './search/SearchBar'
 import CustomHead from './CustomHead'
 
-class Layout extends Component {
+export class Layout extends Component {
   serviceWorker () {
     // Install service worker only in production environment
     if (process.env.NODE_ENV === 'production') {

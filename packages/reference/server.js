@@ -7,9 +7,14 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const fetchData = require('./requests/fetchDataRequest')
+
+// Api
+const { fetchData } = require('./lib/ApiServer')
 const api = require('./constants/apiUrls')
+
+// Handlers
 const handler = require('./routeHandlers/routeHandler')
+const orderHandler = require('./routeHandlers/orderRouteHandler')
 
 app.prepare().then(() => {
   const server = express()
@@ -25,16 +30,22 @@ app.prepare().then(() => {
     return app.render(req, res, '/slug', req.query)
   })
 
+  server.get('/order', (req, res) => {
+    return app.render(req, res, '/order')
+  })
+
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./serviceWorker.js').pipe(res)
   })
 
+// Routes for local API calls
   server.get('/getCategory', handler.getRenderer(api.CategoryUrl))
   server.get('/getMenus', handler.getRenderer(api.MenuUrl))
   server.get('/getProduct/:id', handler.getRenderer(api.ProductUrl))
   server.get('/getSlug', handler.getRenderer(api.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
+  server.post('/createOrder', orderHandler.createOrderRenderer())
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     let slug = req.url
