@@ -10,20 +10,35 @@ exports[`renders the children inside it 1`] = `
       <Logo
         className="o-header__logo"
       />
+      <div
+        className="c-header__account"
+      >
+        <div
+          className="c-header__account-button"
+        >
+          <div
+            className="c-header__account-label"
+          >
+            <a>
+              Account
+            </a>
+          </div>
+        </div>
+      </div>
+      <Connect(MiniBag) />
       <span
-        className="o-header__search"
+        className="o-nav"
+      >
+        <Connect(NavBar) />
+      </span>
+      <span
+        className="c-header__search"
       >
         <SearchBar>
           Content
         </SearchBar>
       </span>
-      <span
-        className="o-header__minibag"
-      >
-        <Connect(MiniBag) />
-      </span>
     </div>
-    <Connect(NavBar) />
   </div>
   <div
     className="o-body"
@@ -48,18 +63,33 @@ exports[`renders the footer 1`] = `
       <Logo
         className="o-header__logo"
       />
+      <div
+        className="c-header__account"
+      >
+        <div
+          className="c-header__account-button"
+        >
+          <div
+            className="c-header__account-label"
+          >
+            <a>
+              Account
+            </a>
+          </div>
+        </div>
+      </div>
+      <Connect(MiniBag) />
       <span
-        className="o-header__search"
+        className="o-nav"
+      >
+        <Connect(NavBar) />
+      </span>
+      <span
+        className="c-header__search"
       >
         <SearchBar />
       </span>
-      <span
-        className="o-header__minibag"
-      >
-        <Connect(MiniBag) />
-      </span>
     </div>
-    <Connect(NavBar) />
   </div>
   <div
     className="o-body"
@@ -82,18 +112,33 @@ exports[`renders the header 1`] = `
       <Logo
         className="o-header__logo"
       />
+      <div
+        className="c-header__account"
+      >
+        <div
+          className="c-header__account-button"
+        >
+          <div
+            className="c-header__account-label"
+          >
+            <a>
+              Account
+            </a>
+          </div>
+        </div>
+      </div>
+      <Connect(MiniBag) />
       <span
-        className="o-header__search"
+        className="o-nav"
+      >
+        <Connect(NavBar) />
+      </span>
+      <span
+        className="c-header__search"
       >
         <SearchBar />
       </span>
-      <span
-        className="o-header__minibag"
-      >
-        <Connect(MiniBag) />
-      </span>
     </div>
-    <Connect(NavBar) />
   </div>
   <div
     className="o-body"
@@ -116,18 +161,33 @@ exports[`renders the navbar 1`] = `
       <Logo
         className="o-header__logo"
       />
+      <div
+        className="c-header__account"
+      >
+        <div
+          className="c-header__account-button"
+        >
+          <div
+            className="c-header__account-label"
+          >
+            <a>
+              Account
+            </a>
+          </div>
+        </div>
+      </div>
+      <Connect(MiniBag) />
       <span
-        className="o-header__search"
+        className="o-nav"
+      >
+        <Connect(NavBar) />
+      </span>
+      <span
+        className="c-header__search"
       >
         <SearchBar />
       </span>
-      <span
-        className="o-header__minibag"
-      >
-        <Connect(MiniBag) />
-      </span>
     </div>
-    <Connect(NavBar) />
   </div>
   <div
     className="o-body"

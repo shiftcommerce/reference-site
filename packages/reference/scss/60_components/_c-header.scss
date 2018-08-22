@@ -1,0 +1,62 @@
+.c-header {
+
+  &__account {
+    height: 40px;
+    width: 33.3%;
+    background: white;
+    margin: auto auto -40px auto;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+
+    &-button {
+      background: url('/static/account-icon.svg') no-repeat center center;
+      width: 50px;
+      height: 40px;
+      margin: auto 50% auto auto;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+    &-label {
+      font-size: 0.8em;
+      padding-top: 18px;
+      padding-left: 42px;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__minibag {
+    float: right;
+    height: 30px;
+    width: 33.3%;
+    border-left: 1px solid $border-default;
+
+    @include breakpoint(desktop) {
+      order: 3;
+      display: inline-flex;
+      height: auto;
+      margin: 0;
+      border: none;
+      align-items: baseline;
+      float: none;
+    }
+  }
+
+  &__search {
+    display: block;
+    margin: auto;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      order: 2;
+      width: 33.3%;
+    }
+  }
+}

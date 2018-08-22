@@ -16,11 +16,14 @@ exports[`renders correctly 1`] = `
         onClick={[Function]}
       >
         <Image
-          height={75}
-          src="/static/logo.svg"
+          className="o-logo__image"
+          height={30}
+          src="/static/shopgo-logo.svg"
           width={120}
         >
-          <div>
+          <div
+            className="o-logo__image"
+          >
             <LazyLoad
               height={200}
               offset={0}

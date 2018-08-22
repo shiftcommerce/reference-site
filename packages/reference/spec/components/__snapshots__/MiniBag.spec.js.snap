@@ -10,42 +10,59 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
   }
   dispatch={[Function]}
 >
-  <div>
+  <div
+    className="c-header__minibag"
+  >
     <Link
       href="/cart"
     >
-      <a
-        aria-label="View your cart"
-        href="/cart"
+      <div
+        className="c-minibag__cart"
         onClick={[Function]}
       >
-        View Your Bag
-        <span
-          style={
-            Object {
-              "marginLeft": "5px",
-              "marginRight": "5px",
-            }
-          }
+        <a
+          aria-label="View your cart"
         >
-          (
-          0
-          )
-        </span>
-      </a>
+          <span
+            className="c-minibag__cart-count"
+          >
+            (
+            0
+            )
+          </span>
+        </a>
+        <div
+          className="c-minibag__cart-label--small"
+        >
+          <a>
+            Basket
+          </a>
+        </div>
+        <div
+          className="c-minibag__cart-label--large"
+        >
+          <a>
+            View Your Bag
+          </a>
+        </div>
+      </div>
     </Link>
-    <Link
-      href=""
+    <div
+      className="c-minibag__checkout"
     >
-      <a
-        aria-label="Go to checkout"
-        className="o-button o-button--primary o-button--lrg o-button--disabled"
+      <Link
         href=""
-        onClick={[Function]}
       >
-        CHECKOUT
-      </a>
-    </Link>
+        <a
+          aria-label="Go to checkout"
+          className="o-button o-button--primary o-button--lrg o-button--disabled"
+          href=""
+          onClick={[Function]}
+        >
+          CHECKOUT
+        </a>
+      </Link>
+    </div>
   </div>
 </MiniBag>
 `;
@@ -72,78 +89,113 @@ exports[`renders an active checkout button where cart has items 1`] = `
   }
   dispatch={[Function]}
 >
-  <div>
+  <div
+    className="c-header__minibag"
+  >
     <Link
       href="/cart"
     >
-      <a
-        aria-label="View your cart"
-        href="/cart"
+      <div
+        className="c-minibag__cart"
         onClick={[Function]}
       >
-        View Your Bag
-        <span
-          style={
-            Object {
-              "marginLeft": "5px",
-              "marginRight": "5px",
-            }
-          }
+        <a
+          aria-label="View your cart"
         >
-          (
-          2
-          )
-        </span>
-      </a>
+          <span
+            className="c-minibag__cart-count"
+          >
+            (
+            2
+            )
+          </span>
+        </a>
+        <div
+          className="c-minibag__cart-label--small"
+        >
+          <a>
+            Basket
+          </a>
+        </div>
+        <div
+          className="c-minibag__cart-label--large"
+        >
+          <a>
+            View Your Bag
+          </a>
+        </div>
+      </div>
     </Link>
-    <Link
-      href="/checkout"
+    <div
+      className="c-minibag__checkout"
     >
-      <a
-        aria-label="Go to checkout"
-        className="o-button o-button--primary o-button--lrg"
+      <Link
         href="/checkout"
-        onClick={[Function]}
       >
-        CHECKOUT
-      </a>
-    </Link>
+        <a
+          aria-label="Go to checkout"
+          className="o-button o-button--primary o-button--lrg"
+          href="/checkout"
+          onClick={[Function]}
+        >
+          CHECKOUT
+        </a>
+      </Link>
+    </div>
   </div>
 </MiniBag>
 `;
 
 exports[`renders the minibag links 1`] = `
-<div>
+<div
+  className="c-header__minibag"
+>
   <Link
     href="/cart"
   >
-    <a
-      aria-label="View your cart"
+    <div
+      className="c-minibag__cart"
     >
-      View Your Bag
-      <span
-        style={
-          Object {
-            "marginLeft": "5px",
-            "marginRight": "5px",
-          }
-        }
+      <a
+        aria-label="View your cart"
       >
-        (
-        0
-        )
-      </span>
-    </a>
+        <span
+          className="c-minibag__cart-count"
+        >
+          (
+          0
+          )
+        </span>
+      </a>
+      <div
+        className="c-minibag__cart-label--small"
+      >
+        <a>
+          Basket
+        </a>
+      </div>
+      <div
+        className="c-minibag__cart-label--large"
+      >
+        <a>
+          View Your Bag
+        </a>
+      </div>
+    </div>
   </Link>
-  <Link
-    href=""
+  <div
+    className="c-minibag__checkout"
   >
-    <a
-      aria-label="Go to checkout"
-      className="o-button o-button--primary o-button--lrg o-button--disabled"
+    <Link
+      href=""
     >
-      CHECKOUT
-    </a>
-  </Link>
+      <a
+        aria-label="Go to checkout"
+        className="o-button o-button--primary o-button--lrg o-button--disabled"
+      >
+        CHECKOUT
+      </a>
+    </Link>
+  </div>
 </div>
 `;

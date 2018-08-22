@@ -1,64 +1,42 @@
 .o-header {
+  background: white;
+  margin: 0 0 0 auto;
+  position: fixed;
+  top: 0;
   width: 100%;
-  margin: 20px auto;
-  @include breakpoint(desktop) {
-    width: 80%;
-  }
-}
-
-.o-header__logo {
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  left: 40%;
+  z-index: 999;
 
   @include breakpoint(desktop) {
-    width: 33.3%;
-    left: 0;
-  }
-}
-
-.o-header__search {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  margin-top: 5px;
-  vertical-align: top;
-
-  @include breakpoint(desktop) {
-    width: 33.3%;
-    margin-top: 0;
-  }
-}
-.o-header__minibag {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  margin-top: 5px;
-  vertical-align: top;
-
-  a {
-    text-transform: uppercase;
-    padding: 15px;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  @include breakpoint(desktop) {
-    width: 33.3%;
-    text-align: right;
-    margin-top: 0;
-  }
-}
-
-.o-header__step {
-  width: 50%;
-  display: inline-block;
-  text-align: center;
-  margin-top: 5px;
-  vertical-align: top;
-
-  @include breakpoint(desktop) {
-    width: 20%;
+  &__logo {
+    margin: 20px auto;
     text-align: center;
-    margin-top: 0;
+    vertical-align: top;
+    width: auto;
+
+    @include breakpoint(desktop) {
+      order: 1;
+      left: 0;
+      margin: 0;
+      width: 33.3%;
+    }
+  }
+
+  &__step {
+    display: inline-block;
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: top;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+      text-align: center;
+      width: 20%;
+    }
   }
 }

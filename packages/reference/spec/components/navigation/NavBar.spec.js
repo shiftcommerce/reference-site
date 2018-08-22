@@ -1,30 +1,12 @@
-// Libraries
-import { createMockStore } from 'redux-test-utils'
-
 // Components
-import NavBar from '../../../components/navigation/NavBar'
+import { NavBar } from '../../../components/navigation/NavBar'
 
 // Fixtures
 import menu from '../../fixtures/menu.fixture'
 
 test('renders the nav bar options', () => {
-  // Arrange
-  const initialState = {
-    loading: false,
-    error: false,
-    menu: menu
-  }
+  const wrapper = mount(<NavBar menu={menu} />)
 
-  const context = {
-    context: {
-      store: createMockStore(initialState)
-    }
-  }
-
-  // Act
-  const wrapper = mount(<NavBar />, context)
-
-  // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toHaveHTML('<div class="o-nav" role="navigation"><a class="o-nav__option o-nav__option--first" href="/categories/1">Bathroom</a></div>')
+  expect(wrapper.find('div.c-nav__menu-list')).toHaveHTML('<div class="c-nav__menu-list"><a class="c-nav__option c-nav__option--first" href="/categories/1">Bathroom<div class="c-nav__option-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></a></div>')
 })

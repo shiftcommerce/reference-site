@@ -1,4 +1,3 @@
-
 // Components
 import { Layout } from '../../components/Layout'
 import NavBar from '../../components/navigation/NavBar'

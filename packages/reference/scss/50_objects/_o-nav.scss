@@ -1,40 +1,14 @@
 /* ==========================================================================
    # Nav Object
    ========================================================================== */
-
 .o-nav {
-  border-top: 1px solid $border-default;
-  border-bottom: 1px solid $border-default;
-  margin-top: 5px;
-  margin: 10px 0;
+  border: none;
   text-align: center;
-  font-size: 13px
-}
-
-.o-nav__option {
-  padding: 10px;
-  width: 100%;
-  display: block;
-  text-transform: uppercase;
-  color: $text-dark;
-
-  &:hover {
-    border-top: 1px solid $text-error;
-  }
+  font-size: 0.9em;
+  height: 50px;
 
   @include breakpoint(desktop) {
-    width: auto;
-    display: inline-block;
-    border-top: 0;
-    padding: 1.25em .75em;
-    border-right: 1px solid $border-default;
-  }
-}
-
-.o-nav__option--first {
-  border-top: 0;
-
-  @include breakpoint(desktop) {
-    border-left: 1px solid $border-default;
+    order: 4;
+    margin: auto;
   }
 }

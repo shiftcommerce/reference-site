@@ -180,7 +180,9 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <div>
+            <div
+              className="c-carousel__content"
+            >
               <Slider
                 arrows={true}
                 dots={true}
@@ -323,11 +325,11 @@ exports[`renders correctly 1`] = `
                                 tabIndex={-1}
                               >
                                 <Image
-                                  className="c-slider-image"
+                                  className="c-carousel__image"
                                   src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
                                 >
                                   <div
-                                    className="c-slider-image"
+                                    className="c-carousel__image"
                                   >
                                     <LazyLoad
                                       height={200}

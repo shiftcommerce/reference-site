@@ -41,8 +41,12 @@ class SearchBar extends Component {
     return (
       <form role='search' onSubmit={this.onSubmit.bind(this)} action='/search' method='get' >
         <div className='c-searchbar'>
-          <input name='query' value={query.query || ''} onChange={onChange || this.defaultOnChange.bind(this)} type='search' className='c-searchbar--input' aria-label='search text' placeholder='Enter Keyword Or Product Code' />
-          <Button label='Search' size='lrg' status='primary' />
+          <div className='c-searchbar__content'>
+            <input name='query' value={query.query || ''} onChange={onChange || this.defaultOnChange.bind(this)} type='search' className='c-searchbar__input' aria-label='search text' placeholder='Search (e.g. "Skinny Jeans")' />
+            <div className='c-searchbar__input-icon'>
+              <Button className='c-searchbar__input-button' label='Search' size='lrg' status='primary' />
+            </div>
+          </div>
         </div>
       </form>
     )

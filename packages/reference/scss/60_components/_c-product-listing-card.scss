@@ -5,12 +5,15 @@
   &__rating {
     text-align: center;
   }
-}
+  &__image {
+    cursor: pointer;
+  }
 
-.c-product-listing-card__rating--fill {
-  color: $text-gold;
-}
+  &__rating--fill {
+    color: $text-gold;
+  }
 
-.c-product-listing-card__rating--empty {
-  color: $text-default;
+  &__rating--empty {
+    color: $text-default;
+  }
 }

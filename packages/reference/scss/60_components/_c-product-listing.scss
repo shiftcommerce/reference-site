@@ -1,24 +1,16 @@
 .c-product-listing {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   grid-auto-rows: minmax(100px, auto);
-}
+  width: 95%;
+  margin: auto;
 
-@media (max-width: 768px) {
-  .c-product-listing {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-    grid-auto-rows: minmax(100px, auto);
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (max-width: 420px) {
-  .c-product-listing {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
-    grid-auto-rows: minmax(100px, auto);
+  @include breakpoint(desktop) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

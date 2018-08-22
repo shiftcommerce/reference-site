@@ -1,5 +1,15 @@
 .c-carousel {
-  width: 503px;
+  width: 350px;
+  margin: auto;
+  overflow: hidden;
+
+  @include breakpoint(desktop) {
+    width: 503px;
+
+    &__content {
+      height: 100%;
+    }
+  }
 }
 
 .slick-next {

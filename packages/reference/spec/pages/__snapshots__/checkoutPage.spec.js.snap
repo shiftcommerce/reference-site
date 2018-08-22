@@ -144,11 +144,14 @@ exports[`Review Your Order button should be disabled if there is any error in bi
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -1676,11 +1679,14 @@ exports[`Review Your Order button should be disabled if there is any error in ca
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -3191,11 +3197,14 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -4715,11 +4724,14 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   onClick={[Function]}
                 >
                   <Image
-                    height={75}
-                    src="/static/logo.svg"
+                    className="o-logo__image"
+                    height={30}
+                    src="/static/shopgo-logo.svg"
                     width={120}
                   >
-                    <div>
+                    <div
+                      className="o-logo__image"
+                    >
                       <LazyLoad
                         height={200}
                         offset={0}
@@ -6252,11 +6264,14 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -7836,11 +7851,14 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}
@@ -9888,11 +9906,14 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 onClick={[Function]}
               >
                 <Image
-                  height={75}
-                  src="/static/logo.svg"
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
                   width={120}
                 >
-                  <div>
+                  <div
+                    className="o-logo__image"
+                  >
                     <LazyLoad
                       height={200}
                       offset={0}

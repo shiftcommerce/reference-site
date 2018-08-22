@@ -1,4 +1,5 @@
 @import '10_settings/_colors';
+@import '10_settings/_fonts';
 
 @import '20_tools/_breakpoints';
 
@@ -11,48 +12,51 @@
 @import '50_objects/_o-body';
 @import '50_objects/_o-breadcrumb';
 @import '50_objects/_o-button';
+@import '50_objects/_o-checkout-cart';
+@import '50_objects/_o-checkout-cart-total';
+@import '50_objects/_o-flex';
 @import '50_objects/_o-footer';
+@import '50_objects/_o-form';
 @import '50_objects/_o-grid';
 @import '50_objects/_o-header';
 @import '50_objects/_o-nav';
-@import '50_objects/_o-form';
-@import '50_objects/_o-flex';
 @import '50_objects/_o-payment-method';
-@import '50_objects/_o-checkout-cart';
-@import '50_objects/_o-checkout-cart-total';
 
+@import '60_components/_c-card-expiry-field';
+@import '60_components/_c-carousel';
 @import "60_components/_c-cart-no-data";
 @import "60_components/_c-cart-summary";
 @import "60_components/_c-cart-table";
+@import '60_components/_c-checkout-cart-total';
+@import '60_components/_c-cvv-field';
 @import "60_components/_c-gallery-half";
 @import "60_components/_c-gallery-third";
+@import "60_components/_c-header";
 @import "60_components/_c-hero";
 @import '60_components/_c-image';
 @import "60_components/_c-line-items";
 @import '60_components/_c-links';
+@import '60_components/_c-loading';
+@import "60_components/_c-minibag";
+@import "60_components/_c-nav";
 @import '60_components/_c-payment-method-button';
 @import '60_components/_c-product';
-@import '60_components/_c-product-price';
-@import '60_components/_c-product-display';
 @import '60_components/_c-product-display';
 @import '60_components/_c-product_list';
 @import '60_components/_c-product-listing';
 @import '60_components/_c-product-listing-card';
-@import '60_components/_c-title';
+@import '60_components/_c-product-price';
 @import '60_components/_c-searchbar';
 @import '60_components/_c-shipping-method-list';
 @import '60_components/_c-step-indicators';
-@import '60_components/_c-card-expiry-field';
-@import '60_components/_c-cvv-field';
-@import '60_components/_c-checkout-cart-total';
-@import '60_components/_c-loading';
-@import '60_components/_c-carousel';
+@import '60_components/_c-title';
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 @import '65_scopes/_algolia_instantsearch';
 
-@import "70_utilities/_u-float";
-@import "70_utilities/_u-text-color";
 @import "70_utilities/_u-bold";
+@import "70_utilities/_u-float";
 @import "70_utilities/_u-sticky";
+@import "70_utilities/_u-text-color";

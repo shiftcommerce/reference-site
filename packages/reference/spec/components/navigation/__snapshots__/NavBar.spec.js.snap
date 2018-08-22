@@ -1,51 +1,260 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the nav bar options 1`] = `
-<Connect(NavBar)>
-  <NavBar
-    dispatch={[Function]}
-    menu={
-      Object {
-        "data": Array [
-          Object {
-            "menu_items": Array [
-              Object {
-                "canonical_path": "/categories/1",
-                "id": 1,
-                "reference": "Bathroom",
-                "title": "Bathroom",
-              },
-            ],
-          },
-        ],
-      }
+<NavBar
+  menu={
+    Object {
+      "data": Array [
+        Object {
+          "menu_items": Array [
+            Object {
+              "canonical_path": "/categories/1",
+              "id": 1,
+              "reference": "Bathroom",
+              "title": "Bathroom",
+            },
+          ],
+        },
+      ],
     }
+  }
+>
+  <div
+    className="o-nav"
+    role="navigation"
   >
+    <input
+      className="c-nav__checkbox"
+      id="burger-menu"
+      type="checkbox"
+    />
     <div
-      className="o-nav"
-      role="navigation"
+      className="c-nav__menu-button"
     >
-      <NavBarOption
-        as="/categories/1"
-        href="/categories/1"
-        index={0}
-        key="0"
-        title="Bathroom"
+      <label
+        className="c-nav__menu-button-icon"
+        htmlFor="burger-menu"
       >
-        <Link
+        <p>
+          Menu
+        </p>
+      </label>
+    </div>
+    <div
+      className="c-nav__menu"
+    >
+      <div
+        className="c-nav__menu-header"
+      >
+        <label
+          className="c-nav__menu-header-cross"
+          htmlFor="burger-menu"
+        />
+        <Logo
+          className="c-nav__menu-header-logo"
+        >
+          <div
+            className="c-nav__menu-header-logo"
+          >
+            <Link
+              as="/"
+              href="/slug?slug=/homepage"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                <Image
+                  className="o-logo__image"
+                  height={30}
+                  src="/static/shopgo-logo.svg"
+                  width={120}
+                >
+                  <div
+                    className="o-logo__image"
+                  >
+                    <LazyLoad
+                      height={200}
+                      offset={0}
+                      once={false}
+                      overflow={false}
+                      resize={false}
+                      scroll={true}
+                      unmountIfInvisible={false}
+                    >
+                      <div
+                        className="lazyload-placeholder"
+                        style={
+                          Object {
+                            "height": 200,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </Logo>
+        <div
+          className="c-nav__menu-header-search"
+        >
+          <SearchBar>
+            <form
+              action="/search"
+              method="get"
+              onSubmit={[Function]}
+              role="search"
+            >
+              <div
+                className="c-searchbar"
+              >
+                <div
+                  className="c-searchbar__content"
+                >
+                  <input
+                    aria-label="search text"
+                    className="c-searchbar__input"
+                    name="query"
+                    onChange={[Function]}
+                    placeholder="Search (e.g. \\"Skinny Jeans\\")"
+                    type="search"
+                    value=""
+                  />
+                  <div
+                    className="c-searchbar__input-icon"
+                  >
+                    <Button
+                      className="c-searchbar__input-button"
+                      label="Search"
+                      size="lrg"
+                      status="primary"
+                    >
+                      <button
+                        className="c-searchbar__input-button o-button o-button--primary o-button--lrg"
+                        disabled={false}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Search
+                      </button>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </SearchBar>
+        </div>
+      </div>
+      <div
+        className="c-nav__menu-list"
+      >
+        <NavBarOption
           as="/categories/1"
           href="/slug?slug=/categories/1"
+          index={0}
+          key="0"
+          title="Bathroom"
         >
-          <a
-            className="o-nav__option o-nav__option--first"
-            href="/categories/1"
-            onClick={[Function]}
+          <Link
+            as="/categories/1"
+            href="/slug?slug=/categories/1"
           >
-            Bathroom
-          </a>
-        </Link>
-      </NavBarOption>
+            <a
+              className="c-nav__option c-nav__option--first"
+              href="/categories/1"
+              onClick={[Function]}
+            >
+              Bathroom
+              <div
+                className="c-nav__option-text"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+            </a>
+          </Link>
+        </NavBarOption>
+      </div>
+      <div
+        className="c-nav__menu-footer"
+      >
+        <div
+          className="c-nav__menu-footer-email"
+        >
+          <div
+            className="c-nav__menu-footer-email-text"
+          >
+            <p>
+              Want to receive the latest news and offers from ShopGo?
+            </p>
+          </div>
+          <div
+            className="c-nav__menu-footer-email-input"
+          >
+            <p>
+              Enter your email address here
+            </p>
+            <div
+              className="c-nav__menu-footer-email-button"
+            >
+              <p>
+                YES PLEASE
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c-nav__menu-footer-content"
+        >
+          <div
+            className="c-nav__menu-footer-links"
+          >
+            <a
+              className="c-nav__menu-footer-link-first"
+            >
+              FAQs
+            </a>
+            <a>
+              About
+            </a>
+            <a>
+              Delivery
+            </a>
+            <a>
+              Stores
+            </a>
+            <a>
+              Contact
+            </a>
+          </div>
+          <div
+            className="c-nav__menu-footer-social"
+          >
+            <div
+              className="c-nav__menu-footer-social-text"
+            >
+              <a>
+                Connect with ShopGo
+              </a>
+            </div>
+            <div
+              className="c-nav__menu-footer-social-links"
+            >
+              <div
+                className="c-nav__menu-footer-social-facebook"
+              />
+              <div
+                className="c-nav__menu-footer-social-instagram"
+              />
+              <div
+                className="c-nav__menu-footer-social-twitter"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </NavBar>
-</Connect(NavBar)>
+  </div>
+</NavBar>
 `;

@@ -16,9 +16,10 @@
   color: $text-primary;
 
   &:hover {
-    margin: 10px auto;
-    border-color: darken($text-primary, 10%);
-    background: linear-gradient(to bottom, lighten($base-color, 20%), $base-color);
+    @include breakpoint(desktop) {
+      border-color: darken($text-primary, 10%);
+      background: linear-gradient(to bottom, lighten($base-color, 20%), $base-color);
+    }
   }
 
   &:focus {
@@ -45,8 +46,10 @@
       color: $text-color;
 
       &:hover {
-        border-color: darken($base-color, 15%);
-        background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);
+        @include breakpoint(desktop) {
+          border-color: darken($base-color, 15%);
+          background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);
+        }
       }
 
       &:focus {
@@ -64,5 +67,4 @@
     opacity: 0.5;
     cursor: default;
   }
-
 }

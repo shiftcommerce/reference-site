@@ -90,35 +90,41 @@ exports[`renders ProductListingCard correctly 1`] = `
       <div
         className="c-product-listing-card__gallery  c-image"
       >
-        <Image
-          alt="Textured Long T-Shirt"
-          aria-label="Textured Long T-Shirt"
-          className="c-product-listing-card__image"
-          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+        <Link
+          as="1"
+          href="/slug?slug=1"
         >
-          <div
+          <Image
+            alt="Textured Long T-Shirt"
+            aria-label="Textured Long T-Shirt"
             className="c-product-listing-card__image"
+            onClick={[Function]}
+            src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
           >
-            <LazyLoad
-              height={200}
-              offset={0}
-              once={false}
-              overflow={false}
-              resize={false}
-              scroll={true}
-              unmountIfInvisible={false}
+            <div
+              className="c-product-listing-card__image"
             >
-              <div
-                className="lazyload-placeholder"
-                style={
-                  Object {
-                    "height": 200,
+              <LazyLoad
+                height={200}
+                offset={0}
+                once={false}
+                overflow={false}
+                resize={false}
+                scroll={true}
+                unmountIfInvisible={false}
+              >
+                <div
+                  className="lazyload-placeholder"
+                  style={
+                    Object {
+                      "height": 200,
+                    }
                   }
-                }
-              />
-            </LazyLoad>
-          </div>
-        </Image>
+                />
+              </LazyLoad>
+            </div>
+          </Image>
+        </Link>
       </div>
       <div
         className="c-product-listing-card__title"
@@ -180,33 +186,6 @@ exports[`renders ProductListingCard correctly 1`] = `
             </span>
           </div>
         </ProductPrice>
-      </div>
-      <div
-        className="c-product-listing-card__view-details"
-      >
-        <Link
-          as="1"
-          href="/slug?slug=1"
-        >
-          <Button
-            aria-label="View"
-            label="View"
-            onClick={[Function]}
-            size="lrg"
-            status="primary"
-          >
-            <button
-              aria-label="View"
-              className="o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              View
-            </button>
-          </Button>
-        </Link>
       </div>
       <div
         className="c-product-listing-card__rating"

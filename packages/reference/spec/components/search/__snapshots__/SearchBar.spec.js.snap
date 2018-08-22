@@ -11,29 +11,38 @@ exports[`renders the header 1`] = `
     <div
       className="c-searchbar"
     >
-      <input
-        aria-label="search text"
-        className="c-searchbar--input"
-        name="query"
-        onChange={[Function]}
-        placeholder="Enter Keyword Or Product Code"
-        type="search"
-        value=""
-      />
-      <Button
-        label="Search"
-        size="lrg"
-        status="primary"
+      <div
+        className="c-searchbar__content"
       >
-        <button
-          className="o-button o-button--primary o-button--lrg"
-          disabled={false}
-          role="button"
-          tabIndex="0"
+        <input
+          aria-label="search text"
+          className="c-searchbar__input"
+          name="query"
+          onChange={[Function]}
+          placeholder="Search (e.g. \\"Skinny Jeans\\")"
+          type="search"
+          value=""
+        />
+        <div
+          className="c-searchbar__input-icon"
         >
-          Search
-        </button>
-      </Button>
+          <Button
+            className="c-searchbar__input-button"
+            label="Search"
+            size="lrg"
+            status="primary"
+          >
+            <button
+              className="c-searchbar__input-button o-button o-button--primary o-button--lrg"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Search
+            </button>
+          </Button>
+        </div>
+      </div>
     </div>
   </form>
 </SearchBar>

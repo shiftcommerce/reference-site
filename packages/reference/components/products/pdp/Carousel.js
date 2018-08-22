@@ -22,11 +22,11 @@ class Carousel extends Component {
     const imageUrls = product.asset_files.map(a => a.s3_url)
 
     return (
-      <div>
+      <div className='c-carousel__content'>
         <Slider {...settings}>
           {imageUrls.map(imageUrl => (
             <div key={imageUrl}>
-              <Image className='c-slider-image' src={imageUrl} />
+              <Image className='c-carousel__image' src={imageUrl} />
             </div>
           ))}
         </Slider>

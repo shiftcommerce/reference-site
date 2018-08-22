@@ -3,23 +3,72 @@
    ========================================================================== */
 
 .c-searchbar {
-  width: 100%;
-  margin: 10px 0;
-  padding: 0;
+  background: #E4E3E2;
+  height: 72px;
 
-  &--input {
-    width: 70%;
-    border-radius: 0;
-    border-width: .07143rem;
-    border-style: solid;
+  @include breakpoint (desktop) {
+    background: none;
+  }
+
+  &__input {
+    background-color: white;
     border-color: $border-default;
-    background-color: $background-light;;
-    padding: 0 10px;
+    border-radius: 0;
+    border-style: solid;
+    border-right: none;
+    border-width: .07143rem;
+    color: #676567;
+    font-size: 1em;
+    font-weight: 500;
+    height: 50px;
     line-height: 38px;
-    margin: 0 5px 0 0;
+    margin: auto;
+    padding: 0 10px;
+    width: 87%;
     -webkit-font-smoothing: antialiased;
-    font-weight: normal;
-    font-size: 13px;
-    color: $background-dark;
+    -webkit-appearance: none;
+
+    @include breakpoint (desktop) {
+      width: 60%;
+    }
+
+    &-icon {
+      display: inline-block;
+      background-color: white;
+      border-radius: 0;
+      border-width: .07143rem;
+      border-style: solid;
+      border-color: $border-default;
+      border-left: none;
+      width: 12%;
+      position: absolute;
+    }
+
+    &-button {
+      border: none;
+      height: 48px;
+      width: 100%;
+      padding: auto;
+      background: url('/static/magnifying-glass.svg') no-repeat center center;
+      font-size: 0;
+      margin: 0;
+
+      @include breakpoint(desktop) {
+        background: linear-gradient(to bottom, #56155d, #431048);
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__content {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    padding-top: 11px;
+
+    @include breakpoint(desktop) {
+      padding: 0;
+    }
   }
 }

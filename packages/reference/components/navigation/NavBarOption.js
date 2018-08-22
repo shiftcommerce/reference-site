@@ -13,8 +13,11 @@ class NavBarOption extends Component {
 
     return (
       <Link href={`/slug?slug=${as}`} as={as}>
-        <a className={classNames('o-nav__option', { 'o-nav__option--first': index === 0 })} >
+        <a className={classNames('c-nav__option', { 'c-nav__option--first': index === 0 })} >
           { title }
+          <div className='c-nav__option-text'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
         </a>
       </Link>
     )
