@@ -1,16 +1,10 @@
 .o-body {
   width: 100%;
-  margin: 15px auto;
-  padding-top: 190px;
-
-  @include breakpoint(tablet) {
-    margin: 0;
-    padding-top: 204px;
-  }
+  padding-top: 12.5rem;
 
   @include breakpoint(desktop) {
     width: 80%;
     margin: auto;
-    padding-top: 30px;
+    padding-top: 2rem;
   }
 }

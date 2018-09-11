@@ -1,6 +1,6 @@
 .o-form {
   width: 100%;
-  margin: 10px 0;
+  margin: 0.65em 0;
 
   &__header {
     width: 100%;
@@ -10,22 +10,21 @@
 
   &__wrapper {
     border: 1px solid #000;
-    padding: 10px 30px;
-    margin-bottom: 10px;
+    padding: 0.65em 1.9em;
+    margin-bottom: 0.65em;
   }
 
   &__input-group {
-    padding-top: 10px;
+    padding-top: 0.65em;
   }
 
   &__label {
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 0.65em;
   }
 
   &__checkbox {
-    margin-bottom: 10px;
+    margin-bottom: 0.65em;
   }
 
   &__error {
@@ -33,26 +32,25 @@
   }
 
   &__input-field {
-    padding: 5px;
-    margin: 10px 0;
+    padding: 0.325em;
+    margin: 0.65em 0;
     display: block;
-    padding: .5rem .75rem;
+    padding: 0.5rem 0.75rem;
     font-size: 1rem;
     line-height: 1.25;
-    color: #495057;
-    background-color: #fff;
+    color: $text-form;
     background-image: none;
     background-clip: padding-box;
     border: 1px solid;
     border-color: rgba(0,0,0,.15);
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     background-color: $background-light-grey;
 
     &__error {
       color: $text-error;
       border-color: $border-error;
       background-color: $background-white;
-      margin-bottom: 10px;
+      margin-bottom: 0.65em;
 
       &::first-letter  {
         text-transform: capitalize;

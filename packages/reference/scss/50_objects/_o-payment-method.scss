@@ -1,35 +1,35 @@
 .o-payment-method {
   width: 100%;
   padding: 0 10%;
-  margin-top: 10px;
+  margin-top: 0.65em;
 
   &__security-fields {
-    padding-top: 10px;
+    padding-top: 0.65em;
   }
 
   &__text {
-    padding: 0 10px;
+    padding: 0 0.65em;
   }
 
   &__label {
-    padding-right: 10px;
+    padding-right: 0.65em;
   }
 
   &__label-cvv[for=cvv] {
-    padding-left: 10px;
+    padding-left: 0.65em;
   }
 
   &__input {
     width: 25%;
-    padding-right: 10px;
+    padding-right: 0.65em;
   }
 
   &__address-summary {
-    padding: 10px;
-    background-color: #ddd;
+    padding: 0.65em;
+    background-color: $background-payment;
 
     h4, p {
-      margin: 5px;
+      margin: 0.325em;
     }
   }
 }

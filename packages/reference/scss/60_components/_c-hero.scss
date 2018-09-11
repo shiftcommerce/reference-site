@@ -1,13 +1,14 @@
 .c-hero {
-  padding-bottom: 20px;
+  padding-bottom: 2.6rem;
   z-index: 0;
   position: relative;
-  margin-bottom: 20px;
+
   &__button {
     text-align: center;
     z-index: 1;
     position: relative;
-    margin-top: -70px;
+    margin-top: -3.5rem;
+
     &-icon {
       text-transform: uppercase;
     }

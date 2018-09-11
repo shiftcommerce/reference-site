@@ -145,9 +145,9 @@ exports[`Review Your Order button should be disabled if there is any error in bi
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -1680,9 +1680,9 @@ exports[`Review Your Order button should be disabled if there is any error in ca
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -3198,9 +3198,9 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -4725,9 +4725,9 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 >
                   <Image
                     className="o-logo__image"
-                    height={30}
+                    height={40}
                     src="/static/shopgo-logo.svg"
-                    width={120}
+                    width={150}
                   >
                     <div
                       className="o-logo__image"
@@ -6265,9 +6265,9 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -7852,9 +7852,9 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -9907,9 +9907,9 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"

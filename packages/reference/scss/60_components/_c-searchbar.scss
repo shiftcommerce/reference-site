@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .c-searchbar {
-  background: #E4E3E2;
-  height: 72px;
+  background: $background-light-grey;
+  height: 4.5rem;
 
   @include breakpoint (desktop) {
     background: none;
@@ -17,13 +17,12 @@
     border-style: solid;
     border-right: none;
     border-width: .07143rem;
-    color: #676567;
+    color: $border-default;
     font-size: 1em;
     font-weight: 500;
-    height: 50px;
-    line-height: 38px;
+    height: 3.1rem;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 3%;
     width: 87%;
     -webkit-font-smoothing: antialiased;
     -webkit-appearance: none;
@@ -35,10 +34,8 @@
     &-icon {
       display: inline-block;
       background-color: white;
+      border: 1px solid $border-default;
       border-radius: 0;
-      border-width: .07143rem;
-      border-style: solid;
-      border-color: $border-default;
       border-left: none;
       width: 12%;
       position: absolute;
@@ -46,10 +43,9 @@
 
     &-button {
       border: none;
-      height: 48px;
+      height: 2.95rem;
       width: 100%;
-      padding: auto;
-      background: url('/static/magnifying-glass.svg') no-repeat center center;
+      background: url('/static/magnifying-glass.svg') no-repeat center;
       font-size: 0;
       margin: 0;
 
@@ -63,9 +59,8 @@
 
   &__content {
     width: 90%;
-    height: 50px;
     margin: auto;
-    padding-top: 11px;
+    padding-top: 0.7em;
 
     @include breakpoint(desktop) {
       padding: 0;

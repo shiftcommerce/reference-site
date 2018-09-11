@@ -14,7 +14,7 @@ class Logo extends Component {
       <div className={className}>
         <Link href='/slug?slug=/homepage' as='/' >
           <a>
-            <Image width={120} height={30} src={logoSrc} className='o-logo__image' />
+            <Image width={150} height={40} src={logoSrc} className='o-logo__image' />
           </a>
         </Link>
       </div>

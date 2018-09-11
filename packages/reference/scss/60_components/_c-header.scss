@@ -1,19 +1,19 @@
 .c-header {
 
   &__account {
-    height: 40px;
+    height: 2.5rem;
     width: 33.3%;
     background: white;
-    margin: auto auto -40px auto;
+    margin: auto auto -2.5rem auto;
 
     @include breakpoint(desktop) {
       display: none;
     }
 
     &-button {
-      background: url('/static/account-icon.svg') no-repeat center center;
-      width: 50px;
-      height: 40px;
+      background: url('/static/account-icon.svg') no-repeat center;
+      width: 3rem;
+      height: 2.4rem;
       margin: auto 50% auto auto;
 
       @include breakpoint(desktop) {
@@ -22,9 +22,9 @@
     }
 
     &-label {
-      font-size: 0.8em;
-      padding-top: 18px;
-      padding-left: 42px;
+      font-size: 0.8rem;
+      padding-top: 1.1rem;
+      padding-left: 2.6rem;
 
       @include breakpoint(desktop) {
         display: none;
@@ -34,7 +34,7 @@
 
   &__minibag {
     float: right;
-    height: 30px;
+    height: 2rem;
     width: 33.3%;
     border-left: 1px solid $border-default;
 

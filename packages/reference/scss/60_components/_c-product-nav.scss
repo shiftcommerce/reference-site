@@ -1,0 +1,41 @@
+.c-product-nav {
+  width: 95%;
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  font-size: 0.85em;
+  padding-top: 0.3em;
+  display: inline-flex;
+
+  @include breakpoint (tablet) {
+    grid-column-end: 4;
+  }
+
+  @include breakpoint (desktop) {
+    grid-column-end: 5;
+  }
+
+  &__links {
+    height: 1em;
+    width: 20%;
+    border-right: 1px solid $border-default;
+    text-align: center;
+
+    a {
+      padding: 0 10%;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &--selected {
+
+      a {
+        padding-bottom: 0.2em;
+        border-bottom: 3px solid $background-orange;
+      }
+    }
+  }
+}

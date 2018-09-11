@@ -1,9 +1,9 @@
 .c-shipping-method-list {
 
   &__header {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1.6em;
+    padding-bottom: 1em;
     border-bottom: 1px solid $border-dark;
   }
 
@@ -12,7 +12,7 @@
   }
 
   &__input-group {
-    padding: 10px;
+    padding: 0.65em;
     border: 1px solid;
 
     &:not(:last-child) {
@@ -21,24 +21,28 @@
 
     input {
       float: left;
-      height: 30px;
+      height: 2.5em;
       vertical-align: middle;
-      margin-right: 10px;
+      margin-right: 0.65em;
     }
   }
+
   &__title {
     display: block;
     font-weight: bold;
   }
+
   &__cost {
     float: right;
-    line-height: 40px;
+    line-height: 2.5rem;
     font-weight: bold;
   }
+
   &__delivery-date-label {
     display: inline;
     font-weight: bold;
   }
+
   &__delivery-date {
     display: inline;
   }

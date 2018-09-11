@@ -66,9 +66,9 @@ exports[`renders the nav bar options 1`] = `
               >
                 <Image
                   className="o-logo__image"
-                  height={30}
+                  height={40}
                   src="/static/shopgo-logo.svg"
-                  width={120}
+                  width={150}
                 >
                   <div
                     className="o-logo__image"
@@ -195,13 +195,19 @@ exports[`renders the nav bar options 1`] = `
             <p>
               Enter your email address here
             </p>
-            <div
+            <Button
               className="c-nav__menu-footer-email-button"
+              label="yes please"
             >
-              <p>
-                YES PLEASE
-              </p>
-            </div>
+              <button
+                className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"
+                disabled={false}
+                role="button"
+                tabIndex="0"
+              >
+                yes please
+              </button>
+            </Button>
           </div>
         </div>
         <div
@@ -242,13 +248,13 @@ exports[`renders the nav bar options 1`] = `
               className="c-nav__menu-footer-social-links"
             >
               <div
-                className="c-nav__menu-footer-social-facebook"
+                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--facebook"
               />
               <div
-                className="c-nav__menu-footer-social-instagram"
+                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--instagram"
               />
               <div
-                className="c-nav__menu-footer-social-twitter"
+                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--twitter"
               />
             </div>
           </div>

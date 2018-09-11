@@ -5,9 +5,7 @@ class ProductListing extends Component {
   renderFacets (categoryId) {
     return (
       <div className='c-product_list__sidebar--filter'>
-
         <p className='c-product_list__sidebar--filter-title'>Colour</p>
-
         <p className='c-product_list__sidebar--filter-title'>Size</p>
       </div>
     )
@@ -32,18 +30,13 @@ class ProductListing extends Component {
           <aside className='c-product_list__sidebar'>
             { this.renderFacets(categoryId) }
           </aside>
-
           <main className='c-product_list__listing'>
-
             { this.renderActions() }
-
             <div role='product list' className='c-product_list__products' />
-
             { this.renderActions() }
           </main>
         </div>
       </div>
-
     )
   }
 }

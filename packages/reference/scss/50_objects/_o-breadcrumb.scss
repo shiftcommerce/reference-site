@@ -15,13 +15,13 @@
   float: left;
 
   &:not(:first-child) {
-    margin-left: 15px;
+    margin-left: 1em;
 
     &:before {
       position: relative;
-      right: 7.5px;
+      right: 0.5em;
       content: '>';
-      font-size: 13px;
+      font-size: 1rem;
     }
   }
 }

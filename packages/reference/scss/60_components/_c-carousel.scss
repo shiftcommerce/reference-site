@@ -1,10 +1,10 @@
 .c-carousel {
-  width: 350px;
+  width: 100%;
   margin: auto;
   overflow: hidden;
 
   @include breakpoint(desktop) {
-    width: 503px;
+    width: 19.4rem;
 
     &__content {
       height: 100%;
@@ -13,10 +13,10 @@
 }
 
 .slick-next {
-  padding-right: 50px;
+  padding-right: 3rem;
 }
 
 .slick-prev {
-  margin-left: 30px;
+  margin-left: 1.7rem;
   z-index: 1;
 }

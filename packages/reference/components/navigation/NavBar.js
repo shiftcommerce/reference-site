@@ -9,6 +9,7 @@ import NavBarOption from './NavBarOption'
 
 // Objects
 import Logo from '../../objects/Logo'
+import Button from '../../objects/Button'
 
 export class NavBar extends Component {
   renderNavOptions (menuItems) {
@@ -52,9 +53,7 @@ export class NavBar extends Component {
         </div>
         <div className='c-nav__menu-footer-email-input'>
           <p>Enter your email address here</p>
-          <div className='c-nav__menu-footer-email-button'>
-            <p>YES PLEASE</p>
-          </div>
+          <Button className='c-nav__menu-footer-email-button' label='yes please' />
         </div>
       </div>
     )
@@ -74,9 +73,9 @@ export class NavBar extends Component {
               <a>Connect with ShopGo</a>
             </div>
             <div className='c-nav__menu-footer-social-links'>
-              <div className='c-nav__menu-footer-social-facebook' />
-              <div className='c-nav__menu-footer-social-instagram' />
-              <div className='c-nav__menu-footer-social-twitter' />
+              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--facebook' />
+              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--instagram' />
+              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--twitter' />
             </div>
           </div>
         </div>

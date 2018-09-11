@@ -1,5 +1,5 @@
 .o-dummy_image {
   display: inline-block;
   text-align: center;
-  background: #e6e6e6 url('/static/placeholder.png') center no-repeat;
+  background: $background-dummy url('/static/placeholder.png') no-repeat center ;
 }

@@ -16,6 +16,7 @@
   color: $text-primary;
 
   &:hover {
+
     @include breakpoint(desktop) {
       border-color: darken($text-primary, 10%);
       background: linear-gradient(to bottom, lighten($base-color, 20%), $base-color);
@@ -46,6 +47,7 @@
       color: $text-color;
 
       &:hover {
+
         @include breakpoint(desktop) {
           border-color: darken($base-color, 15%);
           background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);

@@ -3,11 +3,12 @@
   width: 100% !important;
   margin: 15px 0px;
   padding: 15px 0px;
-  
+
   &__header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
+
   &__column {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -20,10 +21,11 @@
     height: 90px;
     width: 90px;
     max-width: 100px;
-    @include breakpoint(desktop){
+
+    @include breakpoint(desktop) {
       height: 200px;
       width: 150px;
       max-width: 100%;
-    } 
-  }       
+    }
+  }
 }

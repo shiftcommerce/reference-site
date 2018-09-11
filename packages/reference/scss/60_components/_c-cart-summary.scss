@@ -1,13 +1,16 @@
 .c-cart-summary {
-  border-top: 1px solid #f0f0f5;
+  border-top: 1px solid $border-default;
   overflow: hidden;
-  @include breakpoint(desktop){
+
+  @include breakpoint(desktop) {
     margin-left: 50%;
   }
+
   dt {
     float: left;
     clear: left;
   }
+
   dd {
     text-align: right;
     margin-left: 50%;

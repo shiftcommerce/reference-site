@@ -1,10 +1,11 @@
 .c-product-listing {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
   grid-auto-rows: minmax(100px, auto);
-  width: 95%;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 35px;
   margin: auto;
+  width: 95%;
 
   @include breakpoint(tablet) {
     grid-template-columns: repeat(3, 1fr);
@@ -12,5 +13,124 @@
 
   @include breakpoint(desktop) {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__view-more {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+
+
+    @include breakpoint(tablet) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    @include breakpoint(desktop) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    &-button {
+      background: black;
+      color: white;
+      font-size: 0.7rem;
+      height: 2.5rem;
+      text-transform: uppercase;
+      width: 12rem;
+    }
+  }
+
+  &__menu {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include breakpoint(tablet) {
+      grid-column-end: 4;
+    }
+
+    @include breakpoint(desktop) {
+      grid-column-end: 5;
+    }
+
+    &-description {
+      border-bottom: 1px solid $border-default;
+      border-top: 1px solid $border-default;
+      text-align: center;
+
+      &-title {
+        font-size: 1.8rem;
+      }
+
+      &-content {
+        font-size: 0.8rem;
+        margin-bottom: 2em;
+      }
+    }
+
+    &-options {
+      border-bottom: 1px solid $border-default;
+      display: flex;
+      height: 3em;
+
+      &-filters {
+        border-right: 1px solid $border-default;
+        display: flex;
+        width: 50%;
+
+        &-title {
+          font-size: 0.84rem;
+          font-weight: 400;
+          padding-left: 0.5em;
+          padding-top: 0.5em;
+        }
+
+        &-applied {
+          background: black;
+          border-radius: 16px;
+          color: white;
+          font-size: 0.7rem;
+          margin: auto;
+          padding: 0.7em 1.5em;
+          text-align: center;
+        }
+
+        &-button {
+          background: url('/static/arrow-right.svg') no-repeat center;
+          border: none;
+          cursor: pointer;
+          height: 100%;
+          margin: 0;
+          width: 2rem;
+        }
+      }
+
+      &-sort-by {
+        display: flex;
+        width: 50%;
+
+        &-title {
+          font-size: 0.84rem;
+          font-weight: 400;
+          padding-left: 0.5em;
+          padding-top: 0.5em;
+        }
+
+        &-button {
+          background: url('/static/arrow-right.svg') no-repeat center;
+          border: none;
+          cursor: pointer;
+          margin: 0 0 0 auto;
+          width: 2rem;
+        }
+      }
+    }
+
+    &-items-displayed {
+      color: grey;
+      font-size: 0.7em;
+      padding-top: 1em;
+      text-align: right;
+    }
   }
 }
