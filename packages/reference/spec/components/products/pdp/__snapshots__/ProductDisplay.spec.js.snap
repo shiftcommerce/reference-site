@@ -99,7 +99,7 @@ exports[`renders correctly 1`] = `
         <div
           className="c-carousel"
         >
-          <Carousel
+          <CarouselComponent
             className="c-carousel-slider"
             product={
               Object {
@@ -180,188 +180,161 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <div
-              className="c-carousel__content"
+            <Carousel
+              autoPlay={false}
+              axis="horizontal"
+              centerMode={false}
+              centerSlidePercentage={80}
+              dynamicHeight={false}
+              emulateTouch={false}
+              infiniteLoop={false}
+              interval={3000}
+              onChange={[Function]}
+              onClickItem={[Function]}
+              onClickThumb={[Function]}
+              selectedItem={0}
+              showArrows={true}
+              showIndicators={true}
+              showStatus={false}
+              showThumbs={false}
+              statusFormatter={[Function]}
+              stopOnHover={true}
+              swipeScrollTolerance={5}
+              swipeable={true}
+              transitionTime={350}
+              useKeyboardArrows={true}
+              verticalSwipe="standard"
+              width="100%"
             >
-              <Slider
-                arrows={true}
-                dots={true}
-                fade={true}
-                infinite={true}
-                slidesToScroll={1}
-                slidesToShow={1}
-                speed={500}
-              >
-                <InnerSlider
-                  accessibility={true}
-                  adaptiveHeight={false}
-                  afterChange={null}
-                  appendDots={[Function]}
-                  arrows={true}
-                  autoplay={false}
-                  autoplaySpeed={3000}
-                  beforeChange={null}
-                  centerMode={false}
-                  centerPadding="50px"
-                  className=""
-                  cssEase="ease"
-                  customPaging={[Function]}
-                  dots={true}
-                  dotsClass="slick-dots"
-                  draggable={true}
-                  easing="linear"
-                  edgeFriction={0.35}
-                  fade={true}
-                  focusOnSelect={false}
-                  infinite={true}
-                  initialSlide={0}
-                  lazyLoad={null}
-                  nextArrow={null}
-                  onEdge={null}
-                  onInit={null}
-                  onLazyLoadError={null}
-                  onReInit={null}
-                  pauseOnDotsHover={false}
-                  pauseOnFocus={false}
-                  pauseOnHover={true}
-                  prevArrow={null}
-                  responsive={null}
-                  rows={1}
-                  rtl={false}
-                  slide="div"
-                  slidesPerRow={1}
-                  slidesToScroll={1}
-                  slidesToShow={1}
-                  speed={500}
-                  swipe={true}
-                  swipeEvent={null}
-                  swipeToSlide={false}
-                  touchMove={true}
-                  touchThreshold={5}
-                  unslick={true}
-                  useCSS={true}
-                  useTransform={true}
-                  variableWidth={false}
-                  vertical={false}
-                  waitForAnimate={true}
+              <div>
+                <div
+                  className="carousel carousel-slider"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
+                  <button
+                    className="control-arrow control-prev control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
                   <div
-                    className="slick-slider slick-initialized"
+                    className="slider-wrapper axis-horizontal"
+                    style={Object {}}
                   >
-                    <div
-                      className="slick-list"
+                    <ReactSwipe
+                      allowMouseEvents={false}
+                      className="slider animated"
+                      onSwipeDown={[Function]}
+                      onSwipeEnd={[Function]}
+                      onSwipeLeft={[Function]}
+                      onSwipeMove={[Function]}
+                      onSwipeRight={[Function]}
+                      onSwipeStart={[Function]}
+                      onSwipeUp={[Function]}
+                      selectedItem={0}
+                      style={
+                        Object {
+                          "MozTransform": "translate3d(0%,0,0)",
+                          "MozTransitionDuration": "350ms",
+                          "MsTransform": "translate3d(0%,0,0)",
+                          "MsTransitionDuration": "350ms",
+                          "OTransform": "translate3d(0%,0,0)",
+                          "OTransitionDuration": "350ms",
+                          "WebkitTransform": "translate3d(0%,0,0)",
+                          "WebkitTransitionDuration": "350ms",
+                          "msTransform": "translate3d(0%,0,0)",
+                          "msTransitionDuration": "350ms",
+                          "transform": "translate3d(0%,0,0)",
+                          "transitionDuration": "350ms",
+                        }
+                      }
+                      tagName="ul"
+                      tolerance={5}
                     >
-                      <Track
-                        centerMode={false}
-                        centerPadding="50px"
-                        cssEase="ease"
-                        currentSlide={0}
-                        fade={true}
-                        focusOnSelect={null}
-                        infinite={true}
-                        lazyLoad={null}
-                        lazyLoadedList={Array []}
-                        listHeight={0}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        rtl={false}
-                        slideCount={1}
-                        slideHeight={0}
-                        slideWidth={0}
-                        slidesToScroll={1}
-                        slidesToShow={1}
-                        speed={500}
-                        trackStyle={
+                      <ul
+                        className="slider animated"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        style={
                           Object {
-                            "opacity": 1,
+                            "MozTransform": "translate3d(0%,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(0%,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(0%,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(0%,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(0%,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(0%,0,0)",
+                            "transitionDuration": "350ms",
                           }
                         }
-                        unslick={true}
-                        variableWidth={false}
-                        vertical={false}
                       >
-                        <div
-                          className="slick-track"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          style={
-                            Object {
-                              "opacity": 1,
-                            }
-                          }
+                        <li
+                          className="slide selected"
+                          key="itemKey0/.$0"
+                          onClick={[Function]}
                         >
                           <div
-                            aria-hidden={false}
-                            className="slick-slide slick-active slick-current"
-                            data-index={0}
-                            key="original0"
-                            onClick={[Function]}
-                            style={
-                              Object {
-                                "WebkitTransition": "opacity 500ms ease, visibility 500ms ease",
-                                "left": -0,
-                                "opacity": 1,
-                                "outline": "none",
-                                "position": "relative",
-                                "transition": "opacity 500ms ease, visibility 500ms ease",
-                                "width": 0,
-                              }
-                            }
-                            tabIndex="-1"
+                            key="0"
                           >
-                            <div
-                              key="0"
+                            <Image
+                              className="c-slider-image"
+                              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
                             >
                               <div
-                                key="0"
-                                style={
-                                  Object {
-                                    "display": "inline-block",
-                                    "width": "100%",
-                                  }
-                                }
-                                tabIndex={-1}
+                                className="c-slider-image"
                               >
-                                <Image
-                                  className="c-carousel__image"
-                                  src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+                                <LazyLoad
+                                  height={200}
+                                  offset={0}
+                                  once={false}
+                                  overflow={false}
+                                  resize={false}
+                                  scroll={true}
+                                  unmountIfInvisible={false}
                                 >
                                   <div
-                                    className="c-carousel__image"
-                                  >
-                                    <LazyLoad
-                                      height={200}
-                                      offset={0}
-                                      once={false}
-                                      overflow={false}
-                                      resize={false}
-                                      scroll={true}
-                                      unmountIfInvisible={false}
-                                    >
-                                      <div
-                                        className="lazyload-placeholder"
-                                        style={
-                                          Object {
-                                            "height": 200,
-                                          }
-                                        }
-                                      />
-                                    </LazyLoad>
-                                  </div>
-                                </Image>
+                                    className="lazyload-placeholder"
+                                    style={
+                                      Object {
+                                        "height": 200,
+                                      }
+                                    }
+                                  />
+                                </LazyLoad>
                               </div>
-                            </div>
+                            </Image>
                           </div>
-                        </div>
-                      </Track>
-                    </div>
+                        </li>
+                      </ul>
+                    </ReactSwipe>
                   </div>
-                </InnerSlider>
-              </Slider>
-            </div>
-          </Carousel>
+                  <button
+                    className="control-arrow control-next control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <ul
+                    className="control-dots"
+                  >
+                    <li
+                      className="dot selected"
+                      key=".$0"
+                      onClick={[Function]}
+                      value={0}
+                    />
+                  </ul>
+                </div>
+              </div>
+            </Carousel>
+          </CarouselComponent>
         </div>
       </div>
       <div

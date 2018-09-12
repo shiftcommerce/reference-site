@@ -4,7 +4,7 @@ import { Component } from 'react'
 // Components
 import DeliveryInformation from './DeliveryInformation'
 import ProductPrice from './ProductPrice'
-import Carousel from './Carousel'
+import CarouselComponent from './Carousel'
 
 // Objects
 import Button from '../../../objects/Button'
@@ -33,7 +33,7 @@ class ProductDisplay extends Component {
         <div className='c-product-display__body'>
           <div className='c-product-display__gallery'>
             <div className='c-carousel'>
-              <Carousel className='c-carousel-slider' product={product} />
+              <CarouselComponent className='c-carousel-slider' product={product} />
             </div>
           </div>
           <div className='c-product-display__details'>
