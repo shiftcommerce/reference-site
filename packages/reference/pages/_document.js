@@ -1,8 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 
 // Stylesheet
-import '../styles.scss'
-
+import '../scss/main.scss'
 export default class MyDocument extends Document {
   render () {
     return (

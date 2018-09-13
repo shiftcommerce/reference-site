@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+ web:
+   build: .
+   command: bash -c "yarn next build && NODE_ENV=production node server.js"
+   ports:
+     - "3000:3000"
+   env_file: .env
+   volumes:
+     - .:/app
+     - yarn_cache:/app/node_modules
+   environment:
+     - NODE_ENV=production
+
+volumes:
+ yarn_cache:
