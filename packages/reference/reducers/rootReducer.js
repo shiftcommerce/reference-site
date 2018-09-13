@@ -5,6 +5,8 @@ import { combineReducers } from 'redux'
 import setCart from './setCart'
 import setCategory from './setCategory'
 import setCheckout from './setCheckout'
+import setAccount from './setAccount'
+import setLogin from './setLogin'
 import setMenu from './setMenu'
 import setOrder from './setOrder'
 import setPage from './setPage'
@@ -16,6 +18,8 @@ const rootReducer = combineReducers({
   cart: setCart,
   category: setCategory,
   checkout: setCheckout,
+  account: setAccount,
+  login: setLogin,
   menu: setMenu,
   order: setOrder,
   page: setPage,

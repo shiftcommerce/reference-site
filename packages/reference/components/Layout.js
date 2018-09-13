@@ -86,7 +86,6 @@ export class Layout extends Component {
         <div className='o-body'>
           { this.props.children }
         </div>
-
         <div className='o-footer'>
           Footer
         </div>

@@ -20,12 +20,10 @@ const fetchData = async (queryObject, url) => {
       headers: headers
     })
 
-    if (response.status === 200) {
-      const page = response
-      return page
-    }
+    return response
   } catch (error) {
     console.error(error)
+    return error.response
   }
 }
 
@@ -38,9 +36,10 @@ const postData = async (body, url) => {
       auth: auth,
       data: body
     })
-    return { status: response.status, data: response.data }
+    return response
   } catch (error) {
-    console.log(error)
+    console.error('ERROR', error.response)
+    return error.response
   }
 }
 

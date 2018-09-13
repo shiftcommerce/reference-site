@@ -5,25 +5,31 @@ class InputFieldValidator {
     this.rules = rules
   }
 
-  validate () {
+  validate (state) {
     let validationMessage = ''
     Object.keys(this.rules).map((rule) => {
       if (validationMessage === '') {
-        validationMessage = this[rule](rule)
+        validationMessage = this[rule](rule, state)
       }
     })
     return validationMessage
   }
 
-  required (_rule) {
+  required () {
     const present = (this.value.toString().trim().length !== 0)
     return (present ? '' : `${this.formattedFieldName()} is required.`)
   }
 
-  email (_rule) {
+  email () {
     const regex = /.+@.+\..+/i
     const validEmail = (regex.test(this.value))
-    return (validEmail ? '' : `${this.value || this.formattedFieldName()} is not a valid.`)
+    return (validEmail ? '' : `${this.value || this.formattedFieldName()} is not valid.`)
+  }
+
+  compareField (rule, state) {
+    const fieldForComparison = this.rules[rule]
+    const validComparison = this.value === state[fieldForComparison]
+    return (validComparison ? '' : `Must match ${fieldForComparison}`)
   }
 
   maxLength (rule) {

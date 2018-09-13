@@ -22,6 +22,10 @@
 @import '50_objects/_o-nav';
 @import '50_objects/_o-payment-method';
 
+@import '60_components/_c-account-forgotpassword';
+@import '60_components/_c-account-showpassword';
+@import '60_components/_c-account-login';
+@import '60_components/_c-account-register';
 @import '60_components/_c-card-expiry-field';
 @import '60_components/_c-carousel';
 @import "60_components/_c-cart-no-data";

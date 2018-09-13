@@ -1,10 +1,11 @@
 // External Endpoints
-// Note: All external endpoints are expected to be listed here.
 module.exports = {
-  MenuUrl: `/${process.env.API_TENANT}/v1/menus`,
-  ProductUrl: `/${process.env.API_TENANT}/v1/products`,
-  CreateOrderUrl: `/${process.env.API_TENANT}/v2/create_order`,
   CategoryUrl: `/${process.env.API_TENANT}/v1/products`,
-  SlugUrl: `/${process.env.API_TENANT}/v1/slugs`,
-  PageUrl: `/${process.env.API_TENANT}/v1/static_pages`
+  RegisterUrl: `/${process.env.API_TENANT}/v1/customer_accounts`,
+  CreateOrderUrl: `/${process.env.API_TENANT}/v1/create_order`,
+  LoginUrl: `/${process.env.API_TENANT}/v1/customer_account_authentications`,
+  MenuUrl: `/${process.env.API_TENANT}/v1/menus`,
+  PageUrl: `/${process.env.API_TENANT}/v1/static_pages`,
+  ProductUrl: `/${process.env.API_TENANT}/v1/products`,
+  SlugUrl: `/${process.env.API_TENANT}/v1/slugs`
 }

@@ -2,6 +2,11 @@
   width: 100%;
   margin: 0.65em 0;
 
+  &-errors {
+    color: $text-error;
+    text-align: center;
+  }
+
   &__header {
     width: 100%;
     display: flex;

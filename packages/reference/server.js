@@ -15,6 +15,7 @@ const api = require('./constants/apiUrls')
 // Handlers
 const handler = require('./routeHandlers/routeHandler')
 const orderHandler = require('./routeHandlers/orderRouteHandler')
+const accountHandler = require('./routeHandlers/accountRouteHandler')
 
 app.prepare().then(() => {
   const server = express()
@@ -28,6 +29,22 @@ app.prepare().then(() => {
 
   server.get('/slug', (req, res) => {
     return app.render(req, res, '/slug', req.query)
+  })
+
+  server.get('/account/login', (req, res) => {
+    return app.render(req, res, '/account/login', req.query)
+  })
+
+  server.get('/account/myaccount', (req, res) => {
+    return app.render(req, res, '/account/myaccount', req.query)
+  })
+
+  server.get('/account/register', (req, res) => {
+    return app.render(req, res, '/account/register', req.query)
+  })
+
+  server.get('/account/forgotpassword', (req, res) => {
+    return app.render(req, res, '/account/forgotpassword', req.query)
   })
 
   server.get('/order', (req, res) => {
@@ -46,6 +63,8 @@ app.prepare().then(() => {
   server.get('/getSlug', handler.getRenderer(api.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
   server.post('/createOrder', orderHandler.createOrderRenderer())
+  server.post('/register', accountHandler.accountRenderer(api.RegisterUrl))
+  server.post('/login', accountHandler.accountRenderer(api.LoginUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     let slug = req.url

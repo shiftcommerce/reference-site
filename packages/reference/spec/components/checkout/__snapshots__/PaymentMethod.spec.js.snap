@@ -403,14 +403,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="first_name"
-                              >
-                                First Name
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="first_name"
+                            >
+                              First Name
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -419,10 +417,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 required={true}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -463,14 +459,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="last_name"
-                              >
-                                Last Name
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="last_name"
+                            >
+                              Last Name
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -479,10 +473,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 required={true}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -529,14 +521,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         <div
                           className="o-form__input-group"
                         >
-                          <div>
-                            <label
-                              className="o-form__label"
-                              htmlFor="line_1"
-                            >
-                              Address 1
-                               *
-                            </label>
+                          <label
+                            className="o-form__label undefined"
+                            htmlFor="line_1"
+                          >
+                            Address 1
+                             *
                             <input
                               checked={false}
                               className="o-form__input-field o-form__input-block"
@@ -545,10 +535,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               onBlur={[Function]}
                               onChange={[Function]}
                               required={true}
-                              type="text"
-                              value=""
                             />
-                          </div>
+                          </label>
                         </div>
                       </Input>
                     </_class>
@@ -599,14 +587,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="zipcode"
-                              >
-                                Post Code
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="zipcode"
+                            >
+                              Post Code
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -615,10 +601,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 required={true}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -656,14 +640,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="city"
-                              >
-                                City
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="city"
+                            >
+                              City
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -672,10 +654,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 required={true}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -701,13 +681,11 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="state"
-                              >
-                                County
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="state"
+                            >
+                              County
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -715,10 +693,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 name="state"
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -758,14 +734,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="primary_phone"
-                              >
-                                Phone
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="primary_phone"
+                            >
+                              Phone
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -774,10 +748,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 required={true}
-                                type="text"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>
@@ -819,14 +791,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           <div
                             className="o-form__input-group"
                           >
-                            <div>
-                              <label
-                                className="o-form__label"
-                                htmlFor="email"
-                              >
-                                Email
-                                 *
-                              </label>
+                            <label
+                              className="o-form__label undefined"
+                              htmlFor="email"
+                            >
+                              Email
+                               *
                               <input
                                 checked={false}
                                 className="o-form__input-field o-form__input-block"
@@ -836,9 +806,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 onChange={[Function]}
                                 required={true}
                                 type="email"
-                                value=""
                               />
-                            </div>
+                            </label>
                           </div>
                         </Input>
                       </_class>

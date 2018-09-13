@@ -6,43 +6,34 @@ export const readEndpoint = (request) => {
   return (dispatch, getState) => {
     dispatch(fetching(request.requestActionType))
     return new ApiClient().read(request.endpoint, request.query)
-      .then((response) => {
-        if ((response.status === 200 || response.status === 304) || (!response.data && response.status === 200)) {
+      .then(response => {
+        if (response.status === 200 || response.status === 304) {
           const parsedPayload = new JsonApiParser().parse(response.data)
-          dispatch(sendResponse(parsedPayload, request.successActionType))
+          dispatch(sendResponse(request.successActionType, parsedPayload))
         } else {
-          dispatch(fetching(request.successActionType))
-          dispatch(setErroredTo(request.errorActionType))
+          dispatch(setErroredTo(request.errorActionType, response.data))
         }
       })
-      .catch(() => {
-        dispatch(fetching(false, request.successActionType))
-        dispatch(setErroredTo(true, request.errorActionType))
+      .catch((error) => {
+        dispatch(setErroredTo(request.errorActionType, error))
       })
   }
 }
 
 export const postEndpoint = (request) => {
   return (dispatch, getState) => {
-    dispatch(fetching(request.successActionType))
+    dispatch(fetching(request.requestActionType))
     return new ApiClient().post(request.endpoint, request.body)
-      .then((response) => {
-        if (response.status === 201) {
-          const parsedPayload = new JsonApiParser().parse(response.data.data.data)
-          dispatch({ type: request.successActionType, payload: Object.assign({}, parsedPayload) })
-        } else {
-          dispatch(fetching(false, request.successActionType))
-          dispatch(setErroredTo(true, request.successActionType))
-        }
+      .then(response => {
+        _determinePostDispatch(dispatch, request, response)
       })
-      .catch(() => {
-        dispatch(fetching(false, request.successActionType))
-        dispatch(setErroredTo(true, request.successActionType))
+      .catch(error => {
+        dispatch(setErroredTo(request.errorActionType, error))
       })
   }
 }
 
-export function sendResponse (parsedPayload, actionType) {
+export function sendResponse (actionType, parsedPayload) {
   return {
     type: actionType,
     payload: parsedPayload
@@ -55,11 +46,42 @@ function fetching (actionType) {
   }
 }
 
-function setErroredTo (boolean, actionType) {
+function setErroredTo (actionType, data) {
   return {
     type: actionType,
     payload: {
-      error: boolean
+      error: {
+        data: data
+      }
     }
+  }
+}
+
+function _checkForErrors (response) {
+  let validationPassed = true
+  // Validation for customer account form
+  if (response.data.length > 0) {
+    response.data.forEach(item => {
+      if (parseInt(item.status) === 422 || parseInt(item.status) === 404) {
+        validationPassed = false
+      }
+    })
+  }
+
+  return validationPassed
+}
+
+function _determinePostDispatch (dispatch, request, response) {
+  const validationPassed = _checkForErrors(response)
+
+  if (response.status === 201 || response.status === 200) {
+    if (validationPassed) {
+      const parsedPayload = new JsonApiParser().parse(response.data)
+      dispatch(sendResponse(request.successActionType, parsedPayload))
+    } else {
+      dispatch(setErroredTo(request.errorActionType, response.data))
+    }
+  } else {
+    dispatch(setErroredTo(request.errorActionType, response.data))
   }
 }

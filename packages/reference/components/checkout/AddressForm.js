@@ -243,6 +243,7 @@ class AddressForm extends Component {
       checkout,
       className
     } = this.props
+
     const address = checkout[formName]
     const collapsed = address.collapsed
 

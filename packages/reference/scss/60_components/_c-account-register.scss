@@ -1,0 +1,52 @@
+.c-register {
+  padding-bottom: 2rem;
+
+  &__grid {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-template-columns: 50% 50%;
+    position: relative;
+  }
+
+  &__text {
+    text-align: center;
+
+    &-title {
+      color: $background-primary;
+      font-weight: normal;
+      padding-top: 2rem;
+    }
+
+    &-caption {
+      color: grey;
+      font-weight: 300;
+    }
+  }
+
+  &__input {
+    border-radius: 0px;
+    border-color: $border-default;
+    background-color: $background-light;
+    font-weight: 200;
+  }
+
+  &__button {
+    text-align: center;
+
+    &-icon {
+      width: 91%;
+    }
+  }
+
+  &__anchor {
+    display: block;
+    text-align: center;
+  }
+
+  &__errors {
+    text-align: center;
+    color: $border-error;
+    font-weight: normal;
+  }
+}

@@ -10,7 +10,7 @@ module.exports = {
     },
     "test": {
       "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]],
-      "plugins": ["transform-inline-environment-variables"]
+      "plugins": ["inline-dotenv", "transform-inline-environment-variables"]
     }
   },
   "plugins": [

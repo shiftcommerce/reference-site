@@ -9,7 +9,7 @@ import { convertCheckoutToOrder } from './handlers/orderHandler'
 
 export function createOrder (cart, checkout, order) {
   const request = {
-    endpoint: `/createOrder`,
+    endpoint: '/createOrder',
     body: convertCheckoutToOrder(cart, checkout, order),
     successActionType: types.CREATE_ORDER
   }

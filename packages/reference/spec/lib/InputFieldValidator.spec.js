@@ -59,7 +59,7 @@ describe('InputFieldValidator', () => {
       const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
 
       // Assert
-      expect(validationMessage).toBe(`${data.value} is not a valid.`)
+      expect(validationMessage).toBe(`${data.value} is not valid.`)
     })
   })
 

@@ -1,0 +1,42 @@
+.c-login {
+  width: 60%;
+  margin: auto;
+  padding-bottom: 2rem;
+
+  &__title {
+    text-align: center;
+    font-weight: normal;
+    color: $background-primary;
+    padding-top: 2rem;
+  }
+
+  &__caption {
+    text-align: center;
+    color: grey;
+    font-weight: 300;
+  }
+
+  &__button {
+    text-align: center;
+
+    &-icon {
+      width: 100%;
+    }
+  }
+
+  &__anchor {
+    display: block;
+    text-align: center;
+    color: grey;
+    font-weight: 300;
+  }
+
+  &__input {
+    border-radius: 0px;
+    border-color: $border-default;
+    background-color: $background-light;
+    font-weight: 200;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}

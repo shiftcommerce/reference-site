@@ -43,10 +43,11 @@ test('renders text input field with given name', () => {
 
 test('defaults to text type', () => {
   // arrange
+  const type = 'text'
 
   // act
   const wrapper = mount(
-    <Input />
+    <Input type={type} />
   )
 
   // assert

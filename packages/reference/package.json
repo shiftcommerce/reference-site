@@ -60,7 +60,8 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.0.1",
     "stripe": "^5.1.1",
-    "style-loader": "^0.19.0"
+    "style-loader": "^0.19.0",
+    "zxcvbn": "^4.4.2"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
@@ -69,7 +70,6 @@
       "./spec/support/enzymeSetup.js",
       "./spec/support/jestSetup.js"
     ],
-    "testRegex": "/spec/(components|objects|reducers|pages|lib|actions|requests)/.+\\.spec\\.js$",
     "testURL": "http://localhost",
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "<rootDir>/spec/support/jestFileMock.js"

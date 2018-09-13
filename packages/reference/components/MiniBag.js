@@ -44,6 +44,9 @@ export class MiniBag extends Component {
             CHECKOUT
           </a>
         </Link>
+        <Link href='/account/login'>
+          <a className='o-header__myaccount'>My Account</a>
+        </Link>
       </div>
     )
   }

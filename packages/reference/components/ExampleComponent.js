@@ -2,7 +2,7 @@ import { Component } from 'react'
 
 class ExampleComponent extends Component {
   render () {
-    let {
+    const {
       thisProp,
       thatProp
     } = this.props
