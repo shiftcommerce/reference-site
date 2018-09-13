@@ -5,6 +5,9 @@ import withReduxStore from '../lib/with-redux-store'
 
 import ConnectedLayout from '../components/Layout'
 
+// Stylesheet
+import '../scss/main.scss'
+
 class MyApp extends App {
   render () {
     const {Component, pageProps, reduxStore} = this.props
