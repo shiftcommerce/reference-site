@@ -3,7 +3,6 @@
 exports[`renders correctly 1`] = `
 <ProductDisplay
   addToBag={[Function]}
-  changeQuantity={[Function]}
   changeSize={[Function]}
   product={
     Object {
@@ -43,8 +42,20 @@ exports[`renders correctly 1`] = `
       "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
       "id": 1,
       "meta_attributes": Object {
+        "care_instructions": Object {
+          "value": "Machine Washable",
+        },
+        "fabric": Object {
+          "value": "100% cotton",
+        },
         "master_colour": Object {
           "value": "Stone",
+        },
+        "product_feature": Object {
+          "value": "Stretch Fit",
+        },
+        "silhouette": Object {
+          "value": "Flexible Waist",
         },
       },
       "price": "99.00",
@@ -83,13 +94,51 @@ exports[`renders correctly 1`] = `
       ],
     }
   }
-  quantity=""
-  size="Small"
-  sku=""
 >
   <div
     className="c-product-display"
   >
+    <ProductNavBar>
+      <div
+        className="c-product-nav"
+      >
+        <div
+          className="c-product-nav__links"
+        >
+          <a>
+            Women
+          </a>
+        </div>
+        <div
+          className="c-product-nav__links  c-product-nav__links--selected"
+        >
+          <a>
+            Men
+          </a>
+        </div>
+        <div
+          className="c-product-nav__links"
+        >
+          <a>
+            Kids
+          </a>
+        </div>
+        <div
+          className="c-product-nav__links"
+        >
+          <a>
+            Home
+          </a>
+        </div>
+        <div
+          className="c-product-nav__links"
+        >
+          <a>
+            Active
+          </a>
+        </div>
+      </div>
+    </ProductNavBar>
     <div
       className="c-product-display__body"
     >
@@ -139,8 +188,20 @@ exports[`renders correctly 1`] = `
                 "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
                 "id": 1,
                 "meta_attributes": Object {
+                  "care_instructions": Object {
+                    "value": "Machine Washable",
+                  },
+                  "fabric": Object {
+                    "value": "100% cotton",
+                  },
                   "master_colour": Object {
                     "value": "Stone",
+                  },
+                  "product_feature": Object {
+                    "value": "Stretch Fit",
+                  },
+                  "silhouette": Object {
+                    "value": "Flexible Waist",
                   },
                 },
                 "price": "99.00",
@@ -338,24 +399,18 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="c-product-display__details"
+        className="c-product-display__buttons"
       >
-        <section
-          className="c-product-display__section"
+        <div
+          className="c-product-display__buttons-section1"
         >
-          <h1
-            aria-level="1"
-            role="heading"
+          <div
+            className="c-product-display__buttons-title"
           >
             Textured Long T-Shirt
-          </h1>
-          <div
-            className="c-product-display__sku"
-          >
-            <span />
           </div>
           <div
-            className="c-product-display__price"
+            className="c-product-display__buttons-price"
           >
             <ProductPrice
               variants={
@@ -405,75 +460,242 @@ exports[`renders correctly 1`] = `
               </div>
             </ProductPrice>
           </div>
+        </div>
+        <div
+          className="c-product-display__buttons-section2"
+        >
           <div
-            className="c-product-display__description"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
-              }
-            }
-          />
-          <div
-            className="c-product-display__colour"
+            className="c-product-display__buttons-basket"
           >
-            <strong>
-              Colour:
-            </strong>
-            <span>
-               
-              Stone
-               
-            </span>
+            <Button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket-icon"
+              label="ADD TO BASKET"
+              onClick={[Function]}
+              size="lrg"
+              status="primary"
+            >
+              <button
+                aria-label="Add to Basket"
+                className="c-product-display__buttons-basket-icon o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                ADD TO BASKET
+              </button>
+            </Button>
           </div>
           <div
-            className="c-product-display__size"
+            className="c-product-display__buttons-buy"
           >
-            <SizeSelector
-              aria-label="Size Selector"
-              name="line_item[item_id]"
-              onChange={[Function]}
-              prompt="Select a Size"
-              value=""
-              variants={
-                Array [
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 8",
-                      },
+            <Button
+              aria-label="Buy"
+              className="c-product-display__buttons-buy-icon"
+              label="BUY"
+              size="lrg"
+              status="secondary"
+            >
+              <button
+                aria-label="Buy"
+                className="c-product-display__buttons-buy-icon o-button o-button--secondary o-button--lrg"
+                disabled={false}
+                role="button"
+                tabIndex="0"
+              >
+                BUY
+              </button>
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-product-display__info"
+      >
+        <div
+          className="c-product-display__info-title"
+        >
+          Textured Long T-Shirt
+        </div>
+        <div
+          className="c-product-display__info-price"
+        >
+          <ProductPrice
+            variants={
+              Array [
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 8",
                     },
-                    "price": "10.00",
-                    "sku": 1,
-                    "title": "Small",
                   },
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 10",
-                      },
+                  "price": "10.00",
+                  "sku": 1,
+                  "title": "Small",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 10",
                     },
-                    "price": "11.00",
-                    "sku": 2,
-                    "title": "Medium",
                   },
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 12",
-                      },
+                  "price": "11.00",
+                  "sku": 2,
+                  "title": "Medium",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 12",
                     },
-                    "price": "12.00",
-                    "sku": 3,
-                    "title": "Large",
                   },
-                ]
+                  "price": "12.00",
+                  "sku": 3,
+                  "title": "Large",
+                },
+              ]
+            }
+          >
+            <div
+              className="c-product-price"
+            >
+              <span>
+                £
+                10.00
+                 - £
+                12.00
+              </span>
+            </div>
+          </ProductPrice>
+        </div>
+        <div
+          className="c-product-display__info-rating"
+        >
+          <span
+            className="c-product-display__info-rating--empty"
+            key="1"
+          >
+            ★
+          </span>
+          <span
+            className="c-product-display__info-rating--empty"
+            key="2"
+          >
+            ★
+          </span>
+          <span
+            className="c-product-display__info-rating--empty"
+            key="3"
+          >
+            ★
+          </span>
+          <span
+            className="c-product-display__info-rating--empty"
+            key="4"
+          >
+            ★
+          </span>
+          <span
+            className="c-product-display__info-rating--empty"
+            key="5"
+          >
+            ★
+          </span>
+        </div>
+        <p
+          className="c-product-display__info-reviews"
+        >
+          Read Reviews
+        </p>
+        <div
+          className="c-product-display__info-colour"
+        >
+          <h1
+            className="c-product-display__info-colour-title"
+          >
+            Colour
+          </h1>
+          <input
+            id="colour"
+            style={
+              Object {
+                "backgroundColor": "Stone",
               }
+            }
+            type="radio"
+          />
+          <label
+            htmlFor="colour"
+          >
+            Stone
+          </label>
+        </div>
+        <p
+          className="c-product-display__info-size-chart"
+        >
+          Find your recommended size
+        </p>
+        <div
+          className="c-product-display__info-size"
+        >
+          <SizeSelector
+            aria-label="Size Selector"
+            label="Size"
+            name="line_item[item_id]"
+            onChange={[Function]}
+            prompt="Please Select"
+            variants={
+              Array [
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 8",
+                    },
+                  },
+                  "price": "10.00",
+                  "sku": 1,
+                  "title": "Small",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 10",
+                    },
+                  },
+                  "price": "11.00",
+                  "sku": 2,
+                  "title": "Medium",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 12",
+                    },
+                  },
+                  "price": "12.00",
+                  "sku": 3,
+                  "title": "Large",
+                },
+              ]
+            }
+          >
+            <b>
+              <label
+                className="o-size-selector__label"
+                htmlFor="line_item[item_id]"
+              >
+                Size
+              </label>
+            </b>
+            <div
+              className="o-size-selector"
             >
               <select
                 aria-label="Size Selector"
+                label="Size"
                 name="line_item[item_id]"
                 onChange={[Function]}
-                value=""
               >
                 <option
                   aria-posinset="0"
@@ -481,7 +703,7 @@ exports[`renders correctly 1`] = `
                   role="option"
                   value=""
                 >
-                  Select a Size
+                  Please Select
                 </option>
                 <option
                   aria-posinset={1}
@@ -514,158 +736,188 @@ exports[`renders correctly 1`] = `
                   Size 12
                 </option>
               </select>
-            </SizeSelector>
-          </div>
-          <div
-            className="c-product-display__quantity"
-          >
-            <_class
-              aria-label="Quantity Selector"
-              name="line_item[unit_quantity]"
-              onChange={[Function]}
-              options={
-                Array [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                ]
-              }
-              prompt="Select a Quantity"
-              value=""
-            >
-              <DropdownSelect
-                aria-label="Quantity Selector"
-                name="line_item[unit_quantity]"
-                onChange={[Function]}
-                options={
-                  Array [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                  ]
-                }
-                prompt="Select a Quantity"
-                renderValidationMessage={[Function]}
-                value=""
-              >
-                <div
-                  className="o-form__input-group"
-                >
-                  <select
-                    className="o-form__input-block o-form__input-field"
-                    id="line_item[unit_quantity]"
-                    name="line_item[unit_quantity]"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    role="listbox"
-                    value=""
-                  >
-                    <option
-                      aria-posinset="0"
-                      aria-setsize={5}
-                      role="option"
-                      value=""
-                    >
-                      Select a Quantity
-                    </option>
-                    <option
-                      aria-posinset={1}
-                      aria-setsize={5}
-                      key="0"
-                      role="option"
-                      value={1}
-                    >
-                      1
-                    </option>
-                    <option
-                      aria-posinset={2}
-                      aria-setsize={5}
-                      key="1"
-                      role="option"
-                      value={2}
-                    >
-                      2
-                    </option>
-                    <option
-                      aria-posinset={3}
-                      aria-setsize={5}
-                      key="2"
-                      role="option"
-                      value={3}
-                    >
-                      3
-                    </option>
-                    <option
-                      aria-posinset={4}
-                      aria-setsize={5}
-                      key="3"
-                      role="option"
-                      value={4}
-                    >
-                      4
-                    </option>
-                    <option
-                      aria-posinset={5}
-                      aria-setsize={5}
-                      key="4"
-                      role="option"
-                      value={5}
-                    >
-                      5
-                    </option>
-                  </select>
-                </div>
-              </DropdownSelect>
-            </_class>
-          </div>
-          <div
-            className="c-product-display__add-button"
-          >
-            <Button
-              aria-label="Add to Bag"
-              label="ADD TO BAG"
-              onClick={[Function]}
-              size="lrg"
-              status="primary"
-            >
-              <button
-                aria-label="Add to Bag"
-                className="o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                ADD TO BAG
-              </button>
-            </Button>
-          </div>
-        </section>
-        <section
-          aria-label="Delivery Information"
-          className="c-product-display__section"
+            </div>
+          </SizeSelector>
+        </div>
+      </div>
+      <div
+        className="c-product-display__description"
+      >
+        <h1
+          className="c-product-display__description-title"
         >
-          <DeliveryInformation>
-            <div>
-              <h3>
-                Delivery & Returns
-              </h3>
-              <p>
-                Click & collect for free from your local store in 5 working days. Delivery hours are between 8am-8pm, Monday-Friday.
+          Product Details
+        </h1>
+        <label
+          className="c-product-dispay__label"
+          htmlFor="description"
+        />
+        <input
+          id="description"
+          type="checkbox"
+        />
+        <span
+          className="c-product-display__arrow"
+        />
+        <div
+          className="c-product-display__description-text"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+            }
+          }
+        />
+      </div>
+      <div
+        className="c-product-display__size"
+      >
+        <h1
+          className="c-product-display__size-title"
+        >
+          Size & Fit
+        </h1>
+        <label
+          className="c-product-dispay__label"
+          htmlFor="size"
+        />
+        <input
+          id="size"
+          type="checkbox"
+        />
+        <span
+          className="c-product-display__arrow"
+        />
+        <p
+          className="c-product-display__size-text"
+        >
+          - 
+          Stretch Fit
+        </p>
+        <p
+          className="c-product-display__size-text"
+        >
+          - 
+          Flexible Waist
+        </p>
+      </div>
+      <div
+        className="c-product-display__care"
+      >
+        <h1
+          className="c-product-display__care-title"
+        >
+          Details & Care
+        </h1>
+        <label
+          className="c-product-dispay__label"
+          htmlFor="care"
+        />
+        <input
+          id="care"
+          type="checkbox"
+        />
+        <span
+          className="c-product-display__arrow"
+        />
+        <p
+          className="c-product-display__care-text"
+        >
+          - 
+          100% cotton
+        </p>
+        <p
+          className="c-product-display__care-text"
+        >
+          - 
+          Machine Washable
+        </p>
+      </div>
+      <div
+        className="c-product-display__related"
+      >
+        <h1
+          className="c-product-display__related-title"
+        >
+          <span>
+            you may also like
+          </span>
+        </h1>
+        <div
+          className="c-product-display__related-images"
+        >
+          <Link
+            href="/products/s2685492_c327/real-leather-double-monk-strap-formal-shoes-burgundy"
+            key="0"
+          >
+            <div
+              className="c-product-display__related-images-link"
+              onClick={[Function]}
+            >
+              <img
+                className="c-product-display__related-images-file"
+                src="/static/pdp_dummy_images/shoe.jpg"
+              />
+              <p
+                className="c-product-display__related-images-text"
+              >
+                Real Leather Double Monk Strap Formal Shoes
               </p>
-              <p>
-                Standard delivery will be charged at £3.95 regardless of how many items you order.
-              </p>
-              <p>
-                Next working day delivery will be charged at £4.95 regardless of how many items you order. Your order will be with you the next working day if you order before 4pm. Any orders placed after 4pm Thursday up to 4pm Sunday will be delivered Monday. Please note our Next Day Delivery service is not available on selected items due to their size or weight.
+              <p
+                className="c-product-display__related-images-price"
+              >
+                £28
               </p>
             </div>
-          </DeliveryInformation>
-        </section>
+          </Link>
+          <Link
+            href="/products/s2671426_c101/slim-fit-long-sleeve-shirt-black"
+            key="1"
+          >
+            <div
+              className="c-product-display__related-images-link"
+              onClick={[Function]}
+            >
+              <img
+                className="c-product-display__related-images-file"
+                src="/static/pdp_dummy_images/shirt.jpg"
+              />
+              <p
+                className="c-product-display__related-images-text"
+              >
+                Slim Fit Long Sleeve Shirt
+              </p>
+              <p
+                className="c-product-display__related-images-price"
+              >
+                £7
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/products/s2681771_c327/chain-stripe-skinny-tie-burgundy"
+            key="2"
+          >
+            <div
+              className="c-product-display__related-images-link"
+              onClick={[Function]}
+            >
+              <img
+                className="c-product-display__related-images-file"
+                src="/static/pdp_dummy_images/tie.jpg"
+              />
+              <p
+                className="c-product-display__related-images-text"
+              >
+                Chain Stripe Skinny Tie
+              </p>
+              <p
+                className="c-product-display__related-images-price"
+              >
+                £6
+              </p>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   </div>

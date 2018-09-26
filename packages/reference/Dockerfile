@@ -3,7 +3,7 @@ FROM node:10.7.0-slim
 LABEL maintainer "team@shiftcommerce.com"
 
 # Install essentials and cURL
-RUN apt-get update -qq && apt-get install -y --no-install-recommends build-essential curl git apt-transport-https
+RUN apt-get update -qq && apt-get install -y --no-install-recommends build-essential curl git apt-transport-https libpng-dev
 
 # Add the Yarn source
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -

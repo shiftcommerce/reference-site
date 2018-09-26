@@ -9,6 +9,18 @@ const Product = {
   meta_attributes: {
     master_colour: {
       value: 'Stone'
+    },
+    silhouette: {
+      value: 'Flexible Waist'
+    },
+    product_feature: {
+      value: 'Stretch Fit'
+    },
+    care_instructions: {
+      value: 'Machine Washable'
+    },
+    fabric: {
+      value: '100% cotton'
     }
   },
   variants: [

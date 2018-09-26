@@ -1,6 +1,8 @@
+$input-checkbox-size: 16px;
+$input-checkbox-spacing: 8px;
+
 .o-form {
   width: 100%;
-  margin: 0.65em 0;
 
   &-errors {
     color: $text-error;
@@ -11,25 +13,136 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    font-size: 0.7em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+    &-title {
+      margin: 10px 0;
+
+      h2 {
+        margin: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &-edit {
+      margin-top: 10px;
+    }
+
+    &-button {
+      width: 60px;
+      padding: 5px;
+    }
+  }
+
+  &__background {
+    background-color: $form-grey;
+  }
+
+  &__billing {
+    margin-top: 0 !important;
   }
 
   &__wrapper {
-    border: 1px solid #000;
-    padding: 0.65em 1.9em;
-    margin-bottom: 0.65em;
+    padding: 10px;
+
+    &--collapsed {
+      padding-bottom: 20px;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #eee;
+      width: 95%;
+      margin: auto;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    p {
+      font-size: 0.7em;
+      color: $font-dark-grey;
+    }
   }
 
   &__input-group {
-    padding-top: 0.65em;
+
+    button {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    ::placeholder {
+      font-size: 0.7em;
+    }
+
+    select {
+      background-image: url('/static/arrow.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-color: $background-white;
+      font-size: 0.8em;
+    }
+  }
+
+  &__input-field {
+    background-color: white;
   }
 
   &__label {
-    font-size: 1rem;
-    margin-bottom: 0.65em;
+    font-size: 0.9em;
+    margin-bottom: 10px;
   }
 
   &__checkbox {
-    margin-bottom: 0.65em;
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+    margin-bottom: 10px;
+
+    &:checked+.o-form__checkbox-caption:before {
+      background-image: url('/static/check.png');
+      background-size: contain;
+    }
+
+    &-label {
+      font-size: 0.7em;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &-caption {
+      display: block;
+      position: relative;
+      margin-left: $input-checkbox-size + $input-checkbox-spacing;
+      font-weight: 300;
+    }
+
+    &-caption::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: $input-checkbox-spacing / 2;
+      margin-left: -($input-checkbox-size + $input-checkbox-spacing);
+      margin-right: $input-checkbox-spacing;
+      width: $input-checkbox-size;
+      height: $input-checkbox-size;
+      background: colour(white);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+      border: 1px solid black;
+      border-radius: 2px;
+    }
   }
 
   &__error {
@@ -37,25 +150,21 @@
   }
 
   &__input-field {
-    padding: 0.325em;
-    margin: 0.65em 0;
+    margin: 10px 0;
     display: block;
-    padding: 0.5rem 0.75rem;
+    padding: .5rem .75rem;
     font-size: 1rem;
     line-height: 1.25;
-    color: $text-form;
     background-image: none;
     background-clip: padding-box;
     border: 1px solid;
-    border-color: rgba(0,0,0,.15);
-    border-radius: 0.25rem;
-    background-color: $background-light-grey;
+    border-color: $form-input-border;
 
     &__error {
       color: $text-error;
       border-color: $border-error;
-      background-color: $background-white;
-      margin-bottom: 0.65em;
+      background-color: $form-grey;
+      margin-bottom: 10px;
 
       &::first-letter  {
         text-transform: capitalize;
@@ -66,6 +175,8 @@
   &__input-block {
     display: block;
     width: 100%;
+    border-radius: 0.09rem;
+    background-color: $background-white;
   }
 
   &__input-inline {

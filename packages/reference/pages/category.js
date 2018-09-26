@@ -46,10 +46,11 @@ class Category extends Component {
   }
 
   renderProductMenu () {
+    const title = this.props.data[0].meta_attributes.department.value
     return (
       <div className='c-product-listing__menu'>
         <div className='c-product-listing__menu-description'>
-          <h1 className='c-product-listing__menu-description-title'>Category Title</h1>
+          <h1 className='c-product-listing__menu-description-title'>{title}</h1>
           <div className='c-product-listing__menu-description-content'>
             <p>Category description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et justo nunc. Suspendisse lectus odio, pulvinar vitae dictum.</p>
           </div>

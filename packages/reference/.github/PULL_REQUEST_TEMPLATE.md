@@ -8,7 +8,7 @@ Related GitHub issue: #<tbc>
 - [ ] Reviewed and filled in Database review section
 - [ ] Reviewed and filled in Deployment section (including any commands that need to be run)
 - [ ] Documented development process in PR
-- [ ] Documented approach and throught process in issue
+- [ ] Documented approach and thought process in issue
 
 **Make sure you fill this out properly!** Describe what your change is here.
 

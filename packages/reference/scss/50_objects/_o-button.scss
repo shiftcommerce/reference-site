@@ -5,18 +5,17 @@
   cursor: pointer;
   display: inline-block;
   padding: 0.3rem 0.8rem;
-  border: 1px solid #999;
   margin: 10px auto;
   font-size: 0.75rem;
+  text-transform: uppercase;
 
   $base-color: #f7f7f7;
 
   border-color: $text-primary;
-  background: linear-gradient(to bottom, lighten($base-color, 5%), $base-color);
+  background: $base-color;
   color: $text-primary;
 
   &:hover {
-
     @include breakpoint(desktop) {
       border-color: darken($text-primary, 10%);
       background: linear-gradient(to bottom, lighten($base-color, 20%), $base-color);
@@ -31,10 +30,12 @@
     info:     (background-color: $background-info, color: #fff),
     disabled: (background-color: $background-disabled, color: #fff),
     primary:  (background-color: $background-primary, color: #fff),
+    secondary: (background-color: $background-secondary, color: $font-dark-grey),
     positive: (background-color: $background-positive, color: #fff),
     negative: (background-color: $background-negative, color: #fff),
     warning:  (background-color: $background-warning, color: #fff),
-    dark:     (background-color: $background-dark, color: #fff)
+    dark:     (background-color: $background-dark, color: #fff),
+    grey:     (background-color: $background-grey, color: #000000)
   );
 
   @each $key in map-keys($color-variations) {
@@ -42,12 +43,11 @@
       $base-color: map-get(map-get($color-variations, $key), background-color);
       $text-color: map-get(map-get($color-variations, $key), color);
 
-      border-color: darken($base-color, 10%);
-      background: linear-gradient(to bottom, lighten($base-color, 5%), $base-color);
+      border-color: $base-color;
+      background: $base-color;
       color: $text-color;
 
       &:hover {
-
         @include breakpoint(desktop) {
           border-color: darken($base-color, 15%);
           background: linear-gradient(to bottom, lighten($base-color, 10%), $base-color);
@@ -61,8 +61,8 @@
   }
 
   &--lrg {
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 0.6rem;
+    padding: 0.75rem 0.75rem;
   }
 
   &--disabled {

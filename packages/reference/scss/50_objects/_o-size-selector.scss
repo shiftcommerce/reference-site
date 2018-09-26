@@ -1,0 +1,19 @@
+.o-size-selector {
+  position: relative;
+  border-radius: 0px;
+
+  select {
+    border: 1px solid $border-default;
+    width: 100%;
+    border-radius: 0px;
+    background: transparent;
+
+    -webkit-appearance: none;
+    font-size: 9px;
+    padding: 10px;
+    background-image: url('/static/collapse-arrow.png');
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+  }
+}
+

@@ -17,23 +17,37 @@ class SizeSelector extends Component {
     )
   }
 
-  render () {
-    let {
-      name,
-      prompt,
-      variants,
-      ...otherProps
-    } = this.props
+  renderLabel () {
+    const { label, name, required } = this.props
+
+    if (label) {
+      return <>
+        <b><label htmlFor={name} className='o-size-selector__label'>{label}{required && ' *'}</label></b>
+      </>
+    }
+  }
+
+  renderSelect () {
+    const { name, variants, prompt, ...otherProps } = this.props
 
     return (
-      <select name={name} {...otherProps}>
+      <div className='o-size-selector'>
+        <select name={name} {...otherProps}>
 
-        <option role='option' value='' aria-setsize={variants.length} aria-posinset='0' >{ prompt }</option>
+          <option role='option' value='' aria-setsize={variants.length} aria-posinset='0' >{prompt}</option>
 
-        { this.renderOptions(variants) }
+          { this.renderOptions(variants) }
 
-      </select>
+        </select>
+      </div>
     )
+  }
+
+  render () {
+    return <>
+      { this.renderLabel() }
+      { this.renderSelect() }
+    </>
   }
 }
 

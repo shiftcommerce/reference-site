@@ -40,8 +40,20 @@ exports[`renders ProductListingCard correctly 1`] = `
       "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
       "id": 1,
       "meta_attributes": Object {
+        "care_instructions": Object {
+          "value": "Machine Washable",
+        },
+        "fabric": Object {
+          "value": "100% cotton",
+        },
         "master_colour": Object {
           "value": "Stone",
+        },
+        "product_feature": Object {
+          "value": "Stretch Fit",
+        },
+        "silhouette": Object {
+          "value": "Flexible Waist",
         },
       },
       "price": "99.00",

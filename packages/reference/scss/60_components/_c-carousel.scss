@@ -12,11 +12,18 @@
   }
 }
 
-.slick-next {
-  padding-right: 3rem;
+.carousel .control-dots {
+  position: relative;
+  margin: auto;
+  padding: 0;
 }
 
-.slick-prev {
-  margin-left: 1.7rem;
-  z-index: 1;
+.carousel .dot.dot {
+  background-color: grey;
+  box-shadow: none;
+}
+
+.carousel .dot.selected {
+  background-color: $alert-orange;
+  box-shadow: none;
 }
