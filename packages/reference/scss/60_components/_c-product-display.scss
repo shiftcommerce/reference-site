@@ -2,24 +2,8 @@
   position: relative;
   z-index: 0;
 
-  @include breakpoint(desktop) {
-    margin-bottom: 30px;
-  }
-
   &__body {
     margin-bottom: 0.6em;
-
-    hr {
-      border: 0.5px solid $border-default;
-      margin: 0 auto;
-      text-align: center;
-      width: 92%;
-    }
-
-    @include breakpoint(desktop) {
-      display: flex;
-      margin-bottom: 0;
-    }
   }
 
   &__arrow {
@@ -80,6 +64,10 @@
       position: absolute;
       width: 90%;
       z-index: 1;
+
+      @include breakpoint(tablet) {
+        width: 93%;
+      }
     }
   }
 
@@ -140,6 +128,13 @@
   &__info {
     padding: 1em;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      margin: auto;
+      padding: 0;
+      padding-bottom: 1em;
+      width: 92.5%;
+    }
 
     &-title {
       font-size: 0.9em;
@@ -251,6 +246,10 @@
       position: absolute;
       width: 90%;
       z-index: 1;
+
+      @include breakpoint(tablet) {
+        width: 93%;
+      }
     }
   }
 
@@ -291,6 +290,10 @@
       position: absolute;
       width: 90%;
       z-index: 1;
+
+      @include breakpoint(tablet) {
+        width: 93%;
+      }
     }
   }
 
@@ -318,6 +321,7 @@
       grid-gap: 0.8em;
       grid-template-columns: [first] 30% [col2-start] 30% [col3-start] 30% [end];
       grid-template-rows: [first] 100% [end];
+      justify-content: center;
       margin: auto;
       margin-top: 2em;
       width: 100%;

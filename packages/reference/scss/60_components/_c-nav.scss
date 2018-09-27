@@ -6,10 +6,6 @@
 
   &__checkbox:checked~.c-nav__menu {
     right: 0;
-
-    @include breakpoint(tablet) {
-      right: 50%;
-    }
   }
 
   &__menu {
