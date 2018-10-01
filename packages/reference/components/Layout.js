@@ -10,6 +10,7 @@ import MiniBag from './MiniBag'
 import NavBar from './navigation/NavBar'
 import SearchBar from './search/SearchBar'
 import CustomHead from './CustomHead'
+import Footer from './Footer'
 
 export class Layout extends Component {
   // serviceWorker () {
@@ -60,36 +61,44 @@ export class Layout extends Component {
 
   renderHeader () {
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
-      const {
-        searchObject,
-        onSearchQueryChange
-      } = this.props
-      return <div>
+      return <>
         <CustomHead />
         <div className='o-header'>
           <Logo className='o-header__logo' />
           { this.renderHeaderAccount() }
           <MiniBag />
           { this.renderNav() }
-          <span className='c-header__search'>
-            <SearchBar queryObject={searchObject} onChange={onSearchQueryChange} {...this.props} />
-          </span>
+          { this.renderSearch() }
         </div>
-      </div>
+      </>
+    }
+  }
+
+  renderSearch () {
+    const { searchObject, onSearchQueryChange } = this.props
+
+    if (typeof window === 'undefined' || window.location.pathname !== '/cart') {
+      return <>
+        <span className='c-header__search'>
+          <SearchBar queryObject={searchObject} onChange={onSearchQueryChange} {...this.props} />
+        </span>
+      </>
     }
   }
 
   render () {
+    const notCartOrCheckout = /^(?!\/cart|\/checkout).*$/
+    const bodyClass = (typeof window === 'undefined' || notCartOrCheckout.test(window.location.pathname)) ? 'o-body' : ''
     return (
-      <div>
+      <>
         { this.renderHeader() }
-        <div className='o-body'>
+        <div className={bodyClass}>
           { this.props.children }
         </div>
         <div className='o-footer'>
-          Footer
+          <Footer />
         </div>
-      </div>
+      </>
     )
   }
 }

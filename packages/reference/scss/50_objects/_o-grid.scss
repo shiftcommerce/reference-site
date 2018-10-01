@@ -14,9 +14,15 @@
 .o-grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 15px;
   grid-auto-rows: minmax(100px, auto);
-  padding: 0 10%;
+
+  &__lineitems {
+    display: grid;
+    grid-template-columns: [first] 40% [col2-start] 20% [col3-start] 30% [col4-start] 10% [end];
+    grid-template-rows: [row1-start] 30% [row2-start] 30% [row3-start] 30% [row4-start] 5% [row5-start] 5% [row5-end];
+    font-size: 0.9rem;
+    border-bottom: 1px solid $border-divider;
+  }
 }
 
 $grid-lines: (1 2 3 4 5 6 7 8 9 10 11 12 13);
@@ -48,4 +54,39 @@ $grid-lines: (1 2 3 4 5 6 7 8 9 10 11 12 13);
 .o-row {
   width: 100%;
   display: flex;
+}
+
+.o-grid-item1__lineitems {
+  grid-column-start: first;
+  grid-column-end: col2-start;
+  grid-row-start: row1-start;
+  grid-row-end: row5-end;
+}
+
+.o-grid-item2__lineitems {
+  grid-column-start: col2-start;
+  grid-column-end: col4-start;
+  grid-row-start: row1-start;
+  grid-row-end: row2-start;
+}
+
+.o-grid-item3__lineitems {
+  grid-column-start: col2-start;
+  grid-column-end: col3-start;
+  grid-row-start: row2-start;
+  grid-row-end: row5-end;
+}
+
+.o-grid-item4__lineitems {
+  grid-column-start: col3-start;
+  grid-column-end: col4-start;
+  grid-row-start: row2-start;
+  grid-row-end: row5-end;
+}
+
+.o-grid-item5__lineitems {
+  grid-column-start: col4-start;
+  grid-column-end: end;
+  grid-row-start: row1-start;
+  grid-row-end: row5-end;
 }

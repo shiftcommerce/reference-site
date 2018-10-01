@@ -24,15 +24,16 @@ class CheckoutSteps extends Component {
 
   renderCheckoutStep (step, currentStep) {
     const stepCompleted = this.props.checkout[step.componentName].completed
-    const content = stepCompleted ? '✓' : step.position
+    const content = stepCompleted ? '✔' : step.position
     const active = step.position === currentStep
 
     return (
       <div className={classNames('c-step-indicator', { 'c-step-indicator--active': active, 'c-step-indicator--completed': stepCompleted })}>
-        <div className='c-step-indicator__position'>
+        <div className={classNames('c-step-indicator__position', { 'c-step-indicator__position--active': active, 'c-step-indicator__position--completed': stepCompleted })}>
           { content }
         </div>
-        <div className='c-step-indicator__subtitle'>
+        <div className={classNames('c-step-indicator__line', { 'c-step-indicator__line--active': active, 'c-step-indicator__line--completed': stepCompleted })} />
+        <div className={classNames('c-step-indicator__subtitle', { 'c-step-indicator__subtitle--active': active, 'c-step-indicator__subtitle--completed': stepCompleted })}>
           { step.title }
         </div>
       </div>

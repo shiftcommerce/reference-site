@@ -13,15 +13,17 @@ import { readProduct } from '../actions/productActions'
 export class Product extends Component {
   constructor (props) {
     super(props)
+    // TODO: Update to use redux
     this.state = {
       sku: '',
-      size: '',
+      variant: '',
       quantity: 1,
-      price: ''
+      price: '',
+      stockAvailableLevel: 0
     }
 
     this.changeQuantity = this.changeQuantity.bind(this)
-    this.changeSize = this.changeSize.bind(this)
+    this.changeVariant = this.changeVariant.bind(this)
     this.addToBag = this.addToBag.bind(this)
   }
 
@@ -42,19 +44,22 @@ export class Product extends Component {
   }
 
   addToBag () {
-    const { quantity, sku, size, price } = this.state
-    const product = this.props.product
+    const { quantity, sku, variant, stockAvailableLevel, price } = this.state
+    const { product } = this.props
 
     if (quantity !== '' && sku !== '') {
       const lineItem = {
         sku: sku,
         title: product.title,
-        size: size,
+        variant: variant,
         quantity: parseInt(quantity),
+        stockAvailableLevel: stockAvailableLevel,
         price: price,
         imageUrl: (product.asset_files[0] && product.asset_files[0].s3_url),
         productSku: product.sku,
-        productID: product.id
+        productID: product.id,
+        slug: product.slug,
+        canonicalPath: product.canonical_path
       }
       this.props.dispatch(addToCart(lineItem))
     } else {
@@ -68,10 +73,11 @@ export class Product extends Component {
     this.setState({ quantity: e.target.value })
   }
 
-  changeSize (e) {
+  changeVariant (e) {
     this.setState({
+      stockAvailableLevel: parseInt(e.target.options[e.target.selectedIndex].dataset.stockAvailableLevel, 10),
       sku: e.target.value,
-      size: e.target.options[e.target.selectedIndex].text,
+      variant: e.target.options[e.target.selectedIndex].text,
       price: e.target.options[e.target.selectedIndex].dataset.price
     })
   }
@@ -89,7 +95,7 @@ export class Product extends Component {
       )
     } else {
       return (
-        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} {...this.state} />
+        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeVariant={this.changeVariant} addToBag={this.addToBag} {...this.state} />
       )
     }
   }

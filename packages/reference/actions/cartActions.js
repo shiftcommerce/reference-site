@@ -75,8 +75,7 @@ export function readCart () {
 // will add the new quantity to the existing one
 export function addToCart (lineItem) {
   return (dispatch, getState) => {
-    let cart = getState().cart
-    addOrUpdateLineItems(cart, lineItem, dispatch)
+    addOrUpdateLineItems(getState().cart, lineItem, dispatch)
   }
 }
 

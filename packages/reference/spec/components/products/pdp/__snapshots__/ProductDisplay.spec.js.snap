@@ -69,6 +69,7 @@ exports[`renders correctly 1`] = `
           },
           "price": "10.00",
           "sku": 1,
+          "stock_available_level": "1000",
           "title": "Small",
         },
         Object {
@@ -79,6 +80,7 @@ exports[`renders correctly 1`] = `
           },
           "price": "11.00",
           "sku": 2,
+          "stock_available_level": "1000",
           "title": "Medium",
         },
         Object {
@@ -89,11 +91,16 @@ exports[`renders correctly 1`] = `
           },
           "price": "12.00",
           "sku": 3,
+          "stock_available_level": "1000",
           "title": "Large",
         },
       ],
     }
   }
+  quantity=""
+  size="Small"
+  sku=""
+  stockAvailableLevel={0}
 >
   <div
     className="c-product-display"
@@ -215,6 +222,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "10.00",
                     "sku": 1,
+                    "stock_available_level": "1000",
                     "title": "Small",
                   },
                   Object {
@@ -225,6 +233,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "11.00",
                     "sku": 2,
+                    "stock_available_level": "1000",
                     "title": "Medium",
                   },
                   Object {
@@ -235,6 +244,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "12.00",
                     "sku": 3,
+                    "stock_available_level": "1000",
                     "title": "Large",
                   },
                 ],
@@ -423,6 +433,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "10.00",
                     "sku": 1,
+                    "stock_available_level": "1000",
                     "title": "Small",
                   },
                   Object {
@@ -433,6 +444,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "11.00",
                     "sku": 2,
+                    "stock_available_level": "1000",
                     "title": "Medium",
                   },
                   Object {
@@ -443,6 +455,7 @@ exports[`renders correctly 1`] = `
                     },
                     "price": "12.00",
                     "sku": 3,
+                    "stock_available_level": "1000",
                     "title": "Large",
                   },
                 ]
@@ -532,6 +545,7 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "10.00",
                   "sku": 1,
+                  "stock_available_level": "1000",
                   "title": "Small",
                 },
                 Object {
@@ -542,6 +556,7 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "11.00",
                   "sku": 2,
+                  "stock_available_level": "1000",
                   "title": "Medium",
                 },
                 Object {
@@ -552,6 +567,7 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "12.00",
                   "sku": 3,
+                  "stock_available_level": "1000",
                   "title": "Large",
                 },
               ]
@@ -639,12 +655,11 @@ exports[`renders correctly 1`] = `
         <div
           className="c-product-display__info-size"
         >
-          <SizeSelector
+          <VariantSelector
             aria-label="Size Selector"
-            label="Size"
             name="line_item[item_id]"
-            onChange={[Function]}
-            prompt="Please Select"
+            prompt="Select a Size"
+            value=""
             variants={
               Array [
                 Object {
@@ -655,6 +670,7 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "10.00",
                   "sku": 1,
+                  "stock_available_level": "1000",
                   "title": "Small",
                 },
                 Object {
@@ -665,6 +681,7 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "11.00",
                   "sku": 2,
+                  "stock_available_level": "1000",
                   "title": "Medium",
                 },
                 Object {
@@ -675,69 +692,60 @@ exports[`renders correctly 1`] = `
                   },
                   "price": "12.00",
                   "sku": 3,
+                  "stock_available_level": "1000",
                   "title": "Large",
                 },
               ]
             }
           >
-            <b>
-              <label
-                className="o-size-selector__label"
-                htmlFor="line_item[item_id]"
-              >
-                Size
-              </label>
-            </b>
-            <div
-              className="o-size-selector"
+            <select
+              aria-label="Size Selector"
+              name="line_item[item_id]"
+              value=""
             >
-              <select
-                aria-label="Size Selector"
-                label="Size"
-                name="line_item[item_id]"
-                onChange={[Function]}
+              <option
+                aria-posinset="0"
+                aria-setsize={3}
+                role="option"
+                value=""
               >
-                <option
-                  aria-posinset="0"
-                  aria-setsize={3}
-                  role="option"
-                  value=""
-                >
-                  Please Select
-                </option>
-                <option
-                  aria-posinset={1}
-                  aria-setsize={3}
-                  data-price="10.00"
-                  key="0"
-                  role="option"
-                  value={1}
-                >
-                  Size 8
-                </option>
-                <option
-                  aria-posinset={2}
-                  aria-setsize={3}
-                  data-price="11.00"
-                  key="1"
-                  role="option"
-                  value={2}
-                >
-                  Size 10
-                </option>
-                <option
-                  aria-posinset={3}
-                  aria-setsize={3}
-                  data-price="12.00"
-                  key="2"
-                  role="option"
-                  value={3}
-                >
-                  Size 12
-                </option>
-              </select>
-            </div>
-          </SizeSelector>
+                Select a Size
+              </option>
+              <option
+                aria-posinset={1}
+                aria-setsize={3}
+                data-price="10.00"
+                data-stock-available-level="1000"
+                key="0"
+                role="option"
+                value={1}
+              >
+                Size 8
+              </option>
+              <option
+                aria-posinset={2}
+                aria-setsize={3}
+                data-price="11.00"
+                data-stock-available-level="1000"
+                key="1"
+                role="option"
+                value={2}
+              >
+                Size 10
+              </option>
+              <option
+                aria-posinset={3}
+                aria-setsize={3}
+                data-price="12.00"
+                data-stock-available-level="1000"
+                key="2"
+                role="option"
+                value={3}
+              >
+                Size 12
+              </option>
+            </select>
+          </VariantSelector>
         </div>
       </div>
       <div

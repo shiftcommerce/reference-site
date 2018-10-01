@@ -28,6 +28,7 @@ const Product = {
       sku: 1,
       title: 'Small',
       price: fixedPrice(10.0),
+      stock_available_level: '1000',
       meta_attributes: {
         size: {
           value: 'Size 8'
@@ -38,6 +39,7 @@ const Product = {
       sku: 2,
       title: 'Medium',
       price: fixedPrice(11.0),
+      stock_available_level: '1000',
       meta_attributes: {
         size: {
           value: 'Size 10'
@@ -48,6 +50,7 @@ const Product = {
       sku: 3,
       title: 'Large',
       price: fixedPrice(12.0),
+      stock_available_level: '1000',
       meta_attributes: {
         size: {
           value: 'Size 12'

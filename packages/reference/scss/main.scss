@@ -34,6 +34,7 @@
 @import "60_components/_c-cart-table";
 @import '60_components/_c-checkout-cart-total';
 @import '60_components/_c-cvv-field';
+@import "60_components/_c-footer";
 @import "60_components/_c-gallery-half";
 @import "60_components/_c-gallery-third";
 @import "60_components/_c-header";
@@ -44,7 +45,7 @@
 @import '60_components/_c-loading';
 @import "60_components/_c-minibag";
 @import "60_components/_c-nav";
-@import '60_components/_c-payment-method-button';
+@import '60_components/_c-payment-method';
 @import '60_components/_c-product';
 @import '60_components/_c-product-display';
 @import '60_components/_c-product-listing';
@@ -52,7 +53,7 @@
 @import '60_components/_c-product-nav';
 @import '60_components/_c-product-price';
 @import '60_components/_c-searchbar';
-@import '60_components/_c-shipping-method-list';
+@import '60_components/_c-shipping-method';
 @import '60_components/_c-step-indicators';
 @import '60_components/_c-title';
 
@@ -62,5 +63,6 @@
 
 @import "70_utilities/_u-bold";
 @import "70_utilities/_u-float";
+@import "70_utilities/_u-margin";
 @import "70_utilities/_u-sticky";
 @import "70_utilities/_u-text-color";

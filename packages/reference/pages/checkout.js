@@ -16,7 +16,7 @@ import { readCheckoutFromLocalStorage,
   inputChange,
   inputComplete,
   showField } from '../actions/checkoutActions'
-import { readCart, initializeCart } from '../actions/cartActions'
+import { readCart, initializeCart, updateQuantity } from '../actions/cartActions'
 import {
   createOrder,
   requestCardToken,
@@ -28,6 +28,7 @@ import {
 // Objects
 import Button from '../objects/Button'
 import Logo from '../objects/Logo'
+import Input from '../objects/Input'
 
 // Components
 import CustomHead from '../components/CustomHead'
@@ -46,6 +47,7 @@ export class CheckoutPage extends Component {
     super()
 
     this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
+    this.nextSection = this.nextSection.bind(this)
     this.setShippingMethod = this.setShippingMethod.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
     this.onInputBlur = this.onInputBlur.bind(this)
@@ -55,6 +57,8 @@ export class CheckoutPage extends Component {
     this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
     this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
     this.setCardErrors = this.setCardErrors.bind(this)
+    this.updateQuantity = this.updateQuantity.bind(this)
+    this.deleteItem = this.deleteItem.bind(this)
   }
 
   componentDidMount () {
@@ -75,7 +79,45 @@ export class CheckoutPage extends Component {
     }
   }
 
+  updateQuantity (e) {
+    const lineItem = {
+      sku: e.target.dataset.variant,
+      quantity: parseInt(e.target.value, 10)
+    }
+    this.props.dispatch(updateQuantity(lineItem))
+  }
+
+  deleteItem (e) {
+    e.preventDefault()
+    const lineItem = {
+      sku: e.target.dataset.variant,
+      quantity: 0
+    }
+    this.props.dispatch(updateQuantity(lineItem))
+    if (this.props.cart.lineItems.length === 0) {
+      Router.push('/cart')
+    } 
+  }
+
+  nextSection (eventType) {
+    const { checkout } = this.props
+
+    let componentName
+
+    if (checkout.currentStep === 1) {
+      componentName = 'shippingAddress'
+    } else if (checkout.currentStep === 2) {
+      componentName = 'shippingMethod'
+    } else if (checkout.currentStep === 3) {
+      componentName = 'paymentMethod'
+    } 
+
+    window.scrollTo(0, 0);
+    this.props.dispatch(toggleCollapsed(eventType, componentName))
+  }
+
   onToggleCollapsed (eventType, componentName) {
+    window.scrollTo(0, 0);
     this.props.dispatch(toggleCollapsed(eventType, componentName))
   }
 
@@ -137,10 +179,27 @@ export class CheckoutPage extends Component {
     return isBillingAddressValid && isCardValid
   }
 
+  renderGiftCardSection() {
+    return <>
+      <div aria-label='Use gift card or rewards code' className='o-form__wrapper  c-gift__wrapper'>
+        <span className='c-payment-method__gift'>
+          <Input
+            label='Gift Card/Rewards Code'
+            placeholder='Enter Gift Card/Rewards Code'
+            className='c-payment-method__gift-input' />
+          <Button
+            aria-label='Apply Gift Code'
+            className='c-payment-method__gift-button'
+            label='Apply Code'
+            size='lrg' />
+        </span>
+      </div>
+    </>
+  }  
+
   render () {
     const { checkout, cart } = this.props
     const hasLineItems = cart.totalQuantity > 0
-    const paymentMethodCollapsed = checkout.paymentMethod.collapsed
     if (checkout.loading) {
       return (
         <div>
@@ -154,13 +213,17 @@ export class CheckoutPage extends Component {
       )
     } else {
       return (
-        <div>
+        <>
           <CustomHead />
           {hasLineItems &&
-            <div>
+            <>
               <div className='o-header'>
-                <Logo className='c-step-indicators__logo u-text-color--primary' />
+              <div className='c-step-indicators__logo'>
+                <Logo className='u-text-color--primary' />
+              </div>
+              <div>
                 <CheckoutSteps {...this.props} />
+              </div>
               </div>
               <div className='o-grid-container'>
                 <div className='o-col-1-13 o-col-1-9-l'>
@@ -190,29 +253,16 @@ export class CheckoutPage extends Component {
                     onCardTokenReceived={this.onCardTokenReceived}
                     setCardErrors={this.setCardErrors}
                   />
-                  {!paymentMethodCollapsed &&
-                    <div className='o-form'>
-                      <Button
-                        aria-label='Review Your Order'
-                        label='Review Your Order'
-                        size='lrg'
-                        status='primary'
-                        type='submit'
-                        id='review_order'
-                        disabled={!this.isPaymentValid()}
-                        onClick={() => { this.onToggleCollapsed('complete', 'paymentMethod') }}
-                      />
-                    </div>
-                  }
                 </div>
-                <div className='o-col-1-13 o-col-9-13-l'>
-                  <CheckoutCart title='Your Cart' {...this.props} />
-                  <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} />
+                { this.renderGiftCardSection() }
+                <div className='o-col-1-13 o-col-9-13-l c-cart-table'>
+                  <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
+                  <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
                 </div>
               </div>
-            </div>
+            </>
           }
-        </div>
+        </>
       )
     }
   }

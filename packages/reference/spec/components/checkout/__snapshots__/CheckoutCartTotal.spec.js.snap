@@ -1,5 +1,435 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Place Order button should be disabled if there is any error in billing address 1`] = `
+<CheckoutCartTotal
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": "10.00",
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": "5.00",
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "billingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "errors": Object {
+          "first_name": "please fill the details",
+        },
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "currency": "GBP",
+      "currentStep": 4,
+      "customer": Object {
+        "email": "customer@example.com",
+        "external_id": "123",
+        "name": "John Doe",
+      },
+      "error": false,
+      "lineItems": Array [
+        Object {
+          "currency": "GBP",
+          "paid_price_inc_tax": "10",
+          "quantity": 3,
+          "retail_price_inc_tax": "10",
+          "sku": "SK840763631-2",
+          "tax_amount": 0,
+          "tax_percentage": 0,
+          "title": "Textured Long T Shirt",
+        },
+      ],
+      "loading": false,
+      "paid_price_inc_tax": "0105.45",
+      "paymentMethod": Object {
+        "collapsed": false,
+        "completed": false,
+      },
+      "request_uuid": 6765757657657,
+      "retail_price_inc_tax": "0105.45",
+      "reviewOrder": Object {
+        "collapsed": true,
+        "completed": false,
+      },
+      "shippingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "shippingMethod": Object {
+        "collapsed": false,
+        "completed": true,
+        "id": "2",
+        "name": "UPS Next Day",
+        "paid_price_inc_tax": 5.45,
+        "reference": "ups_next_day",
+        "retail_price_inc_tax": 5.45,
+        "sku": "ups_next_day",
+        "tax_amount": 2,
+        "tax_percentage": 20,
+      },
+      "tax_amount": 0,
+    }
+  }
+  dispatch={[MockFunction]}
+  order={
+    Object {
+      "cardErrors": false,
+      "cardTokenRequested": false,
+    }
+  }
+>
+  <Sticker>
+    <div
+      aria-label="Cart total summary"
+      className="u-sticky  c-cart-summary"
+    >
+      <div
+        className=""
+      >
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Total Price: 
+          </dt>
+          <dd>
+             £
+            25.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping costs: 
+          </dt>
+          <dd>
+             
+            £5.45
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="u-bold"
+        >
+          <dt>
+             TOTAL: 
+          </dt>
+          <dd>
+             £
+            30.45
+             
+          </dd>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
+        </dl>
+      </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Place Order"
+        className="c-cart-summary__buttons--proceed"
+        disabled={true}
+        id="place_order"
+        label="Place Order"
+        size="lrg"
+        status="disabled"
+        type="button"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </Button>
+    </div>
+  </Sticker>
+</CheckoutCartTotal>
+`;
+
+exports[`Place Order button should be disabled if there is any error in card details 1`] = `
+<CheckoutCartTotal
+  cart={
+    Object {
+      "lineItems": Array [
+        Object {
+          "discount": 0,
+          "price": "10.00",
+          "quantity": 2,
+          "title": "Test Product",
+        },
+        Object {
+          "discount": 0,
+          "price": "5.00",
+          "quantity": 1,
+          "title": "Pretend Product",
+        },
+      ],
+    }
+  }
+  checkout={
+    Object {
+      "billingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "errors": Object {},
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "currency": "GBP",
+      "currentStep": 4,
+      "customer": Object {
+        "email": "customer@example.com",
+        "external_id": "123",
+        "name": "John Doe",
+      },
+      "error": false,
+      "lineItems": Array [
+        Object {
+          "currency": "GBP",
+          "paid_price_inc_tax": "10",
+          "quantity": 3,
+          "retail_price_inc_tax": "10",
+          "sku": "SK840763631-2",
+          "tax_amount": 0,
+          "tax_percentage": 0,
+          "title": "Textured Long T Shirt",
+        },
+      ],
+      "loading": false,
+      "paid_price_inc_tax": "0105.45",
+      "paymentMethod": Object {
+        "collapsed": false,
+        "completed": false,
+      },
+      "request_uuid": 6765757657657,
+      "retail_price_inc_tax": "0105.45",
+      "reviewOrder": Object {
+        "collapsed": true,
+        "completed": false,
+      },
+      "shippingAddress": Object {
+        "city": "Leeds",
+        "collapsed": true,
+        "completed": true,
+        "country_code": "GBP",
+        "first_name": "Prasanna Gaddam",
+        "label": "BILLING_LABEL",
+        "last_name": "Prasanna Gaddam",
+        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+        "line_2": "Hunslet",
+        "primary_phone": "07400000000",
+        "state": "Yorkshire",
+        "zipcode": "LS10 1QN",
+      },
+      "shippingMethod": Object {
+        "collapsed": false,
+        "completed": true,
+        "id": "2",
+        "name": "UPS Next Day",
+        "paid_price_inc_tax": 5.45,
+        "reference": "ups_next_day",
+        "retail_price_inc_tax": 5.45,
+        "sku": "ups_next_day",
+        "tax_amount": 2,
+        "tax_percentage": 20,
+      },
+      "tax_amount": 0,
+    }
+  }
+  dispatch={[MockFunction]}
+  order={
+    Object {
+      "cardErrors": true,
+      "cardTokenRequested": false,
+    }
+  }
+>
+  <Sticker>
+    <div
+      aria-label="Cart total summary"
+      className="u-sticky  c-cart-summary"
+    >
+      <div
+        className=""
+      >
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Total Price: 
+          </dt>
+          <dd>
+             £
+            25.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping costs: 
+          </dt>
+          <dd>
+             
+            £5.45
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="u-bold"
+        >
+          <dt>
+             TOTAL: 
+          </dt>
+          <dd>
+             £
+            30.45
+             
+          </dd>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
+        </dl>
+      </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Place Order"
+        className="c-cart-summary__buttons--proceed"
+        disabled={true}
+        id="place_order"
+        label="Place Order"
+        size="lrg"
+        status="disabled"
+        type="button"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </Button>
+    </div>
+  </Sticker>
+</CheckoutCartTotal>
+`;
+
 exports[`renders payment errors 1`] = `
 <CheckoutCartTotal
   cart={
@@ -31,16 +461,16 @@ exports[`renders payment errors 1`] = `
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="o-checkout-cart-total u-sticky"
+      className="u-sticky  c-cart-summary"
     >
       <div
-        className="o-checkout-cart-total__wrapper"
+        className=""
       >
         <dl
           aria-label="Subtotal"
         >
           <dt>
-             Subtotal: 
+             Total Price: 
           </dt>
           <dd>
              £
@@ -49,22 +479,10 @@ exports[`renders payment errors 1`] = `
           </dd>
         </dl>
         <dl
-          aria-label="VAT"
-        >
-          <dt>
-             VAT: 
-          </dt>
-          <dd>
-             £
-            0.00
-             
-          </dd>
-        </dl>
-        <dl
           aria-label="Shipping cost"
         >
           <dt>
-             Shipping: 
+             Shipping costs: 
           </dt>
           <dd>
              
@@ -74,40 +492,23 @@ exports[`renders payment errors 1`] = `
         </dl>
         <dl
           aria-label="Total"
-          className="o-checkout-cart-total__total"
+          className="u-bold"
         >
           <dt>
-             You Pay: 
+             TOTAL: 
           </dt>
           <dd>
-             
-            <b>
-              £
-              20.00
-            </b>
+             £
+            20.00
              
           </dd>
-          <div>
-            <Button
-              aria-label="Place Order"
-              disabled={true}
-              label="Place Order"
-              size="lrg"
-              status="disabled"
-              type="button"
-            >
-              <button
-                aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg o-button--disabled"
-                disabled={true}
-                role="button"
-                tabIndex="0"
-                type="button"
-              >
-                Place Order
-              </button>
-            </Button>
-          </div>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
         </dl>
         <div
           className="c-checkout-cart-total__payment-error"
@@ -115,6 +516,52 @@ exports[`renders payment errors 1`] = `
           Payment authentication failed
         </div>
       </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Continue to Payment"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to Payment"
+        size="lrg"
+        type="button"
+      >
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </Button>
     </div>
   </Sticker>
 </CheckoutCartTotal>
@@ -153,16 +600,16 @@ exports[`renders the correct checkout cart costs with shipping address completed
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="o-checkout-cart-total u-sticky"
+      className="u-sticky  c-cart-summary"
     >
       <div
-        className="o-checkout-cart-total__wrapper"
+        className=""
       >
         <dl
           aria-label="Subtotal"
         >
           <dt>
-             Subtotal: 
+             Total Price: 
           </dt>
           <dd>
              £
@@ -171,22 +618,10 @@ exports[`renders the correct checkout cart costs with shipping address completed
           </dd>
         </dl>
         <dl
-          aria-label="VAT"
-        >
-          <dt>
-             VAT: 
-          </dt>
-          <dd>
-             £
-            0.00
-             
-          </dd>
-        </dl>
-        <dl
           aria-label="Shipping cost"
         >
           <dt>
-             Shipping: 
+             Shipping costs: 
           </dt>
           <dd>
              
@@ -196,42 +631,71 @@ exports[`renders the correct checkout cart costs with shipping address completed
         </dl>
         <dl
           aria-label="Total"
-          className="o-checkout-cart-total__total"
+          className="u-bold"
         >
           <dt>
-             You Pay: 
+             TOTAL: 
           </dt>
           <dd>
-             
-            <b>
-              £
-              25.00
-            </b>
+             £
+            25.00
              
           </dd>
-          <div>
-            <Button
-              aria-label="Place Order"
-              disabled={true}
-              label="Place Order"
-              size="lrg"
-              status="disabled"
-              type="button"
-            >
-              <button
-                aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg o-button--disabled"
-                disabled={true}
-                role="button"
-                tabIndex="0"
-                type="button"
-              >
-                Place Order
-              </button>
-            </Button>
-          </div>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
         </dl>
       </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Continue to Payment"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to Payment"
+        size="lrg"
+        type="button"
+      >
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </Button>
     </div>
   </Sticker>
 </CheckoutCartTotal>
@@ -280,16 +744,16 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="o-checkout-cart-total u-sticky"
+      className="u-sticky  c-cart-summary"
     >
       <div
-        className="o-checkout-cart-total__wrapper"
+        className=""
       >
         <dl
           aria-label="Subtotal"
         >
           <dt>
-             Subtotal: 
+             Total Price: 
           </dt>
           <dd>
              £
@@ -298,22 +762,10 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
           </dd>
         </dl>
         <dl
-          aria-label="VAT"
-        >
-          <dt>
-             VAT: 
-          </dt>
-          <dd>
-             £
-            0.00
-             
-          </dd>
-        </dl>
-        <dl
           aria-label="Shipping cost"
         >
           <dt>
-             Shipping: 
+             Shipping costs: 
           </dt>
           <dd>
              
@@ -323,42 +775,71 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         </dl>
         <dl
           aria-label="Total"
-          className="o-checkout-cart-total__total"
+          className="u-bold"
         >
           <dt>
-             You Pay: 
+             TOTAL: 
           </dt>
           <dd>
-             
-            <b>
-              £
-              28.45
-            </b>
+             £
+            28.45
              
           </dd>
-          <div>
-            <Button
-              aria-label="Place Order"
-              disabled={true}
-              label="Place Order"
-              size="lrg"
-              status="disabled"
-              type="button"
-            >
-              <button
-                aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg o-button--disabled"
-                disabled={true}
-                role="button"
-                tabIndex="0"
-                type="button"
-              >
-                Place Order
-              </button>
-            </Button>
-          </div>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
         </dl>
       </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Continue to Payment"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to Payment"
+        size="lrg"
+        type="button"
+      >
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </Button>
     </div>
   </Sticker>
 </CheckoutCartTotal>
@@ -395,16 +876,16 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="o-checkout-cart-total u-sticky"
+      className="u-sticky  c-cart-summary"
     >
       <div
-        className="o-checkout-cart-total__wrapper"
+        className=""
       >
         <dl
           aria-label="Subtotal"
         >
           <dt>
-             Subtotal: 
+             Total Price: 
           </dt>
           <dd>
              £
@@ -413,22 +894,10 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
           </dd>
         </dl>
         <dl
-          aria-label="VAT"
-        >
-          <dt>
-             VAT: 
-          </dt>
-          <dd>
-             £
-            0.00
-             
-          </dd>
-        </dl>
-        <dl
           aria-label="Shipping cost"
         >
           <dt>
-             Shipping: 
+             Shipping costs: 
           </dt>
           <dd>
              
@@ -438,42 +907,71 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         </dl>
         <dl
           aria-label="Total"
-          className="o-checkout-cart-total__total"
+          className="u-bold"
         >
           <dt>
-             You Pay: 
+             TOTAL: 
           </dt>
           <dd>
-             
-            <b>
-              £
-              25.00
-            </b>
+             £
+            25.00
              
           </dd>
-          <div>
-            <Button
-              aria-label="Place Order"
-              disabled={true}
-              label="Place Order"
-              size="lrg"
-              status="disabled"
-              type="button"
-            >
-              <button
-                aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg o-button--disabled"
-                disabled={true}
-                role="button"
-                tabIndex="0"
-                type="button"
-              >
-                Place Order
-              </button>
-            </Button>
-          </div>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
         </dl>
       </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Continue to Payment"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to Payment"
+        size="lrg"
+        type="button"
+      >
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </Button>
     </div>
   </Sticker>
 </CheckoutCartTotal>
@@ -507,16 +1005,16 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="o-checkout-cart-total u-sticky"
+      className="u-sticky  c-cart-summary"
     >
       <div
-        className="o-checkout-cart-total__wrapper"
+        className=""
       >
         <dl
           aria-label="Subtotal"
         >
           <dt>
-             Subtotal: 
+             Total Price: 
           </dt>
           <dd>
              £
@@ -525,22 +1023,10 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
           </dd>
         </dl>
         <dl
-          aria-label="VAT"
-        >
-          <dt>
-             VAT: 
-          </dt>
-          <dd>
-             £
-            0.00
-             
-          </dd>
-        </dl>
-        <dl
           aria-label="Shipping cost"
         >
           <dt>
-             Shipping: 
+             Shipping costs: 
           </dt>
           <dd>
              
@@ -550,42 +1036,71 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         </dl>
         <dl
           aria-label="Total"
-          className="o-checkout-cart-total__total"
+          className="u-bold"
         >
           <dt>
-             You Pay: 
+             TOTAL: 
           </dt>
           <dd>
-             
-            <b>
-              £
-              20.00
-            </b>
+             £
+            20.00
              
           </dd>
-          <div>
-            <Button
-              aria-label="Place Order"
-              disabled={true}
-              label="Place Order"
-              size="lrg"
-              status="disabled"
-              type="button"
-            >
-              <button
-                aria-label="Place Order"
-                className="o-button o-button--disabled o-button--lrg o-button--disabled"
-                disabled={true}
-                role="button"
-                tabIndex="0"
-                type="button"
-              >
-                Place Order
-              </button>
-            </Button>
-          </div>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
         </dl>
       </div>
+    </div>
+    <div
+      className="c-cart-summary-buttons"
+    >
+      <Link
+        href="/"
+      >
+        <Button
+          aria-label="Continue Shopping"
+          className="c-cart-summary__buttons--continue"
+          label="Continue shopping"
+          onClick={[Function]}
+          size="lrg"
+          type="button"
+        >
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </Button>
+      </Link>
+      <Button
+        aria-label="Continue to Payment"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to Payment"
+        size="lrg"
+        type="button"
+      >
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </Button>
     </div>
   </Sticker>
 </CheckoutCartTotal>

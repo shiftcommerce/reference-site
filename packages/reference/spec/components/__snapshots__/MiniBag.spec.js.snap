@@ -26,9 +26,7 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
           <span
             className="c-minibag__cart-count"
           >
-            (
             0
-            )
           </span>
         </a>
         <div
@@ -116,9 +114,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
           <span
             className="c-minibag__cart-count"
           >
-            (
             2
-            )
           </span>
         </a>
         <div
@@ -184,9 +180,7 @@ exports[`renders the minibag links 1`] = `
         <span
           className="c-minibag__cart-count"
         >
-          (
           0
-          )
         </span>
       </a>
       <div

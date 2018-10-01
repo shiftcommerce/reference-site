@@ -1,0 +1,100 @@
+.c-payment-method {
+
+  label {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    height: 35px;
+    width: 45%;
+    margin: 2%;
+    text-align: center;
+    color: white;
+    background-color: black;
+
+    &--active {
+      background-color: $background-positive;
+    }
+
+    &__wrapper {
+      margin: 0;
+    }
+
+    span {
+      line-height: 2.5rem;
+    }
+  }
+
+  &__summary {
+    font-size: 0.75rem;
+    width: 95%;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__address-summary {
+    
+    p {
+      color: black;
+    }
+  }
+
+  &__gift {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    &-button {
+      height: 2rem;
+      width: 7rem;
+      margin-top: 2.1rem;
+      line-height: 2px;
+    }
+
+    &-input {
+      width: 16rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__images {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+
+     img {
+       height: 30px;
+       padding: 5px;
+     }
+
+     div {
+       display: inline-block;
+     }
+
+     &-cardpayment {
+       margin-left: 0.5rem;
+     }
+
+     &-paypal {
+       margin-left: 4rem;
+     }
+  }
+
+  &__header {
+    padding-top: 5px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}

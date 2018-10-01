@@ -10,7 +10,7 @@ import ProductPrice from './ProductPrice'
 
 // Objects
 import Button from '../../../objects/Button'
-import SizeSelector from '../../../objects/SizeSelector'
+import VariantSelector from '../../../objects/VariantSelector'
 
 // Fixtures
 import Images from '../../../spec/fixtures/dummyPDPimages.fixture'
@@ -78,7 +78,7 @@ class ProductDisplay extends Component {
   }
 
   renderInfo () {
-    const { product, changeSize, sku } = this.props
+    const { product, changeVariant, sku } = this.props
     const productColour = product.meta_attributes.master_colour.value
 
     return <>
@@ -100,7 +100,7 @@ class ProductDisplay extends Component {
         </div>
         <p className='c-product-display__info-size-chart'>Find your recommended size</p>
         <div className='c-product-display__info-size'>
-          <SizeSelector onChange={changeSize} value={sku} name='line_item[item_id]' prompt='Please Select' label='Size' variants={product.variants} aria-label='Size Selector' />
+          <VariantSelector onChange={changeVariant} value={sku} name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />
         </div>
       </div>
     </>

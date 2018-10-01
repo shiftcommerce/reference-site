@@ -67,6 +67,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           },
           "price": "10.00",
           "sku": 1,
+          "stock_available_level": "1000",
           "title": "Small",
         },
         Object {
@@ -77,6 +78,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           },
           "price": "11.00",
           "sku": 2,
+          "stock_available_level": "1000",
           "title": "Medium",
         },
         Object {
@@ -87,6 +89,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           },
           "price": "12.00",
           "sku": 3,
+          "stock_available_level": "1000",
           "title": "Large",
         },
       ],
@@ -162,6 +165,7 @@ exports[`renders ProductListingCard correctly 1`] = `
                 },
                 "price": "10.00",
                 "sku": 1,
+                "stock_available_level": "1000",
                 "title": "Small",
               },
               Object {
@@ -172,6 +176,7 @@ exports[`renders ProductListingCard correctly 1`] = `
                 },
                 "price": "11.00",
                 "sku": 2,
+                "stock_available_level": "1000",
                 "title": "Medium",
               },
               Object {
@@ -182,6 +187,7 @@ exports[`renders ProductListingCard correctly 1`] = `
                 },
                 "price": "12.00",
                 "sku": 3,
+                "stock_available_level": "1000",
                 "title": "Large",
               },
             ]

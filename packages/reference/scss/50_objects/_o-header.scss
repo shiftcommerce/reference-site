@@ -3,7 +3,7 @@
   margin: 0 0 0 auto;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
 
   @include breakpoint(desktop) {
@@ -31,7 +31,6 @@
     margin-top: 0.3rem;
     text-align: center;
     vertical-align: top;
-    width: 50%;
 
     @include breakpoint(desktop) {
       margin-top: 0;

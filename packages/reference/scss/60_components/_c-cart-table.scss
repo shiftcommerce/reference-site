@@ -1,13 +1,48 @@
 .c-cart-table {
   display: grid;
   width: 100% !important;
-  margin: 15px 0px;
-  padding: 15px 0px;
-  border-top: 1px solid $border-default;
+  padding: 0px 15px;
+
+  &--margin {
+     margin-top: 30%;
+  }
+
+  &__description {
+    margin: 3px 0;
+    font-size: 0.7em;
+
+    a {
+      color: $background-positive;
+    }
+  }
+
+  &__total {
+    font-weight: 300;
+  }
+
+  &__amount {
+    color: $background-positive;
+  }
 
   &__header {
     display: inline-block;
     width: 100%;
-    border-bottom: 1px solid $border-default;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  h1 {
+    margin-top: 5px;
+  }
+
+  h2 {
+    margin-top: 5px;
+    font-size: 1.1em;
+  }
+
+  h4 {
+    margin-top: 5px;
   }
 }

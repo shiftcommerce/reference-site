@@ -17,8 +17,8 @@ class AddressForm extends Component {
   }
 
   formValid (address) {
-    let requiredFieldsPresent = (this.requiredFields().every((key) => address[key] !== '' && address[key] !== null) === true)
-    let noFormErrorsPresent = (Object.values(address.errors).filter(String).length === 0)
+    const requiredFieldsPresent = (this.requiredFields().every((key) => address[key] !== '' && address[key] !== null) === true)
+    const noFormErrorsPresent = (Object.values(address.errors).filter(String).length === 0)
     return (requiredFieldsPresent && noFormErrorsPresent)
   }
 
@@ -27,11 +27,11 @@ class AddressForm extends Component {
     const collapsed = checkout[formName].collapsed
     return (
       <div className='o-form__header'>
-        <div>
+        <div className='o-form__header-title'>
           <h2>{ title }</h2>
         </div>
-        <div>
-          { collapsed && <Button label='Edit' size='lrg' onClick={() => onToggleCollapsed('edit', formName)} /> }
+        <div className='o-form__header-edit'>
+          { collapsed && <Button label='Edit' size='lrg' status='secondary' className='o-form__header-button' onClick={() => onToggleCollapsed('edit', formName)} /> }
         </div>
       </div>
     )
@@ -44,9 +44,9 @@ class AddressForm extends Component {
     return (
       <div>
         { collapsed && (addressType === 'shipping') &&
-          <div className='o-form__wrapper'>
-            <span className={classNames('u-bold', {'u-text-color--primary': (address.line_1 && address.zipcode)})}>✓ </span>
-            <span className='u-bold'>{ address.first_name } { address.last_name } </span>
+          <div className='o-form__wrapper--collapsed'>
+            <span className={classNames('u-bold', {'u-text-color--primary': (address.line_1 && address.zipcode)})} />
+            <p className='u-bold'>{ address.first_name } { address.last_name } </p>
             <span>{ address.line_1 }, { address.city }, { address.zipcode }</span>
           </div>
         }
@@ -84,6 +84,7 @@ class AddressForm extends Component {
         <Input
           label={fieldOption.label}
           className={fieldOption.className}
+          placeholder={fieldOption.placeholder}
           name={fieldOption.name}
           type={fieldOption.type}
           value={fieldOption.value}
@@ -120,9 +121,9 @@ class AddressForm extends Component {
   renderCustomerNameFields () {
     const { checkout, formName } = this.props
     const address = checkout[formName]
-    let fieldOptions = [
-      { className: 'o-form__input-block', label: 'First Name', name: 'first_name', value: address.first_name, rules: { required: true, maxLength: 50 } },
-      { className: 'o-form__input-block', label: 'Last Name', name: 'last_name', value: address.last_name, rules: { required: true, maxLength: 50 } }
+    const fieldOptions = [
+      { className: 'o-form__input-block', placeholder: 'Enter First Name', label: 'First Name', name: 'first_name', value: address.first_name, rules: { required: true, maxLength: 50 } },
+      { className: 'o-form__input-block', placeholder: 'Enter Last Name', label: 'Last Name', name: 'last_name', value: address.last_name, rules: { required: true, maxLength: 50 } }
     ]
     return (
       <div className='o-flex o-flex__space-between'>
@@ -140,7 +141,7 @@ class AddressForm extends Component {
   renderCompanyNameOption () {
     const { checkout, formName, onShowField } = this.props
     const address = checkout[formName]
-    let fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: address.companyName }
+    const fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: address.companyName }
     return (
       <div>
         {!(address.companyNameShown) &&
@@ -156,7 +157,7 @@ class AddressForm extends Component {
   renderAddressLine1 () {
     const { checkout, formName } = this.props
     const address = checkout[formName]
-    let fieldOption = { className: 'o-form__input-block', label: 'Address 1', name: 'line_1', value: address.line_1, rules: { required: true } }
+    const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Address', label: 'Address 1', name: 'line_1', value: address.line_1, rules: { required: true } }
     return (
       <div>
         { this.renderInputField(address, fieldOption) }
@@ -167,7 +168,7 @@ class AddressForm extends Component {
   renderAddressLine2 () {
     const { checkout, formName, onShowField } = this.props
     const address = checkout[formName]
-    let fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: address.line_2 }
+    const fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: address.line_2 }
     return (
       <div>
         {!(address.address2Shown) &&
@@ -183,12 +184,12 @@ class AddressForm extends Component {
   renderAddressFields () {
     const { checkout, formName } = this.props
     const address = checkout[formName]
-    let fieldOptions = [
-      { className: 'o-form__input-block', label: 'Post Code', name: 'zipcode', value: address.zipcode, rules: { required: true, postcode: true } },
-      { className: 'o-form__input-block', label: 'City', name: 'city', value: address.city, rules: { required: true } },
-      { className: 'o-form__input-block', label: 'County', name: 'state', value: address.state },
-      { className: 'o-form__input-block', label: 'Phone', name: 'primary_phone', value: address.primary_phone, rules: { required: true, phone: true } },
-      { className: 'o-form__input-block', label: 'Email', name: 'email', type: 'email', value: address.email, rules: { required: true, email: true } }
+    const fieldOptions = [
+      { className: 'o-form__input-block', placeholder: 'Enter Post Code', label: 'Post Code', name: 'zipcode', value: address.zipcode, rules: { required: true, postcode: true } },
+      { className: 'o-form__input-block', placeholder: 'Enter City', label: 'City', name: 'city', value: address.city, rules: { required: true } },
+      { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: address.state },
+      { className: 'o-form__input-block', placeholder: 'Enter Phone', label: 'Phone', name: 'primary_phone', value: address.primary_phone, rules: { required: true, phone: true } },
+      { className: 'o-form__input-block', placeholder: 'Enter Email', label: 'Email', name: 'email', type: 'email', value: address.email, rules: { required: true, email: true } }
     ]
     return (
       <div>
@@ -206,7 +207,7 @@ class AddressForm extends Component {
   renderNewsletterCheckbox () {
     const { checkout, formName, addressType } = this.props
     const address = checkout[formName]
-    let fieldOption = { label: 'Sign up for Weekly Newsletters (optional)', name: 'newsletterOptIn', value: address.newsletterOptIn }
+    const fieldOption = { label: 'Sign up for Weekly Newsletters (Optional)', name: 'newsletterOptIn', value: address.newsletterOptIn, className: 'o-form__checkbox-label' }
     return (
       <div>
         { addressType === 'shipping' && this.renderCheckbox(address, fieldOption) }
@@ -227,7 +228,7 @@ class AddressForm extends Component {
               label='View Shipping Options'
               size='lrg'
               status={(isValidForm ? 'primary' : 'disabled')}
-              type='submit'
+              type='primary'
               disabled={!isValidForm}
               onClick={() => onToggleCollapsed('complete', formName)}
             />
@@ -248,11 +249,11 @@ class AddressForm extends Component {
     const collapsed = address.collapsed
 
     return (
-      <div className={classNames('o-form', className)}>
+      <div className={classNames('o-form  u-margin', className)}>
         { this.renderFormHeader() }
         { this.renderFormSummary() }
         { !collapsed &&
-          <form className='o-form__wrapper'>
+          <form className='o-form__wrapper o-form__background'>
             { this.renderCountriesDropdown() }
             { this.renderCustomerNameFields() }
             { this.renderCompanyNameOption() }

@@ -1,5 +1,5 @@
 // Object
-import SizeSelector from '../../objects/SizeSelector'
+import VariantSelector from '../../objects/VariantSelector'
 
 // Fixtures
 import product from '../fixtures/product.fixture'
@@ -7,7 +7,7 @@ import product from '../fixtures/product.fixture'
 test('renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <SizeSelector name='line_item[item_id]' prompt='Select a Size' variants={product.variants} />
+    <VariantSelector name='line_item[item_id]' prompt='Select a Size' variants={product.variants} />
   )
 
   // Assert

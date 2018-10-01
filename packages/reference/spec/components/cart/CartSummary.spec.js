@@ -15,10 +15,9 @@ test('renders correct values when no line items are available', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Sub total:  £0')
-  expect(wrapper).toIncludeText('Tax applied:  +£0')
-  expect(wrapper).toIncludeText('Amount you saved on this purchase:  -£0')
-  expect(wrapper).toIncludeText('Total amount to be paid:  £0')
+  expect(wrapper).toIncludeText('Total Price:£0')
+  expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
+  expect(wrapper).toIncludeText('TOTAL:£0')
 })
 
 test('renders correct values when line items are available', () => {
@@ -46,8 +45,7 @@ test('renders correct values when line items are available', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Sub total:  £20')
-  expect(wrapper).toIncludeText('Tax applied:  +£0')
-  expect(wrapper).toIncludeText('Amount you saved on this purchase:  -£4')
-  expect(wrapper).toIncludeText('Total amount to be paid:  £16')
+  expect(wrapper).toIncludeText('Total Price:£20')
+  expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
+  expect(wrapper).toIncludeText('TOTAL:£16')
 })

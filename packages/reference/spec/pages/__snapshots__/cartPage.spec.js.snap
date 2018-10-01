@@ -19,15 +19,16 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
       Object {
         "lineItems": Array [
           Object {
-            "discount": 0,
-            "imageUrl": "",
-            "price": 10,
-            "productID": 1,
-            "productSku": "1231",
-            "quantity": 2,
-            "size": "size - 8",
-            "sku": "123",
-            "title": "test",
+            "canonical_path": "1",
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "price": "30",
+            "productID": "70515",
+            "quantity": 1,
+            "sku": "S2658934_C101_486",
+            "slug": "1",
+            "stockAvailableLevel": 10000,
+            "title": "Regular Fit Wool Mix Trousers",
+            "variant": "38 Waist 31 Leg",
           },
         ],
         "totalQuantity": 2,
@@ -40,44 +41,115 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         Object {
           "lineItems": Array [
             Object {
-              "discount": 0,
-              "imageUrl": "",
-              "price": 10,
-              "productID": 1,
-              "productSku": "1231",
-              "quantity": 2,
-              "size": "size - 8",
-              "sku": "123",
-              "title": "test",
+              "canonical_path": "1",
+              "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+              "price": "30",
+              "productID": "70515",
+              "quantity": 1,
+              "sku": "S2658934_C101_486",
+              "slug": "1",
+              "stockAvailableLevel": 10000,
+              "title": "Regular Fit Wool Mix Trousers",
+              "variant": "38 Waist 31 Leg",
             },
           ],
           "totalQuantity": 2,
         }
       }
+      deleteItem={[Function]}
       updateQuantity={[Function]}
     >
-      <section>
+      <section
+        className="c-cart-table c-cart-table--margin"
+      >
         <section
           className="c-cart-table__header"
         >
           <div
             className="u-float--left"
           >
-            <h1>
-               My Bag 
-            </h1>
-          </div>
-          <div
-            className="u-float--right"
-          >
-            <h4>
-               
-              <b>
+            <h1
+              className="c-cart-table__title"
+            >
+               Your Shopping Basket 
+              <a
+                className="c-cart-table__amount"
+              >
+                (
                 2
-                 
-                items
-              </b>
-               in your bag 
+                )
+              </a>
+               
+            </h1>
+            <p
+              className="c-cart-table__description"
+            >
+              You have 
+              <a>
+                2
+              </a>
+               
+              <t
+                className={null}
+                count={2}
+                showCount={false}
+                singular="item"
+                style={Object {}}
+                zero={null}
+              >
+                <span
+                  className={null}
+                  style={Object {}}
+                >
+                  items
+                </span>
+              </t>
+               in your shopping basket
+            </p>
+            <p
+              className="c-cart-table__description"
+            >
+              <t
+                className={null}
+                count={2}
+                plural="These"
+                showCount={false}
+                singular="This"
+                style={Object {}}
+                zero={null}
+              >
+                <span
+                  className={null}
+                  style={Object {}}
+                >
+                  These
+                </span>
+              </t>
+               
+              <t
+                className={null}
+                count={2}
+                showCount={false}
+                singular="item"
+                style={Object {}}
+                zero={null}
+              >
+                <span
+                  className={null}
+                  style={Object {}}
+                >
+                  items
+                </span>
+              </t>
+               will be saved for 48 hours depending on availablility
+            </p>
+          </div>
+          <div>
+            <h4
+              className="c-cart-table__total"
+            >
+              £
+              30.00
             </h4>
           </div>
         </section>
@@ -90,109 +162,138 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
               Object {
                 "lineItems": Array [
                   Object {
-                    "discount": 0,
-                    "imageUrl": "",
-                    "price": 10,
-                    "productID": 1,
-                    "productSku": "1231",
-                    "quantity": 2,
-                    "size": "size - 8",
-                    "sku": "123",
-                    "title": "test",
+                    "canonical_path": "1",
+                    "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+                    "price": "30",
+                    "productID": "70515",
+                    "quantity": 1,
+                    "sku": "S2658934_C101_486",
+                    "slug": "1",
+                    "stockAvailableLevel": 10000,
+                    "title": "Regular Fit Wool Mix Trousers",
+                    "variant": "38 Waist 31 Leg",
                   },
                 ],
                 "totalQuantity": 2,
               }
             }
+            deleteItem={[Function]}
             updateQuantity={[Function]}
           >
-            <table
+            <div
               className="c-line-items"
             >
-              <thead>
-                <tr
-                  className="c-line-items__header"
+              <div
+                className="o-grid-container__lineitems"
+                key="1"
+              >
+                <div
+                  className="o-grid-item1__lineitems"
                 >
-                  <th
-                    scope="col"
+                  <Link
+                    as="1"
+                    href="/slug?slug=1"
+                    key="1"
                   >
-                    Your Items
-                  </th>
-                  <th
-                    scope="col"
-                  >
-                    Size
-                  </th>
-                  <th
-                    scope="col"
-                  >
-                    Quantity
-                  </th>
-                  <th
-                    scope="col"
-                  >
-                    You save
-                  </th>
-                  <th
-                    scope="col"
-                  >
-                    Subtotal
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  className="c-line-items__column"
-                  key="0"
-                >
-                  <td
-                    aria-label="test"
-                  >
-                    <Link
-                      as="/products/1"
-                      href="/products/product?1"
+                    <Image
+                      alt="Regular Fit Wool Mix Trousers"
+                      aria-label="Regular Fit Wool Mix Trousers"
+                      className="c-line-items__image"
+                      key="1"
+                      onClick={[Function]}
+                      src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
                     >
-                      <a
-                        href="/products/1"
-                        onClick={[Function]}
+                      <div
+                        className="c-line-items__image"
                       >
-                        <Image
-                          alt="test"
-                          aria-label="test"
-                          className="c-line-items__image"
-                          src=""
+                        <LazyLoad
+                          height={200}
+                          offset={0}
+                          once={false}
+                          overflow={false}
+                          resize={false}
+                          scroll={true}
+                          unmountIfInvisible={false}
                         >
                           <div
-                            className="c-dummy_image c-line-items__image"
+                            className="lazyload-placeholder"
                             style={
                               Object {
-                                "height": undefined,
-                                "width": undefined,
+                                "height": 200,
                               }
                             }
                           />
-                        </Image>
-                        test
-                      </a>
-                    </Link>
-                  </td>
-                  <td>
-                    size - 8
-                  </td>
-                  <td>
-                    <select
-                      data-variant="123"
-                      onChange={[Function]}
-                      value={2}
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                  </Link>
+                </div>
+                <div
+                  className="o-grid-item2__lineitems"
+                >
+                  <div
+                    className="c-line-items__details"
+                  >
+                    <h4
+                      className="c-line-items__details-title  u-bold"
                     >
-                      <option
-                        aria-posinset={1}
-                        aria-setsize={0}
-                        key="0"
-                        value={0}
-                      >
-                        0
-                      </option>
+                      Regular Fit Wool Mix Trousers
+                    </h4>
+                    <div
+                      className="c-line-items__details-sku"
+                    >
+                      <span>
+                        S2658934_C101_486
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="o-grid-item3__lineitems"
+                >
+                  <div
+                    className="c-line-items__colour  u-bold"
+                  >
+                    <span>
+                      Colour
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__size  u-bold"
+                  >
+                    <span>
+                      Option
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__quantity u-bold"
+                  >
+                    <span>
+                      Quantity
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="o-grid-item4__lineitems"
+                >
+                  <span
+                    className="c-line-items__space"
+                  >
+                    Grey
+                  </span>
+                  <span
+                    className="c-line-items__space"
+                  >
+                    38 Waist 31 Leg
+                  </span>
+                  <span
+                    className="c-line-items__space"
+                  >
+                    <select
+                      data-variant="S2658934_C101_486"
+                      onChange={[Function]}
+                      value={1}
+                    >
                       <option
                         aria-posinset={2}
                         aria-setsize={1}
@@ -274,18 +375,39 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         10
                       </option>
                     </select>
-                  </td>
-                  <td>
-                    -£
-                    0
-                  </td>
-                  <td>
-                    £
-                    20.00
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </span>
+                </div>
+                <div
+                  className="o-grid-item5__lineitems"
+                >
+                  <div
+                    className="c-line-items__buttons"
+                  >
+                    <div
+                      className="c-line-items__anchor"
+                    >
+                      <a
+                        className="c-line-items__delete"
+                        data-variant="S2658934_C101_486"
+                        onClick={[Function]}
+                      >
+                        Delete
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__total-wrapper"
+                  >
+                    <a
+                      className="c-line-items__total"
+                    >
+                      £
+                      30.00
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </LineItems>
           <CartSummary
             aria-label="Cart Summary"
@@ -293,20 +415,22 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
               Object {
                 "lineItems": Array [
                   Object {
-                    "discount": 0,
-                    "imageUrl": "",
-                    "price": 10,
-                    "productID": 1,
-                    "productSku": "1231",
-                    "quantity": 2,
-                    "size": "size - 8",
-                    "sku": "123",
-                    "title": "test",
+                    "canonical_path": "1",
+                    "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+                    "price": "30",
+                    "productID": "70515",
+                    "quantity": 1,
+                    "sku": "S2658934_C101_486",
+                    "slug": "1",
+                    "stockAvailableLevel": 10000,
+                    "title": "Regular Fit Wool Mix Trousers",
+                    "variant": "38 Waist 31 Leg",
                   },
                 ],
                 "totalQuantity": 2,
               }
             }
+            deleteItem={[Function]}
             updateQuantity={[Function]}
           >
             <section
@@ -314,51 +438,95 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             >
               <dl>
                 <dt>
-                   Sub total: 
+                  <a>
+                    Total Price:
+                  </a>
                 </dt>
                 <dd>
-                   £
-                  20.00
-                   
-                </dd>
-              </dl>
-              <dl>
-                <dt>
-                   Tax applied: 
-                </dt>
-                <dd
-                  className="u-text-color--red"
-                >
-                   +£
-                  0.00
-                   
-                </dd>
-              </dl>
-              <dl>
-                <dt>
-                   Amount you saved on this purchase: 
-                </dt>
-                <dd
-                  className="u-text-color--green"
-                >
-                   -£
-                  0.00
-                   
-                </dd>
-              </dl>
-              <dl>
-                <dt>
-                   Total amount to be paid: 
-                </dt>
-                <dd>
-                   
-                  <b>
+                  <a>
                     £
-                    20.00
-                  </b>
-                   
+                    30.00
+                  </a>
                 </dd>
               </dl>
+              <dl>
+                <dt>
+                  <a>
+                    Estimated shipping cost: £3.45
+                  </a>
+                </dt>
+              </dl>
+              <dl>
+                <dt>
+                  <a
+                    className="u-bold"
+                  >
+                    TOTAL:
+                  </a>
+                </dt>
+                <dd>
+                  <a
+                    className="u-bold"
+                  >
+                    £
+                    30.00
+                  </a>
+                </dd>
+              </dl>
+              <dl>
+                <a>
+                  * Including VAT
+                </a>
+              </dl>
+            </section>
+            <section
+              className="c-cart-summary__buttons"
+            >
+              <Button
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue"
+                label="Continue shopping"
+                size="lrg"
+                status="grey"
+                type="button"
+              >
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+                  disabled={false}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+              </Button>
+              <Link
+                as=""
+                href="/checkout"
+              >
+                <Button
+                  aria-label="Place Order"
+                  className="c-cart-summary__buttons--proceed"
+                  label="Continue to payment"
+                  onClick={[Function]}
+                  size="lrg"
+                  status="positive"
+                  type="button"
+                >
+                  <button
+                    aria-label="Place Order"
+                    className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                  >
+                    Continue to payment
+                  </button>
+                </Button>
+              </Link>
             </section>
           </CartSummary>
         </section>

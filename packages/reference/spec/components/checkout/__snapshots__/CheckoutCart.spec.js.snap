@@ -1,266 +1,914 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the correct checkout cart summary with multiple line items 1`] = `
+exports[`Checkout Cart renders the correct cart summary with multiple line items 1`] = `
 <CheckoutCart
   cart={
     Object {
       "lineItems": Array [
         Object {
+          "canonical_path": "1",
           "discount": 0,
           "price": "10.00",
           "quantity": 2,
+          "slug": "1",
+          "stockAvailableLevel": "1000",
           "title": "Test Product",
+          "variant": "38 Waist 31 Leg",
         },
         Object {
+          "canonical_path": "1",
           "discount": 0,
           "price": "5.00",
           "quantity": 1,
+          "slug": "1",
+          "stockAvailableLevel": "1000",
           "title": "Pretend Product",
+          "variant": "38 Waist 31 Leg",
         },
       ],
     }
   }
 >
-  <div
-    aria-label="Cart items summary"
-    className="o-checkout-cart"
+  <section
+    className="c-cart-table__header"
   >
     <div
-      className="o-checkout-cart__header"
+      className="u-float--left"
     >
-      <div>
-        <h2 />
-      </div>
-      <div>
-        <Link
-          href="/cart"
+      <h2
+        className="c-cart-table__title"
+      >
+         Your Shopping Basket 
+        <a
+          className="c-cart-table__amount"
         >
-          <a
-            aria-label="Edit your cart"
-            className="o-button o-button--lrg"
-            href="/cart"
-            onClick={[Function]}
+          (
+          )
+        </a>
+         
+      </h2>
+      <p
+        className="c-cart-table__description"
+      >
+        You have 
+        <a />
+         
+        <t
+          className={null}
+          count={1}
+          showCount={false}
+          singular="item"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
           >
-            Edit Cart
-          </a>
-        </Link>
-      </div>
+            item
+          </span>
+        </t>
+         in your shopping basket
+      </p>
+      <p
+        className="c-cart-table__description"
+      >
+        <t
+          className={null}
+          count={1}
+          plural="These"
+          showCount={false}
+          singular="This"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
+          >
+            This
+          </span>
+        </t>
+         
+        <t
+          className={null}
+          count={1}
+          showCount={false}
+          singular="item"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
+          >
+            item
+          </span>
+        </t>
+         will be saved for 48 hours depending on availablility
+      </p>
     </div>
     <div
-      className="o-checkout-cart__wrapper"
+      className="u-float--right"
+    >
+      <h4
+        className="c-cart-table__total"
+      >
+        £
+        25.00
+      </h4>
+    </div>
+  </section>
+  <LineItems
+    cart={
+      Object {
+        "lineItems": Array [
+          Object {
+            "canonical_path": "1",
+            "discount": 0,
+            "price": "10.00",
+            "quantity": 2,
+            "slug": "1",
+            "stockAvailableLevel": "1000",
+            "title": "Test Product",
+            "variant": "38 Waist 31 Leg",
+          },
+          Object {
+            "canonical_path": "1",
+            "discount": 0,
+            "price": "5.00",
+            "quantity": 1,
+            "slug": "1",
+            "stockAvailableLevel": "1000",
+            "title": "Pretend Product",
+            "variant": "38 Waist 31 Leg",
+          },
+        ],
+      }
+    }
+  >
+    <div
+      className="c-line-items"
     >
       <div
-        aria-label="Product"
-        className="o-checkout-cart__product"
-        key="0"
-      >
-        <div
-          className="o-checkout-cart__image"
-        >
-          <Image
-            alt="Test Product"
-            aria-label="Test Product"
-            width={80}
-          >
-            <div
-              className="c-dummy_image"
-              style={
-                Object {
-                  "height": undefined,
-                  "width": 80,
-                }
-              }
-            />
-          </Image>
-        </div>
-        <ul
-          className="o-checkout-cart__info"
-        >
-          <li
-            aria-label="Product title"
-          >
-            Test Product
-          </li>
-          <li
-            aria-label="Quantity"
-          >
-            Qty: 
-            2
-          </li>
-          <li
-            aria-label="Price"
-          >
-            Price: £
-            10.00
-          </li>
-          <li
-            aria-label="Subtotal"
-          >
-            Subtotal: £
-            20
-          </li>
-        </ul>
-      </div>
-      <div
-        aria-label="Product"
-        className="o-checkout-cart__product"
+        className="o-grid-container__lineitems"
         key="1"
       >
         <div
-          className="o-checkout-cart__image"
+          className="o-grid-item1__lineitems"
         >
-          <Image
-            alt="Pretend Product"
-            aria-label="Pretend Product"
-            width={80}
+          <Link
+            as="1"
+            href="/slug?slug=1"
+            key="1"
+          >
+            <Image
+              alt="Test Product"
+              aria-label="Test Product"
+              className="c-line-items__image"
+              key="1"
+              onClick={[Function]}
+            >
+              <div
+                className="c-dummy_image c-line-items__image"
+                style={
+                  Object {
+                    "height": undefined,
+                    "width": undefined,
+                  }
+                }
+              />
+            </Image>
+          </Link>
+        </div>
+        <div
+          className="o-grid-item2__lineitems"
+        >
+          <div
+            className="c-line-items__details"
+          >
+            <h4
+              className="c-line-items__details-title  u-bold"
+            >
+              Test Product
+            </h4>
+            <div
+              className="c-line-items__details-sku"
+            >
+              <span />
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-grid-item3__lineitems"
+        >
+          <div
+            className="c-line-items__colour  u-bold"
+          >
+            <span>
+              Colour
+            </span>
+          </div>
+          <div
+            className="c-line-items__size  u-bold"
+          >
+            <span>
+              Option
+            </span>
+          </div>
+          <div
+            className="c-line-items__quantity u-bold"
+          >
+            <span>
+              Quantity
+            </span>
+          </div>
+        </div>
+        <div
+          className="o-grid-item4__lineitems"
+        >
+          <span
+            className="c-line-items__space"
+          >
+            Grey
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            38 Waist 31 Leg
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            <select
+              value={2}
+            >
+              <option
+                aria-posinset={2}
+                aria-setsize={1}
+                key="1"
+                value={1}
+              >
+                1
+              </option>
+              <option
+                aria-posinset={3}
+                aria-setsize={2}
+                key="2"
+                value={2}
+              >
+                2
+              </option>
+              <option
+                aria-posinset={4}
+                aria-setsize={3}
+                key="3"
+                value={3}
+              >
+                3
+              </option>
+              <option
+                aria-posinset={5}
+                aria-setsize={4}
+                key="4"
+                value={4}
+              >
+                4
+              </option>
+              <option
+                aria-posinset={6}
+                aria-setsize={5}
+                key="5"
+                value={5}
+              >
+                5
+              </option>
+              <option
+                aria-posinset={7}
+                aria-setsize={6}
+                key="6"
+                value={6}
+              >
+                6
+              </option>
+              <option
+                aria-posinset={8}
+                aria-setsize={7}
+                key="7"
+                value={7}
+              >
+                7
+              </option>
+              <option
+                aria-posinset={9}
+                aria-setsize={8}
+                key="8"
+                value={8}
+              >
+                8
+              </option>
+              <option
+                aria-posinset={10}
+                aria-setsize={9}
+                key="9"
+                value={9}
+              >
+                9
+              </option>
+              <option
+                aria-posinset={11}
+                aria-setsize={10}
+                key="10"
+                value={10}
+              >
+                10
+              </option>
+            </select>
+          </span>
+        </div>
+        <div
+          className="o-grid-item5__lineitems"
+        >
+          <div
+            className="c-line-items__buttons"
           >
             <div
-              className="c-dummy_image"
-              style={
-                Object {
-                  "height": undefined,
-                  "width": 80,
-                }
-              }
-            />
-          </Image>
+              className="c-line-items__anchor"
+            >
+              <a
+                className="c-line-items__delete"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__total-wrapper"
+          >
+            <a
+              className="c-line-items__total"
+            >
+              £
+              20.00
+            </a>
+          </div>
         </div>
-        <ul
-          className="o-checkout-cart__info"
+      </div>
+      <div
+        className="o-grid-container__lineitems"
+        key="1"
+      >
+        <div
+          className="o-grid-item1__lineitems"
         >
-          <li
-            aria-label="Product title"
+          <Link
+            as="1"
+            href="/slug?slug=1"
+            key="1"
           >
-            Pretend Product
-          </li>
-          <li
-            aria-label="Quantity"
+            <Image
+              alt="Pretend Product"
+              aria-label="Pretend Product"
+              className="c-line-items__image"
+              key="1"
+              onClick={[Function]}
+            >
+              <div
+                className="c-dummy_image c-line-items__image"
+                style={
+                  Object {
+                    "height": undefined,
+                    "width": undefined,
+                  }
+                }
+              />
+            </Image>
+          </Link>
+        </div>
+        <div
+          className="o-grid-item2__lineitems"
+        >
+          <div
+            className="c-line-items__details"
           >
-            Qty: 
-            1
-          </li>
-          <li
-            aria-label="Price"
+            <h4
+              className="c-line-items__details-title  u-bold"
+            >
+              Pretend Product
+            </h4>
+            <div
+              className="c-line-items__details-sku"
+            >
+              <span />
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-grid-item3__lineitems"
+        >
+          <div
+            className="c-line-items__colour  u-bold"
           >
-            Price: £
-            5.00
-          </li>
-          <li
-            aria-label="Subtotal"
+            <span>
+              Colour
+            </span>
+          </div>
+          <div
+            className="c-line-items__size  u-bold"
           >
-            Subtotal: £
-            5
-          </li>
-        </ul>
+            <span>
+              Option
+            </span>
+          </div>
+          <div
+            className="c-line-items__quantity u-bold"
+          >
+            <span>
+              Quantity
+            </span>
+          </div>
+        </div>
+        <div
+          className="o-grid-item4__lineitems"
+        >
+          <span
+            className="c-line-items__space"
+          >
+            Grey
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            38 Waist 31 Leg
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            <select
+              value={1}
+            >
+              <option
+                aria-posinset={2}
+                aria-setsize={1}
+                key="1"
+                value={1}
+              >
+                1
+              </option>
+              <option
+                aria-posinset={3}
+                aria-setsize={2}
+                key="2"
+                value={2}
+              >
+                2
+              </option>
+              <option
+                aria-posinset={4}
+                aria-setsize={3}
+                key="3"
+                value={3}
+              >
+                3
+              </option>
+              <option
+                aria-posinset={5}
+                aria-setsize={4}
+                key="4"
+                value={4}
+              >
+                4
+              </option>
+              <option
+                aria-posinset={6}
+                aria-setsize={5}
+                key="5"
+                value={5}
+              >
+                5
+              </option>
+              <option
+                aria-posinset={7}
+                aria-setsize={6}
+                key="6"
+                value={6}
+              >
+                6
+              </option>
+              <option
+                aria-posinset={8}
+                aria-setsize={7}
+                key="7"
+                value={7}
+              >
+                7
+              </option>
+              <option
+                aria-posinset={9}
+                aria-setsize={8}
+                key="8"
+                value={8}
+              >
+                8
+              </option>
+              <option
+                aria-posinset={10}
+                aria-setsize={9}
+                key="9"
+                value={9}
+              >
+                9
+              </option>
+              <option
+                aria-posinset={11}
+                aria-setsize={10}
+                key="10"
+                value={10}
+              >
+                10
+              </option>
+            </select>
+          </span>
+        </div>
+        <div
+          className="o-grid-item5__lineitems"
+        >
+          <div
+            className="c-line-items__buttons"
+          >
+            <div
+              className="c-line-items__anchor"
+            >
+              <a
+                className="c-line-items__delete"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__total-wrapper"
+          >
+            <a
+              className="c-line-items__total"
+            >
+              £
+              5.00
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </LineItems>
 </CheckoutCart>
 `;
 
-exports[`renders the correct checkout cart summary with single line item 1`] = `
+exports[`Checkout Cart renders the correct cart summary with single line item 1`] = `
 <CheckoutCart
   cart={
     Object {
       "lineItems": Array [
         Object {
+          "canonical_path": "1",
           "discount": 0,
           "imageUrl": "",
           "price": "10.00",
           "quantity": 2,
           "size": "size - 8",
           "sku": "123",
+          "slug": "1",
+          "stockAvailableLevel": "1000",
           "title": "Test Product",
+          "variant": "38 Waist 31 Leg",
         },
       ],
     }
   }
-  title="Checkout Cart Summary"
 >
-  <div
-    aria-label="Cart items summary"
-    className="o-checkout-cart"
+  <section
+    className="c-cart-table__header"
   >
     <div
-      className="o-checkout-cart__header"
+      className="u-float--left"
     >
-      <div>
-        <h2>
-          Checkout Cart Summary
-        </h2>
-      </div>
-      <div>
-        <Link
-          href="/cart"
+      <h2
+        className="c-cart-table__title"
+      >
+         Your Shopping Basket 
+        <a
+          className="c-cart-table__amount"
         >
-          <a
-            aria-label="Edit your cart"
-            className="o-button o-button--lrg"
-            href="/cart"
-            onClick={[Function]}
+          (
+          )
+        </a>
+         
+      </h2>
+      <p
+        className="c-cart-table__description"
+      >
+        You have 
+        <a />
+         
+        <t
+          className={null}
+          count={1}
+          showCount={false}
+          singular="item"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
           >
-            Edit Cart
-          </a>
-        </Link>
-      </div>
+            item
+          </span>
+        </t>
+         in your shopping basket
+      </p>
+      <p
+        className="c-cart-table__description"
+      >
+        <t
+          className={null}
+          count={1}
+          plural="These"
+          showCount={false}
+          singular="This"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
+          >
+            This
+          </span>
+        </t>
+         
+        <t
+          className={null}
+          count={1}
+          showCount={false}
+          singular="item"
+          style={Object {}}
+          zero={null}
+        >
+          <span
+            className={null}
+            style={Object {}}
+          >
+            item
+          </span>
+        </t>
+         will be saved for 48 hours depending on availablility
+      </p>
     </div>
     <div
-      className="o-checkout-cart__wrapper"
+      className="u-float--right"
+    >
+      <h4
+        className="c-cart-table__total"
+      >
+        £
+        20.00
+      </h4>
+    </div>
+  </section>
+  <LineItems
+    cart={
+      Object {
+        "lineItems": Array [
+          Object {
+            "canonical_path": "1",
+            "discount": 0,
+            "imageUrl": "",
+            "price": "10.00",
+            "quantity": 2,
+            "size": "size - 8",
+            "sku": "123",
+            "slug": "1",
+            "stockAvailableLevel": "1000",
+            "title": "Test Product",
+            "variant": "38 Waist 31 Leg",
+          },
+        ],
+      }
+    }
+  >
+    <div
+      className="c-line-items"
     >
       <div
-        aria-label="Product"
-        className="o-checkout-cart__product"
-        key="0"
+        className="o-grid-container__lineitems"
+        key="1"
       >
         <div
-          className="o-checkout-cart__image"
+          className="o-grid-item1__lineitems"
         >
-          <Image
-            alt="Test Product"
-            aria-label="Test Product"
-            src=""
-            width={80}
+          <Link
+            as="1"
+            href="/slug?slug=1"
+            key="1"
+          >
+            <Image
+              alt="Test Product"
+              aria-label="Test Product"
+              className="c-line-items__image"
+              key="1"
+              onClick={[Function]}
+              src=""
+            >
+              <div
+                className="c-dummy_image c-line-items__image"
+                style={
+                  Object {
+                    "height": undefined,
+                    "width": undefined,
+                  }
+                }
+              />
+            </Image>
+          </Link>
+        </div>
+        <div
+          className="o-grid-item2__lineitems"
+        >
+          <div
+            className="c-line-items__details"
+          >
+            <h4
+              className="c-line-items__details-title  u-bold"
+            >
+              Test Product
+            </h4>
+            <div
+              className="c-line-items__details-sku"
+            >
+              <span>
+                123
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-grid-item3__lineitems"
+        >
+          <div
+            className="c-line-items__colour  u-bold"
+          >
+            <span>
+              Colour
+            </span>
+          </div>
+          <div
+            className="c-line-items__size  u-bold"
+          >
+            <span>
+              Option
+            </span>
+          </div>
+          <div
+            className="c-line-items__quantity u-bold"
+          >
+            <span>
+              Quantity
+            </span>
+          </div>
+        </div>
+        <div
+          className="o-grid-item4__lineitems"
+        >
+          <span
+            className="c-line-items__space"
+          >
+            Grey
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            38 Waist 31 Leg
+          </span>
+          <span
+            className="c-line-items__space"
+          >
+            <select
+              data-variant="123"
+              value={2}
+            >
+              <option
+                aria-posinset={2}
+                aria-setsize={1}
+                key="1"
+                value={1}
+              >
+                1
+              </option>
+              <option
+                aria-posinset={3}
+                aria-setsize={2}
+                key="2"
+                value={2}
+              >
+                2
+              </option>
+              <option
+                aria-posinset={4}
+                aria-setsize={3}
+                key="3"
+                value={3}
+              >
+                3
+              </option>
+              <option
+                aria-posinset={5}
+                aria-setsize={4}
+                key="4"
+                value={4}
+              >
+                4
+              </option>
+              <option
+                aria-posinset={6}
+                aria-setsize={5}
+                key="5"
+                value={5}
+              >
+                5
+              </option>
+              <option
+                aria-posinset={7}
+                aria-setsize={6}
+                key="6"
+                value={6}
+              >
+                6
+              </option>
+              <option
+                aria-posinset={8}
+                aria-setsize={7}
+                key="7"
+                value={7}
+              >
+                7
+              </option>
+              <option
+                aria-posinset={9}
+                aria-setsize={8}
+                key="8"
+                value={8}
+              >
+                8
+              </option>
+              <option
+                aria-posinset={10}
+                aria-setsize={9}
+                key="9"
+                value={9}
+              >
+                9
+              </option>
+              <option
+                aria-posinset={11}
+                aria-setsize={10}
+                key="10"
+                value={10}
+              >
+                10
+              </option>
+            </select>
+          </span>
+        </div>
+        <div
+          className="o-grid-item5__lineitems"
+        >
+          <div
+            className="c-line-items__buttons"
           >
             <div
-              className="c-dummy_image"
-              style={
-                Object {
-                  "height": undefined,
-                  "width": 80,
-                }
-              }
-            />
-          </Image>
+              className="c-line-items__anchor"
+            >
+              <a
+                className="c-line-items__delete"
+                data-variant="123"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__total-wrapper"
+          >
+            <a
+              className="c-line-items__total"
+            >
+              £
+              20.00
+            </a>
+          </div>
         </div>
-        <ul
-          className="o-checkout-cart__info"
-        >
-          <li
-            aria-label="Product title"
-          >
-            Test Product
-          </li>
-          <li
-            aria-label="Quantity"
-          >
-            Qty: 
-            2
-          </li>
-          <li
-            aria-label="Price"
-          >
-            Price: £
-            10.00
-          </li>
-          <li
-            aria-label="Subtotal"
-          >
-            Subtotal: £
-            20
-          </li>
-        </ul>
       </div>
     </div>
-  </div>
+  </LineItems>
 </CheckoutCart>
 `;

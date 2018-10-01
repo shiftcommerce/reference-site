@@ -37,7 +37,7 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   expect(wrapper).toMatchSnapshot()
 
   // Verify if cart line items are available
-  expect(wrapper).toIncludeText('2 items')
+  expect(wrapper.find('section.c-cart-table__header')).toIncludeText('2 items')
 
   // To clear the logs of dispatch being called on component mount
   dispatch.mockClear()
@@ -246,59 +246,4 @@ test('dispatch intializeCart action on creating an order', () => {
 
   // Verify if the dispatch function has dispatched updateQuantity action.
   expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
-})
-
-describe('Review Your Order button', () => {
-  test('should be disabled if there is any error in billing address', () => {
-    // Arrange
-    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
-    const newCheckout = Object.assign({}, checkout, {
-      paymentMethod: {
-        ...checkout.paymentMethod,
-        collapsed: false
-      },
-      billingAddress: {
-        ...checkout.billingAddress,
-        errors: {
-          first_name: 'please fill the details'
-        }
-      }
-    })
-
-    // Act
-    /* eslint-disable no-unused-vars */
-    const wrapper = mount(
-      <CheckoutPage checkout={newCheckout} order={order} cart={cart} dispatch={dispatch} />
-    )
-    /* eslint-enable no-unused-vars */
-    // Assert
-    expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('button#review_order')).toBeDisabled()
-  })
-
-  test('should be disabled if there is any error in card details', () => {
-    // Arrange
-    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
-    const newCheckout = Object.assign({}, checkout, {
-      paymentMethod: {
-        ...checkout.paymentMethod,
-        collapsed: false
-      }
-    })
-
-    const newOrder = {
-      ...order,
-      cardErrors: true
-    }
-
-    // Act
-    /* eslint-disable no-unused-vars */
-    const wrapper = mount(
-      <CheckoutPage checkout={newCheckout} order={newOrder} cart={cart} dispatch={dispatch} />
-    )
-    /* eslint-enable no-unused-vars */
-    // Assert
-    expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('button#review_order')).toBeDisabled()
-  })
 })

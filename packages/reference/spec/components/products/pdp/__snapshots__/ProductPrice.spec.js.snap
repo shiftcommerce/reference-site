@@ -6,21 +6,21 @@ exports[`renders correctly if variants have different prices 1`] = `
     Array [
       Object {
         "price": "10.00",
-        "size": "Size 8",
         "sku": 1,
         "title": "Small",
+        "variant": "Size 8",
       },
       Object {
         "price": "11.00",
-        "size": "Size 10",
         "sku": 2,
         "title": "Medium",
+        "variant": "Size 10",
       },
       Object {
         "price": "12.00",
-        "size": "Size 12",
         "sku": 3,
         "title": "Large",
+        "variant": "Size 12",
       },
     ]
   }

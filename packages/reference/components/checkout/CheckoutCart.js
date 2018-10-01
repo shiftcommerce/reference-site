@@ -1,51 +1,31 @@
 // Libraries
 import { Component } from 'react'
+import Pluralize from 'react-pluralize'
 
-// Objects
-import Image from '../../objects/Image'
-import Link from 'next/link'
+// Lib
+import { fixedPrice } from '../../lib/fixedPrice'
+import { calculateCartSummary } from '../../lib/calculateCartSummary'
+
+// Components
+import LineItems from '../../components/cart/LineItems'
 
 export class CheckoutCart extends Component {
-  renderLineItems () {
-    return (
-      this.props.cart.lineItems.map((lineItem, index) =>
-        <div aria-label='Product' key={index} className='o-checkout-cart__product'>
-          <div className='o-checkout-cart__image'>
-            <Image src={lineItem.imageUrl} alt={lineItem.title} width={80} aria-label={lineItem.title} />
-          </div>
-
-          <ul className='o-checkout-cart__info'>
-            <li aria-label='Product title'>{ lineItem.title }</li>
-            <li aria-label='Quantity'>Qty: { lineItem.quantity }</li>
-            <li aria-label='Price'>Price: &pound;{ lineItem.price }</li>
-            <li aria-label='Subtotal'>Subtotal: &pound;{ lineItem.price * lineItem.quantity }</li>
-          </ul>
-        </div>
-      )
-    )
-  }
-
   render () {
-    const { title } = this.props
-    return (
-      <div aria-label='Cart items summary' className='o-checkout-cart'>
-        <div className='o-checkout-cart__header'>
-          <div>
-            <h2>{ title }</h2>
-          </div>
-
-          <div>
-            <Link href='/cart'>
-              <a aria-label='Edit your cart' className='o-button o-button--lrg'>Edit Cart</a>
-            </Link>
-          </div>
+    const { cart, checkout } = this.props
+    const totals = calculateCartSummary(cart, checkout)
+    return <>
+      <section className='c-cart-table__header'>
+        <div className='u-float--left'>
+          <h2 className='c-cart-table__title'> Your Shopping Basket <a className='c-cart-table__amount'>({cart.totalQuantity})</a> </h2>
+          <p className='c-cart-table__description'>You have <a>{cart.totalQuantity}</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
+          <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.totalQuantity} showCount={false} /> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> will be saved for 48 hours depending on availablility</p>
         </div>
-
-        <div className='o-checkout-cart__wrapper'>
-          { this.renderLineItems() }
+        <div className='u-float--right'>
+          <h4 className='c-cart-table__total'>&pound;{fixedPrice(totals.total)}</h4>
         </div>
-      </div>
-    )
+      </section>
+      <LineItems cart={cart} />
+    </>
   }
 }
 

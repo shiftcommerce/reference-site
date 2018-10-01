@@ -23,37 +23,41 @@ class StripePayment extends Component {
     const shippingAddress = checkout.shippingAddress
 
     return (
-      <div className='o-form__wrapper'>
-        <StripeWrapper
-          cardTokenRequested={order.cardTokenRequested}
-          onCardTokenReceived={onCardTokenReceived}
-          setCardErrors={setCardErrors}
-          checkout={checkout}
-        />
+      <div>
+        <div className='o-form__background'>
+          <div className='o-form__wrapper'>
+            <StripeWrapper
+              cardTokenRequested={order.cardTokenRequested}
+              onCardTokenReceived={onCardTokenReceived}
+              setCardErrors={setCardErrors}
+              checkout={checkout}
+            />
 
-        <div className='o-form__input-group'>
-          <label>Billing address *</label>
-        </div>
+            <div className='o-form__input-group'>
+              <label>Billing address *</label>
+            </div>
 
-        <Checkbox
-          type='checkbox'
-          label='Same as shipping address'
-          name='shippingAddressAsBillingAddress'
-          checked={!!checkout.shippingAddressAsBillingAddress}
-          formName={formName}
-          onChange={changeBillingAddress}
-          onBlur={onBlur}
-        />
+            <Checkbox
+              type='checkbox'
+              label='Same as shipping address'
+              name='shippingAddressAsBillingAddress'
+              checked={!!checkout.shippingAddressAsBillingAddress}
+              formName={formName}
+              onChange={changeBillingAddress}
+              onBlur={onBlur}
+            />
 
-        {checkout.shippingAddressAsBillingAddress &&
-          <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary'>
-            <h4>{`${shippingAddress.first_name} ${shippingAddress.last_name}`}</h4>
-            <p>{shippingAddress.line_1}</p>
-            <p>{shippingAddress.line_2}</p>
-            <p>{shippingAddress.city}</p>
-            <p>{shippingAddress.zipcode}</p>
+            {checkout.shippingAddressAsBillingAddress &&
+              <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary  c-payment-method__address-summary'>
+                <p className='u-bold'>{`${shippingAddress.first_name} ${shippingAddress.last_name}`}</p>
+                <p>{shippingAddress.line_1}</p>
+                <p>{shippingAddress.line_2}</p>
+                <p>{shippingAddress.city}</p>
+                <p>{shippingAddress.zipcode}</p>
+              </div>
+            }
           </div>
-        }
+        </div>
 
         {!(checkout.shippingAddressAsBillingAddress) &&
           <AddressForm
@@ -64,6 +68,7 @@ class StripePayment extends Component {
             addressType='billing'
             onChange={onChange}
             onBlur={onBlur}
+            className='o-form__billing'
             onShowField={onShowField}
             onToggleCollapsed={onToggleCollapsed}
           />

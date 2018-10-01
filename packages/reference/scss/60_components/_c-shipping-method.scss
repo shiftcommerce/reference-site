@@ -1,0 +1,131 @@
+$input-radio-size: 16px;
+$input-radio-spacing: 8px;
+
+.c-shipping-method {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  width: 95%;
+  margin: auto;
+
+  &__header {
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+
+    h2 {
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  &__summary {
+    font-size: 0.75rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-button {
+    background-color: $font-dark-grey;
+  }
+
+  &__radio {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+
+    &-input {
+      border: 0 !important;
+      clip: rect(0 0 0 0) !important;
+      height: 1px !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
+      white-space: nowrap !important;
+
+      &:checked+.c-shipping-method__radio-caption:before {
+        background-image: url('/static/radio.png');
+      }
+    }
+
+    &-caption {
+      margin-left: 15px;
+      position: absolute;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: $input-radio-spacing / 2;
+        margin-left: -($input-radio-size + $input-radio-spacing);
+        width: $input-radio-size;
+        height: $input-radio-size;
+        border: 1px solid;
+        background-size: 125%;
+        background-position: 50%;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &__list {
+    font-size: 0.7rem;
+    padding: 0;
+
+    &-header {
+      margin-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $border-divider;
+      font-size: 0.7rem;
+    }
+
+    &-item-count {
+      float: right;
+      margin-right: 10px;
+    }
+
+    &-input-group {
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-divider;
+      }
+
+      input {
+        float: left;
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+
+    &-title {
+      display: block;
+      font-weight: bold;
+      margin-left: 15px;
+      font-size: 0.8rem;
+    }
+
+    &-cost {
+      float: right;
+      line-height: 40px;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+
+    &-delivery-date-label {
+      display: inline;
+      font-weight: bold;
+      margin-left: 15px;
+      font-size: 0.6rem;
+    }
+    
+    &-delivery-date {
+      display: inline;
+      font-size: 0.6rem;
+    }
+  }
+}

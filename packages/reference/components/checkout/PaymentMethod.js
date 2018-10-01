@@ -16,8 +16,10 @@ export default class PaymentMethod extends Component {
     return (
       <Button
         aria-label='Edit your payment method'
+        className='o-form__header-button'
         label='Edit'
         size='lrg'
+        status='secondary'
         onClick={() => onToggleCollapsed('edit', formName)}
       />
     )
@@ -53,7 +55,7 @@ export default class PaymentMethod extends Component {
     const paymentMode = checkout.paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
 
     return (
-      <div className={classNames('o-form__wrapper', { 'o-form__error': order.paymentError !== null })}>
+      <div className={classNames('c-payment-method__summary', { 'o-form__error': order.paymentError !== null })}>
         <p>
           <span className='u-bold'> Payment Mode: </span>
           <span> { paymentMode } </span>
@@ -67,24 +69,12 @@ export default class PaymentMethod extends Component {
     )
   }
 
-  renderGiftCardSection () {
-    return (
-      <div aria-label='Use gift card or rewards code' className='o-form__wrapper'>
-        <p>
-          + Use a Gift Card / Rewards Code
-        </p>
-      </div>
-    )
-  }
-
   render () {
-    const {
-      checkout
-    } = this.props
-    const collapsed = checkout.paymentMethod.collapsed
+    const { checkout } = this.props
+    const { collapsed } = checkout.paymentMethod
     return (
-      <div aria-label='Payment method' className={classNames('o-form', { 'o-form__hidden': !checkout.shippingMethod.completed })}>
-        <div className='o-form__header'>
+      <div aria-label='Payment method' className={classNames('o-form  c-payment-method', { 'o-form__hidden': !checkout.shippingMethod.completed })}>
+        <div className='o-form__header  c-payment-method__header'>
           <div>
             <h2>Payment Method</h2>
           </div>
@@ -94,7 +84,6 @@ export default class PaymentMethod extends Component {
         </div>
         { collapsed && this.renderFormSummary() }
         { this.renderPaymentMethodSelector() }
-        { !collapsed && this.renderGiftCardSection() }
       </div>
     )
   }

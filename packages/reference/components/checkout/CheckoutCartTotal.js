@@ -1,8 +1,11 @@
 // Libraries
 import { Component } from 'react'
+import Sticky from 'react-stickyfill'
+import Link from 'next/link'
+
+// Lib
 import { calculateCartSummary } from '../../lib/calculateCartSummary'
 import { fixedPrice } from '../../lib/fixedPrice'
-import Sticky from 'react-stickyfill'
 
 // Objects
 import Button from '../../objects/Button'
@@ -10,13 +13,95 @@ import Button from '../../objects/Button'
 class CheckoutCartTotal extends Component {
   validOrder (checkout, order) {
     const checkoutSteps = [ 'shippingAddress', 'shippingMethod', 'paymentMethod' ]
+    const cardErrors = order.card_errors
     const allStepsCompleted = checkoutSteps.every((step) => (checkout[step].completed))
-    return allStepsCompleted
+
+    if (!cardErrors && allStepsCompleted) {
+      return allStepsCompleted
+    } else
+    return false
+  }
+
+  renderButtons () {
+    const { checkout, onClick, order } = this.props
+    const isValidOrder = this.validOrder(checkout, order)
+
+    if (checkout.currentStep === 3) {
+      return <>
+        <div className='c-cart-summary__buttons'>
+          <Link href='/'>
+            <Button
+              aria-label='Continue Shopping'
+              label='Continue shopping'
+              size='lrg'
+              className='c-cart-summary__buttons--continue'
+              type='button'
+            />
+          </Link>
+          <Button
+            aria-label='Review Order'
+            label='Review Your Order'
+            size='lrg'
+            className='c-cart-summary__buttons--proceed'
+            type='button'
+            onClick={onClick}
+          />
+        </div >
+      </>
+    } else if (checkout.currentStep === 4) {
+      return <>
+        <div className='c-cart-summary-buttons'>
+          <Link href='/'>
+            <Button
+              aria-label='Continue Shopping'
+              label='Continue shopping'
+              size='lrg'
+              className='c-cart-summary__buttons--continue'
+              type='button'
+            />
+          </Link>
+          <Button
+            aria-label='Place Order'
+            label='Place Order'
+            size='lrg'
+            className='c-cart-summary__buttons--proceed'
+            type='button'
+            id='place_order'
+            status={(isValidOrder ? 'primary' : 'disabled')}
+            disabled={!isValidOrder}
+            onClick={onClick}
+          />
+        </div >
+      </>
+    } else {
+      return <>
+        <div className='c-cart-summary-buttons'>
+          <Link href='/'>
+            <Button
+              aria-label='Continue Shopping'
+              label='Continue shopping'
+              size='lrg'
+              className='c-cart-summary__buttons--continue'
+              type='button'
+            />
+          </Link>
+          <Button
+            aria-label='Continue to Payment'
+            label='Continue to Payment'
+            size='lrg'
+            className='c-cart-summary__buttons--proceed'
+            type='button'
+            onClick={onClick}
+          />
+        </div >
+      </>
+    }
   }
 
   render () {
-    const { cart, checkout, convertToOrder, order } = this.props
+    const { cart, checkout, order } = this.props
     const totals = calculateCartSummary(cart, checkout)
+    
     let shippingText = ''
     if (!checkout.shippingAddress.completed) {
       shippingText = 'Enter address'
@@ -26,43 +111,31 @@ class CheckoutCartTotal extends Component {
       shippingText = `£${fixedPrice(totals.shipping)}`
     }
 
-    const isValidOrder = this.validOrder(checkout, order)
     return (
       <Sticky>
-        <div aria-label='Cart total summary' className='o-checkout-cart-total u-sticky'>
-          <div className='o-checkout-cart-total__wrapper'>
+        <div aria-label='Cart total summary' className='u-sticky  c-cart-summary'>
+          <div className=''>
             <dl aria-label='Subtotal'>
-              <dt> Subtotal: </dt>
+              <dt> Total Price: </dt>
               <dd> &pound;{ fixedPrice(totals.subTotal) } </dd>
             </dl>
-            <dl aria-label='VAT'>
-              <dt> VAT: </dt>
-              <dd> &pound;{ fixedPrice(totals.tax) } </dd>
-            </dl>
             <dl aria-label='Shipping cost'>
-              <dt> Shipping: </dt>
+              <dt> Shipping costs: </dt>
               <dd> {shippingText} </dd>
             </dl>
-            <dl aria-label='Total' className='o-checkout-cart-total__total'>
-              <dt> You Pay: </dt>
-              <dd> <b>&pound;{ fixedPrice(totals.total) }</b> </dd>
-              <div>
-                <Button
-                  aria-label='Place Order'
-                  label='Place Order'
-                  size='lrg'
-                  status={(isValidOrder ? 'primary' : 'disabled')}
-                  type='button'
-                  disabled={!isValidOrder}
-                  onClick={convertToOrder}
-                />
-              </div>
+            <dl aria-label='Total' className='u-bold'>
+              <dt> TOTAL: </dt>
+              <dd> &pound;{ fixedPrice(totals.total) } </dd>
+            </dl>
+            <dl>
+              <dt className='c-cart-summary__VAT'>* Including VAT</dt>
             </dl>
             {order.paymentError &&
               <div className='c-checkout-cart-total__payment-error'>{ order.paymentError }</div>
             }
           </div>
-        </div>
+        </div>  
+        { this.renderButtons() }
       </Sticky>
     )
   }

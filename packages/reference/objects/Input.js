@@ -75,8 +75,8 @@ class Input extends Component {
     const { name, label, required, type, labelClassName } = this.props
     return (
       <label htmlFor={name} className={`o-form__label ${labelClassName}`}>
-        {label}{required && ' *'}
-        {this.renderInputField()}
+        <b>{label} {required && ' *'}</b>
+        { this.renderInputField() }
         { type === 'password' && <>
           <span className='password__show' onClick={this.showHide}>
             {this.state.type === 'input' ? 'Hide' : 'Show'}

@@ -1,31 +1,70 @@
 // Libraries
 import { Component } from 'react'
+import Link from 'next/link'
+
+// Libs
 import { calculateCartSummary } from '../../lib/calculateCartSummary'
 import { fixedPrice } from '../../lib/fixedPrice'
 
+// Objects
+import Button from '../../objects/Button'
+
 class CartSummary extends Component {
+  shippingText () {
+    if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
+      //TODO: make this dynamic in future
+      return <>
+        <a>Estimated shipping cost: &pound;3.45</a>
+      </>
+    } else {
+      return <>
+         <a>Shipping cost:</a>
+       </>
+    }
+  }
+  
   render () {
     const totals = calculateCartSummary(this.props.cart)
 
     return (
+      <>
       <section className='c-cart-summary'>
         <dl>
-          <dt> Sub total: </dt>
-          <dd> &pound;{ fixedPrice(totals.subTotal) } </dd>
+          <dt><a>Total Price:</a></dt>
+          <dd><a>&pound;{fixedPrice(totals.subTotal)}</a></dd>
         </dl>
         <dl>
-          <dt> Tax applied: </dt>
-          <dd className='u-text-color--red'> +&pound;{ fixedPrice(totals.tax) } </dd>
+          <dt>{ this.shippingText() }</dt>
         </dl>
         <dl>
-          <dt> Amount you saved on this purchase: </dt>
-          <dd className='u-text-color--green'> -&pound;{ fixedPrice(totals.discount) } </dd>
+          <dt><a className='u-bold'>TOTAL:</a></dt>
+            <dd><a className='u-bold'>&pound;{fixedPrice(totals.total)}</a></dd>
         </dl>
         <dl>
-          <dt> Total amount to be paid: </dt>
-          <dd> <b>&pound;{ fixedPrice(totals.total) }</b> </dd>
+          <a>* Including VAT</a>
         </dl>
       </section>
+      <section className='c-cart-summary__buttons'>
+        <Button
+          aria-label='Continue Shopping'
+          label='Continue shopping'
+          size='lrg'
+          status='grey'
+          className='c-cart-summary__buttons--continue'
+          type='button'
+        />
+        <Link href='/checkout' as=''>
+          <Button
+            aria-label='Place Order'
+            label='Continue to payment'
+            size='lrg'
+            className='c-cart-summary__buttons--proceed'
+            status='positive'
+            type='button'
+          />
+        </Link>
+      </section>
+      </>
     )
   }
 }

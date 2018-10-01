@@ -34,11 +34,12 @@ $input-checkbox-spacing: 8px;
     &-button {
       width: 60px;
       padding: 5px;
+      border: none;
     }
   }
 
   &__background {
-    background-color: $form-grey;
+    background-color: $light-grey;
   }
 
   &__billing {
@@ -49,7 +50,7 @@ $input-checkbox-spacing: 8px;
     padding: 10px;
 
     &--collapsed {
-      padding-bottom: 20px;
+      padding-bottom: 1rem;
       font-size: 0.8rem;
       border-bottom: 1px solid #eee;
       width: 95%;
@@ -109,7 +110,7 @@ $input-checkbox-spacing: 8px;
     margin-bottom: 10px;
 
     &:checked+.o-form__checkbox-caption:before {
-      background-image: url('/static/check.png');
+      background-image: url('/static/tick.png');
       background-size: contain;
     }
 
@@ -150,7 +151,7 @@ $input-checkbox-spacing: 8px;
   }
 
   &__input-field {
-    margin: 10px 0;
+    margin: 0.65em 0;
     display: block;
     padding: .5rem .75rem;
     font-size: 1rem;
@@ -163,7 +164,7 @@ $input-checkbox-spacing: 8px;
     &__error {
       color: $text-error;
       border-color: $border-error;
-      background-color: $form-grey;
+      background-color: $light-grey;
       margin-bottom: 10px;
 
       &::first-letter  {

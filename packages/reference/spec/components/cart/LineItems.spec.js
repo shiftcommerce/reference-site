@@ -13,8 +13,12 @@ test('renders line items correctly, on initial load', () => {
         discount: 0,
         quantity: 2,
         sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
+        imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
+        size: 'size - 8',
+        stockAvailableLevel: '1000',
+        variant: '38 Waist 31 Leg',
+        canonicalPath: '1',
+        slug: '1'
       }
     ]
   }
@@ -22,7 +26,7 @@ test('renders line items correctly, on initial load', () => {
   const updateQuantity = () => {}
 
   // act
-  const wrapper = mount(
+  const wrapper = shallow(
     <LineItems cart={cart} updateQuantity={updateQuantity} />
   )
 
@@ -33,7 +37,7 @@ test('renders line items correctly, on initial load', () => {
   expect(wrapper).toContainReact(<Image src={lineItem.imageUrl} alt={lineItem.title} className='c-line-items__image' aria-label={lineItem.title} />)
   expect(wrapper.find('select').props().value).toBe(lineItem.quantity)
   expect(wrapper).toIncludeText(lineItem.sku)
-  expect(wrapper).toIncludeText(lineItem.size)
+  expect(wrapper).toIncludeText(lineItem.variant)
   expect(wrapper).toIncludeText((lineItem.price * lineItem.quantity) - (lineItem.discount))
 })
 
@@ -47,8 +51,12 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
         discount: 0,
         quantity: 2,
         sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
+        imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
+        size: 'size - 8',
+        stockAvailableLevel: '1000',
+        variant: '38 Waist 31 Leg',
+        canonicalPath: '1',
+        slug: '1'
       }
     ]
   }

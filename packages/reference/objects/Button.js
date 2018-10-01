@@ -10,6 +10,7 @@ class Button extends Component {
       size,
       disabled,
       className,
+      onClick,
       ...otherProps
     } = this.props
 
@@ -23,6 +24,7 @@ class Button extends Component {
         tabIndex='0'
         role='button'
         disabled={disabled}
+        onClick={onClick}
         {...otherProps}
       >
         { label }

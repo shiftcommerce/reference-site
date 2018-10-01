@@ -24,51 +24,95 @@ exports[`renders correct values when line items are available 1`] = `
   >
     <dl>
       <dt>
-         Sub total: 
+        <a>
+          Total Price:
+        </a>
       </dt>
       <dd>
-         £
-        20.00
-         
+        <a>
+          £
+          20.00
+        </a>
       </dd>
     </dl>
     <dl>
       <dt>
-         Tax applied: 
+        <a>
+          Estimated shipping cost: £3.45
+        </a>
       </dt>
-      <dd
-        className="u-text-color--red"
-      >
-         +£
-        0.00
-         
-      </dd>
     </dl>
     <dl>
       <dt>
-         Amount you saved on this purchase: 
-      </dt>
-      <dd
-        className="u-text-color--green"
-      >
-         -£
-        4.00
-         
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-         Total amount to be paid: 
+        <a
+          className="u-bold"
+        >
+          TOTAL:
+        </a>
       </dt>
       <dd>
-         
-        <b>
+        <a
+          className="u-bold"
+        >
           £
           16.00
-        </b>
-         
+        </a>
       </dd>
     </dl>
+    <dl>
+      <a>
+        * Including VAT
+      </a>
+    </dl>
+  </section>
+  <section
+    className="c-cart-summary__buttons"
+  >
+    <Button
+      aria-label="Continue Shopping"
+      className="c-cart-summary__buttons--continue"
+      label="Continue shopping"
+      size="lrg"
+      status="grey"
+      type="button"
+    >
+      <button
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+        disabled={false}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Continue shopping
+      </button>
+    </Button>
+    <Link
+      as=""
+      href="/checkout"
+    >
+      <Button
+        aria-label="Place Order"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to payment"
+        onClick={[Function]}
+        size="lrg"
+        status="positive"
+        type="button"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+          disabled={false}
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to payment
+        </button>
+      </Button>
+    </Link>
   </section>
 </CartSummary>
 `;
@@ -86,51 +130,95 @@ exports[`renders correct values when no line items are available 1`] = `
   >
     <dl>
       <dt>
-         Sub total: 
+        <a>
+          Total Price:
+        </a>
       </dt>
       <dd>
-         £
-        0.00
-         
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-         Tax applied: 
-      </dt>
-      <dd
-        className="u-text-color--red"
-      >
-         +£
-        0.00
-         
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-         Amount you saved on this purchase: 
-      </dt>
-      <dd
-        className="u-text-color--green"
-      >
-         -£
-        0.00
-         
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-         Total amount to be paid: 
-      </dt>
-      <dd>
-         
-        <b>
+        <a>
           £
           0.00
-        </b>
-         
+        </a>
       </dd>
     </dl>
+    <dl>
+      <dt>
+        <a>
+          Estimated shipping cost: £3.45
+        </a>
+      </dt>
+    </dl>
+    <dl>
+      <dt>
+        <a
+          className="u-bold"
+        >
+          TOTAL:
+        </a>
+      </dt>
+      <dd>
+        <a
+          className="u-bold"
+        >
+          £
+          0.00
+        </a>
+      </dd>
+    </dl>
+    <dl>
+      <a>
+        * Including VAT
+      </a>
+    </dl>
+  </section>
+  <section
+    className="c-cart-summary__buttons"
+  >
+    <Button
+      aria-label="Continue Shopping"
+      className="c-cart-summary__buttons--continue"
+      label="Continue shopping"
+      size="lrg"
+      status="grey"
+      type="button"
+    >
+      <button
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+        disabled={false}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Continue shopping
+      </button>
+    </Button>
+    <Link
+      as=""
+      href="/checkout"
+    >
+      <Button
+        aria-label="Place Order"
+        className="c-cart-summary__buttons--proceed"
+        label="Continue to payment"
+        onClick={[Function]}
+        size="lrg"
+        status="positive"
+        type="button"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+          disabled={false}
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to payment
+        </button>
+      </Button>
+    </Link>
   </section>
 </CartSummary>
 `;

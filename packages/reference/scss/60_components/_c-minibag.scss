@@ -17,12 +17,16 @@
     }
 
     &-count {
-      background-color: $background-orange;
+      display: block;
+      background-color: $background-positive;
       border-radius: 50%;
       color: white;
       font-size: 0.6em;
-      padding: 0.4em;
-      margin-left: 0.4rem;
+      margin-left: 0.4em;
+      padding-top: 0.4em;
+      text-align: center;
+      width: 18px;
+      height: 18px;
 
       @include breakpoint(desktop) {
         background-color: transparent;

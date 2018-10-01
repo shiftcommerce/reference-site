@@ -105,7 +105,7 @@
     &-footer {
 
       &-email {
-        background-color: $background-orange;
+        background-color: $background-positive;
         padding-bottom: 0.2em;
 
         @include breakpoint(desktop) {

@@ -3,7 +3,10 @@ import CheckoutCartTotal from '../../../components/checkout/CheckoutCartTotal'
 
 // Fixtures
 import { shippingMethods } from '../../../static/shippingMethods.json'
+import checkout from '../../fixtures/checkout.fixture'
+import order from '../../fixtures/order.fixture'
 
+// Lib
 import { fixedPrice } from '../../../lib/fixedPrice'
 
 test('renders the correct checkout cart total with single line item', () => {
@@ -35,10 +38,9 @@ test('renders the correct checkout cart total with single line item', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Subtotal:  £20')
-  expect(wrapper).toIncludeText('VAT:  £0')
-  expect(wrapper).toIncludeText('Shipping:  Enter address')
-  expect(wrapper).toIncludeText('You Pay:  £20')
+  expect(wrapper).toIncludeText('Total Price:  £20')
+  expect(wrapper).toIncludeText('Shipping costs:  Enter address')
+  expect(wrapper).toIncludeText('TOTAL:  £20')
 })
 
 test('renders the correct checkout cart total with multiple line items', () => {
@@ -74,10 +76,9 @@ test('renders the correct checkout cart total with multiple line items', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Subtotal:  £25')
-  expect(wrapper).toIncludeText('VAT:  £0')
-  expect(wrapper).toIncludeText('Shipping:  Enter address')
-  expect(wrapper).toIncludeText('You Pay:  £25')
+  expect(wrapper).toIncludeText('Total Price:  £25')
+  expect(wrapper).toIncludeText('Shipping costs:  Enter address')
+  expect(wrapper).toIncludeText('TOTAL:  £25')
 })
 
 test('renders the correct checkout cart costs with shipping address completed', () => {
@@ -115,10 +116,9 @@ test('renders the correct checkout cart costs with shipping address completed', 
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Subtotal:  £25')
-  expect(wrapper).toIncludeText('VAT:  £0')
-  expect(wrapper).toIncludeText('Shipping:  Select shipping method')
-  expect(wrapper).toIncludeText('You Pay:  £25')
+  expect(wrapper).toIncludeText('Total Price:  £25')
+  expect(wrapper).toIncludeText('Shipping costs:  Select shipping method')
+  expect(wrapper).toIncludeText('TOTAL:  £25')
 })
 
 test('renders the correct checkout cart costs with shipping method selected', () => {
@@ -156,10 +156,9 @@ test('renders the correct checkout cart costs with shipping method selected', ()
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Subtotal:  £25')
-  expect(wrapper).toIncludeText('VAT:  £0')
-  expect(wrapper).toIncludeText('Shipping:  £3.45')
-  expect(wrapper).toIncludeText('You Pay:  £28.45')
+  expect(wrapper).toIncludeText('Total Price:  £25')
+  expect(wrapper).toIncludeText('Shipping costs:  £3.45')
+  expect(wrapper).toIncludeText('TOTAL:  £28.45')
 })
 
 test('renders payment errors', () => {
@@ -194,4 +193,95 @@ test('renders payment errors', () => {
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Payment authentication failed')
+})
+
+describe('Place Order button', () => {
+  test('should be disabled if there is any error in billing address', () => {
+    // Arrange
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const newCheckout = Object.assign({}, checkout, {
+      paymentMethod: {
+        ...checkout.paymentMethod,
+        collapsed: false
+      },
+      billingAddress: {
+        ...checkout.billingAddress,
+        errors: {
+          first_name: 'please fill the details'
+        }
+      },
+      currentStep: 4
+    })
+
+    const cart = {
+      lineItems: [
+        {
+          title: 'Test Product',
+          price: fixedPrice(10.0),
+          discount: 0,
+          quantity: 2
+        },
+        {
+          title: 'Pretend Product',
+          price: fixedPrice(5.0),
+          discount: 0,
+          quantity: 1
+        }
+      ]
+    }
+
+    // Act
+    /* eslint-disable no-unused-vars */
+    const wrapper = mount(
+      <CheckoutCartTotal checkout={newCheckout} order={order} cart={cart} dispatch={dispatch} />
+    )
+    /* eslint-enable no-unused-vars */
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('button#place_order')).toBeDisabled()
+  })
+
+  test('should be disabled if there is any error in card details', () => {
+    // Arrange
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const newCheckout = Object.assign({}, checkout, {
+      paymentMethod: {
+        ...checkout.paymentMethod,
+        collapsed: false
+      },
+      currentStep: 4
+    })
+
+    const newOrder = {
+      ...order,
+      cardErrors: true
+    }
+
+    const cart = {
+      lineItems: [
+        {
+          title: 'Test Product',
+          price: fixedPrice(10.0),
+          discount: 0,
+          quantity: 2
+        },
+        {
+          title: 'Pretend Product',
+          price: fixedPrice(5.0),
+          discount: 0,
+          quantity: 1
+        }
+      ]
+    }
+
+    // Act
+    /* eslint-disable no-unused-vars */
+    const wrapper = mount(
+      <CheckoutCartTotal checkout={newCheckout} order={newOrder} cart={cart} dispatch={dispatch} />
+    )
+    /* eslint-enable no-unused-vars */
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('button#place_order')).toBeDisabled()
+  })
 })

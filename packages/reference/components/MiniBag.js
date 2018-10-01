@@ -18,7 +18,7 @@ export class MiniBag extends Component {
         <div className='c-minibag__cart'>
           <a aria-label='View your cart'>
             <span className='c-minibag__cart-count' >
-              ({ lineItemCount })
+              { lineItemCount }
             </span>
           </a>
           <div className='c-minibag__cart-label--small'>

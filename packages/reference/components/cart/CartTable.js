@@ -1,5 +1,10 @@
 // Libraries
 import { Component } from 'react'
+import Pluralize from 'react-pluralize'
+
+// Lib
+import { fixedPrice } from '../../lib/fixedPrice'
+import { calculateCartSummary } from '../../lib/calculateCartSummary'
 
 // Components
 import LineItems from './LineItems'
@@ -19,20 +24,22 @@ class CartTable extends Component {
       </section>
     }
   }
+
   render () {
-    const {
-      cart
-    } = this.props
-    const itemsKey = cart.totalQuantity === 1 ? 'item' : 'items'
+    const { cart } = this.props
+
+    const totals = calculateCartSummary(cart)
 
     return (
-      <section>
+      <section className='c-cart-table c-cart-table--margin'>
         <section className='c-cart-table__header'>
           <div className='u-float--left'>
-            <h1> My Bag </h1>
+            <h1 className='c-cart-table__title'> Your Shopping Basket <a className='c-cart-table__amount'>({ cart.totalQuantity })</a> </h1>
+            <p className='c-cart-table__description'>You have <a>{cart.totalQuantity}</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
+            <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.totalQuantity} showCount={false} /> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> will be saved for 48 hours depending on availablility</p>
           </div>
-          <div className='u-float--right'>
-            <h4> <b>{ cart.totalQuantity } { itemsKey }</b> in your bag </h4>
+          <div>
+            <h4 className='c-cart-table__total'>&pound;{ fixedPrice(totals.total) }</h4>
           </div>
         </section>
         { this.renderCartData() }

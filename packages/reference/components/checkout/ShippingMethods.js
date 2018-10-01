@@ -44,13 +44,11 @@ export default class ShippingMethods extends Component {
   }
 
   renderFormHeader () {
-    const { checkout, formName, onToggleCollapsed } = this.props
-    const collapsed = checkout.shippingMethod.collapsed
+    const { checkout, onToggleCollapsed, formName } = this.props
+    const { collapsed } = checkout.shippingMethod
     return (
-      <div className='o-form__header'>
-        <div>
-          <h2>Your Shipping Method</h2>
-        </div>
+      <div className='o-form__header c-shipping-method__header'>
+        <h2>Your Shipping Method</h2>
 
         <div>
           { collapsed &&
@@ -58,6 +56,8 @@ export default class ShippingMethods extends Component {
               aria-label='Edit your shipping method'
               label='Edit'
               size='lrg'
+              status='secondary'
+              className='o-form__header-button'
               onClick={() => onToggleCollapsed('edit', formName)}
             />
           }
@@ -73,7 +73,7 @@ export default class ShippingMethods extends Component {
     return (
       <div>
         { collapsed &&
-          <div className='o-form__wrapper'>
+          <div className='c-shipping-method__summary'>
             <p className='u-bold'>{ selectedShippingMethod.name }</p>
             <p><span className='u-bold'>Estimated Delivery</span>: { selectedShippingMethod.delivery_date }</p>
           </div>
@@ -84,7 +84,7 @@ export default class ShippingMethods extends Component {
 
   renderForm () {
     const { checkout, cart, formName, onToggleCollapsed } = this.props
-    const collapsed = checkout.shippingMethod.collapsed
+    const { collapsed } = checkout.shippingMethod
     const itemCount = cart.totalQuantity
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
 
@@ -92,16 +92,15 @@ export default class ShippingMethods extends Component {
       <div>
         { !collapsed &&
           <form className='o-form__wrapper c-shipping-method-list'>
-            <div className='c-shipping-method-list__header u-bold'>
-              📍 Shipping from ...
-              <span className='c-shipping-method-list__item-count'>
+            <div className='c-shipping-method__list-header'>
+              Shipping from ...
+              <span className='c-shipping-method__list-item-count'>
                 { itemCountText }
               </span>
             </div>
             <div>
               { this.renderShippingMethods() }
             </div>
-
             <div className='o-form__input-group'>
               <Button
                 aria-label='Continue to payment'
@@ -123,17 +122,18 @@ export default class ShippingMethods extends Component {
     const selectedShippingMethod = this.state.selectedShippingMethod
 
     const shippingMethodsOutput = shippingMethods.map((method) =>
-      <div className='o-form__input-group c-shipping-method-list__input-group'
+      <div className='o-form__input-group c-shipping-method__list-input-group'
         key={method.id} onClick={() => this.setShippingMethod(method)}
         aria-label={method.sku}>
-        <input id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
-          name='shipping_method'
-          checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
-        <label htmlFor={method.sku}>
-          <span className='c-shipping-method-list__cost'>&pound;{ fixedPrice(method.retail_price_inc_tax) }</span>
-          <span className='c-shipping-method-list__title'>{ method.name }</span>
-          <span className='c-shipping-method-list__delivery-date-label'>Estimated Delivery: </span>
-          <span className='c-shipping-method-list__delivery-date'>{ method.delivery_date }</span>
+        <label htmlFor={method.sku} className='c-shipping-method__radio'>
+          <input className='c-shipping-method__radio-input' id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
+            name='shipping_method'
+            checked={method.id === selectedShippingMethod.id} onChange={() => this.setShippingMethod(method)} />
+          <span className='c-shipping-method__radio-caption' />
+          <span className='c-shipping-method__list-cost'>&pound;{ fixedPrice(method.retail_price_inc_tax) }</span>
+          <span className='c-shipping-method__list-title'>{ method.name }</span>
+          <span className='c-shipping-method__list-delivery-date-label'>Estimated Delivery: </span>
+          <span className='c-shipping-method__list-delivery-date'>{ method.delivery_date }</span>
         </label>
       </div>
     )
@@ -142,12 +142,10 @@ export default class ShippingMethods extends Component {
   }
 
   render () {
-    const {
-      checkout
-    } = this.props
+    const { checkout } = this.props
 
     return (
-      <div aria-label='Shipping Methods' className={classNames('o-form', { 'o-form__hidden': !checkout.shippingAddress.completed })}>
+      <div aria-label='Shipping Methods' className={classNames('c-shipping-method', { 'o-form__hidden': !checkout.shippingAddress.completed })}>
         { this.renderFormHeader() }
         { this.renderFormSummary() }
         { this.renderForm() }

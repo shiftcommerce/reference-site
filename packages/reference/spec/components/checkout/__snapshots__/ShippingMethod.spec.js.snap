@@ -81,16 +81,14 @@ exports[`display pre selected shipping method as selected option on page load 1`
 >
   <div
     aria-label="Shipping Methods"
-    className="o-form"
+    className="c-shipping-method"
   >
     <div
-      className="o-form__header"
+      className="o-form__header c-shipping-method__header"
     >
-      <div>
-        <h2>
-          Your Shipping Method
-        </h2>
-      </div>
+      <h2>
+        Your Shipping Method
+      </h2>
       <div />
     </div>
     <div />
@@ -99,11 +97,11 @@ exports[`display pre selected shipping method as selected option on page load 1`
         className="o-form__wrapper c-shipping-method-list"
       >
         <div
-          className="c-shipping-method-list__header u-bold"
+          className="c-shipping-method__list-header"
         >
-          📍 Shipping from ...
+          Shipping from ...
           <span
-            className="c-shipping-method-list__item-count"
+            className="c-shipping-method__list-item-count"
           >
             undefined items
           </span>
@@ -111,39 +109,44 @@ exports[`display pre selected shipping method as selected option on page load 1`
         <div>
           <div
             aria-label="super_saver"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="1"
             onClick={[Function]}
           >
-            <input
-              checked={true}
-              id="super_saver_1"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="super_saver"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="super_saver"
             >
+              <input
+                checked={true}
+                className="c-shipping-method__radio-input"
+                id="super_saver_1"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="super_saver"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 3.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 Super Saver
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -151,39 +154,44 @@ exports[`display pre selected shipping method as selected option on page load 1`
           </div>
           <div
             aria-label="ups_next_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="2"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_2"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_2"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 5.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -191,39 +199,44 @@ exports[`display pre selected shipping method as selected option on page load 1`
           </div>
           <div
             aria-label="ups_next_day_before_noon"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="3"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_before_noon_3"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day_before_noon"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day_before_noon"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_before_noon_3"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day_before_noon"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day Before Noon
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -231,39 +244,44 @@ exports[`display pre selected shipping method as selected option on page load 1`
           </div>
           <div
             aria-label="ups_same_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="4"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_same_day_4"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_same_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_same_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_same_day_4"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_same_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Same Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -335,26 +353,26 @@ exports[`render collapsed view as expected 1`] = `
 >
   <div
     aria-label="Shipping Methods"
-    className="o-form"
+    className="c-shipping-method"
   >
     <div
-      className="o-form__header"
+      className="o-form__header c-shipping-method__header"
     >
-      <div>
-        <h2>
-          Your Shipping Method
-        </h2>
-      </div>
+      <h2>
+        Your Shipping Method
+      </h2>
       <div>
         <Button
           aria-label="Edit your shipping method"
+          className="o-form__header-button"
           label="Edit"
           onClick={[Function]}
           size="lrg"
+          status="secondary"
         >
           <button
             aria-label="Edit your shipping method"
-            className="o-button o-button--primary o-button--lrg"
+            className="o-form__header-button o-button o-button--secondary o-button--lrg"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -367,7 +385,7 @@ exports[`render collapsed view as expected 1`] = `
     </div>
     <div>
       <div
-        className="o-form__wrapper"
+        className="c-shipping-method__summary"
       >
         <p
           className="u-bold"
@@ -466,16 +484,14 @@ exports[`render shipping methods as expected 1`] = `
 >
   <div
     aria-label="Shipping Methods"
-    className="o-form"
+    className="c-shipping-method"
   >
     <div
-      className="o-form__header"
+      className="o-form__header c-shipping-method__header"
     >
-      <div>
-        <h2>
-          Your Shipping Method
-        </h2>
-      </div>
+      <h2>
+        Your Shipping Method
+      </h2>
       <div />
     </div>
     <div />
@@ -484,11 +500,11 @@ exports[`render shipping methods as expected 1`] = `
         className="o-form__wrapper c-shipping-method-list"
       >
         <div
-          className="c-shipping-method-list__header u-bold"
+          className="c-shipping-method__list-header"
         >
-          📍 Shipping from ...
+          Shipping from ...
           <span
-            className="c-shipping-method-list__item-count"
+            className="c-shipping-method__list-item-count"
           >
             1 item
           </span>
@@ -496,39 +512,44 @@ exports[`render shipping methods as expected 1`] = `
         <div>
           <div
             aria-label="super_saver"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="1"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="super_saver_1"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="super_saver"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="super_saver"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="super_saver_1"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="super_saver"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 3.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 Super Saver
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -536,39 +557,44 @@ exports[`render shipping methods as expected 1`] = `
           </div>
           <div
             aria-label="ups_next_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="2"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_2"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_2"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 5.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -576,39 +602,44 @@ exports[`render shipping methods as expected 1`] = `
           </div>
           <div
             aria-label="ups_next_day_before_noon"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="3"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_before_noon_3"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day_before_noon"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day_before_noon"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_before_noon_3"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day_before_noon"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day Before Noon
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -616,39 +647,44 @@ exports[`render shipping methods as expected 1`] = `
           </div>
           <div
             aria-label="ups_same_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="4"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_same_day_4"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_same_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_same_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_same_day_4"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_same_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Same Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -758,16 +794,14 @@ exports[`renders line item quantity as expected 1`] = `
 >
   <div
     aria-label="Shipping Methods"
-    className="o-form"
+    className="c-shipping-method"
   >
     <div
-      className="o-form__header"
+      className="o-form__header c-shipping-method__header"
     >
-      <div>
-        <h2>
-          Your Shipping Method
-        </h2>
-      </div>
+      <h2>
+        Your Shipping Method
+      </h2>
       <div />
     </div>
     <div />
@@ -776,11 +810,11 @@ exports[`renders line item quantity as expected 1`] = `
         className="o-form__wrapper c-shipping-method-list"
       >
         <div
-          className="c-shipping-method-list__header u-bold"
+          className="c-shipping-method__list-header"
         >
-          📍 Shipping from ...
+          Shipping from ...
           <span
-            className="c-shipping-method-list__item-count"
+            className="c-shipping-method__list-item-count"
           >
             0 items
           </span>
@@ -788,39 +822,44 @@ exports[`renders line item quantity as expected 1`] = `
         <div>
           <div
             aria-label="super_saver"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="1"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="super_saver_1"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="super_saver"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="super_saver"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="super_saver_1"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="super_saver"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 3.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 Super Saver
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -828,39 +867,44 @@ exports[`renders line item quantity as expected 1`] = `
           </div>
           <div
             aria-label="ups_next_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="2"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_2"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_2"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 5.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -868,39 +912,44 @@ exports[`renders line item quantity as expected 1`] = `
           </div>
           <div
             aria-label="ups_next_day_before_noon"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="3"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_before_noon_3"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day_before_noon"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day_before_noon"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_before_noon_3"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day_before_noon"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day Before Noon
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -908,39 +957,44 @@ exports[`renders line item quantity as expected 1`] = `
           </div>
           <div
             aria-label="ups_same_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="4"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_same_day_4"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_same_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_same_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_same_day_4"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_same_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Same Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -1050,16 +1104,14 @@ exports[`should be able to select a shipping method 1`] = `
 >
   <div
     aria-label="Shipping Methods"
-    className="o-form"
+    className="c-shipping-method"
   >
     <div
-      className="o-form__header"
+      className="o-form__header c-shipping-method__header"
     >
-      <div>
-        <h2>
-          Your Shipping Method
-        </h2>
-      </div>
+      <h2>
+        Your Shipping Method
+      </h2>
       <div />
     </div>
     <div />
@@ -1068,11 +1120,11 @@ exports[`should be able to select a shipping method 1`] = `
         className="o-form__wrapper c-shipping-method-list"
       >
         <div
-          className="c-shipping-method-list__header u-bold"
+          className="c-shipping-method__list-header"
         >
-          📍 Shipping from ...
+          Shipping from ...
           <span
-            className="c-shipping-method-list__item-count"
+            className="c-shipping-method__list-item-count"
           >
             undefined items
           </span>
@@ -1080,39 +1132,44 @@ exports[`should be able to select a shipping method 1`] = `
         <div>
           <div
             aria-label="super_saver"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="1"
             onClick={[Function]}
           >
-            <input
-              checked={true}
-              id="super_saver_1"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="super_saver"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="super_saver"
             >
+              <input
+                checked={true}
+                className="c-shipping-method__radio-input"
+                id="super_saver_1"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="super_saver"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 3.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 Super Saver
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -1120,39 +1177,44 @@ exports[`should be able to select a shipping method 1`] = `
           </div>
           <div
             aria-label="ups_next_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="2"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_2"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_2"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 5.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -1160,39 +1222,44 @@ exports[`should be able to select a shipping method 1`] = `
           </div>
           <div
             aria-label="ups_next_day_before_noon"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="3"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_next_day_before_noon_3"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_next_day_before_noon"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_next_day_before_noon"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_next_day_before_noon_3"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_next_day_before_noon"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Next Day Before Noon
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>
@@ -1200,39 +1267,44 @@ exports[`should be able to select a shipping method 1`] = `
           </div>
           <div
             aria-label="ups_same_day"
-            className="o-form__input-group c-shipping-method-list__input-group"
+            className="o-form__input-group c-shipping-method__list-input-group"
             key="4"
             onClick={[Function]}
           >
-            <input
-              checked={false}
-              id="ups_same_day_4"
-              name="shipping_method"
-              onChange={[Function]}
-              type="radio"
-              value="ups_same_day"
-            />
             <label
+              className="c-shipping-method__radio"
               htmlFor="ups_same_day"
             >
+              <input
+                checked={false}
+                className="c-shipping-method__radio-input"
+                id="ups_same_day_4"
+                name="shipping_method"
+                onChange={[Function]}
+                type="radio"
+                value="ups_same_day"
+              />
               <span
-                className="c-shipping-method-list__cost"
+                className="c-shipping-method__radio-caption"
+              />
+              <span
+                className="c-shipping-method__list-cost"
               >
                 £
                 8.45
               </span>
               <span
-                className="c-shipping-method-list__title"
+                className="c-shipping-method__list-title"
               >
                 UPS Same Day
               </span>
               <span
-                className="c-shipping-method-list__delivery-date-label"
+                className="c-shipping-method__list-delivery-date-label"
               >
                 Estimated Delivery: 
               </span>
               <span
-                className="c-shipping-method-list__delivery-date"
+                className="c-shipping-method__list-delivery-date"
               >
                 Sunday 2nd December
               </span>

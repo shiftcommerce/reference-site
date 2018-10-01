@@ -1,62 +1,76 @@
+// Components
 import CheckoutCart from '../../../components/checkout/CheckoutCart'
 
+// Lib 
 import { fixedPrice } from '../../../lib/fixedPrice'
 
-test('renders the correct checkout cart summary with single line item', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
-  }
+describe('Checkout Cart', () => {
+  test('renders the correct cart summary with single line item', () => {
+    // arrange
+    const cart = {
+      lineItems: [
+        {
+          title: 'Test Product',
+          price: fixedPrice(10.0),
+          discount: 0,
+          quantity: 2,
+          sku: '123',
+          imageUrl: '',
+          size: 'size - 8',
+          stockAvailableLevel: '1000',
+          variant: '38 Waist 31 Leg',
+          slug: '1',
+          canonical_path: '1'
+        }
+      ]
+    }
 
-  // act
-  const wrapper = mount(
-    <CheckoutCart cart={cart} title='Checkout Cart Summary' />
-  )
+    // act
+    const wrapper = mount(
+      <CheckoutCart cart={cart} />
+    )
 
-  // assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Checkout Cart Summary')
-  expect(wrapper).toIncludeText('Test Product')
-  expect(wrapper).toIncludeText('Qty: 2')
-  expect(wrapper).toIncludeText('Price: £10')
-  expect(wrapper).toIncludeText('Subtotal: £20')
-})
-test('renders the correct checkout cart summary with multiple line items', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2
-      },
-      {
-        title: 'Pretend Product',
-        price: fixedPrice(5.0),
-        discount: 0,
-        quantity: 1
-      }
-    ]
-  }
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('h4.c-line-items__details-title')).toIncludeText('Test Product')
+    expect(wrapper.find('div.c-line-items__total-wrapper')).toIncludeText('£20')
+  })
 
-  // act
-  const wrapper = mount(
-    <CheckoutCart cart={cart} />
-  )
+  test('renders the correct cart summary with multiple line items', () => {
+    // arrange
+    const cart = {
+      lineItems: [
+        {
+          title: 'Test Product',
+          price: fixedPrice(10.0),
+          discount: 0,
+          quantity: 2,
+          stockAvailableLevel: '1000',
+          variant: '38 Waist 31 Leg',
+          slug: '1',
+          canonical_path: '1'
+        },
+        {
+          title: 'Pretend Product',
+          price: fixedPrice(5.0),
+          discount: 0,
+          quantity: 1,
+          stockAvailableLevel: '1000',
+          variant: '38 Waist 31 Leg',
+          slug: '1',
+          canonical_path: '1'
+        }
+      ]
+    }
 
-  // assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Test Product')
-  expect(wrapper).toIncludeText('Pretend Product')
+    // act
+    const wrapper = mount(
+      <CheckoutCart cart={cart} />
+    )
+
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('div.c-line-items')).toIncludeText('Test Product')
+    expect(wrapper.find('div.c-line-items')).toIncludeText('Pretend Product')
+  })
 })
