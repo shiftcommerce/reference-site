@@ -24,7 +24,7 @@ export class CheckoutCart extends Component {
           <h4 className='c-cart-table__total'>&pound;{fixedPrice(totals.total)}</h4>
         </div>
       </section>
-      <LineItems cart={cart} />
+      <LineItems cart={cart} updateQuantity={this.props.updateQuantity} />
     </>
   }
 }

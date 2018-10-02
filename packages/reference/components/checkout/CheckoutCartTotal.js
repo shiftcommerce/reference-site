@@ -101,7 +101,7 @@ class CheckoutCartTotal extends Component {
   render () {
     const { cart, checkout, order } = this.props
     const totals = calculateCartSummary(cart, checkout)
-    
+
     let shippingText = ''
     if (!checkout.shippingAddress.completed) {
       shippingText = 'Enter address'
@@ -112,6 +112,7 @@ class CheckoutCartTotal extends Component {
     }
 
     return (
+      <>
       <Sticky>
         <div aria-label='Cart total summary' className='u-sticky  c-cart-summary'>
           <div className=''>
@@ -134,9 +135,10 @@ class CheckoutCartTotal extends Component {
               <div className='c-checkout-cart-total__payment-error'>{ order.paymentError }</div>
             }
           </div>
-        </div>  
-        { this.renderButtons() }
+        </div>
       </Sticky>
+      { this.renderButtons() }
+      </>
     )
   }
 }

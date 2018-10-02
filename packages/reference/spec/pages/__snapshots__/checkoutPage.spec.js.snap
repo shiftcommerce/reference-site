@@ -1567,6 +1567,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               "totalQuantity": 2,
             }
           }
+          updateQuantity={[Function]}
         >
           <div
             className="c-line-items"
@@ -1679,6 +1680,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 >
                   <select
                     data-variant="S2658934_C101_486"
+                    onChange={[Function]}
                     value={1}
                   >
                     <option
@@ -1964,55 +1966,55 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               </dl>
             </div>
           </div>
-          <div
-            className="c-cart-summary-buttons"
+        </Sticker>
+        <div
+          className="c-cart-summary-buttons"
+        >
+          <Link
+            href="/"
           >
-            <Link
-              href="/"
-            >
-              <Button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
-                label="Continue shopping"
-                onClick={[Function]}
-                size="lrg"
-                type="button"
-              >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
-                >
-                  Continue shopping
-                </button>
-              </Button>
-            </Link>
             <Button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed"
-              label="Continue to Payment"
+              aria-label="Continue Shopping"
+              className="c-cart-summary__buttons--continue"
+              label="Continue shopping"
               onClick={[Function]}
               size="lrg"
               type="button"
             >
               <button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 type="button"
               >
-                Continue to Payment
+                Continue shopping
               </button>
             </Button>
-          </div>
-        </Sticker>
+          </Link>
+          <Button
+            aria-label="Continue to Payment"
+            className="c-cart-summary__buttons--proceed"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            type="button"
+          >
+            <button
+              aria-label="Continue to Payment"
+              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
       </CheckoutCartTotal>
     </div>
   </div>
@@ -3629,6 +3631,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 "totalQuantity": 2,
               }
             }
+            updateQuantity={[Function]}
           >
             <div
               className="c-line-items"
@@ -3741,6 +3744,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   >
                     <select
                       data-variant="S2658934_C101_486"
+                      onChange={[Function]}
                       value={1}
                     >
                       <option
@@ -4031,55 +4035,55 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 </dl>
               </div>
             </div>
-            <div
-              className="c-cart-summary-buttons"
+          </Sticker>
+          <div
+            className="c-cart-summary-buttons"
+          >
+            <Link
+              href="/"
             >
-              <Link
-                href="/"
-              >
-                <Button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue"
-                  label="Continue shopping"
-                  onClick={[Function]}
-                  size="lrg"
-                  type="button"
-                >
-                  <button
-                    aria-label="Continue Shopping"
-                    className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="button"
-                  >
-                    Continue shopping
-                  </button>
-                </Button>
-              </Link>
               <Button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed"
-                label="Continue to Payment"
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue"
+                label="Continue shopping"
                 onClick={[Function]}
                 size="lrg"
                 type="button"
               >
                 <button
-                  aria-label="Continue to Payment"
-                  className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
                   tabIndex="0"
                   type="button"
                 >
-                  Continue to Payment
+                  Continue shopping
                 </button>
               </Button>
-            </div>
-          </Sticker>
+            </Link>
+            <Button
+              aria-label="Continue to Payment"
+              className="c-cart-summary__buttons--proceed"
+              label="Continue to Payment"
+              onClick={[Function]}
+              size="lrg"
+              type="button"
+            >
+              <button
+                aria-label="Continue to Payment"
+                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Continue to Payment
+              </button>
+            </Button>
+          </div>
         </CheckoutCartTotal>
       </div>
     </div>
@@ -5654,6 +5658,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               "totalQuantity": 2,
             }
           }
+          updateQuantity={[Function]}
         >
           <div
             className="c-line-items"
@@ -5766,6 +5771,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 >
                   <select
                     data-variant="S2658934_C101_486"
+                    onChange={[Function]}
                     value={1}
                   >
                     <option
@@ -6051,55 +6057,55 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               </dl>
             </div>
           </div>
-          <div
-            className="c-cart-summary-buttons"
+        </Sticker>
+        <div
+          className="c-cart-summary-buttons"
+        >
+          <Link
+            href="/"
           >
-            <Link
-              href="/"
-            >
-              <Button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
-                label="Continue shopping"
-                onClick={[Function]}
-                size="lrg"
-                type="button"
-              >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
-                >
-                  Continue shopping
-                </button>
-              </Button>
-            </Link>
             <Button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed"
-              label="Continue to Payment"
+              aria-label="Continue Shopping"
+              className="c-cart-summary__buttons--continue"
+              label="Continue shopping"
               onClick={[Function]}
               size="lrg"
               type="button"
             >
               <button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 type="button"
               >
-                Continue to Payment
+                Continue shopping
               </button>
             </Button>
-          </div>
-        </Sticker>
+          </Link>
+          <Button
+            aria-label="Continue to Payment"
+            className="c-cart-summary__buttons--proceed"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            type="button"
+          >
+            <button
+              aria-label="Continue to Payment"
+              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
       </CheckoutCartTotal>
     </div>
   </div>
@@ -8141,6 +8147,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               "totalQuantity": 2,
             }
           }
+          updateQuantity={[Function]}
         >
           <div
             className="c-line-items"
@@ -8253,6 +8260,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 >
                   <select
                     data-variant="S2658934_C101_486"
+                    onChange={[Function]}
                     value={1}
                   >
                     <option
@@ -8616,55 +8624,55 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               </dl>
             </div>
           </div>
-          <div
-            className="c-cart-summary-buttons"
+        </Sticker>
+        <div
+          className="c-cart-summary-buttons"
+        >
+          <Link
+            href="/"
           >
-            <Link
-              href="/"
-            >
-              <Button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
-                label="Continue shopping"
-                onClick={[Function]}
-                size="lrg"
-                type="button"
-              >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
-                >
-                  Continue shopping
-                </button>
-              </Button>
-            </Link>
             <Button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed"
-              label="Continue to Payment"
+              aria-label="Continue Shopping"
+              className="c-cart-summary__buttons--continue"
+              label="Continue shopping"
               onClick={[Function]}
               size="lrg"
               type="button"
             >
               <button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 type="button"
               >
-                Continue to Payment
+                Continue shopping
               </button>
             </Button>
-          </div>
-        </Sticker>
+          </Link>
+          <Button
+            aria-label="Continue to Payment"
+            className="c-cart-summary__buttons--proceed"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            type="button"
+          >
+            <button
+              aria-label="Continue to Payment"
+              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
       </CheckoutCartTotal>
     </div>
   </div>
@@ -10706,6 +10714,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               "totalQuantity": 2,
             }
           }
+          updateQuantity={[Function]}
         >
           <div
             className="c-line-items"
@@ -10818,6 +10827,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 >
                   <select
                     data-variant="S2658934_C101_486"
+                    onChange={[Function]}
                     value={1}
                   >
                     <option
@@ -11181,55 +11191,55 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               </dl>
             </div>
           </div>
-          <div
-            className="c-cart-summary-buttons"
+        </Sticker>
+        <div
+          className="c-cart-summary-buttons"
+        >
+          <Link
+            href="/"
           >
-            <Link
-              href="/"
-            >
-              <Button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
-                label="Continue shopping"
-                onClick={[Function]}
-                size="lrg"
-                type="button"
-              >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
-                >
-                  Continue shopping
-                </button>
-              </Button>
-            </Link>
             <Button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed"
-              label="Continue to Payment"
+              aria-label="Continue Shopping"
+              className="c-cart-summary__buttons--continue"
+              label="Continue shopping"
               onClick={[Function]}
               size="lrg"
               type="button"
             >
               <button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                aria-label="Continue Shopping"
+                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
                 tabIndex="0"
                 type="button"
               >
-                Continue to Payment
+                Continue shopping
               </button>
             </Button>
-          </div>
-        </Sticker>
+          </Link>
+          <Button
+            aria-label="Continue to Payment"
+            className="c-cart-summary__buttons--proceed"
+            label="Continue to Payment"
+            onClick={[Function]}
+            size="lrg"
+            type="button"
+          >
+            <button
+              aria-label="Continue to Payment"
+              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Continue to Payment
+            </button>
+          </Button>
+        </div>
       </CheckoutCartTotal>
     </div>
   </div>

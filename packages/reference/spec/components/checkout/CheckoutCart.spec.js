@@ -1,8 +1,10 @@
 // Components
 import CheckoutCart from '../../../components/checkout/CheckoutCart'
 
-// Lib 
+// Lib
 import { fixedPrice } from '../../../lib/fixedPrice'
+
+const updateQuantityfnc = jest.fn()
 
 describe('Checkout Cart', () => {
   test('renders the correct cart summary with single line item', () => {
@@ -27,7 +29,7 @@ describe('Checkout Cart', () => {
 
     // act
     const wrapper = mount(
-      <CheckoutCart cart={cart} />
+      <CheckoutCart cart={cart} updateQuantity={updateQuantityfnc} />
     )
 
     // assert
@@ -57,7 +59,7 @@ describe('Checkout Cart', () => {
           quantity: 1,
           stockAvailableLevel: '1000',
           variant: '38 Waist 31 Leg',
-          slug: '1',
+          slug: '2',
           canonical_path: '1'
         }
       ]
@@ -65,7 +67,7 @@ describe('Checkout Cart', () => {
 
     // act
     const wrapper = mount(
-      <CheckoutCart cart={cart} />
+      <CheckoutCart cart={cart} updateQuantity={updateQuantityfnc} />
     )
 
     // assert

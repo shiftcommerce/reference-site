@@ -20,7 +20,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           "discount": 0,
           "price": "5.00",
           "quantity": 1,
-          "slug": "1",
+          "slug": "2",
           "stockAvailableLevel": "1000",
           "title": "Pretend Product",
           "variant": "38 Waist 31 Leg",
@@ -28,6 +28,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
       ],
     }
   }
+  updateQuantity={[MockFunction]}
 >
   <section
     className="c-cart-table__header"
@@ -138,7 +139,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             "discount": 0,
             "price": "5.00",
             "quantity": 1,
-            "slug": "1",
+            "slug": "2",
             "stockAvailableLevel": "1000",
             "title": "Pretend Product",
             "variant": "38 Waist 31 Leg",
@@ -146,6 +147,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
         ],
       }
     }
+    updateQuantity={[MockFunction]}
   >
     <div
       className="c-line-items"
@@ -241,6 +243,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             className="c-line-items__space"
           >
             <select
+              onChange={[MockFunction]}
               value={2}
             >
               <option
@@ -356,21 +359,21 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
       </div>
       <div
         className="o-grid-container__lineitems"
-        key="1"
+        key="2"
       >
         <div
           className="o-grid-item1__lineitems"
         >
           <Link
             as="1"
-            href="/slug?slug=1"
-            key="1"
+            href="/slug?slug=2"
+            key="2"
           >
             <Image
               alt="Pretend Product"
               aria-label="Pretend Product"
               className="c-line-items__image"
-              key="1"
+              key="2"
               onClick={[Function]}
             >
               <div
@@ -445,6 +448,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             className="c-line-items__space"
           >
             <select
+              onChange={[MockFunction]}
               value={1}
             >
               <option
@@ -584,6 +588,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
       ],
     }
   }
+  updateQuantity={[MockFunction]}
 >
   <section
     className="c-cart-table__header"
@@ -695,6 +700,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
         ],
       }
     }
+    updateQuantity={[MockFunction]}
   >
     <div
       className="c-line-items"
@@ -794,6 +800,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           >
             <select
               data-variant="123"
+              onChange={[MockFunction]}
               value={2}
             >
               <option
