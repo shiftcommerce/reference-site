@@ -1,0 +1,9 @@
+bin/
+*.svg
+*.yml
+*.json
+*.png
+*.jpg
+*.log
+*.encrypted
+fonts/

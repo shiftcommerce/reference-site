@@ -1,11 +1,6 @@
 .c-nav {
-
   &__checkbox {
     visibility: hidden;
-  }
-
-  &__checkbox:checked~.c-nav__menu {
-    right: 0;
   }
 
   &__menu {
@@ -69,8 +64,7 @@
       font-size: 1.25em
     }
 
-    &-header{
-
+    &-header {
       &-logo {
         margin: 1em 1em 0.8em 1em;
         padding-left: 2.5em;
@@ -103,7 +97,6 @@
     }
 
     &-footer {
-
       &-email {
         background-color: $background-positive;
         padding-bottom: 0.2em;
@@ -209,6 +202,10 @@
     }
   }
 
+  &__checkbox:checked~.c-nav__menu {
+    right: 0;
+  }
+
   &__option {
     background-color: $background-light-grey;
     padding-left: 1.4em;
@@ -227,7 +224,6 @@
       border-top: 0;
       padding: 1.25em 0.75em;
       border-right: 1px solid $border-default;
-      border-top: none;
       font-size: 1em;
       font-weight: normal;
       height: auto;

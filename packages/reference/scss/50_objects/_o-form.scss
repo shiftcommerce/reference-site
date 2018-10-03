@@ -68,7 +68,6 @@ $input-checkbox-spacing: 8px;
   }
 
   &__input-group {
-
     button {
       display: flex;
       justify-content: center;
@@ -86,10 +85,6 @@ $input-checkbox-spacing: 8px;
       background-color: $background-white;
       font-size: 0.8em;
     }
-  }
-
-  &__input-field {
-    background-color: white;
   }
 
   &__label {
@@ -156,6 +151,7 @@ $input-checkbox-spacing: 8px;
     padding: .5rem .75rem;
     font-size: 1rem;
     line-height: 1.25;
+    background-color: white;
     background-image: none;
     background-clip: padding-box;
     border: 1px solid;
@@ -167,7 +163,7 @@ $input-checkbox-spacing: 8px;
       background-color: $light-grey;
       margin-bottom: 10px;
 
-      &::first-letter  {
+      &::first-letter {
         text-transform: capitalize;
       }
     }

@@ -65,16 +65,10 @@
     "zxcvbn": "^4.4.2"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
-    "setupFiles": [
-      "./spec/support/shims.js",
-      "./spec/support/enzymeSetup.js",
-      "./spec/support/jestSetup.js"
-    ],
-    "testURL": "http://localhost",
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "<rootDir>/spec/support/jestFileMock.js"
-    }
+    "projects": [
+      "jest-test.config.js",
+      "jest-stylelint.config.js"
+    ]
   },
   "standard": {
     "env": [
@@ -106,11 +100,16 @@
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.3",
     "jest-enzyme": "^6.0.0",
+    "jest-runner-stylelint": "^1.0.0",
     "nock": "^9.3.3",
     "react-test-renderer": "^16.0.0",
     "redux-test-utils": "^0.1.3",
+    "sass-lint": "^1.12.1",
     "sinon": "^4.0.1",
     "standard": "^10.0.3",
+    "stylelint": "^9.6.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.3.1",
     "url-loader": "^1.0.1"
   }
 }

@@ -17,7 +17,7 @@ $input-radio-spacing: 8px;
       margin-top: 10px;
     }
   }
-  
+
   &__summary {
     font-size: 0.75rem;
 
@@ -35,22 +35,6 @@ $input-radio-spacing: 8px;
     width: 100%;
     cursor: pointer;
 
-    &-input {
-      border: 0 !important;
-      clip: rect(0 0 0 0) !important;
-      height: 1px !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      padding: 0 !important;
-      position: absolute !important;
-      width: 1px !important;
-      white-space: nowrap !important;
-
-      &:checked+.c-shipping-method__radio-caption:before {
-        background-image: url('/static/radio.png');
-      }
-    }
-
     &-caption {
       margin-left: 15px;
       position: absolute;
@@ -67,6 +51,22 @@ $input-radio-spacing: 8px;
         background-size: 125%;
         background-position: 50%;
         border-radius: 100%;
+      }
+    }
+
+    &-input {
+      border: 0 !important;
+      clip: rect(0 0 0 0) !important;
+      height: 1px !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
+      white-space: nowrap !important;
+
+      &:checked+.c-shipping-method__radio-caption:before {
+        background-image: url('/static/radio.png');
       }
     }
   }
@@ -122,7 +122,7 @@ $input-radio-spacing: 8px;
       margin-left: 15px;
       font-size: 0.6rem;
     }
-    
+
     &-delivery-date {
       display: inline;
       font-size: 0.6rem;

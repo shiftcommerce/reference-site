@@ -1,7 +1,7 @@
 .c-product {
   text-align: center;
   font-size: 13px;
-  font-family: tahoma;
+  font-family: tahoma, sans-serif;
   position: relative;
   float: left;
   padding-left: 15px;
@@ -14,7 +14,7 @@
     text-decoration: none;
   }
 
-  .c-product__image-container{
+  .c-product__image-container {
     justify-content: center;
 
     .c-product__image img {

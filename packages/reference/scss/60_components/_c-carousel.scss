@@ -4,7 +4,6 @@
   overflow: hidden;
 
   @include breakpoint(desktop) {
-
     &__content {
       height: 100%;
     }

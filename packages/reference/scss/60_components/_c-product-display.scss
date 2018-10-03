@@ -47,9 +47,11 @@
 
     input {
       visibility: hidden;
+
       &[type=checkbox]:checked ~.c-product-display__description-text {
         display: block;
       }
+
       &[type=checkbox]:checked ~.c-product-display__arrow:before {
         background-image: url('/static/collapse-arrow-up.png');
       }
@@ -229,9 +231,11 @@
 
     input {
       visibility: hidden;
+
       &[type=checkbox]:checked ~.c-product-display__care-text {
         display: block;
       }
+
       &[type=checkbox]:checked ~.c-product-display__arrow:before {
         background-image: url('/static/collapse-arrow-up.png');
       }
@@ -273,9 +277,11 @@
 
     input {
       visibility: hidden;
+
       &[type=checkbox]:checked ~.c-product-display__size-text {
         display: block;
       }
+
       &[type=checkbox]:checked ~.c-product-display__arrow:before {
         background-image: url('/static/collapse-arrow-up.png');
       }
