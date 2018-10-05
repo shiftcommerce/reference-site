@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import HalfCategoryGallery from '../components/pages/HalfCategoryGallery'
 import HeroImage from '../components/pages/HeroImage'
 import Loading from '../components/Loading'
+import StaticPageError from '../components/StaticPageError'
 import RelatedLinks from '../components/pages/RelatedLinks'
 import ThirdCategoryGallery from '../components/pages/ThirdCategoryGallery'
 
@@ -15,16 +16,8 @@ import { readPage } from '../actions/pageActions'
 class Page extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
     const { id } = query
-    const isServer = !!req
-    if (isServer) {
-      await reduxStore.dispatch(readPage(id))
-    }
+    await reduxStore.dispatch(readPage(id))
     return {id: id}
-  }
-
-  componentDidMount () {
-    const { dispatch, id } = this.props
-    dispatch(readPage(id))
   }
 
   componentHero (heroData) {
@@ -68,11 +61,15 @@ class Page extends Component {
   }
 
   render () {
-    const { page, page: { loading, template } } = this.props
+    const { page, page: { loading, error, template } } = this.props
 
     if (loading) {
       return (
         <Loading />
+      )
+    } else if (error) {
+      return (
+        <StaticPageError error={error} />
       )
     } else {
       const sectionIndex = page.slug === 'homepage' ? 0 : 1

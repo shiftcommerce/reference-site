@@ -10,7 +10,7 @@ function getRenderer (url) {
     const queryObject = req.query
     const data = await fetchData(queryObject, urlWithParams)
 
-    return res.status(200).send(data.data)
+    return res.status(data.status).send(data.data)
   }
 }
 

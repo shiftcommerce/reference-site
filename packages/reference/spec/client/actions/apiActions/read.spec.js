@@ -105,7 +105,7 @@ describe('Read Endpoint', () => {
 
     // Assert
     it('should error and return the error', async () => {
-      expect(dispatch).toHaveBeenCalledWith({ 'payload': { 'error': { 'data': { 'data': [{ 'attributes': { 'active': true, 'resource_id': 50, 'resource_type': 'StaticPage', 'slug': 'mens' }, 'id': '132997', 'links': { 'self': '/integration/v1/slugs/132997.json_api' }, 'type': 'slugs' }] } } }, 'type': 'SET_ERROR' })
+      expect(dispatch).toHaveBeenCalledWith({"payload": {"error": {"data": {"data": [{"attributes": {"active": true, "resource_id": 50, "resource_type": "StaticPage", "slug": "mens"}, "id": "132997", "links": {"self": "/integration/v1/slugs/132997.json_api"}, "type": "slugs"}]}, "request": {"endpoint": "/testEndpoint", "errorActionType": "SET_ERROR", "query": {"fields": {"menu": "id,title"}}, "requestActionType": "GET_TEST", "successActionType": "SET_TEST"}}}, "type": "SET_ERROR"})
       expect(dispatch).toHaveBeenCalledWith({ type: 'GET_TEST' })
       expect(dispatch).not.toHaveBeenCalledWith({ payload: { 'data': [{ 'active': true, 'id': '132997', 'resource_id': 50, 'resource_type': 'StaticPage', 'slug': 'mens' }], 'pagination': {} }, 'type': 'SET_TEST' })
     })

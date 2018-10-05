@@ -7,6 +7,7 @@ export const pageRequest = (pageId) => {
       include: 'template,meta.*'
     },
     requestActionType: types.GET_PAGE,
-    successActionType: types.SET_PAGE
+    successActionType: types.SET_PAGE,
+    errorActionType: types.ERROR_PAGE
   }
 }

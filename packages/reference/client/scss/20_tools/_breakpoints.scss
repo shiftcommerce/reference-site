@@ -6,7 +6,7 @@ $break-large: 1024px;
 
 @mixin breakpoint($point) {
   @if $point == mobile {
-    @media only screen and (max-width: $break-small -1) { @content; }
+    @media only screen and (max-width: $break-small - 1px) { @content; }
   }
   @else if $point == tablet {
     @media only screen and (min-width: $break-small) { @content; }

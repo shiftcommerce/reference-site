@@ -11,11 +11,11 @@ export const readEndpoint = (request) => {
           const parsedPayload = new JsonApiParser().parse(response.data)
           dispatch(sendResponse(request.successActionType, parsedPayload))
         } else {
-          dispatch(setErroredTo(request.errorActionType, response.data))
+          dispatch(setErroredTo(request.errorActionType, response.data, request))
         }
       })
       .catch((error) => {
-        dispatch(setErroredTo(request.errorActionType, error))
+        dispatch(setErroredTo(request.errorActionType, error, request))
       })
   }
 }
@@ -46,12 +46,13 @@ function fetching (actionType) {
   }
 }
 
-function setErroredTo (actionType, data) {
+function setErroredTo (actionType, data, request) {
   return {
     type: actionType,
     payload: {
       error: {
-        data: data
+        data: data,
+        request: request
       }
     }
   }
