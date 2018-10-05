@@ -1,7 +1,7 @@
 {
   "name": "shift-front-end-react",
   "version": "0.0.1",
-  "main": "server.js",
+  "main": "server/server.js",
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
   "author": "Shift Commerce",
   "license": "MIT",
@@ -9,9 +9,9 @@
     "node": "^10.7.0"
   },
   "scripts": {
-    "devserver": "npm rebuild node-sass && NODE_ENV=development node server.js",
+    "devserver": "npm rebuild node-sass && NODE_ENV=development node server/server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node server/server.js",
     "jest": "jest",
     "jest-watch": "jest --watch",
     "jest-coverage": "jest --coverage",

@@ -38,6 +38,7 @@ You should now be able to interact with the web interface via [http://localhost:
 Connect to your API Host by adding the following environment variables in your `.env` file.
 ```
 API_HOST=http://<DOCKER_HOST_IP_ADDRESS>:<PORT>
+API_TENANT=http:<API_TENANT_REFERENCE>
 API_ACCESS_TOKEN=<API_AUTH_ACCESS_TOKEN>
 API_HOST_PROXY=<localhost>:<PORT>
 ```

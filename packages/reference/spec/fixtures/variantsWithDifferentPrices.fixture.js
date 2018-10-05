@@ -1,4 +1,4 @@
-import { fixedPrice } from '../../lib/fixedPrice'
+import { fixedPrice } from '../../client/lib/fixedPrice'
 
 const VariantsWithDifferentPrices = [
   {
