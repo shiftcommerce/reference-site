@@ -30,11 +30,13 @@ export class RelatedLinks extends Component {
         </div>
         <div className='c-links__grid'>
           { elements.map((element, index) => {
-            return (
-              <div key={index}>
-                {this.linkButton(links, element)}
-              </div>
-            )
+            if (links[`link${element}_url`]) {
+              return (
+                <div key={index}>
+                  {this.linkButton(links, element)}
+                </div>
+              )
+            }
           }) }
         </div>
       </div>

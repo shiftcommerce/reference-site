@@ -1,5 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders correctly when some URLs are not set in the component 1`] = `
+<RelatedLinks
+  links={
+    Object {
+      "id": "14_8",
+      "link1_text": "shop bathroom",
+      "link1_url": Array [
+        Object {
+          "canonical_path": "/homeware/bathroom",
+          "id": "/homeware/bathroom",
+          "path": "/homeware/bathroom",
+          "url": "/homeware/bathroom",
+        },
+      ],
+      "link2_text": "",
+      "link3_text": "",
+      "reference": "related_links",
+      "title": "related links",
+    }
+  }
+>
+  <div
+    className="c-links"
+  >
+    <div
+      className="c-links__text"
+    >
+      <h1
+        className="c-links__text-title"
+      >
+        related links
+      </h1>
+    </div>
+    <div
+      className="c-links__grid"
+    >
+      <div
+        key="0"
+      >
+        <div
+          className="c-links__grid-button"
+        >
+          <Link
+            as="/homeware/bathroom"
+            href="/slug?slug=/homeware/bathroom"
+          >
+            <Button
+              aria-label="shop bathroom"
+              className="c-links__grid-button-icon"
+              label="shop bathroom"
+              onClick={[Function]}
+              size="lrg"
+              status="warning"
+            >
+              <button
+                aria-label="shop bathroom"
+                className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                shop bathroom
+              </button>
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</RelatedLinks>
+`;
+
 exports[`renders the full RelatedLinks component 1`] = `
 <RelatedLinks
   links={
