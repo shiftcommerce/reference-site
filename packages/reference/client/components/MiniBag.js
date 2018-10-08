@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
+import Cookies from 'js-cookie'
 
 // Actions
 import { readCart } from '../actions/cartActions'
@@ -37,6 +38,8 @@ export class MiniBag extends Component {
   }
 
   renderCheckoutButton (lineItemCount) {
+    const signedIn = Cookies.get('signedIn')
+
     return (
       <div className='c-minibag__checkout'>
         <Link href={(lineItemCount > 0) ? '/checkout' : ''}>
@@ -44,16 +47,33 @@ export class MiniBag extends Component {
             CHECKOUT
           </a>
         </Link>
-        <Link href='/account/login'>
-          <a className='o-header__myaccount'>My Account</a>
-        </Link>
+        { this.renderMyAccount(signedIn) }
+        { this.renderLogout(signedIn) }
       </div>
     )
   }
 
+  renderMyAccount (signedIn) {
+    return (
+      <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as= '/account/myaccount' >
+        <a className='o-header__myaccount'>My Account</a>
+      </Link>
+    )
+  }
+
+  renderLogout (signedIn) {
+    if (signedIn) {
+      return (
+        <a href='/account/logout' className='o-header__myaccount'>
+          Logout
+        </a>
+      )
+    }
+  }
+
   render () {
-    let { cart } = this.props
-    let lineItemCount = cart.totalQuantity
+    const { cart } = this.props
+    const lineItemCount = cart.totalQuantity
 
     return (
       <div className='c-header__minibag'>
@@ -64,10 +84,9 @@ export class MiniBag extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.cart || {}
-  }
+function mapStateToProps (state) {
+  const { cart } = state
+  return { cart }
 }
 
 export default connect(mapStateToProps)(MiniBag)

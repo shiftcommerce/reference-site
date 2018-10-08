@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 // Libs
 import InputFieldValidator from '../../lib/InputFieldValidator'
-
+import { setCookie } from '../../lib/setCookie'
 // Actions
 import { inputChange,
   setValidationMessage,
@@ -32,6 +32,7 @@ export class Login extends Component {
 
     // Redirect if logged in
     if (login.loggedIn === true) {
+      setCookie()
       Router.push('/account/myaccount')
     }
   }
@@ -77,8 +78,8 @@ export class Login extends Component {
           handleSubmit={this.handleSubmit}
         />
         <a href={'/account/forgotpassword'} className='c-login__anchor'>Reset Password?</a>
-        {this.renderErrors(login)}
-        <p className='c-login__caption'>Don't have an account?</p>
+        { this.renderErrors(login) }
+        <p className='c-login__caption'>{"Don't have an account?"}</p>
         <Link href='/account/register'>
           <Button className='c-login__button-icon' label='CREATE NEW ACCOUNT' status='primary' size='lrg' aria-label='Create New Account' />
         </Link>

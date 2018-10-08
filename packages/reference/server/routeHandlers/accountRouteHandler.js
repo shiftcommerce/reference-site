@@ -7,6 +7,8 @@ function accountRenderer (url) {
 
     if (response.status === 201) {
       const { data } = response.data
+      const customerId = data.relationships.customer_account.data.id
+      req.session.customerId = customerId
 
       return res.status(201).send(data)
     } else if (response.status === 422 || response.status === 404) {

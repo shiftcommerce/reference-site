@@ -2,11 +2,19 @@ const express = require('express')
 const next = require('next')
 const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
 
 const port = parseInt(process.env.PORT, 10) || 3000
+const production = process.env.NODE_ENV === 'production'
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
+
+// session variables
+const defaultExpiryInSeconds = 30 * 24 * 60 * 60  // 30 days in seconds
+const expiryInSeconds = (process.env.SESSSION_EXPIRY || defaultExpiryInSeconds) // user configured time in seconds
+const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 
 // Api
 const { fetchData } = require('./lib/ApiServer')
@@ -20,6 +28,19 @@ const accountHandler = require('./routeHandlers/accountRouteHandler')
 app.prepare().then(() => {
   const server = express()
 
+  const sessionParams = {
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: production,
+      sameSite: 'lax',
+      expires: sessionExpiryTime
+    }
+  }
+
+  server.use(session(sessionParams))
+  server.use(cookieParser())
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
 
@@ -32,11 +53,38 @@ app.prepare().then(() => {
   })
 
   server.get('/account/login', (req, res) => {
-    return app.render(req, res, '/account/login', req.query)
+    const { customerId } = req.session
+    const { signedIn } = req.cookies
+
+    if (customerId) {
+      if (!signedIn) {
+        req.session.cookie.expires = sessionExpiryTime
+        res.cookie('signedIn', true, { expires: sessionExpiryTime })
+      }
+      res.redirect('/account/myaccount')
+    } else {
+      res.clearCookie('signedIn')
+      return app.render(req, res, '/account/login', req.query)
+    }
   })
 
   server.get('/account/myaccount', (req, res) => {
-    return app.render(req, res, '/account/myaccount', req.query)
+    const { customerId } = req.session
+    const { signedIn } = req.cookies
+
+    // If there is no customerId, clear signedIn cookie and render login.
+    if (!customerId) {
+      res.clearCookie('signedIn')
+      return app.render(req, res, '/account/login', req.query)
+    }
+
+    if (customerId && !signedIn) {
+      req.session.cookie.expires = sessionExpiryTime
+      res.cookie('signedIn', true, { expires: sessionExpiryTime })
+      return app.render(req, res, '/account/myaccount', req.query)
+    } else {
+      return app.render(req, res, '/account/myaccount', req.query)
+    }
   })
 
   server.get('/account/register', (req, res) => {
@@ -45,6 +93,17 @@ app.prepare().then(() => {
 
   server.get('/account/forgotpassword', (req, res) => {
     return app.render(req, res, '/account/forgotpassword', req.query)
+  })
+
+  server.get('/account/logout', (req, res) => {
+    req.session.destroy((error) => {
+      if (error) {
+        console.log('logout error:', error)
+      } else {
+        res.clearCookie('signedIn')
+        res.redirect('/')
+      }
+    })
   })
 
   server.get('/order', (req, res) => {

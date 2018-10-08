@@ -5,6 +5,7 @@ import Router from 'next/router'
 
 // Libs
 import InputFieldValidator from '../../lib/InputFieldValidator'
+import { setCookie } from '../../lib/setCookie'
 
 // Actions
 import { inputChange,
@@ -35,6 +36,7 @@ export class Register extends Component {
 
     // Redirect if account created
     if (account.loggedIn === true) {
+      setCookie()
       Router.push('/account/myaccount')
     }
   }
