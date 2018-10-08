@@ -16,7 +16,7 @@
     "jest-watch": "jest --watch",
     "jest-coverage": "jest --coverage",
     "jest-update-snapshot": "jest --updateSnapshot",
-    "heroku-postbuild": "next build",
+    "heroku-postbuild": "next build client",
     "lint": "standard",
     "lint-fix": "standard --fix"
   },
