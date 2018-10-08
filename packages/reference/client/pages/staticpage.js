@@ -61,7 +61,7 @@ class Page extends Component {
   }
 
   render () {
-    const { page, page: { loading, error, template } } = this.props
+    const { page: { loading, error, template } } = this.props
 
     if (loading) {
       return (
@@ -72,8 +72,7 @@ class Page extends Component {
         <StaticPageError error={error} />
       )
     } else {
-      const sectionIndex = page.slug === 'homepage' ? 0 : 1
-      const { components } = template.sections[sectionIndex]
+      const { components } = template.sections.slice(-1).pop()
       const getDataByReference = (data, reference) => data.filter(a => a.reference === reference)
 
       return (
