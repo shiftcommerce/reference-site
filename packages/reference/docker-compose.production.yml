@@ -3,7 +3,7 @@ version: "3"
 services:
  web:
    build: .
-   command: bash -c "yarn next build && NODE_ENV=production node server/server.js"
+   command: bash -c "yarn build && NODE_ENV=production node server/server.js"
    ports:
      - "3000:3000"
    env_file: .env
