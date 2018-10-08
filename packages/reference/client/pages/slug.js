@@ -23,7 +23,7 @@ export class Slug extends Component {
       url = '/'
     }
 
-    Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}`, url, {shallow: true})
+    Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}`, url)
   }
 
   render () {
