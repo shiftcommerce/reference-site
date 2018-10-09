@@ -107,7 +107,7 @@ export class Product extends Component {
       )
     } else {
       return (
-        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} clickToBuy={this.clickToBuy} {...this.state} />
+        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeVariant={this.changeVariant} addToBag={this.addToBag} clickToBuy={this.clickToBuy} {...this.state} />
       )
     }
   }
