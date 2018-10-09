@@ -5,8 +5,7 @@ module.exports = {
       "plugins": ["inline-dotenv"]
     },
     "production": {
-      "presets": ["next/babel"],
-      "plugins": ["inline-dotenv"]
+      "presets": ["next/babel"]
     },
     "test": {
       "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]],
