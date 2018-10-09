@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import Router from 'next/router'
 
 // Components
 import Loading from '../components/Loading'
@@ -25,6 +26,7 @@ export class Product extends Component {
     this.changeQuantity = this.changeQuantity.bind(this)
     this.changeVariant = this.changeVariant.bind(this)
     this.addToBag = this.addToBag.bind(this)
+    this.clickToBuy = this.clickToBuy.bind(this)
   }
 
   static async getInitialProps ({ reduxStore, req, query }) {
@@ -69,6 +71,16 @@ export class Product extends Component {
     }
   }
 
+  clickToBuy () {
+    this.addToBag()
+
+    const { cart } = this.props
+
+    if (cart.totalQuantity >= 1) {
+      Router.push('/checkout')
+    }
+  }
+
   changeQuantity (e) {
     this.setState({ quantity: e.target.value })
   }
@@ -95,15 +107,15 @@ export class Product extends Component {
       )
     } else {
       return (
-        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeVariant={this.changeVariant} addToBag={this.addToBag} {...this.state} />
+        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeSize={this.changeSize} addToBag={this.addToBag} clickToBuy={this.clickToBuy} {...this.state} />
       )
     }
   }
 }
 
 function mapStateToProps (state) {
-  const { menu, product } = state
-  return { menu, product }
+  const { menu, product, cart } = state
+  return { menu, product, cart }
 }
 
 export default connect(mapStateToProps)(Product)

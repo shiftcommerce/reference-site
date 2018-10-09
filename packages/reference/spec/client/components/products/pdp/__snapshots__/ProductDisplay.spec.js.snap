@@ -267,7 +267,7 @@ exports[`renders correctly 1`] = `
               showArrows={true}
               showIndicators={true}
               showStatus={false}
-              showThumbs={false}
+              showThumbs={true}
               statusFormatter={[Function]}
               stopOnHover={true}
               swipeScrollTolerance={5}
@@ -355,33 +355,10 @@ exports[`renders correctly 1`] = `
                           <div
                             key="0"
                           >
-                            <Image
+                            <img
                               className="c-slider-image"
                               src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
-                            >
-                              <div
-                                className="c-slider-image"
-                              >
-                                <LazyLoad
-                                  height={200}
-                                  offset={0}
-                                  once={false}
-                                  overflow={false}
-                                  resize={false}
-                                  scroll={true}
-                                  unmountIfInvisible={false}
-                                >
-                                  <div
-                                    className="lazyload-placeholder"
-                                    style={
-                                      Object {
-                                        "height": 200,
-                                      }
-                                    }
-                                  />
-                                </LazyLoad>
-                              </div>
-                            </Image>
+                            />
                           </div>
                         </li>
                       </ul>
@@ -403,6 +380,97 @@ exports[`renders correctly 1`] = `
                     />
                   </ul>
                 </div>
+                <Thumbs
+                  axis="horizontal"
+                  onSelectItem={[Function]}
+                  selectedItem={0}
+                  transitionTime={350}
+                >
+                  <div
+                    className="carousel"
+                  >
+                    <div
+                      className="thumbs-wrapper axis-vertical"
+                    >
+                      <button
+                        className="control-arrow control-prev control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                      <ReactSwipe
+                        allowMouseEvents={false}
+                        className="thumbs animated"
+                        onSwipeDown={[Function]}
+                        onSwipeEnd={[Function]}
+                        onSwipeLeft={[Function]}
+                        onSwipeMove={[Function]}
+                        onSwipeRight={[Function]}
+                        onSwipeStart={[Function]}
+                        onSwipeUp={[Function]}
+                        selectedItem={0}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(NaNpx,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(NaNpx,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(NaNpx,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(NaNpx,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(NaNpx,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(NaNpx,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                        tagName="ul"
+                        tolerance={0}
+                      >
+                        <ul
+                          className="thumbs animated"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransform": "translate3d(NaNpx,0,0)",
+                              "MozTransitionDuration": "350ms",
+                              "MsTransform": "translate3d(NaNpx,0,0)",
+                              "MsTransitionDuration": "350ms",
+                              "OTransform": "translate3d(NaNpx,0,0)",
+                              "OTransitionDuration": "350ms",
+                              "WebkitTransform": "translate3d(NaNpx,0,0)",
+                              "WebkitTransitionDuration": "350ms",
+                              "msTransform": "translate3d(NaNpx,0,0)",
+                              "msTransitionDuration": "350ms",
+                              "transform": "translate3d(NaNpx,0,0)",
+                              "transitionDuration": "350ms",
+                            }
+                          }
+                        >
+                          <li
+                            className="thumb"
+                            key="0"
+                            onClick={[Function]}
+                          >
+                            <img
+                              className="c-slider-image"
+                              key=".0/.$0"
+                              onLoad={[Function]}
+                              src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+                            />
+                          </li>
+                        </ul>
+                      </ReactSwipe>
+                      <button
+                        className="control-arrow control-next control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </div>
+                  </div>
+                </Thumbs>
               </div>
             </Carousel>
           </CarouselComponent>
@@ -698,147 +766,155 @@ exports[`renders correctly 1`] = `
               ]
             }
           >
-            <select
-              aria-label="Size Selector"
-              name="line_item[item_id]"
-              value=""
+            <div
+              className="o-variant-selector"
             >
-              <option
-                aria-posinset="0"
-                aria-setsize={3}
-                role="option"
+              <select
+                aria-label="Size Selector"
+                name="line_item[item_id]"
                 value=""
               >
-                Select a Size
-              </option>
-              <option
-                aria-posinset={1}
-                aria-setsize={3}
-                data-price="10.00"
-                data-stock-available-level="1000"
-                key="0"
-                role="option"
-                value={1}
-              >
-                Size 8
-              </option>
-              <option
-                aria-posinset={2}
-                aria-setsize={3}
-                data-price="11.00"
-                data-stock-available-level="1000"
-                key="1"
-                role="option"
-                value={2}
-              >
-                Size 10
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={3}
-                data-price="12.00"
-                data-stock-available-level="1000"
-                key="2"
-                role="option"
-                value={3}
-              >
-                Size 12
-              </option>
-            </select>
+                <option
+                  aria-posinset="0"
+                  aria-setsize={3}
+                  role="option"
+                  value=""
+                >
+                  Select a Size
+                </option>
+                <option
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  data-price="10.00"
+                  data-stock-available-level="1000"
+                  key="0"
+                  role="option"
+                  value={1}
+                >
+                  Size 8
+                </option>
+                <option
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  data-price="11.00"
+                  data-stock-available-level="1000"
+                  key="1"
+                  role="option"
+                  value={2}
+                >
+                  Size 10
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  data-price="12.00"
+                  data-stock-available-level="1000"
+                  key="2"
+                  role="option"
+                  value={3}
+                >
+                  Size 12
+                </option>
+              </select>
+            </div>
           </VariantSelector>
         </div>
       </div>
       <div
-        className="c-product-display__description"
+        className="c-product-display__body-dropdowns"
       >
-        <h1
-          className="c-product-display__description-title"
-        >
-          Product Details
-        </h1>
-        <label
-          className="c-product-dispay__label"
-          htmlFor="description"
-        />
-        <input
-          id="description"
-          type="checkbox"
-        />
-        <span
-          className="c-product-display__arrow"
-        />
         <div
-          className="c-product-display__description-text"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+          className="c-product-display__description"
+        >
+          <h1
+            className="c-product-display__description-title"
+          >
+            Product Details
+          </h1>
+          <label
+            className="c-product-dispay__label"
+            htmlFor="description"
+          />
+          <input
+            id="description"
+            type="checkbox"
+          />
+          <span
+            className="c-product-display__arrow"
+          />
+          <div
+            className="c-product-display__description-text"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+              }
             }
-          }
-        />
-      </div>
-      <div
-        className="c-product-display__size"
-      >
-        <h1
-          className="c-product-display__size-title"
+          />
+        </div>
+        <div
+          className="c-product-display__size"
         >
-          Size & Fit
-        </h1>
-        <label
-          className="c-product-dispay__label"
-          htmlFor="size"
-        />
-        <input
-          id="size"
-          type="checkbox"
-        />
-        <span
-          className="c-product-display__arrow"
-        />
-        <p
-          className="c-product-display__size-text"
+          <h1
+            className="c-product-display__size-title"
+          >
+            Size & Fit
+          </h1>
+          <label
+            className="c-product-dispay__label"
+            htmlFor="size"
+          />
+          <input
+            id="size"
+            type="checkbox"
+          />
+          <span
+            className="c-product-display__arrow"
+          />
+          <p
+            className="c-product-display__size-text"
+          >
+            - 
+            Stretch Fit
+          </p>
+          <p
+            className="c-product-display__size-text"
+          >
+            - 
+            Flexible Waist
+          </p>
+        </div>
+        <div
+          className="c-product-display__care"
         >
-          - 
-          Stretch Fit
-        </p>
-        <p
-          className="c-product-display__size-text"
-        >
-          - 
-          Flexible Waist
-        </p>
-      </div>
-      <div
-        className="c-product-display__care"
-      >
-        <h1
-          className="c-product-display__care-title"
-        >
-          Details & Care
-        </h1>
-        <label
-          className="c-product-dispay__label"
-          htmlFor="care"
-        />
-        <input
-          id="care"
-          type="checkbox"
-        />
-        <span
-          className="c-product-display__arrow"
-        />
-        <p
-          className="c-product-display__care-text"
-        >
-          - 
-          100% cotton
-        </p>
-        <p
-          className="c-product-display__care-text"
-        >
-          - 
-          Machine Washable
-        </p>
+          <h1
+            className="c-product-display__care-title"
+          >
+            Details & Care
+          </h1>
+          <label
+            className="c-product-dispay__label"
+            htmlFor="care"
+          />
+          <input
+            id="care"
+            type="checkbox"
+          />
+          <span
+            className="c-product-display__arrow"
+          />
+          <p
+            className="c-product-display__care-text"
+          >
+            - 
+            100% cotton
+          </p>
+          <p
+            className="c-product-display__care-text"
+          >
+            - 
+            Machine Washable
+          </p>
+        </div>
       </div>
       <div
         className="c-product-display__related"
@@ -875,6 +951,40 @@ exports[`renders correctly 1`] = `
               >
                 £28
               </p>
+              <div
+                className="c-product-display__related-images-rating"
+              >
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </div>
             </div>
           </Link>
           <Link
@@ -899,6 +1009,40 @@ exports[`renders correctly 1`] = `
               >
                 £7
               </p>
+              <div
+                className="c-product-display__related-images-rating"
+              >
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </div>
             </div>
           </Link>
           <Link
@@ -923,6 +1067,98 @@ exports[`renders correctly 1`] = `
               >
                 £6
               </p>
+              <div
+                className="c-product-display__related-images-rating"
+              >
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--fill"
+                  key="5"
+                >
+                  ★
+                </span>
+              </div>
+            </div>
+          </Link>
+          <Link
+            href="/products/s2638591/oakwood-tailored-fit-waistcoat"
+            key="3"
+          >
+            <div
+              className="c-product-display__related-images-link"
+              onClick={[Function]}
+            >
+              <img
+                className="c-product-display__related-images-file"
+                src="/static/pdp_dummy_images/waistcoat.jpg"
+              />
+              <p
+                className="c-product-display__related-images-text"
+              >
+                Oakwood Tailored Fit Waistcoat
+              </p>
+              <p
+                className="c-product-display__related-images-price"
+              >
+                £20
+              </p>
+              <div
+                className="c-product-display__related-images-rating"
+              >
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </div>
             </div>
           </Link>
         </div>

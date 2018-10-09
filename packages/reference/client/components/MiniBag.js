@@ -55,7 +55,7 @@ export class MiniBag extends Component {
 
   renderMyAccount (signedIn) {
     return (
-      <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as= '/account/myaccount' >
+      <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
         <a className='o-header__myaccount'>My Account</a>
       </Link>
     )

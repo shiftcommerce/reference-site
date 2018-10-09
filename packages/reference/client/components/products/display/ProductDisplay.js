@@ -39,7 +39,7 @@ class ProductDisplay extends Component {
   }
 
   renderButtons () {
-    const { product, addToBag } = this.props
+    const { product, addToBag, clickToBuy } = this.props
 
     return <>
       <div className='c-product-display__buttons'>
@@ -56,7 +56,7 @@ class ProductDisplay extends Component {
             <Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={addToBag} />
           </div>
           <div className='c-product-display__buttons-buy'>
-            <Button className='c-product-display__buttons-buy-icon' label='BUY' status='secondary' size='lrg' aria-label='Buy' />
+            <Button className='c-product-display__buttons-buy-icon' label='BUY' status='secondary' size='lrg' aria-label='Buy' onClick={clickToBuy} />
           </div>
         </div>
       </div>
@@ -169,11 +169,14 @@ class ProductDisplay extends Component {
                   <img className='c-product-display__related-images-file' src={image.asset_file} />
                   <p className='c-product-display__related-images-text'>{image.text}</p>
                   <p className='c-product-display__related-images-price'>{image.price}</p>
+                  <div className='c-product-display__related-images-rating'>
+                    { this.renderRatingStars(image) }
+                  </div>
                 </div>
               </Link>
             )
           })
-        }
+          }
         </div>
       </div>
     </>
@@ -187,9 +190,11 @@ class ProductDisplay extends Component {
           { this.renderCarousel() }
           { this.renderButtons() }
           { this.renderInfo() }
-          { this.renderDescription() }
-          { this.renderSizeAndFit() }
-          { this.renderDetailsAndCare() }
+          <div className='c-product-display__body-dropdowns'>
+            { this.renderDescription() }
+            { this.renderSizeAndFit() }
+            { this.renderDetailsAndCare() }
+          </div>
           { this.renderRelatedProducts() }
         </div>
       </div>

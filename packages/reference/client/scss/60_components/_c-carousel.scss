@@ -1,12 +1,15 @@
 .c-carousel {
   width: 100%;
+  height: auto;
   margin: auto;
-  overflow: hidden;
+  overflow: visible;
 
   @include breakpoint(desktop) {
-    &__content {
-      height: 100%;
-    }
+    width: 400px;
+  }
+
+  &__content {
+    height: 100%;
   }
 }
 
@@ -14,6 +17,10 @@
   position: relative;
   margin: auto;
   padding: 0;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
 }
 
 .carousel .dot.dot {
@@ -24,4 +31,27 @@
 .carousel .dot.selected {
   background-color: $alert-orange;
   box-shadow: none;
+}
+
+.carousel .thumbs.animated {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    margin-top: -35.3em;
+    margin-left: -8em;
+  }
+}
+
+.carousel .thumb {
+  @include breakpoint(desktop) {
+    display: block;
+  }
+}
+
+.carousel .thumbs-wrapper {
+  @include breakpoint(desktop) {
+    margin: 0;
+    overflow: visible
+  }
 }

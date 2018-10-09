@@ -27,10 +27,12 @@ class VariantSelector extends Component {
     } = this.props
 
     return (
-      <select name={name} {...otherProps}>
-        <option role='option' value='' aria-setsize={variants.length} aria-posinset='0'>{prompt}</option>
-        { this.renderOptions(variants) }
-      </select>
+      <div className='o-variant-selector'>
+        <select name={name} {...otherProps}>
+          <option role='option' value='' aria-setsize={variants.length} aria-posinset='0'>{prompt}</option>
+          { this.renderOptions(variants) }
+        </select>
+      </div>
     )
   }
 }
