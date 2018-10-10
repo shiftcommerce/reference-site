@@ -4,6 +4,7 @@ const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
+const sslRedirect = require('heroku-ssl-redirect')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const production = process.env.NODE_ENV === 'production'
@@ -39,6 +40,7 @@ app.prepare().then(() => {
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
 
+  server.use(sslRedirect())
   server.use(session(sessionParams))
   server.use(cookieParser())
   server.use(bodyParser.json())
