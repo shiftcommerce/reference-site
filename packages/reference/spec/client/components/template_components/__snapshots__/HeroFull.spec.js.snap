@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the full HeroImage component 1`] = `
+<HeroFull
+  componentData={
+    Object {
+      "background_colour": "#eee",
+      "heading": "Thing",
+      "id": "4_1",
+      "image": Array [
+        Object {
+          "asset_file": "1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "created_at": "2017-12-18T11:29:27Z",
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "Week-44-Department-Homeware-2_24.jpg",
+          "file_content_size": 354806,
+          "id": "157604",
+          "image_height": 1483,
+          "image_width": 2396,
+          "reference": "26418193-2571-4bb8-943b-bb567065c4f8",
+          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "updated_at": "2017-12-18T11:29:27Z",
+        },
+      ],
+      "link_1_text": "shop glassware",
+      "link_1_url": Array [
+        Object {
+          "canonical_path": "/homeware/dining/glassware",
+          "id": "/homeware/dining/glassware",
+          "path": "/homeware/dining/glassware",
+          "url": "/homeware/dining/glassware",
+        },
+      ],
+      "link_2_text": "",
+      "link_2_url": null,
+      "link_3_text": "",
+      "link_3_url": null,
+      "link_4_text": "",
+      "link_4_url": null,
+      "link_5_text": "",
+      "link_5_url": null,
+      "overlay_colour": "#eee",
+      "overlay_image_overlap": Array [
+        "full",
+      ],
+      "overlay_position": Array [
+        "above",
+      ],
+      "reference": "hero_full",
+      "text": "Textytext",
+      "title": "TOP OF THE GLASS",
+      "type": "components",
+    }
+  }
+>
+  <div
+    className="c-hero c-hero--full_with_gutters"
+    style={
+      Object {
+        "backgroundColor": "#eee",
+      }
+    }
+  >
+    <div
+      className="c-hero__heading"
+    >
+      Thing
+    </div>
+    <div
+      className="c-hero__content"
+    >
+      <div
+        className="c-hero__overlay"
+        style={
+          Object {
+            "backgroundColor": "#eee",
+          }
+        }
+      >
+        <div
+          className="c-hero__overlay_content"
+        >
+          <div
+            className="c-hero__overlay_title"
+          >
+            TOP OF THE GLASS
+          </div>
+          Textytext
+          <div
+            className="c-hero__button"
+            key="1"
+          >
+            <Link
+              as="/homeware/dining/glassware"
+              href="/slug?slug=/homeware/dining/glassware"
+            >
+              <Button
+                aria-label="shop glassware"
+                className="c-hero__button-icon"
+                label="shop glassware"
+                onClick={[Function]}
+                size="lrg"
+              >
+                <button
+                  aria-label="shop glassware"
+                  className="c-hero__button-icon o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  shop glassware
+                </button>
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <div
+          className="c-hero__overlay_pointer c-hero__overlay_pointer--below"
+          style={
+            Object {
+              "borderTopColor": "#eee",
+            }
+          }
+        />
+      </div>
+      <Image
+        className="c-hero__image"
+        src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
+      >
+        <div
+          className="c-hero__image"
+        >
+          <LazyLoad
+            height={200}
+            offset={0}
+            once={false}
+            overflow={false}
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <div
+              className="lazyload-placeholder"
+              style={
+                Object {
+                  "height": 200,
+                }
+              }
+            />
+          </LazyLoad>
+        </div>
+      </Image>
+    </div>
+  </div>
+</HeroFull>
+`;

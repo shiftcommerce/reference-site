@@ -1,12 +1,12 @@
 // Components
-import { HeroImage } from '../../../../client/components/pages/HeroImage'
+import { HeroFull } from '../../../../client/components/template_components/HeroFull'
 
 // Objects
 import Button from '../../../../client/objects/Button'
 import Image from '../../../../client/objects/Image'
 
 // Fixtures
-import heroImageData from '../../../fixtures/heroImage.fixture'
+import heroImageData from '../../../fixtures/heroFull.fixture'
 
 test('renders the full HeroImage component', () => {
   // Arrange
@@ -14,11 +14,11 @@ test('renders the full HeroImage component', () => {
 
   // Act
   const wrapper = mount(
-    <HeroImage hero={heroImageData} />
+    <HeroFull componentData={heroImageData} />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toContainReact(<Image className='c-hero__image' src={heroImageData.image[0].s3_url} />)
-  expect(wrapper.find('Button')).toMatchElement(<Button className='c-hero__button-icon' label={heroImageData.link1_text} status='warning' size='lrg' aria-label={heroImageData.link1_text} onClick={emptyFunction} />)
+  expect(wrapper.find('Button')).toMatchElement(<Button className='c-hero__button-icon' label={heroImageData.link_1_text} status='warning' size='lrg' aria-label={heroImageData.link1_text} onClick={emptyFunction} />)
 })

@@ -1,16 +1,88 @@
 .c-hero {
-  padding-bottom: 2.6rem;
+  text-align: center;
+  padding-bottom: $global-spacing-unit;
+  padding-top: $global-spacing-unit;
   z-index: 0;
   position: relative;
 
-  &__button {
-    text-align: center;
+  &__heading {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+    font-size: 1.5rem;
+    border-bottom: solid 0.25rem $alert-orange;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__overlay {
+    display: inline-block;
+    background-color: $background-white;
     z-index: 1;
     position: relative;
-    margin-top: -3.5rem;
+    padding: 0 $global-spacing-unit-tiny;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      width: auto;
+      min-width: 50%;
+    }
+  }
+
+  &__overlay_title {
+    font-size: 1.3rem;
+    margin: 0 $global-spacing-unit-tiny;
+  }
+
+  &__overlay_pointer {
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    left: calc(50% - 2rem); /* 50% - half total border width */
+    border: 2rem solid transparent;
+
+    &--above {
+      border-top: 2rem solid transparent;
+      border-bottom: 2rem solid $background-white;
+      margin-top: -4rem; /* - total border height */
+    }
+
+    &--below {
+      border-top: 2rem solid $background-white;
+      border-bottom: 2rem solid transparent;
+      margin-bottom: -4rem; /* - total border height */
+    }
+  }
+
+  &__overlay_content {
+    padding-top: $global-spacing-unit-tiny;
+    padding-bottom: $global-spacing-unit-tiny;
+  }
+
+  &__button {
+    text-align: center;
 
     &-icon {
-      text-transform: uppercase;
+      /* Default Colour */
+      background-color: $background-primary;
     }
+  }
+}
+
+.c-hero--full, .c-hero--full_with_gutters {
+  width: 100vw;
+
+  @include breakpoint(desktop) {
+    margin-left: -10vw;
+  }
+}
+
+.c-hero--full_with_gutters {
+  @include breakpoint(desktop) {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }

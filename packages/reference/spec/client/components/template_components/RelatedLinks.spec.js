@@ -1,5 +1,5 @@
 // Components
-import { RelatedLinks } from '../../../../client/components/pages/RelatedLinks'
+import { RelatedLinks } from '../../../../client/components/template_components/RelatedLinks'
 
 // Objects
 import Button from '../../../../client/objects/Button'
@@ -14,7 +14,7 @@ test('renders the full RelatedLinks component', () => {
 
   // Act
   const wrapper = mount(
-    <RelatedLinks links={relatedLinksData} />
+    <RelatedLinks componentData={relatedLinksData} />
   )
 
   // Assert
@@ -32,7 +32,7 @@ test('renders correctly when some URLs are not set in the component', () => {
 
   // Act
   const wrapper = mount(
-    <RelatedLinks links={relatedLinksWithMissingURLsData} />
+    <RelatedLinks componentData={relatedLinksWithMissingURLsData} />
   )
 
   // Assert

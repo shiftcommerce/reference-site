@@ -25,7 +25,7 @@ export class HalfCategoryGallery extends Component {
   }
 
   render () {
-    const { half } = this.props
+    const { componentData } = this.props
     const elements = [1, 2]
 
     return (
@@ -33,7 +33,7 @@ export class HalfCategoryGallery extends Component {
         { elements.map((element, index) => {
           return (
             <div key={index}>
-              {this.halfComponent(half, element)}
+              {this.halfComponent(componentData, element)}
             </div>
           )
         }) }

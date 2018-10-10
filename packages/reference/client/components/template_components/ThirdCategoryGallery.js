@@ -26,7 +26,7 @@ export class ThirdCategoryGallery extends Component {
   }
 
   render () {
-    const { third } = this.props
+    const { componentData } = this.props
     const elements = [1, 2, 3]
 
     return (
@@ -34,7 +34,7 @@ export class ThirdCategoryGallery extends Component {
         { elements.map((element, index) => {
           return (
             <div key={index}>
-              {this.thirdComponent(third, element)}
+              {this.thirdComponent(componentData, element)}
             </div>
           )
         }) }

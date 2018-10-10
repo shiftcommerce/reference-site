@@ -1,5 +1,7 @@
 const heroImageData = {
-  id: '14_6',
+  id: '4_1',
+  type: 'components',
+  reference: 'hero_full',
   image: [
     {
       asset_file: '1513596567.2856915-Week-44-Department-Homeware-2_24.jpg',
@@ -16,8 +18,11 @@ const heroImageData = {
       updated_at: '2017-12-18T11:29:27Z'
     }
   ],
-  link1_text: 'shop glassware',
-  link1_url: [
+  heading: 'Thing',
+  title: 'TOP OF THE GLASS',
+  text: 'Textytext',
+  link_1_text: 'shop glassware',
+  link_1_url: [
     {
       canonical_path: '/homeware/dining/glassware',
       id: '/homeware/dining/glassware',
@@ -25,8 +30,18 @@ const heroImageData = {
       url: '/homeware/dining/glassware'
     }
   ],
-  reference: 'full_image__text_below',
-  title: 'TOP OF THE GLASS'
+  link_2_text: '',
+  link_2_url: null,
+  link_3_text: '',
+  link_3_url: null,
+  link_4_text: '',
+  link_4_url: null,
+  link_5_text: '',
+  link_5_url: null,
+  background_colour: '#eee',
+  overlay_colour: '#eee',
+  overlay_position: [ 'above' ],
+  overlay_image_overlap: [ 'full' ]
 }
 
 export default heroImageData

@@ -2,7 +2,7 @@
 
 exports[`renders correctly when some URLs are not set in the component 1`] = `
 <RelatedLinks
-  links={
+  componentData={
     Object {
       "id": "14_8",
       "link1_text": "shop bathroom",
@@ -75,7 +75,7 @@ exports[`renders correctly when some URLs are not set in the component 1`] = `
 
 exports[`renders the full RelatedLinks component 1`] = `
 <RelatedLinks
-  links={
+  componentData={
     Object {
       "id": "14_8",
       "link1_text": "shop bathroom",

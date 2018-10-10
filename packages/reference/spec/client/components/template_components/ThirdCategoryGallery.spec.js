@@ -1,5 +1,5 @@
 // Components
-import { ThirdCategoryGallery } from '../../../../client/components/pages/ThirdCategoryGallery'
+import { ThirdCategoryGallery } from '../../../../client/components/template_components/ThirdCategoryGallery'
 
 // Objects
 import Button from '../../../../client/objects/Button'
@@ -14,7 +14,7 @@ test('renders the full ThirdCategoryGallery component', () => {
 
   // Act
   const wrapper = mount(
-    <ThirdCategoryGallery third={thirdCategoryData} />
+    <ThirdCategoryGallery componentData={thirdCategoryData} />
   )
 
   // Assert

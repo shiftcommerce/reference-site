@@ -1,5 +1,5 @@
 // Components
-import { HalfCategoryGallery } from '../../../../client/components/pages/HalfCategoryGallery'
+import { HalfCategoryGallery } from '../../../../client/components/template_components/HalfCategoryGallery'
 
 // Objects
 import Button from '../../../../client/objects/Button'
@@ -14,7 +14,7 @@ test('renders the full HalfCategoryGallery component', () => {
 
   // Act
   const wrapper = mount(
-    <HalfCategoryGallery half={halfCategoryData} />
+    <HalfCategoryGallery componentData={halfCategoryData} />
   )
 
   // Assert

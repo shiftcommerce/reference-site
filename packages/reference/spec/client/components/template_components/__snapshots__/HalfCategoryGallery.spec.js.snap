@@ -2,7 +2,7 @@
 
 exports[`renders the full HalfCategoryGallery component 1`] = `
 <HalfCategoryGallery
-  half={
+  componentData={
     Object {
       "box1_image": Array [
         Object {

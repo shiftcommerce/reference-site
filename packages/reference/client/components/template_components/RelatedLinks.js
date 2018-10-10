@@ -18,22 +18,22 @@ export class RelatedLinks extends Component {
   }
 
   render () {
-    const { links } = this.props
+    const { componentData } = this.props
     const elements = [1, 2, 3]
 
     return (
       <div className='c-links'>
         <div className='c-links__text'>
           <h1 className='c-links__text-title'>
-            {links.title}
+            {componentData.title}
           </h1>
         </div>
         <div className='c-links__grid'>
           { elements.map((element, index) => {
-            if (links[`link${element}_url`]) {
+            if (componentData[`link${element}_url`]) {
               return (
                 <div key={index}>
-                  {this.linkButton(links, element)}
+                  {this.linkButton(componentData, element)}
                 </div>
               )
             }

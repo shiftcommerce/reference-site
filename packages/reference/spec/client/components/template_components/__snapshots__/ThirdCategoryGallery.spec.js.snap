@@ -2,7 +2,7 @@
 
 exports[`renders the full ThirdCategoryGallery component 1`] = `
 <ThirdCategoryGallery
-  third={
+  componentData={
     Object {
       "box1_image": Array [
         Object {
