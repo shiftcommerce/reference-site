@@ -2,7 +2,7 @@ const express = require('express')
 const next = require('next')
 const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
-const session = require('express-session')
+const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 
 const port = parseInt(process.env.PORT, 10) || 3000
@@ -30,14 +30,14 @@ app.prepare().then(() => {
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: production,
-      sameSite: 'lax',
-      expires: sessionExpiryTime
-    }
+    secure: production,
+    sameSite: 'lax',
+    expires: sessionExpiryTime
   }
+
+  // Unique local IPv6 addresses have the same function as private addresses in IPv4
+  // They are unique to the private organization and are not internet routable.
+  server.set('trust proxy', 'uniquelocal')
 
   server.use(session(sessionParams))
   server.use(cookieParser())
@@ -56,16 +56,17 @@ app.prepare().then(() => {
     const { customerId } = req.session
     const { signedIn } = req.cookies
 
-    if (customerId) {
-      if (!signedIn) {
-        req.session.cookie.expires = sessionExpiryTime
-        res.cookie('signedIn', true, { expires: sessionExpiryTime })
-      }
-      res.redirect('/account/myaccount')
-    } else {
+    // If there is no customerId, clear signedIn cookie and render login.
+    if (!customerId) {
       res.clearCookie('signedIn')
       return app.render(req, res, '/account/login', req.query)
     }
+
+    if (customerId && !signedIn) {
+      req.session.expires = sessionExpiryTime
+      res.cookie('signedIn', true, { expires: sessionExpiryTime })
+    }
+    res.redirect('/account/myaccount')
   })
 
   server.get('/account/myaccount', (req, res) => {
@@ -79,12 +80,10 @@ app.prepare().then(() => {
     }
 
     if (customerId && !signedIn) {
-      req.session.cookie.expires = sessionExpiryTime
+      req.session.expires = sessionExpiryTime
       res.cookie('signedIn', true, { expires: sessionExpiryTime })
-      return app.render(req, res, '/account/myaccount', req.query)
-    } else {
-      return app.render(req, res, '/account/myaccount', req.query)
     }
+    return app.render(req, res, '/account/myaccount', req.query)
   })
 
   server.get('/account/register', (req, res) => {
@@ -96,14 +95,9 @@ app.prepare().then(() => {
   })
 
   server.get('/account/logout', (req, res) => {
-    req.session.destroy((error) => {
-      if (error) {
-        console.log('logout error:', error)
-      } else {
-        res.clearCookie('signedIn')
-        res.redirect('/')
-      }
-    })
+    req.session = null
+    res.clearCookie('signedIn')
+    res.redirect('/')
   })
 
   server.get('/order', (req, res) => {
