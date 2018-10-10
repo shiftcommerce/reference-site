@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Button from '../../objects/Button'
 import Image from '../../objects/Image'
 
-export class HeroFull extends Component {
+class HeroFull extends Component {
   heroHeading (hero) {
     // Only render if heading available
     if (hero.heading) {
@@ -93,3 +93,5 @@ export class HeroFull extends Component {
     )
   }
 }
+
+export default HeroFull

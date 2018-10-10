@@ -1,5 +1,5 @@
 // Components
-import { HeroFull } from '../../../../client/components/template_components/HeroFull'
+import HeroFull from '../../../../client/components/template_components/HeroFull'
 
 // Objects
 import Button from '../../../../client/objects/Button'
