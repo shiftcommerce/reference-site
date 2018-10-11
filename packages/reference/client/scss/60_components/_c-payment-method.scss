@@ -43,7 +43,7 @@
   }
 
   &__address-summary {
-    
+
     p {
       color: black;
     }
@@ -72,22 +72,22 @@
     max-width: 100%;
     margin-bottom: 0.5rem;
 
-     img {
-       height: 30px;
-       padding: 5px;
-     }
+    img {
+      height: 30px;
+      padding: 5px;
+    }
 
-     div {
-       display: inline-block;
-     }
+    div {
+      display: inline-block;
+    }
 
-     &-cardpayment {
-       margin-left: 0.5rem;
-     }
+    &-cardpayment {
+      margin-left: 0.5rem;
+    }
 
-     &-paypal {
-       margin-left: 4rem;
-     }
+    &-paypal {
+      margin-left: 4rem;
+    }
   }
 
   &__header {

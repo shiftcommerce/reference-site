@@ -2,6 +2,8 @@
   "extends": "stylelint-config-recommended-scss",
   "rules": {
     "selector-max-empty-lines": 0,
-    "value-list-max-empty-lines": 0
+    "value-list-max-empty-lines": 0,
+    "indentation": 2,
+    "no-eol-whitespace": true
   }
 }

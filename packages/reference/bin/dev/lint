@@ -1,2 +1,18 @@
 #!/bin/bash
-./bin/dev/yarn run lint $@
+
+# First ARG to specify js or css
+action=$1
+
+# Shift the arguments so that you can still pass args to the commands
+# For e.g
+# ./bin/dev/lint js reducers/ <-- JS linter but specify path to run against
+shift
+
+case $action in
+  all)     ./bin/dev/yarn run lint $@         ;;
+  js)      ./bin/dev/yarn run lint:js $@      ;;
+  js:fix)  ./bin/dev/yarn run lint:js:fix $@  ;;
+  css)     ./bin/dev/yarn run lint:css $@     ;;
+  css:fix) ./bin/dev/yarn run lint:css:fix $@ ;;
+  *)       ./bin/dev/yarn run lint $@         ;; # No ARG passed, default to lint all.
+esac

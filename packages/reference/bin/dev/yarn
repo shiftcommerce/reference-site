@@ -1,2 +1,4 @@
 #!/bin/bash
-docker-compose exec web yarn $@
+
+# Initially try to call yarn within the web container if booted, otherwise boot standalone.
+docker-compose exec web yarn $@ || docker-compose run web yarn $@

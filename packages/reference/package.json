@@ -17,8 +17,11 @@
     "jest-coverage": "jest --coverage",
     "jest-update-snapshot": "jest --updateSnapshot",
     "heroku-postbuild": "next build client",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:js": "standard",
+    "lint:js:fix": "standard --fix",
+    "lint:css": "stylelint .",
+    "lint:css:fix": "stylelint . --fix"
   },
   "dependencies": {
     "@zeit/next-css": "^0.1.5",

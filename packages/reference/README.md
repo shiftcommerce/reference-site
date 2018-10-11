@@ -43,6 +43,21 @@ API_ACCESS_TOKEN=<API_AUTH_ACCESS_TOKEN>
 API_HOST_PROXY=<localhost>:<PORT>
 ```
 
+**Available tools:**
+
+
+We have the following binstubs available within the `/bin/dev/` folder to assist in working with the project locally via Docker:
+
+* `./bin/dev/boot` - Boot the application. To exit use `CTRL-C`
+* `./bin/dev/yarn` - Run the test suite within Docker.
+* `./bin/dev/jest` - Run Jest within Docker.
+* `./bin/dev/lint all` - Run both Standard & Stylelint.
+* `./bin/dev/lint js` - Run Standard linting.
+* `./bin/dev/lint js:fix` - Run Standard linting with auto-fix.
+* `./bin/dev/lint css` - Run Stylelint.
+* `./bin/dev/lint css:fix` - Run Stylelint with auto-fix.
+
+
 **Testing**
 
 Jest specs are located in the spec file and can be run using the following command:
