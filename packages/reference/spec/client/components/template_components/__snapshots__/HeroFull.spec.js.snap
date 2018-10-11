@@ -101,6 +101,7 @@ exports[`renders the full HeroImage component 1`] = `
                 label="shop glassware"
                 onClick={[Function]}
                 size="lrg"
+                status="primary"
               >
                 <button
                   aria-label="shop glassware"

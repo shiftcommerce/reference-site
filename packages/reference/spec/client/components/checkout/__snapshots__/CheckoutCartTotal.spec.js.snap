@@ -175,6 +175,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -389,6 +390,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -530,6 +532,7 @@ exports[`renders payment errors 1`] = `
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -550,6 +553,7 @@ exports[`renders payment errors 1`] = `
       className="c-cart-summary__buttons--proceed"
       label="Continue to Payment"
       size="lrg"
+      status="primary"
       type="button"
     >
       <button
@@ -664,6 +668,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -684,6 +689,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
       className="c-cart-summary__buttons--proceed"
       label="Continue to Payment"
       size="lrg"
+      status="primary"
       type="button"
     >
       <button
@@ -808,6 +814,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -828,6 +835,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
       className="c-cart-summary__buttons--proceed"
       label="Continue to Payment"
       size="lrg"
+      status="primary"
       type="button"
     >
       <button
@@ -940,6 +948,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -960,6 +969,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       className="c-cart-summary__buttons--proceed"
       label="Continue to Payment"
       size="lrg"
+      status="primary"
       type="button"
     >
       <button
@@ -1069,6 +1079,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         label="Continue shopping"
         onClick={[Function]}
         size="lrg"
+        status="primary"
         type="button"
       >
         <button
@@ -1089,6 +1100,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
       className="c-cart-summary__buttons--proceed"
       label="Continue to Payment"
       size="lrg"
+      status="primary"
       type="button"
     >
       <button

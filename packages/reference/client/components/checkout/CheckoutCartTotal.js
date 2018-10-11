@@ -33,6 +33,7 @@ class CheckoutCartTotal extends Component {
             <Button
               aria-label='Continue Shopping'
               label='Continue shopping'
+              status='primary'
               size='lrg'
               className='c-cart-summary__buttons--continue'
               type='button'
@@ -44,6 +45,7 @@ class CheckoutCartTotal extends Component {
             size='lrg'
             className='c-cart-summary__buttons--proceed'
             type='button'
+            status='primary'
             onClick={onClick}
           />
         </div >
@@ -57,6 +59,7 @@ class CheckoutCartTotal extends Component {
               label='Continue shopping'
               size='lrg'
               className='c-cart-summary__buttons--continue'
+              status='primary'
               type='button'
             />
           </Link>
@@ -66,6 +69,7 @@ class CheckoutCartTotal extends Component {
             size='lrg'
             className='c-cart-summary__buttons--proceed'
             type='button'
+            status='primary'
             id='place_order'
             status={(isValidOrder ? 'primary' : 'disabled')}
             disabled={!isValidOrder}
@@ -82,6 +86,7 @@ class CheckoutCartTotal extends Component {
               label='Continue shopping'
               size='lrg'
               className='c-cart-summary__buttons--continue'
+              status='primary'
               type='button'
             />
           </Link>
@@ -91,6 +96,7 @@ class CheckoutCartTotal extends Component {
             size='lrg'
             className='c-cart-summary__buttons--proceed'
             type='button'
+            status='primary'
             onClick={onClick}
           />
         </div >

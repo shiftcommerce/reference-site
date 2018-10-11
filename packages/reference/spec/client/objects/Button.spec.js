@@ -4,7 +4,7 @@ import Button from '../../../client/objects/Button'
 test('renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='ADD TO BAG' status='positive' />
+    <Button label='ADD TO BAG' status='positive' size='lrg'/>
   )
 
   // Assert
@@ -14,7 +14,7 @@ test('renders correctly', () => {
 test('disabled button', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='Testing Button' disabled='true' />
+    <Button label='Testing Button' disabled='true' size='lrg' status='primary'/>
   )
 
   // Assert
@@ -27,18 +27,20 @@ describe('Button by default', () => {
   test('disabled should be false', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Enabled Button' />
+      <Button label='Enabled Button' size='lrg' status='primary'/>
     )
 
     // Assert
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('button')).not.toHaveClassName('o-button--disabled')
   })
+})
 
+describe('Button with props', () => {
   test('should be of large size', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Large Button' />
+      <Button label='Large Button' size="lrg"/>
     )
 
     // Assert
@@ -49,7 +51,7 @@ describe('Button by default', () => {
   test('status should be primary', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Primary Button' />
+      <Button label='Primary Button' status="primary"/>
     )
 
     // Assert

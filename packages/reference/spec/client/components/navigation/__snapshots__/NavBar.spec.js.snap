@@ -128,11 +128,10 @@ exports[`renders the nav bar options 1`] = `
                     <Button
                       className="c-searchbar__input-button"
                       label="Search"
-                      size="lrg"
                       status="primary"
                     >
                       <button
-                        className="c-searchbar__input-button o-button o-button--primary o-button--lrg"
+                        className="c-searchbar__input-button o-button o-button--primary"
                         disabled={false}
                         role="button"
                         tabIndex="0"
@@ -198,6 +197,8 @@ exports[`renders the nav bar options 1`] = `
             <Button
               className="c-nav__menu-footer-email-button"
               label="yes please"
+              size="lrg"
+              status="primary"
             >
               <button
                 className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"

@@ -51,14 +51,24 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
       <Link
         href=""
       >
-        <a
+        <Button
           aria-label="Go to checkout"
-          className="o-button o-button--primary o-button--lrg o-button--disabled"
-          href=""
+          className="o-button--disabled"
+          label="Checkout"
           onClick={[Function]}
+          status="primary"
         >
-          CHECKOUT
-        </a>
+          <button
+            aria-label="Go to checkout"
+            className="o-button--disabled o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Checkout
+          </button>
+        </Button>
       </Link>
       <Link
         as="/account/myaccount"
@@ -140,14 +150,24 @@ exports[`renders an active checkout button where cart has items 1`] = `
       <Link
         href="/checkout"
       >
-        <a
+        <Button
           aria-label="Go to checkout"
-          className="o-button o-button--primary o-button--lrg"
-          href="/checkout"
+          className=""
+          label="Checkout"
           onClick={[Function]}
+          status="primary"
         >
-          CHECKOUT
-        </a>
+          <button
+            aria-label="Go to checkout"
+            className="o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Checkout
+          </button>
+        </Button>
       </Link>
       <Link
         as="/account/myaccount"
@@ -207,12 +227,12 @@ exports[`renders the minibag links 1`] = `
     <Link
       href=""
     >
-      <a
+      <Button
         aria-label="Go to checkout"
-        className="o-button o-button--primary o-button--lrg o-button--disabled"
-      >
-        CHECKOUT
-      </a>
+        className="o-button--disabled"
+        label="Checkout"
+        status="primary"
+      />
     </Link>
     <Link
       as="/account/myaccount"

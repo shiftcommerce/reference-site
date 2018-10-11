@@ -1,0 +1,46 @@
+.c-generic-grid {
+  text-align: center;
+  margin: 0 $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    flex-basis: 28%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: $global-spacing-unit-tiny;
+    margin-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      margin-right: $global-spacing-unit-large;
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: $global-spacing-unit;
+    }
+  }
+
+  &__card:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  &__title {
+    font-size: 1rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__cat-button {
+    margin-top: 0;
+  }
+}

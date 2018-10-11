@@ -67,7 +67,7 @@ class HeroFull extends Component {
         buttons.push(
           <div className='c-hero__button' key={index}>
             <Link href={`/slug?slug=${hero[`link_${index}_url`][0].canonical_path}`} as={hero[`link_${index}_url`][0].canonical_path}>
-              <Button className='c-hero__button-icon' label={hero[`link_${index}_text`]} size='lrg' aria-label={hero[`link_${index}_text`]} />
+              <Button className='c-hero__button-icon' label={hero[`link_${index}_text`]} size='lrg' status='primary' aria-label={hero[`link_${index}_text`]} />
             </Link>
           </div>
         )

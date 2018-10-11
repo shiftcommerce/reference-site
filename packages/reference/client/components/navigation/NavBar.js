@@ -53,7 +53,7 @@ export class NavBar extends Component {
         </div>
         <div className='c-nav__menu-footer-email-input'>
           <p>Enter your email address here</p>
-          <Button className='c-nav__menu-footer-email-button' label='yes please' />
+          <Button className='c-nav__menu-footer-email-button' label='yes please' status='primary' size='lrg'/>
         </div>
       </div>
     )

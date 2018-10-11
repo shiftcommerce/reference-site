@@ -1323,6 +1323,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           className="c-payment-method__gift-button"
           label="Apply Code"
           size="lrg"
+          status="primary"
         >
           <button
             aria-label="Apply Gift Code"
@@ -1979,6 +1980,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               label="Continue shopping"
               onClick={[Function]}
               size="lrg"
+              status="primary"
               type="button"
             >
               <button
@@ -2000,6 +2002,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             label="Continue to Payment"
             onClick={[Function]}
             size="lrg"
+            status="primary"
             type="button"
           >
             <button
@@ -3382,6 +3385,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             className="c-payment-method__gift-button"
             label="Apply Code"
             size="lrg"
+            status="primary"
           >
             <button
               aria-label="Apply Gift Code"
@@ -4048,6 +4052,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 label="Continue shopping"
                 onClick={[Function]}
                 size="lrg"
+                status="primary"
                 type="button"
               >
                 <button
@@ -4069,6 +4074,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               label="Continue to Payment"
               onClick={[Function]}
               size="lrg"
+              status="primary"
               type="button"
             >
               <button
@@ -5414,6 +5420,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           className="c-payment-method__gift-button"
           label="Apply Code"
           size="lrg"
+          status="primary"
         >
           <button
             aria-label="Apply Gift Code"
@@ -6070,6 +6077,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               label="Continue shopping"
               onClick={[Function]}
               size="lrg"
+              status="primary"
               type="button"
             >
               <button
@@ -6091,6 +6099,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             label="Continue to Payment"
             onClick={[Function]}
             size="lrg"
+            status="primary"
             type="button"
           >
             <button
@@ -7825,6 +7834,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           className="c-payment-method__gift-button"
           label="Apply Code"
           size="lrg"
+          status="primary"
         >
           <button
             aria-label="Apply Gift Code"
@@ -8637,6 +8647,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               label="Continue shopping"
               onClick={[Function]}
               size="lrg"
+              status="primary"
               type="button"
             >
               <button
@@ -8658,6 +8669,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             label="Continue to Payment"
             onClick={[Function]}
             size="lrg"
+            status="primary"
             type="button"
           >
             <button
@@ -10392,6 +10404,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           className="c-payment-method__gift-button"
           label="Apply Code"
           size="lrg"
+          status="primary"
         >
           <button
             aria-label="Apply Gift Code"
@@ -11204,6 +11217,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               label="Continue shopping"
               onClick={[Function]}
               size="lrg"
+              status="primary"
               type="button"
             >
               <button
@@ -11225,6 +11239,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             label="Continue to Payment"
             onClick={[Function]}
             size="lrg"
+            status="primary"
             type="button"
           >
             <button

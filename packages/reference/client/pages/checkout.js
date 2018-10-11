@@ -191,6 +191,7 @@ export class CheckoutPage extends Component {
             aria-label='Apply Gift Code'
             className='c-payment-method__gift-button'
             label='Apply Code'
+            status='primary'
             size='lrg' />
         </span>
       </div>

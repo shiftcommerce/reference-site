@@ -5,26 +5,23 @@ import classNames from 'classnames'
 class Button extends Component {
   render () {
     let {
-      status,
-      label,
-      size,
-      disabled,
-      className,
-      onClick,
-      ...otherProps
+      status, label, size, disabled,
+      className, onClick, ...otherProps
     } = this.props
 
     disabled = disabled || false
-    status = status || 'primary'
-    size = size || 'lrg'
 
     return (
       <button
-        className={classNames(className, 'o-button', `o-button--${status}`, `o-button--${size}`, {'o-button--disabled': disabled})}
-        tabIndex='0'
-        role='button'
-        disabled={disabled}
-        onClick={onClick}
+        className={classNames(
+          className,
+          'o-button',
+          status ? `o-button--${status}` : null,
+          size ? `o-button--${size}` : null,
+          {'o-button--disabled': disabled}
+        )}
+        tabIndex='0' role='button'
+        disabled={disabled} onClick={onClick}
         {...otherProps}
       >
         { label }

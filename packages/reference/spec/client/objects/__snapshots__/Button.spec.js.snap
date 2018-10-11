@@ -3,6 +3,8 @@
 exports[`Button by default disabled should be false 1`] = `
 <Button
   label="Enabled Button"
+  size="lrg"
+  status="primary"
 >
   <button
     className="o-button o-button--primary o-button--lrg"
@@ -15,12 +17,13 @@ exports[`Button by default disabled should be false 1`] = `
 </Button>
 `;
 
-exports[`Button by default should be of large size 1`] = `
+exports[`Button with props should be of large size 1`] = `
 <Button
   label="Large Button"
+  size="lrg"
 >
   <button
-    className="o-button o-button--primary o-button--lrg"
+    className="o-button o-button--lrg"
     disabled={false}
     role="button"
     tabIndex="0"
@@ -30,12 +33,13 @@ exports[`Button by default should be of large size 1`] = `
 </Button>
 `;
 
-exports[`Button by default status should be primary 1`] = `
+exports[`Button with props status should be primary 1`] = `
 <Button
   label="Primary Button"
+  status="primary"
 >
   <button
-    className="o-button o-button--primary o-button--lrg"
+    className="o-button o-button--primary"
     disabled={false}
     role="button"
     tabIndex="0"
@@ -49,6 +53,8 @@ exports[`disabled button 1`] = `
 <Button
   disabled="true"
   label="Testing Button"
+  size="lrg"
+  status="primary"
 >
   <button
     className="o-button o-button--primary o-button--lrg o-button--disabled"
@@ -64,6 +70,7 @@ exports[`disabled button 1`] = `
 exports[`renders correctly 1`] = `
 <Button
   label="ADD TO BAG"
+  size="lrg"
   status="positive"
 >
   <button

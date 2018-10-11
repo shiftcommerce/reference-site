@@ -29,11 +29,10 @@ exports[`renders the header 1`] = `
           <Button
             className="c-searchbar__input-button"
             label="Search"
-            size="lrg"
             status="primary"
           >
             <button
-              className="c-searchbar__input-button o-button o-button--primary o-button--lrg"
+              className="c-searchbar__input-button o-button o-button--primary"
               disabled={false}
               role="button"
               tabIndex="0"
