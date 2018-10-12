@@ -25,7 +25,7 @@ export class RelatedLinks extends Component {
       <div className='c-links'>
         <div className='c-links__text'>
           <h1 className='c-links__text-title'>
-            {componentData.title}
+            { componentData.title }
           </h1>
         </div>
         <div className='c-links__grid'>
@@ -33,7 +33,7 @@ export class RelatedLinks extends Component {
             if (componentData[`link${element}_url`]) {
               return (
                 <div key={index}>
-                  {this.linkButton(componentData, element)}
+                  { this.linkButton(componentData, element) }
                 </div>
               )
             }

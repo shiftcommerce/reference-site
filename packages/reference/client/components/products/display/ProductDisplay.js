@@ -45,7 +45,7 @@ class ProductDisplay extends Component {
       <div className='c-product-display__buttons'>
         <div className='c-product-display__buttons-section1'>
           <div className='c-product-display__buttons-title'>
-            {product.title}
+            { product.title }
           </div>
           <div className='c-product-display__buttons-price'>
             <ProductPrice variants={product.variants} />
@@ -84,7 +84,7 @@ class ProductDisplay extends Component {
     return <>
       <div className='c-product-display__info'>
         <div className='c-product-display__info-title'>
-          {product.title}
+          { product.title }
         </div>
         <div className='c-product-display__info-price'>
           <ProductPrice variants={product.variants} />
@@ -96,7 +96,7 @@ class ProductDisplay extends Component {
         <div className='c-product-display__info-colour'>
           <h1 className='c-product-display__info-colour-title'>Colour</h1>
           <input type='radio' id='colour' style={{ backgroundColor: productColour }} />
-          <label htmlFor='colour'>{productColour}</label>
+          <label htmlFor='colour'>{ productColour }</label>
         </div>
         <p className='c-product-display__info-size-chart'>Find your recommended size</p>
         <div className='c-product-display__info-size'>
@@ -109,7 +109,7 @@ class ProductDisplay extends Component {
   renderFit (meta) {
     if (meta.silhouette) {
       return <>
-        <p className='c-product-display__size-text'>- {meta.silhouette.value}</p>
+        <p className='c-product-display__size-text'>- { meta.silhouette.value }</p>
       </>
     }
   }
@@ -117,7 +117,7 @@ class ProductDisplay extends Component {
   renderFeature (meta) {
     if (meta.product_feature) {
       return (
-        <p className='c-product-display__size-text'>- {meta.product_feature.value}</p>
+        <p className='c-product-display__size-text'>- { meta.product_feature.value }</p>
       )
     }
   }
@@ -150,8 +150,8 @@ class ProductDisplay extends Component {
         <label htmlFor='care' className='c-product-dispay__label' />
         <input type='checkbox' id='care' />
         <span className='c-product-display__arrow' />
-        <p className='c-product-display__care-text'>- {fabric}</p>
-        <p className='c-product-display__care-text'>- {cleaning}</p>
+        <p className='c-product-display__care-text'>- { fabric }</p>
+        <p className='c-product-display__care-text'>- { cleaning }</p>
       </div>
     </>
   }
@@ -167,8 +167,8 @@ class ProductDisplay extends Component {
               <Link href={image.link} key={index}>
                 <div className='c-product-display__related-images-link'>
                   <img className='c-product-display__related-images-file' src={image.asset_file} />
-                  <p className='c-product-display__related-images-text'>{image.text}</p>
-                  <p className='c-product-display__related-images-price'>{image.price}</p>
+                  <p className='c-product-display__related-images-text'>{ image.text }</p>
+                  <p className='c-product-display__related-images-price'>{ image.price }</p>
                   <div className='c-product-display__related-images-rating'>
                     { this.renderRatingStars(image) }
                   </div>

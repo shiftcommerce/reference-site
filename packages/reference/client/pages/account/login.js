@@ -57,7 +57,7 @@ export class Login extends Component {
       return (
         login.validationErrors.map((error, index) => {
           return <h1 key={index} className='c-register__errors'>
-            {error.detail}
+            { error.detail }
           </h1>
         })
       )
@@ -79,7 +79,7 @@ export class Login extends Component {
         />
         <a href={'/account/forgotpassword'} className='c-login__anchor'>Reset Password?</a>
         { this.renderErrors(login) }
-        <p className='c-login__caption'>{"Don't have an account?"}</p>
+        <p className='c-login__caption'>{ "Don't have an account?" }</p>
         <Link href='/account/register'>
           <Button className='c-login__button-icon' label='CREATE NEW ACCOUNT' status='primary' size='lrg' aria-label='Create New Account' />
         </Link>

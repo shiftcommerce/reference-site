@@ -9,7 +9,7 @@ class ExampleComponent extends Component {
 
     return (
       <div>
-        `The output of {thisProp} + {thatProp} is {thisProp + thatProp}`
+        `The output of { thisProp } + { thatProp } is { thisProp + thatProp }`
       </div>
     )
   }

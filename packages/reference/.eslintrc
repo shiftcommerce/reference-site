@@ -7,18 +7,25 @@
     "render": true,
     "mount": true
   },
-  "plugins": [ "react" ],
+  "plugins": ["react"],
   "extends": "standard",
   "rules": {
-  "camelcase": [
-    "error", {
-      "properties": "never",
-      "ignoreDestructuring": true
+    "camelcase": [
+      "error", {
+        "properties": "never",
+        "ignoreDestructuring": true
     }],
+    "react/jsx-curly-spacing": ["error", {
+      "when": "always",
+      "attributes": false,
+      "children": {
+        "when": "always"
+      }
+    }],
+    "object-curly-spacing": ["error", "always"],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "padded-blocks": [
-      "error",
+    "padded-blocks": ["error",
       {
         "blocks": "never",
         "classes": "never",

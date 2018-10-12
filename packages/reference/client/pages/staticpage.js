@@ -13,7 +13,7 @@ class Page extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
     const { id } = query
     await reduxStore.dispatch(readPage(id))
-    return {id: id}
+    return { id: id }
   }
 
   renderComponents (components) {
@@ -46,7 +46,7 @@ class Page extends Component {
 
       return (
         <div className='c-page'>
-          {this.renderComponents(components)}
+          { this.renderComponents(components) }
         </div>
       )
     }

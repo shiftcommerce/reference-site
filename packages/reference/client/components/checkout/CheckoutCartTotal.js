@@ -127,7 +127,7 @@ class CheckoutCartTotal extends Component {
             </dl>
             <dl aria-label='Shipping cost'>
               <dt> Shipping costs: </dt>
-              <dd> {shippingText} </dd>
+              <dd> { shippingText } </dd>
             </dl>
             <dl aria-label='Total' className='u-bold'>
               <dt> TOTAL: </dt>
@@ -136,7 +136,7 @@ class CheckoutCartTotal extends Component {
             <dl>
               <dt className='c-cart-summary__VAT'>* Including VAT</dt>
             </dl>
-            {order.paymentError &&
+            { order.paymentError &&
               <div className='c-checkout-cart-total__payment-error'>{ order.paymentError }</div>
             }
           </div>

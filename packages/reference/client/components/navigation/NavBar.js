@@ -91,7 +91,7 @@ export class NavBar extends Component {
     if (loading) {
       return (<Loading />)
     } else if (menu.error) {
-      return (<p className='c-nav__error'>Sorry! There is an error in loading menus {menu.error}</p>)
+      return (<p className='c-nav__error'>Sorry! There is an error in loading menus { menu.error }</p>)
     } else {
       return (
         <div className='o-nav' role='navigation'>

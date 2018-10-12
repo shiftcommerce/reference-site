@@ -11,7 +11,7 @@ class HeroFull extends Component {
     // Only render if heading available
     if (hero.heading) {
       return (
-        <div className='c-hero__heading'>{hero.heading}</div>
+        <div className='c-hero__heading'>{ hero.heading }</div>
       )
     }
   }
@@ -21,15 +21,15 @@ class HeroFull extends Component {
     if (this.shouldDisplayOverlay(hero, overlayPosition, currentPosition)) {
       return (
         <div className='c-hero__overlay' style={{ backgroundColor: hero.overlay_colour }}>
-          {this.overlayPointer(hero.overlay_colour, overlayPosition, 'above')}
+          { this.overlayPointer(hero.overlay_colour, overlayPosition, 'above') }
           <div className='c-hero__overlay_content'>
             <div className='c-hero__overlay_title'>
-              {hero.title}
+              { hero.title }
             </div>
-            {hero.text}
-            {this.heroButtons(hero)}
+            { hero.text }
+            { this.heroButtons(hero) }
           </div>
-          {this.overlayPointer(hero.overlay_colour, overlayPosition, 'below')}
+          { this.overlayPointer(hero.overlay_colour, overlayPosition, 'below') }
         </div>
       )
     }
@@ -83,11 +83,11 @@ class HeroFull extends Component {
 
     return (
       <div className='c-hero c-hero--full_with_gutters' style={{ backgroundColor: componentData.background_colour }}>
-        {this.heroHeading(componentData)}
+        { this.heroHeading(componentData) }
         <div className='c-hero__content'>
-          {this.heroOverlay(componentData, 'above')}
+          { this.heroOverlay(componentData, 'above') }
           <Image className='c-hero__image' src={componentData.image[0].s3_url} />
-          {this.heroOverlay(componentData, 'below')}
+          { this.heroOverlay(componentData, 'below') }
         </div>
       </div>
     )

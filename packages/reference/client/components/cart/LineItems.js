@@ -16,7 +16,7 @@ class LineItems extends Component {
       {
         availableQuantity.map(index => {
           return <option key={index} value={index} aria-setsize={index} aria-posinset={index + 1}>
-            {index}
+            { index }
           </option>
         })
       }
@@ -34,7 +34,7 @@ class LineItems extends Component {
           </div>
         </div>
         <div className='c-line-items__total-wrapper'>
-          <a className='c-line-items__total'>&pound;{fixedPrice(lineItem.price * lineItem.quantity)}</a>
+          <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
         </div>
       </div>
     </>
@@ -45,11 +45,11 @@ class LineItems extends Component {
       <div className='o-grid-item2__lineitems'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title  u-bold'>
-            {lineItem.title}
+            { lineItem.title }
           </h4>
           <div className='c-line-items__details-sku'>
             <span>
-              {lineItem.sku}
+              { lineItem.sku }
             </span>
           </div>
         </div>
@@ -72,7 +72,7 @@ class LineItems extends Component {
       </div>
       <div className='o-grid-item4__lineitems'>
         <span className='c-line-items__space'>Grey</span>
-        <span className='c-line-items__space'>{lineItem.variant}</span>
+        <span className='c-line-items__space'>{ lineItem.variant }</span>
         <span className='c-line-items__space'>{ this.renderOptions(lineItem) }</span>
       </div>
     </>

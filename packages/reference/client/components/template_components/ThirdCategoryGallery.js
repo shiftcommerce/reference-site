@@ -12,9 +12,9 @@ export class ThirdCategoryGallery extends Component {
     return (
       <div className='c-third'>
         <Image className='c-third__image' src={thirdData[`box${element}_image`][0].s3_url} />
-        <h1 className='c-third__title'>{thirdData[`box${element}_title`]}</h1>
+        <h1 className='c-third__title'>{ thirdData[`box${element}_title`] }</h1>
         <div className='c-third__text'>
-          <p>{thirdData[`box${element}_text`]}</p>
+          <p>{ thirdData[`box${element}_text`] }</p>
         </div>
         <div className='c-third__button'>
           <Link href={`/slug?slug=${thirdData[`box${element}_link_url`][0].canonical_path}`} as={thirdData[`box${element}_link_url`][0].canonical_path}>
@@ -34,7 +34,7 @@ export class ThirdCategoryGallery extends Component {
         { elements.map((element, index) => {
           return (
             <div key={index}>
-              {this.thirdComponent(componentData, element)}
+              { this.thirdComponent(componentData, element) }
             </div>
           )
         }) }

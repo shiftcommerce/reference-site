@@ -35,7 +35,7 @@ class CartTable extends Component {
         <section className='c-cart-table__header'>
           <div className='u-float--left'>
             <h1 className='c-cart-table__title'> Your Shopping Basket <a className='c-cart-table__amount'>({ cart.totalQuantity })</a> </h1>
-            <p className='c-cart-table__description'>You have <a>{cart.totalQuantity}</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
+            <p className='c-cart-table__description'>You have <a>{ cart.totalQuantity }</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
             <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.totalQuantity} showCount={false} /> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> will be saved for 48 hours depending on availablility</p>
           </div>
           <div>

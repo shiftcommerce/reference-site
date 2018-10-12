@@ -8,7 +8,7 @@ const api = require('./../constants/apiUrls')
 function createOrderRenderer () {
   return (req, res) => {
     const body = req.body
-    const orderPayload = {data: body.data}
+    const orderPayload = { data: body.data }
     const cardToken = body.card_token
     const paymentMethod = body.payment_method
 

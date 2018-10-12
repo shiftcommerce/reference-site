@@ -11,7 +11,7 @@ export default function setCategory (state = initialState, action) {
     case types.GET_CATEGORY:
       return Object.assign({}, state)
     case types.SET_CATEGORY:
-      return Object.assign({}, state, action.payload, {loading: false})
+      return Object.assign({}, state, action.payload, { loading: false })
 
     default:
       return state

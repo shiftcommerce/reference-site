@@ -40,7 +40,7 @@ class Product extends Component {
 
     return (
       [1, 2, 3, 4, 5].map((key, index) =>
-        <span key={key} className={classNames({'c-product__rating--fill': key <= rating, 'c-product__rating--empty': key > rating})}>
+        <span key={key} className={classNames({ 'c-product__rating--fill': key <= rating, 'c-product__rating--empty': key > rating })}>
           &#9733;
         </span>
       )

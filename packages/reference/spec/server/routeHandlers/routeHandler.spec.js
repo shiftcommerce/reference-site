@@ -10,7 +10,7 @@ describe('getRenderer', () => {
       data: 'error!'
     }))
 
-    const req = {params: {}}
+    const req = { params: {} }
     const res = {
       status: jest.fn(x => ({
         send: jest.fn(y => y)

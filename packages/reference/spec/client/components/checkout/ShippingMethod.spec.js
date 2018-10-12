@@ -170,7 +170,7 @@ test('should be able to select a shipping method', () => {
   // Act
   const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
 
-  wrapper.find(`input[id="${selectedShippingMethod.sku}_${selectedShippingMethod.id}"]`).simulate('change', {target: { checked: true }})
+  wrapper.find(`input[id="${selectedShippingMethod.sku}_${selectedShippingMethod.id}"]`).simulate('change', { target: { checked: true } })
 
   const shippingNode = wrapper.find(`#${selectedShippingMethod.sku}_${selectedShippingMethod.id}`)
 

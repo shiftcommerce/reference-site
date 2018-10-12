@@ -30,18 +30,18 @@ export class Product extends Component {
   }
 
   static async getInitialProps ({ reduxStore, req, query }) {
-    const {id} = query
+    const { id } = query
     const isServer = !!req
 
     if (isServer) {
       await reduxStore.dispatch(readProduct(id))
     }
 
-    return {id: id}
+    return { id: id }
   }
 
   componentDidMount () {
-    const {dispatch, id} = this.props
+    const { dispatch, id } = this.props
     dispatch(readProduct(id))
   }
 

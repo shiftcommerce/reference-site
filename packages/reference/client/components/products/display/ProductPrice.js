@@ -10,13 +10,13 @@ class ProductPrice extends Component {
     if (minPrice !== maxPrice) {
       return (
         <span>
-          &pound;{minPrice} - &pound;{maxPrice}
+          &pound;{ minPrice } - &pound;{ maxPrice }
         </span>
       )
     } else {
       return (
         <span>
-          &pound;{maxPrice}
+          &pound;{ maxPrice }
         </span>
       )
     }

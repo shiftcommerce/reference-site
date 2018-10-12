@@ -16,16 +16,16 @@ export default function setOrder (state = initialState, action) {
       return Object.assign({}, state, action.payload)
 
     case types.REQUEST_CARD_TOKEN:
-      return Object.assign({}, state, {cardTokenRequested: action.value})
+      return Object.assign({}, state, { cardTokenRequested: action.value })
 
     case types.SET_CARD_TOKEN:
-      return Object.assign({}, state, {cardToken: action.value})
+      return Object.assign({}, state, { cardToken: action.value })
 
     case types.SET_PAYMENT_ERROR:
-      return Object.assign({}, state, {paymentError: action.value})
+      return Object.assign({}, state, { paymentError: action.value })
 
     case types.CARD_ERRORS:
-      return Object.assign({}, state, {card_errors: action.errors})
+      return Object.assign({}, state, { card_errors: action.errors })
 
     default:
       return state

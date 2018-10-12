@@ -85,7 +85,7 @@ class Checkbox extends Component {
       <label htmlFor={name} className={classNames('o-form__label', className, { 'o-form__input-field__error': validationErrorPresent })}>
         { this.renderInputField() }
         <span className='o-form__checkbox-caption'>
-          {label} {required && ' *'}
+          { label } { required && ' *' }
         </span>
       </label>
     )

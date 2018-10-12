@@ -45,7 +45,7 @@ class AddressForm extends Component {
       <div>
         { collapsed && (addressType === 'shipping') &&
           <div className='o-form__wrapper--collapsed'>
-            <span className={classNames('u-bold', {'u-text-color--primary': (address.line_1 && address.zipcode)})} />
+            <span className={classNames('u-bold', { 'u-text-color--primary': (address.line_1 && address.zipcode) })} />
             <p className='u-bold'>{ address.first_name } { address.last_name } </p>
             <span>{ address.line_1 }, { address.city }, { address.zipcode }</span>
           </div>
@@ -133,7 +133,7 @@ class AddressForm extends Component {
               { this.renderInputField(address, fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -144,7 +144,7 @@ class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: address.companyName }
     return (
       <div>
-        {!(address.companyNameShown) &&
+        { !(address.companyNameShown) &&
           <a href='#' onClick={() => onShowField(formName, 'companyNameShown')}>
             <p>+ Add Company Name (optional)</p>
           </a>
@@ -171,7 +171,7 @@ class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: address.line_2 }
     return (
       <div>
-        {!(address.address2Shown) &&
+        { !(address.address2Shown) &&
           <a href='#' onClick={() => onShowField(formName, 'address2Shown')}>
             <p>+ Add Address 2 (optional)</p>
           </a>
@@ -199,7 +199,7 @@ class AddressForm extends Component {
               { this.renderInputField(address, fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }

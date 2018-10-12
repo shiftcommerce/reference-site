@@ -20,7 +20,7 @@ class SearchBar extends Component {
       e.preventDefault()
       let query = { query: this.props.queryObject.query }
       let href = `/search?${qs.stringify(query)}`
-      Router.push(href, href, {shallow: false})
+      Router.push(href, href, { shallow: false })
     }
   }
 

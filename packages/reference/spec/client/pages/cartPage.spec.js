@@ -42,7 +42,7 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
   dispatch.mockClear()
 
   // Trigger quantity change
-  wrapper.find('select').simulate('change', {target: { value: 3, dataset: { variant: '123' } }})
+  wrapper.find('select').simulate('change', { target: { value: 3, dataset: { variant: '123' } } })
 
   // Verify if updateQuantity method is getting triggered on quantity update
   expect(updateQuantitySpy).toHaveBeenCalled()

@@ -11,11 +11,11 @@ class CarouselComponent extends Component {
 
     return (
       <Carousel showStatus={false} useKeyboardArrows>
-        {imageUrls.map((imageUrl, index) => (
+        { imageUrls.map((imageUrl, index) => (
           <div key={index}>
             <img className='c-slider-image' src={imageUrl} />
           </div>
-        ))}
+        )) }
       </Carousel>
     )
   }

@@ -70,7 +70,7 @@ class DropdownSelect extends Component {
 
     if (label) {
       return (
-        <label htmlFor={name} className='o-form__label'><b>{label}{required && ' *'}</b></label>
+        <label htmlFor={name} className='o-form__label'><b>{ label }{ required && ' *' }</b></label>
       )
     }
   }

@@ -69,7 +69,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   )
 
   // assert
-  wrapper.find('select').simulate('change', {target: { value: 3 }})
+  wrapper.find('select').simulate('change', { target: { value: 3 } })
   expect(wrapper).toMatchSnapshot()
   expect(updateQuantity).toHaveBeenCalled()
 })

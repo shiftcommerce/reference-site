@@ -42,7 +42,7 @@ class ProductListingCard extends React.Component {
           </div>
           <div className='c-product-listing-card__title' >
             <p role='heading' aria-level='1'>
-              {product.title}
+              { product.title }
             </p>
           </div>
           <div className='c-product-listing-card__price'>

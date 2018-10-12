@@ -18,7 +18,7 @@ class Button extends Component {
           'o-button',
           status ? `o-button--${status}` : null,
           size ? `o-button--${size}` : null,
-          {'o-button--disabled': disabled}
+          { 'o-button--disabled': disabled }
         )}
         tabIndex='0' role='button'
         disabled={disabled} onClick={onClick}

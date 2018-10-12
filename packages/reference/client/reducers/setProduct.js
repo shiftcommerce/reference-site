@@ -11,7 +11,7 @@ export default function setProduct (state = initialState, action) {
     case types.GET_PRODUCT:
       return Object.assign({}, state)
     case types.SET_PRODUCT:
-      return Object.assign({}, state, action.payload, {loading: false})
+      return Object.assign({}, state, action.payload, { loading: false })
 
     default:
       return state

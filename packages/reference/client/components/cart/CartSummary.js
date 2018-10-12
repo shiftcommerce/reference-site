@@ -31,14 +31,14 @@ class CartSummary extends Component {
       <section className='c-cart-summary'>
         <dl>
           <dt><a>Total Price:</a></dt>
-          <dd><a>&pound;{fixedPrice(totals.subTotal)}</a></dd>
+          <dd><a>&pound;{ fixedPrice(totals.subTotal) }</a></dd>
         </dl>
         <dl>
           <dt>{ this.shippingText() }</dt>
         </dl>
         <dl>
           <dt><a className='u-bold'>TOTAL:</a></dt>
-          <dd><a className='u-bold'>&pound;{fixedPrice(totals.total)}</a></dd>
+          <dd><a className='u-bold'>&pound;{ fixedPrice(totals.total) }</a></dd>
         </dl>
         <dl>
           <a>* Including VAT</a>

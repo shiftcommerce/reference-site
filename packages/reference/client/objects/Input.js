@@ -64,7 +64,7 @@ class Input extends Component {
   }
 
   validateForm () {
-    this.setState({formValid: this.state.emailValid && this.state.passwordValid && this.state.firstNameValid && this.state.lastNameValid && this.state.confirmEmailValid && this.state.confirmPasswordValid})
+    this.setState({ formValid: this.state.emailValid && this.state.passwordValid && this.state.firstNameValid && this.state.lastNameValid && this.state.confirmEmailValid && this.state.confirmPasswordValid })
   }
 
   errorClass (error) {
@@ -75,11 +75,11 @@ class Input extends Component {
     const { name, label, required, type, labelClassName } = this.props
     return (
       <label htmlFor={name} className={`o-form__label ${labelClassName}`}>
-        <b>{label} {required && ' *'}</b>
+        <b>{ label } { required && ' *' }</b>
         { this.renderInputField() }
         { type === 'password' && <>
           <span className='password__show' onClick={this.showHide}>
-            {this.state.type === 'input' ? 'Hide' : 'Show'}
+            { this.state.type === 'input' ? 'Hide' : 'Show' }
           </span>
           <span className='password__strength' data-score={this.state.score} />
         </> }
@@ -127,7 +127,7 @@ class Input extends Component {
     }
 
     return (
-      <div className={classNames('o-form__input-group', {'u-hidden': hidden})}>
+      <div className={classNames('o-form__input-group', { 'u-hidden': hidden })}>
         { inputFields }
         { renderValidationMessage() }
       </div>

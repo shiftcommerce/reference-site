@@ -13,7 +13,7 @@ export class HalfCategoryGallery extends Component {
       <div className='c-half'>
         <Image className='c-half__image' src={halfData[`box${element}_image`][0].s3_url} />
         <div className='c-half__text'>
-          <h1>{halfData[`box${element}_title`]}</h1>
+          <h1>{ halfData[`box${element}_title`] }</h1>
         </div>
         <div className='c-half__button'>
           <Link href={`/slug?slug=${halfData[`box${element}_link_url`][0].canonical_path}`} as={halfData[`box${element}_link_url`][0].canonical_path}>
@@ -33,7 +33,7 @@ export class HalfCategoryGallery extends Component {
         { elements.map((element, index) => {
           return (
             <div key={index}>
-              {this.halfComponent(componentData, element)}
+              { this.halfComponent(componentData, element) }
             </div>
           )
         }) }

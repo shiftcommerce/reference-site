@@ -31,20 +31,20 @@ export default class PaymentMethod extends Component {
     const selectedMethod = checkout.paymentMethod.selectedMethod
     const display = !collapsed ? 'block' : 'none'
     return (
-      <div style={{display: display}}>
+      <div style={{ display: display }}>
         <PaymentMethodSelector
           currentMethod={selectedMethod}
           onPaymentMethodChanged={onPaymentMethodChanged}
         />
 
-        {(() => {
+        { (() => {
           switch (selectedMethod) {
             case 'card':
               return <StripePayment {...this.props} />
             case 'paypal':
               return <PayPalPayment />
           }
-        })()}
+        })() }
       </div>
     )
   }

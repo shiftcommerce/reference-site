@@ -39,8 +39,8 @@ class StripeCardFields extends Component {
         address_line2: billingAddress.line_2,
         address_state: billingAddress.state,
         address_zip: billingAddress.zipcode
-      }).then(({token, error}) => {
-        this.props.onCardTokenReceived(error ? {error} : {token})
+      }).then(({ token, error }) => {
+        this.props.onCardTokenReceived(error ? { error } : { token })
       })
     }
   }
@@ -49,7 +49,7 @@ class StripeCardFields extends Component {
     let errorMessage = (e.error ? e.error.message : '')
     this.setState({
       errors: Object.assign(this.state.errors, { [fieldName]: errorMessage }),
-      dataAvailable: Object.assign(this.state.dataAvailable, {[fieldName]: !e.empty})
+      dataAvailable: Object.assign(this.state.dataAvailable, { [fieldName]: !e.empty })
     })
 
     this.checkDataValidity()

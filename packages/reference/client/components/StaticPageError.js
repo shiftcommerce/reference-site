@@ -3,7 +3,7 @@ import React from 'react'
 class StaticPageError extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {detailsShown: false}
+    this.state = { detailsShown: false }
 
     this.toggleDetails = this.toggleDetails.bind(this)
   }
@@ -24,11 +24,11 @@ class StaticPageError extends React.Component {
               <p className="c-static-page-error__details-toggle" onClick={this.toggleDetails}>Hide details</p>
               <div className="c-static-page-error__details">
                 <p className="c-static-page-error__detail-header">Endpoint</p>
-                <p className="c-static-page-error__detail">{JSON.stringify(error.request.endpoint)}</p>
+                <p className="c-static-page-error__detail">{ JSON.stringify(error.request.endpoint) }</p>
                 <p className="c-static-page-error__detail-header">Query</p>
-                <p className="c-static-page-error__detail">{JSON.stringify(error.request.query)}</p>
+                <p className="c-static-page-error__detail">{ JSON.stringify(error.request.query) }</p>
                 <p className="c-static-page-error__detail-header">Response data</p>
-                <p className="c-static-page-error__detail">{JSON.stringify(error.data)}</p>
+                <p className="c-static-page-error__detail">{ JSON.stringify(error.data) }</p>
               </div>
             </>
           ) : null}
@@ -42,7 +42,7 @@ class StaticPageError extends React.Component {
         <div className="o-media__body">
           <h1>Oh no, something went wrong.</h1>
           <h2>We weren't able to process your request.</h2>
-          {details}
+          { details }
         </div>
       </div>
     )

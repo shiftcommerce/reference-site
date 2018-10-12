@@ -9,11 +9,11 @@ export const initialState = {
 export default function setPage (state = initialState, action) {
   switch (action.type) {
     case types.GET_PAGE:
-      return Object.assign({}, state, {error: false})
+      return Object.assign({}, state, { error: false })
     case types.SET_PAGE:
-      return Object.assign({}, state, action.payload, {loading: false, error: false})
+      return Object.assign({}, state, action.payload, { loading: false, error: false })
     case types.ERROR_PAGE:
-      return Object.assign({}, state, action.payload, {loading: false})
+      return Object.assign({}, state, action.payload, { loading: false })
     default:
       return state
   }

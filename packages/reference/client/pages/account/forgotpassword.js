@@ -34,7 +34,7 @@ export class ForgotPassword extends Component {
         />
         <div className='c-password__button'>
           <Link href={'/account/login'}>
-            {this.renderFormSubmitButton()}
+            { this.renderFormSubmitButton() }
           </Link>
         </div>
       </div>

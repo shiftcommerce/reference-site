@@ -155,7 +155,7 @@ export class CheckoutPage extends Component {
     this.props.dispatch(changePaymentMethod(paymentMethod))
   }
 
-  onCardTokenReceived ({error, token}) {
+  onCardTokenReceived ({ error, token }) {
     if (error) {
       this.props.dispatch(setPaymentError(error.message))
     } else {
@@ -210,7 +210,7 @@ export class CheckoutPage extends Component {
       )
     } else if (checkout.error) {
       return (
-        <p>{checkout.error}</p>
+        <p>{ checkout.error }</p>
       )
     } else {
       return (

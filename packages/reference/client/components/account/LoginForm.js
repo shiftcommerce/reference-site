@@ -56,7 +56,7 @@ class LoginForm extends Component {
               { this.renderInputField(fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -74,7 +74,7 @@ class LoginForm extends Component {
               { this.renderInputField(fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -107,11 +107,11 @@ class LoginForm extends Component {
     return (
       <div className={classNames('o-form', className)}>
         <form onSubmit={handleSubmit}>
-          {this.renderEmailInputField()}
-          {this.renderPasswordInputField()}
+          { this.renderEmailInputField() }
+          { this.renderPasswordInputField() }
           <Checkbox label='Remember me' />
           <div className='c-login__button'>
-            {this.renderFormSubmitButton()}
+            { this.renderFormSubmitButton() }
           </div>
         </form>
       </div>

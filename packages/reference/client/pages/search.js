@@ -47,7 +47,7 @@ class Search extends Component {
   renderNoResults (search) {
     return (
       <div className='c-product_list__products--no-results'>
-        <h2>Oh no! Nothing matches {`'${search.query || ''}'`}</h2>
+        <h2>Oh no! Nothing matches { `'${search.query || ''}'` }</h2>
       </div>
     )
   }
@@ -84,7 +84,7 @@ class Search extends Component {
     } else if (search.error) {
       return (
         <Layout>
-          <p>{search.error}</p>
+          <p>{ search.error }</p>
         </Layout>
       )
     } else {

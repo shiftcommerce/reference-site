@@ -47,19 +47,19 @@ class StripePayment extends Component {
               onBlur={onBlur}
             />
 
-            {checkout.shippingAddressAsBillingAddress &&
+            { checkout.shippingAddressAsBillingAddress &&
               <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary  c-payment-method__address-summary'>
-                <p className='u-bold'>{`${shippingAddress.first_name} ${shippingAddress.last_name}`}</p>
-                <p>{shippingAddress.line_1}</p>
-                <p>{shippingAddress.line_2}</p>
-                <p>{shippingAddress.city}</p>
-                <p>{shippingAddress.zipcode}</p>
+                <p className='u-bold'>{ `${shippingAddress.first_name} ${shippingAddress.last_name}` }</p>
+                <p>{ shippingAddress.line_1 }</p>
+                <p>{ shippingAddress.line_2 }</p>
+                <p>{ shippingAddress.city }</p>
+                <p>{ shippingAddress.zipcode }</p>
               </div>
             }
           </div>
         </div>
 
-        {!(checkout.shippingAddressAsBillingAddress) &&
+        { !(checkout.shippingAddressAsBillingAddress) &&
           <AddressForm
             aria-label='Billing address form'
             checkout={checkout}

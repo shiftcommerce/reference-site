@@ -21,7 +21,7 @@ class GenericGrid extends Component {
             <Link href={slideLinkURL[0].canonical_path}>
               <a>
                 <Image src={slideImage[0].canonical_path} />
-                <p className="c-generic-grid__title">{slideText}</p>
+                <p className="c-generic-grid__title">{ slideText }</p>
               </a>
             </Link>
           </div>
@@ -37,9 +37,9 @@ class GenericGrid extends Component {
 
     return (
       <section className="c-generic-grid">
-        <h1 className="c-component-header">{component.header}</h1>
+        <h1 className="c-component-header">{ component.header }</h1>
         <div className="c-generic-grid__container">
-          {this.buildSlides(component)}
+          { this.buildSlides(component) }
         </div>
         <Button
           className="c-generic-grid__cat-button"

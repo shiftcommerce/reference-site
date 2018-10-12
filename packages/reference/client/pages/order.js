@@ -18,11 +18,11 @@ class OrderPage extends Component {
       )
     } else if (order.error) {
       return (
-        <p>{order.error}</p>
+        <p>{ order.error }</p>
       )
     } else {
       return (
-        <div>Order has been created: #{order.id}</div>
+        <div>Order has been created: #{ order.id }</div>
       )
     }
   }

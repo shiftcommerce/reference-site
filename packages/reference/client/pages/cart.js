@@ -43,7 +43,7 @@ export class CartPage extends Component {
       )
     } else if (error) {
       return (
-        <p>{error}</p>
+        <p>{ error }</p>
       )
     } else {
       return (

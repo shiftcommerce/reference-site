@@ -20,7 +20,7 @@ class Category extends Component {
     if (isServer) {
       await reduxStore.dispatch(readCategory(id))
     }
-    return {id: id}
+    return { id: id }
   }
 
   componentDidMount () {
@@ -50,7 +50,7 @@ class Category extends Component {
     return (
       <div className='c-product-listing__menu'>
         <div className='c-product-listing__menu-description'>
-          <h1 className='c-product-listing__menu-description-title'>{title}</h1>
+          <h1 className='c-product-listing__menu-description-title'>{ title }</h1>
           <div className='c-product-listing__menu-description-content'>
             <p>Category description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et justo nunc. Suspendisse lectus odio, pulvinar vitae dictum.</p>
           </div>
@@ -73,16 +73,16 @@ class Category extends Component {
       )
     } else if (error) {
       return (
-        <p>{error}</p>
+        <p>{ error }</p>
       )
     } else {
       return (
         <div className='c-product-listing'>
           <ProductNavBar />
           { this.renderProductMenu() }
-          {category.map((product, index) => {
+          { category.map((product, index) => {
             return <ProductListingCard product={product} key={index} />
-          })}
+          }) }
           <div className='c-product-listing__view-more'>
             <Button className='c-product-listing__view-more-button' label='view more' size='lrg' />
           </div>

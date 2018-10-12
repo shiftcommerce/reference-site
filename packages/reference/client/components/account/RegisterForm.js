@@ -56,7 +56,7 @@ class RegisterForm extends Component {
               { this.renderInputField(fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -75,7 +75,7 @@ class RegisterForm extends Component {
               { this.renderInputField(fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -93,7 +93,7 @@ class RegisterForm extends Component {
               { this.renderInputField(fieldOption) }
             </div>
           )
-        })}
+        }) }
       </div>
     )
   }
@@ -126,11 +126,11 @@ class RegisterForm extends Component {
     return (
       <div className={classNames('o-form', className)}>
         <form onSubmit={handleSubmit}>
-          {this.renderNameInputFields()}
-          {this.renderEmailInputFields()}
-          {this.renderPasswordInputFields()}
+          { this.renderNameInputFields() }
+          { this.renderEmailInputFields() }
+          { this.renderPasswordInputFields() }
           <p>* Denotes required fields</p>
-          {this.renderFormSubmitButton()}
+          { this.renderFormSubmitButton() }
         </form>
       </div>
     )

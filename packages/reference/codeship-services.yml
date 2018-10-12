@@ -2,9 +2,12 @@ web:
   build: .
   dockerfile: Dockerfile
   ports:
-    - "3000:3000"
+    - "3000"
   entrypoint: ./bin/docker/yarn_entrypoint
   encrypted_env_file: .env.encrypted
+  environment:
+    - API_HOST=http://api.shiftcommerce.com/v1
+    - API_PROXY_HOST=http://localhost:3000
   volumes:
     - .:/app
 herokudeployment:
