@@ -65,9 +65,9 @@ export class Product extends Component {
       }
       this.props.dispatch(addToCart(lineItem))
     } else {
-      /*eslint-disable */
+      /* eslint-disable */
       alert('Please select a size')
-      /*eslint-enable */
+      /* eslint-enable */
     }
   }
 

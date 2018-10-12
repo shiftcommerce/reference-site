@@ -89,7 +89,6 @@ class Input extends Component {
 
   renderInputField () {
     const { inputId, value, name, required, placeholder, className, validationMessage } = this.props
-    const type = this.props.type || this.state.type || 'text'
     const id = inputId || name
     let fieldValue = value || null
     let validationErrorPresent = (validationMessage !== undefined) && (validationMessage !== '')

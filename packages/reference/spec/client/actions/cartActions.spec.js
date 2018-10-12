@@ -55,7 +55,7 @@ test('return UPDATE_CART_LINE_ITEMS action type on calling addToCart()', () => {
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': { 'lineItems': [lineItemToAdd],
     totalQuantity: 2 },
-    type: actionTypes.UPDATE_CART_LINE_ITEMS })
+  type: actionTypes.UPDATE_CART_LINE_ITEMS })
 })
 
 test('return  UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', () => {

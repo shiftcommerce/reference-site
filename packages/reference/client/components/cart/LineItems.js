@@ -7,7 +7,7 @@ import { fixedPrice } from '../../lib/fixedPrice'
 import Image from '../../objects/Image'
 
 class LineItems extends Component {
-  //TODO: extract this out into it's own service class
+  // TODO: extract this out into it's own service class
   renderOptions (lineItem) {
     let availableQuantity = Array.from(Array(Math.min(lineItem.stockAvailableLevel, 11)).keys())
     availableQuantity.shift()
@@ -94,7 +94,7 @@ class LineItems extends Component {
     return cartData
   }
 
-  render() {
+  render () {
     const cart = this.props.cart
 
     if (cart.totalQuantity === 0) {

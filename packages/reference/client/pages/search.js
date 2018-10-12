@@ -57,8 +57,8 @@ class Search extends Component {
       <div>
         {
           (search.query !== undefined) && (resultState.content.hits.length !== 0)
-          ? <ProductListing searchState={search} onSearchStateChange={this.onSearchStateChange.bind(this)} resultState={resultState} />
-          : this.renderNoResults(search)
+            ? <ProductListing searchState={search} onSearchStateChange={this.onSearchStateChange.bind(this)} resultState={resultState} />
+            : this.renderNoResults(search)
         }
       </div>
     )

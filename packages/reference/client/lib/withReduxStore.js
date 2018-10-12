@@ -33,7 +33,7 @@ export default (App) => {
       if (typeof App.getInitialProps === 'function') {
         appProps = await App.getInitialProps.call(App, appContext)
       }
-      /*eslint-enable */
+      /* eslint-enable */
 
       return {
         ...appProps,

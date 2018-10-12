@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const CACHENAME = 'shift-front-end-react:0001'
 const CACHEFILES = [
   '/',
@@ -120,3 +122,4 @@ self.addEventListener('activate', event => {
     ))
   )
 })
+/* eslint-enable */

@@ -96,7 +96,7 @@ export class CheckoutPage extends Component {
     this.props.dispatch(updateQuantity(lineItem))
     if (this.props.cart.lineItems.length === 0) {
       Router.push('/cart')
-    } 
+    }
   }
 
   nextSection (eventType) {
@@ -110,14 +110,14 @@ export class CheckoutPage extends Component {
       componentName = 'shippingMethod'
     } else if (checkout.currentStep === 3) {
       componentName = 'paymentMethod'
-    } 
+    }
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
     this.props.dispatch(toggleCollapsed(eventType, componentName))
   }
 
   onToggleCollapsed (eventType, componentName) {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
     this.props.dispatch(toggleCollapsed(eventType, componentName))
   }
 
@@ -179,7 +179,7 @@ export class CheckoutPage extends Component {
     return isBillingAddressValid && isCardValid
   }
 
-  renderGiftCardSection() {
+  renderGiftCardSection () {
     return <>
       <div aria-label='Use gift card or rewards code' className='o-form__wrapper  c-gift__wrapper'>
         <span className='c-payment-method__gift'>
@@ -196,7 +196,7 @@ export class CheckoutPage extends Component {
         </span>
       </div>
     </>
-  }  
+  }
 
   render () {
     const { checkout, cart } = this.props
@@ -219,12 +219,12 @@ export class CheckoutPage extends Component {
           {hasLineItems &&
             <>
               <div className='o-header'>
-              <div className='c-step-indicators__logo'>
-                <Logo className='u-text-color--primary' />
-              </div>
-              <div>
-                <CheckoutSteps {...this.props} />
-              </div>
+                <div className='c-step-indicators__logo'>
+                  <Logo className='u-text-color--primary' />
+                </div>
+                <div>
+                  <CheckoutSteps {...this.props} />
+                </div>
               </div>
               <div className='o-grid-container'>
                 <div className='o-col-1-13 o-col-1-9-l'>

@@ -18,8 +18,7 @@ class CheckoutCartTotal extends Component {
 
     if (!cardErrors && allStepsCompleted) {
       return allStepsCompleted
-    } else
-    return false
+    } else { return false }
   }
 
   renderButtons () {

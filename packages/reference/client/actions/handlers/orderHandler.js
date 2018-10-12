@@ -65,7 +65,7 @@ function getTotalPrice (cart, checkout) {
 
 function prepareBillingAddress (address) {
   return Object.assign(
-   prepareAddress(address)
+    prepareAddress(address)
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 class StaticPageError extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {detailsShown: false}
 
@@ -11,9 +11,9 @@ class StaticPageError extends React.Component {
   render () {
     const production = process.env.NODE_ENV === 'production'
     const { error } = this.props
-    let details;
+    let details
 
-    if (!production) { 
+    if (!production) {
       details = (
         <>
           {this.state.detailsShown ? null : (

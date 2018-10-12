@@ -1,6 +1,6 @@
 export default {
   header: 'Generic Grid',
-  cat_text: "Cat Button",
+  cat_text: 'Cat Button',
   cat_url: [
     {
       canonical_path: '/homeware/dining/cat',

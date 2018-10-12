@@ -12,7 +12,7 @@ import Button from '../../objects/Button'
 class CartSummary extends Component {
   shippingText () {
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
-      //TODO: make this dynamic in future
+      // TODO: make this dynamic in future
       return <>
         <a>Estimated shipping cost: &pound;3.45</a>
       </>
@@ -22,7 +22,7 @@ class CartSummary extends Component {
        </>
     }
   }
-  
+
   render () {
     const totals = calculateCartSummary(this.props.cart)
 
@@ -38,7 +38,7 @@ class CartSummary extends Component {
         </dl>
         <dl>
           <dt><a className='u-bold'>TOTAL:</a></dt>
-            <dd><a className='u-bold'>&pound;{fixedPrice(totals.total)}</a></dd>
+          <dd><a className='u-bold'>&pound;{fixedPrice(totals.total)}</a></dd>
         </dl>
         <dl>
           <a>* Including VAT</a>

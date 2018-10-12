@@ -3,8 +3,6 @@ import GenericGrid from '../../../../client/components/template_components/Gener
 
 // Objects
 import Button from '../../../../client/objects/Button'
-import Image from '../../../../client/objects/Image'
-import Link from 'next/link'
 
 // Fixtures
 import genericGridData from '../../../fixtures/genericGrid.fixture'

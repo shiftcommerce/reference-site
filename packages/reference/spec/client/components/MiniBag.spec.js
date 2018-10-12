@@ -1,8 +1,5 @@
 import { MiniBag } from '../../../client/components/MiniBag'
 
-// Objects
-import Button from '../../../client/objects/Button'
-
 test('renders the minibag links', () => {
   // arrange
   const cart = {
@@ -109,7 +106,7 @@ test('renders an active checkout button where cart has items', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('Button').first().props().label).toBe("Checkout")
+  expect(wrapper.find('Button').first().props().label).toBe('Checkout')
   expect(wrapper.find('.o-button')).not.toHaveClassName('o-button--disabled')
 })
 
@@ -128,6 +125,6 @@ test('renders a disabled checkout button where cart is empty', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('Button').first().props().label).toBe("Checkout")
+  expect(wrapper.find('Button').first().props().label).toBe('Checkout')
   expect(wrapper.find('.o-button')).toHaveClassName('o-button--disabled')
 })

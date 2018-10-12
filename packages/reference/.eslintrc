@@ -1,9 +1,29 @@
 {
-  'plugins': ['react'],
-  'extends': ['standard'],
-  'rules': {
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-    'padded-blocks': ['error', { blocks: 'never', classes: 'never', switches: 'never' }]
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+  },
+  "plugins": [ "react" ],
+  "extends": "standard",
+  "rules": {
+  "camelcase": [
+    "error", {
+      "properties": "never",
+      "ignoreDestructuring": true
+    }],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "padded-blocks": [
+      "error",
+      {
+        "blocks": "never",
+        "classes": "never",
+        "switches": "never"
+      }
+    ]
   }
 }

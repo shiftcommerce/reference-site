@@ -20,7 +20,7 @@ const Payload = {
           'related': 'http://172.19.0.1:5000/pim/v1/products/c51f71ec-3e5e-4305-983a-c8c5b7509ace/variants'
         },
         'data': [
-            {'type': 'variants', 'id': '27985460-8ad7-4455-bdfd-a9ee107d87bb'}
+          {'type': 'variants', 'id': '27985460-8ad7-4455-bdfd-a9ee107d87bb'}
         ]
       },
       'categories': {
