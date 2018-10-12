@@ -79,3 +79,26 @@ To rebuild snapshots, you can run
 ```bash
 ./bin/dev/yarn run jest-update-snapshot
 ```
+
+**Security Headers**
+
+The reference site has a default set of best-practice security headers.
+
+If external image hosts are used then these will need to be included in the
+Content Security Policy - this can be done by setting the `IMAGE_HOSTS` environment
+variable to a comma-separated list of hosts, e.g.:
+
+```
+IMAGE_HOSTS=https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com
+```
+
+While working on the site you may find you need to update these headers depending
+on which features are required for the site to function.
+
+These can be modified within `lib/expressSecurityHeadersMiddleware.js` (and the
+corresponding test updated in `spec/lib/expressSecurityHeadersMiddleware.spec.js`)
+as required.
+
+**Note:** if you're working on a new feature and run into issues, check the
+Feature Policy header in the above file as you may need to enable certain features
+(e.g. geolocation)

@@ -104,6 +104,7 @@
     "stylelint": "^9.6.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.3.1",
+    "supertest": "^3.3.0",
     "url-loader": "^1.0.1"
   }
 }

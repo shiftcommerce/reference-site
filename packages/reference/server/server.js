@@ -6,13 +6,23 @@ const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
 
-const port = parseInt(process.env.PORT, 10) || 3000
+// Environment
 const production = process.env.NODE_ENV === 'production'
-const dev = process.env.NODE_ENV !== 'production'
+const test = process.env.NODE_ENV === 'test'
+const dev = !test && !production
+
+// Use environment to determine port
+const standardPort = parseInt(process.env.PORT, 10) || 3000
+const testPort = 3001
+const port = test ? testPort : standardPort
+
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
-// session variables
+// Middleware
+const expressSecurityHeadersMiddleware = require('../lib/expressSecurityHeadersMiddleware')
+
+// Session variables
 const defaultExpiryInSeconds = 30 * 24 * 60 * 60 // 30 days in seconds
 const expiryInSeconds = (process.env.SESSSION_EXPIRY || defaultExpiryInSeconds) // user configured time in seconds
 const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
@@ -26,8 +36,14 @@ const handler = require('./routeHandlers/routeHandler')
 const orderHandler = require('./routeHandlers/orderRouteHandler')
 const accountHandler = require('./routeHandlers/accountRouteHandler')
 
-app.prepare().then(() => {
+// Config
+const imageHosts = process.env.IMAGE_HOSTS
+
+module.exports = app.prepare().then(() => {
   const server = express()
+
+  // Remove X-Powered-By: Express header as this could help attackers
+  server.disable('x-powered-by')
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
@@ -45,6 +61,7 @@ app.prepare().then(() => {
   server.use(cookieParser())
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
+  server.use(expressSecurityHeadersMiddleware({ imageHosts: imageHosts }))
 
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)
@@ -172,7 +189,7 @@ app.prepare().then(() => {
     return handle(req, res)
   })
 
-  server.listen(port, (err) => {
+  return server.listen(port, (err) => {
     if (err) throw err
     console.log(`> Ready on http://localhost:${port}`)
   })
