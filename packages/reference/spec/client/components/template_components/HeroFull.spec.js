@@ -11,6 +11,9 @@ import heroImageData from '../../../fixtures/heroFull.fixture'
 test('renders the full HeroImage component', () => {
   // Arrange
   const emptyFunction = () => {}
+  const image = heroImageData.image[0].s3_url
+  const mobileImage = heroImageData.mobile_image && heroImageData.mobile_image[0] && heroImageData.mobile_image[0].s3_url
+  const linkText = heroImageData.overlay_link_1_text
 
   // Act
   const wrapper = mount(
@@ -19,6 +22,6 @@ test('renders the full HeroImage component', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Image className='c-hero__image' src={heroImageData.image[0].s3_url} />)
-  expect(wrapper.find('Button')).toMatchElement(<Button className='c-hero__button-icon' label={heroImageData.link_1_text} status='warning' size='lrg' aria-label={heroImageData.link1_text} onClick={emptyFunction} />)
+  expect(wrapper).toContainReact(<Image className='c-hero__image' src={image} mobileSrc={mobileImage} />)
+  expect(wrapper.find('Button')).toMatchElement(<Button className='c-hero__button-icon' label={linkText} status='warning' size='lrg' aria-label={linkText} onClick={emptyFunction} />)
 })

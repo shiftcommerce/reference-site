@@ -18,11 +18,23 @@ const heroImageData = {
       updated_at: '2017-12-18T11:29:27Z'
     }
   ],
-  heading: 'Thing',
-  title: 'TOP OF THE GLASS',
-  text: 'Textytext',
-  link_1_text: 'shop glassware',
-  link_1_url: [
+  mobile_image: null,
+  background_colour: 'antiquewhite',
+  heading: '',
+  overlay_position: [ 'below' ],
+  overlay_image_overlap: [ 'medium' ],
+  overlay_background_colour: 'antiquewhite',
+  overlay_text_colour: 'blueviolet',
+  overlay_title: 'Title',
+  overlay_text: 'Words Words Words',
+  overlay_link_background_colour: 'aquamarine',
+  overlay_link_hover_background_colour: 'black',
+  overlay_link_text_colour: 'goldenrod',
+  overlay_link_hover_text_colour: 'white',
+  overlay_link_border_colour: 'mediumseagreen',
+  overlay_link_hover_border_colour: 'white',
+  overlay_link_1_text: 'Panda Product',
+  overlay_link_1_url: [
     {
       canonical_path: '/homeware/dining/glassware',
       id: '/homeware/dining/glassware',
@@ -30,18 +42,14 @@ const heroImageData = {
       url: '/homeware/dining/glassware'
     }
   ],
-  link_2_text: '',
-  link_2_url: null,
-  link_3_text: '',
-  link_3_url: null,
-  link_4_text: '',
-  link_4_url: null,
-  link_5_text: '',
-  link_5_url: null,
-  background_colour: '#eee',
-  overlay_colour: '#eee',
-  overlay_position: [ 'above' ],
-  overlay_image_overlap: [ 'full' ]
+  overlay_link_2_text: '',
+  overlay_link_2_url: null,
+  overlay_link_3_text: '',
+  overlay_link_3_url: null,
+  overlay_link_4_text: '',
+  overlay_link_4_url: null,
+  overlay_link_5_text: '',
+  overlay_link_5_url: null
 }
 
 export default heroImageData

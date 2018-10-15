@@ -299,17 +299,21 @@ exports[`display pre selected shipping method as selected option on page load 1`
             status="primary"
             type="submit"
           >
-            <button
-              aria-label="Continue to payment"
-              className="o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="submit"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to payment"
+                className="o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="submit"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </form>
@@ -370,16 +374,20 @@ exports[`render collapsed view as expected 1`] = `
           size="lrg"
           status="secondary"
         >
-          <button
-            aria-label="Edit your shipping method"
-            className="o-form__header-button o-button o-button--secondary o-button--lrg"
-            disabled={false}
-            onClick={[Function]}
-            role="button"
-            tabIndex="0"
+          <div
+            className="o-button_container"
           >
-            Edit
-          </button>
+            <button
+              aria-label="Edit your shipping method"
+              className="o-form__header-button o-button o-button--secondary o-button--lrg"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              Edit
+            </button>
+          </div>
         </Button>
       </div>
     </div>
@@ -702,17 +710,21 @@ exports[`render shipping methods as expected 1`] = `
             status="primary"
             type="submit"
           >
-            <button
-              aria-label="Continue to payment"
-              className="o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="submit"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to payment"
+                className="o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="submit"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </form>
@@ -1012,17 +1024,21 @@ exports[`renders line item quantity as expected 1`] = `
             status="primary"
             type="submit"
           >
-            <button
-              aria-label="Continue to payment"
-              className="o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="submit"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to payment"
+                className="o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="submit"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </form>
@@ -1322,17 +1338,21 @@ exports[`should be able to select a shipping method 1`] = `
             status="primary"
             type="submit"
           >
-            <button
-              aria-label="Continue to payment"
-              className="o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="submit"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to payment"
+                className="o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="submit"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </form>

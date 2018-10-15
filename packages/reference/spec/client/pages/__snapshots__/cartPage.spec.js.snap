@@ -490,16 +490,20 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 status="grey"
                 type="button"
               >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
-                  disabled={false}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
+                <div
+                  className="o-button_container"
                 >
-                  Continue shopping
-                </button>
+                  <button
+                    aria-label="Continue Shopping"
+                    className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+                    disabled={false}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                  >
+                    Continue shopping
+                  </button>
+                </div>
               </Button>
               <Link
                 as=""
@@ -514,17 +518,21 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   status="positive"
                   type="button"
                 >
-                  <button
-                    aria-label="Place Order"
-                    className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="button"
+                  <div
+                    className="o-button_container"
                   >
-                    Continue to payment
-                  </button>
+                    <button
+                      aria-label="Place Order"
+                      className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                      type="button"
+                    >
+                      Continue to payment
+                    </button>
+                  </div>
                 </Button>
               </Link>
             </section>

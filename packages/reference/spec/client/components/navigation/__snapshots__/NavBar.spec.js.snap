@@ -130,14 +130,18 @@ exports[`renders the nav bar options 1`] = `
                       label="Search"
                       status="primary"
                     >
-                      <button
-                        className="c-searchbar__input-button o-button o-button--primary"
-                        disabled={false}
-                        role="button"
-                        tabIndex="0"
+                      <div
+                        className="o-button_container"
                       >
-                        Search
-                      </button>
+                        <button
+                          className="c-searchbar__input-button o-button o-button--primary"
+                          disabled={false}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          Search
+                        </button>
+                      </div>
                     </Button>
                   </div>
                 </div>
@@ -200,14 +204,18 @@ exports[`renders the nav bar options 1`] = `
               size="lrg"
               status="primary"
             >
-              <button
-                className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"
-                disabled={false}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                yes please
-              </button>
+                <button
+                  className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  role="button"
+                  tabIndex="0"
+                >
+                  yes please
+                </button>
+              </div>
             </Button>
           </div>
         </div>

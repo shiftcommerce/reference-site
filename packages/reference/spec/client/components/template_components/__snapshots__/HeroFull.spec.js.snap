@@ -4,8 +4,8 @@ exports[`renders the full HeroImage component 1`] = `
 <HeroFull
   componentData={
     Object {
-      "background_colour": "#eee",
-      "heading": "Thing",
+      "background_colour": "antiquewhite",
+      "heading": "",
       "id": "4_1",
       "image": Array [
         Object {
@@ -23,8 +23,13 @@ exports[`renders the full HeroImage component 1`] = `
           "updated_at": "2017-12-18T11:29:27Z",
         },
       ],
-      "link_1_text": "shop glassware",
-      "link_1_url": Array [
+      "mobile_image": null,
+      "overlay_background_colour": "antiquewhite",
+      "overlay_image_overlap": Array [
+        "medium",
+      ],
+      "overlay_link_1_text": "Panda Product",
+      "overlay_link_1_url": Array [
         Object {
           "canonical_path": "/homeware/dining/glassware",
           "id": "/homeware/dining/glassware",
@@ -32,102 +37,45 @@ exports[`renders the full HeroImage component 1`] = `
           "url": "/homeware/dining/glassware",
         },
       ],
-      "link_2_text": "",
-      "link_2_url": null,
-      "link_3_text": "",
-      "link_3_url": null,
-      "link_4_text": "",
-      "link_4_url": null,
-      "link_5_text": "",
-      "link_5_url": null,
-      "overlay_colour": "#eee",
-      "overlay_image_overlap": Array [
-        "full",
-      ],
+      "overlay_link_2_text": "",
+      "overlay_link_2_url": null,
+      "overlay_link_3_text": "",
+      "overlay_link_3_url": null,
+      "overlay_link_4_text": "",
+      "overlay_link_4_url": null,
+      "overlay_link_5_text": "",
+      "overlay_link_5_url": null,
+      "overlay_link_background_colour": "aquamarine",
+      "overlay_link_border_colour": "mediumseagreen",
+      "overlay_link_hover_background_colour": "black",
+      "overlay_link_hover_border_colour": "white",
+      "overlay_link_hover_text_colour": "white",
+      "overlay_link_text_colour": "goldenrod",
       "overlay_position": Array [
-        "above",
+        "below",
       ],
+      "overlay_text": "Words Words Words",
+      "overlay_text_colour": "blueviolet",
+      "overlay_title": "Title",
       "reference": "hero_full",
-      "text": "Textytext",
-      "title": "TOP OF THE GLASS",
       "type": "components",
     }
   }
 >
   <div
-    className="c-hero c-hero--full_with_gutters"
+    className="c-hero c-hero--full"
     style={
       Object {
-        "backgroundColor": "#eee",
+        "backgroundColor": "antiquewhite",
       }
     }
   >
     <div
-      className="c-hero__heading"
-    >
-      Thing
-    </div>
-    <div
       className="c-hero__content"
     >
-      <div
-        className="c-hero__overlay"
-        style={
-          Object {
-            "backgroundColor": "#eee",
-          }
-        }
-      >
-        <div
-          className="c-hero__overlay_content"
-        >
-          <div
-            className="c-hero__overlay_title"
-          >
-            TOP OF THE GLASS
-          </div>
-          Textytext
-          <div
-            className="c-hero__button"
-            key="1"
-          >
-            <Link
-              as="/homeware/dining/glassware"
-              href="/slug?slug=/homeware/dining/glassware"
-            >
-              <Button
-                aria-label="shop glassware"
-                className="c-hero__button-icon"
-                label="shop glassware"
-                onClick={[Function]}
-                size="lrg"
-                status="primary"
-              >
-                <button
-                  aria-label="shop glassware"
-                  className="c-hero__button-icon o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  shop glassware
-                </button>
-              </Button>
-            </Link>
-          </div>
-        </div>
-        <div
-          className="c-hero__overlay_pointer c-hero__overlay_pointer--below"
-          style={
-            Object {
-              "borderTopColor": "#eee",
-            }
-          }
-        />
-      </div>
       <Image
         className="c-hero__image"
+        mobileSrc={null}
         src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
       >
         <div
@@ -153,6 +101,99 @@ exports[`renders the full HeroImage component 1`] = `
           </LazyLoad>
         </div>
       </Image>
+      <div
+        className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_3"
+        style={
+          Object {
+            "backgroundColor": "antiquewhite",
+            "color": "blueviolet",
+          }
+        }
+      >
+        <div
+          className="c-hero__overlay_pointer c-hero__overlay_pointer--above"
+          style={
+            Object {
+              "borderBottomColor": "antiquewhite",
+            }
+          }
+        />
+        <div
+          className="c-hero__overlay_content"
+        >
+          <div
+            className="c-hero__overlay_title"
+          >
+            Title
+          </div>
+          <div
+            className="u-whitespace_preline"
+          >
+            Words Words Words
+          </div>
+          <div
+            className="c-hero__button"
+            key="1"
+          >
+            <Link
+              as="/homeware/dining/glassware"
+              href="/slug?slug=/homeware/dining/glassware"
+            >
+              <Button
+                aria-label="Panda Product"
+                className="c-hero__button-icon"
+                hoverStyles={
+                  Object {
+                    "background": "black",
+                    "borderColor": "white",
+                    "color": "white",
+                  }
+                }
+                label="Panda Product"
+                onClick={[Function]}
+                size="sml"
+                status="custom_status"
+                style={
+                  Object {
+                    "backgroundColor": "aquamarine",
+                    "borderColor": "mediumseagreen",
+                    "color": "goldenrod",
+                  }
+                }
+              >
+                <div
+                  className="o-button_container"
+                  style={
+                    Object {
+                      "background": "black",
+                      "borderColor": "white",
+                      "color": "white",
+                    }
+                  }
+                >
+                  <button
+                    aria-label="Panda Product"
+                    className="c-hero__button-icon o-button o-button--custom_status o-button--sml"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    style={
+                      Object {
+                        "backgroundColor": "aquamarine",
+                        "borderColor": "mediumseagreen",
+                        "color": "goldenrod",
+                      }
+                    }
+                    tabIndex="0"
+                  >
+                    Panda Product
+                  </button>
+                </div>
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </HeroFull>

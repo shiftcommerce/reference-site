@@ -556,16 +556,20 @@ exports[`renders correctly 1`] = `
               size="lrg"
               status="primary"
             >
-              <button
-                aria-label="Add to Basket"
-                className="c-product-display__buttons-basket-icon o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                ADD TO BASKET
-              </button>
+                <button
+                  aria-label="Add to Basket"
+                  className="c-product-display__buttons-basket-icon o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  ADD TO BASKET
+                </button>
+              </div>
             </Button>
           </div>
           <div
@@ -578,15 +582,19 @@ exports[`renders correctly 1`] = `
               size="lrg"
               status="secondary"
             >
-              <button
-                aria-label="Buy"
-                className="c-product-display__buttons-buy-icon o-button o-button--secondary o-button--lrg"
-                disabled={false}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                BUY
-              </button>
+                <button
+                  aria-label="Buy"
+                  className="c-product-display__buttons-buy-icon o-button o-button--secondary o-button--lrg"
+                  disabled={false}
+                  role="button"
+                  tabIndex="0"
+                >
+                  BUY
+                </button>
+              </div>
             </Button>
           </div>
         </div>

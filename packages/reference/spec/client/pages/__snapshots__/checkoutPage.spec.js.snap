@@ -528,15 +528,19 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -901,17 +905,21 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   status="primary"
                   type="submit"
                 >
-                  <button
-                    aria-label="Continue to payment"
-                    className="o-button o-button--primary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
+                  <div
+                    className="o-button_container"
                   >
-                    Continue to Payment
-                  </button>
+                    <button
+                      aria-label="Continue to payment"
+                      className="o-button o-button--primary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                      type="submit"
+                    >
+                      Continue to Payment
+                    </button>
+                  </div>
                 </Button>
               </div>
             </form>
@@ -1059,16 +1067,20 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  aria-label="Edit your payment method"
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    aria-label="Edit your payment method"
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -1325,15 +1337,19 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           size="lrg"
           status="primary"
         >
-          <button
-            aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-            disabled={false}
-            role="button"
-            tabIndex="0"
+          <div
+            className="o-button_container"
           >
-            Apply Code
-          </button>
+            <button
+              aria-label="Apply Gift Code"
+              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Apply Code
+            </button>
+          </div>
         </Button>
       </span>
     </div>
@@ -1983,17 +1999,21 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               status="primary"
               type="button"
             >
-              <button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-                type="button"
+              <div
+                className="o-button_container"
               >
-                Continue shopping
-              </button>
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+              </div>
             </Button>
           </Link>
           <Button
@@ -2005,17 +2025,21 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             status="primary"
             type="button"
           >
-            <button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to Payment"
+                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </CheckoutCartTotal>
@@ -2580,15 +2604,19 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   size="lrg"
                   status="secondary"
                 >
-                  <button
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
+                  <div
+                    className="o-button_container"
                   >
-                    Edit
-                  </button>
+                    <button
+                      className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Edit
+                    </button>
+                  </div>
                 </Button>
               </div>
             </div>
@@ -2958,17 +2986,21 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     status="primary"
                     type="submit"
                   >
-                    <button
-                      aria-label="Continue to payment"
-                      className="o-button o-button--primary o-button--lrg"
-                      disabled={false}
-                      onClick={[Function]}
-                      role="button"
-                      tabIndex="0"
-                      type="submit"
+                    <div
+                      className="o-button_container"
                     >
-                      Continue to Payment
-                    </button>
+                      <button
+                        aria-label="Continue to payment"
+                        className="o-button o-button--primary o-button--lrg"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                        type="submit"
+                      >
+                        Continue to Payment
+                      </button>
+                    </div>
                   </Button>
                 </div>
               </form>
@@ -3121,16 +3153,20 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   size="lrg"
                   status="secondary"
                 >
-                  <button
-                    aria-label="Edit your payment method"
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
+                  <div
+                    className="o-button_container"
                   >
-                    Edit
-                  </button>
+                    <button
+                      aria-label="Edit your payment method"
+                      className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Edit
+                    </button>
+                  </div>
                 </Button>
               </div>
             </div>
@@ -3387,15 +3423,19 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             size="lrg"
             status="primary"
           >
-            <button
-              aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-              disabled={false}
-              role="button"
-              tabIndex="0"
+            <div
+              className="o-button_container"
             >
-              Apply Code
-            </button>
+              <button
+                aria-label="Apply Gift Code"
+                className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
+                disabled={false}
+                role="button"
+                tabIndex="0"
+              >
+                Apply Code
+              </button>
+            </div>
           </Button>
         </span>
       </div>
@@ -4055,17 +4095,21 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 status="primary"
                 type="button"
               >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
+                <div
+                  className="o-button_container"
                 >
-                  Continue shopping
-                </button>
+                  <button
+                    aria-label="Continue Shopping"
+                    className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                  >
+                    Continue shopping
+                  </button>
+                </div>
               </Button>
             </Link>
             <Button
@@ -4077,17 +4121,21 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               status="primary"
               type="button"
             >
-              <button
-                aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-                type="button"
+              <div
+                className="o-button_container"
               >
-                Continue to Payment
-              </button>
+                <button
+                  aria-label="Continue to Payment"
+                  className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue to Payment
+                </button>
+              </div>
             </Button>
           </div>
         </CheckoutCartTotal>
@@ -4625,15 +4673,19 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -4998,17 +5050,21 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   status="primary"
                   type="submit"
                 >
-                  <button
-                    aria-label="Continue to payment"
-                    className="o-button o-button--primary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
+                  <div
+                    className="o-button_container"
                   >
-                    Continue to Payment
-                  </button>
+                    <button
+                      aria-label="Continue to payment"
+                      className="o-button o-button--primary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                      type="submit"
+                    >
+                      Continue to Payment
+                    </button>
+                  </div>
                 </Button>
               </div>
             </form>
@@ -5156,16 +5212,20 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  aria-label="Edit your payment method"
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    aria-label="Edit your payment method"
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -5422,15 +5482,19 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           size="lrg"
           status="primary"
         >
-          <button
-            aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-            disabled={false}
-            role="button"
-            tabIndex="0"
+          <div
+            className="o-button_container"
           >
-            Apply Code
-          </button>
+            <button
+              aria-label="Apply Gift Code"
+              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Apply Code
+            </button>
+          </div>
         </Button>
       </span>
     </div>
@@ -6080,17 +6144,21 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               status="primary"
               type="button"
             >
-              <button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-                type="button"
+              <div
+                className="o-button_container"
               >
-                Continue shopping
-              </button>
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+              </div>
             </Button>
           </Link>
           <Button
@@ -6102,17 +6170,21 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             status="primary"
             type="button"
           >
-            <button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to Payment"
+                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </CheckoutCartTotal>
@@ -6883,15 +6955,19 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -7334,17 +7410,21 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   status="primary"
                   type="submit"
                 >
-                  <button
-                    aria-label="Continue to payment"
-                    className="o-button o-button--primary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
+                  <div
+                    className="o-button_container"
                   >
-                    Continue to Payment
-                  </button>
+                    <button
+                      aria-label="Continue to payment"
+                      className="o-button o-button--primary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                      type="submit"
+                    >
+                      Continue to Payment
+                    </button>
+                  </div>
                 </Button>
               </div>
             </form>
@@ -7570,16 +7650,20 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  aria-label="Edit your payment method"
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    aria-label="Edit your payment method"
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -7836,15 +7920,19 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           size="lrg"
           status="primary"
         >
-          <button
-            aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-            disabled={false}
-            role="button"
-            tabIndex="0"
+          <div
+            className="o-button_container"
           >
-            Apply Code
-          </button>
+            <button
+              aria-label="Apply Gift Code"
+              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Apply Code
+            </button>
+          </div>
         </Button>
       </span>
     </div>
@@ -8650,17 +8738,21 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               status="primary"
               type="button"
             >
-              <button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-                type="button"
+              <div
+                className="o-button_container"
               >
-                Continue shopping
-              </button>
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+              </div>
             </Button>
           </Link>
           <Button
@@ -8672,17 +8764,21 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             status="primary"
             type="button"
           >
-            <button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to Payment"
+                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </CheckoutCartTotal>
@@ -9453,15 +9549,19 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -9904,17 +10004,21 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   status="primary"
                   type="submit"
                 >
-                  <button
-                    aria-label="Continue to payment"
-                    className="o-button o-button--primary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
+                  <div
+                    className="o-button_container"
                   >
-                    Continue to Payment
-                  </button>
+                    <button
+                      aria-label="Continue to payment"
+                      className="o-button o-button--primary o-button--lrg"
+                      disabled={false}
+                      onClick={[Function]}
+                      role="button"
+                      tabIndex="0"
+                      type="submit"
+                    >
+                      Continue to Payment
+                    </button>
+                  </div>
                 </Button>
               </div>
             </form>
@@ -10140,16 +10244,20 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 size="lrg"
                 status="secondary"
               >
-                <button
-                  aria-label="Edit your payment method"
-                  className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="o-button_container"
                 >
-                  Edit
-                </button>
+                  <button
+                    aria-label="Edit your payment method"
+                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Edit
+                  </button>
+                </div>
               </Button>
             </div>
           </div>
@@ -10406,15 +10514,19 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           size="lrg"
           status="primary"
         >
-          <button
-            aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-            disabled={false}
-            role="button"
-            tabIndex="0"
+          <div
+            className="o-button_container"
           >
-            Apply Code
-          </button>
+            <button
+              aria-label="Apply Gift Code"
+              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Apply Code
+            </button>
+          </div>
         </Button>
       </span>
     </div>
@@ -11220,17 +11332,21 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               status="primary"
               type="button"
             >
-              <button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-                type="button"
+              <div
+                className="o-button_container"
               >
-                Continue shopping
-              </button>
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
+                >
+                  Continue shopping
+                </button>
+              </div>
             </Button>
           </Link>
           <Button
@@ -11242,17 +11358,21 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             status="primary"
             type="button"
           >
-            <button
-              aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
+            <div
+              className="o-button_container"
             >
-              Continue to Payment
-            </button>
+              <button
+                aria-label="Continue to Payment"
+                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+                type="button"
+              >
+                Continue to Payment
+              </button>
+            </div>
           </Button>
         </div>
       </CheckoutCartTotal>

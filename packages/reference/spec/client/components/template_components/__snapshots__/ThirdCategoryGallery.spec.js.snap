@@ -153,16 +153,20 @@ exports[`renders the full ThirdCategoryGallery component 1`] = `
               size="lrg"
               status="warning"
             >
-              <button
-                aria-label="shop womens sportswear"
-                className="c-third__button-icon o-button o-button--warning o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                shop womens sportswear
-              </button>
+                <button
+                  aria-label="shop womens sportswear"
+                  className="c-third__button-icon o-button o-button--warning o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  shop womens sportswear
+                </button>
+              </div>
             </Button>
           </Link>
         </div>
@@ -228,16 +232,20 @@ exports[`renders the full ThirdCategoryGallery component 1`] = `
               size="lrg"
               status="warning"
             >
-              <button
-                aria-label="shop mens sportswear"
-                className="c-third__button-icon o-button o-button--warning o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                shop mens sportswear
-              </button>
+                <button
+                  aria-label="shop mens sportswear"
+                  className="c-third__button-icon o-button o-button--warning o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  shop mens sportswear
+                </button>
+              </div>
             </Button>
           </Link>
         </div>
@@ -303,16 +311,20 @@ exports[`renders the full ThirdCategoryGallery component 1`] = `
               size="lrg"
               status="warning"
             >
-              <button
-                aria-label="shop kids sportswear"
-                className="c-third__button-icon o-button o-button--warning o-button--lrg"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
+              <div
+                className="o-button_container"
               >
-                shop kids sportswear
-              </button>
+                <button
+                  aria-label="shop kids sportswear"
+                  className="c-third__button-icon o-button o-button--warning o-button--lrg"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                >
+                  shop kids sportswear
+                </button>
+              </div>
             </Button>
           </Link>
         </div>

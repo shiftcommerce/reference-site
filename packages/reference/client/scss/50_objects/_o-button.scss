@@ -1,30 +1,8 @@
 /* ==========================================================================
    # Button Object
    ========================================================================== */
-.o-button {
-  cursor: pointer;
-  display: inline-block;
-  padding: $global-spacing-unit-small $global-spacing-unit;
-  margin: $global-spacing-unit auto;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
 
-  border-color: $text-primary;
-  background: $button-base-color;
-  color: $text-primary;
-
-  &:hover {
-    @include breakpoint(desktop) {
-      border-color: darken($text-primary, 10%);
-      background: linear-gradient(to bottom, lighten($button-base-color, 20%), $button-base-color);
-    }
-  }
-
-  &:focus {
-    box-shadow: rgba(#ccc, 0.2) 0 0 0 2px;
-  }
+.o {
 
   $color-variations: (
     info:     (background-color: $background-info, color: #fff),
@@ -38,35 +16,89 @@
     grey:     (background-color: $background-grey, color: #000000)
   );
 
-  @each $key in map-keys($color-variations) {
-    &--#{$key} {
-      $button-base-color: map-get(map-get($color-variations, $key), background-color);
-      $text-color: map-get(map-get($color-variations, $key), color);
+  $custom-base-color: map-get(map-get($color-variations, primary), background-color);
+  $custom-text-color: map-get(map-get($color-variations, primary), color);
 
-      border-color: $button-base-color;
-      background: $button-base-color;
-      color: $text-color;
-
-      &:hover {
-        @include breakpoint(desktop) {
-          border-color: darken($button-base-color, 15%);
-          background: linear-gradient(to bottom, lighten($button-base-color, 10%), $button-base-color);
-        }
-      }
-
-      &:focus {
-        box-shadow: rgba($button-base-color, 0.2) 0 0 0 2px;
-      }
+  /* Set Defaults to be inherited on .o-button--custom_ hover */
+  &-button_container {
+    visibility: hidden;
+    @include breakpoint(desktop) {
+      border: darken($custom-text-color, 10%) solid 1px;
+      color: $custom-text-color;
+      background: lighten($custom-base-color, 10%);
     }
   }
 
-  &--lrg {
-    font-size: 1.2rem;
-    padding: $global-spacing-unit $global-spacing-unit-large;
-  }
+  &-button {
+    cursor: pointer;
+    display: inline-block;
+    visibility: visible;
+    padding: $global-spacing-unit-small $global-spacing-unit;
+    margin: $global-spacing-unit auto;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 
-  &--disabled {
-    opacity: 0.5;
-    cursor: default;
+    border-color: $text-primary;
+    background: $button-base-color;
+    color: $text-primary;
+
+    &:hover {
+      @include breakpoint(desktop) {
+        border-color: darken($text-primary, 10%);
+        background: linear-gradient(to bottom, lighten($button-base-color, 20%), $button-base-color);
+      }
+    }
+
+    &:focus {
+      box-shadow: rgba(#ccc, 0.2) 0 0 0 2px;
+    }
+
+    @each $key in map-keys($color-variations) {
+      &--#{$key} {
+        $button-base-color: map-get(map-get($color-variations, $key), background-color);
+        $text-color: map-get(map-get($color-variations, $key), color);
+
+        border-color: $button-base-color;
+        background: $button-base-color;
+        color: $text-color;
+
+        &:focus {
+          box-shadow: rgba($button-base-color, 0.2) 0 0 0 2px;
+        }
+      }
+    }
+
+    /* For use when using inline styles for hover */
+    &--custom_status {
+      border: darken($custom-text-color, 10%) solid 1px;
+      color: $custom-text-color;
+      background: lighten($custom-base-color, 10%);
+
+      @include breakpoint(desktop) {
+        &:hover {
+          /* requires !important as to increase specificity above inline base styles */
+          border-color: inherit !important;
+          background: inherit !important;
+          color: inherit !important;
+        }
+      }
+    }
+
+    &--lrg {
+      font-size: 1.2rem;
+      padding: $global-spacing-unit $global-spacing-unit-large;
+    }
+
+    &--sml {
+      font-size: 0.6rem;
+      padding: $global-spacing-unit-small;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
   }
 }

@@ -10,9 +10,21 @@ class Image extends Component {
     }
   }
 
+  responsiveImage (src, mobileSrc, otherProps) {
+    const mobileBreakPoint = '(max-width: 768px)'
+
+    return (
+      <picture>
+        { mobileSrc && <source media={mobileBreakPoint} srcSet={mobileSrc} /> }
+        <img src={src} srcSet={`${src} 769w`} className='c-image' {...otherProps} />
+      </picture>
+    )
+  }
+
   render () {
     let {
       src,
+      mobileSrc,
       className,
       ...otherProps
     } = this.props
@@ -21,7 +33,7 @@ class Image extends Component {
       return (
         <div className={className} >
           <LazyLoad height={200}>
-            <img src={src} className='c-image' {...otherProps} />
+            { this.responsiveImage(src, mobileSrc, otherProps) }
           </LazyLoad>
         </div>
       )

@@ -178,17 +178,21 @@ exports[`Place Order button should be disabled if there is any error in billing 
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -201,17 +205,21 @@ exports[`Place Order button should be disabled if there is any error in billing 
       status="disabled"
       type="button"
     >
-      <button
-        aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
-        disabled={true}
-        id="place_order"
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Place Order
-      </button>
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -393,17 +401,21 @@ exports[`Place Order button should be disabled if there is any error in card det
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -416,17 +428,21 @@ exports[`Place Order button should be disabled if there is any error in card det
       status="disabled"
       type="button"
     >
-      <button
-        aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
-        disabled={true}
-        id="place_order"
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Place Order
-      </button>
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button o-button--disabled o-button--lrg o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -535,17 +551,21 @@ exports[`renders payment errors 1`] = `
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -556,16 +576,20 @@ exports[`renders payment errors 1`] = `
       status="primary"
       type="button"
     >
-      <button
-        aria-label="Continue to Payment"
-        className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-        disabled={false}
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Continue to Payment
-      </button>
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -671,17 +695,21 @@ exports[`renders the correct checkout cart costs with shipping address completed
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -692,16 +720,20 @@ exports[`renders the correct checkout cart costs with shipping address completed
       status="primary"
       type="button"
     >
-      <button
-        aria-label="Continue to Payment"
-        className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-        disabled={false}
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Continue to Payment
-      </button>
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -817,17 +849,21 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -838,16 +874,20 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
       status="primary"
       type="button"
     >
-      <button
-        aria-label="Continue to Payment"
-        className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-        disabled={false}
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Continue to Payment
-      </button>
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -951,17 +991,21 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -972,16 +1016,20 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       status="primary"
       type="button"
     >
-      <button
-        aria-label="Continue to Payment"
-        className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-        disabled={false}
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Continue to Payment
-      </button>
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
@@ -1082,17 +1130,21 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         status="primary"
         type="button"
       >
-        <button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
-          disabled={false}
-          onClick={[Function]}
-          role="button"
-          tabIndex="0"
-          type="button"
+        <div
+          className="o-button_container"
         >
-          Continue shopping
-        </button>
+          <button
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+            type="button"
+          >
+            Continue shopping
+          </button>
+        </div>
       </Button>
     </Link>
     <Button
@@ -1103,16 +1155,20 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
       status="primary"
       type="button"
     >
-      <button
-        aria-label="Continue to Payment"
-        className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
-        disabled={false}
-        role="button"
-        tabIndex="0"
-        type="button"
+      <div
+        className="o-button_container"
       >
-        Continue to Payment
-      </button>
+        <button
+          aria-label="Continue to Payment"
+          className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
     </Button>
   </div>
 </CheckoutCartTotal>
