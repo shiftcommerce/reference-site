@@ -4,7 +4,7 @@ import Router from 'next/router'
 import { connect } from 'react-redux'
 
 // Actions
-import { readSlug } from '../actions/slugActions'
+import { readSlug } from '../actions/slug-actions'
 
 export class Slug extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {

@@ -20,7 +20,7 @@ const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
 // Middleware
-const expressSecurityHeadersMiddleware = require('../lib/expressSecurityHeadersMiddleware')
+const securityHeaders = require('./middleware/security-headers')
 
 // Session variables
 const defaultExpiryInSeconds = 30 * 24 * 60 * 60 // 30 days in seconds
@@ -28,13 +28,13 @@ const expiryInSeconds = (process.env.SESSSION_EXPIRY || defaultExpiryInSeconds) 
 const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 
 // Api
-const { fetchData } = require('./lib/ApiServer')
-const api = require('./constants/apiUrls')
+const { fetchData } = require('./lib/api-server')
+const api = require('./constants/api-urls')
 
 // Handlers
-const handler = require('./routeHandlers/routeHandler')
-const orderHandler = require('./routeHandlers/orderRouteHandler')
-const accountHandler = require('./routeHandlers/accountRouteHandler')
+const handler = require('./route-handlers/route-handler')
+const orderHandler = require('./route-handlers/order-route-handler')
+const accountHandler = require('./route-handlers/account-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -61,7 +61,7 @@ module.exports = app.prepare().then(() => {
   server.use(cookieParser())
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-  server.use(expressSecurityHeadersMiddleware({ imageHosts: imageHosts }))
+  server.use(securityHeaders({ imageHosts: imageHosts }))
 
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)

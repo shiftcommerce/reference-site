@@ -3,11 +3,11 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Actions
-import { readPage } from '../actions/pageActions'
+import { readPage } from '../actions/page-actions'
 
 // Components
-import ComponentManifest from '../components/template_components/templateComponentsManifest'
-import Loading from '../components/Loading'
+import ComponentManifest from '../components/template-components/template-components-manifest'
+import Loading from '../components/loading'
 
 class Page extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {

@@ -5,17 +5,17 @@ import Router from 'next/router'
 import qs from 'qs'
 
 // Actions
-import { setSearchState, setSearchQuery } from '../actions/searchActions'
+import { setSearchState, setSearchQuery } from '../actions/search-actions'
 
 // Components
-import Layout from '../components/Layout'
-import { ProductListing, findResultsState } from '../components/products/listing/ProductListing'
+import Layout from '../components/layout'
+import { ProductListing, findResultsState } from '../components/products/listing/product-listing'
 
 // Lib
-import trimObject from '../lib/trimObject'
+import trimObject from '../lib/trim-object'
 
 // Objects
-import Breadcrumb from '../objects/Breadcrumb'
+import Breadcrumb from '../objects/bread-crumb'
 
 class Search extends Component {
   static async getInitialProps ({ store, req, query, url }) {

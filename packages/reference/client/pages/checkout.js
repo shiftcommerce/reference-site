@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Router from 'next/router'
 
 // Libs
-import InputFieldValidator from '../lib/InputFieldValidator'
+import InputFieldValidator from '../lib/input-field-validator'
 
 // Actions
 import { readCheckoutFromLocalStorage,
@@ -15,29 +15,29 @@ import { readCheckoutFromLocalStorage,
   changePaymentMethod,
   inputChange,
   inputComplete,
-  showField } from '../actions/checkoutActions'
-import { readCart, initializeCart, updateQuantity } from '../actions/cartActions'
+  showField } from '../actions/checkout-actions'
+import { readCart, initializeCart, updateQuantity } from '../actions/cart-actions'
 import {
   createOrder,
   requestCardToken,
   setCardToken,
   setPaymentError,
   setCardErrors
-} from '../actions/orderActions'
+} from '../actions/order-actions'
 
 // Objects
-import Button from '../objects/Button'
-import Logo from '../objects/Logo'
-import Input from '../objects/Input'
+import Button from '../objects/button'
+import Logo from '../objects/logo'
+import Input from '../objects/input'
 
 // Components
-import CustomHead from '../components/CustomHead'
-import CheckoutSteps from '../components/checkout/CheckoutSteps'
-import AddressForm from '../components/checkout/AddressForm'
-import CheckoutCart from '../components/checkout/CheckoutCart'
-import CheckoutCartTotal from '../components/checkout/CheckoutCartTotal'
-import ShippingMethods from '../components/checkout/ShippingMethods'
-import PaymentMethod from '../components/checkout/PaymentMethod'
+import CustomHead from '../components/custom-head'
+import CheckoutSteps from '../components/checkout/checkout-steps'
+import AddressForm from '../components/checkout/address-form'
+import CheckoutCart from '../components/checkout/checkout-cart'
+import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
+import ShippingMethods from '../components/checkout/shipping-methods'
+import PaymentMethod from '../components/checkout/payment-method'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {

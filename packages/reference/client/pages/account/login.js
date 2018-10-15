@@ -5,19 +5,19 @@ import Router from 'next/router'
 import Link from 'next/link'
 
 // Libs
-import InputFieldValidator from '../../lib/InputFieldValidator'
-import { setCookie } from '../../lib/setCookie'
+import InputFieldValidator from '../../lib/input-field-validator'
+import { setCookie } from '../../lib/set-cookie'
 // Actions
 import { inputChange,
   setValidationMessage,
   createLogin
-} from '../../actions/loginActions'
+} from '../../actions/login-actions'
 
 // Components
-import LoginForm from '../../components/account/LoginForm'
+import LoginForm from '../../components/account/login-form'
 
 // Objects
-import Button from '../../objects/Button'
+import Button from '../../objects/button'
 
 export class Login extends Component {
   constructor () {

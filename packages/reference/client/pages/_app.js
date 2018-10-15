@@ -1,9 +1,9 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import App, { Container } from 'next/app'
-import withReduxStore from '../lib/withReduxStore'
+import withReduxStore from '../lib/with-redux-store'
 
-import ConnectedLayout from '../components/Layout'
+import ConnectedLayout from '../components/layout'
 
 // Stylesheet
 import '../scss/main.scss'

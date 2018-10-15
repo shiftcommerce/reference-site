@@ -4,17 +4,17 @@ import { connect } from 'react-redux'
 import Router from 'next/router'
 
 // Libs
-import InputFieldValidator from '../../lib/InputFieldValidator'
-import { setCookie } from '../../lib/setCookie'
+import InputFieldValidator from '../../lib/input-field-validator'
+import { setCookie } from '../../lib/set-cookie'
 
 // Actions
 import { inputChange,
   setValidationMessage,
   createAccount
-} from '../../actions/registerActions'
+} from '../../actions/register-actions'
 
 // Components
-import RegisterForm from '../../components/account/RegisterForm'
+import RegisterForm from '../../components/account/register-form'
 
 export class Register extends Component {
   constructor () {

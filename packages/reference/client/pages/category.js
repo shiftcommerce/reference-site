@@ -3,15 +3,15 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Actions
-import { readCategory } from '../actions/categoryActions'
+import { readCategory } from '../actions/category-actions'
 
 // Components
-import Loading from '../components/Loading'
-import ProductListingCard from '../components/products/listing/ProductListingCard'
-import ProductNavBar from '../components/navigation/ProductNavBar'
+import Loading from '../components/loading'
+import ProductListingCard from '../components/products/listing/product-listing-card'
+import ProductNavBar from '../components/navigation/product-navbar'
 
 // Objects
-import Button from '../objects/Button'
+import Button from '../objects/button'
 
 class Category extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {

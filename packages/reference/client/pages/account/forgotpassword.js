@@ -3,8 +3,8 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
-import Button from '../../objects/Button'
-import Input from '../../objects/Input'
+import Button from '../../objects/button'
+import Input from '../../objects/input'
 
 export class ForgotPassword extends Component {
   renderFormSubmitButton () {

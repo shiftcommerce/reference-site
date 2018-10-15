@@ -4,12 +4,12 @@ import { connect } from 'react-redux'
 import Router from 'next/router'
 
 // Components
-import Loading from '../components/Loading'
-import ProductDisplay from '../components/products/display/ProductDisplay'
+import Loading from '../components/loading'
+import ProductDisplay from '../components/products/display/product-display'
 
 // Actions
-import { addToCart } from '../actions/cartActions'
-import { readProduct } from '../actions/productActions'
+import { addToCart } from '../actions/cart-actions'
+import { readProduct } from '../actions/product-actions'
 
 export class Product extends Component {
   constructor (props) {

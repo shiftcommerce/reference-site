@@ -3,11 +3,11 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Actions
-import { updateQuantity } from '../actions/cartActions'
+import { updateQuantity } from '../actions/cart-actions'
 
 // Components
-import CartTable from '../components/cart/CartTable'
-import Loading from '../components/Loading'
+import CartTable from '../components/cart/cart-table'
+import Loading from '../components/loading'
 
 export class CartPage extends Component {
   constructor (props) {
