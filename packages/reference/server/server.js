@@ -125,7 +125,7 @@ module.exports = app.prepare().then(() => {
 
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
-    createReadStream('./serviceWorker.js').pipe(res)
+    createReadStream('./server/service-worker.js').pipe(res)
   })
 
   // Routes for local API calls

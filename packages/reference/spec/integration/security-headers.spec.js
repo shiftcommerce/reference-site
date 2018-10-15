@@ -9,13 +9,13 @@ describe('GET /', () => {
   afterAll(() => httpServer.close())
 
   test('It should respond with a 200 status', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/test')
+    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
 
     expect(response.statusCode).toBe(200)
   })
 
   test('It should not respond with an x-powered-by header', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/test')
+    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
 
     // Header keys are lowercased at this point. Here we have decided to check
     // the keys individually against a case insensitive regex in case the
@@ -26,7 +26,7 @@ describe('GET /', () => {
   })
 
   test('It should respond with appropriate security headers', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/test')
+    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
     const imageHosts = process.env.IMAGE_HOSTS
     const formattedImageHosts = (imageHosts) ? imageHosts.replace(',', ' ') : ''
 

@@ -15,7 +15,7 @@ import { ProductListing, findResultsState } from '../components/products/listing
 import trimObject from '../lib/trim-object'
 
 // Objects
-import Breadcrumb from '../objects/bread-crumb'
+import Breadcrumb from '../objects/breadcrumb'
 
 class Search extends Component {
   static async getInitialProps ({ store, req, query, url }) {
