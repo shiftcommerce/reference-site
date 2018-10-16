@@ -1,6 +1,9 @@
 const axios = require('axios')
 const qs = require('qs')
 
+// libs
+const { setCacheHeaders } = require('./setCacheHeaders')
+
 const auth = {
   username: process.env.API_TENANT,
   password: process.env.API_ACCESS_TOKEN
@@ -20,6 +23,7 @@ const fetchData = async (queryObject, url) => {
       headers: headers
     })
 
+    setCacheHeaders(response)
     return response
   } catch (error) {
     console.error(error)
@@ -36,6 +40,8 @@ const postData = async (body, url) => {
       auth: auth,
       data: body
     })
+
+    setCacheHeaders(response)
     return response
   } catch (error) {
     console.error('ERROR', error.response)
