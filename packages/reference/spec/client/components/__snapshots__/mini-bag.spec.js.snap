@@ -30,17 +30,10 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
           </span>
         </a>
         <div
-          className="c-minibag__cart-label--small"
+          className="c-minibag__cart-label"
         >
           <a>
             Basket
-          </a>
-        </div>
-        <div
-          className="c-minibag__cart-label--large"
-        >
-          <a>
-            View Your Bag
           </a>
         </div>
       </div>
@@ -133,17 +126,10 @@ exports[`renders an active checkout button where cart has items 1`] = `
           </span>
         </a>
         <div
-          className="c-minibag__cart-label--small"
+          className="c-minibag__cart-label"
         >
           <a>
             Basket
-          </a>
-        </div>
-        <div
-          className="c-minibag__cart-label--large"
-        >
-          <a>
-            View Your Bag
           </a>
         </div>
       </div>
@@ -214,17 +200,10 @@ exports[`renders the minibag links 1`] = `
         </span>
       </a>
       <div
-        className="c-minibag__cart-label--small"
+        className="c-minibag__cart-label"
       >
         <a>
           Basket
-        </a>
-      </div>
-      <div
-        className="c-minibag__cart-label--large"
-      >
-        <a>
-          View Your Bag
         </a>
       </div>
     </div>

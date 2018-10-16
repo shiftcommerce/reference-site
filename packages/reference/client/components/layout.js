@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import Link from 'next/link'
 
 // Objects
 import Logo from '../objects/logo'
@@ -50,9 +51,9 @@ export class Layout extends Component {
       <div className='c-header__account'>
         <div className='c-header__account-button'>
           <div className='c-header__account-label'>
-            <a>
-              Account
-            </a>
+            <Link href='/account/login'>
+              <a>Account</a>
+            </Link>
           </div>
         </div>
       </div>

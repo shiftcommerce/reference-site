@@ -12,6 +12,7 @@ import ProductNavBar from '../components/navigation/product-navbar'
 
 // Objects
 import Button from '../objects/button'
+import Breadcrumb from '../objects/breadcrumb'
 
 class Category extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
@@ -32,6 +33,8 @@ class Category extends Component {
   renderMenuOptions () {
     return (
       <div className='c-product-listing__menu-options'>
+        <Breadcrumb />
+        { this.renderProductMenuDropdowns() }
         <div className='c-product-listing__menu-options-filters'>
           <h2 className='c-product-listing__menu-options-filters-title'>Filters</h2>
           <div className='c-product-listing__menu-options-filters-applied'>2 of 6</div>
@@ -57,7 +60,30 @@ class Category extends Component {
         </div>
         { this.renderMenuOptions() }
         <div className='c-product-listing__menu-items-displayed'>
-          Showing 24 of 100 Products
+          <p>Showing 24 of 100 Products</p>
+          <h4>View<span> 2</span> 4</h4>
+        </div>
+      </div>
+    )
+  }
+
+  renderProductMenuDropdowns () {
+    return (
+      <div className='c-product-listing__menu-dropdowns'>
+        <div className='c-product-listing__menu-dropdown c-product-listing__menu-dropdown--category'>
+          <select className='c-product-listing__menu-dropdown-select'><option>category</option></select>
+        </div>
+        <div className='c-product-listing__menu-dropdown c-product-listing__menu-dropdown--colour'>
+          <select className='c-product-listing__menu-dropdown-select'><option>colour</option></select>
+        </div>
+        <div className='c-product-listing__menu-dropdown c-product-listing__menu-dropdown--size'>
+          <select className='c-product-listing__menu-dropdown-select'><option>size</option></select>
+        </div>
+        <div className='c-product-listing__menu-dropdown c-product-listing__menu-dropdown--price'>
+          <select className='c-product-listing__menu-dropdown-select'><option>price</option></select>
+        </div>
+        <div className='c-product-listing__menu-dropdown c-product-listing__menu-dropdown--sortby'>
+          <select className='c-product-listing__menu-dropdown-select'><option>sort by</option></select>
         </div>
       </div>
     )
@@ -68,26 +94,22 @@ class Category extends Component {
     const { loading, error } = this.props
 
     if (loading) {
-      return (
-        <Loading />
-      )
+      return (<Loading />)
     } else if (error) {
-      return (
-        <p>{ error }</p>
-      )
+      return (<p>{ error }</p>)
     } else {
-      return (
+      return <>
+        <ProductNavBar />
         <div className='c-product-listing'>
-          <ProductNavBar />
           { this.renderProductMenu() }
-          { category.map((product, index) => {
-            return <ProductListingCard product={product} key={index} />
+          { category.map((product, id) => {
+            return <ProductListingCard product={product} key={id} />
           }) }
           <div className='c-product-listing__view-more'>
             <Button className='c-product-listing__view-more-button' label='view more' size='lrg' />
           </div>
         </div>
-      )
+      </>
     }
   }
 }

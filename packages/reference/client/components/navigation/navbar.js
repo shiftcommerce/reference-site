@@ -94,7 +94,7 @@ export class NavBar extends Component {
       return (<p className='c-nav__error'>Sorry! There is an error in loading menus { menu.error }</p>)
     } else {
       return (
-        <div className='o-nav' role='navigation'>
+        <div className='c-nav' role='navigation'>
           { this.renderNavBurgerMenu() }
           <div className='c-nav__menu'>
             { this.renderNavHeader() }

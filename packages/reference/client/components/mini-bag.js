@@ -25,14 +25,9 @@ export class MiniBag extends Component {
               { lineItemCount }
             </span>
           </a>
-          <div className='c-minibag__cart-label--small'>
+          <div className='c-minibag__cart-label'>
             <a>
               Basket
-            </a>
-          </div>
-          <div className='c-minibag__cart-label--large'>
-            <a>
-              View Your Bag
             </a>
           </div>
         </div>

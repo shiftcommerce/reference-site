@@ -3,7 +3,6 @@
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 15px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 35px;
   margin: auto;
   width: 95%;
 
@@ -13,32 +12,6 @@
 
   @include breakpoint(desktop) {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  &__view-more {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    text-align: center;
-
-
-    @include breakpoint(tablet) {
-      grid-column-start: 2;
-      grid-column-end: 3;
-    }
-
-    @include breakpoint(desktop) {
-      grid-column-start: 2;
-      grid-column-end: 4;
-    }
-
-    &-button {
-      background: black;
-      color: white;
-      font-size: 0.7rem;
-      height: 2.5rem;
-      text-transform: uppercase;
-      width: 12rem;
-    }
   }
 
   &__menu {
@@ -51,6 +24,7 @@
 
     @include breakpoint(desktop) {
       grid-column-end: 5;
+      height: 24rem;
     }
 
     &-description {
@@ -60,11 +34,38 @@
 
       &-title {
         font-size: 1.8rem;
+
+        @include breakpoint(desktop) {
+          margin-top: $global-spacing-unit;
+          font-size: 2.5rem;
+        }
+
+        h1 {
+
+          @include breakpoint(desktop) {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
 
       &-content {
         font-size: 0.8rem;
-        margin-bottom: 2em;
+        margin-bottom: ($global-spacing-unit-tiny * 5);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint(tablet) {
+          width: 50%;
+        }
+
+        @include breakpoint(desktop) {
+          width: 35%;
+          margin-bottom: $global-spacing-unit-large;
+          font-size: 1rem;
+        }
       }
     }
 
@@ -73,16 +74,30 @@
       display: flex;
       height: 3em;
 
+      @include breakpoint(desktop) {
+        border-bottom: 0;
+        height: auto;
+        display: block;
+      }
+
       &-filters {
         border-right: 1px solid $border-default;
         display: flex;
         width: 50%;
 
+        @include breakpoint(desktop) {
+          display: none;
+        }
+
         &-title {
           font-size: 0.84rem;
           font-weight: 400;
-          padding-left: 0.5em;
-          padding-top: 0.5em;
+          padding-left: $global-spacing-unit-tiny;
+          padding-top: $global-spacing-unit-tiny;
+
+          @media (max-width: 355px) {
+            font-size: 0.75rem
+          }
         }
 
         &-applied {
@@ -91,8 +106,12 @@
           color: white;
           font-size: 0.7rem;
           margin: auto;
-          padding: 0.7em 1.5em;
+          padding: ($global-spacing-unit-tiny * 1.5) $global-spacing-unit-small;
           text-align: center;
+
+          @media (max-width: 355px) {
+            font-size: 0.6rem;
+          }
         }
 
         &-button {
@@ -102,6 +121,10 @@
           height: 100%;
           margin: 0;
           width: 2rem;
+
+          @include breakpoint(desktop) {
+            display: none;
+          }
         }
       }
 
@@ -109,11 +132,19 @@
         display: flex;
         width: 50%;
 
+        @include breakpoint(desktop) {
+          display: none;
+        }
+
         &-title {
           font-size: 0.84rem;
           font-weight: 400;
-          padding-left: 0.5em;
-          padding-top: 0.5em;
+          padding-left: $global-spacing-unit-tiny;
+          padding-top: $global-spacing-unit-tiny;
+
+          @media (max-width: 355px) {
+            font-size: 0.75rem;
+          }
         }
 
         &-button {
@@ -121,16 +152,114 @@
           border: none;
           cursor: pointer;
           margin: 0 0 0 auto;
+          height: 100%;
           width: 2rem;
         }
+      }
+    }
+
+    &-dropdowns {
+      display: none;
+
+      @include breakpoint(desktop) {
+        width: 100%;
+        margin-top: ($global-spacing-unit-tiny * 13);
+        display: block;
+      }
+    }
+
+    &-dropdown {
+      border-color: $border-default;
+      margin: auto $global-spacing-unit-tiny;
+      display: inline-block;
+
+      &--category {
+        margin-left: 0;
+      }
+
+      &--sortby {
+        float: right;
+        margin-right: 0;
+      }
+
+      &-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-color: $border-default;
+        background: url('/static/arrow-dropdown.svg') no-repeat center;
+        background-position-x: 8.5rem;
+        background-size: 1em;
+        color: black;
+        font-size: 0.7rem;
+        width: 10rem;
+        height: 2.5rem;
+        text-transform: capitalize;
+        border-radius: 0;
       }
     }
 
     &-items-displayed {
       color: grey;
       font-size: 0.7em;
-      padding-top: 1em;
-      text-align: right;
+      padding-top: $global-spacing-unit-tiny;
+
+
+      @include breakpoint(desktop) {
+        position: relative;
+        bottom: 7rem;
+        text-align: left;
+        width: 100%;
+        font-size: 0.8rem;
+      }
+
+      p {
+        width: 50%;
+      }
+
+      h4 {
+        display: none;
+
+        @include breakpoint(desktop) {
+          color: black;
+          display: inline-block;
+          float: right;
+          width: 50%;
+          text-align: right;
+          position: relative;
+          bottom: 2.8rem;
+          margin-right: 0;
+          font-size: 0.8rem;
+        }
+
+        span {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  &__view-more {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+
+    &-button {
+      background: black;
+      color: white;
+      font-size: 0.7rem;
+      height: 2.5rem;
+      text-transform: uppercase;
+      width: 12rem;
     }
   }
 }

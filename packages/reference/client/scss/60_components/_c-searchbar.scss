@@ -6,10 +6,6 @@
   background: $background-light-grey;
   height: 4.5rem;
 
-  @include breakpoint (desktop) {
-    background: none;
-  }
-
   &__input {
     background-color: white;
     border-color: $border-default;
@@ -28,7 +24,7 @@
     -webkit-appearance: none;
 
     @include breakpoint (desktop) {
-      width: 60%;
+      width: 90%;
     }
 
     &-icon {
@@ -39,6 +35,10 @@
       border-left: none;
       width: 12%;
       position: absolute;
+
+      @include breakpoint (desktop) {
+        width: 4%;
+      }
     }
 
     &-button {
@@ -50,9 +50,7 @@
       margin: 0;
 
       @include breakpoint(desktop) {
-        background: linear-gradient(to bottom, #56155d, #431048);
-        font-size: 1rem;
-        text-transform: uppercase;
+        height: 2.9rem;
       }
     }
   }
@@ -60,10 +58,11 @@
   &__content {
     width: 90%;
     margin: auto;
-    padding-top: 0.7em;
+    padding-top: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
-      padding: 0;
+      width: 65%;
+      margin-left: 26%;
     }
   }
 }

@@ -1,6 +1,5 @@
 .o-header {
   background: white;
-  margin: 0 0 0 auto;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -13,22 +12,23 @@
   }
 
   &__logo {
-    margin: 1rem auto;
+    margin: $global-spacing-unit-small auto 0 auto;
     text-align: center;
     vertical-align: top;
     width: auto;
 
     @include breakpoint(desktop) {
-      left: 0;
-      margin: 0;
-      order: 1;
-      width: 33.3%;
+      order: 2;
+      position: fixed;
+      width: 20%;
+      margin: $global-spacing-unit-small 0 0 $global-spacing-unit-large;
+      z-index: 999;
     }
   }
 
   &__step {
     display: inline-block;
-    margin-top: 0.3rem;
+    margin-top: $global-spacing-unit-tiny;
     text-align: center;
     vertical-align: top;
 

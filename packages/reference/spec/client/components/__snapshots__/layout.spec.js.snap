@@ -19,9 +19,13 @@ exports[`renders the children inside it 1`] = `
           <div
             className="c-header__account-label"
           >
-            <a>
-              Account
-            </a>
+            <Link
+              href="/account/login"
+            >
+              <a>
+                Account
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -74,9 +78,13 @@ exports[`renders the footer 1`] = `
           <div
             className="c-header__account-label"
           >
-            <a>
-              Account
-            </a>
+            <Link
+              href="/account/login"
+            >
+              <a>
+                Account
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -125,9 +133,13 @@ exports[`renders the header 1`] = `
           <div
             className="c-header__account-label"
           >
-            <a>
-              Account
-            </a>
+            <Link
+              href="/account/login"
+            >
+              <a>
+                Account
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -176,9 +188,13 @@ exports[`renders the navbar 1`] = `
           <div
             className="c-header__account-label"
           >
-            <a>
-              Account
-            </a>
+            <Link
+              href="/account/login"
+            >
+              <a>
+                Account
+              </a>
+            </Link>
           </div>
         </div>
       </div>

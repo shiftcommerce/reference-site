@@ -44,8 +44,6 @@ test('renders the minibag links', () => {
 
   // assert
   expect(wrapper.find('div.c-minibag__cart')).toIncludeText('0')
-  expect(wrapper.find('div.c-minibag__cart-label--small')).toIncludeText('Basket')
-  expect(wrapper.find('div.c-minibag__cart-label--large')).toIncludeText('View Your Bag')
 })
 
 test('renders the line item quantity as expected, where are items', () => {
@@ -75,8 +73,6 @@ test('renders the line item quantity as expected, where are items', () => {
 
   // assert
   expect(wrapper.find('div.c-minibag__cart')).toIncludeText('2')
-  expect(wrapper.find('div.c-minibag__cart-label--small')).toIncludeText('Basket')
-  expect(wrapper.find('div.c-minibag__cart-label--large')).toIncludeText('View Your Bag')
 })
 
 test('renders an active checkout button where cart has items', () => {

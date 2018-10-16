@@ -20,7 +20,7 @@ exports[`renders the nav bar options 1`] = `
   }
 >
   <div
-    className="o-nav"
+    className="c-nav"
     role="navigation"
   >
     <input

@@ -8,11 +8,8 @@
 
     @include breakpoint(desktop) {
       order: 1;
-      background: none;
       position: relative;
-      width: 30%;
-      height: auto;
-      margin: 0;
+      background-size: 1.1rem;
     }
 
     &-count {
@@ -21,49 +18,27 @@
       border-radius: 50%;
       color: white;
       font-size: 0.6em;
-      margin-left: 0.4em;
-      padding-top: 0.4em;
+      margin-left: $global-spacing-unit-tiny;
+      padding-top: ($global-spacing-unit-tiny / 1.5);
       text-align: center;
       width: 18px;
       height: 18px;
-
-      @include breakpoint(desktop) {
-        background-color: transparent;
-        border-radius: 0;
-        color: black;
-        margin: 0;
-        padding: 0;
-        font-size: 1rem;
-      }
     }
 
     &-label {
-      &--small {
-        padding-left: 2.6em;
+      padding-left: ($global-spacing-unit-tiny * 7);
 
-        a {
-          color: black;
-          display: block;
-          font-size: 0.8em;
-        }
-
-        @include breakpoint(desktop) {
-          display: none;
-        }
+      @include breakpoint(desktop) {
+        padding-bottom: $global-spacing-unit-tiny;
       }
 
-      &--large {
-        display: none;
+      a {
+        color: black;
+        display: block;
+        font-size: 0.8rem;
 
         @include breakpoint(desktop) {
-          display: inline-block;
-          width: auto;
-        }
-
-        a {
-          color: black;
-          display: inline-block;
-          font-size: 1rem;
+          font-size: 0.75rem;
         }
       }
     }
@@ -71,10 +46,5 @@
 
   &__checkout {
     display: none;
-
-    @include breakpoint(desktop) {
-      order: 2;
-      display: inline-block;
-    }
   }
 }

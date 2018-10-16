@@ -3,12 +3,20 @@
    ========================================================================== */
 
 .o-breadcrumb {
-  display: flex;
+  display: none;
   align-self: center;
   padding: .75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
   border-radius: .25rem;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    margin: 0;
+    font-size: 0.8rem;
+    height: auto;
+    padding-left: 0;
+  }
 }
 
 .o-breadcrumb__item {

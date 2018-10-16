@@ -4,11 +4,15 @@
 .o-nav {
   border: none;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   height: 3.67em;
 
   @include breakpoint(desktop) {
-    order: 4;
-    margin: auto;
+    order: 3;
+    margin: ($global-spacing-unit-tiny * 14) 0 0 auto;
+  }
+
+  @media (max-width: 1205px) {
+    font-size: 0.73em;
   }
 }
