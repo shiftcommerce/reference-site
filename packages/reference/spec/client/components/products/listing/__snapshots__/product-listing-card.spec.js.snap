@@ -39,6 +39,7 @@ exports[`renders ProductListingCard correctly 1`] = `
       "canonical_path": "1",
       "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
       "id": 1,
+      "max_current_price": "10.00",
       "meta_attributes": Object {
         "care_instructions": Object {
           "value": "Machine Washable",
@@ -56,7 +57,8 @@ exports[`renders ProductListingCard correctly 1`] = `
           "value": "Flexible Waist",
         },
       },
-      "price": "99.00",
+      "min_current_price": "10.00",
+      "price": "10.00",
       "title": "Textured Long T-Shirt",
       "variants": Array [
         Object {
@@ -103,7 +105,7 @@ exports[`renders ProductListingCard correctly 1`] = `
       className="c-product-listing-card__body"
     >
       <div
-        className="c-product-listing-card__gallery  c-image"
+        className="c-product-listing-card__gallery c-image"
       >
         <Link
           as="1"
@@ -155,42 +157,100 @@ exports[`renders ProductListingCard correctly 1`] = `
         className="c-product-listing-card__price"
       >
         <ProductPrice
-          variants={
-            Array [
-              Object {
-                "meta_attributes": Object {
-                  "size": Object {
-                    "value": "Size 8",
-                  },
+          product={
+            Object {
+              "asset_files": Array [
+                Object {
+                  "alt_text": "Textured Long T-Shirt",
+                  "asset_file": "S2623408_C29P_Alt2.jpg",
+                  "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
                 },
-                "price": "10.00",
-                "sku": 1,
-                "stock_available_level": "1000",
-                "title": "Small",
-              },
-              Object {
-                "meta_attributes": Object {
-                  "size": Object {
-                    "value": "Size 10",
-                  },
+              ],
+              "bundles": Array [
+                Object {
+                  "id": 1,
+                  "products": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "id": 2,
+                          "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
+                        },
+                      ],
+                      "canonical_path": "/products/stripe-shirt",
+                      "id": 1,
+                      "title": "Stripe Shirt",
+                    },
+                    Object {
+                      "asset_files": Array [],
+                      "canonical_path": "/products/slip-on-pump",
+                      "id": 2,
+                      "title": "Slip on Pump (no asset files example)",
+                    },
+                  ],
+                  "title": "Mingo",
                 },
-                "price": "11.00",
-                "sku": 2,
-                "stock_available_level": "1000",
-                "title": "Medium",
-              },
-              Object {
-                "meta_attributes": Object {
-                  "size": Object {
-                    "value": "Size 12",
-                  },
+              ],
+              "canonical_path": "1",
+              "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+              "id": 1,
+              "max_current_price": "10.00",
+              "meta_attributes": Object {
+                "care_instructions": Object {
+                  "value": "Machine Washable",
                 },
-                "price": "12.00",
-                "sku": 3,
-                "stock_available_level": "1000",
-                "title": "Large",
+                "fabric": Object {
+                  "value": "100% cotton",
+                },
+                "master_colour": Object {
+                  "value": "Stone",
+                },
+                "product_feature": Object {
+                  "value": "Stretch Fit",
+                },
+                "silhouette": Object {
+                  "value": "Flexible Waist",
+                },
               },
-            ]
+              "min_current_price": "10.00",
+              "price": "10.00",
+              "title": "Textured Long T-Shirt",
+              "variants": Array [
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 8",
+                    },
+                  },
+                  "price": "10.00",
+                  "sku": 1,
+                  "stock_available_level": "1000",
+                  "title": "Small",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 10",
+                    },
+                  },
+                  "price": "11.00",
+                  "sku": 2,
+                  "stock_available_level": "1000",
+                  "title": "Medium",
+                },
+                Object {
+                  "meta_attributes": Object {
+                    "size": Object {
+                      "value": "Size 12",
+                    },
+                  },
+                  "price": "12.00",
+                  "sku": 3,
+                  "stock_available_level": "1000",
+                  "title": "Large",
+                },
+              ],
+            }
           }
         >
           <div
@@ -199,8 +259,6 @@ exports[`renders ProductListingCard correctly 1`] = `
             <span>
               £
               10.00
-               - £
-              12.00
             </span>
           </div>
         </ProductPrice>

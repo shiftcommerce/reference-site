@@ -48,7 +48,7 @@ class ProductDisplay extends Component {
             { product.title }
           </div>
           <div className='c-product-display__buttons-price'>
-            <ProductPrice variants={product.variants} />
+            <ProductPrice product={product} />
           </div>
         </div>
         <div className='c-product-display__buttons-section2'>
@@ -87,7 +87,7 @@ class ProductDisplay extends Component {
           { product.title }
         </div>
         <div className='c-product-display__info-price'>
-          <ProductPrice variants={product.variants} />
+          <ProductPrice product={product} />
         </div>
         <div className='c-product-display__info-rating'>
           { this.renderRatingStars(product) }

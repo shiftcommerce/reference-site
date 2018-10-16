@@ -5,7 +5,9 @@ const Product = {
   canonical_path: '1',
   title: 'Textured Long T-Shirt',
   description: 'Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.',
-  price: fixedPrice(99.0),
+  price: fixedPrice(10),
+  min_current_price: fixedPrice(10),
+  max_current_price: fixedPrice(10),
   meta_attributes: {
     master_colour: {
       value: 'Stone'

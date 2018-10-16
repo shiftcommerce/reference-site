@@ -11,7 +11,7 @@ import Image from '../../../objects/image'
 
 class ProductListingCard extends React.Component {
   renderRatingStars (product) {
-    let rating = (product.rating || 0)
+    const rating = (product.rating || 0)
 
     return (
       [1, 2, 3, 4, 5].map((key, index) =>
@@ -23,19 +23,21 @@ class ProductListingCard extends React.Component {
   }
 
   render () {
-    let {
-      product
+    const {
+      product,
+      className
     } = this.props
 
-    const assetFile = product.asset_files[0]
+    const assetFile = product.asset_files && product.asset_files[0]
+    const pictureUrl = product.picture_url
 
     return (
-      <div className='c-product-listing-card'>
+      <div className={classNames('c-product-listing-card', className)}>
         <div className='c-product-listing-card__body'>
-          <div className='c-product-listing-card__gallery  c-image'>
+          <div className='c-product-listing-card__gallery c-image'>
             <Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}>
               <Image className='c-product-listing-card__image'
-                src={assetFile && assetFile.s3_url}
+                src={(assetFile && assetFile.s3_url) || pictureUrl}
                 alt={(assetFile && assetFile.alt_text) || product.title}
                 aria-label={product.title} />
             </Link>
@@ -46,7 +48,7 @@ class ProductListingCard extends React.Component {
             </p>
           </div>
           <div className='c-product-listing-card__price'>
-            <ProductPrice variants={product.variants} />
+            <ProductPrice product={product} />
           </div>
           <div className='c-product-listing-card__rating'>
             { this.renderRatingStars(product) }

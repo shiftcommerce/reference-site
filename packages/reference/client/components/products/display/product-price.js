@@ -1,22 +1,32 @@
 // Libraries
-import { Component } from 'react'
+import { PureComponent } from 'react'
+import { fixedPrice } from '../../../lib/fixed-price'
 
-class ProductPrice extends Component {
-  renderPrice (variants) {
-    const priceList = variants.map((variant) => (variant.price))
-    const minPrice = Number(Math.min(...priceList)).toFixed(2)
-    const maxPrice = Number(Math.max(...priceList)).toFixed(2)
+class ProductPrice extends PureComponent {
+  // only add two decimal places if the price is not an integer
+  // e.g. £25 but £26.50
+  addDecimalsIfNeeded (price) {
+    if (parseFloat(price) === parseInt(price)) {
+      return price
+    } else {
+      return fixedPrice(price)
+    }
+  }
+
+  renderPrice (product) {
+    const minPrice = product.min_current_price
+    const maxPrice = product.max_current_price
 
     if (minPrice !== maxPrice) {
       return (
         <span>
-          &pound;{ minPrice } - &pound;{ maxPrice }
+          &pound;{ this.addDecimalsIfNeeded(minPrice) } - &pound;{ this.addDecimalsIfNeeded(maxPrice) }
         </span>
       )
     } else {
       return (
         <span>
-          &pound;{ maxPrice }
+          &pound;{ this.addDecimalsIfNeeded(maxPrice) }
         </span>
       )
     }
@@ -25,7 +35,7 @@ class ProductPrice extends Component {
   render () {
     return (
       <div className='c-product-price'>
-        { this.renderPrice(this.props.variants) }
+        { this.renderPrice(this.props.product) }
       </div>
     )
   }

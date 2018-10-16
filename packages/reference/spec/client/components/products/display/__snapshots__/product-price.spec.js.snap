@@ -2,27 +2,11 @@
 
 exports[`renders correctly if variants have different prices 1`] = `
 <ProductPrice
-  variants={
-    Array [
-      Object {
-        "price": "10.00",
-        "sku": 1,
-        "title": "Small",
-        "variant": "Size 8",
-      },
-      Object {
-        "price": "11.00",
-        "sku": 2,
-        "title": "Medium",
-        "variant": "Size 10",
-      },
-      Object {
-        "price": "12.00",
-        "sku": 3,
-        "title": "Large",
-        "variant": "Size 12",
-      },
-    ]
+  product={
+    Object {
+      "max_current_price": "12.00",
+      "min_current_price": "10.00",
+    }
   }
 >
   <div
@@ -40,27 +24,11 @@ exports[`renders correctly if variants have different prices 1`] = `
 
 exports[`renders correctly if variants have similar price 1`] = `
 <ProductPrice
-  variants={
-    Array [
-      Object {
-        "price": "10.00",
-        "size": "Size 8",
-        "sku": 1,
-        "title": "Small",
-      },
-      Object {
-        "price": "10.00",
-        "size": "Size 10",
-        "sku": 2,
-        "title": "Medium",
-      },
-      Object {
-        "price": "10.00",
-        "size": "Size 12",
-        "sku": 3,
-        "title": "Large",
-      },
-    ]
+  product={
+    Object {
+      "max_current_price": "10.00",
+      "min_current_price": "10.00",
+    }
   }
 >
   <div

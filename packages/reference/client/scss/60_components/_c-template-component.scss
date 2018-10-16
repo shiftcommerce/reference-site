@@ -1,0 +1,11 @@
+.c-template-component {
+  margin: 0 $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    margin: 0;
+  }
+
+  &__cat-button {
+    margin-top: 0;
+  }
+}

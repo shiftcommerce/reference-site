@@ -13,7 +13,7 @@ test('GenericGrid component renders correctly', () => {
 
   // Act
   const wrapper = mount(
-    <GenericGrid component={genericGridData} />
+    <GenericGrid componentData={genericGridData} />
   )
 
   // Assert

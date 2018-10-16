@@ -2,7 +2,7 @@
 
 exports[`GenericGrid component renders correctly 1`] = `
 <GenericGrid
-  component={
+  componentData={
     Object {
       "cat_text": "Cat Button",
       "cat_url": Array [
@@ -94,7 +94,7 @@ exports[`GenericGrid component renders correctly 1`] = `
   }
 >
   <section
-    className="c-generic-grid"
+    className="c-template-component u-center-align"
   >
     <h1
       className="c-component-header"
@@ -102,10 +102,10 @@ exports[`GenericGrid component renders correctly 1`] = `
       Generic Grid
     </h1>
     <div
-      className="c-generic-grid__container"
+      className="o-card-grid o-card-grid--3d-3m"
     >
       <div
-        className="c-generic-grid__card"
+        className="o-card-grid__card"
         key="0"
       >
         <Link
@@ -140,7 +140,7 @@ exports[`GenericGrid component renders correctly 1`] = `
               </div>
             </Image>
             <p
-              className="c-generic-grid__title"
+              className="o-card-grid__title"
             >
               shop glassware
             </p>
@@ -148,7 +148,7 @@ exports[`GenericGrid component renders correctly 1`] = `
         </Link>
       </div>
       <div
-        className="c-generic-grid__card"
+        className="o-card-grid__card"
         key="1"
       >
         <Link
@@ -183,7 +183,7 @@ exports[`GenericGrid component renders correctly 1`] = `
               </div>
             </Image>
             <p
-              className="c-generic-grid__title"
+              className="o-card-grid__title"
             >
               shop glassware2
             </p>
@@ -191,7 +191,7 @@ exports[`GenericGrid component renders correctly 1`] = `
         </Link>
       </div>
       <div
-        className="c-generic-grid__card"
+        className="o-card-grid__card"
         key="2"
       >
         <Link
@@ -226,7 +226,7 @@ exports[`GenericGrid component renders correctly 1`] = `
               </div>
             </Image>
             <p
-              className="c-generic-grid__title"
+              className="o-card-grid__title"
             >
               shop glassware3
             </p>
@@ -234,24 +234,33 @@ exports[`GenericGrid component renders correctly 1`] = `
         </Link>
       </div>
     </div>
-    <Button
-      className="c-generic-grid__cat-button"
-      label="Cat Button"
-      status="primary"
+    <Link
+      href="/homeware/dining/cat"
     >
-      <div
-        className="o-button_container"
+      <a
+        href="/homeware/dining/cat"
+        onClick={[Function]}
       >
-        <button
-          className="c-generic-grid__cat-button o-button o-button--primary"
-          disabled={false}
-          role="button"
-          tabIndex="0"
+        <Button
+          className="c-template-component__cat-button"
+          label="Cat Button"
+          status="primary"
         >
-          Cat Button
-        </button>
-      </div>
-    </Button>
+          <div
+            className="o-button_container"
+          >
+            <button
+              className="c-template-component__cat-button o-button o-button--primary"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              Cat Button
+            </button>
+          </div>
+        </Button>
+      </a>
+    </Link>
   </section>
 </GenericGrid>
 `;

@@ -1,51 +1,60 @@
 // Libraries
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import Link from 'next/link'
 
 // Objects
 import Button from '../../objects/button'
 import Image from '../../objects/image'
 
-class GenericGrid extends Component {
-  buildSlides (component) {
+class GenericGrid extends PureComponent {
+  buildSlides (componentData) {
     const slides = []
 
     for (let i of [...Array(12).keys()]) {
-      const slideImage = component[`slide${i + 1}_image`]
-      const slideText = component[`slide${i + 1}_text`]
-      const slideLinkURL = component[`slide${i + 1}_url`]
+      const slideImage = componentData[`slide${i + 1}_image`]
+      const slideText = componentData[`slide${i + 1}_text`]
+      const slideLinkURL = componentData[`slide${i + 1}_url`]
 
       if (slideImage && slideText && slideLinkURL) {
         slides.push(
-          <div className="c-generic-grid__card" key={i}>
+          <div className="o-card-grid__card" key={i}>
             <Link href={slideLinkURL[0].canonical_path}>
               <a>
                 <Image src={slideImage[0].canonical_path} />
-                <p className="c-generic-grid__title">{ slideText }</p>
+                <p className="o-card-grid__title">{ slideText }</p>
               </a>
             </Link>
           </div>
         )
       }
     }
-
     return slides
   }
 
+  catButton (componentData) {
+    return (
+      <Link href={componentData.cat_url[0].canonical_path}>
+        <a>
+          <Button
+            className="c-template-component__cat-button"
+            label={componentData.cat_text}
+            status="primary"
+          />
+        </a>
+      </Link>
+    )
+  }
+
   render () {
-    const { component } = this.props
+    const { componentData } = this.props
 
     return (
-      <section className="c-generic-grid">
-        <h1 className="c-component-header">{ component.header }</h1>
-        <div className="c-generic-grid__container">
-          { this.buildSlides(component) }
+      <section className="c-template-component u-center-align">
+        <h1 className="c-component-header">{ componentData.header }</h1>
+        <div className="o-card-grid o-card-grid--3d-3m">
+          { this.buildSlides(componentData) }
         </div>
-        <Button
-          className="c-generic-grid__cat-button"
-          label={component.cat_text}
-          status="primary"
-        />
+        { componentData.cat_url[0] && componentData.cat_text && this.catButton(componentData) }
       </section>
     )
   }
