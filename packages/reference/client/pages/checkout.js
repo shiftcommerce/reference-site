@@ -26,9 +26,7 @@ import {
 } from '../actions/order-actions'
 
 // Objects
-import Button from '../objects/button'
 import Logo from '../objects/logo'
-import Input from '../objects/input'
 
 // Components
 import CustomHead from '../components/custom-head'
@@ -38,6 +36,7 @@ import CheckoutCart from '../components/checkout/checkout-cart'
 import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import ShippingMethods from '../components/checkout/shipping-methods'
 import PaymentMethod from '../components/checkout/payment-method'
+import PromoInput from '../components/promo-input'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {
@@ -179,25 +178,6 @@ export class CheckoutPage extends Component {
     return isBillingAddressValid && isCardValid
   }
 
-  renderGiftCardSection () {
-    return <>
-      <div aria-label='Use gift card or rewards code' className='o-form__wrapper  c-gift__wrapper'>
-        <span className='c-payment-method__gift'>
-          <Input
-            label='Gift Card/Rewards Code'
-            placeholder='Enter Gift Card/Rewards Code'
-            className='c-payment-method__gift-input' />
-          <Button
-            aria-label='Apply Gift Code'
-            className='c-payment-method__gift-button'
-            label='Apply Code'
-            status='primary'
-            size='lrg' />
-        </span>
-      </div>
-    </>
-  }
-
   render () {
     const { checkout, cart } = this.props
     const hasLineItems = cart.totalQuantity > 0
@@ -255,7 +235,7 @@ export class CheckoutPage extends Component {
                     setCardErrors={this.setCardErrors}
                   />
                 </div>
-                { this.renderGiftCardSection() }
+                <PromoInput />
                 <div className='o-col-1-13 o-col-9-13-l c-cart-table'>
                   <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
                   <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />

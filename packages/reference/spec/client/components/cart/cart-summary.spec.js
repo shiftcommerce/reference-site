@@ -17,7 +17,7 @@ test('renders correct values when no line items are available', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Total Price:£0')
   expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
-  expect(wrapper).toIncludeText('TOTAL:£0')
+  expect(wrapper).toIncludeText('Total Price:£0.00')
 })
 
 test('renders correct values when line items are available', () => {
@@ -47,5 +47,5 @@ test('renders correct values when line items are available', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Total Price:£20')
   expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
-  expect(wrapper).toIncludeText('TOTAL:£16')
+  expect(wrapper).toIncludeText('TOTAL:£19.45')
 })

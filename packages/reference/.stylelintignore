@@ -5,5 +5,6 @@ bin/
 *.png
 *.jpg
 *.log
+*.aes
 *.encrypted
 fonts/

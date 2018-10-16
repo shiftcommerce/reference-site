@@ -34,8 +34,8 @@ describe('Checkout Cart', () => {
 
     // assert
     expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('a.c-line-items__total')).toIncludeText('£20')
     expect(wrapper.find('h4.c-line-items__details-title')).toIncludeText('Test Product')
-    expect(wrapper.find('div.c-line-items__total-wrapper')).toIncludeText('£20')
   })
 
   test('renders the correct cart summary with multiple line items', () => {

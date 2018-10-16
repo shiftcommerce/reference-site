@@ -6,6 +6,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
     Object {
       "lineItems": Array [
         Object {
+          "bundles": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "id": "157928",
+                  "meta_attributes": Object {},
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "meta_attributes": Object {},
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ],
           "canonical_path": "1",
           "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
           "price": "30",
@@ -178,6 +196,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -392,6 +428,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -575,6 +629,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -931,6 +1003,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -1291,68 +1381,69 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
         </div>
       </PaymentMethod>
     </div>
-    <div
-      aria-label="Use gift card or rewards code"
-      className="o-form__wrapper  c-gift__wrapper"
-    >
-      <span
-        className="c-payment-method__gift"
+    <PromoInput>
+      <div
+        aria-label="Use gift card or rewards code"
+        className="c-gift__wrapper"
       >
-        <_class
-          className="c-payment-method__gift-input"
-          label="Gift Card/Rewards Code"
-          placeholder="Enter Gift Card/Rewards Code"
+        <span
+          className="c-payment-method__gift"
         >
-          <Input
+          <_class
             className="c-payment-method__gift-input"
-            label="Gift Card/Rewards Code"
-            placeholder="Enter Gift Card/Rewards Code"
-            renderValidationMessage={[Function]}
+            label="Promotion Code"
+            placeholder="Enter Promotion Code"
+          >
+            <Input
+              className="c-payment-method__gift-input"
+              label="Promotion Code"
+              placeholder="Enter Promotion Code"
+              renderValidationMessage={[Function]}
+            >
+              <div
+                className="o-form__input-group"
+              >
+                <label
+                  className="o-form__label undefined"
+                >
+                  <b>
+                    Promotion Code
+                     
+                  </b>
+                  <input
+                    checked={false}
+                    className="o-form__input-field c-payment-method__gift-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter Promotion Code"
+                  />
+                </label>
+              </div>
+            </Input>
+          </_class>
+          <Button
+            aria-label="Apply Gift Code"
+            className="c-payment-method__gift-button  o-button--sml"
+            label="Apply"
+            status="primary"
           >
             <div
-              className="o-form__input-group"
+              className="o-button_container"
             >
-              <label
-                className="o-form__label undefined"
+              <button
+                aria-label="Apply Gift Code"
+                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                disabled={false}
+                role="button"
+                tabIndex="0"
               >
-                <b>
-                  Gift Card/Rewards Code
-                   
-                </b>
-                <input
-                  checked={false}
-                  className="o-form__input-field c-payment-method__gift-input"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  placeholder="Enter Gift Card/Rewards Code"
-                />
-              </label>
+                Apply
+              </button>
             </div>
-          </Input>
-        </_class>
-        <Button
-          aria-label="Apply Gift Code"
-          className="c-payment-method__gift-button"
-          label="Apply Code"
-          size="lrg"
-          status="primary"
-        >
-          <div
-            className="o-button_container"
-          >
-            <button
-              aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              Apply Code
-            </button>
-          </div>
-        </Button>
-      </span>
-    </div>
+          </Button>
+        </span>
+      </div>
+    </PromoInput>
     <div
       className="o-col-1-13 o-col-9-13-l c-cart-table"
     >
@@ -1361,6 +1452,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -1569,6 +1678,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -1590,11 +1717,11 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             className="c-line-items"
           >
             <div
-              className="o-grid-container__lineitems"
+              className="c-line-items__grid"
               key="1"
             >
               <div
-                className="o-grid-item1__lineitems"
+                className="c-line-items__grid-item1"
               >
                 <Link
                   as="1"
@@ -1635,7 +1762,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 </Link>
               </div>
               <div
-                className="o-grid-item2__lineitems"
+                className="c-line-items__grid-item2"
               >
                 <div
                   className="c-line-items__details"
@@ -1655,24 +1782,32 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 </div>
               </div>
               <div
-                className="o-grid-item3__lineitems"
+                className="c-line-items__grid-item4"
               >
                 <div
-                  className="c-line-items__colour  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Colour
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item6"
+              >
                 <div
-                  className="c-line-items__size  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Option
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item8"
+              >
                 <div
-                  className="c-line-items__quantity u-bold"
+                  className="c-line-items__param u-bold"
                 >
                   <span>
                     Quantity
@@ -1680,21 +1815,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 </div>
               </div>
               <div
-                className="o-grid-item4__lineitems"
+                className="c-line-items__param  c-line-items__grid-item5"
               >
-                <span
-                  className="c-line-items__space"
-                >
+                <span>
                   Grey
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item7"
+              >
+                <span>
                   38 Waist 31 Leg
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item9"
+              >
+                <span>
                   <select
                     data-variant="S2658934_C101_486"
                     onChange={[Function]}
@@ -1784,32 +1921,28 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 </span>
               </div>
               <div
-                className="o-grid-item5__lineitems"
+                className="c-line-items__grid-item3"
               >
                 <div
-                  className="c-line-items__buttons"
-                >
-                  <div
-                    className="c-line-items__anchor"
-                  >
-                    <a
-                      className="c-line-items__delete"
-                      data-variant="S2658934_C101_486"
-                    >
-                      Delete
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__total-wrapper"
+                  className="c-line-items__delete"
                 >
                   <a
-                    className="c-line-items__total"
+                    className="c-line-items__delete-button"
+                    data-variant="S2658934_C101_486"
                   >
-                    £
-                    30.00
+                    Delete
                   </a>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item10"
+              >
+                <a
+                  className="c-line-items__total"
+                >
+                  £
+                  30.00
+                </a>
               </div>
             </div>
           </div>
@@ -1820,6 +1953,24 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -2067,6 +2218,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
       Object {
         "lineItems": Array [
           Object {
+            "bundles": Array [
+              Object {
+                "asset_files": Array [
+                  Object {
+                    "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    "id": "157928",
+                    "meta_attributes": Object {},
+                    "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  },
+                ],
+                "canonical_path": "/bundles/anna-outfit-1",
+                "id": "261",
+                "meta_attributes": Object {},
+                "name": "Anna Outfit 1",
+                "slug": "anna-outfit-1",
+              },
+            ],
             "canonical_path": "1",
             "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
             "price": "30",
@@ -2244,6 +2413,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -2463,6 +2650,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -2651,6 +2856,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -3012,6 +3235,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -3377,68 +3618,69 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
           </div>
         </PaymentMethod>
       </div>
-      <div
-        aria-label="Use gift card or rewards code"
-        className="o-form__wrapper  c-gift__wrapper"
-      >
-        <span
-          className="c-payment-method__gift"
+      <PromoInput>
+        <div
+          aria-label="Use gift card or rewards code"
+          className="c-gift__wrapper"
         >
-          <_class
-            className="c-payment-method__gift-input"
-            label="Gift Card/Rewards Code"
-            placeholder="Enter Gift Card/Rewards Code"
+          <span
+            className="c-payment-method__gift"
           >
-            <Input
+            <_class
               className="c-payment-method__gift-input"
-              label="Gift Card/Rewards Code"
-              placeholder="Enter Gift Card/Rewards Code"
-              renderValidationMessage={[Function]}
+              label="Promotion Code"
+              placeholder="Enter Promotion Code"
+            >
+              <Input
+                className="c-payment-method__gift-input"
+                label="Promotion Code"
+                placeholder="Enter Promotion Code"
+                renderValidationMessage={[Function]}
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    className="o-form__label undefined"
+                  >
+                    <b>
+                      Promotion Code
+                       
+                    </b>
+                    <input
+                      checked={false}
+                      className="o-form__input-field c-payment-method__gift-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Enter Promotion Code"
+                    />
+                  </label>
+                </div>
+              </Input>
+            </_class>
+            <Button
+              aria-label="Apply Gift Code"
+              className="c-payment-method__gift-button  o-button--sml"
+              label="Apply"
+              status="primary"
             >
               <div
-                className="o-form__input-group"
+                className="o-button_container"
               >
-                <label
-                  className="o-form__label undefined"
+                <button
+                  aria-label="Apply Gift Code"
+                  className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                  disabled={false}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <b>
-                    Gift Card/Rewards Code
-                     
-                  </b>
-                  <input
-                    checked={false}
-                    className="o-form__input-field c-payment-method__gift-input"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    placeholder="Enter Gift Card/Rewards Code"
-                  />
-                </label>
+                  Apply
+                </button>
               </div>
-            </Input>
-          </_class>
-          <Button
-            aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button"
-            label="Apply Code"
-            size="lrg"
-            status="primary"
-          >
-            <div
-              className="o-button_container"
-            >
-              <button
-                aria-label="Apply Gift Code"
-                className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-                disabled={false}
-                role="button"
-                tabIndex="0"
-              >
-                Apply Code
-              </button>
-            </div>
-          </Button>
-        </span>
-      </div>
+            </Button>
+          </span>
+        </div>
+      </PromoInput>
       <div
         className="o-col-1-13 o-col-9-13-l c-cart-table"
       >
@@ -3447,6 +3689,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -3660,6 +3920,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               Object {
                 "lineItems": Array [
                   Object {
+                    "bundles": Array [
+                      Object {
+                        "asset_files": Array [
+                          Object {
+                            "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                            "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                            "id": "157928",
+                            "meta_attributes": Object {},
+                            "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          },
+                        ],
+                        "canonical_path": "/bundles/anna-outfit-1",
+                        "id": "261",
+                        "meta_attributes": Object {},
+                        "name": "Anna Outfit 1",
+                        "slug": "anna-outfit-1",
+                      },
+                    ],
                     "canonical_path": "1",
                     "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                     "price": "30",
@@ -3681,11 +3959,11 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               className="c-line-items"
             >
               <div
-                className="o-grid-container__lineitems"
+                className="c-line-items__grid"
                 key="1"
               >
                 <div
-                  className="o-grid-item1__lineitems"
+                  className="c-line-items__grid-item1"
                 >
                   <Link
                     as="1"
@@ -3726,7 +4004,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   </Link>
                 </div>
                 <div
-                  className="o-grid-item2__lineitems"
+                  className="c-line-items__grid-item2"
                 >
                   <div
                     className="c-line-items__details"
@@ -3746,24 +4024,32 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   </div>
                 </div>
                 <div
-                  className="o-grid-item3__lineitems"
+                  className="c-line-items__grid-item4"
                 >
                   <div
-                    className="c-line-items__colour  u-bold"
+                    className="c-line-items__param  u-bold"
                   >
                     <span>
                       Colour
                     </span>
                   </div>
+                </div>
+                <div
+                  className="c-line-items__grid-item6"
+                >
                   <div
-                    className="c-line-items__size  u-bold"
+                    className="c-line-items__param  u-bold"
                   >
                     <span>
                       Option
                     </span>
                   </div>
+                </div>
+                <div
+                  className="c-line-items__grid-item8"
+                >
                   <div
-                    className="c-line-items__quantity u-bold"
+                    className="c-line-items__param u-bold"
                   >
                     <span>
                       Quantity
@@ -3771,21 +4057,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   </div>
                 </div>
                 <div
-                  className="o-grid-item4__lineitems"
+                  className="c-line-items__param  c-line-items__grid-item5"
                 >
-                  <span
-                    className="c-line-items__space"
-                  >
+                  <span>
                     Grey
                   </span>
-                  <span
-                    className="c-line-items__space"
-                  >
+                </div>
+                <div
+                  className="c-line-items__param  c-line-items__grid-item7"
+                >
+                  <span>
                     38 Waist 31 Leg
                   </span>
-                  <span
-                    className="c-line-items__space"
-                  >
+                </div>
+                <div
+                  className="c-line-items__param  c-line-items__grid-item9"
+                >
+                  <span>
                     <select
                       data-variant="S2658934_C101_486"
                       onChange={[Function]}
@@ -3875,32 +4163,28 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   </span>
                 </div>
                 <div
-                  className="o-grid-item5__lineitems"
+                  className="c-line-items__grid-item3"
                 >
                   <div
-                    className="c-line-items__buttons"
-                  >
-                    <div
-                      className="c-line-items__anchor"
-                    >
-                      <a
-                        className="c-line-items__delete"
-                        data-variant="S2658934_C101_486"
-                      >
-                        Delete
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="c-line-items__total-wrapper"
+                    className="c-line-items__delete"
                   >
                     <a
-                      className="c-line-items__total"
+                      className="c-line-items__delete-button"
+                      data-variant="S2658934_C101_486"
                     >
-                      £
-                      30.00
+                      Delete
                     </a>
                   </div>
+                </div>
+                <div
+                  className="c-line-items__grid-item10"
+                >
+                  <a
+                    className="c-line-items__total"
+                  >
+                    £
+                    30.00
+                  </a>
                 </div>
               </div>
             </div>
@@ -3911,6 +4195,24 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -4151,6 +4453,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
     Object {
       "lineItems": Array [
         Object {
+          "bundles": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "id": "157928",
+                  "meta_attributes": Object {},
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "meta_attributes": Object {},
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ],
           "canonical_path": "1",
           "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
           "price": "30",
@@ -4323,6 +4643,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -4537,6 +4875,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -4720,6 +5076,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -5076,6 +5450,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -5436,68 +5828,69 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
         </div>
       </PaymentMethod>
     </div>
-    <div
-      aria-label="Use gift card or rewards code"
-      className="o-form__wrapper  c-gift__wrapper"
-    >
-      <span
-        className="c-payment-method__gift"
+    <PromoInput>
+      <div
+        aria-label="Use gift card or rewards code"
+        className="c-gift__wrapper"
       >
-        <_class
-          className="c-payment-method__gift-input"
-          label="Gift Card/Rewards Code"
-          placeholder="Enter Gift Card/Rewards Code"
+        <span
+          className="c-payment-method__gift"
         >
-          <Input
+          <_class
             className="c-payment-method__gift-input"
-            label="Gift Card/Rewards Code"
-            placeholder="Enter Gift Card/Rewards Code"
-            renderValidationMessage={[Function]}
+            label="Promotion Code"
+            placeholder="Enter Promotion Code"
+          >
+            <Input
+              className="c-payment-method__gift-input"
+              label="Promotion Code"
+              placeholder="Enter Promotion Code"
+              renderValidationMessage={[Function]}
+            >
+              <div
+                className="o-form__input-group"
+              >
+                <label
+                  className="o-form__label undefined"
+                >
+                  <b>
+                    Promotion Code
+                     
+                  </b>
+                  <input
+                    checked={false}
+                    className="o-form__input-field c-payment-method__gift-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter Promotion Code"
+                  />
+                </label>
+              </div>
+            </Input>
+          </_class>
+          <Button
+            aria-label="Apply Gift Code"
+            className="c-payment-method__gift-button  o-button--sml"
+            label="Apply"
+            status="primary"
           >
             <div
-              className="o-form__input-group"
+              className="o-button_container"
             >
-              <label
-                className="o-form__label undefined"
+              <button
+                aria-label="Apply Gift Code"
+                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                disabled={false}
+                role="button"
+                tabIndex="0"
               >
-                <b>
-                  Gift Card/Rewards Code
-                   
-                </b>
-                <input
-                  checked={false}
-                  className="o-form__input-field c-payment-method__gift-input"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  placeholder="Enter Gift Card/Rewards Code"
-                />
-              </label>
+                Apply
+              </button>
             </div>
-          </Input>
-        </_class>
-        <Button
-          aria-label="Apply Gift Code"
-          className="c-payment-method__gift-button"
-          label="Apply Code"
-          size="lrg"
-          status="primary"
-        >
-          <div
-            className="o-button_container"
-          >
-            <button
-              aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              Apply Code
-            </button>
-          </div>
-        </Button>
-      </span>
-    </div>
+          </Button>
+        </span>
+      </div>
+    </PromoInput>
     <div
       className="o-col-1-13 o-col-9-13-l c-cart-table"
     >
@@ -5506,6 +5899,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -5714,6 +6125,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -5735,11 +6164,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             className="c-line-items"
           >
             <div
-              className="o-grid-container__lineitems"
+              className="c-line-items__grid"
               key="1"
             >
               <div
-                className="o-grid-item1__lineitems"
+                className="c-line-items__grid-item1"
               >
                 <Link
                   as="1"
@@ -5780,7 +6209,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 </Link>
               </div>
               <div
-                className="o-grid-item2__lineitems"
+                className="c-line-items__grid-item2"
               >
                 <div
                   className="c-line-items__details"
@@ -5800,24 +6229,32 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 </div>
               </div>
               <div
-                className="o-grid-item3__lineitems"
+                className="c-line-items__grid-item4"
               >
                 <div
-                  className="c-line-items__colour  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Colour
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item6"
+              >
                 <div
-                  className="c-line-items__size  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Option
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item8"
+              >
                 <div
-                  className="c-line-items__quantity u-bold"
+                  className="c-line-items__param u-bold"
                 >
                   <span>
                     Quantity
@@ -5825,21 +6262,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 </div>
               </div>
               <div
-                className="o-grid-item4__lineitems"
+                className="c-line-items__param  c-line-items__grid-item5"
               >
-                <span
-                  className="c-line-items__space"
-                >
+                <span>
                   Grey
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item7"
+              >
+                <span>
                   38 Waist 31 Leg
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item9"
+              >
+                <span>
                   <select
                     data-variant="S2658934_C101_486"
                     onChange={[Function]}
@@ -5929,32 +6368,28 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 </span>
               </div>
               <div
-                className="o-grid-item5__lineitems"
+                className="c-line-items__grid-item3"
               >
                 <div
-                  className="c-line-items__buttons"
-                >
-                  <div
-                    className="c-line-items__anchor"
-                  >
-                    <a
-                      className="c-line-items__delete"
-                      data-variant="S2658934_C101_486"
-                    >
-                      Delete
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__total-wrapper"
+                  className="c-line-items__delete"
                 >
                   <a
-                    className="c-line-items__total"
+                    className="c-line-items__delete-button"
+                    data-variant="S2658934_C101_486"
                   >
-                    £
-                    30.00
+                    Delete
                   </a>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item10"
+              >
+                <a
+                  className="c-line-items__total"
+                >
+                  £
+                  30.00
+                </a>
               </div>
             </div>
           </div>
@@ -5965,6 +6400,24 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -6199,6 +6652,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
     Object {
       "lineItems": Array [
         Object {
+          "bundles": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "id": "157928",
+                  "meta_attributes": Object {},
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "meta_attributes": Object {},
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ],
           "canonical_path": "1",
           "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
           "price": "30",
@@ -6449,6 +6920,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -6741,6 +7230,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -7002,6 +7509,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -7436,6 +7961,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -7874,68 +8417,69 @@ exports[`should not redirect to order confirmation page, if no new order got cre
         </div>
       </PaymentMethod>
     </div>
-    <div
-      aria-label="Use gift card or rewards code"
-      className="o-form__wrapper  c-gift__wrapper"
-    >
-      <span
-        className="c-payment-method__gift"
+    <PromoInput>
+      <div
+        aria-label="Use gift card or rewards code"
+        className="c-gift__wrapper"
       >
-        <_class
-          className="c-payment-method__gift-input"
-          label="Gift Card/Rewards Code"
-          placeholder="Enter Gift Card/Rewards Code"
+        <span
+          className="c-payment-method__gift"
         >
-          <Input
+          <_class
             className="c-payment-method__gift-input"
-            label="Gift Card/Rewards Code"
-            placeholder="Enter Gift Card/Rewards Code"
-            renderValidationMessage={[Function]}
+            label="Promotion Code"
+            placeholder="Enter Promotion Code"
+          >
+            <Input
+              className="c-payment-method__gift-input"
+              label="Promotion Code"
+              placeholder="Enter Promotion Code"
+              renderValidationMessage={[Function]}
+            >
+              <div
+                className="o-form__input-group"
+              >
+                <label
+                  className="o-form__label undefined"
+                >
+                  <b>
+                    Promotion Code
+                     
+                  </b>
+                  <input
+                    checked={false}
+                    className="o-form__input-field c-payment-method__gift-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter Promotion Code"
+                  />
+                </label>
+              </div>
+            </Input>
+          </_class>
+          <Button
+            aria-label="Apply Gift Code"
+            className="c-payment-method__gift-button  o-button--sml"
+            label="Apply"
+            status="primary"
           >
             <div
-              className="o-form__input-group"
+              className="o-button_container"
             >
-              <label
-                className="o-form__label undefined"
+              <button
+                aria-label="Apply Gift Code"
+                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                disabled={false}
+                role="button"
+                tabIndex="0"
               >
-                <b>
-                  Gift Card/Rewards Code
-                   
-                </b>
-                <input
-                  checked={false}
-                  className="o-form__input-field c-payment-method__gift-input"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  placeholder="Enter Gift Card/Rewards Code"
-                />
-              </label>
+                Apply
+              </button>
             </div>
-          </Input>
-        </_class>
-        <Button
-          aria-label="Apply Gift Code"
-          className="c-payment-method__gift-button"
-          label="Apply Code"
-          size="lrg"
-          status="primary"
-        >
-          <div
-            className="o-button_container"
-          >
-            <button
-              aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              Apply Code
-            </button>
-          </div>
-        </Button>
-      </span>
-    </div>
+          </Button>
+        </span>
+      </div>
+    </PromoInput>
     <div
       className="o-col-1-13 o-col-9-13-l c-cart-table"
     >
@@ -7944,6 +8488,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -8230,6 +8792,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -8251,11 +8831,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             className="c-line-items"
           >
             <div
-              className="o-grid-container__lineitems"
+              className="c-line-items__grid"
               key="1"
             >
               <div
-                className="o-grid-item1__lineitems"
+                className="c-line-items__grid-item1"
               >
                 <Link
                   as="1"
@@ -8296,7 +8876,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 </Link>
               </div>
               <div
-                className="o-grid-item2__lineitems"
+                className="c-line-items__grid-item2"
               >
                 <div
                   className="c-line-items__details"
@@ -8316,24 +8896,32 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 </div>
               </div>
               <div
-                className="o-grid-item3__lineitems"
+                className="c-line-items__grid-item4"
               >
                 <div
-                  className="c-line-items__colour  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Colour
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item6"
+              >
                 <div
-                  className="c-line-items__size  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Option
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item8"
+              >
                 <div
-                  className="c-line-items__quantity u-bold"
+                  className="c-line-items__param u-bold"
                 >
                   <span>
                     Quantity
@@ -8341,21 +8929,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 </div>
               </div>
               <div
-                className="o-grid-item4__lineitems"
+                className="c-line-items__param  c-line-items__grid-item5"
               >
-                <span
-                  className="c-line-items__space"
-                >
+                <span>
                   Grey
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item7"
+              >
+                <span>
                   38 Waist 31 Leg
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item9"
+              >
+                <span>
                   <select
                     data-variant="S2658934_C101_486"
                     onChange={[Function]}
@@ -8445,32 +9035,28 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 </span>
               </div>
               <div
-                className="o-grid-item5__lineitems"
+                className="c-line-items__grid-item3"
               >
                 <div
-                  className="c-line-items__buttons"
-                >
-                  <div
-                    className="c-line-items__anchor"
-                  >
-                    <a
-                      className="c-line-items__delete"
-                      data-variant="S2658934_C101_486"
-                    >
-                      Delete
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__total-wrapper"
+                  className="c-line-items__delete"
                 >
                   <a
-                    className="c-line-items__total"
+                    className="c-line-items__delete-button"
+                    data-variant="S2658934_C101_486"
                   >
-                    £
-                    30.00
+                    Delete
                   </a>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item10"
+              >
+                <a
+                  className="c-line-items__total"
+                >
+                  £
+                  30.00
+                </a>
               </div>
             </div>
           </div>
@@ -8481,6 +9067,24 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -8793,6 +9397,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
     Object {
       "lineItems": Array [
         Object {
+          "bundles": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "id": "157928",
+                  "meta_attributes": Object {},
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "meta_attributes": Object {},
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ],
           "canonical_path": "1",
           "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
           "price": "30",
@@ -9043,6 +9665,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -9335,6 +9975,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -9596,6 +10254,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -10030,6 +10706,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -10468,68 +11162,69 @@ exports[`should redirect to order confirmation page, if new order got created 1`
         </div>
       </PaymentMethod>
     </div>
-    <div
-      aria-label="Use gift card or rewards code"
-      className="o-form__wrapper  c-gift__wrapper"
-    >
-      <span
-        className="c-payment-method__gift"
+    <PromoInput>
+      <div
+        aria-label="Use gift card or rewards code"
+        className="c-gift__wrapper"
       >
-        <_class
-          className="c-payment-method__gift-input"
-          label="Gift Card/Rewards Code"
-          placeholder="Enter Gift Card/Rewards Code"
+        <span
+          className="c-payment-method__gift"
         >
-          <Input
+          <_class
             className="c-payment-method__gift-input"
-            label="Gift Card/Rewards Code"
-            placeholder="Enter Gift Card/Rewards Code"
-            renderValidationMessage={[Function]}
+            label="Promotion Code"
+            placeholder="Enter Promotion Code"
+          >
+            <Input
+              className="c-payment-method__gift-input"
+              label="Promotion Code"
+              placeholder="Enter Promotion Code"
+              renderValidationMessage={[Function]}
+            >
+              <div
+                className="o-form__input-group"
+              >
+                <label
+                  className="o-form__label undefined"
+                >
+                  <b>
+                    Promotion Code
+                     
+                  </b>
+                  <input
+                    checked={false}
+                    className="o-form__input-field c-payment-method__gift-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter Promotion Code"
+                  />
+                </label>
+              </div>
+            </Input>
+          </_class>
+          <Button
+            aria-label="Apply Gift Code"
+            className="c-payment-method__gift-button  o-button--sml"
+            label="Apply"
+            status="primary"
           >
             <div
-              className="o-form__input-group"
+              className="o-button_container"
             >
-              <label
-                className="o-form__label undefined"
+              <button
+                aria-label="Apply Gift Code"
+                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                disabled={false}
+                role="button"
+                tabIndex="0"
               >
-                <b>
-                  Gift Card/Rewards Code
-                   
-                </b>
-                <input
-                  checked={false}
-                  className="o-form__input-field c-payment-method__gift-input"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  placeholder="Enter Gift Card/Rewards Code"
-                />
-              </label>
+                Apply
+              </button>
             </div>
-          </Input>
-        </_class>
-        <Button
-          aria-label="Apply Gift Code"
-          className="c-payment-method__gift-button"
-          label="Apply Code"
-          size="lrg"
-          status="primary"
-        >
-          <div
-            className="o-button_container"
-          >
-            <button
-              aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button o-button o-button--primary o-button--lrg"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              Apply Code
-            </button>
-          </div>
-        </Button>
-      </span>
-    </div>
+          </Button>
+        </span>
+      </div>
+    </PromoInput>
     <div
       className="o-col-1-13 o-col-9-13-l c-cart-table"
     >
@@ -10538,6 +11233,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",
@@ -10824,6 +11537,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             Object {
               "lineItems": Array [
                 Object {
+                  "bundles": Array [
+                    Object {
+                      "asset_files": Array [
+                        Object {
+                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "id": "157928",
+                          "meta_attributes": Object {},
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        },
+                      ],
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "meta_attributes": Object {},
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
+                    },
+                  ],
                   "canonical_path": "1",
                   "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                   "price": "30",
@@ -10845,11 +11576,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             className="c-line-items"
           >
             <div
-              className="o-grid-container__lineitems"
+              className="c-line-items__grid"
               key="1"
             >
               <div
-                className="o-grid-item1__lineitems"
+                className="c-line-items__grid-item1"
               >
                 <Link
                   as="1"
@@ -10890,7 +11621,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 </Link>
               </div>
               <div
-                className="o-grid-item2__lineitems"
+                className="c-line-items__grid-item2"
               >
                 <div
                   className="c-line-items__details"
@@ -10910,24 +11641,32 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 </div>
               </div>
               <div
-                className="o-grid-item3__lineitems"
+                className="c-line-items__grid-item4"
               >
                 <div
-                  className="c-line-items__colour  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Colour
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item6"
+              >
                 <div
-                  className="c-line-items__size  u-bold"
+                  className="c-line-items__param  u-bold"
                 >
                   <span>
                     Option
                   </span>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item8"
+              >
                 <div
-                  className="c-line-items__quantity u-bold"
+                  className="c-line-items__param u-bold"
                 >
                   <span>
                     Quantity
@@ -10935,21 +11674,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 </div>
               </div>
               <div
-                className="o-grid-item4__lineitems"
+                className="c-line-items__param  c-line-items__grid-item5"
               >
-                <span
-                  className="c-line-items__space"
-                >
+                <span>
                   Grey
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item7"
+              >
+                <span>
                   38 Waist 31 Leg
                 </span>
-                <span
-                  className="c-line-items__space"
-                >
+              </div>
+              <div
+                className="c-line-items__param  c-line-items__grid-item9"
+              >
+                <span>
                   <select
                     data-variant="S2658934_C101_486"
                     onChange={[Function]}
@@ -11039,32 +11780,28 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 </span>
               </div>
               <div
-                className="o-grid-item5__lineitems"
+                className="c-line-items__grid-item3"
               >
                 <div
-                  className="c-line-items__buttons"
-                >
-                  <div
-                    className="c-line-items__anchor"
-                  >
-                    <a
-                      className="c-line-items__delete"
-                      data-variant="S2658934_C101_486"
-                    >
-                      Delete
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__total-wrapper"
+                  className="c-line-items__delete"
                 >
                   <a
-                    className="c-line-items__total"
+                    className="c-line-items__delete-button"
+                    data-variant="S2658934_C101_486"
                   >
-                    £
-                    30.00
+                    Delete
                   </a>
                 </div>
+              </div>
+              <div
+                className="c-line-items__grid-item10"
+              >
+                <a
+                  className="c-line-items__total"
+                >
+                  £
+                  30.00
+                </a>
               </div>
             </div>
           </div>
@@ -11075,6 +11812,24 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           Object {
             "lineItems": Array [
               Object {
+                "bundles": Array [
+                  Object {
+                    "asset_files": Array [
+                      Object {
+                        "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "id": "157928",
+                        "meta_attributes": Object {},
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      },
+                    ],
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "meta_attributes": Object {},
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
+                  },
+                ],
                 "canonical_path": "1",
                 "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
                 "price": "30",

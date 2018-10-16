@@ -153,11 +153,11 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
       className="c-line-items"
     >
       <div
-        className="o-grid-container__lineitems"
+        className="c-line-items__grid"
         key="1"
       >
         <div
-          className="o-grid-item1__lineitems"
+          className="c-line-items__grid-item1"
         >
           <Link
             as="1"
@@ -184,7 +184,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </Link>
         </div>
         <div
-          className="o-grid-item2__lineitems"
+          className="c-line-items__grid-item2"
         >
           <div
             className="c-line-items__details"
@@ -202,24 +202,32 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </div>
         </div>
         <div
-          className="o-grid-item3__lineitems"
+          className="c-line-items__grid-item4"
         >
           <div
-            className="c-line-items__colour  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Colour
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item6"
+        >
           <div
-            className="c-line-items__size  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Option
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item8"
+        >
           <div
-            className="c-line-items__quantity u-bold"
+            className="c-line-items__param u-bold"
           >
             <span>
               Quantity
@@ -227,21 +235,23 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </div>
         </div>
         <div
-          className="o-grid-item4__lineitems"
+          className="c-line-items__param  c-line-items__grid-item5"
         >
-          <span
-            className="c-line-items__space"
-          >
+          <span>
             Grey
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item7"
+        >
+          <span>
             38 Waist 31 Leg
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item9"
+        >
+          <span>
             <select
               onChange={[MockFunction]}
               value={2}
@@ -330,39 +340,35 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </span>
         </div>
         <div
-          className="o-grid-item5__lineitems"
+          className="c-line-items__grid-item3"
         >
           <div
-            className="c-line-items__buttons"
-          >
-            <div
-              className="c-line-items__anchor"
-            >
-              <a
-                className="c-line-items__delete"
-              >
-                Delete
-              </a>
-            </div>
-          </div>
-          <div
-            className="c-line-items__total-wrapper"
+            className="c-line-items__delete"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__delete-button"
             >
-              £
-              20.00
+              Delete
             </a>
           </div>
         </div>
+        <div
+          className="c-line-items__grid-item10"
+        >
+          <a
+            className="c-line-items__total"
+          >
+            £
+            20.00
+          </a>
+        </div>
       </div>
       <div
-        className="o-grid-container__lineitems"
+        className="c-line-items__grid"
         key="2"
       >
         <div
-          className="o-grid-item1__lineitems"
+          className="c-line-items__grid-item1"
         >
           <Link
             as="1"
@@ -389,7 +395,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </Link>
         </div>
         <div
-          className="o-grid-item2__lineitems"
+          className="c-line-items__grid-item2"
         >
           <div
             className="c-line-items__details"
@@ -407,24 +413,32 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </div>
         </div>
         <div
-          className="o-grid-item3__lineitems"
+          className="c-line-items__grid-item4"
         >
           <div
-            className="c-line-items__colour  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Colour
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item6"
+        >
           <div
-            className="c-line-items__size  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Option
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item8"
+        >
           <div
-            className="c-line-items__quantity u-bold"
+            className="c-line-items__param u-bold"
           >
             <span>
               Quantity
@@ -432,21 +446,23 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </div>
         </div>
         <div
-          className="o-grid-item4__lineitems"
+          className="c-line-items__param  c-line-items__grid-item5"
         >
-          <span
-            className="c-line-items__space"
-          >
+          <span>
             Grey
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item7"
+        >
+          <span>
             38 Waist 31 Leg
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item9"
+        >
+          <span>
             <select
               onChange={[MockFunction]}
               value={1}
@@ -535,31 +551,27 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </span>
         </div>
         <div
-          className="o-grid-item5__lineitems"
+          className="c-line-items__grid-item3"
         >
           <div
-            className="c-line-items__buttons"
-          >
-            <div
-              className="c-line-items__anchor"
-            >
-              <a
-                className="c-line-items__delete"
-              >
-                Delete
-              </a>
-            </div>
-          </div>
-          <div
-            className="c-line-items__total-wrapper"
+            className="c-line-items__delete"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__delete-button"
             >
-              £
-              5.00
+              Delete
             </a>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item10"
+        >
+          <a
+            className="c-line-items__total"
+          >
+            £
+            5.00
+          </a>
         </div>
       </div>
     </div>
@@ -706,11 +718,11 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
       className="c-line-items"
     >
       <div
-        className="o-grid-container__lineitems"
+        className="c-line-items__grid"
         key="1"
       >
         <div
-          className="o-grid-item1__lineitems"
+          className="c-line-items__grid-item1"
         >
           <Link
             as="1"
@@ -738,7 +750,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           </Link>
         </div>
         <div
-          className="o-grid-item2__lineitems"
+          className="c-line-items__grid-item2"
         >
           <div
             className="c-line-items__details"
@@ -758,24 +770,32 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           </div>
         </div>
         <div
-          className="o-grid-item3__lineitems"
+          className="c-line-items__grid-item4"
         >
           <div
-            className="c-line-items__colour  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Colour
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item6"
+        >
           <div
-            className="c-line-items__size  u-bold"
+            className="c-line-items__param  u-bold"
           >
             <span>
               Option
             </span>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item8"
+        >
           <div
-            className="c-line-items__quantity u-bold"
+            className="c-line-items__param u-bold"
           >
             <span>
               Quantity
@@ -783,21 +803,23 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           </div>
         </div>
         <div
-          className="o-grid-item4__lineitems"
+          className="c-line-items__param  c-line-items__grid-item5"
         >
-          <span
-            className="c-line-items__space"
-          >
+          <span>
             Grey
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item7"
+        >
+          <span>
             38 Waist 31 Leg
           </span>
-          <span
-            className="c-line-items__space"
-          >
+        </div>
+        <div
+          className="c-line-items__param  c-line-items__grid-item9"
+        >
+          <span>
             <select
               data-variant="123"
               onChange={[MockFunction]}
@@ -887,32 +909,28 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           </span>
         </div>
         <div
-          className="o-grid-item5__lineitems"
+          className="c-line-items__grid-item3"
         >
           <div
-            className="c-line-items__buttons"
-          >
-            <div
-              className="c-line-items__anchor"
-            >
-              <a
-                className="c-line-items__delete"
-                data-variant="123"
-              >
-                Delete
-              </a>
-            </div>
-          </div>
-          <div
-            className="c-line-items__total-wrapper"
+            className="c-line-items__delete"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__delete-button"
+              data-variant="123"
             >
-              £
-              20.00
+              Delete
             </a>
           </div>
+        </div>
+        <div
+          className="c-line-items__grid-item10"
+        >
+          <a
+            className="c-line-items__total"
+          >
+            £
+            20.00
+          </a>
         </div>
       </div>
     </div>

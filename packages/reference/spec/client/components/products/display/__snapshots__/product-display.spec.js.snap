@@ -15,27 +15,19 @@ exports[`renders correctly 1`] = `
       ],
       "bundles": Array [
         Object {
-          "id": 1,
-          "products": Array [
+          "asset_files": Array [
             Object {
-              "asset_files": Array [
-                Object {
-                  "id": 2,
-                  "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-                },
-              ],
-              "canonical_path": "/products/stripe-shirt",
-              "id": 1,
-              "title": "Stripe Shirt",
-            },
-            Object {
-              "asset_files": Array [],
-              "canonical_path": "/products/slip-on-pump",
-              "id": 2,
-              "title": "Slip on Pump (no asset files example)",
+              "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+              "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+              "created_at": "2017-12-20T10:53:17Z",
+              "file_content_content_type": "image/jpeg",
+              "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
             },
           ],
-          "title": "Mingo",
+          "canonical_path": "/bundles/anna-outfit-1",
+          "id": "261",
+          "name": "Anna Outfit 1",
+          "slug": "anna-outfit-1",
         },
       ],
       "canonical_path": "1",
@@ -170,27 +162,19 @@ exports[`renders correctly 1`] = `
                 ],
                 "bundles": Array [
                   Object {
-                    "id": 1,
-                    "products": Array [
+                    "asset_files": Array [
                       Object {
-                        "asset_files": Array [
-                          Object {
-                            "id": 2,
-                            "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-                          },
-                        ],
-                        "canonical_path": "/products/stripe-shirt",
-                        "id": 1,
-                        "title": "Stripe Shirt",
-                      },
-                      Object {
-                        "asset_files": Array [],
-                        "canonical_path": "/products/slip-on-pump",
-                        "id": 2,
-                        "title": "Slip on Pump (no asset files example)",
+                        "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "created_at": "2017-12-20T10:53:17Z",
+                        "file_content_content_type": "image/jpeg",
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
                       },
                     ],
-                    "title": "Mingo",
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
                   },
                 ],
                 "canonical_path": "1",
@@ -506,27 +490,19 @@ exports[`renders correctly 1`] = `
                   ],
                   "bundles": Array [
                     Object {
-                      "id": 1,
-                      "products": Array [
+                      "asset_files": Array [
                         Object {
-                          "asset_files": Array [
-                            Object {
-                              "id": 2,
-                              "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-                            },
-                          ],
-                          "canonical_path": "/products/stripe-shirt",
-                          "id": 1,
-                          "title": "Stripe Shirt",
-                        },
-                        Object {
-                          "asset_files": Array [],
-                          "canonical_path": "/products/slip-on-pump",
-                          "id": 2,
-                          "title": "Slip on Pump (no asset files example)",
+                          "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                          "created_at": "2017-12-20T10:53:17Z",
+                          "file_content_content_type": "image/jpeg",
+                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
                         },
                       ],
-                      "title": "Mingo",
+                      "canonical_path": "/bundles/anna-outfit-1",
+                      "id": "261",
+                      "name": "Anna Outfit 1",
+                      "slug": "anna-outfit-1",
                     },
                   ],
                   "canonical_path": "1",
@@ -682,27 +658,19 @@ exports[`renders correctly 1`] = `
                 ],
                 "bundles": Array [
                   Object {
-                    "id": 1,
-                    "products": Array [
+                    "asset_files": Array [
                       Object {
-                        "asset_files": Array [
-                          Object {
-                            "id": 2,
-                            "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-                          },
-                        ],
-                        "canonical_path": "/products/stripe-shirt",
-                        "id": 1,
-                        "title": "Stripe Shirt",
-                      },
-                      Object {
-                        "asset_files": Array [],
-                        "canonical_path": "/products/slip-on-pump",
-                        "id": 2,
-                        "title": "Slip on Pump (no asset files example)",
+                        "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                        "created_at": "2017-12-20T10:53:17Z",
+                        "file_content_content_type": "image/jpeg",
+                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
                       },
                     ],
-                    "title": "Mingo",
+                    "canonical_path": "/bundles/anna-outfit-1",
+                    "id": "261",
+                    "name": "Anna Outfit 1",
+                    "slug": "anna-outfit-1",
                   },
                 ],
                 "canonical_path": "1",
@@ -1040,253 +1008,88 @@ exports[`renders correctly 1`] = `
           </p>
         </div>
       </div>
-      <div
-        className="c-product-display__related"
+    </div>
+    <div
+      className="c-product-display__related-products"
+    >
+      <RelatedProducts
+        bundles={
+          Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "created_at": "2017-12-20T10:53:17Z",
+                  "file_content_content_type": "image/jpeg",
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ]
+        }
       >
-        <h1
-          className="c-product-display__related-title"
-        >
-          <span>
-            you may also like
-          </span>
-        </h1>
         <div
-          className="c-product-display__related-images"
+          className="c-related-products"
         >
-          <Link
-            href="/products/s2685492_c327/real-leather-double-monk-strap-formal-shoes-burgundy"
-            key="0"
+          <h1
+            className="c-related-products__title"
           >
-            <div
-              className="c-product-display__related-images-link"
-              onClick={[Function]}
+            <span>
+              you may also like
+            </span>
+          </h1>
+          <ul>
+            <li
+              key="261"
             >
-              <img
-                className="c-product-display__related-images-file"
-                src="/static/pdp_dummy_images/shoe.jpg"
-              />
-              <p
-                className="c-product-display__related-images-text"
+              <Image
+                className="c-related-products__image"
+                src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg"
               >
-                Real Leather Double Monk Strap Formal Shoes
-              </p>
-              <p
-                className="c-product-display__related-images-price"
+                <div
+                  className="c-related-products__image"
+                >
+                  <LazyLoad
+                    height={200}
+                    offset={0}
+                    once={false}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": 200,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </div>
+              </Image>
+              <Link
+                href="/bundles/anna-outfit-1"
               >
-                £28
-              </p>
-              <div
-                className="c-product-display__related-images-rating"
-              >
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="1"
+                <div
+                  className="c-related-products__name"
+                  onClick={[Function]}
                 >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="2"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="3"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="4"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="5"
-                >
-                  ★
-                </span>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/products/s2671426_c101/slim-fit-long-sleeve-shirt-black"
-            key="1"
-          >
-            <div
-              className="c-product-display__related-images-link"
-              onClick={[Function]}
-            >
-              <img
-                className="c-product-display__related-images-file"
-                src="/static/pdp_dummy_images/shirt.jpg"
-              />
-              <p
-                className="c-product-display__related-images-text"
-              >
-                Slim Fit Long Sleeve Shirt
-              </p>
-              <p
-                className="c-product-display__related-images-price"
-              >
-                £7
-              </p>
-              <div
-                className="c-product-display__related-images-rating"
-              >
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="1"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="2"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="3"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="4"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="5"
-                >
-                  ★
-                </span>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/products/s2681771_c327/chain-stripe-skinny-tie-burgundy"
-            key="2"
-          >
-            <div
-              className="c-product-display__related-images-link"
-              onClick={[Function]}
-            >
-              <img
-                className="c-product-display__related-images-file"
-                src="/static/pdp_dummy_images/tie.jpg"
-              />
-              <p
-                className="c-product-display__related-images-text"
-              >
-                Chain Stripe Skinny Tie
-              </p>
-              <p
-                className="c-product-display__related-images-price"
-              >
-                £6
-              </p>
-              <div
-                className="c-product-display__related-images-rating"
-              >
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="1"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="2"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="3"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="4"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--fill"
-                  key="5"
-                >
-                  ★
-                </span>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/products/s2638591/oakwood-tailored-fit-waistcoat"
-            key="3"
-          >
-            <div
-              className="c-product-display__related-images-link"
-              onClick={[Function]}
-            >
-              <img
-                className="c-product-display__related-images-file"
-                src="/static/pdp_dummy_images/waistcoat.jpg"
-              />
-              <p
-                className="c-product-display__related-images-text"
-              >
-                Oakwood Tailored Fit Waistcoat
-              </p>
-              <p
-                className="c-product-display__related-images-price"
-              >
-                £20
-              </p>
-              <div
-                className="c-product-display__related-images-rating"
-              >
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="1"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="2"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="3"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="4"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="5"
-                >
-                  ★
-                </span>
-              </div>
-            </div>
-          </Link>
+                  <a>
+                    Anna Outfit 1
+                  </a>
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
-      </div>
+      </RelatedProducts>
     </div>
   </div>
 </ProductDisplay>

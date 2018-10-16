@@ -1,0 +1,14 @@
+.c-payment-icons {
+  margin: auto;
+  text-align: center;
+  &__image {
+    width: 35px;
+    display: inline-block;
+    margin: 0.7em;
+
+    @include breakpoint(desktop) {
+      width: 65px;
+      margin: 1.2em;
+    }
+  }
+}

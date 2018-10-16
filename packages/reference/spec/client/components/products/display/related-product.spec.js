@@ -9,11 +9,24 @@ import product from '../../../../fixtures/product'
 
 test('renders correctly', () => {
   // Arrange & Act
+  const { bundles } = product
   const wrapper = mount(
-    <RelatedProducts bundles={product.bundles} />
+    <RelatedProducts bundles={bundles} />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Image src={product.bundles[0].products[0].asset_files[0].url} height={73} width={73} />)
+  expect(wrapper).toContainReact(<Image className='c-related-products__image' src={bundles[0].asset_files[0] && bundles[0].asset_files[0].s3_url} />)
+})
+
+test('returns null if bundles array is empty', () => {
+  // Arrange & Act
+  const bundles = []
+  const wrapper = mount(
+    <RelatedProducts bundles={bundles} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.children().length).toBe(0)
 })

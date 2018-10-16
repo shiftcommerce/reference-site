@@ -3,7 +3,7 @@
   z-index: 0;
 
   &__body {
-    margin-bottom: 0.6em;
+    margin-bottom: 1em;
 
     @include breakpoint(desktop) {
       display: grid;
@@ -20,6 +20,7 @@
         grid-row-start: row3-start;
         grid-row-end: row4-start;
         width: 100%;
+        margin-bottom: 10em;
       }
     }
   }
@@ -404,65 +405,6 @@
 
       @include breakpoint(desktop) {
         width: 55%;
-      }
-    }
-  }
-
-  &__related {
-    width: 92.5%;
-    border-top: 0.5px solid $border-default;
-    margin: auto;
-    padding: 1em;
-
-    @include breakpoint(desktop) {
-      grid-column-start: col1-start;
-      grid-column-end: col2-end;
-      grid-row-start: row6-start;
-      grid-row-end: row6-end;
-      padding-top: 10em;
-      border-top: none;
-    }
-
-    &-title {
-      font-size: 1em;
-      margin: auto;
-      margin-top: 1em;
-      text-align: center;
-      text-transform: uppercase;
-
-      span {
-        border-bottom: 0.25em solid $alert-orange;
-      }
-    }
-
-    &-images {
-      display: grid;
-      grid-gap: 0.8em;
-      grid-template-columns: [first] 25% [col2-start] 25% [col3-start] 25% [col4-start] 25% [end];
-      grid-template-rows: [first] 100% [end];
-      justify-content: center;
-      margin: auto;
-      margin-top: 2em;
-      width: 100%;
-
-      &-text {
-        font-size: 0.8em;
-        height: 4.5em;
-        text-align: center;
-      }
-
-      &-price {
-        font-size: 0.8em;
-        text-align: center;
-      }
-
-      &-rating {
-        text-align: center;
-        font-size: 1em;
-      }
-
-      &-link {
-        cursor: pointer;
       }
     }
   }

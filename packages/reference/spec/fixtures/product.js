@@ -62,24 +62,19 @@ const Product = {
   ],
   bundles: [
     {
-      id: 1,
-      title: 'Mingo',
-      products: [
+      asset_files: [
         {
-          id: 1,
-          title: 'Stripe Shirt',
-          canonical_path: '/products/stripe-shirt',
-          asset_files: [
-            { id: 2, url: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg' }
-          ]
-        },
-        {
-          id: 2,
-          title: 'Slip on Pump (no asset files example)',
-          canonical_path: '/products/slip-on-pump',
-          asset_files: []
+          asset_file: '1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg',
+          canonical_path: 'https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg',
+          created_at: '2017-12-20T10:53:17Z',
+          file_content_content_type: 'image/jpeg',
+          s3_url: 'https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg'
         }
-      ]
+      ],
+      canonical_path: '/bundles/anna-outfit-1',
+      id: '261',
+      name: 'Anna Outfit 1',
+      slug: 'anna-outfit-1'
     }
   ],
   asset_files: [

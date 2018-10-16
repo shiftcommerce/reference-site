@@ -14,7 +14,6 @@
 
     &-title {
       color: $background-primary;
-      font-weight: normal;
       padding-top: 2rem;
     }
 
@@ -47,6 +46,5 @@
   &__errors {
     text-align: center;
     color: $border-error;
-    font-weight: normal;
   }
 }

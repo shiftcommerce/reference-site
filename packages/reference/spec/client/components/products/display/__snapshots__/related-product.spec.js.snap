@@ -5,45 +5,44 @@ exports[`renders correctly 1`] = `
   bundles={
     Array [
       Object {
-        "id": 1,
-        "products": Array [
+        "asset_files": Array [
           Object {
-            "asset_files": Array [
-              Object {
-                "id": 2,
-                "url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg",
-              },
-            ],
-            "canonical_path": "/products/stripe-shirt",
-            "id": 1,
-            "title": "Stripe Shirt",
-          },
-          Object {
-            "asset_files": Array [],
-            "canonical_path": "/products/slip-on-pump",
-            "id": 2,
-            "title": "Slip on Pump (no asset files example)",
+            "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+            "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+            "created_at": "2017-12-20T10:53:17Z",
+            "file_content_content_type": "image/jpeg",
+            "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
           },
         ],
-        "title": "Mingo",
+        "canonical_path": "/bundles/anna-outfit-1",
+        "id": "261",
+        "name": "Anna Outfit 1",
+        "slug": "anna-outfit-1",
       },
     ]
   }
 >
-  <div>
-    <h3>
-      Related Products
-    </h3>
+  <div
+    className="c-related-products"
+  >
+    <h1
+      className="c-related-products__title"
+    >
+      <span>
+        you may also like
+      </span>
+    </h1>
     <ul>
       <li
-        key="0"
+        key="261"
       >
         <Image
-          height={73}
-          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
-          width={73}
+          className="c-related-products__image"
+          src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg"
         >
-          <div>
+          <div
+            className="c-related-products__image"
+          >
             <LazyLoad
               height={200}
               offset={0}
@@ -65,45 +64,25 @@ exports[`renders correctly 1`] = `
           </div>
         </Image>
         <Link
-          href="/products/stripe-shirt"
-        >
-          <a
-            href="/products/stripe-shirt"
-            onClick={[Function]}
-          >
-            Stripe Shirt
-          </a>
-        </Link>
-      </li>
-      <li
-        key="1"
-      >
-        <Image
-          height={73}
-          width={73}
+          href="/bundles/anna-outfit-1"
         >
           <div
-            className="c-dummy_image"
-            style={
-              Object {
-                "height": 73,
-                "width": 73,
-              }
-            }
-          />
-        </Image>
-        <Link
-          href="/products/slip-on-pump"
-        >
-          <a
-            href="/products/slip-on-pump"
+            className="c-related-products__name"
             onClick={[Function]}
           >
-            Slip on Pump (no asset files example)
-          </a>
+            <a>
+              Anna Outfit 1
+            </a>
+          </div>
         </Link>
       </li>
     </ul>
   </div>
 </RelatedProducts>
+`;
+
+exports[`returns null if bundles array is empty 1`] = `
+<RelatedProducts
+  bundles={Array []}
+/>
 `;

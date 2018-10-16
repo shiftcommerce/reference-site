@@ -61,7 +61,8 @@ export class Product extends Component {
         productSku: product.sku,
         productID: product.id,
         slug: product.slug,
-        canonicalPath: product.canonical_path
+        canonicalPath: product.canonical_path,
+        bundles: product.bundles
       }
       this.props.dispatch(addToCart(lineItem))
     } else {

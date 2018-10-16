@@ -35,15 +35,13 @@ exports[`renders the children inside it 1`] = `
       >
         <Connect(NavBar) />
       </span>
-      <React.Fragment>
-        <span
-          className="c-header__search"
-        >
-          <SearchBar>
-            Content
-          </SearchBar>
-        </span>
-      </React.Fragment>
+      <span
+        className="c-header__search"
+      >
+        <SearchBar>
+          Content
+        </SearchBar>
+      </span>
     </div>
   </React.Fragment>
   <div
@@ -94,13 +92,11 @@ exports[`renders the footer 1`] = `
       >
         <Connect(NavBar) />
       </span>
-      <React.Fragment>
-        <span
-          className="c-header__search"
-        >
-          <SearchBar />
-        </span>
-      </React.Fragment>
+      <span
+        className="c-header__search"
+      >
+        <SearchBar />
+      </span>
     </div>
   </React.Fragment>
   <div
@@ -149,13 +145,11 @@ exports[`renders the header 1`] = `
       >
         <Connect(NavBar) />
       </span>
-      <React.Fragment>
-        <span
-          className="c-header__search"
-        >
-          <SearchBar />
-        </span>
-      </React.Fragment>
+      <span
+        className="c-header__search"
+      >
+        <SearchBar />
+      </span>
     </div>
   </React.Fragment>
   <div
@@ -204,13 +198,11 @@ exports[`renders the navbar 1`] = `
       >
         <Connect(NavBar) />
       </span>
-      <React.Fragment>
-        <span
-          className="c-header__search"
-        >
-          <SearchBar />
-        </span>
-      </React.Fragment>
+      <span
+        className="c-header__search"
+      >
+        <SearchBar />
+      </span>
     </div>
   </React.Fragment>
   <div

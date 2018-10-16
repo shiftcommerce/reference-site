@@ -1,48 +1,186 @@
 .c-cart-table {
   display: grid;
   width: 100% !important;
-  padding: 0px 15px;
+  padding: 1em;
+  padding-top: 4.5em;
+
+  @include breakpoint(desktop) {
+    padding: 1em;
+  }
+
+  &__grid {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
+      grid-template-rows: [row1-start] 80% [row2-start] 20% [row2-end];
+      grid-gap: 4%;
+    }
+
+    &-item-a {
+      @include breakpoint(desktop) {
+        grid-column-start: [col1-start];
+        grid-column-end: [col2-start];
+        grid-row-start: [row1-start];
+        grid-row-end: [row2-start];
+        padding-bottom: 0;
+        margin: 1em;
+      }
+    }
+
+    &-item-b {
+      @include breakpoint(desktop) {
+        grid-column-start: [col2-start];
+        grid-column-end: [col2-end];
+        grid-row-start: [row1-start];
+        grid-row-end: [row2-start];
+        padding-bottom: 0;
+        margin: 1em;
+      }
+    }
+  }
 
   &--margin {
     margin-top: 30%;
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__promo {
+    @include breakpoint(desktop) {
+      margin-bottom: 1em;
+    }
   }
 
   &__description {
-    margin: 3px 0;
+    margin: ($global-spacing-unit-tiny / 2) 0;
     font-size: 0.7em;
+
+    @include breakpoint(desktop) {
+      font-size: 0.9em;
+    }
 
     a {
       color: $background-positive;
     }
   }
 
+  &__text {
+    margin-bottom: 1em;
+  }
+
   &__total {
     font-weight: 300;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
   }
 
   &__amount {
     color: $background-positive;
   }
 
+  &__related-products {
+    margin: 1em;
+    border-top: ($global-spacing-unit-tiny / 3) solid #eee;
+    padding-top: 2em;
+  }
+
   &__header {
     display: inline-block;
     width: 100%;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    padding-top: 10px;
+    border-top: ($global-spacing-unit-tiny / 6) solid #eee;
+    border-bottom: ($global-spacing-unit-tiny / 6) solid #eee;
+    padding-bottom: ($global-spacing-unit-large / 3);
+    padding-top: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      border: none;
+      padding: 0;
+    }
+
+    &-grid {
+      @include breakpoint(desktop) {
+        display: grid;
+        grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
+        grid-template-rows: [row1-start] 100% [row1-end];
+        grid-gap: 4%;
+      }
+
+      &-item-a {
+        @include breakpoint(desktop) {
+          grid-column-start: [col1-start];
+          grid-column-end: [col2-start];
+          grid-row-start: [row1-start];
+          grid-row-end: [row1-end];
+          border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
+          margin: 1em;
+        }
+      }
+
+      &-item-b {
+        @include breakpoint(desktop) {
+          grid-column-start: [col2-start];
+          grid-column-end: [col2-end];
+          grid-row-start: [row1-start];
+          grid-row-end: [row1-end];
+          border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
+          margin: 1em;
+        }
+
+        h1 {
+          display: none;
+
+          @include breakpoint(desktop) {
+            display: block;
+            font-weight: 500;
+          }
+        }
+
+        p {
+          display: none;
+
+          @include breakpoint(desktop) {
+            display: block;
+            font-size: 0.9em;
+          }
+        }
+
+        a {
+          display: none;
+
+          @include breakpoint(desktop) {
+            display: inline;
+            font-weight: 500;
+            font-size: 0.9em;
+          }
+        }
+
+
+      }
+    }
   }
 
   h1 {
-    margin-top: 5px;
+    margin-top: $global-spacing-unit-tiny;
   }
 
   h2 {
-    margin-top: 5px;
+    margin-top: $global-spacing-unit-tiny;
     font-size: 1.1em;
   }
 
   h4 {
-    margin-top: 5px;
+    margin-top: $global-spacing-unit-tiny;
+  }
+
+  &__icons {
+
+    p {
+      font-size: 0.9em;
+      font-weight: 600;
+    }
   }
 }

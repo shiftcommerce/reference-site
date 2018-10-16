@@ -14,29 +14,26 @@ class RelatedProducts extends Component {
   renderRelatedProducts (bundles) {
     return (
       bundles.map((bundle) =>
-        bundle.products.map((product, idx) =>
-          <li key={idx}>
+        <li key={bundle.id}>
+          <Image className='c-related-products__image' src={bundle.asset_files[0] && bundle.asset_files[0].s3_url} />
 
-            <Image src={product.asset_files[0] && product.asset_files[0].url} height={73} width={73} />
-
-            <Link href={product.canonical_path} >
-              <a>{ product.title }</a>
-            </Link>
-          </li>
-        )
+          <Link href={bundle.canonical_path} >
+            <div className='c-related-products__name'>
+              <a>{ bundle.name }</a>
+            </div>
+          </Link>
+        </li>
       )
     )
   }
 
   render () {
-    let {
-      bundles
-    } = this.props
+    const { bundles } = this.props
 
-    if (bundles) {
+    if (bundles.length >= 1) {
       return (
-        <div>
-          <h3>Related Products</h3>
+        <div className='c-related-products'>
+          <h1 className='c-related-products__title'><span>you may also like</span></h1>
 
           <ul>
             { this.renderRelatedProducts(bundles) }

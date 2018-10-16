@@ -18,7 +18,6 @@ test('renders the header', () => {
 
   // Assert
   expect(header).toExist()
-  expect(header).toIncludeText('Search')
   expect(header).toContainReact(<Logo className='o-header__logo' />)
   expect(header.find(MiniBag)).toExist()
   expect(wrapper).toMatchSnapshot()

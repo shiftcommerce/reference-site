@@ -3,21 +3,27 @@
   width: 100%;
   text-align: right;
   background-color: $light-grey;
-  padding: 10px;
+  padding: $global-spacing-unit-small;
   font-size: 0.9em;
+
+  @include breakpoint(desktop) {
+    padding: 1.5em;
+  }
 
   &__VAT {
     font-size: 0.6rem;
   }
 
-  @include breakpoint(desktop) {
-    margin-left: 50%;
-  }
-
   dl {
     margin: 0;
-    margin-top: 10px;
+    margin-top: $global-spacing-unit-small;
     font-size: 0.8rem;
+  }
+
+  p {
+    @include breakpoint(desktop) {
+      font-size: 1.4em;
+    }
   }
 
   dt {
@@ -32,16 +38,29 @@
   }
 
   &__buttons {
-    margin-top: 10px;
+    margin-top: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: [col1-start] 40% [col2-start] 57% [col2-end];
+      grid-template-rows: [row1-start] 100% [row1-end];
+      width: 100%;
+      grid-gap: 3%;
+      border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
+      padding-bottom: 1em;
+      margin-top: 1em;
+    }
+
 
     &--continue {
       outline: none;
       border: 0;
       padding: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: $global-spacing-unit;
+      padding-right: $global-spacing-unit;
       background-color: $background-secondary;
       color: black;
+      width: 100%;
     }
 
     &--proceed {
@@ -49,11 +68,11 @@
       color: white;
       font-size: 0.9em;
       border: 0;
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: $global-spacing-unit;
+      padding-right: $global-spacing-unit;
       background-color: $background-positive;
       float: right;
-      min-width: 230px;
+      width: 100%;
     }
   }
 }

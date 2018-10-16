@@ -19,6 +19,24 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
       Object {
         "lineItems": Array [
           Object {
+            "bundles": Array [
+              Object {
+                "asset_files": Array [
+                  Object {
+                    "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    "id": "157928",
+                    "meta_attributes": Object {},
+                    "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  },
+                ],
+                "canonical_path": "/bundles/anna-outfit-1",
+                "id": "261",
+                "meta_attributes": Object {},
+                "name": "Anna Outfit 1",
+                "slug": "anna-outfit-1",
+              },
+            ],
             "canonical_path": "1",
             "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
             "price": "30",
@@ -41,6 +59,24 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         Object {
           "lineItems": Array [
             Object {
+              "bundles": Array [
+                Object {
+                  "asset_files": Array [
+                    Object {
+                      "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      "id": "157928",
+                      "meta_attributes": Object {},
+                      "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    },
+                  ],
+                  "canonical_path": "/bundles/anna-outfit-1",
+                  "id": "261",
+                  "meta_attributes": Object {},
+                  "name": "Anna Outfit 1",
+                  "slug": "anna-outfit-1",
+                },
+              ],
               "canonical_path": "1",
               "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
               "price": "30",
@@ -65,84 +101,128 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         <section
           className="c-cart-table__header"
         >
+          <Breadcrumb>
+            <nav>
+              <ol
+                className="o-breadcrumb"
+              >
+                <li
+                  className="o-breadcrumb__item"
+                >
+                  <Link
+                    as="/"
+                    href="/home/index"
+                  >
+                    <a
+                      className="o-breadcrumb__link"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      Home
+                    </a>
+                  </Link>
+                </li>
+              </ol>
+            </nav>
+          </Breadcrumb>
           <div
-            className="u-float--left"
+            className="c-cart-table__header-grid"
           >
-            <h1
-              className="c-cart-table__title"
+            <div
+              className="c-cart-table__header-grid-item-a"
             >
-               Your Shopping Basket 
-              <a
-                className="c-cart-table__amount"
+              <h1
+                className="c-cart-table__title"
               >
-                (
-                2
-                )
-              </a>
-               
-            </h1>
-            <p
-              className="c-cart-table__description"
+                Your Shopping Basket 
+                <a
+                  className="c-cart-table__amount"
+                >
+                  (
+                  2
+                  )
+                </a>
+              </h1>
+              <div
+                className="c-cart-table__text"
+              >
+                <p
+                  className="c-cart-table__description"
+                >
+                  You have 
+                  <a>
+                    2
+                  </a>
+                   
+                  <t
+                    className={null}
+                    count={2}
+                    showCount={false}
+                    singular="item"
+                    style={Object {}}
+                    zero={null}
+                  >
+                    <span
+                      className={null}
+                      style={Object {}}
+                    >
+                      items
+                    </span>
+                  </t>
+                   in your shopping basket
+                </p>
+                <p
+                  className="c-cart-table__description"
+                >
+                  <t
+                    className={null}
+                    count={2}
+                    plural="These"
+                    showCount={false}
+                    singular="This"
+                    style={Object {}}
+                    zero={null}
+                  >
+                    <span
+                      className={null}
+                      style={Object {}}
+                    >
+                      These
+                    </span>
+                  </t>
+                   
+                  <t
+                    className={null}
+                    count={2}
+                    showCount={false}
+                    singular="item"
+                    style={Object {}}
+                    zero={null}
+                  >
+                    <span
+                      className={null}
+                      style={Object {}}
+                    >
+                      items
+                    </span>
+                  </t>
+                   will be saved for 48 hours depending on availablility
+                </p>
+              </div>
+            </div>
+            <div
+              className="c-cart-table__header-grid-item-b"
             >
-              You have 
-              <a>
-                2
-              </a>
-               
-              <t
-                className={null}
-                count={2}
-                showCount={false}
-                singular="item"
-                style={Object {}}
-                zero={null}
-              >
-                <span
-                  className={null}
-                  style={Object {}}
-                >
-                  items
-                </span>
-              </t>
-               in your shopping basket
-            </p>
-            <p
-              className="c-cart-table__description"
-            >
-              <t
-                className={null}
-                count={2}
-                plural="These"
-                showCount={false}
-                singular="This"
-                style={Object {}}
-                zero={null}
-              >
-                <span
-                  className={null}
-                  style={Object {}}
-                >
-                  These
-                </span>
-              </t>
-               
-              <t
-                className={null}
-                count={2}
-                showCount={false}
-                singular="item"
-                style={Object {}}
-                zero={null}
-              >
-                <span
-                  className={null}
-                  style={Object {}}
-                >
-                  items
-                </span>
-              </t>
-               will be saved for 48 hours depending on availablility
-            </p>
+              <h1>
+                Estimated Delivery
+              </h1>
+              <p>
+                We will deliver your item: 
+                <a>
+                  Sunday 2nd December
+                </a>
+              </p>
+            </div>
           </div>
           <div>
             <h4
@@ -154,240 +234,268 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           </div>
         </section>
         <section
-          className="u-float-clear"
+          className="c-cart-table__grid"
         >
-          <LineItems
-            aria-label="Line Items"
-            cart={
-              Object {
-                "lineItems": Array [
-                  Object {
-                    "canonical_path": "1",
-                    "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
-                    "price": "30",
-                    "productID": "70515",
-                    "quantity": 1,
-                    "sku": "S2658934_C101_486",
-                    "slug": "1",
-                    "stockAvailableLevel": 10000,
-                    "title": "Regular Fit Wool Mix Trousers",
-                    "variant": "38 Waist 31 Leg",
-                  },
-                ],
-                "totalQuantity": 2,
-              }
-            }
-            deleteItem={[Function]}
-            updateQuantity={[Function]}
+          <div
+            className="c-cart-table__grid-item-a"
           >
-            <div
-              className="c-line-items"
+            <LineItems
+              aria-label="Line Items"
+              cart={
+                Object {
+                  "lineItems": Array [
+                    Object {
+                      "bundles": Array [
+                        Object {
+                          "asset_files": Array [
+                            Object {
+                              "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                              "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                              "id": "157928",
+                              "meta_attributes": Object {},
+                              "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                            },
+                          ],
+                          "canonical_path": "/bundles/anna-outfit-1",
+                          "id": "261",
+                          "meta_attributes": Object {},
+                          "name": "Anna Outfit 1",
+                          "slug": "anna-outfit-1",
+                        },
+                      ],
+                      "canonical_path": "1",
+                      "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+                      "price": "30",
+                      "productID": "70515",
+                      "quantity": 1,
+                      "sku": "S2658934_C101_486",
+                      "slug": "1",
+                      "stockAvailableLevel": 10000,
+                      "title": "Regular Fit Wool Mix Trousers",
+                      "variant": "38 Waist 31 Leg",
+                    },
+                  ],
+                  "totalQuantity": 2,
+                }
+              }
+              deleteItem={[Function]}
+              updateQuantity={[Function]}
             >
               <div
-                className="o-grid-container__lineitems"
-                key="1"
+                className="c-line-items"
               >
                 <div
-                  className="o-grid-item1__lineitems"
-                >
-                  <Link
-                    as="1"
-                    href="/slug?slug=1"
-                    key="1"
-                  >
-                    <Image
-                      alt="Regular Fit Wool Mix Trousers"
-                      aria-label="Regular Fit Wool Mix Trousers"
-                      className="c-line-items__image"
-                      key="1"
-                      onClick={[Function]}
-                      src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
-                    >
-                      <div
-                        className="c-line-items__image"
-                      >
-                        <LazyLoad
-                          height={200}
-                          offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
-                        >
-                          <div
-                            className="lazyload-placeholder"
-                            style={
-                              Object {
-                                "height": 200,
-                              }
-                            }
-                          />
-                        </LazyLoad>
-                      </div>
-                    </Image>
-                  </Link>
-                </div>
-                <div
-                  className="o-grid-item2__lineitems"
+                  className="c-line-items__grid"
+                  key="1"
                 >
                   <div
-                    className="c-line-items__details"
+                    className="c-line-items__grid-item1"
                   >
-                    <h4
-                      className="c-line-items__details-title  u-bold"
+                    <Link
+                      as="1"
+                      href="/slug?slug=1"
+                      key="1"
                     >
-                      Regular Fit Wool Mix Trousers
-                    </h4>
+                      <Image
+                        alt="Regular Fit Wool Mix Trousers"
+                        aria-label="Regular Fit Wool Mix Trousers"
+                        className="c-line-items__image"
+                        key="1"
+                        onClick={[Function]}
+                        src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
+                      >
+                        <div
+                          className="c-line-items__image"
+                        >
+                          <LazyLoad
+                            height={200}
+                            offset={0}
+                            once={false}
+                            overflow={false}
+                            resize={false}
+                            scroll={true}
+                            unmountIfInvisible={false}
+                          >
+                            <div
+                              className="lazyload-placeholder"
+                              style={
+                                Object {
+                                  "height": 200,
+                                }
+                              }
+                            />
+                          </LazyLoad>
+                        </div>
+                      </Image>
+                    </Link>
+                  </div>
+                  <div
+                    className="c-line-items__grid-item2"
+                  >
                     <div
-                      className="c-line-items__details-sku"
+                      className="c-line-items__details"
+                    >
+                      <h4
+                        className="c-line-items__details-title  u-bold"
+                      >
+                        Regular Fit Wool Mix Trousers
+                      </h4>
+                      <div
+                        className="c-line-items__details-sku"
+                      >
+                        <span>
+                          S2658934_C101_486
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__grid-item4"
+                  >
+                    <div
+                      className="c-line-items__param  u-bold"
                     >
                       <span>
-                        S2658934_C101_486
+                        Colour
                       </span>
                     </div>
                   </div>
-                </div>
-                <div
-                  className="o-grid-item3__lineitems"
-                >
                   <div
-                    className="c-line-items__colour  u-bold"
-                  >
-                    <span>
-                      Colour
-                    </span>
-                  </div>
-                  <div
-                    className="c-line-items__size  u-bold"
-                  >
-                    <span>
-                      Option
-                    </span>
-                  </div>
-                  <div
-                    className="c-line-items__quantity u-bold"
-                  >
-                    <span>
-                      Quantity
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className="o-grid-item4__lineitems"
-                >
-                  <span
-                    className="c-line-items__space"
-                  >
-                    Grey
-                  </span>
-                  <span
-                    className="c-line-items__space"
-                  >
-                    38 Waist 31 Leg
-                  </span>
-                  <span
-                    className="c-line-items__space"
-                  >
-                    <select
-                      data-variant="S2658934_C101_486"
-                      onChange={[Function]}
-                      value={1}
-                    >
-                      <option
-                        aria-posinset={2}
-                        aria-setsize={1}
-                        key="1"
-                        value={1}
-                      >
-                        1
-                      </option>
-                      <option
-                        aria-posinset={3}
-                        aria-setsize={2}
-                        key="2"
-                        value={2}
-                      >
-                        2
-                      </option>
-                      <option
-                        aria-posinset={4}
-                        aria-setsize={3}
-                        key="3"
-                        value={3}
-                      >
-                        3
-                      </option>
-                      <option
-                        aria-posinset={5}
-                        aria-setsize={4}
-                        key="4"
-                        value={4}
-                      >
-                        4
-                      </option>
-                      <option
-                        aria-posinset={6}
-                        aria-setsize={5}
-                        key="5"
-                        value={5}
-                      >
-                        5
-                      </option>
-                      <option
-                        aria-posinset={7}
-                        aria-setsize={6}
-                        key="6"
-                        value={6}
-                      >
-                        6
-                      </option>
-                      <option
-                        aria-posinset={8}
-                        aria-setsize={7}
-                        key="7"
-                        value={7}
-                      >
-                        7
-                      </option>
-                      <option
-                        aria-posinset={9}
-                        aria-setsize={8}
-                        key="8"
-                        value={8}
-                      >
-                        8
-                      </option>
-                      <option
-                        aria-posinset={10}
-                        aria-setsize={9}
-                        key="9"
-                        value={9}
-                      >
-                        9
-                      </option>
-                      <option
-                        aria-posinset={11}
-                        aria-setsize={10}
-                        key="10"
-                        value={10}
-                      >
-                        10
-                      </option>
-                    </select>
-                  </span>
-                </div>
-                <div
-                  className="o-grid-item5__lineitems"
-                >
-                  <div
-                    className="c-line-items__buttons"
+                    className="c-line-items__grid-item6"
                   >
                     <div
-                      className="c-line-items__anchor"
+                      className="c-line-items__param  u-bold"
+                    >
+                      <span>
+                        Option
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__grid-item8"
+                  >
+                    <div
+                      className="c-line-items__param u-bold"
+                    >
+                      <span>
+                        Quantity
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__param  c-line-items__grid-item5"
+                  >
+                    <span>
+                      Grey
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__param  c-line-items__grid-item7"
+                  >
+                    <span>
+                      38 Waist 31 Leg
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__param  c-line-items__grid-item9"
+                  >
+                    <span>
+                      <select
+                        data-variant="S2658934_C101_486"
+                        onChange={[Function]}
+                        value={1}
+                      >
+                        <option
+                          aria-posinset={2}
+                          aria-setsize={1}
+                          key="1"
+                          value={1}
+                        >
+                          1
+                        </option>
+                        <option
+                          aria-posinset={3}
+                          aria-setsize={2}
+                          key="2"
+                          value={2}
+                        >
+                          2
+                        </option>
+                        <option
+                          aria-posinset={4}
+                          aria-setsize={3}
+                          key="3"
+                          value={3}
+                        >
+                          3
+                        </option>
+                        <option
+                          aria-posinset={5}
+                          aria-setsize={4}
+                          key="4"
+                          value={4}
+                        >
+                          4
+                        </option>
+                        <option
+                          aria-posinset={6}
+                          aria-setsize={5}
+                          key="5"
+                          value={5}
+                        >
+                          5
+                        </option>
+                        <option
+                          aria-posinset={7}
+                          aria-setsize={6}
+                          key="6"
+                          value={6}
+                        >
+                          6
+                        </option>
+                        <option
+                          aria-posinset={8}
+                          aria-setsize={7}
+                          key="7"
+                          value={7}
+                        >
+                          7
+                        </option>
+                        <option
+                          aria-posinset={9}
+                          aria-setsize={8}
+                          key="8"
+                          value={8}
+                        >
+                          8
+                        </option>
+                        <option
+                          aria-posinset={10}
+                          aria-setsize={9}
+                          key="9"
+                          value={9}
+                        >
+                          9
+                        </option>
+                        <option
+                          aria-posinset={11}
+                          aria-setsize={10}
+                          key="10"
+                          value={10}
+                        >
+                          10
+                        </option>
+                      </select>
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__grid-item3"
+                  >
+                    <div
+                      className="c-line-items__delete"
                     >
                       <a
-                        className="c-line-items__delete"
+                        className="c-line-items__delete-button"
                         data-variant="S2658934_C101_486"
                         onClick={[Function]}
                       >
@@ -396,7 +504,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c-line-items__total-wrapper"
+                    className="c-line-items__grid-item10"
                   >
                     <a
                       className="c-line-items__total"
@@ -407,137 +515,488 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   </div>
                 </div>
               </div>
-            </div>
-          </LineItems>
-          <CartSummary
-            aria-label="Cart Summary"
-            cart={
-              Object {
-                "lineItems": Array [
-                  Object {
-                    "canonical_path": "1",
-                    "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
-                    "price": "30",
-                    "productID": "70515",
-                    "quantity": 1,
-                    "sku": "S2658934_C101_486",
-                    "slug": "1",
-                    "stockAvailableLevel": 10000,
-                    "title": "Regular Fit Wool Mix Trousers",
-                    "variant": "38 Waist 31 Leg",
-                  },
-                ],
-                "totalQuantity": 2,
-              }
-            }
-            deleteItem={[Function]}
-            updateQuantity={[Function]}
+            </LineItems>
+          </div>
+          <div
+            className="c-cart-table__grid-item-b"
           >
-            <section
-              className="c-cart-summary"
+            <div
+              className="c-cart-table__promo"
             >
-              <dl>
-                <dt>
-                  <a>
-                    Total Price:
-                  </a>
-                </dt>
-                <dd>
-                  <a>
-                    £
-                    30.00
-                  </a>
-                </dd>
-              </dl>
-              <dl>
-                <dt>
-                  <a>
-                    Estimated shipping cost: £3.45
-                  </a>
-                </dt>
-              </dl>
-              <dl>
-                <dt>
-                  <a
-                    className="u-bold"
-                  >
-                    TOTAL:
-                  </a>
-                </dt>
-                <dd>
-                  <a
-                    className="u-bold"
-                  >
-                    £
-                    30.00
-                  </a>
-                </dd>
-              </dl>
-              <dl>
-                <a>
-                  * Including VAT
-                </a>
-              </dl>
-            </section>
-            <section
-              className="c-cart-summary__buttons"
-            >
-              <Button
-                aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
-                label="Continue shopping"
-                size="lrg"
-                status="grey"
-                type="button"
-              >
+              <PromoInput>
                 <div
-                  className="o-button_container"
+                  aria-label="Use gift card or rewards code"
+                  className="c-gift__wrapper"
                 >
-                  <button
-                    aria-label="Continue Shopping"
-                    className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
-                    disabled={false}
-                    role="button"
-                    tabIndex="0"
-                    type="button"
+                  <span
+                    className="c-payment-method__gift"
                   >
-                    Continue shopping
-                  </button>
+                    <_class
+                      className="c-payment-method__gift-input"
+                      label="Promotion Code"
+                      placeholder="Enter Promotion Code"
+                    >
+                      <Input
+                        className="c-payment-method__gift-input"
+                        label="Promotion Code"
+                        placeholder="Enter Promotion Code"
+                        renderValidationMessage={[Function]}
+                      >
+                        <div
+                          className="o-form__input-group"
+                        >
+                          <label
+                            className="o-form__label undefined"
+                          >
+                            <b>
+                              Promotion Code
+                               
+                            </b>
+                            <input
+                              checked={false}
+                              className="o-form__input-field c-payment-method__gift-input"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Enter Promotion Code"
+                            />
+                          </label>
+                        </div>
+                      </Input>
+                    </_class>
+                    <Button
+                      aria-label="Apply Gift Code"
+                      className="c-payment-method__gift-button  o-button--sml"
+                      label="Apply"
+                      status="primary"
+                    >
+                      <div
+                        className="o-button_container"
+                      >
+                        <button
+                          aria-label="Apply Gift Code"
+                          className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                          disabled={false}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </Button>
+                  </span>
                 </div>
-              </Button>
-              <Link
-                as=""
-                href="/checkout"
+              </PromoInput>
+            </div>
+            <CartSummary
+              aria-label="Cart Summary"
+              cart={
+                Object {
+                  "lineItems": Array [
+                    Object {
+                      "bundles": Array [
+                        Object {
+                          "asset_files": Array [
+                            Object {
+                              "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                              "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                              "id": "157928",
+                              "meta_attributes": Object {},
+                              "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                            },
+                          ],
+                          "canonical_path": "/bundles/anna-outfit-1",
+                          "id": "261",
+                          "meta_attributes": Object {},
+                          "name": "Anna Outfit 1",
+                          "slug": "anna-outfit-1",
+                        },
+                      ],
+                      "canonical_path": "1",
+                      "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+                      "price": "30",
+                      "productID": "70515",
+                      "quantity": 1,
+                      "sku": "S2658934_C101_486",
+                      "slug": "1",
+                      "stockAvailableLevel": 10000,
+                      "title": "Regular Fit Wool Mix Trousers",
+                      "variant": "38 Waist 31 Leg",
+                    },
+                  ],
+                  "totalQuantity": 2,
+                }
+              }
+              deleteItem={[Function]}
+              updateQuantity={[Function]}
+            >
+              <section
+                className="c-cart-summary"
+              >
+                <dl>
+                  <dt>
+                    <a>
+                      Total Price:
+                    </a>
+                  </dt>
+                  <dd>
+                    <a>
+                      £
+                      30.00
+                    </a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a>
+                      Estimated shipping cost: £3.45
+                    </a>
+                  </dt>
+                </dl>
+                <dl>
+                  <dt>
+                    <p
+                      className="u-bold"
+                    >
+                      TOTAL:
+                    </p>
+                  </dt>
+                  <dd>
+                    <p
+                      className="u-bold"
+                    >
+                      £
+                      33.45
+                    </p>
+                  </dd>
+                </dl>
+                <dl>
+                  <a>
+                    * Including VAT
+                  </a>
+                </dl>
+              </section>
+              <section
+                className="c-cart-summary__buttons"
               >
                 <Button
-                  aria-label="Place Order"
-                  className="c-cart-summary__buttons--proceed"
-                  label="Continue to payment"
-                  onClick={[Function]}
-                  size="lrg"
-                  status="positive"
+                  aria-label="Continue Shopping"
+                  className="c-cart-summary__buttons--continue o-button--sml"
+                  label="Continue shopping"
+                  status="grey"
                   type="button"
                 >
                   <div
                     className="o-button_container"
                   >
                     <button
-                      aria-label="Place Order"
-                      className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+                      aria-label="Continue Shopping"
+                      className="c-cart-summary__buttons--continue o-button--sml o-button o-button--grey"
                       disabled={false}
-                      onClick={[Function]}
                       role="button"
                       tabIndex="0"
                       type="button"
                     >
-                      Continue to payment
+                      Continue shopping
                     </button>
                   </div>
                 </Button>
-              </Link>
-            </section>
-          </CartSummary>
+                <Link
+                  as=""
+                  href="/checkout"
+                >
+                  <Button
+                    aria-label="Place Order"
+                    className="c-cart-summary__buttons--proceed o-button--sml"
+                    label="Continue to payment"
+                    onClick={[Function]}
+                    status="positive"
+                    type="button"
+                  >
+                    <div
+                      className="o-button_container"
+                    >
+                      <button
+                        aria-label="Place Order"
+                        className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                        type="button"
+                      >
+                        Continue to payment
+                      </button>
+                    </div>
+                  </Button>
+                </Link>
+              </section>
+            </CartSummary>
+            <div
+              className="c-cart-table__icons"
+            >
+              <p>
+                We Accept
+              </p>
+              <PaymentIcons>
+                <div
+                  className="c-payment-icons"
+                >
+                  <Image
+                    aria-label="VISA"
+                    className="c-payment-icons__image"
+                    src="/static/payments/visa.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="Mastercard"
+                    className="c-payment-icons__image"
+                    src="/static/payments/mastercard.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="American Express"
+                    className="c-payment-icons__image"
+                    src="/static/payments/american-express.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="Maestro"
+                    className="c-payment-icons__image"
+                    src="/static/payments/maestro.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="PayPal"
+                    className="c-payment-icons__image"
+                    src="/static/payments/pay-pal.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="Apple Pay"
+                    className="c-payment-icons__image"
+                    src="/static/payments/apple-pay.svg"
+                  >
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                </div>
+              </PaymentIcons>
+            </div>
+          </div>
         </section>
+        <div
+          className="c-cart-table__related-products"
+        >
+          <RelatedProducts
+            bundles={
+              Array [
+                Object {
+                  "asset_files": Array [
+                    Object {
+                      "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                      "id": "157928",
+                      "meta_attributes": Object {},
+                      "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                    },
+                  ],
+                  "canonical_path": "/bundles/anna-outfit-1",
+                  "id": "261",
+                  "meta_attributes": Object {},
+                  "name": "Anna Outfit 1",
+                  "slug": "anna-outfit-1",
+                },
+              ]
+            }
+          >
+            <div
+              className="c-related-products"
+            >
+              <h1
+                className="c-related-products__title"
+              >
+                <span>
+                  you may also like
+                </span>
+              </h1>
+              <ul>
+                <li
+                  key="261"
+                >
+                  <Image
+                    className="c-related-products__image"
+                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg"
+                  >
+                    <div
+                      className="c-related-products__image"
+                    >
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
+                      >
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                  <Link
+                    href="/bundles/anna-outfit-1"
+                  >
+                    <div
+                      className="c-related-products__name"
+                      onClick={[Function]}
+                    >
+                      <a>
+                        Anna Outfit 1
+                      </a>
+                    </div>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </RelatedProducts>
+        </div>
       </section>
     </CartTable>
   </CartPage>

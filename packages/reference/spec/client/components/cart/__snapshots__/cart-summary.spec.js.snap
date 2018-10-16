@@ -44,19 +44,19 @@ exports[`renders correct values when line items are available 1`] = `
     </dl>
     <dl>
       <dt>
-        <a
+        <p
           className="u-bold"
         >
           TOTAL:
-        </a>
+        </p>
       </dt>
       <dd>
-        <a
+        <p
           className="u-bold"
         >
           £
-          16.00
-        </a>
+          19.45
+        </p>
       </dd>
     </dl>
     <dl>
@@ -70,9 +70,8 @@ exports[`renders correct values when line items are available 1`] = `
   >
     <Button
       aria-label="Continue Shopping"
-      className="c-cart-summary__buttons--continue"
+      className="c-cart-summary__buttons--continue o-button--sml"
       label="Continue shopping"
-      size="lrg"
       status="grey"
       type="button"
     >
@@ -81,7 +80,7 @@ exports[`renders correct values when line items are available 1`] = `
       >
         <button
           aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+          className="c-cart-summary__buttons--continue o-button--sml o-button o-button--grey"
           disabled={false}
           role="button"
           tabIndex="0"
@@ -97,10 +96,9 @@ exports[`renders correct values when line items are available 1`] = `
     >
       <Button
         aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed"
+        className="c-cart-summary__buttons--proceed o-button--sml"
         label="Continue to payment"
         onClick={[Function]}
-        size="lrg"
         status="positive"
         type="button"
       >
@@ -109,7 +107,7 @@ exports[`renders correct values when line items are available 1`] = `
         >
           <button
             aria-label="Place Order"
-            className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+            className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -158,19 +156,19 @@ exports[`renders correct values when no line items are available 1`] = `
     </dl>
     <dl>
       <dt>
-        <a
+        <p
           className="u-bold"
         >
           TOTAL:
-        </a>
+        </p>
       </dt>
       <dd>
-        <a
+        <p
           className="u-bold"
         >
           £
-          0.00
-        </a>
+          3.45
+        </p>
       </dd>
     </dl>
     <dl>
@@ -184,9 +182,8 @@ exports[`renders correct values when no line items are available 1`] = `
   >
     <Button
       aria-label="Continue Shopping"
-      className="c-cart-summary__buttons--continue"
+      className="c-cart-summary__buttons--continue o-button--sml"
       label="Continue shopping"
-      size="lrg"
       status="grey"
       type="button"
     >
@@ -195,7 +192,7 @@ exports[`renders correct values when no line items are available 1`] = `
       >
         <button
           aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button o-button--grey o-button--lrg"
+          className="c-cart-summary__buttons--continue o-button--sml o-button o-button--grey"
           disabled={false}
           role="button"
           tabIndex="0"
@@ -211,10 +208,9 @@ exports[`renders correct values when no line items are available 1`] = `
     >
       <Button
         aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed"
+        className="c-cart-summary__buttons--proceed o-button--sml"
         label="Continue to payment"
         onClick={[Function]}
-        size="lrg"
         status="positive"
         type="button"
       >
@@ -223,7 +219,7 @@ exports[`renders correct values when no line items are available 1`] = `
         >
           <button
             aria-label="Place Order"
-            className="c-cart-summary__buttons--proceed o-button o-button--positive o-button--lrg"
+            className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
             disabled={false}
             onClick={[Function]}
             role="button"

@@ -1,19 +1,16 @@
 // Libraries
 import { Component } from 'react'
 import classNames from 'classnames'
-import Link from 'next/link'
 
 // Components
 import Carousel from './carousel'
 import ProductNavBar from '../../navigation/product-navbar'
 import ProductPrice from './product-price'
+import RelatedProducts from './related-products'
 
 // Objects
 import Button from '../../../objects/button'
 import VariantSelector from '../../../objects/variant-selector'
-
-// Fixtures
-import Images from '../../../../spec/fixtures/dummy-pdp-images'
 
 class ProductDisplay extends Component {
   renderRatingStars (product) {
@@ -156,34 +153,10 @@ class ProductDisplay extends Component {
     </>
   }
 
-  // Currently using dummy data from fixture
-  renderRelatedProducts () {
-    return <>
-      <div className='c-product-display__related'>
-        <h1 className='c-product-display__related-title'><span>you may also like</span></h1>
-        <div className='c-product-display__related-images'>
-          { Images.asset_files.map((image, index) => {
-            return (
-              <Link href={image.link} key={index}>
-                <div className='c-product-display__related-images-link'>
-                  <img className='c-product-display__related-images-file' src={image.asset_file} />
-                  <p className='c-product-display__related-images-text'>{ image.text }</p>
-                  <p className='c-product-display__related-images-price'>{ image.price }</p>
-                  <div className='c-product-display__related-images-rating'>
-                    { this.renderRatingStars(image) }
-                  </div>
-                </div>
-              </Link>
-            )
-          })
-          }
-        </div>
-      </div>
-    </>
-  }
-
   render () {
-    return <>
+    const { product: { bundles } } = this.props
+
+    return (
       <div className='c-product-display'>
         <ProductNavBar />
         <div className='c-product-display__body'>
@@ -195,10 +168,12 @@ class ProductDisplay extends Component {
             { this.renderSizeAndFit() }
             { this.renderDetailsAndCare() }
           </div>
-          { this.renderRelatedProducts() }
+        </div>
+        <div className='c-product-display__related-products'>
+          <RelatedProducts bundles={bundles} />
         </div>
       </div>
-    </>
+    )
   }
 }
 

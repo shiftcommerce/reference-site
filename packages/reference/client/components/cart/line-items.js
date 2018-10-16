@@ -25,24 +25,22 @@ class LineItems extends Component {
 
   renderButtonsAndTotal (lineItem) {
     return <>
-      <div className='o-grid-item5__lineitems'>
-        <div className='c-line-items__buttons'>
-          <div className='c-line-items__anchor'>
-            <a className='c-line-items__delete' data-variant={lineItem.sku} onClick={this.props.deleteItem} >
-              Delete
-            </a>
-          </div>
+      <div className='c-line-items__grid-item3'>
+        <div className='c-line-items__delete'>
+          <a className='c-line-items__delete-button' data-variant={lineItem.sku} onClick={this.props.deleteItem} >
+            Delete
+          </a>
         </div>
-        <div className='c-line-items__total-wrapper'>
-          <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
-        </div>
+      </div>
+      <div className='c-line-items__grid-item10'>
+        <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
       </div>
     </>
   }
 
   renderTitle (lineItem) {
-    return <>
-      <div className='o-grid-item2__lineitems'>
+    return (
+      <div className='c-line-items__grid-item2'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title  u-bold'>
             { lineItem.title }
@@ -54,34 +52,40 @@ class LineItems extends Component {
           </div>
         </div>
       </div>
-    </>
+    )
   }
 
   renderParams (lineItem) {
     return <>
-      <div className='o-grid-item3__lineitems'>
-        <div className='c-line-items__colour  u-bold'>
+      <div className='c-line-items__grid-item4'>
+        <div className='c-line-items__param  u-bold'>
           <span>Colour</span>
         </div>
-        <div className='c-line-items__size  u-bold'>
+      </div>
+      <div className='c-line-items__grid-item6'>
+        <div className='c-line-items__param  u-bold'>
           <span>Option</span>
         </div>
-        <div className='c-line-items__quantity u-bold'>
-          <span>Quantity</span>
-        </div>
       </div>
-      <div className='o-grid-item4__lineitems'>
-        <span className='c-line-items__space'>Grey</span>
-        <span className='c-line-items__space'>{ lineItem.variant }</span>
-        <span className='c-line-items__space'>{ this.renderOptions(lineItem) }</span>
+      <div className='c-line-items__grid-item8'>
+        <div className='c-line-items__param u-bold'><span>Quantity</span></div>
+      </div>
+      <div className='c-line-items__param  c-line-items__grid-item5'>
+        <span>Grey</span>
+      </div>
+      <div className='c-line-items__param  c-line-items__grid-item7'>
+        <span>{ lineItem.variant }</span>
+      </div>
+      <div className='c-line-items__param  c-line-items__grid-item9'>
+        <span>{ this.renderOptions(lineItem) }</span>
       </div>
     </>
   }
 
   renderLineItems () {
     const cartData = this.props.cart.lineItems.map((lineItem, index) =>
-      <div className='o-grid-container__lineitems' key={lineItem.slug}>
-        <div className='o-grid-item1__lineitems'>
+      <div className='c-line-items__grid' key={lineItem.slug}>
+        <div className='c-line-items__grid-item1'>
           <Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} key={lineItem.slug}>
             <Image className='c-line-items__image' src={lineItem.imageUrl} alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
           </Link>
