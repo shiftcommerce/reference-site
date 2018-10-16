@@ -1,4 +1,8 @@
-.c-template-component {
+// Used around template components to
+// provide some left and right margins in
+// mobile and tablet views
+
+.o-template-component {
   margin: 0 $global-spacing-unit-small;
 
   @include breakpoint(desktop) {

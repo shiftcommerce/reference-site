@@ -26,6 +26,7 @@
 @import '50_objects/_o-media';
 @import '50_objects/_o-nav';
 @import '50_objects/_o-payment-method';
+@import '50_objects/_o-template-component';
 @import '50_objects/_o-variant-selector';
 
 @import '60_components/_c-account-forgotpassword';
@@ -46,6 +47,7 @@
 @import "60_components/_c-generic-grid";
 @import "60_components/_c-header";
 @import "60_components/_c-hero";
+@import "60_components/_c-horizontal-divider";
 @import '60_components/_c-image';
 @import "60_components/_c-line-items";
 @import '60_components/_c-links';
@@ -63,7 +65,6 @@
 @import '60_components/_c-shipping-method';
 @import '60_components/_c-static-page-error';
 @import '60_components/_c-step-indicators';
-@import '60_components/_c-template-component';
 @import '60_components/_c-title';
 
 @import "~react-responsive-carousel/lib/styles/carousel.min.css";

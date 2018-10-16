@@ -43,7 +43,7 @@ class ProductGrid extends PureComponent {
     const { componentData } = this.props
 
     return (
-      <section className="c-template-component u-center-align">
+      <section className="o-template-component u-center-align">
         <h1 className="c-component-header">{ componentData.header }</h1>
         <div className="o-card-grid o-card-grid--4d-2m">
           { this.products(componentData) }

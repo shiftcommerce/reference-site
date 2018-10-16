@@ -94,7 +94,7 @@ exports[`GenericGrid component renders correctly 1`] = `
   }
 >
   <section
-    className="c-template-component u-center-align"
+    className="o-template-component u-center-align"
   >
     <h1
       className="c-component-header"
