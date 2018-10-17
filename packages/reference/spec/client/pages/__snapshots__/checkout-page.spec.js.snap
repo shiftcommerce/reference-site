@@ -583,7 +583,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     className="o-form__header-button o-button o-button--secondary o-button--lrg"
@@ -978,7 +978,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   type="submit"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Continue to payment"
@@ -1158,7 +1158,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Edit your payment method"
@@ -1428,7 +1428,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             status="primary"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Apply Gift Code"
@@ -2151,7 +2151,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue Shopping"
@@ -2177,7 +2177,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             type="button"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to Payment"
@@ -2810,7 +2810,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   status="secondary"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       className="o-form__header-button o-button o-button--secondary o-button--lrg"
@@ -3210,7 +3210,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     type="submit"
                   >
                     <div
-                      className="o-button_container"
+                      className="o-button__container"
                     >
                       <button
                         aria-label="Continue to payment"
@@ -3395,7 +3395,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   status="secondary"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Edit your payment method"
@@ -3665,7 +3665,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               status="primary"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Apply Gift Code"
@@ -4398,7 +4398,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 type="button"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Continue Shopping"
@@ -4424,7 +4424,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue to Payment"
@@ -5030,7 +5030,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     className="o-form__header-button o-button o-button--secondary o-button--lrg"
@@ -5425,7 +5425,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   type="submit"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Continue to payment"
@@ -5605,7 +5605,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Edit your payment method"
@@ -5875,7 +5875,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             status="primary"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Apply Gift Code"
@@ -6598,7 +6598,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue Shopping"
@@ -6624,7 +6624,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             type="button"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to Payment"
@@ -7463,7 +7463,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     className="o-form__header-button o-button o-button--secondary o-button--lrg"
@@ -7936,7 +7936,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   type="submit"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Continue to payment"
@@ -8194,7 +8194,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Edit your payment method"
@@ -8464,7 +8464,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             status="primary"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Apply Gift Code"
@@ -9343,7 +9343,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue Shopping"
@@ -9369,7 +9369,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             type="button"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to Payment"
@@ -10208,7 +10208,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     className="o-form__header-button o-button o-button--secondary o-button--lrg"
@@ -10681,7 +10681,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   type="submit"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Continue to payment"
@@ -10939,7 +10939,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 status="secondary"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Edit your payment method"
@@ -11209,7 +11209,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             status="primary"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Apply Gift Code"
@@ -12088,7 +12088,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue Shopping"
@@ -12114,7 +12114,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             type="button"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to Payment"

@@ -55,7 +55,7 @@ exports[`renders correctly when some URLs are not set in the component 1`] = `
               status="warning"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="shop bathroom"
@@ -148,7 +148,7 @@ exports[`renders the full RelatedLinks component 1`] = `
               status="warning"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="shop bathroom"
@@ -184,7 +184,7 @@ exports[`renders the full RelatedLinks component 1`] = `
               status="warning"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="shop rugs"
@@ -220,7 +220,7 @@ exports[`renders the full RelatedLinks component 1`] = `
               status="warning"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="shop cushions & throws"

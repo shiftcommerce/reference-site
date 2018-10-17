@@ -32,7 +32,7 @@ exports[`renders the header 1`] = `
             status="primary"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 className="c-searchbar__input-button o-button o-button--primary"

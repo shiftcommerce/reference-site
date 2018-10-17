@@ -12,4 +12,28 @@
   &__cat-button {
     margin-top: 0;
   }
+
+  &__inner-wrapper {
+    @include breakpoint(desktop) {
+      width: $o-body-container-width;
+      margin: auto;
+    }
+  }
+}
+
+// Modifiers
+
+// Calculates negative margin so that a constrained
+// body's child can take full screen width
+@function full-width-margin($body-wrapper-width) {
+  @return percentage(($body-wrapper-width - 100%) / ($body-wrapper-width * 2))
+}
+
+.o-template-component--full-width {
+  margin: 0;
+
+  @include breakpoint(desktop) {
+    margin-left: full-width-margin($o-body-container-width);
+    margin-right: full-width-margin($o-body-container-width);
+  }
 }

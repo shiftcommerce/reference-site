@@ -179,7 +179,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -206,7 +206,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Place Order"
@@ -402,7 +402,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -429,7 +429,7 @@ exports[`Place Order button should be disabled if there is any error in card det
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Place Order"
@@ -552,7 +552,7 @@ exports[`renders payment errors 1`] = `
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -577,7 +577,7 @@ exports[`renders payment errors 1`] = `
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue to Payment"
@@ -696,7 +696,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -721,7 +721,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue to Payment"
@@ -850,7 +850,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -875,7 +875,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue to Payment"
@@ -992,7 +992,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -1017,7 +1017,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue to Payment"
@@ -1131,7 +1131,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Continue Shopping"
@@ -1156,7 +1156,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue to Payment"

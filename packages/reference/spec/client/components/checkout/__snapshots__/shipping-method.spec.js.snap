@@ -300,7 +300,7 @@ exports[`display pre selected shipping method as selected option on page load 1`
             type="submit"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to payment"
@@ -375,7 +375,7 @@ exports[`render collapsed view as expected 1`] = `
           status="secondary"
         >
           <div
-            className="o-button_container"
+            className="o-button__container"
           >
             <button
               aria-label="Edit your shipping method"
@@ -711,7 +711,7 @@ exports[`render shipping methods as expected 1`] = `
             type="submit"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to payment"
@@ -1025,7 +1025,7 @@ exports[`renders line item quantity as expected 1`] = `
             type="submit"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to payment"
@@ -1339,7 +1339,7 @@ exports[`should be able to select a shipping method 1`] = `
             type="submit"
           >
             <div
-              className="o-button_container"
+              className="o-button__container"
             >
               <button
                 aria-label="Continue to payment"

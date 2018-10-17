@@ -247,7 +247,7 @@ exports[`GenericGrid component renders correctly 1`] = `
           status="primary"
         >
           <div
-            className="o-button_container"
+            className="o-button__container"
           >
             <button
               className="c-template-component__cat-button o-button o-button--primary"

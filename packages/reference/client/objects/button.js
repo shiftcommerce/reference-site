@@ -10,7 +10,7 @@ class Button extends Component {
     } = this.props
 
     return (
-      <div className='o-button_container' style={hoverStyles}>
+      <div className='o-button__container' style={hoverStyles}>
         <button
           className={classNames(
             className,

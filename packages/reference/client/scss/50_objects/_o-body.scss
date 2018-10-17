@@ -1,9 +1,11 @@
+$o-body-container-width: 80%;
+
 .o-body {
   width: 100%;
   padding-top: 12rem;
 
   @include breakpoint(desktop) {
-    width: 80%;
+    width: $o-body-container-width;
     margin: auto;
     padding-top: 1rem;
   }

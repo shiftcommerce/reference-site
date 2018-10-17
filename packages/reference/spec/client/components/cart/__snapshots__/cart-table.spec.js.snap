@@ -514,7 +514,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   status="primary"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Apply Gift Code"
@@ -629,7 +629,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
               type="button"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   aria-label="Continue Shopping"
@@ -656,7 +656,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 type="button"
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                 >
                   <button
                     aria-label="Place Order"

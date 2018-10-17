@@ -570,7 +570,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       status="primary"
                     >
                       <div
-                        className="o-button_container"
+                        className="o-button__container"
                       >
                         <button
                           aria-label="Apply Gift Code"
@@ -686,7 +686,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   type="button"
                 >
                   <div
-                    className="o-button_container"
+                    className="o-button__container"
                   >
                     <button
                       aria-label="Continue Shopping"
@@ -713,7 +713,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     type="button"
                   >
                     <div
-                      className="o-button_container"
+                      className="o-button__container"
                     >
                       <button
                         aria-label="Place Order"

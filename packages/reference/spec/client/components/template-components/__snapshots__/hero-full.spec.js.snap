@@ -162,7 +162,7 @@ exports[`renders the full HeroImage component 1`] = `
                 }
               >
                 <div
-                  className="o-button_container"
+                  className="o-button__container"
                   style={
                     Object {
                       "background": "black",

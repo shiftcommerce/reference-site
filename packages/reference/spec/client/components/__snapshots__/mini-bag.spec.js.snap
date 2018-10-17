@@ -52,7 +52,7 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
           status="primary"
         >
           <div
-            className="o-button_container"
+            className="o-button__container"
           >
             <button
               aria-label="Go to checkout"
@@ -148,7 +148,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
           status="primary"
         >
           <div
-            className="o-button_container"
+            className="o-button__container"
           >
             <button
               aria-label="Go to checkout"

@@ -1,3 +1,4 @@
+import EmailSignup from './email-signup'
 import GenericGrid from './generic-grid'
 import HalfCategoryGallery from './half-category-gallery'
 import HeroFull from './hero-full'
@@ -7,6 +8,7 @@ import RelatedLinks from './related-links'
 import ThirdCategoryGallery from './third-category-gallery'
 
 export default {
+  email_signup: EmailSignup,
   generic_grid: GenericGrid,
   half_category_gallery: HalfCategoryGallery,
   hero_full: HeroFull,

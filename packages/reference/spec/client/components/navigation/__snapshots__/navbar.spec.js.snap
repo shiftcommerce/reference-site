@@ -131,7 +131,7 @@ exports[`renders the nav bar options 1`] = `
                       status="primary"
                     >
                       <div
-                        className="o-button_container"
+                        className="o-button__container"
                       >
                         <button
                           className="c-searchbar__input-button o-button o-button--primary"
@@ -205,7 +205,7 @@ exports[`renders the nav bar options 1`] = `
               status="primary"
             >
               <div
-                className="o-button_container"
+                className="o-button__container"
               >
                 <button
                   className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"

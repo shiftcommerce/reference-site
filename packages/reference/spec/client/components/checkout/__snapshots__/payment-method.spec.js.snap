@@ -1502,7 +1502,7 @@ exports[`renders payment summary on collapsing 1`] = `
           status="secondary"
         >
           <div
-            className="o-button_container"
+            className="o-button__container"
           >
             <button
               aria-label="Edit your payment method"
@@ -2060,7 +2060,7 @@ exports[`renders payment summary on collapsing 1`] = `
                     status="secondary"
                   >
                     <div
-                      className="o-button_container"
+                      className="o-button__container"
                     >
                       <button
                         className="o-form__header-button o-button o-button--secondary o-button--lrg"

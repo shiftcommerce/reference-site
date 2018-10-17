@@ -7,7 +7,7 @@ exports[`Button by default disabled should be false 1`] = `
   status="primary"
 >
   <div
-    className="o-button_container"
+    className="o-button__container"
   >
     <button
       className="o-button o-button--primary o-button--lrg"
@@ -27,7 +27,7 @@ exports[`Button with props should be of large size 1`] = `
   size="lrg"
 >
   <div
-    className="o-button_container"
+    className="o-button__container"
   >
     <button
       className="o-button o-button--lrg"
@@ -47,7 +47,7 @@ exports[`Button with props status should be primary 1`] = `
   status="primary"
 >
   <div
-    className="o-button_container"
+    className="o-button__container"
   >
     <button
       className="o-button o-button--primary"
@@ -69,7 +69,7 @@ exports[`disabled button 1`] = `
   status="primary"
 >
   <div
-    className="o-button_container"
+    className="o-button__container"
   >
     <button
       className="o-button o-button--primary o-button--lrg o-button--disabled"
@@ -90,7 +90,7 @@ exports[`renders correctly 1`] = `
   status="positive"
 >
   <div
-    className="o-button_container"
+    className="o-button__container"
   >
     <button
       className="o-button o-button--positive o-button--lrg"

@@ -76,7 +76,7 @@ exports[`renders correct values when line items are available 1`] = `
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue Shopping"
@@ -103,7 +103,7 @@ exports[`renders correct values when line items are available 1`] = `
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Place Order"
@@ -188,7 +188,7 @@ exports[`renders correct values when no line items are available 1`] = `
       type="button"
     >
       <div
-        className="o-button_container"
+        className="o-button__container"
       >
         <button
           aria-label="Continue Shopping"
@@ -215,7 +215,7 @@ exports[`renders correct values when no line items are available 1`] = `
         type="button"
       >
         <div
-          className="o-button_container"
+          className="o-button__container"
         >
           <button
             aria-label="Place Order"
