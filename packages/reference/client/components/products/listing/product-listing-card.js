@@ -36,7 +36,7 @@ class ProductListingCard extends React.Component {
         <div className='c-product-listing-card__body'>
           <div className='c-product-listing-card__gallery c-image'>
             <Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}>
-              <Image className='c-product-listing-card__image'
+              <Image className='c-product-listing-card__image u-image-shadow'
                 src={(assetFile && assetFile.s3_url) || pictureUrl}
                 alt={(assetFile && assetFile.alt_text) || product.title}
                 aria-label={product.title} />

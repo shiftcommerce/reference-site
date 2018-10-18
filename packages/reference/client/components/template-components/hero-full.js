@@ -11,7 +11,7 @@ class HeroFull extends Component {
     // Only render heading if available
     if (hero.heading) {
       return (
-        <div className='c-hero__heading'>{ hero.heading }</div>
+        <h1 className='c-component-header'>{ hero.heading }</h1>
       )
     }
   }
@@ -39,7 +39,7 @@ class HeroFull extends Component {
 
   overlaySize (hero) {
     let count = 0
-    if (hero.overlay_title) { count++ }
+    if (hero.overlay_title) { count += 2 }
     if (hero.overlay_text) { count++ }
     if (hero.overlay_link_1_url && hero.overlay_link_1_text) { count++ }
     return count
@@ -99,14 +99,14 @@ class HeroFull extends Component {
     let mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
 
     return (
-      <div className='o-template-component o-template-component--full-width c-hero' style={{ backgroundColor: componentData.background_colour }}>
+      <section className='o-template-component o-template-component--full-width c-hero' style={{ backgroundColor: componentData.background_colour }}>
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }
           <Image className='c-hero__image' src={imgSrc} mobileSrc={mobileSrc} />
           { this.heroOverlay(componentData, 'below') }
         </div>
-      </div>
+      </section>
     )
   }
 }

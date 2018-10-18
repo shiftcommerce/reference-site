@@ -20,7 +20,7 @@ class GenericGrid extends PureComponent {
           <div className="o-card-grid__card" key={i}>
             <Link href={slideLinkURL[0].canonical_path}>
               <a>
-                <Image src={slideImage[0].canonical_path} />
+                <Image className='u-image-shadow' src={slideImage[0].canonical_path} />
                 <p className="o-card-grid__title">{ slideText }</p>
               </a>
             </Link>

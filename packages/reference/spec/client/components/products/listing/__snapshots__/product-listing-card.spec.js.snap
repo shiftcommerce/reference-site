@@ -106,12 +106,12 @@ exports[`renders ProductListingCard correctly 1`] = `
           <Image
             alt="Textured Long T-Shirt"
             aria-label="Textured Long T-Shirt"
-            className="c-product-listing-card__image"
+            className="c-product-listing-card__image u-image-shadow"
             onClick={[Function]}
             src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
           >
             <div
-              className="c-product-listing-card__image"
+              className="c-product-listing-card__image u-image-shadow"
             >
               <LazyLoad
                 height={200}

@@ -18,7 +18,7 @@ test('renders ProductListingCard correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}><Image className='c-product-listing-card__image' src={product.asset_files[0].s3_url} alt={product.title} aria-label={product.title} /></Link>)
+  expect(wrapper).toContainReact(<Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}><Image className='c-product-listing-card__image u-image-shadow' src={product.asset_files[0].s3_url} alt={product.title} aria-label={product.title} /></Link>)
   expect(wrapper).toIncludeText(product.title)
   expect(wrapper).toIncludeText('£10.00')
   expect(wrapper.find('.c-product-listing-card__rating')).toHaveClassName('c-product-listing-card__rating')

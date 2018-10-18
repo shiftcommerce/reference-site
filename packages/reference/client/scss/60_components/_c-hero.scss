@@ -10,14 +10,6 @@
     padding-top: $global-spacing-unit;
   }
 
-  &__heading {
-    display: inline-block;
-    margin-bottom: 1rem;
-    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
-    font-size: 1.5rem;
-    border-bottom: solid 0.25rem $alert-orange;
-  }
-
   &__content {
     position: relative;
 
@@ -76,6 +68,9 @@
       &--offset_above_large_3 {
         margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
+      &--offset_above_large_4 {
+        margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
       &--overlap_below_large {
         margin-top: -$global-spacing-unit * 4;
       }
@@ -86,6 +81,9 @@
         margin-bottom: calc(#{$global-spacing-unit} * 4 - 4rem);
       }
       &--offset_below_large_3 {
+        margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
+      &--offset_below_large_4 {
         margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
 
@@ -101,6 +99,9 @@
       &--offset_above_huge_3 {
         margin-top: calc(#{$global-spacing-unit} * 6 - 7rem);
       }
+      &--offset_above_huge_4 {
+        margin-top: calc(#{$global-spacing-unit} * 6 - 9rem);
+      }
       &--overlap_below_huge {
         margin-top: -$global-spacing-unit * 6;
       }
@@ -112,6 +113,9 @@
       }
       &--offset_below_huge_3 {
         margin-bottom: calc(#{$global-spacing-unit} * 6 - 7rem);
+      }
+      &--offset_below_huge_4 {
+        margin-bottom: calc(#{$global-spacing-unit} * 6 - 9rem);
       }
 
       &--overlap_above_massive {
@@ -126,6 +130,9 @@
       &--offset_above_massive_3 {
         margin-top: calc(#{$global-spacing-unit} * 10 - 7rem);
       }
+      &--offset_above_massive_4 {
+        margin-top: calc(#{$global-spacing-unit} * 10 - 9rem);
+      }
       &--overlap_below_massive {
         margin-top: -$global-spacing-unit * 10;
       }
@@ -138,12 +145,16 @@
       &--offset_below_massive_3 {
         margin-bottom: calc(#{$global-spacing-unit} * 10 - 7rem);
       }
+      &--offset_below_massive_4 {
+        margin-bottom: calc(#{$global-spacing-unit} * 10 - 9rem);
+      }
     }
   }
 
   &__overlay_title {
-    font-size: 1.3rem;
-    margin: 0 $global-spacing-unit-tiny;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: $global-spacing-unit-small auto;
   }
 
   &__overlay_pointer {

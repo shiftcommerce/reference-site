@@ -116,9 +116,12 @@ exports[`GenericGrid component renders correctly 1`] = `
             onClick={[Function]}
           >
             <Image
+              className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
-              <div>
+              <div
+                className="u-image-shadow"
+              >
                 <LazyLoad
                   height={200}
                   offset={0}
@@ -159,9 +162,12 @@ exports[`GenericGrid component renders correctly 1`] = `
             onClick={[Function]}
           >
             <Image
+              className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg"
             >
-              <div>
+              <div
+                className="u-image-shadow"
+              >
                 <LazyLoad
                   height={200}
                   offset={0}
@@ -202,9 +208,12 @@ exports[`GenericGrid component renders correctly 1`] = `
             onClick={[Function]}
           >
             <Image
+              className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg"
             >
-              <div>
+              <div
+                className="u-image-shadow"
+              >
                 <LazyLoad
                   height={200}
                   offset={0}

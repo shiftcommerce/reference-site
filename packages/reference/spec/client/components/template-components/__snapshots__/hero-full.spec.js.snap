@@ -62,7 +62,7 @@ exports[`renders the full HeroImage component 1`] = `
     }
   }
 >
-  <div
+  <section
     className="o-template-component o-template-component--full-width c-hero"
     style={
       Object {
@@ -102,7 +102,7 @@ exports[`renders the full HeroImage component 1`] = `
         </div>
       </Image>
       <div
-        className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_3"
+        className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_4"
         style={
           Object {
             "backgroundColor": "antiquewhite",
@@ -195,6 +195,6 @@ exports[`renders the full HeroImage component 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </HeroFull>
 `;
