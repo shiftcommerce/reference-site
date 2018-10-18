@@ -58,19 +58,15 @@
       padding: 15px;
       padding-left: $global-spacing-unit;
       padding-right: $global-spacing-unit;
-      background-color: $background-secondary;
-      color: black;
       width: 100%;
     }
 
     &--proceed {
       outline: none;
-      color: white;
       font-size: 0.9em;
       border: 0;
       padding-left: $global-spacing-unit;
       padding-right: $global-spacing-unit;
-      background-color: $background-positive;
       float: right;
       width: 100%;
     }

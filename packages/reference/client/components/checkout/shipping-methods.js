@@ -103,9 +103,9 @@ export default class ShippingMethods extends Component {
             </div>
             <div className='o-form__input-group'>
               <Button
+                className='o-button--sml'
                 aria-label='Continue to payment'
                 label='Continue to Payment'
-                size='lrg'
                 status='primary'
                 type='submit'
                 onClick={() => onToggleCollapsed('complete', formName)}

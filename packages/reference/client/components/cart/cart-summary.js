@@ -48,13 +48,13 @@ class CartSummary extends Component {
           <Button
             aria-label='Continue Shopping'
             label='Continue shopping'
-            status='grey'
+            status='secondary'
             className='c-cart-summary__buttons--continue o-button--sml'
             type='button'
           />
-          <Link href='/checkout' as=''>
+          <Link href='/checkout'>
             <Button
-              aria-label='Place Order'
+              aria-label='Continue to payment'
               label='Continue to payment'
               className='c-cart-summary__buttons--proceed o-button--sml'
               status='positive'

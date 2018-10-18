@@ -16,7 +16,7 @@ class PromoInput extends Component {
             className='c-payment-method__gift-input' />
           <Button
             aria-label='Apply Gift Code'
-            className='c-payment-method__gift-button  o-button--sml'
+            className='c-payment-method__gift-button o-button--sml'
             label='Apply'
             status='primary' />
         </span>

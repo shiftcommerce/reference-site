@@ -26,38 +26,35 @@ class CheckoutCartTotal extends Component {
     const isValidOrder = this.validOrder(checkout, order)
 
     if (checkout.currentStep === 3) {
-      return <>
+      return (
         <div className='c-cart-summary__buttons'>
           <Link href='/'>
             <Button
               aria-label='Continue Shopping'
               label='Continue shopping'
               status='primary'
-              size='lrg'
-              className='c-cart-summary__buttons--continue'
+              className='c-cart-summary__buttons--continue o-button--sml'
               type='button'
             />
           </Link>
           <Button
             aria-label='Review Order'
             label='Review Your Order'
-            size='lrg'
-            className='c-cart-summary__buttons--proceed'
+            className='c-cart-summary__buttons--proceed o-button--sml'
             type='button'
             status='primary'
             onClick={onClick}
           />
-        </div >
-      </>
+        </div>
+      )
     } else if (checkout.currentStep === 4) {
-      return <>
+      return (
         <div className='c-cart-summary-buttons'>
           <Link href='/'>
             <Button
               aria-label='Continue Shopping'
               label='Continue shopping'
-              size='lrg'
-              className='c-cart-summary__buttons--continue'
+              className='c-cart-summary__buttons--continue o-button--sml'
               status='primary'
               type='button'
             />
@@ -65,8 +62,7 @@ class CheckoutCartTotal extends Component {
           <Button
             aria-label='Place Order'
             label='Place Order'
-            size='lrg'
-            className='c-cart-summary__buttons--proceed'
+            className='c-cart-summary__buttons--proceed o-button--sml'
             type='button'
             status='primary'
             id='place_order'
@@ -74,17 +70,16 @@ class CheckoutCartTotal extends Component {
             disabled={!isValidOrder}
             onClick={onClick}
           />
-        </div >
-      </>
+        </div>
+      )
     } else {
-      return <>
+      return (
         <div className='c-cart-summary-buttons'>
           <Link href='/'>
             <Button
               aria-label='Continue Shopping'
               label='Continue shopping'
-              size='lrg'
-              className='c-cart-summary__buttons--continue'
+              className='c-cart-summary__buttons--continue o-button--sml'
               status='primary'
               type='button'
             />
@@ -92,14 +87,13 @@ class CheckoutCartTotal extends Component {
           <Button
             aria-label='Continue to Payment'
             label='Continue to Payment'
-            size='lrg'
-            className='c-cart-summary__buttons--proceed'
+            className='c-cart-summary__buttons--proceed o-button--sml'
             type='button'
-            status='primary'
+            status='positive'
             onClick={onClick}
           />
-        </div >
-      </>
+        </div>
+      )
     }
   }
 
@@ -119,7 +113,7 @@ class CheckoutCartTotal extends Component {
     return (
       <>
       <Sticky>
-        <div aria-label='Cart total summary' className='u-sticky  c-cart-summary'>
+        <div aria-label='Cart total summary' className='u-sticky c-cart-summary'>
           <div className=''>
             <dl aria-label='Subtotal'>
               <dt> Total Price: </dt>

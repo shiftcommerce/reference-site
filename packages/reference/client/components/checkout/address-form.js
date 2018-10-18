@@ -225,9 +225,9 @@ class AddressForm extends Component {
           <div className='o-form__input-group'>
             <Button
               aria-label='View Shipping Options'
+              className='c-address-form__button o-button--sml'
               label='View Shipping Options'
-              size='lrg'
-              status={(isValidForm ? 'primary' : 'disabled')}
+              status={(isValidForm ? 'positive' : 'disabled')}
               type='primary'
               disabled={!isValidForm}
               onClick={() => onToggleCollapsed('complete', formName)}

@@ -3,15 +3,14 @@
    ========================================================================== */
 
 $color-variations: (
-  info:     (background-color: $background-info, color: #fff),
-  disabled: (background-color: $background-disabled, color: #fff),
-  primary:  (background-color: $background-primary, color: #fff),
-  secondary: (background-color: $background-secondary, color: $font-dark-grey),
-  positive: (background-color: $background-positive, color: #fff),
-  negative: (background-color: $background-negative, color: #fff),
-  warning:  (background-color: $background-warning, color: #fff),
-  dark:     (background-color: $background-dark, color: #fff),
-  grey:     (background-color: $background-grey, color: #000000)
+  info:      (background-color: $background-info, color: $text-light),
+  disabled:  (background-color: $background-disabled, color: $text-light),
+  primary:   (background-color: $background-primary, color: $text-light),
+  secondary: (background-color: $background-secondary, color: $text-dark),
+  positive:  (background-color: $background-positive, color: $text-light),
+  negative:  (background-color: $background-negative, color: $text-light),
+  warning:   (background-color: $background-warning, color: $text-light),
+  dark:      (background-color: $background-dark, color: $text-light),
 );
 
 $custom-base-color: map-get(map-get($color-variations, primary), background-color);
@@ -19,6 +18,7 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
 
 .o-button {
   cursor: pointer;
+  border: none;
   display: inline-block;
   visibility: visible;
   padding: $global-spacing-unit-small $global-spacing-unit;
@@ -35,8 +35,8 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
 
   &:hover {
     @include breakpoint(desktop) {
-      border-color: darken($text-primary, 10%);
       background: linear-gradient(to bottom, lighten($button-base-color, 20%), $button-base-color);
+      color: $text-light;
     }
   }
 

@@ -971,9 +971,9 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               >
                 <Button
                   aria-label="Continue to payment"
+                  className="o-button--sml"
                   label="Continue to Payment"
                   onClick={[Function]}
-                  size="lrg"
                   status="primary"
                   type="submit"
                 >
@@ -982,7 +982,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <button
                       aria-label="Continue to payment"
-                      className="o-button o-button--primary o-button--lrg"
+                      className="o-button--sml o-button o-button--primary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -1151,10 +1151,9 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button"
+                className="o-form__header-button o-button--sml"
                 label="Edit"
                 onClick={[Function]}
-                size="lrg"
                 status="secondary"
               >
                 <div
@@ -1162,7 +1161,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    className="o-form__header-button o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -1423,7 +1422,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           </_class>
           <Button
             aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button  o-button--sml"
+            className="c-payment-method__gift-button o-button--sml"
             label="Apply"
             status="primary"
           >
@@ -1432,7 +1431,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             >
               <button
                 aria-label="Apply Gift Code"
-                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                 disabled={false}
                 role="button"
                 tabIndex="0"
@@ -2083,7 +2082,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
         <Sticker>
           <div
             aria-label="Cart total summary"
-            className="u-sticky  c-cart-summary"
+            className="u-sticky c-cart-summary"
           >
             <div
               className=""
@@ -2143,10 +2142,9 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           >
             <Button
               aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue"
+              className="c-cart-summary__buttons--continue o-button--sml"
               label="Continue shopping"
               onClick={[Function]}
-              size="lrg"
               status="primary"
               type="button"
             >
@@ -2155,7 +2153,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               >
                 <button
                   aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
@@ -2169,11 +2167,10 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           </Link>
           <Button
             aria-label="Continue to Payment"
-            className="c-cart-summary__buttons--proceed"
+            className="c-cart-summary__buttons--proceed o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
-            status="primary"
+            status="positive"
             type="button"
           >
             <div
@@ -2181,7 +2178,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             >
               <button
                 aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -3203,9 +3200,9 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 >
                   <Button
                     aria-label="Continue to payment"
+                    className="o-button--sml"
                     label="Continue to Payment"
                     onClick={[Function]}
-                    size="lrg"
                     status="primary"
                     type="submit"
                   >
@@ -3214,7 +3211,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <button
                         aria-label="Continue to payment"
-                        className="o-button o-button--primary o-button--lrg"
+                        className="o-button--sml o-button o-button--primary"
                         disabled={false}
                         onClick={[Function]}
                         role="button"
@@ -3388,10 +3385,9 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               <div>
                 <Button
                   aria-label="Edit your payment method"
-                  className="o-form__header-button"
+                  className="o-form__header-button o-button--sml"
                   label="Edit"
                   onClick={[Function]}
-                  size="lrg"
                   status="secondary"
                 >
                   <div
@@ -3399,7 +3395,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   >
                     <button
                       aria-label="Edit your payment method"
-                      className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                      className="o-form__header-button o-button--sml o-button o-button--secondary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -3660,7 +3656,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             </_class>
             <Button
               aria-label="Apply Gift Code"
-              className="c-payment-method__gift-button  o-button--sml"
+              className="c-payment-method__gift-button o-button--sml"
               label="Apply"
               status="primary"
             >
@@ -3669,7 +3665,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               >
                 <button
                   aria-label="Apply Gift Code"
-                  className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                  className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                   disabled={false}
                   role="button"
                   tabIndex="0"
@@ -4330,7 +4326,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
           <Sticker>
             <div
               aria-label="Cart total summary"
-              className="u-sticky  c-cart-summary"
+              className="u-sticky c-cart-summary"
             >
               <div
                 className=""
@@ -4390,10 +4386,9 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             >
               <Button
                 aria-label="Continue Shopping"
-                className="c-cart-summary__buttons--continue"
+                className="c-cart-summary__buttons--continue o-button--sml"
                 label="Continue shopping"
                 onClick={[Function]}
-                size="lrg"
                 status="primary"
                 type="button"
               >
@@ -4402,7 +4397,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 >
                   <button
                     aria-label="Continue Shopping"
-                    className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                    className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -4416,11 +4411,10 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             </Link>
             <Button
               aria-label="Continue to Payment"
-              className="c-cart-summary__buttons--proceed"
+              className="c-cart-summary__buttons--proceed o-button--sml"
               label="Continue to Payment"
               onClick={[Function]}
-              size="lrg"
-              status="primary"
+              status="positive"
               type="button"
             >
               <div
@@ -4428,7 +4422,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               >
                 <button
                   aria-label="Continue to Payment"
-                  className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                  className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
@@ -5418,9 +5412,9 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               >
                 <Button
                   aria-label="Continue to payment"
+                  className="o-button--sml"
                   label="Continue to Payment"
                   onClick={[Function]}
-                  size="lrg"
                   status="primary"
                   type="submit"
                 >
@@ -5429,7 +5423,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <button
                       aria-label="Continue to payment"
-                      className="o-button o-button--primary o-button--lrg"
+                      className="o-button--sml o-button o-button--primary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -5598,10 +5592,9 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button"
+                className="o-form__header-button o-button--sml"
                 label="Edit"
                 onClick={[Function]}
-                size="lrg"
                 status="secondary"
               >
                 <div
@@ -5609,7 +5602,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    className="o-form__header-button o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -5870,7 +5863,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           </_class>
           <Button
             aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button  o-button--sml"
+            className="c-payment-method__gift-button o-button--sml"
             label="Apply"
             status="primary"
           >
@@ -5879,7 +5872,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             >
               <button
                 aria-label="Apply Gift Code"
-                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                 disabled={false}
                 role="button"
                 tabIndex="0"
@@ -6530,7 +6523,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
         <Sticker>
           <div
             aria-label="Cart total summary"
-            className="u-sticky  c-cart-summary"
+            className="u-sticky c-cart-summary"
           >
             <div
               className=""
@@ -6590,10 +6583,9 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           >
             <Button
               aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue"
+              className="c-cart-summary__buttons--continue o-button--sml"
               label="Continue shopping"
               onClick={[Function]}
-              size="lrg"
               status="primary"
               type="button"
             >
@@ -6602,7 +6594,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               >
                 <button
                   aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
@@ -6616,11 +6608,10 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           </Link>
           <Button
             aria-label="Continue to Payment"
-            className="c-cart-summary__buttons--proceed"
+            className="c-cart-summary__buttons--proceed o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
-            status="primary"
+            status="positive"
             type="button"
           >
             <div
@@ -6628,7 +6619,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             >
               <button
                 aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -7929,9 +7920,9 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               >
                 <Button
                   aria-label="Continue to payment"
+                  className="o-button--sml"
                   label="Continue to Payment"
                   onClick={[Function]}
-                  size="lrg"
                   status="primary"
                   type="submit"
                 >
@@ -7940,7 +7931,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <button
                       aria-label="Continue to payment"
-                      className="o-button o-button--primary o-button--lrg"
+                      className="o-button--sml o-button o-button--primary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -8187,10 +8178,9 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button"
+                className="o-form__header-button o-button--sml"
                 label="Edit"
                 onClick={[Function]}
-                size="lrg"
                 status="secondary"
               >
                 <div
@@ -8198,7 +8188,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    className="o-form__header-button o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -8459,7 +8449,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           </_class>
           <Button
             aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button  o-button--sml"
+            className="c-payment-method__gift-button o-button--sml"
             label="Apply"
             status="primary"
           >
@@ -8468,7 +8458,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             >
               <button
                 aria-label="Apply Gift Code"
-                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                 disabled={false}
                 role="button"
                 tabIndex="0"
@@ -9275,7 +9265,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
         <Sticker>
           <div
             aria-label="Cart total summary"
-            className="u-sticky  c-cart-summary"
+            className="u-sticky c-cart-summary"
           >
             <div
               className=""
@@ -9335,10 +9325,9 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           >
             <Button
               aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue"
+              className="c-cart-summary__buttons--continue o-button--sml"
               label="Continue shopping"
               onClick={[Function]}
-              size="lrg"
               status="primary"
               type="button"
             >
@@ -9347,7 +9336,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               >
                 <button
                   aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
@@ -9361,11 +9350,10 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           </Link>
           <Button
             aria-label="Continue to Payment"
-            className="c-cart-summary__buttons--proceed"
+            className="c-cart-summary__buttons--proceed o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
-            status="primary"
+            status="positive"
             type="button"
           >
             <div
@@ -9373,7 +9361,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             >
               <button
                 aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -10674,9 +10662,9 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               >
                 <Button
                   aria-label="Continue to payment"
+                  className="o-button--sml"
                   label="Continue to Payment"
                   onClick={[Function]}
-                  size="lrg"
                   status="primary"
                   type="submit"
                 >
@@ -10685,7 +10673,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <button
                       aria-label="Continue to payment"
-                      className="o-button o-button--primary o-button--lrg"
+                      className="o-button--sml o-button o-button--primary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -10932,10 +10920,9 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button"
+                className="o-form__header-button o-button--sml"
                 label="Edit"
                 onClick={[Function]}
-                size="lrg"
                 status="secondary"
               >
                 <div
@@ -10943,7 +10930,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
+                    className="o-form__header-button o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -11204,7 +11191,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           </_class>
           <Button
             aria-label="Apply Gift Code"
-            className="c-payment-method__gift-button  o-button--sml"
+            className="c-payment-method__gift-button o-button--sml"
             label="Apply"
             status="primary"
           >
@@ -11213,7 +11200,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             >
               <button
                 aria-label="Apply Gift Code"
-                className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                 disabled={false}
                 role="button"
                 tabIndex="0"
@@ -12020,7 +12007,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
         <Sticker>
           <div
             aria-label="Cart total summary"
-            className="u-sticky  c-cart-summary"
+            className="u-sticky c-cart-summary"
           >
             <div
               className=""
@@ -12080,10 +12067,9 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           >
             <Button
               aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue"
+              className="c-cart-summary__buttons--continue o-button--sml"
               label="Continue shopping"
               onClick={[Function]}
-              size="lrg"
               status="primary"
               type="button"
             >
@@ -12092,7 +12078,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               >
                 <button
                   aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button o-button--primary o-button--lrg"
+                  className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
                   disabled={false}
                   onClick={[Function]}
                   role="button"
@@ -12106,11 +12092,10 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           </Link>
           <Button
             aria-label="Continue to Payment"
-            className="c-cart-summary__buttons--proceed"
+            className="c-cart-summary__buttons--proceed o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
-            status="primary"
+            status="positive"
             type="button"
           >
             <div
@@ -12118,7 +12103,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             >
               <button
                 aria-label="Continue to Payment"
-                className="c-cart-summary__buttons--proceed o-button o-button--primary o-button--lrg"
+                className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                 disabled={false}
                 onClick={[Function]}
                 role="button"

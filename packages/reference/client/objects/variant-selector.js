@@ -12,7 +12,7 @@ class VariantSelector extends Component {
       // TODO: Do not use data attributes but instead use redux
       variants && variants.map((variant, idx) =>
         <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price}>
-          { variant.meta_attributes.size.value }
+          { variant.title }
         </option>
       )
     )

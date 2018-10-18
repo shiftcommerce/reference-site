@@ -1,7 +1,11 @@
 .c-login {
-  width: 60%;
+  width: 80%;
   margin: auto;
   padding-bottom: 2rem;
+
+  @include breakpoint(tablet) {
+    width: 60%;
+  }
 
   &__title {
     text-align: center;
@@ -11,8 +15,9 @@
 
   &__caption {
     text-align: center;
-    color: grey;
+    color: $text-default;
     font-weight: 300;
+    margin-bottom: 0;
   }
 
   &__button {
@@ -35,7 +40,7 @@
     border-color: $border-default;
     background-color: $background-light;
     font-weight: 200;
-    font-size: 14px;
+    font-size: 0.9em;
     margin-top: 10px;
   }
 }

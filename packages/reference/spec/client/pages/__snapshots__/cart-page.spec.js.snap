@@ -565,7 +565,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     </_class>
                     <Button
                       aria-label="Apply Gift Code"
-                      className="c-payment-method__gift-button  o-button--sml"
+                      className="c-payment-method__gift-button o-button--sml"
                       label="Apply"
                       status="primary"
                     >
@@ -574,7 +574,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       >
                         <button
                           aria-label="Apply Gift Code"
-                          className="c-payment-method__gift-button  o-button--sml o-button o-button--primary"
+                          className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
                           disabled={false}
                           role="button"
                           tabIndex="0"
@@ -682,7 +682,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   aria-label="Continue Shopping"
                   className="c-cart-summary__buttons--continue o-button--sml"
                   label="Continue shopping"
-                  status="grey"
+                  status="secondary"
                   type="button"
                 >
                   <div
@@ -690,7 +690,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   >
                     <button
                       aria-label="Continue Shopping"
-                      className="c-cart-summary__buttons--continue o-button--sml o-button o-button--grey"
+                      className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
                       disabled={false}
                       role="button"
                       tabIndex="0"
@@ -701,11 +701,10 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   </div>
                 </Button>
                 <Link
-                  as=""
                   href="/checkout"
                 >
                   <Button
-                    aria-label="Place Order"
+                    aria-label="Continue to payment"
                     className="c-cart-summary__buttons--proceed o-button--sml"
                     label="Continue to payment"
                     onClick={[Function]}
@@ -716,7 +715,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="o-button__container"
                     >
                       <button
-                        aria-label="Place Order"
+                        aria-label="Continue to payment"
                         className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
                         disabled={false}
                         onClick={[Function]}

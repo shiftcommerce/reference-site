@@ -24,22 +24,20 @@ class LoginForm extends Component {
     const { login, formName, onBlur } = this.props
 
     return (
-      <>
-        <Input
-          label={fieldOption.label}
-          className={fieldOption.className}
-          labelClassName={fieldOption.labelClassName}
-          inputId={fieldOption.id}
-          name={fieldOption.name}
-          type={fieldOption.type}
-          value={fieldOption.value}
-          required={(fieldOption.rules && fieldOption.rules.required)}
-          validationMessage={login.errors[fieldOption.name]}
-          rules={fieldOption.rules}
-          formName={formName}
-          onBlur={onBlur}
-        />
-      </>
+      <Input
+        label={fieldOption.label}
+        className={fieldOption.className}
+        labelClassName={fieldOption.labelClassName}
+        inputId={fieldOption.id}
+        name={fieldOption.name}
+        type={fieldOption.type}
+        value={fieldOption.value}
+        required={(fieldOption.rules && fieldOption.rules.required)}
+        validationMessage={login.errors[fieldOption.name]}
+        rules={fieldOption.rules}
+        formName={formName}
+        onBlur={onBlur}
+      />
     )
   }
 
@@ -86,10 +84,9 @@ class LoginForm extends Component {
     return (
       <div className='o-form__input-group'>
         <Button
-          className='c-login__button-icon'
+          className='c-login__button-icon o-button--sml'
           aria-label='Continue Securely'
           label='CONTINUE SECURELY'
-          size='lrg'
           status={(isValidForm ? 'primary' : 'disabled')}
           type='submit'
           disabled={!isValidForm}

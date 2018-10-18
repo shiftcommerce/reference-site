@@ -293,9 +293,9 @@ exports[`display pre selected shipping method as selected option on page load 1`
         >
           <Button
             aria-label="Continue to payment"
+            className="o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
             status="primary"
             type="submit"
           >
@@ -304,7 +304,7 @@ exports[`display pre selected shipping method as selected option on page load 1`
             >
               <button
                 aria-label="Continue to payment"
-                className="o-button o-button--primary o-button--lrg"
+                className="o-button--sml o-button o-button--primary"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -704,9 +704,9 @@ exports[`render shipping methods as expected 1`] = `
         >
           <Button
             aria-label="Continue to payment"
+            className="o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
             status="primary"
             type="submit"
           >
@@ -715,7 +715,7 @@ exports[`render shipping methods as expected 1`] = `
             >
               <button
                 aria-label="Continue to payment"
-                className="o-button o-button--primary o-button--lrg"
+                className="o-button--sml o-button o-button--primary"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -1018,9 +1018,9 @@ exports[`renders line item quantity as expected 1`] = `
         >
           <Button
             aria-label="Continue to payment"
+            className="o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
             status="primary"
             type="submit"
           >
@@ -1029,7 +1029,7 @@ exports[`renders line item quantity as expected 1`] = `
             >
               <button
                 aria-label="Continue to payment"
-                className="o-button o-button--primary o-button--lrg"
+                className="o-button--sml o-button o-button--primary"
                 disabled={false}
                 onClick={[Function]}
                 role="button"
@@ -1332,9 +1332,9 @@ exports[`should be able to select a shipping method 1`] = `
         >
           <Button
             aria-label="Continue to payment"
+            className="o-button--sml"
             label="Continue to Payment"
             onClick={[Function]}
-            size="lrg"
             status="primary"
             type="submit"
           >
@@ -1343,7 +1343,7 @@ exports[`should be able to select a shipping method 1`] = `
             >
               <button
                 aria-label="Continue to payment"
-                className="o-button o-button--primary o-button--lrg"
+                className="o-button--sml o-button o-button--primary"
                 disabled={false}
                 onClick={[Function]}
                 role="button"

@@ -65,7 +65,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={1}
       >
-        Size 8
+        Small
       </option>
       <option
         aria-posinset={2}
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={2}
       >
-        Size 10
+        Medium
       </option>
       <option
         aria-posinset={3}
@@ -87,7 +87,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={3}
       >
-        Size 12
+        Large
       </option>
     </select>
   </div>

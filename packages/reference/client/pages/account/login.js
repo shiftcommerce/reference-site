@@ -81,7 +81,7 @@ export class Login extends Component {
         { this.renderErrors(login) }
         <p className='c-login__caption'>{ "Don't have an account?" }</p>
         <Link href='/account/register'>
-          <Button className='c-login__button-icon' label='CREATE NEW ACCOUNT' status='primary' size='lrg' aria-label='Create New Account' />
+          <Button className='c-login__button-icon o-button--sml' label='CREATE NEW ACCOUNT' status='primary' aria-label='Create New Account' />
         </Link>
       </div>
     )
