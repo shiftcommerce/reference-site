@@ -63,7 +63,7 @@ exports[`renders the full HeroImage component 1`] = `
   }
 >
   <div
-    className="c-hero c-hero--full"
+    className="o-template-component o-template-component--full-width c-hero"
     style={
       Object {
         "backgroundColor": "antiquewhite",

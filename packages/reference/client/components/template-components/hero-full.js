@@ -99,7 +99,7 @@ class HeroFull extends Component {
     let mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
 
     return (
-      <div className='c-hero c-hero--full' style={{ backgroundColor: componentData.background_colour }}>
+      <div className='o-template-component o-template-component--full-width c-hero' style={{ backgroundColor: componentData.background_colour }}>
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }

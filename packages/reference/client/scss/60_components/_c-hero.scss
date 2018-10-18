@@ -20,6 +20,12 @@
 
   &__content {
     position: relative;
+
+    @include breakpoint(desktop) {
+      max-width: $o-body-container-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__overlay {
@@ -175,18 +181,5 @@
       background-color: $background-primary;
       margin: $global-spacing-unit-small auto;
     }
-  }
-}
-
-.c-hero--full::before {
-  @include breakpoint(desktop) {
-    content:"";
-    position: absolute;
-    width: 100vw; /* 100% width */
-    left: -10vw; /* 10% width gutters */
-    top: 0;
-    height: 100%;
-    background-color: inherit;
-    z-index: -1;
   }
 }
