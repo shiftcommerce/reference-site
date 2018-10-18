@@ -1,19 +1,4 @@
 .c-footer {
-
-  &-email {
-    height: 104px;
-    background-color: $background-positive;
-
-    &-text {
-      padding-top: 20px;
-
-      p {
-        margin: 0;
-        color: white;
-      }
-    }
-  }
-
   &__content {
     height: 175px;
     background-color: white;
@@ -22,15 +7,15 @@
   &__links {
     display: inline-block;
     height: 100px;
-    margin: 0 auto 35px auto;
+    margin: 0 auto $global-spacing-unit-large auto;
     font-size: 0.8em;
     text-align: center;
     background-color: $light-grey;
-    padding: 40px;
+    padding: ($global-spacing-unit-small * 3) 0;
     width: 100% !important;
 
     a {
-      padding: 5px 15px;
+      padding: $global-spacing-unit-tiny $global-spacing-unit-small;
       border-left: 1px solid lightgrey;
     }
 
@@ -53,24 +38,26 @@
     }
 
     &-links {
-      display: flex;
+      display: inline-block;
       margin: auto;
-      width: 120px;
     }
 
     &-facebook {
+      display: inline-block;
       background: url('/static/facebook.svg') no-repeat center;
       width: 50px;
       height: 50px;
     }
 
     &-instagram {
+      display: inline-block;
       background: url('/static/instagram.svg') no-repeat center;
       width: 50px;
       height: 50px;
     }
 
     &-twitter {
+      display: inline-block;
       background: url('/static/twitter.svg') no-repeat center;
       width: 50px;
       height: 50px;

@@ -1,4 +1,5 @@
 .c-payment-method {
+  padding-top: $global-spacing-unit-small;
 
   label {
     font-size: 0.7rem;
@@ -7,12 +8,11 @@
 
   &__button {
     display: inline-block;
-    padding: 0 2rem;
     font-size: 0.7rem;
     text-transform: uppercase;
     height: 35px;
     width: 45%;
-    margin: 2%;
+    margin: 2.5%;
     text-align: center;
     color: white;
     background-color: black;
@@ -34,7 +34,7 @@
     font-size: 0.75rem;
     width: 95%;
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: $global-spacing-unit;
     border-bottom: 1px solid #eee;
 
     p {
@@ -52,7 +52,7 @@
   &__gift {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    grid-auto-rows: minmax(50px, auto);
 
     @include breakpoint(desktop) {
       grid-template-columns: [col1-start] 67% [col2-start] 30% [col2-end];
@@ -60,21 +60,23 @@
     }
 
     &-button {
+      display: inline-block;
       height: 2rem;
-      width: 7rem;
-      margin-top: 2.1rem;
+      max-width: 8rem;
+      min-width: 6rem;
+      width: 100%;
+      margin-top: $global-spacing-unit;
       line-height: 2px;
 
       @include breakpoint(desktop) {
         width: 100%;
         height: 2.3rem;
-        margin-top: 1.9rem;
+        margin-top: $global-spacing-unit;
       }
     }
 
     &-input {
-      width: 16rem;
-      margin-right: 0.5rem;
+      margin-right: $global-spacing-unit-tiny;
 
       @include breakpoint(desktop) {
         width: 100%;
@@ -83,13 +85,15 @@
   }
 
   &__images {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    margin: $global-spacing-unit-tiny;
+    margin-top: 0;
 
     img {
-      height: 30px;
-      padding: 5px;
+      height: 25px;
+      padding: $global-spacing-unit-tiny;
     }
 
     div {
@@ -97,16 +101,16 @@
     }
 
     &-cardpayment {
-      margin-left: 0.5rem;
+      margin: auto;
     }
 
     &-paypal {
-      margin-left: 4rem;
+      margin: auto;
     }
   }
 
   &__header {
-    padding-top: 5px;
+    padding-top: $global-spacing-unit-tiny;
 
     h2 {
       margin-bottom: 0;

@@ -11,7 +11,9 @@ export function createOrder (cart, checkout, order) {
   const request = {
     endpoint: '/createOrder',
     body: convertCheckoutToOrder(cart, checkout, order),
-    successActionType: types.CREATE_ORDER
+    requestActionType: types.CREATE_ORDER,
+    successActionType: types.SET_ORDER,
+    errorActionType: types.ERROR_ORDER
   }
   return postEndpoint(request)
 }

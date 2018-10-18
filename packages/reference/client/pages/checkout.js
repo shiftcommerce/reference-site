@@ -142,7 +142,7 @@ export class CheckoutPage extends Component {
     if (this.props.checkout.paymentMethod.selectedMethod === 'card') {
       this.props.dispatch(requestCardToken(true))
     } else {
-      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order, this.props.ip))
+      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order))
     }
   }
 

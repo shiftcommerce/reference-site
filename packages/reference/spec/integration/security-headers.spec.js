@@ -35,6 +35,7 @@ describe('GET /', () => {
       `img-src 'self' ${formattedImageHosts}`,
       "style-src 'self' 'unsafe-inline'",
       "script-src 'self' 'unsafe-inline' https://js.stripe.com",
+      'frame-src https://js.stripe.com',
       "connect-src 'self'",
       "form-action 'self'",
       "object-src 'self'",

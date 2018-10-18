@@ -193,7 +193,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             className="c-payment-method__images-paypal"
           >
             <Image
-              src="/static/payments/PayPal.svg"
+              src="/static/payments/pay-pal.svg"
             >
               <div>
                 <LazyLoad
@@ -1214,7 +1214,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             className="c-payment-method__images-paypal"
           >
             <Image
-              src="/static/payments/PayPal.svg"
+              src="/static/payments/pay-pal.svg"
             >
               <div>
                 <LazyLoad
@@ -1694,7 +1694,7 @@ exports[`renders payment summary on collapsing 1`] = `
             className="c-payment-method__images-paypal"
           >
             <Image
-              src="/static/payments/PayPal.svg"
+              src="/static/payments/pay-pal.svg"
             >
               <div>
                 <LazyLoad

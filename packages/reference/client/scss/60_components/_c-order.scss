@@ -1,0 +1,173 @@
+.c-order {
+  font-size: 0.9em;
+
+  @include breakpoint(desktop) {
+    margin: auto;
+  }
+
+  p, h1, h2, h3, h4 {
+    margin: 0;
+  }
+
+  &__header {
+    padding: $global-spacing-unit-small;
+
+    &-tick {
+      display: inline-block;
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background-color: $alert-orange;
+      color: white;
+      text-align: center;
+      font-size: 1.6em;
+      padding: 8px;
+    }
+
+    &-text {
+      display: inline-block;
+      padding: $global-spacing-unit-tiny;
+      margin-left: $global-spacing-unit-large;
+
+      h3 {
+        @include breakpoint(desktop) {
+          font-size: 1.5em;
+        }
+      }
+
+      &-id {
+        font-size: 0.85em;
+
+        @include breakpoint(desktop) {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  &__map {
+    @include breakpoint(desktop) {
+      height: 400px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    &-image {
+      @include breakpoint(desktop) {
+        align-self: center;
+      }
+    }
+  }
+
+  &__confirm {
+    padding: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      padding: $global-spacing-unit-small 0;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: $global-spacing-unit-small;
+
+      @include breakpoint(desktop) {
+        font-weight: 500;
+      }
+    }
+
+    p {
+      font-size: 0.85em;
+
+      @include breakpoint(desktop) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &__customer-info {
+    padding: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      padding: $global-spacing-unit-small 0;
+    }
+
+    h3 {
+      margin-bottom: $global-spacing-unit-small;
+
+      @include breakpoint(desktop) {
+        font-size: 1.5em;
+      }
+    }
+
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__shipping-address {
+    padding: $global-spacing-unit-small 0;
+    border-bottom: 1px solid $border-default;
+
+    h4 {
+      @include breakpoint(desktop) {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  &__shipping-method {
+    padding: $global-spacing-unit-small 0;
+    border-bottom: 1px solid $border-default;
+
+    h4 {
+      @include breakpoint(desktop) {
+        font-size: 1.3em;
+      }
+    }
+
+    &-delivery {
+      display: inline-block;
+    }
+
+  }
+
+  &__payment-method {
+    padding: $global-spacing-unit-small 0;
+
+    h4 {
+      @include breakpoint(desktop) {
+        font-size: 1.3em;
+      }
+    }
+
+    &-card {
+      display: inline-block;
+      margin: $global-spacing-unit-small 0;
+
+      span {
+        margin-left: $global-spacing-unit-small;
+      }
+
+      &-image {
+        display: inline-block;
+        height: 20px;
+        margin-right: $global-spacing-unit-small;
+      }
+    }
+  }
+
+  &__button {
+    padding: $global-spacing-unit-small;
+    padding-top: 0;
+
+    @include breakpoint(desktop) {
+      padding: 0 0 $global-spacing-unit-small 0;
+    }
+
+    &--continue {
+      width: 100%;
+      font-size: 1em;
+    }
+  }
+}

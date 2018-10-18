@@ -24,18 +24,20 @@ class LineItems extends Component {
   }
 
   renderButtonsAndTotal (lineItem) {
-    return <>
-      <div className='c-line-items__grid-item3'>
-        <div className='c-line-items__delete'>
-          <a className='c-line-items__delete-button' data-variant={lineItem.sku} onClick={this.props.deleteItem} >
-            Delete
-          </a>
+    return (
+      <>
+        <div className='c-line-items__grid-item3'>
+          <div className='c-line-items__delete'>
+            <a className='c-line-items__delete-button' data-variant={lineItem.sku} onClick={this.props.deleteItem} >
+              Delete
+            </a>
+          </div>
         </div>
-      </div>
-      <div className='c-line-items__grid-item10'>
-        <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
-      </div>
-    </>
+        <div className='c-line-items__grid-item10'>
+          <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
+        </div>
+      </>
+    )
   }
 
   renderTitle (lineItem) {

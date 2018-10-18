@@ -4,7 +4,6 @@ const stripe = require('stripe')(process.env.SECRET_STRIPE_API_KEY)
 // Product api urls
 const api = require('./../constants/api-urls')
 
-// Fetch product details basing on the product id set in the params
 function createOrderRenderer () {
   return (req, res) => {
     const body = req.body
@@ -52,9 +51,9 @@ function createOrderRenderer () {
 
 async function placeOrder (req, res, orderPayload) {
   const url = `${api.CreateOrderUrl}.json_api`
-  req.body = orderPayload
-  let data = await postData(req.body, url)
-  return res.status(201).send(data)
+  const response = await postData(orderPayload, url)
+
+  return res.status(201).send(response.data)
 }
 
 module.exports = { createOrderRenderer }

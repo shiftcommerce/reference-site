@@ -2,7 +2,7 @@ $input-checkbox-size: 16px;
 $input-checkbox-spacing: 8px;
 
 .o-form {
-  width: 100%;
+  width: 100vw;
 
   &-errors {
     color: $text-error;
@@ -14,26 +14,26 @@ $input-checkbox-spacing: 8px;
     display: flex;
     justify-content: space-between;
     font-size: 0.7em;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding-left: $global-spacing-unit-small;
+    padding-right: $global-spacing-unit-small;
+    margin-top: -$global-spacing-unit;
 
     &-title {
-      margin: 10px 0;
+      margin: $global-spacing-unit-small 0;
 
       h2 {
         margin: 0;
-        margin-top: 10px;
+        margin-top: $global-spacing-unit-small;
       }
     }
 
     &-edit {
-      margin-top: 10px;
+      margin-top: $global-spacing-unit-small;
     }
 
     &-button {
       width: 60px;
-      padding: 5px;
+      padding: $global-spacing-unit-tiny;
       border: none;
     }
   }
@@ -47,10 +47,11 @@ $input-checkbox-spacing: 8px;
   }
 
   &__wrapper {
-    padding: 10px;
+    padding: $global-spacing-unit-small;
+    width: 100vw;
 
     &--collapsed {
-      padding-bottom: 1rem;
+      padding-bottom: $global-spacing-unit-small;
       font-size: 0.8rem;
       border-bottom: 1px solid #eee;
       width: 95%;
@@ -71,7 +72,7 @@ $input-checkbox-spacing: 8px;
     button {
       display: flex;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: $global-spacing-unit-small;
     }
 
     ::placeholder {
@@ -89,7 +90,7 @@ $input-checkbox-spacing: 8px;
 
   &__label {
     font-size: 0.9em;
-    margin-bottom: 10px;
+    margin-bottom: $global-spacing-unit-small;
   }
 
   &__checkbox {
@@ -102,7 +103,7 @@ $input-checkbox-spacing: 8px;
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
-    margin-bottom: 10px;
+    margin-bottom: $global-spacing-unit-small;
 
     &:checked+.o-form__checkbox-caption:before {
       background-image: url('/static/tick.png');
@@ -128,7 +129,7 @@ $input-checkbox-spacing: 8px;
       display: inline-block;
       position: relative;
       top: $input-checkbox-spacing / 2;
-      margin-left: -($input-checkbox-size + $input-checkbox-spacing);
+      margin-left: -$global-spacing-unit;
       margin-right: $input-checkbox-spacing;
       width: $input-checkbox-size;
       height: $input-checkbox-size;
@@ -146,11 +147,10 @@ $input-checkbox-spacing: 8px;
   }
 
   &__input-field {
-    margin: 0.65em 0;
+    margin: $global-spacing-unit-tiny 0;
     display: block;
-    padding: .5rem .75rem;
-    font-size: 1rem;
-    line-height: 1.25;
+    padding: $global-spacing-unit-tiny;
+    font-size: 0.9rem;
     background-color: white;
     background-image: none;
     background-clip: padding-box;
@@ -161,7 +161,7 @@ $input-checkbox-spacing: 8px;
       color: $text-error;
       border-color: $border-error;
       background-color: $light-grey;
-      margin-bottom: 10px;
+      margin-bottom: $global-spacing-unit-small;
 
       &::first-letter {
         text-transform: capitalize;

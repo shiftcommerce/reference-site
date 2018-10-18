@@ -1350,7 +1350,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   className="c-payment-method__images-paypal"
                 >
                   <Image
-                    src="/static/payments/PayPal.svg"
+                    src="/static/payments/pay-pal.svg"
                   >
                     <div>
                       <LazyLoad
@@ -1598,6 +1598,12 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               </a>
                
             </h2>
+            <h4
+              className="c-cart-table__total"
+            >
+              £
+              35.45
+            </h4>
             <p
               className="c-cart-table__description"
             >
@@ -1660,16 +1666,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               </t>
                will be saved for 48 hours depending on availablility
             </p>
-          </div>
-          <div
-            className="u-float--right"
-          >
-            <h4
-              className="c-cart-table__total"
-            >
-              £
-              35.45
-            </h4>
           </div>
         </section>
         <LineItems
@@ -3584,7 +3580,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     className="c-payment-method__images-paypal"
                   >
                     <Image
-                      src="/static/payments/PayPal.svg"
+                      src="/static/payments/pay-pal.svg"
                     >
                       <div>
                         <LazyLoad
@@ -3837,6 +3833,12 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 </a>
                  
               </h2>
+              <h4
+                className="c-cart-table__total"
+              >
+                £
+                35.45
+              </h4>
               <p
                 className="c-cart-table__description"
               >
@@ -3899,16 +3901,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 </t>
                  will be saved for 48 hours depending on availablility
               </p>
-            </div>
-            <div
-              className="u-float--right"
-            >
-              <h4
-                className="c-cart-table__total"
-              >
-                £
-                35.45
-              </h4>
             </div>
           </section>
           <LineItems
@@ -5791,7 +5783,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   className="c-payment-method__images-paypal"
                 >
                   <Image
-                    src="/static/payments/PayPal.svg"
+                    src="/static/payments/pay-pal.svg"
                   >
                     <div>
                       <LazyLoad
@@ -6039,6 +6031,12 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               </a>
                
             </h2>
+            <h4
+              className="c-cart-table__total"
+            >
+              £
+              35.45
+            </h4>
             <p
               className="c-cart-table__description"
             >
@@ -6101,16 +6099,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               </t>
                will be saved for 48 hours depending on availablility
             </p>
-          </div>
-          <div
-            className="u-float--right"
-          >
-            <h4
-              className="c-cart-table__total"
-            >
-              £
-              35.45
-            </h4>
           </div>
         </section>
         <LineItems
@@ -8377,7 +8365,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   className="c-payment-method__images-paypal"
                 >
                   <Image
-                    src="/static/payments/PayPal.svg"
+                    src="/static/payments/pay-pal.svg"
                   >
                     <div>
                       <LazyLoad
@@ -8703,6 +8691,12 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               </a>
                
             </h2>
+            <h4
+              className="c-cart-table__total"
+            >
+              £
+              35.45
+            </h4>
             <p
               className="c-cart-table__description"
             >
@@ -8765,16 +8759,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               </t>
                will be saved for 48 hours depending on availablility
             </p>
-          </div>
-          <div
-            className="u-float--right"
-          >
-            <h4
-              className="c-cart-table__total"
-            >
-              £
-              35.45
-            </h4>
           </div>
         </section>
         <LineItems
@@ -11119,7 +11103,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   className="c-payment-method__images-paypal"
                 >
                   <Image
-                    src="/static/payments/PayPal.svg"
+                    src="/static/payments/pay-pal.svg"
                   >
                     <div>
                       <LazyLoad
@@ -11445,6 +11429,12 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               </a>
                
             </h2>
+            <h4
+              className="c-cart-table__total"
+            >
+              £
+              35.45
+            </h4>
             <p
               className="c-cart-table__description"
             >
@@ -11507,16 +11497,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               </t>
                will be saved for 48 hours depending on availablility
             </p>
-          </div>
-          <div
-            className="u-float--right"
-          >
-            <h4
-              className="c-cart-table__total"
-            >
-              £
-              35.45
-            </h4>
           </div>
         </section>
         <LineItems

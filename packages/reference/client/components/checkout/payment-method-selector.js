@@ -32,7 +32,7 @@ export default class PaymentMethodSelector extends Component {
           <Image src='/static/payments/maestro.svg' />
         </span>
         <span className='c-payment-method__images-paypal'>
-          <Image src='/static/payments/PayPal.svg' />
+          <Image src='/static/payments/pay-pal.svg' />
         </span>
       </div>
     </>

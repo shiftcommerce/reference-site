@@ -9,7 +9,7 @@
   &__logo {
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: $global-spacing-unit;
     text-align: center;
 
     @include breakpoint(desktop) {
@@ -22,7 +22,7 @@
     width: 100%;
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
+    margin-top: $global-spacing-unit-small;
     border-bottom: 1px solid #eee;
 
     @include breakpoint(desktop) {
@@ -32,6 +32,7 @@
 
     .c-step-indicator {
       color: $text-default;
+      margin: 0 $global-spacing-unit-tiny;
 
       a, a:link, a:hover, a:visited {
         color: inherit;
@@ -42,10 +43,10 @@
 
         &--completed {
           display: block;
-          margin-top: -32%;
-          margin-bottom: 32%;
-          margin-left: 70%;
-          width: 60%;
+          position: fixed;
+          margin-top: -$global-spacing-unit;
+          margin-left: $global-spacing-unit;
+          width: 90px;
           z-index: -999;
           border: 1px solid $background-positive;
         }
@@ -53,12 +54,11 @@
 
       &__position {
         display: block;
-        margin: 10px auto;
+        margin: auto;
         height: 45px;
         width: 45px;
         line-height: 45px;
         border-radius: 50%;
-        text-align: center;
         background-color: $checkout-grey;
 
         &--active {
@@ -74,9 +74,9 @@
       }
 
       &__subtitle {
-        padding: 5px 0 15px;
+        padding: $global-spacing-unit-tiny 0 $global-spacing-unit-small;
         font-size: 0.6em;
-        width: 100px;
+        width: 100%;
         color: black;
 
         &--active {

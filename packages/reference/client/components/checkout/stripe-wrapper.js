@@ -5,9 +5,6 @@ import { StripeProvider, Elements } from 'react-stripe-elements'
 // Components
 import StripeCardFields from './stripe-card-fields'
 
-// Constants
-import paymentConfig from '../../constants/payment-config'
-
 class StripeWrapper extends Component {
   renderStripeForm (StripeApiKey) {
     const {
@@ -40,7 +37,7 @@ class StripeWrapper extends Component {
   }
 
   render () {
-    let StripeApiKey = paymentConfig.StripeApiKey
+    const StripeApiKey = process.env.STRIPE_API_KEY
 
     return (
       StripeApiKey ? this.renderStripeForm(StripeApiKey) : this.renderServiceUnavailableMessage()

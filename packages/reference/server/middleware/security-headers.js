@@ -89,6 +89,9 @@ const buildContentSecurityPolicy = (imageHosts) => {
     // required as that's how we load Stripe
     "script-src 'self' 'unsafe-inline' https://js.stripe.com",
 
+    // Allow <frame> and <iframe>'s from third party sources.
+    'frame-src https://js.stripe.com',
+
     // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
     // WebSocket and EventSource
     "connect-src 'self'",

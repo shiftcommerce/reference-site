@@ -12,7 +12,7 @@ export const initialState = {
 
 export default function setOrder (state = initialState, action) {
   switch (action.type) {
-    case types.CREATE_ORDER:
+    case types.SET_ORDER:
       return Object.assign({}, state, action.payload)
 
     case types.REQUEST_CARD_TOKEN:

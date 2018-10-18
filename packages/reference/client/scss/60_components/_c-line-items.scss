@@ -1,14 +1,13 @@
 .c-line-items {
   width: 100%;
-  padding: 15px 0px;
+  padding: $global-spacing-unit-small 0;
 
   &__grid {
     display: grid;
     grid-template-columns: [first] 40% [col2-start] 25% [col3-start] 25% [col4-start] 5% [end];
     grid-template-rows: [row1-start] 30% [row2-start] 30% [row3-start] 30% [row4-start] 5% [row5-start] 5% [row5-end];
     font-size: 0.9rem;
-    border-bottom: ($global-spacing-unit-tiny / 6) solid $border-divider;
-    margin-bottom: 1em;
+    margin-bottom: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
       grid-template-columns: [first] 35% [col2-start] 15% [col3-start] 35% [col4-start] 15% [end];
@@ -88,7 +87,7 @@
 
   &__image {
     width: 100%;
-    padding-right: 1em;
+    padding-right: $global-spacing-unit-small;
     height: 100%;
     display: inline-block;
   }

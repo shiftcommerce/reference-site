@@ -1,12 +1,12 @@
 $o-body-container-width: 80%;
 
 .o-body {
-  width: 100%;
-  padding-top: 12rem;
+  width: 100vw;
+  padding-top: 13em;
 
   @include breakpoint(desktop) {
     width: $o-body-container-width;
     margin: auto;
-    padding-top: 1rem;
+    padding-top: 1em;
   }
 }

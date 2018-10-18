@@ -22,7 +22,7 @@ class CheckoutCartTotal extends Component {
   }
 
   renderButtons () {
-    const { checkout, onClick, order } = this.props
+    const { checkout, onClick, order, convertToOrder } = this.props
     const isValidOrder = this.validOrder(checkout, order)
 
     if (checkout.currentStep === 3) {
@@ -68,7 +68,7 @@ class CheckoutCartTotal extends Component {
             id='place_order'
             status={(isValidOrder ? 'primary' : 'disabled')}
             disabled={!isValidOrder}
-            onClick={onClick}
+            onClick={convertToOrder}
           />
         </div>
       )
