@@ -1,3 +1,4 @@
+import BannerImage from './banner-image'
 import EmailSignup from './email-signup'
 import GenericGrid from './generic-grid'
 import HalfCategoryGallery from './half-category-gallery'
@@ -8,6 +9,7 @@ import RelatedLinks from './related-links'
 import ThirdCategoryGallery from './third-category-gallery'
 
 export default {
+  banner_image: BannerImage,
   email_signup: EmailSignup,
   generic_grid: GenericGrid,
   half_category_gallery: HalfCategoryGallery,

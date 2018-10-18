@@ -1,0 +1,7 @@
+.c-banner-image {
+  margin: $global-spacing-unit-tiny auto;
+
+  @include breakpoint(tablet) {
+    margin: $global-spacing-unit-small auto;
+  }
+}
