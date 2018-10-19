@@ -31,6 +31,21 @@ const fetchData = async (queryObject, url) => {
   }
 }
 
+const fetchOmsData = async (queryObject, url) => {
+  const query = qs.stringify(queryObject)
+
+  try {
+    const response = await axios.get(`${process.env.OMS_HOST}/${url}?${query}`, {
+      headers: headers
+    })
+
+    return response
+  } catch (error) {
+    console.error(error)
+    return error.response
+  }
+}
+
 const postData = async (body, url) => {
   try {
     const response = await axios({
@@ -49,4 +64,4 @@ const postData = async (body, url) => {
   }
 }
 
-module.exports = { fetchData, postData }
+module.exports = { fetchData, fetchOmsData, postData }

@@ -1,6 +1,8 @@
 // Libraries
 import { Component } from 'react'
 import Link from 'next/link'
+
+// Lib
 import { fixedPrice } from '../../lib/fixed-price'
 
 // Objects

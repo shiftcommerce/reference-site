@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
   web:
@@ -12,6 +12,13 @@ services:
     volumes:
       - .:/app
       - yarn_cache:/app/node_modules
+    networks:
+      - shift_net
 
 volumes:
   yarn_cache:
+
+networks:
+  shift_net:
+    driver: bridge
+    name: shift_net

@@ -29,12 +29,13 @@ const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 
 // Api
 const { fetchData } = require('./lib/api-server')
-const api = require('./constants/api-urls')
+const { platform, oms } = require('./constants/api-urls')
 
 // Handlers
+const accountHandler = require('./route-handlers/account-route-handler')
 const handler = require('./route-handlers/route-handler')
 const orderHandler = require('./route-handlers/order-route-handler')
-const accountHandler = require('./route-handlers/account-route-handler')
+const orderHistoryHandler = require('./route-handlers/order-history-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -129,14 +130,16 @@ module.exports = app.prepare().then(() => {
   })
 
   // Routes for local API calls
-  server.get('/getCategory', handler.getRenderer(api.CategoryUrl))
-  server.get('/getMenus', handler.getRenderer(api.MenuUrl))
-  server.get('/getProduct/:id', handler.getRenderer(api.ProductUrl))
-  server.get('/getSlug', handler.getRenderer(api.SlugUrl))
-  server.get('/getStaticPage/:id', handler.getRenderer(api.PageUrl))
+  server.get('/getCategory', handler.getRenderer(platform.CategoryUrl))
+  server.get('/getMenus', handler.getRenderer(platform.MenuUrl))
+  server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
+  server.get('/getSlug', handler.getRenderer(platform.SlugUrl))
+  server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
+  server.get('/orderHistory', orderHistoryHandler.orderHistoryRenderer(oms.orderHistoryUrl))
+
   server.post('/createOrder', orderHandler.createOrderRenderer())
-  server.post('/register', accountHandler.accountRenderer(api.RegisterUrl))
-  server.post('/login', accountHandler.accountRenderer(api.LoginUrl))
+  server.post('/register', accountHandler.accountRenderer(platform.RegisterUrl))
+  server.post('/login', accountHandler.accountRenderer(platform.LoginUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     let slug = req.url

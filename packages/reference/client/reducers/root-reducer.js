@@ -9,6 +9,7 @@ import setAccount from './set-account'
 import setLogin from './set-login'
 import setMenu from './set-menu'
 import setOrder from './set-order'
+import setOrders from './set-orders'
 import setPage from './set-page'
 import setProduct from './set-product'
 import setSearchState from './set-search-state'
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   login: setLogin,
   menu: setMenu,
   order: setOrder,
+  orders: setOrders,
   page: setPage,
   product: setProduct,
   search: setSearchState,

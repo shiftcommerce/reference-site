@@ -10,7 +10,7 @@ function accountRenderer (url) {
       const customerId = data.relationships.customer_account.data.id
       req.session.customerId = customerId
 
-      return res.status(201).send(data)
+      return res.status(201).send(response.data)
     } else if (response.status === 422 || response.status === 404) {
       const errorData = response.data.errors
 
