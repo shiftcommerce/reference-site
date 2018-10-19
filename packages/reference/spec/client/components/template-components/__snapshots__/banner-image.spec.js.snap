@@ -23,6 +23,11 @@ exports[`BannerImage component renders correctly 1`] = `
           "updated_at": "2018-10-12T08:34:46Z",
         },
       ],
+      "image_link": Array [
+        Object {
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png",
+        },
+      ],
       "link_1_url": Array [
         Object {
           "canonical_path": "/offers/25%25off",
@@ -54,8 +59,12 @@ exports[`BannerImage component renders correctly 1`] = `
     }
   }
 >
-  <Link>
+  <Link
+    as="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+    href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+  >
     <a
+      href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
       onClick={[Function]}
     >
       <Image

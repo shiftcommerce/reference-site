@@ -2,6 +2,11 @@ const bannerImageData = {
   id: '4_1',
   type: 'components',
   reference: 'banner_image',
+  image_link: [
+    {
+      canonical_path: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png'
+    }
+  ],
   image: [
     {
       'meta_attributes': {},
