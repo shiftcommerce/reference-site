@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+const path = require('path')
+const Dotenv = require('dotenv-webpack')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 
@@ -14,52 +18,65 @@ module.exports = withCSS(withSass({
         aggregateTimeout: 300
       }
     }
+
+    config.plugins = config.plugins || []
+    config.plugins = [
+      ...config.plugins,
+
+      // Read the .env file
+      new Dotenv({
+        path: path.join(__dirname, '.env'),
+        systemvars: true
+      })
+    ]
+
     return config
   },
   webpack (config, { dev }) {
-    config.module.rules.push(
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              query: {
-                hash: 'sha512',
-                digest: 'hex',
-                name: '[hash].[ext]'
-              }
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: { progressive: true, quality: 65 },
-              optipng: { enabled: false },
-              pngquant: { quality: '65-90', speed: 4 },
-              gifsicle: { interlaced: false },
-              webp: { quality: 75 }
+    config.module.rules.push({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            query: {
+              hash: 'sha512',
+              digest: 'hex',
+              name: '[hash].[ext]'
             }
           }
-        ]
-      },
-      {
-        test: /\.(eot|woff|woff2|ttf|jpg)$/,
-        use: {
-          loader: 'url-loader',
+        },
+        {
+          loader: 'image-webpack-loader',
           options: {
-            limit: 100000, name: '[name].[ext]'
+            mozjpeg: { progressive: true, quality: 65 },
+            optipng: { enabled: false },
+            pngquant: { quality: '65-90', speed: 4 },
+            gifsicle: { interlaced: false },
+            webp: { quality: 75 }
           }
         }
-      })
+      ]
+    },
+    {
+      test: /\.(eot|woff|woff2|ttf|jpg)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 100000, name: '[name].[ext]'
+        }
+      }
+    })
 
     // Perform customizations to config
     config.module.rules = config.module.rules.map(rule => {
       if (rule.loader === 'babel-loader') {
         rule.options.cacheDirectory = false
       }
+
       return rule
     })
+
     return config
   }
 }))
