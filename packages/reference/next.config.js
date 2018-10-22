@@ -1,7 +1,4 @@
-require('dotenv').config()
-
 const path = require('path')
-const Dotenv = require('dotenv-webpack')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 
@@ -18,6 +15,9 @@ module.exports = withCSS(withSass({
         aggregateTimeout: 300
       }
     }
+
+    require('dotenv').config()
+    const Dotenv = require('dotenv-webpack')
 
     config.plugins = config.plugins || []
     config.plugins = [
