@@ -1,4 +1,15 @@
 #!/bin/bash
 
-# Initially try to call yarn within the web container if booted, otherwise boot standalone.
-docker-compose exec web yarn $@ || docker-compose run --rm web yarn $@
+docker-compose ps | grep web | grep Up > /dev/null 2>&1
+
+exit_status=$?
+
+if [ $exit_status -eq 0 ]; then
+  echo "-- Web container is running"
+  echo "-- Attaching..."
+  docker-compose exec web yarn $@
+else
+  echo "-- Web container is not running"
+  echo "-- Running standalone container..."
+  docker-compose run --rm web yarn $@
+fi
