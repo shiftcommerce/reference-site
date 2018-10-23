@@ -24,12 +24,14 @@ exports[`renders the nav bar options 1`] = `
     role="navigation"
   >
     <input
+      checked={false}
       className="c-nav__checkbox"
       id="burger-menu"
       type="checkbox"
     />
     <div
       className="c-nav__menu-button"
+      onClick={[Function]}
     >
       <label
         className="c-nav__menu-button-icon"
@@ -46,10 +48,6 @@ exports[`renders the nav bar options 1`] = `
       <div
         className="c-nav__menu-header"
       >
-        <label
-          className="c-nav__menu-header-cross"
-          htmlFor="burger-menu"
-        />
         <Logo
           className="c-nav__menu-header-logo"
         >
@@ -68,7 +66,7 @@ exports[`renders the nav bar options 1`] = `
                   className="o-logo__image"
                   height={40}
                   src="/static/shopgo-logo.svg"
-                  width={150}
+                  width={180}
                 >
                   <div
                     className="o-logo__image"
@@ -97,6 +95,11 @@ exports[`renders the nav bar options 1`] = `
             </Link>
           </div>
         </Logo>
+        <label
+          className="c-nav__menu-header-cross"
+          htmlFor="burger-menu"
+          onClick={[Function]}
+        />
         <div
           className="c-nav__menu-header-search"
         >
@@ -158,6 +161,7 @@ exports[`renders the nav bar options 1`] = `
           href="/slug?slug=/categories/1"
           index={0}
           key="0"
+          onClick={[Function]}
           title="Bathroom"
         >
           <Link
@@ -165,11 +169,15 @@ exports[`renders the nav bar options 1`] = `
             href="/slug?slug=/categories/1"
           >
             <a
-              className="c-nav__option c-nav__option--first"
+              className="c-nav__option"
               href="/categories/1"
               onClick={[Function]}
             >
-              Bathroom
+              <div
+                className="c-nav__option-label"
+              >
+                Bathroom
+              </div>
               <div
                 className="c-nav__option-text"
               >

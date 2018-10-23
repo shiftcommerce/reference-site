@@ -12,10 +12,32 @@ import Logo from '../../objects/logo'
 import Button from '../../objects/button'
 
 export class NavBar extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      menuShown: false
+    }
+
+    this.toggleMenuShown = this.toggleMenuShown.bind(this)
+  }
+
+  toggleMenuShown (e) {
+    this.setState(state => {
+      return { menuShown: !state.menuShown }
+    })
+  }
+
   renderNavOptions (menuItems) {
     return (
       menuItems.map((menuItem, index) =>
-        <NavBarOption key={index} index={index} title={menuItem.title} href={`/slug?slug=${menuItem.canonical_path}`} as={menuItem.canonical_path} />
+        <NavBarOption
+          key={index}
+          index={index}
+          title={menuItem.title}
+          href={`/slug?slug=${menuItem.canonical_path}`}
+          as={menuItem.canonical_path}
+          onClick={this.toggleMenuShown}
+        />
       )
     )
   }
@@ -23,8 +45,8 @@ export class NavBar extends Component {
   renderNavHeader () {
     return (
       <div className='c-nav__menu-header'>
-        <label htmlFor='burger-menu' className='c-nav__menu-header-cross' />
         <Logo className='c-nav__menu-header-logo' />
+        <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown}/>
         <div className='c-nav__menu-header-search'>
           <SearchBar />
         </div>
@@ -35,8 +57,8 @@ export class NavBar extends Component {
   renderNavBurgerMenu () {
     return (
       <>
-        <input id='burger-menu' type='checkbox' className='c-nav__checkbox' />
-        <div className='c-nav__menu-button'>
+        <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown}/>
+        <div className='c-nav__menu-button'onClick={this.toggleMenuShown} >
           <label htmlFor='burger-menu' className='c-nav__menu-button-icon'>
             <p>Menu</p>
           </label>

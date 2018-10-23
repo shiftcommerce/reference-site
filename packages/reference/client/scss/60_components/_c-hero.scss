@@ -1,13 +1,11 @@
 .c-hero {
   text-align: center;
   padding-bottom: $global-spacing-unit-small;
-  padding-top: $global-spacing-unit-tiny;
   z-index: 0;
   position: relative;
 
   @include breakpoint(desktop) {
     padding-bottom: $global-spacing-unit;
-    padding-top: $global-spacing-unit;
   }
 
   &__content {

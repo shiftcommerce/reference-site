@@ -3,17 +3,16 @@
    ========================================================================== */
 
 .c-searchbar {
-  background: $background-light-grey;
   height: 4.5rem;
 
   &__input {
     background-color: white;
     border-color: $border-default;
-    border-radius: 0;
     border-style: solid;
     border-right: none;
     border-width: .07143rem;
-    color: $border-default;
+    border-radius: 6px 0 0 6px;
+    color: $text-dark;
     font-size: 1em;
     font-weight: 500;
     height: 3.1rem;
@@ -24,33 +23,50 @@
     -webkit-appearance: none;
 
     @include breakpoint (desktop) {
-      width: 90%;
+      width: auto;
+      margin: 0;
+      flex-grow: 1;
+      padding: 0 $global-spacing-unit-small;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &-icon {
       display: inline-block;
       background-color: white;
       border: 1px solid $border-default;
-      border-radius: 0;
+      border-radius: 0 6px 6px 0;
       border-left: none;
       width: 12%;
       position: absolute;
 
       @include breakpoint (desktop) {
-        width: 4%;
+        position: static;
+        width: auto;
       }
     }
 
     &-button {
       border: none;
-      height: 2.95rem;
+      height: 3rem;
       width: 100%;
       background: url('/static/magnifying-glass.svg') no-repeat center;
       font-size: 0;
       margin: 0;
 
+      &:hover {
+        background: url('/static/magnifying-glass.svg') no-repeat center;
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:focus {
+        background: url('/static/magnifying-glass.svg') no-repeat center;
+      }
+
       @include breakpoint(desktop) {
-        height: 2.9rem;
+        height: 2.8rem;
       }
     }
   }
@@ -61,8 +77,9 @@
     padding-top: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
-      width: 65%;
-      margin-left: 26%;
+      width: auto;
+      margin-left: $global-spacing-unit;
+      display: flex;
     }
   }
 }

@@ -5,14 +5,14 @@
   border: none;
   text-align: center;
   font-size: 1em;
-  height: 3.67em;
+  flex-grow: 1;
+  flex-basis: 30%;
 
   @include breakpoint(desktop) {
-    order: 3;
-    margin: ($global-spacing-unit-tiny * 14) 0 0 auto;
-  }
-
-  @media (max-width: 1205px) {
-    font-size: 0.73em;
+    padding-top: 72px; /* height of c-header__top in desktop */
+    width: $o-body-container-width;
+    margin: $global-spacing-unit-small auto;
+    flex-grow: 0;
+    flex-basis: auto;
   }
 }

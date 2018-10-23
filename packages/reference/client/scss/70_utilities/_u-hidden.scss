@@ -19,3 +19,9 @@
     display: none;
   }
 }
+
+.u-visible-d {
+  @include breakpoint(mobile-tablet) {
+    display: none;
+  }
+}

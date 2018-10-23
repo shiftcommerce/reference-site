@@ -4,12 +4,17 @@
     cursor: pointer;
     height: 2.5rem;
     width: 3rem;
-    margin: auto 45% auto auto;
+    margin: auto 50% auto auto;
 
     @include breakpoint(desktop) {
+      margin-right: 40%;
       order: 1;
       position: relative;
-      background-size: 1.1rem;
+      width: auto;
+      margin-left: $global-spacing-unit-small;
+      background-position: 60% 50%;
+      background-size: 30%;
+      height: 3.2rem;
     }
 
     &-count {
@@ -23,6 +28,12 @@
       text-align: center;
       width: 18px;
       height: 18px;
+
+      @include breakpoint(desktop) {
+        margin-left: $global-spacing-unit-small;
+        position: relative;
+        top: 10px;
+      }
     }
 
     &-label {
@@ -30,6 +41,7 @@
 
       @include breakpoint(desktop) {
         padding-bottom: $global-spacing-unit-tiny;
+        padding-left: $global-spacing-unit-large;
       }
 
       a {
@@ -38,7 +50,7 @@
         font-size: 0.8rem;
 
         @include breakpoint(desktop) {
-          font-size: 0.75rem;
+          font-size: 1rem;
         }
       }
     }

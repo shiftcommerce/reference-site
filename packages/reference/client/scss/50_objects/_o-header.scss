@@ -1,29 +1,53 @@
 .o-header {
-  background: white;
   position: fixed;
   top: 0;
+  background-color: white;
   width: 100vw;
   z-index: 999;
+  display: flex;
 
   @include breakpoint(desktop) {
-    display: flex;
     flex-wrap: wrap;
     position: static;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__top {
     width: 100%;
+    @include breakpoint(desktop) {
+      background: $background-light-grey;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+  }
+
+  &__top-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(desktop) {
+      flex-wrap: nowrap;
+      width: $o-body-container-width;
+      margin: auto;
+      padding: 0 $global-spacing-unit;
+    }
   }
 
   &__logo {
-    margin: $global-spacing-unit-small auto 0 auto;
+    margin: $global-spacing-unit-small auto;
     text-align: center;
-    vertical-align: top;
     width: auto;
+    flex-basis: 100%;
+    max-height: 40px;
+    transition: max-height 0.1s;
 
     @include breakpoint(desktop) {
-      order: 2;
-      position: fixed;
-      width: 20%;
-      margin: $global-spacing-unit-small 0 0 $global-spacing-unit-large;
-      z-index: 999;
+      margin: 0;
+      flex-basis: auto;
     }
   }
 
@@ -37,6 +61,16 @@
       margin-top: 0;
       text-align: center;
       width: 20%;
+    }
+  }
+
+  &--shrunk {
+    @include breakpoint(mobile-tablet) {
+      .o-header__logo {
+        max-height: 0px;
+        margin-bottom: 0;
+        overflow: hidden;
+      }
     }
   }
 }

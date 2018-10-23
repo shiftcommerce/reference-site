@@ -11,6 +11,9 @@ $break-large: 1024px;
   @else if $point == tablet {
     @media only screen and (min-width: $break-small) { @content; }
   }
+  @else if $point == mobile-tablet {
+    @media only screen and (max-width: $break-large - 1px) { @content; }
+  }
   @else if $point == desktop {
     @media only screen and (min-width: $break-large) { @content; }
   }

@@ -1,20 +1,18 @@
 // Libraries
 import { Component } from 'react'
 import Link from 'next/link'
-import classNames from 'classnames'
 
 class NavBarOption extends Component {
   render () {
     let {
       as,
-      title,
-      index
+      title
     } = this.props
 
     return (
       <Link href={`/slug?slug=${as}`} as={as}>
-        <a className={classNames('c-nav__option', { 'c-nav__option--first': index === 0 })} >
-          { title }
+        <a className='c-nav__option' onClick={this.props.onClick}>
+          <div className='c-nav__option-label'>{ title }</div>
           <div className='c-nav__option-text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>

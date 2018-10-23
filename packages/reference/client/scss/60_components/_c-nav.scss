@@ -1,15 +1,14 @@
 .c-nav {
   border: none;
   text-align: center;
-  height: 3.67em;
 
   @include breakpoint(desktop) {
-    height: 2.5em;
     width: auto;
+    text-align: left;
   }
 
   &__checkbox {
-    visibility: hidden;
+    display: none;
   }
 
   &__menu {
@@ -28,7 +27,6 @@
     -webkit-overflow-scrolling: touch;
 
     @include breakpoint(desktop) {
-      height: auto;
       overflow-y: visible;
       overflow: hidden;
       transition: none;
@@ -38,10 +36,10 @@
 
     &-button {
       display: block;
-      height: 2rem;
-      width: 33.3%;
-      float: left;
+      flex-basis: 33.3%;
+      flex-grow: 1;
       border-right: 1px solid $border-default;
+      font-size: 0.8rem;
 
       @include breakpoint(desktop) {
         display: none;
@@ -70,14 +68,21 @@
       font-size: 1.25em;
 
       @include breakpoint(desktop) {
-        font-size: 0.735em;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
       }
     }
 
     &-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
       &-logo {
         margin: $global-spacing-unit-small;
         padding-left: $global-spacing-unit-small;
+        flex-grow: 1;
 
         @include breakpoint(desktop) {
           display: none;
@@ -86,11 +91,9 @@
 
       &-cross {
         background: url('/static/cross.svg') no-repeat center;
-        height: 5.5em;
-        width: 5.5em;
-        float: right;
+        height: 4rem;
+        width: 4rem;
         background-color: black;
-        margin-top: -$global-spacing-unit-small;
 
         @include breakpoint(desktop) {
           display: none;
@@ -99,6 +102,8 @@
 
       &-search {
         text-align: left;
+        flex-grow: 1;
+        background-color: $background-light-grey;
 
         @include breakpoint(desktop) {
           display: none;
@@ -228,27 +233,46 @@
     height: 6em;
 
     @include breakpoint(desktop) {
-      width: auto;
-      display: inline-block;
       padding: 0 $global-spacing-unit-small;
       border-top: none;
       font-weight: normal;
       background-color: white;
       border-left: 1px solid $border-default;
-      height: 1rem;
+      height: auto;
+      text-align: center;
     }
 
-    &:hover {
-
+    &:first-of-type {
       @include breakpoint(desktop) {
-        border-bottom: 3px solid $alert-orange;
+        border-left: none;
       }
     }
 
-    &--first {
-
+    &-label {
       @include breakpoint(desktop) {
-        border-left: none;
+        padding: $global-spacing-unit-tiny 0;
+        white-space: nowrap;
+        position: relative;
+      }
+      &::after {
+        @include breakpoint(desktop) {
+          content: '';
+          display: block;
+          width: 0;
+          margin: auto;
+          height: 3px;
+          background: $alert-orange;
+          transition: width 0.2s;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform:translateX(-50%);
+        }
+      }
+      &:hover::after {
+        @include breakpoint(desktop) {
+          width: 100%;
+        }
       }
     }
 

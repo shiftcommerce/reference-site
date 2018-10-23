@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import classNames from 'classnames'
 
 // Objects
 import Logo from '../objects/logo'
@@ -37,10 +38,48 @@ export class Layout extends Component {
   //     }
   //   }
   // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      shrunk: false
+    }
+
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll () {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+
+    if (scrollTop > 100 && !this.state.shrunk) {
+      this.setState(state => {
+        return { shrunk: true }
+      })
+    } else if (scrollTop <= 100 && this.state.shrunk) {
+      this.setState(state => {
+        return { shrunk: false }
+      })
+    }
+  }
 
   renderNav () {
     return (
-      <span className='o-nav'>
+      <span className='o-nav u-visible-d'>
+        <NavBar />
+      </span>
+    )
+  }
+
+  renderMobileNav () {
+    return (
+      <span className='o-nav u-hidden-d'>
         <NavBar />
       </span>
     )
@@ -62,16 +101,27 @@ export class Layout extends Component {
 
   renderHeader () {
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
-      return <>
-        <CustomHead />
-        <div className='o-header'>
-          <Logo className='o-header__logo' />
-          { this.renderHeaderAccount() }
-          <MiniBag />
-          { this.renderNav() }
-          { this.renderSearch() }
-        </div>
-      </>
+      const headerClasses = classNames('o-header', {
+        'o-header--shrunk': this.state.shrunk
+      })
+
+      return (
+        <>
+          <CustomHead />
+          <div className={ headerClasses }>
+            <div className='o-header__top'>
+              <div className='o-header__top-wrapper'>
+                <Logo className='o-header__logo' />
+                { this.renderMobileNav() }
+                { this.renderHeaderAccount() }
+                <MiniBag />
+                { this.renderSearch() }
+              </div>
+            </div>
+            { this.renderNav() }
+          </div>
+        </>
+      )
     }
   }
 

@@ -1,18 +1,12 @@
 .c-header {
   &__account {
-    height: 2.5rem;
-    width: 33.3%;
-    background: white;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: ($global-spacing-unit-tiny * 6.5);
-
+    flex-basis: 30%;
+    flex-grow: 1;
     @include breakpoint(desktop) {
-      order: 4;
-      margin: ($global-spacing-unit-tiny * 14) 0 0 auto;
-      width: 6rem;
-      top: 0;
+      flex-basis: auto;
+      order: 3;
+      position: static;
+      margin: 0;
     }
 
     &-button {
@@ -23,7 +17,10 @@
       cursor: pointer;
 
       @include breakpoint(desktop) {
-        background-size: 1.4rem;
+        margin-right: 55%;
+        width: auto;
+        height: 3.2rem;
+        background-size: 40%;
       }
     }
 
@@ -31,14 +28,12 @@
       font-size: 0.8rem;
       padding-top: ($global-spacing-unit-tiny * 3);
       padding-left: ($global-spacing-unit-tiny * 7);
-      width: 6rem;
 
       @include breakpoint(desktop) {
-        font-size: 0.75rem
+        font-size: 1rem;
       }
 
       a {
-
         @include breakpoint(desktop) {
           padding-right: $global-spacing-unit-small;
           border-right: 1px solid $border-default;
@@ -50,19 +45,15 @@
   }
 
   &__minibag {
-    float: right;
-    height: 2rem;
-    width: 33.3%;
+    flex-basis: 30%;
+    flex-grow: 1;
     border-left: 1px solid $border-default;
 
     @include breakpoint(desktop) {
-      order: 5;
-      height: 2.5rem;
-      margin: ($global-spacing-unit-tiny * 14) auto 0 0;
-      border: none;
-      align-items: baseline;
-      float: none;
-      width: 6rem;
+      order: 4;
+      height: auto;
+      border-left: none;
+      flex-basis: auto;
     }
   }
 
@@ -70,11 +61,12 @@
     display: block;
     margin: auto;
     width: 100%;
+    background: $background-light-grey;
+    margin-top: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
-      order: 1;
-      position: fixed;
-      z-index: 99;
+      order: 2;
+      margin-top: 0;
     }
   }
 }
