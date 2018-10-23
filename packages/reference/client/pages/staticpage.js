@@ -8,9 +8,10 @@ import { readPage } from '../actions/page-actions'
 // Components
 import ComponentManifest from '../components/template-components/template-components-manifest'
 import Loading from '../components/loading'
+import StaticPageError from '../components/static-page-error'
 
 class Page extends Component {
-  static async getInitialProps ({ reduxStore, req, query }) {
+  static async getInitialProps ({ reduxStore, query }) {
     const { id } = query
     await reduxStore.dispatch(readPage(id))
     return { id: id }
