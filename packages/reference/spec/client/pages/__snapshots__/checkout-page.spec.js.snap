@@ -1385,17 +1385,20 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
         aria-label="Use gift card or rewards code"
         className="c-gift__wrapper"
       >
+        <p
+          className="c-payment-method__gift-title"
+        >
+          Promotion Code
+        </p>
         <span
           className="c-payment-method__gift"
         >
           <_class
             className="c-payment-method__gift-input"
-            label="Promotion Code"
             placeholder="Enter Promotion Code"
           >
             <Input
               className="c-payment-method__gift-input"
-              label="Promotion Code"
               placeholder="Enter Promotion Code"
               renderValidationMessage={[Function]}
             >
@@ -1406,7 +1409,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   className="o-form__label undefined"
                 >
                   <b>
-                    Promotion Code
                      
                   </b>
                   <input
@@ -3615,17 +3617,20 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
           aria-label="Use gift card or rewards code"
           className="c-gift__wrapper"
         >
+          <p
+            className="c-payment-method__gift-title"
+          >
+            Promotion Code
+          </p>
           <span
             className="c-payment-method__gift"
           >
             <_class
               className="c-payment-method__gift-input"
-              label="Promotion Code"
               placeholder="Enter Promotion Code"
             >
               <Input
                 className="c-payment-method__gift-input"
-                label="Promotion Code"
                 placeholder="Enter Promotion Code"
                 renderValidationMessage={[Function]}
               >
@@ -3636,7 +3641,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     className="o-form__label undefined"
                   >
                     <b>
-                      Promotion Code
                        
                     </b>
                     <input
@@ -5818,17 +5822,20 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
         aria-label="Use gift card or rewards code"
         className="c-gift__wrapper"
       >
+        <p
+          className="c-payment-method__gift-title"
+        >
+          Promotion Code
+        </p>
         <span
           className="c-payment-method__gift"
         >
           <_class
             className="c-payment-method__gift-input"
-            label="Promotion Code"
             placeholder="Enter Promotion Code"
           >
             <Input
               className="c-payment-method__gift-input"
-              label="Promotion Code"
               placeholder="Enter Promotion Code"
               renderValidationMessage={[Function]}
             >
@@ -5839,7 +5846,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   className="o-form__label undefined"
                 >
                   <b>
-                    Promotion Code
                      
                   </b>
                   <input
@@ -8400,17 +8406,20 @@ exports[`should not redirect to order confirmation page, if no new order got cre
         aria-label="Use gift card or rewards code"
         className="c-gift__wrapper"
       >
+        <p
+          className="c-payment-method__gift-title"
+        >
+          Promotion Code
+        </p>
         <span
           className="c-payment-method__gift"
         >
           <_class
             className="c-payment-method__gift-input"
-            label="Promotion Code"
             placeholder="Enter Promotion Code"
           >
             <Input
               className="c-payment-method__gift-input"
-              label="Promotion Code"
               placeholder="Enter Promotion Code"
               renderValidationMessage={[Function]}
             >
@@ -8421,7 +8430,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   className="o-form__label undefined"
                 >
                   <b>
-                    Promotion Code
                      
                   </b>
                   <input
@@ -11138,17 +11146,20 @@ exports[`should redirect to order confirmation page, if new order got created 1`
         aria-label="Use gift card or rewards code"
         className="c-gift__wrapper"
       >
+        <p
+          className="c-payment-method__gift-title"
+        >
+          Promotion Code
+        </p>
         <span
           className="c-payment-method__gift"
         >
           <_class
             className="c-payment-method__gift-input"
-            label="Promotion Code"
             placeholder="Enter Promotion Code"
           >
             <Input
               className="c-payment-method__gift-input"
-              label="Promotion Code"
               placeholder="Enter Promotion Code"
               renderValidationMessage={[Function]}
             >
@@ -11159,7 +11170,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   className="o-form__label undefined"
                 >
                   <b>
-                    Promotion Code
                      
                   </b>
                   <input

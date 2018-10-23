@@ -1,12 +1,12 @@
 $o-body-container-width: 80%;
 
 .o-body {
-  width: 100vw;
-  padding-top: 13em;
+  width: 100%;
+  padding-top: $global-spacing-unit-huge * 2;
 
   @include breakpoint(desktop) {
     width: $o-body-container-width;
     margin: auto;
-    padding-top: 1em;
+    padding-top: $global-spacing-unit-small;
   }
 }

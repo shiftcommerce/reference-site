@@ -17,7 +17,7 @@
   @include breakpoint(desktop) {
     flex-basis: auto;
     flex-grow: 1;
-    padding-right: 1rem;
+    padding-right: $global-spacing-unit-small;
 
     &:last-of-type {
       padding-right: 0;

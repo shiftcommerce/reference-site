@@ -9,9 +9,9 @@ class PromoInput extends Component {
   render () {
     return (
       <div aria-label='Use gift card or rewards code' className='c-gift__wrapper'>
+        <p className='c-payment-method__gift-title'>Promotion Code</p>
         <span className='c-payment-method__gift'>
           <Input
-            label='Promotion Code'
             placeholder='Enter Promotion Code'
             className='c-payment-method__gift-input' />
           <Button

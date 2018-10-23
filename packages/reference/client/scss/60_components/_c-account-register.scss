@@ -1,5 +1,5 @@
 .c-register {
-  padding-bottom: 2rem;
+  padding-bottom: $global-spacing-unit;
 
   &__grid {
     display: grid;
@@ -14,7 +14,7 @@
 
     &-title {
       color: $background-primary;
-      padding-top: 2rem;
+      padding-top: $global-spacing-unit;
     }
 
     &-caption {
@@ -34,7 +34,7 @@
     text-align: center;
 
     &-icon {
-      width: 91%;
+      width: 100%;
     }
   }
 

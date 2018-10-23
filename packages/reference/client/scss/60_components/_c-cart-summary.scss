@@ -46,9 +46,9 @@
       grid-template-rows: [row1-start] 100% [row1-end];
       width: 100%;
       grid-gap: 3%;
-      border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
-      padding-bottom: 1em;
-      margin-top: 1em;
+      border-bottom: 1px solid $border-default;
+      padding-bottom: $global-spacing-unit-small;
+      margin-top: $global-spacing-unit-small;
     }
 
 

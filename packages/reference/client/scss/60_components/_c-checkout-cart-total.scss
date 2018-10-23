@@ -1,10 +1,10 @@
 .c-checkout-cart-total {
-  margin: 0 10px;
-  padding: 0 10px;
+  margin: 0 $global-spacing-unit-small;
+  padding: 0 $global-spacing-unit-small;
 
   &__payment-error {
     color: red;
-    padding: 0.5rem;
+    padding: $global-spacing-unit-small;
     border: 1px solid red;
   }
 }

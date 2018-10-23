@@ -2,7 +2,7 @@ $input-checkbox-size: 16px;
 $input-checkbox-spacing: 8px;
 
 .o-form {
-  width: 100vw;
+  width: 100%;
 
   &-errors {
     color: $text-error;
@@ -14,9 +14,7 @@ $input-checkbox-spacing: 8px;
     display: flex;
     justify-content: space-between;
     font-size: 0.7em;
-    padding-left: $global-spacing-unit-small;
-    padding-right: $global-spacing-unit-small;
-    margin-top: -$global-spacing-unit;
+    padding: $global-spacing-unit-small $global-spacing-unit-small 0 $global-spacing-unit-small;
 
     &-title {
       margin: $global-spacing-unit-small 0;
@@ -48,12 +46,11 @@ $input-checkbox-spacing: 8px;
 
   &__wrapper {
     padding: $global-spacing-unit-small;
-    width: 100vw;
 
     &--collapsed {
       padding-bottom: $global-spacing-unit-small;
       font-size: 0.8rem;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $border-default;
       width: 95%;
       margin: auto;
 
@@ -147,11 +144,11 @@ $input-checkbox-spacing: 8px;
   }
 
   &__input-field {
-    margin: $global-spacing-unit-tiny 0;
+    margin: $global-spacing-unit-small 0;
     display: block;
-    padding: $global-spacing-unit-tiny;
-    font-size: 0.9rem;
-    background-color: white;
+    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+    font-size: 1rem;
+    line-height: 1.25;
     background-image: none;
     background-clip: padding-box;
     border: 1px solid;
@@ -160,7 +157,6 @@ $input-checkbox-spacing: 8px;
     &__error {
       color: $text-error;
       border-color: $border-error;
-      background-color: $light-grey;
       margin-bottom: $global-spacing-unit-small;
 
       &::first-letter {

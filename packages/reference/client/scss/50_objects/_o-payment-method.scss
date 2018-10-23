@@ -1,34 +1,34 @@
 .o-payment-method {
   width: 100%;
   padding: 0 10%;
-  margin-top: 0.65em;
+  margin-top: $global-spacing-unit-small;
 
   &__security-fields {
-    padding-top: 0.65em;
+    padding-top: $global-spacing-unit-small;
   }
 
   &__text {
-    padding: 0 0.65em;
+    padding: 0 $global-spacing-unit-small;
   }
 
   &__label {
-    padding-right: 0.65em;
+    padding-right: $global-spacing-unit-small;
   }
 
   &__label-cvv[for=cvv] {
-    padding-left: 0.65em;
+    padding-left: $global-spacing-unit-small;
   }
 
   &__input {
     width: 25%;
-    padding-right: 0.65em;
+    padding-right: $global-spacing-unit-small;
   }
 
   &__address-summary {
-    padding-top: 10px;
+    padding-top: $global-spacing-unit-small;
 
     h4, p {
-      margin: 0.325em;
+      margin: $global-spacing-unit-tiny;
     }
   }
 }

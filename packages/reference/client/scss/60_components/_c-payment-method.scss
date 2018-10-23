@@ -35,7 +35,7 @@
     width: 95%;
     margin: auto;
     padding-bottom: $global-spacing-unit;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $border-default;
 
     p {
       margin: 0;
@@ -59,17 +59,21 @@
       grid-gap: 3%;
     }
 
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+
     &-button {
       display: inline-block;
       height: 2rem;
-      max-width: 8rem;
       min-width: 6rem;
       width: 100%;
       margin-top: $global-spacing-unit;
       line-height: 2px;
 
       @include breakpoint(desktop) {
-        width: 100%;
         height: 2.3rem;
         margin-top: $global-spacing-unit;
       }
@@ -80,6 +84,8 @@
 
       @include breakpoint(desktop) {
         width: 100%;
+        height: 2.3rem;
+        margin-top: $global-spacing-unit;
       }
     }
   }

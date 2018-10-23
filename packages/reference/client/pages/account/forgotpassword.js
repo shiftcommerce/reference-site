@@ -11,10 +11,9 @@ export class ForgotPassword extends Component {
     return (
       <div className='o-form__input-group'>
         <Button
-          className='c-password__button-icon'
+          className='c-password__button-icon o-button-sml'
           aria-label='Submit'
           label='SUBMIT'
-          size='lrg'
           status='primary'
           type='submit'
         />

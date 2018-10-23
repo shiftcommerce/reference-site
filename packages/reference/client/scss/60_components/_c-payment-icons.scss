@@ -4,11 +4,11 @@
   &__image {
     width: 35px;
     display: inline-block;
-    margin: 0.7em;
+    margin: $global-spacing-unit-tiny;
 
     @include breakpoint(desktop) {
       width: 65px;
-      margin: 1.2em;
+      margin: $global-spacing-unit-small;
     }
   }
 }

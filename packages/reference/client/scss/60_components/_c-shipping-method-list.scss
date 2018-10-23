@@ -1,8 +1,8 @@
 .c-shipping-method-list {
   &__header {
-    margin-top: 1rem;
-    margin-bottom: 1.6em;
-    padding-bottom: 1em;
+    margin-top: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit-small;
+    padding-bottom: $global-spacing-unit-small;
     border-bottom: 1px solid $border-dark;
   }
 
@@ -11,7 +11,7 @@
   }
 
   &__input-group {
-    padding: 0.65em;
+    padding: $global-spacing-unit-small;
     border: 1px solid;
 
     &:not(:last-child) {
@@ -22,7 +22,7 @@
       float: left;
       height: 2.5em;
       vertical-align: middle;
-      margin-right: 0.65em;
+      margin-right: $global-spacing-unit-small;
     }
   }
 

@@ -7,11 +7,12 @@
     grid-template-columns: [first] 40% [col2-start] 25% [col3-start] 25% [col4-start] 5% [end];
     grid-template-rows: [row1-start] 30% [row2-start] 30% [row3-start] 30% [row4-start] 5% [row5-start] 5% [row5-end];
     font-size: 0.9rem;
-    margin-bottom: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit-large;
 
     @include breakpoint(desktop) {
       grid-template-columns: [first] 35% [col2-start] 15% [col3-start] 35% [col4-start] 15% [end];
-      border: none;
+      padding-bottom: $global-spacing-unit;
+      border-bottom: 1px solid $border-default;
     }
 
     &-item1 {
@@ -117,6 +118,10 @@
     &-sku {
       color: $background-secondary;
       font-size: 0.8em;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
     }
   }
 

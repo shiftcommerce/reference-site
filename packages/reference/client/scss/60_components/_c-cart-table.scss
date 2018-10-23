@@ -1,11 +1,13 @@
 .c-cart-table {
   display: grid;
-  width: 100% !important;
-  padding: 1em;
-  padding-top: 4.5em;
+  padding: $global-spacing-unit;
+  padding-top: $global-spacing-unit-huge;
+  margin: auto;
 
   @include breakpoint(desktop) {
-    padding: 1em;
+    margin: auto;
+    padding: $global-spacing-unit-small;
+    width: 80%;
   }
 
   &__grid {
@@ -49,7 +51,7 @@
 
   &__promo {
     @include breakpoint(desktop) {
-      margin-bottom: 1em;
+      margin-bottom: $global-spacing-unit-small;
     }
   }
 
@@ -67,7 +69,7 @@
   }
 
   &__text {
-    margin-bottom: 1em;
+    margin-bottom: $global-spacing-unit-small;
   }
 
   &__total {
@@ -83,17 +85,17 @@
   }
 
   &__related-products {
-    margin: 1em;
-    border-top: ($global-spacing-unit-tiny / 3) solid #eee;
-    padding-top: 2em;
+    margin: $global-spacing-unit;
+    border-top: 1px solid $border-default;
+    padding-top: $global-spacing-unit;
   }
 
   &__header {
     display: inline-block;
     width: 100%;
-    border-top: ($global-spacing-unit-tiny / 6) solid #eee;
-    border-bottom: ($global-spacing-unit-tiny / 6) solid #eee;
-    padding-bottom: ($global-spacing-unit-large / 3);
+    border-top: 1px solid $border-default;
+    border-bottom: 1px solid $border-default;
+    padding-bottom: $global-spacing-unit-small;
     padding-top: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
@@ -115,8 +117,8 @@
           grid-column-end: [col2-start];
           grid-row-start: [row1-start];
           grid-row-end: [row1-end];
-          border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
-          margin: 1em;
+          border-bottom: 1px solid $border-default;
+          margin: $global-spacing-unit-small;
         }
       }
 
@@ -126,8 +128,8 @@
           grid-column-end: [col2-end];
           grid-row-start: [row1-start];
           grid-row-end: [row1-end];
-          border-bottom: ($global-spacing-unit-tiny / 3) solid #eee;
-          margin: 1em;
+          border-bottom: 1px solid $border-default;
+          margin: $global-spacing-unit-small;
         }
 
         h1 {

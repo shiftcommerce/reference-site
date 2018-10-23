@@ -528,17 +528,20 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   aria-label="Use gift card or rewards code"
                   className="c-gift__wrapper"
                 >
+                  <p
+                    className="c-payment-method__gift-title"
+                  >
+                    Promotion Code
+                  </p>
                   <span
                     className="c-payment-method__gift"
                   >
                     <_class
                       className="c-payment-method__gift-input"
-                      label="Promotion Code"
                       placeholder="Enter Promotion Code"
                     >
                       <Input
                         className="c-payment-method__gift-input"
-                        label="Promotion Code"
                         placeholder="Enter Promotion Code"
                         renderValidationMessage={[Function]}
                       >
@@ -549,7 +552,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                             className="o-form__label undefined"
                           >
                             <b>
-                              Promotion Code
                                
                             </b>
                             <input

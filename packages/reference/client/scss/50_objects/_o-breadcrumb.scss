@@ -5,10 +5,9 @@
 .o-breadcrumb {
   display: none;
   align-self: center;
-  padding: .75rem 1rem;
-  margin-bottom: 1rem;
+  padding: $global-spacing-unit-small;
+  margin-bottom: $global-spacing-unit-small;
   list-style: none;
-  border-radius: .25rem;
 
   @include breakpoint(desktop) {
     display: flex;
@@ -22,13 +21,13 @@
   float: left;
 
   &:not(:first-child) {
-    margin-left: 1em;
+    margin-left: $global-spacing-unit-small;
 
     &:before {
       position: relative;
       right: 0.5em;
       content: '>';
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 }

@@ -3,14 +3,14 @@
   z-index: 0;
 
   &__body {
-    margin-bottom: 1em;
+    margin-bottom: $global-spacing-unit-huge;
 
     @include breakpoint(desktop) {
       display: grid;
       grid-template-columns: [col1-start] 45% [col2-start] 55% [col2-end];
       grid-template-rows: [row1-start] 20% [row2-start] 20% [row3-start] 20% [row4-start] 40% [row4-end];
       grid-gap: 0.5em;
-      margin-top: 30px;
+      margin-top: $global-spacing-unit;
     }
 
     &-dropdowns {
@@ -20,7 +20,7 @@
         grid-row-start: row3-start;
         grid-row-end: row4-start;
         width: 100%;
-        margin-bottom: 10em;
+        margin-bottom: $global-spacing-unit-huge * 2;
       }
     }
   }
@@ -57,7 +57,7 @@
     width: 92.5%;
     border-top: 0.5px solid $border-default;
     margin: auto;
-    padding: 1em 0;
+    padding: $global-spacing-unit-small 0;
 
     @include breakpoint(desktop) {
       width: 100%;
@@ -65,8 +65,8 @@
 
     &-title {
       display: inline;
-      font-size: 0.75em;
-      padding-bottom: 0.5em;
+      font-size: 0.8em;
+      padding-bottom: $global-spacing-unit;
 
       @include breakpoint(desktop) {
         font-size: 0.9em
@@ -75,11 +75,11 @@
 
     &-text {
       display: none;
-      font-size: 0.6em;
+      font-size: 0.7em;
 
       @include breakpoint(tablet) {
         font-size: 0.8em;
-        padding-top: 1em;
+        padding-top: $global-spacing-unit-small;
       }
     }
 
@@ -100,7 +100,7 @@
       cursor: pointer;
       display: block;
       height: 2.8em;
-      margin-top: -2em;
+      margin-top: -$global-spacing-unit;
       position: absolute;
       width: 92.5%;
       z-index: 1;
@@ -113,9 +113,9 @@
 
   &__buttons {
     background-color: white;
-    margin-bottom: 3.5em;
+    margin-bottom: $global-spacing-unit-large;
     margin-top: -($global-spacing-unit-huge * 2);
-    padding: 1em;
+    padding: $global-spacing-unit-small;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -189,13 +189,13 @@
   }
 
   &__info {
-    padding: 1em;
+    padding: $global-spacing-unit-small;
     width: 100%;
 
     @include breakpoint(tablet) {
       margin: auto;
       padding: 0;
-      padding-bottom: 1em;
+      padding-bottom: $global-spacing-unit-small;
       width: 92.5%;
     }
 
@@ -214,7 +214,7 @@
     &-title {
       font-size: 0.9em;
       font-weight: 800;
-      padding-bottom: 1em;
+      padding-bottom: $global-spacing-unit-small;
 
       @include breakpoint(desktop) {
         font-size: 1em
@@ -223,7 +223,7 @@
 
     &-rating {
       display: inline;
-      padding-bottom: 1em;
+      padding-bottom: $global-spacing-unit-small;
 
       &--fill {
         color: $background-primary;
@@ -242,7 +242,7 @@
       cursor: pointer;
       display: inline;
       font-size: 0.6em;
-      padding-left: 0.5em;
+      padding-left: $global-spacing-unit-tiny;
       text-decoration: underline;
     }
 
@@ -284,7 +284,7 @@
         float: right;
         font-size: 0.6em;
         text-decoration: underline;
-        margin-top: -0.2em;
+        margin-top: -3px;
       }
     }
   }
@@ -293,8 +293,8 @@
     width: 92.5%;
     border-top: 0.5px solid $border-default;
     margin: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
 
     @include breakpoint(desktop) {
       width: 100%;

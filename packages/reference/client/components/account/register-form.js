@@ -105,10 +105,9 @@ class RegisterForm extends Component {
     return (
       <div className='o-form__input-group'>
         <Button
-          className='c-password__button-icon'
+          className='c-password__button-icon o-button-sml'
           aria-label='Create Account'
           label='Create Account'
-          size='lrg'
           status={(isValidForm ? 'primary' : 'disabled')}
           type='submit'
           disabled={!isValidForm}

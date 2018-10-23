@@ -1,7 +1,7 @@
 .c-login {
   width: 80%;
   margin: auto;
-  padding-bottom: 2rem;
+  padding-bottom: $global-spacing-unit;
 
   @include breakpoint(tablet) {
     width: 60%;
@@ -10,7 +10,7 @@
   &__title {
     text-align: center;
     color: $background-primary;
-    padding-top: 2rem;
+    padding-top: $global-spacing-unit;
   }
 
   &__caption {
@@ -41,6 +41,6 @@
     background-color: $background-light;
     font-weight: 200;
     font-size: 0.9em;
-    margin-top: 10px;
+    margin-top: $global-spacing-unit;
   }
 }

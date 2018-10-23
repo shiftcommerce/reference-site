@@ -2,19 +2,19 @@ $input-radio-size: 16px;
 $input-radio-spacing: 8px;
 
 .c-shipping-method {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  padding-bottom: $global-spacing-unit-small;
+  border-bottom: 1px solid $border-default;
   width: 95%;
   margin: auto;
 
   &__header {
     margin: 0;
     padding: 0;
-    padding-top: 5px;
+    padding-top: $global-spacing-unit-tiny;
 
     h2 {
       margin: 0;
-      margin-top: 10px;
+      margin-top: $global-spacing-unit-small;
     }
   }
 
@@ -36,7 +36,7 @@ $input-radio-spacing: 8px;
     cursor: pointer;
 
     &-caption {
-      margin-left: 15px;
+      margin-left: $global-spacing-unit-small;
       position: absolute;
 
       &:before {
@@ -76,19 +76,19 @@ $input-radio-spacing: 8px;
     padding: 0;
 
     &-header {
-      margin-top: 15px;
-      padding-bottom: 15px;
+      margin-top: $global-spacing-unit-small;
+      padding-bottom: $global-spacing-unit-small;
       border-bottom: 1px solid $border-divider;
       font-size: 0.7rem;
     }
 
     &-item-count {
       float: right;
-      margin-right: 10px;
+      margin-right: $global-spacing-unit-small;
     }
 
     &-input-group {
-      padding: 10px;
+      padding: $global-spacing-unit-small;
 
       &:not(:last-child) {
         border-bottom: 1px solid $border-divider;
@@ -98,14 +98,14 @@ $input-radio-spacing: 8px;
         float: left;
         height: 30px;
         vertical-align: middle;
-        margin-right: 10px;
+        margin-right: $global-spacing-unit-small;
       }
     }
 
     &-title {
       display: block;
       font-weight: bold;
-      margin-left: 15px;
+      margin-left: $global-spacing-unit-small;
       font-size: 0.8rem;
     }
 
@@ -119,7 +119,7 @@ $input-radio-spacing: 8px;
     &-delivery-date-label {
       display: inline;
       font-weight: bold;
-      margin-left: 15px;
+      margin-left: $global-spacing-unit-small;
       font-size: 0.6rem;
     }
 
