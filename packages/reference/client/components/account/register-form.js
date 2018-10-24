@@ -108,7 +108,7 @@ class RegisterForm extends Component {
           className='c-password__button-icon o-button-sml'
           aria-label='Create Account'
           label='Create Account'
-          status={(isValidForm ? 'primary' : 'disabled')}
+          status={(isValidForm ? 'positive' : 'disabled')}
           type='submit'
           disabled={!isValidForm}
         />

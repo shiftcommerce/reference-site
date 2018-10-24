@@ -87,7 +87,7 @@ class LoginForm extends Component {
           className='c-login__button-icon o-button--sml'
           aria-label='Continue Securely'
           label='CONTINUE SECURELY'
-          status={(isValidForm ? 'primary' : 'disabled')}
+          status={(isValidForm ? 'positive' : 'disabled')}
           type='submit'
           disabled={!isValidForm}
         />

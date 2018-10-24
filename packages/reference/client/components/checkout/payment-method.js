@@ -16,7 +16,7 @@ export default class PaymentMethod extends Component {
     return (
       <Button
         aria-label='Edit your payment method'
-        className='o-form__header-button o-button--sml'
+        className='o-button--sml'
         label='Edit'
         status='secondary'
         onClick={() => onToggleCollapsed('edit', formName)}

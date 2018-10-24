@@ -30,9 +30,7 @@ class AddressForm extends Component {
         <div className='o-form__header-title'>
           <h2>{ title }</h2>
         </div>
-        <div className='o-form__header-edit'>
-          { collapsed && <Button label='Edit' size='lrg' status='secondary' className='o-form__header-button' onClick={() => onToggleCollapsed('edit', formName)} /> }
-        </div>
+        { collapsed && <Button label='Edit' status='secondary' className='o-button--sml' onClick={() => onToggleCollapsed('edit', formName)} /> }
       </div>
     )
   }

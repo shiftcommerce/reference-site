@@ -33,12 +33,6 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
   background: $button-base-color;
   color: $text-primary;
 
-  &:hover {
-    @include breakpoint(desktop) {
-      background: linear-gradient(to bottom, lighten($button-base-color, 20%), $button-base-color);
-      color: $text-light;
-    }
-  }
 
   &:focus {
     box-shadow: rgba($background-secondary, 0.2) 0 0 0 2px;
@@ -55,6 +49,13 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
 
       &:focus {
         box-shadow: rgba($button-base-color, 0.2) 0 0 0 2px;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($button-base-color, 0.2);
+          cursor: pointer;
+        }
       }
     }
   }

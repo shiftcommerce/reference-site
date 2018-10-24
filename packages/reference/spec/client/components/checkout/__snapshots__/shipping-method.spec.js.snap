@@ -368,10 +368,9 @@ exports[`render collapsed view as expected 1`] = `
       <div>
         <Button
           aria-label="Edit your shipping method"
-          className="o-form__header-button"
+          className="o-button--sml"
           label="Edit"
           onClick={[Function]}
-          size="lrg"
           status="secondary"
         >
           <div
@@ -379,7 +378,7 @@ exports[`render collapsed view as expected 1`] = `
           >
             <button
               aria-label="Edit your shipping method"
-              className="o-form__header-button o-button o-button--secondary o-button--lrg"
+              className="o-button--sml o-button o-button--secondary"
               disabled={false}
               onClick={[Function]}
               role="button"

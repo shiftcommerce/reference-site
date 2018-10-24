@@ -572,31 +572,26 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 Shipping Address
               </h2>
             </div>
-            <div
-              className="o-form__header-edit"
+            <Button
+              className="o-button--sml"
+              label="Edit"
+              onClick={[Function]}
+              status="secondary"
             >
-              <Button
-                className="o-form__header-button"
-                label="Edit"
-                onClick={[Function]}
-                size="lrg"
-                status="secondary"
+              <div
+                className="o-button__container"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  className="o-button--sml o-button o-button--secondary"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Edit
-                  </button>
-                </div>
-              </Button>
-            </div>
+                  Edit
+                </button>
+              </div>
+            </Button>
           </div>
           <div>
             <div
@@ -1151,7 +1146,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button o-button--sml"
+                className="o-button--sml"
                 label="Edit"
                 onClick={[Function]}
                 status="secondary"
@@ -1161,7 +1156,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button--sml o-button o-button--secondary"
+                    className="o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -1225,22 +1220,50 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 className="o-form c-payment-method"
               >
                 <div
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
+                  className="c-payment-method__button-group"
                 >
-                  <span>
-                    Credit/Debit Card
-                  </span>
-                </div>
-                <div
-                  aria-label="Use paypal"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
-                >
-                  <span>
-                    PayPal
-                  </span>
+                  <Button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button "
+                    label="Credit/Debit Card"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use credit or debit card"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Credit/Debit Card
+                      </button>
+                    </div>
+                  </Button>
+                  <Button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button "
+                    label="PayPal"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use paypal"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        PayPal
+                      </button>
+                    </div>
+                  </Button>
                 </div>
               </div>
               <div
@@ -2794,31 +2817,26 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   Shipping Address
                 </h2>
               </div>
-              <div
-                className="o-form__header-edit"
+              <Button
+                className="o-button--sml"
+                label="Edit"
+                onClick={[Function]}
+                status="secondary"
               >
-                <Button
-                  className="o-form__header-button"
-                  label="Edit"
-                  onClick={[Function]}
-                  size="lrg"
-                  status="secondary"
+                <div
+                  className="o-button__container"
                 >
-                  <div
-                    className="o-button__container"
+                  <button
+                    className="o-button--sml o-button o-button--secondary"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
                   >
-                    <button
-                      className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                      disabled={false}
-                      onClick={[Function]}
-                      role="button"
-                      tabIndex="0"
-                    >
-                      Edit
-                    </button>
-                  </div>
-                </Button>
-              </div>
+                    Edit
+                  </button>
+                </div>
+              </Button>
             </div>
             <div>
               <div
@@ -3383,7 +3401,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               <div>
                 <Button
                   aria-label="Edit your payment method"
-                  className="o-form__header-button o-button--sml"
+                  className="o-button--sml"
                   label="Edit"
                   onClick={[Function]}
                   status="secondary"
@@ -3393,7 +3411,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   >
                     <button
                       aria-label="Edit your payment method"
-                      className="o-form__header-button o-button--sml o-button o-button--secondary"
+                      className="o-button--sml o-button o-button--secondary"
                       disabled={false}
                       onClick={[Function]}
                       role="button"
@@ -3457,22 +3475,50 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   className="o-form c-payment-method"
                 >
                   <div
-                    aria-label="Use credit or debit card"
-                    className="c-payment-method__button "
-                    onClick={[Function]}
+                    className="c-payment-method__button-group"
                   >
-                    <span>
-                      Credit/Debit Card
-                    </span>
-                  </div>
-                  <div
-                    aria-label="Use paypal"
-                    className="c-payment-method__button "
-                    onClick={[Function]}
-                  >
-                    <span>
-                      PayPal
-                    </span>
+                    <Button
+                      aria-label="Use credit or debit card"
+                      className="c-payment-method__button "
+                      label="Credit/Debit Card"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="o-button__container"
+                      >
+                        <button
+                          aria-label="Use credit or debit card"
+                          className="c-payment-method__button  o-button"
+                          disabled={false}
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          Credit/Debit Card
+                        </button>
+                      </div>
+                    </Button>
+                    <Button
+                      aria-label="Use paypal"
+                      className="c-payment-method__button "
+                      label="PayPal"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="o-button__container"
+                      >
+                        <button
+                          aria-label="Use paypal"
+                          className="c-payment-method__button  o-button"
+                          disabled={false}
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          PayPal
+                        </button>
+                      </div>
+                    </Button>
                   </div>
                 </div>
                 <div
@@ -5009,31 +5055,26 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 Shipping Address
               </h2>
             </div>
-            <div
-              className="o-form__header-edit"
+            <Button
+              className="o-button--sml"
+              label="Edit"
+              onClick={[Function]}
+              status="secondary"
             >
-              <Button
-                className="o-form__header-button"
-                label="Edit"
-                onClick={[Function]}
-                size="lrg"
-                status="secondary"
+              <div
+                className="o-button__container"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  className="o-button--sml o-button o-button--secondary"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Edit
-                  </button>
-                </div>
-              </Button>
-            </div>
+                  Edit
+                </button>
+              </div>
+            </Button>
           </div>
           <div>
             <div
@@ -5588,7 +5629,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button o-button--sml"
+                className="o-button--sml"
                 label="Edit"
                 onClick={[Function]}
                 status="secondary"
@@ -5598,7 +5639,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button--sml o-button o-button--secondary"
+                    className="o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -5662,22 +5703,50 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 className="o-form c-payment-method"
               >
                 <div
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
+                  className="c-payment-method__button-group"
                 >
-                  <span>
-                    Credit/Debit Card
-                  </span>
-                </div>
-                <div
-                  aria-label="Use paypal"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
-                >
-                  <span>
-                    PayPal
-                  </span>
+                  <Button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button "
+                    label="Credit/Debit Card"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use credit or debit card"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Credit/Debit Card
+                      </button>
+                    </div>
+                  </Button>
+                  <Button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button "
+                    label="PayPal"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use paypal"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        PayPal
+                      </button>
+                    </div>
+                  </Button>
                 </div>
               </div>
               <div
@@ -7437,31 +7506,26 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 Shipping Address
               </h2>
             </div>
-            <div
-              className="o-form__header-edit"
+            <Button
+              className="o-button--sml"
+              label="Edit"
+              onClick={[Function]}
+              status="secondary"
             >
-              <Button
-                className="o-form__header-button"
-                label="Edit"
-                onClick={[Function]}
-                size="lrg"
-                status="secondary"
+              <div
+                className="o-button__container"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  className="o-button--sml o-button o-button--secondary"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Edit
-                  </button>
-                </div>
-              </Button>
-            </div>
+                  Edit
+                </button>
+              </div>
+            </Button>
           </div>
           <div>
             <div
@@ -8172,7 +8236,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button o-button--sml"
+                className="o-button--sml"
                 label="Edit"
                 onClick={[Function]}
                 status="secondary"
@@ -8182,7 +8246,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button--sml o-button o-button--secondary"
+                    className="o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -8246,22 +8310,50 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 className="o-form c-payment-method"
               >
                 <div
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
+                  className="c-payment-method__button-group"
                 >
-                  <span>
-                    Credit/Debit Card
-                  </span>
-                </div>
-                <div
-                  aria-label="Use paypal"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
-                >
-                  <span>
-                    PayPal
-                  </span>
+                  <Button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button "
+                    label="Credit/Debit Card"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use credit or debit card"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Credit/Debit Card
+                      </button>
+                    </div>
+                  </Button>
+                  <Button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button "
+                    label="PayPal"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use paypal"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        PayPal
+                      </button>
+                    </div>
+                  </Button>
                 </div>
               </div>
               <div
@@ -10177,31 +10269,26 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 Shipping Address
               </h2>
             </div>
-            <div
-              className="o-form__header-edit"
+            <Button
+              className="o-button--sml"
+              label="Edit"
+              onClick={[Function]}
+              status="secondary"
             >
-              <Button
-                className="o-form__header-button"
-                label="Edit"
-                onClick={[Function]}
-                size="lrg"
-                status="secondary"
+              <div
+                className="o-button__container"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  className="o-button--sml o-button o-button--secondary"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    className="o-form__header-button o-button o-button--secondary o-button--lrg"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Edit
-                  </button>
-                </div>
-              </Button>
-            </div>
+                  Edit
+                </button>
+              </div>
+            </Button>
           </div>
           <div>
             <div
@@ -10912,7 +10999,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             <div>
               <Button
                 aria-label="Edit your payment method"
-                className="o-form__header-button o-button--sml"
+                className="o-button--sml"
                 label="Edit"
                 onClick={[Function]}
                 status="secondary"
@@ -10922,7 +11009,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 >
                   <button
                     aria-label="Edit your payment method"
-                    className="o-form__header-button o-button--sml o-button o-button--secondary"
+                    className="o-button--sml o-button o-button--secondary"
                     disabled={false}
                     onClick={[Function]}
                     role="button"
@@ -10986,22 +11073,50 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 className="o-form c-payment-method"
               >
                 <div
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
+                  className="c-payment-method__button-group"
                 >
-                  <span>
-                    Credit/Debit Card
-                  </span>
-                </div>
-                <div
-                  aria-label="Use paypal"
-                  className="c-payment-method__button "
-                  onClick={[Function]}
-                >
-                  <span>
-                    PayPal
-                  </span>
+                  <Button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button "
+                    label="Credit/Debit Card"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use credit or debit card"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Credit/Debit Card
+                      </button>
+                    </div>
+                  </Button>
+                  <Button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button "
+                    label="PayPal"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Use paypal"
+                        className="c-payment-method__button  o-button"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        PayPal
+                      </button>
+                    </div>
+                  </Button>
                 </div>
               </div>
               <div
