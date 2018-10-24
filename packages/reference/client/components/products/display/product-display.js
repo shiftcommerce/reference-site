@@ -6,7 +6,6 @@ import classNames from 'classnames'
 import Carousel from './carousel'
 import ProductNavBar from '../../navigation/product-navbar'
 import ProductPrice from './product-price'
-import RelatedProducts from './related-products'
 
 // Objects
 import Button from '../../../objects/button'
@@ -180,8 +179,6 @@ class ProductDisplay extends Component {
   }
 
   render () {
-    const { product: { bundles } } = this.props
-
     return (
       <div className='c-product-display'>
         <ProductNavBar />
@@ -194,9 +191,6 @@ class ProductDisplay extends Component {
             { this.renderSizeAndFit() }
             { this.renderDetailsAndCare() }
           </div>
-        </div>
-        <div className='c-product-display__related-products'>
-          <RelatedProducts bundles={bundles} />
         </div>
       </div>
     )

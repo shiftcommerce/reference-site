@@ -3,6 +3,9 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
 
+// Lib
+import renderComponents from '../lib/render-components'
+
 // Components
 import Loading from '../components/loading'
 import ProductDisplay from '../components/products/display/product-display'
@@ -96,7 +99,7 @@ export class Product extends Component {
   }
 
   render () {
-    const { product, product: { loading, error } } = this.props
+    const { product, product: { loading, error, template } } = this.props
 
     if (loading) {
       return (
@@ -107,8 +110,20 @@ export class Product extends Component {
         <h1>Unable to load product.</h1>
       )
     } else {
+      const { components } = template.sections.slice(-1).pop()
+
       return (
-        <ProductDisplay product={product} changeQuantity={this.changeQuantity} changeVariant={this.changeVariant} addToBag={this.addToBag} clickToBuy={this.clickToBuy} {...this.state} />
+        <>
+          <ProductDisplay
+            product={product}
+            changeQuantity={this.changeQuantity}
+            changeVariant={this.changeVariant}
+            addToBag={this.addToBag}
+            clickToBuy={this.clickToBuy}
+            {...this.state}
+          />
+          { renderComponents(components) }
+        </>
       )
     }
   }

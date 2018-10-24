@@ -5,8 +5,10 @@ import { connect } from 'react-redux'
 // Actions
 import { readPage } from '../actions/page-actions'
 
+// Lib
+import renderComponents from '../lib/render-components'
+
 // Components
-import ComponentManifest from '../components/template-components/template-components-manifest'
 import Loading from '../components/loading'
 import StaticPageError from '../components/static-page-error'
 
@@ -15,20 +17,6 @@ class Page extends Component {
     const { id } = query
     await reduxStore.dispatch(readPage(id))
     return { id: id }
-  }
-
-  renderComponents (components) {
-    let html = []
-
-    for (var index = 0; index < components.length; index++) {
-      let component = components[index]
-      let ComponentName = ComponentManifest[component.reference]
-      if (ComponentName) {
-        html.push(<ComponentName key={index} componentData={component} />)
-      }
-    }
-
-    return html
   }
 
   render () {
@@ -45,11 +33,7 @@ class Page extends Component {
     } else {
       const { components } = template.sections.slice(-1).pop()
 
-      return (
-        <div className='c-page'>
-          { this.renderComponents(components) }
-        </div>
-      )
+      return renderComponents(components)
     }
   }
 }

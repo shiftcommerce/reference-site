@@ -48,7 +48,7 @@ class ProductGrid extends PureComponent {
         <div className="o-card-grid o-card-grid--4d-2m">
           { this.products(componentData) }
         </div>
-        { componentData.cat_url[0] && componentData.cat_text && this.catButton(componentData) }
+        { componentData.cat_url && componentData.cat_url[0] && componentData.cat_text && this.catButton(componentData) }
       </section>
     )
   }
