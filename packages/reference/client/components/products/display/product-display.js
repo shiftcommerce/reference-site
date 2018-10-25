@@ -36,6 +36,8 @@ class ProductDisplay extends Component {
 
   renderButtons () {
     const { product, addToBag, clickToBuy } = this.props
+    const minPrice = product.min_current_price
+    const maxPrice = product.max_current_price
 
     return (
       <div className='c-product-display__buttons'>
@@ -44,7 +46,7 @@ class ProductDisplay extends Component {
             { product.title }
           </div>
           <div className='c-product-display__buttons-price'>
-            <ProductPrice product={product} />
+            <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>
         </div>
         <div className='c-product-display__buttons-section2'>
@@ -90,6 +92,8 @@ class ProductDisplay extends Component {
 
   renderInfo () {
     const { product, changeVariant, sku, product: { meta_attributes } } = this.props
+    const minPrice = product.min_current_price
+    const maxPrice = product.max_current_price
 
     return (
       <div className='c-product-display__info'>
@@ -97,7 +101,7 @@ class ProductDisplay extends Component {
           { product.title }
         </div>
         <div className='c-product-display__info-price'>
-          <ProductPrice product={product} />
+          <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
         </div>
         <div className='c-product-display__info-rating'>
           { this.renderRatingStars(product) }
@@ -106,7 +110,13 @@ class ProductDisplay extends Component {
         { this.renderColourSelector(meta_attributes) }
         <p className='c-product-display__info-size-chart'>Find your recommended size</p>
         <div className='c-product-display__info-size'>
-          <VariantSelector onChange={changeVariant} value={sku} name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />
+          <VariantSelector
+            onChange={changeVariant}
+            value={sku}
+            name='line_item[item_id]'
+            prompt='Select a Size'
+            variants={product.variants}
+            aria-label='Size Selector' />
         </div>
       </div>
     )

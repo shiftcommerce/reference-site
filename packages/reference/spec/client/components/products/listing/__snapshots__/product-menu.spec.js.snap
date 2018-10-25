@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="c-product-listing__menu-description"
+>
+  <h1
+    className="c-product-listing__menu-description-title"
+  >
+    Super Products
+  </h1>
+  <div
+    className="c-product-listing__menu-description-content"
+  >
+    <p>
+      Placeholder text can be changed using props
+    </p>
+  </div>
+</div>
+`;

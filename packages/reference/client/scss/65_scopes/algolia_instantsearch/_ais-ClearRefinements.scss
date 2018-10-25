@@ -1,0 +1,16 @@
+.ais-ClearRefinements {
+
+  &-button {
+    right: 0px;
+    padding: 0.5rem;
+    background: $background-light-grey;
+    margin: 0.2rem;
+    border-radius: 5%;
+    border: 1px solid $border-shadow;
+    cursor: pointer;
+
+    &--disabled {
+      display: none;
+    }
+  }
+}

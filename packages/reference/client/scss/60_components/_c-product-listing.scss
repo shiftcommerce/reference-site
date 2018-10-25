@@ -6,6 +6,10 @@
   margin: auto;
   width: 95%;
 
+  &--hide {
+    display: none;
+  }
+
   @include breakpoint(tablet) {
     grid-template-columns: repeat(3, 1fr);
   }

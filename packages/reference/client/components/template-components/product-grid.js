@@ -13,11 +13,18 @@ class ProductGrid extends PureComponent {
     const products = []
 
     for (let i of [...Array(4).keys()]) {
+      let product = componentData.products[i]
       products.push(
         <ProductListingCard
           className="o-card-grid__card"
-          product={componentData.products[i]}
-          key={componentData.products[i].id}
+          title={product.title}
+          assetFileUrl={product.picture_url}
+          assetFileAltText={product.title}
+          minPrice={product.min_current_price}
+          maxPrice={product.max_current_price}
+          productPath={product.canonical_path}
+          productRating={product.product_rating}
+          key={product.id}
         />
       )
     }

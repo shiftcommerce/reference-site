@@ -1,0 +1,64 @@
+.ais-RatingMenu {
+
+  &-list {
+    list-style: none;
+    padding: 0.1rem;
+  }
+
+  &-item {
+    vertical-align: middle;
+    padding: 5px;
+
+    svg {
+      height: 18px;
+    }
+
+    &--selected > a:after {
+      content: "";
+    }
+
+    &--selected > a:before {
+      border-color: black;
+    }
+
+    &--disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  &-label {
+    display: none;
+  }
+
+  &-count {
+    text-align: center;
+    vertical-align: middle;
+    color: grey;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &:after {
+      content:")"
+    }
+
+    &:before {
+      content:"("
+    }
+  }
+
+  &-link {
+    @include custom-checkbox
+  }
+
+  &-starIcon {
+    stroke: transparent;
+    &--empty {
+      fill: grey;
+      stroke: transparent;
+    }
+    &--full {
+      stroke: transparent;
+    }
+  }
+}

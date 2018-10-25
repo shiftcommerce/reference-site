@@ -2,12 +2,8 @@
 
 exports[`renders correctly if variants have different prices 1`] = `
 <ProductPrice
-  product={
-    Object {
-      "max_current_price": "12.00",
-      "min_current_price": "10.00",
-    }
-  }
+  maxPrice="12.00"
+  minPrice="10.00"
 >
   <div
     className="c-product-price"
@@ -24,12 +20,8 @@ exports[`renders correctly if variants have different prices 1`] = `
 
 exports[`renders correctly if variants have similar price 1`] = `
 <ProductPrice
-  product={
-    Object {
-      "max_current_price": "10.00",
-      "min_current_price": "10.00",
-    }
-  }
+  maxPrice="10.00"
+  minPrice="10.00"
 >
   <div
     className="c-product-price"

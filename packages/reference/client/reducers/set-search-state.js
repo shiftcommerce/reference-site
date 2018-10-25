@@ -2,6 +2,7 @@
 import * as types from '../actions/action-types'
 
 export const initialState = {
+  loading: true,
   error: false,
   query: null
 }

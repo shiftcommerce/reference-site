@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the header 1`] = `
+<div
+  className="ais-RangeSlider"
+>
+  <InputRange
+    allowSameValues={false}
+    classNames={
+      Object {
+        "activeTrack": "input-range__track input-range__track--active",
+        "disabledInputRange": "input-range input-range--disabled",
+        "inputRange": "input-range",
+        "labelContainer": "input-range__label-container",
+        "maxLabel": "input-range__label input-range__label--max",
+        "minLabel": "input-range__label input-range__label--min",
+        "slider": "input-range__slider",
+        "sliderContainer": "input-range__slider-container",
+        "track": "input-range__track input-range__track--background",
+        "valueLabel": "input-range__label input-range__label--value",
+      }
+    }
+    disabled={false}
+    maxValue={20}
+    minValue={5}
+    onChange={[Function]}
+    onChangeComplete={[Function]}
+    step={1}
+    value={
+      Object {
+        "max": 20,
+        "min": 5,
+      }
+    }
+  />
+</div>
+`;

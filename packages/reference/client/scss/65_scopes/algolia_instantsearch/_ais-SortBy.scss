@@ -1,0 +1,27 @@
+.ais-SortBy {
+  position: absolute;
+  right: 0;
+  width: 35%;
+  height: 47px;
+
+  &-select{
+    width: 100%;
+    background: transparent;
+    display: inline-block;
+    padding-top: 0.3em;
+    padding-left: 2rem;
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    -webkit-appearance: none;
+  }
+
+  &-option{
+    position: absolute;
+    top: 100%;
+    padding: 2px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+}

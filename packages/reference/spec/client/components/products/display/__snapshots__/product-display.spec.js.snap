@@ -479,93 +479,8 @@ exports[`renders correctly 1`] = `
             className="c-product-display__buttons-price"
           >
             <ProductPrice
-              product={
-                Object {
-                  "asset_files": Array [
-                    Object {
-                      "alt_text": "Textured Long T-Shirt",
-                      "asset_file": "S2623408_C29P_Alt2.jpg",
-                      "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
-                    },
-                  ],
-                  "bundles": Array [
-                    Object {
-                      "asset_files": Array [
-                        Object {
-                          "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
-                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                          "created_at": "2017-12-20T10:53:17Z",
-                          "file_content_content_type": "image/jpeg",
-                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                        },
-                      ],
-                      "canonical_path": "/bundles/anna-outfit-1",
-                      "id": "261",
-                      "name": "Anna Outfit 1",
-                      "slug": "anna-outfit-1",
-                    },
-                  ],
-                  "canonical_path": "1",
-                  "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
-                  "id": 1,
-                  "max_current_price": "10.00",
-                  "meta_attributes": Object {
-                    "care_instructions": Object {
-                      "value": "Machine Washable",
-                    },
-                    "fabric": Object {
-                      "value": "100% cotton",
-                    },
-                    "master_colour": Object {
-                      "value": "Stone",
-                    },
-                    "product_feature": Object {
-                      "value": "Stretch Fit",
-                    },
-                    "silhouette": Object {
-                      "value": "Flexible Waist",
-                    },
-                  },
-                  "min_current_price": "10.00",
-                  "price": "10.00",
-                  "title": "Textured Long T-Shirt",
-                  "variants": Array [
-                    Object {
-                      "meta_attributes": Object {
-                        "size": Object {
-                          "value": "Size 8",
-                        },
-                      },
-                      "price": "10.00",
-                      "sku": 1,
-                      "stock_available_level": "1000",
-                      "title": "Small",
-                    },
-                    Object {
-                      "meta_attributes": Object {
-                        "size": Object {
-                          "value": "Size 10",
-                        },
-                      },
-                      "price": "11.00",
-                      "sku": 2,
-                      "stock_available_level": "1000",
-                      "title": "Medium",
-                    },
-                    Object {
-                      "meta_attributes": Object {
-                        "size": Object {
-                          "value": "Size 12",
-                        },
-                      },
-                      "price": "12.00",
-                      "sku": 3,
-                      "stock_available_level": "1000",
-                      "title": "Large",
-                    },
-                  ],
-                }
-              }
+              maxPrice="10.00"
+              minPrice="10.00"
             >
               <div
                 className="c-product-price"
@@ -645,93 +560,8 @@ exports[`renders correctly 1`] = `
           className="c-product-display__info-price"
         >
           <ProductPrice
-            product={
-              Object {
-                "asset_files": Array [
-                  Object {
-                    "alt_text": "Textured Long T-Shirt",
-                    "asset_file": "S2623408_C29P_Alt2.jpg",
-                    "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
-                  },
-                ],
-                "bundles": Array [
-                  Object {
-                    "asset_files": Array [
-                      Object {
-                        "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
-                        "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                        "created_at": "2017-12-20T10:53:17Z",
-                        "file_content_content_type": "image/jpeg",
-                        "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                      },
-                    ],
-                    "canonical_path": "/bundles/anna-outfit-1",
-                    "id": "261",
-                    "name": "Anna Outfit 1",
-                    "slug": "anna-outfit-1",
-                  },
-                ],
-                "canonical_path": "1",
-                "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
-                "id": 1,
-                "max_current_price": "10.00",
-                "meta_attributes": Object {
-                  "care_instructions": Object {
-                    "value": "Machine Washable",
-                  },
-                  "fabric": Object {
-                    "value": "100% cotton",
-                  },
-                  "master_colour": Object {
-                    "value": "Stone",
-                  },
-                  "product_feature": Object {
-                    "value": "Stretch Fit",
-                  },
-                  "silhouette": Object {
-                    "value": "Flexible Waist",
-                  },
-                },
-                "min_current_price": "10.00",
-                "price": "10.00",
-                "title": "Textured Long T-Shirt",
-                "variants": Array [
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 8",
-                      },
-                    },
-                    "price": "10.00",
-                    "sku": 1,
-                    "stock_available_level": "1000",
-                    "title": "Small",
-                  },
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 10",
-                      },
-                    },
-                    "price": "11.00",
-                    "sku": 2,
-                    "stock_available_level": "1000",
-                    "title": "Medium",
-                  },
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 12",
-                      },
-                    },
-                    "price": "12.00",
-                    "sku": 3,
-                    "stock_available_level": "1000",
-                    "title": "Large",
-                  },
-                ],
-              }
-            }
+            maxPrice="10.00"
+            minPrice="10.00"
           >
             <div
               className="c-product-price"
@@ -881,7 +711,7 @@ exports[`renders correctly 1`] = `
                   role="option"
                   value={1}
                 >
-                  Small
+                  £10.00
                 </option>
                 <option
                   aria-posinset={2}
@@ -892,7 +722,7 @@ exports[`renders correctly 1`] = `
                   role="option"
                   value={2}
                 >
-                  Medium
+                  £11.00
                 </option>
                 <option
                   aria-posinset={3}
@@ -903,7 +733,7 @@ exports[`renders correctly 1`] = `
                   role="option"
                   value={3}
                 >
-                  Large
+                  £12.00
                 </option>
               </select>
             </div>

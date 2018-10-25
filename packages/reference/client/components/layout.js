@@ -126,13 +126,13 @@ export class Layout extends Component {
   }
 
   renderSearch () {
-    const { searchObject, onSearchQueryChange } = this.props
-
-    return (
-      <span className='c-header__search'>
-        <SearchBar queryObject={searchObject} onChange={onSearchQueryChange} {...this.props} />
-      </span>
-    )
+    if (typeof window === 'undefined' || window.location.pathname !== '/cart') {
+      return (
+        <span className='c-header__search'>
+          <SearchBar query={this.props.query} />
+        </span>
+      )
+    }
   }
 
   render () {

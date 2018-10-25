@@ -9,10 +9,10 @@ class VariantSelector extends Component {
 
   renderOptions (variants) {
     return (
-      // TODO: Do not use data attributes but instead use redux
+      // @TODO: Add variant data to algolia
       variants && variants.map((variant, idx) =>
         <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price}>
-          { variant.title }
+          { `£${variant.price}` }
         </option>
       )
     )

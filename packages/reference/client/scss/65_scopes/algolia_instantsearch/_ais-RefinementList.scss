@@ -1,0 +1,62 @@
+.ais-RefinementList {
+
+  &-list {
+    display: block;
+    list-style: none;
+    padding: 0.1rem;
+    margin: 0.5rem 0;
+  }
+
+  &-item {
+    padding: 5px;
+
+    &--disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  &-count {
+    color: grey;
+
+    &:after {
+      content:")"
+    }
+
+    &:before {
+      content:"("
+    }
+  }
+
+  &-showMore {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    padding: 5px 0 15px 22px;
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &-label {
+    /*Hide default checkbox*/
+    input[type='checkbox'] {
+      display: none;
+    }
+
+    input[type='checkbox']:checked + span:after {
+      content: "";
+      color: black;
+    }
+    input[type='checkbox']:checked + span:before {
+      content: "";
+      border-color: black;
+    }
+  }
+
+  &-labelText {
+    cursor: pointer;
+    @include custom-checkbox
+  }
+}

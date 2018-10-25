@@ -1,52 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the header 1`] = `
-<SearchBar>
-  <form
-    action="/search"
-    method="get"
-    onSubmit={[Function]}
-    role="search"
-  >
-    <div
-      className="c-searchbar"
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getAction": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "isActionDispatched": [Function],
+      "isActionTypeDispatched": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(SearchBar)>
+    <SearchBar
+      dispatch={[Function]}
     >
-      <div
-        className="c-searchbar__content"
+      <form
+        action="/search"
+        method="get"
+        onSubmit={[Function]}
+        role="search"
       >
-        <input
-          aria-label="search text"
-          className="c-searchbar__input"
-          name="query"
-          onChange={[Function]}
-          placeholder="Search (e.g. \\"Skinny Jeans\\")"
-          type="search"
-          value=""
-        />
         <div
-          className="c-searchbar__input-icon"
+          className="c-searchbar"
         >
-          <Button
-            className="c-searchbar__input-button"
-            label="Search"
-            status="primary"
+          <div
+            className="c-searchbar__content"
           >
+            <input
+              aria-label="search text"
+              className="c-searchbar__input"
+              name="query"
+              onChange={[Function]}
+              placeholder="Search our catalog..."
+              type="search"
+              value=""
+            />
             <div
-              className="o-button__container"
+              className="c-searchbar__input-icon"
             >
-              <button
-                className="c-searchbar__input-button o-button o-button--primary"
-                disabled={false}
-                role="button"
-                tabIndex="0"
+              <Button
+                className="c-searchbar__input-button"
+                label="Search"
+                status="primary"
               >
-                Search
-              </button>
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    className="c-searchbar__input-button o-button o-button--primary"
+                    disabled={false}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Search
+                  </button>
+                </div>
+              </Button>
             </div>
-          </Button>
+          </div>
         </div>
-      </div>
-    </div>
-  </form>
-</SearchBar>
+      </form>
+    </SearchBar>
+  </Connect(SearchBar)>
+</Provider>
 `;

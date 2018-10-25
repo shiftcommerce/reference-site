@@ -1,14 +1,26 @@
+// Libraries
+import { Provider } from 'react-redux'
+import { createMockStore } from 'redux-test-utils'
+
+// Components
 import SearchBar from '../../../../client/components/search/search-bar'
 
 test('renders the header', () => {
-  // arrange
+  // Arrange - provide an initail state for the search
+  const initialState = {
+    loading: true,
+    error: false,
+    query: null
+  }
 
-  // act
+  // Act
   const wrapper = mount(
-    <SearchBar />
+    <Provider store={createMockStore(initialState)} >
+      <SearchBar />
+    </Provider>
   )
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Search')
 })

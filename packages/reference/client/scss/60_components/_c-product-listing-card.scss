@@ -5,6 +5,9 @@
   &__price,
   &__rating {
     text-align: center;
+    &--empty {
+      color: $background-light;
+    }
   }
 
   &__title {

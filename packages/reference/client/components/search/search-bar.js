@@ -2,47 +2,44 @@
 import { Component } from 'react'
 import Router from 'next/router'
 import qs from 'qs'
+import { connect } from 'react-redux'
+
+// Actions
+import { setSearchQuery } from '../../actions/search-actions'
 
 // Objects
 import Button from '../../objects/button'
 
 class SearchBar extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      query: ''
-    }
-  }
-
   onSubmit (e) {
     if (Router.router.pathname === '/search') {
       e.preventDefault()
-      let query = { query: this.props.queryObject.query }
-      let href = `/search?${qs.stringify(query)}`
-      Router.push(href, href, { shallow: false })
+      const query = { query: this.props.query }
+      const href = `/search?${qs.stringify(query)}`
+      Router.push(href, href)
     }
   }
 
   defaultOnChange (e) {
-    this.setState({ query: e.target.value })
+    this.props.dispatch(setSearchQuery(e.target.value))
   }
 
   render () {
-    let {
-      queryObject,
-      onChange
-    } = this.props
-
-    let query = {
-      query: (queryObject ? queryObject.query : this.state.query)
-    }
+    const { query } = this.props
 
     return (
       <form role='search' onSubmit={this.onSubmit.bind(this)} action='/search' method='get' >
         <div className='c-searchbar'>
           <div className='c-searchbar__content'>
-            <input name='query' value={query.query || ''} onChange={onChange || this.defaultOnChange.bind(this)} type='search' className='c-searchbar__input' aria-label='search text' placeholder='Search (e.g. "Skinny Jeans")' />
+            <input
+              name='query'
+              value={query || ''}
+              onChange={this.defaultOnChange.bind(this)}
+              type='search'
+              className='c-searchbar__input'
+              aria-label='search text'
+              placeholder='Search our catalog...'
+            />
             <div className='c-searchbar__input-icon'>
               <Button className='c-searchbar__input-button' label='Search' status='primary' />
             </div>
@@ -53,4 +50,10 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar
+function mapStateToProps (state) {
+  const { search } = state
+
+  return search
+}
+
+export default connect(mapStateToProps)(SearchBar)

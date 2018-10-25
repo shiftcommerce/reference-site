@@ -1,0 +1,41 @@
+.ais-CurrentRefinements {
+
+  &-label {
+    display: none;
+  }
+
+  &-list {
+    display: inline-block;
+    list-style: none;
+    padding: 0.1rem;
+  }
+
+  &-item {
+    display: inline-block;
+    list-style: none;
+  }
+
+  &-category {
+    display: inline-block;
+    padding: 0.5rem;
+    background: $background-light-grey;
+    margin: 0.2rem;
+    border-radius: 5%;
+    border: 1px solid $border-shadow;
+    cursor: pointer;
+  }
+
+  &-categoryLabel {
+    padding: 0.5rem;
+  }
+
+  &-delete {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+}

@@ -1,10 +1,31 @@
-const path = require('path')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
+const nextRuntimeDotenv = require('next-runtime-dotenv')
 
 const windows = process.env.WINDOWS || false
 
-module.exports = withCSS(withSass({
+const withConfig = nextRuntimeDotenv({
+  public: [
+    'API_HOST_PROXY',
+    'ALGOLIA_APP_ID',
+    'ALGOLIA_API_KEY',
+    'ALGOLIA_INDEX_NAME',
+    'ALGOLIA_RESULTS_PER_PAGE',
+    'STRIPE_API_KEY'
+  ],
+  server: [
+    'API_TENANT',
+    'API_ACCESS_TOKEN',
+    'API_HOST',
+    'OMS_HOST',
+    'SESSION_SECRET',
+    'IMAGE_HOSTS',
+    'SCRIPT_HOSTS',
+    'SECRET_STRIPE_API_KEY'
+  ]
+})
+
+module.exports = withConfig(withCSS(withSass({
   assetPrefix: process.env.ASSET_HOST || '',
 
   webpackDevMiddleware: (config) => {
@@ -15,20 +36,6 @@ module.exports = withCSS(withSass({
         aggregateTimeout: 300
       }
     }
-
-    require('dotenv').config()
-    const Dotenv = require('dotenv-webpack')
-
-    config.plugins = config.plugins || []
-    config.plugins = [
-      ...config.plugins,
-
-      // Read the .env file
-      new Dotenv({
-        path: path.join(__dirname, '.env'),
-        systemvars: true
-      })
-    ]
 
     return config
   },
@@ -79,4 +86,4 @@ module.exports = withCSS(withSass({
 
     return config
   }
-}))
+})))

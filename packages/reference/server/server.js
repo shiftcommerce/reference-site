@@ -39,6 +39,7 @@ const orderHistoryHandler = require('./route-handlers/order-history-route-handle
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
+const scriptHosts = process.env.SCRIPT_HOSTS
 
 module.exports = app.prepare().then(() => {
   const server = express()
@@ -62,7 +63,7 @@ module.exports = app.prepare().then(() => {
   server.use(cookieParser())
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-  server.use(securityHeaders({ imageHosts: imageHosts }))
+  server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
 
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)
@@ -130,7 +131,7 @@ module.exports = app.prepare().then(() => {
   })
 
   // Routes for local API calls
-  server.get('/getCategory', handler.getRenderer(platform.CategoryUrl))
+  server.get('/getCategory/:id', handler.getRenderer(platform.CategoryUrl))
   server.get('/getMenus', handler.getRenderer(platform.MenuUrl))
   server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/getSlug', handler.getRenderer(platform.SlugUrl))
@@ -142,8 +143,10 @@ module.exports = app.prepare().then(() => {
   server.post('/login', accountHandler.accountRenderer(platform.LoginUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
-    let slug = req.url
-
+    // @TODO This url sanitiser should be replaced with a whitelist
+    // This may be handled by fastly to provided best caching performance
+    // See https://docs.fastly.com/vcl/functions/querystring-regfilter-except/
+    let slug = req.url.split('?')[0]
     if (slug === '/') {
       slug = '/homepage'
     }
@@ -184,7 +187,6 @@ module.exports = app.prepare().then(() => {
     }
 
     const url = `${process.env.API_TENANT}/v1/slugs`
-
     return fetchData(queryObject, url).then(directRouting).catch((error) => { console.log('Error is', error) })
   })
 

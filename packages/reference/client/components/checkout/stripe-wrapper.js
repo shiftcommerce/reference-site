@@ -2,11 +2,16 @@
 import { Component } from 'react'
 import { StripeProvider, Elements } from 'react-stripe-elements'
 
+// Next config
+import getConfig from 'next/config'
+
 // Components
 import StripeCardFields from './stripe-card-fields'
 
+const { publicRuntimeConfig: { STRIPE_API_KEY } } = getConfig()
+
 class StripeWrapper extends Component {
-  renderStripeForm (StripeApiKey) {
+  renderStripeForm () {
     const {
       cardTokenRequested,
       onCardTokenReceived,
@@ -15,7 +20,7 @@ class StripeWrapper extends Component {
     } = this.props
 
     return (
-      <StripeProvider apiKey={StripeApiKey}>
+      <StripeProvider apiKey={STRIPE_API_KEY}>
         <Elements>
           <StripeCardFields
             cardTokenRequested={cardTokenRequested}
@@ -37,10 +42,8 @@ class StripeWrapper extends Component {
   }
 
   render () {
-    const StripeApiKey = process.env.STRIPE_API_KEY
-
     return (
-      StripeApiKey ? this.renderStripeForm(StripeApiKey) : this.renderServiceUnavailableMessage()
+      STRIPE_API_KEY ? this.renderStripeForm() : this.renderServiceUnavailableMessage()
     )
   }
 }

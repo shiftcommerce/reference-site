@@ -1,0 +1,96 @@
+/* ==========================================================================
+
+   # Algolia Instant Search compile file
+
+      Compile all the algolia-instantsearch files from the neighbouring
+      folder here.
+
+   ========================================================================== */
+
+@mixin custom-checkbox {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 22px;
+
+  &:before,
+  &:after {
+    cursor: inherit;
+    position: absolute;
+    display: inline-block;
+  }
+
+  &:before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border: 1px solid grey;
+    border-radius: 10%;
+    left: 0px;
+  }
+
+  &:after {
+    content: none;
+    height: 3px;
+    width: 7px;
+    color: black;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+
+    transform: rotate(-45deg);
+    left: 4px;
+    top: 5px;
+  }
+
+  &:hover:after {
+    content: "";
+    color: grey;
+  }
+}
+
+@mixin custom-radio-button {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+  }
+
+  &:before {
+    height: 16px;
+    width: 16px;
+
+    border: 1px solid $border-default;
+    border-radius: 100%;
+    left: 0px;
+  }
+
+  &:after {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background-color: black;
+    left: 5px;
+    top: 5px;
+  }
+
+  &:hover:after {
+    background-color: red;
+    content: "";
+    color: red;
+  }
+}
+
+@import "./algolia_instantsearch/_ais-CurrentRefinements";
+@import "./algolia_instantsearch/_ais-ClearRefinements";
+@import "./algolia_instantsearch/_ais-RefinementList";
+@import "./algolia_instantsearch/_ais-RangeSlider";
+@import "./algolia_instantsearch/_ais-RatingMenu";
+@import "./algolia_instantsearch/_ais-SortBy";
+@import "./algolia_instantsearch/_ais-Panel";
+

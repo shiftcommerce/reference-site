@@ -16,6 +16,12 @@ import checkout from '../../fixtures/checkout'
 import order from '../../fixtures/order'
 import shippingMethods from '../../fixtures/shipping-methods'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {
+    STRIPE_API_KEY: 'FAKE-STRIPE-API-KEY'
+  }
+}))
+
 test('dispatch setShippingMethod action on changing shipping method', () => {
   // Arrange
   const initialState = {}

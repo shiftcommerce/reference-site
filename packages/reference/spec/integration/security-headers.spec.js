@@ -29,6 +29,8 @@ describe('GET /', () => {
     const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
     const imageHosts = process.env.IMAGE_HOSTS
     const formattedImageHosts = (imageHosts) ? imageHosts.replace(',', ' ') : ''
+    const scriptHosts = process.env.SCRIPT_HOSTS
+    const formattedScriptHosts = (scriptHosts) ? scriptHosts.replace(',', ' ') : ''
 
     const expectedContentSecurityPolicy = [
       "default-src 'self'",
@@ -36,7 +38,7 @@ describe('GET /', () => {
       "style-src 'self' 'unsafe-inline'",
       "script-src 'self' 'unsafe-inline' https://js.stripe.com",
       'frame-src https://js.stripe.com',
-      "connect-src 'self'",
+      `connect-src 'self' ${formattedScriptHosts}`,
       "form-action 'self'",
       "object-src 'self'",
       'block-all-mixed-content'

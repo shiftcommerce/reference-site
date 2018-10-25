@@ -5,494 +5,531 @@ const searchResultState = {
         'hits': [
           {
             'category_ids': [
-              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+              59
             ],
-            'product_title': 'Field Jacket',
-            'product_reference': 'field_jacket',
-            'product_path': '/products/field_jacket',
+            'product_path': '/products/seed_product_51',
+            'product_title': 'SEPIA nonslip tray 420×210mm',
+            'product_reference': 'seed_product_51',
             'product_meta_data': {
               'eu': {
-                'sku': 'S2658012',
-                'colour': 'Stone',
-                'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
+                'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
               }
             },
-            'variant_sku': 'S2658012-1',
-            'variant_title': 'Medium',
+            'variant_title': 'Variant 2 for SEPIA nonslip tray 420×210mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Medium',
-                'price': 60
+                'price': 97.68
               }
             },
             'product_assets': [
               {
-                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-                'alt_text': 'Field Jacket',
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 420×210mm',
                 'sort_position': 1
               }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
+            'variant_assets': [],
+            'product_rating': 0,
+            'objectID': '1510895812',
             '_highlightResult': {
               'product_title': {
-                'value': 'Field Jacket',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S2658012',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 2 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           },
           {
             'category_ids': [
-              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+              59
             ],
-            'product_title': 'Quilted Shacket',
-            'product_reference': 'quilted_shacket1',
-            'product_path': '/products/quilted_shacket1',
+            'product_path': '/products/seed_product_51',
+            'product_title': 'SEPIA nonslip tray 420×210mm',
+            'product_reference': 'seed_product_51',
             'product_meta_data': {
               'eu': {
-                'sku': 'S26591711',
-                'colour': 'Navy',
-                'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
+                'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
               }
             },
-            'variant_sku': 'S26591711-1',
-            'variant_title': 'Small',
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 420×210mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Small',
-                'price': 70
+                'price': 16.95
               }
             },
             'product_assets': [
-
+              {
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 420×210mm',
+                'sort_position': 1
+              }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
+            'variant_assets': [],
+            'product_rating': 3,
+            'objectID': '1510895802',
             '_highlightResult': {
               'product_title': {
-                'value': 'Quilted Shacket',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S26591711',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           },
           {
             'category_ids': [
-              '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
+              61
             ],
-            'product_title': 'Short Sleeve T-Shirt',
-            'product_reference': 'short_sleeve_print_t_shirt_1',
-            'product_path': '/products/short_sleeve_print_t_shirt_1',
+            'product_path': '/products/seed_product_50',
+            'product_title': 'SEPIA nonslip tray 360×180mm',
+            'product_reference': 'seed_product_50',
             'product_meta_data': {
               'eu': {
-                'sku': 'S26584011',
-                'colour': 'Khakhi',
-                'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
+                'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
               }
             },
-            'variant_sku': 'S26584011-1',
-            'variant_title': 'Size 8',
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Size 8',
-                'price': 40
+                'price': 30.15
               }
             },
             'product_assets': [
               {
-                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-                'alt_text': 'Bell Sleeve Dress',
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 360×180mm',
                 'sort_position': 1
               }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
+            'variant_assets': [],
+            'product_rating': 1,
+            'objectID': '1510895792',
             '_highlightResult': {
               'product_title': {
-                'value': 'Short Sleeve T-Shirt',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S26584011',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
+              }
+            }
+          },
+          {
+            'category_ids': [
+              61
+            ],
+            'product_path': '/products/seed_product_50',
+            'product_title': 'SEPIA nonslip tray 360×180mm',
+            'product_reference': 'seed_product_50',
+            'product_meta_data': {
+              'eu': {
+                'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
+              }
+            },
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
+            'variant_meta_data': {
+              'eu': {
+                'price': 34.9
+              }
+            },
+            'product_assets': [
+              {
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 360×180mm',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [],
+            'product_rating': 4,
+            'objectID': '1510894512',
+            '_highlightResult': {
+              'product_title': {
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
+              },
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           }
         ],
-        'nbHits': 3,
+        'nbHits': 4,
         'page': 0,
         'nbPages': 1,
-        'hitsPerPage': 36,
+        'hitsPerPage': 20,
         'processingTimeMS': 1,
         'facets': {
           'category_ids': {
-            '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee': 3,
-            '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b': 1
+            '59': 2,
+            '61': 2
           },
-          'variant_meta_data.eu.size': {
-            'Small': 2,
-            'Medium': 1,
-            'Size 8': 1
+          'product_rating': {
+            '0': 1,
+            '1': 1,
+            '3': 1,
+            '4': 1
           },
-          'product_meta_data.eu.colour': {
-            'Stone': 2,
-            'Khakhi': 1,
-            'Navy': 1
+          'variant_meta_data.eu.price': {
+            '16.95': 1,
+            '30.15': 1,
+            '34.9': 1,
+            '97.68': 1
+          }
+        },
+        'facets_stats': {
+          'category_ids': {
+            'min': 59,
+            'max': 61,
+            'avg': 60,
+            'sum': 240
+          },
+          'product_rating': {
+            'min': 0,
+            'max': 4,
+            'avg': 2,
+            'sum': 8
+          },
+          'variant_meta_data.eu.price': {
+            'min': 16.95,
+            'max': 97.68,
+            'avg': 44.92,
+            'sum': 179.68
           }
         },
         'exhaustiveFacetsCount': true,
-        'exhaustiveNbHits': false,
-        'query': '',
-        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22product_meta_data.eu.colour%22%2C%22variant_meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
-        'index': 'test_variants'
+        'exhaustiveNbHits': true,
+        'query': 'tray',
+        'params': 'query=tray&maxValuesPerFacet=20&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22category_ids%22%2C%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=',
+        'index': 'instant_search'
       }
     ],
-    'query': '',
+    'query': 'tray',
     'hits': [
       {
         'category_ids': [
-          '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+          59
         ],
-        'product_title': 'Field Jacket',
-        'product_reference': 'field_jacket',
-        'product_path': '/products/short_sleeve_print_t_shirt_1',
+        'product_path': '/products/seed_product_51',
+        'product_title': 'SEPIA nonslip tray 420×210mm',
+        'product_reference': 'seed_product_51',
         'product_meta_data': {
           'eu': {
-            'sku': 'S2658012',
-            'colour': 'Stone',
-            'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
+            'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
           }
         },
-        'variant_sku': 'S2658012-1',
-        'variant_title': 'Medium',
+        'variant_title': 'Variant 2 for SEPIA nonslip tray 420×210mm',
         'variant_meta_data': {
           'eu': {
-            'size': 'Medium',
-            'price': 60
+            'price': 97.68
           }
         },
         'product_assets': [
           {
-            'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-            'alt_text': 'Field Jacket',
+            'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+            'alt_text': 'SEPIA nonslip tray 420×210mm',
             'sort_position': 1
           }
         ],
-        'variant_assets': [
-
-        ],
-        'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
+        'variant_assets': [],
+        'product_rating': 0,
+        'objectID': '1510895812',
         '_highlightResult': {
           'product_title': {
-            'value': 'Field Jacket',
-            'matchLevel': 'none',
+            'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
             'matchedWords': [
-
+              'tray'
             ]
           },
-          'product_meta_data': {
-            'eu': {
-              'sku': {
-                'value': 'S2658012',
-                'matchLevel': 'none',
-                'matchedWords': [
-
-                ]
-              }
-            }
+          'variant_title': {
+            'value': 'Variant 2 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
+            'matchedWords': [
+              'tray'
+            ]
           }
         }
       },
       {
         'category_ids': [
-          '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+          59
         ],
-        'product_title': 'Quilted Shacket',
-        'product_reference': 'quilted_shacket1',
-        'product_path': '/products/quilted_shacket1',
+        'product_path': '/products/seed_product_51',
+        'product_title': 'SEPIA nonslip tray 420×210mm',
+        'product_reference': 'seed_product_51',
         'product_meta_data': {
           'eu': {
-            'sku': 'S26591711',
-            'colour': 'Navy',
-            'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
+            'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
           }
         },
-        'variant_sku': 'S26591711-1',
-        'variant_title': 'Small',
+        'variant_title': 'Variant 1 for SEPIA nonslip tray 420×210mm',
         'variant_meta_data': {
           'eu': {
-            'size': 'Small',
-            'price': 70
+            'price': 16.95
           }
         },
         'product_assets': [
-
+          {
+            'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+            'alt_text': 'SEPIA nonslip tray 420×210mm',
+            'sort_position': 1
+          }
         ],
-        'variant_assets': [
-
-        ],
-        'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
+        'variant_assets': [],
+        'product_rating': 3,
+        'objectID': '1510895802',
         '_highlightResult': {
           'product_title': {
-            'value': 'Quilted Shacket',
-            'matchLevel': 'none',
+            'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
             'matchedWords': [
-
+              'tray'
             ]
           },
-          'product_meta_data': {
-            'eu': {
-              'sku': {
-                'value': 'S26591711',
-                'matchLevel': 'none',
-                'matchedWords': [
-
-                ]
-              }
-            }
+          'variant_title': {
+            'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
+            'matchedWords': [
+              'tray'
+            ]
           }
         }
       },
       {
         'category_ids': [
-          '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
+          61
         ],
-        'product_title': 'Short Sleeve T-Shirt',
-        'product_reference': 'short_sleeve_print_t_shirt_1',
-        'product_path': '/products/short_sleeve_print_t_shirt_1',
+        'product_path': '/products/seed_product_50',
+        'product_title': 'SEPIA nonslip tray 360×180mm',
+        'product_reference': 'seed_product_50',
         'product_meta_data': {
           'eu': {
-            'sku': 'S26584011',
-            'colour': 'Khakhi',
-            'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
+            'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
           }
         },
-        'variant_sku': 'S26584011-1',
-        'variant_title': 'Size 8',
+        'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
         'variant_meta_data': {
           'eu': {
-            'size': 'Size 8',
-            'price': 40
+            'price': 30.15
           }
         },
         'product_assets': [
           {
-            'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-            'alt_text': 'Bell Sleeve Dress',
+            'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+            'alt_text': 'SEPIA nonslip tray 360×180mm',
             'sort_position': 1
           }
         ],
-        'variant_assets': [
-
-        ],
-        'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
+        'variant_assets': [],
+        'product_rating': 1,
+        'objectID': '1510895792',
         '_highlightResult': {
           'product_title': {
-            'value': 'Short Sleeve T-Shirt',
-            'matchLevel': 'none',
+            'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
             'matchedWords': [
-
+              'tray'
             ]
           },
-          'product_meta_data': {
-            'eu': {
-              'sku': {
-                'value': 'S26584011',
-                'matchLevel': 'none',
-                'matchedWords': [
-
-                ]
-              }
-            }
+          'variant_title': {
+            'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
+            'matchedWords': [
+              'tray'
+            ]
+          }
+        }
+      },
+      {
+        'category_ids': [
+          61
+        ],
+        'product_path': '/products/seed_product_50',
+        'product_title': 'SEPIA nonslip tray 360×180mm',
+        'product_reference': 'seed_product_50',
+        'product_meta_data': {
+          'eu': {
+            'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
+          }
+        },
+        'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
+        'variant_meta_data': {
+          'eu': {
+            'price': 34.9
+          }
+        },
+        'product_assets': [
+          {
+            'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+            'alt_text': 'SEPIA nonslip tray 360×180mm',
+            'sort_position': 1
+          }
+        ],
+        'variant_assets': [],
+        'product_rating': 4,
+        'objectID': '1510894512',
+        '_highlightResult': {
+          'product_title': {
+            'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
+            'matchedWords': [
+              'tray'
+            ]
+          },
+          'variant_title': {
+            'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+            'matchLevel': 'full',
+            'fullyHighlighted': false,
+            'matchedWords': [
+              'tray'
+            ]
           }
         }
       }
     ],
-    'index': 'test_variants',
-    'hitsPerPage': 36,
-    'nbHits': 3,
+    'index': 'instant_search',
+    'hitsPerPage': 20,
+    'nbHits': 4,
     'nbPages': 1,
     'page': 0,
     'processingTimeMS': 1,
     'exhaustiveFacetsCount': true,
-    'exhaustiveNbHits': false,
+    'exhaustiveNbHits': true,
     'disjunctiveFacets': [
       {
-        'name': 'product_meta_data.eu.colour',
-        'data': {
-          'Stone': 2,
-          'Khakhi': 1,
-          'Navy': 1
-        },
-        'exhaustive': true
-      },
-      {
-        'name': 'variant_meta_data.eu.size',
-        'data': {
-          'Small': 2,
-          'Medium': 1,
-          'Size 8': 1
-        },
-        'exhaustive': true
-      }
-    ],
-    'hierarchicalFacets': [
-      {
         'name': 'category_ids',
-        'count': null,
-        'isRefined': true,
-        'path': null,
-        'data': [
-          {
-            'name': '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee',
-            'path': '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee',
-            'count': 3,
-            'isRefined': false,
-            'data': null
-          },
-          {
-            'name': '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b',
-            'path': '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b',
-            'count': 1,
-            'isRefined': false,
-            'data': null
-          }
-        ]
+        'data': {
+          '59': 2,
+          '61': 2
+        },
+        'exhaustive': true,
+        'stats': {
+          'min': 59,
+          'max': 61,
+          'avg': 60,
+          'sum': 240
+        }
+      },
+      {
+        'name': 'product_rating',
+        'data': {
+          '0': 1,
+          '1': 1,
+          '3': 1,
+          '4': 1
+        },
+        'exhaustive': true,
+        'stats': {
+          'min': 0,
+          'max': 4,
+          'avg': 2,
+          'sum': 8
+        }
+      },
+      {
+        'name': 'variant_meta_data.eu.price',
+        'data': {
+          '16.95': 1,
+          '30.15': 1,
+          '34.9': 1,
+          '97.68': 1
+        },
+        'exhaustive': true,
+        'stats': {
+          'min': 16.95,
+          'max': 97.68,
+          'avg': 44.92,
+          'sum': 179.68
+        }
       }
     ],
-    'facets': [
-
-    ],
+    'hierarchicalFacets': [],
+    'facets': [],
     '_state': {
-      'index': 'test_variants',
-      'query': '',
-      'facets': [
-
-      ],
+      'index': 'instant_search',
+      'query': 'tray',
+      'facets': [],
       'disjunctiveFacets': [
-        'product_meta_data.eu.colour',
-        'variant_meta_data.eu.size'
+        'category_ids',
+        'product_rating',
+        'variant_meta_data.eu.price'
       ],
-      'hierarchicalFacets': [
-        {
-          'name': 'category_ids',
-          'attributes': [
-            'category_ids'
-          ],
-          'separator': ' > ',
-          'rootPath': null,
-          'showParentLevel': false
-        }
-      ],
-      'facetsRefinements': {
-
-      },
-      'facetsExcludes': {
-
-      },
-      'disjunctiveFacetsRefinements': {
-
-      },
-      'numericRefinements': {
-
-      },
-      'tagRefinements': [
-
-      ],
-      'hierarchicalFacetsRefinements': {
-
-      },
-      'hitsPerPage': 36,
-      'maxValuesPerFacet': 10,
+      'hierarchicalFacets': [],
+      'facetsRefinements': {},
+      'facetsExcludes': {},
+      'disjunctiveFacetsRefinements': {},
+      'numericRefinements': {},
+      'tagRefinements': [],
+      'hierarchicalFacetsRefinements': {},
+      'maxValuesPerFacet': 20,
       'page': 0,
       'highlightPreTag': '<ais-highlight-0000000000>',
       'highlightPostTag': '</ais-highlight-0000000000>'
     }
   },
   'state': {
-    'index': 'test_variants',
-    'query': '',
-    'facets': [
-
-    ],
+    'index': 'instant_search',
+    'query': 'tray',
+    'facets': [],
     'disjunctiveFacets': [
-      'product_meta_data.eu.colour',
-      'variant_meta_data.eu.size'
+      'category_ids',
+      'product_rating',
+      'variant_meta_data.eu.price'
     ],
-    'hierarchicalFacets': [
-      {
-        'name': 'category_ids',
-        'attributes': [
-          'category_ids'
-        ],
-        'separator': ' > ',
-        'rootPath': null,
-        'showParentLevel': false
-      }
-    ],
-    'facetsRefinements': {
-
-    },
-    'facetsExcludes': {
-
-    },
-    'disjunctiveFacetsRefinements': {
-
-    },
-    'numericRefinements': {
-
-    },
-    'tagRefinements': [
-
-    ],
-    'hierarchicalFacetsRefinements': {
-
-    },
-    'hitsPerPage': 36,
-    'maxValuesPerFacet': 10,
+    'hierarchicalFacets': [],
+    'facetsRefinements': {},
+    'facetsExcludes': {},
+    'disjunctiveFacetsRefinements': {},
+    'numericRefinements': {},
+    'tagRefinements': [],
+    'hierarchicalFacetsRefinements': {},
+    'maxValuesPerFacet': 20,
     'page': 0,
     'highlightPreTag': '<ais-highlight-0000000000>',
     'highlightPostTag': '</ais-highlight-0000000000>'
@@ -503,189 +540,241 @@ const searchResultState = {
         'hits': [
           {
             'category_ids': [
-              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+              59
             ],
-            'product_title': 'Field Jacket',
-            'product_reference': 'field_jacket',
-            'product_path': '/products/field_jacket',
+            'product_path': '/products/seed_product_51',
+            'product_title': 'SEPIA nonslip tray 420×210mm',
+            'product_reference': 'seed_product_51',
             'product_meta_data': {
               'eu': {
-                'sku': 'S2658012',
-                'colour': 'Stone',
-                'description': 'A stylish field jacket is ideal for seeing you through transitional months as it is warm and wind proof but not overly heavy. Our lightweight style features military elements, with three large front pockets, zip and button detailing around the neck in a tobacco colour way. Fastens with a zip and buttons.'
+                'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
               }
             },
-            'variant_sku': 'S2658012-1',
-            'variant_title': 'Medium',
+            'variant_title': 'Variant 2 for SEPIA nonslip tray 420×210mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Medium',
-                'price': 60
+                'price': 97.68
               }
             },
             'product_assets': [
               {
-                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-                'alt_text': 'Field Jacket',
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 420×210mm',
                 'sort_position': 1
               }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': 'e2f164fd-ef59-4e1e-9fff-d1b945d57fcb_7e1270a0-1425-437f-b5ef-4889bdf322cb',
+            'variant_assets': [],
+            'product_rating': 0,
+            'objectID': '1510895812',
             '_highlightResult': {
               'product_title': {
-                'value': 'Field Jacket',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S2658012',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 2 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           },
           {
             'category_ids': [
-              '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee'
+              59
             ],
-            'product_title': 'Quilted Shacket',
-            'product_reference': 'quilted_shacket1',
-            'product_path': '/products/quilted_shacket1',
+            'product_path': '/products/seed_product_51',
+            'product_title': 'SEPIA nonslip tray 420×210mm',
+            'product_reference': 'seed_product_51',
             'product_meta_data': {
               'eu': {
-                'sku': 'S26591711',
-                'colour': 'Navy',
-                'description': 'The weather can’t seem to make its mind up during the transitional months, which is why lightweight layering is a must. This navy jacket/shirt hybrid, AKA the shacket, perfectly blends the key characteristics of the two to formulate arguably the most versatile outwear pieces of all-time. Fashioned in a lightly wadded quilted design, this fully lined shacket features two front chest pockets, together with side entry pockets and is finished with matte black poppers. Stay warm and look stylish in this modern marvel.'
+                'description': `Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.`
               }
             },
-            'variant_sku': 'S26591711-1',
-            'variant_title': 'Small',
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 420×210mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Small',
-                'price': 70
+                'price': 16.95
               }
             },
             'product_assets': [
-
+              {
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 420×210mm',
+                'sort_position': 1
+              }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': 'cd5c450e-5821-4afb-80fc-d1ae686509e9_5825f825-e1fa-4f83-907e-27164460b6a4',
+            'variant_assets': [],
+            'product_rating': 3,
+            'objectID': '1510895802',
             '_highlightResult': {
               'product_title': {
-                'value': 'Quilted Shacket',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S26591711',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 420×210mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           },
           {
             'category_ids': [
-              '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b'
+              61
             ],
-            'product_title': 'Short Sleeve T-Shirt',
-            'product_reference': 'short_sleeve_print_t_shirt_1',
-            'product_path': '/products/short_sleeve_print_t_shirt_1',
+            'product_path': '/products/seed_product_50',
+            'product_title': 'SEPIA nonslip tray 360×180mm',
+            'product_reference': 'seed_product_50',
             'product_meta_data': {
               'eu': {
-                'sku': 'S26584011',
-                'colour': 'Khakhi',
-                'description': 'Being one of the most versatile wardrobe essentials, there is no such thing as having too many t-shirts. Fashioned in a nep fabric, this khaki t-shirt features a crew neckline alongside short sleeves. Adding an extra dash of comfort to your basic collection, this practical tee is ideal for everyday use, loungewear and activewear, not to mention everything in between.'
+                'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
               }
             },
-            'variant_sku': 'S26584011-1',
-            'variant_title': 'Size 8',
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
             'variant_meta_data': {
               'eu': {
-                'size': 'Size 8',
-                'price': 40
+                'price': 30.15
               }
             },
             'product_assets': [
               {
-                'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-                'alt_text': 'Bell Sleeve Dress',
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 360×180mm',
                 'sort_position': 1
               }
             ],
-            'variant_assets': [
-
-            ],
-            'objectID': '2f67d96c-ee4f-4db2-9419-2bda39be7d6e_2833e4a2-d21f-4a21-90dd-314c093370b2',
+            'variant_assets': [],
+            'product_rating': 1,
+            'objectID': '1510895792',
             '_highlightResult': {
               'product_title': {
-                'value': 'Short Sleeve T-Shirt',
-                'matchLevel': 'none',
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
                 'matchedWords': [
-
+                  'tray'
                 ]
               },
-              'product_meta_data': {
-                'eu': {
-                  'sku': {
-                    'value': 'S26584011',
-                    'matchLevel': 'none',
-                    'matchedWords': [
-
-                    ]
-                  }
-                }
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
+              }
+            }
+          },
+          {
+            'category_ids': [
+              61
+            ],
+            'product_path': '/products/seed_product_50',
+            'product_title': 'SEPIA nonslip tray 360×180mm',
+            'product_reference': 'seed_product_50',
+            'product_meta_data': {
+              'eu': {
+                'description': `We've blended the flavour of fragrant, zingy lemon with the warmth of spicy ginger root to create this deliciously invigorating infusion. We only use the finest ingredients so it's full of taste and goodness.`
+              }
+            },
+            'variant_title': 'Variant 1 for SEPIA nonslip tray 360×180mm',
+            'variant_meta_data': {
+              'eu': {
+                'price': 34.9
+              }
+            },
+            'product_assets': [
+              {
+                'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/151/1537803729.1077693-SEPIA_nonslip_tray_360_180mm.jpg',
+                'alt_text': 'SEPIA nonslip tray 360×180mm',
+                'sort_position': 1
+              }
+            ],
+            'variant_assets': [],
+            'product_rating': 4,
+            'objectID': '1510894512',
+            '_highlightResult': {
+              'product_title': {
+                'value': 'SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
+              },
+              'variant_title': {
+                'value': 'Variant 1 for SEPIA nonslip <ais-highlight-0000000000>tray</ais-highlight-0000000000> 360×180mm',
+                'matchLevel': 'full',
+                'fullyHighlighted': false,
+                'matchedWords': [
+                  'tray'
+                ]
               }
             }
           }
         ],
-        'nbHits': 3,
+        'nbHits': 4,
         'page': 0,
         'nbPages': 1,
-        'hitsPerPage': 36,
+        'hitsPerPage': 20,
         'processingTimeMS': 1,
         'facets': {
           'category_ids': {
-            '5cb2136b-64af-4d2f-b349-79fe7e9bb1ee': 3,
-            '61af1530-a9e8-44f2-a5c0-a0e7fe8f397b': 1
+            '59': 2,
+            '61': 2
           },
-          'variant_meta_data.eu.size': {
-            'Small': 2,
-            'Medium': 1,
-            'Size 8': 1
+          'product_rating': {
+            '0': 1,
+            '1': 1,
+            '3': 1,
+            '4': 1
           },
-          'product_meta_data.eu.colour': {
-            'Stone': 2,
-            'Khakhi': 1,
-            'Navy': 1
+          'variant_meta_data.eu.price': {
+            '16.95': 1,
+            '30.15': 1,
+            '34.9': 1,
+            '97.68': 1
+          }
+        },
+        'facets_stats': {
+          'category_ids': {
+            'min': 59,
+            'max': 61,
+            'avg': 60,
+            'sum': 240
+          },
+          'product_rating': {
+            'min': 0,
+            'max': 4,
+            'avg': 2,
+            'sum': 8
+          },
+          'variant_meta_data.eu.price': {
+            'min': 16.95,
+            'max': 97.68,
+            'avg': 44.92,
+            'sum': 179.68
           }
         },
         'exhaustiveFacetsCount': true,
-        'exhaustiveNbHits': false,
-        'query': '',
-        'params': 'query=&hitsPerPage=36&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22product_meta_data.eu.colour%22%2C%22variant_meta_data.eu.size%22%2C%22category_ids%22%5D&tagFilters=',
-        'index': 'test_variants'
+        'exhaustiveNbHits': true,
+        'query': 'tray',
+        'params': 'query=tray&maxValuesPerFacet=20&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&facets=%5B%22category_ids%22%2C%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=',
+        'index': 'instant_search'
       }
     ]
   }

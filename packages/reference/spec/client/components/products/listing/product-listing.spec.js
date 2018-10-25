@@ -1,24 +1,46 @@
 // Component
-import { ProductListing } from '../../../../../client/components/products/listing/product-listing'
+import ProductListing from '../../../../../client/components/products/listing/product-listing'
+import AlgoliaFilters from '../../../../../client/components/search/algolia/algolia-filters'
+
+import ProductNavBar from '../../../../../client/components/navigation/product-navbar'
+import ProductMenu from '../../../../../client/components/products/listing/product-menu'
+import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
 
 // Fixtures
-import resultState from '../../../../fixtures/search-result-state'
+import searchResultState from '../../../../fixtures/search-result-state'
+
+// Mock out the next/config
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {
+    ALGOLIA_API_KEY: 'FAKE-API-KEY',
+    ALGOLIA_APP_ID: 'FAKE-APP-ID',
+    ALGOLIA_INDEX_NAME: 'FAKE-INDEX'
+  }
+}))
 
 test('renders correctly', () => {
   // Arrange
-  const searchState = {}
-  const category = {
-    data: {
-      id: 1,
-      title: 'Bathroom'
-    }
+  const searchState = {
+    query: 'tray'
   }
+
+  const onSearchStateChange = (nextSearchState) => (nextSearchState)
 
   // Act
   const wrapper = shallow(
-    <ProductListing category={category} resultState={resultState} searchState={searchState} />
+    <ProductListing
+      resultsState={searchResultState}
+      onSearchStateChange={onSearchStateChange}
+      searchState={searchState}
+    />
   )
+
+  const rootTree = wrapper.find('c-product-listing')
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(rootTree.find(ProductNavBar))
+  expect(rootTree.find(ProductMenu))
+  expect(rootTree.find(ProductMenuOptions))
+  expect(rootTree.find(AlgoliaFilters))
 })

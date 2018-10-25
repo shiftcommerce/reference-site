@@ -5,109 +5,67 @@ import Router from 'next/router'
 import qs from 'qs'
 
 // Actions
-import { setSearchState, setSearchQuery } from '../actions/search-actions'
 
 // Components
-import Layout from '../components/layout'
-import { ProductListing, findResultsState } from '../components/products/listing/product-listing'
+import { findResultsState } from '../components/search/algolia/instant-search'
+import ProductListing from '../components/products/listing/product-listing'
 
-// Lib
-import trimObject from '../lib/trim-object'
+// Set a debounce updateAfter in ms to limit
+// window.history updates
+const updateAfter = 700
 
-// Objects
-import Breadcrumb from '../objects/breadcrumb'
+const searchStateToUrl = searchState =>
+  searchState ? `${window.location.pathname}?${qs.stringify(searchState)}` : ''
 
 class Search extends Component {
-  static async getInitialProps ({ store, req, query, url }) {
-    const searchState = query
-    const resultState = await findResultsState(ProductListing, { searchState })
-    store.dispatch(setSearchState(searchState))
-    return { search: searchState, resultState: resultState, url: url }
+  constructor (props) {
+    super(props)
+    this.onSearchStateChange = this.onSearchStateChange.bind(this)
   }
 
-  breadcrumbCanonicalPath (searchState) {
-    delete searchState.configure
-    return `/search?${qs.stringify(searchState)}`
+  static async getInitialProps ({ query }) {
+    const resultsState = await findResultsState(ProductListing, { searchState: query })
+
+    return { resultsState, searchState: query }
   }
 
-  onSearchQueryChange (e) {
-    this.props.dispatch(setSearchQuery(e.target.value))
+  onSearchStateChange = searchState => {
+    clearTimeout(this.debouncedSetState)
+    this.debouncedSetState = setTimeout(() => {
+      const href = searchStateToUrl(searchState)
+      Router.replace(href, href)
+    }, updateAfter)
+    this.setState({ searchState })
   }
 
-  onSearchStateChange (searchState) {
-    delete searchState.configure
-    let searchObject = trimObject(searchState)
-    let href = `${Router.router.pathname}?${qs.stringify(searchObject)}`
-    Router.push(href, href, {
-      shallow: true
-    })
-    this.props.dispatch(setSearchState(searchObject))
+  componentDidMount () {
+    this.setState({ searchState: qs.parse(window.location.search.slice(1)) })
   }
 
-  renderNoResults (search) {
-    return (
-      <div className='c-product_list__products--no-results'>
-        <h2>Oh no! Nothing matches { `'${search.query || ''}'` }</h2>
-      </div>
-    )
-  }
-
-  renderSearchResults (search, resultState) {
-    return (
-      <div>
-        {
-          (search.query !== undefined) && (resultState.content.hits.length !== 0)
-            ? <ProductListing searchState={search} onSearchStateChange={this.onSearchStateChange.bind(this)} resultState={resultState} />
-            : this.renderNoResults(search)
-        }
-      </div>
-    )
+  componentWillReceiveProps () {
+    this.setState({ searchState: qs.parse(window.location.search.slice(1)) })
   }
 
   render () {
-    let {
-      search,
-      resultState
-    } = this.props
-
-    let BreadcrumbTrail = [
-      { id: 1, title: `Search: '${search.query || ''}'`, canonical_path: this.breadcrumbCanonicalPath(search) }
-    ]
-
-    // TODO: Push search results into search object
-    if (search.loading) {
-      return (
-        <Layout>
-          <p>Loading...</p>
-        </Layout>
-      )
-    } else if (search.error) {
-      return (
-        <Layout>
-          <p>{ search.error }</p>
-        </Layout>
-      )
-    } else {
-      return (
-        <Layout searchObject={search} onSearchQueryChange={this.onSearchQueryChange.bind(this)}>
-          <Breadcrumb trail={BreadcrumbTrail} />
-          { this.renderSearchResults(search, resultState) }
-        </Layout>
-      )
-    }
+    return (
+      <ProductListing
+        resultsState={this.props.resultsState}
+        onSearchStateChange={this.onSearchStateChange}
+        searchState={
+          this.state && this.state.searchState
+            ? this.state.searchState
+            : this.props.searchState
+        }
+        title={`Search "${this.props.searchState.query}"`}
+      />
+    )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    search: state.search || undefined
-  }
+function mapStateToProps (state) {
+  const { search } = state
+
+  return search
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search)
+export default connect(mapStateToProps)(Search)

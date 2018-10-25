@@ -2,7 +2,7 @@
 
 module.exports = (options = {}) => {
   return (request, response, next) => {
-    const contentSecurityPolicy = buildContentSecurityPolicy(options.imageHosts)
+    const contentSecurityPolicy = buildContentSecurityPolicy(options.imageHosts, options.scriptHosts)
 
     const headers = buildHeaders(contentSecurityPolicy)
 
@@ -72,8 +72,9 @@ const featurePolicy = [
 ].join('; ')
 
 // This method takes image hosts and builds the CSP header
-const buildContentSecurityPolicy = (imageHosts) => {
+const buildContentSecurityPolicy = (imageHosts, scriptHosts) => {
   const formattedImageHosts = (imageHosts) ? imageHosts.replace(',', ' ') : ''
+  const formattedScriptHosts = (scriptHosts) ? scriptHosts.replace(',', ' ') : ''
 
   return [
     // Only first party origins are allowed by default
@@ -94,7 +95,7 @@ const buildContentSecurityPolicy = (imageHosts) => {
 
     // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
     // WebSocket and EventSource
-    "connect-src 'self'",
+    `connect-src 'self' ${formattedScriptHosts}`,
 
     // Enforce that forms point to self
     "form-action 'self'",

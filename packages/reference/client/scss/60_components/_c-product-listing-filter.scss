@@ -1,0 +1,62 @@
+.c-product-listing-filter {
+  width: 95%;
+  margin: auto;
+  font-size: 0.85em;
+  margin-bottom: $global-spacing-unit-large;
+  padding-top: $global-spacing-unit;
+
+  &--hide {
+    display: none;
+  }
+
+  &-close {
+    float: right;
+    height: 4rem;
+    width: 4rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active, &:focus {
+      border-style: none;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      margin: auto;
+      padding: auto;
+      height: 2rem;
+      width: 2px;
+      content: ' ';
+      background-color: #333;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &__header {
+    &-title {
+      h2 {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__body {
+    &-option {
+      border-top: 1px solid $border-default;
+    }
+  }
+}

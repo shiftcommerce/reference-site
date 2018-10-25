@@ -10,8 +10,8 @@ import ProductPrice from '../display/product-price'
 import Image from '../../../objects/image'
 
 class ProductListingCard extends React.Component {
-  renderRatingStars (product) {
-    const rating = (product.rating || 0)
+  renderRatingStars (productRating) {
+    const rating = (productRating || 0)
 
     return (
       [1, 2, 3, 4, 5].map((key, index) =>
@@ -24,34 +24,37 @@ class ProductListingCard extends React.Component {
 
   render () {
     const {
-      product,
-      className
+      assetFileAltText,
+      assetFileUrl,
+      className,
+      maxPrice,
+      minPrice,
+      productPath,
+      productRating,
+      title
     } = this.props
-
-    const assetFile = product.asset_files && product.asset_files[0]
-    const pictureUrl = product.picture_url
 
     return (
       <div className={classNames('c-product-listing-card', className)}>
         <div className='c-product-listing-card__body'>
           <div className='c-product-listing-card__gallery c-image'>
-            <Link href={`/slug?slug=${product.canonical_path}`} as={product.canonical_path}>
+            <Link href={`/slug?slug=${productPath}`} as={productPath}>
               <Image className='c-product-listing-card__image u-image-shadow'
-                src={(assetFile && assetFile.s3_url) || pictureUrl}
-                alt={(assetFile && assetFile.alt_text) || product.title}
-                aria-label={product.title} />
+                src={assetFileUrl}
+                alt={assetFileAltText || title}
+                aria-label={title} />
             </Link>
           </div>
           <div className='c-product-listing-card__title' >
             <p role='heading' aria-level='1'>
-              { product.title }
+              { title }
             </p>
           </div>
           <div className='c-product-listing-card__price'>
-            <ProductPrice product={product} />
+            <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>
           <div className='c-product-listing-card__rating'>
-            { this.renderRatingStars(product) }
+            { this.renderRatingStars(productRating) }
           </div>
         </div>
       </div>

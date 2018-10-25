@@ -8,7 +8,9 @@ import ProductWithVariantsWithDifferentPrices from '../../../../fixtures/product
 test('renders correctly if variants have similar price', () => {
   // Act
   const wrapper = mount(
-    <ProductPrice product={ProductWithVariantsWithSimilarPrice} />
+    <ProductPrice
+      minPrice={ProductWithVariantsWithSimilarPrice.min_current_price}
+      maxPrice={ProductWithVariantsWithSimilarPrice.max_current_price} />
   )
 
   // Assert
@@ -19,7 +21,9 @@ test('renders correctly if variants have similar price', () => {
 test('renders correctly if variants have different prices', () => {
   // Act
   const wrapper = mount(
-    <ProductPrice product={ProductWithVariantsWithDifferentPrices} />
+    <ProductPrice
+      minPrice={ProductWithVariantsWithDifferentPrices.min_current_price}
+      maxPrice={ProductWithVariantsWithDifferentPrices.max_current_price} />
   )
 
   // Assert

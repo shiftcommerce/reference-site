@@ -1,283 +1,301 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the nav bar options 1`] = `
-<NavBar
-  menu={
+<Provider
+  store={
     Object {
-      "data": Array [
-        Object {
-          "menu_items": Array [
-            Object {
-              "canonical_path": "/categories/1",
-              "id": 1,
-              "reference": "Bathroom",
-              "title": "Bathroom",
-            },
-          ],
-        },
-      ],
+      "dispatch": [Function],
+      "getAction": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "isActionDispatched": [Function],
+      "isActionTypeDispatched": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <div
-    className="c-nav"
-    role="navigation"
+  <NavBar
+    menu={
+      Object {
+        "data": Array [
+          Object {
+            "menu_items": Array [
+              Object {
+                "canonical_path": "/categories/1",
+                "id": 1,
+                "reference": "Bathroom",
+                "title": "Bathroom",
+              },
+            ],
+          },
+        ],
+      }
+    }
   >
-    <input
-      checked={false}
-      className="c-nav__checkbox"
-      id="burger-menu"
-      type="checkbox"
-    />
     <div
-      className="c-nav__menu-button"
-      onClick={[Function]}
+      className="c-nav"
+      role="navigation"
     >
-      <label
-        className="c-nav__menu-button-icon"
-        htmlFor="burger-menu"
-      >
-        <p>
-          Menu
-        </p>
-      </label>
-    </div>
-    <div
-      className="c-nav__menu"
-    >
+      <input
+        checked={false}
+        className="c-nav__checkbox"
+        id="burger-menu"
+        type="checkbox"
+      />
       <div
-        className="c-nav__menu-header"
+        className="c-nav__menu-button"
+        onClick={[Function]}
       >
-        <Logo
-          className="c-nav__menu-header-logo"
+        <label
+          className="c-nav__menu-button-icon"
+          htmlFor="burger-menu"
         >
-          <div
+          <p>
+            Menu
+          </p>
+        </label>
+      </div>
+      <div
+        className="c-nav__menu"
+      >
+        <div
+          className="c-nav__menu-header"
+        >
+          <Logo
             className="c-nav__menu-header-logo"
           >
-            <Link
-              as="/"
-              href="/slug?slug=/homepage"
+            <div
+              className="c-nav__menu-header-logo"
             >
-              <a
-                href="/"
-                onClick={[Function]}
+              <Link
+                as="/"
+                href="/slug?slug=/homepage"
               >
-                <Image
-                  className="o-logo__image"
-                  height={40}
-                  src="/static/shopgo-logo.svg"
-                  width={180}
+                <a
+                  href="/"
+                  onClick={[Function]}
                 >
-                  <div
+                  <Image
                     className="o-logo__image"
+                    height={40}
+                    src="/static/shopgo-logo.svg"
+                    width={180}
                   >
-                    <LazyLoad
-                      height={200}
-                      offset={0}
-                      once={false}
-                      overflow={false}
-                      resize={false}
-                      scroll={true}
-                      unmountIfInvisible={false}
+                    <div
+                      className="o-logo__image"
                     >
-                      <div
-                        className="lazyload-placeholder"
-                        style={
-                          Object {
-                            "height": 200,
-                          }
-                        }
-                      />
-                    </LazyLoad>
-                  </div>
-                </Image>
-              </a>
-            </Link>
-          </div>
-        </Logo>
-        <label
-          className="c-nav__menu-header-cross"
-          htmlFor="burger-menu"
-          onClick={[Function]}
-        />
-        <div
-          className="c-nav__menu-header-search"
-        >
-          <SearchBar>
-            <form
-              action="/search"
-              method="get"
-              onSubmit={[Function]}
-              role="search"
-            >
-              <div
-                className="c-searchbar"
-              >
-                <div
-                  className="c-searchbar__content"
-                >
-                  <input
-                    aria-label="search text"
-                    className="c-searchbar__input"
-                    name="query"
-                    onChange={[Function]}
-                    placeholder="Search (e.g. \\"Skinny Jeans\\")"
-                    type="search"
-                    value=""
-                  />
-                  <div
-                    className="c-searchbar__input-icon"
-                  >
-                    <Button
-                      className="c-searchbar__input-button"
-                      label="Search"
-                      status="primary"
-                    >
-                      <div
-                        className="o-button__container"
+                      <LazyLoad
+                        height={200}
+                        offset={0}
+                        once={false}
+                        overflow={false}
+                        resize={false}
+                        scroll={true}
+                        unmountIfInvisible={false}
                       >
-                        <button
-                          className="c-searchbar__input-button o-button o-button--primary"
-                          disabled={false}
-                          role="button"
-                          tabIndex="0"
+                        <div
+                          className="lazyload-placeholder"
+                          style={
+                            Object {
+                              "height": 200,
+                            }
+                          }
+                        />
+                      </LazyLoad>
+                    </div>
+                  </Image>
+                </a>
+              </Link>
+            </div>
+          </Logo>
+          <label
+            className="c-nav__menu-header-cross"
+            htmlFor="burger-menu"
+            onClick={[Function]}
+          />
+          <div
+            className="c-nav__menu-header-search"
+          >
+            <Connect(SearchBar)>
+              <SearchBar
+                dispatch={[Function]}
+              >
+                <form
+                  action="/search"
+                  method="get"
+                  onSubmit={[Function]}
+                  role="search"
+                >
+                  <div
+                    className="c-searchbar"
+                  >
+                    <div
+                      className="c-searchbar__content"
+                    >
+                      <input
+                        aria-label="search text"
+                        className="c-searchbar__input"
+                        name="query"
+                        onChange={[Function]}
+                        placeholder="Search our catalog..."
+                        type="search"
+                        value=""
+                      />
+                      <div
+                        className="c-searchbar__input-icon"
+                      >
+                        <Button
+                          className="c-searchbar__input-button"
+                          label="Search"
+                          status="primary"
                         >
-                          Search
-                        </button>
+                          <div
+                            className="o-button__container"
+                          >
+                            <button
+                              className="c-searchbar__input-button o-button o-button--primary"
+                              disabled={false}
+                              role="button"
+                              tabIndex="0"
+                            >
+                              Search
+                            </button>
+                          </div>
+                        </Button>
                       </div>
-                    </Button>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </form>
-          </SearchBar>
+                </form>
+              </SearchBar>
+            </Connect(SearchBar)>
+          </div>
         </div>
-      </div>
-      <div
-        className="c-nav__menu-list"
-      >
-        <NavBarOption
-          as="/categories/1"
-          href="/slug?slug=/categories/1"
-          index={0}
-          key="0"
-          onClick={[Function]}
-          title="Bathroom"
+        <div
+          className="c-nav__menu-list"
         >
-          <Link
+          <NavBarOption
             as="/categories/1"
             href="/slug?slug=/categories/1"
+            index={0}
+            key="0"
+            onClick={[Function]}
+            title="Bathroom"
           >
-            <a
-              className="c-nav__option"
-              href="/categories/1"
-              onClick={[Function]}
+            <Link
+              as="/categories/1"
+              href="/slug?slug=/categories/1"
             >
-              <div
-                className="c-nav__option-label"
+              <a
+                className="c-nav__option"
+                href="/categories/1"
+                onClick={[Function]}
               >
-                Bathroom
-              </div>
-              <div
-                className="c-nav__option-text"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-            </a>
-          </Link>
-        </NavBarOption>
-      </div>
-      <div
-        className="c-nav__menu-footer"
-      >
-        <div
-          className="c-nav__menu-footer-email"
-        >
-          <div
-            className="c-nav__menu-footer-email-text"
-          >
-            <p>
-              Want to receive the latest news and offers from ShopGo?
-            </p>
-          </div>
-          <div
-            className="c-nav__menu-footer-email-input"
-          >
-            <p>
-              Enter your email address here
-            </p>
-            <Button
-              className="c-nav__menu-footer-email-button"
-              label="yes please"
-              size="lrg"
-              status="primary"
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"
-                  disabled={false}
-                  role="button"
-                  tabIndex="0"
+                <div
+                  className="c-nav__option-label"
                 >
-                  yes please
-                </button>
-              </div>
-            </Button>
-          </div>
+                  Bathroom
+                </div>
+                <div
+                  className="c-nav__option-text"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </a>
+            </Link>
+          </NavBarOption>
         </div>
         <div
-          className="c-nav__menu-footer-content"
+          className="c-nav__menu-footer"
         >
           <div
-            className="c-nav__menu-footer-links"
-          >
-            <a
-              className="c-nav__menu-footer-link-first"
-            >
-              FAQs
-            </a>
-            <a>
-              About
-            </a>
-            <a>
-              Delivery
-            </a>
-            <a>
-              Stores
-            </a>
-            <a>
-              Contact
-            </a>
-          </div>
-          <div
-            className="c-nav__menu-footer-social"
+            className="c-nav__menu-footer-email"
           >
             <div
-              className="c-nav__menu-footer-social-text"
+              className="c-nav__menu-footer-email-text"
             >
+              <p>
+                Want to receive the latest news and offers from ShopGo?
+              </p>
+            </div>
+            <div
+              className="c-nav__menu-footer-email-input"
+            >
+              <p>
+                Enter your email address here
+              </p>
+              <Button
+                className="c-nav__menu-footer-email-button"
+                label="yes please"
+                size="lrg"
+                status="primary"
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    className="c-nav__menu-footer-email-button o-button o-button--primary o-button--lrg"
+                    disabled={false}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    yes please
+                  </button>
+                </div>
+              </Button>
+            </div>
+          </div>
+          <div
+            className="c-nav__menu-footer-content"
+          >
+            <div
+              className="c-nav__menu-footer-links"
+            >
+              <a
+                className="c-nav__menu-footer-link-first"
+              >
+                FAQs
+              </a>
               <a>
-                Connect with ShopGo
+                About
+              </a>
+              <a>
+                Delivery
+              </a>
+              <a>
+                Stores
+              </a>
+              <a>
+                Contact
               </a>
             </div>
             <div
-              className="c-nav__menu-footer-social-links"
+              className="c-nav__menu-footer-social"
             >
               <div
-                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--facebook"
-              />
+                className="c-nav__menu-footer-social-text"
+              >
+                <a>
+                  Connect with ShopGo
+                </a>
+              </div>
               <div
-                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--instagram"
-              />
-              <div
-                className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--twitter"
-              />
+                className="c-nav__menu-footer-social-links"
+              >
+                <div
+                  className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--facebook"
+                />
+                <div
+                  className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--instagram"
+                />
+                <div
+                  className="c-nav__menu-footer-social-link c-nav__menu-footer-social-link--twitter"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</NavBar>
+  </NavBar>
+</Provider>
 `;

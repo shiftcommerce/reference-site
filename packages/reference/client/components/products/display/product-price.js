@@ -13,10 +13,7 @@ class ProductPrice extends PureComponent {
     }
   }
 
-  renderPrice (product) {
-    const minPrice = product.min_current_price
-    const maxPrice = product.max_current_price
-
+  renderPrice (minPrice, maxPrice) {
     if (minPrice !== maxPrice) {
       return (
         <span>
@@ -35,7 +32,7 @@ class ProductPrice extends PureComponent {
   render () {
     return (
       <div className='c-product-price'>
-        { this.renderPrice(this.props.product) }
+        { this.renderPrice(this.props.minPrice, this.props.maxPrice) }
       </div>
     )
   }

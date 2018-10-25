@@ -8,3 +8,4 @@ bin/
 *.aes
 *.encrypted
 fonts/
+codeship.aes

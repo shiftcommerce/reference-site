@@ -1,57 +1,38 @@
+import { fixedPrice } from '../../client/lib/fixed-price'
+
 const productSearchHit = {
-  'objectID': 'a2d8d304-19eb-4a98-ae77-d7db53715cc4_6d2a54b2-3988-4e3c-b4d8-26feb6ea852e',
-  'category_ids': [
-    '22bca338-b578-4aee-a302-992764fa3e72'
-  ],
-  'product_title': 'Textured Long T-Shirt',
-  'product_reference': 'product_reference',
-  'product_path': '/products/product_reference',
+  'category_ids': [ 59 ],
+  'product_path': '/products/seed_product_51',
+  'product_title': 'SEPIA nonslip tray 420×210mm',
+  'product_reference': 'seed_product_51',
   'product_meta_data': {
     'eu': {
-      'colour': 'Blue',
-      'sku': 'SKU2659078',
-      'description': 'Combining comfort and practicality, this grey marl textured t-shirt is a go-to everyday essential. Featuring a v-neck and front pocket, this staple piece can be layered to create a range different looks.'
+      'description': `Assam in north-eastern India grows exceptional tea in the lush
+        soil of the Brahmaputra valley – and we pick ours at the peak of the season
+        from some of the region's finest estates during the second flush harvest.
+        It's rich, strong and full-bodied with malty notes.`
     }
   },
-  'variant_sku': 'small_1',
-  'variant_title': 'Small',
+  'variant_sku': '0927967530244',
+  'variant_title': 'Variant 2 for SEPIA nonslip tray 420×210mm',
   'variant_meta_data': {
     'eu': {
-      'size': 'Size 8',
-      'price': 10.0
+      'price': 97.68
     }
   },
   'product_assets': [
     {
-      'id': 1,
-      'url': 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg',
-      'alt_text': 'test alt value'
+      'url': 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg',
+      'alt_text': 'SEPIA nonslip tray 420×210mm',
+      'sort_position': 1
     }
   ],
+  'variants': [
+    { price: fixedPrice(19) },
+    { price: fixedPrice(15) }
+  ],
   'variant_assets': [],
-  '_highlightResult': {
-    'product_title': {
-      'value': '<ais-highlight-0000000000>Long</ais-highlight-0000000000> Shirt',
-      'matchLevel': 'full',
-      'fullyHighlighted': false,
-      'matchedWords': [
-        'long'
-      ]
-    },
-    'product_meta_data': {
-      'eu': {
-        'sku': {
-          'value': 'SK8407636324',
-          'matchLevel': 'none',
-          'matchedWords': []
-        }
-      }
-    },
-    'variant_sku': {
-      'value': 'SK8407636324-2',
-      'matchLevel': 'none',
-      'matchedWords': []
-    }
-  }
+  'product_rating': 0,
+  'objectID': '1510895812'
 }
 export default productSearchHit
