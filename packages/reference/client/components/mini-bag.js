@@ -26,9 +26,9 @@ export class MiniBag extends Component {
             </span>
           </a>
           <div className='c-minibag__cart-label'>
-            <a>
-              Basket
-            </a>
+            <Link href='/cart'>
+              <a>Basket</a>
+            </Link>
           </div>
         </div>
       </Link>
@@ -41,8 +41,7 @@ export class MiniBag extends Component {
     return (
       <div className='c-minibag__checkout'>
         <Link href={(lineItemCount > 0) ? '/checkout' : ''}>
-          <Button className={classNames({ 'o-button--disabled': (lineItemCount === 0) })} label="Checkout" status="primary" aria-label='Go to checkout'>
-          </Button>
+          <Button className={classNames({ 'o-button--disabled': (lineItemCount === 0) })} label='Checkout' status='primary' aria-label='Go to checkout' />
         </Link>
         { this.renderMyAccount(signedIn) }
         { this.renderLogout(signedIn) }

@@ -1,9 +1,6 @@
 // Components
 import ProductListingCard from '../../../../../client/components/products/listing/product-listing-card'
 
-// Libraries
-import Link from 'next/link'
-
 // Objects
 import Image from '../../../../../client/objects/image'
 
@@ -26,16 +23,7 @@ test('renders ProductListingCard correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(
-    <Link href={`/slug?slug=${productSearchHit.product_path}`} as={productSearchHit.product_path}>
-      <Image
-        className='c-product-listing-card__image u-image-shadow'
-        src={productSearchHit.product_assets[0].url}
-        alt={productSearchHit.product_title}
-        aria-label={productSearchHit.product_title}
-      />
-    </Link>
-  )
+  expect(wrapper).toContainReact(<Image className='c-product-listing-card__image u-image-shadow' src={productSearchHit.product_assets[0].url} alt={productSearchHit.product_title} aria-label={productSearchHit.product_title} />)
   expect(wrapper).toIncludeText(productSearchHit.product_title)
   expect(wrapper.find('.c-product-price')).toIncludeText(`£${productSearchHit.variant_meta_data.eu.price}`)
   expect(wrapper.find('.c-product-listing-card__rating')).toHaveClassName('c-product-listing-card__rating')

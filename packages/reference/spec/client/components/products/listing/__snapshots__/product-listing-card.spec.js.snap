@@ -16,55 +16,59 @@ exports[`renders ProductListingCard correctly 1`] = `
     <div
       className="c-product-listing-card__body"
     >
-      <div
-        className="c-product-listing-card__gallery c-image"
+      <Link
+        as="/products/seed_product_51"
+        href="/slug?slug=/products/seed_product_51"
       >
-        <Link
-          as="/products/seed_product_51"
-          href="/slug?slug=/products/seed_product_51"
+        <a
+          href="/products/seed_product_51"
+          onClick={[Function]}
         >
-          <Image
-            alt="SEPIA nonslip tray 420×210mm"
-            aria-label="SEPIA nonslip tray 420×210mm"
-            className="c-product-listing-card__image u-image-shadow"
-            onClick={[Function]}
-            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+          <div
+            className="c-product-listing-card__gallery c-image"
           >
-            <div
+            <Image
+              alt="SEPIA nonslip tray 420×210mm"
+              aria-label="SEPIA nonslip tray 420×210mm"
               className="c-product-listing-card__image u-image-shadow"
+              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
             >
-              <LazyLoad
-                height={200}
-                offset={0}
-                once={false}
-                overflow={false}
-                resize={false}
-                scroll={true}
-                unmountIfInvisible={false}
+              <div
+                className="c-product-listing-card__image u-image-shadow"
               >
-                <div
-                  className="lazyload-placeholder"
-                  style={
-                    Object {
-                      "height": 200,
+                <LazyLoad
+                  height={200}
+                  offset={0}
+                  once={false}
+                  overflow={false}
+                  resize={false}
+                  scroll={true}
+                  unmountIfInvisible={false}
+                >
+                  <div
+                    className="lazyload-placeholder"
+                    style={
+                      Object {
+                        "height": 200,
+                      }
                     }
-                  }
-                />
-              </LazyLoad>
-            </div>
-          </Image>
-        </Link>
-      </div>
-      <div
-        className="c-product-listing-card__title"
-      >
-        <p
-          aria-level="1"
-          role="heading"
-        >
-          SEPIA nonslip tray 420×210mm
-        </p>
-      </div>
+                  />
+                </LazyLoad>
+              </div>
+            </Image>
+          </div>
+          <div
+            className="c-product-listing-card__title"
+          >
+            <p
+              aria-level="1"
+              role="heading"
+            >
+              SEPIA nonslip tray 420×210mm
+            </p>
+          </div>
+        </a>
+      </Link>
       <div
         className="c-product-listing-card__price"
       >

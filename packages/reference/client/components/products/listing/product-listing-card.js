@@ -22,34 +22,47 @@ class ProductListingCard extends React.Component {
     )
   }
 
-  render () {
+  renderImageAndTitle () {
     const {
       assetFileAltText,
       assetFileUrl,
+      title
+    } = this.props
+
+    return (
+      <>
+        <div className='c-product-listing-card__gallery c-image'>
+          <Image className='c-product-listing-card__image u-image-shadow'
+            src={assetFileUrl}
+            alt={assetFileAltText || title}
+            aria-label={title} />
+        </div>
+        <div className='c-product-listing-card__title' >
+          <p role='heading' aria-level='1'>
+            { title }
+          </p>
+        </div>
+      </>
+    )
+  }
+
+  render () {
+    const {
       className,
       maxPrice,
       minPrice,
       productPath,
-      productRating,
-      title
+      productRating
     } = this.props
 
     return (
       <div className={classNames('c-product-listing-card', className)}>
         <div className='c-product-listing-card__body'>
-          <div className='c-product-listing-card__gallery c-image'>
-            <Link href={`/slug?slug=${productPath}`} as={productPath}>
-              <Image className='c-product-listing-card__image u-image-shadow'
-                src={assetFileUrl}
-                alt={assetFileAltText || title}
-                aria-label={title} />
-            </Link>
-          </div>
-          <div className='c-product-listing-card__title' >
-            <p role='heading' aria-level='1'>
-              { title }
-            </p>
-          </div>
+          <Link href={`/slug?slug=${productPath}`} as={productPath}>
+            <a>
+              { this.renderImageAndTitle() }
+            </a>
+          </Link>
           <div className='c-product-listing-card__price'>
             <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>

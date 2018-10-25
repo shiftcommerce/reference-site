@@ -32,9 +32,16 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
         <div
           className="c-minibag__cart-label"
         >
-          <a>
-            Basket
-          </a>
+          <Link
+            href="/cart"
+          >
+            <a
+              href="/cart"
+              onClick={[Function]}
+            >
+              Basket
+            </a>
+          </Link>
         </div>
       </div>
     </Link>
@@ -128,9 +135,16 @@ exports[`renders an active checkout button where cart has items 1`] = `
         <div
           className="c-minibag__cart-label"
         >
-          <a>
-            Basket
-          </a>
+          <Link
+            href="/cart"
+          >
+            <a
+              href="/cart"
+              onClick={[Function]}
+            >
+              Basket
+            </a>
+          </Link>
         </div>
       </div>
     </Link>
@@ -202,9 +216,13 @@ exports[`renders the minibag links 1`] = `
       <div
         className="c-minibag__cart-label"
       >
-        <a>
-          Basket
-        </a>
+        <Link
+          href="/cart"
+        >
+          <a>
+            Basket
+          </a>
+        </Link>
       </div>
     </div>
   </Link>
