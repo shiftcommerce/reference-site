@@ -8,10 +8,7 @@ export class Footer extends Component {
       <div className='c-footer'>
         <div className='c-footer__content'>
           <div className='c-footer__links'>
-            <div className='c-footer__links-first'>
-              <a>FAQs</a>
-            </div>
-            <a>About</a><a>Delivery</a><a>Stores</a><a>Contact</a>
+            <a>FAQs</a><a>About</a><a>Delivery</a><a>Stores</a><a>Contact</a>
           </div>
           <div className='c-footer__social'>
             <div className='c-footer__social-text'>

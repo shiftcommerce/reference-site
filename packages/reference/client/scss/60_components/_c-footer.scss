@@ -1,66 +1,45 @@
 .c-footer {
-  &__content {
-    height: 175px;
-    background-color: white;
-  }
-
   &__links {
-    display: inline-block;
-    height: 100px;
-    margin: 0 auto $global-spacing-unit-large auto;
     font-size: 0.8em;
     text-align: center;
     background-color: $light-grey;
-    padding: ($global-spacing-unit-small * 3) 0;
-    width: 100% !important;
+    padding: $global-spacing-unit 0;
+    width: 100%;
 
     a {
       padding: $global-spacing-unit-tiny $global-spacing-unit-small;
       border-left: 1px solid lightgrey;
     }
 
-    &-first {
-      display: inline-block;
-
-      a {
-        border: 0;
-      }
+    a:first-child {
+      border: 0;
     }
   }
 
   &__social {
-    height: 80px;
-    margin: auto;
+    margin-top: $global-spacing-unit-small;
     text-align: center;
 
     &-text {
       font-size: 0.9em;
     }
 
-    &-links {
+    &-facebook, &-instagram, &-twitter {
       display: inline-block;
-      margin: auto;
+      width: 50px;
+      height: 50px;
     }
 
     &-facebook {
-      display: inline-block;
       background: url('/static/facebook.svg') no-repeat center;
-      width: 50px;
-      height: 50px;
     }
 
     &-instagram {
-      display: inline-block;
       background: url('/static/instagram.svg') no-repeat center;
-      width: 50px;
-      height: 50px;
     }
 
     &-twitter {
-      display: inline-block;
       background: url('/static/twitter.svg') no-repeat center;
-      width: 50px;
-      height: 50px;
     }
   }
 }
