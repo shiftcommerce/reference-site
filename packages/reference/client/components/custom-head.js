@@ -7,6 +7,7 @@ class CustomHead extends Component {
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <script src='https://js.stripe.com/v3/' />
       <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon.png' />
+      <title>ShopGo</title>
     </Head>
   }
 }
