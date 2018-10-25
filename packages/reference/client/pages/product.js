@@ -110,7 +110,8 @@ export class Product extends Component {
         <h1>Unable to load product.</h1>
       )
     } else {
-      const { components } = template.sections.slice(-1).pop()
+      const templateSection = template && template.sections && template.sections.slice(-1).pop()
+      const components = templateSection && templateSection.components
 
       return (
         <>
@@ -122,7 +123,7 @@ export class Product extends Component {
             clickToBuy={this.clickToBuy}
             {...this.state}
           />
-          { renderComponents(components) }
+          { components && renderComponents(components) }
         </>
       )
     }
