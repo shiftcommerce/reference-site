@@ -7,13 +7,13 @@ import Loading from '../../components/loading'
 import OrderList from '../../components/orders/list'
 
 // Actions
-import { getOrderHistoryOverview } from '../../actions/order-actions'
+import { getCustomerOrders } from '../../actions/order-actions'
 
 export class MyAccount extends Component {
   componentDidMount () {
     const { dispatch } = this.props
 
-    dispatch(getOrderHistoryOverview())
+    dispatch(getCustomerOrders())
   }
 
   render () {
@@ -31,7 +31,7 @@ export class MyAccount extends Component {
             <h2>Order History</h2>
           </div>
           <div>
-            <OrderList orders={orders} />
+            { orders.length >= 1 ? <OrderList orders={orders} /> : <p>No previous orders found.</p> }
           </div>
         </div>
       )

@@ -1,4 +1,4 @@
-const orderHistoryData = {
+const customerOrdersData = {
   'data': [
     {
       'id': '013affd4-eed2-4fa9-8cad-7a0473368ae0',
@@ -758,4 +758,4 @@ const orderHistoryData = {
   }
 }
 
-export default orderHistoryData
+export default customerOrdersData

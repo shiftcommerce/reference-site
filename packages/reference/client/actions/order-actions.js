@@ -8,7 +8,7 @@ import { readEndpoint, postEndpoint } from './api-actions'
 import { convertCheckoutToOrder } from './handlers/order-handler'
 
 // Request
-import { orderHistoryRequest } from '../requests/order-history-request'
+import { customerOrdersRequest } from '../requests/customer-orders-request'
 
 export function createOrder (cart, checkout, order) {
   const request = {
@@ -52,6 +52,6 @@ export function setCardErrors (boolean) {
   }
 }
 
-export function getOrderHistoryOverview () {
-  return readEndpoint(orderHistoryRequest())
+export function getCustomerOrders () {
+  return readEndpoint(customerOrdersRequest())
 }

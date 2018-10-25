@@ -12,6 +12,6 @@ module.exports = {
     SlugUrl: `${process.env.API_TENANT}/v1/slugs`
   },
   oms: {
-    orderHistoryUrl: `oms/v1/order_histories`
+    customerOrdersUrl: `oms/v1/customer_orders`
   }
 }

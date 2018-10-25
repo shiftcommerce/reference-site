@@ -7,10 +7,10 @@ export const initialState = {
 
 export default function setOrders (state = initialState, action) {
   switch (action.type) {
-    case types.GET_ORDER_HISTORY:
+    case types.GET_CUSTOMER_ORDERS:
       return Object.assign({}, state)
 
-    case types.SET_ORDER_HISTORY:
+    case types.SET_CUSTOMER_ORDERS:
       return Object.assign({}, state, action.payload, { loading: false })
 
     default:

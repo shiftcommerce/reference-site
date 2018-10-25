@@ -1,7 +1,7 @@
 // Lib
 const { fetchOmsData } = require('./../lib/api-server')
 
-function orderHistoryRenderer (url) {
+function customerOrdersRenderer (url) {
   return async (req, res) => {
     const filterParams = {
       filter: {
@@ -30,4 +30,4 @@ function orderHistoryRenderer (url) {
   }
 }
 
-module.exports = { orderHistoryRenderer }
+module.exports = { customerOrdersRenderer }
