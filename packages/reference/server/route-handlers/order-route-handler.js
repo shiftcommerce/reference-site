@@ -2,7 +2,7 @@ const { postData } = require('./../lib/api-server')
 const stripe = require('stripe')(process.env.SECRET_STRIPE_API_KEY)
 
 // Product api urls
-const api = require('./../constants/api-urls')
+const { platform } = require('./../constants/api-urls')
 
 function createOrderRenderer () {
   return (req, res) => {
@@ -50,7 +50,7 @@ function createOrderRenderer () {
 }
 
 async function placeOrder (req, res, orderPayload) {
-  const url = `${api.CreateOrderUrl}.json_api`
+  const url = `${platform.CreateOrderUrl}.json_api`
   const response = await postData(orderPayload, url)
 
   return res.status(201).send(response.data)
