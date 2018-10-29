@@ -1,10 +1,10 @@
 // Component
 import ProductDisplay from '../../../../../client/components/products/display/product-display'
-import Carousel from '../../../../../client/components/products/display/carousel'
 
 // Objects
 import Button from '../../../../../client/objects/button'
 import VariantSelector from '../../../../../client/objects/variant-selector'
+import Image from '../../../../../client/objects/image'
 
 // Fixtures
 import product from '../../../../fixtures/product'
@@ -28,8 +28,7 @@ test('renders correctly', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText(product.title)
   expect(wrapper).toIncludeText(product.description)
-  expect(wrapper).toContainReact(<Carousel className='c-carousel-slider' product={product} />)
-  expect(wrapper).toContainReact(<VariantSelector value='' name='line_item[item_id]' prompt='Select a Size' variants={product.variants} aria-label='Size Selector' />)
+  expect(wrapper).toContainReact(<Image src={product.asset_files[0].s3_url} key={product.asset_files[0].s3_url} className='c-product-display__gallery-image' />)
+  expect(wrapper).toContainReact(<VariantSelector value='' name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Size Selector' />)
   expect(wrapper.find('Button').at(0)).toMatchElement(<Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={emptyFunction} />)
-  expect(wrapper.find('Button').at(1)).toMatchElement(<Button className='c-product-display__buttons-buy-icon' label='BUY' status='secondary' size='lrg' aria-label='Buy' onClick={emptyFunction} />)
 })

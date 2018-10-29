@@ -809,7 +809,6 @@ exports[`renders correctly 1`] = `
     <div
       className="c-product-listing"
     >
-      <ProductNavBar />
       <div
         className="c-product-listing__menu"
       >

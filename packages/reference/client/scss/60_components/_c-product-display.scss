@@ -1,55 +1,71 @@
 .c-product-display {
-  position: relative;
-  z-index: 0;
 
   &__body {
-    margin-bottom: $global-spacing-unit-huge;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $global-spacing-unit;
 
     @include breakpoint(desktop) {
-      display: grid;
-      grid-template-columns: [col1-start] 45% [col2-start] 55% [col2-end];
-      grid-template-rows: [row1-start] 20% [row2-start] 20% [row3-start] 20% [row4-start] 40% [row4-end];
-      grid-gap: 0.5em;
+      flex-direction: row;
       margin-top: $global-spacing-unit;
+      font-size: 1.2em;
     }
 
     &-dropdowns {
       @include breakpoint(desktop) {
-        grid-column-start: col2-start;
-        grid-column-end: col2-end;
-        grid-row-start: row3-start;
-        grid-row-end: row4-start;
+        order: 2;
         width: 100%;
         margin-bottom: $global-spacing-unit-huge * 2;
       }
     }
   }
 
+  &__content {
+
+    &-image {
+
+      @include breakpoint(desktop) {
+        order: 1;
+        width: 60%;
+      }
+    }
+
+    &-details {
+      @include breakpoint(desktop) {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: $global-spacing-unit-large;
+        margin-left: $global-spacing-unit-tiny;
+      }
+    }
+  }
+
   &__arrow {
     &:before {
-      background-image: url('/static/collapse-arrow.png');
+      background-image: url('/static/collapse-arrow-up.png');
       background-repeat: no-repeat;
       content: '';
       float: right;
       height: 20px;
       width: 20px;
-      z-index: 0;
     }
   }
 
   &__gallery {
-    justify-content: center;
+    order: 1;
 
-    @include breakpoint(desktop) {
-      grid-column-start: col1-start;
-      grid-column-end: col2-start;
-      grid-row-start: row1-start;
-      grid-row-end: row4-start;
+    &-image {
+
+      img{
+        width: 100%;
+      }
     }
 
-    img {
-      height: auto;
-      width: 100%;
+    @include breakpoint(desktop) {
+      margin: auto;
+      max-width: 500px;
     }
   }
 
@@ -74,8 +90,9 @@
     }
 
     &-text {
-      display: none;
+      display: block;
       font-size: 0.7em;
+      margin-top: $global-spacing-unit-small;
 
       @include breakpoint(tablet) {
         font-size: 0.8em;
@@ -87,11 +104,11 @@
       visibility: hidden;
 
       &[type=checkbox]:checked ~.c-product-display__description-text {
-        display: block;
+        display: none;
       }
 
       &[type=checkbox]:checked ~.c-product-display__arrow:before {
-        background-image: url('/static/collapse-arrow-up.png');
+        background-image: url('/static/collapse-arrow.png');
       }
     }
 
@@ -103,36 +120,39 @@
       margin-top: -$global-spacing-unit;
       position: absolute;
       width: 92.5%;
-      z-index: 1;
 
       @include breakpoint(desktop) {
-        width: 55%;
+        width: 40%;
       }
     }
   }
 
   &__buttons {
+    order: 1;
     background-color: white;
-    margin-bottom: $global-spacing-unit-large;
-    margin-top: -($global-spacing-unit-huge * 2);
     padding: $global-spacing-unit-small;
     position: relative;
-    width: 100%;
-    z-index: 1;
 
     @include breakpoint(desktop) {
-      grid-column-start: col2-start;
-      grid-column-end: col2-end;
-      grid-row-start: row2-start;
-      grid-row-end: row3-start;
-      margin: 0;
+      order: 2;
+      margin-bottom: $global-spacing-unit-small;
       padding: 0;
-      height: 100%;
+    }
+
+    &-price {
+      display: inline-block;
+      font-size: 0.9em;
+      text-align: left;
+    }
+
+    &-title {
+      display: inline-block;
+      margin-right: $global-spacing-unit-small;
+      font-size: 0.9em;
+      font-weight: 500;
     }
 
     &-section1 {
-      display: grid;
-      grid-template-columns: [first] 55% [col2-start] 45% [end];
       padding-bottom: $global-spacing-unit-small;
 
       @include breakpoint(desktop) {
@@ -141,9 +161,6 @@
     }
 
     &-section2 {
-      display: grid;
-      grid-gap: 4%;
-      grid-template-columns: [first] 48% [col2-start] 48% [end];
       margin: auto;
 
       @include breakpoint(desktop) {
@@ -152,6 +169,7 @@
     }
 
     &-basket {
+      display: inline-block;
       margin: auto;
       width: 100%;
 
@@ -167,8 +185,14 @@
     }
 
     &-buy {
+      display: inline-block;
       margin: auto;
-      width: 100%;
+      width: 48%;
+      float: right;
+
+      @include breakpoint(desktop) {
+        width: 100%;
+      }
 
       &-icon {
         font-size: 0.8em;
@@ -176,23 +200,15 @@
         margin: 0;
       }
     }
-
-    &-title {
-      font-size: 0.9em;
-      font-weight: 500;
-    }
-
-    &-price {
-      font-size: 0.9em;
-      text-align: left;
-    }
   }
 
   &__info {
+    margin-top: $global-spacing-unit;
     padding: $global-spacing-unit-small;
     width: 100%;
 
     @include breakpoint(tablet) {
+      order: 1;
       margin: auto;
       padding: 0;
       padding-bottom: $global-spacing-unit-small;
@@ -200,15 +216,10 @@
     }
 
     @include breakpoint(desktop) {
-      grid-column-start: col2-start;
-      grid-column-end: col2-end;
-      grid-row-start: row1-start;
-      grid-row-end: row2-start;
       padding: 0;
       margin-top: 0;
       margin-bottom: 0;
       width: 100%;
-      height: 100%;
     }
 
     &-title {
@@ -279,6 +290,17 @@
       font-size: 0.75em;
       width: 100%;
       padding-top: $global-spacing-unit-small;
+      padding-bottom: $global-spacing-unit-small;
+
+      p {
+        font-size: 0.8em;
+      }
+
+      @include breakpoint(desktop) {
+        select {
+          font-size: 0.8em;
+        }
+      }
 
       &-chart {
         float: right;
@@ -311,12 +333,11 @@
     }
 
     &-text {
-      display: none;
+      display: block;
       font-size: 0.6em;
 
       @include breakpoint(tablet) {
         font-size: 0.8em;
-        padding-top: 1em;
       }
     }
 
@@ -324,11 +345,11 @@
       visibility: hidden;
 
       &[type=checkbox]:checked ~.c-product-display__care-text {
-        display: block;
+        display: none;
       }
 
       &[type=checkbox]:checked ~.c-product-display__arrow:before {
-        background-image: url('/static/collapse-arrow-up.png');
+        background-image: url('/static/collapse-arrow.png');
       }
     }
 
@@ -399,7 +420,6 @@
       margin-top: -2em;
       position: absolute;
       width: 92.5%;
-      z-index: 1;
 
       @include breakpoint(desktop) {
         width: 55%;

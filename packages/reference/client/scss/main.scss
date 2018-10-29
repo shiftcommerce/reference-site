@@ -34,7 +34,6 @@
 @import '60_components/_c-address-form';
 @import '60_components/_c-banner-image';
 @import '60_components/_c-card-expiry-field';
-@import '60_components/_c-carousel';
 @import "60_components/_c-cart-no-data";
 @import "60_components/_c-cart-summary";
 @import "60_components/_c-cart-table";
@@ -62,7 +61,6 @@
 @import '60_components/_c-product-listing';
 @import '60_components/_c-product-listing-card';
 @import '60_components/_c-product-listing-filter';
-@import '60_components/_c-product-nav';
 @import '60_components/_c-product-price';
 @import '60_components/_c-related-products';
 @import '60_components/_c-searchbar';
@@ -72,8 +70,6 @@
 @import '60_components/_c-title';
 
 @import '65_scopes/_algolia-instantsearch.scss';
-
-@import "~react-responsive-carousel/lib/styles/carousel.min.css";
 
 @import "70_utilities/_u-alignment";
 @import "70_utilities/_u-bold";

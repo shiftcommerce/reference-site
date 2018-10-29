@@ -166,19 +166,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   className="o-logo__image"
                 >
                   <LazyLoad
-                    height={200}
+                    debounce={true}
+                    elementType="div"
                     offset={0}
-                    once={false}
-                    overflow={false}
-                    resize={false}
-                    scroll={true}
-                    unmountIfInvisible={false}
+                    offsetBottom={0}
+                    offsetHorizontal={0}
+                    offsetLeft={0}
+                    offsetRight={0}
+                    offsetTop={0}
+                    offsetVertical={0}
+                    throttle={250}
                   >
                     <div
-                      className="lazyload-placeholder"
+                      className="LazyLoad"
                       style={
                         Object {
-                          "height": 200,
+                          "height": undefined,
+                          "width": undefined,
                         }
                       }
                     />
@@ -1277,19 +1281,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -1301,19 +1309,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -1325,19 +1337,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -1349,19 +1365,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -1377,19 +1397,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -1760,19 +1784,23 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                       className="c-line-items__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -2401,19 +2429,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     className="o-logo__image"
                   >
                     <LazyLoad
-                      height={200}
+                      debounce={true}
+                      elementType="div"
                       offset={0}
-                      once={false}
-                      overflow={false}
-                      resize={false}
-                      scroll={true}
-                      unmountIfInvisible={false}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
                     >
                       <div
-                        className="lazyload-placeholder"
+                        className="LazyLoad"
                         style={
                           Object {
-                            "height": 200,
+                            "height": undefined,
+                            "width": undefined,
                           }
                         }
                       />
@@ -3532,19 +3564,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <div>
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -3556,19 +3592,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <div>
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -3580,19 +3620,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <div>
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -3604,19 +3648,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <div>
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -3632,19 +3680,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     >
                       <div>
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -4020,19 +4072,23 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                         className="c-line-items__image"
                       >
                         <LazyLoad
-                          height={200}
+                          debounce={true}
+                          elementType="div"
                           offset={0}
-                          once={false}
-                          overflow={false}
-                          resize={false}
-                          scroll={true}
-                          unmountIfInvisible={false}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
                         >
                           <div
-                            className="lazyload-placeholder"
+                            className="LazyLoad"
                             style={
                               Object {
-                                "height": 200,
+                                "height": undefined,
+                                "width": undefined,
                               }
                             }
                           />
@@ -4649,19 +4705,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   className="o-logo__image"
                 >
                   <LazyLoad
-                    height={200}
+                    debounce={true}
+                    elementType="div"
                     offset={0}
-                    once={false}
-                    overflow={false}
-                    resize={false}
-                    scroll={true}
-                    unmountIfInvisible={false}
+                    offsetBottom={0}
+                    offsetHorizontal={0}
+                    offsetLeft={0}
+                    offsetRight={0}
+                    offsetTop={0}
+                    offsetVertical={0}
+                    throttle={250}
                   >
                     <div
-                      className="lazyload-placeholder"
+                      className="LazyLoad"
                       style={
                         Object {
-                          "height": 200,
+                          "height": undefined,
+                          "width": undefined,
                         }
                       }
                     />
@@ -5760,19 +5820,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -5784,19 +5848,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -5808,19 +5876,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -5832,19 +5904,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -5860,19 +5936,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -6243,19 +6323,23 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                       className="c-line-items__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -6944,19 +7028,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   className="o-logo__image"
                 >
                   <LazyLoad
-                    height={200}
+                    debounce={true}
+                    elementType="div"
                     offset={0}
-                    once={false}
-                    overflow={false}
-                    resize={false}
-                    scroll={true}
-                    unmountIfInvisible={false}
+                    offsetBottom={0}
+                    offsetHorizontal={0}
+                    offsetLeft={0}
+                    offsetRight={0}
+                    offsetTop={0}
+                    offsetVertical={0}
+                    throttle={250}
                   >
                     <div
-                      className="lazyload-placeholder"
+                      className="LazyLoad"
                       style={
                         Object {
-                          "height": 200,
+                          "height": undefined,
+                          "width": undefined,
                         }
                       }
                     />
@@ -8367,19 +8455,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -8391,19 +8483,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -8415,19 +8511,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -8439,19 +8539,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -8467,19 +8571,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -8928,19 +9036,23 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                       className="c-line-items__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -9707,19 +9819,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   className="o-logo__image"
                 >
                   <LazyLoad
-                    height={200}
+                    debounce={true}
+                    elementType="div"
                     offset={0}
-                    once={false}
-                    overflow={false}
-                    resize={false}
-                    scroll={true}
-                    unmountIfInvisible={false}
+                    offsetBottom={0}
+                    offsetHorizontal={0}
+                    offsetLeft={0}
+                    offsetRight={0}
+                    offsetTop={0}
+                    offsetVertical={0}
+                    throttle={250}
                   >
                     <div
-                      className="lazyload-placeholder"
+                      className="LazyLoad"
                       style={
                         Object {
-                          "height": 200,
+                          "height": undefined,
+                          "width": undefined,
                         }
                       }
                     />
@@ -11130,19 +11246,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -11154,19 +11274,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -11178,19 +11302,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -11202,19 +11330,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -11230,19 +11362,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   >
                     <div>
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -11691,19 +11827,23 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                       className="c-line-items__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />

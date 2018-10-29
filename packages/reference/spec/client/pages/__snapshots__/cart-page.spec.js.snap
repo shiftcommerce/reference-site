@@ -308,19 +308,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           className="c-line-items__image"
                         >
                           <LazyLoad
-                            height={200}
+                            debounce={true}
+                            elementType="div"
                             offset={0}
-                            once={false}
-                            overflow={false}
-                            resize={false}
-                            scroll={true}
-                            unmountIfInvisible={false}
+                            offsetBottom={0}
+                            offsetHorizontal={0}
+                            offsetLeft={0}
+                            offsetRight={0}
+                            offsetTop={0}
+                            offsetVertical={0}
+                            throttle={250}
                           >
                             <div
-                              className="lazyload-placeholder"
+                              className="LazyLoad"
                               style={
                                 Object {
-                                  "height": 200,
+                                  "height": undefined,
+                                  "width": undefined,
                                 }
                               }
                             />
@@ -751,19 +755,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -779,19 +787,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -807,19 +819,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -835,19 +851,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -863,19 +883,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -891,19 +915,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-payment-icons__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />
@@ -962,19 +990,23 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       className="c-related-products__image"
                     >
                       <LazyLoad
-                        height={200}
+                        debounce={true}
+                        elementType="div"
                         offset={0}
-                        once={false}
-                        overflow={false}
-                        resize={false}
-                        scroll={true}
-                        unmountIfInvisible={false}
+                        offsetBottom={0}
+                        offsetHorizontal={0}
+                        offsetLeft={0}
+                        offsetRight={0}
+                        offsetTop={0}
+                        offsetVertical={0}
+                        throttle={250}
                       >
                         <div
-                          className="lazyload-placeholder"
+                          className="LazyLoad"
                           style={
                             Object {
-                              "height": 200,
+                              "height": undefined,
+                              "width": undefined,
                             }
                           }
                         />

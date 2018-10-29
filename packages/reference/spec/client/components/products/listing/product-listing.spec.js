@@ -2,7 +2,6 @@
 import ProductListing from '../../../../../client/components/products/listing/product-listing'
 import AlgoliaFilters from '../../../../../client/components/search/algolia/algolia-filters'
 
-import ProductNavBar from '../../../../../client/components/navigation/product-navbar'
 import ProductMenu from '../../../../../client/components/products/listing/product-menu'
 import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
 
@@ -39,7 +38,6 @@ test('renders correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(rootTree.find(ProductNavBar))
   expect(rootTree.find(ProductMenu))
   expect(rootTree.find(ProductMenuOptions))
   expect(rootTree.find(AlgoliaFilters))

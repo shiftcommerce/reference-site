@@ -3,11 +3,10 @@ import { Component } from 'react'
 import classNames from 'classnames'
 
 // Components
-import Carousel from './carousel'
-import ProductNavBar from '../../navigation/product-navbar'
 import ProductPrice from './product-price'
 
 // Objects
+import Image from '../../../objects/image'
 import Button from '../../../objects/button'
 import VariantSelector from '../../../objects/variant-selector'
 
@@ -24,18 +23,21 @@ class ProductDisplay extends Component {
     )
   }
 
-  renderCarousel () {
+  renderImage () {
+    const { product } = this.props
+    const imageUrls = product.asset_files.map(a => a.s3_url)
+
     return (
       <div className='c-product-display__gallery'>
-        <div className='c-carousel'>
-          <Carousel className='c-carousel-slider' product={this.props.product} />
-        </div>
+        { imageUrls.map(imageUrl => {
+          return <Image src={imageUrl} key={imageUrl} className='c-product-display__gallery-image'/>
+        }) }
       </div>
     )
   }
 
   renderButtons () {
-    const { product, addToBag, clickToBuy } = this.props
+    const { product, addToBag } = this.props
     const minPrice = product.min_current_price
     const maxPrice = product.max_current_price
 
@@ -51,10 +53,7 @@ class ProductDisplay extends Component {
         </div>
         <div className='c-product-display__buttons-section2'>
           <div className='c-product-display__buttons-basket'>
-            <Button className='c-product-display__buttons-basket-icon o-button--sml' label='ADD TO BASKET' status='primary' aria-label='Add to Basket' onClick={addToBag} />
-          </div>
-          <div className='c-product-display__buttons-buy'>
-            <Button className='c-product-display__buttons-buy-icon o-button--sml' label='BUY' status='secondary' aria-label='Buy' onClick={clickToBuy} />
+            <Button className='c-product-display__buttons-basket-icon o-button--sml' label='ADD TO BASKET' status='positive' aria-label='Add to Basket' onClick={addToBag} />
           </div>
         </div>
       </div>
@@ -64,15 +63,17 @@ class ProductDisplay extends Component {
   renderDescription () {
     const { product } = this.props
 
-    return (
-      <div className='c-product-display__description'>
-        <h1 className='c-product-display__description-title'>Product Details</h1>
-        <label htmlFor='description' className='c-product-dispay__label' />
-        <input type='checkbox' id='description' />
-        <span className='c-product-display__arrow' />
-        <div className='c-product-display__description-text' dangerouslySetInnerHTML={{ __html: product.description }} />
-      </div>
-    )
+    if (product.description) {
+      return (
+        <div className='c-product-display__description'>
+          <h1 className='c-product-display__description-title'>Product Details</h1>
+          <label htmlFor='description' className='c-product-dispay__label' />
+          <input type='checkbox' id='description' />
+          <span className='c-product-display__arrow' />
+          <div className='c-product-display__description-text' dangerouslySetInnerHTML={{ __html: product.description }} />
+        </div>
+      )
+    }
   }
 
   renderColourSelector (meta) {
@@ -83,7 +84,7 @@ class ProductDisplay extends Component {
       return (
         <div className='c-product-display__info-colour'>
           <h1 className='c-product-display__info-colour-title'>Colour</h1>
-          <input type='radio' id='colour' style={{ backgroundColor: productColour }}/>
+          <input type='radio' id='colour' style={{ backgroundColor: productColour }} />
           <label htmlFor='colour'>{ productColour }</label>
         </div>
       )
@@ -105,16 +106,15 @@ class ProductDisplay extends Component {
         </div>
         <div className='c-product-display__info-rating'>
           { this.renderRatingStars(product) }
+          <p className='c-product-display__info-reviews'> Read Reviews</p>
         </div>
-        <p className='c-product-display__info-reviews'>Read Reviews</p>
         { this.renderColourSelector(meta_attributes) }
-        <p className='c-product-display__info-size-chart'>Find your recommended size</p>
         <div className='c-product-display__info-size'>
           <VariantSelector
             onChange={changeVariant}
             value={sku}
             name='line_item[item_id]'
-            prompt='Select a Size'
+            prompt='Select a Product'
             variants={product.variants}
             aria-label='Size Selector' />
         </div>
@@ -191,15 +191,18 @@ class ProductDisplay extends Component {
   render () {
     return (
       <div className='c-product-display'>
-        <ProductNavBar />
         <div className='c-product-display__body'>
-          { this.renderCarousel() }
-          { this.renderButtons() }
-          { this.renderInfo() }
-          <div className='c-product-display__body-dropdowns'>
-            { this.renderDescription() }
-            { this.renderSizeAndFit() }
-            { this.renderDetailsAndCare() }
+          <div className='c-product-display__content-image'>
+            { this.renderImage() }
+          </div>
+          <div className='c-product-display__content-details'>
+            { this.renderButtons() }
+            { this.renderInfo() }
+            <div className='c-product-display__body-dropdowns'>
+              { this.renderDescription() }
+              { this.renderSizeAndFit() }
+              { this.renderDetailsAndCare() }
+            </div>
           </div>
         </div>
       </div>

@@ -9,7 +9,6 @@ import { InstantSearch } from '../../search/algolia/instant-search'
 import { AlgoliaHits, LoadMoreHits } from '../../search/algolia/algolia-hits'
 import AlgoliaFilters from '../../search/algolia/algolia-filters'
 
-import ProductNavBar from '../../navigation/product-navbar'
 import ProductMenu from './product-menu'
 import ProductMenuOptions from './product-menu-options'
 
@@ -41,7 +40,6 @@ class ProductListing extends Component {
       <>
         <AlgoliaFilters showFilters={this.state.showFilters} toggleFiltering={this.toggleFiltering} />
         <div className={classNames('c-product-listing', { 'u-hidden': this.state.showFilters })}>
-          <ProductNavBar />
           <div className='c-product-listing__menu'>
             <ProductMenu title={this.props.title} body={'Optional text prop not yet setup but available'} />
             <ProductMenuOptions toggleFiltering={this.toggleFiltering} />

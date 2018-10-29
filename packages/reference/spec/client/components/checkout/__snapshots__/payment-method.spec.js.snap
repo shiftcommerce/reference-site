@@ -125,19 +125,23 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -149,19 +153,23 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -173,19 +181,23 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -197,19 +209,23 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -225,19 +241,23 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1171,19 +1191,23 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1195,19 +1219,23 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1219,19 +1247,23 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1243,19 +1275,23 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1271,19 +1307,23 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1679,19 +1719,23 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1703,19 +1747,23 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1727,19 +1775,23 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1751,19 +1803,23 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
@@ -1779,19 +1835,23 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               <div>
                 <LazyLoad
-                  height={200}
+                  debounce={true}
+                  elementType="div"
                   offset={0}
-                  once={false}
-                  overflow={false}
-                  resize={false}
-                  scroll={true}
-                  unmountIfInvisible={false}
+                  offsetBottom={0}
+                  offsetHorizontal={0}
+                  offsetLeft={0}
+                  offsetRight={0}
+                  offsetTop={0}
+                  offsetVertical={0}
+                  throttle={250}
                 >
                   <div
-                    className="lazyload-placeholder"
+                    className="LazyLoad"
                     style={
                       Object {
-                        "height": 200,
+                        "height": undefined,
+                        "width": undefined,
                       }
                     }
                   />
