@@ -9,6 +9,7 @@ import NavBarOption from './navbar-option'
 
 // Objects
 import Logo from '../../objects/logo'
+import Image from '../../objects/image'
 import Button from '../../objects/button'
 
 export class NavBar extends Component {
@@ -95,9 +96,9 @@ export class NavBar extends Component {
               <a>Connect with ShopGo</a>
             </div>
             <div className='c-nav__menu-footer-social-links'>
-              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--facebook' />
-              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--instagram' />
-              <div className='c-nav__menu-footer-social-link c-nav__menu-footer-social-link--twitter' />
+              <Image src='/static/facebook.svg' />
+              <Image src='/static/instagram.svg' />
+              <Image src='/static/twitter.svg' />
             </div>
           </div>
         </div>

@@ -2,6 +2,9 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
+// Objects
+import Image from '../objects/image'
+
 export class Footer extends Component {
   renderFooter () {
     return (
@@ -15,9 +18,9 @@ export class Footer extends Component {
               <a>Connect with ShopGo</a>
             </div>
             <div className='c-footer__social-links'>
-              <div className='c-footer__social-facebook' />
-              <div className='c-footer__social-instagram' />
-              <div className='c-footer__social-twitter' />
+              <Image src='/static/facebook.svg' />
+              <Image src='/static/instagram.svg' />
+              <Image src='/static/twitter.svg' />
             </div>
           </div>
         </div>

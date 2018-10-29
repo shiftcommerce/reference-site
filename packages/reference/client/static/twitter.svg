@@ -1,1 +1,20 @@
-<?xml version="1.0" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="277 151 26 26" width="26" height="26"><g><circle vector-effect="non-scaling-stroke" cx="0" cy="0" r="1" transform="matrix(13,0,0,13,290,164)" fill="rgb(43,163,239)"/><defs><mask id="_mask_7PDblAnLSErSV95RJN3QywD2tDSYIemK"><path d="M 283.962 159.702 L 295.604 159.702 L 295.604 169.016 L 283.962 169.016 L 283.962 159.702 Z" style="stroke:black;fill:white;stroke-miterlimit:10;"/></mask><mask id="_mask_OWHwwIrspmNN3n74DtmtWcjIa85kVjwq"><path d="M 283.962 159.702 L 295.604 159.702 L 295.604 169.016 L 283.962 169.016 L 283.962 159.702 Z" style="stroke:black;fill:white;stroke-miterlimit:10;"/></mask></defs><g mask="url(#_mask_OWHwwIrspmNN3n74DtmtWcjIa85kVjwq)"><g mask="url(#_mask_7PDblAnLSErSV95RJN3QywD2tDSYIemK)"/></g><g mask="url(#_mask_7PDblAnLSErSV95RJN3QywD2tDSYIemK)"><image width="30" height="24" transform="matrix(0.388,0,0,0.388,283.962,159.702)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAACVUlEQVRIS7WWS6hPURSHv5+BMlBISUJeUUhIrqSEYkTJLdJ1JV2SkjtAKRIpMqDLQN66KQNloMRAycSVQpG3AZncgUceKbS0tM/t/I/zP2fvsIZnr/X71tp7nb22+AdmZoOBzcASYBTwGbgLnJR0M48ws2nAI/lHMxsEdEg6mJqHmS0CLgJDmsSeAfYDC4BW4IOk1gzcARwHdkg6EAs3s5nALWBAZMxbYDbQm4FPAOtDcBfQKelHnZiZ3QFm1fmF9U/AMWA48DADdwOrcwI9QLukp81EzWyyC0RC824XgLYMvA/YWRD5HjI8JMm3qMHMbBXgIinmFW+R9DMD+1l5F5aZJ3A5NNB1Sb5l3pDtwNkE6mtJozP/3+AgdAlYXiNkwGPAj8Abyn+fWHsmaWID2MyWAi+A06HrYsVS/G5LmlMEnwPWAO8q/scUSJlvt6S2IngdcOpvlWvit0o6XAT7eT0HRvxH+AxJ98qaax5wLeEWSsnxlaRx+YC+rg6d3QKcByakqEb4bi/OgSJ4LjAFWAnMjxCMcfkIjJH0vqriqcB9oF+MYqRP6eBpqDhs9x5gV6RondsDHyKS/PZrsD/AAb4N2Av0r1OuWPctbpH0pMynFBzgI8Ol4t2+ODEBr3CZpKvN4pqCA9yBR4C+OzYigS/enJKuVPmWnfF4wJ8zGwF/H6WY3/crJPnZVprMbCGwKVQ1DBhaF1Sy/g04CuyW9DUmPv/Y2wCsBSbFBAafXsAHTJekNwlxlG31dMAvEh9hY8O0Ggh4VT69XoYnzw2gJ+ZtVpbQLx5lu4wNbeSuAAAAAElFTkSuQmCC" style=""/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2BA3EF;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<circle class="st0" cx="34" cy="34" r="34"/>
+	<g id="White">
+		<path class="st1" d="M28.29,46.5c11.6,0,17.95-9.62,17.95-17.95c0-0.27,0-0.54-0.01-0.81c1.23-0.89,2.3-2,3.15-3.27
+			c-1.13,0.5-2.35,0.84-3.63,1c1.3-0.77,2.3-2.02,2.78-3.49c-1.22,0.73-2.57,1.24-4.01,1.53c-1.14-1.23-2.79-1.99-4.6-1.99
+			c-3.48,0-6.31,2.83-6.31,6.31c0,0.49,0.06,0.97,0.16,1.44c-5.24-0.27-9.89-2.78-13-6.59c-0.54,0.93-0.85,2.02-0.85,3.17
+			c0,2.19,1.12,4.12,2.8,5.25c-1.03-0.04-2-0.32-2.87-0.79c0,0.02,0,0.05,0,0.09c0,3.05,2.18,5.61,5.06,6.19
+			c-0.53,0.15-1.08,0.22-1.66,0.22c-0.41,0-0.8-0.04-1.18-0.11c0.8,2.51,3.14,4.33,5.89,4.38c-2.16,1.7-4.88,2.71-7.84,2.71
+			c-0.5,0-1.01-0.02-1.5-0.09C21.42,45.45,24.74,46.5,28.29,46.5"/>
+	</g>
+</g>
+</svg>

@@ -176,7 +176,7 @@
 
       &-links {
         margin: $global-spacing-unit-large auto;
-        font-size: 1.2em;
+        font-size: 1em;
 
         @include breakpoint(desktop) {
           display: none;
@@ -192,25 +192,19 @@
         margin-bottom: $global-spacing-unit-large;
 
         &-links {
-          display: flex;
           margin: $global-spacing-unit-small auto;
-          width: 8rem;
-          height: 2rem;
-        }
 
-        &-link {
-          width: 33.3%;
+          div {
+            display: inline-block;
+            margin-right: $global-spacing-unit-tiny;
 
-          &--facebook {
-            background: url('/static/facebook.svg') no-repeat center;
+            &:first-child {
+              margin-left: $global-spacing-unit-tiny;
+            }
           }
 
-          &--instagram {
-            background: url('/static/instagram.svg') no-repeat center;
-          }
-
-          &--twitter {
-            background: url('/static/twitter.svg') no-repeat center;
+          img {
+            width: 35px;
           }
         }
       }

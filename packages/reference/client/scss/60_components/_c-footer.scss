@@ -17,29 +17,28 @@
   }
 
   &__social {
-    margin-top: $global-spacing-unit-small;
+    margin: $global-spacing-unit 0;
     text-align: center;
 
     &-text {
       font-size: 0.9em;
     }
 
-    &-facebook, &-instagram, &-twitter {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-    }
+    &-links {
+      margin: $global-spacing-unit-small;
 
-    &-facebook {
-      background: url('/static/facebook.svg') no-repeat center;
-    }
+      div {
+        display: inline-block;
+        margin-right: $global-spacing-unit-tiny;
 
-    &-instagram {
-      background: url('/static/instagram.svg') no-repeat center;
-    }
+        &:first-child {
+          margin-left: $global-spacing-unit-tiny;
+        }
+      }
 
-    &-twitter {
-      background: url('/static/twitter.svg') no-repeat center;
+      img {
+        width: 35px;
+      }
     }
   }
 }
