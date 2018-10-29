@@ -16,6 +16,14 @@ export class MyAccount extends Component {
     dispatch(getCustomerOrders())
   }
 
+  renderOrdersList (orders) {
+    if (orders.data.length === 0) {
+      return (<p>No previous orders found.</p>)
+    }
+
+    return (<OrderList orders={orders} />)
+  }
+
   render () {
     const { orders, orders: { loading } } = this.props
 
@@ -30,9 +38,7 @@ export class MyAccount extends Component {
           <div className='c-order-history__nav'>
             <h2>Order History</h2>
           </div>
-          <div>
-            { orders.length >= 1 ? <OrderList orders={orders} /> : <p>No previous orders found.</p> }
-          </div>
+          { this.renderOrdersList(orders) }
         </div>
       )
     }
