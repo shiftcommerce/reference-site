@@ -34,7 +34,7 @@
   &-count {
     text-align: center;
     vertical-align: middle;
-    color: grey;
+    color: $medium-grey;
     font-size: 1rem;
     line-height: 1rem;
 
@@ -54,7 +54,7 @@
   &-starIcon {
     stroke: transparent;
     &--empty {
-      fill: grey;
+      fill: $medium-grey;
       stroke: transparent;
     }
     &--full {

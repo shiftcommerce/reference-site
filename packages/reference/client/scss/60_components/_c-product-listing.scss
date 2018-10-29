@@ -203,7 +203,7 @@
     }
 
     &-items-displayed {
-      color: grey;
+      color: $medium-grey;
       font-size: 0.7em;
       padding-top: $global-spacing-unit-tiny;
 
@@ -236,7 +236,7 @@
         }
 
         span {
-          color: grey;
+          color: $medium-grey;
         }
       }
     }

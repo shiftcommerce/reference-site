@@ -138,7 +138,7 @@
           width: 90%;
           margin: $global-spacing-unit-small auto;
           background-color: white;
-          color: grey;
+          color: $medium-grey;
           text-align: left;
 
           @include breakpoint(desktop) {

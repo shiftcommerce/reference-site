@@ -43,9 +43,12 @@
     top: 5px;
   }
 
-  &:hover:after {
-    content: "";
-    color: grey;
+  // Only show checkbox hover state on desktop as it doesn't make sense on mobile/tablet
+  @include breakpoint(desktop) {
+    &:hover:after {
+      content: "";
+      color: grey;
+    }
   }
 }
 
