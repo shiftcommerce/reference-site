@@ -10,7 +10,8 @@ test('renders the header', () => {
   const initialState = {
     loading: true,
     error: false,
-    query: null
+    query: null,
+    search: {}
   }
 
   // Act
