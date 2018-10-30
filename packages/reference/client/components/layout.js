@@ -126,22 +126,30 @@ export class Layout extends Component {
   }
 
   renderSearch () {
-    if (typeof window === 'undefined' || window.location.pathname !== '/cart') {
-      return (
-        <span className='c-header__search'>
-          <SearchBar query={this.props.query} />
-        </span>
-      )
-    }
+    const hiddenMobileSearchbar = typeof window !== 'undefined' && window.location.pathname === '/cart'
+    const searchClasses = classNames('c-header__search', {
+      'u-visible-d': hiddenMobileSearchbar
+    })
+
+    return (
+      <span className={searchClasses}>
+        <SearchBar query={this.props.query} />
+      </span>
+    )
   }
 
   render () {
     const notCartOrCheckout = /^(?!\/cart|\/checkout).*$/
-    const bodyClass = (typeof window === 'undefined' || notCartOrCheckout.test(window.location.pathname)) ? 'o-body' : ''
+    const bodyClassApplied = (typeof window === 'undefined' || notCartOrCheckout.test(window.location.pathname))
+
+    const bodyClasses = classNames({
+      'o-body': bodyClassApplied
+    })
+
     return (
       <>
         { this.renderHeader() }
-        <div className={bodyClass}>
+        <div className={bodyClasses}>
           { this.props.children }
         </div>
         <div className='o-footer'>

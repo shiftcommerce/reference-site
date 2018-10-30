@@ -1,12 +1,10 @@
 .c-cart-table {
   display: grid;
   padding: $global-spacing-unit;
-  padding-top: $global-spacing-unit-huge;
+  padding-top: $global-spacing-unit-small;
   margin: auto;
 
   @include breakpoint(desktop) {
-    margin: auto;
-    padding: $global-spacing-unit-small;
     width: 80%;
   }
 
@@ -42,7 +40,7 @@
   }
 
   &--margin {
-    margin-top: 30%;
+    margin-top: 108px; // height of mobile header without the searchbar
 
     @include breakpoint(desktop) {
       margin-top: 0;
