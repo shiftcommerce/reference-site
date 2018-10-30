@@ -61,7 +61,7 @@ class LoginForm extends Component {
 
   renderPasswordInputField () {
     const fieldOptions = [
-      { className: 'o-form__input-block', type: 'password', label: 'Password', labelClassName: 'password', name: 'password', rules: { required: true, maxLength: 50, minLength: 6 } }
+      { className: 'o-form__input-block', type: 'password', label: 'Password', name: 'password', rules: { required: true, maxLength: 50, minLength: 6 } }
     ]
 
     return (
