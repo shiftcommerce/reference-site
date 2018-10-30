@@ -9,8 +9,6 @@ import NavBarOption from './navbar-option'
 
 // Objects
 import Logo from '../../objects/logo'
-import Image from '../../objects/image'
-import Button from '../../objects/button'
 
 export class NavBar extends Component {
   constructor (props) {
@@ -68,44 +66,6 @@ export class NavBar extends Component {
     )
   }
 
-  renderNavFooterEmail () {
-    return (
-      <div className='c-nav__menu-footer-email'>
-        <div className='c-nav__menu-footer-email-text'>
-          <p>Want to receive the latest news and offers from ShopGo?</p>
-        </div>
-        <div className='c-nav__menu-footer-email-input'>
-          <p>Enter your email address here</p>
-          <Button className='c-nav__menu-footer-email-button' label='yes please' status='primary' size='lrg'/>
-        </div>
-      </div>
-    )
-  }
-
-  renderNavFooter () {
-    return (
-      <div className='c-nav__menu-footer'>
-        { this.renderNavFooterEmail() }
-        <div className='c-nav__menu-footer-content'>
-          <div className='c-nav__menu-footer-links'>
-            <a className='c-nav__menu-footer-link-first'>FAQs</a>
-            <a>About</a><a>Delivery</a><a>Stores</a><a>Contact</a>
-          </div>
-          <div className='c-nav__menu-footer-social'>
-            <div className='c-nav__menu-footer-social-text'>
-              <a>Connect with ShopGo</a>
-            </div>
-            <div className='c-nav__menu-footer-social-links'>
-              <Image src='/static/facebook.svg' />
-              <Image src='/static/instagram.svg' />
-              <Image src='/static/twitter.svg' />
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   render () {
     const { loading } = this.props.menu.data
     const menu = this.props.menu.data[0]
@@ -124,7 +84,6 @@ export class NavBar extends Component {
             <div className='c-nav__menu-list'>
               { this.renderNavOptions(menuItems) }
             </div>
-            { this.renderNavFooter() }
           </div>
         </div>
       )
