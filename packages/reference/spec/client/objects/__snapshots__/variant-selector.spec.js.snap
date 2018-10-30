@@ -65,7 +65,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={1}
       >
-        £10.00
+        Small - £10.00
       </option>
       <option
         aria-posinset={2}
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={2}
       >
-        £11.00
+        Medium - £11.00
       </option>
       <option
         aria-posinset={3}
@@ -87,7 +87,7 @@ exports[`renders correctly 1`] = `
         role="option"
         value={3}
       >
-        £12.00
+        Large - £12.00
       </option>
     </select>
   </div>
