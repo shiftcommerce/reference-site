@@ -74,18 +74,6 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
           </div>
         </Button>
       </Link>
-      <Link
-        as="/account/myaccount"
-        href="/account/login"
-      >
-        <a
-          className="o-header__myaccount"
-          href="/account/myaccount"
-          onClick={[Function]}
-        >
-          My Account
-        </a>
-      </Link>
     </div>
   </div>
 </MiniBag>
@@ -177,18 +165,6 @@ exports[`renders an active checkout button where cart has items 1`] = `
           </div>
         </Button>
       </Link>
-      <Link
-        as="/account/myaccount"
-        href="/account/login"
-      >
-        <a
-          className="o-header__myaccount"
-          href="/account/myaccount"
-          onClick={[Function]}
-        >
-          My Account
-        </a>
-      </Link>
     </div>
   </div>
 </MiniBag>
@@ -238,16 +214,6 @@ exports[`renders the minibag links 1`] = `
         label="Checkout"
         status="primary"
       />
-    </Link>
-    <Link
-      as="/account/myaccount"
-      href="/account/login"
-    >
-      <a
-        className="o-header__myaccount"
-      >
-        My Account
-      </a>
     </Link>
   </div>
 </div>

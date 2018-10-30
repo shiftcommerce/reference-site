@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
+import Cookies from 'js-cookie'
 
 // Objects
 import Logo from '../objects/logo'
@@ -85,14 +86,33 @@ export class Layout extends Component {
     )
   }
 
-  renderHeaderAccount () {
+  renderHeaderAccount (signedIn) {
     return (
-      <div className='c-header__account'>
-        <div className='c-header__account-button'>
+      <>
+        <div className='c-header__account'>
+          <div className='c-header__account-button'>
+            <div className='c-header__account-label'>
+              <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
+                <a className='o-header__myaccount'>Account</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className='c-header__account'>
+          { signedIn && this.renderLogout(signedIn) }
+        </div>
+      </>
+    )
+  }
+
+  renderLogout (signedIn) {
+    return (
+      <div className='c-header__log-out'>
+        <div className='c-header__log-out-button'>
           <div className='c-header__account-label'>
-            <Link href='/account/login'>
-              <a>Account</a>
-            </Link>
+            <a href='/account/logout' className='o-header__myaccount'>
+              Logout
+            </a>
           </div>
         </div>
       </div>
@@ -100,6 +120,8 @@ export class Layout extends Component {
   }
 
   renderHeader () {
+    const signedIn = Cookies.get('signedIn')
+
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
       const headerClasses = classNames('o-header', {
         'o-header--shrunk': this.state.shrunk
@@ -113,7 +135,7 @@ export class Layout extends Component {
               <div className='o-header__top-wrapper'>
                 <Logo className='o-header__logo' />
                 { this.renderMobileNav() }
-                { this.renderHeaderAccount() }
+                { this.renderHeaderAccount(signedIn) }
                 <MiniBag />
                 { this.renderSearch() }
               </div>

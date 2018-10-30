@@ -3,7 +3,6 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
-import Cookies from 'js-cookie'
 
 // Actions
 import { readCart } from '../actions/cart-actions'
@@ -36,35 +35,13 @@ export class MiniBag extends Component {
   }
 
   renderCheckoutButton (lineItemCount) {
-    const signedIn = Cookies.get('signedIn')
-
     return (
       <div className='c-minibag__checkout'>
         <Link href={(lineItemCount > 0) ? '/checkout' : ''}>
           <Button className={classNames({ 'o-button--disabled': (lineItemCount === 0) })} label='Checkout' status='primary' aria-label='Go to checkout' />
         </Link>
-        { this.renderMyAccount(signedIn) }
-        { this.renderLogout(signedIn) }
       </div>
     )
-  }
-
-  renderMyAccount (signedIn) {
-    return (
-      <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
-        <a className='o-header__myaccount'>My Account</a>
-      </Link>
-    )
-  }
-
-  renderLogout (signedIn) {
-    if (signedIn) {
-      return (
-        <a href='/account/logout' className='o-header__myaccount'>
-          Logout
-        </a>
-      )
-    }
   }
 
   render () {

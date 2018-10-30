@@ -44,13 +44,58 @@
     }
   }
 
+  &__log-out {
+    flex-basis: 30%;
+    flex-grow: 1;
+    @include breakpoint(desktop) {
+      flex-basis: auto;
+      order: 4;
+      position: static;
+      margin: 0;
+    }
+
+    &-button {
+      background: url('/static/account-icon.svg') no-repeat center;
+      width: 3rem;
+      height: 2.4rem;
+      margin: auto 50% auto auto;
+      cursor: pointer;
+
+      @include breakpoint(desktop) {
+        margin-right: 55%;
+        width: auto;
+        height: 3.2rem;
+        background-size: 40%;
+      }
+    }
+
+    &-label {
+      font-size: 0.8rem;
+      padding-top: ($global-spacing-unit-tiny * 3);
+      padding-left: ($global-spacing-unit-tiny * 7);
+
+      @include breakpoint(desktop) {
+        font-size: 1rem;
+      }
+
+      a {
+        @include breakpoint(desktop) {
+          padding-right: $global-spacing-unit-small;
+          border-right: 1px solid $border-default;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
   &__minibag {
     flex-basis: 30%;
     flex-grow: 1;
     border-left: 1px solid $border-default;
 
     @include breakpoint(desktop) {
-      order: 4;
+      order: 5;
       height: auto;
       border-left: none;
       flex-basis: auto;
