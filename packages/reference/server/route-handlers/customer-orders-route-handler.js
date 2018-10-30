@@ -9,9 +9,13 @@ function customerOrdersRenderer (url) {
         customer_reference: req.session.customerId
       },
       fields: {
-        customer_orders: 'account_reference,reference,placed_at,customer,pricing,line_items,shipping_addresses,shipping_methods'
+        customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+        line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+        shipping_methods: 'label,price',
+        shipping_addresses: 'name,company,lines,city,state,postcode,country',
+        discounts: 'label,amount_inc_tax,coupon_code'
       },
-      include: 'customer,shipping_methods,shipping_addresses,billing_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts,line_items.individual_prices,line_items.individual_prices.discounts,payments.billing_address'
+      include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
     }
 
     const response = await fetchOmsData(query, url)
