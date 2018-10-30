@@ -4,7 +4,7 @@ services:
   web:
     image: shift-front-end-react
     build: .
-    command: nodemon -w server/server.js
+    command: nodemon --legacy-watch --watch server server/server.js
     ports:
       - "3000:3000"
     entrypoint: ./bin/docker/yarn_entrypoint
