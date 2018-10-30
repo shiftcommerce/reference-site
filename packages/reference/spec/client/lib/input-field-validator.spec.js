@@ -116,9 +116,42 @@ describe('InputFieldValidator', () => {
   })
 
   describe('Phone validation', () => {
-    test('with valid phone', () => {
+    test('with valid mobile number', () => {
       // Arrange
       const data = { name: 'phone_number', value: '07800000000', rules: { phone: true } }
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid mobile number that has country code', () => {
+      // Arrange
+      const data = { name: 'phone_number', value: '+447800000000', rules: { phone: true } }
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid landline number', () => {
+      // Arrange
+      const data = { name: 'phone_number', value: '01130000000', rules: { phone: true } }
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid landline number that has country code', () => {
+      // Arrange
+      const data = { name: 'phone_number', value: '+441130000000', rules: { phone: true } }
 
       // Act
       const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()

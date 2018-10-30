@@ -45,7 +45,7 @@ class InputFieldValidator {
   }
 
   phone () {
-    const regex = /^((\+44\s?|0)7([45789]\d{2}|624)\s?\d{3}\s?\d{3})$/
+    const regex = /^(\+?44\s?\d{3,4}|\(?\d{4,5}\)?)\s?\d{3}\s?\d{3}$/
     const validPhoneNumber = (this.value.match(regex))
     return (validPhoneNumber ? '' : `${this.value} - is not a valid ${this.formattedFieldName()}.`)
   }
