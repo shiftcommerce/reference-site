@@ -7,7 +7,10 @@ export function registerPayload (account) {
       email_confirmation: credentials.confirm_email,
       password: credentials.password,
       password_confirmation: credentials.confirm_password,
-      meta_attributes: {}
+      meta_attributes: {
+        first_name: { value: credentials.first_name },
+        last_name: { value: credentials.last_name }
+      }
     }
   }
   return {

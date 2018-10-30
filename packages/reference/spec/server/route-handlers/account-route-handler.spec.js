@@ -21,7 +21,9 @@ describe('create an account', () => {
           email: 'a.fletcher1234@gmail.com',
           email_confirmation: 'a.fletcher1234@gmail.com',
           password: 'qwertyuiop',
-          password_confirmation: 'qwertyuiop'
+          password_confirmation: 'qwertyuiop',
+          first_name: 'a',
+          last_name: 'fletcher'
         }
       }
     }
@@ -41,6 +43,8 @@ describe('create an account', () => {
       expect(response.data.data.id).toBe('23063267')
       expect(response.data.data.type).toBe('customer_accounts')
       expect(response.data.data.attributes.email).toBe('a.fletcher1234@gmail.com')
+      expect(response.data.data.attributes.meta_attributes.first_name.value).toBe('a')
+      expect(response.data.data.attributes.meta_attributes.last_name.value).toBe('fletcher')
     })
   })
 
@@ -77,7 +81,7 @@ describe('create an account', () => {
   })
 })
 
-describe('loggin into an account', () => {
+describe('login into an account', () => {
   describe('with valid data', () => {
     const url = '/login'
 

@@ -6,7 +6,16 @@ const response = {
       self: '/integration/v1/customer_accounts/23063267.json_api'
     },
     attributes: {
-      meta_attributes: {},
+      meta_attributes: {
+        first_name: {
+          value: 'a',
+          data_type: 'text'
+        },
+        last_name: {
+          value: 'fletcher',
+          data_type: 'text'
+        }
+      },
       email: 'a.fletcher1234@gmail.com',
       reference: null,
       created_at: '2018-08-28T13:57:37.802Z',
