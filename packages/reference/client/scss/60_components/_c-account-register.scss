@@ -1,5 +1,11 @@
 .c-register {
+  width: 80%;
+  margin: auto;
   padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(tablet) {
+    width: 60%;
+  }
 
   &__grid {
     display: grid;
