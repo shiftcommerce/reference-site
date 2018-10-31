@@ -1277,7 +1277,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   className="c-payment-method__images-cardpayment"
                 >
                   <Image
-                    src="/static/payments/VISA.svg"
+                    src="/static/payments/visa.svg"
                   >
                     <div>
                       <LazyLoad
@@ -1305,7 +1305,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     </div>
                   </Image>
                   <Image
-                    src="/static/payments/Mastercard.svg"
+                    src="/static/payments/mastercard.svg"
                   >
                     <div>
                       <LazyLoad
@@ -3560,7 +3560,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     className="c-payment-method__images-cardpayment"
                   >
                     <Image
-                      src="/static/payments/VISA.svg"
+                      src="/static/payments/visa.svg"
                     >
                       <div>
                         <LazyLoad
@@ -3588,7 +3588,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </div>
                     </Image>
                     <Image
-                      src="/static/payments/Mastercard.svg"
+                      src="/static/payments/mastercard.svg"
                     >
                       <div>
                         <LazyLoad
@@ -5816,7 +5816,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   className="c-payment-method__images-cardpayment"
                 >
                   <Image
-                    src="/static/payments/VISA.svg"
+                    src="/static/payments/visa.svg"
                   >
                     <div>
                       <LazyLoad
@@ -5844,7 +5844,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     </div>
                   </Image>
                   <Image
-                    src="/static/payments/Mastercard.svg"
+                    src="/static/payments/mastercard.svg"
                   >
                     <div>
                       <LazyLoad
@@ -8451,7 +8451,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   className="c-payment-method__images-cardpayment"
                 >
                   <Image
-                    src="/static/payments/VISA.svg"
+                    src="/static/payments/visa.svg"
                   >
                     <div>
                       <LazyLoad
@@ -8479,7 +8479,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     </div>
                   </Image>
                   <Image
-                    src="/static/payments/Mastercard.svg"
+                    src="/static/payments/mastercard.svg"
                   >
                     <div>
                       <LazyLoad
@@ -11242,7 +11242,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   className="c-payment-method__images-cardpayment"
                 >
                   <Image
-                    src="/static/payments/VISA.svg"
+                    src="/static/payments/visa.svg"
                   >
                     <div>
                       <LazyLoad
@@ -11270,7 +11270,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     </div>
                   </Image>
                   <Image
-                    src="/static/payments/Mastercard.svg"
+                    src="/static/payments/mastercard.svg"
                   >
                     <div>
                       <LazyLoad

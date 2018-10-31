@@ -33,8 +33,8 @@ export default class PaymentMethodSelector extends Component {
         </div>
         <div className='c-payment-method__images'>
           <span className='c-payment-method__images-cardpayment'>
-            <Image src='/static/payments/VISA.svg' />
-            <Image src='/static/payments/Mastercard.svg' />
+            <Image src='/static/payments/visa.svg' />
+            <Image src='/static/payments/mastercard.svg' />
             <Image src='/static/payments/american-express.svg' />
             <Image src='/static/payments/maestro.svg' />
           </span>

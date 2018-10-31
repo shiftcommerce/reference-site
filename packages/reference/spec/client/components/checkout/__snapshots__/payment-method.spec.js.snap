@@ -121,7 +121,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             className="c-payment-method__images-cardpayment"
           >
             <Image
-              src="/static/payments/VISA.svg"
+              src="/static/payments/visa.svg"
             >
               <div>
                 <LazyLoad
@@ -149,7 +149,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
               </div>
             </Image>
             <Image
-              src="/static/payments/Mastercard.svg"
+              src="/static/payments/mastercard.svg"
             >
               <div>
                 <LazyLoad
@@ -1187,7 +1187,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             className="c-payment-method__images-cardpayment"
           >
             <Image
-              src="/static/payments/VISA.svg"
+              src="/static/payments/visa.svg"
             >
               <div>
                 <LazyLoad
@@ -1215,7 +1215,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
               </div>
             </Image>
             <Image
-              src="/static/payments/Mastercard.svg"
+              src="/static/payments/mastercard.svg"
             >
               <div>
                 <LazyLoad
@@ -1715,7 +1715,7 @@ exports[`renders payment summary on collapsing 1`] = `
             className="c-payment-method__images-cardpayment"
           >
             <Image
-              src="/static/payments/VISA.svg"
+              src="/static/payments/visa.svg"
             >
               <div>
                 <LazyLoad
@@ -1743,7 +1743,7 @@ exports[`renders payment summary on collapsing 1`] = `
               </div>
             </Image>
             <Image
-              src="/static/payments/Mastercard.svg"
+              src="/static/payments/mastercard.svg"
             >
               <div>
                 <LazyLoad

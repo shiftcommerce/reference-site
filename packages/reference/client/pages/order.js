@@ -13,7 +13,7 @@ class OrderPage extends Component {
 
     if (cardBrand === 'Visa') {
       return (
-        <Image src='/static/payments/VISA.svg' className='c-order__payment-method-card-image' />
+        <Image src='/static/payments/visa.svg' className='c-order__payment-method-card-image' />
       )
     }
   }
