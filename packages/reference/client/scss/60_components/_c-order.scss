@@ -149,10 +149,13 @@
         margin-left: $global-spacing-unit-small;
       }
 
-      &-image {
-        display: inline-block;
+      img {
         height: 20px;
         margin-right: $global-spacing-unit-small;
+      }
+
+      &-image {
+        display: inline-block;
       }
     }
   }
