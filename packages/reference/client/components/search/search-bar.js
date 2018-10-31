@@ -53,7 +53,7 @@ class SearchBar extends Component {
 function mapStateToProps (state) {
   const { search } = state
 
-  return search
+  return { search }
 }
 
 export default connect(mapStateToProps)(SearchBar)

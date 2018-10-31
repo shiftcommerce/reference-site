@@ -1,8 +1,13 @@
+// Libs
+import { calculateCartSummary } from '../../lib/calculate-cart-summary'
+
 export function convertCheckoutToOrder (cart, checkout, order) {
   // This is to ensure billing address has correctly set
   if (checkout.shippingAddressAsBillingAddress === true) {
     checkout.billingAddress = checkout.shippingAddress
   }
+
+  const totals = calculateCartSummary(cart, checkout)
 
   const orderPayload = {
     attributes: {
@@ -13,10 +18,12 @@ export function convertCheckoutToOrder (cart, checkout, order) {
       ip_address: '',
       line_items_resources: prepareLineItems(cart),
       shipping_address: prepareShippingAddress(checkout.shippingAddress),
-      shipping_method: prepareShippingMethod(checkout.shippingMethod, checkout),
+      shipping_method: prepareShippingMethod(checkout),
       discount_summaries: discountSummary(),
-      sub_total: getTotalPrice(cart, checkout),
-      total: getTotalPrice(cart, checkout),
+      sub_total: totals.subTotal,
+      total: totals.total,
+      shipping_total: totals.shipping,
+      tax: totals.tax,
       placed_at: new Date().toISOString()
     },
     type: 'create_order'
@@ -51,28 +58,12 @@ function prepareLineItems (cart) {
   return formattedLineItems
 }
 
-function getTotalPrice (cart, checkout) {
-  const lineItems = cart.lineItems
-  let totalAmount = 0
-  if (lineItems.length > 0) {
-    lineItems.forEach((lineItem) => {
-      totalAmount += parseInt(lineItem.price * lineItem.quantity)
-    })
-  }
-  totalAmount += checkout.shippingMethod.retail_price_inc_tax
-  return totalAmount
-}
-
 function prepareBillingAddress (address) {
-  return Object.assign(
-    prepareAddress(address)
-  )
+  return prepareAddress(address)
 }
 
 function prepareShippingAddress (address) {
-  return Object.assign(
-    prepareAddress(address)
-  )
+  return prepareAddress(address)
 }
 
 function prepareAddress (address) {
@@ -91,10 +82,12 @@ function prepareAddress (address) {
   }
 }
 
-function prepareShippingMethod (shippingMethod, checkout) {
+function prepareShippingMethod (checkout) {
+  const shippingMethod = checkout.shippingMethod
+  const checkoutUpdatedAt = new Date(checkout.updatedAt).toISOString()
   return {
     attributes: {
-      created_at: checkout.updatedAt.toISOString(),
+      created_at: checkoutUpdatedAt,
       description: shippingMethod.delivery_date,
       label: shippingMethod.name,
       meta_attributes: {},
@@ -102,9 +95,9 @@ function prepareShippingMethod (shippingMethod, checkout) {
       sku: shippingMethod.sku,
       sub_total: shippingMethod.paid_price_inc_tax,
       tax: shippingMethod.tax_amount,
-      tax_rate: shippingMethod.tax_amount,
+      tax_rate: shippingMethod.tax_percentage,
       total: shippingMethod.retail_price_inc_tax,
-      updated_at: checkout.updatedAt.toISOString()
+      updated_at: checkoutUpdatedAt
     },
     id: shippingMethod.id,
     type: 'shipping_methods'
