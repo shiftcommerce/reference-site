@@ -6,6 +6,9 @@ import classNames from 'classnames'
 import Button from '../../objects/button'
 import Input from '../../objects/input'
 
+// lib
+import AccountFormErrors from '../../lib/form-errors'
+
 class RegisterForm extends Component {
   requiredFields () {
     return [ 'first_name', 'last_name', 'email', 'confirm_email', 'password', 'confirm_password' ]
@@ -23,22 +26,20 @@ class RegisterForm extends Component {
     const { account, formName, onBlur } = this.props
 
     return (
-      <>
-        <Input
-          label={fieldOption.label}
-          className={fieldOption.className}
-          labelClassName={fieldOption.labelClassName}
-          name={fieldOption.name}
-          type={fieldOption.type}
-          value={fieldOption.value}
-          required={(fieldOption.rules && fieldOption.rules.required)}
-          validationMessage={account.errors[fieldOption.name]}
-          rules={fieldOption.rules}
-          idInput={fieldOption.idInput}
-          formName={formName}
-          onBlur={onBlur}
-        />
-      </>
+      <Input
+        label={fieldOption.label}
+        className={fieldOption.className}
+        labelClassName={fieldOption.labelClassName}
+        name={fieldOption.name}
+        type={fieldOption.type}
+        value={fieldOption.value}
+        required={(fieldOption.rules && fieldOption.rules.required)}
+        validationMessage={account.errors[fieldOption.name]}
+        rules={fieldOption.rules}
+        idInput={fieldOption.idInput}
+        formName={formName}
+        onBlur={onBlur}
+      />
     )
   }
 
@@ -80,11 +81,12 @@ class RegisterForm extends Component {
     )
   }
 
-  renderNameInputFields (formName) {
+  renderNameInputFields () {
     const fieldOptions = [
       { className: 'o-form__input-block', label: 'First Name', name: 'first_name', rules: { required: true, maxLength: 50 } },
       { className: 'o-form__input-block', label: 'Last Name', name: 'last_name', rules: { required: true, maxLength: 50 } }
     ]
+
     return (
       <div className='o-flex o-flex__space-between'>
         { fieldOptions.map((fieldOption, index) => {
@@ -119,12 +121,14 @@ class RegisterForm extends Component {
   render () {
     const {
       className,
-      handleSubmit
+      handleSubmit,
+      account
     } = this.props
 
     return (
       <div className={classNames('o-form', className)}>
         <form onSubmit={handleSubmit}>
+          <AccountFormErrors errors={account.validationErrors} />
           { this.renderNameInputFields() }
           { this.renderEmailInputFields() }
           { this.renderPasswordInputFields() }

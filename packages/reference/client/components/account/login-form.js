@@ -2,6 +2,9 @@
 import { Component } from 'react'
 import classNames from 'classnames'
 
+// lib
+import AccountFormErrors from '../../lib/form-errors'
+
 // Objects
 import Button from '../../objects/button'
 import Input from '../../objects/input'
@@ -98,12 +101,14 @@ class LoginForm extends Component {
   render () {
     const {
       className,
-      handleSubmit
+      handleSubmit,
+      login
     } = this.props
 
     return (
       <div className={classNames('o-form', className)}>
         <form onSubmit={handleSubmit}>
+          <AccountFormErrors errors={login.validationErrors} />
           { this.renderEmailInputField() }
           { this.renderPasswordInputField() }
           <Checkbox label='Remember me' />

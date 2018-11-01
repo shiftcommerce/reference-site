@@ -26,6 +26,7 @@ export class Register extends Component {
 
   validateInput (event, formName, fieldName, fieldValue, rules) {
     const { account } = this.props
+
     let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate(account)
     this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
     this.props.dispatch(inputChange(formName, fieldName, fieldValue))
@@ -41,18 +42,6 @@ export class Register extends Component {
     }
   }
 
-  renderErrors (account) {
-    if (account.validationErrors.length > 0) {
-      return (
-        account.validationErrors.map((error, index) => {
-          return <h1 key={index} className='c-register__errors'>
-            { error.detail }
-          </h1>
-        })
-      )
-    }
-  }
-
   handleSubmit (event) {
     event.preventDefault()
     const { account } = this.props
@@ -61,8 +50,6 @@ export class Register extends Component {
   }
 
   render () {
-    const { account } = this.props
-
     return (
       <div className='c-register'>
         <div className='c-register__text'>
@@ -76,7 +63,6 @@ export class Register extends Component {
           onCreateAccount={this.onCreateAccount}
           handleSubmit={this.handleSubmit}
         />
-        { this.renderErrors(account) }
         <a className='c-register__anchor'>Privacy Policy</a>
       </div>
     )

@@ -7,6 +7,7 @@ import Link from 'next/link'
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
+
 // Actions
 import { inputChange,
   setValidationMessage,
@@ -52,21 +53,7 @@ export class Login extends Component {
     this.props.dispatch(createLogin(login))
   }
 
-  renderErrors (login) {
-    if (login.validationErrors.length > 0) {
-      return (
-        login.validationErrors.map((error, index) => {
-          return <h1 key={index} className='c-register__errors'>
-            { error.detail }
-          </h1>
-        })
-      )
-    }
-  }
-
   render () {
-    const { login } = this.props
-
     return (
       <div className='c-login'>
         <h1 className='c-login__title'>Login</h1>
@@ -78,7 +65,6 @@ export class Login extends Component {
           handleSubmit={this.handleSubmit}
         />
         <a href={'/account/forgotpassword'} className='c-login__anchor'>Reset Password?</a>
-        { this.renderErrors(login) }
         <p className='c-login__caption'>{ "Don't have an account?" }</p>
         <Link href='/account/register'>
           <Button className='c-login__button-icon o-button--sml' label='CREATE NEW ACCOUNT' status='primary' aria-label='Create New Account' />

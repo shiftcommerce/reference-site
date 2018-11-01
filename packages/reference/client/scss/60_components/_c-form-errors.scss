@@ -1,0 +1,24 @@
+.c-account {
+  &-errors {
+    text-align: left;
+    color: $text-alert;
+    font-size: 1em;
+    font-weight: 300;
+    background-color: $background-alert;
+    padding: $global-spacing-unit-small;
+    border-radius: 2px;
+    border: 1px solid $border-alert;
+    margin: $global-spacing-unit-small 0;
+
+    li {
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1em;
+      font-weight: 500;
+      margin: 0;
+      padding-bottom: $global-spacing-unit-small;
+    }
+  }
+}

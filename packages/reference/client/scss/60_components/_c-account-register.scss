@@ -21,6 +21,7 @@
     &-title {
       color: $background-primary;
       padding-top: $global-spacing-unit;
+      font-weight: 500;
     }
 
     &-caption {
@@ -47,10 +48,5 @@
   &__anchor {
     display: block;
     text-align: center;
-  }
-
-  &__errors {
-    text-align: center;
-    color: $border-error;
   }
 }
