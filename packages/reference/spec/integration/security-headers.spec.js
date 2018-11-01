@@ -38,7 +38,7 @@ describe('GET /', () => {
       "style-src 'self' 'unsafe-inline'",
       "script-src 'self' 'unsafe-inline' https://js.stripe.com",
       'frame-src https://js.stripe.com',
-      `connect-src 'self' ${formattedScriptHosts}`,
+      `connect-src 'self' https://*.algolia.net https://*.algolianet.com ${formattedScriptHosts}`,
       "form-action 'self'",
       "object-src 'self'",
       'block-all-mixed-content'

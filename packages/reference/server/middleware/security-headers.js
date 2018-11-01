@@ -95,7 +95,7 @@ const buildContentSecurityPolicy = (imageHosts, scriptHosts) => {
 
     // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
     // WebSocket and EventSource
-    `connect-src 'self' ${formattedScriptHosts}`,
+    `connect-src 'self' https://*.algolia.net https://*.algolianet.com ${formattedScriptHosts}`,
 
     // Enforce that forms point to self
     "form-action 'self'",
