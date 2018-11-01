@@ -1,5 +1,7 @@
 web:
   build: .
+  cached: true
+  default_cache_branch: develop
   dockerfile: Dockerfile
   ports:
     - "3000"
