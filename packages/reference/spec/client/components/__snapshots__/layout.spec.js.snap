@@ -21,33 +21,28 @@ exports[`renders the children inside it 1`] = `
           >
             <Connect(NavBar) />
           </span>
-          <React.Fragment>
+          <div
+            className="c-header__account"
+          >
             <div
-              className="c-header__account"
+              className="c-header__account-button"
             >
               <div
-                className="c-header__account-button"
+                className="c-header__account-label"
               >
-                <div
-                  className="c-header__account-label"
+                <Link
+                  as="/account/myaccount"
+                  href="/account/login"
                 >
-                  <Link
-                    as="/account/myaccount"
-                    href="/account/login"
+                  <a
+                    className="o-header__myaccount"
                   >
-                    <a
-                      className="o-header__myaccount"
-                    >
-                      Account
-                    </a>
-                  </Link>
-                </div>
+                    Account
+                  </a>
+                </Link>
               </div>
             </div>
-            <div
-              className="c-header__account"
-            />
-          </React.Fragment>
+          </div>
           <Connect(MiniBag) />
           <span
             className="c-header__search"
@@ -97,33 +92,28 @@ exports[`renders the footer 1`] = `
           >
             <Connect(NavBar) />
           </span>
-          <React.Fragment>
+          <div
+            className="c-header__account"
+          >
             <div
-              className="c-header__account"
+              className="c-header__account-button"
             >
               <div
-                className="c-header__account-button"
+                className="c-header__account-label"
               >
-                <div
-                  className="c-header__account-label"
+                <Link
+                  as="/account/myaccount"
+                  href="/account/login"
                 >
-                  <Link
-                    as="/account/myaccount"
-                    href="/account/login"
+                  <a
+                    className="o-header__myaccount"
                   >
-                    <a
-                      className="o-header__myaccount"
-                    >
-                      Account
-                    </a>
-                  </Link>
-                </div>
+                    Account
+                  </a>
+                </Link>
               </div>
             </div>
-            <div
-              className="c-header__account"
-            />
-          </React.Fragment>
+          </div>
           <Connect(MiniBag) />
           <span
             className="c-header__search"
@@ -171,33 +161,28 @@ exports[`renders the header 1`] = `
           >
             <Connect(NavBar) />
           </span>
-          <React.Fragment>
+          <div
+            className="c-header__account"
+          >
             <div
-              className="c-header__account"
+              className="c-header__account-button"
             >
               <div
-                className="c-header__account-button"
+                className="c-header__account-label"
               >
-                <div
-                  className="c-header__account-label"
+                <Link
+                  as="/account/myaccount"
+                  href="/account/login"
                 >
-                  <Link
-                    as="/account/myaccount"
-                    href="/account/login"
+                  <a
+                    className="o-header__myaccount"
                   >
-                    <a
-                      className="o-header__myaccount"
-                    >
-                      Account
-                    </a>
-                  </Link>
-                </div>
+                    Account
+                  </a>
+                </Link>
               </div>
             </div>
-            <div
-              className="c-header__account"
-            />
-          </React.Fragment>
+          </div>
           <Connect(MiniBag) />
           <span
             className="c-header__search"
@@ -245,33 +230,28 @@ exports[`renders the navbar 1`] = `
           >
             <Connect(NavBar) />
           </span>
-          <React.Fragment>
+          <div
+            className="c-header__account"
+          >
             <div
-              className="c-header__account"
+              className="c-header__account-button"
             >
               <div
-                className="c-header__account-button"
+                className="c-header__account-label"
               >
-                <div
-                  className="c-header__account-label"
+                <Link
+                  as="/account/myaccount"
+                  href="/account/login"
                 >
-                  <Link
-                    as="/account/myaccount"
-                    href="/account/login"
+                  <a
+                    className="o-header__myaccount"
                   >
-                    <a
-                      className="o-header__myaccount"
-                    >
-                      Account
-                    </a>
-                  </Link>
-                </div>
+                    Account
+                  </a>
+                </Link>
               </div>
             </div>
-            <div
-              className="c-header__account"
-            />
-          </React.Fragment>
+          </div>
           <Connect(MiniBag) />
           <span
             className="c-header__search"

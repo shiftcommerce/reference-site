@@ -1,6 +1,8 @@
 import React from 'react'
+import Cookies from 'js-cookie'
 import { initializeStore } from '../utils/configure-store'
 import { readMenu } from '../actions/menu-actions'
+import { setLoggedInFromCookies } from '../actions/login-actions'
 
 const isServer = typeof window === 'undefined'
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__'
@@ -44,6 +46,12 @@ export default (App) => {
     constructor (props) {
       super(props)
       this.reduxStore = getOrCreateStore(props.initialReduxState)
+    }
+
+    componentDidMount () {
+      if (Cookies.get('signedIn')) {
+        this.reduxStore.dispatch(setLoggedInFromCookies())
+      }
     }
 
     render () {

@@ -3,7 +3,6 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
-import Cookies from 'js-cookie'
 
 // Objects
 import Logo from '../objects/logo'
@@ -86,33 +85,34 @@ export class Layout extends Component {
     )
   }
 
-  renderHeaderAccount (signedIn) {
+  renderHeaderAccount (loggedIn) {
     return (
-      <>
-        <div className='c-header__account'>
-          <div className='c-header__account-button'>
-            <div className='c-header__account-label'>
-              <Link href={(signedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
-                <a className='o-header__myaccount'>Account</a>
-              </Link>
-            </div>
+      <div className='c-header__account'>
+        <div className='c-header__account-button'>
+          <div className='c-header__account-label'>
+            <Link href={(loggedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
+              <a className='o-header__myaccount'>Account</a>
+            </Link>
           </div>
         </div>
-        <div className='c-header__account'>
-          { signedIn && this.renderLogout(signedIn) }
-        </div>
-      </>
+      </div>
     )
   }
 
-  renderLogout (signedIn) {
+  renderLogout (loggedIn) {
+    if (!loggedIn) {
+      return null
+    }
+
     return (
-      <div className='c-header__log-out'>
-        <div className='c-header__log-out-button'>
-          <div className='c-header__account-label'>
-            <a href='/account/logout' className='o-header__myaccount'>
-              Logout
-            </a>
+      <div className='c-header__account'>
+        <div className='c-header__log-out'>
+          <div className='c-header__log-out-button'>
+            <div className='c-header__log-out-label'>
+              <a href='/account/logout' className='o-header__myaccount'>
+                Logout
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const signedIn = Cookies.get('signedIn')
+    const { loggedIn } = this.props
 
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
       const headerClasses = classNames('o-header', {
@@ -135,7 +135,8 @@ export class Layout extends Component {
               <div className='o-header__top-wrapper'>
                 <Logo className='o-header__logo' />
                 { this.renderMobileNav() }
-                { this.renderHeaderAccount(signedIn) }
+                { this.renderHeaderAccount(loggedIn) }
+                { this.renderLogout(loggedIn) }
                 <MiniBag />
                 { this.renderSearch() }
               </div>
@@ -182,4 +183,10 @@ export class Layout extends Component {
   }
 }
 
-export default connect()(Layout)
+function mapStateToProps (state) {
+  const { login } = state
+
+  return login
+}
+
+export default connect(mapStateToProps)(Layout)

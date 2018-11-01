@@ -18,6 +18,13 @@ export function createLogin (account) {
   return postEndpoint(request)
 }
 
+export function setLoggedInFromCookies () {
+  return {
+    type: actionTypes.SET_LOGIN,
+    payload: { }
+  }
+}
+
 export function inputChange (fieldName, fieldValue) {
   return (dispatch) => {
     dispatch(storeInputChange(fieldName, fieldValue))
