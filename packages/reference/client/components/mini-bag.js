@@ -9,26 +9,32 @@ import { readCart } from '../actions/cart-actions'
 
 // Objects
 import Button from '../objects/button'
+import Image from '../objects/image'
 
 export class MiniBag extends Component {
   componentDidMount () {
     this.props.dispatch(readCart())
   }
 
+  renderIconAndCount (lineItemCount) {
+    return (
+      <div className='c-minibag__cart-image'>
+        <div className='c-minibag__cart-image-count' >
+          { lineItemCount }
+        </div>
+        <Image className='c-minibag__cart-image-icon' src='/static/bag-icon.svg' />
+      </div>
+    )
+  }
+
   renderViewYourBagLink (lineItemCount) {
     return (
       <Link href='/cart'>
         <div className='c-minibag__cart'>
-          <a aria-label='View your cart'>
-            <span className='c-minibag__cart-count' >
-              { lineItemCount }
-            </span>
+          { this.renderIconAndCount(lineItemCount) }
+          <a href='/cart'>
+            Basket
           </a>
-          <div className='c-minibag__cart-label'>
-            <Link href='/cart'>
-              <a>Basket</a>
-            </Link>
-          </div>
         </div>
       </Link>
     )

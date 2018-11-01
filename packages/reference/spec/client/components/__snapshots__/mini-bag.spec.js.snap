@@ -20,29 +20,51 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
         className="c-minibag__cart"
         onClick={[Function]}
       >
-        <a
-          aria-label="View your cart"
+        <div
+          className="c-minibag__cart-image"
         >
-          <span
-            className="c-minibag__cart-count"
+          <div
+            className="c-minibag__cart-image-count"
           >
             0
-          </span>
-        </a>
-        <div
-          className="c-minibag__cart-label"
-        >
-          <Link
-            href="/cart"
+          </div>
+          <Image
+            className="c-minibag__cart-image-icon"
+            src="/static/bag-icon.svg"
           >
-            <a
-              href="/cart"
-              onClick={[Function]}
+            <div
+              className="c-minibag__cart-image-icon"
             >
-              Basket
-            </a>
-          </Link>
+              <LazyLoad
+                debounce={true}
+                elementType="div"
+                offset={0}
+                offsetBottom={0}
+                offsetHorizontal={0}
+                offsetLeft={0}
+                offsetRight={0}
+                offsetTop={0}
+                offsetVertical={0}
+                throttle={250}
+              >
+                <div
+                  className="LazyLoad"
+                  style={
+                    Object {
+                      "height": undefined,
+                      "width": undefined,
+                    }
+                  }
+                />
+              </LazyLoad>
+            </div>
+          </Image>
         </div>
+        <a
+          href="/cart"
+        >
+          Basket
+        </a>
       </div>
     </Link>
     <div
@@ -111,29 +133,51 @@ exports[`renders an active checkout button where cart has items 1`] = `
         className="c-minibag__cart"
         onClick={[Function]}
       >
-        <a
-          aria-label="View your cart"
+        <div
+          className="c-minibag__cart-image"
         >
-          <span
-            className="c-minibag__cart-count"
+          <div
+            className="c-minibag__cart-image-count"
           >
             2
-          </span>
-        </a>
-        <div
-          className="c-minibag__cart-label"
-        >
-          <Link
-            href="/cart"
+          </div>
+          <Image
+            className="c-minibag__cart-image-icon"
+            src="/static/bag-icon.svg"
           >
-            <a
-              href="/cart"
-              onClick={[Function]}
+            <div
+              className="c-minibag__cart-image-icon"
             >
-              Basket
-            </a>
-          </Link>
+              <LazyLoad
+                debounce={true}
+                elementType="div"
+                offset={0}
+                offsetBottom={0}
+                offsetHorizontal={0}
+                offsetLeft={0}
+                offsetRight={0}
+                offsetTop={0}
+                offsetVertical={0}
+                throttle={250}
+              >
+                <div
+                  className="LazyLoad"
+                  style={
+                    Object {
+                      "height": undefined,
+                      "width": undefined,
+                    }
+                  }
+                />
+              </LazyLoad>
+            </div>
+          </Image>
         </div>
+        <a
+          href="/cart"
+        >
+          Basket
+        </a>
       </div>
     </Link>
     <div
@@ -180,26 +224,24 @@ exports[`renders the minibag links 1`] = `
     <div
       className="c-minibag__cart"
     >
-      <a
-        aria-label="View your cart"
+      <div
+        className="c-minibag__cart-image"
       >
-        <span
-          className="c-minibag__cart-count"
+        <div
+          className="c-minibag__cart-image-count"
         >
           0
-        </span>
-      </a>
-      <div
-        className="c-minibag__cart-label"
-      >
-        <Link
-          href="/cart"
-        >
-          <a>
-            Basket
-          </a>
-        </Link>
+        </div>
+        <Image
+          className="c-minibag__cart-image-icon"
+          src="/static/bag-icon.svg"
+        />
       </div>
+      <a
+        href="/cart"
+      >
+        Basket
+      </a>
     </div>
   </Link>
   <div

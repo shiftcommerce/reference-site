@@ -1,57 +1,49 @@
 .c-minibag {
   &__cart {
-    background: url('/static/bag-icon.svg') no-repeat center;
+    flex-basis: 30%;
+    flex-grow: 1;
     cursor: pointer;
-    height: 1.7rem;
-    margin: auto 50% auto auto;
-    width: 3rem;
+    text-align: center;
 
     @include breakpoint(desktop) {
-      margin-right: 40%;
-      order: 1;
-      position: relative;
-      width: auto;
       margin-left: $global-spacing-unit-small;
-      background-position: 60% 50%;
-      background-size: 30%;
-      height: 3.2rem;
     }
 
-    &-count {
-      display: block;
-      background-color: $background-positive;
-      border-radius: 50%;
-      color: white;
-      font-size: 0.6em;
-      margin-left: $global-spacing-unit-tiny;
-      padding-top: ($global-spacing-unit-tiny / 1.5);
-      text-align: center;
-      width: 18px;
-      height: 18px;
+    a {
+      text-decoration: none;
+      font-size: 0.8em;
+      display: inline-block;
+      padding-left: $global-spacing-unit-small;
+    }
 
-      @include breakpoint(desktop) {
-        margin-left: $global-spacing-unit-small;
+    &-image {
+      display: inline-block;
+
+      &-icon {
+        display: inline-block;
+        z-index: 0;
         position: relative;
-        top: 10px;
-      }
-    }
 
-    &-label {
-      padding-left: ($global-spacing-unit-tiny * 7);
-
-      @include breakpoint(desktop) {
-        padding-bottom: $global-spacing-unit-tiny;
-        padding-left: $global-spacing-unit-large;
-      }
-
-      a {
-        color: black;
-        display: block;
-        font-size: 0.8rem;
-
-        @include breakpoint(desktop) {
-          font-size: 1rem;
+        img {
+          height: 24px;
+          width: 25px;
         }
+      }
+
+      &-count {
+        display: inline-block;
+        background-color: $background-positive;
+        border-radius: 50%;
+        color: white;
+        font-size: 0.5em;
+        padding-top: ($global-spacing-unit-tiny / 1.5);
+        text-align: center;
+        width: 16px;
+        height: 16px;
+        margin-right: -$global-spacing-unit-small;
+        z-index: 1;
+        position: relative;
+        vertical-align: top;
       }
     }
   }

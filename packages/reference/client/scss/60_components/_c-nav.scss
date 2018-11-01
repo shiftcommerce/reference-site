@@ -35,31 +35,28 @@
     }
 
     &-button {
-      display: block;
       flex-basis: 33.3%;
       flex-grow: 1;
-      border-right: 1px solid $border-default;
-      font-size: 0.8rem;
+      cursor: pointer;
+      margin: auto;
 
       @include breakpoint(desktop) {
         display: none;
       }
 
-      &-icon {
-        cursor: pointer;
-        background: url('/static/burger-menu-icon.svg') no-repeat center;
+      p {
+        text-decoration: none;
+        font-size: 0.8em;
         display: inline-block;
-        height: 2.45rem;
-        width: 3rem;
-        margin-right: ($global-spacing-unit-tiny * 5);
+        padding-left: $global-spacing-unit-small;
+      }
 
-        p {
-          padding-top: $global-spacing-unit-tiny;
-          padding-left: ($global-spacing-unit-tiny * 7);
-        }
+      &-image {
+        display: inline-block;
 
-        @include breakpoint(desktop) {
-          display: none;
+        img {
+          height: 24px;
+          width: 24px;
         }
       }
     }

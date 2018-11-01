@@ -6,6 +6,7 @@ import classNames from 'classnames'
 
 // Objects
 import Logo from '../objects/logo'
+import Image from '../objects/image'
 
 // Components
 import MiniBag from './mini-bag'
@@ -86,36 +87,18 @@ export class Layout extends Component {
   }
 
   renderHeaderAccount (loggedIn) {
-    return (
-      <div className='c-header__account'>
-        <div className='c-header__account-button'>
-          <div className='c-header__account-label'>
-            <Link href={(loggedIn) ? '/account/myaccount' : '/account/login'} as='/account/myaccount' >
-              <a className='o-header__myaccount'>Account</a>
-            </Link>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  renderLogout (loggedIn) {
-    if (!loggedIn) {
-      return null
-    }
+    const url = loggedIn ? '/account/myaccount' : '/account/login'
+    const as = '/account/myaccount'
 
     return (
-      <div className='c-header__account'>
-        <div className='c-header__log-out'>
-          <div className='c-header__log-out-button'>
-            <div className='c-header__log-out-label'>
-              <a href='/account/logout' className='o-header__myaccount'>
-                Logout
-              </a>
-            </div>
-          </div>
+      <Link href={url} as={as} >
+        <div className='c-header__account'>
+          <Image className='c-header__account-image' src='/static/account-icon.svg' />
+          <a href={url} as={as}>
+            Account
+          </a>
         </div>
-      </div>
+      </Link>
     )
   }
 
@@ -136,7 +119,6 @@ export class Layout extends Component {
                 <Logo className='o-header__logo' />
                 { this.renderMobileNav() }
                 { this.renderHeaderAccount(loggedIn) }
-                { this.renderLogout(loggedIn) }
                 <MiniBag />
                 { this.renderSearch() }
               </div>

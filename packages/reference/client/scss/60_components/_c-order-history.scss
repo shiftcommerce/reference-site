@@ -6,14 +6,23 @@
     margin-top: 0;
   }
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: $global-spacing-unit-small;
+  &__banner {
+    display: grid;
+    grid-template-columns: [col1-start] 50% [col2-start] 50% [end];
 
-    @include breakpoint(desktop) {
-      font-weight: normal;
+    h1 {
+      font-size: 1.2em;
+      margin: auto;
+      text-transform: uppercase;
+    }
+
+    &-button {
+      margin: auto;
+      width: 100%;
+
+      &-icon {
+        width: 100%;
+      }
     }
   }
 
@@ -30,7 +39,7 @@
   &__nav {
     background-color: $background-positive;
     color: white;
-    margin: $global-spacing-unit-small 0;
+    margin: 0;
     padding: $global-spacing-unit-small;
 
     h2 {

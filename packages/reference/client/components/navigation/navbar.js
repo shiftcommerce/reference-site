@@ -9,6 +9,7 @@ import NavBarOption from './navbar-option'
 
 // Objects
 import Logo from '../../objects/logo'
+import Image from '../../objects/image'
 
 export class NavBar extends Component {
   constructor (props) {
@@ -58,9 +59,8 @@ export class NavBar extends Component {
       <>
         <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown}/>
         <div className='c-nav__menu-button'onClick={this.toggleMenuShown} >
-          <label htmlFor='burger-menu' className='c-nav__menu-button-icon'>
-            <p>Menu</p>
-          </label>
+          <Image className='c-nav__menu-button-image' src='/static/burger-menu-icon.svg' />
+          <p>Menu</p>
         </div>
       </>
     )

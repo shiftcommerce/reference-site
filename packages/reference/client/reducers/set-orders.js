@@ -2,7 +2,8 @@
 import * as types from '../actions/action-types'
 
 export const initialState = {
-  loading: true
+  loading: true,
+  data: {}
 }
 
 export default function setOrders (state = initialState, action) {
