@@ -12,7 +12,7 @@ export function withValidationMessage () {
         let validationMessage = this.props.validationMessage
 
         return (
-          validationMessage ? <div className='o-form__input-field__error'>{ validationMessage }</div> : null
+          validationMessage && <div className='o-form__input-field__error'>{ validationMessage }</div>
         )
       }
 

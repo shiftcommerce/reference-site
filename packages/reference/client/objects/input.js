@@ -18,6 +18,13 @@ class Input extends Component {
       type: props.type,
       score: null
     }
+
+    // Set callback ref to allow us to refer to this input later
+    // This ref is assigned when rendering the <input> tag below
+    this.passwordInput = null
+    this.setPasswordInputRef = (element) => {
+      this.passwordInput = element
+    }
   }
 
   triggerChange (event) {
@@ -48,6 +55,11 @@ class Input extends Component {
     this.setState({
       type: this.state.type === 'input' ? 'password' : 'input'
     })
+
+    // Focus input back into the password input
+    // TODO: Use refs in future once we've upgraded Next:
+    // https://reactjs.org/docs/refs-and-the-dom.html
+    this.passwordInput.focus()
   }
 
   passwordStrength (e) {
@@ -105,6 +117,7 @@ class Input extends Component {
         onChange={this.triggerChange}
         onBlur={this.triggerBlur}
         value={value}
+        ref={this.setPasswordInputRef}
       />
     )
   }

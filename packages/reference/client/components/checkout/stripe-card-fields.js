@@ -67,7 +67,7 @@ class StripeCardFields extends Component {
     let errorMessage = this.state.errors[fieldName]
 
     return (
-      errorMessage ? <div className='o-form__input-field__error'>{ errorMessage }</div> : null
+      errorMessage && <div className='o-form__input-field__error'>{ errorMessage }</div>
     )
   }
 

@@ -35,7 +35,7 @@ class LoginForm extends Component {
         name={fieldOption.name}
         type={fieldOption.type}
         value={fieldOption.value}
-        required={(fieldOption.rules && fieldOption.rules.required)}
+        required={(fieldOption.rules && fieldOption.rules.requiredButIgnoreEmpty)}
         validationMessage={login.errors[fieldOption.name]}
         rules={fieldOption.rules}
         formName={formName}
@@ -46,7 +46,7 @@ class LoginForm extends Component {
 
   renderEmailInputField () {
     const fieldOptions = [
-      { className: 'o-form__input-block', type: 'email', label: 'Email', name: 'email', rules: { required: true, maxLength: 50, email: true } }
+      { className: 'o-form__input-block', type: 'email', label: 'Email', name: 'email', rules: { requiredButIgnoreEmpty: true, maxLength: 50, email: true } }
     ]
 
     return (
@@ -64,7 +64,7 @@ class LoginForm extends Component {
 
   renderPasswordInputField () {
     const fieldOptions = [
-      { className: 'o-form__input-block', type: 'password', label: 'Password', name: 'password', rules: { required: true, maxLength: 50, minLength: 6 } }
+      { className: 'o-form__input-block', type: 'password', label: 'Password', name: 'password', rules: { requiredButIgnoreEmpty: true, maxLength: 50 } }
     ]
 
     return (

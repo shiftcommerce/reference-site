@@ -20,6 +20,16 @@ class InputFieldValidator {
     return (present ? '' : `${this.formattedFieldName()} is required.`)
   }
 
+  // This rule can be used where we don't want to hassle the user with validation
+  // messages before they've started entering text
+  requiredButIgnoreEmpty () {
+    if (this.value.toString().trim().length > 0) {
+      return this.required()
+    } else {
+      // no-op
+    }
+  }
+
   email () {
     const regex = /.+@.+\..+/i
     const validEmail = (regex.test(this.value))
