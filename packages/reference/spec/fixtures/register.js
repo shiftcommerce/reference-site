@@ -1,4 +1,4 @@
-const response = {
+export default {
   data: {
     id: '23063267',
     type: 'customer_accounts',
@@ -171,5 +171,3 @@ const response = {
     self: '/integration/v1/customer_accounts'
   }
 }
-
-export default response

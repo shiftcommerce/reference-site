@@ -28,6 +28,13 @@ export class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  static async getInitialProps ({ reduxStore }) {
+    // Redirect to myaccount if already logged in
+    const { account, login } = reduxStore.getState()
+    if (account.loggedIn || login.loggedIn) Router.push('/account/myaccount')
+    return {}
+  }
+
   componentDidUpdate () {
     const { login } = this.props
 

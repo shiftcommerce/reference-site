@@ -8,7 +8,8 @@ import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
 
 // Actions
-import { inputChange,
+import {
+  inputChange,
   setValidationMessage,
   createAccount
 } from '../../actions/register-actions'
@@ -24,6 +25,13 @@ export class Register extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  static async getInitialProps ({ reduxStore }) {
+    // Redirect to myaccount if already logged in
+    const { account, login } = reduxStore.getState()
+    if (account.loggedIn || login.loggedIn) Router.push('/account/myaccount')
+    return {}
+  }
+
   validateInput (event, formName, fieldName, fieldValue, rules) {
     const { account } = this.props
 
@@ -36,7 +44,7 @@ export class Register extends Component {
     const { account } = this.props
 
     // Redirect if account created
-    if (account.loggedIn === true) {
+    if (account.loggedIn) {
       setCookie()
       Router.push('/account/myaccount')
     }

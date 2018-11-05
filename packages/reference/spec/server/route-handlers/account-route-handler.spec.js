@@ -8,11 +8,13 @@ import registerInvalidPayload from '../../fixtures/register-invalid'
 import loginAccountPayload from '../../fixtures/login-account'
 import loginAccountInvalidPayload from '../../fixtures/login-account-invalid'
 
+import { accountRenderer } from '../../../server/route-handlers/account-route-handler'
+
 axios.defaults.adapter = httpAdapter
 
 describe('create an account', () => {
   describe('with valid data', () => {
-    const url = '/register'
+    const url = 'register'
 
     const body = {
       data: {
@@ -28,28 +30,36 @@ describe('create an account', () => {
       }
     }
 
-    it('should save and return the data', async () => {
-      nock(process.env.API_HOST_PROXY)
-        .post(url)
+    it('should save, return the data and log the user in', async () => {
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
         .reply(201, registerPayload)
 
-      const response = await axios({
-        method: 'post',
-        url: `${process.env.API_HOST_PROXY}${url}`,
-        data: body
-      })
+      const req = {
+        body: body,
+        session: {}
+      }
 
-      expect(response.status).toBe(201)
-      expect(response.data.data.id).toBe('23063267')
-      expect(response.data.data.type).toBe('customer_accounts')
-      expect(response.data.data.attributes.email).toBe('a.fletcher1234@gmail.com')
-      expect(response.data.data.attributes.meta_attributes.first_name.value).toBe('a')
-      expect(response.data.data.attributes.meta_attributes.last_name.value).toBe('fletcher')
+      const res = {
+        status: jest.fn(x => ({
+          send: jest.fn(y => y)
+        }))
+      }
+
+      const response = await accountRenderer(url)(req, res)
+
+      expect(res.status).toHaveBeenCalledWith(201)
+      expect(response.data.id).toBe('23063267')
+      expect(response.data.type).toBe('customer_accounts')
+      expect(response.data.attributes.email).toBe('a.fletcher1234@gmail.com')
+      expect(response.data.attributes.meta_attributes.first_name.value).toBe('a')
+      expect(response.data.attributes.meta_attributes.last_name.value).toBe('fletcher')
+      expect(req.session.customerId).toBe('23063267')
     })
   })
 
   describe('with invalid data', () => {
-    const url = '/register'
+    const url = 'register'
 
     const body = {
       data: {
@@ -64,26 +74,36 @@ describe('create an account', () => {
     }
 
     it('should return an error', async () => {
-      nock(process.env.API_HOST_PROXY)
-        .post(url)
-        .reply(200, registerInvalidPayload)
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
+        .reply(422, registerInvalidPayload)
 
-      const response = await axios({
-        method: 'post',
-        url: `${process.env.API_HOST_PROXY}${url}`,
-        data: body
-      })
+      console.error = jest.fn()
 
-      expect(response.status).toBe(200)
-      expect(response.data.errors[0].status).toBe('422')
-      expect(response.data.errors[0].detail).toBe('password - is too short (minimum is 8 characters)')
+      const req = {
+        body: body,
+        session: {}
+      }
+
+      const res = {
+        status: jest.fn(x => ({
+          send: jest.fn(y => y)
+        }))
+      }
+
+      const response = await accountRenderer(url)(req, res)
+
+      expect(res.status).toHaveBeenCalledWith(422)
+      expect(response[0].status).toBe('422')
+      expect(response[0].detail).toBe('password - is too short (minimum is 8 characters)')
+      expect(console.error).toHaveBeenCalled()
     })
   })
 })
 
 describe('login into an account', () => {
   describe('with valid data', () => {
-    const url = '/login'
+    const url = 'login'
 
     const body = {
       data: {
@@ -96,26 +116,34 @@ describe('login into an account', () => {
     }
 
     it('should log the user in', async () => {
-      nock(process.env.API_HOST_PROXY)
-        .post(url)
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
         .reply(201, loginAccountPayload)
 
-      const response = await axios({
-        method: 'post',
-        url: `${process.env.API_HOST_PROXY}${url}`,
-        data: body
-      })
+      const req = {
+        body: body,
+        session: {}
+      }
 
-      expect(response.status).toBe(201)
-      expect(response.data.data.id).toBe('6699f1eb-ac8a-442c-87ea-a814affa5389')
-      expect(response.data.data.type).toBe('customer_account_authentications')
-      expect(response.data.data.attributes.email).toBe('a.fletcher1234@gmail.com')
-      expect(response.data.data.attributes.password).toBe('qwertyuiop')
+      const res = {
+        status: jest.fn(x => ({
+          send: jest.fn(y => y)
+        }))
+      }
+
+      const response = await accountRenderer(url)(req, res)
+
+      expect(res.status).toHaveBeenCalledWith(201)
+      expect(response.data.id).toBe('6699f1eb-ac8a-442c-87ea-a814affa5389')
+      expect(response.data.type).toBe('customer_account_authentications')
+      expect(response.data.attributes.email).toBe('a.fletcher1234@gmail.com')
+      expect(response.data.attributes.password).toBe('qwertyuiop')
+      expect(req.session.customerId).toBe('6699f1eb-ac8a-442c-87ea-a814affa5389')
     })
   })
 
   describe('with invalid data', () => {
-    const url = '/login'
+    const url = 'login'
 
     const body = {
       data: {
@@ -128,19 +156,29 @@ describe('login into an account', () => {
     }
 
     it('should return an error', async () => {
-      nock(process.env.API_HOST_PROXY)
-        .post(url)
-        .reply(200, loginAccountInvalidPayload)
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
+        .reply(404, loginAccountInvalidPayload)
 
-      const response = await axios({
-        method: 'post',
-        url: `${process.env.API_HOST_PROXY}${url}`,
-        data: body
-      })
+      console.error = jest.fn()
 
-      expect(response.status).toBe(200)
-      expect(response.data.errors[0].status).toBe('404')
-      expect(response.data.errors[0].detail).toBe('Wrong email/reference/token or password')
+      const req = {
+        body: body,
+        session: {}
+      }
+
+      const res = {
+        status: jest.fn(x => ({
+          send: jest.fn(y => y)
+        }))
+      }
+
+      const response = await accountRenderer(url)(req, res)
+
+      expect(res.status).toHaveBeenCalledWith(404)
+      expect(response[0].detail).toBe('Wrong email/reference/token or password')
+      expect(req.session.customerId).toBe(undefined)
+      expect(console.error).toHaveBeenCalled()
     })
   })
 })
