@@ -533,8 +533,10 @@ exports[`renders correctly 1`] = `
                 <div
                   className="c-order__summary-header-total"
                 >
-                  £
-                  110.26
+                  <h2>
+                    £
+                    110.26
+                  </h2>
                 </div>
               </div>
               <div
@@ -790,6 +792,7 @@ exports[`renders correctly 1`] = `
                           Shipping costs:
                         </dt>
                         <dd>
+                          £
                           3.45
                         </dd>
                       </dl>

@@ -81,7 +81,7 @@ class OrderSummary extends Component {
             </dl>
             <dl aria-label='Order shipping costs'>
               <dt>Shipping costs:</dt>
-              <dd>{ order.shipping_total }</dd>
+              <dd>&pound;{ order.shipping_total }</dd>
             </dl>
             <dl aria-label='Order total' className='u-bold'>
               <dt>TOTAL:</dt>
@@ -106,7 +106,7 @@ class OrderSummary extends Component {
           </div>
 
           <div className='c-order__summary-header-total'>
-            &pound;{ fixedPrice(order.total) }
+            <h2>&pound;{ fixedPrice(order.total) }</h2>
           </div>
         </div>
 
