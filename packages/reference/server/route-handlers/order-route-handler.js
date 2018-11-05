@@ -50,7 +50,7 @@ function createOrderRenderer () {
 }
 
 async function placeOrder (req, res, orderPayload) {
-  const url = `${platform.CreateOrderUrl}.json_api`
+  const url = `${platform.CreateOrderUrl}.json_api?include=line_items`
   const response = await postData(orderPayload, url)
 
   return res.status(201).send(response.data)
