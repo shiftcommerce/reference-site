@@ -26,7 +26,7 @@ test('shows an error message when submitting an invalid email', () => {
   )
 
   const inputField = wrapper.find('input')
-  inputField.instance().value = 'panda'
+  inputField.instance().value = 'test'
 
   const submitButton = wrapper.find('button')
   submitButton.simulate('click')
@@ -48,7 +48,7 @@ test('shows the confirmation message when submitting something that looks like a
   expect(wrapper).toIncludeText('Button text')
 
   const inputField = wrapper.find('input')
-  inputField.instance().value = 'panda@bambooland.com'
+  inputField.instance().value = 'test@example.com'
 
   const submitButton = wrapper.find('button')
   submitButton.simulate('click')

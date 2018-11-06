@@ -33,7 +33,7 @@ const heroImageData = {
   overlay_link_hover_text_colour: 'white',
   overlay_link_border_colour: 'mediumseagreen',
   overlay_link_hover_border_colour: 'white',
-  overlay_link_1_text: 'Panda Product',
+  overlay_link_1_text: 'Test Product',
   overlay_link_1_url: [
     {
       canonical_path: '/homeware/dining/glassware',

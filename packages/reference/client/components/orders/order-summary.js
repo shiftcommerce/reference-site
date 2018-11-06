@@ -18,7 +18,7 @@ class OrderSummary extends Component {
       )
     } else {
       return (
-        <Image src='/static/panda.svg' alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
+        <Image src='/static/placeholder.png' alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
       )
     }
   }

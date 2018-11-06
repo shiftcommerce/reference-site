@@ -38,7 +38,7 @@ class StaticPageError extends React.Component {
 
     return (
       <div className="o-media c-static-page-error">
-        <img className="o-media__img c-static-page-error__image" src="/static/panda.svg" />
+        <img className="o-media__img c-static-page-error__image" src="/static/placeholder.png" />
         <div className="o-media__body">
           <h1>Oh no, something went wrong.</h1>
           <h2>We weren't able to process your request.</h2>

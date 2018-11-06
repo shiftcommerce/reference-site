@@ -549,7 +549,7 @@ exports[`renders correctly 1`] = `
                   <Image
                     alt="SCS-04-CJ coffee jug 600ml"
                     aria-label="SCS-04-CJ coffee jug 600ml"
-                    src="/static/panda.svg"
+                    src="/static/placeholder.png"
                   >
                     <div>
                       <LazyLoad
@@ -662,7 +662,7 @@ exports[`renders correctly 1`] = `
                   <Image
                     alt="Brazil Daterra Masterpiece - Curupira"
                     aria-label="Brazil Daterra Masterpiece - Curupira"
-                    src="/static/panda.svg"
+                    src="/static/placeholder.png"
                   >
                     <div>
                       <LazyLoad

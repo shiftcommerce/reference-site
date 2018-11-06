@@ -27,7 +27,7 @@ class LineItems extends PureComponent {
       )
     } else {
       return (
-        <Image className='c-order-history__line-items_image' src='/static/panda.svg' alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
+        <Image className='c-order-history__line-items_image' src='/static/placeholder.png' alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
       )
     }
   }
