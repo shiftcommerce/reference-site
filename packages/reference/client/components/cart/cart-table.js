@@ -38,7 +38,6 @@ class CartTable extends Component {
             </div>
             <CartSummary {...this.props} aria-label='Cart Summary' />
             <div className='c-cart-table__icons'>
-              <p>We Accept</p>
               <PaymentIcons />
             </div>
           </div>
@@ -83,7 +82,7 @@ class CartTable extends Component {
 
     return (
       <div className='c-cart-table__header-grid-item-b'>
-        <h1>Estimated Delivery</h1>
+        <h1 className='c-cart-table__title'>Estimated Delivery</h1>
         <p>We will deliver your item: <a>{ deliveryDate }</a></p>
       </div>
     )
@@ -96,12 +95,14 @@ class CartTable extends Component {
     return (
       <section className='c-cart-table c-cart-table--margin'>
         <section className='c-cart-table__header'>
-          <Breadcrumb />
+          <div className='c-cart-table__breadcrumb'>
+            <Breadcrumb />
+          </div>
           <div className='c-cart-table__header-grid'>
             { this.renderBasketDetails() }
             { this.renderDeliveryDetails() }
           </div>
-          <div>
+          <div className='c-cart-table__header-total'>
             <h4 className='c-cart-table__total'>&pound;{ fixedPrice(totals.total) }</h4>
           </div>
         </section>

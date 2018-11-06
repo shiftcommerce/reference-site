@@ -101,30 +101,34 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
         <section
           className="c-cart-table__header"
         >
-          <Breadcrumb>
-            <nav>
-              <ol
-                className="o-breadcrumb"
-              >
-                <li
-                  className="o-breadcrumb__item"
+          <div
+            className="c-cart-table__breadcrumb"
+          >
+            <Breadcrumb>
+              <nav>
+                <ol
+                  className="o-breadcrumb"
                 >
-                  <Link
-                    as="/"
-                    href="/home/index"
+                  <li
+                    className="o-breadcrumb__item"
                   >
-                    <a
-                      className="o-breadcrumb__link"
-                      href="/"
-                      onClick={[Function]}
+                    <Link
+                      as="/"
+                      href="/home/index"
                     >
-                      Home
-                    </a>
-                  </Link>
-                </li>
-              </ol>
-            </nav>
-          </Breadcrumb>
+                      <a
+                        className="o-breadcrumb__link"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        Home
+                      </a>
+                    </Link>
+                  </li>
+                </ol>
+              </nav>
+            </Breadcrumb>
+          </div>
           <div
             className="c-cart-table__header-grid"
           >
@@ -213,7 +217,9 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             <div
               className="c-cart-table__header-grid-item-b"
             >
-              <h1>
+              <h1
+                className="c-cart-table__title"
+              >
                 Estimated Delivery
               </h1>
               <p>
@@ -224,7 +230,9 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
               </p>
             </div>
           </div>
-          <div>
+          <div
+            className="c-cart-table__header-total"
+          >
             <h4
               className="c-cart-table__total"
             >
@@ -285,15 +293,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 className="c-line-items"
               >
                 <div
-                  className="c-line-items__grid"
+                  className="c-line-items__sections"
                   key="1"
                 >
                   <div
-                    className="c-line-items__grid-item1"
+                    className="c-line-items__images"
                   >
                     <Link
-                      as="1"
-                      href="/slug?slug=1"
+                      href="/slug?slug=undefined"
                       key="1"
                     >
                       <Image
@@ -334,188 +341,192 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     </Link>
                   </div>
                   <div
-                    className="c-line-items__grid-item2"
+                    className="c-line-items__information"
                   >
                     <div
-                      className="c-line-items__details"
+                      className="c-line-items__title"
                     >
-                      <h4
-                        className="c-line-items__details-title  u-bold"
-                      >
-                        Regular Fit Wool Mix Trousers
-                      </h4>
                       <div
-                        className="c-line-items__details-sku"
+                        className="c-line-items__details"
+                      >
+                        <h4
+                          className="c-line-items__details-title  u-bold"
+                        >
+                          Regular Fit Wool Mix Trousers
+                        </h4>
+                        <div
+                          className="c-line-items__details-sku"
+                        >
+                          <span>
+                            S2658934_C101_486
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__colour"
+                    >
+                      <div
+                        className="c-line-items__param  u-bold"
                       >
                         <span>
-                          S2658934_C101_486
+                          Colour
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="c-line-items__grid-item4"
-                  >
                     <div
-                      className="c-line-items__param  u-bold"
+                      className="c-line-items__option"
                     >
-                      <span>
-                        Colour
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="c-line-items__grid-item6"
-                  >
-                    <div
-                      className="c-line-items__param  u-bold"
-                    >
-                      <span>
-                        Option
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="c-line-items__grid-item8"
-                  >
-                    <div
-                      className="c-line-items__param u-bold"
-                    >
-                      <span>
-                        Quantity
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    className="c-line-items__param  c-line-items__grid-item5"
-                  >
-                    <span>
-                      Grey
-                    </span>
-                  </div>
-                  <div
-                    className="c-line-items__param  c-line-items__grid-item7"
-                  >
-                    <span>
-                      38 Waist 31 Leg
-                    </span>
-                  </div>
-                  <div
-                    className="c-line-items__param  c-line-items__grid-item9"
-                  >
-                    <span>
-                      <select
-                        data-variant="S2658934_C101_486"
-                        onChange={[Function]}
-                        value={1}
+                      <div
+                        className="c-line-items__param  u-bold"
                       >
-                        <option
-                          aria-posinset={2}
-                          aria-setsize={1}
-                          key="1"
+                        <span>
+                          Option
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__quantity"
+                    >
+                      <div
+                        className="c-line-items__param u-bold"
+                      >
+                        <span>
+                          Quantity
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__param  c-line-items__colour-selected"
+                    >
+                      <span>
+                        Grey
+                      </span>
+                    </div>
+                    <div
+                      className="c-line-items__param  c-line-items__option-selected"
+                    >
+                      <span>
+                        38 Waist 31 Leg
+                      </span>
+                    </div>
+                    <div
+                      className="c-line-items__param  c-line-items__quantity-selected"
+                    >
+                      <span>
+                        <select
+                          data-variant="S2658934_C101_486"
+                          onChange={[Function]}
                           value={1}
                         >
-                          1
-                        </option>
-                        <option
-                          aria-posinset={3}
-                          aria-setsize={2}
-                          key="2"
-                          value={2}
-                        >
-                          2
-                        </option>
-                        <option
-                          aria-posinset={4}
-                          aria-setsize={3}
-                          key="3"
-                          value={3}
-                        >
-                          3
-                        </option>
-                        <option
-                          aria-posinset={5}
-                          aria-setsize={4}
-                          key="4"
-                          value={4}
-                        >
-                          4
-                        </option>
-                        <option
-                          aria-posinset={6}
-                          aria-setsize={5}
-                          key="5"
-                          value={5}
-                        >
-                          5
-                        </option>
-                        <option
-                          aria-posinset={7}
-                          aria-setsize={6}
-                          key="6"
-                          value={6}
-                        >
-                          6
-                        </option>
-                        <option
-                          aria-posinset={8}
-                          aria-setsize={7}
-                          key="7"
-                          value={7}
-                        >
-                          7
-                        </option>
-                        <option
-                          aria-posinset={9}
-                          aria-setsize={8}
-                          key="8"
-                          value={8}
-                        >
-                          8
-                        </option>
-                        <option
-                          aria-posinset={10}
-                          aria-setsize={9}
-                          key="9"
-                          value={9}
-                        >
-                          9
-                        </option>
-                        <option
-                          aria-posinset={11}
-                          aria-setsize={10}
-                          key="10"
-                          value={10}
-                        >
-                          10
-                        </option>
-                      </select>
-                    </span>
-                  </div>
-                  <div
-                    className="c-line-items__grid-item3"
-                  >
+                          <option
+                            aria-posinset={2}
+                            aria-setsize={1}
+                            key="1"
+                            value={1}
+                          >
+                            1
+                          </option>
+                          <option
+                            aria-posinset={3}
+                            aria-setsize={2}
+                            key="2"
+                            value={2}
+                          >
+                            2
+                          </option>
+                          <option
+                            aria-posinset={4}
+                            aria-setsize={3}
+                            key="3"
+                            value={3}
+                          >
+                            3
+                          </option>
+                          <option
+                            aria-posinset={5}
+                            aria-setsize={4}
+                            key="4"
+                            value={4}
+                          >
+                            4
+                          </option>
+                          <option
+                            aria-posinset={6}
+                            aria-setsize={5}
+                            key="5"
+                            value={5}
+                          >
+                            5
+                          </option>
+                          <option
+                            aria-posinset={7}
+                            aria-setsize={6}
+                            key="6"
+                            value={6}
+                          >
+                            6
+                          </option>
+                          <option
+                            aria-posinset={8}
+                            aria-setsize={7}
+                            key="7"
+                            value={7}
+                          >
+                            7
+                          </option>
+                          <option
+                            aria-posinset={9}
+                            aria-setsize={8}
+                            key="8"
+                            value={8}
+                          >
+                            8
+                          </option>
+                          <option
+                            aria-posinset={10}
+                            aria-setsize={9}
+                            key="9"
+                            value={9}
+                          >
+                            9
+                          </option>
+                          <option
+                            aria-posinset={11}
+                            aria-setsize={10}
+                            key="10"
+                            value={10}
+                          >
+                            10
+                          </option>
+                        </select>
+                      </span>
+                    </div>
                     <div
-                      className="c-line-items__delete"
+                      className="c-line-items__remove"
+                    >
+                      <div
+                        className="c-line-items__delete"
+                      >
+                        <a
+                          className="c-line-items__delete-button"
+                          data-variant="S2658934_C101_486"
+                          onClick={[Function]}
+                        >
+                          Delete
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__amount"
                     >
                       <a
-                        className="c-line-items__delete-button"
-                        data-variant="S2658934_C101_486"
-                        onClick={[Function]}
+                        className="c-line-items__total"
                       >
-                        Delete
+                        £
+                        30.00
                       </a>
                     </div>
-                  </div>
-                  <div
-                    className="c-line-items__grid-item10"
-                  >
-                    <a
-                      className="c-line-items__total"
-                    >
-                      £
-                      30.00
-                    </a>
                   </div>
                 </div>
               </div>
@@ -739,205 +750,209 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
             <div
               className="c-cart-table__icons"
             >
-              <p>
-                We Accept
-              </p>
               <PaymentIcons>
                 <div
                   className="c-payment-icons"
                 >
-                  <Image
-                    aria-label="VISA"
-                    className="c-payment-icons__image"
-                    src="/static/payments/visa.svg"
+                  <p>
+                    We Accept
+                  </p>
+                  <div
+                    className="c-payment-icons__images"
                   >
-                    <div
+                    <Image
+                      aria-label="VISA"
                       className="c-payment-icons__image"
+                      src="/static/payments/visa.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
-                  <Image
-                    aria-label="Mastercard"
-                    className="c-payment-icons__image"
-                    src="/static/payments/mastercard.svg"
-                  >
-                    <div
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                    <Image
+                      aria-label="Mastercard"
                       className="c-payment-icons__image"
+                      src="/static/payments/mastercard.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
-                  <Image
-                    aria-label="American Express"
-                    className="c-payment-icons__image"
-                    src="/static/payments/american-express.svg"
-                  >
-                    <div
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                    <Image
+                      aria-label="American Express"
                       className="c-payment-icons__image"
+                      src="/static/payments/american-express.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
-                  <Image
-                    aria-label="Maestro"
-                    className="c-payment-icons__image"
-                    src="/static/payments/maestro.svg"
-                  >
-                    <div
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                    <Image
+                      aria-label="Maestro"
                       className="c-payment-icons__image"
+                      src="/static/payments/maestro.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
-                  <Image
-                    aria-label="PayPal"
-                    className="c-payment-icons__image"
-                    src="/static/payments/pay-pal.svg"
-                  >
-                    <div
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                    <Image
+                      aria-label="PayPal"
                       className="c-payment-icons__image"
+                      src="/static/payments/pay-pal.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
-                  <Image
-                    aria-label="Apple Pay"
-                    className="c-payment-icons__image"
-                    src="/static/payments/apple-pay.svg"
-                  >
-                    <div
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                    <Image
+                      aria-label="Apple Pay"
                       className="c-payment-icons__image"
+                      src="/static/payments/apple-pay.svg"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
+                      <div
+                        className="c-payment-icons__image"
                       >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
+                        <LazyLoad
+                          debounce={true}
+                          elementType="div"
+                          offset={0}
+                          offsetBottom={0}
+                          offsetHorizontal={0}
+                          offsetLeft={0}
+                          offsetRight={0}
+                          offsetTop={0}
+                          offsetVertical={0}
+                          throttle={250}
+                        >
+                          <div
+                            className="LazyLoad"
+                            style={
+                              Object {
+                                "height": undefined,
+                                "width": undefined,
+                              }
                             }
-                          }
-                        />
-                      </LazyLoad>
-                    </div>
-                  </Image>
+                          />
+                        </LazyLoad>
+                      </div>
+                    </Image>
+                  </div>
                 </div>
               </PaymentIcons>
             </div>

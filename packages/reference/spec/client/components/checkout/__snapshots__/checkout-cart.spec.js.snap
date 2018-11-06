@@ -31,89 +31,92 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
   updateQuantity={[MockFunction]}
 >
   <section
-    className="c-cart-table__header"
+    className="c-checkout-cart__header"
   >
     <div
-      className="u-float--left"
+      className="u-float--left c-checkout-cart__table"
     >
-      <h2
-        className="c-cart-table__title"
+      <h1
+        className="c-checkout-cart__title"
       >
          Your Shopping Basket 
         <a
-          className="c-cart-table__amount"
+          className="c-checkout-cart__amount"
         >
           (
           )
         </a>
-         
-      </h2>
+      </h1>
       <h4
-        className="c-cart-table__total"
+        className="c-checkout-cart__total"
       >
         £
         25.00
       </h4>
-      <p
-        className="c-cart-table__description"
+      <div
+        className="c-checkout-cart__text"
       >
-        You have 
-        <a />
-         
-        <t
-          className={null}
-          count={1}
-          showCount={false}
-          singular="item"
-          style={Object {}}
-          zero={null}
+        <p
+          className="c-checkout-cart__description"
         >
-          <span
+          You have 
+          <a />
+           
+          <t
             className={null}
+            count={1}
+            showCount={false}
+            singular="item"
             style={Object {}}
+            zero={null}
           >
-            item
-          </span>
-        </t>
-         in your shopping basket
-      </p>
-      <p
-        className="c-cart-table__description"
-      >
-        <t
-          className={null}
-          count={1}
-          plural="These"
-          showCount={false}
-          singular="This"
-          style={Object {}}
-          zero={null}
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </t>
+           in your shopping basket
+        </p>
+        <p
+          className="c-checkout-cart__description"
         >
-          <span
+          <t
             className={null}
+            count={1}
+            plural="These"
+            showCount={false}
+            singular="This"
             style={Object {}}
+            zero={null}
           >
-            This
-          </span>
-        </t>
-         
-        <t
-          className={null}
-          count={1}
-          showCount={false}
-          singular="item"
-          style={Object {}}
-          zero={null}
-        >
-          <span
+            <span
+              className={null}
+              style={Object {}}
+            >
+              This
+            </span>
+          </t>
+           
+          <t
             className={null}
+            count={1}
+            showCount={false}
+            singular="item"
             style={Object {}}
+            zero={null}
           >
-            item
-          </span>
-        </t>
-         will be saved for 48 hours depending on availablility
-      </p>
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </t>
+           will be saved for 48 hours depending on availablility
+        </p>
+      </div>
     </div>
   </section>
   <LineItems
@@ -149,15 +152,14 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
       className="c-line-items"
     >
       <div
-        className="c-line-items__grid"
+        className="c-line-items__sections"
         key="1"
       >
         <div
-          className="c-line-items__grid-item1"
+          className="c-line-items__images"
         >
           <Link
-            as="1"
-            href="/slug?slug=1"
+            href="/slug?slug=undefined"
             key="1"
           >
             <Image
@@ -180,195 +182,198 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </Link>
         </div>
         <div
-          className="c-line-items__grid-item2"
+          className="c-line-items__information"
         >
           <div
-            className="c-line-items__details"
+            className="c-line-items__title"
           >
-            <h4
-              className="c-line-items__details-title  u-bold"
-            >
-              Test Product
-            </h4>
             <div
-              className="c-line-items__details-sku"
+              className="c-line-items__details"
             >
-              <span />
+              <h4
+                className="c-line-items__details-title  u-bold"
+              >
+                Test Product
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span />
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="c-line-items__grid-item4"
-        >
           <div
-            className="c-line-items__param  u-bold"
+            className="c-line-items__colour"
           >
-            <span>
-              Colour
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item6"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Option
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item8"
-        >
-          <div
-            className="c-line-items__param u-bold"
-          >
-            <span>
-              Quantity
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item5"
-        >
-          <span>
-            Grey
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item7"
-        >
-          <span>
-            38 Waist 31 Leg
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item9"
-        >
-          <span>
-            <select
-              onChange={[MockFunction]}
-              value={2}
+            <div
+              className="c-line-items__param  u-bold"
             >
-              <option
-                aria-posinset={2}
-                aria-setsize={1}
-                key="1"
-                value={1}
-              >
-                1
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={2}
-                key="2"
+              <span>
+                Colour
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__option"
+          >
+            <div
+              className="c-line-items__param  u-bold"
+            >
+              <span>
+                Option
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__option-selected"
+          >
+            <span>
+              38 Waist 31 Leg
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                onChange={[MockFunction]}
                 value={2}
               >
-                2
-              </option>
-              <option
-                aria-posinset={4}
-                aria-setsize={3}
-                key="3"
-                value={3}
-              >
-                3
-              </option>
-              <option
-                aria-posinset={5}
-                aria-setsize={4}
-                key="4"
-                value={4}
-              >
-                4
-              </option>
-              <option
-                aria-posinset={6}
-                aria-setsize={5}
-                key="5"
-                value={5}
-              >
-                5
-              </option>
-              <option
-                aria-posinset={7}
-                aria-setsize={6}
-                key="6"
-                value={6}
-              >
-                6
-              </option>
-              <option
-                aria-posinset={8}
-                aria-setsize={7}
-                key="7"
-                value={7}
-              >
-                7
-              </option>
-              <option
-                aria-posinset={9}
-                aria-setsize={8}
-                key="8"
-                value={8}
-              >
-                8
-              </option>
-              <option
-                aria-posinset={10}
-                aria-setsize={9}
-                key="9"
-                value={9}
-              >
-                9
-              </option>
-              <option
-                aria-posinset={11}
-                aria-setsize={10}
-                key="10"
-                value={10}
-              >
-                10
-              </option>
-            </select>
-          </span>
-        </div>
-        <div
-          className="c-line-items__grid-item3"
-        >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
           <div
-            className="c-line-items__delete"
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amount"
           >
             <a
-              className="c-line-items__delete-button"
+              className="c-line-items__total"
             >
-              Delete
+              £
+              20.00
             </a>
           </div>
         </div>
-        <div
-          className="c-line-items__grid-item10"
-        >
-          <a
-            className="c-line-items__total"
-          >
-            £
-            20.00
-          </a>
-        </div>
       </div>
       <div
-        className="c-line-items__grid"
+        className="c-line-items__sections"
         key="2"
       >
         <div
-          className="c-line-items__grid-item1"
+          className="c-line-items__images"
         >
           <Link
-            as="1"
-            href="/slug?slug=2"
+            href="/slug?slug=undefined"
             key="2"
           >
             <Image
@@ -391,183 +396,187 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           </Link>
         </div>
         <div
-          className="c-line-items__grid-item2"
+          className="c-line-items__information"
         >
           <div
-            className="c-line-items__details"
+            className="c-line-items__title"
           >
-            <h4
-              className="c-line-items__details-title  u-bold"
-            >
-              Pretend Product
-            </h4>
             <div
-              className="c-line-items__details-sku"
+              className="c-line-items__details"
             >
-              <span />
+              <h4
+                className="c-line-items__details-title  u-bold"
+              >
+                Pretend Product
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span />
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="c-line-items__grid-item4"
-        >
           <div
-            className="c-line-items__param  u-bold"
+            className="c-line-items__colour"
           >
-            <span>
-              Colour
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item6"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Option
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item8"
-        >
-          <div
-            className="c-line-items__param u-bold"
-          >
-            <span>
-              Quantity
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item5"
-        >
-          <span>
-            Grey
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item7"
-        >
-          <span>
-            38 Waist 31 Leg
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item9"
-        >
-          <span>
-            <select
-              onChange={[MockFunction]}
-              value={1}
+            <div
+              className="c-line-items__param  u-bold"
             >
-              <option
-                aria-posinset={2}
-                aria-setsize={1}
-                key="1"
+              <span>
+                Colour
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__option"
+          >
+            <div
+              className="c-line-items__param  u-bold"
+            >
+              <span>
+                Option
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__option-selected"
+          >
+            <span>
+              38 Waist 31 Leg
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                onChange={[MockFunction]}
                 value={1}
               >
-                1
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={2}
-                key="2"
-                value={2}
-              >
-                2
-              </option>
-              <option
-                aria-posinset={4}
-                aria-setsize={3}
-                key="3"
-                value={3}
-              >
-                3
-              </option>
-              <option
-                aria-posinset={5}
-                aria-setsize={4}
-                key="4"
-                value={4}
-              >
-                4
-              </option>
-              <option
-                aria-posinset={6}
-                aria-setsize={5}
-                key="5"
-                value={5}
-              >
-                5
-              </option>
-              <option
-                aria-posinset={7}
-                aria-setsize={6}
-                key="6"
-                value={6}
-              >
-                6
-              </option>
-              <option
-                aria-posinset={8}
-                aria-setsize={7}
-                key="7"
-                value={7}
-              >
-                7
-              </option>
-              <option
-                aria-posinset={9}
-                aria-setsize={8}
-                key="8"
-                value={8}
-              >
-                8
-              </option>
-              <option
-                aria-posinset={10}
-                aria-setsize={9}
-                key="9"
-                value={9}
-              >
-                9
-              </option>
-              <option
-                aria-posinset={11}
-                aria-setsize={10}
-                key="10"
-                value={10}
-              >
-                10
-              </option>
-            </select>
-          </span>
-        </div>
-        <div
-          className="c-line-items__grid-item3"
-        >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
           <div
-            className="c-line-items__delete"
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amount"
           >
             <a
-              className="c-line-items__delete-button"
+              className="c-line-items__total"
             >
-              Delete
+              £
+              5.00
             </a>
           </div>
-        </div>
-        <div
-          className="c-line-items__grid-item10"
-        >
-          <a
-            className="c-line-items__total"
-          >
-            £
-            5.00
-          </a>
         </div>
       </div>
     </div>
@@ -599,89 +608,92 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
   updateQuantity={[MockFunction]}
 >
   <section
-    className="c-cart-table__header"
+    className="c-checkout-cart__header"
   >
     <div
-      className="u-float--left"
+      className="u-float--left c-checkout-cart__table"
     >
-      <h2
-        className="c-cart-table__title"
+      <h1
+        className="c-checkout-cart__title"
       >
          Your Shopping Basket 
         <a
-          className="c-cart-table__amount"
+          className="c-checkout-cart__amount"
         >
           (
           )
         </a>
-         
-      </h2>
+      </h1>
       <h4
-        className="c-cart-table__total"
+        className="c-checkout-cart__total"
       >
         £
         20.00
       </h4>
-      <p
-        className="c-cart-table__description"
+      <div
+        className="c-checkout-cart__text"
       >
-        You have 
-        <a />
-         
-        <t
-          className={null}
-          count={1}
-          showCount={false}
-          singular="item"
-          style={Object {}}
-          zero={null}
+        <p
+          className="c-checkout-cart__description"
         >
-          <span
+          You have 
+          <a />
+           
+          <t
             className={null}
+            count={1}
+            showCount={false}
+            singular="item"
             style={Object {}}
+            zero={null}
           >
-            item
-          </span>
-        </t>
-         in your shopping basket
-      </p>
-      <p
-        className="c-cart-table__description"
-      >
-        <t
-          className={null}
-          count={1}
-          plural="These"
-          showCount={false}
-          singular="This"
-          style={Object {}}
-          zero={null}
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </t>
+           in your shopping basket
+        </p>
+        <p
+          className="c-checkout-cart__description"
         >
-          <span
+          <t
             className={null}
+            count={1}
+            plural="These"
+            showCount={false}
+            singular="This"
             style={Object {}}
+            zero={null}
           >
-            This
-          </span>
-        </t>
-         
-        <t
-          className={null}
-          count={1}
-          showCount={false}
-          singular="item"
-          style={Object {}}
-          zero={null}
-        >
-          <span
+            <span
+              className={null}
+              style={Object {}}
+            >
+              This
+            </span>
+          </t>
+           
+          <t
             className={null}
+            count={1}
+            showCount={false}
+            singular="item"
             style={Object {}}
+            zero={null}
           >
-            item
-          </span>
-        </t>
-         will be saved for 48 hours depending on availablility
-      </p>
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </t>
+           will be saved for 48 hours depending on availablility
+        </p>
+      </div>
     </div>
   </section>
   <LineItems
@@ -710,15 +722,14 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
       className="c-line-items"
     >
       <div
-        className="c-line-items__grid"
+        className="c-line-items__sections"
         key="1"
       >
         <div
-          className="c-line-items__grid-item1"
+          className="c-line-items__images"
         >
           <Link
-            as="1"
-            href="/slug?slug=1"
+            href="/slug?slug=undefined"
             key="1"
           >
             <Image
@@ -742,187 +753,191 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           </Link>
         </div>
         <div
-          className="c-line-items__grid-item2"
+          className="c-line-items__information"
         >
           <div
-            className="c-line-items__details"
+            className="c-line-items__title"
           >
-            <h4
-              className="c-line-items__details-title  u-bold"
-            >
-              Test Product
-            </h4>
             <div
-              className="c-line-items__details-sku"
+              className="c-line-items__details"
+            >
+              <h4
+                className="c-line-items__details-title  u-bold"
+              >
+                Test Product
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span>
+                  123
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c-line-items__colour"
+          >
+            <div
+              className="c-line-items__param  u-bold"
             >
               <span>
-                123
+                Colour
               </span>
             </div>
           </div>
-        </div>
-        <div
-          className="c-line-items__grid-item4"
-        >
           <div
-            className="c-line-items__param  u-bold"
+            className="c-line-items__option"
           >
-            <span>
-              Colour
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item6"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Option
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__grid-item8"
-        >
-          <div
-            className="c-line-items__param u-bold"
-          >
-            <span>
-              Quantity
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item5"
-        >
-          <span>
-            Grey
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item7"
-        >
-          <span>
-            38 Waist 31 Leg
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__grid-item9"
-        >
-          <span>
-            <select
-              data-variant="123"
-              onChange={[MockFunction]}
-              value={2}
+            <div
+              className="c-line-items__param  u-bold"
             >
-              <option
-                aria-posinset={2}
-                aria-setsize={1}
-                key="1"
-                value={1}
-              >
-                1
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={2}
-                key="2"
+              <span>
+                Option
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__option-selected"
+          >
+            <span>
+              38 Waist 31 Leg
+            </span>
+          </div>
+          <div
+            className="c-line-items__param  c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                data-variant="123"
+                onChange={[MockFunction]}
                 value={2}
               >
-                2
-              </option>
-              <option
-                aria-posinset={4}
-                aria-setsize={3}
-                key="3"
-                value={3}
-              >
-                3
-              </option>
-              <option
-                aria-posinset={5}
-                aria-setsize={4}
-                key="4"
-                value={4}
-              >
-                4
-              </option>
-              <option
-                aria-posinset={6}
-                aria-setsize={5}
-                key="5"
-                value={5}
-              >
-                5
-              </option>
-              <option
-                aria-posinset={7}
-                aria-setsize={6}
-                key="6"
-                value={6}
-              >
-                6
-              </option>
-              <option
-                aria-posinset={8}
-                aria-setsize={7}
-                key="7"
-                value={7}
-              >
-                7
-              </option>
-              <option
-                aria-posinset={9}
-                aria-setsize={8}
-                key="8"
-                value={8}
-              >
-                8
-              </option>
-              <option
-                aria-posinset={10}
-                aria-setsize={9}
-                key="9"
-                value={9}
-              >
-                9
-              </option>
-              <option
-                aria-posinset={11}
-                aria-setsize={10}
-                key="10"
-                value={10}
-              >
-                10
-              </option>
-            </select>
-          </span>
-        </div>
-        <div
-          className="c-line-items__grid-item3"
-        >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
           <div
-            className="c-line-items__delete"
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+                data-variant="123"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amount"
           >
             <a
-              className="c-line-items__delete-button"
-              data-variant="123"
+              className="c-line-items__total"
             >
-              Delete
+              £
+              20.00
             </a>
           </div>
-        </div>
-        <div
-          className="c-line-items__grid-item10"
-        >
-          <a
-            className="c-line-items__total"
-          >
-            £
-            20.00
-          </a>
         </div>
       </div>
     </div>

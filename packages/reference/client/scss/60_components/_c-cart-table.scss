@@ -23,7 +23,6 @@
         grid-row-start: [row1-start];
         grid-row-end: [row2-start];
         padding-bottom: 0;
-        margin: 1em;
       }
     }
 
@@ -34,7 +33,6 @@
         grid-row-start: [row1-start];
         grid-row-end: [row2-start];
         padding-bottom: 0;
-        margin: 1em;
       }
     }
   }
@@ -44,6 +42,14 @@
 
     @include breakpoint(desktop) {
       margin-top: 0;
+      width: 80%;
+    }
+  }
+
+  &__breadcrumb {
+
+    @include breakpoint(desktop) {
+      padding: $global-spacing-unit-small 0;
     }
   }
 
@@ -68,10 +74,15 @@
 
   &__text {
     margin-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
   }
 
   &__total {
     font-weight: 300;
+    float: right;
 
     @include breakpoint(desktop) {
       display: none;
@@ -80,16 +91,27 @@
 
   &__amount {
     color: $background-positive;
+
+    &:hover {
+      color: $background-positive;
+    }
   }
 
   &__related-products {
-    margin: $global-spacing-unit;
+    margin-top: $global-spacing-unit;
     border-top: 1px solid $border-default;
     padding-top: $global-spacing-unit;
   }
 
+  &__title {
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
   &__header {
-    display: inline-block;
+    display: flex;
     width: 100%;
     border-top: 1px solid $border-default;
     border-bottom: 1px solid $border-default;
@@ -97,16 +119,24 @@
     padding-top: $global-spacing-unit-small;
 
     @include breakpoint(desktop) {
+      display: inline-block;
       border: none;
       padding: 0;
     }
 
     &-grid {
+      width: 70%;
+
+      @include breakpoint(tablet) {
+        font-size: 1em;
+      }
+
       @include breakpoint(desktop) {
         display: grid;
         grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
         grid-template-rows: [row1-start] 100% [row1-end];
         grid-gap: 4%;
+        width: 100%;
       }
 
       &-item-a {
@@ -116,7 +146,6 @@
           grid-row-start: [row1-start];
           grid-row-end: [row1-end];
           border-bottom: 1px solid $border-default;
-          margin: $global-spacing-unit-small;
         }
       }
 
@@ -127,7 +156,6 @@
           grid-row-start: [row1-start];
           grid-row-end: [row1-end];
           border-bottom: 1px solid $border-default;
-          margin: $global-spacing-unit-small;
         }
 
         h1 {
@@ -157,23 +185,42 @@
             font-size: 0.9em;
           }
         }
+      }
+    }
 
+    &-total {
+      width: 30%;
 
+      @include breakpoint(tablet) {
+        font-size: 1em;
       }
     }
   }
 
   h1 {
     margin-top: $global-spacing-unit-tiny;
+    font-size: 1em;
+
+    @include breakpoint(tablet) {
+      font-size: 1.3em;
+    }
   }
 
   h2 {
-    margin-top: $global-spacing-unit-tiny;
+    margin-top: $global-spacing-unit-small;
     font-size: 1.1em;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+    }
   }
 
   h4 {
     margin-top: $global-spacing-unit-tiny;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
   }
 
   &__icons {

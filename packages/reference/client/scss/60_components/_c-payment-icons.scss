@@ -1,14 +1,30 @@
 .c-payment-icons {
-  margin: auto;
-  text-align: center;
+  display: none;
+  border-top: 1px solid $border-default;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+
+  &__images {
+    margin: auto;
+    text-align: center;
+  }
+
   &__image {
     width: 35px;
     display: inline-block;
     margin: $global-spacing-unit-tiny;
 
     @include breakpoint(desktop) {
-      width: 65px;
+      width: 45px;
       margin: $global-spacing-unit-small;
+      margin-bottom: $global-spacing-unit;
     }
   }
 }

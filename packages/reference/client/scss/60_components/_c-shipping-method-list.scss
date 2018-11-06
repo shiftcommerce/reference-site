@@ -1,4 +1,13 @@
 .c-shipping-method-list {
+
+  @include breakpoint(tablet) {
+    padding: $global-spacing-unit-small 0;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+
   &__header {
     margin-top: $global-spacing-unit-small;
     margin-bottom: $global-spacing-unit-small;

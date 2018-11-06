@@ -56,7 +56,7 @@ export default class ShippingMethods extends Component {
               aria-label='Edit your shipping method'
               label='Edit'
               status='secondary'
-              className='o-button--sml'
+              className='o-button-edit'
               onClick={() => onToggleCollapsed('edit', formName)}
             />
           }

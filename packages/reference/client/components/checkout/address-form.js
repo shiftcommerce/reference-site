@@ -26,11 +26,11 @@ class AddressForm extends Component {
     const { checkout, title, formName, onToggleCollapsed } = this.props
     const collapsed = checkout[formName].collapsed
     return (
-      <div className='o-form__header'>
-        <div className='o-form__header-title'>
+      <div className='o-form__header c-address-form__header'>
+        <div className='o-form__header-title c-address-form__header-title'>
           <h2>{ title }</h2>
         </div>
-        { collapsed && <Button label='Edit' status='secondary' className='o-button--sml' onClick={() => onToggleCollapsed('edit', formName)} /> }
+        { collapsed && <Button label='Edit' status='secondary' className='o-button-edit' onClick={() => onToggleCollapsed('edit', formName)} /> }
       </div>
     )
   }
@@ -42,7 +42,7 @@ class AddressForm extends Component {
     return (
       <div>
         { collapsed && (addressType === 'shipping') &&
-          <div className='o-form__wrapper--collapsed'>
+          <div className='o-form__wrapper--collapsed c-address-form__summary'>
             <span className={classNames('u-bold', { 'u-text-color--primary': (address.line_1 && address.zipcode) })} />
             <p className='u-bold'>{ address.first_name } { address.last_name } </p>
             <span>{ address.line_1 }, { address.city }, { address.zipcode }</span>

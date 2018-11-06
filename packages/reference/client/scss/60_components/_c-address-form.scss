@@ -1,6 +1,22 @@
 .c-address-form {
 
-  &__button {
-    width: 100%;
+  &__header {
+    padding-left: 9px;
+
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
+
+    @include breakpoint(desktop) {
+      width: 100%;
+    }
+
+    &-title {
+      margin: 0;
+    }
+  }
+
+  &__summary {
+    padding-left: 0;
   }
 }

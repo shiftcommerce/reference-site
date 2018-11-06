@@ -1,0 +1,53 @@
+.c-checkout {
+
+  @include breakpoint(desktop) {
+    width: 80%;
+    margin: auto;
+  }
+
+  &__addressform {
+
+    @include breakpoint(desktop) {
+      width: 90%;
+    }
+  }
+
+  &__cart {
+    margin: auto;
+    padding-left: $global-spacing-unit-small;
+    padding-right: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      padding-left: $global-spacing-unit;
+      padding-right: $global-spacing-unit;
+    }
+
+    @include breakpoint(desktop) {
+      padding-left: $global-spacing-unit-small;
+      padding-right: 0;
+    }
+  }
+
+  &__breadcrumb {
+
+    @include breakpoint(desktop) {
+      width: 80%;
+      margin: auto;
+      padding-bottom: $global-spacing-unit-small;
+      padding-top: $global-spacing-unit-small;
+      border-bottom: 1px solid $border-default;
+      border-top: 1px solid $border-default;
+      margin-top: $global-spacing-unit;
+    }
+  }
+
+  &__steps {
+
+    @include breakpoint(desktop) {
+      width: 80%;
+      margin: auto;
+      border-bottom: 1px solid $border-default;
+    }
+  }
+}
+                

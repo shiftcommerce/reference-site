@@ -16,7 +16,7 @@ export default class PaymentMethod extends Component {
     return (
       <Button
         aria-label='Edit your payment method'
-        className='o-button--sml'
+        className='o-button-edit'
         label='Edit'
         status='secondary'
         onClick={() => onToggleCollapsed('edit', formName)}
@@ -30,7 +30,7 @@ export default class PaymentMethod extends Component {
     const selectedMethod = checkout.paymentMethod.selectedMethod
     const display = !collapsed ? 'block' : 'none'
     return (
-      <div style={{ display: display }}>
+      <div className='c-payment-method__section' style={{ display: display }}>
         <PaymentMethodSelector
           currentMethod={selectedMethod}
           onPaymentMethodChanged={onPaymentMethodChanged}

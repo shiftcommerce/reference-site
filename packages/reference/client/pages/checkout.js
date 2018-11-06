@@ -27,6 +27,7 @@ import {
 
 // Objects
 import Logo from '../objects/logo'
+import Breadcrumb from '../objects/breadcrumb'
 
 // Components
 import CustomHead from '../components/custom-head'
@@ -36,6 +37,7 @@ import CheckoutCart from '../components/checkout/checkout-cart'
 import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import ShippingMethods from '../components/checkout/shipping-methods'
 import PaymentMethod from '../components/checkout/payment-method'
+import PaymentIcons from '../components/cart/payment-icons'
 import PromoInput from '../components/promo-input'
 
 export class CheckoutPage extends Component {
@@ -198,47 +200,59 @@ export class CheckoutPage extends Component {
           <CustomHead />
           {hasLineItems &&
             <>
-              <div className='o-header'>
+              <div className='o-header--checkout'>
                 <div className='c-step-indicators__logo'>
                   <Logo className='u-text-color--primary' />
                 </div>
-                <div>
+                <div className='c-checkout__breadcrumb'>
+                  <Breadcrumb />
+                </div>
+                <div className='c-checkout__steps'>
                   <CheckoutSteps {...this.props} />
                 </div>
               </div>
-              <div className='o-grid-container'>
-                <div className='o-col-1-13 o-col-1-9-l'>
-                  <AddressForm {...this.props}
-                    title='Shipping Address'
-                    formName='shippingAddress'
-                    addressType='shipping'
-                    onChange={this.onInputChange}
-                    onBlur={this.onInputBlur}
-                    onShowField={this.onShowField}
-                    onToggleCollapsed={this.onToggleCollapsed}
-                  />
-                  <ShippingMethods
-                    {...this.props}
-                    formName='shippingMethod'
-                    setShippingMethod={this.setShippingMethod}
-                    onToggleCollapsed={this.onToggleCollapsed}
-                  />
-                  <PaymentMethod
-                    formName='paymentMethod'
-                    {...this.props}
-                    changeBillingAddress={this.changeBillingAddress}
-                    onChange={this.onInputChange}
-                    onBlur={this.onInputBlur}
-                    onPaymentMethodChanged={this.onPaymentMethodChanged}
-                    onToggleCollapsed={this.onToggleCollapsed}
-                    onCardTokenReceived={this.onCardTokenReceived}
-                    setCardErrors={this.setCardErrors}
-                  />
-                </div>
-                <PromoInput />
-                <div className='o-col-1-13 o-col-9-13-l c-cart-table'>
-                  <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
-                  <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
+              <div className='c-checkout'>
+                <div className='o-grid-container'>
+                  <div className='o-col-1-13 o-col-1-8-l'>
+                    <div className='c-checkout__addressform'>
+                      <AddressForm {...this.props}
+                        title='Shipping Address'
+                        formName='shippingAddress'
+                        addressType='shipping'
+                        onChange={this.onInputChange}
+                        onBlur={this.onInputBlur}
+                        onShowField={this.onShowField}
+                        onToggleCollapsed={this.onToggleCollapsed}
+                      />
+                    </div>
+                    <ShippingMethods
+                      {...this.props}
+                      formName='shippingMethod'
+                      setShippingMethod={this.setShippingMethod}
+                      onToggleCollapsed={this.onToggleCollapsed}
+                    />
+                    <PaymentMethod
+                      formName='paymentMethod'
+                      {...this.props}
+                      changeBillingAddress={this.changeBillingAddress}
+                      onChange={this.onInputChange}
+                      onBlur={this.onInputBlur}
+                      onPaymentMethodChanged={this.onPaymentMethodChanged}
+                      onToggleCollapsed={this.onToggleCollapsed}
+                      onCardTokenReceived={this.onCardTokenReceived}
+                      setCardErrors={this.setCardErrors}
+                    />
+                  </div>
+                  <div className='o-col-1-13 o-col-8-13-l'>
+                    <div className='c-checkout__cart'>
+                      <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
+                      <PromoInput />
+                      <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
+                      <div className='c-checkout__payment'>
+                        <PaymentIcons />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </>

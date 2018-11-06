@@ -33,6 +33,16 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
   background: $button-base-color;
   color: $text-primary;
 
+  &-edit {
+    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+    font-size: 1em;
+    margin: 0;
+
+    @include breakpoint(desktop) {
+      font-size: 0.8em;
+    }
+  }
+
 
   &:focus {
     box-shadow: rgba($background-secondary, 0.2) 0 0 0 2px;

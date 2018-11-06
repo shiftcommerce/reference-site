@@ -111,7 +111,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -164,7 +164,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -174,7 +174,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -182,7 +182,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -332,7 +332,7 @@ exports[`Place Order button should be disabled if there is any error in card det
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -385,7 +385,7 @@ exports[`Place Order button should be disabled if there is any error in card det
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -395,7 +395,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -403,7 +403,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -475,7 +475,7 @@ exports[`renders payment errors 1`] = `
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -533,7 +533,7 @@ exports[`renders payment errors 1`] = `
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -543,7 +543,7 @@ exports[`renders payment errors 1`] = `
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -551,7 +551,7 @@ exports[`renders payment errors 1`] = `
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -622,7 +622,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -675,7 +675,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -685,7 +685,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -693,7 +693,7 @@ exports[`renders the correct checkout cart costs with shipping address completed
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -774,7 +774,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -827,7 +827,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -837,7 +837,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -845,7 +845,7 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -914,7 +914,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -967,7 +967,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -977,7 +977,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -985,7 +985,7 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"
@@ -1051,7 +1051,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
   <Sticker>
     <div
       aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
+      className="c-cart-summary"
     >
       <div
         className=""
@@ -1104,7 +1104,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -1114,7 +1114,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
         onClick={[Function]}
-        status="primary"
+        status="secondary"
         type="button"
       >
         <div
@@ -1122,7 +1122,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         >
           <button
             aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
             disabled={false}
             onClick={[Function]}
             role="button"

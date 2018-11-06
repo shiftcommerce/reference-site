@@ -43,7 +43,7 @@ test('dispatch setShippingMethod action on changing shipping method', () => {
   expect(wrapper).toMatchSnapshot()
 
   // Verify if cart line items are available
-  expect(wrapper.find('section.c-cart-table__header')).toIncludeText('2 items')
+  expect(wrapper.find('section.c-checkout-cart__header')).toIncludeText('2 items')
 
   // To clear the logs of dispatch being called on component mount
   dispatch.mockClear()

@@ -1,144 +1,135 @@
 .c-line-items {
-  width: 100%;
-  padding: $global-spacing-unit-small 0;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: [first] 40% [col2-start] 25% [col3-start] 25% [col4-start] 5% [end];
-    grid-template-rows: [row1-start] 30% [row2-start] 30% [row3-start] 30% [row4-start] 5% [row5-start] 5% [row5-end];
+  &__sections {
+    display: flex;
     font-size: 0.9rem;
-    margin-bottom: $global-spacing-unit-large;
+    border-bottom: 1px solid $border-default;
 
     @include breakpoint(desktop) {
-      grid-template-columns: [first] 35% [col2-start] 15% [col3-start] 35% [col4-start] 15% [end];
-      padding-bottom: $global-spacing-unit;
-      border-bottom: 1px solid $border-default;
-    }
-
-    &-item1 {
-      grid-column-start: first;
-      grid-column-end: col2-start;
-      grid-row-start: row1-start;
-      grid-row-end: row5-end;
-    }
-
-    &-item2 {
-      grid-column-start: col2-start;
-      grid-column-end: col4-start;
-      grid-row-start: row1-start;
-      grid-row-end: row2-start;
-    }
-
-    &-item3 {
-      grid-column-start: col4-start;
-      grid-column-end: end;
-      grid-row-start: row1-start;
-      grid-row-end: row2-start;
-    }
-
-    &-item4 {
-      grid-column-start: col2-start;
-      grid-column-end: col3-start;
-      grid-row-start: row2-start;
-      grid-row-end: row3-start
-    }
-
-    &-item5 {
-      grid-column-start: col3-start;
-      grid-column-end: col4-start;
-      grid-row-start: row2-start;
-      grid-row-end: row3-start
-    }
-
-    &-item6 {
-      grid-column-start: col2-start;
-      grid-column-end: col3-start;
-      grid-row-start: row3-start;
-      grid-row-end: row4-start;
-    }
-
-    &-item7 {
-      grid-column-start: col3-start;
-      grid-column-end: col4-start;
-      grid-row-start: row3-start;
-      grid-row-end: row4-start;
-    }
-
-    &-item8 {
-      grid-column-start: col2-start;
-      grid-column-end: col3-start;
-      grid-row-start: row4-start;
-      grid-row-end: row5-start;
-    }
-
-    &-item9 {
-      grid-column-start: col3-start;
-      grid-column-end: col4-start;
-      grid-row-start: row4-start;
-      grid-row-end: row5-start;
-    }
-
-    &-item10 {
-      grid-column-start: col4-start;
-      grid-column-end: end;
-      grid-row-start: row5-start;
-      grid-row-end: row5-end;
+      margin-top: $global-spacing-unit-tiny;
     }
   }
 
-  &__image {
+  &__images {
+    order: 1;
+    width: 40%;
+    margin-right: $global-spacing-unit-tiny;
+    margin-top: $global-spacing-unit-small;
+    cursor: pointer;
+
+    @include breakpoint (desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__information {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    font-size: 0.8em;
+    margin-top: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    order: 1;
+    width: 80%;
+
+    @include breakpoint(desktop) {
+      width: 70%;
+    }
+  }
+
+  &__remove {
+    order: 2;
+    flex-grow: 3;
+    width: 20%;
+  }
+
+  &__colour {
+    order: 3;
+    width: 20%;
+
+    &-selected {
+      order: 4;
+      width: 80%;
+    }
+  }
+
+  &__option {
+    order: 5;
+    width: 20%;
+
+    &-selected {
+      order: 6;
+      width: 80%;
+    }
+  }
+
+  &__quantity {
+    order: 7;
+    width: 20%;
+
+    &-selected {
+      order: 8;
+      width: 80%;
+    }
+  }
+
+  &__amount {
+    order: 9;
     width: 100%;
-    padding-right: $global-spacing-unit-small;
-    height: 100%;
-    display: inline-block;
+    margin-bottom: $global-spacing-unit-small;
+    text-align: right;
   }
 
   &__delete {
+    text-align: right;
+    margin-top: $global-spacing-unit-tiny;
+
     @include breakpoint(desktop) {
-      text-align: right;
+      font-size: 0.9em;
     }
 
     &-button {
       color: $form-input-border;
-      font-size: 0.8em;
       text-decoration: underline;
+      cursor: pointer;
     }
+  }
+
+  &__image {
+    margin-top: $global-spacing-unit-tiny;
   }
 
   &__details {
 
     &-title {
-      font-size: 0.8em;
-
-      @include breakpoint(desktop) {
-        font-size: 1em;
-      }
+      margin: 0;
+      margin-top: $global-spacing-unit-tiny;
     }
 
     &-sku {
       color: $background-secondary;
-      font-size: 0.8em;
-
-      @include breakpoint(desktop) {
-        display: none;
-      }
     }
   }
 
   &__param {
-    font-size: 0.8em;
-
-    @include breakpoint(desktop) {
-      font-size: 1em;
-    }
+    margin: $global-spacing-unit-small 0;
   }
 
   &__total {
-    display: block;
 
     @include breakpoint(desktop) {
-      font-weight: 500;
-      text-align: right;
+      font-size: 1.1em;
     }
   }
 }

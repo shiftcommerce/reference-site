@@ -73,8 +73,19 @@
       }
     }
   }
-}
 
-.o-header__myaccount {
-  font-size: 12px;
+  &--checkout {
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 99;
+
+    @include breakpoint(desktop) {
+      position: static;
+    }
+  }
+
+  &__myaccount {
+    font-size: 1rem;
+  }
 }

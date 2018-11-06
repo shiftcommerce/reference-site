@@ -1,3 +1,7 @@
 .u-margin {
   margin-top: $global-spacing-unit * 7;
+
+  @include breakpoint(desktop) {
+    margin-top: $global-spacing-unit-large;
+  }
 }

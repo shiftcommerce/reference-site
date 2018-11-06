@@ -6,15 +6,30 @@ $input-radio-spacing: 8px;
   border-bottom: 1px solid $border-default;
   width: 95%;
   margin: auto;
+  padding-top: $global-spacing-unit-tiny;
+
+  @include breakpoint(desktop) {
+    margin: 0;
+    width: 90%;
+    padding-top: 0;
+  }
 
   &__header {
-    margin: 0;
-    padding: 0;
     padding-top: $global-spacing-unit-tiny;
+    padding-left: 0;
+    padding-right: 4px;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    @include breakpoint(desktop) {
+      padding-top: $global-spacing-unit-small;
+    }
 
     h2 {
-      margin: 0;
-      margin-top: $global-spacing-unit-small;
+      margin-top: 0;
     }
   }
 
