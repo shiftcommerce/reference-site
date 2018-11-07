@@ -43,18 +43,16 @@ class OrderList extends PureComponent {
 
   renderOrderDetails (order, orderDate, total) {
     return (
-      <>
-        <div className='c-order-history__details'>
-          { this.renderOrderSummary(order, orderDate, total) }
-          <LineItems items={order.line_items} />
-          <div className='c-order-history__totals'>
-            <p>Shipping: &pound;{ this.renderShippingTotal(order) } </p>
-            <p className='u-bold'>Total: &pound;{ total }</p>
-          </div>
-          <h3>Shipping Details</h3>
-          <ShippingAddresses addresses={order.shipping_addresses} />
+      <div className='c-order-history__details'>
+        { this.renderOrderSummary(order, orderDate, total) }
+        <LineItems items={order.line_items} />
+        <div className='c-order-history__totals'>
+          <p>Shipping: &pound;{ this.renderShippingTotal(order) } </p>
+          <p className='u-bold'>Total: &pound;{ total }</p>
         </div>
-      </>
+        <h3>Shipping Details</h3>
+        <ShippingAddresses addresses={order.shipping_addresses} />
+      </div>
     )
   }
 

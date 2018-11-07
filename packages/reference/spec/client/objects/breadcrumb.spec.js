@@ -12,4 +12,5 @@ test('renders correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toContainMatchingElements(3, 'Link')
 })

@@ -3,11 +3,6 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 class Breadcrumb extends Component {
-  constructor (props) {
-    super(props)
-    this.renderBreadcrumbs = this.renderBreadcrumbs.bind(this)
-  }
-
   renderBreadcrumbs (trail) {
     return (
       trail && trail.map((crumb, idx) =>
@@ -21,10 +16,7 @@ class Breadcrumb extends Component {
   }
 
   render () {
-    let {
-      trail,
-      ...otherProps
-    } = this.props
+    const { trail, ...otherProps } = this.props
 
     return (
       <nav>

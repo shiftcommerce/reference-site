@@ -1,19 +1,17 @@
 export function registerPayload (account) {
-  const credentials = account
-  const accountPayload = {
-    type: 'customer_accounts',
-    attributes: {
-      email: credentials.email,
-      email_confirmation: credentials.confirm_email,
-      password: credentials.password,
-      password_confirmation: credentials.confirm_password,
-      meta_attributes: {
-        first_name: { value: credentials.first_name },
-        last_name: { value: credentials.last_name }
+  return {
+    data: {
+      type: 'customer_accounts',
+      attributes: {
+        email: account.email,
+        email_confirmation: account.confirm_email,
+        password: account.password,
+        password_confirmation: account.confirm_password,
+        meta_attributes: {
+          first_name: { value: account.first_name },
+          last_name: { value: account.last_name }
+        }
       }
     }
-  }
-  return {
-    data: accountPayload
   }
 }

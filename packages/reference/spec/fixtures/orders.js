@@ -4,7 +4,7 @@ const orders = {
     {
       id: '61c40964-4b4c-4f54-b580-958798087312',
       account_reference: 'shiftacc',
-      reference: '23063301',
+      reference: '1000',
       placed_at: '2018-01-01T12:00:00.000Z',
       pricing: {
         currency: 'GBP',
@@ -264,12 +264,12 @@ const orders = {
     {
       id: 'fda3fcff-92c7-414a-bdea-156cde21a926',
       account_reference: 'shiftacc',
-      reference: 'QjcNzNAx7w',
+      reference: '1001',
       placed_at: '2018-01-01T12:00:00.000Z',
       pricing: {
         currency: 'GBP',
         total_ex_tax: 125900,
-        total_inc_tax: 150600,
+        total_inc_tax: 160600,
         pre_discount_total_ex_tax: 126600,
         pre_discount_total_inc_tax: 151440,
         total_discount_ex_tax: 700,

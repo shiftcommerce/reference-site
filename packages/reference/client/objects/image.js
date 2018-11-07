@@ -22,7 +22,7 @@ class Image extends Component {
   }
 
   render () {
-    let {
+    const {
       src,
       mobileSrc,
       className,
@@ -31,7 +31,7 @@ class Image extends Component {
 
     if (src) {
       return (
-        <div className={className} >
+        <div className={className}>
           <LazyLoad>
             { this.responsiveImage(src, mobileSrc, otherProps) }
           </LazyLoad>

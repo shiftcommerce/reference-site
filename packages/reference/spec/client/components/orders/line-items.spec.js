@@ -1,4 +1,4 @@
-// Comnponent
+// Component
 import LineItems from '../../../../client/components/orders/line-items'
 
 // Lib
@@ -8,15 +8,15 @@ import { penceToPounds } from '../../../../client/lib/pence-to-pounds'
 import orders from '../../../fixtures/orders'
 
 test('renders correctly', () => {
-  // arrange
+  // Arrange
   const lineItems = orders.data[0].line_items
 
-  // act
+  // Act
   const wrapper = mount(
     <LineItems items={lineItems} />
   )
 
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText(lineItems[0].sku)
   expect(wrapper).toIncludeText(lineItems[0].quantity)

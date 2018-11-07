@@ -42,7 +42,7 @@ function createOrderRenderer () {
         }
       })
     } else {
-      placeOrder(req, res, orderPayload).catch((error) => {
+      return placeOrder(req, res, orderPayload).catch((error) => {
         console.log('Error is ', error)
       })
     }
@@ -50,10 +50,9 @@ function createOrderRenderer () {
 }
 
 async function placeOrder (req, res, orderPayload) {
-  const url = `${platform.CreateOrderUrl}.json_api?include=line_items`
-  const response = await postData(orderPayload, url)
+  const response = await postData(orderPayload, `${platform.CreateOrderUrl}?include=line_items`)
 
-  return res.status(201).send(response.data)
+  return res.status(response.status).send(response.data)
 }
 
 module.exports = { createOrderRenderer }

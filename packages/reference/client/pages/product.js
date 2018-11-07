@@ -121,7 +121,6 @@ export class Product extends Component {
             changeVariant={this.changeVariant}
             addToBag={this.addToBag}
             clickToBuy={this.clickToBuy}
-            {...this.state}
           />
           { components && renderComponents(components) }
         </>

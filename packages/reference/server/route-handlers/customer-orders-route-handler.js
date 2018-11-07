@@ -25,13 +25,9 @@ function customerOrdersRenderer (url) {
 
       return res.status(201).send(data)
     } else if (response.status === 422 || response.status === 404) {
-      const errorData = response.data.errors
-
-      return res.status(response.status).send(errorData)
+      return res.status(response.status).send(response.data.errors)
     } else {
-      const errorData = response.data
-
-      return res.status(response.status).send(errorData)
+      return res.status(response.status).send(response.data)
     }
   }
 }

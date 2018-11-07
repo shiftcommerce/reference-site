@@ -2,7 +2,7 @@ const axios = require('axios')
 const qs = require('qs')
 
 // libs
-const { setCacheHeaders } = require('./setCacheHeaders')
+const { setCacheHeaders } = require('./set-cache-headers')
 
 const auth = {
   username: process.env.API_TENANT,

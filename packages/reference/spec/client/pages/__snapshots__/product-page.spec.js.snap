@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Processing state handling: displays error message, when there is an error in loading product 1`] = `
+exports[`Product page loading and error states displays an error message when there is an error loading the product 1`] = `
 <Provider
   store={
     Object {
@@ -22,6 +22,12 @@ exports[`Processing state handling: displays error message, when there is an err
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
       }
     }
     product={
@@ -39,7 +45,7 @@ exports[`Processing state handling: displays error message, when there is an err
 </Provider>
 `;
 
-exports[`Processing state handling: displays loading spinner, when there is no error and product is loading from db 1`] = `
+exports[`Product page loading and error states displays loading spinner, when there is no error and product is loading 1`] = `
 <Loading
   dispatch={[MockFunction]}
   product={
@@ -83,7 +89,7 @@ exports[`Processing state handling: displays loading spinner, when there is no e
 </Loading>
 `;
 
-exports[`Processing state handling: displays relevant message, when product data is empty 1`] = `
+exports[`Product page loading and error states displays relevant message, when product data is empty 1`] = `
 <Provider
   store={
     Object {
@@ -105,6 +111,12 @@ exports[`Processing state handling: displays relevant message, when product data
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
       }
     }
     product={Object {}}
@@ -112,6 +124,617 @@ exports[`Processing state handling: displays relevant message, when product data
     <h1>
       Unable to load product.
     </h1>
+  </Product>
+</Provider>
+`;
+
+exports[`Product page renders a product once data is present 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getAction": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "isActionDispatched": [Function],
+      "isActionTypeDispatched": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Product
+    dispatch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    product={
+      Object {
+        "asset_files": Array [
+          Object {
+            "alt_text": "Textured Long T-Shirt",
+            "asset_file": "S2623408_C29P_Alt2.jpg",
+            "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+          },
+        ],
+        "bundles": Array [
+          Object {
+            "asset_files": Array [
+              Object {
+                "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                "created_at": "2017-12-20T10:53:17Z",
+                "file_content_content_type": "image/jpeg",
+                "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+              },
+            ],
+            "canonical_path": "/bundles/anna-outfit-1",
+            "id": "261",
+            "name": "Anna Outfit 1",
+            "slug": "anna-outfit-1",
+          },
+        ],
+        "canonical_path": "1",
+        "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+        "id": 1,
+        "max_current_price": "10.00",
+        "meta_attributes": Object {
+          "care_instructions": Object {
+            "value": "Machine Washable",
+          },
+          "fabric": Object {
+            "value": "100% cotton",
+          },
+          "master_colour": Object {
+            "value": "Stone",
+          },
+          "product_feature": Object {
+            "value": "Stretch Fit",
+          },
+          "silhouette": Object {
+            "value": "Flexible Waist",
+          },
+        },
+        "min_current_price": "10.00",
+        "price": "10.00",
+        "title": "Textured Long T-Shirt",
+        "variants": Array [
+          Object {
+            "meta_attributes": Object {
+              "size": Object {
+                "value": "Size 8",
+              },
+            },
+            "price": "10.00",
+            "sku": 1,
+            "stock_available_level": "1000",
+            "title": "Small",
+          },
+          Object {
+            "meta_attributes": Object {
+              "size": Object {
+                "value": "Size 10",
+              },
+            },
+            "price": "11.00",
+            "sku": 2,
+            "stock_available_level": "1000",
+            "title": "Medium",
+          },
+          Object {
+            "meta_attributes": Object {
+              "size": Object {
+                "value": "Size 12",
+              },
+            },
+            "price": "12.00",
+            "sku": 3,
+            "stock_available_level": "1000",
+            "title": "Large",
+          },
+        ],
+      }
+    }
+  >
+    <ProductDisplay
+      addToBag={[Function]}
+      changeQuantity={[Function]}
+      changeVariant={[Function]}
+      clickToBuy={[Function]}
+      product={
+        Object {
+          "asset_files": Array [
+            Object {
+              "alt_text": "Textured Long T-Shirt",
+              "asset_file": "S2623408_C29P_Alt2.jpg",
+              "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+            },
+          ],
+          "bundles": Array [
+            Object {
+              "asset_files": Array [
+                Object {
+                  "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
+                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                  "created_at": "2017-12-20T10:53:17Z",
+                  "file_content_content_type": "image/jpeg",
+                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
+                },
+              ],
+              "canonical_path": "/bundles/anna-outfit-1",
+              "id": "261",
+              "name": "Anna Outfit 1",
+              "slug": "anna-outfit-1",
+            },
+          ],
+          "canonical_path": "1",
+          "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+          "id": 1,
+          "max_current_price": "10.00",
+          "meta_attributes": Object {
+            "care_instructions": Object {
+              "value": "Machine Washable",
+            },
+            "fabric": Object {
+              "value": "100% cotton",
+            },
+            "master_colour": Object {
+              "value": "Stone",
+            },
+            "product_feature": Object {
+              "value": "Stretch Fit",
+            },
+            "silhouette": Object {
+              "value": "Flexible Waist",
+            },
+          },
+          "min_current_price": "10.00",
+          "price": "10.00",
+          "title": "Textured Long T-Shirt",
+          "variants": Array [
+            Object {
+              "meta_attributes": Object {
+                "size": Object {
+                  "value": "Size 8",
+                },
+              },
+              "price": "10.00",
+              "sku": 1,
+              "stock_available_level": "1000",
+              "title": "Small",
+            },
+            Object {
+              "meta_attributes": Object {
+                "size": Object {
+                  "value": "Size 10",
+                },
+              },
+              "price": "11.00",
+              "sku": 2,
+              "stock_available_level": "1000",
+              "title": "Medium",
+            },
+            Object {
+              "meta_attributes": Object {
+                "size": Object {
+                  "value": "Size 12",
+                },
+              },
+              "price": "12.00",
+              "sku": 3,
+              "stock_available_level": "1000",
+              "title": "Large",
+            },
+          ],
+        }
+      }
+    >
+      <div
+        className="c-product-display"
+      >
+        <div
+          className="c-product-display__body"
+        >
+          <div
+            className="c-product-display__content-image"
+          >
+            <div
+              className="c-product-display__gallery"
+            >
+              <Image
+                className="c-product-display__gallery-image"
+                key="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+                src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+              >
+                <div
+                  className="c-product-display__gallery-image"
+                >
+                  <LazyLoad
+                    debounce={true}
+                    elementType="div"
+                    offset={0}
+                    offsetBottom={0}
+                    offsetHorizontal={0}
+                    offsetLeft={0}
+                    offsetRight={0}
+                    offsetTop={0}
+                    offsetVertical={0}
+                    throttle={250}
+                  >
+                    <div
+                      className="LazyLoad"
+                      style={
+                        Object {
+                          "height": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </div>
+              </Image>
+            </div>
+          </div>
+          <div
+            className="c-product-display__content-details"
+          >
+            <div
+              className="c-product-display__buttons"
+            >
+              <div
+                className="c-product-display__buttons-section1"
+              >
+                <div
+                  className="c-product-display__buttons-title"
+                >
+                  Textured Long T-Shirt
+                </div>
+                <div
+                  className="c-product-display__buttons-price"
+                >
+                  <ProductPrice
+                    maxPrice="10.00"
+                    minPrice="10.00"
+                  >
+                    <div
+                      className="c-product-price"
+                    >
+                      <span>
+                        £
+                        10.00
+                      </span>
+                    </div>
+                  </ProductPrice>
+                </div>
+              </div>
+              <div
+                className="c-product-display__buttons-section2"
+              >
+                <div
+                  className="c-product-display__buttons-basket"
+                >
+                  <Button
+                    aria-label="Add to Basket"
+                    className="c-product-display__buttons-basket-icon o-button--sml"
+                    label="ADD TO BASKET"
+                    onClick={[Function]}
+                    status="positive"
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Add to Basket"
+                        className="c-product-display__buttons-basket-icon o-button--sml o-button o-button--positive"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        ADD TO BASKET
+                      </button>
+                    </div>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="c-product-display__info"
+            >
+              <div
+                className="c-product-display__info-title"
+              >
+                Textured Long T-Shirt
+              </div>
+              <div
+                className="c-product-display__info-price"
+              >
+                <ProductPrice
+                  maxPrice="10.00"
+                  minPrice="10.00"
+                >
+                  <div
+                    className="c-product-price"
+                  >
+                    <span>
+                      £
+                      10.00
+                    </span>
+                  </div>
+                </ProductPrice>
+              </div>
+              <div
+                className="c-product-display__info-rating"
+              >
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="c-product-display__info-rating--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+                <p
+                  className="c-product-display__info-reviews"
+                >
+                   Read Reviews
+                </p>
+              </div>
+              <div
+                className="c-product-display__info-colour"
+              >
+                <h1
+                  className="c-product-display__info-colour-title"
+                >
+                  Colour
+                </h1>
+                <input
+                  id="colour"
+                  style={
+                    Object {
+                      "backgroundColor": "Stone",
+                    }
+                  }
+                  type="radio"
+                />
+                <label
+                  htmlFor="colour"
+                >
+                  Stone
+                </label>
+              </div>
+              <div
+                className="c-product-display__info-size"
+              >
+                <VariantSelector
+                  aria-label="Size Selector"
+                  name="line_item[item_id]"
+                  onChange={[Function]}
+                  prompt="Select a Product"
+                  variants={
+                    Array [
+                      Object {
+                        "meta_attributes": Object {
+                          "size": Object {
+                            "value": "Size 8",
+                          },
+                        },
+                        "price": "10.00",
+                        "sku": 1,
+                        "stock_available_level": "1000",
+                        "title": "Small",
+                      },
+                      Object {
+                        "meta_attributes": Object {
+                          "size": Object {
+                            "value": "Size 10",
+                          },
+                        },
+                        "price": "11.00",
+                        "sku": 2,
+                        "stock_available_level": "1000",
+                        "title": "Medium",
+                      },
+                      Object {
+                        "meta_attributes": Object {
+                          "size": Object {
+                            "value": "Size 12",
+                          },
+                        },
+                        "price": "12.00",
+                        "sku": 3,
+                        "stock_available_level": "1000",
+                        "title": "Large",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="o-variant-selector"
+                  >
+                    <select
+                      aria-label="Size Selector"
+                      name="line_item[item_id]"
+                      onChange={[Function]}
+                    >
+                      <option
+                        aria-posinset="0"
+                        aria-setsize={3}
+                        role="option"
+                        value=""
+                      >
+                        Select a Product
+                      </option>
+                      <option
+                        aria-posinset={1}
+                        aria-setsize={3}
+                        data-price="10.00"
+                        data-stock-available-level="1000"
+                        key="0"
+                        role="option"
+                        value={1}
+                      >
+                        Small - £10.00
+                      </option>
+                      <option
+                        aria-posinset={2}
+                        aria-setsize={3}
+                        data-price="11.00"
+                        data-stock-available-level="1000"
+                        key="1"
+                        role="option"
+                        value={2}
+                      >
+                        Medium - £11.00
+                      </option>
+                      <option
+                        aria-posinset={3}
+                        aria-setsize={3}
+                        data-price="12.00"
+                        data-stock-available-level="1000"
+                        key="2"
+                        role="option"
+                        value={3}
+                      >
+                        Large - £12.00
+                      </option>
+                    </select>
+                  </div>
+                </VariantSelector>
+              </div>
+            </div>
+            <div
+              className="c-product-display__body-dropdowns"
+            >
+              <div
+                className="c-product-display__description"
+              >
+                <h1
+                  className="c-product-display__description-title"
+                >
+                  Product Details
+                </h1>
+                <label
+                  className="c-product-dispay__label"
+                  htmlFor="description"
+                />
+                <input
+                  id="description"
+                  type="checkbox"
+                />
+                <span
+                  className="c-product-display__arrow"
+                />
+                <div
+                  className="c-product-display__description-text"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="c-product-display__size"
+              >
+                <h1
+                  className="c-product-display__size-title"
+                >
+                  Size & Fit
+                </h1>
+                <label
+                  className="c-product-dispay__label"
+                  htmlFor="size"
+                />
+                <input
+                  id="size"
+                  type="checkbox"
+                />
+                <span
+                  className="c-product-display__arrow"
+                />
+                <p
+                  className="c-product-display__size-text"
+                >
+                  - 
+                  Stretch Fit
+                </p>
+                <p
+                  className="c-product-display__size-text"
+                >
+                  - 
+                  Flexible Waist
+                </p>
+              </div>
+              <div
+                className="c-product-display__care"
+              >
+                <h1
+                  className="c-product-display__care-title"
+                >
+                  Details & Care
+                </h1>
+                <label
+                  className="c-product-dispay__label"
+                  htmlFor="care"
+                />
+                <input
+                  id="care"
+                  type="checkbox"
+                />
+                <span
+                  className="c-product-display__arrow"
+                />
+                <p
+                  className="c-product-display__care-text"
+                >
+                  - 
+                  Machine Washable
+                </p>
+                <p
+                  className="c-product-display__care-text"
+                >
+                  - 
+                  100% cotton
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ProductDisplay>
   </Product>
 </Provider>
 `;

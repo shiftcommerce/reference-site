@@ -11,7 +11,7 @@ import StripeCardFields from './stripe-card-fields'
 const { publicRuntimeConfig: { STRIPE_API_KEY } } = getConfig()
 
 class StripeWrapper extends Component {
-  renderStripeForm () {
+  renderStripeForm (stripeApiKey) {
     const {
       cardTokenRequested,
       onCardTokenReceived,
@@ -20,7 +20,7 @@ class StripeWrapper extends Component {
     } = this.props
 
     return (
-      <StripeProvider apiKey={STRIPE_API_KEY}>
+      <StripeProvider apiKey={stripeApiKey}>
         <Elements>
           <StripeCardFields
             cardTokenRequested={cardTokenRequested}
@@ -42,8 +42,10 @@ class StripeWrapper extends Component {
   }
 
   render () {
+    const { stripeApiKey = STRIPE_API_KEY } = this.props
+
     return (
-      STRIPE_API_KEY ? this.renderStripeForm() : this.renderServiceUnavailableMessage()
+      stripeApiKey ? this.renderStripeForm(stripeApiKey) : this.renderServiceUnavailableMessage()
     )
   }
 }

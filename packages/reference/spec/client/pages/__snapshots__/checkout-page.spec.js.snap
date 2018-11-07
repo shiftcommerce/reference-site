@@ -127,6 +127,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
           [Function],
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+      ],
     }
   }
   order={Object {}}
@@ -350,6 +360,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
               Array [
                 [Function],
               ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
             ],
           }
         }
@@ -589,6 +609,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     [Function],
                   ],
                 ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                ],
               }
             }
             formName="shippingAddress"
@@ -785,6 +815,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -1160,6 +1200,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -1597,6 +1647,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -2170,6 +2230,16 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     [Function],
                   ],
                 ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                ],
               }
             }
             onClick={[Function]}
@@ -2643,6 +2713,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Promise {},
+          },
+          Object {
+            "isThrow": false,
+            "value": Promise {},
+          },
+        ],
       }
     }
     order={
@@ -2871,6 +2951,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -3115,6 +3205,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       [Function],
                     ],
                   ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
+                  ],
                 }
               }
               formName="shippingAddress"
@@ -3316,6 +3416,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -3696,6 +3806,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -4138,6 +4258,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                     Array [
                       [Function],
                     ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
                   ],
                 }
               }
@@ -4716,6 +4846,16 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       [Function],
                     ],
                   ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": Promise {},
+                    },
+                  ],
                 }
               }
               onClick={[Function]}
@@ -5182,6 +5322,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
           [Function],
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+      ],
     }
   }
   order={Object {}}
@@ -5405,6 +5555,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               Array [
                 [Function],
               ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
             ],
           }
         }
@@ -5644,6 +5804,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     [Function],
                   ],
                 ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                ],
               }
             }
             formName="shippingAddress"
@@ -5840,6 +6010,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -6215,6 +6395,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -6652,6 +6842,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -7224,6 +7424,16 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -7685,6 +7895,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
           [Function],
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+      ],
     }
   }
   order={
@@ -7986,6 +8206,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               Array [
                 [Function],
               ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
             ],
           }
         }
@@ -8303,6 +8533,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     [Function],
                   ],
                 ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                ],
               }
             }
             formName="shippingAddress"
@@ -8577,6 +8817,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -9030,6 +9280,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -9545,6 +9805,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -10195,6 +10465,16 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -10734,6 +11014,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
           [Function],
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+      ],
     }
   }
   order={
@@ -11035,6 +11325,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               Array [
                 [Function],
               ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
+              Object {
+                "isThrow": false,
+                "value": Promise {},
+              },
             ],
           }
         }
@@ -11352,6 +11652,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     [Function],
                   ],
                 ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                ],
               }
             }
             formName="shippingAddress"
@@ -11626,6 +11936,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -12079,6 +12399,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 Array [
                   [Function],
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
+                Object {
+                  "isThrow": false,
+                  "value": Promise {},
+                },
               ],
             }
           }
@@ -12594,6 +12924,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }
@@ -13244,6 +13584,16 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                   Array [
                     [Function],
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": Promise {},
+                  },
                 ],
               }
             }

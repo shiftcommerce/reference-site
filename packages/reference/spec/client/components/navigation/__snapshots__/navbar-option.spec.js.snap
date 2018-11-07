@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the links 1`] = `
+<Link
+  as="/categories/mens"
+  href="/slug?slug=/categories/mens"
+>
+  <a
+    className="c-nav__option"
+  >
+    <div
+      className="c-nav__option-label"
+    >
+      Mens
+    </div>
+    <div
+      className="c-nav__option-text"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </a>
+</Link>
+`;

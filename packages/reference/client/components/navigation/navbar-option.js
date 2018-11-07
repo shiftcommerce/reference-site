@@ -4,10 +4,7 @@ import Link from 'next/link'
 
 class NavBarOption extends Component {
   render () {
-    let {
-      as,
-      title
-    } = this.props
+    const { as, title } = this.props
 
     return (
       <Link href={`/slug?slug=${as}`} as={as}>
