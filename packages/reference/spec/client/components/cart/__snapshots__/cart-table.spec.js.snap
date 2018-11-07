@@ -638,55 +638,28 @@ exports[`renders the correct message when line items are available in cart 1`] =
           <section
             className="c-cart-summary__buttons"
           >
-            <Button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml"
-              label="Continue shopping"
-              status="secondary"
-              type="button"
+            <Link
+              as="/"
+              href="/slug?slug=/homepage"
             >
-              <div
-                className="o-button__container"
+              <a
+                className="o-button--sml c-cart-summary__buttons--continue"
+                href="/"
+                onClick={[Function]}
               >
-                <button
-                  aria-label="Continue Shopping"
-                  className="c-cart-summary__buttons--continue o-button--sml o-button o-button--secondary"
-                  disabled={false}
-                  role="button"
-                  tabIndex="0"
-                  type="button"
-                >
-                  Continue shopping
-                </button>
-              </div>
-            </Button>
+                continue shopping
+              </a>
+            </Link>
             <Link
               href="/checkout"
             >
-              <Button
-                aria-label="Continue to payment"
-                className="c-cart-summary__buttons--proceed o-button--sml"
-                label="Continue to payment"
+              <a
+                className="o-button--sml c-cart-summary__buttons--proceed"
+                href="/checkout"
                 onClick={[Function]}
-                status="positive"
-                type="button"
               >
-                <div
-                  className="o-button__container"
-                >
-                  <button
-                    aria-label="Continue to payment"
-                    className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="button"
-                  >
-                    Continue to payment
-                  </button>
-                </div>
-              </Button>
+                continue to payment
+              </a>
             </Link>
           </section>
         </CartSummary>

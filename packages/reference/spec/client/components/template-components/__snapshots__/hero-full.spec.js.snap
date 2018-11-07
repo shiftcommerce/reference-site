@@ -143,57 +143,13 @@ exports[`renders the full HeroImage component 1`] = `
               as="/homeware/dining/glassware"
               href="/slug?slug=/homeware/dining/glassware"
             >
-              <Button
-                aria-label="Test Product"
+              <a
                 className="c-hero__button-icon"
-                hoverStyles={
-                  Object {
-                    "background": "black",
-                    "borderColor": "white",
-                    "color": "white",
-                  }
-                }
-                label="Test Product"
+                href="/homeware/dining/glassware"
                 onClick={[Function]}
-                size="sml"
-                status="custom_status"
-                style={
-                  Object {
-                    "backgroundColor": "aquamarine",
-                    "borderColor": "mediumseagreen",
-                    "color": "goldenrod",
-                  }
-                }
               >
-                <div
-                  className="o-button__container"
-                  style={
-                    Object {
-                      "background": "black",
-                      "borderColor": "white",
-                      "color": "white",
-                    }
-                  }
-                >
-                  <button
-                    aria-label="Test Product"
-                    className="c-hero__button-icon o-button o-button--custom_status o-button--sml"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    style={
-                      Object {
-                        "backgroundColor": "aquamarine",
-                        "borderColor": "mediumseagreen",
-                        "color": "goldenrod",
-                      }
-                    }
-                    tabIndex="0"
-                  >
-                    Test Product
-                  </button>
-                </div>
-              </Button>
+                Test Product
+              </a>
             </Link>
           </div>
         </div>

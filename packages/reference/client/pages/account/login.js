@@ -17,9 +17,6 @@ import { inputChange,
 // Components
 import LoginForm from '../../components/account/login-form'
 
-// Objects
-import Button from '../../objects/button'
-
 export class Login extends Component {
   constructor () {
     super()
@@ -71,10 +68,10 @@ export class Login extends Component {
           onBlur={this.validateInput}
           handleSubmit={this.handleSubmit}
         />
-        <a href={'/account/forgotpassword'} className='c-login__anchor'>Reset Password?</a>
-        <p className='c-login__caption'>{ "Don't have an account?" }</p>
+        <a href='/account/forgotpassword' className='c-login__anchor'>Reset Password?</a>
+        <p className='c-login__caption'>Don't have an account?</p>
         <Link href='/account/register'>
-          <Button className='c-login__button-icon o-button--sml' label='CREATE NEW ACCOUNT' status='primary' aria-label='Create New Account' />
+          <a className='c-login__register-button'>create new account</a>
         </Link>
       </div>
     )

@@ -85,16 +85,14 @@ class LoginForm extends Component {
     const isValidForm = this.formValid(login)
 
     return (
-      <div className='o-form__input-group'>
-        <Button
-          className='c-login__button-icon o-button--sml'
-          aria-label='Continue Securely'
-          label='CONTINUE SECURELY'
-          status={(isValidForm ? 'positive' : 'disabled')}
-          type='submit'
-          disabled={!isValidForm}
-        />
-      </div>
+      <Button
+        className='c-login__button o-button--sml'
+        aria-label='Continue Securely'
+        label='CONTINUE SECURELY'
+        status={(isValidForm ? 'positive' : 'disabled')}
+        type='submit'
+        disabled={!isValidForm}
+      />
     )
   }
 
@@ -112,9 +110,7 @@ class LoginForm extends Component {
           { this.renderEmailInputField() }
           { this.renderPasswordInputField() }
           <Checkbox label='Remember me' />
-          <div className='c-login__button'>
-            { this.renderFormSubmitButton() }
-          </div>
+          { this.renderFormSubmitButton() }
         </form>
       </div>
     )

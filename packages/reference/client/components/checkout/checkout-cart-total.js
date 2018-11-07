@@ -21,44 +21,29 @@ class CheckoutCartTotal extends Component {
     } else { return false }
   }
 
+  renderContinueShopping () {
+    return (
+      <Link href='/slug?slug=/homepage' as='/'>
+        <a className='c-cart-summary__buttons--continue o-button--sml'>continue shopping</a>
+      </Link>
+    )
+  }
+
   renderButtons () {
     const { checkout, onClick, order, convertToOrder } = this.props
     const isValidOrder = this.validOrder(checkout, order)
 
     if (checkout.currentStep === 3) {
       return (
-        <>
-          <Link href='/'>
-            <Button
-              aria-label='Continue Shopping'
-              label='Continue shopping'
-              status='secondary'
-              className='c-cart-summary__buttons--continue o-button--sml'
-              type='button'
-            />
-          </Link>
-          <Button
-            aria-label='Review Order'
-            label='Review Your Order'
-            className='c-cart-summary__buttons--proceed o-button--sml'
-            type='button'
-            status='positive'
-            onClick={onClick}
-          />
-        </>
+        <section className='c-cart-summary__buttons'>
+          { this.renderContinueShopping() }
+          <a className='o-button--sml c-cart-summary__buttons--proceed' onClick={onClick}>review your order</a>
+        </section>
       )
     } else if (checkout.currentStep === 4) {
       return (
-        <>
-          <Link href='/'>
-            <Button
-              aria-label='Continue Shopping'
-              label='Continue shopping'
-              className='c-cart-summary__buttons--continue o-button--sml'
-              status='secondary'
-              type='button'
-            />
-          </Link>
+        <section className='c-cart-summary__buttons'>
+          { this.renderContinueShopping() }
           <Button
             aria-label='Place Order'
             label='Place Order'
@@ -69,29 +54,14 @@ class CheckoutCartTotal extends Component {
             disabled={!isValidOrder}
             onClick={convertToOrder}
           />
-        </>
+        </section>
       )
     } else {
       return (
-        <>
-          <Link href='/'>
-            <Button
-              aria-label='Continue Shopping'
-              label='Continue shopping'
-              className='c-cart-summary__buttons--continue o-button--sml'
-              status='secondary'
-              type='button'
-            />
-          </Link>
-          <Button
-            aria-label='Continue to Payment'
-            label='Continue to Payment'
-            className='c-cart-summary__buttons--proceed o-button--sml'
-            type='button'
-            status='positive'
-            onClick={onClick}
-          />
-        </>
+        <section className='c-cart-summary__buttons'>
+          { this.renderContinueShopping() }
+          <a className='o-button--sml c-cart-summary__buttons--proceed' onClick={onClick}>continue to payment</a>
+        </section>
       )
     }
   }
@@ -111,9 +81,8 @@ class CheckoutCartTotal extends Component {
 
     return (
       <>
-      <Sticky>
-        <div aria-label='Cart total summary' className='c-cart-summary'>
-          <div className=''>
+        <Sticky>
+          <div aria-label='Cart total summary' className='u-sticky c-cart-summary'>
             <dl aria-label='Subtotal'>
               <dt> Total Price: </dt>
               <dd> &pound;{ fixedPrice(totals.subTotal) } </dd>
@@ -133,11 +102,8 @@ class CheckoutCartTotal extends Component {
               <div className='c-checkout-cart-total__payment-error'>{ order.paymentError }</div>
             }
           </div>
-        </div>
-      </Sticky>
-      <div className='c-cart-summary__buttons'>
+        </Sticky>
         { this.renderButtons() }
-      </div>
       </>
     )
   }

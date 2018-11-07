@@ -184,11 +184,28 @@
 
   &__button {
     text-align: center;
+    margin-top: $global-spacing-unit;
+    margin-bottom: $global-spacing-unit-large;
+    padding-bottom: $global-spacing-unit;
 
     &-icon {
-      /* Default Colour */
       background-color: $background-primary;
       margin: $global-spacing-unit-small auto;
+      color: $text-light;
+      font-size: 0.8rem;
+      padding: $global-spacing-unit-small;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      &:visited {
+        color: $text-light;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-primary, 0.2);
+        }
+      }
     }
   }
 }

@@ -7,6 +7,32 @@
     width: 60%;
   }
 
+  &__register {
+
+    &-button {
+      width: 100%;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      font-size: 0.8rem;
+      padding: 12px;
+      color: $text-light;
+      background-color: $background-primary;
+      letter-spacing: 0.1rem;
+      margin: $global-spacing-unit auto;
+
+      &:visited {
+        color: $text-light;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-primary, 0.2);
+        }
+      }
+    }
+  }
+
   &__title {
     text-align: center;
     color: $background-primary;
@@ -23,10 +49,7 @@
 
   &__button {
     text-align: center;
-
-    &-icon {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   &__anchor {

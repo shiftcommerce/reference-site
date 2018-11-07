@@ -3,7 +3,6 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
-import Button from '../../objects/button'
 import Image from '../../objects/image'
 
 class HeroFull extends Component {
@@ -75,14 +74,13 @@ class HeroFull extends Component {
 
     // Only start looping if first button is there
     if (hero.overlay_link_1_url && hero.overlay_link_1_text) {
-      let buttonStyles = { backgroundColor: hero.overlay_link_background_colour, color: hero.overlay_link_text_colour, borderColor: hero.overlay_link_border_colour }
-      let buttonHoverStyles = { background: hero.overlay_link_hover_background_colour, color: hero.overlay_link_hover_text_colour, borderColor: hero.overlay_link_hover_border_colour }
+      const url = hero[`overlay_link_${index}_url`][0].canonical_path
 
       while (hero[`overlay_link_${index}_url`] && hero[`overlay_link_${index}_text`]) {
         buttons.push(
           <div className='c-hero__button' key={index}>
-            <Link href={`/slug?slug=${hero[`overlay_link_${index}_url`][0].canonical_path}`} as={hero[`overlay_link_${index}_url`][0].canonical_path}>
-              <Button className='c-hero__button-icon' label={hero[`overlay_link_${index}_text`]} size='sml' aria-label={hero[`overlay_link_${index}_text`]} status='custom_status' style={buttonStyles} hoverStyles={buttonHoverStyles} />
+            <Link href={`/slug?slug=${url}`} as={url}>
+              <a className='c-hero__button-icon'>{ hero[`overlay_link_${index}_text`] }</a>
             </Link>
           </div>
         )

@@ -105,16 +105,14 @@ class RegisterForm extends Component {
     const isValidForm = this.formValid(account)
 
     return (
-      <div className='o-form__input-group'>
-        <Button
-          className='c-password__button-icon o-button-sml'
-          aria-label='Create Account'
-          label='Create Account'
-          status={(isValidForm ? 'positive' : 'disabled')}
-          type='submit'
-          disabled={!isValidForm}
-        />
-      </div>
+      <Button
+        className='c-register__button o-button-sml'
+        aria-label='Create Account'
+        label='Create Account'
+        status={(isValidForm ? 'positive' : 'disabled')}
+        type='submit'
+        disabled={!isValidForm}
+      />
     )
   }
 

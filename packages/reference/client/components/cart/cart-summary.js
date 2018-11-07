@@ -6,9 +6,6 @@ import Link from 'next/link'
 import { calculateCartSummary } from '../../lib/calculate-cart-summary'
 import { fixedPrice } from '../../lib/fixed-price'
 
-// Objects
-import Button from '../../objects/button'
-
 class CartSummary extends Component {
   shippingText () {
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
@@ -45,21 +42,11 @@ class CartSummary extends Component {
           </dl>
         </section>
         <section className='c-cart-summary__buttons'>
-          <Button
-            aria-label='Continue Shopping'
-            label='Continue shopping'
-            status='secondary'
-            className='c-cart-summary__buttons--continue o-button--sml'
-            type='button'
-          />
+          <Link href='/slug?slug=/homepage' as='/'>
+            <a className='o-button--sml c-cart-summary__buttons--continue'>continue shopping</a>
+          </Link>
           <Link href='/checkout'>
-            <Button
-              aria-label='Continue to payment'
-              label='Continue to payment'
-              className='c-cart-summary__buttons--proceed o-button--sml'
-              status='positive'
-              type='button'
-            />
+            <a className='o-button--sml c-cart-summary__buttons--proceed'>continue to payment</a>
           </Link>
         </section>
       </>
