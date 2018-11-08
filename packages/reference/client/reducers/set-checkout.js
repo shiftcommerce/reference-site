@@ -40,7 +40,7 @@ export const checkoutInitialState = {
   paymentMethod: {
     collapsed: true,
     completed: false,
-    selectedMethod: 'card'
+    selectedMethod: ''
   },
   reviewOrder: {
     collapsed: true,

@@ -1,10 +1,4 @@
 .c-payment-method {
-  padding-top: $global-spacing-unit-tiny;
-
-  @include breakpoint(desktop) {
-    padding-top: 0;
-  }
-
   label {
     font-size: 0.7rem;
     font-weight: bold;
@@ -60,6 +54,10 @@
     padding-bottom: $global-spacing-unit-small;
     border-bottom: 1px solid $border-default;
     padding-left: 2px;
+
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
 
     @include breakpoint(desktop) {
       width: 90%;

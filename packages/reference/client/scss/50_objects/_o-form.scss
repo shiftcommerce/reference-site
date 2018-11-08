@@ -181,7 +181,7 @@ $input-checkbox-spacing: 8px;
       margin-right: $input-checkbox-spacing;
       width: $input-checkbox-size;
       height: $input-checkbox-size;
-      background: colour(white);
+      background: $background-white;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 50%;
@@ -204,6 +204,7 @@ $input-checkbox-spacing: 8px;
     background-clip: padding-box;
     border: 1px solid;
     border-color: $form-input-border;
+    background-color: $background-white;
 
     &__error {
       color: $text-error;

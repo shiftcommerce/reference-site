@@ -2,11 +2,8 @@ $input-radio-size: 16px;
 $input-radio-spacing: 8px;
 
 .c-shipping-method {
-  padding-bottom: $global-spacing-unit-small;
-  border-bottom: 1px solid $border-default;
-  width: 95%;
+  width: 100%;
   margin: auto;
-  padding-top: $global-spacing-unit-tiny;
 
   @include breakpoint(desktop) {
     margin: 0;
@@ -14,18 +11,28 @@ $input-radio-spacing: 8px;
     padding-top: 0;
   }
 
+  &__wrapper {
+    padding: $global-spacing-unit-tiny;
+  }
+
   &__header {
-    padding-top: $global-spacing-unit-tiny;
-    padding-left: 0;
-    padding-right: 4px;
+    margin: auto;
+    width: 100%;
 
     @include breakpoint(tablet) {
-      width: 100%;
+      padding-left: 0;
       padding-right: 0;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @include breakpoint(desktop) {
       padding-top: $global-spacing-unit-small;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: $global-spacing-unit;
     }
 
     h2 {
@@ -35,6 +42,11 @@ $input-radio-spacing: 8px;
 
   &__summary {
     font-size: 0.75rem;
+    padding-left: 2px;
+
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
 
     p {
       margin: 0;

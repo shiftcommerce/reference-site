@@ -1,7 +1,6 @@
 .c-address-form {
 
   &__header {
-    padding-left: 9px;
 
     @include breakpoint(tablet) {
       padding-left: 0;
@@ -17,6 +16,10 @@
   }
 
   &__summary {
-    padding-left: 0;
+    padding-left: 2px;
+
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
   }
 }

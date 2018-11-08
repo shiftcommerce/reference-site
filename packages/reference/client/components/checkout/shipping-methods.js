@@ -72,7 +72,7 @@ export default class ShippingMethods extends Component {
     return (
       <div>
         { collapsed &&
-          <div className='c-shipping-method__summary'>
+          <div className='o-form__wrapper--collapsed c-shipping-method__summary'>
             <p className='u-bold'>{ selectedShippingMethod.name }</p>
             <p><span className='u-bold'>Estimated Delivery</span>: { selectedShippingMethod.delivery_date }</p>
           </div>
@@ -90,7 +90,7 @@ export default class ShippingMethods extends Component {
     return (
       <div>
         { !collapsed &&
-          <form className='o-form__wrapper c-shipping-method-list'>
+          <form className='o-form__wrapper o-form__background c-shipping-method-list'>
             <div className='c-shipping-method__list-header'>
               Shipping from ...
               <span className='c-shipping-method__list-item-count'>
@@ -105,7 +105,7 @@ export default class ShippingMethods extends Component {
                 className='o-button--sml'
                 aria-label='Continue to payment'
                 label='Continue to Payment'
-                status='primary'
+                status='positive'
                 type='submit'
                 onClick={() => onToggleCollapsed('complete', formName)}
               />
@@ -144,7 +144,7 @@ export default class ShippingMethods extends Component {
     const { checkout } = this.props
 
     return (
-      <div aria-label='Shipping Methods' className={classNames('c-shipping-method', { 'o-form__hidden': !checkout.shippingAddress.completed })}>
+      <div aria-label='Shipping Methods' className={classNames('o-form c-shipping-method', { 'o-form__hidden': !checkout.shippingAddress.completed })}>
         { this.renderFormHeader() }
         { this.renderFormSummary() }
         { this.renderForm() }
