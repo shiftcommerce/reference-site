@@ -26,6 +26,7 @@ const withConfig = nextRuntimeDotenv({
 })
 
 module.exports = withConfig(withCSS(withSass({
+  poweredByHeader: false,
   assetPrefix: process.env.ASSET_HOST || '',
 
   webpackDevMiddleware: (config) => {
