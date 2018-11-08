@@ -47,9 +47,14 @@ export class NavBar extends Component {
       <div className='c-nav__menu-header'>
         <Logo className='c-nav__menu-header-logo' />
         <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown}/>
-        <div className='c-nav__menu-header-search'>
-          <SearchBar />
-        </div>
+      </div>
+    )
+  }
+
+  renderSearchBar () {
+    return (
+      <div className='c-nav__menu-header-search'>
+        <SearchBar />
       </div>
     )
   }
@@ -82,6 +87,7 @@ export class NavBar extends Component {
           <div className='c-nav__menu'>
             { this.renderNavHeader() }
             <div className='c-nav__menu-list'>
+              { this.renderSearchBar() }
               { this.renderNavOptions(menuItems) }
             </div>
           </div>

@@ -17,7 +17,6 @@ exports[`renders the header 1`] = `
   <Connect(SearchBar)>
     <SearchBar
       dispatch={[Function]}
-      search={Object {}}
     >
       <form
         action="/search"

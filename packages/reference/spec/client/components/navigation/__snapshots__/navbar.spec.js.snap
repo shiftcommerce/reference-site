@@ -143,6 +143,10 @@ exports[`renders the nav bar options 1`] = `
             htmlFor="burger-menu"
             onClick={[Function]}
           />
+        </div>
+        <div
+          className="c-nav__menu-list"
+        >
           <div
             className="c-nav__menu-header-search"
           >
@@ -199,10 +203,6 @@ exports[`renders the nav bar options 1`] = `
               </SearchBar>
             </Connect(SearchBar)>
           </div>
-        </div>
-        <div
-          className="c-nav__menu-list"
-        >
           <NavBarOption
             as="/categories/1"
             href="/slug?slug=/categories/1"
