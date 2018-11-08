@@ -13,4 +13,4 @@ herokudeployment:
   image: codeship/heroku-deployment
   encrypted_env_file: heroku-deployment.env.encrypted
   volumes:
-    - ./:/deploy
+    - .:/app
