@@ -58,7 +58,7 @@ test('return UPDATE_CART_LINE_ITEMS action type on calling addToCart()', () => {
   type: actionTypes.UPDATE_CART_LINE_ITEMS })
 })
 
-test('return  UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', () => {
+test('return UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', () => {
   // arrange
   const cart = {
     lineItems: [

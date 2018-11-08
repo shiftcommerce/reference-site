@@ -9,5 +9,8 @@ module.exports = {
   testURL: 'http://localhost',
   moduleNameMapper: {
     '^.+\\.(css|scss)$': '<rootDir>/spec/support/jest-file-mock.js'
-  }
+  },
+  testPathIgnorePatterns: [
+    '<rootDir>/spec/integration'
+  ]
 }

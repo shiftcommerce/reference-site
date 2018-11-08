@@ -1,21 +1,14 @@
 import request from 'supertest'
 
-import serverPromise from '../../server/server.js'
-
 describe('GET /', () => {
-  // Configure real server for testing against
-  let httpServer
-  beforeAll(async () => { httpServer = await serverPromise })
-  afterAll(() => httpServer.close())
-
   test('It should respond with a 200 status', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
+    const response = await request(`http://localhost:3001`).get('/serviceWorker.js')
 
     expect(response.statusCode).toBe(200)
   })
 
   test('It should not respond with an x-powered-by header', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
+    const response = await request(`http://localhost:3001`).get('/serviceWorker.js')
 
     // Header keys are lowercased at this point. Here we have decided to check
     // the keys individually against a case insensitive regex in case the
@@ -26,7 +19,7 @@ describe('GET /', () => {
   })
 
   test('It should respond with appropriate security headers', async () => {
-    const response = await request(`http://localhost:${httpServer.address().port}`).get('/serviceWorker.js')
+    const response = await request(`http://localhost:3001`).get('/serviceWorker.js')
     const imageHosts = process.env.IMAGE_HOSTS
     const formattedImageHosts = (imageHosts) ? imageHosts.replace(',', ' ') : ''
     const scriptHosts = process.env.SCRIPT_HOSTS

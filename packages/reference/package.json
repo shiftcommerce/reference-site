@@ -12,7 +12,8 @@
     "devserver": "npm rebuild node-sass && NODE_ENV=development node server/server.js",
     "build": "next build client",
     "start": "NODE_ENV=production node server/server.js",
-    "jest": "jest",
+    "test:unit": "jest --config=jest-test.config.js",
+    "test:integration": "jest --config=jest-puppeteer.config.js",
     "jest-watch": "jest --watch",
     "jest-coverage": "jest --coverage",
     "jest-update-snapshot": "jest --updateSnapshot",
@@ -20,8 +21,8 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:js": "eslint .",
     "lint:js:fix": "eslint . --fix",
-    "lint:css": "stylelint .",
-    "lint:css:fix": "stylelint . --fix"
+    "lint:css": "stylelint client/scss",
+    "lint:css:fix": "stylelint client/scss --fix"
   },
   "dependencies": {
     "@zeit/next-css": "^0.1.5",
@@ -74,10 +75,12 @@
     "zxcvbn": "^4.4.2"
   },
   "jest": {
+    "verbose": true,
+    "bail": true,
     "projects": [
-      "jest-test.config.js",
       "jest-stylelint.config.js",
-      "jest-eslint.config.js"
+      "jest-eslint.config.js",
+      "jest-test.config.js"
     ]
   },
   "devDependencies": {
@@ -97,9 +100,11 @@
     "eslint-plugin-standard": "^3.0.1",
     "jest": "23.6.0",
     "jest-enzyme": "^7.0.0",
+    "jest-puppeteer": "^3.5.0",
     "jest-runner-eslint": "^0.6.0",
     "jest-runner-stylelint": "^1.0.0",
     "nock": "^9.3.3",
+    "puppeteer": "^1.10.0",
     "react-test-renderer": "^16.0.0",
     "redux-test-utils": "^0.1.3",
     "sass-lint": "^1.12.1",

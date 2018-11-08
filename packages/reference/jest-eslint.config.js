@@ -1,5 +1,9 @@
 module.exports = {
   runner: 'jest-runner-eslint',
-  displayName: 'lint',
-  testMatch: ['**/*.js']
+  displayName: 'eslint',
+  testMatch: [
+    '<rootDir>/spec/**/*.js',
+    '<rootDir>/server/**/*.js',
+    '<rootDir>/client/**/*.js'
+  ]
 }

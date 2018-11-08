@@ -1,10 +1,18 @@
-- name: tests
-  type: serial
+- name: eslint
+  service: web
+  command: yarn run lint:js
+- name: stylelint
+  service: web
+  command: yarn run lint:css
+
+- type: parallel
   steps:
-  - service: web
-    command: yarn run jest
+    - service: web
+      command: yarn run test:unit
+    - service: web
+      command: yarn run test:integration
+
 - name: deploy
   tag: develop
   service: herokudeployment
   command: codeship_heroku deploy /deploy shift-front-end-staging
-

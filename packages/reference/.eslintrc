@@ -11,7 +11,11 @@
   "globals": {
     "shallow": true,
     "render": true,
-    "mount": true
+    "mount": true,
+    "page": true,
+    "browser": true,
+    "context": true,
+    "jestPuppeteer": true
   },
   "plugins": ["react"],
   "extends": "standard",
