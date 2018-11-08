@@ -15,4 +15,4 @@
 - name: deploy
   tag: develop
   service: herokudeployment
-  command: codeship_heroku_deploy -N shift-front-end-staging
+  command: codeship_heroku_deploy -f /app -N shift-front-end-staging
