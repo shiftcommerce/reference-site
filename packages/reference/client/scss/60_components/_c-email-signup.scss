@@ -23,9 +23,12 @@
   }
 
   &__input {
+    height: 100%;
+    margin-right: 0;
     font-size: 0.8rem;
     padding: $global-spacing-unit-small;
     border-width: 1px;
+    border-radius: 0;
     flex-grow: 1;
 
     &--invalid {
