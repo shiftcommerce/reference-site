@@ -12,10 +12,10 @@ exports[`renders the algolia filter component with children 1`] = `
     >
       <h2>
         Filters
+        <button
+          className="c-product-listing-filter-close"
+        />
       </h2>
-      <button
-        className="c-product-listing-filter-close"
-      />
     </div>
     <div
       className="c-product-listing-filter__header-selection"

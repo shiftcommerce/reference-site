@@ -20,7 +20,7 @@
     position: fixed;
     right: 100%;
     transition: right 0.25s;
-    z-index: 999;
+    z-index: $nav-z-index;
     top: 0;
     bottom: 0;
     width: 100%;

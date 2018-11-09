@@ -58,12 +58,11 @@ export class Layout extends Component {
 
   handleScroll () {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-
-    if (scrollTop > 100 && !this.state.shrunk) {
+    if (scrollTop > 40 && !this.state.shrunk) {
       this.setState(state => {
         return { shrunk: true }
       })
-    } else if (scrollTop <= 100 && this.state.shrunk) {
+    } else if (scrollTop <= 40 && this.state.shrunk) {
       this.setState(state => {
         return { shrunk: false }
       })

@@ -3,7 +3,7 @@
   top: 0;
   background-color: white;
   width: 100vw;
-  z-index: 999;
+  z-index: $nav-z-index;
   display: flex;
 
   @include breakpoint(desktop) {
@@ -20,7 +20,7 @@
       background: $background-light-grey;
       position: fixed;
       top: 0;
-      z-index: 999;
+      z-index: $nav-z-index;
     }
   }
 

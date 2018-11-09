@@ -1,17 +1,37 @@
 .c-product-listing-filter {
-  width: 95%;
-  margin: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: right 0.25s;
+  width: 100%;
+  overflow-y: scroll;
+  z-index: $modal-z-index;
+  padding: 3.5rem 2.5% $global-spacing-unit 2.5%; /* margin for fixed header title, 95% width, general spacing for bottom */
   font-size: 0.85em;
-  margin-bottom: $global-spacing-unit-large;
-  padding-top: $global-spacing-unit;
+  background-color: $background-white;
 
   &--hide {
-    display: none;
+    right: 100%;
+  }
+
+  &__header-title {
+    position: fixed;
+    top: 0;
+    z-index: $modal-z-index + 1;
+
+    background-color: $background-white;
+    width: 95%;
+    border-bottom: 1px solid $border-default;
+
+    h2 {
+      margin: 1rem auto; /* Normalizing this h2 margins so it's easier to manage the margin at the top of the page */
+    }
   }
 
   &-close {
     float: right;
-    height: 4rem;
+    height: auto;
     width: 4rem;
     background: transparent;
     border: none;
@@ -31,6 +51,7 @@
       margin: auto;
       padding: auto;
       height: 2rem;
+      margin-top: -0.25rem; /* Minus half the difference between the height and the h2 font size 2rem - 1.5rem */
       width: 2px;
       content: ' ';
       background-color: #333;
@@ -42,15 +63,6 @@
 
     &:after {
       transform: rotate(-45deg);
-    }
-
-  }
-
-  &__header {
-    &-title {
-      h2 {
-        display: inline-block;
-      }
     }
   }
 

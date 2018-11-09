@@ -8,6 +8,7 @@
     display: inline-block;
     list-style: none;
     padding: 0.1rem;
+    margin: 1rem 0;
   }
 
   &-item {
@@ -37,5 +38,9 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
+  }
+
+  &--noRefinement {
+    display: none;
   }
 }

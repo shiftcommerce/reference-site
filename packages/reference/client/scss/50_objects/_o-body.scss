@@ -2,7 +2,7 @@ $o-body-container-width: 80%;
 
 .o-body {
   width: 100%;
-  padding-top: 188px; // height of the fixed header in mobile
+  padding-top: 176px; // height of the fixed header in mobile
 
   @include breakpoint(desktop) {
     width: $o-body-container-width;

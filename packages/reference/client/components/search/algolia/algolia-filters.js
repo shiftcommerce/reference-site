@@ -57,11 +57,13 @@ class AlgoliaFilters extends Component {
     const { showFilters, toggleFiltering } = this.props
 
     return (
-      <div className={classNames('c-product-listing-filter', { 'u-hidden': !showFilters })}>
+      <div className={classNames('c-product-listing-filter', { 'c-product-listing-filter--hide': !showFilters })}>
         <div className='c-product-listing-filter__header'>
           <div className='c-product-listing-filter__header-title'>
-            <h2>Filters</h2>
-            <button className='c-product-listing-filter-close' onClick={toggleFiltering} />
+            <h2>
+              Filters
+              <button className='c-product-listing-filter-close' onClick={toggleFiltering} />
+            </h2>
           </div>
           <div className='c-product-listing-filter__header-selection'>
             <ClearRefinements />
