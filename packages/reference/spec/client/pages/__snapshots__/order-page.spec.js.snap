@@ -196,53 +196,6 @@ exports[`renders correctly 1`] = `
             className="c-order__detail"
           >
             <div
-              className="c-order__detail-map"
-            >
-              <Map
-                className="c-order__detail-map-image"
-              >
-                <Image
-                  className={
-                    Object {
-                      "className": "c-order__detail-map-image",
-                    }
-                  }
-                  src="/static/googlemap.png"
-                >
-                  <div
-                    className={
-                      Object {
-                        "className": "c-order__detail-map-image",
-                      }
-                    }
-                  >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </LazyLoad>
-                  </div>
-                </Image>
-              </Map>
-            </div>
-            <div
               className="c-order__detail-confirmation-message"
             >
               <h2>

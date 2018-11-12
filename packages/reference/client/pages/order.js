@@ -6,7 +6,6 @@ import Link from 'next/link'
 // Objects
 import Button from '../objects/button'
 import Image from '../objects/image'
-import Map from '../objects/map'
 
 // Components
 import OrderSummary from '../components/orders/order-summary'
@@ -21,14 +20,6 @@ export class OrderPage extends Component {
           <p className='c-order__header-text-id u-text-color--orange u-bold'>Order #{ order.id }</p>
           <h3 className='u-bold'>Thank you { shippingAddress.first_name }!</h3>
         </div>
-      </div>
-    )
-  }
-
-  renderMap () {
-    return (
-      <div className='c-order__detail-map'>
-        <Map className='c-order__detail-map-image'/>
       </div>
     )
   }
@@ -112,7 +103,6 @@ export class OrderPage extends Component {
   renderOrderDetails (order) {
     return (
       <div className='c-order__detail'>
-        { this.renderMap() }
         { this.renderOrderConfirmationMessage(order) }
         { this.renderShippingAddress(order) }
         { this.renderShippingMethod(order) }
