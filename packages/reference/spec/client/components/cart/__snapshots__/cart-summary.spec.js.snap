@@ -88,7 +88,7 @@ exports[`renders correct values when line items are available 1`] = `
         href="/checkout"
         onClick={[Function]}
       >
-        continue to payment
+        Checkout
       </a>
     </Link>
   </section>
@@ -172,7 +172,7 @@ exports[`renders correct values when no line items are available 1`] = `
         href="/checkout"
         onClick={[Function]}
       >
-        continue to payment
+        Checkout
       </a>
     </Link>
   </section>

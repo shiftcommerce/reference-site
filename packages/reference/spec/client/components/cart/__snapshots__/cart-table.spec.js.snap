@@ -635,7 +635,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 href="/checkout"
                 onClick={[Function]}
               >
-                continue to payment
+                Checkout
               </a>
             </Link>
           </section>

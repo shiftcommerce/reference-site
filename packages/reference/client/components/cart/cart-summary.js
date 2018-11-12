@@ -46,7 +46,7 @@ class CartSummary extends Component {
             <a className='o-button--sml c-cart-summary__buttons--continue'>continue shopping</a>
           </Link>
           <Link href='/checkout'>
-            <a className='o-button--sml c-cart-summary__buttons--proceed'>continue to payment</a>
+            <a className='o-button--sml c-cart-summary__buttons--proceed'>Checkout</a>
           </Link>
         </section>
       </>

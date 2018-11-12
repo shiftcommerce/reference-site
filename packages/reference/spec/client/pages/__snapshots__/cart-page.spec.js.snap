@@ -697,7 +697,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     href="/checkout"
                     onClick={[Function]}
                   >
-                    continue to payment
+                    Checkout
                   </a>
                 </Link>
               </section>
