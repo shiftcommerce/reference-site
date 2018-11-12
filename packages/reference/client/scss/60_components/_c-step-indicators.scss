@@ -49,7 +49,7 @@
 
           @include breakpoint(desktop) {
             position: static;
-            margin-left: ($global-spacing-unit-tiny * 12);
+            margin-left: ($global-spacing-unit-tiny * 15);
             width: 100%;
           }
         }
