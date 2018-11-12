@@ -20,6 +20,8 @@ const testRequest = {
 axios.defaults.adapter = httpAdapter
 
 describe('ApiClient does', () => {
+  afterEach(() => { nock.cleanAll() })
+
   const expectedData = Payload
 
   test('read', async () => {

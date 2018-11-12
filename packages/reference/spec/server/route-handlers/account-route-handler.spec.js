@@ -13,6 +13,8 @@ import { accountRenderer } from '../../../server/route-handlers/account-route-ha
 axios.defaults.adapter = httpAdapter
 
 describe('create an account', () => {
+  afterEach(() => { nock.cleanAll() })
+
   describe('with valid data', () => {
     const url = 'register'
 
@@ -102,6 +104,8 @@ describe('create an account', () => {
 })
 
 describe('login into an account', () => {
+  afterEach(() => { nock.cleanAll() })
+
   describe('with valid data', () => {
     const url = 'login'
 

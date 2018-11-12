@@ -21,6 +21,10 @@ describe('customerOrdersRenderer', () => {
     consoleSpy.mockRestore()
   })
 
+  afterEach(() => {
+    nock.cleanAll()
+  })
+
   it('should pass the customerId from session cookie', async () => {
     const customerId = '123456'
 

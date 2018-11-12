@@ -122,7 +122,12 @@ module.exports = app.prepare().then(() => {
   })
 
   server.get('/order', (req, res) => {
-    return app.render(req, res, '/order')
+    // Context: When a customer successfully places an order via checkout,
+    // the redirect to the order confirmation page occurs on the client side.
+    // This serverside route is only hit when a full page reload is initiated.
+    // As state is lost on page reload, the logic below redirects to Account page
+    // where the user can view their order in the order history.
+    res.redirect(302, '/account/myaccount')
   })
 
   server.get('/serviceWorker.js', (req, res) => {

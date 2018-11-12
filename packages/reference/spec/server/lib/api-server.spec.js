@@ -11,6 +11,8 @@ import getSlugPayload from '../../fixtures/get-slug'
 axios.defaults.adapter = httpAdapter
 
 describe('fetchDataRequest makes', () => {
+  afterEach(() => { nock.cleanAll() })
+
   const queryObject = {
     filter: {
       path: '/pages/mens'
@@ -42,6 +44,8 @@ describe('fetchDataRequest makes', () => {
 })
 
 describe('postDataRequest', () => {
+  afterEach(() => { nock.cleanAll() })
+
   const url = 'integration/v1/customer_accounts'
 
   const body = {
