@@ -1,5 +1,5 @@
 .c-product-listing-filter {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -18,7 +18,6 @@
   &__header-title {
     position: fixed;
     top: 0;
-    z-index: $modal-z-index + 1;
 
     background-color: $background-white;
     width: 95%;
@@ -31,8 +30,8 @@
 
   &-close {
     float: right;
-    height: auto;
-    width: 4rem;
+    height: 2rem;
+    width: 2rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -44,6 +43,7 @@
 
     &:active, &:focus {
       border-style: none;
+      outline: -webkit-focus-ring-color auto 0;
     }
 
     &:before, &:after {
@@ -51,7 +51,7 @@
       margin: auto;
       padding: auto;
       height: 2rem;
-      margin-top: -0.25rem; /* Minus half the difference between the height and the h2 font size 2rem - 1.5rem */
+      margin-top: -1.25rem; /* Minus half the difference between the height and the h2 font size 2rem - 1.5rem and half the height of close 1rem */
       width: 2px;
       content: ' ';
       background-color: #333;
