@@ -25,10 +25,6 @@ import {
   setCardErrors
 } from '../actions/order-actions'
 
-// Objects
-import Logo from '../objects/logo'
-import Breadcrumb from '../objects/breadcrumb'
-
 // Components
 import CustomHead from '../components/custom-head'
 import CheckoutSteps from '../components/checkout/checkout-steps'
@@ -201,12 +197,6 @@ export class CheckoutPage extends Component {
           {hasLineItems &&
             <>
               <div className='o-header--checkout'>
-                <div className='c-step-indicators__logo'>
-                  <Logo className='u-text-color--primary' />
-                </div>
-                <div className='c-checkout__breadcrumb'>
-                  <Breadcrumb />
-                </div>
                 <div className='c-checkout__steps'>
                   <CheckoutSteps {...this.props} />
                 </div>

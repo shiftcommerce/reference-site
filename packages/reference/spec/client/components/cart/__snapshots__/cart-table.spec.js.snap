@@ -32,8 +32,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
           "sku": "S2658934_C101_486",
           "slug": "1",
           "stockAvailableLevel": 10000,
-          "title": "Regular Fit Wool Mix Trousers",
-          "variant": "38 Waist 31 Leg",
+          "variant": "Regular Fit Wool Mix Trousers",
         },
       ],
       "totalQuantity": 2,
@@ -225,8 +224,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   "sku": "S2658934_C101_486",
                   "slug": "1",
                   "stockAvailableLevel": 10000,
-                  "title": "Regular Fit Wool Mix Trousers",
-                  "variant": "38 Waist 31 Leg",
+                  "variant": "Regular Fit Wool Mix Trousers",
                 },
               ],
               "totalQuantity": 2,
@@ -249,8 +247,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   key="1"
                 >
                   <Image
-                    alt="Regular Fit Wool Mix Trousers"
-                    aria-label="Regular Fit Wool Mix Trousers"
                     className="c-line-items__image"
                     key="1"
                     onClick={[Function]}
@@ -320,17 +316,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   </div>
                 </div>
                 <div
-                  className="c-line-items__option"
-                >
-                  <div
-                    className="c-line-items__param  u-bold"
-                  >
-                    <span>
-                      Option
-                    </span>
-                  </div>
-                </div>
-                <div
                   className="c-line-items__quantity"
                 >
                   <div
@@ -346,13 +331,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 >
                   <span>
                     Grey
-                  </span>
-                </div>
-                <div
-                  className="c-line-items__param  c-line-items__option-selected"
-                >
-                  <span>
-                    38 Waist 31 Leg
                   </span>
                 </div>
                 <div
@@ -580,8 +558,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   "sku": "S2658934_C101_486",
                   "slug": "1",
                   "stockAvailableLevel": 10000,
-                  "title": "Regular Fit Wool Mix Trousers",
-                  "variant": "38 Waist 31 Leg",
+                  "variant": "Regular Fit Wool Mix Trousers",
                 },
               ],
               "totalQuantity": 2,

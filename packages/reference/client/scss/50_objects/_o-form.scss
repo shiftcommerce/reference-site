@@ -9,6 +9,14 @@ $input-checkbox-spacing: 8px;
     text-align: center;
   }
 
+  &__address {
+    margin-top: $global-spacing-unit-huge;
+
+    @include breakpoint(desktop) {
+      margin-top: $global-spacing-unit-large;
+    }
+  }
+
   &__header {
     width: 100%;
     display: flex;

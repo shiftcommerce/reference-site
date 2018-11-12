@@ -16,8 +16,6 @@ exports[`renders line items correctly, on initial load 1`] = `
         key="1"
       >
         <Image
-          alt="test"
-          aria-label="test"
           className="c-line-items__image"
           key="1"
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
@@ -36,7 +34,7 @@ exports[`renders line items correctly, on initial load 1`] = `
           <h4
             className="c-line-items__details-title  u-bold"
           >
-            test
+            Test
           </h4>
           <div
             className="c-line-items__details-sku"
@@ -60,17 +58,6 @@ exports[`renders line items correctly, on initial load 1`] = `
           </div>
         </div>
         <div
-          className="c-line-items__option"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Option
-            </span>
-          </div>
-        </div>
-        <div
           className="c-line-items__quantity"
         >
           <div
@@ -86,13 +73,6 @@ exports[`renders line items correctly, on initial load 1`] = `
         >
           <span>
             Grey
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__option-selected"
-        >
-          <span>
-            38 Waist 31 Leg
           </span>
         </div>
         <div
@@ -235,8 +215,6 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
         key="1"
       >
         <Image
-          alt="test"
-          aria-label="test"
           className="c-line-items__image"
           key="1"
           src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
@@ -255,7 +233,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
           <h4
             className="c-line-items__details-title  u-bold"
           >
-            test
+            Test
           </h4>
           <div
             className="c-line-items__details-sku"
@@ -279,17 +257,6 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
           </div>
         </div>
         <div
-          className="c-line-items__option"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Option
-            </span>
-          </div>
-        </div>
-        <div
           className="c-line-items__quantity"
         >
           <div
@@ -305,13 +272,6 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
         >
           <span>
             Grey
-          </span>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__option-selected"
-        >
-          <span>
-            38 Waist 31 Leg
           </span>
         </div>
         <div

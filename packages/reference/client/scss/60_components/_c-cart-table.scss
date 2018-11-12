@@ -1,14 +1,21 @@
 .c-cart-table {
   display: grid;
-  padding: $global-spacing-unit;
+  padding-left: $global-spacing-unit-small;
+  padding-right: $global-spacing-unit-small;
   padding-top: $global-spacing-unit-small;
   margin: auto;
+
+  @include breakpoint(tablet) {
+    padding-left: $global-spacing-unit;
+    padding-right: $global-spacing-unit;
+  }
 
   @include breakpoint(desktop) {
     width: 80%;
   }
 
   &__grid {
+
     @include breakpoint(desktop) {
       display: grid;
       grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
@@ -17,6 +24,7 @@
     }
 
     &-item-a {
+
       @include breakpoint(desktop) {
         grid-column-start: [col1-start];
         grid-column-end: [col2-start];
@@ -27,6 +35,7 @@
     }
 
     &-item-b {
+
       @include breakpoint(desktop) {
         grid-column-start: [col2-start];
         grid-column-end: [col2-end];
@@ -54,6 +63,7 @@
   }
 
   &__promo {
+
     @include breakpoint(desktop) {
       margin-bottom: $global-spacing-unit-small;
     }

@@ -247,7 +247,7 @@ class AddressForm extends Component {
     const collapsed = address.collapsed
 
     return (
-      <div className={classNames('o-form  u-margin', className)}>
+      <div className={classNames('o-form__address', className)}>
         { this.renderFormHeader() }
         { this.renderFormSummary() }
         { !collapsed &&

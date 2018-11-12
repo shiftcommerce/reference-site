@@ -47,7 +47,7 @@ class LineItems extends Component {
       <div className='c-line-items__title'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title  u-bold'>
-            { lineItem.title }
+            { lineItem.variant }
           </h4>
           <div className='c-line-items__details-sku'>
             <span>
@@ -66,19 +66,11 @@ class LineItems extends Component {
           <span>Colour</span>
         </div>
       </div>
-      <div className='c-line-items__option'>
-        <div className='c-line-items__param  u-bold'>
-          <span>Option</span>
-        </div>
-      </div>
       <div className='c-line-items__quantity'>
         <div className='c-line-items__param u-bold'><span>Quantity</span></div>
       </div>
       <div className='c-line-items__param  c-line-items__colour-selected'>
         <span>Grey</span>
-      </div>
-      <div className='c-line-items__param  c-line-items__option-selected'>
-        <span>{ lineItem.variant }</span>
       </div>
       <div className='c-line-items__param  c-line-items__quantity-selected'>
         <span>{ this.renderOptions(lineItem) }</span>

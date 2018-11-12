@@ -8,7 +8,7 @@ test('renders line items correctly, on initial load', () => {
   const cart = {
     lineItems: [
       {
-        title: 'test',
+        variant: 'Test',
         price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
@@ -16,7 +16,6 @@ test('renders line items correctly, on initial load', () => {
         imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
         size: 'size - 8',
         stockAvailableLevel: '1000',
-        variant: '38 Waist 31 Leg',
         canonicalPath: '1',
         slug: '1'
       }
@@ -33,11 +32,10 @@ test('renders line items correctly, on initial load', () => {
   // assert
   const lineItem = cart.lineItems[0]
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(lineItem.title)
+  expect(wrapper).toIncludeText(lineItem.variant)
   expect(wrapper).toContainReact(<Image src={lineItem.imageUrl} alt={lineItem.title} className='c-line-items__image' aria-label={lineItem.title} />)
   expect(wrapper.find('select').props().value).toBe(lineItem.quantity)
   expect(wrapper).toIncludeText(lineItem.sku)
-  expect(wrapper).toIncludeText(lineItem.variant)
   expect(wrapper).toIncludeText((lineItem.price * lineItem.quantity) - (lineItem.discount))
 })
 
@@ -46,7 +44,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   const cart = {
     lineItems: [
       {
-        title: 'test',
+        variant: 'Test',
         price: fixedPrice(10.0),
         discount: 0,
         quantity: 2,
@@ -54,7 +52,6 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
         imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
         size: 'size - 8',
         stockAvailableLevel: '1000',
-        variant: '38 Waist 31 Leg',
         canonicalPath: '1',
         slug: '1'
       }

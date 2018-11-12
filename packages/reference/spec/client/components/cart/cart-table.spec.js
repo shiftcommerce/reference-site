@@ -32,8 +32,7 @@ test('renders the correct message when line items are available in cart', () => 
     lineItems: [
       {
         sku: 'S2658934_C101_486',
-        title: 'Regular Fit Wool Mix Trousers',
-        variant: '38 Waist 31 Leg',
+        variant: 'Regular Fit Wool Mix Trousers',
         quantity: 2,
         stockAvailableLevel: 10000,
         price: '30',

@@ -12,7 +12,7 @@ describe('Checkout Cart', () => {
     const cart = {
       lineItems: [
         {
-          title: 'Test Product',
+          variant: 'Test Product',
           price: fixedPrice(10.0),
           discount: 0,
           quantity: 2,
@@ -20,7 +20,6 @@ describe('Checkout Cart', () => {
           imageUrl: '',
           size: 'size - 8',
           stockAvailableLevel: '1000',
-          variant: '38 Waist 31 Leg',
           slug: '1',
           canonical_path: '1'
         }
@@ -43,22 +42,20 @@ describe('Checkout Cart', () => {
     const cart = {
       lineItems: [
         {
-          title: 'Test Product',
+          variant: 'Test Product',
           price: fixedPrice(10.0),
           discount: 0,
           quantity: 2,
           stockAvailableLevel: '1000',
-          variant: '38 Waist 31 Leg',
           slug: '1',
           canonical_path: '1'
         },
         {
-          title: 'Pretend Product',
+          variant: 'Pretend Product',
           price: fixedPrice(5.0),
           discount: 0,
           quantity: 1,
           stockAvailableLevel: '1000',
-          variant: '38 Waist 31 Leg',
           slug: '2',
           canonical_path: '1'
         }

@@ -12,8 +12,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           "quantity": 2,
           "slug": "1",
           "stockAvailableLevel": "1000",
-          "title": "Test Product",
-          "variant": "38 Waist 31 Leg",
+          "variant": "Test Product",
         },
         Object {
           "canonical_path": "1",
@@ -22,8 +21,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           "quantity": 1,
           "slug": "2",
           "stockAvailableLevel": "1000",
-          "title": "Pretend Product",
-          "variant": "38 Waist 31 Leg",
+          "variant": "Pretend Product",
         },
       ],
     }
@@ -130,8 +128,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             "quantity": 2,
             "slug": "1",
             "stockAvailableLevel": "1000",
-            "title": "Test Product",
-            "variant": "38 Waist 31 Leg",
+            "variant": "Test Product",
           },
           Object {
             "canonical_path": "1",
@@ -140,8 +137,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             "quantity": 1,
             "slug": "2",
             "stockAvailableLevel": "1000",
-            "title": "Pretend Product",
-            "variant": "38 Waist 31 Leg",
+            "variant": "Pretend Product",
           },
         ],
       }
@@ -163,8 +159,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             key="1"
           >
             <Image
-              alt="Test Product"
-              aria-label="Test Product"
               className="c-line-items__image"
               key="1"
               onClick={[Function]}
@@ -214,17 +208,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__option"
-          >
-            <div
-              className="c-line-items__param  u-bold"
-            >
-              <span>
-                Option
-              </span>
-            </div>
-          </div>
-          <div
             className="c-line-items__quantity"
           >
             <div
@@ -240,13 +223,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           >
             <span>
               Grey
-            </span>
-          </div>
-          <div
-            className="c-line-items__param  c-line-items__option-selected"
-          >
-            <span>
-              38 Waist 31 Leg
             </span>
           </div>
           <div
@@ -377,8 +353,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             key="2"
           >
             <Image
-              alt="Pretend Product"
-              aria-label="Pretend Product"
               className="c-line-items__image"
               key="2"
               onClick={[Function]}
@@ -428,17 +402,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__option"
-          >
-            <div
-              className="c-line-items__param  u-bold"
-            >
-              <span>
-                Option
-              </span>
-            </div>
-          </div>
-          <div
             className="c-line-items__quantity"
           >
             <div
@@ -454,13 +417,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           >
             <span>
               Grey
-            </span>
-          </div>
-          <div
-            className="c-line-items__param  c-line-items__option-selected"
-          >
-            <span>
-              38 Waist 31 Leg
             </span>
           </div>
           <div
@@ -599,8 +555,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           "sku": "123",
           "slug": "1",
           "stockAvailableLevel": "1000",
-          "title": "Test Product",
-          "variant": "38 Waist 31 Leg",
+          "variant": "Test Product",
         },
       ],
     }
@@ -710,8 +665,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             "sku": "123",
             "slug": "1",
             "stockAvailableLevel": "1000",
-            "title": "Test Product",
-            "variant": "38 Waist 31 Leg",
+            "variant": "Test Product",
           },
         ],
       }
@@ -733,8 +687,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             key="1"
           >
             <Image
-              alt="Test Product"
-              aria-label="Test Product"
               className="c-line-items__image"
               key="1"
               onClick={[Function]}
@@ -787,17 +739,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             </div>
           </div>
           <div
-            className="c-line-items__option"
-          >
-            <div
-              className="c-line-items__param  u-bold"
-            >
-              <span>
-                Option
-              </span>
-            </div>
-          </div>
-          <div
             className="c-line-items__quantity"
           >
             <div
@@ -813,13 +754,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           >
             <span>
               Grey
-            </span>
-          </div>
-          <div
-            className="c-line-items__param  c-line-items__option-selected"
-          >
-            <span>
-              38 Waist 31 Leg
             </span>
           </div>
           <div

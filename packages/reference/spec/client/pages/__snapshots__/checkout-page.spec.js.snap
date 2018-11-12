@@ -150,89 +150,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
     className="o-header--checkout"
   >
     <div
-      className="c-step-indicators__logo"
-    >
-      <Logo
-        className="u-text-color--primary"
-      >
-        <div
-          className="u-text-color--primary"
-        >
-          <Link
-            as="/"
-            href="/slug?slug=/homepage"
-          >
-            <a
-              href="/"
-              onClick={[Function]}
-            >
-              <Image
-                className="o-logo__image"
-                height={40}
-                src="/static/shopgo-logo.svg"
-                width={180}
-              >
-                <div
-                  className="o-logo__image"
-                >
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </a>
-          </Link>
-        </div>
-      </Logo>
-    </div>
-    <div
-      className="c-checkout__breadcrumb"
-    >
-      <Breadcrumb>
-        <nav>
-          <ol
-            className="o-breadcrumb"
-          >
-            <li
-              className="o-breadcrumb__item"
-            >
-              <Link
-                as="/"
-                href="/home/index"
-              >
-                <a
-                  className="o-breadcrumb__link"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </Link>
-            </li>
-          </ol>
-        </nav>
-      </Breadcrumb>
-    </div>
-    <div
       className="c-checkout__steps"
     >
       <CheckoutSteps
@@ -630,7 +547,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
             title="Shipping Address"
           >
             <div
-              className="o-form  u-margin"
+              className="o-form__address"
             >
               <div
                 className="o-form__header c-address-form__header"
@@ -1859,7 +1776,7 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                         <h4
                           className="c-line-items__details-title  u-bold"
                         >
-                          Regular Fit Wool Mix Trousers
+                          38 Waist 31 Leg
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -1882,17 +1799,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c-line-items__option"
-                    >
-                      <div
-                        className="c-line-items__param  u-bold"
-                      >
-                        <span>
-                          Option
-                        </span>
-                      </div>
-                    </div>
-                    <div
                       className="c-line-items__quantity"
                     >
                       <div
@@ -1908,13 +1814,6 @@ exports[`dispatch intializeCart action on creating an order 1`] = `
                     >
                       <span>
                         Grey
-                      </span>
-                    </div>
-                    <div
-                      className="c-line-items__param  c-line-items__option-selected"
-                    >
-                      <span>
-                        38 Waist 31 Leg
                       </span>
                     </div>
                     <div
@@ -2703,89 +2602,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
       className="o-header--checkout"
     >
       <div
-        className="c-step-indicators__logo"
-      >
-        <Logo
-          className="u-text-color--primary"
-        >
-          <div
-            className="u-text-color--primary"
-          >
-            <Link
-              as="/"
-              href="/slug?slug=/homepage"
-            >
-              <a
-                href="/"
-                onClick={[Function]}
-              >
-                <Image
-                  className="o-logo__image"
-                  height={40}
-                  src="/static/shopgo-logo.svg"
-                  width={180}
-                >
-                  <div
-                    className="o-logo__image"
-                  >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </LazyLoad>
-                  </div>
-                </Image>
-              </a>
-            </Link>
-          </div>
-        </Logo>
-      </div>
-      <div
-        className="c-checkout__breadcrumb"
-      >
-        <Breadcrumb>
-          <nav>
-            <ol
-              className="o-breadcrumb"
-            >
-              <li
-                className="o-breadcrumb__item"
-              >
-                <Link
-                  as="/"
-                  href="/home/index"
-                >
-                  <a
-                    className="o-breadcrumb__link"
-                    href="/"
-                    onClick={[Function]}
-                  >
-                    Home
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </nav>
-        </Breadcrumb>
-      </div>
-      <div
         className="c-checkout__steps"
       >
         <CheckoutSteps
@@ -3193,7 +3009,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
               title="Shipping Address"
             >
               <div
-                className="o-form  u-margin"
+                className="o-form__address"
               >
                 <div
                   className="o-form__header c-address-form__header"
@@ -4437,7 +4253,7 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                           <h4
                             className="c-line-items__details-title  u-bold"
                           >
-                            Regular Fit Wool Mix Trousers
+                            38 Waist 31 Leg
                           </h4>
                           <div
                             className="c-line-items__details-sku"
@@ -4460,17 +4276,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c-line-items__option"
-                      >
-                        <div
-                          className="c-line-items__param  u-bold"
-                        >
-                          <span>
-                            Option
-                          </span>
-                        </div>
-                      </div>
-                      <div
                         className="c-line-items__quantity"
                       >
                         <div
@@ -4486,13 +4291,6 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       >
                         <span>
                           Grey
-                        </span>
-                      </div>
-                      <div
-                        className="c-line-items__param  c-line-items__option-selected"
-                      >
-                        <span>
-                          38 Waist 31 Leg
                         </span>
                       </div>
                       <div
@@ -5269,89 +5067,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
     className="o-header--checkout"
   >
     <div
-      className="c-step-indicators__logo"
-    >
-      <Logo
-        className="u-text-color--primary"
-      >
-        <div
-          className="u-text-color--primary"
-        >
-          <Link
-            as="/"
-            href="/slug?slug=/homepage"
-          >
-            <a
-              href="/"
-              onClick={[Function]}
-            >
-              <Image
-                className="o-logo__image"
-                height={40}
-                src="/static/shopgo-logo.svg"
-                width={180}
-              >
-                <div
-                  className="o-logo__image"
-                >
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </a>
-          </Link>
-        </div>
-      </Logo>
-    </div>
-    <div
-      className="c-checkout__breadcrumb"
-    >
-      <Breadcrumb>
-        <nav>
-          <ol
-            className="o-breadcrumb"
-          >
-            <li
-              className="o-breadcrumb__item"
-            >
-              <Link
-                as="/"
-                href="/home/index"
-              >
-                <a
-                  className="o-breadcrumb__link"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </Link>
-            </li>
-          </ol>
-        </nav>
-      </Breadcrumb>
-    </div>
-    <div
       className="c-checkout__steps"
     >
       <CheckoutSteps
@@ -5749,7 +5464,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             title="Shipping Address"
           >
             <div
-              className="o-form  u-margin"
+              className="o-form__address"
             >
               <div
                 className="o-form__header c-address-form__header"
@@ -6978,7 +6693,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                         <h4
                           className="c-line-items__details-title  u-bold"
                         >
-                          Regular Fit Wool Mix Trousers
+                          38 Waist 31 Leg
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -7001,17 +6716,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c-line-items__option"
-                    >
-                      <div
-                        className="c-line-items__param  u-bold"
-                      >
-                        <span>
-                          Option
-                        </span>
-                      </div>
-                    </div>
-                    <div
                       className="c-line-items__quantity"
                     >
                       <div
@@ -7027,13 +6731,6 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                     >
                       <span>
                         Grey
-                      </span>
-                    </div>
-                    <div
-                      className="c-line-items__param  c-line-items__option-selected"
-                    >
-                      <span>
-                        38 Waist 31 Leg
                       </span>
                     </div>
                     <div
@@ -7882,89 +7579,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
     className="o-header--checkout"
   >
     <div
-      className="c-step-indicators__logo"
-    >
-      <Logo
-        className="u-text-color--primary"
-      >
-        <div
-          className="u-text-color--primary"
-        >
-          <Link
-            as="/"
-            href="/slug?slug=/homepage"
-          >
-            <a
-              href="/"
-              onClick={[Function]}
-            >
-              <Image
-                className="o-logo__image"
-                height={40}
-                src="/static/shopgo-logo.svg"
-                width={180}
-              >
-                <div
-                  className="o-logo__image"
-                >
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </a>
-          </Link>
-        </div>
-      </Logo>
-    </div>
-    <div
-      className="c-checkout__breadcrumb"
-    >
-      <Breadcrumb>
-        <nav>
-          <ol
-            className="o-breadcrumb"
-          >
-            <li
-              className="o-breadcrumb__item"
-            >
-              <Link
-                as="/"
-                href="/home/index"
-              >
-                <a
-                  className="o-breadcrumb__link"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </Link>
-            </li>
-          </ol>
-        </nav>
-      </Breadcrumb>
-    </div>
-    <div
       className="c-checkout__steps"
     >
       <CheckoutSteps
@@ -8518,7 +8132,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             title="Shipping Address"
           >
             <div
-              className="o-form  u-margin"
+              className="o-form__address"
             >
               <div
                 className="o-form__header c-address-form__header"
@@ -9981,7 +9595,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                         <h4
                           className="c-line-items__details-title  u-bold"
                         >
-                          Regular Fit Wool Mix Trousers
+                          38 Waist 31 Leg
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -10004,17 +9618,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                       </div>
                     </div>
                     <div
-                      className="c-line-items__option"
-                    >
-                      <div
-                        className="c-line-items__param  u-bold"
-                      >
-                        <span>
-                          Option
-                        </span>
-                      </div>
-                    </div>
-                    <div
                       className="c-line-items__quantity"
                     >
                       <div
@@ -10030,13 +9633,6 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                     >
                       <span>
                         Grey
-                      </span>
-                    </div>
-                    <div
-                      className="c-line-items__param  c-line-items__option-selected"
-                    >
-                      <span>
-                        38 Waist 31 Leg
                       </span>
                     </div>
                     <div
@@ -10963,89 +10559,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
     className="o-header--checkout"
   >
     <div
-      className="c-step-indicators__logo"
-    >
-      <Logo
-        className="u-text-color--primary"
-      >
-        <div
-          className="u-text-color--primary"
-        >
-          <Link
-            as="/"
-            href="/slug?slug=/homepage"
-          >
-            <a
-              href="/"
-              onClick={[Function]}
-            >
-              <Image
-                className="o-logo__image"
-                height={40}
-                src="/static/shopgo-logo.svg"
-                width={180}
-              >
-                <div
-                  className="o-logo__image"
-                >
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </a>
-          </Link>
-        </div>
-      </Logo>
-    </div>
-    <div
-      className="c-checkout__breadcrumb"
-    >
-      <Breadcrumb>
-        <nav>
-          <ol
-            className="o-breadcrumb"
-          >
-            <li
-              className="o-breadcrumb__item"
-            >
-              <Link
-                as="/"
-                href="/home/index"
-              >
-                <a
-                  className="o-breadcrumb__link"
-                  href="/"
-                  onClick={[Function]}
-                >
-                  Home
-                </a>
-              </Link>
-            </li>
-          </ol>
-        </nav>
-      </Breadcrumb>
-    </div>
-    <div
       className="c-checkout__steps"
     >
       <CheckoutSteps
@@ -11599,7 +11112,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             title="Shipping Address"
           >
             <div
-              className="o-form  u-margin"
+              className="o-form__address"
             >
               <div
                 className="o-form__header c-address-form__header"
@@ -13062,7 +12575,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                         <h4
                           className="c-line-items__details-title  u-bold"
                         >
-                          Regular Fit Wool Mix Trousers
+                          38 Waist 31 Leg
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -13085,17 +12598,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                       </div>
                     </div>
                     <div
-                      className="c-line-items__option"
-                    >
-                      <div
-                        className="c-line-items__param  u-bold"
-                      >
-                        <span>
-                          Option
-                        </span>
-                      </div>
-                    </div>
-                    <div
                       className="c-line-items__quantity"
                     >
                       <div
@@ -13111,13 +12613,6 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                     >
                       <span>
                         Grey
-                      </span>
-                    </div>
-                    <div
-                      className="c-line-items__param  c-line-items__option-selected"
-                    >
-                      <span>
-                        38 Waist 31 Leg
                       </span>
                     </div>
                     <div

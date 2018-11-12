@@ -352,7 +352,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <h4
                           className="c-line-items__details-title  u-bold"
                         >
-                          Regular Fit Wool Mix Trousers
+                          38 Waist 31 Leg
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -375,17 +375,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c-line-items__option"
-                    >
-                      <div
-                        className="c-line-items__param  u-bold"
-                      >
-                        <span>
-                          Option
-                        </span>
-                      </div>
-                    </div>
-                    <div
                       className="c-line-items__quantity"
                     >
                       <div
@@ -401,13 +390,6 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       <span>
                         Grey
-                      </span>
-                    </div>
-                    <div
-                      className="c-line-items__param  c-line-items__option-selected"
-                    >
-                      <span>
-                        38 Waist 31 Leg
                       </span>
                     </div>
                     <div

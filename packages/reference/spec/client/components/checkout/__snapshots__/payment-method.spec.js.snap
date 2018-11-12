@@ -437,7 +437,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             title="Billing Address"
           >
             <div
-              className="o-form  u-margin o-form__billing"
+              className="o-form__address o-form__billing"
             >
               <div
                 className="o-form__header c-address-form__header"
@@ -2180,7 +2180,7 @@ exports[`renders payment summary on collapsing 1`] = `
             title="Billing Address"
           >
             <div
-              className="o-form  u-margin o-form__billing"
+              className="o-form__address o-form__billing"
             >
               <div
                 className="o-form__header c-address-form__header"
