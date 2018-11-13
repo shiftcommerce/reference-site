@@ -15,15 +15,15 @@ class RegisterForm extends Component {
   }
 
   formValid () {
-    const { account } = this.props
+    const { registration } = this.props
 
-    let requiredFieldsPresent = (this.requiredFields().every((key) => account[key] !== '' && account[key] !== null) === true)
-    let noFormErrorsPresent = (Object.values(account.errors).filter(String).length === 0)
+    const requiredFieldsPresent = (this.requiredFields().every((key) => registration[key] !== '' && registration[key] !== null) === true)
+    const noFormErrorsPresent = (Object.values(registration.errors).filter(String).length === 0)
     return (requiredFieldsPresent && noFormErrorsPresent)
   }
 
   renderInputField (fieldOption) {
-    const { account, formName, onBlur } = this.props
+    const { registration, formName, onBlur } = this.props
 
     return (
       <Input
@@ -34,7 +34,7 @@ class RegisterForm extends Component {
         type={fieldOption.type}
         value={fieldOption.value}
         required={(fieldOption.rules && fieldOption.rules.required)}
-        validationMessage={account.errors[fieldOption.name]}
+        validationMessage={registration.errors[fieldOption.name]}
         rules={fieldOption.rules}
         idInput={fieldOption.idInput}
         formName={formName}
@@ -101,8 +101,8 @@ class RegisterForm extends Component {
   }
 
   renderFormSubmitButton () {
-    const { account } = this.props
-    const isValidForm = this.formValid(account)
+    const { registration } = this.props
+    const isValidForm = this.formValid(registration)
 
     return (
       <Button
@@ -120,13 +120,13 @@ class RegisterForm extends Component {
     const {
       className,
       handleSubmit,
-      account
+      registration
     } = this.props
 
     return (
       <div className={classNames('o-form', className)}>
         <form onSubmit={handleSubmit}>
-          <AccountFormErrors errors={account.validationErrors} />
+          <AccountFormErrors errors={registration.validationErrors} />
           { this.renderNameInputFields() }
           { this.renderEmailInputFields() }
           { this.renderPasswordInputFields() }

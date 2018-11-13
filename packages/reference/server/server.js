@@ -108,6 +108,11 @@ module.exports = app.prepare().then(() => {
   })
 
   server.get('/account/register', (req, res) => {
+    const { customerId } = req.session
+    // If there is a customerId, redirect to my account page.
+    if (customerId) {
+      res.redirect('/account/myaccount')
+    }
     return app.render(req, res, '/account/register', req.query)
   })
 

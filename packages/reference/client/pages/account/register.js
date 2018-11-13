@@ -33,9 +33,8 @@ export class Register extends Component {
   }
 
   validateInput (event, formName, fieldName, fieldValue, rules) {
-    const { account } = this.props
-
-    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate(account)
+    const { registration } = this.props
+    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate(registration)
     this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
     this.props.dispatch(inputChange(formName, fieldName, fieldValue))
   }
@@ -52,9 +51,9 @@ export class Register extends Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    const { account } = this.props
+    const { registration } = this.props
 
-    this.props.dispatch(createAccount(account))
+    this.props.dispatch(createAccount(registration))
   }
 
   render () {
@@ -78,9 +77,9 @@ export class Register extends Component {
 }
 
 function mapStateToProps (state) {
-  const { account } = state
+  const { registration, account } = state
 
-  return { account }
+  return { registration, account }
 }
 
 export default connect(mapStateToProps)(Register)

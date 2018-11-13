@@ -13,7 +13,7 @@ export function createAccount (account) {
     body: registerPayload(account),
     requestActionType: actionTypes.CREATE_ACCOUNT,
     successActionType: actionTypes.SET_ACCOUNT,
-    errorActionType: actionTypes.ERROR_ACCOUNT
+    errorActionType: actionTypes.ERROR_REGISTRATION
   }
   return postEndpoint(request)
 }
@@ -33,7 +33,7 @@ export function setValidationMessage (formName, fieldName, errorMessage) {
 // Store the input change info in the local redux store
 export function storeInputChange (formName, fieldName, fieldValue) {
   return {
-    type: actionTypes.SET_ACCOUNT_INPUT_VALUE,
+    type: actionTypes.SET_REGISTRATION_INPUT_VALUE,
     payload: {
       formName: formName,
       fieldName: fieldName,
@@ -44,7 +44,7 @@ export function storeInputChange (formName, fieldName, fieldValue) {
 
 export function storeValidationMessage (formName, fieldName, validationMessage) {
   return {
-    type: actionTypes.SET_ACCOUNT_INPUT_VALIDATION_MESSAGE,
+    type: actionTypes.SET_REGISTRATION_INPUT_VALIDATION_MESSAGE,
     payload: {
       formName: formName,
       fieldName: fieldName,

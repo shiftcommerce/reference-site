@@ -12,6 +12,7 @@ import setOrder from './set-order'
 import setOrders from './set-orders'
 import setPage from './set-page'
 import setProduct from './set-product'
+import setRegistration from './set-registration'
 import setSearchState from './set-search-state'
 import setSlug from './set-slug'
 
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
   orders: setOrders,
   page: setPage,
   product: setProduct,
+  registration: setRegistration,
   search: setSearchState,
   slug: setSlug
 })
