@@ -36,6 +36,7 @@ const accountHandler = require('./route-handlers/account-route-handler')
 const handler = require('./route-handlers/route-handler')
 const orderHandler = require('./route-handlers/order-route-handler')
 const customerOrdersHandler = require('./route-handlers/customer-orders-route-handler')
+const addressBookHandler = require('./route-handlers/address-book-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -156,10 +157,15 @@ module.exports = app.prepare().then(() => {
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
   server.get('/getAccount', accountHandler.getRenderer(platform.AccountUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
+  server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
 
   server.post('/createOrder', orderHandler.createOrderRenderer())
+
   server.post('/register', accountHandler.postRenderer(platform.AccountUrl))
   server.post('/login', accountHandler.postRenderer(platform.LoginUrl))
+
+  server.post('/createAddress', addressBookHandler.postAddressRenderer(platform.AddressesUrl))
+  server.delete(/\/deleteAddress\/*/, addressBookHandler.deleteAddressRenderer(platform.AddressUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist

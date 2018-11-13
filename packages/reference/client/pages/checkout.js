@@ -24,6 +24,10 @@ import {
   setPaymentError,
   setCardErrors
 } from '../actions/order-actions'
+import {
+  fetchAddressBook,
+  saveToAddressBook
+} from '../actions/address-book-actions'
 
 // Components
 import CustomHead from '../components/custom-head'
@@ -38,8 +42,10 @@ import PromoInput from '../components/promo-input'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {
+    await reduxStore.dispatch(fetchAddressBook())
     return {}
   }
+
   constructor () {
     super()
 
@@ -109,13 +115,22 @@ export class CheckoutPage extends Component {
       componentName = 'paymentMethod'
     }
 
-    window.scrollTo(0, 0)
-    this.props.dispatch(toggleCollapsed(eventType, componentName))
+    this.onToggleCollapsed(eventType, componentName)
   }
 
   onToggleCollapsed (eventType, componentName) {
+    const { dispatch, checkout } = this.props
+
+    if (componentName === 'shippingAddress' && checkout.shippingAddress.saveToAddressBook) {
+      dispatch(saveToAddressBook(checkout.shippingAddress))
+    }
+
+    if (componentName === 'paymentMethod' && checkout.billingAddress.saveToAddressBook) {
+      dispatch(saveToAddressBook(checkout.billingAddress))
+    }
+
     window.scrollTo(0, 0)
-    this.props.dispatch(toggleCollapsed(eventType, componentName))
+    dispatch(toggleCollapsed(eventType, componentName))
   }
 
   setShippingMethod (shippingMethod) {
@@ -194,6 +209,7 @@ export class CheckoutPage extends Component {
       return (
         <>
           <CustomHead />
+          <p>{ checkout.flashError }</p>
           {hasLineItems &&
             <>
               <div className='o-header--checkout'>
@@ -258,6 +274,7 @@ const mapStateToProps = (state) => {
     checkout: state.checkout || {},
     cart: state.cart || {},
     order: state.order || {},
+    login: state.login,
     ip: state.ip
   }
 }

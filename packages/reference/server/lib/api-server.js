@@ -60,8 +60,24 @@ const postData = async (body, url) => {
     return response
   } catch (error) {
     console.error('ERROR', error.response)
+    console.error('ERROR DATA', JSON.stringify(error.response.data))
     return error.response
   }
 }
 
-module.exports = { fetchData, fetchOmsData, postData }
+const deleteData = async (url) => {
+  try {
+    const response = await axios.delete(`${process.env.API_HOST}/${url}`, {
+      auth: auth,
+      headers: headers
+    })
+
+    setCacheHeaders(response)
+    return response
+  } catch (error) {
+    console.error(error)
+    return error.response
+  }
+}
+
+module.exports = { deleteData, fetchData, fetchOmsData, postData }

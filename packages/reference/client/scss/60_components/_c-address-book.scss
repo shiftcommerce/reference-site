@@ -1,0 +1,126 @@
+.c-address-book {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: $global-spacing-unit;
+  overflow-y: auto;
+
+  @include breakpoint(desktop) {
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+  }
+
+  &__header {
+    flex-basis: 100%;
+    align-items: center;
+    display: flex;
+    padding-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      padding-bottom: $global-spacing-unit;
+    }
+
+    h1 {
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+
+  &__close {
+    height: 50px;
+    width: 50px;
+    background-image: url('/static/black-cross.png');
+    cursor: pointer;
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9998;
+  }
+
+  &__entries {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(desktop) {
+      // Aligns odd numbers of entries nicely
+      &::after {
+        content: "";
+        flex-grow: 1;
+        flex-basis: 40%;
+      }
+    }
+  }
+
+  &__entry {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    display: flex;
+    border: 2px solid $border-divider;
+    padding: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      flex-basis: 40%;
+      margin-right: $global-spacing-unit-small;
+
+      &:nth-of-type(n+1) {
+        max-width: 50%;
+      }
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__address {
+    flex-grow: 1;
+    align-self: flex-start;
+
+    h1 {
+      margin: 0;
+      margin-bottom: $global-spacing-unit-tiny;
+      font-size: 1.5rem;
+
+      @include breakpoint(desktop) {
+        margin-bottom: $global-spacing-unit-small;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    margin-top: $global-spacing-unit-tiny;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      width: auto;
+    }
+
+    button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

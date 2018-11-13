@@ -1,12 +1,10 @@
 .c-checkout {
-
   @include breakpoint(desktop) {
     width: 80%;
     margin: auto;
   }
 
   &__addressform {
-
     @include breakpoint(desktop) {
       width: 90%;
     }
@@ -29,7 +27,6 @@
   }
 
   &__breadcrumb {
-
     @include breakpoint(desktop) {
       width: 80%;
       margin: auto;
@@ -42,12 +39,15 @@
   }
 
   &__steps {
-
     @include breakpoint(desktop) {
       width: 80%;
       margin: auto;
       border-bottom: 1px solid $border-default;
     }
   }
+
+  &__address-book-button {
+    margin: 0;
+    margin-bottom: $global-spacing-unit-small;
+  }
 }
-                

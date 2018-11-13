@@ -1,4 +1,4 @@
-import AddressForm from '../../../../client/components/checkout/address-form'
+import { AddressForm } from '../../../../client/components/checkout/address-form'
 
 test('renders the correct base form elements', () => {
   // Arrange
@@ -9,10 +9,11 @@ test('renders the correct base form elements', () => {
       errors: {}
     }
   }
+  const addressBook = []
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' checkout={checkout} />
+    <AddressForm formName='testAddress' checkout={checkout} addressBook={addressBook} />
   )
 
   // assert
@@ -49,10 +50,11 @@ test('renders the values from the state', () => {
   const checkout = {
     testAddress: address
   }
+  const addressBook = []
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' checkout={checkout} />
+    <AddressForm formName='testAddress' checkout={checkout} addressBook={addressBook} />
   )
 
   // assert
@@ -76,10 +78,11 @@ test('renders additional elements for shipping form', () => {
       errors: {}
     }
   }
+  const addressBook = []
 
   // Act
   const wrapper = mount(
-    <AddressForm formName='shippingAddress' addressType='shipping' checkout={checkout} />
+    <AddressForm formName='shippingAddress' addressType='shipping' checkout={checkout} addressBook={addressBook} />
   )
 
   // Assert - Additional fields for shipping form:
@@ -101,10 +104,11 @@ test('renders the additional company / address2 fields when enabled', () => {
   const checkout = {
     testAddress: address
   }
+  const addressBook = []
 
   // act
   const wrapper = mount(
-    <AddressForm formName='testAddress' checkout={checkout} />
+    <AddressForm formName='testAddress' checkout={checkout} addressBook={addressBook} />
   )
 
   // Assert - additional enabled fields:
@@ -124,10 +128,11 @@ test('does not render the additional company / address2 fields when not enabled'
   const checkout = {
     testAddress: address
   }
+  const addressBook = []
 
   // Act
   const wrapper = mount(
-    <AddressForm formName='testAddress' checkout={checkout} />
+    <AddressForm formName='testAddress' checkout={checkout} addressBook={addressBook} />
   )
 
   // Assert - Input fields are not rendered:
@@ -155,4 +160,54 @@ test('renders the collapsed version of the form when collapsed = true', () => {
   expect(wrapper).toHaveText('Edit')
   // An input field is not rendered:
   expect(wrapper.find('#full_name').length).toEqual(0)
+})
+
+test('renders the address book button when user is logged in and has addresses', () => {
+  // Prepare fake props
+  const checkout = {
+    shippingAddress: { errors: {} }
+  }
+  const addressBook = [{}] // address book has 1 entry
+
+  // Render the component
+  const wrapper = mount(
+    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} loggedIn />
+  )
+
+  // Ensure the button is displayed
+  expect(wrapper).toIncludeText('Address book')
+})
+
+test('does not render the address book button when user is not logged in', () => {
+  // Prepare fake checkout and addressBook props
+  const checkout = {
+    shippingAddress: { errors: {} }
+  }
+  // address book has 1 entry but the user is not logged in
+  const addressBook = [{}]
+
+  // Render the component
+  const wrapper = mount(
+    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} />
+  )
+
+  // Ensure the button is not displayed
+  expect(wrapper).not.toIncludeText('Address book')
+})
+
+test('does not render the address book button when user is logged in but does not have saved addresses', () => {
+  // Prepare fake checkout and addressBook props
+  const checkout = {
+    shippingAddress: { errors: {} }
+  }
+  // address book is empty
+  const addressBook = []
+
+  // Render the component
+  const wrapper = mount(
+    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} loggedIn />
+  )
+
+  // Ensure the button is not displayed
+  expect(wrapper).not.toIncludeText('Address book')
 })

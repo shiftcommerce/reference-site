@@ -24,20 +24,25 @@ jest.mock('next/config', () => () => ({
 
 test('dispatch setShippingMethod action on changing shipping method', () => {
   // Arrange
-  const initialState = {}
+  const initialState = {
+    login: {
+      loggedIn: false
+    },
+    checkout: {
+      addressBook: []
+    }
+  }
   const expectedFunction = setShippingMethod().toString()
   const setShippingMethodSpy = jest.spyOn(CheckoutPage.prototype, 'setShippingMethod')
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const selectedShippingMethod = shippingMethods.shippingMethods[0]
 
   // Act
-  /* eslint-disable no-unused-vars */
   const wrapper = mount(
     <Provider store={createMockStore(initialState)}>
       <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
     </Provider>
   )
-  /* eslint-enable no-unused-vars */
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -99,11 +104,9 @@ test('redirects to cart page when lineItems is empty', () => {
   Router.router = mockedRouter
 
   // Act
-  /* eslint-disable no-unused-vars */
-  const wrapper = mount(
+  mount(
     <CheckoutPage dispatch={dispatch} cart={cart} checkout={checkout} />
   )
-  /* eslint-enable no-unused-vars */
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)
@@ -114,9 +117,6 @@ test('redirects to cart page when lineItems is empty', () => {
 
 test('redirects to order confirmation page, on creating an order', () => {
   // Arrange
-  // const initialState = {
-  //   order: {}
-  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {}
   const newOrder = {
@@ -129,11 +129,9 @@ test('redirects to order confirmation page, on creating an order', () => {
   Router.router = mockedRouter
 
   // Act
-  /* eslint-disable no-unused-vars */
-  const wrapper = mount(
+  const wrapper = shallow(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
-  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 
@@ -150,9 +148,6 @@ test('redirects to order confirmation page, on creating an order', () => {
 
 test('should not redirect to order confirmation page, if no new order got created', () => {
   // Arrange
-  // const initialState = {
-  //   order: {}
-  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
@@ -164,11 +159,9 @@ test('should not redirect to order confirmation page, if no new order got create
   Router.router = mockedRouter
 
   // Act
-  /* eslint-disable no-unused-vars */
-  const wrapper = mount(
+  const wrapper = shallow(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
-  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 
@@ -178,9 +171,6 @@ test('should not redirect to order confirmation page, if no new order got create
 
 test('should redirect to order confirmation page, if new order got created', () => {
   // Arrange
-  // const initialState = {
-  //   order: {}
-  // }
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
@@ -196,11 +186,9 @@ test('should redirect to order confirmation page, if new order got created', () 
   Router.router = mockedRouter
 
   // Act
-  /* eslint-disable no-unused-vars */
-  const wrapper = mount(
+  const wrapper = shallow(
     <CheckoutPage checkout={checkout} cart={cart} order={order} dispatch={dispatch} />
   )
-  /* eslint-enable no-unused-vars */
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -226,12 +214,14 @@ test('dispatch intializeCart action on creating an order', () => {
     ...checkout
   }
 
+  // Mock next.js router
+  const mockedRouter = { push: jest.fn() }
+  Router.router = mockedRouter
+
   // Act
-  /* eslint-disable no-unused-vars */
-  const wrapper = mount(
+  const wrapper = shallow(
     <CheckoutPage checkout={checkout} cart={cart} order={{}} dispatch={dispatch} />
   )
-  /* eslint-enable no-unused-vars */
   // Assert
   expect(wrapper).toMatchSnapshot()
 

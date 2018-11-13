@@ -22,6 +22,8 @@ const formFields = {
   primary_phone: '',
   email: '',
   newsletterOptIn: false,
+  saveToAddressBook: false,
+  label: '',
   collapsed: false,
   completed: false,
   errors: {},
@@ -50,7 +52,8 @@ export const checkoutInitialState = {
     collapsed: true,
     completed: false
   },
-  currentStep: 1
+  currentStep: 1,
+  addressBook: []
 }
 
 export default function setCheckout (state = checkoutInitialState, action) {
@@ -108,6 +111,43 @@ export default function setCheckout (state = checkoutInitialState, action) {
 
     case types.CHANGE_PAYMENT_METHOD:
       newState.paymentMethod.selectedMethod = action.paymentMethod
+      return newState
+
+    case types.SET_ADDRESS:
+      const chosenAddress = action.address
+      const meta = chosenAddress.meta_attributes
+      const companyName = meta.company_name && meta.company_name.value
+
+      newState[action.formName] = {
+        country_code: chosenAddress.country,
+        first_name: chosenAddress.first_name,
+        last_name: chosenAddress.last_name,
+        companyName: companyName,
+        companyNameShown: !!companyName,
+        line_1: chosenAddress.address_line_1,
+        line_2: chosenAddress.address_line_2,
+        address2Shown: !!chosenAddress.address_line_2,
+        zipcode: chosenAddress.postcode,
+        city: chosenAddress.city,
+        state: chosenAddress.state,
+        primary_phone: meta.phone_number.value,
+        email: meta.email.value,
+        saveToAddressBook: false,
+        errors: {}
+      }
+      return newState
+
+    case types.SET_ADDRESS_BOOK:
+      newState.addressBook = action.payload.data
+      return newState
+
+    case types.SET_ADDRESS_BOOK_ENTRY:
+      newState.shippingAddress.saveToAddressBook = false
+      newState.billingAddress.saveToAddressBook = false
+      return newState
+
+    case types.DELETE_ADDRESS:
+      newState.addressBook = state.addressBook.filter(address => address.id !== action.data.addressId)
       return newState
 
     default:

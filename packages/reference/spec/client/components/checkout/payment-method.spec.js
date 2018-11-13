@@ -1,9 +1,15 @@
 // Components
 import PaymentMethod from '../../../../client/components/checkout/payment-method'
+// Libraries
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
 // Fixtures
 import order from '../../../fixtures/order'
 import checkoutData from '../../../fixtures/checkout'
+
+// Reducers
+import rootReducer from '../../../../client/reducers/root-reducer'
 
 // Mock Stripe checkout
 jest.mock('../../../../client/components/checkout/stripe-wrapper', () => (props) => <p>Mocked Card Fields</p>)
@@ -39,12 +45,18 @@ test('Renders correct address summary when shippingAsBilling is true', () => {
     cardTokenRequested: false
   }
 
+  const store = createStore(rootReducer)
+
   // act
-  const wrapper = mount(<PaymentMethod
-    checkout={checkout}
-    setShippingBillingAddress={setShippingBillingAddress}
-    order={order}
-  />)
+  const wrapper = mount(
+    <Provider store={store}>
+      <PaymentMethod
+        checkout={checkout}
+        setShippingBillingAddress={setShippingBillingAddress}
+        order={order}
+      />
+    </Provider>
+  )
 
   // assert
   expect(wrapper).toMatchSnapshot()
@@ -88,12 +100,18 @@ test('Does not render address summary when shippingAsBilling is false', () => {
   }
   const setShippingBillingAddress = () => {}
 
+  const store = createStore(rootReducer)
+
   // act
-  const wrapper = mount(<PaymentMethod
-    checkout={checkout}
-    setShippingBillingAddress={setShippingBillingAddress}
-    order={order}
-  />)
+  const wrapper = mount(
+    <Provider store={store}>
+      <PaymentMethod
+        checkout={checkout}
+        setShippingBillingAddress={setShippingBillingAddress}
+        order={order}
+      />
+    </Provider>
+  )
 
   // assert
   expect(wrapper).toMatchSnapshot()
@@ -112,9 +130,13 @@ test('renders payment summary on collapsing', () => {
     }
   })
 
+  const store = createStore(rootReducer)
+
   // Act
   const wrapper = mount(
-    <PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
+    <Provider store={store}>
+      <PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
+    </Provider>
   )
 
   // Assert

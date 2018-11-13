@@ -1,321 +1,456 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Does not render address summary when shippingAsBilling is false 1`] = `
-<PaymentMethod
-  checkout={
+<Provider
+  store={
     Object {
-      "billingAddress": Object {
-        "collapsed": false,
-        "completed": false,
-        "errors": Object {},
-      },
-      "paymentMethod": Object {
-        "collapsed": false,
-        "completed": false,
-        "selectedMethod": "card",
-      },
-      "shippingAddress": Object {
-        "city": "Test City",
-        "collapsed": true,
-        "completed": true,
-        "errors": Object {},
-        "first_name": "Test First Name",
-        "last_name": "Test Last Name",
-        "line_1": "Test Address 1",
-        "line_2": "Test Address 2",
-        "zipcode": "Test Postcode",
-      },
-      "shippingAddressAsBillingAddress": false,
-      "shippingMethod": Object {
-        "collapsed": true,
-        "completed": true,
-      },
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
-  order={
-    Object {
-      "cardErrors": false,
-      "cardTokenRequested": false,
-    }
-  }
-  setShippingBillingAddress={[Function]}
 >
-  <div
-    aria-label="Payment method"
-    className="o-form  c-payment-method"
+  <PaymentMethod
+    checkout={
+      Object {
+        "billingAddress": Object {
+          "collapsed": false,
+          "completed": false,
+          "errors": Object {},
+        },
+        "paymentMethod": Object {
+          "collapsed": false,
+          "completed": false,
+          "selectedMethod": "card",
+        },
+        "shippingAddress": Object {
+          "city": "Test City",
+          "collapsed": true,
+          "completed": true,
+          "errors": Object {},
+          "first_name": "Test First Name",
+          "last_name": "Test Last Name",
+          "line_1": "Test Address 1",
+          "line_2": "Test Address 2",
+          "zipcode": "Test Postcode",
+        },
+        "shippingAddressAsBillingAddress": false,
+        "shippingMethod": Object {
+          "collapsed": true,
+          "completed": true,
+        },
+      }
+    }
+    order={
+      Object {
+        "cardErrors": false,
+        "cardTokenRequested": false,
+      }
+    }
+    setShippingBillingAddress={[Function]}
   >
     <div
-      className="o-form__header  c-payment-method__header"
+      aria-label="Payment method"
+      className="o-form  c-payment-method"
     >
-      <div>
-        <h2>
-          Payment Method
-        </h2>
-      </div>
-      <div />
-    </div>
-    <div
-      className="c-payment-method__section"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      <PaymentMethodSelector
-        currentMethod="card"
-      >
-        <div
-          className="o-form c-payment-method"
-        >
-          <div
-            className="c-payment-method__button-group"
-          >
-            <Button
-              aria-label="Use credit or debit card"
-              className="c-payment-method__button c-payment-method__button--active"
-              label="Credit/Debit Card"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button c-payment-method__button--active o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Credit/Debit Card
-                </button>
-              </div>
-            </Button>
-            <Button
-              aria-label="Use paypal"
-              className="c-payment-method__button "
-              label="PayPal"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use paypal"
-                  className="c-payment-method__button  o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  PayPal
-                </button>
-              </div>
-            </Button>
-          </div>
-          <div
-            className="c-payment-method__images"
-          >
-            <span
-              className="c-payment-method__images-cardpayment"
-            >
-              <Image
-                src="/static/payments/visa.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/mastercard.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/american-express.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/maestro.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-            <span
-              className="c-payment-method__images-paypal"
-            >
-              <Image
-                src="/static/payments/pay-pal.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-          </div>
-        </div>
-      </PaymentMethodSelector>
-      <StripePayment
-        checkout={
-          Object {
-            "billingAddress": Object {
-              "collapsed": false,
-              "completed": false,
-              "errors": Object {},
-            },
-            "paymentMethod": Object {
-              "collapsed": false,
-              "completed": false,
-              "selectedMethod": "card",
-            },
-            "shippingAddress": Object {
-              "city": "Test City",
-              "collapsed": true,
-              "completed": true,
-              "errors": Object {},
-              "first_name": "Test First Name",
-              "last_name": "Test Last Name",
-              "line_1": "Test Address 1",
-              "line_2": "Test Address 2",
-              "zipcode": "Test Postcode",
-            },
-            "shippingAddressAsBillingAddress": false,
-            "shippingMethod": Object {
-              "collapsed": true,
-              "completed": true,
-            },
-          }
-        }
-        order={
-          Object {
-            "cardErrors": false,
-            "cardTokenRequested": false,
-          }
-        }
-        setShippingBillingAddress={[Function]}
+      <div
+        className="o-form__header  c-payment-method__header"
       >
         <div>
+          <h2>
+            Payment Method
+          </h2>
+        </div>
+        <div />
+      </div>
+      <div
+        className="c-payment-method__section"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <PaymentMethodSelector
+          currentMethod="card"
+        >
           <div
-            className="o-form__background"
+            className="o-form c-payment-method"
           >
             <div
-              className="o-form__wrapper"
+              className="c-payment-method__button-group"
             >
-              <Component
-                cardTokenRequested={false}
+              <Button
+                aria-label="Use credit or debit card"
+                className="c-payment-method__button c-payment-method__button--active"
+                label="Credit/Debit Card"
+                onClick={[Function]}
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button c-payment-method__button--active o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Credit/Debit Card
+                  </button>
+                </div>
+              </Button>
+              <Button
+                aria-label="Use paypal"
+                className="c-payment-method__button "
+                label="PayPal"
+                onClick={[Function]}
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button  o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    PayPal
+                  </button>
+                </div>
+              </Button>
+            </div>
+            <div
+              className="c-payment-method__images"
+            >
+              <span
+                className="c-payment-method__images-cardpayment"
+              >
+                <Image
+                  src="/static/payments/visa.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/mastercard.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/american-express.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/maestro.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+              <span
+                className="c-payment-method__images-paypal"
+              >
+                <Image
+                  src="/static/payments/pay-pal.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+            </div>
+          </div>
+        </PaymentMethodSelector>
+        <StripePayment
+          checkout={
+            Object {
+              "billingAddress": Object {
+                "collapsed": false,
+                "completed": false,
+                "errors": Object {},
+              },
+              "paymentMethod": Object {
+                "collapsed": false,
+                "completed": false,
+                "selectedMethod": "card",
+              },
+              "shippingAddress": Object {
+                "city": "Test City",
+                "collapsed": true,
+                "completed": true,
+                "errors": Object {},
+                "first_name": "Test First Name",
+                "last_name": "Test Last Name",
+                "line_1": "Test Address 1",
+                "line_2": "Test Address 2",
+                "zipcode": "Test Postcode",
+              },
+              "shippingAddressAsBillingAddress": false,
+              "shippingMethod": Object {
+                "collapsed": true,
+                "completed": true,
+              },
+            }
+          }
+          order={
+            Object {
+              "cardErrors": false,
+              "cardTokenRequested": false,
+            }
+          }
+          setShippingBillingAddress={[Function]}
+        >
+          <div>
+            <div
+              className="o-form__background"
+            >
+              <div
+                className="o-form__wrapper"
+              >
+                <Component
+                  cardTokenRequested={false}
+                  checkout={
+                    Object {
+                      "billingAddress": Object {
+                        "collapsed": false,
+                        "completed": false,
+                        "errors": Object {},
+                      },
+                      "paymentMethod": Object {
+                        "collapsed": false,
+                        "completed": false,
+                        "selectedMethod": "card",
+                      },
+                      "shippingAddress": Object {
+                        "city": "Test City",
+                        "collapsed": true,
+                        "completed": true,
+                        "errors": Object {},
+                        "first_name": "Test First Name",
+                        "last_name": "Test Last Name",
+                        "line_1": "Test Address 1",
+                        "line_2": "Test Address 2",
+                        "zipcode": "Test Postcode",
+                      },
+                      "shippingAddressAsBillingAddress": false,
+                      "shippingMethod": Object {
+                        "collapsed": true,
+                        "completed": true,
+                      },
+                    }
+                  }
+                >
+                  <p>
+                    Mocked Card Fields
+                  </p>
+                </Component>
+                <div
+                  className="o-form__input-group"
+                >
+                  <label>
+                    Billing address *
+                  </label>
+                </div>
+                <_class
+                  checked={false}
+                  label="Same as shipping address"
+                  name="shippingAddressAsBillingAddress"
+                  type="checkbox"
+                >
+                  <Checkbox
+                    checked={false}
+                    label="Same as shipping address"
+                    name="shippingAddressAsBillingAddress"
+                    renderValidationMessage={[Function]}
+                    type="checkbox"
+                  >
+                    <div
+                      className="o-form__input-group"
+                    >
+                      <label
+                        className="o-form__label"
+                        htmlFor="shippingAddressAsBillingAddress"
+                      >
+                        <input
+                          checked={false}
+                          className="o-form__checkbox"
+                          id="shippingAddressAsBillingAddress"
+                          name="shippingAddressAsBillingAddress"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                        <span
+                          className="o-form__checkbox-caption"
+                        >
+                          Same as shipping address
+                           
+                        </span>
+                      </label>
+                    </div>
+                  </Checkbox>
+                </_class>
+              </div>
+            </div>
+            <Connect(AddressForm)
+              addressType="billing"
+              aria-label="Billing address form"
+              checkout={
+                Object {
+                  "billingAddress": Object {
+                    "collapsed": false,
+                    "completed": false,
+                    "errors": Object {},
+                  },
+                  "paymentMethod": Object {
+                    "collapsed": false,
+                    "completed": false,
+                    "selectedMethod": "card",
+                  },
+                  "shippingAddress": Object {
+                    "city": "Test City",
+                    "collapsed": true,
+                    "completed": true,
+                    "errors": Object {},
+                    "first_name": "Test First Name",
+                    "last_name": "Test Last Name",
+                    "line_1": "Test Address 1",
+                    "line_2": "Test Address 2",
+                    "zipcode": "Test Postcode",
+                  },
+                  "shippingAddressAsBillingAddress": false,
+                  "shippingMethod": Object {
+                    "collapsed": true,
+                    "completed": true,
+                  },
+                }
+              }
+              className="o-form__billing"
+              formName="billingAddress"
+              title="Billing Address"
+            >
+              <AddressForm
+                addressBook={Array []}
+                addressType="billing"
+                aria-label="Billing address form"
                 checkout={
                   Object {
                     "billingAddress": Object {
@@ -346,253 +481,80 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     },
                   }
                 }
-              >
-                <p>
-                  Mocked Card Fields
-                </p>
-              </Component>
-              <div
-                className="o-form__input-group"
-              >
-                <label>
-                  Billing address *
-                </label>
-              </div>
-              <_class
-                checked={false}
-                label="Same as shipping address"
-                name="shippingAddressAsBillingAddress"
-                type="checkbox"
-              >
-                <Checkbox
-                  checked={false}
-                  label="Same as shipping address"
-                  name="shippingAddressAsBillingAddress"
-                  renderValidationMessage={[Function]}
-                  type="checkbox"
-                >
-                  <div
-                    className="o-form__input-group"
-                  >
-                    <label
-                      className="o-form__label"
-                      htmlFor="shippingAddressAsBillingAddress"
-                    >
-                      <input
-                        checked={false}
-                        className="o-form__checkbox"
-                        id="shippingAddressAsBillingAddress"
-                        name="shippingAddressAsBillingAddress"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        type="checkbox"
-                      />
-                      <span
-                        className="o-form__checkbox-caption"
-                      >
-                        Same as shipping address
-                         
-                      </span>
-                    </label>
-                  </div>
-                </Checkbox>
-              </_class>
-            </div>
-          </div>
-          <AddressForm
-            addressType="billing"
-            aria-label="Billing address form"
-            checkout={
-              Object {
-                "billingAddress": Object {
-                  "collapsed": false,
-                  "completed": false,
-                  "errors": Object {},
-                },
-                "paymentMethod": Object {
-                  "collapsed": false,
-                  "completed": false,
-                  "selectedMethod": "card",
-                },
-                "shippingAddress": Object {
-                  "city": "Test City",
-                  "collapsed": true,
-                  "completed": true,
-                  "errors": Object {},
-                  "first_name": "Test First Name",
-                  "last_name": "Test Last Name",
-                  "line_1": "Test Address 1",
-                  "line_2": "Test Address 2",
-                  "zipcode": "Test Postcode",
-                },
-                "shippingAddressAsBillingAddress": false,
-                "shippingMethod": Object {
-                  "collapsed": true,
-                  "completed": true,
-                },
-              }
-            }
-            className="o-form__billing"
-            formName="billingAddress"
-            title="Billing Address"
-          >
-            <div
-              className="o-form__address o-form__billing"
-            >
-              <div
-                className="o-form__header c-address-form__header"
+                className="o-form__billing"
+                dispatch={[Function]}
+                formName="billingAddress"
+                loggedIn={false}
+                title="Billing Address"
               >
                 <div
-                  className="o-form__header-title c-address-form__header-title"
+                  className="o-form__address o-form__billing"
                 >
-                  <h2>
-                    Billing Address
-                  </h2>
-                </div>
-              </div>
-              <div />
-              <form
-                className="o-form__wrapper o-form__background"
-              >
-                <div>
-                  <_class
-                    formName="billingAddress"
-                    label="Country"
-                    name="country_code"
-                    options={
-                      Array [
-                        Object {
-                          "id": 1,
-                          "title": "United Kingdom",
-                          "value": "GB",
-                        },
-                        Object {
-                          "id": 2,
-                          "title": "United States",
-                          "value": "US",
-                        },
-                      ]
-                    }
-                    prompt="Select a Country"
-                    required={true}
-                    rules={
-                      Object {
-                        "required": true,
-                      }
-                    }
+                  <div
+                    className="o-form__header c-address-form__header"
                   >
-                    <DropdownSelect
-                      formName="billingAddress"
-                      label="Country"
-                      name="country_code"
-                      options={
-                        Array [
-                          Object {
-                            "id": 1,
-                            "title": "United Kingdom",
-                            "value": "GB",
-                          },
-                          Object {
-                            "id": 2,
-                            "title": "United States",
-                            "value": "US",
-                          },
-                        ]
-                      }
-                      prompt="Select a Country"
-                      renderValidationMessage={[Function]}
-                      required={true}
-                      rules={
-                        Object {
-                          "required": true,
-                        }
-                      }
+                    <div
+                      className="o-form__header-title c-address-form__header-title"
                     >
-                      <div
-                        className="o-form__input-group"
+                      <h2>
+                        Billing Address
+                      </h2>
+                    </div>
+                  </div>
+                  <div />
+                  <form
+                    className="o-form__wrapper o-form__background"
+                  >
+                    <div>
+                      <_class
+                        formName="billingAddress"
+                        label="Country"
+                        name="country_code"
+                        options={
+                          Array [
+                            Object {
+                              "id": 1,
+                              "title": "United Kingdom",
+                              "value": "GB",
+                            },
+                            Object {
+                              "id": 2,
+                              "title": "United States",
+                              "value": "US",
+                            },
+                          ]
+                        }
+                        prompt="Select a Country"
+                        required={true}
+                        rules={
+                          Object {
+                            "required": true,
+                          }
+                        }
                       >
-                        <label
-                          className="o-form__label"
-                          htmlFor="country_code"
-                        >
-                          <b>
-                            Country
-                             *
-                          </b>
-                        </label>
-                        <select
-                          className="o-form__input-block o-form__input-field"
-                          id="country_code"
+                        <DropdownSelect
+                          formName="billingAddress"
+                          label="Country"
                           name="country_code"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          required={true}
-                          role="listbox"
-                        >
-                          <option
-                            aria-posinset="0"
-                            aria-setsize={2}
-                            role="option"
-                            value=""
-                          >
-                            Select a Country
-                          </option>
-                          <option
-                            aria-posinset={1}
-                            aria-setsize={2}
-                            key="0"
-                            role="option"
-                            value="GB"
-                          >
-                            United Kingdom
-                          </option>
-                          <option
-                            aria-posinset={2}
-                            aria-setsize={2}
-                            key="1"
-                            role="option"
-                            value="US"
-                          >
-                            United States
-                          </option>
-                        </select>
-                      </div>
-                    </DropdownSelect>
-                  </_class>
-                </div>
-                <div
-                  className="o-flex o-flex__space-between"
-                >
-                  <div
-                    className="o-flex-full-width-s"
-                    key="0"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="First Name"
-                        name="first_name"
-                        placeholder="Enter First Name"
-                        required={true}
-                        rules={
-                          Object {
-                            "maxLength": 50,
-                            "required": true,
+                          options={
+                            Array [
+                              Object {
+                                "id": 1,
+                                "title": "United Kingdom",
+                                "value": "GB",
+                              },
+                              Object {
+                                "id": 2,
+                                "title": "United States",
+                                "value": "US",
+                              },
+                            ]
                           }
-                        }
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="First Name"
-                          name="first_name"
-                          placeholder="Enter First Name"
+                          prompt="Select a Country"
                           renderValidationMessage={[Function]}
                           required={true}
                           rules={
                             Object {
-                              "maxLength": 50,
                               "required": true,
                             }
                           }
@@ -601,1366 +563,1703 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             className="o-form__input-group"
                           >
                             <label
-                              className="o-form__label undefined"
-                              htmlFor="first_name"
+                              className="o-form__label"
+                              htmlFor="country_code"
                             >
                               <b>
-                                First Name
-                                 
+                                Country
                                  *
                               </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="first_name"
-                                name="first_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter First Name"
-                                required={true}
-                              />
                             </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                  <div
-                    className="o-flex-full-width-s"
-                    key="1"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Last Name"
-                        name="last_name"
-                        placeholder="Enter Last Name"
-                        required={true}
-                        rules={
-                          Object {
-                            "maxLength": 50,
-                            "required": true,
-                          }
-                        }
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Last Name"
-                          name="last_name"
-                          placeholder="Enter Last Name"
-                          renderValidationMessage={[Function]}
-                          required={true}
-                          rules={
-                            Object {
-                              "maxLength": 50,
-                              "required": true,
-                            }
-                          }
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="last_name"
-                            >
-                              <b>
-                                Last Name
-                                 
-                                 *
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="last_name"
-                                name="last_name"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter Last Name"
-                                required={true}
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    <p>
-                      + Add Company Name (optional)
-                    </p>
-                  </a>
-                </div>
-                <div>
-                  <div>
-                    <_class
-                      className="o-form__input-block"
-                      formName="billingAddress"
-                      label="Address 1"
-                      name="line_1"
-                      placeholder="Enter Address"
-                      required={true}
-                      rules={
-                        Object {
-                          "required": true,
-                        }
-                      }
-                    >
-                      <Input
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Address 1"
-                        name="line_1"
-                        placeholder="Enter Address"
-                        renderValidationMessage={[Function]}
-                        required={true}
-                        rules={
-                          Object {
-                            "required": true,
-                          }
-                        }
-                      >
-                        <div
-                          className="o-form__input-group"
-                        >
-                          <label
-                            className="o-form__label undefined"
-                            htmlFor="line_1"
-                          >
-                            <b>
-                              Address 1
-                               
-                               *
-                            </b>
-                            <input
-                              checked={false}
-                              className="o-form__input-field o-form__input-block"
-                              id="line_1"
-                              name="line_1"
+                            <select
+                              className="o-form__input-block o-form__input-field"
+                              id="country_code"
+                              name="country_code"
                               onBlur={[Function]}
                               onChange={[Function]}
-                              placeholder="Enter Address"
                               required={true}
-                            />
-                          </label>
+                              role="listbox"
+                            >
+                              <option
+                                aria-posinset="0"
+                                aria-setsize={2}
+                                role="option"
+                                value=""
+                              >
+                                Select a Country
+                              </option>
+                              <option
+                                aria-posinset={1}
+                                aria-setsize={2}
+                                key="0"
+                                role="option"
+                                value="GB"
+                              >
+                                United Kingdom
+                              </option>
+                              <option
+                                aria-posinset={2}
+                                aria-setsize={2}
+                                key="1"
+                                role="option"
+                                value="US"
+                              >
+                                United States
+                              </option>
+                            </select>
+                          </div>
+                        </DropdownSelect>
+                      </_class>
+                    </div>
+                    <div
+                      className="o-flex o-flex__space-between"
+                    >
+                      <div
+                        className="o-flex-full-width-s"
+                        key="0"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="First Name"
+                            name="first_name"
+                            placeholder="Enter First Name"
+                            required={true}
+                            rules={
+                              Object {
+                                "maxLength": 50,
+                                "required": true,
+                              }
+                            }
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="First Name"
+                              name="first_name"
+                              placeholder="Enter First Name"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "maxLength": 50,
+                                  "required": true,
+                                }
+                              }
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="first_name"
+                                >
+                                  <b>
+                                    First Name
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="first_name"
+                                    name="first_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter First Name"
+                                    required={true}
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
                         </div>
-                      </Input>
-                    </_class>
-                  </div>
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
+                      </div>
+                      <div
+                        className="o-flex-full-width-s"
+                        key="1"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="Last Name"
+                            name="last_name"
+                            placeholder="Enter Last Name"
+                            required={true}
+                            rules={
+                              Object {
+                                "maxLength": 50,
+                                "required": true,
+                              }
+                            }
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Last Name"
+                              name="last_name"
+                              placeholder="Enter Last Name"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "maxLength": 50,
+                                  "required": true,
+                                }
+                              }
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="last_name"
+                                >
+                                  <b>
+                                    Last Name
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="last_name"
+                                    name="last_name"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter Last Name"
+                                    required={true}
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <p>
+                          + Add Company Name (optional)
+                        </p>
+                      </a>
+                    </div>
+                    <div>
+                      <div>
+                        <_class
+                          className="o-form__input-block"
+                          formName="billingAddress"
+                          label="Address 1"
+                          name="line_1"
+                          placeholder="Enter Address"
+                          required={true}
+                          rules={
+                            Object {
+                              "required": true,
+                            }
+                          }
+                        >
+                          <Input
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="Address 1"
+                            name="line_1"
+                            placeholder="Enter Address"
+                            renderValidationMessage={[Function]}
+                            required={true}
+                            rules={
+                              Object {
+                                "required": true,
+                              }
+                            }
+                          >
+                            <div
+                              className="o-form__input-group"
+                            >
+                              <label
+                                className="o-form__label undefined"
+                                htmlFor="line_1"
+                              >
+                                <b>
+                                  Address 1
+                                   
+                                   *
+                                </b>
+                                <input
+                                  checked={false}
+                                  className="o-form__input-field o-form__input-block"
+                                  id="line_1"
+                                  name="line_1"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  placeholder="Enter Address"
+                                  required={true}
+                                />
+                              </label>
+                            </div>
+                          </Input>
+                        </_class>
+                      </div>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <p>
+                          + Add Address 2 (optional)
+                        </p>
+                      </a>
+                    </div>
+                    <div>
+                      <div
+                        key="0"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="Post Code"
+                            name="zipcode"
+                            placeholder="Enter Post Code"
+                            required={true}
+                            rules={
+                              Object {
+                                "postcode": true,
+                                "required": true,
+                              }
+                            }
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Post Code"
+                              name="zipcode"
+                              placeholder="Enter Post Code"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "postcode": true,
+                                  "required": true,
+                                }
+                              }
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="zipcode"
+                                >
+                                  <b>
+                                    Post Code
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="zipcode"
+                                    name="zipcode"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter Post Code"
+                                    required={true}
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                      <div
+                        key="1"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="City"
+                            name="city"
+                            placeholder="Enter City"
+                            required={true}
+                            rules={
+                              Object {
+                                "required": true,
+                              }
+                            }
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="City"
+                              name="city"
+                              placeholder="Enter City"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "required": true,
+                                }
+                              }
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="city"
+                                >
+                                  <b>
+                                    City
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="city"
+                                    name="city"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter City"
+                                    required={true}
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                      <div
+                        key="2"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="County"
+                            name="state"
+                            placeholder="Enter County"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="County"
+                              name="state"
+                              placeholder="Enter County"
+                              renderValidationMessage={[Function]}
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="state"
+                                >
+                                  <b>
+                                    County
+                                     
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="state"
+                                    name="state"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter County"
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                      <div
+                        key="3"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="Phone"
+                            name="primary_phone"
+                            placeholder="Enter Phone"
+                            required={true}
+                            rules={
+                              Object {
+                                "phone": true,
+                                "required": true,
+                              }
+                            }
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Phone"
+                              name="primary_phone"
+                              placeholder="Enter Phone"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "phone": true,
+                                  "required": true,
+                                }
+                              }
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="primary_phone"
+                                >
+                                  <b>
+                                    Phone
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="primary_phone"
+                                    name="primary_phone"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter Phone"
+                                    required={true}
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                      <div
+                        key="4"
+                      >
+                        <div>
+                          <_class
+                            className="o-form__input-block"
+                            formName="billingAddress"
+                            label="Email"
+                            name="email"
+                            placeholder="Enter Email"
+                            required={true}
+                            rules={
+                              Object {
+                                "email": true,
+                                "required": true,
+                              }
+                            }
+                            type="email"
+                          >
+                            <Input
+                              className="o-form__input-block"
+                              formName="billingAddress"
+                              label="Email"
+                              name="email"
+                              placeholder="Enter Email"
+                              renderValidationMessage={[Function]}
+                              required={true}
+                              rules={
+                                Object {
+                                  "email": true,
+                                  "required": true,
+                                }
+                              }
+                              type="email"
+                            >
+                              <div
+                                className="o-form__input-group"
+                              >
+                                <label
+                                  className="o-form__label undefined"
+                                  htmlFor="email"
+                                >
+                                  <b>
+                                    Email
+                                     
+                                     *
+                                  </b>
+                                  <input
+                                    checked={false}
+                                    className="o-form__input-field o-form__input-block"
+                                    id="email"
+                                    name="email"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Enter Email"
+                                    required={true}
+                                    type="email"
+                                  />
+                                </label>
+                              </div>
+                            </Input>
+                          </_class>
+                        </div>
+                      </div>
+                    </div>
                     <p>
-                      + Add Address 2 (optional)
+                      * Denotes required fields
                     </p>
-                  </a>
+                    <div />
+                    <div />
+                    <div />
+                  </form>
                 </div>
-                <div>
-                  <div
-                    key="0"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Post Code"
-                        name="zipcode"
-                        placeholder="Enter Post Code"
-                        required={true}
-                        rules={
-                          Object {
-                            "postcode": true,
-                            "required": true,
-                          }
-                        }
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Post Code"
-                          name="zipcode"
-                          placeholder="Enter Post Code"
-                          renderValidationMessage={[Function]}
-                          required={true}
-                          rules={
-                            Object {
-                              "postcode": true,
-                              "required": true,
-                            }
-                          }
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="zipcode"
-                            >
-                              <b>
-                                Post Code
-                                 
-                                 *
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="zipcode"
-                                name="zipcode"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter Post Code"
-                                required={true}
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                  <div
-                    key="1"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="City"
-                        name="city"
-                        placeholder="Enter City"
-                        required={true}
-                        rules={
-                          Object {
-                            "required": true,
-                          }
-                        }
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="City"
-                          name="city"
-                          placeholder="Enter City"
-                          renderValidationMessage={[Function]}
-                          required={true}
-                          rules={
-                            Object {
-                              "required": true,
-                            }
-                          }
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="city"
-                            >
-                              <b>
-                                City
-                                 
-                                 *
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="city"
-                                name="city"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter City"
-                                required={true}
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                  <div
-                    key="2"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="County"
-                        name="state"
-                        placeholder="Enter County"
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="County"
-                          name="state"
-                          placeholder="Enter County"
-                          renderValidationMessage={[Function]}
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="state"
-                            >
-                              <b>
-                                County
-                                 
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="state"
-                                name="state"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter County"
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                  <div
-                    key="3"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Phone"
-                        name="primary_phone"
-                        placeholder="Enter Phone"
-                        required={true}
-                        rules={
-                          Object {
-                            "phone": true,
-                            "required": true,
-                          }
-                        }
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Phone"
-                          name="primary_phone"
-                          placeholder="Enter Phone"
-                          renderValidationMessage={[Function]}
-                          required={true}
-                          rules={
-                            Object {
-                              "phone": true,
-                              "required": true,
-                            }
-                          }
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="primary_phone"
-                            >
-                              <b>
-                                Phone
-                                 
-                                 *
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="primary_phone"
-                                name="primary_phone"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter Phone"
-                                required={true}
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                  <div
-                    key="4"
-                  >
-                    <div>
-                      <_class
-                        className="o-form__input-block"
-                        formName="billingAddress"
-                        label="Email"
-                        name="email"
-                        placeholder="Enter Email"
-                        required={true}
-                        rules={
-                          Object {
-                            "email": true,
-                            "required": true,
-                          }
-                        }
-                        type="email"
-                      >
-                        <Input
-                          className="o-form__input-block"
-                          formName="billingAddress"
-                          label="Email"
-                          name="email"
-                          placeholder="Enter Email"
-                          renderValidationMessage={[Function]}
-                          required={true}
-                          rules={
-                            Object {
-                              "email": true,
-                              "required": true,
-                            }
-                          }
-                          type="email"
-                        >
-                          <div
-                            className="o-form__input-group"
-                          >
-                            <label
-                              className="o-form__label undefined"
-                              htmlFor="email"
-                            >
-                              <b>
-                                Email
-                                 
-                                 *
-                              </b>
-                              <input
-                                checked={false}
-                                className="o-form__input-field o-form__input-block"
-                                id="email"
-                                name="email"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                placeholder="Enter Email"
-                                required={true}
-                                type="email"
-                              />
-                            </label>
-                          </div>
-                        </Input>
-                      </_class>
-                    </div>
-                  </div>
-                </div>
-                <p>
-                  * Denotes required fields
-                </p>
-                <div />
-                <div />
-              </form>
-            </div>
-          </AddressForm>
-        </div>
-      </StripePayment>
+              </AddressForm>
+            </Connect(AddressForm)>
+          </div>
+        </StripePayment>
+      </div>
     </div>
-  </div>
-</PaymentMethod>
+  </PaymentMethod>
+</Provider>
 `;
 
 exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
-<PaymentMethod
-  checkout={
+<Provider
+  store={
     Object {
-      "billingAddress": Object {},
-      "paymentMethod": Object {
-        "collapsed": false,
-        "completed": false,
-        "selectedMethod": "card",
-      },
-      "shippingAddress": Object {
-        "city": "Test City",
-        "collapsed": true,
-        "completed": true,
-        "errors": Object {},
-        "first_name": "Test First Name",
-        "last_name": "Test Last Name",
-        "line_1": "Test Address 1",
-        "line_2": "Test Address 2",
-        "zipcode": "Test Postcode",
-      },
-      "shippingAddressAsBillingAddress": true,
-      "shippingMethod": Object {
-        "collapsed": true,
-        "completed": true,
-      },
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
-  order={
-    Object {
-      "cardTokenRequested": false,
-    }
-  }
-  setShippingBillingAddress={[Function]}
 >
-  <div
-    aria-label="Payment method"
-    className="o-form  c-payment-method"
+  <PaymentMethod
+    checkout={
+      Object {
+        "billingAddress": Object {},
+        "paymentMethod": Object {
+          "collapsed": false,
+          "completed": false,
+          "selectedMethod": "card",
+        },
+        "shippingAddress": Object {
+          "city": "Test City",
+          "collapsed": true,
+          "completed": true,
+          "errors": Object {},
+          "first_name": "Test First Name",
+          "last_name": "Test Last Name",
+          "line_1": "Test Address 1",
+          "line_2": "Test Address 2",
+          "zipcode": "Test Postcode",
+        },
+        "shippingAddressAsBillingAddress": true,
+        "shippingMethod": Object {
+          "collapsed": true,
+          "completed": true,
+        },
+      }
+    }
+    order={
+      Object {
+        "cardTokenRequested": false,
+      }
+    }
+    setShippingBillingAddress={[Function]}
   >
     <div
-      className="o-form__header  c-payment-method__header"
+      aria-label="Payment method"
+      className="o-form  c-payment-method"
     >
-      <div>
-        <h2>
-          Payment Method
-        </h2>
-      </div>
-      <div />
-    </div>
-    <div
-      className="c-payment-method__section"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      <PaymentMethodSelector
-        currentMethod="card"
-      >
-        <div
-          className="o-form c-payment-method"
-        >
-          <div
-            className="c-payment-method__button-group"
-          >
-            <Button
-              aria-label="Use credit or debit card"
-              className="c-payment-method__button c-payment-method__button--active"
-              label="Credit/Debit Card"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button c-payment-method__button--active o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Credit/Debit Card
-                </button>
-              </div>
-            </Button>
-            <Button
-              aria-label="Use paypal"
-              className="c-payment-method__button "
-              label="PayPal"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use paypal"
-                  className="c-payment-method__button  o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  PayPal
-                </button>
-              </div>
-            </Button>
-          </div>
-          <div
-            className="c-payment-method__images"
-          >
-            <span
-              className="c-payment-method__images-cardpayment"
-            >
-              <Image
-                src="/static/payments/visa.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/mastercard.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/american-express.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/maestro.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-            <span
-              className="c-payment-method__images-paypal"
-            >
-              <Image
-                src="/static/payments/pay-pal.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-          </div>
-        </div>
-      </PaymentMethodSelector>
-      <StripePayment
-        checkout={
-          Object {
-            "billingAddress": Object {},
-            "paymentMethod": Object {
-              "collapsed": false,
-              "completed": false,
-              "selectedMethod": "card",
-            },
-            "shippingAddress": Object {
-              "city": "Test City",
-              "collapsed": true,
-              "completed": true,
-              "errors": Object {},
-              "first_name": "Test First Name",
-              "last_name": "Test Last Name",
-              "line_1": "Test Address 1",
-              "line_2": "Test Address 2",
-              "zipcode": "Test Postcode",
-            },
-            "shippingAddressAsBillingAddress": true,
-            "shippingMethod": Object {
-              "collapsed": true,
-              "completed": true,
-            },
-          }
-        }
-        order={
-          Object {
-            "cardTokenRequested": false,
-          }
-        }
-        setShippingBillingAddress={[Function]}
+      <div
+        className="o-form__header  c-payment-method__header"
       >
         <div>
+          <h2>
+            Payment Method
+          </h2>
+        </div>
+        <div />
+      </div>
+      <div
+        className="c-payment-method__section"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        <PaymentMethodSelector
+          currentMethod="card"
+        >
           <div
-            className="o-form__background"
+            className="o-form c-payment-method"
           >
             <div
-              className="o-form__wrapper"
+              className="c-payment-method__button-group"
             >
-              <Component
-                cardTokenRequested={false}
-                checkout={
-                  Object {
-                    "billingAddress": Object {},
-                    "paymentMethod": Object {
-                      "collapsed": false,
-                      "completed": false,
-                      "selectedMethod": "card",
-                    },
-                    "shippingAddress": Object {
-                      "city": "Test City",
-                      "collapsed": true,
-                      "completed": true,
-                      "errors": Object {},
-                      "first_name": "Test First Name",
-                      "last_name": "Test Last Name",
-                      "line_1": "Test Address 1",
-                      "line_2": "Test Address 2",
-                      "zipcode": "Test Postcode",
-                    },
-                    "shippingAddressAsBillingAddress": true,
-                    "shippingMethod": Object {
-                      "collapsed": true,
-                      "completed": true,
-                    },
-                  }
-                }
+              <Button
+                aria-label="Use credit or debit card"
+                className="c-payment-method__button c-payment-method__button--active"
+                label="Credit/Debit Card"
+                onClick={[Function]}
               >
-                <p>
-                  Mocked Card Fields
-                </p>
-              </Component>
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button c-payment-method__button--active o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Credit/Debit Card
+                  </button>
+                </div>
+              </Button>
+              <Button
+                aria-label="Use paypal"
+                className="c-payment-method__button "
+                label="PayPal"
+                onClick={[Function]}
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button  o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    PayPal
+                  </button>
+                </div>
+              </Button>
+            </div>
+            <div
+              className="c-payment-method__images"
+            >
+              <span
+                className="c-payment-method__images-cardpayment"
+              >
+                <Image
+                  src="/static/payments/visa.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/mastercard.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/american-express.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/maestro.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+              <span
+                className="c-payment-method__images-paypal"
+              >
+                <Image
+                  src="/static/payments/pay-pal.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+            </div>
+          </div>
+        </PaymentMethodSelector>
+        <StripePayment
+          checkout={
+            Object {
+              "billingAddress": Object {},
+              "paymentMethod": Object {
+                "collapsed": false,
+                "completed": false,
+                "selectedMethod": "card",
+              },
+              "shippingAddress": Object {
+                "city": "Test City",
+                "collapsed": true,
+                "completed": true,
+                "errors": Object {},
+                "first_name": "Test First Name",
+                "last_name": "Test Last Name",
+                "line_1": "Test Address 1",
+                "line_2": "Test Address 2",
+                "zipcode": "Test Postcode",
+              },
+              "shippingAddressAsBillingAddress": true,
+              "shippingMethod": Object {
+                "collapsed": true,
+                "completed": true,
+              },
+            }
+          }
+          order={
+            Object {
+              "cardTokenRequested": false,
+            }
+          }
+          setShippingBillingAddress={[Function]}
+        >
+          <div>
+            <div
+              className="o-form__background"
+            >
               <div
-                className="o-form__input-group"
+                className="o-form__wrapper"
               >
-                <label>
-                  Billing address *
-                </label>
-              </div>
-              <_class
-                checked={true}
-                label="Same as shipping address"
-                name="shippingAddressAsBillingAddress"
-                type="checkbox"
-              >
-                <Checkbox
+                <Component
+                  cardTokenRequested={false}
+                  checkout={
+                    Object {
+                      "billingAddress": Object {},
+                      "paymentMethod": Object {
+                        "collapsed": false,
+                        "completed": false,
+                        "selectedMethod": "card",
+                      },
+                      "shippingAddress": Object {
+                        "city": "Test City",
+                        "collapsed": true,
+                        "completed": true,
+                        "errors": Object {},
+                        "first_name": "Test First Name",
+                        "last_name": "Test Last Name",
+                        "line_1": "Test Address 1",
+                        "line_2": "Test Address 2",
+                        "zipcode": "Test Postcode",
+                      },
+                      "shippingAddressAsBillingAddress": true,
+                      "shippingMethod": Object {
+                        "collapsed": true,
+                        "completed": true,
+                      },
+                    }
+                  }
+                >
+                  <p>
+                    Mocked Card Fields
+                  </p>
+                </Component>
+                <div
+                  className="o-form__input-group"
+                >
+                  <label>
+                    Billing address *
+                  </label>
+                </div>
+                <_class
                   checked={true}
                   label="Same as shipping address"
                   name="shippingAddressAsBillingAddress"
-                  renderValidationMessage={[Function]}
                   type="checkbox"
                 >
-                  <div
-                    className="o-form__input-group"
+                  <Checkbox
+                    checked={true}
+                    label="Same as shipping address"
+                    name="shippingAddressAsBillingAddress"
+                    renderValidationMessage={[Function]}
+                    type="checkbox"
                   >
-                    <label
-                      className="o-form__label"
-                      htmlFor="shippingAddressAsBillingAddress"
+                    <div
+                      className="o-form__input-group"
                     >
-                      <input
-                        checked={true}
-                        className="o-form__checkbox"
-                        id="shippingAddressAsBillingAddress"
-                        name="shippingAddressAsBillingAddress"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        type="checkbox"
-                      />
-                      <span
-                        className="o-form__checkbox-caption"
+                      <label
+                        className="o-form__label"
+                        htmlFor="shippingAddressAsBillingAddress"
                       >
-                        Same as shipping address
-                         
-                      </span>
-                    </label>
-                  </div>
-                </Checkbox>
-              </_class>
-              <div
-                aria-label="Shipping address to be used for billing"
-                className="o-payment-method__address-summary  c-payment-method__address-summary"
-              >
-                <p
-                  className="u-bold"
+                        <input
+                          checked={true}
+                          className="o-form__checkbox"
+                          id="shippingAddressAsBillingAddress"
+                          name="shippingAddressAsBillingAddress"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                        <span
+                          className="o-form__checkbox-caption"
+                        >
+                          Same as shipping address
+                           
+                        </span>
+                      </label>
+                    </div>
+                  </Checkbox>
+                </_class>
+                <div
+                  aria-label="Shipping address to be used for billing"
+                  className="o-payment-method__address-summary  c-payment-method__address-summary"
                 >
-                  Test First Name Test Last Name
-                </p>
-                <p>
-                  Test Address 1
-                </p>
-                <p>
-                  Test Address 2
-                </p>
-                <p>
-                  Test City
-                </p>
-                <p>
-                  Test Postcode
-                </p>
+                  <p
+                    className="u-bold"
+                  >
+                    Test First Name Test Last Name
+                  </p>
+                  <p>
+                    Test Address 1
+                  </p>
+                  <p>
+                    Test Address 2
+                  </p>
+                  <p>
+                    Test City
+                  </p>
+                  <p>
+                    Test Postcode
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </StripePayment>
+        </StripePayment>
+      </div>
     </div>
-  </div>
-</PaymentMethod>
+  </PaymentMethod>
+</Provider>
 `;
 
 exports[`renders payment summary on collapsing 1`] = `
-<PaymentMethod
-  checkout={
+<Provider
+  store={
     Object {
-      "billingAddress": Object {
-        "city": "Leeds",
-        "collapsed": true,
-        "completed": true,
-        "country_code": "GBP",
-        "errors": Object {},
-        "first_name": "Prasanna Gaddam",
-        "label": "BILLING_LABEL",
-        "last_name": "Prasanna Gaddam",
-        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-        "line_2": "Hunslet",
-        "primary_phone": "07400000000",
-        "state": "Yorkshire",
-        "zipcode": "LS10 1QN",
-      },
-      "currency": "GBP",
-      "currentStep": 2,
-      "customer": Object {
-        "email": "customer@example.com",
-        "external_id": "123",
-        "name": "John Doe",
-      },
-      "error": false,
-      "lineItems": Array [
-        Object {
-          "currency": "GBP",
-          "paid_price_inc_tax": "10",
-          "quantity": 3,
-          "retail_price_inc_tax": "10",
-          "sku": "SK840763631-2",
-          "tax_amount": 0,
-          "tax_percentage": 0,
-          "title": "Textured Long T Shirt",
-        },
-      ],
-      "loading": false,
-      "paid_price_inc_tax": "0105.45",
-      "paymentMethod": Object {
-        "collapsed": true,
-        "completed": false,
-        "selectedMethod": "card",
-      },
-      "request_uuid": 6765757657657,
-      "retail_price_inc_tax": "0105.45",
-      "reviewOrder": Object {
-        "collapsed": true,
-        "completed": false,
-      },
-      "shippingAddress": Object {
-        "city": "Leeds",
-        "collapsed": true,
-        "completed": true,
-        "country_code": "GBP",
-        "first_name": "Prasanna Gaddam",
-        "label": "BILLING_LABEL",
-        "last_name": "Prasanna Gaddam",
-        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-        "line_2": "Hunslet",
-        "primary_phone": "07400000000",
-        "state": "Yorkshire",
-        "zipcode": "LS10 1QN",
-      },
-      "shippingMethod": Object {
-        "collapsed": false,
-        "completed": true,
-        "id": "2",
-        "name": "UPS Next Day",
-        "paid_price_inc_tax": 5.45,
-        "reference": "ups_next_day",
-        "retail_price_inc_tax": 5.45,
-        "sku": "ups_next_day",
-        "tax_amount": 2,
-        "tax_percentage": 20,
-      },
-      "tax_amount": 0,
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
-  order={
-    Object {
-      "cardErrors": false,
-      "cardTokenRequested": false,
-    }
-  }
-  setShippingBillingAddress={[Function]}
 >
-  <div
-    aria-label="Payment method"
-    className="o-form  c-payment-method"
+  <PaymentMethod
+    checkout={
+      Object {
+        "billingAddress": Object {
+          "city": "Leeds",
+          "collapsed": true,
+          "completed": true,
+          "country_code": "GBP",
+          "errors": Object {},
+          "first_name": "Prasanna Gaddam",
+          "label": "BILLING_LABEL",
+          "last_name": "Prasanna Gaddam",
+          "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+          "line_2": "Hunslet",
+          "primary_phone": "07400000000",
+          "state": "Yorkshire",
+          "zipcode": "LS10 1QN",
+        },
+        "currency": "GBP",
+        "currentStep": 2,
+        "customer": Object {
+          "email": "customer@example.com",
+          "external_id": "123",
+          "name": "John Doe",
+        },
+        "error": false,
+        "lineItems": Array [
+          Object {
+            "currency": "GBP",
+            "paid_price_inc_tax": "10",
+            "quantity": 3,
+            "retail_price_inc_tax": "10",
+            "sku": "SK840763631-2",
+            "tax_amount": 0,
+            "tax_percentage": 0,
+            "title": "Textured Long T Shirt",
+          },
+        ],
+        "loading": false,
+        "paid_price_inc_tax": "0105.45",
+        "paymentMethod": Object {
+          "collapsed": true,
+          "completed": false,
+          "selectedMethod": "card",
+        },
+        "request_uuid": 6765757657657,
+        "retail_price_inc_tax": "0105.45",
+        "reviewOrder": Object {
+          "collapsed": true,
+          "completed": false,
+        },
+        "shippingAddress": Object {
+          "city": "Leeds",
+          "collapsed": true,
+          "completed": true,
+          "country_code": "GBP",
+          "first_name": "Prasanna Gaddam",
+          "label": "BILLING_LABEL",
+          "last_name": "Prasanna Gaddam",
+          "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+          "line_2": "Hunslet",
+          "primary_phone": "07400000000",
+          "state": "Yorkshire",
+          "zipcode": "LS10 1QN",
+        },
+        "shippingMethod": Object {
+          "collapsed": false,
+          "completed": true,
+          "id": "2",
+          "name": "UPS Next Day",
+          "paid_price_inc_tax": 5.45,
+          "reference": "ups_next_day",
+          "retail_price_inc_tax": 5.45,
+          "sku": "ups_next_day",
+          "tax_amount": 2,
+          "tax_percentage": 20,
+        },
+        "tax_amount": 0,
+      }
+    }
+    order={
+      Object {
+        "cardErrors": false,
+        "cardTokenRequested": false,
+      }
+    }
+    setShippingBillingAddress={[Function]}
   >
     <div
-      className="o-form__header  c-payment-method__header"
+      aria-label="Payment method"
+      className="o-form  c-payment-method"
     >
-      <div>
-        <h2>
-          Payment Method
-        </h2>
-      </div>
-      <div>
-        <Button
-          aria-label="Edit your payment method"
-          className="o-button-edit"
-          label="Edit"
-          onClick={[Function]}
-          status="secondary"
-        >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Edit your payment method"
-              className="o-button-edit o-button o-button--secondary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              Edit
-            </button>
-          </div>
-        </Button>
-      </div>
-    </div>
-    <div
-      className="c-payment-method__summary o-form__error"
-    >
-      <p>
-        <span
-          className="u-bold"
-        >
-           Payment Mode: 
-        </span>
-        <span>
-           
-          Credit/Debit Card
-           
-        </span>
-      </p>
-      <p>
-        <span
-          className="u-bold"
-        >
-          Billing Address: 
-        </span>
-        <span
-          className="u-bold"
-        >
-          Prasanna Gaddam
-           
-          Prasanna Gaddam
-           
-        </span>
-        <span>
-          Apartment 19, Waterloo Court, 17 Hunslet Road
-          , 
-          Leeds
-          , 
-          LS10 1QN
-        </span>
-      </p>
-    </div>
-    <div
-      className="c-payment-method__section"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-    >
-      <PaymentMethodSelector
-        currentMethod="card"
-      >
-        <div
-          className="o-form c-payment-method"
-        >
-          <div
-            className="c-payment-method__button-group"
-          >
-            <Button
-              aria-label="Use credit or debit card"
-              className="c-payment-method__button c-payment-method__button--active"
-              label="Credit/Debit Card"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use credit or debit card"
-                  className="c-payment-method__button c-payment-method__button--active o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Credit/Debit Card
-                </button>
-              </div>
-            </Button>
-            <Button
-              aria-label="Use paypal"
-              className="c-payment-method__button "
-              label="PayPal"
-              onClick={[Function]}
-            >
-              <div
-                className="o-button__container"
-              >
-                <button
-                  aria-label="Use paypal"
-                  className="c-payment-method__button  o-button"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  PayPal
-                </button>
-              </div>
-            </Button>
-          </div>
-          <div
-            className="c-payment-method__images"
-          >
-            <span
-              className="c-payment-method__images-cardpayment"
-            >
-              <Image
-                src="/static/payments/visa.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/mastercard.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/american-express.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/maestro.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-            <span
-              className="c-payment-method__images-paypal"
-            >
-              <Image
-                src="/static/payments/pay-pal.svg"
-              >
-                <div>
-                  <LazyLoad
-                    debounce={true}
-                    elementType="div"
-                    offset={0}
-                    offsetBottom={0}
-                    offsetHorizontal={0}
-                    offsetLeft={0}
-                    offsetRight={0}
-                    offsetTop={0}
-                    offsetVertical={0}
-                    throttle={250}
-                  >
-                    <div
-                      className="LazyLoad"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </LazyLoad>
-                </div>
-              </Image>
-            </span>
-          </div>
-        </div>
-      </PaymentMethodSelector>
-      <StripePayment
-        checkout={
-          Object {
-            "billingAddress": Object {
-              "city": "Leeds",
-              "collapsed": true,
-              "completed": true,
-              "country_code": "GBP",
-              "errors": Object {},
-              "first_name": "Prasanna Gaddam",
-              "label": "BILLING_LABEL",
-              "last_name": "Prasanna Gaddam",
-              "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-              "line_2": "Hunslet",
-              "primary_phone": "07400000000",
-              "state": "Yorkshire",
-              "zipcode": "LS10 1QN",
-            },
-            "currency": "GBP",
-            "currentStep": 2,
-            "customer": Object {
-              "email": "customer@example.com",
-              "external_id": "123",
-              "name": "John Doe",
-            },
-            "error": false,
-            "lineItems": Array [
-              Object {
-                "currency": "GBP",
-                "paid_price_inc_tax": "10",
-                "quantity": 3,
-                "retail_price_inc_tax": "10",
-                "sku": "SK840763631-2",
-                "tax_amount": 0,
-                "tax_percentage": 0,
-                "title": "Textured Long T Shirt",
-              },
-            ],
-            "loading": false,
-            "paid_price_inc_tax": "0105.45",
-            "paymentMethod": Object {
-              "collapsed": true,
-              "completed": false,
-              "selectedMethod": "card",
-            },
-            "request_uuid": 6765757657657,
-            "retail_price_inc_tax": "0105.45",
-            "reviewOrder": Object {
-              "collapsed": true,
-              "completed": false,
-            },
-            "shippingAddress": Object {
-              "city": "Leeds",
-              "collapsed": true,
-              "completed": true,
-              "country_code": "GBP",
-              "first_name": "Prasanna Gaddam",
-              "label": "BILLING_LABEL",
-              "last_name": "Prasanna Gaddam",
-              "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-              "line_2": "Hunslet",
-              "primary_phone": "07400000000",
-              "state": "Yorkshire",
-              "zipcode": "LS10 1QN",
-            },
-            "shippingMethod": Object {
-              "collapsed": false,
-              "completed": true,
-              "id": "2",
-              "name": "UPS Next Day",
-              "paid_price_inc_tax": 5.45,
-              "reference": "ups_next_day",
-              "retail_price_inc_tax": 5.45,
-              "sku": "ups_next_day",
-              "tax_amount": 2,
-              "tax_percentage": 20,
-            },
-            "tax_amount": 0,
-          }
-        }
-        order={
-          Object {
-            "cardErrors": false,
-            "cardTokenRequested": false,
-          }
-        }
-        setShippingBillingAddress={[Function]}
+      <div
+        className="o-form__header  c-payment-method__header"
       >
         <div>
-          <div
-            className="o-form__background"
+          <h2>
+            Payment Method
+          </h2>
+        </div>
+        <div>
+          <Button
+            aria-label="Edit your payment method"
+            className="o-button-edit"
+            label="Edit"
+            onClick={[Function]}
+            status="secondary"
           >
             <div
-              className="o-form__wrapper"
+              className="o-button__container"
             >
-              <Component
-                cardTokenRequested={false}
+              <button
+                aria-label="Edit your payment method"
+                className="o-button-edit o-button o-button--secondary"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                Edit
+              </button>
+            </div>
+          </Button>
+        </div>
+      </div>
+      <div
+        className="c-payment-method__summary o-form__error"
+      >
+        <p>
+          <span
+            className="u-bold"
+          >
+             Payment Mode: 
+          </span>
+          <span>
+             
+            Credit/Debit Card
+             
+          </span>
+        </p>
+        <p>
+          <span
+            className="u-bold"
+          >
+            Billing Address: 
+          </span>
+          <span
+            className="u-bold"
+          >
+            Prasanna Gaddam
+             
+            Prasanna Gaddam
+             
+          </span>
+          <span>
+            Apartment 19, Waterloo Court, 17 Hunslet Road
+            , 
+            Leeds
+            , 
+            LS10 1QN
+          </span>
+        </p>
+      </div>
+      <div
+        className="c-payment-method__section"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <PaymentMethodSelector
+          currentMethod="card"
+        >
+          <div
+            className="o-form c-payment-method"
+          >
+            <div
+              className="c-payment-method__button-group"
+            >
+              <Button
+                aria-label="Use credit or debit card"
+                className="c-payment-method__button c-payment-method__button--active"
+                label="Credit/Debit Card"
+                onClick={[Function]}
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use credit or debit card"
+                    className="c-payment-method__button c-payment-method__button--active o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    Credit/Debit Card
+                  </button>
+                </div>
+              </Button>
+              <Button
+                aria-label="Use paypal"
+                className="c-payment-method__button "
+                label="PayPal"
+                onClick={[Function]}
+              >
+                <div
+                  className="o-button__container"
+                >
+                  <button
+                    aria-label="Use paypal"
+                    className="c-payment-method__button  o-button"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                  >
+                    PayPal
+                  </button>
+                </div>
+              </Button>
+            </div>
+            <div
+              className="c-payment-method__images"
+            >
+              <span
+                className="c-payment-method__images-cardpayment"
+              >
+                <Image
+                  src="/static/payments/visa.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/mastercard.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/american-express.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+                <Image
+                  src="/static/payments/maestro.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+              <span
+                className="c-payment-method__images-paypal"
+              >
+                <Image
+                  src="/static/payments/pay-pal.svg"
+                >
+                  <div>
+                    <LazyLoad
+                      debounce={true}
+                      elementType="div"
+                      offset={0}
+                      offsetBottom={0}
+                      offsetHorizontal={0}
+                      offsetLeft={0}
+                      offsetRight={0}
+                      offsetTop={0}
+                      offsetVertical={0}
+                      throttle={250}
+                    >
+                      <div
+                        className="LazyLoad"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </LazyLoad>
+                  </div>
+                </Image>
+              </span>
+            </div>
+          </div>
+        </PaymentMethodSelector>
+        <StripePayment
+          checkout={
+            Object {
+              "billingAddress": Object {
+                "city": "Leeds",
+                "collapsed": true,
+                "completed": true,
+                "country_code": "GBP",
+                "errors": Object {},
+                "first_name": "Prasanna Gaddam",
+                "label": "BILLING_LABEL",
+                "last_name": "Prasanna Gaddam",
+                "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                "line_2": "Hunslet",
+                "primary_phone": "07400000000",
+                "state": "Yorkshire",
+                "zipcode": "LS10 1QN",
+              },
+              "currency": "GBP",
+              "currentStep": 2,
+              "customer": Object {
+                "email": "customer@example.com",
+                "external_id": "123",
+                "name": "John Doe",
+              },
+              "error": false,
+              "lineItems": Array [
+                Object {
+                  "currency": "GBP",
+                  "paid_price_inc_tax": "10",
+                  "quantity": 3,
+                  "retail_price_inc_tax": "10",
+                  "sku": "SK840763631-2",
+                  "tax_amount": 0,
+                  "tax_percentage": 0,
+                  "title": "Textured Long T Shirt",
+                },
+              ],
+              "loading": false,
+              "paid_price_inc_tax": "0105.45",
+              "paymentMethod": Object {
+                "collapsed": true,
+                "completed": false,
+                "selectedMethod": "card",
+              },
+              "request_uuid": 6765757657657,
+              "retail_price_inc_tax": "0105.45",
+              "reviewOrder": Object {
+                "collapsed": true,
+                "completed": false,
+              },
+              "shippingAddress": Object {
+                "city": "Leeds",
+                "collapsed": true,
+                "completed": true,
+                "country_code": "GBP",
+                "first_name": "Prasanna Gaddam",
+                "label": "BILLING_LABEL",
+                "last_name": "Prasanna Gaddam",
+                "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                "line_2": "Hunslet",
+                "primary_phone": "07400000000",
+                "state": "Yorkshire",
+                "zipcode": "LS10 1QN",
+              },
+              "shippingMethod": Object {
+                "collapsed": false,
+                "completed": true,
+                "id": "2",
+                "name": "UPS Next Day",
+                "paid_price_inc_tax": 5.45,
+                "reference": "ups_next_day",
+                "retail_price_inc_tax": 5.45,
+                "sku": "ups_next_day",
+                "tax_amount": 2,
+                "tax_percentage": 20,
+              },
+              "tax_amount": 0,
+            }
+          }
+          order={
+            Object {
+              "cardErrors": false,
+              "cardTokenRequested": false,
+            }
+          }
+          setShippingBillingAddress={[Function]}
+        >
+          <div>
+            <div
+              className="o-form__background"
+            >
+              <div
+                className="o-form__wrapper"
+              >
+                <Component
+                  cardTokenRequested={false}
+                  checkout={
+                    Object {
+                      "billingAddress": Object {
+                        "city": "Leeds",
+                        "collapsed": true,
+                        "completed": true,
+                        "country_code": "GBP",
+                        "errors": Object {},
+                        "first_name": "Prasanna Gaddam",
+                        "label": "BILLING_LABEL",
+                        "last_name": "Prasanna Gaddam",
+                        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                        "line_2": "Hunslet",
+                        "primary_phone": "07400000000",
+                        "state": "Yorkshire",
+                        "zipcode": "LS10 1QN",
+                      },
+                      "currency": "GBP",
+                      "currentStep": 2,
+                      "customer": Object {
+                        "email": "customer@example.com",
+                        "external_id": "123",
+                        "name": "John Doe",
+                      },
+                      "error": false,
+                      "lineItems": Array [
+                        Object {
+                          "currency": "GBP",
+                          "paid_price_inc_tax": "10",
+                          "quantity": 3,
+                          "retail_price_inc_tax": "10",
+                          "sku": "SK840763631-2",
+                          "tax_amount": 0,
+                          "tax_percentage": 0,
+                          "title": "Textured Long T Shirt",
+                        },
+                      ],
+                      "loading": false,
+                      "paid_price_inc_tax": "0105.45",
+                      "paymentMethod": Object {
+                        "collapsed": true,
+                        "completed": false,
+                        "selectedMethod": "card",
+                      },
+                      "request_uuid": 6765757657657,
+                      "retail_price_inc_tax": "0105.45",
+                      "reviewOrder": Object {
+                        "collapsed": true,
+                        "completed": false,
+                      },
+                      "shippingAddress": Object {
+                        "city": "Leeds",
+                        "collapsed": true,
+                        "completed": true,
+                        "country_code": "GBP",
+                        "first_name": "Prasanna Gaddam",
+                        "label": "BILLING_LABEL",
+                        "last_name": "Prasanna Gaddam",
+                        "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                        "line_2": "Hunslet",
+                        "primary_phone": "07400000000",
+                        "state": "Yorkshire",
+                        "zipcode": "LS10 1QN",
+                      },
+                      "shippingMethod": Object {
+                        "collapsed": false,
+                        "completed": true,
+                        "id": "2",
+                        "name": "UPS Next Day",
+                        "paid_price_inc_tax": 5.45,
+                        "reference": "ups_next_day",
+                        "retail_price_inc_tax": 5.45,
+                        "sku": "ups_next_day",
+                        "tax_amount": 2,
+                        "tax_percentage": 20,
+                      },
+                      "tax_amount": 0,
+                    }
+                  }
+                >
+                  <p>
+                    Mocked Card Fields
+                  </p>
+                </Component>
+                <div
+                  className="o-form__input-group"
+                >
+                  <label>
+                    Billing address *
+                  </label>
+                </div>
+                <_class
+                  checked={false}
+                  label="Same as shipping address"
+                  name="shippingAddressAsBillingAddress"
+                  type="checkbox"
+                >
+                  <Checkbox
+                    checked={false}
+                    label="Same as shipping address"
+                    name="shippingAddressAsBillingAddress"
+                    renderValidationMessage={[Function]}
+                    type="checkbox"
+                  >
+                    <div
+                      className="o-form__input-group"
+                    >
+                      <label
+                        className="o-form__label"
+                        htmlFor="shippingAddressAsBillingAddress"
+                      >
+                        <input
+                          checked={false}
+                          className="o-form__checkbox"
+                          id="shippingAddressAsBillingAddress"
+                          name="shippingAddressAsBillingAddress"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          type="checkbox"
+                        />
+                        <span
+                          className="o-form__checkbox-caption"
+                        >
+                          Same as shipping address
+                           
+                        </span>
+                      </label>
+                    </div>
+                  </Checkbox>
+                </_class>
+              </div>
+            </div>
+            <Connect(AddressForm)
+              addressType="billing"
+              aria-label="Billing address form"
+              checkout={
+                Object {
+                  "billingAddress": Object {
+                    "city": "Leeds",
+                    "collapsed": true,
+                    "completed": true,
+                    "country_code": "GBP",
+                    "errors": Object {},
+                    "first_name": "Prasanna Gaddam",
+                    "label": "BILLING_LABEL",
+                    "last_name": "Prasanna Gaddam",
+                    "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                    "line_2": "Hunslet",
+                    "primary_phone": "07400000000",
+                    "state": "Yorkshire",
+                    "zipcode": "LS10 1QN",
+                  },
+                  "currency": "GBP",
+                  "currentStep": 2,
+                  "customer": Object {
+                    "email": "customer@example.com",
+                    "external_id": "123",
+                    "name": "John Doe",
+                  },
+                  "error": false,
+                  "lineItems": Array [
+                    Object {
+                      "currency": "GBP",
+                      "paid_price_inc_tax": "10",
+                      "quantity": 3,
+                      "retail_price_inc_tax": "10",
+                      "sku": "SK840763631-2",
+                      "tax_amount": 0,
+                      "tax_percentage": 0,
+                      "title": "Textured Long T Shirt",
+                    },
+                  ],
+                  "loading": false,
+                  "paid_price_inc_tax": "0105.45",
+                  "paymentMethod": Object {
+                    "collapsed": true,
+                    "completed": false,
+                    "selectedMethod": "card",
+                  },
+                  "request_uuid": 6765757657657,
+                  "retail_price_inc_tax": "0105.45",
+                  "reviewOrder": Object {
+                    "collapsed": true,
+                    "completed": false,
+                  },
+                  "shippingAddress": Object {
+                    "city": "Leeds",
+                    "collapsed": true,
+                    "completed": true,
+                    "country_code": "GBP",
+                    "first_name": "Prasanna Gaddam",
+                    "label": "BILLING_LABEL",
+                    "last_name": "Prasanna Gaddam",
+                    "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
+                    "line_2": "Hunslet",
+                    "primary_phone": "07400000000",
+                    "state": "Yorkshire",
+                    "zipcode": "LS10 1QN",
+                  },
+                  "shippingMethod": Object {
+                    "collapsed": false,
+                    "completed": true,
+                    "id": "2",
+                    "name": "UPS Next Day",
+                    "paid_price_inc_tax": 5.45,
+                    "reference": "ups_next_day",
+                    "retail_price_inc_tax": 5.45,
+                    "sku": "ups_next_day",
+                    "tax_amount": 2,
+                    "tax_percentage": 20,
+                  },
+                  "tax_amount": 0,
+                }
+              }
+              className="o-form__billing"
+              formName="billingAddress"
+              title="Billing Address"
+            >
+              <AddressForm
+                addressBook={Array []}
+                addressType="billing"
+                aria-label="Billing address form"
                 checkout={
                   Object {
                     "billingAddress": Object {
@@ -2040,185 +2339,54 @@ exports[`renders payment summary on collapsing 1`] = `
                     "tax_amount": 0,
                   }
                 }
-              >
-                <p>
-                  Mocked Card Fields
-                </p>
-              </Component>
-              <div
-                className="o-form__input-group"
-              >
-                <label>
-                  Billing address *
-                </label>
-              </div>
-              <_class
-                checked={false}
-                label="Same as shipping address"
-                name="shippingAddressAsBillingAddress"
-                type="checkbox"
-              >
-                <Checkbox
-                  checked={false}
-                  label="Same as shipping address"
-                  name="shippingAddressAsBillingAddress"
-                  renderValidationMessage={[Function]}
-                  type="checkbox"
-                >
-                  <div
-                    className="o-form__input-group"
-                  >
-                    <label
-                      className="o-form__label"
-                      htmlFor="shippingAddressAsBillingAddress"
-                    >
-                      <input
-                        checked={false}
-                        className="o-form__checkbox"
-                        id="shippingAddressAsBillingAddress"
-                        name="shippingAddressAsBillingAddress"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        type="checkbox"
-                      />
-                      <span
-                        className="o-form__checkbox-caption"
-                      >
-                        Same as shipping address
-                         
-                      </span>
-                    </label>
-                  </div>
-                </Checkbox>
-              </_class>
-            </div>
-          </div>
-          <AddressForm
-            addressType="billing"
-            aria-label="Billing address form"
-            checkout={
-              Object {
-                "billingAddress": Object {
-                  "city": "Leeds",
-                  "collapsed": true,
-                  "completed": true,
-                  "country_code": "GBP",
-                  "errors": Object {},
-                  "first_name": "Prasanna Gaddam",
-                  "label": "BILLING_LABEL",
-                  "last_name": "Prasanna Gaddam",
-                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-                  "line_2": "Hunslet",
-                  "primary_phone": "07400000000",
-                  "state": "Yorkshire",
-                  "zipcode": "LS10 1QN",
-                },
-                "currency": "GBP",
-                "currentStep": 2,
-                "customer": Object {
-                  "email": "customer@example.com",
-                  "external_id": "123",
-                  "name": "John Doe",
-                },
-                "error": false,
-                "lineItems": Array [
-                  Object {
-                    "currency": "GBP",
-                    "paid_price_inc_tax": "10",
-                    "quantity": 3,
-                    "retail_price_inc_tax": "10",
-                    "sku": "SK840763631-2",
-                    "tax_amount": 0,
-                    "tax_percentage": 0,
-                    "title": "Textured Long T Shirt",
-                  },
-                ],
-                "loading": false,
-                "paid_price_inc_tax": "0105.45",
-                "paymentMethod": Object {
-                  "collapsed": true,
-                  "completed": false,
-                  "selectedMethod": "card",
-                },
-                "request_uuid": 6765757657657,
-                "retail_price_inc_tax": "0105.45",
-                "reviewOrder": Object {
-                  "collapsed": true,
-                  "completed": false,
-                },
-                "shippingAddress": Object {
-                  "city": "Leeds",
-                  "collapsed": true,
-                  "completed": true,
-                  "country_code": "GBP",
-                  "first_name": "Prasanna Gaddam",
-                  "label": "BILLING_LABEL",
-                  "last_name": "Prasanna Gaddam",
-                  "line_1": "Apartment 19, Waterloo Court, 17 Hunslet Road",
-                  "line_2": "Hunslet",
-                  "primary_phone": "07400000000",
-                  "state": "Yorkshire",
-                  "zipcode": "LS10 1QN",
-                },
-                "shippingMethod": Object {
-                  "collapsed": false,
-                  "completed": true,
-                  "id": "2",
-                  "name": "UPS Next Day",
-                  "paid_price_inc_tax": 5.45,
-                  "reference": "ups_next_day",
-                  "retail_price_inc_tax": 5.45,
-                  "sku": "ups_next_day",
-                  "tax_amount": 2,
-                  "tax_percentage": 20,
-                },
-                "tax_amount": 0,
-              }
-            }
-            className="o-form__billing"
-            formName="billingAddress"
-            title="Billing Address"
-          >
-            <div
-              className="o-form__address o-form__billing"
-            >
-              <div
-                className="o-form__header c-address-form__header"
+                className="o-form__billing"
+                dispatch={[Function]}
+                formName="billingAddress"
+                loggedIn={false}
+                title="Billing Address"
               >
                 <div
-                  className="o-form__header-title c-address-form__header-title"
-                >
-                  <h2>
-                    Billing Address
-                  </h2>
-                </div>
-                <Button
-                  className="o-button-edit"
-                  label="Edit"
-                  onClick={[Function]}
-                  status="secondary"
+                  className="o-form__address o-form__billing"
                 >
                   <div
-                    className="o-button__container"
+                    className="o-form__header c-address-form__header"
                   >
-                    <button
-                      className="o-button-edit o-button o-button--secondary"
-                      disabled={false}
-                      onClick={[Function]}
-                      role="button"
-                      tabIndex="0"
+                    <div
+                      className="o-form__header-title c-address-form__header-title"
                     >
-                      Edit
-                    </button>
+                      <h2>
+                        Billing Address
+                      </h2>
+                    </div>
+                    <Button
+                      className="o-button-edit"
+                      label="Edit"
+                      onClick={[Function]}
+                      status="secondary"
+                    >
+                      <div
+                        className="o-button__container"
+                      >
+                        <button
+                          className="o-button-edit o-button o-button--secondary"
+                          disabled={false}
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex="0"
+                        >
+                          Edit
+                        </button>
+                      </div>
+                    </Button>
                   </div>
-                </Button>
-              </div>
-              <div />
-            </div>
-          </AddressForm>
-        </div>
-      </StripePayment>
+                  <div />
+                </div>
+              </AddressForm>
+            </Connect(AddressForm)>
+          </div>
+        </StripePayment>
+      </div>
     </div>
-  </div>
-</PaymentMethod>
+  </PaymentMethod>
+</Provider>
 `;

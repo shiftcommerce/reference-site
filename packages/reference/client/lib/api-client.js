@@ -31,6 +31,16 @@ class ApiClient {
     }
   }
 
+  async delete (endpoint, options = {}) {
+    try {
+      const response = await this.client.delete(endpoint)
+      return { status: response.status, data: response.data }
+    } catch (error) {
+      console.error('Error during delete request', error)
+      return { status: error.response.status, data: error.response.data }
+    }
+  }
+
   encodeParams (endpoint, queryObject = {}) {
     if (Object.keys(queryObject).length > 0) {
       const query = qs.stringify(queryObject)

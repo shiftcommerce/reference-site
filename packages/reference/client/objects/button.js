@@ -4,13 +4,13 @@ import classNames from 'classnames'
 
 class Button extends Component {
   render () {
-    let {
+    const {
       status, label, size, disabled = false,
-      className, onClick, hoverStyles, ...otherProps
+      className, containerClassName, onClick, hoverStyles, ...otherProps
     } = this.props
 
     return (
-      <div className='o-button__container' style={hoverStyles}>
+      <div className={classNames('o-button__container', containerClassName)} style={hoverStyles}>
         <button
           className={classNames(
             className,

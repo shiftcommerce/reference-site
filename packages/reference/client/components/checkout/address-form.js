@@ -1,5 +1,6 @@
 // Libraries
 import { Component } from 'react'
+import { connect } from 'react-redux'
 import classNames from 'classnames'
 
 // Objects
@@ -11,7 +12,20 @@ import Button from '../../objects/button'
 // Json
 import Countries from './../../static/countries.json'
 
-class AddressForm extends Component {
+// Components
+import AddressBook from '../address-book'
+
+export class AddressForm extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      addressBookShown: false
+    }
+
+    this.toggleAddressBook = this.toggleAddressBook.bind(this)
+  }
+
   requiredFields () {
     return [ 'line_1', 'zipcode', 'city', 'primary_phone', 'email' ]
   }
@@ -50,6 +64,28 @@ class AddressForm extends Component {
         }
       </div>
     )
+  }
+
+  renderAddressBookButton () {
+    const { loggedIn } = this.props
+    const addressBookHasEntries = this.props.addressBook.length !== 0
+
+    return loggedIn && addressBookHasEntries && (
+      <Button
+        className='c-checkout__address-book-button'
+        label='Address book'
+        status='primary'
+        size='sml'
+        onClick={this.toggleAddressBook}
+      />
+    )
+  }
+
+  toggleAddressBook (e) {
+    e.preventDefault()
+    this.setState({
+      addressBookShown: !this.state.addressBookShown
+    })
   }
 
   renderCountriesDropdown () {
@@ -202,10 +238,40 @@ class AddressForm extends Component {
     )
   }
 
+  renderSaveAddressCheckbox () {
+    const { loggedIn, checkout, formName } = this.props
+    const address = checkout[formName]
+    const checkboxOptions = {
+      label: 'Save address for later',
+      name: 'saveToAddressBook',
+      value: address.saveToAddressBook,
+      className: 'o-form__checkbox-label'
+    }
+    const inputOptions = {
+      className: 'o-form__input-block',
+      placeholder: 'A recognisable name, only for your own use, e.g. "Home"',
+      label: 'Address name',
+      name: 'label',
+      type: 'text',
+      value: address.label
+    }
+    return (
+      <div>
+        { loggedIn && this.renderCheckbox(address, checkboxOptions) }
+        { address.saveToAddressBook && this.renderInputField(address, inputOptions) }
+      </div>
+    )
+  }
+
   renderNewsletterCheckbox () {
     const { checkout, formName, addressType } = this.props
     const address = checkout[formName]
-    const fieldOption = { label: 'Sign up for Weekly Newsletters (Optional)', name: 'newsletterOptIn', value: address.newsletterOptIn, className: 'o-form__checkbox-label' }
+    const fieldOption = {
+      label: 'Sign up for Weekly Newsletters (Optional)',
+      name: 'newsletterOptIn',
+      value: address.newsletterOptIn,
+      className: 'o-form__checkbox-label'
+    }
     return (
       <div>
         { addressType === 'shipping' && this.renderCheckbox(address, fieldOption) }
@@ -252,6 +318,7 @@ class AddressForm extends Component {
         { this.renderFormSummary() }
         { !collapsed &&
           <form className='o-form__wrapper o-form__background'>
+            { this.renderAddressBookButton() }
             { this.renderCountriesDropdown() }
             { this.renderCustomerNameFields() }
             { this.renderCompanyNameOption() }
@@ -259,13 +326,25 @@ class AddressForm extends Component {
             { this.renderAddressLine2() }
             { this.renderAddressFields() }
             <p>* Denotes required fields</p>
+            { this.renderSaveAddressCheckbox() }
             { this.renderNewsletterCheckbox() }
             { this.renderFormSubmitButton() }
           </form>
         }
+        { this.state.addressBookShown && <AddressBook
+          formName={formName}
+          onClose={this.toggleAddressBook}
+        /> }
       </div>
     )
   }
 }
 
-export default AddressForm
+const mapStateToProps = ({ login: { loggedIn }, checkout: { addressBook } }) => {
+  return {
+    addressBook,
+    loggedIn
+  }
+}
+
+export default connect(mapStateToProps)(AddressForm)
