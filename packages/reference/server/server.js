@@ -130,6 +130,14 @@ module.exports = app.prepare().then(() => {
     res.redirect(302, '/account/myaccount')
   })
 
+  server.get('/checkout', (req, res) => {
+    return handle(req, res)
+  })
+
+  server.get('/cart', (req, res) => {
+    return handle(req, res)
+  })
+
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./server/service-worker.js').pipe(res)
@@ -158,10 +166,10 @@ module.exports = app.prepare().then(() => {
     }
 
     const directRouting = async (page) => {
-      const { resource_id } = page.data.data[0].attributes
-      const resourceType = page.data.data[0].attributes.resource_type
+      if (page.status === 200 && page.data.data.length !== 0) {
+        const { resource_id } = page.data.data[0].attributes
+        const resourceType = page.data.data[0].attributes.resource_type
 
-      if (page.status === 200) {
         switch (resourceType) {
           case 'Product':
             return app.render(req, res, '/product', Object.assign(req.query, { id: resource_id }))
