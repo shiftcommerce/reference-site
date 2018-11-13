@@ -2,6 +2,7 @@ import React from 'react'
 import Cookies from 'js-cookie'
 import { initializeStore } from '../utils/configure-store'
 import { readMenu } from '../actions/menu-actions'
+import { fetchAccountDetails } from '../actions/account-actions'
 import { setLoggedInFromCookies } from '../actions/login-actions'
 
 const isServer = typeof window === 'undefined'
@@ -51,6 +52,7 @@ export default (App) => {
     componentDidMount () {
       if (Cookies.get('signedIn')) {
         this.reduxStore.dispatch(setLoggedInFromCookies())
+        this.reduxStore.dispatch(fetchAccountDetails())
       }
     }
 

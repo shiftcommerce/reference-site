@@ -1,6 +1,9 @@
 // actionTypes
 import * as actionTypes from './action-types'
 
+// import other actions
+import { initiateCheckout } from './checkout-actions'
+
 // cartHandler
 import * as cartHandler from './handlers/cart-handler'
 
@@ -31,12 +34,6 @@ export function storeCart (cart) {
 export function initiateCart () {
   return {
     type: actionTypes.INITIATE_CART
-  }
-}
-
-export function initiateCheckout () {
-  return {
-    type: actionTypes.INITIATE_CHECKOUT
   }
 }
 

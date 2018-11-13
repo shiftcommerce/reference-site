@@ -9,6 +9,9 @@ import rootReducer from '../../../../client/reducers/root-reducer'
 // actionTypes
 import * as types from '../../../../client/actions/action-types'
 
+// Fixtures
+import accountPayload from '../../../fixtures/account-payload'
+
 // Pages
 import RegisterPage from '../../../../client/pages/account/register'
 
@@ -28,7 +31,7 @@ test('redirects to myaccount page when account is created', () => {
   // Act - pretend the account is being set
   store.dispatch({
     type: types.SET_ACCOUNT,
-    payload: {}
+    payload: accountPayload.data.attributes
   })
 
   // Assert - verify that only one redirect happens

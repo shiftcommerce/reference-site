@@ -3,14 +3,52 @@ import nock from 'nock'
 import httpAdapter from 'axios/lib/adapters/http'
 
 // fixtures
+import accountPayload from '../../fixtures/account-payload'
 import registerPayload from '../../fixtures/register'
 import registerInvalidPayload from '../../fixtures/register-invalid'
 import loginAccountPayload from '../../fixtures/login-account'
 import loginAccountInvalidPayload from '../../fixtures/login-account-invalid'
 
-import { accountRenderer } from '../../../server/route-handlers/account-route-handler'
+import { getRenderer, postRenderer } from '../../../server/route-handlers/account-route-handler'
 
 axios.defaults.adapter = httpAdapter
+
+describe('fetching an account', () => {
+  afterEach(() => { nock.cleanAll() })
+
+  describe('with valid data', () => {
+    const url = 'account'
+
+    it('should return the data and log the user in', async () => {
+      // Arrange
+      const accountID = '23063267'
+
+      nock(process.env.API_HOST)
+        .get(`/${url}/${accountID}`)
+        .query(true)
+        .reply(200, accountPayload)
+
+      const req = {
+        session: {
+          customerId: accountID
+        }
+      }
+
+      const res = {
+        status: jest.fn(x => ({
+          send: jest.fn(y => y)
+        }))
+      }
+
+      // Act
+      const response = await getRenderer(url)(req, res)
+
+      // Assert
+      expect(res.status).toHaveBeenCalledWith(200)
+      expect(response.data.id).toBe(accountID)
+    })
+  })
+})
 
 describe('create an account', () => {
   afterEach(() => { nock.cleanAll() })
@@ -48,7 +86,7 @@ describe('create an account', () => {
         }))
       }
 
-      const response = await accountRenderer(url)(req, res)
+      const response = await postRenderer(url)(req, res)
 
       expect(res.status).toHaveBeenCalledWith(201)
       expect(response.data.id).toBe('23063267')
@@ -93,7 +131,7 @@ describe('create an account', () => {
         }))
       }
 
-      const response = await accountRenderer(url)(req, res)
+      const response = await postRenderer(url)(req, res)
 
       expect(res.status).toHaveBeenCalledWith(422)
       expect(response[0].status).toBe('422')
@@ -135,14 +173,15 @@ describe('login into an account', () => {
         }))
       }
 
-      const response = await accountRenderer(url)(req, res)
+      const response = await postRenderer(url)(req, res)
 
       expect(res.status).toHaveBeenCalledWith(201)
       expect(response.data.id).toBe('6699f1eb-ac8a-442c-87ea-a814affa5389')
       expect(response.data.type).toBe('customer_account_authentications')
       expect(response.data.attributes.email).toBe('a.fletcher1234@gmail.com')
       expect(response.data.attributes.password).toBe('qwertyuiop')
-      expect(req.session.customerId).toBe('6699f1eb-ac8a-442c-87ea-a814affa5389')
+      expect(response.data.relationships.customer_account.data.id).toBe('23063264')
+      expect(req.session.customerId).toBe('23063264')
     })
   })
 
@@ -177,7 +216,7 @@ describe('login into an account', () => {
         }))
       }
 
-      const response = await accountRenderer(url)(req, res)
+      const response = await postRenderer(url)(req, res)
 
       expect(res.status).toHaveBeenCalledWith(404)
       expect(response[0].detail).toBe('Wrong email/reference/token or password')

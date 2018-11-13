@@ -4,7 +4,7 @@ import * as actionTypes from '../../../client/actions/action-types'
 // Mock localforage module
 jest.mock('../../../client/lib/localforage')
 
-test('return STORE_CHECKOUT action type on calling readCheckoutFromLocalStorage()', () => {
+test('return storeCheckout action type on calling readCheckoutFromLocalStorage()', () => {
   // Arrange
   const fn = checkoutActions.readCheckoutFromLocalStorage()
   const dispatch = jest.fn()
@@ -15,14 +15,17 @@ test('return STORE_CHECKOUT action type on calling readCheckoutFromLocalStorage(
     loading: false,
     updatedAt: new Date()
   }
-  const getState = () => ({ checkout: checkout })
+  const getState = () => ({ checkout: checkout, account: {} })
 
   // Act
   fn(dispatch, getState)
 
   // Assert
   expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ checkout: checkout, type: actionTypes.STORE_CHECKOUT })
+  // Expect dispatch to have been called with function. Comparing function output with expected function output.
+  const mockCall = dispatch.mock.calls[0]
+  const mockCallFirstArgument = mockCall[0]
+  expect(mockCallFirstArgument(jest.fn(), getState)).toEqual(checkoutActions.storeCheckout(checkout)(jest.fn(), getState))
 })
 
 test('return SET_CHECKOUT_INPUT_VALUE on calling inputChange()', () => {

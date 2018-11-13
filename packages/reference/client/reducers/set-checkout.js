@@ -6,35 +6,39 @@ import CheckoutStepTransitionManager from '../lib/checkout-step-transition-manag
 
 const addressFormFields = {
   country_code: '',
-  first_name: '',
-  last_name: '',
-  companyName: '',
-  companyNameShown: '',
   line_1: '',
   line_2: '',
   address2Shown: '',
   zipcode: '',
   city: '',
   state: '',
+  companyName: '',
+  companyNameShown: ''
+}
+
+const formFields = {
+  first_name: '',
+  last_name: '',
   primary_phone: '',
   email: '',
   newsletterOptIn: false,
   collapsed: false,
   completed: false,
-  errors: {}
+  errors: {},
+  ...addressFormFields
 }
 
 export const checkoutInitialState = {
   error: false,
   shippingAddress: {
-    ...addressFormFields
+    ...formFields
   },
   shippingMethod: {
     collapsed: true,
     completed: false
   },
   billingAddress: {
-    ...addressFormFields
+    ...formFields
   },
   shippingAddressAsBillingAddress: true,
   paymentMethod: {
@@ -94,7 +98,13 @@ export default function setCheckout (state = checkoutInitialState, action) {
       return newState
 
     case types.INITIATE_CHECKOUT:
-      return Object.assign({}, checkoutInitialState)
+      let additionalInfo = {}
+
+      if (action.customerDetails) {
+        additionalInfo.shippingAddress = Object.assign(formFields, action.customerDetails)
+      }
+
+      return Object.assign(checkoutInitialState, additionalInfo)
 
     case types.CHANGE_PAYMENT_METHOD:
       newState.paymentMethod.selectedMethod = action.paymentMethod

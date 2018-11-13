@@ -13,6 +13,7 @@ import { inputChange,
   setValidationMessage,
   createLogin
 } from '../../actions/login-actions'
+import { fetchAccountDetails } from '../../actions/account-actions'
 
 // Components
 import LoginForm from '../../components/account/login-form'
@@ -55,6 +56,7 @@ export class Login extends Component {
     const { login } = this.props
 
     this.props.dispatch(createLogin(login))
+      .then(() => { this.props.dispatch(fetchAccountDetails()) })
   }
 
   render () {

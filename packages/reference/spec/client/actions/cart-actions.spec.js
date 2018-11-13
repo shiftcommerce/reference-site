@@ -1,5 +1,6 @@
 import * as cartActions from '../../../client/actions/cart-actions'
 import * as actionTypes from '../../../client/actions/action-types'
+import { initiateCheckout } from '../../../client/actions/checkout-actions'
 
 // Mock localforage module
 jest.mock('../../../client/lib/localforage')
@@ -26,7 +27,7 @@ test('return STORE_CART action type on calling readCart()', () => {
   // act
   fn(dispatch, getState)
 
-  // asset
+  // assert
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': cart, type: actionTypes.STORE_CART })
 })
@@ -51,7 +52,7 @@ test('return UPDATE_CART_LINE_ITEMS action type on calling addToCart()', () => {
   // act
   fn(dispatch, getState)
 
-  // asset
+  // assert
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': { 'lineItems': [lineItemToAdd],
     totalQuantity: 2 },
@@ -98,7 +99,7 @@ test('return UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', ()
   // act
   fn(dispatch, getState)
 
-  // asset
+  // assert
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ 'cart': expectedCart, type: actionTypes.UPDATE_CART_LINE_ITEMS })
 })
@@ -112,7 +113,7 @@ test('return INITIALIZE_CART action type on calling initializeCart()', () => {
   // act
   fn(dispatch, getState)
 
-  // asset
+  // assert
   expect(fn).toEqual(expect.any(Function))
   expect(dispatch).toHaveBeenCalledWith({ type: actionTypes.INITIATE_CART })
 })
@@ -121,12 +122,15 @@ test('return INITIALIZE_CHECKOUT action type on calling initializeCart()', () =>
   // arrange
   const fn = cartActions.initializeCart()
   const dispatch = jest.fn()
-  const getState = () => ({ })
+  const getState = () => ({ account: {} })
 
   // act
   fn(dispatch, getState)
 
-  // asset
+  // assert
   expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ type: actionTypes.INITIATE_CHECKOUT })
+  // Expect dispatch to have been called with function. Comparing function output with expected function output.
+  const mockCall = dispatch.mock.calls[1]
+  const mockCallFirstArgument = mockCall[0]
+  expect(mockCallFirstArgument(jest.fn(), getState)).toEqual(initiateCheckout()(jest.fn(), getState))
 })

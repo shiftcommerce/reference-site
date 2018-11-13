@@ -72,10 +72,39 @@ export function inputComplete () {
 
 // Stores a checkout in redux store
 export function storeCheckout (checkout) {
-  return {
-    type: actionTypes.STORE_CHECKOUT,
-    checkout: Object.assign({}, checkout)
+  return (dispatch, getState) => {
+    const customer = getState().account
+
+    // If logged in set customer details if not already set
+    if (customer.loggedIn) {
+      [checkout.shippingAddress, checkout.billingAddress].forEach((addressObject) => {
+        if (addressIsEmpty(addressObject)) {
+          addressObject.first_name = addressObject.first_name || customer.first_name
+          addressObject.last_name = addressObject.last_name || customer.last_name
+          addressObject.email = addressObject.email || customer.email
+        }
+      })
+    }
+
+    return {
+      type: actionTypes.STORE_CHECKOUT,
+      checkout: Object.assign({}, checkout)
+    }
   }
+}
+
+// Helper method to return whether an address object is empty/has blank values
+function addressIsEmpty (addressObject) {
+  const fields = ['first_name', 'last_name', 'email', 'primary_phone', 'country_code', 'companyName', 'line_1', 'line_2', 'zipcode', 'city', 'state']
+  let emptyAddress = true
+
+  for (const field of fields) {
+    if (addressObject[field]) {
+      emptyAddress = false
+      break
+    }
+  }
+  return emptyAddress
 }
 
 // set shipping method details
@@ -103,7 +132,7 @@ export function storeCheckoutInLocalStorage (checkout) {
 // This function will be called by checkout every time the component is mounted
 export function readCheckoutFromLocalStorage () {
   return (dispatch, getState) => {
-    let checkout = getState().checkout
+    const { checkout } = getState()
     // check if local redux store has no data
     if (checkout.updatedAt === undefined) {
       localForage.getValue('checkout').then((checkout) => {
@@ -122,9 +151,24 @@ export function readCheckoutFromLocalStorage () {
     return checkout
   }
 }
+
 export function initiateCheckout () {
-  return {
-    type: actionTypes.INITIATE_CHECKOUT
+  return (dispatch, getState) => {
+    const customer = getState().account
+
+    let action = {
+      type: actionTypes.INITIATE_CHECKOUT
+    }
+
+    if (customer.loggedIn === true) {
+      action.customer = {
+        first_name: customer.first_name,
+        last_name: customer.last_name,
+        email: customer.email
+      }
+    }
+
+    return action
   }
 }
 

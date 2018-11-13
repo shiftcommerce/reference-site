@@ -141,11 +141,12 @@ module.exports = app.prepare().then(() => {
   server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/getSlug', handler.getRenderer(platform.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
+  server.get('/getAccount', accountHandler.getRenderer(platform.AccountUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
 
   server.post('/createOrder', orderHandler.createOrderRenderer())
-  server.post('/register', accountHandler.accountRenderer(platform.RegisterUrl))
-  server.post('/login', accountHandler.accountRenderer(platform.LoginUrl))
+  server.post('/register', accountHandler.postRenderer(platform.AccountUrl))
+  server.post('/login', accountHandler.postRenderer(platform.LoginUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist
