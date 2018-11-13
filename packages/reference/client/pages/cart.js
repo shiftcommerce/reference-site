@@ -47,7 +47,11 @@ export class CartPage extends Component {
       )
     } else {
       return (
-        <CartTable cart={cart} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
+        <CartTable
+          cart={cart}
+          updateQuantity={this.updateQuantity}
+          deleteItem={this.deleteItem}
+        />
       )
     }
   }

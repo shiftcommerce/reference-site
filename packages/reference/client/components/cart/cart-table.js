@@ -12,7 +12,6 @@ import CartSummary from './cart-summary'
 import CartNoData from './cart-no-data'
 import PaymentIcons from './payment-icons'
 import PromoInput from '../promo-input'
-import RelatedProducts from '../products/display/related-products'
 
 // Fixtures
 import ShippingMethods from '../../static/shipping-methods.json'
@@ -44,22 +43,6 @@ class CartTable extends Component {
         </section>
       )
     }
-  }
-
-  renderRelatedProducts () {
-    const { cart: { lineItems } } = this.props
-
-    let bundles = []
-
-    lineItems.map((lineItem) => {
-      lineItem.bundles.map((bundle) => {
-        bundles.push(bundle)
-      })
-    })
-
-    return (
-      <RelatedProducts bundles={bundles} />
-    )
   }
 
   renderBasketDetails () {
@@ -107,9 +90,6 @@ class CartTable extends Component {
           </div>
         </section>
         { this.renderCartData() }
-        <div className='c-cart-table__related-products'>
-          { this.renderRelatedProducts() }
-        </div>
       </section>
     )
   }

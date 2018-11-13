@@ -5,11 +5,16 @@ import VariantSelector from '../../../client/objects/variant-selector'
 import product from '../../fixtures/product'
 
 test('renders correctly', () => {
-  // Arrange & Act
+  // Arrange
+  const changeVariant = jest.fn()
+
+  // Act
   const wrapper = mount(
-    <VariantSelector name='line_item[item_id]' prompt='Select a Size' variants={product.variants} />
+    <VariantSelector name='line_item[item_id]' prompt='Select a Size' onChange={changeVariant} variants={product.variants} />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  wrapper.find('select').simulate('change', { target: { value: 'Variant 1 for SEPIA nonslip tray 420×210mm' } })
+  expect(changeVariant).toHaveBeenCalled()
 })

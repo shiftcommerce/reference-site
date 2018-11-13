@@ -1,7 +1,6 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import Router from 'next/router'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -21,15 +20,14 @@ export class Product extends Component {
     this.state = {
       sku: '',
       variant: '',
+      variantId: null,
       quantity: 1,
       price: '',
       stockAvailableLevel: 0
     }
 
-    this.changeQuantity = this.changeQuantity.bind(this)
     this.changeVariant = this.changeVariant.bind(this)
     this.addToBag = this.addToBag.bind(this)
-    this.clickToBuy = this.clickToBuy.bind(this)
   }
 
   static async getInitialProps ({ reduxStore, req, query }) {
@@ -75,25 +73,12 @@ export class Product extends Component {
     }
   }
 
-  clickToBuy () {
-    this.addToBag()
-
-    const { cart } = this.props
-
-    if (cart.totalQuantity >= 1) {
-      Router.push('/checkout')
-    }
-  }
-
-  changeQuantity (e) {
-    this.setState({ quantity: e.target.value })
-  }
-
   changeVariant (e) {
     this.setState({
       stockAvailableLevel: parseInt(e.target.options[e.target.selectedIndex].dataset.stockAvailableLevel, 10),
       sku: e.target.value,
       variant: e.target.options[e.target.selectedIndex].text,
+      variantId: e.target.options[e.target.selectedIndex].dataset.variantId,
       price: e.target.options[e.target.selectedIndex].dataset.price
     })
   }
@@ -112,15 +97,16 @@ export class Product extends Component {
     } else {
       const templateSection = template && template.sections && template.sections.slice(-1).pop()
       const components = templateSection && templateSection.components
+      const selectedVariant = product.variants.find(variant => variant.id === this.state.variantId)
 
       return (
         <>
           <ProductDisplay
             product={product}
-            changeQuantity={this.changeQuantity}
             changeVariant={this.changeVariant}
             addToBag={this.addToBag}
             clickToBuy={this.clickToBuy}
+            selectedVariant={selectedVariant}
           />
           { components && renderComponents(components) }
         </>

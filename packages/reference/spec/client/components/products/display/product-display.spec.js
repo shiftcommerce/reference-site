@@ -1,5 +1,6 @@
 // Component
 import ProductDisplay from '../../../../../client/components/products/display/product-display'
+import ProductPrice from '../../../../../client/components/products/display/product-price'
 
 // Objects
 import Button from '../../../../../client/objects/button'
@@ -9,26 +10,57 @@ import Image from '../../../../../client/objects/image'
 // Fixtures
 import product from '../../../../fixtures/product'
 
-test('renders correctly', () => {
-  // Arrange
-  const emptyFunction = () => {}
-  const value = {
-    sku: '',
-    size: 'Small',
-    quantity: '',
-    stockAvailableLevel: 0
-  }
+describe('PDP renders correctly', () => {
+  test('when no variant is selected', () => {
+    // arrange
+    const emptyFunction = () => { }
+    const value = {
+      sku: '',
+      variant: '',
+      variantId: null,
+      quantity: 1,
+      price: '',
+      stockAvailableLevel: 0
+    }
 
-  // Act
-  const wrapper = mount(
-    <ProductDisplay product={product} changeSize={emptyFunction} addToBag={emptyFunction} {...value} />
-  )
+    // act
+    const wrapper = mount(
+      <ProductDisplay product={product} changeVariant={emptyFunction} addToBag={emptyFunction} {...value} />
+    )
 
-  // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(product.title)
-  expect(wrapper).toIncludeText(product.description)
-  expect(wrapper).toContainReact(<Image src={product.asset_files[0].s3_url} key={product.asset_files[0].s3_url} className='c-product-display__gallery-image' />)
-  expect(wrapper).toContainReact(<VariantSelector value='' name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Size Selector' />)
-  expect(wrapper.find('Button').at(0)).toMatchElement(<Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={emptyFunction} />)
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText(product.title)
+    expect(wrapper).toIncludeText(product.description)
+    expect(wrapper).toContainReact(<Image src={product.asset_files[0].s3_url} key={product.asset_files[0].s3_url} className='c-product-display__gallery-image' />)
+    expect(wrapper).toContainReact(<VariantSelector onChange={emptyFunction} value={value.sku} name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Variant Selector' />)
+    expect(wrapper.find('Button').at(0)).toMatchElement(<Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={emptyFunction} />)
+    expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={97.68} />)
+  })
+
+  test('when a variant has been selected', () => {
+    // arrange
+    const emptyFunction = () => { }
+    const value = {
+      sku: '',
+      variant: '',
+      variantId: '344',
+      quantity: 1,
+      price: '',
+      stockAvailableLevel: 0
+    }
+
+    // act
+    const selectedVariant = product.variants.find(variant => variant.id === value.variantId)
+
+    const wrapper = mount(
+      <ProductDisplay product={product} selectedVariant={selectedVariant} changeVariant={emptyFunction} addToBag={emptyFunction} {...value} />
+    )
+
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText(selectedVariant.description)
+    expect(wrapper).toIncludeText(selectedVariant.sku)
+    expect(wrapper).toContainReact(<ProductPrice minPrice={97.68} maxPrice={97.68} />)
+  })
 })

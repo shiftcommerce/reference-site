@@ -11,8 +11,8 @@ class VariantSelector extends Component {
     return (
       // @TODO: Add variant data to algolia
       variants && variants.map((variant, idx) =>
-        <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price}>
-          { `${variant.title} - £${variant.price}` }
+        <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price} data-variant-id={variant.id}>
+          { variant.title }
         </option>
       )
     )

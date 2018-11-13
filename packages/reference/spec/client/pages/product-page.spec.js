@@ -88,7 +88,7 @@ describe('Product page', () => {
     expect(wrapper).toMatchSnapshot()
 
     expect(wrapper).toIncludeText(product.title)
-    expect(wrapper).toIncludeText(product.price)
+    expect(wrapper).toIncludeText(product.min_current_price)
 
     expect(wrapper.find(ProductDisplay)).toExist()
   })

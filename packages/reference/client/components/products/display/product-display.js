@@ -23,54 +23,39 @@ class ProductDisplay extends Component {
     )
   }
 
-  renderImage () {
-    const { product } = this.props
-    const imageUrls = product.asset_files.map(a => a.s3_url)
+  renderImage (product) {
+    const imageUrls = product.asset_files.map(asset => asset.s3_url)
 
     return (
       <div className='c-product-display__gallery'>
         { imageUrls.map(imageUrl => {
-          return <Image src={imageUrl} key={imageUrl} className='c-product-display__gallery-image'/>
+          return <Image src={imageUrl} key={imageUrl} className='c-product-display__gallery-image' />
         }) }
       </div>
     )
   }
 
   renderButtons () {
-    const { product, addToBag } = this.props
-    const minPrice = product.min_current_price
-    const maxPrice = product.max_current_price
+    const { addToBag } = this.props
 
     return (
       <div className='c-product-display__buttons'>
-        <div className='c-product-display__buttons-section1'>
-          <div className='c-product-display__buttons-title'>
-            { product.title }
-          </div>
-          <div className='c-product-display__buttons-price'>
-            <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
-          </div>
-        </div>
-        <div className='c-product-display__buttons-section2'>
-          <div className='c-product-display__buttons-basket'>
-            <Button className='c-product-display__buttons-basket-icon o-button--sml' label='ADD TO BASKET' status='positive' aria-label='Add to Basket' onClick={addToBag} />
-          </div>
-        </div>
+        <Button className='c-product-display__buttons-basket o-button--sml' label='ADD TO BASKET' status='positive' aria-label='Add to Basket' onClick={addToBag} />
       </div>
     )
   }
 
-  renderDescription () {
-    const { product } = this.props
+  renderDescription (product, selectedVariant) {
+    const description = selectedVariant ? selectedVariant.description : product.description
 
-    if (product.description) {
+    if (description) {
       return (
         <div className='c-product-display__description'>
           <h1 className='c-product-display__description-title'>Product Details</h1>
           <label htmlFor='description' className='c-product-dispay__label' />
           <input type='checkbox' id='description' />
           <span className='c-product-display__arrow' />
-          <div className='c-product-display__description-text' dangerouslySetInnerHTML={{ __html: product.description }} />
+          <div className='c-product-display__description-text' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
       )
     }
@@ -91,32 +76,70 @@ class ProductDisplay extends Component {
     }
   }
 
-  renderInfo () {
-    const { product, changeVariant, sku, product: { meta_attributes } } = this.props
-    const minPrice = product.min_current_price
-    const maxPrice = product.max_current_price
+  renderSku (selectedVariant) {
+    if (selectedVariant) {
+      return (
+        <div className='c-product-display__info-sku'>
+          { selectedVariant.sku }
+        </div>
+      )
+    }
+  }
+
+  renderTitle (product, selectedVariant) {
+    let title = product.title
+
+    if (selectedVariant) {
+      title = selectedVariant.title
+    }
+
+    return (
+      <div className='c-product-display__info-title'>
+        { title }
+      </div>
+    )
+  }
+
+  renderPrice (product, selectedVariant) {
+    let minPrice = product.min_current_price
+    let maxPrice = product.max_current_price
+
+    if (selectedVariant) {
+      minPrice = selectedVariant.price
+      maxPrice = selectedVariant.price
+    }
+
+    return (
+      <div className='c-product-display__info-price'>
+        <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
+      </div>
+    )
+  }
+
+  renderInfo (product, selectedVariant) {
+    const metaAttributes = product.meta_attributes
+    const { changeVariant, sku } = this.props
 
     return (
       <div className='c-product-display__info'>
-        <div className='c-product-display__info-title'>
-          { product.title }
+        <div className='c-product-display__info-headings'>
+          { this.renderTitle(product, selectedVariant) }
+          { this.renderSku(selectedVariant) }
         </div>
-        <div className='c-product-display__info-price'>
-          <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
-        </div>
+        { this.renderPrice(product, selectedVariant) }
         <div className='c-product-display__info-rating'>
           { this.renderRatingStars(product) }
-          <p className='c-product-display__info-reviews'> Read Reviews</p>
+          <p className='c-product-display__info-reviews'>Read Reviews</p>
         </div>
-        { this.renderColourSelector(meta_attributes) }
-        <div className='c-product-display__info-size'>
+        { this.renderColourSelector(metaAttributes) }
+        <div className='c-product-display__info-variant'>
           <VariantSelector
             onChange={changeVariant}
             value={sku}
             name='line_item[item_id]'
             prompt='Select a Product'
             variants={product.variants}
-            aria-label='Size Selector' />
+            aria-label='Variant Selector' />
         </div>
       </div>
     )
@@ -189,17 +212,19 @@ class ProductDisplay extends Component {
   }
 
   render () {
+    const { product, selectedVariant } = this.props
+
     return (
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__content-image'>
-            { this.renderImage() }
+            { this.renderImage(product) }
           </div>
           <div className='c-product-display__content-details'>
+            { this.renderInfo(product, selectedVariant) }
             { this.renderButtons() }
-            { this.renderInfo() }
             <div className='c-product-display__body-dropdowns'>
-              { this.renderDescription() }
+              { this.renderDescription(product, selectedVariant) }
               { this.renderSizeAndFit() }
               { this.renderDetailsAndCare() }
             </div>

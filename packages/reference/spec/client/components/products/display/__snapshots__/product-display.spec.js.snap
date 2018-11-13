@@ -1,100 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`PDP renders correctly when a variant has been selected 1`] = `
 <ProductDisplay
   addToBag={[Function]}
-  changeSize={[Function]}
+  changeVariant={[Function]}
+  price=""
   product={
     Object {
       "asset_files": Array [
         Object {
-          "alt_text": "Textured Long T-Shirt",
-          "asset_file": "S2623408_C29P_Alt2.jpg",
-          "s3_url": "https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg",
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
         },
       ],
-      "bundles": Array [
-        Object {
-          "asset_files": Array [
-            Object {
-              "asset_file": "1513767197.7652595-1847 -_Anna_Outfit_1-3_099.jpg",
-              "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-              "created_at": "2017-12-20T10:53:17Z",
-              "file_content_content_type": "image/jpeg",
-              "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-            },
-          ],
-          "canonical_path": "/bundles/anna-outfit-1",
-          "id": "261",
-          "name": "Anna Outfit 1",
-          "slug": "anna-outfit-1",
-        },
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
       ],
-      "canonical_path": "1",
-      "description": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
-      "id": 1,
-      "max_current_price": "10.00",
-      "meta_attributes": Object {
-        "care_instructions": Object {
-          "value": "Machine Washable",
-        },
-        "fabric": Object {
-          "value": "100% cotton",
-        },
-        "master_colour": Object {
-          "value": "Stone",
-        },
-        "product_feature": Object {
-          "value": "Stretch Fit",
-        },
-        "silhouette": Object {
-          "value": "Flexible Waist",
-        },
-      },
-      "min_current_price": "10.00",
-      "price": "10.00",
-      "title": "Textured Long T-Shirt",
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
       "variants": Array [
         Object {
-          "meta_attributes": Object {
-            "size": Object {
-              "value": "Size 8",
-            },
-          },
-          "price": "10.00",
-          "sku": 1,
-          "stock_available_level": "1000",
-          "title": "Small",
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+          "updated_at": "2018-11-05T11:23:16Z",
         },
         Object {
-          "meta_attributes": Object {
-            "size": Object {
-              "value": "Size 10",
-            },
-          },
-          "price": "11.00",
-          "sku": 2,
-          "stock_available_level": "1000",
-          "title": "Medium",
-        },
-        Object {
-          "meta_attributes": Object {
-            "size": Object {
-              "value": "Size 12",
-            },
-          },
-          "price": "12.00",
-          "sku": 3,
-          "stock_available_level": "1000",
-          "title": "Large",
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+          "updated_at": "2018-10-31T10:24:00Z",
         },
       ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
     }
   }
-  quantity=""
-  size="Small"
+  quantity={1}
+  selectedVariant={
+    Object {
+      "available_to_browse": false,
+      "available_to_order": false,
+      "created_at": "2018-09-24T15:43:05Z",
+      "current_price": 97.68,
+      "deleted_at": null,
+      "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "ewis_eligible": false,
+      "expected_availability_date": null,
+      "has_assets": true,
+      "id": "344",
+      "meta_attributes": Object {},
+      "ordered_total": 1,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "position": null,
+      "price": 97.68,
+      "price_includes_taxes": true,
+      "product_id": 175,
+      "reference": "voluptas_50_2",
+      "sku": "0927967530244",
+      "stock_allocated_level": 1,
+      "stock_available_level": 0,
+      "stock_level": 1,
+      "tax_code": "vat",
+      "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+      "updated_at": "2018-10-31T10:24:00Z",
+    }
+  }
   sku=""
   stockAvailableLevel={0}
+  variant=""
+  variantId="344"
 >
   <div
     className="c-product-display"
@@ -110,8 +179,8 @@ exports[`renders correctly 1`] = `
         >
           <Image
             className="c-product-display__gallery-image"
-            key="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
-            src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12671/S2623408_C29P_Alt2.jpg"
+            key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
           >
             <div
               className="c-product-display__gallery-image"
@@ -146,86 +215,35 @@ exports[`renders correctly 1`] = `
         className="c-product-display__content-details"
       >
         <div
-          className="c-product-display__buttons"
-        >
-          <div
-            className="c-product-display__buttons-section1"
-          >
-            <div
-              className="c-product-display__buttons-title"
-            >
-              Textured Long T-Shirt
-            </div>
-            <div
-              className="c-product-display__buttons-price"
-            >
-              <ProductPrice
-                maxPrice="10.00"
-                minPrice="10.00"
-              >
-                <div
-                  className="c-product-price"
-                >
-                  <span>
-                    £
-                    10.00
-                  </span>
-                </div>
-              </ProductPrice>
-            </div>
-          </div>
-          <div
-            className="c-product-display__buttons-section2"
-          >
-            <div
-              className="c-product-display__buttons-basket"
-            >
-              <Button
-                aria-label="Add to Basket"
-                className="c-product-display__buttons-basket-icon o-button--sml"
-                label="ADD TO BASKET"
-                onClick={[Function]}
-                status="positive"
-              >
-                <div
-                  className="o-button__container"
-                >
-                  <button
-                    aria-label="Add to Basket"
-                    className="c-product-display__buttons-basket-icon o-button--sml o-button o-button--positive"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    ADD TO BASKET
-                  </button>
-                </div>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div
           className="c-product-display__info"
         >
           <div
-            className="c-product-display__info-title"
+            className="c-product-display__info-headings"
           >
-            Textured Long T-Shirt
+            <div
+              className="c-product-display__info-title"
+            >
+              Variant 2 for SEPIA nonslip tray 420×210mm
+            </div>
+            <div
+              className="c-product-display__info-sku"
+            >
+              0927967530244
+            </div>
           </div>
           <div
             className="c-product-display__info-price"
           >
             <ProductPrice
-              maxPrice="10.00"
-              minPrice="10.00"
+              maxPrice={97.68}
+              minPrice={97.68}
             >
               <div
                 className="c-product-price"
               >
                 <span>
                   £
-                  10.00
+                  97.68
                 </span>
               </div>
             </ProductPrice>
@@ -266,74 +284,77 @@ exports[`renders correctly 1`] = `
             <p
               className="c-product-display__info-reviews"
             >
-               Read Reviews
+              Read Reviews
             </p>
           </div>
           <div
-            className="c-product-display__info-colour"
-          >
-            <h1
-              className="c-product-display__info-colour-title"
-            >
-              Colour
-            </h1>
-            <input
-              id="colour"
-              style={
-                Object {
-                  "backgroundColor": "Stone",
-                }
-              }
-              type="radio"
-            />
-            <label
-              htmlFor="colour"
-            >
-              Stone
-            </label>
-          </div>
-          <div
-            className="c-product-display__info-size"
+            className="c-product-display__info-variant"
           >
             <VariantSelector
-              aria-label="Size Selector"
+              aria-label="Variant Selector"
               name="line_item[item_id]"
+              onChange={[Function]}
               prompt="Select a Product"
               value=""
               variants={
                 Array [
                   Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 8",
-                      },
-                    },
-                    "price": "10.00",
-                    "sku": 1,
-                    "stock_available_level": "1000",
-                    "title": "Small",
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+                    "updated_at": "2018-11-05T11:23:16Z",
                   },
                   Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 10",
-                      },
-                    },
-                    "price": "11.00",
-                    "sku": 2,
-                    "stock_available_level": "1000",
-                    "title": "Medium",
-                  },
-                  Object {
-                    "meta_attributes": Object {
-                      "size": Object {
-                        "value": "Size 12",
-                      },
-                    },
-                    "price": "12.00",
-                    "sku": 3,
-                    "stock_available_level": "1000",
-                    "title": "Large",
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+                    "updated_at": "2018-10-31T10:24:00Z",
                   },
                 ]
               }
@@ -342,13 +363,14 @@ exports[`renders correctly 1`] = `
                 className="o-variant-selector"
               >
                 <select
-                  aria-label="Size Selector"
+                  aria-label="Variant Selector"
                   name="line_item[item_id]"
+                  onChange={[Function]}
                   value=""
                 >
                   <option
                     aria-posinset="0"
-                    aria-setsize={3}
+                    aria-setsize={2}
                     role="option"
                     value=""
                   >
@@ -356,41 +378,58 @@ exports[`renders correctly 1`] = `
                   </option>
                   <option
                     aria-posinset={1}
-                    aria-setsize={3}
-                    data-price="10.00"
-                    data-stock-available-level="1000"
+                    aria-setsize={2}
+                    data-price={16.95}
+                    data-stock-available-level={0}
+                    data-variant-id="343"
                     key="0"
                     role="option"
-                    value={1}
+                    value="9337040128595"
                   >
-                    Small - £10.00
+                    Variant 1 for SEPIA nonslip tray 420×210mm
                   </option>
                   <option
                     aria-posinset={2}
-                    aria-setsize={3}
-                    data-price="11.00"
-                    data-stock-available-level="1000"
+                    aria-setsize={2}
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
                     key="1"
                     role="option"
-                    value={2}
+                    value="0927967530244"
                   >
-                    Medium - £11.00
-                  </option>
-                  <option
-                    aria-posinset={3}
-                    aria-setsize={3}
-                    data-price="12.00"
-                    data-stock-available-level="1000"
-                    key="2"
-                    role="option"
-                    value={3}
-                  >
-                    Large - £12.00
+                    Variant 2 for SEPIA nonslip tray 420×210mm
                   </option>
                 </select>
               </div>
             </VariantSelector>
           </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <Button
+            aria-label="Add to Basket"
+            className="c-product-display__buttons-basket o-button--sml"
+            label="ADD TO BASKET"
+            onClick={[Function]}
+            status="positive"
+          >
+            <div
+              className="o-button__container"
+            >
+              <button
+                aria-label="Add to Basket"
+                className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          </Button>
         </div>
         <div
           className="c-product-display__body-dropdowns"
@@ -418,74 +457,447 @@ exports[`renders correctly 1`] = `
               className="c-product-display__description-text"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "Part of our Made in Britain collection, the limited edition Thruxton jacket by Morley offers great style and practicality for everyday wear.",
+                  "__html": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
                 }
               }
             />
           </div>
-          <div
-            className="c-product-display__size"
+        </div>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;
+
+exports[`PDP renders correctly when no variant is selected 1`] = `
+<ProductDisplay
+  addToBag={[Function]}
+  changeVariant={[Function]}
+  price=""
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
+        },
+      ],
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
+      ],
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
+      "variants": Array [
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+          "updated_at": "2018-11-05T11:23:16Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+      ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
+    }
+  }
+  quantity={1}
+  sku=""
+  stockAvailableLevel={0}
+  variant=""
+  variantId={null}
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__content-image"
+      >
+        <div
+          className="c-product-display__gallery"
+        >
+          <Image
+            className="c-product-display__gallery-image"
+            key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
           >
-            <h1
-              className="c-product-display__size-title"
+            <div
+              className="c-product-display__gallery-image"
             >
-              Size & Fit
-            </h1>
-            <label
-              className="c-product-dispay__label"
-              htmlFor="size"
-            />
-            <input
-              id="size"
-              type="checkbox"
-            />
+              <LazyLoad
+                debounce={true}
+                elementType="div"
+                offset={0}
+                offsetBottom={0}
+                offsetHorizontal={0}
+                offsetLeft={0}
+                offsetRight={0}
+                offsetTop={0}
+                offsetVertical={0}
+                throttle={250}
+              >
+                <div
+                  className="LazyLoad"
+                  style={
+                    Object {
+                      "height": undefined,
+                      "width": undefined,
+                    }
+                  }
+                />
+              </LazyLoad>
+            </div>
+          </Image>
+        </div>
+      </div>
+      <div
+        className="c-product-display__content-details"
+      >
+        <div
+          className="c-product-display__info"
+        >
+          <div
+            className="c-product-display__info-headings"
+          >
+            <div
+              className="c-product-display__info-title"
+            >
+              SEPIA nonslip tray 420×210mm
+            </div>
+          </div>
+          <div
+            className="c-product-display__info-price"
+          >
+            <ProductPrice
+              maxPrice={97.68}
+              minPrice={16.95}
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  16.95
+                   - £
+                  97.68
+                </span>
+              </div>
+            </ProductPrice>
+          </div>
+          <div
+            className="c-product-display__info-rating"
+          >
             <span
-              className="c-product-display__arrow"
-            />
-            <p
-              className="c-product-display__size-text"
+              className="c-product-display__info-rating--empty"
+              key="1"
             >
-              - 
-              Stretch Fit
-            </p>
-            <p
-              className="c-product-display__size-text"
+              ★
+            </span>
+            <span
+              className="c-product-display__info-rating--empty"
+              key="2"
             >
-              - 
-              Flexible Waist
+              ★
+            </span>
+            <span
+              className="c-product-display__info-rating--empty"
+              key="3"
+            >
+              ★
+            </span>
+            <span
+              className="c-product-display__info-rating--empty"
+              key="4"
+            >
+              ★
+            </span>
+            <span
+              className="c-product-display__info-rating--empty"
+              key="5"
+            >
+              ★
+            </span>
+            <p
+              className="c-product-display__info-reviews"
+            >
+              Read Reviews
             </p>
           </div>
           <div
-            className="c-product-display__care"
+            className="c-product-display__info-variant"
+          >
+            <VariantSelector
+              aria-label="Variant Selector"
+              name="line_item[item_id]"
+              onChange={[Function]}
+              prompt="Select a Product"
+              value=""
+              variants={
+                Array [
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+                    "updated_at": "2018-11-05T11:23:16Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                ]
+              }
+            >
+              <div
+                className="o-variant-selector"
+              >
+                <select
+                  aria-label="Variant Selector"
+                  name="line_item[item_id]"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    aria-posinset="0"
+                    aria-setsize={2}
+                    role="option"
+                    value=""
+                  >
+                    Select a Product
+                  </option>
+                  <option
+                    aria-posinset={1}
+                    aria-setsize={2}
+                    data-price={16.95}
+                    data-stock-available-level={0}
+                    data-variant-id="343"
+                    key="0"
+                    role="option"
+                    value="9337040128595"
+                  >
+                    Variant 1 for SEPIA nonslip tray 420×210mm
+                  </option>
+                  <option
+                    aria-posinset={2}
+                    aria-setsize={2}
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
+                    key="1"
+                    role="option"
+                    value="0927967530244"
+                  >
+                    Variant 2 for SEPIA nonslip tray 420×210mm
+                  </option>
+                </select>
+              </div>
+            </VariantSelector>
+          </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <Button
+            aria-label="Add to Basket"
+            className="c-product-display__buttons-basket o-button--sml"
+            label="ADD TO BASKET"
+            onClick={[Function]}
+            status="positive"
+          >
+            <div
+              className="o-button__container"
+            >
+              <button
+                aria-label="Add to Basket"
+                className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          </Button>
+        </div>
+        <div
+          className="c-product-display__body-dropdowns"
+        >
+          <div
+            className="c-product-display__description"
           >
             <h1
-              className="c-product-display__care-title"
+              className="c-product-display__description-title"
             >
-              Details & Care
+              Product Details
             </h1>
             <label
               className="c-product-dispay__label"
-              htmlFor="care"
+              htmlFor="description"
             />
             <input
-              id="care"
+              id="description"
               type="checkbox"
             />
             <span
               className="c-product-display__arrow"
             />
-            <p
-              className="c-product-display__care-text"
-            >
-              - 
-              Machine Washable
-            </p>
-            <p
-              className="c-product-display__care-text"
-            >
-              - 
-              100% cotton
-            </p>
+            <div
+              className="c-product-display__description-text"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                }
+              }
+            />
           </div>
         </div>
       </div>

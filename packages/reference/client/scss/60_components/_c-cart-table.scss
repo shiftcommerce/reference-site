@@ -107,11 +107,6 @@
     }
   }
 
-  &__related-products {
-    margin-top: $global-spacing-unit;
-    padding-top: $global-spacing-unit;
-  }
-
   &__title {
 
     @include breakpoint(desktop) {

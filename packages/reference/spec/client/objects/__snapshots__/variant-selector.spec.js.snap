@@ -3,41 +3,67 @@
 exports[`renders correctly 1`] = `
 <VariantSelector
   name="line_item[item_id]"
+  onChange={[MockFunction]}
   prompt="Select a Size"
   variants={
     Array [
       Object {
-        "meta_attributes": Object {
-          "size": Object {
-            "value": "Size 8",
-          },
-        },
-        "price": "10.00",
-        "sku": 1,
-        "stock_available_level": "1000",
-        "title": "Small",
+        "available_to_browse": false,
+        "available_to_order": false,
+        "created_at": "2018-09-24T15:43:05Z",
+        "current_price": 16.95,
+        "deleted_at": null,
+        "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+        "ewis_eligible": false,
+        "expected_availability_date": null,
+        "has_assets": true,
+        "id": "343",
+        "meta_attributes": Object {},
+        "ordered_total": 10,
+        "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "position": null,
+        "price": 16.95,
+        "price_includes_taxes": true,
+        "product_id": 175,
+        "reference": "dolor_50_1",
+        "sku": "9337040128595",
+        "stock_allocated_level": 10,
+        "stock_available_level": 0,
+        "stock_level": 1,
+        "tax_code": "vat",
+        "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+        "updated_at": "2018-11-05T11:23:16Z",
       },
       Object {
-        "meta_attributes": Object {
-          "size": Object {
-            "value": "Size 10",
-          },
-        },
-        "price": "11.00",
-        "sku": 2,
-        "stock_available_level": "1000",
-        "title": "Medium",
-      },
-      Object {
-        "meta_attributes": Object {
-          "size": Object {
-            "value": "Size 12",
-          },
-        },
-        "price": "12.00",
-        "sku": 3,
-        "stock_available_level": "1000",
-        "title": "Large",
+        "available_to_browse": false,
+        "available_to_order": false,
+        "created_at": "2018-09-24T15:43:05Z",
+        "current_price": 97.68,
+        "deleted_at": null,
+        "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+        "ewis_eligible": false,
+        "expected_availability_date": null,
+        "has_assets": true,
+        "id": "344",
+        "meta_attributes": Object {},
+        "ordered_total": 1,
+        "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "position": null,
+        "price": 97.68,
+        "price_includes_taxes": true,
+        "product_id": 175,
+        "reference": "voluptas_50_2",
+        "sku": "0927967530244",
+        "stock_allocated_level": 1,
+        "stock_available_level": 0,
+        "stock_level": 1,
+        "tax_code": "vat",
+        "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+        "updated_at": "2018-10-31T10:24:00Z",
       },
     ]
   }
@@ -47,10 +73,11 @@ exports[`renders correctly 1`] = `
   >
     <select
       name="line_item[item_id]"
+      onChange={[MockFunction]}
     >
       <option
         aria-posinset="0"
-        aria-setsize={3}
+        aria-setsize={2}
         role="option"
         value=""
       >
@@ -58,36 +85,27 @@ exports[`renders correctly 1`] = `
       </option>
       <option
         aria-posinset={1}
-        aria-setsize={3}
-        data-price="10.00"
-        data-stock-available-level="1000"
+        aria-setsize={2}
+        data-price={16.95}
+        data-stock-available-level={0}
+        data-variant-id="343"
         key="0"
         role="option"
-        value={1}
+        value="9337040128595"
       >
-        Small - £10.00
+        Variant 1 for SEPIA nonslip tray 420×210mm
       </option>
       <option
         aria-posinset={2}
-        aria-setsize={3}
-        data-price="11.00"
-        data-stock-available-level="1000"
+        aria-setsize={2}
+        data-price={97.68}
+        data-stock-available-level={0}
+        data-variant-id="344"
         key="1"
         role="option"
-        value={2}
+        value="0927967530244"
       >
-        Medium - £11.00
-      </option>
-      <option
-        aria-posinset={3}
-        aria-setsize={3}
-        data-price="12.00"
-        data-stock-available-level="1000"
-        key="2"
-        role="option"
-        value={3}
-      >
-        Large - £12.00
+        Variant 2 for SEPIA nonslip tray 420×210mm
       </option>
     </select>
   </div>
