@@ -1,15 +1,15 @@
-engines:
+plugins:
+  eslint:
+    enabled: true
+    channel: eslint-5
   duplication:
     enabled: true
     config:
       languages:
         javascript:
           mass_threshold: 300
-ratings:
-   paths:
-   - "**.js"
 
-exclude_paths:
+exclude_patterns:
 - spec/
 - bin/
 - static/

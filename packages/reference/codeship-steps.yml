@@ -1,6 +1,3 @@
-- name: eslint
-  service: web
-  command: yarn run lint:js
 - name: stylelint
   service: web
   command: yarn run lint:css
