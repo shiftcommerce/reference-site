@@ -1227,93 +1227,97 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
           }
         >
           <div
-            className="c-step-indicators__steps"
+            className="c-step-indicators"
           >
             <div
-              className="o-header__step"
-              key="0"
+              className="c-step-indicators__steps"
             >
               <div
-                className="c-step-indicator c-step-indicator--completed"
+                className="o-header__step"
+                key="0"
               >
                 <div
-                  className="c-step-indicator__position c-step-indicator__position--completed"
+                  className="c-step-indicator c-step-indicator--completed"
                 >
-                  ✔
-                </div>
-                <div
-                  className="c-step-indicator__line c-step-indicator__line--completed"
-                />
-                <div
-                  className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
-                >
-                  Shipping Address
+                  <div
+                    className="c-step-indicator__position c-step-indicator__position--completed"
+                  >
+                    ✔
+                  </div>
+                  <div
+                    className="c-step-indicator__line c-step-indicator__line--completed"
+                  />
+                  <div
+                    className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+                  >
+                    Shipping Address
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="o-header__step"
-              key="1"
-            >
               <div
-                className="c-step-indicator c-step-indicator--active c-step-indicator--completed"
+                className="o-header__step"
+                key="1"
               >
                 <div
-                  className="c-step-indicator__position c-step-indicator__position--active c-step-indicator__position--completed"
+                  className="c-step-indicator c-step-indicator--active c-step-indicator--completed"
                 >
-                  ✔
-                </div>
-                <div
-                  className="c-step-indicator__line c-step-indicator__line--active c-step-indicator__line--completed"
-                />
-                <div
-                  className="c-step-indicator__subtitle c-step-indicator__subtitle--active c-step-indicator__subtitle--completed"
-                >
-                  Shipping Method
+                  <div
+                    className="c-step-indicator__position c-step-indicator__position--active c-step-indicator__position--completed"
+                  >
+                    ✔
+                  </div>
+                  <div
+                    className="c-step-indicator__line c-step-indicator__line--active c-step-indicator__line--completed"
+                  />
+                  <div
+                    className="c-step-indicator__subtitle c-step-indicator__subtitle--active c-step-indicator__subtitle--completed"
+                  >
+                    Shipping Method
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="o-header__step"
-              key="2"
-            >
               <div
-                className="c-step-indicator"
+                className="o-header__step"
+                key="2"
               >
                 <div
-                  className="c-step-indicator__position"
+                  className="c-step-indicator"
                 >
-                  3
-                </div>
-                <div
-                  className="c-step-indicator__line"
-                />
-                <div
-                  className="c-step-indicator__subtitle"
-                >
-                  Payment
+                  <div
+                    className="c-step-indicator__position"
+                  >
+                    3
+                  </div>
+                  <div
+                    className="c-step-indicator__line"
+                  />
+                  <div
+                    className="c-step-indicator__subtitle"
+                  >
+                    Payment
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="o-header__step"
-              key="3"
-            >
               <div
-                className="c-step-indicator"
+                className="o-header__step"
+                key="3"
               >
                 <div
-                  className="c-step-indicator__position"
+                  className="c-step-indicator"
                 >
-                  4
-                </div>
-                <div
-                  className="c-step-indicator__line"
-                />
-                <div
-                  className="c-step-indicator__subtitle"
-                >
-                  Review & Submit
+                  <div
+                    className="c-step-indicator__position"
+                  >
+                    4
+                  </div>
+                  <div
+                    className="c-step-indicator__line"
+                  />
+                  <div
+                    className="c-step-indicator__subtitle"
+                  >
+                    Review & Submit
+                  </div>
                 </div>
               </div>
             </div>

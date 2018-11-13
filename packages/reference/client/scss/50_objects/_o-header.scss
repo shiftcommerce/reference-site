@@ -52,14 +52,13 @@
   }
 
   &__step {
-    display: inline-block;
-    margin-top: $global-spacing-unit-tiny;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     vertical-align: top;
+    width: 90px;
 
     @include breakpoint(desktop) {
-      margin-top: 0;
-      text-align: center;
       width: 25%;
     }
   }

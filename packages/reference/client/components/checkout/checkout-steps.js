@@ -19,7 +19,11 @@ class CheckoutSteps extends Component {
       </div>
     )
 
-    return checkoutData
+    return (
+      <div className='c-step-indicators__steps'>
+        { checkoutData }
+      </div>
+    )
   }
 
   renderCheckoutStep (step, currentStep) {
@@ -42,7 +46,7 @@ class CheckoutSteps extends Component {
 
   render () {
     return (
-      <div className='c-step-indicators__steps'>
+      <div className='c-step-indicators'>
         { this.renderCheckoutSteps() }
       </div>
     )
