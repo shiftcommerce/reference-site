@@ -7,6 +7,9 @@ import Link from 'next/link'
 import Loading from '../../components/loading'
 import OrderList from '../../components/orders/list'
 
+// Lib
+import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+
 // Objects
 import Button from '../../objects/button'
 
@@ -84,4 +87,4 @@ function mapStateToProps (state) {
   return { login, orders }
 }
 
-export default connect(mapStateToProps)(MyAccount)
+export default algoliaReduxWrapper(connect(mapStateToProps)(MyAccount), MyAccount)

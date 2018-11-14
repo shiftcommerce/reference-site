@@ -11,6 +11,10 @@ import { fixedPrice } from '../../../client/lib/fixed-price'
 // Fixtures
 import order from '../../fixtures/confirmation-order'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
+
 describe('Page Rendering:', () => {
   test('renders correctly', () => {
     // Arrange

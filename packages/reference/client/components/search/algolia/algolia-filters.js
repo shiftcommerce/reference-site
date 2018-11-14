@@ -62,8 +62,8 @@ class AlgoliaFilters extends Component {
           <div className='c-product-listing-filter__header-title'>
             <h2>
               Filters
-              <button className='c-product-listing-filter-close' onClick={toggleFiltering} />
             </h2>
+            <button className='c-product-listing-filter-close' onClick={toggleFiltering} />
           </div>
           <div className='c-product-listing-filter__header-selection'>
             <ClearRefinements />

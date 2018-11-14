@@ -15,7 +15,7 @@ test('renders the header', () => {
   }
 
   // Act
-  const wrapper = mount(
+  const wrapper = shallow(
     <Provider store={createMockStore(initialState)} >
       <SearchBar />
     </Provider>

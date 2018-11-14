@@ -7,16 +7,16 @@ import { readPage } from '../actions/page-actions'
 
 // Lib
 import renderComponents from '../lib/render-components'
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
 
 // Components
 import Loading from '../components/loading'
 import StaticPageError from '../components/static-page-error'
 
 class Page extends Component {
-  static async getInitialProps ({ reduxStore, query }) {
-    const { id } = query
+  static async getInitialProps ({ reduxStore, query: { id } }) {
     await reduxStore.dispatch(readPage(id))
-    return { id: id }
+    return { id }
   }
 
   render () {
@@ -44,4 +44,4 @@ function mapStateToProps (state) {
   return { page }
 }
 
-export default connect(mapStateToProps)(Page)
+export default algoliaReduxWrapper(connect(mapStateToProps)(Page), Page)

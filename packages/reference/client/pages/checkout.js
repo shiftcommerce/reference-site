@@ -5,6 +5,7 @@ import Router from 'next/router'
 
 // Libs
 import InputFieldValidator from '../lib/input-field-validator'
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
 
 // Actions
 import { readCheckoutFromLocalStorage,
@@ -285,4 +286,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage)
+export default algoliaReduxWrapper(connect(mapStateToProps, mapDispatchToProps)(CheckoutPage), CheckoutPage)

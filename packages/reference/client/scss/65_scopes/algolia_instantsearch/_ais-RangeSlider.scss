@@ -2,4 +2,9 @@
 
 .ais-RangeSlider {
   padding: 1.5rem;
+
+  @include breakpoint(desktop) {
+    padding-left: $global-spacing-unit-small;
+    padding-right: $global-spacing-unit-small;
+  }
 }

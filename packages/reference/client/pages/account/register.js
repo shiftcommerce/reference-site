@@ -6,6 +6,7 @@ import Router from 'next/router'
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
+import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
 
 // Actions
 import {
@@ -17,7 +18,7 @@ import {
 // Components
 import RegisterForm from '../../components/account/register-form'
 
-export class Register extends Component {
+export class RegisterPage extends Component {
   constructor () {
     super()
 
@@ -82,4 +83,4 @@ function mapStateToProps (state) {
   return { registration, account }
 }
 
-export default connect(mapStateToProps)(Register)
+export default algoliaReduxWrapper(connect(mapStateToProps)(RegisterPage), RegisterPage)

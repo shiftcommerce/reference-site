@@ -2,7 +2,11 @@
 import Router from 'next/router'
 
 // Pages
-import LoginPage from '../../../../client/pages/account/login'
+import { LoginPage } from '../../../../client/pages/account/login'
+
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
 
 test('redirects to myaccount page when account already exists', async () => {
   // Mock Redux store

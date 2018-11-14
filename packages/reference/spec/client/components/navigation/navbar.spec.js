@@ -17,7 +17,7 @@ test('renders the nav bar options', () => {
   }
 
   // Act
-  const wrapper = mount(
+  const wrapper = shallow(
     <Provider store={createMockStore(initialState)} >
       <NavBar menu={menu} />
     </Provider>

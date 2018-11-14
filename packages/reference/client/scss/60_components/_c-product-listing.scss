@@ -1,13 +1,13 @@
 .c-product-listing {
   display: grid;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto) [last-line];
   grid-gap: 15px;
   grid-template-columns: repeat(2, 1fr);
   margin: auto;
-  width: 95%;
 
-  &--hide {
-    display: none;
+  @include breakpoint(mobile-tablet) {
+    padding-left: $global-spacing-unit-tiny;
+    padding-right: $global-spacing-unit-tiny;
   }
 
   @include breakpoint(tablet) {
@@ -16,6 +16,14 @@
 
   @include breakpoint(desktop) {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-wrapper {
+    @include tools-clearfix();
+  }
+
+  &--hide {
+    display: none;
   }
 
   &__menu {
@@ -28,13 +36,17 @@
 
     @include breakpoint(desktop) {
       grid-column-end: 5;
-      height: 24rem;
     }
 
     &-description {
       border-bottom: 1px solid $border-default;
       border-top: 1px solid $border-default;
       text-align: center;
+
+      @include breakpoint(mobile-tablet) {
+        margin-left: $global-spacing-unit-tiny;
+        margin-right: $global-spacing-unit-tiny;
+      }
 
       &-title {
         font-size: 1.8rem;

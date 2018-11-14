@@ -2,6 +2,9 @@
 import { Component } from 'react'
 import Link from 'next/link'
 
+// Lib
+import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+
 // Objects
 import Button from '../../objects/button'
 import Input from '../../objects/input'
@@ -41,4 +44,4 @@ export class ForgotPassword extends Component {
   }
 }
 
-export default ForgotPassword
+export default algoliaReduxWrapper(ForgotPassword, ForgotPassword)

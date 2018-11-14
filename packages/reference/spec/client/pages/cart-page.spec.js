@@ -12,6 +12,10 @@ import { updateQuantity } from '../../../client/actions/cart-actions'
 import cart from '../../fixtures/cart'
 import menu from '../../fixtures/menu'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
+
 test('dispatch updateQuantity action on changing line item quantity', () => {
   // Arrange
   const initialState = {

@@ -3,21 +3,24 @@ import { Component } from 'react'
 import Router from 'next/router'
 import qs from 'qs'
 import { connect } from 'react-redux'
+import { SearchBox } from 'react-instantsearch/dom'
 
 // Actions
 import { setSearchQuery } from '../../actions/search-actions'
 
-// Objects
-import Button from '../../objects/button'
-
 class SearchBar extends Component {
+  constructor (props) {
+    super(props)
+
+    this.onSubmit = this.onSubmit.bind(this)
+    this.defaultOnChange = this.defaultOnChange.bind(this)
+  }
+
   onSubmit (e) {
-    if (Router.router.pathname === '/search') {
-      e.preventDefault()
-      const query = { query: this.props.query }
-      const href = `/search?${qs.stringify(query)}`
-      Router.push(href, href)
-    }
+    e.preventDefault()
+    const query = { query: this.props.query }
+    const href = `/search?${qs.stringify(query)}`
+    Router.push(href, href)
   }
 
   defaultOnChange (e) {
@@ -25,35 +28,14 @@ class SearchBar extends Component {
   }
 
   render () {
-    const { query } = this.props
-
     return (
-      <form role='search' onSubmit={this.onSubmit.bind(this)} action='/search' method='get' >
-        <div className='c-searchbar'>
-          <div className='c-searchbar__content'>
-            <input
-              name='query'
-              value={query || ''}
-              onChange={this.defaultOnChange.bind(this)}
-              type='search'
-              className='c-searchbar__input'
-              aria-label='search text'
-              placeholder='Search our catalog...'
-            />
-            <div className='c-searchbar__input-icon'>
-              <Button className='c-searchbar__input-button' label='Search' status='primary' />
-            </div>
-          </div>
+      <div className='c-searchbar'>
+        <div className='c-searchbar__content'>
+          <SearchBox onSubmit={this.onSubmit} onChange={this.defaultOnChange} />
         </div>
-      </form>
+      </div>
     )
   }
 }
 
-function mapStateToProps (state) {
-  const { search } = state
-
-  return search
-}
-
-export default connect(mapStateToProps)(SearchBar)
+export default connect()(SearchBar)

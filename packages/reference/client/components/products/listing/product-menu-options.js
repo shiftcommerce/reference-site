@@ -3,12 +3,10 @@ import { PureComponent } from 'react'
 import { SortBy } from 'react-instantsearch-dom'
 
 // Components
-import ProductMenuDropdowns from './product-menu-dropdowns'
 import AlgoliaRefinements from '../../search/algolia/algolia-refinements'
 
 // Objects
 import Button from '../../../objects/button'
-import Breadcrumb from '../../../objects/breadcrumb'
 
 class ProductMenuOptions extends PureComponent {
   render () {
@@ -16,8 +14,6 @@ class ProductMenuOptions extends PureComponent {
 
     return (
       <div className='c-product-listing__menu-options'>
-        <Breadcrumb />
-        <ProductMenuDropdowns />
         <div className='c-product-listing__menu-options-filters'>
           <h2 className='c-product-listing__menu-options-filters-title'>Filters</h2>
           <div className='c-product-listing__menu-options-filters-applied'>

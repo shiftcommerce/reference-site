@@ -7,6 +7,7 @@ import Link from 'next/link'
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
+import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
 
 // Actions
 import { inputChange,
@@ -18,7 +19,7 @@ import { fetchAccountDetails } from '../../actions/account-actions'
 // Components
 import LoginForm from '../../components/account/login-form'
 
-export class Login extends Component {
+export class LoginPage extends Component {
   constructor () {
     super()
 
@@ -86,4 +87,4 @@ function mapStateToProps (state) {
   return { login }
 }
 
-export default connect(mapStateToProps)(Login)
+export default algoliaReduxWrapper(connect(mapStateToProps)(LoginPage), LoginPage)

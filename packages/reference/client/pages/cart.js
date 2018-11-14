@@ -2,6 +2,9 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 
+// Lib
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+
 // Actions
 import { updateQuantity } from '../actions/cart-actions'
 
@@ -62,4 +65,4 @@ function mapStateToProps (state) {
   return { cart }
 }
 
-export default connect(mapStateToProps)(CartPage)
+export default algoliaReduxWrapper(connect(mapStateToProps)(CartPage), CartPage)

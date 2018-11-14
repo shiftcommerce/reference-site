@@ -4,8 +4,6 @@ exports[`renders correctly 1`] = `
 <div
   className="c-product-listing__menu-options"
 >
-  <Breadcrumb />
-  <ProductMenuDropdowns />
   <div
     className="c-product-listing__menu-options-filters"
   >

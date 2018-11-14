@@ -12,6 +12,10 @@ import ShippingAddresses from '../../../../client/components/orders/shipping-add
 // Fixtures
 import orders from '../../../fixtures/orders'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
+
 describe('My Account page', () => {
   test('renders a default message if the customer has no orders', () => {
     // Act

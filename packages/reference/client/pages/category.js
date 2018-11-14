@@ -8,78 +8,88 @@ import qs from 'qs'
 import { readCategory } from '../actions/category-actions'
 
 // Components
-import { findResultsState } from '../components/search/algolia/instant-search'
 import ProductListing from '../components/products/listing/product-listing'
 
-// Set a debounce updateAfter in ms to limit
-// window.history updates
-const updateAfter = 300
-
-// searchStateToUrl should not return a new url unless additional
-// refinements are applied. This is required for back and forward
-// navigation. Likewise we want to navigate either shallowly - without calling
-// componentDidMount - or deeply
-const searchStateToUrl = (searchState, categoryId) => {
-  const filter = `category_ids:${categoryId}`
-  const filterOnlySearchState = { configure: { filters: filter } }
-  const isSimpleState = JSON.stringify(searchState) === JSON.stringify(filterOnlySearchState)
-
-  if (qs.stringify(searchState) !== '' && !isSimpleState) {
-    return { as: `${window.location.pathname}?${qs.stringify(searchState)}`, isShallow: true }
-  } else {
-    return { as: '', isShallow: false }
-  }
-}
+// Lib
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
 
 class Category extends Component {
-  constructor (props) {
-    super(props)
-    this.onSearchStateChange = this.onSearchStateChange.bind(this)
-  }
+  static algoliaEnabled = () => true
 
-  static async getInitialProps ({ reduxStore, query }) {
-    // The id is required for filtering to category and prevents flickering
-    // of non-category items. Any further options should be passed along only
-    // if they are present
-    const { id, ...options } = query
-    const filter = `category_ids:${id}`
+  static async getInitialProps ({ query: { id }, reduxStore }) {
     await reduxStore.dispatch(readCategory(id))
-    const searchState = Object.assign({ configure: { filters: filter } }, options)
-    const resultsState = await findResultsState(ProductListing, { searchState })
-
-    return { searchState, resultsState }
+    return { id }
   }
 
-  onSearchStateChange = (searchState) => {
+  static buildAlgoliaStates ({ reduxStore, query }) {
+    const { id, ...options } = query
+    return Object.assign({ configure: { filters: `category_ids:${id}` } }, options)
+  }
+
+  static onSearchStateChange (searchState) {
     clearTimeout(this.debouncedSetState)
     this.debouncedSetState = setTimeout(() => {
-      const categoryId = this.props.id
-      const href = `/category?id=${categoryId}`
-      const { as, isShallow } = searchStateToUrl(searchState, categoryId)
-      Router.replace(href, as, { shallow: isShallow })
-    }, updateAfter)
+      let href, as
+      if (searchState.query) {
+        // If the user typed in the searchbox we want to clear any filters
+        // and redirect to the search page
+        const newSearchState = { query: searchState.query }
+        href = as = `/search?${qs.stringify(newSearchState)}`
+      } else {
+        // Otherwise searchState changed because refinments were applied
+        // we want to stay on the same page but push a url onto the stack
+        // so that the back button works as expected
+        const categoryId = this.props.id
+        as = this.searchStateToUrl(searchState)
+        const queryString = as.split('?')[1]
+        // queryString is added at the end so that the url that is pushed
+        // onto the stack is different for each combination of refinements,
+        // otherwise the url would always be the same and the back button would
+        // navigate to the previous page instead of undoing refinements
+        href = `/category?id=${categoryId}&${queryString}`
+      }
+      Router.push(href, as)
+    }, this.updateAfter())
     this.setState({ searchState })
   }
 
-  // Algolia reference implementation would expect the full searchState to be
-  // present in the Url. We wish to hide `{ configure: {filters: filter} }`
-  // on initial page load, so that the url is the slug
-  constructSearchState = (filter, search) => {
-    const options = qs.parse(search.slice(1))
-    Object.assign({ configure: { filters: filter } }, options)
+  static searchStateToUrl (searchState) {
+    // Get a deep copy of searchState - we don't want to modify it
+    const searchStateClone = JSON.parse(JSON.stringify(searchState))
+    // We don't need the category id filter in the URL
+    delete searchStateClone.configure
+    // We don't need the page in the URL
+    delete searchStateClone.page
+    // Build the query string and append it to current path
+    return `${window.location.pathname}?${qs.stringify(searchStateClone)}`
   }
 
-  componentDidMount () {
-    const filter = this.props.id
+  static algoliaComponentDidMount () {
+    // Algolia reference implementation would expect the full searchState to be
+    // present in the Url. We wish to hide `{ configure: {filters: filter} }`
+    // on initial page load, so that the url is the slug
+    const constructSearchState = (filter, search) => {
+      const options = qs.parse(search.slice(1))
+      return Object.assign({ configure: { filters: filter } }, options)
+    }
+
+    const filter = `category_ids:${this.props.id}`
     const { search } = window.location
-    this.props.dispatch(readCategory(filter))
-    this.setState({ searchState: this.constructSearchState(filter, search) })
+    this.setState({ searchState: constructSearchState(filter, search) })
   }
 
-  componentWillReceiveProps () {
-    const filter = this.props.id
+  static algoliaComponentWillReceiveProps () {
+    // Algolia reference implementation would expect the full searchState to be
+    // present in the Url. We wish to hide `{ configure: {filters: filter} }`
+    // on initial page load, so that the url is the slug
+    const constructSearchState = (filter, search) => {
+      const options = qs.parse(search.slice(1))
+      return Object.assign({ configure: { filters: filter } }, options)
+    }
+
+    const filter = `category_ids:${this.props.id}`
     const { search } = window.location
-    this.setState({ searchState: this.constructSearchState(filter, search) })
+    this.setState({ searchState: constructSearchState(filter, search) })
   }
 
   render () {
@@ -105,4 +115,4 @@ function mapStateToProps (state) {
   return category
 }
 
-export default connect(mapStateToProps)(Category)
+export default algoliaReduxWrapper(connect(mapStateToProps)(Category), Category)

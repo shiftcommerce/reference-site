@@ -6,6 +6,9 @@ import { connect } from 'react-redux'
 // Actions
 import { readSlug } from '../actions/slug-actions'
 
+// Lib
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+
 export class Slug extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
     await reduxStore.dispatch(readSlug(query.slug))
@@ -36,4 +39,4 @@ function mapStateToProps (state) {
   return { slug }
 }
 
-export default connect(mapStateToProps)(Slug)
+export default algoliaReduxWrapper(connect(mapStateToProps)(Slug), Slug)

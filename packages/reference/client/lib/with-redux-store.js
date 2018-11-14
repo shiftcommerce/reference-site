@@ -5,6 +5,9 @@ import { readMenu } from '../actions/menu-actions'
 import { fetchAccountDetails } from '../actions/account-actions'
 import { setLoggedInFromCookies } from '../actions/login-actions'
 
+// Lib
+import InitialPropsDelegator from './initial-props-delegator'
+
 const isServer = typeof window === 'undefined'
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__'
 
@@ -22,25 +25,22 @@ function getOrCreateStore (initialState) {
 }
 
 export default (App) => {
-  return class AppWithRedux extends React.Component {
+  return class AppWithRedux extends InitialPropsDelegator(App) {
     static async getInitialProps (appContext) {
       // Get or Create the store with `undefined` as initialState
       // This allows you to set a custom default initialState
       const reduxStore = getOrCreateStore()
       await reduxStore.dispatch(readMenu())
       // Provide the store to getInitialProps of pages
-      appContext.ctx.reduxStore = reduxStore
+      appContext.reduxStore = reduxStore
 
-      let appProps = {}
-      /*eslint-disable */
-      if (typeof App.getInitialProps === 'function') {
-        appProps = await App.getInitialProps.call(App, appContext)
-      }
-      /* eslint-enable */
+      // Get initial props from the parent
+      let appProps = await Object.getPrototypeOf(this).getInitialProps(appContext)
 
       return {
-        ...appProps,
-        initialReduxState: reduxStore.getState()
+        initialReduxState: reduxStore.getState(),
+        reduxStore,
+        ...appProps
       }
     }
 
@@ -57,7 +57,14 @@ export default (App) => {
     }
 
     render () {
-      return <App {...this.props} reduxStore={this.reduxStore} />
+      const { reduxStore, initialReduxState, ...otherProps } = this.props
+
+      let currentStore = reduxStore
+      if (!reduxStore || (Object.keys(reduxStore).length === 0 && reduxStore.constructor === Object && !isServer)) {
+        currentStore = getOrCreateStore(initialReduxState)
+      }
+
+      return <App reduxStore={currentStore} {...otherProps} />
     }
   }
 }

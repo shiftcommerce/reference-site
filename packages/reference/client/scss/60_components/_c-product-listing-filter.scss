@@ -1,30 +1,30 @@
 .c-product-listing-filter {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transition: right 0.25s;
   width: 100%;
-  overflow-y: scroll;
-  z-index: $modal-z-index;
-  padding: 3.5rem 2.5% $global-spacing-unit 2.5%; /* margin for fixed header title, 95% width, general spacing for bottom */
   font-size: 0.85em;
-  background-color: $background-white;
 
-  &--hide {
-    right: 100%;
+  @include breakpoint(mobile-tablet) {
+    position: fixed;
+    background: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: right 0.25s;
+    overflow-y: auto;
+    z-index: $modal-z-index;
+    padding: $global-spacing-unit-small;
   }
 
-  &__header-title {
-    position: fixed;
-    top: 0;
+  @include breakpoint(desktop) {
+    float: left;
+    width: auto;
+    padding-top: $global-spacing-unit-small;
+    padding-bottom: $global-spacing-unit-small;
+    margin-right: $global-spacing-unit;
+  }
 
-    background-color: $background-white;
-    width: 95%;
-    border-bottom: 1px solid $border-default;
-
-    h2 {
-      margin: 1rem auto; /* Normalizing this h2 margins so it's easier to manage the margin at the top of the page */
+  &--hide {
+    @include breakpoint(mobile-tablet) {
+      right: 100%;
     }
   }
 
@@ -66,8 +66,20 @@
     }
   }
 
-  &__body {
-    &-option {
+  &__header {
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &__body-option {
+    @include breakpoint(mobile-tablet) {
       border-top: 1px solid $border-default;
     }
   }

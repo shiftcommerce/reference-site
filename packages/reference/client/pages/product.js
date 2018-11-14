@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 // Lib
 import renderComponents from '../lib/render-components'
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
 
 // Components
 import Loading from '../components/loading'
@@ -120,4 +121,4 @@ function mapStateToProps (state) {
   return { menu, product, cart }
 }
 
-export default connect(mapStateToProps)(Product)
+export default algoliaReduxWrapper(connect(mapStateToProps)(Product), Product)

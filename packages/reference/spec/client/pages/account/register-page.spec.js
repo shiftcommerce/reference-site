@@ -1,38 +1,27 @@
 // Libraries
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import Router from 'next/router'
 
-// Reducers
-import rootReducer from '../../../../client/reducers/root-reducer'
-
-// actionTypes
-import * as types from '../../../../client/actions/action-types'
-
-// Fixtures
-import accountPayload from '../../../fixtures/account-payload'
-
 // Pages
-import RegisterPage from '../../../../client/pages/account/register'
+import { RegisterPage } from '../../../../client/pages/account/register'
+
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
 
 test('redirects to myaccount page when account is created', () => {
   // Arrange - mock next.js router
   const mockedRouter = { push: jest.fn() }
   Router.router = mockedRouter
 
-  // Arrange - build a Redux store and the component
-  const store = createStore(rootReducer)
-  mount(
-    <Provider store={store}>
-      <RegisterPage />
-    </Provider>
+  const wrapper = mount(
+    <RegisterPage
+      account = {{ loggedIn: false }}
+      registration = {{ errors: {}, validationErrors: [] }}
+    />
   )
 
-  // Act - pretend the account is being set
-  store.dispatch({
-    type: types.SET_ACCOUNT,
-    payload: accountPayload.data.attributes
-  })
+  // Act - pretend a user has just logged in
+  wrapper.setProps({ account: { loggedIn: true, errors: {}, validationErrors: [] } })
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)

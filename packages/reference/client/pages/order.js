@@ -3,6 +3,9 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 
+// Lib
+import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+
 // Objects
 import Button from '../objects/button'
 import Image from '../objects/image'
@@ -146,4 +149,4 @@ const mapStateToProps = (state) => {
   return { order }
 }
 
-export default connect(mapStateToProps)(OrderPage)
+export default algoliaReduxWrapper(connect(mapStateToProps)(OrderPage), OrderPage)

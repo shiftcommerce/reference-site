@@ -1,6 +1,5 @@
 // Component
 import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
-import ProductMenuDropdowns from '../../../../../client/components/products/listing/product-menu-dropdowns'
 
 // Objects
 import Breadcrumb from '../../../../../client/objects/breadcrumb'
@@ -22,5 +21,4 @@ test('renders correctly', () => {
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(rootTree.find(Breadcrumb))
-  expect(rootTree.find(ProductMenuDropdowns))
 })

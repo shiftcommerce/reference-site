@@ -2,7 +2,9 @@
 import * as types from '../actions/action-types'
 
 export const initialState = {
-  loading: true,
+  data: {
+    loading: true
+  },
   error: false
 }
 

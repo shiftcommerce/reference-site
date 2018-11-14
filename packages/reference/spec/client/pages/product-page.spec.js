@@ -12,6 +12,10 @@ import ProductDisplay from './../../../client/components/products/display/produc
 // Fixtures
 import product from './../../fixtures/product'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {}
+}))
+
 describe('Product page', () => {
   describe('loading and error states', () => {
     test('displays loading spinner, when there is no error and product is loading', () => {

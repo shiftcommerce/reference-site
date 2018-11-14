@@ -1,5 +1,5 @@
 // Component
-import ProductListing from '../../../../../client/components/products/listing/product-listing'
+import { ProductListing } from '../../../../../client/components/products/listing/product-listing'
 import AlgoliaFilters from '../../../../../client/components/search/algolia/algolia-filters'
 
 import ProductMenu from '../../../../../client/components/products/listing/product-menu'
