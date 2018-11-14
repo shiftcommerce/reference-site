@@ -91,7 +91,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           "stock_available_level": 0,
           "stock_level": 1,
           "tax_code": "vat",
-          "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+          "title": "Variant 1",
           "updated_at": "2018-11-05T11:23:16Z",
         },
         Object {
@@ -120,7 +120,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           "stock_available_level": 0,
           "stock_level": 1,
           "tax_code": "vat",
-          "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+          "title": "Variant 2",
           "updated_at": "2018-10-31T10:24:00Z",
         },
       ],
@@ -156,7 +156,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
       "stock_available_level": 0,
       "stock_level": 1,
       "tax_code": "vat",
-      "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+      "title": "Variant 2",
       "updated_at": "2018-10-31T10:24:00Z",
     }
   }
@@ -223,7 +223,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             <div
               className="c-product-display__info-title"
             >
-              Variant 2 for SEPIA nonslip tray 420×210mm
+              SEPIA nonslip tray 420×210mm - Variant 2
             </div>
             <div
               className="c-product-display__info-sku"
@@ -324,7 +324,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     "stock_available_level": 0,
                     "stock_level": 1,
                     "tax_code": "vat",
-                    "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+                    "title": "Variant 1",
                     "updated_at": "2018-11-05T11:23:16Z",
                   },
                   Object {
@@ -353,7 +353,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     "stock_available_level": 0,
                     "stock_level": 1,
                     "tax_code": "vat",
-                    "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+                    "title": "Variant 2",
                     "updated_at": "2018-10-31T10:24:00Z",
                   },
                 ]
@@ -386,7 +386,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     role="option"
                     value="9337040128595"
                   >
-                    Variant 1 for SEPIA nonslip tray 420×210mm
+                    Variant 1
+                     - £
+                    16.95
                   </option>
                   <option
                     aria-posinset={2}
@@ -398,7 +400,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     role="option"
                     value="0927967530244"
                   >
-                    Variant 2 for SEPIA nonslip tray 420×210mm
+                    Variant 2
+                     - £
+                    97.68
                   </option>
                 </select>
               </div>
@@ -562,7 +566,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           "stock_available_level": 0,
           "stock_level": 1,
           "tax_code": "vat",
-          "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+          "title": "Variant 1",
           "updated_at": "2018-11-05T11:23:16Z",
         },
         Object {
@@ -591,7 +595,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           "stock_available_level": 0,
           "stock_level": 1,
           "tax_code": "vat",
-          "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+          "title": "Variant 2",
           "updated_at": "2018-10-31T10:24:00Z",
         },
       ],
@@ -761,7 +765,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     "stock_available_level": 0,
                     "stock_level": 1,
                     "tax_code": "vat",
-                    "title": "Variant 1 for SEPIA nonslip tray 420×210mm",
+                    "title": "Variant 1",
                     "updated_at": "2018-11-05T11:23:16Z",
                   },
                   Object {
@@ -790,7 +794,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     "stock_available_level": 0,
                     "stock_level": 1,
                     "tax_code": "vat",
-                    "title": "Variant 2 for SEPIA nonslip tray 420×210mm",
+                    "title": "Variant 2",
                     "updated_at": "2018-10-31T10:24:00Z",
                   },
                 ]
@@ -823,7 +827,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     role="option"
                     value="9337040128595"
                   >
-                    Variant 1 for SEPIA nonslip tray 420×210mm
+                    Variant 1
+                     - £
+                    16.95
                   </option>
                   <option
                     aria-posinset={2}
@@ -835,7 +841,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     role="option"
                     value="0927967530244"
                   >
-                    Variant 2 for SEPIA nonslip tray 420×210mm
+                    Variant 2
+                     - £
+                    97.68
                   </option>
                 </select>
               </div>

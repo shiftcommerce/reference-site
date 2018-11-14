@@ -90,7 +90,7 @@ class ProductDisplay extends Component {
     let title = product.title
 
     if (selectedVariant) {
-      title = selectedVariant.title
+      title = `${product.title} - ${selectedVariant.title}`
     }
 
     return (

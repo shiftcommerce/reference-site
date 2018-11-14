@@ -1,5 +1,6 @@
 // Libraries
 import { Component } from 'react'
+import { fixedPrice } from '../lib/fixed-price'
 
 class VariantSelector extends Component {
   constructor (props) {
@@ -12,7 +13,7 @@ class VariantSelector extends Component {
       // @TODO: Add variant data to algolia
       variants && variants.map((variant, idx) =>
         <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price} data-variant-id={variant.id}>
-          { variant.title }
+          { variant.title } - &pound;{ fixedPrice(variant.price) }
         </option>
       )
     )

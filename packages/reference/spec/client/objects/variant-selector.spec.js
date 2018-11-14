@@ -15,6 +15,6 @@ test('renders correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  wrapper.find('select').simulate('change', { target: { value: 'Variant 1 for SEPIA nonslip tray 420×210mm' } })
+  wrapper.find('select').simulate('change', { target: { value: 'Variant 1' } })
   expect(changeVariant).toHaveBeenCalled()
 })
