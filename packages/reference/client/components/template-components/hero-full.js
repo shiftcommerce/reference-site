@@ -3,6 +3,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Objects
+import ConditionalLink from '../../objects/conditional-link'
 import Image from '../../objects/image'
 
 class HeroFull extends Component {
@@ -74,9 +75,9 @@ class HeroFull extends Component {
 
     // Only start looping if first button is there
     if (hero.overlay_link_1_url && hero.overlay_link_1_text) {
-      const url = hero[`overlay_link_${index}_url`][0].canonical_path
-
       while (hero[`overlay_link_${index}_url`] && hero[`overlay_link_${index}_text`]) {
+        const url = hero[`overlay_link_${index}_url`][0].canonical_path
+
         buttons.push(
           <div className='c-hero__button' key={index}>
             <Link href={`/slug?slug=${url}`} as={url}>
@@ -93,15 +94,18 @@ class HeroFull extends Component {
 
   render () {
     const { componentData } = this.props
-    let imgSrc = componentData.image && componentData.image[0] && componentData.image[0].s3_url
-    let mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
+    const href = componentData['overlay_link_1_url'] && componentData['overlay_link_1_url'][0].canonical_path
+    const imgSrc = componentData.image && componentData.image[0] && componentData.image[0].s3_url
+    const mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
 
     return (
       <section className='o-template-component o-template-component--full-width c-hero' style={{ backgroundColor: componentData.background_colour }}>
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }
-          <Image className='c-hero__image' src={imgSrc} mobileSrc={mobileSrc} />
+          <ConditionalLink href={href}>
+            <Image className='c-hero__image' src={imgSrc} mobileSrc={mobileSrc} />
+          </ConditionalLink>
           { this.heroOverlay(componentData, 'below') }
         </div>
       </section>
