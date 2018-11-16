@@ -1,37 +1,36 @@
 .c-minibag {
   &__cart {
-    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // flex-basis: 30%;
     flex-grow: 1;
     cursor: pointer;
     text-align: center;
 
-    @include breakpoint(desktop) {
-      margin-left: $global-spacing-unit-small;
-    }
-
     a {
-      text-decoration: none;
       font-size: 0.8em;
-      display: inline-block;
       padding-left: $global-spacing-unit-small;
+
+      @include breakpoint(desktop) {
+        font-size: 1em;
+      }
     }
 
     &-image {
-      display: inline-block;
+      height: 22px;
+      width: 22px;
+      position: relative;
 
       &-icon {
         display: inline-block;
-        z-index: 0;
-        position: relative;
-
         img {
-          height: 24px;
-          width: 25px;
+          height: 22px;
+          width: 22px;
         }
       }
 
       &-count {
-        display: inline-block;
         background-color: $background-positive;
         border-radius: 50%;
         color: white;
@@ -42,7 +41,9 @@
         line-height: 16px;
         margin-right: -$global-spacing-unit-small;
         z-index: 1;
-        position: relative;
+        position: absolute;
+        left: -6px;
+        top: -6px;
         vertical-align: top;
       }
     }
