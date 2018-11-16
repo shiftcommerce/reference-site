@@ -9,7 +9,7 @@ test('renders the links', () => {
 
   // Act
   const wrapper = shallow(
-    <NavBarOption title='Mens' href='/categories/mens' as='/categories/mens' />
+    <NavBarOption title='Mens' href='/slug?slug=/categories/mens' as='/categories/mens' />
   )
 
   // Assert

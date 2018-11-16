@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 class NavBarOption extends Component {
   render () {
-    const { as, title } = this.props
+    const { href, as, title } = this.props
 
     return (
-      <Link href={`/slug?slug=${as}`} as={as}>
+      <Link href={href} as={as}>
         <a className='c-nav__option' onClick={this.props.onClick}>
           <div className='c-nav__option-label'>{ title }</div>
           <div className='c-nav__option-text'>

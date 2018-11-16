@@ -12,25 +12,17 @@ import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
 export class Slug extends Component {
   static async getInitialProps ({ reduxStore, req, query }) {
     await reduxStore.dispatch(readSlug(query.slug))
-
-    return {
-      url: query.slug
-    }
-  }
-
-  componentDidMount () {
-    const slug = this.props.slug.data[0]
-    let { url } = this.props
+    const { slug } = reduxStore.getState()
+    const resourceType = slug.data[0].resource_type
+    const resourceId = slug.data[0].resource_id
+    let url = query.slug
 
     if (url === '/homepage') {
       url = '/'
     }
 
-    Router.replace(`/${slug.resource_type.toLowerCase()}?id=${slug.resource_id}`, url)
-  }
-
-  render () {
-    return <div />
+    Router.replace(`/${resourceType.toLowerCase()}?id=${resourceId}`, url)
+    return {}
   }
 }
 
