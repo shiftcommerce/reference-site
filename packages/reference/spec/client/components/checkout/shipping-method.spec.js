@@ -143,6 +143,38 @@ test('display pre selected shipping method as selected option on page load', () 
   expect(shippingNode.props().checked).toBe(true)
 })
 
+test('when shipping method is not set it preselects the first available one', () => {
+  // Arrange
+  const shippingMethods = ShippingMethodsJson.shippingMethods
+  const state = {
+    shippingMethods: shippingMethods
+  }
+  const setShippingMethod = () => {}
+
+  const cart = {
+    lineItems: []
+  }
+
+  const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
+    shippingMethod: {
+      collapsed: false
+    }
+  }
+
+  // Act
+  const wrapper = shallow(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
+  const shippingNode = wrapper.find(`#${shippingMethods[0].sku}_${shippingMethods[0].id}`)
+
+  // Assert
+  // expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText(shippingMethods[0].name)
+  expect(shippingNode.props().checked).toBe(true)
+})
+
 test('should be able to select a shipping method', () => {
   // Arrange
   const shippingMethods = ShippingMethodsJson.shippingMethods

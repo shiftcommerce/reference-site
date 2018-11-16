@@ -10,6 +10,8 @@ import { oms } from '../../../server/constants/api-urls'
 import customerOrdersPayload from '../../fixtures/customer-orders-index'
 import customerOrdersPayloadInvalid from '../../fixtures/customer-orders-index-invalid'
 
+afterEach(() => { nock.cleanAll() })
+
 describe('customerOrdersRenderer', () => {
   let consoleSpy
 

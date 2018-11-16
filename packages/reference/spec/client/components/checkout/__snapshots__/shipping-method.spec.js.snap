@@ -528,7 +528,7 @@ exports[`render shipping methods as expected 1`] = `
               htmlFor="super_saver"
             >
               <input
-                checked={false}
+                checked={true}
                 className="c-shipping-method__radio-input"
                 id="super_saver_1"
                 name="shipping_method"
@@ -842,7 +842,7 @@ exports[`renders line item quantity as expected 1`] = `
               htmlFor="super_saver"
             >
               <input
-                checked={false}
+                checked={true}
                 className="c-shipping-method__radio-input"
                 id="super_saver_1"
                 name="shipping_method"

@@ -28,9 +28,9 @@ export default class ShippingMethods extends Component {
   shippingMethod () {
     const { checkout, setShippingMethod } = this.props
     const preSelectedShippingMethod = checkout.shippingMethod
-    const defaultShippingMethod = this.availableShippingMethods() || [0]
+    const defaultShippingMethod = this.availableShippingMethods()[0]
 
-    if (preSelectedShippingMethod && (preSelectedShippingMethod.id !== undefined)) {
+    if (preSelectedShippingMethod && preSelectedShippingMethod.id) {
       return preSelectedShippingMethod
     } else {
       setShippingMethod(defaultShippingMethod)

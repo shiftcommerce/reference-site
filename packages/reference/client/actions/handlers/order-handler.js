@@ -23,7 +23,7 @@ export function convertCheckoutToOrder (cart, checkout, order) {
       sub_total: totals.subTotal,
       total: totals.total,
       shipping_total: totals.shipping,
-      tax: totals.tax,
+      tax: totals.tax || 0,
       placed_at: new Date().toISOString()
     },
     type: 'create_order'

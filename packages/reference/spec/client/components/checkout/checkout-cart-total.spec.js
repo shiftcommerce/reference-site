@@ -195,6 +195,74 @@ test('renders payment errors', () => {
   expect(wrapper).toIncludeText('Payment authentication failed')
 })
 
+test('displays a correct disabled button when shipping address is not completed yet', () => {
+  const checkout = {
+    currentStep: 1,
+    shippingAddress: {
+      errors: []
+    }
+  }
+
+  const cart = {
+    lineItems: [
+      {
+        title: 'Test Product',
+        price: fixedPrice(10.0),
+        discount: 0,
+        quantity: 2,
+        sku: '123',
+        imageUrl: '',
+        size: 'size - 8'
+      }
+    ]
+  }
+
+  const wrapper = mount(
+    <CheckoutCartTotal checkout={checkout} order={{}} cart={cart} dispatch={jest.fn()} />
+  )
+
+  expect(wrapper.find('button.c-cart-summary__buttons--proceed')).toHaveText('Choose Shipping Method')
+  expect(wrapper.find('button.c-cart-summary__buttons--proceed')).toHaveProp('disabled', true)
+})
+
+test('displays a correct enabled button when shipping address is completed', () => {
+  const checkout = {
+    currentStep: 1,
+    shippingAddress: {
+      first_name: 'John',
+      last_name: 'Doe',
+      primary_phone: '07510123123',
+      email: 'john@example.com',
+      country_code: 'UK',
+      line_1: '1 Line',
+      zipcode: 'Ls27EY',
+      city: 'Leeds',
+      errors: {}
+    }
+  }
+
+  const cart = {
+    lineItems: [
+      {
+        title: 'Test Product',
+        price: fixedPrice(10.0),
+        discount: 0,
+        quantity: 2,
+        sku: '123',
+        imageUrl: '',
+        size: 'size - 8'
+      }
+    ]
+  }
+
+  const wrapper = mount(
+    <CheckoutCartTotal checkout={checkout} order={{}} cart={cart} dispatch={jest.fn()} />
+  )
+
+  expect(wrapper.find('button.c-cart-summary__buttons--proceed')).toHaveText('Choose Shipping Method')
+  expect(wrapper.find('button.c-cart-summary__buttons--proceed')).toHaveProp('disabled', false)
+})
+
 describe('Place Order button', () => {
   test('should be disabled if there is any error in billing address', () => {
     // Arrange

@@ -9,6 +9,9 @@ import Checkbox from './../../objects/checkbox'
 import DropdownSelect from './../../objects/dropdown-select'
 import Button from '../../objects/button'
 
+// Lib
+import addressFormValidator from '../../lib/address-form-validator'
+
 // Json
 import Countries from './../../static/countries.json'
 
@@ -282,7 +285,7 @@ export class AddressForm extends Component {
   renderFormSubmitButton () {
     const { checkout, addressType, formName, onToggleCollapsed } = this.props
     const address = checkout[formName]
-    const isValidForm = this.formValid(address)
+    const isValidForm = addressFormValidator(address)
     return (
       <div>
         { addressType === 'shipping' &&

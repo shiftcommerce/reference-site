@@ -3241,79 +3241,115 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                 }
               }
             >
-              <Sticker>
-                <div
-                  aria-label="Cart total summary"
-                  className="u-sticky c-cart-summary"
-                >
-                  <dl
-                    aria-label="Subtotal"
+              <div>
+                <Sticker>
+                  <div
+                    aria-label="Cart total summary"
+                    className="u-sticky c-cart-summary"
                   >
-                    <dt>
-                       Total Price: 
-                    </dt>
-                    <dd>
-                       £
-                      30.00
-                       
-                    </dd>
-                  </dl>
-                  <dl
-                    aria-label="Shipping cost"
-                  >
-                    <dt>
-                       Shipping costs: 
-                    </dt>
-                    <dd>
-                       
-                      £5.45
-                       
-                    </dd>
-                  </dl>
-                  <dl
-                    aria-label="Total"
-                    className="u-bold"
-                  >
-                    <dt>
-                       TOTAL: 
-                    </dt>
-                    <dd>
-                       £
-                      35.45
-                       
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt
-                      className="c-cart-summary__VAT"
+                    <dl
+                      aria-label="Subtotal"
                     >
-                      * Including VAT
-                    </dt>
-                  </dl>
-                </div>
-              </Sticker>
-              <section
-                className="c-cart-summary__buttons"
-              >
-                <Link
-                  as="/"
-                  href="/slug?slug=/homepage"
+                      <dt>
+                         Total Price: 
+                      </dt>
+                      <dd>
+                         £
+                        30.00
+                         
+                      </dd>
+                    </dl>
+                    <dl
+                      aria-label="Shipping cost"
+                    >
+                      <dt>
+                         Shipping costs: 
+                      </dt>
+                      <dd>
+                         
+                        £5.45
+                         
+                      </dd>
+                    </dl>
+                    <dl
+                      aria-label="Total"
+                      className="u-bold"
+                    >
+                      <dt>
+                         TOTAL: 
+                      </dt>
+                      <dd>
+                         £
+                        35.45
+                         
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt
+                        className="c-cart-summary__VAT"
+                      >
+                        * Including VAT
+                      </dt>
+                    </dl>
+                  </div>
+                </Sticker>
+                <div
+                  className="c-cart-summary-buttons"
                 >
-                  <a
-                    className="c-cart-summary__buttons--continue o-button--sml"
+                  <Link
                     href="/"
-                    onClick={[Function]}
                   >
-                    continue shopping
-                  </a>
-                </Link>
-                <a
-                  className="o-button--sml c-cart-summary__buttons--proceed"
-                  onClick={[Function]}
-                >
-                  continue to payment
-                </a>
-              </section>
+                    <Button
+                      aria-label="Continue Shopping"
+                      className="c-cart-summary__buttons--continue o-button--sml"
+                      label="Continue shopping"
+                      onClick={[Function]}
+                      status="primary"
+                      type="button"
+                    >
+                      <div
+                        className="o-button__container"
+                      >
+                        <button
+                          aria-label="Continue Shopping"
+                          className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+                          disabled={false}
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex="0"
+                          type="button"
+                        >
+                          Continue shopping
+                        </button>
+                      </div>
+                    </Button>
+                  </Link>
+                  <Button
+                    aria-label="Continue to Payment"
+                    className="c-cart-summary__buttons--proceed o-button--sml"
+                    label="Continue to Payment"
+                    onClick={[Function]}
+                    status="positive"
+                    type="button"
+                  >
+                    <div
+                      className="o-button__container"
+                    >
+                      <button
+                        aria-label="Continue to Payment"
+                        className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--positive"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
+                        type="button"
+                      >
+                        Continue to Payment
+                      </button>
+                    </div>
+                  </Button>
+                </div>
+              </div>
             </CheckoutCartTotal>
             <div
               className="c-checkout__payment"
