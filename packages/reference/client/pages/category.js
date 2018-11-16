@@ -21,7 +21,7 @@ class Category extends Component {
     return { id }
   }
 
-  static buildAlgoliaStates ({ reduxStore, query }) {
+  static buildAlgoliaStates ({ query }) {
     const { id, ...options } = query
     return Object.assign({ configure: { filters: `category_ids:${id}` } }, options)
   }
@@ -42,6 +42,10 @@ class Category extends Component {
         const categoryId = this.props.id
         as = this.searchStateToUrl(searchState)
         const queryString = as.split('?')[1]
+
+        if (!queryString) {
+          return
+        }
         // queryString is added at the end so that the url that is pushed
         // onto the stack is different for each combination of refinements,
         // otherwise the url would always be the same and the back button would
@@ -78,7 +82,7 @@ class Category extends Component {
     this.setState({ searchState: constructSearchState(filter, search) })
   }
 
-  static algoliaComponentWillReceiveProps () {
+  static algoliaComponentWillReceiveProps (nextProps) {
     // Algolia reference implementation would expect the full searchState to be
     // present in the Url. We wish to hide `{ configure: {filters: filter} }`
     // on initial page load, so that the url is the slug
@@ -87,7 +91,7 @@ class Category extends Component {
       return Object.assign({ configure: { filters: filter } }, options)
     }
 
-    const filter = `category_ids:${this.props.id}`
+    const filter = `category_ids:${nextProps.id}`
     const { search } = window.location
     this.setState({ searchState: constructSearchState(filter, search) })
   }

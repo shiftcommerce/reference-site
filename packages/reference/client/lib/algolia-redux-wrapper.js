@@ -117,8 +117,8 @@ function algoliaOuterWrapper (NextWrapper, Page) {
       return Page.algoliaComponentDidMount && Page.algoliaComponentDidMount.call(this)
     }
 
-    componentWillReceiveProps () {
-      return Page.algoliaComponentWillReceiveProps && Page.algoliaComponentWillReceiveProps.call(this)
+    componentWillReceiveProps (nextProps) {
+      return Page.algoliaComponentWillReceiveProps && Page.algoliaComponentWillReceiveProps.call(this, nextProps)
     }
 
     render () {

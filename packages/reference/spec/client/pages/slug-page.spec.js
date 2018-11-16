@@ -37,20 +37,20 @@ test('Performs router replace to homepage when given /', async () => {
   const query = { slug: '/homepage' }
 
   // Mock next.js router
-  const mockedRouter = { replace: jest.fn() }
+  const mockedRouter = { push: jest.fn() }
   Router.router = mockedRouter
 
   await Slug.getInitialProps({ reduxStore, query })
 
   // Assert - verify that only one redirect happens
-  expect(Router.router.replace.mock.calls.length).toBe(1)
+  expect(Router.router.push.mock.calls.length).toBe(1)
 
   // Assert - verify that it sets the correct slug and goes to the homepage
-  expect(Router.router.replace.mock.calls[0][0]).toBe(`/${resourceType.toLowerCase()}?id=${resourceId}`)
-  expect(Router.router.replace.mock.calls[0][1]).toBe('/')
+  expect(Router.router.push.mock.calls[0][0]).toBe(`/${resourceType.toLowerCase()}?id=${resourceId}`)
+  expect(Router.router.push.mock.calls[0][1]).toBe('/')
 })
 
-test('Performs router replace to resource when given slug', async () => {
+test('Performs router push to resource when given slug', async () => {
   // Mock the redux store
   const reduxStore = createMockStore(initialState)
   reduxStore.dispatch = jest.fn()
@@ -59,15 +59,15 @@ test('Performs router replace to resource when given slug', async () => {
   const query = { slug: '/coffee' }
 
   // Mock next.js router
-  const mockedRouter = { replace: jest.fn() }
+  const mockedRouter = { push: jest.fn() }
   Router.router = mockedRouter
 
   await Slug.getInitialProps({ reduxStore, query })
 
   // Assert - verify that only one redirect happens
-  expect(Router.router.replace.mock.calls.length).toBe(1)
+  expect(Router.router.push.mock.calls.length).toBe(1)
 
   // Assert - verify that the sets the correct slug and goes to the correct resource
-  expect(Router.router.replace.mock.calls[0][0]).toBe(`/${resourceType.toLowerCase()}?id=${resourceId}`)
-  expect(Router.router.replace.mock.calls[0][1]).toBe(query.slug)
+  expect(Router.router.push.mock.calls[0][0]).toBe(`/${resourceType.toLowerCase()}?id=${resourceId}`)
+  expect(Router.router.push.mock.calls[0][1]).toBe(query.slug)
 })
