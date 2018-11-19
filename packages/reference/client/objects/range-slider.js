@@ -18,26 +18,30 @@ class RangeSlider extends Component {
     }
   }
 
+  refinementUpdated = sliderState => (
+    this.props.currentRefinement.min !== sliderState.min ||
+    this.props.currentRefinement.max !== sliderState.max
+  )
+
   onChange = sliderState => {
-    if (
-      this.props.currentRefinement.min !== sliderState.min ||
-      this.props.currentRefinement.max !== sliderState.max
-    ) {
+    if (this.refinementUpdated(sliderState)) {
       this.setState({
         currentValues: { min: sliderState.min, max: sliderState.max }
       })
     }
-  };
+  }
 
   refineSelection = sliderState => {
-    this.props.refine({
-      min: sliderState.min,
-      max: sliderState.max
-    })
+    if (this.refinementUpdated(sliderState)) {
+      this.props.refine({
+        min: sliderState.min,
+        max: sliderState.max
+      })
+    }
   }
 
   render () {
-    const { min, max, formatLabel } = this.props
+    const { formatLabel, min, max } = this.props
     const { currentValues } = this.state
 
     return min !== max ? (

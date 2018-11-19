@@ -264,10 +264,6 @@
       grid-column-end: 3;
     }
 
-    @include breakpoint(desktop) {
-      display: none;
-    }
-
     &-button {
       background: black;
       color: white;
