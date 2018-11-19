@@ -8,6 +8,7 @@ import getConfig from 'next/config'
 
 // Lib
 import InitialPropsDelegator from './initial-props-delegator'
+import buildSearchStateForURL from '../lib/build-search-state-for-url'
 
 // Components
 import ConnectedLayout from '../components/layout'
@@ -103,14 +104,9 @@ function algoliaOuterWrapper (NextWrapper, Page) {
       }
 
       // Default implementation
-      // Get a deep copy of searchState - we don't want to modify it
-      const searchStateClone = JSON.parse(JSON.stringify(searchState))
-      // We don't need the id in the URL
-      delete searchStateClone.id
-      // We don't need the page in the URL
-      delete searchStateClone.page
+      const urlSearchState = buildSearchStateForURL(searchState)
       // Build the query string and append it to search path
-      return searchState ? `/search?${qs.stringify(searchStateClone)}` : ''
+      return searchState.query ? `/search?${qs.stringify(urlSearchState)}` : '/search'
     }
 
     componentDidMount () {

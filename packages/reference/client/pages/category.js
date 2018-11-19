@@ -13,6 +13,7 @@ import ProductListing from '../components/products/listing/product-listing'
 
 // Lib
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 class Category extends Component {
@@ -45,9 +46,6 @@ class Category extends Component {
         as = this.searchStateToUrl(searchState)
         const queryString = as.split('?')[1]
 
-        if (!queryString) {
-          return
-        }
         // queryString is added at the end so that the url that is pushed
         // onto the stack is different for each combination of refinements,
         // otherwise the url would always be the same and the back button would
@@ -60,14 +58,8 @@ class Category extends Component {
   }
 
   static searchStateToUrl (searchState) {
-    // Get a deep copy of searchState - we don't want to modify it
-    const searchStateClone = JSON.parse(JSON.stringify(searchState))
-    // We don't need the category id filter in the URL
-    delete searchStateClone.configure
-    // We don't need the page in the URL
-    delete searchStateClone.page
-    // Build the query string and append it to current path
-    return `${window.location.pathname}?${qs.stringify(searchStateClone)}`
+    const urlSearchState = buildSearchStateForURL(searchState)
+    return Object.keys(urlSearchState).length > 0 ? `${window.location.pathname}?${qs.stringify(urlSearchState)}` : window.location.pathname
   }
 
   static algoliaComponentDidMount () {
