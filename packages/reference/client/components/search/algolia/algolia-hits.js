@@ -4,20 +4,33 @@ import { connectInfiniteHits } from 'react-instantsearch-dom'
 // Components
 import ProductListingCard from '../../products/listing/product-listing-card'
 
-const AlgoliaHits = connectInfiniteHits(({ hits }) => {
-  return hits.map((hit, index) => (
-    <ProductListingCard
-      title={hit.product_title}
-      assetFileUrl={hit.product_assets[0].url}
-      assetFileAltText={hit.product_assets[0].alt_text}
-      minPrice={hit.variant_meta_data.eu.price}
-      maxPrice={hit.variant_meta_data.eu.price}
-      productPath={hit.product_path}
-      productRating={hit.product_rating}
-      key={hit.objectID}
+// This is only exported for testing
+const BaseAlgoliaHits = ({ hits }) => {
+  return groupVariants(hits).map((variantGroup, index) => {
+    return <ProductListingCard
+      title={variantGroup[0].product_title}
+      assetFileUrl={variantGroup[0].product_assets[0].url}
+      assetFileAltText={variantGroup[0].product_assets[0].alt_text}
+      minPrice={Math.min(...variantGroup.map(variant => variant.variant_meta_data.eu.price))}
+      maxPrice={Math.max(...variantGroup.map(variant => variant.variant_meta_data.eu.price))}
+      productPath={variantGroup[0].product_path}
+      productRating={variantGroup[0].product_rating}
+      key={variantGroup[0].objectID}
     />
-  ))
-})
+  })
+}
+
+const AlgoliaHits = connectInfiniteHits(BaseAlgoliaHits)
+
+// Groups variants (i.e. hits) by product reference, returns an array of arrays,
+// each sub-array is a group of variants
+const groupVariants = (hits) => {
+  return Object.values(hits.reduce((products, variant) => {
+    if (!products[variant.product_reference]) products[variant.product_reference] = []
+    products[variant.product_reference].push(variant)
+    return products
+  }, {}))
+}
 
 const LoadMoreHits = connectInfiniteHits(({ hits, hasMore, refine }) => {
   const option = (hasMore, count) => {
@@ -37,4 +50,4 @@ const LoadMoreHits = connectInfiniteHits(({ hits, hasMore, refine }) => {
   )
 })
 
-export { AlgoliaHits, LoadMoreHits }
+export { AlgoliaHits, BaseAlgoliaHits, LoadMoreHits }

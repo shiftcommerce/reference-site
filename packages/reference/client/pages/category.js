@@ -99,24 +99,14 @@ class Category extends Component {
   }
 
   render () {
-    const { title, id } = this.props
+    const { title } = this.props
 
     return (
       <>
         <Head>
           <title>{ suffixWithStoreName(title) }</title>
         </Head>
-        <ProductListing
-          resultsState={this.props.resultsState}
-          onSearchStateChange={this.onSearchStateChange}
-          searchState={
-            this.state && this.state.searchState
-              ? this.state.searchState
-              : this.props.searchState
-          }
-          title={title}
-          categoryId={id}
-        />
+        <ProductListing title={this.props.title} />
       </>
     )
   }

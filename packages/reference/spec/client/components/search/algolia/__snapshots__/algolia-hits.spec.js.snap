@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the algolia hits 1`] = `
-<AlgoliaInfiniteHits(UnknownComponent)>
-  <Component
+<AlgoliaInfiniteHits(BaseAlgoliaHits)>
+  <BaseAlgoliaHits
     createURL={[Function]}
     hasMore={false}
     hits={Array []}
     refine={[Function]}
   />
-</AlgoliaInfiniteHits(UnknownComponent)>
+</AlgoliaInfiniteHits(BaseAlgoliaHits)>
 `;
