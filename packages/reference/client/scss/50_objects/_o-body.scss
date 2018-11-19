@@ -1,12 +1,17 @@
 $o-body-container-width: 80%;
+$o-footer-height: 175px;
+$o-header-height-desktop: 127px;
+$o-header-height-mobile: 176px;
 
 .o-body {
   width: 100%;
-  padding-top: 176px; // height of the fixed header in mobile
+  padding-top: $o-header-height-mobile;
+  min-height: calc(100vh - #{$o-footer-height});
 
-  @include breakpoint(desktop) {
+  @include breakpoint (desktop) {
     width: $o-body-container-width;
     margin: auto;
     padding-top: 0;
+    min-height: calc(100vh - #{$o-footer-height + $o-header-height-desktop});
   }
 }
