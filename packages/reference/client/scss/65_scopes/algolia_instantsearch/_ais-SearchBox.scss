@@ -22,6 +22,9 @@
     font-size: 1em;
     font-weight: 500;
     padding: 0 $global-spacing-unit-small;
+    // Remove rounded edges on iOS
+    -webkit-appearance: none;
+    margin-right: -5px;
 
     &:focus {
       outline: none;
