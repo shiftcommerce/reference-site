@@ -3,11 +3,13 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
 import Link from 'next/link'
+import Head from 'next/head'
 
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
 import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
 import { inputChange,
@@ -62,21 +64,26 @@ export class LoginPage extends Component {
 
   render () {
     return (
-      <div className='c-login'>
-        <h1 className='c-login__title'>Login</h1>
-        <p className='c-login__caption'>Please enter your details below.</p>
-        <LoginForm {...this.props}
-          title='Login'
-          formName='loginForm'
-          onBlur={this.validateInput}
-          handleSubmit={this.handleSubmit}
-        />
-        <a href='/account/forgotpassword' className='c-login__anchor'>Reset Password?</a>
-        <p className='c-login__caption'>Don't have an account?</p>
-        <Link href='/account/register'>
-          <a className='c-login__register-button'>create new account</a>
-        </Link>
-      </div>
+      <>
+        <Head>
+          <title>{ suffixWithStoreName('Login') }</title>
+        </Head>
+        <div className='c-login'>
+          <h1 className='c-login__title'>Login</h1>
+          <p className='c-login__caption'>Please enter your details below.</p>
+          <LoginForm {...this.props}
+            title='Login'
+            formName='loginForm'
+            onBlur={this.validateInput}
+            handleSubmit={this.handleSubmit}
+          />
+          <a href='/account/forgotpassword' className='c-login__anchor'>Reset Password?</a>
+          <p className='c-login__caption'>Don't have an account?</p>
+          <Link href='/account/register'>
+            <a className='c-login__register-button'>create new account</a>
+          </Link>
+        </div>
+      </>
     )
   }
 }

@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import Head from 'next/head'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -85,7 +86,7 @@ export class Product extends Component {
   }
 
   render () {
-    const { product, product: { loading, error, template } } = this.props
+    const { product, product: { loading, error, template, title } } = this.props
 
     if (loading) {
       return (
@@ -102,6 +103,9 @@ export class Product extends Component {
 
       return (
         <>
+          <Head>
+            <title>{ title }</title>
+          </Head>
           <ProductDisplay
             product={product}
             changeVariant={this.changeVariant}

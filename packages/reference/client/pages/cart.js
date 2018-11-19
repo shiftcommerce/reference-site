@@ -1,9 +1,11 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import Head from 'next/head'
 
 // Lib
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
 import { updateQuantity } from '../actions/cart-actions'
@@ -50,11 +52,12 @@ export class CartPage extends Component {
       )
     } else {
       return (
-        <CartTable
-          cart={cart}
-          updateQuantity={this.updateQuantity}
-          deleteItem={this.deleteItem}
-        />
+        <>
+          <Head>
+            <title>{ suffixWithStoreName('Your Shopping Cart') }</title>
+          </Head>
+          <CartTable cart={cart} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
+        </>
       )
     }
   }

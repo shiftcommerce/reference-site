@@ -2,10 +2,12 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
+import Head from 'next/head'
 
 // Libs
 import InputFieldValidator from '../lib/input-field-validator'
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
 import { readCheckoutFromLocalStorage,
@@ -31,7 +33,6 @@ import {
 } from '../actions/address-book-actions'
 
 // Components
-import CustomHead from '../components/custom-head'
 import CheckoutSteps from '../components/checkout/checkout-steps'
 import AddressForm from '../components/checkout/address-form'
 import CheckoutCart from '../components/checkout/checkout-cart'
@@ -40,6 +41,7 @@ import ShippingMethods from '../components/checkout/shipping-methods'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentIcons from '../components/cart/payment-icons'
 import PromoInput from '../components/promo-input'
+import Loading from '../components/loading'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {
@@ -192,15 +194,23 @@ export class CheckoutPage extends Component {
     return isBillingAddressValid && isCardValid
   }
 
+  renderPageTitle () {
+    return (
+      <Head>
+        <title>{ suffixWithStoreName('Checkout') }</title>
+      </Head>
+    )
+  }
+
   render () {
     const { checkout, cart } = this.props
     const hasLineItems = cart.totalQuantity > 0
     if (checkout.loading) {
       return (
-        <div>
-          <CustomHead />
-          loading...
-        </div>
+        <>
+          { this.renderPageTitle() }
+          <Loading />
+        </>
       )
     } else if (checkout.error) {
       return (
@@ -209,7 +219,7 @@ export class CheckoutPage extends Component {
     } else {
       return (
         <>
-          <CustomHead />
+          { this.renderPageTitle() }
           <p>{ checkout.flashError }</p>
           {hasLineItems &&
             <>

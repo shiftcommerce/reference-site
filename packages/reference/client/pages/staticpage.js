@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import Head from 'next/head'
 
 // Actions
 import { readPage } from '../actions/page-actions'
@@ -8,6 +9,7 @@ import { readPage } from '../actions/page-actions'
 // Lib
 import renderComponents from '../lib/render-components'
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
 import Loading from '../components/loading'
@@ -17,6 +19,24 @@ class Page extends Component {
   static async getInitialProps ({ reduxStore, query: { id } }) {
     await reduxStore.dispatch(readPage(id))
     return { id }
+  }
+
+  renderPageTitle () {
+    const { title } = this.props.page
+
+    if (title === 'Homepage') {
+      return (
+        <Head>
+          <title>ShopGo</title>
+        </Head>
+      )
+    } else {
+      return (
+        <Head>
+          <title>{ suffixWithStoreName(title) }</title>
+        </Head>
+      )
+    }
   }
 
   render () {
@@ -33,7 +53,12 @@ class Page extends Component {
     } else {
       const { components } = template.sections.slice(-1).pop()
 
-      return renderComponents(components)
+      return (
+        <>
+          { this.renderPageTitle() }
+          { components && renderComponents(components) }
+        </>
+      )
     }
   }
 }

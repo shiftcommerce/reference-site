@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import Head from 'next/head'
 
 // Components
 import Loading from '../../components/loading'
@@ -9,6 +10,7 @@ import OrderList from '../../components/orders/list'
 
 // Lib
 import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
 import Button from '../../objects/button'
@@ -60,22 +62,36 @@ export class MyAccount extends Component {
     )
   }
 
+  renderPageTitle () {
+    return (
+      <Head>
+        <title>{ suffixWithStoreName('My Account') }</title>
+      </Head>
+    )
+  }
+
   render () {
     const { orders, orders: { loading } } = this.props
 
     if (loading) {
       return (
-        <div className='c-order-history'>
-          { this.renderAccountBanner() }
-          <Loading />
-        </div>
+        <>
+          { this.renderPageTitle() }
+          <div className='c-order-history'>
+            { this.renderAccountBanner() }
+            <Loading />
+          </div>
+        </>
       )
     } else {
       return (
-        <div className='c-order-history'>
-          { this.renderAccountBanner() }
-          { this.renderOrdersList(orders) }
-        </div>
+        <>
+          { this.renderPageTitle() }
+          <div className='c-order-history'>
+            { this.renderAccountBanner() }
+            { this.renderOrdersList(orders) }
+          </div>
+        </>
       )
     }
   }

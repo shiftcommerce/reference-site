@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
 import qs from 'qs'
+import Head from 'next/head'
 
 // Actions
 import { readCategory } from '../actions/category-actions'
@@ -12,6 +13,7 @@ import ProductListing from '../components/products/listing/product-listing'
 
 // Lib
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 class Category extends Component {
   static algoliaEnabled = () => true
@@ -97,18 +99,25 @@ class Category extends Component {
   }
 
   render () {
+    const { title, id } = this.props
+
     return (
-      <ProductListing
-        resultsState={this.props.resultsState}
-        onSearchStateChange={this.onSearchStateChange}
-        searchState={
-          this.state && this.state.searchState
-            ? this.state.searchState
-            : this.props.searchState
-        }
-        title={this.props.title}
-        categoryId={this.props.id}
-      />
+      <>
+        <Head>
+          <title>{ suffixWithStoreName(title) }</title>
+        </Head>
+        <ProductListing
+          resultsState={this.props.resultsState}
+          onSearchStateChange={this.onSearchStateChange}
+          searchState={
+            this.state && this.state.searchState
+              ? this.state.searchState
+              : this.props.searchState
+          }
+          title={title}
+          categoryId={id}
+        />
+      </>
     )
   }
 }

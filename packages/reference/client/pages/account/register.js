@@ -2,11 +2,13 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
+import Head from 'next/head'
 
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
 import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
 import {
@@ -59,20 +61,25 @@ export class RegisterPage extends Component {
 
   render () {
     return (
-      <div className='c-register'>
-        <div className='c-register__text'>
-          <h1 className='c-register__text-title'>Create your account</h1>
-          <p className='c-register__text-caption'>We are delighted to have you as part of the family. All we ask is that you fill in the missing details highlighted in the form below:</p>
+      <>
+        <Head>
+          <title>{ suffixWithStoreName('Create Account') }</title>
+        </Head>
+        <div className='c-register'>
+          <div className='c-register__text'>
+            <h1 className='c-register__text-title'>Create your account</h1>
+            <p className='c-register__text-caption'>We are delighted to have you as part of the family. All we ask is that you fill in the missing details highlighted in the form below:</p>
+          </div>
+          <RegisterForm {...this.props}
+            title='Create Account'
+            formName='createAccountFields'
+            onBlur={this.validateInput}
+            onCreateAccount={this.onCreateAccount}
+            handleSubmit={this.handleSubmit}
+          />
+          <a className='c-register__anchor'>Privacy Policy</a>
         </div>
-        <RegisterForm {...this.props}
-          title='Create Account'
-          formName='createAccountFields'
-          onBlur={this.validateInput}
-          onCreateAccount={this.onCreateAccount}
-          handleSubmit={this.handleSubmit}
-        />
-        <a className='c-register__anchor'>Privacy Policy</a>
-      </div>
+      </>
     )
   }
 }
