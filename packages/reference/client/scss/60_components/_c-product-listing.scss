@@ -258,10 +258,16 @@
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
+    padding: $global-spacing-unit;
 
     @include breakpoint(tablet) {
-      grid-column-start: 2;
-      grid-column-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    @include breakpoint(desktop) {
+      grid-column-start: 1;
+      grid-column-end: 5;
     }
 
     &-button {

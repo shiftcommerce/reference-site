@@ -15,6 +15,7 @@
   }
 
   @include breakpoint(desktop) {
+    max-width: 220px;
     float: left;
     width: auto;
     padding-top: $global-spacing-unit-small;
@@ -25,6 +26,7 @@
   &--hide {
     @include breakpoint(mobile-tablet) {
       right: 100%;
+      display: block;
     }
   }
 
@@ -64,17 +66,22 @@
     &:after {
       transform: rotate(-45deg);
     }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
   }
 
   &__header {
+    @include breakpoint(desktop) {
+      display: block;
+    }
+
     &-title {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
 
-    @include breakpoint(desktop) {
-      display: none;
     }
   }
 
