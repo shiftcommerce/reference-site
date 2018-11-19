@@ -52,7 +52,7 @@ class Category extends Component {
         // navigate to the previous page instead of undoing refinements
         href = `/category?id=${categoryId}&${queryString}`
       }
-      Router.push(href, as)
+      Router.push(href, as, { shallow: true })
     }, this.updateAfter())
     this.setState({ searchState })
   }
