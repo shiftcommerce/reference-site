@@ -16,6 +16,7 @@
   &__inner-wrapper {
     @include breakpoint(desktop) {
       width: $o-body-container-width;
+      max-width: $o-body-max-width;
       margin: auto;
     }
   }
@@ -26,7 +27,7 @@
 // Calculates negative margin so that a constrained
 // body's child can take full screen width
 @function full-width-margin($body-wrapper-width) {
-  @return percentage(($body-wrapper-width - 100%) / ($body-wrapper-width * 2))
+  @return percentage(($body-wrapper-width - 100%) / (60%))
 }
 
 .o-template-component--full-width {

@@ -12,6 +12,7 @@
     padding-top: 72px; /* height of c-header__top in desktop */
     width: $o-body-container-width;
     margin: $global-spacing-unit-small auto;
+    max-width: $o-body-max-width;
     flex-grow: 0;
     flex-basis: auto;
   }

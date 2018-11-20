@@ -36,7 +36,7 @@
           border: 1px solid $background-positive;
 
           @include breakpoint(desktop) {
-            margin-left: ($global-spacing-unit-tiny * 15);
+            margin-left: $global-spacing-unit-huge;
             margin-bottom: 0;
           }
         }

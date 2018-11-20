@@ -2,6 +2,7 @@
   @include breakpoint(desktop) {
     width: 80%;
     margin: auto;
+    max-width: $o-body-max-width;
   }
 
   &__addressform {
@@ -26,21 +27,8 @@
     }
   }
 
-  &__breadcrumb {
-    @include breakpoint(desktop) {
-      width: 80%;
-      margin: auto;
-      padding-bottom: $global-spacing-unit-small;
-      padding-top: $global-spacing-unit-small;
-      border-bottom: 1px solid $border-default;
-      border-top: 1px solid $border-default;
-      margin-top: $global-spacing-unit;
-    }
-  }
-
   &__steps {
     @include breakpoint(desktop) {
-      width: 80%;
       margin: auto;
       border-bottom: 1px solid $border-default;
     }

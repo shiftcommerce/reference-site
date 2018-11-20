@@ -1,4 +1,5 @@
 $o-body-container-width: 80%;
+$o-body-max-width: 1200px;
 $o-footer-height: 175px;
 $o-header-height-desktop: 127px;
 $o-header-height-mobile: 176px;
@@ -12,6 +13,7 @@ $o-header-height-mobile: 176px;
     width: $o-body-container-width;
     margin: auto;
     padding-top: 0;
+    max-width: $o-body-max-width;
     min-height: calc(100vh - #{$o-footer-height + $o-header-height-desktop});
   }
 }
