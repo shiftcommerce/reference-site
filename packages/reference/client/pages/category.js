@@ -62,32 +62,11 @@ class Category extends Component {
     return Object.keys(urlSearchState).length > 0 ? `${window.location.pathname}?${qs.stringify(urlSearchState)}` : window.location.pathname
   }
 
-  static algoliaComponentDidMount () {
-    // Algolia reference implementation would expect the full searchState to be
-    // present in the Url. We wish to hide `{ configure: {filters: filter} }`
-    // on initial page load, so that the url is the slug
-    const constructSearchState = (filter, search) => {
-      const options = qs.parse(search.slice(1))
-      return Object.assign({ configure: { filters: filter } }, options)
-    }
-
-    const filter = `category_ids:${this.props.id}`
-    const { search } = window.location
-    this.setState({ searchState: constructSearchState(filter, search) })
-  }
-
   static algoliaComponentWillReceiveProps (nextProps) {
-    // Algolia reference implementation would expect the full searchState to be
-    // present in the Url. We wish to hide `{ configure: {filters: filter} }`
-    // on initial page load, so that the url is the slug
-    const constructSearchState = (filter, search) => {
-      const options = qs.parse(search.slice(1))
-      return Object.assign({ configure: { filters: filter } }, options)
+    // Only set a new state when we switch category
+    if (nextProps.id !== this.props.id) {
+      this.setState({ searchState: nextProps.searchState })
     }
-
-    const filter = `category_ids:${nextProps.id}`
-    const { search } = window.location
-    this.setState({ searchState: constructSearchState(filter, search) })
   }
 
   render () {

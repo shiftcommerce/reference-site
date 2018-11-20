@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the algolia hits 1`] = `
-<AlgoliaInfiniteHits(BaseAlgoliaHits)>
-  <BaseAlgoliaHits
+<AlgoliaInfiniteHits(AlgoliaResults)>
+  <AlgoliaResults
     createURL={[Function]}
     hasMore={false}
     hits={Array []}
     refine={[Function]}
-  />
-</AlgoliaInfiniteHits(BaseAlgoliaHits)>
+  >
+    <div
+      className="c-product-listing__view-more"
+    >
+      <p
+        className="c-product-listing__view-more-message"
+      >
+        There are no results for this search
+      </p>
+    </div>
+  </AlgoliaResults>
+</AlgoliaInfiniteHits(AlgoliaResults)>
 `;

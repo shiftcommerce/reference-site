@@ -20,19 +20,7 @@ const BaseAlgoliaHits = ({ hits }) => {
   })
 }
 
-const AlgoliaHits = connectInfiniteHits(BaseAlgoliaHits)
-
-// Groups variants (i.e. hits) by product reference, returns an array of arrays,
-// each sub-array is a group of variants
-const groupVariants = (hits) => {
-  return Object.values(hits.reduce((products, variant) => {
-    if (!products[variant.product_reference]) products[variant.product_reference] = []
-    products[variant.product_reference].push(variant)
-    return products
-  }, {}))
-}
-
-const LoadMoreHits = connectInfiniteHits(({ hits, hasMore, refine }) => {
+const LoadMoreHits = ({ hits, hasMore, refine }) => {
   const option = (hasMore, count) => {
     if (hasMore) {
       return <button className='c-product-listing__view-more-button' onClick={refine}>Load More</button>
@@ -48,6 +36,27 @@ const LoadMoreHits = connectInfiniteHits(({ hits, hasMore, refine }) => {
       { option(hasMore, hits.length) }
     </div>
   )
-})
+}
 
-export { AlgoliaHits, BaseAlgoliaHits, LoadMoreHits }
+const AlgoliaResults = (hits, hasMore, refine) => {
+  return (
+    <>
+      { BaseAlgoliaHits(hits) }
+      { LoadMoreHits(hits, hasMore, refine) }
+    </>
+  )
+}
+
+// Groups variants (i.e. hits) by product reference, returns an array of arrays,
+// each sub-array is a group of variants
+const groupVariants = (hits) => {
+  return Object.values(hits.reduce((products, variant) => {
+    if (!products[variant.product_reference]) products[variant.product_reference] = []
+    products[variant.product_reference].push(variant)
+    return products
+  }, {}))
+}
+
+const AlgoliaHits = connectInfiniteHits(AlgoliaResults)
+
+export { AlgoliaHits, BaseAlgoliaHits }

@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import Breadcrumb from '../../../objects/breadcrumb'
 
 // Components
-import { AlgoliaHits, LoadMoreHits } from '../../search/algolia/algolia-hits'
+import { AlgoliaHits } from '../../search/algolia/algolia-hits'
 import AlgoliaFilters from '../../search/algolia/algolia-filters'
 
 import ProductMenu from './product-menu'
@@ -38,7 +38,6 @@ export class ProductListing extends Component {
               <ProductMenuOptions showFilters={this.state.showFilters} toggleFiltering={this.toggleFiltering} />
             </div>
             <AlgoliaHits />
-            <LoadMoreHits />
           </div>
         </div>
       </>

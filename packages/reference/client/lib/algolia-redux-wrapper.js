@@ -92,7 +92,7 @@ function algoliaOuterWrapper (NextWrapper, Page) {
       clearTimeout(this.debouncedSetState)
       this.debouncedSetState = setTimeout(() => {
         const href = this.searchStateToUrl(searchState)
-        Router.push(href, href)
+        Router.push(href, href, { shallow: true })
       }, this.updateAfter())
       this.setState({ searchState })
     }
