@@ -152,6 +152,8 @@ function algoliaInnerWrapper (Component) {
   return class extends InitialPropsDelegator(Component) {
     render () {
       const { resultsState, onSearchStateChange, searchState, ...otherProps } = this.props
+      // We should always configure this in the state to prevent a onSearchStateChange first render
+      searchState.configure = { ...searchState.configure, hitsPerPage: ALGOLIA_RESULTS_PER_PAGE }
       return (
         <InstantSearch
           appId={ALGOLIA_APP_ID}
@@ -161,7 +163,7 @@ function algoliaInnerWrapper (Component) {
           onSearchStateChange={onSearchStateChange}
           searchState={searchState}
         >
-          <Configure hitsPerPage={ALGOLIA_RESULTS_PER_PAGE} {...searchState.configure} />
+          <Configure {...searchState.configure} />
           <Component searchState={ searchState } {...otherProps} />
         </InstantSearch>
       )
