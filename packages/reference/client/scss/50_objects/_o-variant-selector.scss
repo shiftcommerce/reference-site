@@ -9,11 +9,18 @@
     background: transparent;
 
     -webkit-appearance: none;
-    font-size: 1em;
     padding: $global-spacing-unit-small;
     background-image: url('/static/collapse-arrow.png');
     background-repeat: no-repeat;
     background-position: 97% 50%;
+
+    // Media query for mobile safari (the only browser which implements this)
+    @supports (-webkit-overflow-scrolling: touch) {
+      // Workaround for iOS zoom issue on selecting inputs
+      @include breakpoint(mobile) {
+        font-size: 16px;
+      }
+    }
   }
 }
 
