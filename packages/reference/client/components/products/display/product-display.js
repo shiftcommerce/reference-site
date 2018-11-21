@@ -4,9 +4,9 @@ import classNames from 'classnames'
 
 // Components
 import ProductPrice from './product-price'
+import Carousel from './carousel'
 
 // Objects
-import Image from '../../../objects/image'
 import Button from '../../../objects/button'
 import VariantSelector from '../../../objects/variant-selector'
 
@@ -23,14 +23,10 @@ class ProductDisplay extends Component {
     )
   }
 
-  renderImage (product) {
-    const imageUrls = product.asset_files.map(asset => asset.s3_url)
-
+  renderCarousel (product) {
     return (
-      <div className='c-product-display__gallery'>
-        { imageUrls.map(imageUrl => {
-          return <Image src={imageUrl} key={imageUrl} className='c-product-display__gallery-image' />
-        }) }
+      <div className='c-product-display__carousel'>
+        <Carousel assetFiles={product.asset_files} />
       </div>
     )
   }
@@ -218,7 +214,7 @@ class ProductDisplay extends Component {
       <div className='c-product-display'>
         <div className='c-product-display__body'>
           <div className='c-product-display__content-image'>
-            { this.renderImage(product) }
+            { this.renderCarousel(product) }
           </div>
           <div className='c-product-display__content-details'>
             { this.renderInfo(product, selectedVariant) }

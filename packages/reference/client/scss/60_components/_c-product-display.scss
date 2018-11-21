@@ -52,12 +52,9 @@
     }
   }
 
-  &__gallery {
-    &-image {
-
-      img{
-        width: 100%;
-      }
+  &__carousel {
+    img {
+      width: 100%;
     }
 
     @include breakpoint(desktop) {
