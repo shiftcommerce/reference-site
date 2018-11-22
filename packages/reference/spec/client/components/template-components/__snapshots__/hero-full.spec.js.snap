@@ -63,7 +63,7 @@ exports[`renders the full HeroImage component 1`] = `
   }
 >
   <section
-    className="o-template-component o-template-component--full-width c-hero"
+    className="o-template-component o-template-component--full-width c-hero u-padding-top-des"
     style={
       Object {
         "backgroundColor": "antiquewhite",

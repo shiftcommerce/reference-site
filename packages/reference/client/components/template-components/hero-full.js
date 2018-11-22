@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
 
 // Objects
 import ConditionalLink from '../../objects/conditional-link'
@@ -11,7 +12,7 @@ class HeroFull extends Component {
     // Only render heading if available
     if (hero.heading) {
       return (
-        <h1 className='c-component-header'>{ hero.heading }</h1>
+        <h1 className='c-component-header u-margin-top-none-des'>{ hero.heading }</h1>
       )
     }
   }
@@ -97,9 +98,12 @@ class HeroFull extends Component {
     const href = componentData['overlay_link_1_url'] && componentData['overlay_link_1_url'][0].canonical_path
     const imgSrc = componentData.image && componentData.image[0] && componentData.image[0].s3_url
     const mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
+    const componentClasses = classNames('o-template-component o-template-component--full-width c-hero', {
+      'u-padding-top-des': !!componentData.background_colour
+    })
 
     return (
-      <section className='o-template-component o-template-component--full-width c-hero' style={{ backgroundColor: componentData.background_colour }}>
+      <section className={componentClasses} style={{ backgroundColor: componentData.background_colour }}>
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }

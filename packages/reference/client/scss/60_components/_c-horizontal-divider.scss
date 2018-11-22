@@ -1,11 +1,4 @@
 .c-horizontal-divider {
   height: 3px;
-  margin-top: $global-spacing-unit-small;
-  margin-bottom: $global-spacing-unit-small;
   background-color: $background-light-grey;
-
-  @include breakpoint(tablet) {
-    margin-top: $global-spacing-unit;
-    margin-bottom: $global-spacing-unit;
-  }
 }

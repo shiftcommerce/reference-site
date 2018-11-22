@@ -21,3 +21,13 @@ $global-spacing-unit-tiny:  $global-baseline * $global-spacing-unit-factor-tiny 
 $global-spacing-unit-small: $global-baseline * $global-spacing-unit-factor-small !default;
 $global-spacing-unit-large: $global-baseline * $global-spacing-unit-factor-large !default;
 $global-spacing-unit-huge:  $global-baseline * $global-spacing-unit-factor-huge !default;
+
+// Used for auto-generation of utilities
+$directions: top right bottom left;
+$spacings: (
+  none: 0,
+  xs: $global-spacing-unit-tiny,
+  s: $global-spacing-unit-small,
+  l: $global-spacing-unit-large,
+  xl: $global-spacing-unit-huge
+);

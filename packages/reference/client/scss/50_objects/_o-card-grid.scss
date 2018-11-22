@@ -15,15 +15,11 @@
     flex-grow: 1;
     flex-shrink: 1;
     margin-right: $global-spacing-unit-tiny;
-    margin-bottom: $global-spacing-unit;
+    margin-bottom: $global-spacing-unit-small;
 
     @include breakpoint(tablet) {
       margin-right: $global-spacing-unit;
       flex-basis: 20%;
-    }
-
-    @include breakpoint(desktop) {
-      margin-bottom: $global-spacing-unit;
     }
   }
 

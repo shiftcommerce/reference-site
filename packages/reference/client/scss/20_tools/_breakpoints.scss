@@ -4,6 +4,13 @@
 $break-small: 768px;
 $break-large: 1024px;
 
+$breakpoints: (
+  mob: mobile,
+  tab: tablet,
+  mobtab: mobile-tablet,
+  des: desktop
+);
+
 @mixin breakpoint($point) {
   @if $point == mobile {
     @media only screen and (max-width: $break-small - 1px) { @content; }
