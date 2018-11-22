@@ -2,9 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <React.Fragment>
-  <AlgoliaStateResults(ProductMenu)
-    body="Optional text prop not yet setup but available"
-  />
+  <AlgoliaStateResults(ProductMenu) />
   <Breadcrumb />
   <div
     className="c-product-listing-wrapper"

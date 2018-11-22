@@ -9,12 +9,5 @@ exports[`renders correctly 1`] = `
   >
     Super Products
   </h1>
-  <div
-    className="c-product-listing__menu-description-content"
-  >
-    <p>
-      Placeholder text can be changed using props
-    </p>
-  </div>
 </div>
 `;
