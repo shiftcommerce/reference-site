@@ -8,6 +8,7 @@ import ProductListing from '../components/products/listing/product-listing'
 
 // Lib
 import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 class Search extends Component {
   static algoliaEnabled = () => true
@@ -15,19 +16,12 @@ class Search extends Component {
   static updateAfter () { return 0 }
 
   render () {
-    const searchQuery = this.props.searchState.query
-    let searchTitle = 'Showing all products'
-
-    if (searchQuery) {
-      searchTitle = `Search "${searchQuery}"`
-    }
-
     return (
       <>
         <Head>
-          <title>{ searchTitle }</title>
+          <title>{ suffixWithStoreName('Search') }</title>
         </Head>
-        <ProductListing title={searchTitle} />
+        <ProductListing />
       </>
     )
   }

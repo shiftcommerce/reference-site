@@ -4,7 +4,10 @@ import { ProductMenu } from '../../../../../client/components/products/listing/p
 test('renders correctly', () => {
   // Arrange
   const initialProps = {
-    title: 'Super Products'
+    title: 'Super Products',
+    searchState: {
+      query: 'coffee'
+    }
   }
 
   // Act
