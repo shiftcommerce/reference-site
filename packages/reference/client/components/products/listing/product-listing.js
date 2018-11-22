@@ -27,9 +27,11 @@ export class ProductListing extends Component {
   }
 
   render () {
+    const { title } = this.props
+
     return (
       <>
-        <ProductMenu title={this.props.title} body={'Optional text prop not yet setup but available'} />
+        <ProductMenu title={title} body={'Optional text prop not yet setup but available'} />
         <Breadcrumb />
         <div className='c-product-listing-wrapper'>
           <AlgoliaFilters showFilters={this.state.showFilters} toggleFiltering={this.toggleFiltering} />

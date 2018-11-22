@@ -1,27 +1,39 @@
 .ais-SortBy {
-  position: absolute;
-  right: 0;
-  width: 35%;
-  height: 47px;
-
-  &-select{
-    width: 100%;
-    background: transparent;
-    display: inline-block;
-    padding-top: 0.3em;
-    padding-left: 2rem;
-    border: 0;
-    border-radius: 0;
-    height: 100%;
-    -webkit-appearance: none;
+  @include breakpoint(mobile-tablet) {
+    height: 47px;
+    flex-grow: 1;
   }
 
-  &-option{
-    position: absolute;
-    top: 100%;
-    padding: 2px;
-    left: 0;
-    right: 0;
-    z-index: 99;
+  @include breakpoint(desktop) {
+    height: 2.5rem;
+  }
+
+  &-select {
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+    height: 100%;
+    font-size: 0.85rem;
+    margin-left: $global-spacing-unit-tiny;
+    border-radius: 0;
+    border-color: $border-shadow;
+    padding: $global-spacing-unit-tiny;
+
+    @include breakpoint(mobile-tablet) {
+      border: 0;
+    }
+
+    @include breakpoint(desktop) {
+      padding-left: $global-spacing-unit-small;
+      padding-right: 25px;
+      margin-left: 0;
+      background-image: url('/static/arrow-dropdown.svg');
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) 50%;
+    }
+
+    @media (max-width: 355px) {
+      font-size: 0.75rem;
+    }
   }
 }

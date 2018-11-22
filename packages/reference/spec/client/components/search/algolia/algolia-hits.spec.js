@@ -1,5 +1,6 @@
 // Components
-import { AlgoliaHits, BaseAlgoliaHits } from '../../../../../client/components/search/algolia/algolia-hits'
+import { AlgoliaHits, AlgoliaResults } from '../../../../../client/components/search/algolia/algolia-hits'
+import ProductListingCard from '../../../../../client/components/products/listing/product-listing-card'
 
 // Fixtures
 import resultsState from '../../../../fixtures/search-result-state'
@@ -40,7 +41,8 @@ test('groups algolia hits by product_reference', () => {
         }
       },
       product_path: '/product_1',
-      product_rating: 3
+      product_rating: 3,
+      objectID: 1
     },
     {
       product_reference: 'product_a',
@@ -52,7 +54,8 @@ test('groups algolia hits by product_reference', () => {
         }
       },
       product_path: '/product_1',
-      product_rating: 3
+      product_rating: 3,
+      objectID: 2
     },
     {
       product_reference: 'product_b',
@@ -64,7 +67,8 @@ test('groups algolia hits by product_reference', () => {
         }
       },
       product_path: '/product_2',
-      product_rating: 5
+      product_rating: 5,
+      objectID: 3
     },
     {
       product_reference: 'product_b',
@@ -76,17 +80,21 @@ test('groups algolia hits by product_reference', () => {
         }
       },
       product_path: '/product_2',
-      product_rating: 5
+      product_rating: 5,
+      objectID: 4
     }
   ]
 
-  const products = BaseAlgoliaHits({ hits })
+  const wrapper = shallow(<AlgoliaResults hits={ hits } hasMore={ false } refine={ jest.fn() } />)
 
-  expect(products.length).toEqual(2)
-  expect(products[0].props.title).toEqual('Product A')
-  expect(products[0].props.minPrice).toEqual(10)
-  expect(products[0].props.maxPrice).toEqual(20)
-  expect(products[1].props.title).toEqual('Product B')
-  expect(products[1].props.minPrice).toEqual(15)
-  expect(products[1].props.maxPrice).toEqual(25)
+  expect(wrapper.find(ProductListingCard).length).toEqual(2)
+
+  const productA = wrapper.find(ProductListingCard).first()
+  const productB = wrapper.find(ProductListingCard).last()
+  expect(productA.prop('title')).toEqual('Product A')
+  expect(productA.prop('minPrice')).toEqual(10)
+  expect(productA.prop('maxPrice')).toEqual(20)
+  expect(productB.prop('title')).toEqual('Product B')
+  expect(productB.prop('minPrice')).toEqual(15)
+  expect(productB.prop('maxPrice')).toEqual(25)
 })

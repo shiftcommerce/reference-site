@@ -23,6 +23,8 @@ const {
   }
 } = getConfig()
 
+const MAX_VARIANTS_PER_PRODUCT = 50
+
 export default function (ConnectedComponent, Page) {
   return algoliaOuterWrapper(
     withReduxStore(
@@ -163,8 +165,8 @@ function algoliaInnerWrapper (Component) {
           onSearchStateChange={onSearchStateChange}
           searchState={searchState}
         >
-          <Configure {...searchState.configure} />
-          <Component searchState={ searchState } {...otherProps} />
+          <Configure distinct={MAX_VARIANTS_PER_PRODUCT} {...searchState.configure} />
+          <Component {...otherProps} />
         </InstantSearch>
       )
     }

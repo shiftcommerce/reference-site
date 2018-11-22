@@ -1,5 +1,5 @@
 // Component
-import ProductMenu from '../../../../../client/components/products/listing/product-menu'
+import { ProductMenu } from '../../../../../client/components/products/listing/product-menu'
 
 test('renders correctly', () => {
   // Arrange

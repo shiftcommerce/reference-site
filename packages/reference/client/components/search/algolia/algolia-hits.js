@@ -1,12 +1,12 @@
 // Libraries
-import { connectInfiniteHits } from 'react-instantsearch-dom'
+import { connectInfiniteHits, connectStateResults } from 'react-instantsearch-dom'
 
 // Components
 import ProductListingCard from '../../products/listing/product-listing-card'
 
 // This is only exported for testing
-const BaseAlgoliaHits = ({ hits }) => {
-  return groupVariants(hits).map((variantGroup, index) => {
+const BaseAlgoliaHits = (variantGroups) => {
+  return variantGroups.map((variantGroup, index) => {
     return <ProductListingCard
       title={variantGroup[0].product_title}
       assetFileUrl={variantGroup[0].product_assets[0].url}
@@ -38,10 +38,25 @@ const LoadMoreHits = ({ hits, hasMore, refine }) => {
   )
 }
 
+const productListingInfo = ({ products, allSearchResults }) => {
+  return (
+    <div className="c-product-listing__info">
+      <p className="c-product-listing__counts">Showing { products.length } of { allSearchResults && allSearchResults.nbHits } products</p>
+      <p className="c-product-listing__grid-toggles u-visible-d">View <a href='#' className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled">2</a> <a href='#' className="c-product-listing__grid-toggle">4</a></p>
+    </div>
+  )
+}
+const ConnectedProductListingInfo = connectStateResults(productListingInfo)
+
 const AlgoliaResults = (hits, hasMore, refine) => {
+  const products = groupVariants(hits.hits)
+
   return (
     <>
-      { BaseAlgoliaHits(hits) }
+      <ConnectedProductListingInfo products={products} />
+      <div className="c-product-listing__products">
+        { BaseAlgoliaHits(products) }
+      </div>
       { LoadMoreHits(hits, hasMore, refine) }
     </>
   )
@@ -59,4 +74,4 @@ const groupVariants = (hits) => {
 
 const AlgoliaHits = connectInfiniteHits(AlgoliaResults)
 
-export { AlgoliaHits, BaseAlgoliaHits }
+export { AlgoliaHits, AlgoliaResults, BaseAlgoliaHits }

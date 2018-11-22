@@ -15,7 +15,7 @@ class Search extends Component {
 
   render () {
     return (
-      <ProductListing title={`Search "${this.props.searchState.query}"`} />
+      <ProductListing />
     )
   }
 }

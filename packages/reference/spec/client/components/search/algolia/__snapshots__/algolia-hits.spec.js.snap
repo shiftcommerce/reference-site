@@ -8,6 +8,54 @@ exports[`renders the algolia hits 1`] = `
     hits={Array []}
     refine={[Function]}
   >
+    <AlgoliaStateResults(productListingInfo)
+      products={Array []}
+    >
+      <productListingInfo
+        products={Array []}
+        props={
+          Object {
+            "canRender": false,
+            "products": Array [],
+          }
+        }
+        searchResults={null}
+      >
+        <div
+          className="c-product-listing__info"
+        >
+          <p
+            className="c-product-listing__counts"
+          >
+            Showing 
+            0
+             of 
+             products
+          </p>
+          <p
+            className="c-product-listing__grid-toggles u-visible-d"
+          >
+            View 
+            <a
+              className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled"
+              href="#"
+            >
+              2
+            </a>
+             
+            <a
+              className="c-product-listing__grid-toggle"
+              href="#"
+            >
+              4
+            </a>
+          </p>
+        </div>
+      </productListingInfo>
+    </AlgoliaStateResults(productListingInfo)>
+    <div
+      className="c-product-listing__products"
+    />
     <div
       className="c-product-listing__view-more"
     >

@@ -82,6 +82,11 @@
       justify-content: space-between;
       align-items: center;
 
+      h2 {
+        @include breakpoint(desktop) {
+          margin-top: 0;
+        }
+      }
     }
   }
 

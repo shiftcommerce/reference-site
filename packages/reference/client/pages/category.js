@@ -77,7 +77,7 @@ class Category extends Component {
         <Head>
           <title>{ suffixWithStoreName(title) }</title>
         </Head>
-        <ProductListing title={this.props.title} />
+        <ProductListing title={title} />
       </>
     )
   }

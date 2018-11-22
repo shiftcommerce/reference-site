@@ -1,22 +1,5 @@
 .c-product-listing {
-  display: grid;
-  grid-auto-rows: minmax(100px, auto) [last-line];
-  grid-gap: 15px;
-  grid-template-columns: repeat(2, 1fr);
   margin: auto;
-
-  @include breakpoint(mobile-tablet) {
-    padding-left: $global-spacing-unit-tiny;
-    padding-right: $global-spacing-unit-tiny;
-  }
-
-  @include breakpoint(tablet) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include breakpoint(desktop) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   &-wrapper {
     @include tools-clearfix();
@@ -26,60 +9,47 @@
     display: none;
   }
 
-  &__menu {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  &__products {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto) [last-line];
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(mobile-tablet) {
+      padding-left: $global-spacing-unit-tiny;
+      padding-right: $global-spacing-unit-tiny;
+    }
 
     @include breakpoint(tablet) {
-      grid-column-end: 4;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include breakpoint(desktop) {
-      grid-column-end: 5;
+      grid-template-columns: repeat(4, 1fr);
     }
+  }
 
+  &__menu {
     &-description {
       border-bottom: 1px solid $border-default;
       border-top: 1px solid $border-default;
       text-align: center;
-
-      @include breakpoint(mobile-tablet) {
-        margin-left: $global-spacing-unit-tiny;
-        margin-right: $global-spacing-unit-tiny;
-      }
 
       &-title {
         font-size: 1.8rem;
 
         @include breakpoint(desktop) {
           margin-top: $global-spacing-unit;
+          margin-bottom: $global-spacing-unit;
           font-size: 2.5rem;
-        }
-
-        h1 {
-
-          @include breakpoint(desktop) {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-          }
         }
       }
 
       &-content {
         font-size: 0.8rem;
-        margin-bottom: ($global-spacing-unit-tiny * 5);
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-
-        @include breakpoint(tablet) {
-          width: 50%;
-        }
+        margin-bottom: $global-spacing-unit;
 
         @include breakpoint(desktop) {
-          width: 35%;
-          margin-bottom: $global-spacing-unit-large;
           font-size: 1rem;
         }
       }
@@ -145,30 +115,37 @@
 
       &-sort-by {
         display: flex;
+        align-items: center;
         width: 50%;
 
         @include breakpoint(desktop) {
-          display: none;
+          width: auto;
+          justify-content: flex-end;
         }
 
         &-title {
-          font-size: 0.84rem;
+          font-size: 0.85rem;
           font-weight: normal;
-          padding-left: $global-spacing-unit-tiny;
-          padding-top: $global-spacing-unit-tiny;
+          margin-left: $global-spacing-unit-tiny;
+          flex-shrink: 0;
 
           @media (max-width: 355px) {
             font-size: 0.75rem;
+          }
+
+          @include breakpoint(desktop) {
+            margin-right: $global-spacing-unit-small;
           }
         }
 
         &-button {
           background: url('/static/arrow-right.svg') no-repeat center;
           border: none;
+          width: 30px;
+          padding-left: 0;
+          padding-right: 0;
+          margin: 0;
           cursor: pointer;
-          margin: 0 0 0 auto;
-          height: 100%;
-          width: 2rem;
         }
       }
     }
@@ -255,20 +232,8 @@
   }
 
   &__view-more {
-    grid-column-start: 1;
-    grid-column-end: 3;
     text-align: center;
     padding: $global-spacing-unit;
-
-    @include breakpoint(tablet) {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-
-    @include breakpoint(desktop) {
-      grid-column-start: 1;
-      grid-column-end: 5;
-    }
 
     &-button {
       background: black;
@@ -277,6 +242,41 @@
       height: 2.5rem;
       text-transform: uppercase;
       width: 12rem;
+    }
+
+    &-message {
+      font-size: 0.8em;
+      color: $text-default;
+      margin: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: flex-end;
+    font-size: 0.8em;
+
+    @include breakpoint(mobile-tablet) {
+      margin-left: $global-spacing-unit-tiny;
+      margin-right: $global-spacing-unit-tiny;
+    }
+
+    @include breakpoint(desktop) {
+      justify-content: space-between;
+    }
+
+  }
+
+  &__counts {
+    color: $text-default;
+  }
+
+  &__grid-toggle {
+    margin-left: $global-spacing-unit-tiny;
+
+    &--disabled {
+      color: $text-default;
     }
   }
 }

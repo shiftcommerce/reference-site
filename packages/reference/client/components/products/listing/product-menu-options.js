@@ -30,7 +30,7 @@ class ProductMenuOptions extends PureComponent {
               { value: 'instant_search_product_rating_desc', label: 'Rating desc.' }
             ]}
           />
-          <Button className='c-product-listing__menu-options-sort-by-button' />
+          <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
         </div>
       </div>
     )

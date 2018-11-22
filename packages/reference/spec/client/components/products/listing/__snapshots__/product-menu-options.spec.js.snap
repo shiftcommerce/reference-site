@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
       }
     />
     <Button
-      className="c-product-listing__menu-options-sort-by-button"
+      className="c-product-listing__menu-options-sort-by-button u-hidden-d"
     />
   </div>
 </div>
