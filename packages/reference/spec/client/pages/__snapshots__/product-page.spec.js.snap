@@ -675,13 +675,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               className="c-product-display__info"
             >
               <div
-                className="c-product-display__info-headings"
+                className="c-product-display__info-title"
               >
-                <div
-                  className="c-product-display__info-title"
-                >
-                  SEPIA nonslip tray 420×210mm
-                </div>
+                SEPIA nonslip tray 420×210mm
               </div>
               <div
                 className="c-product-display__info-price"

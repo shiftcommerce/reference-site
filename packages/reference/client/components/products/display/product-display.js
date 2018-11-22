@@ -118,10 +118,8 @@ class ProductDisplay extends Component {
 
     return (
       <div className='c-product-display__info'>
-        <div className='c-product-display__info-headings'>
-          { this.renderTitle(product, selectedVariant) }
-          { this.renderSku(selectedVariant) }
-        </div>
+        { this.renderTitle(product, selectedVariant) }
+        { this.renderSku(selectedVariant) }
         { this.renderPrice(product, selectedVariant) }
         <div className='c-product-display__info-rating'>
           { this.renderRatingStars(product) }

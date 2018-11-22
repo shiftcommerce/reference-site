@@ -170,21 +170,13 @@
       width: 100%;
     }
 
-    &-headings {
-      height: 55px;
-
-      @include breakpoint(desktop) {
-        height: 65px;
-      }
-    }
-
     &-title {
       font-size: 0.9em;
       font-weight: 700;
       padding-bottom: $global-spacing-unit-small;
 
       @include breakpoint(desktop) {
-        font-size: 1em
+        font-size: 1em;
       }
     }
 
