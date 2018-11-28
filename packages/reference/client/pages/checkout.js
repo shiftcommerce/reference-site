@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 // Libs
 import InputFieldValidator from '../lib/input-field-validator'
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { reduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
@@ -296,4 +296,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default algoliaReduxWrapper(connect(mapStateToProps, mapDispatchToProps)(CheckoutPage), CheckoutPage)
+export default reduxWrapper(connect(mapStateToProps, mapDispatchToProps)(CheckoutPage), CheckoutPage)

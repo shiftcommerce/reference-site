@@ -1,29 +1,70 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
 
-// Actions
-import { readPage } from '../actions/page-actions'
+// Requests
+import { pageRequest } from '../requests/page-request'
 
 // Lib
 import renderComponents from '../lib/render-components'
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
+import JsonApiParser from '../lib/json-api-parser'
 
 // Components
 import Loading from '../components/loading'
 import StaticPageError from '../components/static-page-error'
 
+const fetchPage = async (id) => {
+  try {
+    const request = pageRequest(id)
+    const response = await new ApiClient().read(request.endpoint, request.query)
+    return new JsonApiParser().parse(response.data)
+  } catch (error) {
+    return { error }
+  }
+}
+
 class Page extends Component {
-  static async getInitialProps ({ reduxStore, query: { id } }) {
-    await reduxStore.dispatch(readPage(id))
-    return { id }
+  static async getInitialProps ({ query: { id }, req }) {
+    if (req) { // server-side
+      const page = await fetchPage(id)
+      return { id, page }
+    } else { // client side
+      return { id }
+    }
   }
 
-  renderPageTitle () {
-    const { title } = this.props.page
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
 
+  static getDerivedStateFromProps (newProps, prevState) {
+    if (prevState.currentId !== newProps.id) {
+      return { currentId: newProps.id, loading: true }
+    }
+    return null
+  }
+
+  async componentDidMount () {
+    await this.fetchPageIntoState(this.props.id)
+  }
+
+  async componentDidUpdate (_, prevState) {
+    if (prevState.currentId !== this.state.currentId) {
+      await this.fetchPageIntoState(this.props.id)
+    }
+  }
+
+  async fetchPageIntoState (id) {
+    const page = await fetchPage(id)
+    this.setState({ loading: false, page })
+  }
+
+  renderPageTitle (title) {
     if (title === 'Homepage') {
       return (
         <Head>
@@ -40,22 +81,23 @@ class Page extends Component {
   }
 
   render () {
-    const { page: { loading, error, template } } = this.props
+    const page = this.props.page || (this.state && this.state.page)
+    const loading = (this.state && this.state.loading) || !page
 
     if (loading) {
       return (
         <Loading />
       )
-    } else if (error) {
+    } else if (page.error) {
       return (
-        <StaticPageError error={error} />
+        <StaticPageError error={page.error} />
       )
     } else {
-      const { components } = template.sections.slice(-1).pop()
+      const { components } = page.template.sections.slice(-1).pop()
 
       return (
         <>
-          { this.renderPageTitle() }
+          { this.renderPageTitle(page.title) }
           { components && renderComponents(components) }
         </>
       )
@@ -63,10 +105,4 @@ class Page extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  const { page } = state
-
-  return { page }
-}
-
-export default algoliaReduxWrapper(connect(mapStateToProps)(Page), Page)
+export default algoliaReduxWrapper(connect()(Page), Page)

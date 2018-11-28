@@ -7,13 +7,11 @@ import Head from 'next/head'
 import ProductListing from '../components/products/listing/product-listing'
 
 // Lib
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 class Search extends Component {
   static algoliaEnabled = () => true
-
-  static updateAfter () { return 0 }
 
   render () {
     return (

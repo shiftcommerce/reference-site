@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Link from 'next/link'
 
 // Lib
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Objects
 import Button from '../objects/button'

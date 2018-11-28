@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 // Lib
 import renderComponents from '../lib/render-components'
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Components
 import Loading from '../components/loading'

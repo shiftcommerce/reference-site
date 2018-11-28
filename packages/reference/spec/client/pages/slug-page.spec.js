@@ -1,6 +1,6 @@
 // Libraries
-import { createMockStore } from 'redux-test-utils'
 import Router from 'next/router'
+import nock from 'nock'
 
 // Pages
 import { Slug } from '../../../client/pages/slug'
@@ -9,30 +9,25 @@ import { Slug } from '../../../client/pages/slug'
 const resourceType = 'staticpage'
 const resourceId = 1
 
-const slug = {
-  data: [
-    {
-      resource_type: resourceType,
-      resource_id: resourceId
-    }
-  ]
-}
-
-const initialState = {
-  slug: slug
-}
-
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
 }))
 
-// Tests
+beforeEach(() => {
+  nock(process.env.API_HOST_PROXY, { 'encodedQueryParams': true })
+    .get('/getSlug/')
+    .query(true)
+    .reply(200, { 'data': [{
+      'attributes': {
+        'resource_id': 1,
+        'resource_type': 'StaticPage'
+      }
+    }] }, ['access-control-allow-origin', '*'])
+})
+
+afterEach(() => { nock.cleanAll() })
 
 test('Performs router replace to homepage when given /', async () => {
-  // Mock the redux store
-  const reduxStore = createMockStore(initialState)
-  reduxStore.dispatch = jest.fn()
-
   // Set the slug
   const query = { slug: '/homepage' }
 
@@ -40,7 +35,7 @@ test('Performs router replace to homepage when given /', async () => {
   const mockedRouter = { push: jest.fn() }
   Router.router = mockedRouter
 
-  await Slug.getInitialProps({ reduxStore, query })
+  await Slug.getInitialProps({ query })
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)
@@ -51,10 +46,6 @@ test('Performs router replace to homepage when given /', async () => {
 })
 
 test('Performs router push to resource when given slug', async () => {
-  // Mock the redux store
-  const reduxStore = createMockStore(initialState)
-  reduxStore.dispatch = jest.fn()
-
   // Set the slug
   const query = { slug: '/coffee' }
 
@@ -62,7 +53,7 @@ test('Performs router push to resource when given slug', async () => {
   const mockedRouter = { push: jest.fn() }
   Router.router = mockedRouter
 
-  await Slug.getInitialProps({ reduxStore, query })
+  await Slug.getInitialProps({ query })
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)

@@ -7,7 +7,7 @@ import Head from 'next/head'
 // Libs
 import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
-import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions

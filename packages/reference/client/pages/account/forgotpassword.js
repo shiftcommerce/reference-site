@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 // Lib
-import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects

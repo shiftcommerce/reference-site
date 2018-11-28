@@ -1,18 +1,20 @@
 // Libraries
 import { Component } from 'react'
 import Router from 'next/router'
-import { connect } from 'react-redux'
 
-// Actions
-import { readSlug } from '../actions/slug-actions'
+// Config
+import { slugRequest } from '../requests/slug-request'
 
 // Lib
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import ApiClient from '../lib/api-client'
+import JsonApiParser from '../lib/json-api-parser'
 
 export class Slug extends Component {
-  static async getInitialProps ({ reduxStore, req, query }) {
-    await reduxStore.dispatch(readSlug(query.slug))
-    const { slug } = reduxStore.getState()
+  static async getInitialProps ({ query }) {
+    const request = slugRequest(query.slug)
+    const response = await new ApiClient().read(request.endpoint, request.query)
+    const slug = new JsonApiParser().parse(response.data)
+
     const resourceType = slug.data[0].resource_type
     const resourceId = slug.data[0].resource_id
     let url = query.slug
@@ -26,9 +28,4 @@ export class Slug extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  const { slug } = state
-  return { slug }
-}
-
-export default algoliaReduxWrapper(connect(mapStateToProps)(Slug), Slug)
+export default Slug

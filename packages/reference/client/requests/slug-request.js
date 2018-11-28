@@ -1,7 +1,5 @@
 import qs from 'qs'
 
-import * as types from '../actions/action-types'
-
 export const slugRequest = (slug) => {
   const queryObject = {
     filter: {
@@ -17,8 +15,6 @@ export const slugRequest = (slug) => {
   }
   const query = qs.stringify(queryObject)
   return {
-    endpoint: `/getSlug/?${query}`,
-    requestActionType: types.GET_SLUG,
-    successActionType: types.SET_SLUG
+    endpoint: `/getSlug/?${query}`
   }
 }

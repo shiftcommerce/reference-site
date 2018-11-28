@@ -57,29 +57,24 @@ exports[`Product page loading and error states displays loading spinner, when th
   }
 >
   <Loading
-    className="c-loading"
-    color="#431048"
-    delay={0}
+    className="c-loading u-padding-top-xl"
+    color="#f5c6cb"
+    delay={250}
     height={50}
     type="spin"
     width={50}
   >
     <div
-      className="c-loading"
+      className="c-loading u-padding-top-xl"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 32 32\\">
-  <path opacity=\\".25\\" d=\\"M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4\\"/>
-  <path d=\\"M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z\\">
-    <animateTransform attributeName=\\"transform\\" type=\\"rotate\\" from=\\"0 16 16\\" to=\\"360 16 16\\" dur=\\"0.8s\\" repeatCount=\\"indefinite\\" />
-  </path>
-</svg>
+          "__html": "<svg class=\\"icon-blank\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 32 32\\"></svg>
 ",
         }
       }
       style={
         Object {
-          "fill": "#431048",
+          "fill": "#f5c6cb",
           "height": 50,
           "width": 50,
         }

@@ -5,27 +5,40 @@ import Router from 'next/router'
 import qs from 'qs'
 import Head from 'next/head'
 
-// Actions
-import { readCategory } from '../actions/category-actions'
-
 // Components
 import ProductListing from '../components/products/listing/product-listing'
+import Loading from '../components/loading'
+import AlgoliaFilters from '../components/search/algolia/algolia-filters'
+
+// Requests
+import { categoryRequest } from '../requests/category-request'
 
 // Lib
-import algoliaReduxWrapper from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
+import JsonApiParser from '../lib/json-api-parser'
+
+const fetchCategory = async (id) => {
+  const request = categoryRequest(id)
+  const response = await new ApiClient().read(request.endpoint, request.query)
+  return new JsonApiParser().parse(response.data)
+}
 
 class Category extends Component {
   static algoliaEnabled = () => true
 
-  static async getInitialProps ({ query: { id }, reduxStore }) {
-    await reduxStore.dispatch(readCategory(id))
-    return { id }
+  static async getInitialProps ({ query: { id }, reduxStore, req }) {
+    if (req) { // server-side
+      const category = await fetchCategory(id)
+      return { id, category }
+    } else { // client side
+      return { id }
+    }
   }
 
-  static buildAlgoliaStates ({ query }) {
-    const { id, ...options } = query
+  static buildAlgoliaStates ({ query: { id, ...options } }) {
     return Object.assign({ configure: { filters: `category_ids:${id}` } }, options)
   }
 
@@ -62,31 +75,68 @@ class Category extends Component {
     return Object.keys(urlSearchState).length > 0 ? `${window.location.pathname}?${qs.stringify(urlSearchState)}` : window.location.pathname
   }
 
-  static algoliaComponentWillReceiveProps (nextProps) {
-    // Only set a new state when we switch category
-    if (nextProps.id !== this.props.id) {
-      this.setState({ searchState: nextProps.searchState })
+  static algoliaGetDerivedStateFromProps (newProps, prevState) {
+    if (prevState.currentId !== newProps.id) {
+      return { currentId: newProps.id, searchState: newProps.searchState }
+    }
+    return null
+  }
+
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
+  static getDerivedStateFromProps (newProps, prevState) {
+    if (prevState.currentId !== newProps.id) {
+      return { currentId: newProps.id, loading: true }
+    }
+    return null
+  }
+
+  async componentDidMount () {
+    await this.fetchCategoryIntoState(this.props.id)
+  }
+
+  async componentDidUpdate (_, prevState) {
+    if (prevState.currentId !== this.state.currentId) {
+      await this.fetchCategoryIntoState(this.props.id)
     }
   }
 
-  render () {
-    const { title } = this.props
+  async fetchCategoryIntoState (id) {
+    const category = await fetchCategory(id)
+    this.setState({ loading: false, category })
+  }
 
-    return (
-      <>
-        <Head>
-          <title>{ suffixWithStoreName(title) }</title>
-        </Head>
-        <ProductListing title={title} />
-      </>
-    )
+  render () {
+    const category = this.props.category || (this.state && this.state.category)
+    const loading = (this.state && this.state.loading) || !category
+
+    if (loading) {
+      return (
+        <>
+          <Loading />
+          {/* Render Algolia filters so that the Algolia request triggered by the spinner
+          matches the default category page request - otherwise an extra call to Algolia is made */}
+          <div className='u-hidden'>
+            <AlgoliaFilters />
+          </div>
+        </>
+      )
+    } else {
+      const { title } = category
+
+      return (
+        <>
+          <Head>
+            <title>{ suffixWithStoreName(title) }</title>
+          </Head>
+          <ProductListing title={title} />
+        </>
+      )
+    }
   }
 }
 
-function mapStateToProps (state) {
-  const { category } = state
-
-  return category
-}
-
-export default algoliaReduxWrapper(connect(mapStateToProps)(Category), Category)
+export default algoliaReduxWrapper(connect()(Category), Category)

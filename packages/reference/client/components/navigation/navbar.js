@@ -62,7 +62,7 @@ export class NavBar extends Component {
   renderNavBurgerMenu () {
     return (
       <>
-        <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown}/>
+        <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown} readOnly />
         <div className='c-nav__menu-button'onClick={this.toggleMenuShown} >
           <Image className='c-nav__menu-button-image' src='/static/burger-menu-icon.svg' />
           <p>Menu</p>

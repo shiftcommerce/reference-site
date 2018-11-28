@@ -9,7 +9,7 @@ import Loading from '../../components/loading'
 import OrderList from '../../components/orders/list'
 
 // Lib
-import algoliaReduxWrapper from '../../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
