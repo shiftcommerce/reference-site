@@ -67,8 +67,8 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
     }
 
     shouldComponentUpdate (nextProps, nextState) {
-      // Rerender if there is not state
-      if (!nextState) return true
+      // Rerender if getDerivedStateFromProps isn't implemented
+      if (!nextState.currentId) return true
       // If there is state, only rerender when search state changes
       // Stops multiple renders and algolia queries on category pages
       return JSON.stringify(nextState.searchState) !== JSON.stringify(this.state && this.state.searchState)
@@ -102,7 +102,10 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
     }
 
     static getDerivedStateFromProps (newProps, prevState) {
-      return Page.algoliaGetDerivedStateFromProps && Page.algoliaGetDerivedStateFromProps.call(this, newProps, prevState)
+      if (Page.algoliaGetDerivedStateFromProps) {
+        return Page.algoliaGetDerivedStateFromProps.call(this, newProps, prevState)
+      }
+      return null
     }
 
     componentDidMount () {
