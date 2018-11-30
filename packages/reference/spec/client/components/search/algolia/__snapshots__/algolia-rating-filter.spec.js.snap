@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders rating options correctly 1`] = `
+<AlgoliaRefinementList(AlgoliaRatingFilter)
+  attributeName="product_rating"
+  items={
+    Array [
+      Object {
+        "count": 3,
+        "isRefined": true,
+        "label": "4",
+        "value": Array [],
+      },
+      Object {
+        "count": 8,
+        "isRefined": false,
+        "label": "1",
+        "value": Array [
+          "4",
+          "1",
+        ],
+      },
+      Object {
+        "count": 4,
+        "isRefined": false,
+        "label": "2",
+        "value": Array [
+          "4",
+          "2",
+        ],
+      },
+      Object {
+        "count": 3,
+        "isRefined": false,
+        "label": "3",
+        "value": Array [
+          "4",
+          "3",
+        ],
+      },
+      Object {
+        "count": 2,
+        "isRefined": false,
+        "label": "0",
+        "value": Array [
+          "4",
+          "0",
+        ],
+      },
+    ]
+  }
+  limitMax={20}
+  limitMin={10}
+  max={5}
+  min={0}
+  operator="or"
+  refine={[MockFunction]}
+  showMore={false}
+/>
+`;

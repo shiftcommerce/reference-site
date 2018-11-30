@@ -53,11 +53,14 @@ exports[`renders the algolia filter component with children 1`] = `
       </h2>
     }
   >
-    <AlgoliaRange(RatingMenuWidget)
-      attribute="product_rating"
+    <AlgoliaRefinementList(AlgoliaRatingFilter)
+      attributeName="product_rating"
+      limitMax={20}
+      limitMin={10}
       max={5}
       min={0}
-      precision={0}
+      operator="or"
+      showMore={false}
     />
   </Panel>
   <Panel

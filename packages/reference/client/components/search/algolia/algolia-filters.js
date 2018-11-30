@@ -5,13 +5,13 @@ import {
   RefinementList,
   CurrentRefinements,
   ClearRefinements,
-  Panel,
-  RatingMenu
+  Panel
 } from 'react-instantsearch-dom'
 import classNames from 'classnames'
 
 // Components
 import AlgoliaSlider from './algolia-slider'
+import AlgoliaRatingFilter from './algolia-rating-filter'
 
 // For refinements such as ratings and prices, we will transform the list
 // so that we put the label within the button. We will also set the value
@@ -74,7 +74,7 @@ class AlgoliaFilters extends Component {
           <RefinementList attribute='category_ids' showMore={true} limit={3} transformItems={maintainRefinementOrder} />
         </Panel>
         <Panel className="c-product-listing-filter__body-option" header={header('Rating')}>
-          <RatingMenu attribute='product_rating' min={0} max={5} />
+          <AlgoliaRatingFilter attributeName='product_rating' min={0} max={5}/>
         </Panel>
         <Panel className="c-product-listing-filter__body-option" header={header('Price')}>
           <AlgoliaSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />

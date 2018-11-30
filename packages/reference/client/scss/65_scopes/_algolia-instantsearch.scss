@@ -83,7 +83,7 @@
   }
 
   &:hover:after {
-    background-color: red;
+    background-color: $background-positive;
     content: "";
     color: red;
   }
