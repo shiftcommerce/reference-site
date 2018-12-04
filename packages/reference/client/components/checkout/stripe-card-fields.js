@@ -72,7 +72,7 @@ class StripeCardFields extends Component {
   }
 
   render () {
-    let errors = this.state.errors
+    let { errors } = this.state
 
     return <div>
       <label>

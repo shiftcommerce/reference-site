@@ -1,6 +1,7 @@
 // Libraries
 import { PureComponent } from 'react'
 import Link from 'next/link'
+import t from 'typy'
 
 // Objects
 import Image from '../../objects/image'
@@ -8,14 +9,14 @@ import Image from '../../objects/image'
 export class BannerImage extends PureComponent {
   render () {
     const { componentData } = this.props
-    const image = componentData.image && componentData.image[0] && componentData.image[0].s3_url
-    const mobileImage = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
-    const imageLink = componentData.image_link && componentData.image_link[0] && componentData.image_link[0].canonical_path
+    const imgSrc = t(componentData, 'image[0].s3_url').safeObject
+    const mobileSrc = t(componentData, 'mobile_image[0].s3_url').safeObject
+    const href = t(componentData, 'image_link[0].canonical_path').safeObject
 
     return (
-      <Link href={imageLink} as={imageLink}>
+      <Link href={href} as={href}>
         <a>
-          <Image className='c-banner-image' src={image} mobileSrc={mobileImage} />
+          <Image className='c-banner-image' src={imgSrc} mobileSrc={mobileSrc} />
         </a>
       </Link>
     )

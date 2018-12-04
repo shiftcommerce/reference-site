@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import classNames from 'classnames'
+import t from 'typy'
 
 // lib
 import AccountFormErrors from '../../lib/form-errors'
@@ -35,7 +36,7 @@ class LoginForm extends Component {
         name={fieldOption.name}
         type={fieldOption.type}
         value={fieldOption.value}
-        required={(fieldOption.rules && fieldOption.rules.requiredButIgnoreEmpty)}
+        required={t(fieldOption, 'rules.requiredButIgnoreEmpty').safeObject}
         validationMessage={login.errors[fieldOption.name]}
         rules={fieldOption.rules}
         formName={formName}

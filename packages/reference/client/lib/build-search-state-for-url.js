@@ -1,3 +1,6 @@
+// Libraries
+import t from 'typy'
+
 // Returns a copy of the searchState to be used for building the new page URL.
 // Removes any elements which shouldn't make it into the URL, i.e.
 // * the id of the current resource
@@ -27,7 +30,7 @@ export default function buildSearchStateForURL (searchState) {
 function deleteResetProductRating (searchStateClone) {
   if (!searchStateClone.range) return
 
-  const productRating = searchStateClone.range.product_rating
+  const productRating = t(searchStateClone, 'range.product_rating').safeObject
   if (productRating && productRating.min === 0 && productRating.max === 5) {
     delete searchStateClone.range.product_rating
   }

@@ -25,9 +25,8 @@ export default class PaymentMethod extends Component {
   }
 
   renderPaymentMethodSelector () {
-    const { checkout, onPaymentMethodChanged } = this.props
-    const collapsed = checkout.paymentMethod.collapsed
-    const selectedMethod = checkout.paymentMethod.selectedMethod
+    const { checkout: { paymentMethod: { collapsed, selectedMethod } }, onPaymentMethodChanged } = this.props
+
     const display = !collapsed ? 'block' : 'none'
     return (
       <div className='c-payment-method__section' style={{ display: display }}>
@@ -48,9 +47,8 @@ export default class PaymentMethod extends Component {
   }
 
   renderFormSummary () {
-    const { checkout, order } = this.props
-    const billingAddress = checkout.billingAddress
-    const paymentMode = checkout.paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
+    const { checkout: { billingAddress, paymentMethod }, order } = this.props
+    const paymentMode = paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
 
     return (
       <div className={classNames('c-payment-method__summary', { 'o-form__error': order.paymentError !== null })}>
@@ -70,6 +68,7 @@ export default class PaymentMethod extends Component {
   render () {
     const { checkout } = this.props
     const { collapsed } = checkout.paymentMethod
+
     return (
       <div aria-label='Payment method' className={classNames('o-form  c-payment-method', { 'o-form__hidden': !checkout.shippingMethod.completed })}>
         <div className='o-form__header  c-payment-method__header'>

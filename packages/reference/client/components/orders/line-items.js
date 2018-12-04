@@ -1,5 +1,6 @@
 import { PureComponent } from 'react'
 import Link from 'next/link'
+import t from 'typy'
 
 // Lib
 import { penceToPounds } from '../../lib/pence-to-pounds'
@@ -9,10 +10,12 @@ import Image from '../../objects/image'
 
 class LineItems extends PureComponent {
   renderTotal (lineItem) {
+    const total = t(lineItem, 'pricing.line_inc_tax').safeObject
+
     return (
       <div className='c-order-history__line-items_grid_item4'>
         <div className='c-order-history__line-items_total-wrapper'>
-          <a className='c-order-history__line-items_total'>&pound;{ penceToPounds(lineItem.pricing.line_inc_tax) }</a>
+          <a className='c-order-history__line-items_total'>&pound;{ penceToPounds(total) }</a>
         </div>
       </div>
     )
@@ -50,6 +53,9 @@ class LineItems extends PureComponent {
   }
 
   renderParams (lineItem) {
+    const deliveryMethod = t(lineItem, 'shipping_method.label').safeObject
+    const customerName = t(lineItem, 'shipping_address.name').safeObject
+
     return (
       <>
         <div className='c-order-history__line-items_grid_item3'>
@@ -65,8 +71,8 @@ class LineItems extends PureComponent {
         </div>
         <div className='c-order-history__line-items_grid_item3'>
           <span className='c-order-history__line-items_space'>{ lineItem.quantity }</span>
-          <span className='c-order-history__line-items_space'>{ lineItem.shipping_method.label }</span>
-          <span className='c-order-history__line-items_space'>{ lineItem.shipping_address.name }</span>
+          <span className='c-order-history__line-items_space'>{ deliveryMethod }</span>
+          <span className='c-order-history__line-items_space'>{ customerName }</span>
         </div>
       </>
     )

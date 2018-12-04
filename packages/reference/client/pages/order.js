@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import t from 'typy'
 
 // Lib
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
@@ -15,13 +16,14 @@ import OrderSummary from '../components/orders/order-summary'
 
 export class OrderPage extends Component {
   renderHeader (order) {
-    const shippingAddress = order.shipping_address.attributes
+    const customerName = t(order, 'shipping_address.attributes.first_name').safeObject
+
     return (
       <div className='c-order__header'>
         <div className='c-order__header-tick'>✔</div>
         <div className='c-order__header-text'>
           <p className='c-order__header-text-id u-text-color--orange u-bold'>Order #{ order.id }</p>
-          <h3 className='u-bold'>Thank you { shippingAddress.first_name }!</h3>
+          <h3 className='u-bold'>Thank you { customerName }!</h3>
         </div>
       </div>
     )
@@ -37,7 +39,8 @@ export class OrderPage extends Component {
   }
 
   renderShippingAddress (order) {
-    const shippingAddress = order.shipping_address.attributes
+    const shippingAddress = t(order, 'shipping_address.attributes').safeObject
+
     return (
       <div className='c-order__detail-shipping-address'>
         <h2>Shipping Address</h2>
@@ -48,7 +51,8 @@ export class OrderPage extends Component {
   }
 
   renderShippingMethod (order) {
-    const shippingMethod = order.shipping_method.attributes
+    const shippingMethod = t(order, 'shipping_method.attributes').safeObject
+
     return (
       <div className='c-order__detail-shipping-method'>
         <h2>Shipping Method</h2>
@@ -67,9 +71,10 @@ export class OrderPage extends Component {
   }
 
   renderPaymentMethod (order) {
-    const billingAddress = order.billing_address.attributes
-    const cardDetails = order.cardToken.card
+    const billingAddress = t(order, 'billing_address.attributes').safeObject
+    const cardDetails = t(order, 'cardToken.card').safeObject
     const displayMonth = { 1: '01', 2: '02', 3: '02', 4: '04', 5: '05', 6: '06', 7: '07', 8: '08', 9: '09', 10: '10', 11: '11', 12: '12' }
+
     return (
       <div className='c-order__detail-payment-method'>
         <h2>Payment Method</h2>

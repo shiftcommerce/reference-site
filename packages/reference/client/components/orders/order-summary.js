@@ -97,7 +97,8 @@ class OrderSummary extends Component {
   }
 
   render () {
-    const order = this.props.order
+    const { order } = this.props
+
     return (
       <div className='c-order__summary'>
         <div className='c-order__summary-header'>

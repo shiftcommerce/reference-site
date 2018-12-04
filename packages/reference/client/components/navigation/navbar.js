@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import t from 'typy'
 
 // Components
 import Loading from '../loading'
@@ -72,14 +73,13 @@ export class NavBar extends Component {
   }
 
   render () {
-    const { loading } = this.props.menu.data
-    const menu = this.props.menu.data[0]
-    const menuItems = menu && menu.menu_items
+    const { loading, error } = this.props.menu
+    const menuItems = t(this.props, 'menu.data[0].menu_items').safeObject
 
     if (loading) {
       return (<Loading />)
-    } else if (menu.error) {
-      return (<p className='c-nav__error'>Sorry! There is an error in loading menus { menu.error }</p>)
+    } else if (error) {
+      return (<p className='c-nav__error'>Sorry! There is an error in loading menus { error }</p>)
     } else {
       return (
         <div className='c-nav' role='navigation'>

@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
+import t from 'typy'
 
 // Objects
 import ConditionalLink from '../../objects/conditional-link'
@@ -95,9 +96,9 @@ class HeroFull extends Component {
 
   render () {
     const { componentData } = this.props
-    const href = componentData['overlay_link_1_url'] && componentData['overlay_link_1_url'][0].canonical_path
-    const imgSrc = componentData.image && componentData.image[0] && componentData.image[0].s3_url
-    const mobileSrc = componentData.mobile_image && componentData.mobile_image[0] && componentData.mobile_image[0].s3_url
+    const href = t(componentData, 'overlay_link_1_url[0].canonical_path').safeObject
+    const imgSrc = t(componentData, 'image[0].s3_url').safeObject
+    const mobileSrc = t(componentData, 'mobile_image[0].s3_url').safeObject
     const componentClasses = classNames('o-template-component o-template-component--full-width c-hero', {
       'u-padding-top-des': !!componentData.background_colour
     })

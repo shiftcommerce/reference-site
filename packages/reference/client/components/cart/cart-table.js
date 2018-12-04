@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import Pluralize from 'react-pluralize'
+import t from 'typy'
 
 // Lib
 import { fixedPrice } from '../../lib/fixed-price'
@@ -61,7 +62,7 @@ class CartTable extends Component {
 
   renderDeliveryDetails () {
     // TODO: update to use actual delivery date, currently using data from fixture
-    const deliveryDate = ShippingMethods.shippingMethods[0].delivery_date
+    const deliveryDate = t(ShippingMethods, 'shippingMethods[0].delivery_date').safeObject
 
     return (
       <div className='c-cart-table__header-grid-item-b'>

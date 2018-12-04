@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import Router from 'next/router'
+import t from 'typy'
 
 // Config
 import { slugRequest } from '../requests/slug-request'
@@ -15,8 +16,8 @@ export class Slug extends Component {
     const response = await new ApiClient().read(request.endpoint, request.query)
     const slug = new JsonApiParser().parse(response.data)
 
-    const resourceType = slug.data[0].resource_type
-    const resourceId = slug.data[0].resource_id
+    const resourceType = t(slug, 'data[0].resource_type').safeObject
+    const resourceId = t(slug, 'data[0].resource_id').safeObject
     let url = query.slug
 
     if (url === '/homepage') {

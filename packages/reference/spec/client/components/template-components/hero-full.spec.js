@@ -1,3 +1,6 @@
+// Libraries
+import t from 'typy'
+
 // Components
 import HeroFull from '../../../../client/components/template-components/hero-full'
 
@@ -9,8 +12,8 @@ import heroImageData from '../../../fixtures/hero-full'
 
 test('renders the full HeroImage component', () => {
   // Arrange
-  const image = heroImageData.image[0].s3_url
-  const mobileImage = heroImageData.mobile_image && heroImageData.mobile_image[0] && heroImageData.mobile_image[0].s3_url
+  const imgSrc = t(heroImageData, 'image[0].s3_url').safeObject
+  const mobileSrc = t(heroImageData, 'mobile_image[0].s3_url').safeObject
 
   // Act
   const wrapper = mount(
@@ -19,5 +22,5 @@ test('renders the full HeroImage component', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Image className='c-hero__image' src={image} mobileSrc={mobileImage} />)
+  expect(wrapper).toContainReact(<Image className='c-hero__image' src={imgSrc} mobileSrc={mobileSrc} />)
 })

@@ -14,13 +14,13 @@ test('renders correctly', () => {
 test('disabled button', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='Testing Button' disabled='true' size='lrg' status='primary'/>
+    <Button label='Testing Button' disabled={true} size='lrg' status='primary'/>
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('button')).toHaveClassName('o-button--disabled')
-  expect(wrapper.find('button')).toHaveProp('disabled', 'true')
+  expect(wrapper.find('button')).toHaveProp('disabled', true)
 })
 
 describe('Button by default', () => {
@@ -40,7 +40,7 @@ describe('Button with props', () => {
   test('should be of large size', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Large Button' size="lrg"/>
+      <Button label='Large Button' size='lrg'/>
     )
 
     // Assert
@@ -51,7 +51,7 @@ describe('Button with props', () => {
   test('status should be primary', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Primary Button' status="primary"/>
+      <Button label='Primary Button' status='primary'/>
     )
 
     // Assert

@@ -63,7 +63,7 @@ exports[`Button with props status should be primary 1`] = `
 
 exports[`disabled button 1`] = `
 <Button
-  disabled="true"
+  disabled={true}
   label="Testing Button"
   size="lrg"
   status="primary"
@@ -73,7 +73,7 @@ exports[`disabled button 1`] = `
   >
     <button
       className="o-button o-button--primary o-button--lrg o-button--disabled"
-      disabled="true"
+      disabled={true}
       role="button"
       tabIndex="0"
     >

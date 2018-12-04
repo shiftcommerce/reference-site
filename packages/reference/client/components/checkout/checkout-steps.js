@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 class CheckoutSteps extends Component {
   renderCheckoutSteps () {
-    const currentStep = this.props.checkout.currentStep
+    const { checkout: { currentStep } } = this.props
 
     const checkoutSteps = [
       { position: 1, title: 'Shipping Address', componentName: 'shippingAddress' },

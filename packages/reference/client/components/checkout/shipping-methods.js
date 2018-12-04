@@ -45,7 +45,7 @@ export default class ShippingMethods extends Component {
 
   renderFormHeader () {
     const { checkout, onToggleCollapsed, formName } = this.props
-    const { collapsed } = checkout.shippingMethod
+    const { shippingMethod: { collapsed } } = checkout
     return (
       <div className='o-form__header c-shipping-method__header'>
         <h2>Your Shipping Method</h2>
@@ -67,8 +67,9 @@ export default class ShippingMethods extends Component {
 
   renderFormSummary () {
     const { checkout } = this.props
-    const collapsed = checkout.shippingMethod.collapsed
-    const selectedShippingMethod = this.state.selectedShippingMethod
+    const { shippingMethod: { collapsed } } = checkout
+    const { selectedShippingMethod } = this.state
+
     return (
       <div>
         { collapsed &&
@@ -83,7 +84,7 @@ export default class ShippingMethods extends Component {
 
   renderForm () {
     const { checkout, cart, formName, onToggleCollapsed } = this.props
-    const { collapsed } = checkout.shippingMethod
+    const { shippingMethod: { collapsed } } = checkout
     const itemCount = cart.totalQuantity
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
 
@@ -117,8 +118,7 @@ export default class ShippingMethods extends Component {
   }
 
   renderShippingMethods () {
-    const shippingMethods = this.state.shippingMethods
-    const selectedShippingMethod = this.state.selectedShippingMethod
+    const { shippingMethods, selectedShippingMethod } = this.state
 
     const shippingMethodsOutput = shippingMethods.map((method) =>
       <div className='o-form__input-group c-shipping-method__list-input-group'

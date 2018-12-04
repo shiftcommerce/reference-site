@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import classNames from 'classnames'
+import t from 'typy'
 
 import Button from '../../objects/button'
 
@@ -71,15 +72,9 @@ class EmailSignup extends Component {
     )
   }
 
-  backgroundURL (componentData) {
-    return componentData.background_image &&
-      componentData.background_image[0] &&
-      componentData.background_image[0].canonical_path
-  }
-
   render () {
     const { componentData } = this.props
-    const backgroundURL = this.backgroundURL(componentData)
+    const backgroundURL = t(componentData, 'background_image[0].canonical_path').safeObject
     const backgroundStyles = {
       backgroundColor: componentData.background_colour,
       backgroundImage: backgroundURL ? `url(${backgroundURL})` : undefined

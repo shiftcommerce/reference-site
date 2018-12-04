@@ -73,6 +73,7 @@
     "sass-loader": "^7.0.1",
     "stripe": "^5.1.1",
     "style-loader": "^0.19.0",
+    "typy": "^2.0.1",
     "zxcvbn": "^4.4.2"
   },
   "jest": {

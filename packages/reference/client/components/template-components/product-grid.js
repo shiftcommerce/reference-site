@@ -1,6 +1,7 @@
 // Libraries
 import { PureComponent } from 'react'
 import Link from 'next/link'
+import t from 'typy'
 
 // Objects
 import Button from '../../objects/button'
@@ -34,7 +35,7 @@ class ProductGrid extends PureComponent {
 
   catButton (componentData) {
     return (
-      <Link href={componentData.cat_url[0].canonical_path}>
+      <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject}>
         <a>
           <Button
             className="c-template-component__cat-button"

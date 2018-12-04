@@ -1,6 +1,7 @@
 // Libraries
 import { Component } from 'react'
 import classNames from 'classnames'
+import t from 'typy'
 
 // Objects
 import Button from '../../objects/button'
@@ -33,7 +34,7 @@ class RegisterForm extends Component {
         name={fieldOption.name}
         type={fieldOption.type}
         value={fieldOption.value}
-        required={(fieldOption.rules && fieldOption.rules.required)}
+        required={t(fieldOption, 'rules.required').safeObject}
         validationMessage={registration.errors[fieldOption.name]}
         rules={fieldOption.rules}
         idInput={fieldOption.idInput}

@@ -18,5 +18,6 @@ export const menuRequest = {
     include: 'menu_items'
   },
   requestActionType: types.GET_MENU,
-  successActionType: types.SET_MENU
+  successActionType: types.SET_MENU,
+  errorActionType: types.ERROR_MENU
 }

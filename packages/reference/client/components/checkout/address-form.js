@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import classNames from 'classnames'
+import t from 'typy'
 
 // Objects
 import Input from './../../objects/input'
@@ -96,6 +97,7 @@ export class AddressForm extends Component {
     const address = checkout[formName]
     const name = 'country_code'
     const rules = { required: true }
+
     return (
       <div>
         <DropdownSelect
@@ -125,7 +127,7 @@ export class AddressForm extends Component {
           name={fieldOption.name}
           type={fieldOption.type}
           value={fieldOption.value}
-          required={(fieldOption.rules && fieldOption.rules.required)}
+          required={t(fieldOption, 'rules.required').safeObject}
           validationMessage={address.errors[fieldOption.name]}
           rules={fieldOption.rules}
           formName={this.props.formName}
@@ -144,7 +146,7 @@ export class AddressForm extends Component {
           className={fieldOption.className}
           name={fieldOption.name}
           checked={!!fieldOption.value}
-          required={(fieldOption.rules && fieldOption.rules.required)}
+          required={t(fieldOption, 'rules.required').safeObject}
           validationMessage={address.errors[fieldOption.name]}
           rules={fieldOption.rules}
           formName={this.props.formName}

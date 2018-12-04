@@ -187,13 +187,6 @@ export class CheckoutPage extends Component {
     this.props.dispatch(changeBillingAddress(formName, fieldName, event.target.checked))
   }
 
-  isPaymentValid () {
-    let billingAddressErrors = this.props.checkout.billingAddress.errors
-    const isCardValid = !this.props.order.cardErrors
-    const isBillingAddressValid = Object.keys(billingAddressErrors).every((key) => billingAddressErrors[key] === '') === true
-    return isBillingAddressValid && isCardValid
-  }
-
   renderPageTitle () {
     return (
       <Head>
@@ -203,24 +196,25 @@ export class CheckoutPage extends Component {
   }
 
   render () {
-    const { checkout, cart } = this.props
+    const { checkout: { loading, error, flashError }, cart } = this.props
     const hasLineItems = cart.totalQuantity > 0
-    if (checkout.loading) {
+
+    if (loading) {
       return (
         <>
           { this.renderPageTitle() }
           <Loading />
         </>
       )
-    } else if (checkout.error) {
+    } else if (error) {
       return (
-        <p>{ checkout.error }</p>
+        <p>{ error }</p>
       )
     } else {
       return (
         <>
           { this.renderPageTitle() }
-          <p>{ checkout.flashError }</p>
+          <p>{ flashError }</p>
           {hasLineItems &&
             <>
               <div className='o-header--checkout'>

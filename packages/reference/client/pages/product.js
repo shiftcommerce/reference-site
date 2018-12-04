@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
+import t from 'typy'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -60,7 +61,7 @@ export class Product extends Component {
         quantity: parseInt(quantity),
         stockAvailableLevel: stockAvailableLevel,
         price: price,
-        imageUrl: (product.asset_files[0] && product.asset_files[0].s3_url),
+        imageUrl: t(product, 'asset_files[0].s3_url').safeObject,
         productSku: product.sku,
         productID: product.id,
         slug: product.slug,

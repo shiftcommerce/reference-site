@@ -1,6 +1,7 @@
 // Libraries
 import { PureComponent } from 'react'
 import dateFns from 'date-fns'
+import t from 'typy'
 
 // Components
 import LineItems from './line-items'
@@ -74,7 +75,7 @@ class OrderList extends PureComponent {
       <>
         { orders.data.map((order) => {
           const orderDate = dateFns.format(new Date(order.placed_at), 'MMM D, YYYY')
-          const total = penceToPounds(order.pricing.total_inc_tax)
+          const total = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
 
           return (
             <div className='c-order-history__header' key={order.id}>

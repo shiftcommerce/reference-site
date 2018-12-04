@@ -1,3 +1,6 @@
+// Libraries
+import t from 'typy'
+
 class JsonApiParser {
   parse (payload) {
     if (Array.isArray(payload.data)) {
@@ -51,12 +54,12 @@ class JsonApiParser {
       Object.entries(relationships).forEach(([key, value]) => {
         if (value.data) {
           if (Array.isArray(value.data)) {
-            let resourceIDs = value.data.map((resource) => (resource.id))
-            let resourceType = (value.data.length > 0 ? value.data[0].type : '')
+            const resourceIDs = value.data.map((resource) => (resource.id))
+            const resourceType = t(value, 'data[0].type').safeString
             parsedRelationships[key] = this.filterIncludedResources(resourceType, resourceIDs, includedResources)
           } else {
-            let resourceIDs = value.data.id
-            let resourceType = value.data.type
+            const resourceIDs = t(value, 'data.id').safeObject
+            const resourceType = t(value, 'data.type').safeObject
             parsedRelationships[key] = this.filterIncludedResources(resourceType, resourceIDs, includedResources)[0]
           }
         } else {
