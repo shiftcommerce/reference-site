@@ -27,8 +27,8 @@ class StripeCardFields extends Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (!this.props.cardTokenRequested && nextProps.cardTokenRequested) {
+  componentDidUpdate (prevProps) {
+    if (!prevProps.cardTokenRequested && this.props.cardTokenRequested) {
       const billingAddress = this.props.billingAddress
 
       this.props.stripe.createToken({

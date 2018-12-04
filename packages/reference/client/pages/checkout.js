@@ -74,14 +74,14 @@ export class CheckoutPage extends Component {
     })
   }
 
-  componentWillReceiveProps (props) {
-    const prevOrder = this.props.order
-    const newOrder = props.order
+  componentDidUpdate (prevProps) {
+    const prevOrder = prevProps.order
+    const newOrder = this.props.order
     // Only when new order got created,
     // Redirect to order confirmation page
     if (newOrder && newOrder.id && newOrder.id !== prevOrder.id) {
       Router.push('/order')
-      props.dispatch(initializeCart())
+      this.props.dispatch(initializeCart())
     }
   }
 

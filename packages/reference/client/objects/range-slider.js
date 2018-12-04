@@ -7,15 +7,10 @@ class RangeSlider extends Component {
     this.state = { currentValues: { min: this.props.min, max: this.props.max } }
   }
 
-  componentWillReceiveProps (sliderState) {
-    if (sliderState.canRefine) {
-      this.setState({
-        currentValues: {
-          min: sliderState.currentRefinement.min,
-          max: sliderState.currentRefinement.max
-        }
-      })
-    }
+  static getDerivedStateFromProps (nextProps, prevState) {
+    return nextProps.canRefine && prevState.canRefine
+      ? null
+      : { currentValues: { min: nextProps.min, max: nextProps.max } }
   }
 
   refinementUpdated = sliderState => (
@@ -43,7 +38,6 @@ class RangeSlider extends Component {
   render () {
     const { formatLabel, min, max } = this.props
     const { currentValues } = this.state
-
     return min !== max ? (
       <div className='ais-RangeSlider'>
         <InputRange

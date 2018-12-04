@@ -207,7 +207,7 @@ test('should redirect to order confirmation page, if new order got created', () 
 test('dispatch intializeCart action on creating an order', () => {
   // Arrange
   const expectedFunction = initializeCart().toString()
-  const componentWillReceivePropsSpy = jest.spyOn(CheckoutPage.prototype, 'componentWillReceiveProps')
+  const componentDidUpdateSpy = jest.spyOn(CheckoutPage.prototype, 'componentDidUpdate')
   const dispatch = jest.fn().mockImplementation((updateSpy) => Promise.resolve('first call'))
   const order = {
     id: 2332423424234,
@@ -232,8 +232,8 @@ test('dispatch intializeCart action on creating an order', () => {
     order: order
   })
 
-  // Verify if componentWillRecieveProps method is called on order creation
-  expect(componentWillReceivePropsSpy).toHaveBeenCalled()
+  // Verify if componentDidUpdate method is called on order creation
+  expect(componentDidUpdateSpy).toHaveBeenCalled()
 
   expect(dispatch).toHaveBeenCalled()
 
