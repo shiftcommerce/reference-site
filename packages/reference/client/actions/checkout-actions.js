@@ -189,3 +189,24 @@ export function changePaymentMethod (paymentMethod) {
     paymentMethod: paymentMethod
   }
 }
+
+export function autoFillAddress (address) {
+  return {
+    type: actionTypes.AUTOFILL_ADDRESS,
+    address: address
+  }
+}
+
+export function editForm (formName) {
+  return {
+    type: actionTypes.EDIT_FORM,
+    formName: formName
+  }
+}
+
+export function renderSummary (formName) {
+  return {
+    type: actionTypes.EDIT_ADDRESS,
+    formName: formName
+  }
+}

@@ -4,45 +4,54 @@ import { connect } from 'react-redux'
 
 // Action creators
 import { deleteAddressBookEntry, setAddress } from '../actions/address-book-actions'
-
-// Objects
-import Button from '../objects/button'
+import { editForm } from '../actions/checkout-actions'
 
 class AddressBook extends Component {
-  setAddress (e, address) {
-    const { formName, dispatch, onClose } = this.props
+  setAddress (address) {
+    const { formName, dispatch } = this.props
 
     dispatch(setAddress(address, formName))
-    onClose(e)
   }
 
   handleAddressDeleted (address) {
     return this.props.dispatch(deleteAddressBookEntry(address))
   }
 
-  renderEntries () {
-    const entries = this.props.addressBook
+  createNewAddress () {
+    const { formName, dispatch, onToggleCollapsed } = this.props
+    onToggleCollapsed('edit', formName)
+    dispatch(editForm(formName))
+  }
+
+  renderOptions (address) {
+    const { id } = this.props
+    const optionLabel = <a><b>{ address.meta_attributes.label.value }</b> -&nbsp; { address.first_name } { address.last_name },&nbsp;
+      { address.address_line_1 },&nbsp; { address.postcode },&nbsp; { address.city },&nbsp; { address.country }
+    </a>
 
     return (
-      <div className="c-address-book__entries">
+      <div className='c-address-book__radio-container'>
+        <input type='radio' name='address-book-radio' className='c-address-book__radio' onChange={() => { this.setAddress(address) }} checked={address.id === id} />
+        <label htmlFor={address.id}>{ optionLabel }</label>
+        <a className='c-address-book__delete-address' label='Delete' onClick={() => this.handleAddressDeleted(address)}>Delete</a>
+      </div>
+    )
+  }
+
+  renderEntries () {
+    // Sort array of objects and return a new array
+    // with the preferred address as the first object.
+    // We always want to display the preferred-address as the first option
+    const entries = this.props.addressBook.sort(function (a, b) {
+      return b.preferred_shipping - a.preferred_shipping
+    })
+
+    return (
+      <div className='c-address-book__entries'>
         { entries.map(address => {
           return (
-            <div className="c-address-book__entry" key={address.id}>
-              <div className="c-address-book__address">
-                { address.meta_attributes.label && <h1>{ address.meta_attributes.label.value }</h1> }
-                <p>{ `${address.first_name} ${address.last_name}` }</p>
-                { address.meta_attributes.company_name && <p>{ address.meta_attributes.company_name.value }</p> }
-                <p>{ address.address_line_1 }</p>
-                { address.address_line_2 && <p>{ address.address_line_2 }</p> }
-                <p>{ address.postcode }</p>
-                <p>{ address.city }</p>
-                { address.state && <p>{ address.state }</p> }
-                { address.meta_attributes.phone_number && <p>{ address.meta_attributes.phone_number.value }</p> }
-                { address.meta_attributes.email && <p>{ address.meta_attributes.email.value }</p> }
-                <p>{ address.country }</p>
-              </div>
-              <Button containerClassName='c-address-book__button' label='Use this address' status='primary' size='sml' onClick={(e) => { this.setAddress(e, address) }}/>
-              <Button containerClassName='c-address-book__button' label='Delete' status='negative' size='sml' onClick={() => this.handleAddressDeleted(address)}/>
+            <div key={address.id}>
+              { this.renderOptions(address) }
             </div>
           )
         }) }
@@ -51,24 +60,20 @@ class AddressBook extends Component {
   }
 
   render () {
+    const { formName } = this.props
+
     return (
-      <>
-        <div className="c-address-book">
-          <div className="c-address-book__header">
-            <h1>Select an address</h1>
-            <div className="c-address-book__close" onClick={this.props.onClose}></div>
-          </div>
-          { this.renderEntries() }
-        </div>
-        <div className="c-address-book-overlay" onClick={this.props.onClose}>
-        </div>
-      </>
+      <div className='c-address-book'>
+        <h3>Your addresses</h3>
+        { this.renderEntries() }
+        <a className='c-address-book__new-address' onClick={() => this.createNewAddress(formName)}>+ Add a new address</a>
+      </div>
     )
   }
 }
 
-const mapStateToProps = ({ checkout: { addressBook } }) => {
-  return { addressBook }
+const mapStateToProps = ({ checkout: { addressBook, shippingAddress: { id } } }) => {
+  return { addressBook, id }
 }
 
 const mapDispatchToProps = (dispatch) => {

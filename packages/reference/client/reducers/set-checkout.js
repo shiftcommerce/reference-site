@@ -23,9 +23,12 @@ const formFields = {
   email: '',
   newsletterOptIn: false,
   saveToAddressBook: false,
+  preferred_billing: false,
+  preferred_shipping: false,
   label: '',
   collapsed: false,
   completed: false,
+  selected: false,
   errors: {},
   ...addressFormFields
 }
@@ -119,6 +122,7 @@ export default function setCheckout (state = checkoutInitialState, action) {
       const companyName = meta.company_name && meta.company_name.value
 
       newState[action.formName] = {
+        id: chosenAddress.id,
         country_code: chosenAddress.country,
         first_name: chosenAddress.first_name,
         last_name: chosenAddress.last_name,
@@ -133,6 +137,10 @@ export default function setCheckout (state = checkoutInitialState, action) {
         primary_phone: meta.phone_number.value,
         email: meta.email.value,
         saveToAddressBook: false,
+        selected: true,
+        collapsed: true,
+        preferred_billing: chosenAddress.setAsPreferredBilling,
+        preferred_shipping: chosenAddress.setAsPreferredShipping,
         errors: {}
       }
       return newState
@@ -148,6 +156,43 @@ export default function setCheckout (state = checkoutInitialState, action) {
 
     case types.DELETE_ADDRESS:
       newState.addressBook = state.addressBook.filter(address => address.id !== action.data.addressId)
+      return newState
+
+    case types.AUTOFILL_ADDRESS:
+      const address = action.address
+      newState.shippingAddress = {
+        id: address.id,
+        city: address.city,
+        country_code: address.country,
+        email: address.meta_attributes.email.value,
+        first_name: address.first_name,
+        last_name: address.last_name,
+        line_1: address.address_line_1,
+        line_2: address.address_line_2,
+        primary_phone: address.meta_attributes.phone_number.value,
+        state: address.state,
+        zipcode: address.postcode,
+        preferred_shipping: address.preferred_shipping,
+        preferred_billing: address.preferred_billing,
+        selected: true,
+        collapsed: true,
+        errors: {}
+      }
+      return newState
+
+    case types.EDIT_FORM:
+      const formName = action.formName
+      newState[formName].id = ''
+      newState[formName].collapsed = false
+      newState[formName].selected = false
+      newState[formName].preferred_shipping = false
+      newState[formName].preferred_ = false
+      return newState
+
+    case types.EDIT_ADDRESS:
+      newState[formName].collapsed = true
+      newState[formName].completed = false
+      newState.checkoutStep = 1
       return newState
 
     default:

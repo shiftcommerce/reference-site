@@ -36,21 +36,11 @@ class DropdownSelect extends Component {
   }
 
   renderDropdown () {
-    let {
-      name,
-      value,
-      prompt,
-      options,
-      required,
-      className,
-      validationMessage
-    } = this.props
-
-    let validationErrorPresent = (validationMessage !== undefined) && (validationMessage !== '')
+    const { name, value, prompt, options, required, className, validationMessage, disabled } = this.props
 
     return (
       <select
-        className={classNames('o-form__input-block o-form__input-field', className, { 'o-form__input-field__error': validationErrorPresent })}
+        className={classNames('o-form__input-block o-form__input-field', className, { 'o-form__input-field__error': validationMessage })}
         id={name}
         required={required}
         value={value}
@@ -58,6 +48,7 @@ class DropdownSelect extends Component {
         role='listbox'
         onChange={this.triggerChange}
         onBlur={this.triggerBlur}
+        disabled={disabled}
       >
         <option role='option' value='' aria-setsize={options.length} aria-posinset='0'>{ prompt }</option>
         { this.renderOptions(options) }

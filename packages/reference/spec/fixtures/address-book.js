@@ -8,7 +8,14 @@ export default [
     'city': 'Blackpool',
     'postcode': 'LS27EY',
     'country': 'GB',
-    'meta_attributes': {}
+    'preferred_billing': 'true',
+    'preferred_shipping': 'true',
+    'meta_attributes': {
+      'label': {
+        'value': 'Home',
+        'data_type': 'text'
+      }
+    }
   },
   {
     'id': '23',
@@ -21,6 +28,8 @@ export default [
     'state': 'West Yorkshire',
     'postcode': 'LS27EY',
     'country': 'GB',
+    'preferred_billing': 'false',
+    'preferred_shipping': 'false',
     'meta_attributes': {
       'label': {
         'value': 'Grandmas house',

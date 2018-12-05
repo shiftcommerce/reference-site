@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
+// Components
 import AddressBook from '../../../client/components/address-book'
 import ApiClient from '../../../client/lib/api-client'
 
@@ -34,7 +35,6 @@ test('it renders given addresses correctly', () => {
   // Check address 1 is correctly rendered
   expect(component).toIncludeText('Bernard Houseman')
   expect(component).toIncludeText('84 West Quay Street')
-  expect(component).toIncludeText('Top floor')
   expect(component).toIncludeText('Blackpool')
   expect(component).toIncludeText('LS27EY')
   expect(component).toIncludeText('GB')
@@ -42,15 +42,9 @@ test('it renders given addresses correctly', () => {
   // Check address 2 is correctly rendered
   expect(component).toIncludeText('Bob Doe')
   expect(component).toIncludeText('20 Cardigan Lane')
-  expect(component).toIncludeText('Morley')
   expect(component).toIncludeText('Leeds')
-  expect(component).toIncludeText('West Yorkshire')
   expect(component).toIncludeText('LS27EY')
   expect(component).toIncludeText('GB')
-  expect(component).toIncludeText('Grandmas house')
-  expect(component).toIncludeText('bob@example.com')
-  expect(component).toIncludeText('07510756423')
-  expect(component).toIncludeText('Team 18')
 })
 
 test('selecting an address populates address in redux state', () => {
@@ -65,12 +59,12 @@ test('selecting an address populates address in redux state', () => {
   // Pretend the address book is displayed for the shipping address
   const component = mount(
     <Provider store={store}>
-      <AddressBook formName='shippingAddress' onClose={() => {}}/>
+      <AddressBook formName='shippingAddress' />
     </Provider>
   )
 
   // Select the last address in the book
-  component.find({ status: 'primary' }).last().prop('onClick')()
+  component.find({ type: 'radio' }).last().prop('onChange')()
 
   // Check the Redux store has been correctly populated
   const updatedShippingAddress = store.getState().checkout.shippingAddress

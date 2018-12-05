@@ -202,39 +202,46 @@ $input-checkbox-spacing: 8px;
     border: 1px solid $text-error;
   }
 
-  &__input-field {
-    margin: $global-spacing-unit-small 0;
-    display: block;
-    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
-    font-size: 1rem;
-    line-height: 1.25;
-    background-image: none;
-    background-clip: padding-box;
-    border: 1px solid;
-    border-color: $form-input-border;
-    background-color: $background-white;
+  &__input {
+    &-field {
+      margin: $global-spacing-unit-small 0;
+      display: block;
+      padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+      font-size: 1rem;
+      line-height: 1.25;
+      background-image: none;
+      background-clip: padding-box;
+      border: 1px solid;
+      border-color: $form-input-border;
+      background-color: $background-white;
 
-    &__error {
-      color: $text-error;
-      border-color: $border-error;
-      margin-bottom: $global-spacing-unit-small;
+      &__error {
+        color: $text-error;
+        border-color: $border-error;
+        margin-bottom: $global-spacing-unit-small;
 
-      &::first-letter {
-        text-transform: capitalize;
+        &::first-letter {
+          text-transform: capitalize;
+        }
       }
     }
-  }
 
-  &__input-block {
-    display: block;
-    width: 100%;
-    border-radius: 0.09rem;
-    background-color: $background-white;
-    height: 2.2rem;
-  }
+    &-block {
+      display: block;
+      width: 100%;
+      border-radius: 0.09rem;
+      background-color: $background-white;
+      height: 2.2rem;
+    }
 
-  &__input-inline {
-    display: inline;
+    &-inline {
+      display: inline;
+    }
+
+    &--disabled {
+      border: 1px solid $background-disabled;
+      background-color: $light-grey !important;
+    }
   }
 
   &__hidden {

@@ -100,7 +100,7 @@ class Input extends Component {
   }
 
   renderInputField () {
-    const { inputId, value, name, required, placeholder, className, validationMessage } = this.props
+    const { inputId, value, name, required, placeholder, className, validationMessage, readOnly } = this.props
     const id = inputId || name
     let fieldValue = value || null
     let validationErrorPresent = (validationMessage !== undefined) && (validationMessage !== '')
@@ -118,6 +118,7 @@ class Input extends Component {
         onBlur={this.triggerBlur}
         value={value}
         ref={this.setPasswordInputRef}
+        readOnly={readOnly}
       />
     )
   }

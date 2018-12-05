@@ -234,6 +234,7 @@ export class CheckoutPage extends Component {
                         onBlur={this.onInputBlur}
                         onShowField={this.onShowField}
                         onToggleCollapsed={this.onToggleCollapsed}
+                        addressInAddressBook={this.addressInAddressBook}
                       />
                     </div>
                     <ShippingMethods

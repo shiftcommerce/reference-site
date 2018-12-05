@@ -1038,7 +1038,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     </p>
                     <div />
                     <div />
-                    <div />
                   </form>
                 </div>
               </AddressForm>

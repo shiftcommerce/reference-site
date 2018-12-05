@@ -53,6 +53,8 @@ function newAddressBookEntryPayload (address) {
         state: address.state,
         country: address.country_code,
         postcode: address.zipcode,
+        preferred_billing: address.preferred_billing,
+        preferred_shipping: address.preferred_shipping,
         meta_attributes: addressMetaAttributes(address)
       }
     }

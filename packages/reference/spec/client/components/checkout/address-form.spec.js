@@ -1,4 +1,16 @@
+// Libraries
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+// Components
 import { AddressForm } from '../../../../client/components/checkout/address-form'
+
+// Reducers
+import rootReducer from '../../../../client/reducers/root-reducer'
+import { checkoutInitialState } from '../../../../client/reducers/set-checkout'
+
+// Fixtures
+import addressBookData from '../../../fixtures/address-book'
 
 test('renders the correct base form elements', () => {
   // Arrange
@@ -162,52 +174,48 @@ test('renders the collapsed version of the form when collapsed = true', () => {
   expect(wrapper.find('#full_name').length).toEqual(0)
 })
 
-test('renders the address book button when user is logged in and has addresses', () => {
-  // Prepare fake props
+test('renders the address book when user is logged in and has addresses', () => {
+  // Initialize Redux store with address book data
+  const store = createStore(rootReducer, {
+    checkout: Object.assign(checkoutInitialState, {
+      addressBook: addressBookData
+    })
+  })
+
+  const addressBook = addressBookData
+
   const checkout = {
-    shippingAddress: { errors: {} }
+    shippingAddress: {
+      collapsed: true,
+      completed: false,
+      errors: {}
+    },
+    addressBook: addressBook
   }
-  const addressBook = [{}] // address book has 1 entry
+
+  const dispatch = jest.fn()
 
   // Render the component
   const wrapper = mount(
-    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} loggedIn />
+    <Provider store={store}>
+      <AddressForm formName='shippingAddress' addressType='shipping' checkout={checkout} addressBook={addressBook} dispatch={dispatch} loggedIn />
+    </Provider>
   )
 
-  // Ensure the button is displayed
-  expect(wrapper).toIncludeText('Address book')
-})
+  // Ensure the Address-book is displayed
+  expect(wrapper).toIncludeText('Your addresses')
 
-test('does not render the address book button when user is not logged in', () => {
-  // Prepare fake checkout and addressBook props
-  const checkout = {
-    shippingAddress: { errors: {} }
-  }
-  // address book has 1 entry but the user is not logged in
-  const addressBook = [{}]
+  // Check address 1 is correctly rendered
+  expect(wrapper).toIncludeText('Bernard Houseman')
+  expect(wrapper).toIncludeText('84 West Quay Street')
+  expect(wrapper).toIncludeText('Blackpool')
+  expect(wrapper).toIncludeText('LS27EY')
+  expect(wrapper).toIncludeText('GB')
 
-  // Render the component
-  const wrapper = mount(
-    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} />
-  )
-
-  // Ensure the button is not displayed
-  expect(wrapper).not.toIncludeText('Address book')
-})
-
-test('does not render the address book button when user is logged in but does not have saved addresses', () => {
-  // Prepare fake checkout and addressBook props
-  const checkout = {
-    shippingAddress: { errors: {} }
-  }
-  // address book is empty
-  const addressBook = []
-
-  // Render the component
-  const wrapper = mount(
-    <AddressForm formName='shippingAddress' checkout={checkout} addressBook={addressBook} loggedIn />
-  )
-
-  // Ensure the button is not displayed
-  expect(wrapper).not.toIncludeText('Address book')
+  // Check address 2 is correctly rendered
+  expect(wrapper).toIncludeText('Bob Doe')
+  expect(wrapper).toIncludeText('20 Cardigan Lane')
+  expect(wrapper).toIncludeText('Leeds')
+  expect(wrapper).toIncludeText('LS27EY')
+  expect(wrapper).toIncludeText('GB')
 })

@@ -1,4 +1,8 @@
 .c-address-form {
+  &__buttons {
+    display: inline-flex;
+    justify-content: space-between;
+  }
 
   &__header {
 

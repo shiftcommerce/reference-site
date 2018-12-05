@@ -37,5 +37,12 @@
   &__address-book-button {
     margin: 0;
     margin-bottom: $global-spacing-unit-small;
+    margin-right: $global-spacing-unit-small;
+  }
+
+  &__edit-form-button {
+    margin: 0;
+    margin-bottom: $global-spacing-unit-small;
+    margin-right: $global-spacing-unit-small;
   }
 }
