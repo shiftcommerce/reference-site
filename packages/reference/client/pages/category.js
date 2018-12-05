@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Router from 'next/router'
 import qs from 'qs'
 import Head from 'next/head'
+import equal from 'deep-equal'
 
 // Components
 import ProductListing from '../components/products/listing/product-listing'
@@ -26,7 +27,7 @@ const fetchCategory = async (id) => {
   return new JsonApiParser().parse(response.data)
 }
 
-class Category extends Component {
+export class Category extends Component {
   static algoliaEnabled = () => true
 
   static async getInitialProps ({ query: { id }, reduxStore, req }) {
@@ -76,10 +77,34 @@ class Category extends Component {
   }
 
   static algoliaGetDerivedStateFromProps (newProps, prevState) {
-    if (prevState.currentId !== newProps.id) {
-      return { currentId: newProps.id, searchState: newProps.searchState }
+    if (prevState.categoryId !== newProps.id) {
+      return { categoryId: newProps.id }
     }
     return null
+  }
+
+  static algoliaComponentDidUpdate (prevProps, prevState) {
+    if (prevState.categoryId != this.state.categoryId) { // eslint-disable-line eqeqeq
+      this.setState({
+        searchState: Object.assign(
+          {},
+          this.state.searchState, {
+            configure: Object.assign(
+              {},
+              this.state.searchState.configure,
+              { filters: `category_ids:${this.state.categoryId}` }
+            ),
+            page: 1 }
+        )
+      })
+    }
+
+    if (!equal(prevState.searchState, this.state.searchState)) return
+
+    const urlSearchState = qs.parse(window.location.search.slice(1))
+    if (!equal(buildSearchStateForURL(this.state.searchState), urlSearchState)) {
+      this.setState({ currentId: prevProps.id, searchState: Object.assign(urlSearchState, { configure: prevProps.searchState.configure }) })
+    }
   }
 
   constructor (props) {
