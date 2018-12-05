@@ -1,6 +1,7 @@
 // Component
 import ProductDisplay from '../../../../../client/components/products/display/product-display'
 import ProductPrice from '../../../../../client/components/products/display/product-price'
+import EwisForm from '../../../../../client/components/products/display/ewis-form'
 import Carousel from '../../../../../client/components/products/display/carousel'
 
 // Objects
@@ -38,7 +39,33 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={97.68} />)
   })
 
-  test('when a variant has been selected', () => {
+  test('when an in stock variant has been selected', () => {
+    // arrange
+    const emptyFunction = () => { }
+    const value = {
+      sku: '',
+      variant: '',
+      variantId: '343',
+      quantity: 1,
+      price: '',
+      stockAvailableLevel: 0
+    }
+
+    // act
+    const selectedVariant = product.variants.find(variant => variant.id === value.variantId)
+
+    const wrapper = mount(
+      <ProductDisplay product={product} selectedVariant={selectedVariant} changeVariant={emptyFunction} addToBag={emptyFunction} {...value} />
+    )
+
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText(selectedVariant.description)
+    expect(wrapper).toIncludeText(selectedVariant.sku)
+    expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={16.95} />)
+  })
+
+  test('when an out of stock variant has been selected', () => {
     // arrange
     const emptyFunction = () => { }
     const value = {
@@ -62,5 +89,32 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toIncludeText(selectedVariant.description)
     expect(wrapper).toIncludeText(selectedVariant.sku)
     expect(wrapper).toContainReact(<ProductPrice minPrice={97.68} maxPrice={97.68} />)
+  })
+
+  test('when an out of stock, "Email When In Stock" enabled variant has been selected', () => {
+    // arrange
+    const emptyFunction = () => { }
+    const value = {
+      sku: '',
+      variant: '',
+      variantId: '345',
+      quantity: 1,
+      price: '',
+      stockAvailableLevel: 0
+    }
+
+    // act
+    const selectedVariant = product.variants.find(variant => variant.id === value.variantId)
+
+    const wrapper = mount(
+      <ProductDisplay product={product} selectedVariant={selectedVariant} changeVariant={emptyFunction} addToBag={emptyFunction} {...value} />
+    )
+
+    // assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText(selectedVariant.description)
+    expect(wrapper).toIncludeText(selectedVariant.sku)
+    expect(wrapper).toContainReact(<ProductPrice minPrice={97.68} maxPrice={97.68} />)
+    expect(wrapper).toContainReact(<EwisForm />)
   })
 })

@@ -1,0 +1,17 @@
+.c-ewis-form {
+  &__input-field {
+    width: 100%;
+    margin: 0 0 $global-spacing-unit-small 0;
+    border-color: $border-default;
+  }
+
+  &__submit-message {
+    margin-top: $global-spacing-unit-small;
+    font-size: 0.8rem;
+
+    @include breakpoint(desktop) {
+      font-size: 1rem;
+    }
+  }
+}
+

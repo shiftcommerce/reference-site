@@ -124,7 +124,7 @@ class Input extends Component {
   }
 
   render () {
-    const { hidden, renderValidationMessage } = this.props
+    const { hidden, renderValidationMessage, inputGroupClassName } = this.props
     const type = this.state.type || 'text'
 
     let inputFields = ''
@@ -141,7 +141,7 @@ class Input extends Component {
     }
 
     return (
-      <div className={classNames('o-form__input-group', { 'u-hidden': hidden })}>
+      <div className={classNames('o-form__input-group', inputGroupClassName, { 'u-hidden': hidden })}>
         { inputFields }
         { renderValidationMessage() }
       </div>

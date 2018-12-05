@@ -30,8 +30,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         "reference": "dolor_50_1",
         "sku": "9337040128595",
         "stock_allocated_level": 10,
-        "stock_available_level": 0,
-        "stock_level": 1,
+        "stock_available_level": 1,
+        "stock_level": 11,
         "tax_code": "vat",
         "title": "Variant 1",
         "updated_at": "2018-11-05T11:23:16Z",
@@ -65,6 +65,35 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         "title": "Variant 2",
         "updated_at": "2018-10-31T10:24:00Z",
       },
+      Object {
+        "available_to_browse": false,
+        "available_to_order": false,
+        "created_at": "2018-09-24T15:43:05Z",
+        "current_price": 97.68,
+        "deleted_at": null,
+        "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+        "ewis_eligible": true,
+        "expected_availability_date": null,
+        "has_assets": true,
+        "id": "345",
+        "meta_attributes": Object {},
+        "ordered_total": 1,
+        "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "position": null,
+        "price": 97.68,
+        "price_includes_taxes": true,
+        "product_id": 175,
+        "reference": "voluptas_50_3",
+        "sku": "0927967530245",
+        "stock_allocated_level": 1,
+        "stock_available_level": 0,
+        "stock_level": 1,
+        "tax_code": "vat",
+        "title": "Variant 3",
+        "updated_at": "2018-10-31T10:24:00Z",
+      },
     ]
   }
 >
@@ -77,7 +106,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
     >
       <option
         aria-posinset="0"
-        aria-setsize={2}
+        aria-setsize={3}
         role="option"
         value=""
       >
@@ -85,9 +114,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
       </option>
       <option
         aria-posinset={1}
-        aria-setsize={2}
+        aria-setsize={3}
         data-price={16.95}
-        data-stock-available-level={0}
+        data-stock-available-level={1}
         data-variant-id="343"
         key="0"
         role="option"
@@ -96,10 +125,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         Variant 1
          - £
         16.95
+         
       </option>
       <option
         aria-posinset={2}
-        aria-setsize={2}
+        aria-setsize={3}
         data-price={97.68}
         data-stock-available-level={0}
         data-variant-id="344"
@@ -110,6 +140,24 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         Variant 2
          - £
         97.68
+         
+        - Out of Stock
+      </option>
+      <option
+        aria-posinset={3}
+        aria-setsize={3}
+        data-price={97.68}
+        data-stock-available-level={0}
+        data-variant-id="345"
+        key="2"
+        role="option"
+        value="0927967530245"
+      >
+        Variant 3
+         - £
+        97.68
+         
+        - Email When in Stock
       </option>
     </select>
   </div>

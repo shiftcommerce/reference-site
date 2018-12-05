@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 // Components
 import ProductPrice from './product-price'
+import EwisForm from './ewis-form'
 import Carousel from './carousel'
 
 // Objects
@@ -32,13 +33,24 @@ class ProductDisplay extends Component {
   }
 
   renderButtons () {
-    const { addToBag } = this.props
+    const { addToBag, selectedVariant } = this.props
 
-    return (
-      <div className='c-product-display__buttons'>
-        <Button className='c-product-display__buttons-basket o-button--sml' label='ADD TO BASKET' status='positive' aria-label='Add to Basket' onClick={addToBag} />
-      </div>
-    )
+    if (selectedVariant && selectedVariant.ewis_eligible && selectedVariant.stock_available_level <= 0) {
+      return (
+        <div className='c-product-display__buttons'>
+          <EwisForm />
+        </div>
+      )
+    } else {
+      const buttonStatus = selectedVariant && selectedVariant.stock_available_level > 0 ? 'positive' : 'disabled'
+      const onClick = selectedVariant && selectedVariant.stock_available_level > 0 ? addToBag : null
+
+      return (
+        <div className='c-product-display__buttons'>
+          <Button className='c-product-display__buttons-basket o-button--sml' label='ADD TO BASKET' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
+        </div>
+      )
+    }
   }
 
   renderDescription (product, selectedVariant) {

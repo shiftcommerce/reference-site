@@ -13,10 +13,20 @@ class VariantSelector extends Component {
       // @TODO: Add variant data to algolia
       variants && variants.map((variant, idx) =>
         <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price} data-variant-id={variant.id}>
-          { variant.title } - &pound;{ fixedPrice(variant.price) }
+          { variant.title } - &pound;{ fixedPrice(variant.price) } { this.stockMessage(variant) }
         </option>
       )
     )
+  }
+
+  stockMessage (variant) {
+    if (variant.stock_available_level <= 0 && variant.ewis_eligible) {
+      return '- Email When in Stock'
+    } else if (variant.stock_available_level <= 0) {
+      return '- Out of Stock'
+    } else {
+      return ''
+    }
   }
 
   render () {
