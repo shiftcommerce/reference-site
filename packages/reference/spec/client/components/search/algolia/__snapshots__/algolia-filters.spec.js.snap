@@ -1,82 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the algolia filter component with children 1`] = `
-<div
-  className="c-product-listing-filter"
->
+<div>
   <div
-    className="c-product-listing-filter__header"
+    className="c-product-listing-filter-heading"
   >
-    <div
-      className="c-product-listing-filter__header-title"
-    >
-      <h2>
-        Filters
-      </h2>
+    <h2>
+      Filters
       <button
         className="c-product-listing-filter-close"
       />
-    </div>
+    </h2>
+  </div>
+  <div
+    className="c-product-listing-filter"
+  >
     <div
-      className="c-product-listing-filter__header-selection"
+      className="c-product-listing-filter__header"
     >
-      <AlgoliaCurrentRefinements(ClearRefinementsWidget) />
-      <AlgoliaCurrentRefinements(CurrentRefinementsWidget)
+      <div
+        className="c-product-listing-filter__header-selection"
+      >
+        <AlgoliaCurrentRefinements(ClearRefinementsWidget) />
+        <AlgoliaCurrentRefinements(CurrentRefinementsWidget)
+          transformItems={[Function]}
+        />
+      </div>
+    </div>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          Sub Category
+        </h2>
+      }
+    >
+      <AlgoliaRefinementList(RefinementListWidget)
+        attribute="category_ids"
+        limit={3}
+        operator="or"
+        showMore={true}
+        showMoreLimit={20}
         transformItems={[Function]}
       />
-    </div>
+    </Panel>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          Rating
+        </h2>
+      }
+    >
+      <AlgoliaRefinementList(AlgoliaRatingFilter)
+        attributeName="product_rating"
+        limitMax={20}
+        limitMin={10}
+        max={5}
+        min={0}
+        operator="or"
+        showMore={false}
+      />
+    </Panel>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          Price
+        </h2>
+      }
+    >
+      <AlgoliaRange(RangeSlider)
+        attribute="variant_meta_data.eu.price"
+        formatLabel={[Function]}
+        precision={0}
+      />
+    </Panel>
   </div>
-  <Panel
-    className="c-product-listing-filter__body-option"
-    footer={null}
-    header={
-      <h2>
-        Sub Category
-      </h2>
-    }
-  >
-    <AlgoliaRefinementList(RefinementListWidget)
-      attribute="category_ids"
-      limit={3}
-      operator="or"
-      showMore={true}
-      showMoreLimit={20}
-      transformItems={[Function]}
-    />
-  </Panel>
-  <Panel
-    className="c-product-listing-filter__body-option"
-    footer={null}
-    header={
-      <h2>
-        Rating
-      </h2>
-    }
-  >
-    <AlgoliaRefinementList(AlgoliaRatingFilter)
-      attributeName="product_rating"
-      limitMax={20}
-      limitMin={10}
-      max={5}
-      min={0}
-      operator="or"
-      showMore={false}
-    />
-  </Panel>
-  <Panel
-    className="c-product-listing-filter__body-option"
-    footer={null}
-    header={
-      <h2>
-        Price
-      </h2>
-    }
-  >
-    <AlgoliaRange(RangeSlider)
-      attribute="variant_meta_data.eu.price"
-      formatLabel={[Function]}
-      precision={0}
-    />
-  </Panel>
 </div>
 `;

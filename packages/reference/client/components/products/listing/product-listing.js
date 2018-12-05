@@ -16,13 +16,19 @@ export class ProductListing extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      showFilters: false
+      filtersShown: false
     }
   }
 
   toggleFiltering = () => {
+    if (this.state.filtersShown) {
+      document.body.classList.remove('modal-open')
+    } else {
+      document.body.classList.add('modal-open')
+    }
+
     this.setState({
-      showFilters: !this.state.showFilters
+      filtersShown: !this.state.filtersShown
     })
   }
 
@@ -34,10 +40,10 @@ export class ProductListing extends Component {
         <ProductMenu title={title} />
         <Breadcrumb />
         <div className='c-product-listing-wrapper'>
-          <AlgoliaFilters showFilters={this.state.showFilters} toggleFiltering={this.toggleFiltering} />
+          <AlgoliaFilters filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
-              <ProductMenuOptions showFilters={this.state.showFilters} toggleFiltering={this.toggleFiltering} />
+              <ProductMenuOptions toggleFiltering={this.toggleFiltering} />
             </div>
             <AlgoliaHits />
           </div>

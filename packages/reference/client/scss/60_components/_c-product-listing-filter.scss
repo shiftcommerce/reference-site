@@ -1,3 +1,28 @@
+.c-product-listing-filter-heading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $modal-z-index + 1;
+  transition: right 0.25s;
+
+  background-color: $background-white;
+  width: 95%;
+  margin: 0 2.5%;
+  border-bottom: 1px solid $border-default;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+
+  &--hide {
+    right: 100%;
+  }
+
+  h2 {
+    margin: 1rem auto; /* Normalizing this h2 margins so it's easier to manage the margin at the top of the page */
+  }
+}
+
 .c-product-listing-filter {
   width: 100%;
   font-size: 0.85em;
@@ -9,9 +34,10 @@
     right: 0;
     bottom: 0;
     transition: right 0.25s;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: $modal-z-index;
     padding: $global-spacing-unit-small;
+    padding-top: 3.5rem;
   }
 
   @include breakpoint(desktop) {

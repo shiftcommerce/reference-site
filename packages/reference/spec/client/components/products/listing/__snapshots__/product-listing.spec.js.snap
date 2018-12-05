@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="c-product-listing-wrapper"
   >
     <AlgoliaFilters
-      showFilters={false}
+      filtersShown={false}
       toggleFiltering={[Function]}
     />
     <div
@@ -18,7 +18,6 @@ exports[`renders correctly 1`] = `
         className="c-product-listing__menu"
       >
         <ProductMenuOptions
-          showFilters={false}
           toggleFiltering={[Function]}
         />
       </div>

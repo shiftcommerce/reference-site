@@ -24,28 +24,15 @@ exports[`renders correctly 1`] = `
           <div
             className="o-logo__image"
           >
-            <LazyLoad
-              debounce={true}
-              elementType="div"
-              offset={0}
-              offsetBottom={0}
-              offsetHorizontal={0}
-              offsetLeft={0}
-              offsetRight={0}
-              offsetTop={0}
-              offsetVertical={0}
-              throttle={250}
-            >
-              <div
-                className="LazyLoad"
-                style={
-                  Object {
-                    "height": undefined,
-                    "width": undefined,
-                  }
-                }
+            <picture>
+              <img
+                className="c-image"
+                height={40}
+                src="/static/shopgo-logo.svg"
+                srcSet="/static/shopgo-logo.svg 769w"
+                width={180}
               />
-            </LazyLoad>
+            </picture>
           </div>
         </Image>
       </a>

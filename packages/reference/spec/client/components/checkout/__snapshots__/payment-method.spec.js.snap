@@ -135,112 +135,52 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   src="/static/payments/visa.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/visa.svg"
+                        srcSet="/static/payments/visa.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/mastercard.svg"
+                        srcSet="/static/payments/mastercard.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/american-express.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/american-express.svg"
+                        srcSet="/static/payments/american-express.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/maestro.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/maestro.svg"
+                        srcSet="/static/payments/maestro.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>
@@ -251,28 +191,13 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/pay-pal.svg"
+                        srcSet="/static/payments/pay-pal.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>
@@ -1256,112 +1181,52 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                   src="/static/payments/visa.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/visa.svg"
+                        srcSet="/static/payments/visa.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/mastercard.svg"
+                        srcSet="/static/payments/mastercard.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/american-express.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/american-express.svg"
+                        srcSet="/static/payments/american-express.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/maestro.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/maestro.svg"
+                        srcSet="/static/payments/maestro.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>
@@ -1372,28 +1237,13 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/pay-pal.svg"
+                        srcSet="/static/payments/pay-pal.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>
@@ -1797,112 +1647,52 @@ exports[`renders payment summary on collapsing 1`] = `
                   src="/static/payments/visa.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/visa.svg"
+                        srcSet="/static/payments/visa.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/mastercard.svg"
+                        srcSet="/static/payments/mastercard.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/american-express.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/american-express.svg"
+                        srcSet="/static/payments/american-express.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
                   src="/static/payments/maestro.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/maestro.svg"
+                        srcSet="/static/payments/maestro.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>
@@ -1913,28 +1703,13 @@ exports[`renders payment summary on collapsing 1`] = `
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        className="c-image"
+                        src="/static/payments/pay-pal.svg"
+                        srcSet="/static/payments/pay-pal.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </span>

@@ -255,28 +255,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                     <div
                       className="c-line-items__image"
                     >
-                      <LazyLoad
-                        debounce={true}
-                        elementType="div"
-                        offset={0}
-                        offsetBottom={0}
-                        offsetHorizontal={0}
-                        offsetLeft={0}
-                        offsetRight={0}
-                        offsetTop={0}
-                        offsetVertical={0}
-                        throttle={250}
-                      >
-                        <div
-                          className="LazyLoad"
-                          style={
-                            Object {
-                              "height": undefined,
-                              "width": undefined,
-                            }
-                          }
+                      <picture>
+                        <img
+                          className="c-image"
+                          onClick={[Function]}
+                          src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
+                          srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg 769w"
                         />
-                      </LazyLoad>
+                      </picture>
                     </div>
                   </Image>
                 </Link>
@@ -661,28 +647,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="VISA"
+                        className="c-image"
+                        src="/static/payments/visa.svg"
+                        srcSet="/static/payments/visa.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
@@ -693,28 +665,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="Mastercard"
+                        className="c-image"
+                        src="/static/payments/mastercard.svg"
+                        srcSet="/static/payments/mastercard.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
@@ -725,28 +683,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="American Express"
+                        className="c-image"
+                        src="/static/payments/american-express.svg"
+                        srcSet="/static/payments/american-express.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
@@ -757,28 +701,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="Maestro"
+                        className="c-image"
+                        src="/static/payments/maestro.svg"
+                        srcSet="/static/payments/maestro.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
@@ -789,28 +719,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="PayPal"
+                        className="c-image"
+                        src="/static/payments/pay-pal.svg"
+                        srcSet="/static/payments/pay-pal.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
                 <Image
@@ -821,28 +737,14 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   <div
                     className="c-payment-icons__image"
                   >
-                    <LazyLoad
-                      debounce={true}
-                      elementType="div"
-                      offset={0}
-                      offsetBottom={0}
-                      offsetHorizontal={0}
-                      offsetLeft={0}
-                      offsetRight={0}
-                      offsetTop={0}
-                      offsetVertical={0}
-                      throttle={250}
-                    >
-                      <div
-                        className="LazyLoad"
-                        style={
-                          Object {
-                            "height": undefined,
-                            "width": undefined,
-                          }
-                        }
+                    <picture>
+                      <img
+                        aria-label="Apple Pay"
+                        className="c-image"
+                        src="/static/payments/apple-pay.svg"
+                        srcSet="/static/payments/apple-pay.svg 769w"
                       />
-                    </LazyLoad>
+                    </picture>
                   </div>
                 </Image>
               </div>

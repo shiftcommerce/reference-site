@@ -2,4 +2,12 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+
+  &.modal-open {
+    /* Stop background scrolling when mobile modal open */
+    @include breakpoint(mobile-tablet) {
+      overflow-y: hidden;
+      position: fixed;
+    }
+  }
 }

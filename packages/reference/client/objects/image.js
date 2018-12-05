@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import classNames from 'classnames'
-import LazyLoad from 'react-lazy-load'
 
 class Image extends Component {
   styles () {
@@ -32,9 +31,7 @@ class Image extends Component {
     if (src) {
       return (
         <div className={className}>
-          <LazyLoad>
-            { this.responsiveImage(src, mobileSrc, otherProps) }
-          </LazyLoad>
+          { this.responsiveImage(src, mobileSrc, otherProps) }
         </div>
       )
     } else {

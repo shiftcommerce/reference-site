@@ -3,7 +3,7 @@ import AlgoliaFilters from '../../../../../client/components/search/algolia/algo
 
 test('renders the algolia filter component with children', () => {
   // Arrange & Act
-  const wrapper = shallow(<AlgoliaFilters showFilters={true} />)
+  const wrapper = shallow(<AlgoliaFilters filtersShown={true} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()

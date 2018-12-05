@@ -35,28 +35,13 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
             <div
               className="c-minibag__cart-image-icon"
             >
-              <LazyLoad
-                debounce={true}
-                elementType="div"
-                offset={0}
-                offsetBottom={0}
-                offsetHorizontal={0}
-                offsetLeft={0}
-                offsetRight={0}
-                offsetTop={0}
-                offsetVertical={0}
-                throttle={250}
-              >
-                <div
-                  className="LazyLoad"
-                  style={
-                    Object {
-                      "height": undefined,
-                      "width": undefined,
-                    }
-                  }
+              <picture>
+                <img
+                  className="c-image"
+                  src="/static/bag-icon.svg"
+                  srcSet="/static/bag-icon.svg 769w"
                 />
-              </LazyLoad>
+              </picture>
             </div>
           </Image>
         </div>
@@ -148,28 +133,13 @@ exports[`renders an active checkout button where cart has items 1`] = `
             <div
               className="c-minibag__cart-image-icon"
             >
-              <LazyLoad
-                debounce={true}
-                elementType="div"
-                offset={0}
-                offsetBottom={0}
-                offsetHorizontal={0}
-                offsetLeft={0}
-                offsetRight={0}
-                offsetTop={0}
-                offsetVertical={0}
-                throttle={250}
-              >
-                <div
-                  className="LazyLoad"
-                  style={
-                    Object {
-                      "height": undefined,
-                      "width": undefined,
-                    }
-                  }
+              <picture>
+                <img
+                  className="c-image"
+                  src="/static/bag-icon.svg"
+                  srcSet="/static/bag-icon.svg 769w"
                 />
-              </LazyLoad>
+              </picture>
             </div>
           </Image>
         </div>

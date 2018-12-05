@@ -36,28 +36,15 @@ exports[`renders ProductListingCard correctly 1`] = `
               <div
                 className="c-product-listing-card__image u-image-shadow"
               >
-                <LazyLoad
-                  debounce={true}
-                  elementType="div"
-                  offset={0}
-                  offsetBottom={0}
-                  offsetHorizontal={0}
-                  offsetLeft={0}
-                  offsetRight={0}
-                  offsetTop={0}
-                  offsetVertical={0}
-                  throttle={250}
-                >
-                  <div
-                    className="LazyLoad"
-                    style={
-                      Object {
-                        "height": undefined,
-                        "width": undefined,
-                      }
-                    }
+                <picture>
+                  <img
+                    alt="SEPIA nonslip tray 420×210mm"
+                    aria-label="SEPIA nonslip tray 420×210mm"
+                    className="c-image"
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                    srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg 769w"
                   />
-                </LazyLoad>
+                </picture>
               </div>
             </Image>
           </div>

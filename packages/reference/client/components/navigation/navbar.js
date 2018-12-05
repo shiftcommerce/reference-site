@@ -23,6 +23,12 @@ export class NavBar extends Component {
   }
 
   toggleMenuShown (e) {
+    if (this.state.menuShown) {
+      document.body.classList.remove('modal-open')
+    } else {
+      document.body.classList.add('modal-open')
+    }
+
     this.setState(state => {
       return { menuShown: !state.menuShown }
     })
@@ -48,6 +54,7 @@ export class NavBar extends Component {
       <div className='c-nav__menu-header'>
         <Logo className='c-nav__menu-header-logo' />
         <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown}/>
+        { this.renderSearchBar() }
       </div>
     )
   }
@@ -84,10 +91,9 @@ export class NavBar extends Component {
       return (
         <div className='c-nav' role='navigation'>
           { this.renderNavBurgerMenu() }
+          { this.renderNavHeader() }
           <div className='c-nav__menu'>
-            { this.renderNavHeader() }
             <div className='c-nav__menu-list'>
-              { this.renderSearchBar() }
               { this.renderNavOptions(menuItems) }
             </div>
           </div>

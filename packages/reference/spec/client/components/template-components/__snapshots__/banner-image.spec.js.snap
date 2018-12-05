@@ -75,28 +75,17 @@ exports[`BannerImage component renders correctly 1`] = `
         <div
           className="c-banner-image"
         >
-          <LazyLoad
-            debounce={true}
-            elementType="div"
-            offset={0}
-            offsetBottom={0}
-            offsetHorizontal={0}
-            offsetLeft={0}
-            offsetRight={0}
-            offsetTop={0}
-            offsetVertical={0}
-            throttle={250}
-          >
-            <div
-              className="LazyLoad"
-              style={
-                Object {
-                  "height": undefined,
-                  "width": undefined,
-                }
-              }
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
             />
-          </LazyLoad>
+            <img
+              className="c-image"
+              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+              srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png 769w"
+            />
+          </picture>
         </div>
       </Image>
     </a>
