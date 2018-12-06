@@ -44,7 +44,7 @@ exports[`renders the children inside it 1`] = `
           <span
             className="c-header__search"
           >
-            <Connect(SearchBar) />
+            <SearchBar />
           </span>
         </div>
       </div>
@@ -112,7 +112,7 @@ exports[`renders the footer 1`] = `
           <span
             className="c-header__search"
           >
-            <Connect(SearchBar) />
+            <SearchBar />
           </span>
         </div>
       </div>
@@ -178,7 +178,7 @@ exports[`renders the header 1`] = `
           <span
             className="c-header__search"
           >
-            <Connect(SearchBar) />
+            <SearchBar />
           </span>
         </div>
       </div>
@@ -244,7 +244,7 @@ exports[`renders the navbar 1`] = `
           <span
             className="c-header__search"
           >
-            <Connect(SearchBar) />
+            <SearchBar />
           </span>
         </div>
       </div>

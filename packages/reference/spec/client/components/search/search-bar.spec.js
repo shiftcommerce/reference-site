@@ -3,9 +3,10 @@ import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Components
-import SearchBar from '../../../../client/components/search/search-bar'
+import { SearchBar } from '../../../../client/components/search/search-bar'
+import { InstantSearch } from '../../../../client/components/search/algolia/instant-search'
 
-test('renders the header', () => {
+test('Renders the algolia SearchBox and checks the placeholder', () => {
   // Arrange - provide an initail state for the search
   const initialState = {
     loading: true,
@@ -14,14 +15,20 @@ test('renders the header', () => {
     search: {}
   }
 
+  const store = createMockStore(initialState)
+
   // Act
-  const wrapper = shallow(
-    <Provider store={createMockStore(initialState)} >
-      <SearchBar />
+  const wrapper = mount(
+    <Provider store={store} >
+      <InstantSearch
+        appId='test'
+        apiKey='test'
+        indexName='test'>
+        <SearchBar />
+      </InstantSearch>
     </Provider>
   )
 
   // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Search')
+  expect(wrapper.find('.ais-SearchBox__input').prop('placeholder')).toBe('Search here…')
 })
