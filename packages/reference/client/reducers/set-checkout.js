@@ -61,6 +61,7 @@ export const checkoutInitialState = {
 
 export default function setCheckout (state = checkoutInitialState, action) {
   let newState = Object.assign({}, state)
+  const { formName } = action
 
   switch (action.type) {
     case types.SET_CHECKOUT_INPUT_VALUE:
@@ -181,7 +182,6 @@ export default function setCheckout (state = checkoutInitialState, action) {
       return newState
 
     case types.EDIT_FORM:
-      const formName = action.formName
       newState[formName].id = ''
       newState[formName].collapsed = false
       newState[formName].selected = false
