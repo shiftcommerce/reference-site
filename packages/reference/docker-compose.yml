@@ -7,6 +7,7 @@ services:
     command: nodemon --legacy-watch --watch server server/server.js
     ports:
       - "3000:3000"
+      - "3001:3001"
     entrypoint: ./bin/docker/yarn_entrypoint
     env_file: .env
     volumes:

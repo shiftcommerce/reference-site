@@ -4,6 +4,12 @@ import ProductMenuOptions from '../../../../../client/components/products/listin
 // Objects
 import Breadcrumb from '../../../../../client/objects/breadcrumb'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {
+    ALGOLIA_INDEX_NAME: 'instant_search'
+  }
+}))
+
 test('renders correctly', () => {
   // Arrange
   const initialProps = {
