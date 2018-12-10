@@ -4,7 +4,7 @@ import Link from 'next/link'
 import t from 'typy'
 
 // Objects
-import Image from '../../objects/image'
+import LazyLoad from '../../objects/lazy-load'
 
 export class BannerImage extends PureComponent {
   render () {
@@ -16,7 +16,7 @@ export class BannerImage extends PureComponent {
     return (
       <Link href={href} as={href}>
         <a>
-          <Image className='c-banner-image' src={imgSrc} mobileSrc={mobileSrc} />
+          <LazyLoad className='c-banner-image' src={imgSrc} mobileSrc={mobileSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} />
         </a>
       </Link>
     )

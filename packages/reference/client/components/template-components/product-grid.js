@@ -15,6 +15,7 @@ class ProductGrid extends PureComponent {
 
     for (let i of [...Array(4).keys()]) {
       let product = componentData.products[i]
+
       products.push(
         <ProductListingCard
           className="o-card-grid__card"
@@ -26,6 +27,8 @@ class ProductGrid extends PureComponent {
           productPath={product.canonical_path}
           productRating={product.product_rating}
           key={product.id}
+          imageHeight={componentData.image_height}
+          imageWidth={componentData.image_width}
         />
       )
     }

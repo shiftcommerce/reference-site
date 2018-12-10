@@ -6,7 +6,7 @@ import t from 'typy'
 
 // Objects
 import ConditionalLink from '../../objects/conditional-link'
-import Image from '../../objects/image'
+import LazyLoad from '../../objects/lazy-load'
 
 class HeroFull extends Component {
   heroHeading (hero) {
@@ -109,7 +109,7 @@ class HeroFull extends Component {
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }
           <ConditionalLink href={href}>
-            <Image className='c-hero__image' src={imgSrc} mobileSrc={mobileSrc} />
+            <LazyLoad className='c-hero__image' src={imgSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} mobileSrc={mobileSrc} />
           </ConditionalLink>
           { this.heroOverlay(componentData, 'below') }
         </div>

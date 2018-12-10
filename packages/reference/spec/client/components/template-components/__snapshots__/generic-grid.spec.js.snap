@@ -115,22 +115,45 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware"
             onClick={[Function]}
           >
-            <Image
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
               <div
-                className="u-image-shadow"
+                style={
+                  Object {
+                    "background": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "NaN%",
+                    "width": "100%",
+                  }
+                }
               >
-                <picture>
-                  <img
-                    className="c-image"
-                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
-                    srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg 769w"
-                  />
-                </picture>
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </Image>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >
@@ -150,22 +173,45 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware2"
             onClick={[Function]}
           >
-            <Image
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg"
             >
               <div
-                className="u-image-shadow"
+                style={
+                  Object {
+                    "background": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "NaN%",
+                    "width": "100%",
+                  }
+                }
               >
-                <picture>
-                  <img
-                    className="c-image"
-                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg"
-                    srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg 769w"
-                  />
-                </picture>
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </Image>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >
@@ -185,22 +231,45 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware3"
             onClick={[Function]}
           >
-            <Image
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg"
             >
               <div
-                className="u-image-shadow"
+                style={
+                  Object {
+                    "background": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "NaN%",
+                    "width": "100%",
+                  }
+                }
               >
-                <picture>
-                  <img
-                    className="c-image"
-                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg"
-                    srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg 769w"
-                  />
-                </picture>
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </Image>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >

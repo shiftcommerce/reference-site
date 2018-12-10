@@ -67,27 +67,46 @@ exports[`BannerImage component renders correctly 1`] = `
       href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
       onClick={[Function]}
     >
-      <Image
+      <LazyLoad
         className="c-banner-image"
         mobileSrc="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
         src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
       >
         <div
-          className="c-banner-image"
+          style={
+            Object {
+              "background": "#EEEFF3",
+              "height": 0,
+              "paddingBottom": "NaN%",
+              "width": "100%",
+            }
+          }
         >
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
-            />
-            <img
-              className="c-image"
-              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
-              srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png 769w"
-            />
-          </picture>
+          <FadeIn
+            offset={150}
+            once={true}
+            render={[Function]}
+          >
+            <LazyLoad
+              offset={150}
+              once={true}
+              overflow={false}
+              resize={false}
+              scroll={true}
+              unmountIfInvisible={false}
+            >
+              <div
+                className="lazyload-placeholder"
+                style={
+                  Object {
+                    "height": undefined,
+                  }
+                }
+              />
+            </LazyLoad>
+          </FadeIn>
         </div>
-      </Image>
+      </LazyLoad>
     </a>
   </Link>
 </BannerImage>

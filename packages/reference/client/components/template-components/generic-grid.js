@@ -2,9 +2,11 @@
 import { PureComponent } from 'react'
 import Link from 'next/link'
 
+// Components
+import LazyLoad from '../../objects/lazy-load'
+
 // Objects
 import Button from '../../objects/button'
-import Image from '../../objects/image'
 
 class GenericGrid extends PureComponent {
   buildSlides (componentData) {
@@ -20,11 +22,16 @@ class GenericGrid extends PureComponent {
           <div className="o-card-grid__card" key={i}>
             <Link href={slideLinkURL[0].canonical_path}>
               <a>
-                <Image className='u-image-shadow' src={slideImage[0].canonical_path} />
+                <LazyLoad className='u-image-shadow'
+                  src={slideImage[0].canonical_path}
+                  imageHeight={componentData.image_height}
+                  imageWidth={componentData.image_width}
+                />
                 <p className="o-card-grid__title">{ slideText }</p>
               </a>
             </Link>
           </div>
+
         )
       }
     }

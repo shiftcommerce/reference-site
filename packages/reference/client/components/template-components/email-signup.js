@@ -20,6 +20,15 @@ class EmailSignup extends Component {
     this.fakeSubmit = this.fakeSubmit.bind(this)
   }
 
+  styles () {
+    const { componentData: { image_height, image_width } } = this.props
+
+    return {
+      height: image_height,
+      width: image_width
+    }
+  }
+
   setInputRef (element) {
     this.inputElement = element
   }

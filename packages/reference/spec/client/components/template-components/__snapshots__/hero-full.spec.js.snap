@@ -84,22 +84,45 @@ exports[`renders the full HeroImage component 1`] = `
             href="/homeware/dining/glassware"
             onClick={[Function]}
           >
-            <Image
+            <LazyLoad
               className="c-hero__image"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
               <div
-                className="c-hero__image"
+                style={
+                  Object {
+                    "background": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "NaN%",
+                    "width": "100%",
+                  }
+                }
               >
-                <picture>
-                  <img
-                    className="c-image"
-                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
-                    srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg 769w"
-                  />
-                </picture>
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </Image>
+            </LazyLoad>
           </a>
         </Link>
       </ConditionalLink>

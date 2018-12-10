@@ -7,7 +7,7 @@ import Link from 'next/link'
 import ProductPrice from '../display/product-price'
 
 // Objects
-import Image from '../../../objects/image'
+import LazyLoad from '../../../objects/lazy-load'
 
 class ProductListingCard extends React.Component {
   renderRatingStars (productRating) {
@@ -26,16 +26,29 @@ class ProductListingCard extends React.Component {
     const {
       assetFileAltText,
       assetFileUrl,
-      title
+      title,
+      imageHeight,
+      imageWidth
     } = this.props
+
+    const DEFAULT_IMAGE_DIMENSION = 280
+
+    // Needed so that the aspect ratio can be calculated
+    // if it is undefined then lazyload div wont display correctly.
+    // TODO: remove this when we specify height/width in Algolia.
+    const plpImageHeight = imageHeight || DEFAULT_IMAGE_DIMENSION
+    const plpImageWidth = imageWidth || DEFAULT_IMAGE_DIMENSION
 
     return (
       <>
         <div className='c-product-listing-card__gallery c-image'>
-          <Image className='c-product-listing-card__image u-image-shadow'
+          <LazyLoad className='c-product-listing-card__image u-image-shadow'
             src={assetFileUrl}
             alt={assetFileAltText || title}
-            aria-label={title} />
+            aria-label={title}
+            imageHeight={plpImageHeight}
+            imageWidth={plpImageWidth}
+          />
         </div>
         <div className='c-product-listing-card__title' >
           <p role='heading' aria-level='1'>

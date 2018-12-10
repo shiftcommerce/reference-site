@@ -7,6 +7,15 @@ import Link from 'next/link'
 import Button from '../../objects/button'
 
 export class RelatedLinks extends Component {
+  styles () {
+    const { componentData: { image_height, image_width } } = this.props
+
+    return {
+      height: image_height,
+      width: image_width
+    }
+  }
+
   linkButton (linkData, element) {
     return (
       <div className='c-links__grid-button'>
@@ -22,7 +31,7 @@ export class RelatedLinks extends Component {
     const elements = [1, 2, 3]
 
     return (
-      <div className='c-links'>
+      <div className='c-links' style={this.styles()}>
         <div className='c-links__text'>
           <h1 className='c-links__text-title'>
             { componentData.title }

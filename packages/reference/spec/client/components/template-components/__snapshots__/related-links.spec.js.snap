@@ -23,6 +23,12 @@ exports[`renders correctly when some URLs are not set in the component 1`] = `
 >
   <div
     className="c-links"
+    style={
+      Object {
+        "height": undefined,
+        "width": undefined,
+      }
+    }
   >
     <div
       className="c-links__text"
@@ -116,6 +122,12 @@ exports[`renders the full RelatedLinks component 1`] = `
 >
   <div
     className="c-links"
+    style={
+      Object {
+        "height": undefined,
+        "width": undefined,
+      }
+    }
   >
     <div
       className="c-links__text"

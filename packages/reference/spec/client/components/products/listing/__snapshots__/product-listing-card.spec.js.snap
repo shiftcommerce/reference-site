@@ -27,26 +27,49 @@ exports[`renders ProductListingCard correctly 1`] = `
           <div
             className="c-product-listing-card__gallery c-image"
           >
-            <Image
+            <LazyLoad
               alt="SEPIA nonslip tray 420×210mm"
               aria-label="SEPIA nonslip tray 420×210mm"
               className="c-product-listing-card__image u-image-shadow"
+              imageHeight={280}
+              imageWidth={280}
               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
             >
               <div
-                className="c-product-listing-card__image u-image-shadow"
+                style={
+                  Object {
+                    "background": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "100.00%",
+                    "width": "100%",
+                  }
+                }
               >
-                <picture>
-                  <img
-                    alt="SEPIA nonslip tray 420×210mm"
-                    aria-label="SEPIA nonslip tray 420×210mm"
-                    className="c-image"
-                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
-                    srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg 769w"
-                  />
-                </picture>
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </Image>
+            </LazyLoad>
           </div>
           <div
             className="c-product-listing-card__title"

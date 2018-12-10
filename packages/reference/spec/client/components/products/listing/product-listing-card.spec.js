@@ -1,14 +1,16 @@
 // Components
 import ProductListingCard from '../../../../../client/components/products/listing/product-listing-card'
 
-// Objects
-import Image from '../../../../../client/objects/image'
-
 // Fixtures
 import productSearchHit from '../../../../fixtures/product-search-hit'
 
 test('renders ProductListingCard correctly', () => {
   // Act
+
+  // at the moment we dont pass the image size throught algolia,
+  // the fixture will need updating when we do. At the moment
+  // product listing is set to default to 280
+
   const wrapper = mount(
     <ProductListingCard
       title={productSearchHit.product_title}
@@ -18,13 +20,16 @@ test('renders ProductListingCard correctly', () => {
       maxPrice={productSearchHit.variant_meta_data.eu.price}
       productPath={productSearchHit.product_path}
       productRating={productSearchHit.product_rating}
+      imageHeight={productSearchHit.image_height}
+      imageWidth={productSearchHit.image_width}
     />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Image className='c-product-listing-card__image u-image-shadow' src={productSearchHit.product_assets[0].url} alt={productSearchHit.product_title} aria-label={productSearchHit.product_title} />)
-  expect(wrapper).toIncludeText(productSearchHit.product_title)
   expect(wrapper.find('.c-product-price')).toIncludeText(`£${productSearchHit.variant_meta_data.eu.price}`)
   expect(wrapper.find('.c-product-listing-card__rating')).toHaveClassName('c-product-listing-card__rating')
+
+  // Assert lazyload component is loading image
+  expect(wrapper.find('.lazyload-placeholder')).toHaveClassName('lazyload-placeholder')
 })
