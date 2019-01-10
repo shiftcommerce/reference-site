@@ -2,9 +2,7 @@
 import { Component } from 'react'
 import {
   injectStripe,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCVCElement
+  CardElement
 } from 'react-stripe-elements'
 
 import classNames from 'classnames'
@@ -15,14 +13,10 @@ class StripeCardFields extends Component {
 
     this.state = {
       errors: {
-        CardNumberElement: '',
-        CardExpiryElement: '',
-        CardCVCElement: ''
+        CardElement: ''
       },
       dataAvailable: {
-        CardNumberElement: false,
-        CardExpiryElement: false,
-        CardCVCElement: false
+        CardElement: false
       }
     }
   }
@@ -76,40 +70,15 @@ class StripeCardFields extends Component {
 
     return <div>
       <label>
-        Credit / Debit Card Number *
-        <CardNumberElement
-          className={classNames('o-form__input-field', { 'o-form__input-field__error': (errors.CardNumberElement !== '') })}
-          onChange={this.handleChange.bind(this, 'CardNumberElement')}
+        Please enter your credit card details *
+        <CardElement
+          className={classNames('o-form__input-field', { 'o-form__input-field__error': (errors.CardElement !== '') })}
+          onChange={this.handleChange.bind(this, 'CardElement')}
+          hidePostalCode={true}
         />
       </label>
 
-      { this.renderValidationMessageFor('CardNumberElement') }
-
-      <div className='o-flex o-flex__space-between'>
-        <div className='o-flex-full-width-s'>
-          <label aria-label='Card expiry date'>
-            Expiration *
-            <CardExpiryElement
-              className={classNames('o-form__input-field c-card-expiry-field', { 'o-form__input-field__error': (errors.CardExpiryElement !== '') })}
-              onChange={this.handleChange.bind(this, 'CardExpiryElement')}
-            />
-          </label>
-
-          { this.renderValidationMessageFor('CardExpiryElement') }
-        </div>
-
-        <div className='o-flex-full-width-s'>
-          <label aria-label='CVV security code'>
-            CVV *
-            <CardCVCElement
-              className={classNames('o-form__input-field c-cvv-field', { 'o-form__input-field__error': (errors.CardCVCElement !== '') })}
-              onChange={this.handleChange.bind(this, 'CardCVCElement')}
-            />
-          </label>
-
-          { this.renderValidationMessageFor('CardCVCElement') }
-        </div>
-      </div>
+      { this.renderValidationMessageFor('CardElement') }
     </div>
   }
 }
