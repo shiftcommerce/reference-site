@@ -40,10 +40,10 @@ export class AddressForm extends Component {
     }
   }
 
-  formValid (address) {
+  formValid (formInput) {
     const requiredFields = ['line_1', 'zipcode', 'city', 'primary_phone', 'email']
-    const requiredFieldsPresent = (requiredFields().every((key) => address[key] !== '' && address[key] !== null) === true)
-    const noFormErrorsPresent = (Object.values(address.errors).filter(String).length === 0)
+    const requiredFieldsPresent = (requiredFields().every((key) => formInput[key] !== '' && formInput[key] !== null) === true)
+    const noFormErrorsPresent = (Object.values(formInput.errors).filter(String).length === 0)
     return (requiredFieldsPresent && noFormErrorsPresent)
   }
 
@@ -64,15 +64,15 @@ export class AddressForm extends Component {
     const { checkout, addressType, formName, onToggleCollapsed } = this.props
     const collapsed = checkout[formName].collapsed
     const completed = checkout[formName].completed
-    const address = checkout[formName]
+    const form = checkout[formName]
 
     return (
-      <div>
+      <>
         { collapsed && (addressType === 'shipping') &&
           <div className='o-form__wrapper--collapsed c-address-form__summary'>
-            <span className={classNames('u-bold', { 'u-text-color--primary': (address.line_1 && address.zipcode) })} />
-            <p className='u-bold'>{ address.first_name } { address.last_name } </p>
-            <span>{ address.line_1 }, { address.city }, { address.zipcode }</span>
+            <span className={classNames('u-bold', { 'u-text-color--primary': (form.line_1 && form.zipcode) })} />
+            <p className='u-bold'>{ form.first_name } { form.last_name } </p>
+            <span>{ form.line_1 }, { form.city }, { form.zipcode }</span>
             { collapsed && !completed && <AddressBook
               formName={formName}
               onToggleCollapsed={onToggleCollapsed}
@@ -80,7 +80,7 @@ export class AddressForm extends Component {
             { !completed && this.renderFormSubmitButton() }
           </div>
         }
-      </div>
+      </>
     )
   }
 
@@ -99,32 +99,32 @@ export class AddressForm extends Component {
 
   renderCountriesDropdown () {
     const { checkout, formName, onChange, onBlur } = this.props
-    const address = checkout[formName]
+    const formInput = checkout[formName]
     const name = 'country_code'
     const rules = { required: true }
 
     return (
-      <div>
+      <>
         <DropdownSelect
           options={Countries}
           label='Country'
           name={name}
-          value={address.country_code}
+          value={formInput.country_code}
           formName={formName}
           required={rules.required}
           rules={rules}
-          validationMessage={address.errors[name]}
+          validationMessage={formInput.errors[name]}
           onChange={onChange}
           onBlur={onBlur}
           prompt='Select a Country'
         />
-      </div>
+      </>
     )
   }
 
-  renderInputField (address, fieldOption) {
+  renderInputField (formInput, fieldOption) {
     return (
-      <div>
+      <>
         <Input
           label={fieldOption.label}
           className={fieldOption.className}
@@ -133,42 +133,42 @@ export class AddressForm extends Component {
           type={fieldOption.type}
           value={fieldOption.value}
           required={t(fieldOption, 'rules.required').safeObject}
-          validationMessage={address.errors[fieldOption.name]}
+          validationMessage={formInput.errors[fieldOption.name]}
           rules={fieldOption.rules}
           formName={this.props.formName}
           onChange={this.props.onChange}
           onBlur={this.props.onBlur}
         />
-      </div>
+      </>
     )
   }
 
-  renderCheckbox (address, fieldOption) {
+  renderCheckbox (formInput, fieldOption) {
     return (
-      <div>
+      <>
         <Checkbox
           label={fieldOption.label}
           className={fieldOption.className}
           name={fieldOption.name}
           checked={!!fieldOption.value}
           required={t(fieldOption, 'rules.required').safeObject}
-          validationMessage={address.errors[fieldOption.name]}
+          validationMessage={formInput.errors[fieldOption.name]}
           rules={fieldOption.rules}
           formName={this.props.formName}
           onChange={this.props.onChange}
           onBlur={this.props.onBlur}
         />
-      </div>
+      </>
     )
   }
 
   renderCustomerNameFields () {
     const { checkout, formName } = this.props
-    const address = checkout[formName]
+    const formInput = checkout[formName]
 
     const fieldOptions = [
-      { className: 'o-form__input-block', placeholder: 'Enter First Name', label: 'First Name', name: 'first_name', value: address.first_name, rules: { required: true, maxLength: 50 } },
-      { className: 'o-form__input-block', placeholder: 'Enter Last Name', label: 'Last Name', name: 'last_name', value: address.last_name, rules: { required: true, maxLength: 50 } }
+      { className: 'o-form__input-block', placeholder: 'Enter First Name', label: 'First Name', name: 'first_name', value: formInput.first_name, rules: { required: true, maxLength: 50 } },
+      { className: 'o-form__input-block', placeholder: 'Enter Last Name', label: 'Last Name', name: 'last_name', value: formInput.last_name, rules: { required: true, maxLength: 50 } }
     ]
 
     return (
@@ -176,7 +176,7 @@ export class AddressForm extends Component {
         { fieldOptions.map((fieldOption, index) => {
           return (
             <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(address, fieldOption) }
+              { this.renderInputField(formInput, fieldOption) }
             </div>
           )
         }) }
@@ -186,114 +186,138 @@ export class AddressForm extends Component {
 
   renderCompanyNameOption () {
     const { checkout, formName, onShowField } = this.props
-    const address = checkout[formName]
-    const fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: address.companyName }
+    const formInput = checkout[formName]
+    const fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: formInput.companyName }
 
     return (
-      <div>
-        { !(address.companyNameShown) &&
+      <>
+        { !(formInput.companyNameShown) &&
           <a href='#' onClick={() => onShowField(formName, 'companyNameShown')}>
             <p>+ Add Company Name (optional)</p>
           </a>
         }
-        { address.companyNameShown && this.renderInputField(address, fieldOption) }
-      </div>
+        { formInput.companyNameShown && this.renderInputField(formInput, fieldOption) }
+      </>
     )
   }
 
   renderAddressLine1 () {
     const { checkout, formName } = this.props
-    const address = checkout[formName]
-    const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Address', label: 'Address 1', name: 'line_1', value: address.line_1, rules: { required: true } }
+    const formInput = checkout[formName]
+    const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Address', label: 'Address 1', name: 'line_1', value: formInput.line_1, rules: { required: true } }
 
     return (
-      <div>
-        { this.renderInputField(address, fieldOption) }
-      </div>
+      <>
+        { this.renderInputField(formInput, fieldOption) }
+      </>
     )
   }
 
   renderAddressLine2 () {
     const { checkout, formName, onShowField } = this.props
-    const address = checkout[formName]
-    const fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: address.line_2 }
+    const formInput = checkout[formName]
+    const fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: formInput.line_2 }
 
     return (
-      <div>
-        { !(address.address2Shown) &&
+      <>
+        { !(formInput.address2Shown) &&
           <a href='#' onClick={() => onShowField(formName, 'address2Shown')}>
             <p>+ Add Address 2 (optional)</p>
           </a>
         }
-        { address.address2Shown && this.renderInputField(address, fieldOption) }
-      </div>
+        { formInput.address2Shown && this.renderInputField(formInput, fieldOption) }
+      </>
     )
   }
 
   renderAddressFields () {
     const { checkout, formName } = this.props
-    const address = checkout[formName]
+    const formInput = checkout[formName]
     const fieldOptions = [
-      { className: 'o-form__input-block', placeholder: 'Enter Post Code', label: 'Post Code', name: 'zipcode', value: address.zipcode, rules: { required: true, postcode: true } },
-      { className: 'o-form__input-block', placeholder: 'Enter City', label: 'City', name: 'city', value: address.city, rules: { required: true } },
-      { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: address.state },
-      { className: 'o-form__input-block', placeholder: 'Enter Phone', label: 'Phone', name: 'primary_phone', value: address.primary_phone, rules: { required: true, phone: true } },
-      { className: 'o-form__input-block', placeholder: 'Enter Email', label: 'Email', name: 'email', type: 'email', value: address.email, rules: { required: true, email: true } }
+      { className: 'o-form__input-block', placeholder: 'Enter Post Code', label: 'Post Code', name: 'zipcode', value: formInput.zipcode, rules: { required: true, postcode: true } },
+      { className: 'o-form__input-block', placeholder: 'Enter City', label: 'City', name: 'city', value: formInput.city, rules: { required: true } },
+      { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: formInput.state }
     ]
 
     return (
-      <div>
+      <>
         { fieldOptions.map((fieldOption, index) => {
           return (
             <div key={index}>
-              { this.renderInputField(address, fieldOption) }
+              { this.renderInputField(formInput, fieldOption) }
             </div>
           )
         }) }
-      </div>
+      </>
+    )
+  }
+
+  renderPhone () {
+    const { checkout, formName } = this.props
+    const formInput = checkout[formName]
+    const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Phone', label: 'Phone', name: 'primary_phone', value: formInput.primary_phone, rules: { required: true, phone: true } }
+
+    return (
+      <>
+        <p className='o-form__additional-label'>Required for any delivery related questions</p>
+        { this.renderInputField(formInput, fieldOption) }
+      </>
+    )
+  }
+
+  renderEmail () {
+    const { checkout, formName } = this.props
+    const formInput = checkout[formName]
+    const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Email', label: 'Email', name: 'email', type: 'email', value: formInput.email, rules: { required: true, email: true } }
+
+    return (
+      <>
+        <p className='o-form__additional-label'>Required for Order Confirmation Email</p>
+        { this.renderInputField(formInput, fieldOption) }
+      </>
     )
   }
 
   renderSaveAddressCheckbox () {
     const { loggedIn, checkout, formName } = this.props
-    const address = checkout[formName]
-    const checkboxOptions = { label: 'Save address for later', name: 'saveToAddressBook', value: address.saveToAddressBook, className: 'o-form__checkbox-label' }
-    const inputOptions = { className: 'o-form__input-block', placeholder: 'A recognisable name, only for your own use, e.g. "Home"', label: 'Address name', name: 'label', type: 'text', value: address.label }
-    const preferredShippingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred shipping address', name: 'preferred_shipping', value: address.setAsPreferredShipping }
-    const preferredBillingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred billing address', name: 'preferred_billing', value: address.setAsPreferredBilling }
+    const formInput = checkout[formName]
+    const checkboxOptions = { label: 'Save address for later', name: 'saveToAddressBook', value: formInput.saveToAddressBook, className: 'o-form__checkbox-label' }
+    const inputOptions = { className: 'o-form__input-block', placeholder: 'A recognisable name, only for your own use, e.g. "Home"', label: 'Address name', name: 'label', type: 'text', value: formInput.label }
+    const preferredShippingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred shipping address', name: 'preferred_shipping', value: formInput.setAsPreferredShipping }
+    const preferredBillingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred billing address', name: 'preferred_billing', value: formInput.setAsPreferredBilling }
 
     return (
       <>
-        { loggedIn && !address.formPreFilled && this.renderCheckbox(address, checkboxOptions) }
-        { address.saveToAddressBook && this.renderCheckbox(address, preferredShippingCheckboxOptions) }
-        { address.saveToAddressBook && this.renderCheckbox(address, preferredBillingCheckboxOptions) }
-        { address.saveToAddressBook && this.renderInputField(address, inputOptions) }
+        { loggedIn && !formInput.formPreFilled && this.renderCheckbox(formInput, checkboxOptions) }
+        { formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredShippingCheckboxOptions) }
+        { formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredBillingCheckboxOptions) }
+        { formInput.saveToAddressBook && this.renderInputField(formInput, inputOptions) }
       </>
     )
   }
 
   renderNewsletterCheckbox () {
     const { checkout, formName, addressType } = this.props
-    const address = checkout[formName]
+    const formInput = checkout[formName]
     const fieldOption = {
       label: 'Sign up for Weekly Newsletters (Optional)',
       name: 'newsletterOptIn',
-      value: address.newsletterOptIn,
+      value: formInput.newsletterOptIn,
       className: 'o-form__checkbox-label'
     }
     return (
-      <div>
-        { addressType === 'shipping' && this.renderCheckbox(address, fieldOption) }
-      </div>
+      <>
+        { addressType === 'shipping' && this.renderCheckbox(formInput, fieldOption) }
+      </>
     )
   }
 
   renderFormSubmitButton () {
     const { checkout, addressType, formName } = this.props
-    const address = checkout[formName]
-    const isValidForm = addressFormValidator(address)
+    const formInput = checkout[formName]
+    const isValidForm = addressFormValidator(formInput)
     return (
-      <div>
+      <>
         { addressType === 'shipping' &&
           <div className='o-form__input-group'>
             <Button
@@ -307,7 +331,7 @@ export class AddressForm extends Component {
             />
           </div>
         }
-      </div>
+      </>
     )
   }
 
@@ -318,13 +342,13 @@ export class AddressForm extends Component {
       className
     } = this.props
 
-    const address = checkout[formName]
+    const formInput = checkout[formName]
 
     return (
       <div className={classNames('o-form__address', className)}>
         { this.renderFormHeader() }
         { this.renderFormSummary() }
-        { !address.collapsed && !address.selected &&
+        { !formInput.collapsed && !formInput.selected &&
           <form className='o-form__wrapper o-form__background'>
             { this.renderCountriesDropdown() }
             { this.renderCustomerNameFields() }
@@ -332,6 +356,8 @@ export class AddressForm extends Component {
             { this.renderAddressLine1() }
             { this.renderAddressLine2() }
             { this.renderAddressFields() }
+            { this.renderPhone() }
+            { this.renderEmail() }
             <p>* Denotes required fields</p>
             { this.renderSaveAddressCheckbox() }
             { this.renderNewsletterCheckbox() }

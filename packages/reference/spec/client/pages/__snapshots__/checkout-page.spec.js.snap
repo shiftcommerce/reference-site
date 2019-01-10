@@ -1658,29 +1658,27 @@ exports[`dispatch setShippingMethod action on changing shipping method 1`] = `
                       </div>
                     </Button>
                   </div>
-                  <div>
-                    <div
-                      className="o-form__wrapper--collapsed c-address-form__summary"
+                  <div
+                    className="o-form__wrapper--collapsed c-address-form__summary"
+                  >
+                    <span
+                      className="u-bold u-text-color--primary"
+                    />
+                    <p
+                      className="u-bold"
                     >
-                      <span
-                        className="u-bold u-text-color--primary"
-                      />
-                      <p
-                        className="u-bold"
-                      >
-                        Prasanna Gaddam
-                         
-                        Prasanna Gaddam
-                         
-                      </p>
-                      <span>
-                        Apartment 19, Waterloo Court, 17 Hunslet Road
-                        , 
-                        Leeds
-                        , 
-                        LS10 1QN
-                      </span>
-                    </div>
+                      Prasanna Gaddam
+                       
+                      Prasanna Gaddam
+                       
+                    </p>
+                    <span>
+                      Apartment 19, Waterloo Court, 17 Hunslet Road
+                      , 
+                      Leeds
+                      , 
+                      LS10 1QN
+                    </span>
                   </div>
                 </div>
               </AddressForm>

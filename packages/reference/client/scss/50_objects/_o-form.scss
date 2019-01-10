@@ -9,6 +9,12 @@ $input-checkbox-spacing: 8px;
     text-align: center;
   }
 
+  &__additional-label {
+    float: right;
+    margin-top: $global-spacing-unit-tiny;
+    text-align: end;
+  }
+
   &__address {
     margin-top: $global-spacing-unit-huge;
 
