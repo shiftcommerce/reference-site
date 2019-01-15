@@ -16,7 +16,6 @@ class CheckoutCartTotal extends Component {
     const checkoutSteps = [ 'shippingAddress', 'shippingMethod', 'paymentMethod' ]
     const cardErrors = order.card_errors
     const allStepsCompleted = checkoutSteps.every((step) => (checkout[step].completed))
-
     if (!cardErrors && allStepsCompleted) {
       return allStepsCompleted
     } else { return false }
@@ -106,7 +105,6 @@ class CheckoutCartTotal extends Component {
       onClick: convertToOrder
     }
   }
-
   renderButtons () {
     return (
       <div className='c-cart-summary-buttons'>
@@ -131,7 +129,7 @@ class CheckoutCartTotal extends Component {
     const totals = calculateCartSummary(cart, checkout)
 
     return (
-      <div>
+      <>
         <Sticky>
           <div aria-label='Cart total summary' className='u-sticky c-cart-summary'>
             <dl aria-label='Subtotal'>
@@ -153,7 +151,7 @@ class CheckoutCartTotal extends Component {
           </div>
         </Sticky>
         { this.renderButtons() }
-      </div>
+      </>
     )
   }
 }

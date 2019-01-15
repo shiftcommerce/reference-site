@@ -67,7 +67,6 @@ class StripeCardFields extends Component {
 
   render () {
     let { errors } = this.state
-
     return <div>
       <label>
         Please enter your credit card details *

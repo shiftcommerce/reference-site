@@ -108,115 +108,113 @@ exports[`Place Order button should be disabled if there is any error in billing 
     }
   }
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            £5.45
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            30.45
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          £5.45
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          30.45
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed o-button--sml"
-        disabled={true}
-        id="place_order"
-        label="Place Order"
-        status="disabled"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            aria-label="Place Order"
-            className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--disabled o-button--disabled"
-            disabled={true}
-            id="place_order"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
           >
-            Place Order
+            Continue shopping
           </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      aria-label="Place Order"
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      disabled={true}
+      id="place_order"
+      label="Place Order"
+      status="disabled"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--disabled o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -327,115 +325,113 @@ exports[`Place Order button should be disabled if there is any error in card det
     }
   }
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            £5.45
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            30.45
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          £5.45
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          30.45
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        aria-label="Place Order"
-        className="c-cart-summary__buttons--proceed o-button--sml"
-        disabled={true}
-        id="place_order"
-        label="Place Order"
-        status="disabled"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            aria-label="Place Order"
-            className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--disabled o-button--disabled"
-            disabled={true}
-            id="place_order"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
           >
-            Place Order
+            Continue shopping
           </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      aria-label="Place Order"
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      disabled={true}
+      id="place_order"
+      label="Place Order"
+      status="disabled"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          aria-label="Place Order"
+          className="c-cart-summary__buttons--proceed o-button--sml o-button o-button--disabled o-button--disabled"
+          disabled={true}
+          id="place_order"
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Place Order
+        </button>
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -468,111 +464,109 @@ exports[`renders payment errors 1`] = `
     }
   }
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            20.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            Enter address
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            20.00
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-        <div
-          className="c-checkout-cart-total__payment-error"
-        >
-          Payment authentication failed
-        </div>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          20.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          Enter address
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          20.00
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+      <div
+        className="c-checkout-cart-total__payment-error"
+      >
+        Payment authentication failed
+      </div>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        className="c-cart-summary__buttons--proceed o-button--sml"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            className="c-cart-summary__buttons--proceed o-button--sml o-button"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
             disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
-          />
+          >
+            Continue shopping
+          </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          className="c-cart-summary__buttons--proceed o-button--sml o-button"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -607,106 +601,104 @@ exports[`renders the correct checkout cart costs with shipping address completed
   }
   order={Object {}}
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            Select shipping method
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          Select shipping method
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        className="c-cart-summary__buttons--proceed o-button--sml"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            className="c-cart-summary__buttons--proceed o-button--sml o-button"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
             disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
-          />
+          >
+            Continue shopping
+          </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          className="c-cart-summary__buttons--proceed o-button--sml o-button"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -751,106 +743,104 @@ exports[`renders the correct checkout cart costs with shipping method selected 1
   }
   order={Object {}}
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            £3.45
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            28.45
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          £3.45
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          28.45
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        className="c-cart-summary__buttons--proceed o-button--sml"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            className="c-cart-summary__buttons--proceed o-button--sml o-button"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
             disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
-          />
+          >
+            Continue shopping
+          </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          className="c-cart-summary__buttons--proceed o-button--sml o-button"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -883,106 +873,104 @@ exports[`renders the correct checkout cart total with multiple line items 1`] = 
   }
   order={Object {}}
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            Enter address
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            25.00
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          Enter address
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          25.00
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        className="c-cart-summary__buttons--proceed o-button--sml"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            className="c-cart-summary__buttons--proceed o-button--sml o-button"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
             disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
-          />
+          >
+            Continue shopping
+          </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          className="c-cart-summary__buttons--proceed o-button--sml o-button"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;
@@ -1012,106 +1000,104 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
   order={Object {}}
   title="Checkout Cart Summary"
 >
-  <div>
-    <Sticker>
-      <div
-        aria-label="Cart total summary"
-        className="u-sticky c-cart-summary"
-      >
-        <dl
-          aria-label="Subtotal"
-        >
-          <dt>
-             Total Price: 
-          </dt>
-          <dd>
-             £
-            20.00
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Shipping cost"
-        >
-          <dt>
-             Shipping costs: 
-          </dt>
-          <dd>
-             
-            Enter address
-             
-          </dd>
-        </dl>
-        <dl
-          aria-label="Total"
-          className="u-bold"
-        >
-          <dt>
-             TOTAL: 
-          </dt>
-          <dd>
-             £
-            20.00
-             
-          </dd>
-        </dl>
-        <dl>
-          <dt
-            className="c-cart-summary__VAT"
-          >
-            * Including VAT
-          </dt>
-        </dl>
-      </div>
-    </Sticker>
+  <Sticker>
     <div
-      className="c-cart-summary-buttons"
+      aria-label="Cart total summary"
+      className="u-sticky c-cart-summary"
     >
-      <Link
-        href="/"
+      <dl
+        aria-label="Subtotal"
       >
-        <Button
-          aria-label="Continue Shopping"
-          className="c-cart-summary__buttons--continue o-button--sml"
-          label="Continue shopping"
-          onClick={[Function]}
-          status="primary"
-          type="button"
+        <dt>
+           Total Price: 
+        </dt>
+        <dd>
+           £
+          20.00
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Shipping cost"
+      >
+        <dt>
+           Shipping costs: 
+        </dt>
+        <dd>
+           
+          Enter address
+           
+        </dd>
+      </dl>
+      <dl
+        aria-label="Total"
+        className="u-bold"
+      >
+        <dt>
+           TOTAL: 
+        </dt>
+        <dd>
+           £
+          20.00
+           
+        </dd>
+      </dl>
+      <dl>
+        <dt
+          className="c-cart-summary__VAT"
         >
-          <div
-            className="o-button__container"
-          >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </div>
-        </Button>
-      </Link>
+          * Including VAT
+        </dt>
+      </dl>
+    </div>
+  </Sticker>
+  <div
+    className="c-cart-summary-buttons"
+  >
+    <Link
+      href="/"
+    >
       <Button
-        className="c-cart-summary__buttons--proceed o-button--sml"
+        aria-label="Continue Shopping"
+        className="c-cart-summary__buttons--continue o-button--sml"
+        label="Continue shopping"
+        onClick={[Function]}
+        status="primary"
         type="button"
       >
         <div
           className="o-button__container"
         >
           <button
-            className="c-cart-summary__buttons--proceed o-button--sml o-button"
+            aria-label="Continue Shopping"
+            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
             disabled={false}
+            onClick={[Function]}
             role="button"
             tabIndex="0"
             type="button"
-          />
+          >
+            Continue shopping
+          </button>
         </div>
       </Button>
-    </div>
+    </Link>
+    <Button
+      className="c-cart-summary__buttons--proceed o-button--sml"
+      type="button"
+    >
+      <div
+        className="o-button__container"
+      >
+        <button
+          className="c-cart-summary__buttons--proceed o-button--sml o-button"
+          disabled={false}
+          role="button"
+          tabIndex="0"
+          type="button"
+        />
+      </div>
+    </Button>
   </div>
 </CheckoutCartTotal>
 `;

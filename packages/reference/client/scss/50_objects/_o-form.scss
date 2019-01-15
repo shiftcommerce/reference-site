@@ -17,10 +17,6 @@ $input-checkbox-spacing: 8px;
 
   &__address {
     margin-top: $global-spacing-unit-huge;
-
-    @include breakpoint(desktop) {
-      margin-top: $global-spacing-unit-large;
-    }
   }
 
   &__header {

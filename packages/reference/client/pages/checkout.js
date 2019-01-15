@@ -42,6 +42,7 @@ import PaymentMethod from '../components/checkout/payment-method'
 import PaymentIcons from '../components/cart/payment-icons'
 import PromoInput from '../components/promo-input'
 import Loading from '../components/loading'
+import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {
@@ -222,6 +223,7 @@ export class CheckoutPage extends Component {
                   <CheckoutSteps {...this.props} />
                 </div>
               </div>
+              <MiniPlaceOrder {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
               <div className='c-checkout'>
                 <div className='o-grid-container'>
                   <div className='o-col-1-13 o-col-1-8-l'>
