@@ -40,12 +40,14 @@ class StripeCardFields extends Component {
   }
 
   handleChange (fieldName, e) {
-    let errorMessage = (e.error ? e.error.message : '')
+    let errorMessage = ''
+    if (e.error || e.complete === false) {
+      errorMessage = e.error ? e.error.message : 'Incomplete card details'
+    }
     this.setState({
       errors: Object.assign(this.state.errors, { [fieldName]: errorMessage }),
       dataAvailable: Object.assign(this.state.dataAvailable, { [fieldName]: !e.empty })
     })
-
     this.checkDataValidity()
   }
 
