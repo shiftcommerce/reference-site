@@ -64,7 +64,7 @@
       padding-left: $global-spacing-unit;
 
       @include breakpoint(tablet) {
-        padding-left: $global-spacing-unit-small;
+        padding-left: $global-spacing-unit;
       }
     }
   }
@@ -79,7 +79,7 @@
       padding-left: $global-spacing-unit;
 
       @include breakpoint(tablet) {
-        padding-left: $global-spacing-unit-small;
+        padding-left: $global-spacing-unit;
       }
     }
   }

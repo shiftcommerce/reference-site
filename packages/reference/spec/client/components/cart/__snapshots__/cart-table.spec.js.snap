@@ -155,7 +155,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   items
                 </span>
               </t>
-               will be saved for 48 hours depending on availablility
+               will be saved for 48 hours depending on availability
             </p>
           </div>
         </div>
@@ -829,7 +829,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
               style={Object {}}
               zero={null}
             />
-             will be saved for 48 hours depending on availablility
+             will be saved for 48 hours depending on availability
           </p>
         </div>
       </div>

@@ -213,7 +213,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       items
                     </span>
                   </t>
-                   will be saved for 48 hours depending on availablility
+                   will be saved for 48 hours depending on availability
                 </p>
               </div>
             </div>
