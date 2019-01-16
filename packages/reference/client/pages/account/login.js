@@ -6,14 +6,12 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 // Libs
-import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
-import { inputChange,
-  setValidationMessage,
+import {
   createLogin
 } from '../../actions/login-actions'
 import { fetchAccountDetails } from '../../actions/account-actions'
@@ -25,7 +23,6 @@ export class LoginPage extends Component {
   constructor () {
     super()
 
-    this.validateInput = this.validateInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -46,18 +43,7 @@ export class LoginPage extends Component {
     }
   }
 
-  validateInput (event, formName, fieldName, fieldValue, rules) {
-    const { login } = this.props
-
-    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate(login)
-    this.props.dispatch(inputChange(fieldName, fieldValue))
-    this.props.dispatch(setValidationMessage(fieldName, validationMessage))
-  }
-
-  handleSubmit (event) {
-    event.preventDefault()
-    const { login } = this.props
-
+  handleSubmit (login) {
     this.props.dispatch(createLogin(login))
       .then(() => { this.props.dispatch(fetchAccountDetails()) })
   }
@@ -74,7 +60,6 @@ export class LoginPage extends Component {
           <LoginForm {...this.props}
             title='Login'
             formName='loginForm'
-            onBlur={this.validateInput}
             handleSubmit={this.handleSubmit}
           />
           <a href='/account/forgotpassword' className='c-login__anchor'>Reset Password?</a>

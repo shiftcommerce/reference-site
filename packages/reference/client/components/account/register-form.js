@@ -1,118 +1,109 @@
 // Libraries
 import { Component } from 'react'
 import classNames from 'classnames'
-import t from 'typy'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
 
 // Objects
 import Button from '../../objects/button'
-import Input from '../../objects/input'
+
+// Actions
+import { clearErrors } from '../../actions/account-actions'
 
 // lib
 import AccountFormErrors from '../../lib/form-errors'
 
 class RegisterForm extends Component {
-  requiredFields () {
-    return [ 'first_name', 'last_name', 'email', 'confirm_email', 'password', 'confirm_password' ]
+  componentDidMount () {
+    if (this.props.registration.errors.length > 0) {
+      this.props.dispatch(clearErrors())
+    }
   }
 
-  formValid () {
-    const { registration } = this.props
-
-    const requiredFieldsPresent = (this.requiredFields().every((key) => registration[key] !== '' && registration[key] !== null) === true)
-    const noFormErrorsPresent = (Object.values(registration.errors).filter(String).length === 0)
-    return (requiredFieldsPresent && noFormErrorsPresent)
-  }
-
-  renderInputField (fieldOption) {
-    const { registration, formName, onBlur } = this.props
-
-    return (
-      <Input
-        label={fieldOption.label}
-        className={fieldOption.className}
-        labelClassName={fieldOption.labelClassName}
-        name={fieldOption.name}
-        type={fieldOption.type}
-        value={fieldOption.value}
-        required={t(fieldOption, 'rules.required').safeObject}
-        validationMessage={registration.errors[fieldOption.name]}
-        rules={fieldOption.rules}
-        idInput={fieldOption.idInput}
-        formName={formName}
-        onBlur={onBlur}
-      />
-    )
-  }
-
-  renderPasswordInputFields () {
-    const fieldOptions = [
-      { className: 'o-form__input-block', type: 'password', label: 'Password', labelClassName: 'password', name: 'password', inputId: 'password', rules: { required: true, maxLength: 50, minLength: 8 } },
-      { className: 'o-form__input-block', type: 'password', label: 'Confirm Password', labelClassName: 'password', name: 'confirm_password', inputId: 'passwordConfirmation', rules: { required: true, maxLength: 50, minLength: 8, compareField: 'password' } }
-    ]
-
+  renderNameInputs () {
     return (
       <div className='o-flex o-flex__space-between'>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(fieldOption) }
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>First Name *</b></label>
+            <Field className='c-register__input' type='firstName' name='firstName' placeholder='First Name' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='firstName' />
             </div>
-          )
-        }) }
+          </div>
+        </div>
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>Last Name *</b></label>
+            <Field type='lastName' name='lastName' placeholder='Last Name' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='lastName' />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
 
-  renderEmailInputFields () {
-    const fieldOptions = [
-      { className: 'o-form__input-block', label: 'Email', name: 'email', rules: { required: true, maxLength: 50, email: true }, inputId: 'email' },
-      { className: 'o-form__input-block', label: 'Confirm Email', name: 'confirm_email', rules: { required: true, maxLength: 50, email: true, compareField: 'email' }, inputId: 'emailConfirmation' }
-    ]
-
+  renderEmailInputs () {
     return (
       <div className='o-flex o-flex__space-between'>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(fieldOption) }
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>Email *</b></label>
+            <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='email' />
             </div>
-          )
-        }) }
+          </div>
+        </div>
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>Confirm Email *</b></label>
+            <Field className='o-form__input-block' type='confirmEmail' name='confirmEmail' placeholder='Confirm Email' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='confirmEmail' />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
 
-  renderNameInputFields () {
-    const fieldOptions = [
-      { className: 'o-form__input-block', label: 'First Name', name: 'first_name', rules: { required: true, maxLength: 50 } },
-      { className: 'o-form__input-block', label: 'Last Name', name: 'last_name', rules: { required: true, maxLength: 50 } }
-    ]
-
+  renderPasswordInputs () {
     return (
       <div className='o-flex o-flex__space-between'>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(fieldOption) }
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>Password *</b></label>
+            <Field type='password' name='password' placeholder='Password' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='password' />
             </div>
-          )
-        }) }
+          </div>
+        </div>
+        <div className='o-flex-full-width-s'>
+          <div className='o-form__input-block'>
+            <label className='o-form__label'><b>Confirm Password *</b></label>
+            <Field type='password' name='confirmPassword' placeholder='Confirm Password' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='confirmPassword' />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
 
-  renderFormSubmitButton () {
-    const { registration } = this.props
-    const isValidForm = this.formValid(registration)
-
+  renderSubmitButton (props) {
     return (
       <Button
         className='c-register__button o-button-sml'
         aria-label='Create Account'
         label='Create Account'
-        status={(isValidForm ? 'positive' : 'disabled')}
+        status={(props.isValid ? 'positive' : 'disabled')}
         type='submit'
-        disabled={!isValidForm}
+        disabled={!props.isValid}
       />
     )
   }
@@ -124,16 +115,56 @@ class RegisterForm extends Component {
       registration
     } = this.props
 
+    const initialValues = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      confirmEmail: '',
+      password: '',
+      confirmPassword: ''
+    }
+
+    const registerSchema = Yup.object().shape({
+      firstName: Yup.string()
+        .required('Required'),
+      lastName: Yup.string()
+        .required('Required'),
+      email: Yup.string()
+        .email('Invalid email')
+        .required('Required'),
+      confirmEmail: Yup.string()
+        .oneOf([Yup.ref('email'), null], 'Must match')
+        .required('Required'),
+      password: Yup.string()
+        .min(5, 'Password must be at least 5 characters')
+        .max(30, 'Password must be shorter than 30 characters')
+        .required('Required'),
+      confirmPassword: Yup.string()
+        .required('Required')
+        .oneOf([Yup.ref('password'), null], 'Must match')
+    })
+
     return (
       <div className={classNames('o-form', className)}>
-        <form onSubmit={handleSubmit}>
-          <AccountFormErrors errors={registration.validationErrors} />
-          { this.renderNameInputFields() }
-          { this.renderEmailInputFields() }
-          { this.renderPasswordInputFields() }
-          <p>* Denotes required fields</p>
-          { this.renderFormSubmitButton() }
-        </form>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={registerSchema}
+          onSubmit={handleSubmit}
+          render={props => (
+            <>
+              <AccountFormErrors errors={registration.errors} />
+              <Form>
+                <div>
+                  { this.renderNameInputs() }
+                  { this.renderEmailInputs() }
+                  { this.renderPasswordInputs() }
+                  <p>* Denotes required fields</p>
+                  { this.renderSubmitButton(props) }
+                </div>
+              </Form>
+            </>
+          )}
+        />
       </div>
     )
   }

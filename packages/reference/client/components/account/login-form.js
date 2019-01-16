@@ -1,98 +1,84 @@
 // Libraries
 import { Component } from 'react'
 import classNames from 'classnames'
-import t from 'typy'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+
+// Objects
+import Button from '../../objects/button'
+import Checkbox from '../../objects/checkbox'
 
 // lib
 import AccountFormErrors from '../../lib/form-errors'
 
-// Objects
-import Button from '../../objects/button'
-import Input from '../../objects/input'
-import Checkbox from '../../objects/checkbox'
+// Actions
+import { clearErrors } from '../../actions/account-actions'
 
 class LoginForm extends Component {
-  requiredFields () {
-    return [ 'email', 'password' ]
-  }
-
-  formValid () {
-    const { login } = this.props
-
-    let requiredFieldsPresent = (this.requiredFields().every((key) => login[key] !== '' && login[key] !== null) === true)
-    let noFormErrorsPresent = (Object.values(login.errors).filter(String).length === 0)
-    return (requiredFieldsPresent && noFormErrorsPresent)
-  }
-
-  renderInputField (fieldOption) {
-    const { login, formName, onBlur } = this.props
-
-    return (
-      <Input
-        label={fieldOption.label}
-        className={fieldOption.className}
-        labelClassName={fieldOption.labelClassName}
-        inputId={fieldOption.id}
-        name={fieldOption.name}
-        type={fieldOption.type}
-        value={fieldOption.value}
-        required={t(fieldOption, 'rules.requiredButIgnoreEmpty').safeObject}
-        validationMessage={login.errors[fieldOption.name]}
-        rules={fieldOption.rules}
-        formName={formName}
-        onBlur={onBlur}
-      />
-    )
+  componentDidMount () {
+    if (this.props.login.errors.length > 0) {
+      this.props.dispatch(clearErrors())
+    }
   }
 
   renderEmailInputField () {
-    const fieldOptions = [
-      { className: 'o-form__input-block', type: 'email', label: 'Email', name: 'email', rules: { requiredButIgnoreEmpty: true, maxLength: 50, email: true } }
-    ]
-
     return (
       <div className='o-flex o-flex__space-between'>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(fieldOption) }
-            </div>
-          )
-        }) }
+        <div className='o-flex-full-width-s'>
+          <label className='o-form__label'><b>Email *</b></label>
+          <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />
+          <div className='o-form__input-field__error'>
+            <ErrorMessage name='email' />
+          </div>
+        </div>
       </div>
     )
   }
 
   renderPasswordInputField () {
-    const fieldOptions = [
-      { className: 'o-form__input-block', type: 'password', label: 'Password', name: 'password', rules: { requiredButIgnoreEmpty: true, maxLength: 50 } }
-    ]
-
     return (
       <div className='o-flex o-flex__space-between'>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div className='o-flex-full-width-s' key={index}>
-              { this.renderInputField(fieldOption) }
-            </div>
-          )
-        }) }
+        <div className='o-flex-full-width-s'>
+          <label className='o-form__label'><b>Password *</b></label>
+          <Field type='password' name='password' placeholder='Password' className='o-form__input-field o-form__input-block' />
+          <div className='o-form__input-field__error'>
+            <ErrorMessage name='password' />
+          </div>
+        </div>
       </div>
     )
   }
 
-  renderFormSubmitButton () {
-    const { login } = this.props
-    const isValidForm = this.formValid(login)
-
+  renderSubmitButton (props) {
     return (
       <Button
         className='c-login__button o-button--sml'
         aria-label='Continue Securely'
         label='CONTINUE SECURELY'
-        status={(isValidForm ? 'positive' : 'disabled')}
+        status={(props.isValid ? 'positive' : 'disabled')}
         type='submit'
-        disabled={!isValidForm}
+        disabled={!props.isValid}
+      />
+    )
+  }
+
+  renderFormik (initialValues, loginSchema, handleSubmit, login) {
+    return (
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginSchema}
+        onSubmit={handleSubmit}
+        render={props => (
+          <Form className='c-login__form'>
+            <AccountFormErrors errors={login.errors} />
+            { this.renderEmailInputField() }
+            { this.renderPasswordInputField() }
+            <div>
+              <Checkbox label='Remember me' />
+              { this.renderSubmitButton(props) }
+            </div>
+          </Form>
+        )}
       />
     )
   }
@@ -104,15 +90,22 @@ class LoginForm extends Component {
       login
     } = this.props
 
+    const initialValues = {
+      email: '',
+      password: ''
+    }
+
+    const loginSchema = Yup.object().shape({
+      email: Yup.string()
+        .email('Invalid email')
+        .required('Email is required'),
+      password: Yup.string()
+        .required('Password is required')
+    })
+
     return (
       <div className={classNames('o-form', className)}>
-        <form onSubmit={handleSubmit}>
-          <AccountFormErrors errors={login.validationErrors} />
-          { this.renderEmailInputField() }
-          { this.renderPasswordInputField() }
-          <Checkbox label='Remember me' />
-          { this.renderFormSubmitButton() }
-        </form>
+        { this.renderFormik(initialValues, loginSchema, handleSubmit, login) }
       </div>
     )
   }

@@ -4,7 +4,6 @@ import { Component } from 'react'
 class FormErrors extends Component {
   render () {
     const { errors } = this.props
-
     if (errors.length === 0) {
       return null
     }

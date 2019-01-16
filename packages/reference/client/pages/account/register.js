@@ -5,17 +5,12 @@ import Router from 'next/router'
 import Head from 'next/head'
 
 // Libs
-import InputFieldValidator from '../../lib/input-field-validator'
 import { setCookie } from '../../lib/set-cookie'
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
-import {
-  inputChange,
-  setValidationMessage,
-  createAccount
-} from '../../actions/register-actions'
+import { createAccount } from '../../actions/register-actions'
 
 // Components
 import RegisterForm from '../../components/account/register-form'
@@ -24,7 +19,6 @@ export class RegisterPage extends Component {
   constructor () {
     super()
 
-    this.validateInput = this.validateInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -33,13 +27,6 @@ export class RegisterPage extends Component {
     const { account, login } = reduxStore.getState()
     if (account.loggedIn || login.loggedIn) Router.push('/account/myaccount')
     return {}
-  }
-
-  validateInput (event, formName, fieldName, fieldValue, rules) {
-    const { registration } = this.props
-    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate(registration)
-    this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
-    this.props.dispatch(inputChange(formName, fieldName, fieldValue))
   }
 
   componentDidUpdate () {
@@ -52,11 +39,8 @@ export class RegisterPage extends Component {
     }
   }
 
-  handleSubmit (event) {
-    event.preventDefault()
-    const { registration } = this.props
-
-    this.props.dispatch(createAccount(registration))
+  handleSubmit (values) {
+    this.props.dispatch(createAccount(values))
   }
 
   render () {

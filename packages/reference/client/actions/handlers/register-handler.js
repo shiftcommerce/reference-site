@@ -4,9 +4,9 @@ export function registerPayload (account) {
       type: 'customer_accounts',
       attributes: {
         email: account.email,
-        email_confirmation: account.confirm_email,
+        email_confirmation: account.confirmEmail,
         password: account.password,
-        password_confirmation: account.confirm_password,
+        password_confirmation: account.confirmPassword,
         meta_attributes: {
           first_name: { value: account.first_name },
           last_name: { value: account.last_name }

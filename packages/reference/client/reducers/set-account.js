@@ -2,9 +2,6 @@
 import * as types from '../actions/action-types'
 
 export const initialState = {
-  first_name: '',
-  last_name: '',
-  email: '',
   errors: {},
   loggedIn: false
 }

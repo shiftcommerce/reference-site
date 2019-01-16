@@ -36,7 +36,7 @@ export class AddressForm extends Component {
     if (loggedIn && addressBook.length > 0) {
       const preferredAddress = addressBook.find((obj) => { return obj.preferred_shipping === true })
 
-      this.props.dispatch(autoFillAddress(preferredAddress))
+      this.props.dispatch(autoFillAddress(preferredAddress || addressBook[0]))
     }
   }
 
