@@ -32,7 +32,7 @@ test('saveToAddressBook posts correct body to correct URL', () => {
 
   expect(apiActions.postEndpoint).toHaveBeenCalledTimes(1)
   const request = apiActions.postEndpoint.mock.calls[0][0]
-  expect(request.endpoint).toBe('/createAddress')
+  expect(request.endpoint).toBe('/createAddressBookAddress')
   expect(request.body).toEqual({
     data: {
       type: 'addresses',
@@ -61,6 +61,22 @@ test('saveToAddressBook posts correct body to correct URL', () => {
         }
       }
     }
+  })
+})
+
+describe('saveToAddressBook()', () => {
+  test('saves a shipping address by default', () => {
+    apiActions.postEndpoint = jest.fn()
+    saveToAddressBook({})
+    const request = apiActions.postEndpoint.mock.calls[0][0]
+    expect(request.successActionType).toEqual(types.SET_ADDRESS_BOOK_ENTRY_SHIPPING)
+  })
+
+  test('saves a billing address when an option is given', () => {
+    apiActions.postEndpoint = jest.fn()
+    saveToAddressBook({}, { billing: true })
+    const request = apiActions.postEndpoint.mock.calls[0][0]
+    expect(request.successActionType).toEqual(types.SET_ADDRESS_BOOK_ENTRY_BILLING)
   })
 })
 

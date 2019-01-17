@@ -52,7 +52,7 @@ export class MiniBag extends Component {
 
   render () {
     const { cart } = this.props
-    const lineItemCount = cart.totalQuantity
+    const lineItemCount = cart.line_items_count || 0
 
     return (
       <div className='c-header__minibag'>

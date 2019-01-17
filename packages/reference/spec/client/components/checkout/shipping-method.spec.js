@@ -1,26 +1,20 @@
 // Component
 import ShippingMethod from '../../../../client/components/checkout/shipping-methods'
+import * as apiActions from '../../../../client/actions/api-actions'
 
-// Fixture
-import ShippingMethodsJson from '../../../fixtures/shipping-methods'
+// Lib
+import { businessDaysFromNow } from '../../../../client/lib/business-days-from-now'
 
-test('render shipping methods as expected', () => {
+test('render shipping methods as expected', async () => {
   // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const selectedShippingMethod = shippingMethods[0]
-  const state = {
-    shippingMethods: shippingMethods,
-    collapsed: false
-  }
-  const setShippingMethod = () => {}
-
   const cart = {
-    lineItems: [
+    line_items: [
       {
         id: '1'
       }
     ],
-    totalQuantity: 1
+    line_items_count: 1,
+    shipping_method: {}
   }
 
   const checkout = {
@@ -31,64 +25,104 @@ test('render shipping methods as expected', () => {
     shippingMethod: {}
   }
 
+  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+    data: [{
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }]
+  }))
+
   // Act
-  const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Loading...')
+
+  await wrapper.instance().componentDidMount()
+
   expect(wrapper).toIncludeText('1 item')
-  expect(wrapper).toIncludeText(selectedShippingMethod.name)
+  expect(wrapper).toIncludeText('Standard shipping')
+
+  fetchShippingSpy.mockRestore()
 })
 
-test('render collapsed view as expected', () => {
+test('render collapsed view as expected', async () => {
   // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const selectedShippingMethod = shippingMethods[0]
-  const state = {}
-
   const checkout = {
     shippingAddress: {
       collapsed: true,
       completed: true
     },
     shippingMethod: {
-      ...selectedShippingMethod,
       collapsed: true
     }
   }
 
   const cart = {
-    lineItems: [
+    line_items: [
       {
         id: '1'
       }
-    ]
+    ],
+    line_items_count: 1,
+    shipping_method: {
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }
   }
+
+  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({ data: [] }))
 
   // Act
-  const wrapper = mount(<ShippingMethod state={state} cart={cart} checkout={checkout} />)
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
+  expect(wrapper).toIncludeText('Loading...')
+
+  await wrapper.instance().componentDidMount()
+
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(selectedShippingMethod.name)
-  expect(wrapper).toIncludeText(selectedShippingMethod.delivery_date)
+  expect(wrapper).toIncludeText('Standard shipping')
+  expect(wrapper).toIncludeText(businessDaysFromNow(2).format('dddd Do MMMM'))
   expect(wrapper).toIncludeText('Edit')
-  expect(wrapper).not.toIncludeText(shippingMethods[1].name)
   expect(wrapper).not.toIncludeText('Shipping from')
+
   expect(wrapper).not.toIncludeText('Continue to Payment')
+
+  fetchShippingSpy.mockRestore()
 })
 
-test('renders line item quantity as expected', () => {
+test('renders line item quantity as expected', async () => {
   // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const state = {
-    shippingMethods: shippingMethods
-  }
-  const setShippingMethod = () => {}
-
   const cart = {
-    lineItems: [],
-    totalQuantity: 0
+    line_items: [],
+    line_items_count: 0,
+    shipping_method: {
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }
   }
 
   const checkout = {
@@ -101,58 +135,27 @@ test('renders line item quantity as expected', () => {
     }
   }
 
+  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({ data: [] }))
+
   // Act
-  const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} />)
 
   // Assert
+  expect(wrapper).toIncludeText('Loading...')
+
+  await wrapper.instance().componentDidMount()
+
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('0 items')
+
+  fetchShippingSpy.mockRestore()
 })
 
-test('display pre selected shipping method as selected option on page load', () => {
+test('preselects first shipping method when fetching shipping methods and none is set', async () => {
   // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const selectedShippingMethod = shippingMethods[0]
-  const state = {
-    shippingMethods: shippingMethods
-  }
-  const setShippingMethod = () => {}
-
   const cart = {
-    lineItems: []
-  }
-
-  const checkout = {
-    shippingAddress: {
-      collapsed: true,
-      completed: true
-    },
-    shippingMethod: {
-      ...selectedShippingMethod,
-      collapsed: false
-    }
-  }
-
-  // Act
-  const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
-  const shippingNode = wrapper.find(`#${selectedShippingMethod.sku}_${selectedShippingMethod.id}`)
-
-  // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(selectedShippingMethod.name)
-  expect(shippingNode.props().checked).toBe(true)
-})
-
-test('when shipping method is not set it preselects the first available one', () => {
-  // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const state = {
-    shippingMethods: shippingMethods
-  }
-  const setShippingMethod = () => {}
-
-  const cart = {
-    lineItems: []
+    line_items: [],
+    line_items_count: 0
   }
 
   const checkout = {
@@ -165,27 +168,64 @@ test('when shipping method is not set it preselects the first available one', ()
     }
   }
 
+  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+    data: [{
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }, {
+      id: 2,
+      sku: 'NEX_SHIP',
+      label: 'Next day delivery',
+      total: 6.25,
+      meta_attributes: {
+        working_days: {
+          value: 1
+        }
+      }
+    }]
+  }))
+
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(() => { cart.shipping_method = { id: 1 } })
+
   // Act
-  const wrapper = shallow(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
-  const shippingNode = wrapper.find(`#${shippingMethods[0].sku}_${shippingMethods[0].id}`)
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
-  // expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(shippingMethods[0].name)
-  expect(shippingNode.props().checked).toBe(true)
+  expect(wrapper).toIncludeText('Loading...')
+
+  await wrapper.instance().componentDidMount()
+
+  const request = postSpy.mock.calls[0][0]
+  expect(request.endpoint).toEqual('/setShippingMethod')
+  expect(request.body.shippingMethodId).toEqual(1)
+
+  postSpy.mockRestore()
+  fetchShippingSpy.mockRestore()
 })
 
-test('should be able to select a shipping method', () => {
+test('selecting a shipping method makes a correct API call', async () => {
   // Arrange
-  const shippingMethods = ShippingMethodsJson.shippingMethods
-  const state = {
-    shippingMethods: shippingMethods,
-    selectedShippingMethod: ''
-  }
-  const setShippingMethod = () => {}
-
   const cart = {
-    lineItems: []
+    line_items: [],
+    line_items_count: 1,
+    shipping_method: {
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }
   }
 
   const checkout = {
@@ -197,18 +237,48 @@ test('should be able to select a shipping method', () => {
       collapsed: false
     }
   }
-  const selectedShippingMethod = shippingMethods[0]
+
+  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+    data: [{
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }, {
+      id: 2,
+      sku: 'NEX_SHIP',
+      label: 'Next day delivery',
+      total: 6.25,
+      meta_attributes: {
+        working_days: {
+          value: 1
+        }
+      }
+    }]
+  }))
+
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(() => { cart.shipping_method = { id: 1 } })
 
   // Act
-  const wrapper = mount(<ShippingMethod cart={cart} state={state} checkout={checkout} setShippingMethod={setShippingMethod} />)
-
-  wrapper.find(`input[id="${selectedShippingMethod.sku}_${selectedShippingMethod.id}"]`).simulate('change', { target: { checked: true } })
-
-  const shippingNode = wrapper.find(`#${selectedShippingMethod.sku}_${selectedShippingMethod.id}`)
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(selectedShippingMethod.name)
-  expect(wrapper.state().selectedShippingMethod.id).toBe(selectedShippingMethod.id)
-  expect(shippingNode.props().checked).toBe(true)
+  expect(wrapper).toIncludeText('Loading...')
+
+  await wrapper.instance().componentDidMount()
+  wrapper.update()
+
+  wrapper.find('input[id="NEX_SHIP_2"]').simulate('change', { target: { checked: true } })
+
+  const request = postSpy.mock.calls[0][0]
+  expect(request.endpoint).toEqual('/setShippingMethod')
+  expect(request.body.shippingMethodId).toEqual(2)
+
+  fetchShippingSpy.mockRestore()
+  postSpy.mockRestore()
 })

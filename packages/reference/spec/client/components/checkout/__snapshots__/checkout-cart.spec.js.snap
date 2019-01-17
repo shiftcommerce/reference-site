@@ -4,26 +4,43 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
 <CheckoutCart
   cart={
     Object {
-      "lineItems": Array [
+      "line_items": Array [
         Object {
-          "canonical_path": "1",
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "slug": "1",
-          "stockAvailableLevel": "1000",
-          "variant": "Test Product",
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "1",
+              "title": "Test Product",
+            },
+            "title": "Test Variant",
+          },
+          "sku": "123",
+          "stock_available_level": "1000",
+          "sub_total": 10,
+          "total": 10,
+          "total_discount": 0,
+          "unit_quantity": 2,
         },
         Object {
-          "canonical_path": "1",
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "slug": "2",
-          "stockAvailableLevel": "1000",
-          "variant": "Pretend Product",
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "2",
+              "title": "Pretend Product",
+            },
+            "title": "Pretend Variant",
+          },
+          "sku": "123",
+          "stock_available_level": "1000",
+          "sub_total": 5,
+          "total": 5,
+          "total_discount": 0,
+          "unit_quantity": 1,
         },
       ],
+      "total": 25,
     }
   }
   updateQuantity={[MockFunction]}
@@ -120,26 +137,43 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
   <LineItems
     cart={
       Object {
-        "lineItems": Array [
+        "line_items": Array [
           Object {
-            "canonical_path": "1",
-            "discount": 0,
-            "price": "10.00",
-            "quantity": 2,
-            "slug": "1",
-            "stockAvailableLevel": "1000",
-            "variant": "Test Product",
+            "item": Object {
+              "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+              "product": Object {
+                "canonical_path": "1",
+                "slug": "1",
+                "title": "Test Product",
+              },
+              "title": "Test Variant",
+            },
+            "sku": "123",
+            "stock_available_level": "1000",
+            "sub_total": 10,
+            "total": 10,
+            "total_discount": 0,
+            "unit_quantity": 2,
           },
           Object {
-            "canonical_path": "1",
-            "discount": 0,
-            "price": "5.00",
-            "quantity": 1,
-            "slug": "2",
-            "stockAvailableLevel": "1000",
-            "variant": "Pretend Product",
+            "item": Object {
+              "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+              "product": Object {
+                "canonical_path": "1",
+                "slug": "2",
+                "title": "Pretend Product",
+              },
+              "title": "Pretend Variant",
+            },
+            "sku": "123",
+            "stock_available_level": "1000",
+            "sub_total": 5,
+            "total": 5,
+            "total_discount": 0,
+            "unit_quantity": 1,
           },
         ],
+        "total": 25,
       }
     }
     updateQuantity={[MockFunction]}
@@ -155,10 +189,12 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           className="c-line-items__images"
         >
           <Link
-            href="/slug?slug=undefined"
+            href="/slug?slug=1"
             key="1"
           >
             <Image
+              alt="Test Variant"
+              aria-label="Test Variant"
               className="c-line-items__image"
               key="1"
               onClick={[Function]}
@@ -187,12 +223,14 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               <h4
                 className="c-line-items__details-title  u-bold"
               >
-                Test Product
+                Test Product - Test Variant
               </h4>
               <div
                 className="c-line-items__details-sku"
               >
-                <span />
+                <span>
+                  123
+                </span>
               </div>
             </div>
           </div>
@@ -330,13 +368,13 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__amount"
+            className="c-line-items__amounts"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__amount c-line-items__amount--total"
             >
               £
-              20.00
+              10.00
             </a>
           </div>
         </div>
@@ -349,10 +387,12 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
           className="c-line-items__images"
         >
           <Link
-            href="/slug?slug=undefined"
+            href="/slug?slug=1"
             key="2"
           >
             <Image
+              alt="Pretend Variant"
+              aria-label="Pretend Variant"
               className="c-line-items__image"
               key="2"
               onClick={[Function]}
@@ -381,12 +421,14 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               <h4
                 className="c-line-items__details-title  u-bold"
               >
-                Pretend Product
+                Pretend Product - Pretend Variant
               </h4>
               <div
                 className="c-line-items__details-sku"
               >
-                <span />
+                <span>
+                  123
+                </span>
               </div>
             </div>
           </div>
@@ -524,10 +566,10 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__amount"
+            className="c-line-items__amounts"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__amount c-line-items__amount--total"
             >
               £
               5.00
@@ -544,20 +586,26 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
 <CheckoutCart
   cart={
     Object {
-      "lineItems": Array [
+      "line_items": Array [
         Object {
-          "canonical_path": "1",
-          "discount": 0,
-          "imageUrl": "",
-          "price": "10.00",
-          "quantity": 2,
-          "size": "size - 8",
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "1",
+              "title": "Test Product",
+            },
+            "title": "Test Variant",
+          },
           "sku": "123",
-          "slug": "1",
-          "stockAvailableLevel": "1000",
-          "variant": "Test Product",
+          "stock_available_level": "1000",
+          "sub_total": 20,
+          "total": 20,
+          "total_discount": 0,
+          "unit_quantity": 2,
         },
       ],
+      "total": 20,
     }
   }
   updateQuantity={[MockFunction]}
@@ -654,20 +702,26 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
   <LineItems
     cart={
       Object {
-        "lineItems": Array [
+        "line_items": Array [
           Object {
-            "canonical_path": "1",
-            "discount": 0,
-            "imageUrl": "",
-            "price": "10.00",
-            "quantity": 2,
-            "size": "size - 8",
+            "item": Object {
+              "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+              "product": Object {
+                "canonical_path": "1",
+                "slug": "1",
+                "title": "Test Product",
+              },
+              "title": "Test Variant",
+            },
             "sku": "123",
-            "slug": "1",
-            "stockAvailableLevel": "1000",
-            "variant": "Test Product",
+            "stock_available_level": "1000",
+            "sub_total": 20,
+            "total": 20,
+            "total_discount": 0,
+            "unit_quantity": 2,
           },
         ],
+        "total": 20,
       }
     }
     updateQuantity={[MockFunction]}
@@ -683,14 +737,15 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           className="c-line-items__images"
         >
           <Link
-            href="/slug?slug=undefined"
+            href="/slug?slug=1"
             key="1"
           >
             <Image
+              alt="Test Variant"
+              aria-label="Test Variant"
               className="c-line-items__image"
               key="1"
               onClick={[Function]}
-              src=""
             >
               <div
                 className="c-dummy_image c-line-items__image"
@@ -716,7 +771,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
               <h4
                 className="c-line-items__details-title  u-bold"
               >
-                Test Product
+                Test Product - Test Variant
               </h4>
               <div
                 className="c-line-items__details-sku"
@@ -761,7 +816,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
           >
             <span>
               <select
-                data-variant="123"
                 onChange={[MockFunction]}
                 value={2}
               >
@@ -856,17 +910,16 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             >
               <a
                 className="c-line-items__delete-button"
-                data-variant="123"
               >
                 Delete
               </a>
             </div>
           </div>
           <div
-            className="c-line-items__amount"
+            className="c-line-items__amounts"
           >
             <a
-              className="c-line-items__total"
+              className="c-line-items__amount c-line-items__amount--total"
             >
               £
               20.00

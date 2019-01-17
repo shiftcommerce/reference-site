@@ -1387,6 +1387,17 @@ exports[`renders payment summary on collapsing 1`] = `
   }
 >
   <PaymentMethod
+    cart={
+      Object {
+        "billing_address": Object {
+          "address_line_1": "1 Queen Street",
+          "city": "Leeds",
+          "first_name": "Leon",
+          "last_name": "The Professional",
+          "postcode": "LS27EY",
+        },
+      }
+    }
     checkout={
       Object {
         "billingAddress": Object {
@@ -1535,17 +1546,17 @@ exports[`renders payment summary on collapsing 1`] = `
           <span
             className="u-bold"
           >
-            Prasanna Gaddam
+            Leon
              
-            Prasanna Gaddam
+            The Professional
              
           </span>
           <span>
-            Apartment 19, Waterloo Court, 17 Hunslet Road
+            1 Queen Street
             , 
             Leeds
             , 
-            LS10 1QN
+            LS27EY
           </span>
         </p>
       </div>
@@ -1689,6 +1700,17 @@ exports[`renders payment summary on collapsing 1`] = `
           </div>
         </PaymentMethodSelector>
         <StripePayment
+          cart={
+            Object {
+              "billing_address": Object {
+                "address_line_1": "1 Queen Street",
+                "city": "Leeds",
+                "first_name": "Leon",
+                "last_name": "The Professional",
+                "postcode": "LS27EY",
+              },
+            }
+          }
           checkout={
             Object {
               "billingAddress": Object {

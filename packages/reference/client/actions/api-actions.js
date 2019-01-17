@@ -99,7 +99,7 @@ function _checkForErrors (response) {
 function _determinePostDispatch (dispatch, request, response) {
   const validationPassed = _checkForErrors(response)
 
-  if ((response.status === 201 || response.status === 200) && validationPassed) {
+  if ((response.status === 202 || response.status === 201 || response.status === 200) && validationPassed) {
     if (request.successActionType) {
       const parsedPayload = new JsonApiParser().parse(response.data)
       dispatch(sendResponse(request.successActionType, parsedPayload))

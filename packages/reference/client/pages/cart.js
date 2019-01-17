@@ -8,7 +8,7 @@ import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
-import { updateQuantity } from '../actions/cart-actions'
+import { updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
 
 // Components
 import CartTable from '../components/cart/cart-table'
@@ -23,20 +23,12 @@ export class CartPage extends Component {
   }
 
   updateQuantity (e) {
-    const lineItem = {
-      sku: e.target.dataset.variant,
-      quantity: parseInt(e.target.value, 10)
-    }
-    this.props.dispatch(updateQuantity(lineItem))
+    this.props.dispatch(updateLineItemQuantity(e.target.dataset.id, parseInt(e.target.value, 10)))
   }
 
   deleteItem (e) {
     e.preventDefault()
-    const lineItem = {
-      sku: e.target.dataset.variant,
-      quantity: 0
-    }
-    this.props.dispatch(updateQuantity(lineItem))
+    this.props.dispatch(deleteLineItem(e.target.dataset.id))
   }
 
   render () {

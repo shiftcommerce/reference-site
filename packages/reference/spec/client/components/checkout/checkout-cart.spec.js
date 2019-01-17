@@ -1,27 +1,30 @@
 // Components
 import CheckoutCart from '../../../../client/components/checkout/checkout-cart'
 
-// Lib
-import { fixedPrice } from '../../../../client/lib/fixed-price'
-
 const updateQuantityfnc = jest.fn()
 
 describe('Checkout Cart', () => {
   test('renders the correct cart summary with single line item', () => {
     // arrange
     const cart = {
-      lineItems: [
+      total: 20,
+      line_items: [
         {
-          variant: 'Test Product',
-          price: fixedPrice(10.0),
-          discount: 0,
-          quantity: 2,
+          total: 20,
+          sub_total: 20,
+          total_discount: 0,
+          unit_quantity: 2,
           sku: '123',
-          imageUrl: '',
-          size: 'size - 8',
-          stockAvailableLevel: '1000',
-          slug: '1',
-          canonical_path: '1'
+          stock_available_level: '1000',
+          item: {
+            imageUrl: 'https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg',
+            title: 'Test Variant',
+            product: {
+              slug: '1',
+              canonical_path: '1',
+              title: 'Test Product'
+            }
+          }
         }
       ]
     }
@@ -33,31 +36,48 @@ describe('Checkout Cart', () => {
 
     // assert
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('a.c-line-items__total')).toIncludeText('£20')
+    expect(wrapper.find('a.c-line-items__amount')).toIncludeText('£20')
     expect(wrapper.find('h4.c-line-items__details-title')).toIncludeText('Test Product')
   })
 
   test('renders the correct cart summary with multiple line items', () => {
     // arrange
     const cart = {
-      lineItems: [
+      total: 25,
+      line_items: [
         {
-          variant: 'Test Product',
-          price: fixedPrice(10.0),
-          discount: 0,
-          quantity: 2,
-          stockAvailableLevel: '1000',
-          slug: '1',
-          canonical_path: '1'
+          total: 10,
+          sub_total: 10,
+          total_discount: 0,
+          unit_quantity: 2,
+          sku: '123',
+          stock_available_level: '1000',
+          item: {
+            imageUrl: 'https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg',
+            title: 'Test Variant',
+            product: {
+              slug: '1',
+              canonical_path: '1',
+              title: 'Test Product'
+            }
+          }
         },
         {
-          variant: 'Pretend Product',
-          price: fixedPrice(5.0),
-          discount: 0,
-          quantity: 1,
-          stockAvailableLevel: '1000',
-          slug: '2',
-          canonical_path: '1'
+          total: 5,
+          sub_total: 5,
+          total_discount: 0,
+          unit_quantity: 1,
+          sku: '123',
+          stock_available_level: '1000',
+          item: {
+            imageUrl: 'https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg',
+            title: 'Pretend Variant',
+            product: {
+              slug: '2',
+              canonical_path: '1',
+              title: 'Pretend Product'
+            }
+          }
         }
       ]
     }

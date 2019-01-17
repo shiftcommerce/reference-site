@@ -70,14 +70,13 @@ describe('create an account', () => {
       }
     }
 
-    it('should save, return the data and log the user in', async () => {
-      nock(process.env.API_HOST)
-        .post(`/${url}`, body)
-        .reply(201, registerPayload)
-
+    it('should create the account, log the user in and upadte their cart', async () => {
       const req = {
         body: body,
-        session: {}
+        session: {},
+        signedCookies: {
+          cart: '123'
+        }
       }
 
       const res = {
@@ -85,6 +84,23 @@ describe('create an account', () => {
           send: jest.fn(y => y)
         }))
       }
+
+      const expectedCartUpdatePayload = {
+        data: {
+          type: 'carts',
+          attributes: {
+            customer_account_id: '23063267'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
+        .reply(201, registerPayload)
+
+      const updateCartMock = nock(process.env.API_HOST)
+        .patch(`/${process.env.API_TENANT}/v1/carts/123`, expectedCartUpdatePayload)
+        .reply(200, { customer_account: 'customer_account_data' })
 
       const response = await postRenderer(url)(req, res)
 
@@ -95,6 +111,7 @@ describe('create an account', () => {
       expect(response.data.attributes.meta_attributes.first_name.value).toBe('a')
       expect(response.data.attributes.meta_attributes.last_name.value).toBe('fletcher')
       expect(req.session.customerId).toBe('23063267')
+      expect(updateCartMock.isDone()).toEqual(true)
     })
   })
 
@@ -157,14 +174,13 @@ describe('login into an account', () => {
       }
     }
 
-    it('should log the user in', async () => {
-      nock(process.env.API_HOST)
-        .post(`/${url}`, body)
-        .reply(201, loginAccountPayload)
-
+    it('should log the user in and update their guest cart', async () => {
       const req = {
         body: body,
-        session: {}
+        session: {},
+        signedCookies: {
+          cart: '123'
+        }
       }
 
       const res = {
@@ -172,6 +188,23 @@ describe('login into an account', () => {
           send: jest.fn(y => y)
         }))
       }
+
+      const expectedCartUpdatePayload = {
+        data: {
+          type: 'carts',
+          attributes: {
+            customer_account_id: '23063264'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${url}`, body)
+        .reply(201, loginAccountPayload)
+
+      const updateCartMock = nock(process.env.API_HOST)
+        .patch(`/${process.env.API_TENANT}/v1/carts/123`, expectedCartUpdatePayload)
+        .reply(200, { customer_account: 'customer_account_data' })
 
       const response = await postRenderer(url)(req, res)
 
@@ -182,6 +215,7 @@ describe('login into an account', () => {
       expect(response.data.attributes.password).toBe('qwertyuiop')
       expect(response.data.relationships.customer_account.data.id).toBe('23063264')
       expect(req.session.customerId).toBe('23063264')
+      expect(updateCartMock.isDone()).toBe(true)
     })
   })
 

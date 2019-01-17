@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a disabled checkout button where cart is empty 1`] = `
+exports[`renders a disabled checkout button when cart is empty 1`] = `
 <MiniBag
   cart={
     Object {
-      "lineItems": Array [],
-      "totalQuantity": 0,
+      "line_items": Array [],
+      "line_items_count": 0,
     }
   }
   dispatch={[Function]}
@@ -86,11 +86,11 @@ exports[`renders a disabled checkout button where cart is empty 1`] = `
 </MiniBag>
 `;
 
-exports[`renders an active checkout button where cart has items 1`] = `
+exports[`renders an active checkout button when cart has items 1`] = `
 <MiniBag
   cart={
     Object {
-      "lineItems": Array [
+      "line_items": Array [
         Object {
           "discount": 0,
           "image_url": "",
@@ -103,7 +103,7 @@ exports[`renders an active checkout button where cart has items 1`] = `
           "title": "test",
         },
       ],
-      "totalQuantity": 2,
+      "line_items_count": 2,
     }
   }
   dispatch={[Function]}

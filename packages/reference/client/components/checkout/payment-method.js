@@ -47,7 +47,8 @@ export default class PaymentMethod extends Component {
   }
 
   renderFormSummary () {
-    const { checkout: { billingAddress, paymentMethod }, order } = this.props
+    const { checkout: { paymentMethod }, order } = this.props
+    const billingAddress = this.props.cart.billing_address
     const paymentMode = paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
 
     return (
@@ -58,8 +59,8 @@ export default class PaymentMethod extends Component {
         </p>
         <p>
           <span className='u-bold'>Billing Address: </span>
-          <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
-          <span>{ billingAddress.line_1 }, { billingAddress.city }, { billingAddress.zipcode }</span>
+          <span className='u-bold'>{ billingAddress && billingAddress.first_name } { billingAddress && billingAddress.last_name } </span>
+          <span>{ billingAddress && billingAddress.address_line_1 }, { billingAddress && billingAddress.city }, { billingAddress && billingAddress.postcode }</span>
         </p>
       </div>
     )

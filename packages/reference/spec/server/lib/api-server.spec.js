@@ -2,7 +2,7 @@ import axios from 'axios'
 import nock from 'nock'
 import httpAdapter from 'axios/lib/adapters/http'
 
-import { fetchData, postData, deleteData } from '../../../server/lib/api-server'
+import { fetchData, postData, patchData, deleteData } from '../../../server/lib/api-server'
 
 // fixtures
 import registerPayload from '../../fixtures/register'
@@ -68,6 +68,29 @@ test('postDataRequest saves and returns data', async () => {
   expect(response.data.data.id).toBe('23063267')
   expect(response.data.data.type).toBe('customer_accounts')
   expect(response.data.data.attributes.email).toBe('a.fletcher1234@gmail.com')
+})
+
+test('patchData updates and returns data', async () => {
+  const url = 'integration/v1/customer_accounts'
+
+  const body = {
+    data: {
+      type: 'customer_accounts',
+      attributes: {
+        email: 'updated_email@example.com'
+      }
+    }
+  }
+
+  nock(process.env.API_HOST)
+    .patch(`/${url}`)
+    .reply(200, registerPayload)
+
+  const response = await patchData(body, url)
+
+  expect(response.status).toBe(200)
+  expect(response.data.data.id).toBe('23063267')
+  expect(response.data.data.type).toBe('customer_accounts')
 })
 
 test('deleteData correctly returns successful responses', async () => {

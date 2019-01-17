@@ -1,11 +1,14 @@
 import CartSummary from '../../../../client/components/cart/cart-summary'
 
-import { fixedPrice } from '../../../../client/lib/fixed-price'
+import cartFixture from '../../../fixtures/cart'
 
-test('renders correct values when no line items are available', () => {
+test('renders correct values when line items are available', () => {
   // arrange
   const cart = {
-    lineItems: []
+    lineItems: [],
+    sub_total: 0,
+    discount_summaries: [],
+    shipping_total: 0
   }
 
   // act
@@ -16,36 +19,59 @@ test('renders correct values when no line items are available', () => {
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Total Price:£0')
-  expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
+  expect(wrapper).toIncludeText('Estimating shipping cost...')
   expect(wrapper).toIncludeText('Total Price:£0.00')
 })
 
-test('renders correct values when line items are available', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'test',
-        price: fixedPrice(10.0),
-        discount: fixedPrice(2.0),
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
-  }
-
-  const updateQuantity = () => {}
-
+test('renders correct values when line items and discounts are available', () => {
   // act
   const wrapper = mount(
-    <CartSummary cart={cart} updateQuantity={updateQuantity} />
+    <CartSummary cart={cartFixture} />
   )
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Total Price:£20')
-  expect(wrapper).toIncludeText('Estimated shipping cost: £3.45')
-  expect(wrapper).toIncludeText('TOTAL:£19.45')
+  expect(wrapper).toIncludeText('Total Price:£6.77')
+  expect(wrapper).toIncludeText('£1.50 off all orders')
+  expect(wrapper).toIncludeText('TOTAL:£5.27')
+})
+
+test('displays placeholder text, fetches shipping methods and sets the estimated cost to the cheapest one', async () => {
+  cartFixture.shipping_method = undefined
+  const fetchShippingSpy = jest.spyOn(CartSummary, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+    data: [{
+      id: 1,
+      sku: 'STA_SHIP',
+      label: 'Standard shipping',
+      total: 3.75,
+      meta_attributes: {
+        working_days: {
+          value: 2
+        }
+      }
+    }, {
+      id: 2,
+      sku: 'NEX_SHIP',
+      label: 'Next day delivery',
+      total: 6.25,
+      meta_attributes: {
+        working_days: {
+          value: 1
+        }
+      }
+    }]
+  }))
+
+  const wrapper = mount(
+    <CartSummary cart={cartFixture} />
+  )
+
+  expect(wrapper).toIncludeText('Estimating shipping cost...')
+
+  await wrapper.instance().componentDidMount()
+  wrapper.update()
+
+  expect(wrapper).toIncludeText('Shipping from: £3.75')
+
+  fetchShippingSpy.mockRestore()
 })

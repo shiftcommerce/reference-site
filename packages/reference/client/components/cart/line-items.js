@@ -11,10 +11,10 @@ import Image from '../../objects/image'
 class LineItems extends Component {
   // TODO: extract this out into it's own service class
   renderOptions (lineItem) {
-    let availableQuantity = Array.from(Array(Math.min(lineItem.stockAvailableLevel, 11)).keys())
+    let availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys())
     availableQuantity.shift()
 
-    return <select value={lineItem.quantity} onChange={this.props.updateQuantity} data-variant={lineItem.sku}>
+    return <select value={lineItem.unit_quantity} onChange={this.props.updateQuantity} data-id={lineItem.id}>
       {
         availableQuantity.map(index => {
           return <option key={index} value={index} aria-setsize={index} aria-posinset={index + 1}>
@@ -30,13 +30,19 @@ class LineItems extends Component {
       <>
         <div className='c-line-items__remove'>
           <div className='c-line-items__delete'>
-            <a className='c-line-items__delete-button' data-variant={lineItem.sku} onClick={this.props.deleteItem} >
+            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
               Delete
             </a>
           </div>
         </div>
-        <div className='c-line-items__amount'>
-          <a className='c-line-items__total'>&pound;{ fixedPrice(lineItem.price * lineItem.quantity) }</a>
+        <div className='c-line-items__amounts'>
+          { lineItem.sub_total !== lineItem.total && (
+            <>
+              <a className='c-line-items__amount'>&pound;{ fixedPrice(lineItem.sub_total) }</a>
+              <a className='c-line-items__amount c-line-items__amount--discount'>- &pound;{ fixedPrice(lineItem.total_discount) }</a>
+            </>
+          ) }
+          <a className='c-line-items__amount c-line-items__amount--total'>&pound;{ fixedPrice(lineItem.total) }</a>
         </div>
       </>
     )
@@ -47,7 +53,7 @@ class LineItems extends Component {
       <div className='c-line-items__title'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title  u-bold'>
-            { lineItem.variant }
+            { `${lineItem.item.product.title} - ${lineItem.item.title}` }
           </h4>
           <div className='c-line-items__details-sku'>
             <span>
@@ -79,11 +85,11 @@ class LineItems extends Component {
   }
 
   renderLineItems () {
-    const cartData = this.props.cart.lineItems.map((lineItem, index) =>
-      <div className='c-line-items__sections' key={lineItem.slug}>
+    const cartData = this.props.cart.line_items.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) =>
+      <div className='c-line-items__sections' key={lineItem.item.product.slug}>
         <div className='c-line-items__images'>
-          <Link href={`/slug?slug=${lineItem.canonicalPath}`} key={lineItem.slug}>
-            <Image className='c-line-items__image' src={lineItem.imageUrl} alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
+          <Link href={`/slug?slug=${lineItem.item.product.canonical_path}`} key={lineItem.item.product.slug}>
+            <Image className='c-line-items__image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
           </Link>
         </div>
         <div className='c-line-items__information'>
@@ -97,9 +103,9 @@ class LineItems extends Component {
   }
 
   render () {
-    const cart = this.props.cart
+    const { cart } = this.props
 
-    if (cart.totalQuantity === 0) {
+    if (cart.line_items_count === 0) {
       return null
     } else {
       return <div className='c-line-items'>

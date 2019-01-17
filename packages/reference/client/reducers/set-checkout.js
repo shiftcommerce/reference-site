@@ -150,9 +150,14 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.addressBook = action.payload.data
       return newState
 
-    case types.SET_ADDRESS_BOOK_ENTRY:
-      newState.shippingAddress.saveToAddressBook = false
+    case types.SET_ADDRESS_BOOK_ENTRY_BILLING:
       newState.billingAddress.saveToAddressBook = false
+      newState.billingAddress.id = action.payload.id
+      return newState
+
+    case types.SET_ADDRESS_BOOK_ENTRY_SHIPPING:
+      newState.shippingAddress.saveToAddressBook = false
+      newState.shippingAddress.id = action.payload.id
       return newState
 
     case types.DELETE_ADDRESS:
@@ -193,6 +198,14 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState[formName].collapsed = true
       newState[formName].completed = false
       newState.checkoutStep = 1
+      return newState
+
+    case types.SHIPPING_ADDRESS_CREATED:
+      newState.shippingAddress.id = action.payload.id
+      return newState
+
+    case types.BILLING_ADDRESS_CREATED:
+      newState.billingAddress.id = action.payload.id
       return newState
 
     default:

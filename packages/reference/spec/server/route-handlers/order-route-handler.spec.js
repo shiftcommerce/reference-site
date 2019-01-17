@@ -18,7 +18,7 @@ const url = `/${platform.CreateOrderUrl}?include=line_items`
 
 describe('createOrderRenderer', () => {
   describe('with valid data', () => {
-    it('should create an order with valid data', async () => {
+    it('should create an order with valid data and clear the cart cookie', async () => {
       const body = {
         data: {
           type: 'create_order',
@@ -47,18 +47,21 @@ describe('createOrderRenderer', () => {
       const res = {
         status: jest.fn(x => ({
           send: jest.fn(y => y)
-        }))
+        })),
+        clearCookie: jest.fn()
       }
 
       nock(process.env.API_HOST)
         .post(url, body)
         .reply(201, createOrderResponse)
 
-      const response = await createOrderRenderer()(req, res)
+      const response = await (createOrderRenderer())(req, res)
 
       expect(response.data.type).toBe('create_order')
       expect(response.data.attributes.email).toBe('guest@order.com')
       expect(response.data.attributes.ip_address).toBe('1.1.1.1')
+
+      expect(res.clearCookie).toHaveBeenCalled()
     })
   })
 

@@ -1,108 +1,60 @@
-// actionTypes
-import * as actionTypes from './action-types'
+// Libraries
+import Cookies from 'js-cookie'
 
-// import other actions
-import { initiateCheckout } from './checkout-actions'
+// Actions
+import { postEndpoint, readEndpoint } from './api-actions'
 
-// cartHandler
-import * as cartHandler from './handlers/cart-handler'
+import {
+  addToCartRequest,
+  fetchCartRequest,
+  updateLineItemQuantityRequest,
+  deleteLineItemRequest,
+  setShippingAddressRequest,
+  createShippingAddressRequest,
+  setBillingAddressRequest,
+  createBillingAddressRequest,
+  setShippingMethodRequest
+} from '../requests/cart-requests'
 
-// initial states
-import { cartInitialState } from './../reducers/set-cart'
-import { checkoutInitialState } from './../reducers/set-checkout'
-
-// localForage
-import LocalForage from '../lib/localforage'
-const localForage = new LocalForage()
-
-// Return to reducer with the updated cart details
-export function updateCart (cart) {
-  return {
-    type: actionTypes.UPDATE_CART_LINE_ITEMS,
-    cart: Object.assign({}, cart)
-  }
-}
-
-// Store the cart details in to the local redux store
-export function storeCart (cart) {
-  return {
-    type: actionTypes.STORE_CART,
-    cart: Object.assign({}, cart)
-  }
-}
-
-export function initiateCart () {
-  return {
-    type: actionTypes.INITIATE_CART
-  }
-}
-
-// This function will be called by minibag on every page load
-// It will initialize cart lineitems
 export function readCart () {
   return (dispatch, getState) => {
-    let cart = getState().cart
-
-    // check if local redux has line items
-    if (cart.totalQuantity === 0) {
-      // check if indexedDB, if local redux store dont have line item
-      // This is to ensure, we dont miss line items on page refresh
-      return localForage.getValue('cart').then((cart) => {
-        // if indexedDB also dont have lineitems,
-        // initalize cart
-        if (cart === null) {
-          dispatch(initializeCart())
-        }
-        // update local redux store
-        dispatch(storeCart(cart))
-
-        return cart
-      })
-    // if local redux store has line items,
-    // dispatch them
+    // Only fetch the cart if needed, otherwise do nothing
+    if (Cookies.get('cart') && !getState().cart.id) {
+      return dispatch(readEndpoint(fetchCartRequest()))
     } else {
-      dispatch(storeCart(cart))
-      return Promise.resolve(cart)
+      return Promise.resolve()
     }
   }
 }
 
-// This function will be called, when user add items to bag
-// in product detail page. If a line item already exists, it
-// will add the new quantity to the existing one
-export function addToCart (lineItem) {
-  return (dispatch, getState) => {
-    addOrUpdateLineItems(getState().cart, lineItem, dispatch)
-  }
+export function addToCart (variantId, quantity) {
+  return postEndpoint(addToCartRequest(variantId, quantity))
 }
 
-export function updateQuantity (lineItem) {
-  return (dispatch, getState) => {
-    let cart = getState().cart
-    cart = cartHandler.updateCart(cart, lineItem)
-    dispatchUpdate(cart, dispatch)
-  }
+export function updateLineItemQuantity (lineItemId, newQuantity) {
+  return postEndpoint(updateLineItemQuantityRequest(lineItemId, newQuantity))
 }
 
-export function initializeCart () {
-  return (dispatch) => {
-    dispatch(initiateCart())
-    dispatch(initiateCheckout())
-    localForage.setValue('cart', cartInitialState)
-    localForage.setValue('checkout', checkoutInitialState)
-  }
+export function deleteLineItem (lineItemId) {
+  return postEndpoint(deleteLineItemRequest(lineItemId))
 }
 
-// Private functions
-
-function addOrUpdateLineItems (cart, lineItem, dispatch) {
-  cart = cartHandler.addToCart(cart, lineItem)
-  dispatchUpdate(cart, dispatch)
+export function setCartShippingAddress (addressId) {
+  return postEndpoint(setShippingAddressRequest(addressId))
 }
 
-function dispatchUpdate (cart, dispatch) {
-  // update local redux store
-  dispatch(updateCart(cart))
-  // update indexedDB
-  localForage.setValue('cart', cart)
+export function setCartBillingAddress (addressId) {
+  return postEndpoint(setBillingAddressRequest(addressId))
+}
+
+export function createShippingAddress (address) {
+  return postEndpoint(createShippingAddressRequest(address))
+}
+
+export function createBillingAddress (address) {
+  return postEndpoint(createBillingAddressRequest(address))
+}
+
+export function setCartShippingMethod (shippingMethodId) {
+  return postEndpoint(setShippingMethodRequest(shippingMethodId))
 }

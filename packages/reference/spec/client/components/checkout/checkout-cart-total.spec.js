@@ -2,27 +2,18 @@
 import CheckoutCartTotal from '../../../../client/components/checkout/checkout-cart-total'
 
 // Fixtures
-import { shippingMethods } from '../../../../client/static/shipping-methods.json'
 import checkout from '../../../fixtures/checkout'
 import order from '../../../fixtures/order'
 
-// Lib
-import { fixedPrice } from '../../../../client/lib/fixed-price'
-
-test('renders the correct checkout cart total with single line item', () => {
+test("renders the cart's total, subtotal and shipping cost", () => {
   // arrange
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
+    sub_total: 15,
+    total: 20,
+    discount_summaries: [],
+    shipping_method: {
+      total: 5
+    }
   }
 
   const checkout = {
@@ -38,143 +29,78 @@ test('renders the correct checkout cart total with single line item', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Total Price:  £20')
-  expect(wrapper).toIncludeText('Shipping costs:  Enter address')
-  expect(wrapper).toIncludeText('TOTAL:  £20')
+  expect(wrapper).toIncludeText('Total Price:  £15.00')
+  expect(wrapper).toIncludeText('Shipping costs:  £5.00')
+  expect(wrapper).toIncludeText('TOTAL:  £20.00')
 })
 
-test('renders the correct checkout cart total with multiple line items', () => {
+test('renders promotions', () => {
   // arrange
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2
-      },
-      {
-        title: 'Pretend Product',
-        price: fixedPrice(5.0),
-        discount: 0,
-        quantity: 1
-      }
-    ]
+    sub_total: 15,
+    total: 20,
+    discount_summaries: [{
+      id: 1,
+      name: 'Christmas Special',
+      total: 1.5
+    }],
+    shipping_method: {
+      total: 5
+    }
   }
 
   const checkout = {
-    shippingAddress: {},
-    shippingMethod: {}
+    shippingAddress: {}
   }
 
   const order = {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} title='Checkout Cart Summary' />
   )
 
   // assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Total Price:  £25')
-  expect(wrapper).toIncludeText('Shipping costs:  Enter address')
-  expect(wrapper).toIncludeText('TOTAL:  £25')
+  expect(wrapper).toIncludeText('Christmas Special:- £1.50')
 })
 
-test('renders the correct checkout cart costs with shipping address completed', () => {
+test('renders shipping promotions', () => {
   // arrange
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2
-      },
-      {
-        title: 'Pretend Product',
-        price: fixedPrice(5.0),
-        discount: 0,
-        quantity: 1
-      }
-    ]
-  }
-
-  const checkout = {
-    shippingAddress: {
-      completed: true
+    sub_total: 15,
+    total: 20,
+    shipping_method: {
+      total: 5
     },
-    shippingMethod: {}
-  }
-
-  const order = {}
-
-  // act
-  const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
-  )
-
-  // assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Total Price:  £25')
-  expect(wrapper).toIncludeText('Shipping costs:  Select shipping method')
-  expect(wrapper).toIncludeText('TOTAL:  £25')
-})
-
-test('renders the correct checkout cart costs with shipping method selected', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2
-      },
-      {
-        title: 'Pretend Product',
-        price: fixedPrice(5.0),
-        discount: 0,
-        quantity: 1
-      }
-    ]
+    discount_summaries: [],
+    shipping_discount_name: 'Free shipping',
+    shipping_total_discount: -5
   }
 
   const checkout = {
-    shippingAddress: {
-      completed: true
-    },
-    shippingMethod: shippingMethods[0]
+    shippingAddress: {}
   }
 
   const order = {}
 
   // act
   const wrapper = mount(
-    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} />
+    <CheckoutCartTotal cart={cart} checkout={checkout} order={order} title='Checkout Cart Summary' />
   )
 
   // assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Total Price:  £25')
-  expect(wrapper).toIncludeText('Shipping costs:  £3.45')
-  expect(wrapper).toIncludeText('TOTAL:  £28.45')
+  expect(wrapper).toIncludeText('Free shipping:- £5.00')
 })
 
 test('renders payment errors', () => {
   // arrange
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
+    sub_total: 15,
+    total: 20,
+    discount_summaries: [],
+    shipping_method: {
+      total: 5
+    }
   }
 
   const checkout = {
@@ -204,17 +130,9 @@ test('displays a correct disabled button when shipping address is not completed 
   }
 
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
+    sub_total: 15,
+    total: 20,
+    discount_summaries: []
   }
 
   const wrapper = mount(
@@ -242,17 +160,9 @@ test('displays a correct enabled button when shipping address is completed', () 
   }
 
   const cart = {
-    lineItems: [
-      {
-        title: 'Test Product',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
+    sub_total: 15,
+    total: 20,
+    discount_summaries: []
   }
 
   const wrapper = mount(
@@ -266,7 +176,7 @@ test('displays a correct enabled button when shipping address is completed', () 
 describe('Place Order button', () => {
   test('should be disabled if there is any error in billing address', () => {
     // Arrange
-    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve())
     const newCheckout = Object.assign({}, checkout, {
       paymentMethod: {
         ...checkout.paymentMethod,
@@ -282,28 +192,16 @@ describe('Place Order button', () => {
     })
 
     const cart = {
-      lineItems: [
-        {
-          title: 'Test Product',
-          price: fixedPrice(10.0),
-          discount: 0,
-          quantity: 2
-        },
-        {
-          title: 'Pretend Product',
-          price: fixedPrice(5.0),
-          discount: 0,
-          quantity: 1
-        }
-      ]
+      sub_total: 15,
+      total: 20,
+      discount_summaries: []
     }
 
     // Act
-    /* eslint-disable no-unused-vars */
     const wrapper = mount(
       <CheckoutCartTotal checkout={newCheckout} order={order} cart={cart} dispatch={dispatch} />
     )
-    /* eslint-enable no-unused-vars */
+
     // Assert
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('button#place_order')).toBeDisabled()
@@ -311,7 +209,7 @@ describe('Place Order button', () => {
 
   test('should be disabled if there is any error in card details', () => {
     // Arrange
-    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve('1234'))
+    const dispatch = jest.fn().mockImplementation((test) => Promise.resolve())
     const newCheckout = Object.assign({}, checkout, {
       paymentMethod: {
         ...checkout.paymentMethod,
@@ -326,28 +224,16 @@ describe('Place Order button', () => {
     }
 
     const cart = {
-      lineItems: [
-        {
-          title: 'Test Product',
-          price: fixedPrice(10.0),
-          discount: 0,
-          quantity: 2
-        },
-        {
-          title: 'Pretend Product',
-          price: fixedPrice(5.0),
-          discount: 0,
-          quantity: 1
-        }
-      ]
+      sub_total: 15,
+      total: 20,
+      discount_summaries: []
     }
 
     // Act
-    /* eslint-disable no-unused-vars */
     const wrapper = mount(
       <CheckoutCartTotal checkout={newCheckout} order={newOrder} cart={cart} dispatch={dispatch} />
     )
-    /* eslint-enable no-unused-vars */
+
     // Assert
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('button#place_order')).toBeDisabled()

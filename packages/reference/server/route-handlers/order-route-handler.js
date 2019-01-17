@@ -52,6 +52,10 @@ function createOrderRenderer () {
 async function placeOrder (req, res, orderPayload) {
   const response = await postData(orderPayload, `${platform.CreateOrderUrl}?include=line_items`)
 
+  if (response.status === 201) {
+    res.clearCookie('cart', { signed: true })
+  }
+
   return res.status(response.status).send(response.data)
 }
 

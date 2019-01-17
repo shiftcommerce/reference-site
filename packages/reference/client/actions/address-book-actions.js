@@ -4,11 +4,11 @@ import * as actionTypes from './action-types'
 // Actions
 import { readEndpoint, postEndpoint, deleteEndpoint } from './api-actions'
 
-export function saveToAddressBook (address) {
+export function saveToAddressBook (address, options = {}) {
   const request = {
-    endpoint: '/createAddress',
+    endpoint: '/createAddressBookAddress',
     body: newAddressBookEntryPayload(address),
-    successActionType: actionTypes.SET_ADDRESS_BOOK_ENTRY
+    successActionType: options.billing ? actionTypes.SET_ADDRESS_BOOK_ENTRY_BILLING : actionTypes.SET_ADDRESS_BOOK_ENTRY_SHIPPING
   }
   return postEndpoint(request)
 }

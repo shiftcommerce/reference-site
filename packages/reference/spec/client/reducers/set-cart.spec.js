@@ -1,17 +1,32 @@
-import setCart, { cartInitialState } from '../../../client/reducers/set-cart'
+import setCart from '../../../client/reducers/set-cart'
 import * as actionTypes from '../../../client/actions/action-types'
 
-test('returns empty on dispatching INITIALIZE_CART action', () => {
-  // Arrange
-  const payload = {
-    type: actionTypes.INITIATE_CART
+test('returns an empty cart when SET_ORDER is dispatched', () => {
+  expect(setCart({ key: 'value' }, { type: actionTypes.SET_ORDER })).toEqual({})
+})
+
+test('returns an updated cart when CART_UPDATED is dispatched', () => {
+  const action = {
+    type: actionTypes.CART_UPDATED,
+    payload: {
+      key: 'new value'
+    }
   }
-  const expectResults = Object.assign({}, cartInitialState)
 
-  // Act
-  const result = setCart({}, payload)
+  expect(setCart({ key: 'value' }, action)).toEqual({
+    key: 'new value'
+  })
+})
 
-  // Assert
-  expect(result).toEqual(expectResults)
-  expect(result.lineItems.length).toBe(0)
+test("doesn't change the state when an unrecognized action is dispatched", () => {
+  const action = {
+    type: 'UNKNOWN',
+    payload: {
+      key: 'new value'
+    }
+  }
+
+  expect(setCart({ key: 'value' }, action)).toEqual({
+    key: 'value'
+  })
 })

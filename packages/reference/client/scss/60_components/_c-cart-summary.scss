@@ -37,6 +37,10 @@
     padding: 0 0 0 .5em;
   }
 
+  &__promotion {
+    color: $text-error;
+  }
+
   &__mini-button-container {
     display: flex;
     align-items: center;

@@ -129,13 +129,22 @@ test('renders payment summary on collapsing', () => {
       selectedMethod: 'card'
     }
   })
+  const cart = {
+    billing_address: {
+      first_name: 'Leon',
+      last_name: 'The Professional',
+      address_line_1: '1 Queen Street',
+      city: 'Leeds',
+      postcode: 'LS27EY'
+    }
+  }
 
   const store = createStore(rootReducer)
 
   // Act
   const wrapper = mount(
     <Provider store={store}>
-      <PaymentMethod checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
+      <PaymentMethod cart={cart} checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
     </Provider>
   )
 

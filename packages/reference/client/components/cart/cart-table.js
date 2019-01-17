@@ -5,7 +5,6 @@ import t from 'typy'
 
 // Lib
 import { fixedPrice } from '../../lib/fixed-price'
-import { calculateCartSummary } from '../../lib/calculate-cart-summary'
 
 // Components
 import LineItems from './line-items'
@@ -22,9 +21,9 @@ import Breadcrumb from '../../objects/breadcrumb'
 
 class CartTable extends Component {
   renderCartData () {
-    const cart = this.props.cart
+    const { cart } = this.props
 
-    if (cart.totalQuantity === 0) {
+    if (!cart.line_items_count) {
       return <CartNoData />
     } else {
       return (
@@ -51,10 +50,10 @@ class CartTable extends Component {
 
     return (
       <div className='c-cart-table__header-grid-item-a'>
-        <h1 className='c-cart-table__title'>Your Shopping Basket <a className='c-cart-table__amount'>({ cart.totalQuantity })</a></h1>
+        <h1 className='c-cart-table__title'>Your Shopping Basket <a className='c-cart-table__amount'>({ cart.line_items_count || 0 })</a></h1>
         <div className='c-cart-table__text'>
-          <p className='c-cart-table__description'>You have <a>{ cart.totalQuantity }</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
-          <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.totalQuantity} showCount={false} /> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> will be saved for 48 hours depending on availability</p>
+          <p className='c-cart-table__description'>You have <a>{ cart.line_items_count || 0 }</a> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> in your shopping basket</p>
+          <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.line_items_count || 0} showCount={false} /> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> will be saved for 48 hours depending on availablility</p>
         </div>
       </div>
     )
@@ -74,7 +73,6 @@ class CartTable extends Component {
 
   render () {
     const { cart } = this.props
-    const totals = calculateCartSummary(cart)
 
     return (
       <section className='c-cart-table c-cart-table--margin'>
@@ -87,7 +85,7 @@ class CartTable extends Component {
             { this.renderDeliveryDetails() }
           </div>
           <div className='c-cart-table__header-total'>
-            <h4 className='c-cart-table__total'>&pound;{ fixedPrice(totals.total) }</h4>
+            <h4 className='c-cart-table__total'>&pound;{ fixedPrice(cart.total || 0) }</h4>
           </div>
         </section>
         { this.renderCartData() }

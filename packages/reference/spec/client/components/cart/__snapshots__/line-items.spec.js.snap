@@ -6,19 +6,21 @@ exports[`renders line items correctly, on initial load 1`] = `
 >
   <div
     className="c-line-items__sections"
-    key="1"
+    key="jugs/seed_product_40"
   >
     <div
       className="c-line-items__images"
     >
       <Link
-        href="/slug?slug=1"
-        key="1"
+        href="/slug?slug=/jugs/seed_product_40"
+        key="jugs/seed_product_40"
       >
         <Image
+          alt="Variant 1"
+          aria-label="Variant 1"
           className="c-line-items__image"
-          key="1"
-          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+          key="jugs/seed_product_40"
+          src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
         />
       </Link>
     </div>
@@ -34,13 +36,13 @@ exports[`renders line items correctly, on initial load 1`] = `
           <h4
             className="c-line-items__details-title  u-bold"
           >
-            Test
+            SCS-04-CJ coffee jug 600ml - Variant 1
           </h4>
           <div
             className="c-line-items__details-sku"
           >
             <span>
-              123
+              3008557600817
             </span>
           </div>
         </div>
@@ -80,9 +82,9 @@ exports[`renders line items correctly, on initial load 1`] = `
         >
           <span>
             <select
-              data-variant="123"
+              data-id="311"
               onChange={[Function]}
-              value={2}
+              value={1}
             >
               <option
                 aria-posinset={2}
@@ -177,20 +179,34 @@ exports[`renders line items correctly, on initial load 1`] = `
           >
             <a
               className="c-line-items__delete-button"
-              data-variant="123"
+              data-id="311"
             >
               Delete
             </a>
           </div>
         </div>
         <div
-          className="c-line-items__amount"
+          className="c-line-items__amounts"
         >
+          <React.Fragment>
+            <a
+              className="c-line-items__amount"
+            >
+              £
+              6.77
+            </a>
+            <a
+              className="c-line-items__amount c-line-items__amount--discount"
+            >
+              - £
+              1.50
+            </a>
+          </React.Fragment>
           <a
-            className="c-line-items__total"
+            className="c-line-items__amount c-line-items__amount--total"
           >
             £
-            20.00
+            5.27
           </a>
         </div>
       </React.Fragment>
@@ -205,19 +221,21 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
 >
   <div
     className="c-line-items__sections"
-    key="1"
+    key="jugs/seed_product_40"
   >
     <div
       className="c-line-items__images"
     >
       <Link
-        href="/slug?slug=1"
-        key="1"
+        href="/slug?slug=/jugs/seed_product_40"
+        key="jugs/seed_product_40"
       >
         <Image
+          alt="Variant 1"
+          aria-label="Variant 1"
           className="c-line-items__image"
-          key="1"
-          src="https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg"
+          key="jugs/seed_product_40"
+          src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
         />
       </Link>
     </div>
@@ -233,13 +251,13 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
           <h4
             className="c-line-items__details-title  u-bold"
           >
-            Test
+            SCS-04-CJ coffee jug 600ml - Variant 1
           </h4>
           <div
             className="c-line-items__details-sku"
           >
             <span>
-              123
+              3008557600817
             </span>
           </div>
         </div>
@@ -279,7 +297,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
         >
           <span>
             <select
-              data-variant="123"
+              data-id="311"
               onChange={
                 [MockFunction] {
                   "calls": Array [
@@ -299,7 +317,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
                   ],
                 }
               }
-              value={2}
+              value={1}
             >
               <option
                 aria-posinset={2}
@@ -394,20 +412,34 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
           >
             <a
               className="c-line-items__delete-button"
-              data-variant="123"
+              data-id="311"
             >
               Delete
             </a>
           </div>
         </div>
         <div
-          className="c-line-items__amount"
+          className="c-line-items__amounts"
         >
+          <React.Fragment>
+            <a
+              className="c-line-items__amount"
+            >
+              £
+              6.77
+            </a>
+            <a
+              className="c-line-items__amount c-line-items__amount--discount"
+            >
+              - £
+              1.50
+            </a>
+          </React.Fragment>
           <a
-            className="c-line-items__total"
+            className="c-line-items__amount c-line-items__amount--total"
           >
             £
-            20.00
+            5.27
           </a>
         </div>
       </React.Fragment>

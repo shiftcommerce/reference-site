@@ -2,7 +2,6 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
-import t from 'typy'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -50,30 +49,8 @@ export class Product extends Component {
   }
 
   addToBag () {
-    const { quantity, sku, variant, stockAvailableLevel, price } = this.state
-    const { product } = this.props
-
-    if (quantity !== '' && sku !== '') {
-      const lineItem = {
-        sku: sku,
-        title: product.title,
-        variant: variant,
-        quantity: parseInt(quantity),
-        stockAvailableLevel: stockAvailableLevel,
-        price: price,
-        imageUrl: t(product, 'asset_files[0].s3_url').safeObject,
-        productSku: product.sku,
-        productID: product.id,
-        slug: product.slug,
-        canonicalPath: product.canonical_path,
-        bundles: product.bundles
-      }
-      this.props.dispatch(addToCart(lineItem))
-    } else {
-      /* eslint-disable */
-      alert('Please select a size')
-      /* eslint-enable */
-    }
+    const { variantId, quantity } = this.state
+    this.props.dispatch(addToCart(variantId, parseInt(quantity)))
   }
 
   changeVariant (e) {

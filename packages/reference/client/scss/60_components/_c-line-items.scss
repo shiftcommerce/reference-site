@@ -84,10 +84,9 @@
     }
   }
 
-  &__amount {
+  &__amounts {
     order: 9;
     width: 100%;
-    margin-bottom: $global-spacing-unit-small;
     text-align: right;
   }
 
@@ -126,10 +125,20 @@
     margin: $global-spacing-unit-small 0;
   }
 
-  &__total {
+  &__amount {
+    display: block;
+    margin-bottom: $global-spacing-unit-tiny;
 
     @include breakpoint(desktop) {
       font-size: 1.1em;
+    }
+
+    &--discount {
+      color: $text-error;
+    }
+
+    &--total {
+      font-weight: 700;
     }
   }
 }

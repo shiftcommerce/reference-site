@@ -1,136 +1,134 @@
+import Cookies from 'js-cookie'
+
 import * as cartActions from '../../../client/actions/cart-actions'
 import * as actionTypes from '../../../client/actions/action-types'
-import { initiateCheckout } from '../../../client/actions/checkout-actions'
+import * as apiActions from '../../../client/actions/api-actions'
 
-// Mock localforage module
-jest.mock('../../../client/lib/localforage')
+describe('readCart', () => {
+  test('returns a thunk returning a promise resolving to undefined if cart cookie is not present', async () => {
+    const spy = jest.spyOn(Cookies, 'get').mockImplementation()
+    const getState = () => ({ cart: {} })
 
-test('return STORE_CART action type on calling readCart()', () => {
-  // arrange
-  const fn = cartActions.readCart()
-  const dispatch = jest.fn()
-  let cart = {
-    lineItems: [
-      {
-        title: 'test',
-        price: 10,
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
-  }
-  const getState = () => ({ cart: cart })
+    const thunk = cartActions.readCart(undefined, getState)
+    const promiseResult = await thunk()
+    expect(promiseResult).toEqual(undefined)
 
-  // act
-  fn(dispatch, getState)
+    spy.mockRestore()
+  })
 
-  // assert
-  expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ 'cart': cart, type: actionTypes.STORE_CART })
+  test('returns a thunk returning a promise resolving to undefined if there is cart id in state', async () => {
+    const spy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'cartCookie')
+    const getState = () => ({ cart: { id: 10 } })
+
+    const thunk = cartActions.readCart()
+    const promiseResult = await thunk(undefined, getState)
+    expect(promiseResult).toEqual(undefined)
+
+    spy.mockRestore()
+  })
+
+  test('returns a thunk initiating a cart request when cart cookie exists but cart is not in state', async () => {
+    const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'cartCookie')
+    const getState = () => ({ cart: {} })
+    const readSpy = jest.spyOn(apiActions, 'readEndpoint').mockImplementation(() => 'readEndpoint')
+
+    const thunk = cartActions.readCart()
+    const promiseResult = await thunk(jest.fn(value => value), getState)
+    expect(readSpy).toHaveBeenCalledTimes(1)
+    expect(promiseResult).toEqual('readEndpoint')
+
+    cookieSpy.mockRestore()
+  })
 })
 
-test('return UPDATE_CART_LINE_ITEMS action type on calling addToCart()', () => {
-  // arrange
-  const dispatch = jest.fn()
-  const getState = () => ({ cart: { lineItems: [], totalQuantity: 0 } })
+test('addToCart triggers a correct addToCart request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
 
-  const lineItemToAdd = {
-    title: 'test',
-    price: 10,
-    discount: 0,
-    quantity: 2,
-    sku: '123',
-    imageUrl: '',
-    size: 'size - 8'
-  }
+  cartActions.addToCart(100, 2)
 
-  const fn = cartActions.addToCart(lineItemToAdd)
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/addToCart')
+  expect(requestObject.body.variantId).toEqual(100)
+  expect(requestObject.body.quantity).toEqual(2)
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
 
-  // act
-  fn(dispatch, getState)
-
-  // assert
-  expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ 'cart': { 'lineItems': [lineItemToAdd],
-    totalQuantity: 2 },
-  type: actionTypes.UPDATE_CART_LINE_ITEMS })
+  postSpy.mockRestore()
 })
 
-test('return UPDATE_CART_LINE_ITEMS action type on calling updateQuantity()', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        title: 'test',
-        price: 10,
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ]
-  }
-  const lineItemToAdd = {
-    quantity: 3,
-    sku: '123'
-  }
-  const expectedCart = {
-    lineItems: [
-      {
-        title: 'test',
-        price: 10,
-        discount: 0,
-        quantity: 3,
-        sku: '123',
-        imageUrl: '',
-        size: 'size - 8'
-      }
-    ],
-    totalQuantity: 3
-  }
-  const dispatch = jest.fn()
-  const getState = () => ({ cart: cart })
+test('updateLineItemQuantity triggers a correct updateLineItemQuantity request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
 
-  const fn = cartActions.updateQuantity(lineItemToAdd)
-  // act
-  fn(dispatch, getState)
+  cartActions.updateLineItemQuantity(10, 3)
 
-  // assert
-  expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ 'cart': expectedCart, type: actionTypes.UPDATE_CART_LINE_ITEMS })
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/updateLineItem')
+  expect(requestObject.body.lineItemId).toEqual(10)
+  expect(requestObject.body.newQuantity).toEqual(3)
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
 })
 
-test('return INITIALIZE_CART action type on calling initializeCart()', () => {
-  // arrange
-  const fn = cartActions.initializeCart()
-  const dispatch = jest.fn()
-  const getState = () => ({ })
+test('deleteLineItem triggers a correct deleteLineItem request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
 
-  // act
-  fn(dispatch, getState)
+  cartActions.deleteLineItem(10)
 
-  // assert
-  expect(fn).toEqual(expect.any(Function))
-  expect(dispatch).toHaveBeenCalledWith({ type: actionTypes.INITIATE_CART })
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/deleteLineItem/10')
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
 })
 
-test('return INITIALIZE_CHECKOUT action type on calling initializeCart()', () => {
-  // arrange
-  const fn = cartActions.initializeCart()
-  const dispatch = jest.fn()
-  const getState = () => ({ account: {} })
+test('setCartShippingAddress triggers a correct setCartShippingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
 
-  // act
-  fn(dispatch, getState)
+  cartActions.setCartShippingAddress(10)
 
-  // assert
-  expect(fn).toEqual(expect.any(Function))
-  // Expect dispatch to have been called with function. Comparing function output with expected function output.
-  const mockCall = dispatch.mock.calls[1]
-  const mockCallFirstArgument = mockCall[0]
-  expect(mockCallFirstArgument(jest.fn(), getState)).toEqual(initiateCheckout()(jest.fn(), getState))
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/setCartShippingAddress')
+  expect(requestObject.body.addressId).toEqual(10)
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
+})
+
+test('setCartBillingAddress triggers a correct setCartBillingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.setCartBillingAddress(10)
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/setCartBillingAddress')
+  expect(requestObject.body.addressId).toEqual(10)
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
+})
+
+test('createShippingAddress triggers a correct createShippingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.createShippingAddress({ addressKey: 'addressValue' })
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/createAddress')
+  expect(requestObject.body.addressKey).toEqual('addressValue')
+  expect(requestObject.successActionType).toEqual(actionTypes.SHIPPING_ADDRESS_CREATED)
+
+  postSpy.mockRestore()
+})
+
+test('createBillingAddress triggers a correct createBillingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.createBillingAddress({ addressKey: 'addressValue' })
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/createAddress')
+  expect(requestObject.body.addressKey).toEqual('addressValue')
+  expect(requestObject.successActionType).toEqual(actionTypes.BILLING_ADDRESS_CREATED)
+
+  postSpy.mockRestore()
 })

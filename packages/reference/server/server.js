@@ -33,6 +33,7 @@ const { platform, oms } = require('./constants/api-urls')
 
 // Handlers
 const accountHandler = require('./route-handlers/account-route-handler')
+const cartHandler = require('./route-handlers/cart-route-handler')
 const handler = require('./route-handlers/route-handler')
 const orderHandler = require('./route-handlers/order-route-handler')
 const customerOrdersHandler = require('./route-handlers/customer-orders-route-handler')
@@ -61,7 +62,7 @@ module.exports = app.prepare().then(() => {
 
   server.use(sslRedirect())
   server.use(session(sessionParams))
-  server.use(cookieParser())
+  server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
   server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
@@ -124,6 +125,7 @@ module.exports = app.prepare().then(() => {
   server.get('/account/logout', (req, res) => {
     req.session = null
     res.clearCookie('signedIn')
+    res.clearCookie('cart', { signed: true })
     res.redirect('/')
   })
 
@@ -159,12 +161,22 @@ module.exports = app.prepare().then(() => {
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
   server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
 
+  server.post('/addToCart', cartHandler.addToCartRenderer())
+  server.post('/createAddress', cartHandler.createAddressRenderer())
+  server.post('/deleteLineItem/:lineItemId', cartHandler.deleteLineItemRenderer())
+  server.get('/getCart', cartHandler.getCartRenderer())
+  server.get('/getShippingMethods', cartHandler.getShippingMethodsRenderer())
+  server.post('/setCartBillingAddress', cartHandler.setCartBillingAddressRenderer())
+  server.post('/setCartShippingAddress', cartHandler.setCartShippingAddressRenderer())
+  server.post('/setShippingMethod', cartHandler.setCartShippingMethodRenderer())
+  server.post('/updateLineItem', cartHandler.updateLineItemRenderer())
+
   server.post('/createOrder', orderHandler.createOrderRenderer())
 
   server.post('/register', accountHandler.postRenderer(platform.AccountUrl))
   server.post('/login', accountHandler.postRenderer(platform.LoginUrl))
 
-  server.post('/createAddress', addressBookHandler.postAddressRenderer(platform.AddressesUrl))
+  server.post('/createAddressBookAddress', addressBookHandler.postAddressRenderer(platform.AddressesUrl))
   server.delete(/\/deleteAddress\/*/, addressBookHandler.deleteAddressRenderer(platform.AddressUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {

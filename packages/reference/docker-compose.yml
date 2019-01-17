@@ -4,7 +4,7 @@ services:
   web:
     image: shift-front-end-react
     build: .
-    command: nodemon --legacy-watch --watch server server/server.js
+    command: nodemon --legacy-watch --watch server server/*
     ports:
       - "3000:3000"
       - "3001:3001"

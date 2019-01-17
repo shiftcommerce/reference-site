@@ -1,68 +1,104 @@
 import LineItems from '../../../../client/components/cart/line-items'
 import Image from '../../../../client/objects/image'
 
-import { fixedPrice } from '../../../../client/lib/fixed-price'
+import cartFixture from '../../../fixtures/cart'
 
 test('renders line items correctly, on initial load', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        variant: 'Test',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
-        size: 'size - 8',
-        stockAvailableLevel: '1000',
-        canonicalPath: '1',
-        slug: '1'
-      }
-    ]
-  }
-
   const updateQuantity = () => {}
 
   // act
   const wrapper = shallow(
-    <LineItems cart={cart} updateQuantity={updateQuantity} />
+    <LineItems cart={cartFixture} updateQuantity={updateQuantity} />
   )
 
   // assert
-  const lineItem = cart.lineItems[0]
+  const lineItem = cartFixture.line_items[0]
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(lineItem.variant)
-  expect(wrapper).toContainReact(<Image src={lineItem.imageUrl} alt={lineItem.title} className='c-line-items__image' aria-label={lineItem.title} />)
-  expect(wrapper.find('select').props().value).toBe(lineItem.quantity)
+  expect(wrapper).toIncludeText(lineItem.item.product.title)
+  expect(wrapper).toContainReact(<Image className='c-line-items__image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />)
+  expect(wrapper.find('select').props().value).toBe(lineItem.unit_quantity)
   expect(wrapper).toIncludeText(lineItem.sku)
-  expect(wrapper).toIncludeText((lineItem.price * lineItem.quantity) - (lineItem.discount))
+  expect(wrapper).toIncludeText((lineItem.item.price * lineItem.unit_quantity) - (lineItem.total_discount))
+})
+
+test('renders line items sorted by their id', () => {
+  const cart = {
+    line_items: [
+      {
+        id: '311',
+        item: {
+          picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+          product: {
+            canonical_path: '/jugs/seed_product_40',
+            slug: 'jugs/seed_product_40',
+            title: 'First product'
+          },
+          title: 'First variant'
+        },
+        item_id: 321,
+        item_type: 'Variant',
+        line_item_discounts: [
+          {
+            id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+            line_item_number: 1,
+            promotion_id: 21,
+            total: 1.5
+          }
+        ],
+        sku: '3008557600817',
+        stock_available_level: 85,
+        sub_total: 6.77,
+        total: 5.27,
+        total_discount: 1.5,
+        unit_quantity: 1
+      },
+      {
+        id: '310',
+        item: {
+          picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+          product: {
+            canonical_path: '/jugs/seed_product_39',
+            slug: 'jugs/seed_product_39',
+            title: 'Second product'
+          },
+          title: 'Second variant'
+        },
+        item_id: 321,
+        item_type: 'Variant',
+        line_item_discounts: [
+          {
+            id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+            line_item_number: 1,
+            promotion_id: 21,
+            total: 1.5
+          }
+        ],
+        sku: '3008557600817',
+        stock_available_level: 85,
+        sub_total: 6.77,
+        total: 5.27,
+        total_discount: 1.5,
+        unit_quantity: 1
+      }
+    ],
+    line_items_count: 2
+  }
+
+  // act
+  const wrapper = shallow(
+    <LineItems cart={cart} />
+  )
+
+  const firstItem = wrapper.find('.c-line-items__sections').first()
+  expect(firstItem).toIncludeText('Second product - Second variant')
 })
 
 test('trigger updateQuantity function, on change of line item quantity', () => {
-  // arrange
-  const cart = {
-    lineItems: [
-      {
-        variant: 'Test',
-        price: fixedPrice(10.0),
-        discount: 0,
-        quantity: 2,
-        sku: '123',
-        imageUrl: 'https://staging-matalanintegration-1452506760.s3.amazonaws.com/uploads/asset_file/asset_file/12917/S2623404_C146_Main.jpg',
-        size: 'size - 8',
-        stockAvailableLevel: '1000',
-        canonicalPath: '1',
-        slug: '1'
-      }
-    ]
-  }
-
   const updateQuantity = jest.fn()
 
   // act
   const wrapper = shallow(
-    <LineItems cart={cart} updateQuantity={updateQuantity} />
+    <LineItems cart={cartFixture} updateQuantity={updateQuantity} />
   )
 
   // assert

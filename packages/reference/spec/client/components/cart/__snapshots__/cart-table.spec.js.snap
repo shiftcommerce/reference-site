@@ -4,38 +4,25 @@ exports[`renders the correct message when line items are available in cart 1`] =
 <CartTable
   cart={
     Object {
-      "lineItems": Array [
+      "discount_summaries": Array [],
+      "line_items": Array [
         Object {
-          "bundles": Array [
-            Object {
-              "asset_files": Array [
-                Object {
-                  "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                  "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                  "id": "157928",
-                  "meta_attributes": Object {},
-                  "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                },
-              ],
-              "canonical_path": "/bundles/anna-outfit-1",
-              "id": "261",
-              "meta_attributes": Object {},
-              "name": "Anna Outfit 1",
-              "slug": "anna-outfit-1",
+          "item": Object {
+            "product": Object {
+              "canonicalPath": "1",
+              "slug": "1",
             },
-          ],
-          "canonicalPath": "1",
-          "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
-          "price": "30",
-          "productID": "70515",
-          "quantity": 2,
+          },
           "sku": "S2658934_C101_486",
-          "slug": "1",
-          "stockAvailableLevel": 10000,
-          "variant": "Regular Fit Wool Mix Trousers",
+          "stock_available_level": 10000,
+          "sub_total": 30,
+          "title": "Regular Fit Wool Mix Trousers",
+          "total": 30,
+          "unit_quantity": 2,
         },
       ],
-      "totalQuantity": 2,
+      "line_items_count": 2,
+      "sub_total": 60,
     }
   }
   updateQuantity={[Function]}
@@ -155,7 +142,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   items
                 </span>
               </t>
-               will be saved for 48 hours depending on availability
+               will be saved for 48 hours depending on availablility
             </p>
           </div>
         </div>
@@ -182,7 +169,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
           className="c-cart-table__total"
         >
           £
-          60.00
+          0.00
         </h4>
       </div>
     </section>
@@ -196,38 +183,25 @@ exports[`renders the correct message when line items are available in cart 1`] =
           aria-label="Line Items"
           cart={
             Object {
-              "lineItems": Array [
+              "discount_summaries": Array [],
+              "line_items": Array [
                 Object {
-                  "bundles": Array [
-                    Object {
-                      "asset_files": Array [
-                        Object {
-                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                          "id": "157928",
-                          "meta_attributes": Object {},
-                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                        },
-                      ],
-                      "canonical_path": "/bundles/anna-outfit-1",
-                      "id": "261",
-                      "meta_attributes": Object {},
-                      "name": "Anna Outfit 1",
-                      "slug": "anna-outfit-1",
+                  "item": Object {
+                    "product": Object {
+                      "canonicalPath": "1",
+                      "slug": "1",
                     },
-                  ],
-                  "canonicalPath": "1",
-                  "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
-                  "price": "30",
-                  "productID": "70515",
-                  "quantity": 2,
+                  },
                   "sku": "S2658934_C101_486",
-                  "slug": "1",
-                  "stockAvailableLevel": 10000,
-                  "variant": "Regular Fit Wool Mix Trousers",
+                  "stock_available_level": 10000,
+                  "sub_total": 30,
+                  "title": "Regular Fit Wool Mix Trousers",
+                  "total": 30,
+                  "unit_quantity": 2,
                 },
               ],
-              "totalQuantity": 2,
+              "line_items_count": 2,
+              "sub_total": 60,
             }
           }
           updateQuantity={[Function]}
@@ -243,27 +217,23 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 className="c-line-items__images"
               >
                 <Link
-                  href="/slug?slug=1"
+                  href="/slug?slug=undefined"
                   key="1"
                 >
                   <Image
                     className="c-line-items__image"
                     key="1"
                     onClick={[Function]}
-                    src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
                   >
                     <div
-                      className="c-line-items__image"
-                    >
-                      <picture>
-                        <img
-                          className="c-image"
-                          onClick={[Function]}
-                          src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg"
-                          srcSet="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg 769w"
-                        />
-                      </picture>
-                    </div>
+                      className="c-dummy_image c-line-items__image"
+                      style={
+                        Object {
+                          "height": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    />
                   </Image>
                 </Link>
               </div>
@@ -279,7 +249,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                     <h4
                       className="c-line-items__details-title  u-bold"
                     >
-                      Regular Fit Wool Mix Trousers
+                      undefined - undefined
                     </h4>
                     <div
                       className="c-line-items__details-sku"
@@ -324,7 +294,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 >
                   <span>
                     <select
-                      data-variant="S2658934_C101_486"
                       onChange={[Function]}
                       value={2}
                     >
@@ -419,20 +388,19 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   >
                     <a
                       className="c-line-items__delete-button"
-                      data-variant="S2658934_C101_486"
                     >
                       Delete
                     </a>
                   </div>
                 </div>
                 <div
-                  className="c-line-items__amount"
+                  className="c-line-items__amounts"
                 >
                   <a
-                    className="c-line-items__total"
+                    className="c-line-items__amount c-line-items__amount--total"
                   >
                     £
-                    60.00
+                    30.00
                   </a>
                 </div>
               </div>
@@ -516,38 +484,25 @@ exports[`renders the correct message when line items are available in cart 1`] =
           aria-label="Cart Summary"
           cart={
             Object {
-              "lineItems": Array [
+              "discount_summaries": Array [],
+              "line_items": Array [
                 Object {
-                  "bundles": Array [
-                    Object {
-                      "asset_files": Array [
-                        Object {
-                          "asset_file": "1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                          "id": "157928",
-                          "meta_attributes": Object {},
-                          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157928/1513767197.7652595-1847-_Anna_Outfit_1-3_099.jpg",
-                        },
-                      ],
-                      "canonical_path": "/bundles/anna-outfit-1",
-                      "id": "261",
-                      "meta_attributes": Object {},
-                      "name": "Anna Outfit 1",
-                      "slug": "anna-outfit-1",
+                  "item": Object {
+                    "product": Object {
+                      "canonicalPath": "1",
+                      "slug": "1",
                     },
-                  ],
-                  "canonicalPath": "1",
-                  "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
-                  "price": "30",
-                  "productID": "70515",
-                  "quantity": 2,
+                  },
                   "sku": "S2658934_C101_486",
-                  "slug": "1",
-                  "stockAvailableLevel": 10000,
-                  "variant": "Regular Fit Wool Mix Trousers",
+                  "stock_available_level": 10000,
+                  "sub_total": 30,
+                  "title": "Regular Fit Wool Mix Trousers",
+                  "total": 30,
+                  "unit_quantity": 2,
                 },
               ],
-              "totalQuantity": 2,
+              "line_items_count": 2,
+              "sub_total": 60,
             }
           }
           updateQuantity={[Function]}
@@ -571,7 +526,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
             <dl>
               <dt>
                 <a>
-                  Estimated shipping cost: £3.45
+                  Estimating shipping cost...
                 </a>
               </dt>
             </dl>
@@ -588,7 +543,6 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   className="u-bold"
                 >
                   £
-                  63.45
                 </p>
               </dd>
             </dl>
@@ -829,7 +783,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
               style={Object {}}
               zero={null}
             />
-             will be saved for 48 hours depending on availability
+             will be saved for 48 hours depending on availablility
           </p>
         </div>
       </div>

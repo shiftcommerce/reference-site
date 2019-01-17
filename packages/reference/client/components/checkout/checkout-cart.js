@@ -4,27 +4,25 @@ import Pluralize from 'react-pluralize'
 
 // Lib
 import { fixedPrice } from '../../lib/fixed-price'
-import { calculateCartSummary } from '../../lib/calculate-cart-summary'
 
 // Components
 import LineItems from '../../components/cart/line-items'
 
 export class CheckoutCart extends Component {
   render () {
-    const { cart, checkout } = this.props
-    const totals = calculateCartSummary(cart, checkout)
+    const { cart } = this.props
     return <>
       <section className='c-checkout-cart__header'>
         <div className='u-float--left c-checkout-cart__table'>
-          <h1 className='c-checkout-cart__title'> Your Shopping Basket <a className='c-checkout-cart__amount'>({ cart.totalQuantity })</a></h1>
-          <h4 className='c-checkout-cart__total'>&pound;{ fixedPrice(totals.total) }</h4>
+          <h1 className='c-checkout-cart__title'> Your Shopping Basket <a className='c-checkout-cart__amount'>({ cart.line_items_count })</a></h1>
+          <h4 className='c-checkout-cart__total'>&pound;{ fixedPrice(cart.total) }</h4>
           <div className='c-checkout-cart__text'>
-            <p className='c-checkout-cart__description'>You have <a>{ cart.totalQuantity }</a> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> in your shopping basket</p>
-            <p className='c-checkout-cart__description'><Pluralize singular='This' plural='These' count={cart.totalQuantity} showCount={false} /> <Pluralize singular='item' count={cart.totalQuantity} showCount={false} /> will be saved for 48 hours depending on availablility</p>
+            <p className='c-checkout-cart__description'>You have <a>{ cart.line_items_count }</a> <Pluralize singular='item' count={cart.line_items_count} showCount={false} /> in your shopping basket</p>
+            <p className='c-checkout-cart__description'><Pluralize singular='This' plural='These' count={cart.line_items_count} showCount={false} /> <Pluralize singular='item' count={cart.line_items_count} showCount={false} /> will be saved for 48 hours depending on availablility</p>
           </div>
         </div>
       </section>
-      <LineItems cart={cart} updateQuantity={this.props.updateQuantity} />
+      <LineItems cart={cart} updateQuantity={this.props.updateQuantity} deleteItem={this.props.deleteItem} />
     </>
   }
 }

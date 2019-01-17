@@ -78,9 +78,12 @@ test('correctly populates the address book', () => {
   expect(updatedState.addressBook).toBe('address book data')
 })
 
-test('correctly marks addresses as not requiring saving after persisting', () => {
+test('correctly marks shipping addresses as not requiring saving after persisting', () => {
   const action = {
-    type: actionTypes.SET_ADDRESS_BOOK_ENTRY
+    type: actionTypes.SET_ADDRESS_BOOK_ENTRY_SHIPPING,
+    payload: {
+      id: 10
+    }
   }
 
   const currentState = {
@@ -88,14 +91,39 @@ test('correctly marks addresses as not requiring saving after persisting', () =>
       saveToAddressBook: true
     },
     billingAddress: {
-      saveToAddressBook: false
+      saveToAddressBook: true
     }
   }
 
   const updatedState = setCheckout(currentState, action)
 
   expect(updatedState.shippingAddress.saveToAddressBook).toBe(false)
+  expect(updatedState.shippingAddress.id).toEqual(10)
+  expect(updatedState.billingAddress.saveToAddressBook).toBe(true)
+})
+
+test('correctly marks billing addresses as not requiring saving after persisting', () => {
+  const action = {
+    type: actionTypes.SET_ADDRESS_BOOK_ENTRY_BILLING,
+    payload: {
+      id: 10
+    }
+  }
+
+  const currentState = {
+    shippingAddress: {
+      saveToAddressBook: true
+    },
+    billingAddress: {
+      saveToAddressBook: true
+    }
+  }
+
+  const updatedState = setCheckout(currentState, action)
+
   expect(updatedState.billingAddress.saveToAddressBook).toBe(false)
+  expect(updatedState.billingAddress.id).toEqual(10)
+  expect(updatedState.shippingAddress.saveToAddressBook).toBe(true)
 })
 
 test('correctly deletes addresses from the store', () => {
@@ -113,4 +141,38 @@ test('correctly deletes addresses from the store', () => {
   const updatedState = setCheckout(currentState, action)
 
   expect(updatedState.addressBook).toEqual([{ id: 9 }, { id: 11 }])
+})
+
+test('sets shipping address id when a shipping address is created', () => {
+  const action = {
+    type: actionTypes.SHIPPING_ADDRESS_CREATED,
+    payload: {
+      id: 10
+    }
+  }
+
+  const currentState = {
+    shippingAddress: {}
+  }
+
+  const updatedState = setCheckout(currentState, action)
+
+  expect(updatedState.shippingAddress.id).toEqual(10)
+})
+
+test('sets billing address id when a billing address is created', () => {
+  const action = {
+    type: actionTypes.BILLING_ADDRESS_CREATED,
+    payload: {
+      id: 10
+    }
+  }
+
+  const currentState = {
+    billingAddress: {}
+  }
+
+  const updatedState = setCheckout(currentState, action)
+
+  expect(updatedState.billingAddress.id).toEqual(10)
 })

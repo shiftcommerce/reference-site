@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 // Lib
 import addressFormValidator from '../../lib/address-form-validator'
-import { calculateCartSummary } from '../../lib/calculate-cart-summary'
 import { fixedPrice } from '../../lib/fixed-price'
 
 // Objects
@@ -114,19 +113,40 @@ class CheckoutCartTotal extends Component {
     )
   }
 
-  shippingText (checkout, totals) {
-    if (!checkout.shippingAddress.completed) {
-      return 'Enter address'
-    } else if (!checkout.shippingMethod.retail_price_inc_tax) {
-      return 'Select shipping method'
+  renderPromotions () {
+    return this.props.cart.discount_summaries.map(discountSummary => {
+      return (
+        <dl className='c-cart-summary__promotion' key={ discountSummary.id }>
+          <dt>{ discountSummary.name }:</dt>
+          <dd>- &pound;{ fixedPrice(discountSummary.total) }</dd>
+        </dl>
+      )
+    })
+  }
+
+  renderShippingPromotion () {
+    const shippingPromotionName = this.props.cart.shipping_discount_name
+
+    if (shippingPromotionName) {
+      return (
+        <dl className='c-cart-summary__promotion'>
+          <dt>{ shippingPromotionName }:</dt>
+          <dd>- &pound;{ fixedPrice(this.props.cart.shipping_total_discount * -1) }</dd>
+        </dl>
+      )
+    }
+  }
+
+  shippingText (checkout, cart) {
+    if (cart.shipping_method) {
+      return `£${fixedPrice(cart.shipping_method.total)}`
     } else {
-      return `£${fixedPrice(totals.shipping)}`
+      return 'Loading shipping cost...'
     }
   }
 
   render () {
     const { cart, checkout, order } = this.props
-    const totals = calculateCartSummary(cart, checkout)
 
     return (
       <>
@@ -134,15 +154,17 @@ class CheckoutCartTotal extends Component {
           <div aria-label='Cart total summary' className='u-sticky c-cart-summary'>
             <dl aria-label='Subtotal'>
               <dt> Total Price: </dt>
-              <dd> &pound;{ fixedPrice(totals.subTotal) } </dd>
+              <dd> &pound;{ fixedPrice(cart.sub_total) } </dd>
             </dl>
+            { this.renderPromotions() }
             <dl aria-label='Shipping cost'>
               <dt> Shipping costs: </dt>
-              <dd> { this.shippingText(checkout, totals) } </dd>
+              <dd> { this.shippingText(checkout, cart) } </dd>
             </dl>
+            { this.renderShippingPromotion() }
             <dl aria-label='Total' className='u-bold'>
               <dt> TOTAL: </dt>
-              <dd> &pound;{ fixedPrice(checkout.shippingAddress.completed ? totals.total : totals.subTotal) } </dd>
+              <dd> &pound;{ fixedPrice(cart.total) } </dd>
             </dl>
             <dl>
               <dt className='c-cart-summary__VAT'>* Including VAT</dt>

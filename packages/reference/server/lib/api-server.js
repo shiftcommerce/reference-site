@@ -65,11 +65,31 @@ const postData = async (body, url) => {
   }
 }
 
-const deleteData = async (url) => {
+const patchData = async (body, url) => {
+  try {
+    const response = await axios({
+      method: 'patch',
+      url: `${process.env.API_HOST}/${url}`,
+      headers: headers,
+      auth: auth,
+      data: body
+    })
+
+    setCacheHeaders(response)
+    return response
+  } catch (error) {
+    console.error('ERROR', error.response)
+    console.error('ERROR DATA', JSON.stringify(error.response.data))
+    return error.response
+  }
+}
+
+const deleteData = async (url, body = {}) => {
   try {
     const response = await axios.delete(`${process.env.API_HOST}/${url}`, {
       auth: auth,
-      headers: headers
+      headers: headers,
+      data: body
     })
 
     setCacheHeaders(response)
@@ -80,4 +100,4 @@ const deleteData = async (url) => {
   }
 }
 
-module.exports = { deleteData, fetchData, fetchOmsData, postData }
+module.exports = { deleteData, fetchData, fetchOmsData, postData, patchData }

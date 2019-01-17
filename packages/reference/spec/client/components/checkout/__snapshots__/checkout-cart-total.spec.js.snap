@@ -4,20 +4,9 @@ exports[`Place Order button should be disabled if there is any error in billing 
 <CheckoutCartTotal
   cart={
     Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "title": "Pretend Product",
-        },
-      ],
+      "discount_summaries": Array [],
+      "sub_total": 15,
+      "total": 20,
     }
   }
   checkout={
@@ -121,7 +110,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         </dt>
         <dd>
            £
-          25.00
+          15.00
            
         </dd>
       </dl>
@@ -133,7 +122,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         </dt>
         <dd>
            
-          £5.45
+          Loading shipping cost...
            
         </dd>
       </dl>
@@ -146,7 +135,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
         </dt>
         <dd>
            £
-          30.45
+          20.00
            
         </dd>
       </dl>
@@ -223,20 +212,9 @@ exports[`Place Order button should be disabled if there is any error in card det
 <CheckoutCartTotal
   cart={
     Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "title": "Pretend Product",
-        },
-      ],
+      "discount_summaries": Array [],
+      "sub_total": 15,
+      "total": 20,
     }
   }
   checkout={
@@ -338,7 +316,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         </dt>
         <dd>
            £
-          25.00
+          15.00
            
         </dd>
       </dl>
@@ -350,7 +328,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         </dt>
         <dd>
            
-          £5.45
+          Loading shipping cost...
            
         </dd>
       </dl>
@@ -363,7 +341,7 @@ exports[`Place Order button should be disabled if there is any error in card det
         </dt>
         <dd>
            £
-          30.45
+          20.00
            
         </dd>
       </dl>
@@ -440,17 +418,12 @@ exports[`renders payment errors 1`] = `
 <CheckoutCartTotal
   cart={
     Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "imageUrl": "",
-          "price": "10.00",
-          "quantity": 2,
-          "size": "size - 8",
-          "sku": "123",
-          "title": "Test Product",
-        },
-      ],
+      "discount_summaries": Array [],
+      "shipping_method": Object {
+        "total": 5,
+      },
+      "sub_total": 15,
+      "total": 20,
     }
   }
   checkout={
@@ -477,7 +450,7 @@ exports[`renders payment errors 1`] = `
         </dt>
         <dd>
            £
-          20.00
+          15.00
            
         </dd>
       </dl>
@@ -489,7 +462,7 @@ exports[`renders payment errors 1`] = `
         </dt>
         <dd>
            
-          Enter address
+          £5.00
            
         </dd>
       </dl>
@@ -571,425 +544,16 @@ exports[`renders payment errors 1`] = `
 </CheckoutCartTotal>
 `;
 
-exports[`renders the correct checkout cart costs with shipping address completed 1`] = `
+exports[`renders the cart's total, subtotal and shipping cost 1`] = `
 <CheckoutCartTotal
   cart={
     Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "title": "Pretend Product",
-        },
-      ],
-    }
-  }
-  checkout={
-    Object {
-      "shippingAddress": Object {
-        "completed": true,
+      "discount_summaries": Array [],
+      "shipping_method": Object {
+        "total": 5,
       },
-      "shippingMethod": Object {},
-    }
-  }
-  order={Object {}}
->
-  <Sticker>
-    <div
-      aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
-    >
-      <dl
-        aria-label="Subtotal"
-      >
-        <dt>
-           Total Price: 
-        </dt>
-        <dd>
-           £
-          25.00
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping costs: 
-        </dt>
-        <dd>
-           
-          Select shipping method
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="u-bold"
-      >
-        <dt>
-           TOTAL: 
-        </dt>
-        <dd>
-           £
-          25.00
-           
-        </dd>
-      </dl>
-      <dl>
-        <dt
-          className="c-cart-summary__VAT"
-        >
-          * Including VAT
-        </dt>
-      </dl>
-    </div>
-  </Sticker>
-  <div
-    className="c-cart-summary-buttons"
-  >
-    <Link
-      href="/"
-    >
-      <Button
-        aria-label="Continue Shopping"
-        className="c-cart-summary__buttons--continue o-button--sml"
-        label="Continue shopping"
-        onClick={[Function]}
-        status="primary"
-        type="button"
-      >
-        <div
-          className="o-button__container"
-        >
-          <button
-            aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-            disabled={false}
-            onClick={[Function]}
-            role="button"
-            tabIndex="0"
-            type="button"
-          >
-            Continue shopping
-          </button>
-        </div>
-      </Button>
-    </Link>
-    <Button
-      className="c-cart-summary__buttons--proceed o-button--sml"
-      type="button"
-    >
-      <div
-        className="o-button__container"
-      >
-        <button
-          className="c-cart-summary__buttons--proceed o-button--sml o-button"
-          disabled={false}
-          role="button"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
-    </Button>
-  </div>
-</CheckoutCartTotal>
-`;
-
-exports[`renders the correct checkout cart costs with shipping method selected 1`] = `
-<CheckoutCartTotal
-  cart={
-    Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "title": "Pretend Product",
-        },
-      ],
-    }
-  }
-  checkout={
-    Object {
-      "shippingAddress": Object {
-        "completed": true,
-      },
-      "shippingMethod": Object {
-        "delivery_date": "Sunday 2nd December",
-        "id": "1",
-        "name": "Super Saver",
-        "paid_price_inc_tax": 3.45,
-        "reference": "super_saver",
-        "retail_price_inc_tax": 3.45,
-        "sku": "super_saver",
-        "tax_amount": 2,
-        "tax_percentage": 20,
-      },
-    }
-  }
-  order={Object {}}
->
-  <Sticker>
-    <div
-      aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
-    >
-      <dl
-        aria-label="Subtotal"
-      >
-        <dt>
-           Total Price: 
-        </dt>
-        <dd>
-           £
-          25.00
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping costs: 
-        </dt>
-        <dd>
-           
-          £3.45
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="u-bold"
-      >
-        <dt>
-           TOTAL: 
-        </dt>
-        <dd>
-           £
-          28.45
-           
-        </dd>
-      </dl>
-      <dl>
-        <dt
-          className="c-cart-summary__VAT"
-        >
-          * Including VAT
-        </dt>
-      </dl>
-    </div>
-  </Sticker>
-  <div
-    className="c-cart-summary-buttons"
-  >
-    <Link
-      href="/"
-    >
-      <Button
-        aria-label="Continue Shopping"
-        className="c-cart-summary__buttons--continue o-button--sml"
-        label="Continue shopping"
-        onClick={[Function]}
-        status="primary"
-        type="button"
-      >
-        <div
-          className="o-button__container"
-        >
-          <button
-            aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-            disabled={false}
-            onClick={[Function]}
-            role="button"
-            tabIndex="0"
-            type="button"
-          >
-            Continue shopping
-          </button>
-        </div>
-      </Button>
-    </Link>
-    <Button
-      className="c-cart-summary__buttons--proceed o-button--sml"
-      type="button"
-    >
-      <div
-        className="o-button__container"
-      >
-        <button
-          className="c-cart-summary__buttons--proceed o-button--sml o-button"
-          disabled={false}
-          role="button"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
-    </Button>
-  </div>
-</CheckoutCartTotal>
-`;
-
-exports[`renders the correct checkout cart total with multiple line items 1`] = `
-<CheckoutCartTotal
-  cart={
-    Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "price": "10.00",
-          "quantity": 2,
-          "title": "Test Product",
-        },
-        Object {
-          "discount": 0,
-          "price": "5.00",
-          "quantity": 1,
-          "title": "Pretend Product",
-        },
-      ],
-    }
-  }
-  checkout={
-    Object {
-      "shippingAddress": Object {},
-      "shippingMethod": Object {},
-    }
-  }
-  order={Object {}}
->
-  <Sticker>
-    <div
-      aria-label="Cart total summary"
-      className="u-sticky c-cart-summary"
-    >
-      <dl
-        aria-label="Subtotal"
-      >
-        <dt>
-           Total Price: 
-        </dt>
-        <dd>
-           £
-          25.00
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Shipping cost"
-      >
-        <dt>
-           Shipping costs: 
-        </dt>
-        <dd>
-           
-          Enter address
-           
-        </dd>
-      </dl>
-      <dl
-        aria-label="Total"
-        className="u-bold"
-      >
-        <dt>
-           TOTAL: 
-        </dt>
-        <dd>
-           £
-          25.00
-           
-        </dd>
-      </dl>
-      <dl>
-        <dt
-          className="c-cart-summary__VAT"
-        >
-          * Including VAT
-        </dt>
-      </dl>
-    </div>
-  </Sticker>
-  <div
-    className="c-cart-summary-buttons"
-  >
-    <Link
-      href="/"
-    >
-      <Button
-        aria-label="Continue Shopping"
-        className="c-cart-summary__buttons--continue o-button--sml"
-        label="Continue shopping"
-        onClick={[Function]}
-        status="primary"
-        type="button"
-      >
-        <div
-          className="o-button__container"
-        >
-          <button
-            aria-label="Continue Shopping"
-            className="c-cart-summary__buttons--continue o-button--sml o-button o-button--primary"
-            disabled={false}
-            onClick={[Function]}
-            role="button"
-            tabIndex="0"
-            type="button"
-          >
-            Continue shopping
-          </button>
-        </div>
-      </Button>
-    </Link>
-    <Button
-      className="c-cart-summary__buttons--proceed o-button--sml"
-      type="button"
-    >
-      <div
-        className="o-button__container"
-      >
-        <button
-          className="c-cart-summary__buttons--proceed o-button--sml o-button"
-          disabled={false}
-          role="button"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
-    </Button>
-  </div>
-</CheckoutCartTotal>
-`;
-
-exports[`renders the correct checkout cart total with single line item 1`] = `
-<CheckoutCartTotal
-  cart={
-    Object {
-      "lineItems": Array [
-        Object {
-          "discount": 0,
-          "imageUrl": "",
-          "price": "10.00",
-          "quantity": 2,
-          "size": "size - 8",
-          "sku": "123",
-          "title": "Test Product",
-        },
-      ],
+      "sub_total": 15,
+      "total": 20,
     }
   }
   checkout={
@@ -1013,7 +577,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         </dt>
         <dd>
            £
-          20.00
+          15.00
            
         </dd>
       </dl>
@@ -1025,7 +589,7 @@ exports[`renders the correct checkout cart total with single line item 1`] = `
         </dt>
         <dd>
            
-          Enter address
+          £5.00
            
         </dd>
       </dl>

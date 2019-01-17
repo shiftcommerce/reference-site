@@ -12,14 +12,13 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 // Actions
 import { readCheckoutFromLocalStorage,
   toggleCollapsed,
-  setShippingMethod,
   changeBillingAddress,
   setValidationMessage,
   changePaymentMethod,
   inputChange,
   inputComplete,
   showField } from '../actions/checkout-actions'
-import { readCart, initializeCart, updateQuantity } from '../actions/cart-actions'
+import { readCart, updateLineItemQuantity, deleteLineItem, setCartShippingAddress, setCartBillingAddress, createShippingAddress, createBillingAddress } from '../actions/cart-actions'
 import {
   createOrder,
   requestCardToken,
@@ -55,7 +54,6 @@ export class CheckoutPage extends Component {
 
     this.onToggleCollapsed = this.onToggleCollapsed.bind(this)
     this.nextSection = this.nextSection.bind(this)
-    this.setShippingMethod = this.setShippingMethod.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
@@ -70,8 +68,8 @@ export class CheckoutPage extends Component {
 
   componentDidMount () {
     this.props.dispatch(readCheckoutFromLocalStorage())
-    this.props.dispatch(readCart()).then((cart) => {
-      if (cart.totalQuantity === 0) Router.push('/cart')
+    this.props.dispatch(readCart()).then(() => {
+      if (!this.props.cart.line_items_count) Router.push('/cart')
     })
   }
 
@@ -82,63 +80,67 @@ export class CheckoutPage extends Component {
     // Redirect to order confirmation page
     if (newOrder && newOrder.id && newOrder.id !== prevOrder.id) {
       Router.push('/order')
-      this.props.dispatch(initializeCart())
     }
   }
 
   updateQuantity (e) {
-    const lineItem = {
-      sku: e.target.dataset.variant,
-      quantity: parseInt(e.target.value, 10)
-    }
-    this.props.dispatch(updateQuantity(lineItem))
+    this.props.dispatch(updateLineItemQuantity(e.target.dataset.id, parseInt(e.target.value, 10)))
   }
 
   deleteItem (e) {
     e.preventDefault()
-    const lineItem = {
-      sku: e.target.dataset.variant,
-      quantity: 0
-    }
-    this.props.dispatch(updateQuantity(lineItem))
-    if (this.props.cart.lineItems.length === 0) {
-      Router.push('/cart')
-    }
+    this.props.dispatch(deleteLineItem(e.target.dataset.id)).then(() => {
+      if (this.props.cart.line_items.length === 0) {
+        Router.push('/cart')
+      }
+    })
   }
 
   nextSection (eventType) {
-    const { checkout } = this.props
+    const { dispatch, checkout } = this.props
 
     let componentName
 
     if (checkout.currentStep === 1) {
       componentName = 'shippingAddress'
+
+      if (checkout.shippingAddress.saveToAddressBook) {
+        dispatch(saveToAddressBook(checkout.shippingAddress)).then(() => {
+          dispatch(setCartShippingAddress(checkout.shippingAddress.id))
+        })
+      } else if (checkout.shippingAddress.id) {
+        dispatch(setCartShippingAddress(checkout.shippingAddress.id))
+      } else {
+        dispatch(createShippingAddress(checkout.shippingAddress)).then(() => {
+          dispatch(setCartShippingAddress(checkout.shippingAddress.id))
+        })
+      }
     } else if (checkout.currentStep === 2) {
       componentName = 'shippingMethod'
     } else if (checkout.currentStep === 3) {
       componentName = 'paymentMethod'
+
+      if (checkout.billingAddress.saveToAddressBook) {
+        dispatch(saveToAddressBook(checkout.billingAddress, { billing: true })).then(() => {
+          dispatch(setCartBillingAddress(checkout.billingAddress.id))
+        })
+      } else if (checkout.shippingAddressAsBillingAddress) {
+        dispatch(setCartBillingAddress(checkout.shippingAddress.id))
+      } else {
+        dispatch(createBillingAddress(checkout.billingAddress)).then(() => {
+          dispatch(setCartBillingAddress(checkout.billingAddress.id))
+        })
+      }
     }
 
     this.onToggleCollapsed(eventType, componentName)
   }
 
   onToggleCollapsed (eventType, componentName) {
-    const { dispatch, checkout } = this.props
-
-    if (componentName === 'shippingAddress' && checkout.shippingAddress.saveToAddressBook) {
-      dispatch(saveToAddressBook(checkout.shippingAddress))
-    }
-
-    if (componentName === 'paymentMethod' && checkout.billingAddress.saveToAddressBook) {
-      dispatch(saveToAddressBook(checkout.billingAddress))
-    }
+    const { dispatch } = this.props
 
     window.scrollTo(0, 0)
     dispatch(toggleCollapsed(eventType, componentName))
-  }
-
-  setShippingMethod (shippingMethod) {
-    this.props.dispatch(setShippingMethod(shippingMethod))
   }
 
   onInputChange (event, formName, fieldName, fieldValue) {
@@ -198,7 +200,7 @@ export class CheckoutPage extends Component {
 
   render () {
     const { checkout: { loading, error, flashError }, cart } = this.props
-    const hasLineItems = cart.totalQuantity > 0
+    const hasLineItems = cart.line_items_count > 0
 
     if (loading) {
       return (
@@ -236,13 +238,13 @@ export class CheckoutPage extends Component {
                         onBlur={this.onInputBlur}
                         onShowField={this.onShowField}
                         onToggleCollapsed={this.onToggleCollapsed}
+                        nextSection={this.nextSection}
                         addressInAddressBook={this.addressInAddressBook}
                       />
                     </div>
                     <ShippingMethods
                       {...this.props}
                       formName='shippingMethod'
-                      setShippingMethod={this.setShippingMethod}
                       onToggleCollapsed={this.onToggleCollapsed}
                     />
                     <PaymentMethod

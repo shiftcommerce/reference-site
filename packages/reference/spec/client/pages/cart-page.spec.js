@@ -6,7 +6,7 @@ import { createMockStore } from 'redux-test-utils'
 import { CartPage } from '../../../client/pages/cart'
 
 // Actions
-import { updateQuantity } from '../../../client/actions/cart-actions'
+import { updateLineItemQuantity } from '../../../client/actions/cart-actions'
 
 // Fixtures
 import cart from '../../fixtures/cart'
@@ -25,7 +25,7 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
       data: menu
     }
   }
-  const expectedFunction = updateQuantity().toString()
+  const expectedFunction = updateLineItemQuantity().toString()
   const updateQuantitySpy = jest.spyOn(CartPage.prototype, 'updateQuantity')
   const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
@@ -46,7 +46,7 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
   dispatch.mockClear()
 
   // Trigger quantity change
-  wrapper.find('select').simulate('change', { target: { value: 3, dataset: { variant: '123' } } })
+  wrapper.find('select').first().simulate('change', { target: { value: 3, dataset: { variant: '123' } } })
 
   // Verify if updateQuantity method is getting triggered on quantity update
   expect(updateQuantitySpy).toHaveBeenCalled()

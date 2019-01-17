@@ -85,9 +85,9 @@ export class AddressForm extends Component {
   }
 
   submitForm (e) {
-    const { formName, onToggleCollapsed } = this.props
+    const { nextSection } = this.props
     e.preventDefault()
-    onToggleCollapsed('complete', formName)
+    nextSection('complete')
   }
 
   editForm () {
