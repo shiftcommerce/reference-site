@@ -38,7 +38,7 @@ export const deleteLineItemRequest = (lineItemId) => {
 
 export const setShippingAddressRequest = (addressId) => {
   return {
-    endpoint: `/setCartShippingAddress`,
+    endpoint: '/setCartShippingAddress',
     body: { addressId },
     successActionType: types.CART_UPDATED
   }
@@ -46,7 +46,7 @@ export const setShippingAddressRequest = (addressId) => {
 
 export const createShippingAddressRequest = (address) => {
   return {
-    endpoint: `/createAddress`,
+    endpoint: '/createAddress',
     body: address,
     successActionType: types.SHIPPING_ADDRESS_CREATED
   }
@@ -54,7 +54,7 @@ export const createShippingAddressRequest = (address) => {
 
 export const setBillingAddressRequest = (addressId) => {
   return {
-    endpoint: `/setCartBillingAddress`,
+    endpoint: '/setCartBillingAddress',
     body: { addressId },
     successActionType: types.CART_UPDATED
   }
@@ -62,7 +62,7 @@ export const setBillingAddressRequest = (addressId) => {
 
 export const createBillingAddressRequest = (address) => {
   return {
-    endpoint: `/createAddress`,
+    endpoint: '/createAddress',
     body: address,
     successActionType: types.BILLING_ADDRESS_CREATED
   }
@@ -70,8 +70,15 @@ export const createBillingAddressRequest = (address) => {
 
 export const setShippingMethodRequest = (shippingMethodId) => {
   return {
-    endpoint: `/setShippingMethod`,
+    endpoint: '/setShippingMethod',
     body: { shippingMethodId },
     successActionType: types.CART_UPDATED
+  }
+}
+
+export const addCartCouponRequest = (couponCode) => {
+  return {
+    endpoint: '/addCartCoupon',
+    body: { couponCode }
   }
 }

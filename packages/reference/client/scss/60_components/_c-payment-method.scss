@@ -83,32 +83,6 @@
     }
   }
 
-  &__gift {
-    display: grid;
-    grid-template-columns: [col1-start] 67% [col2-start] 30% [col2-end];
-    grid-gap: 3%;
-
-    &-title {
-      font-weight: 500;
-      font-size: 0.9em;
-    }
-
-    &-button {
-      display: inline-block;
-      height: 2rem;
-      width: 100%;
-      margin-top: $global-spacing-unit-tiny;
-      line-height: 2px;
-    }
-
-    &-input {
-      margin-right: $global-spacing-unit-tiny;
-      width: 100%;
-      height: 2rem;
-      margin-top: $global-spacing-unit-tiny;
-    }
-  }
-
   &__images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -39,7 +39,7 @@ import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import ShippingMethods from '../components/checkout/shipping-methods'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentIcons from '../components/cart/payment-icons'
-import PromoInput from '../components/promo-input'
+import CouponForm from '../components/coupon-form'
 import Loading from '../components/loading'
 import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
@@ -262,7 +262,7 @@ export class CheckoutPage extends Component {
                   <div className='o-col-1-13 o-col-8-13-l'>
                     <div className='c-checkout__cart'>
                       <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
-                      <PromoInput />
+                      <CouponForm />
                       <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
                       <div className='c-checkout__payment'>
                         <PaymentIcons />

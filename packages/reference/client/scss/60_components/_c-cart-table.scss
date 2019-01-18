@@ -58,13 +58,6 @@
     }
   }
 
-  &__promo {
-
-    @include breakpoint(desktop) {
-      margin-bottom: $global-spacing-unit-small;
-    }
-  }
-
   &__description {
     margin: ($global-spacing-unit-tiny / 2) 0;
     font-size: 0.7em;

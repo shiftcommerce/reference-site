@@ -11,7 +11,8 @@ import {
   setCartBillingAddressRenderer,
   createAddressRenderer,
   getShippingMethodsRenderer,
-  setCartShippingMethodRenderer
+  setCartShippingMethodRenderer,
+  addCartCouponRenderer
 } from '../../../server/route-handlers/cart-route-handler'
 
 axios.defaults.adapter = httpAdapter
@@ -451,4 +452,95 @@ test('setCartShippingMethodRenderer updates the cart with a billing address id',
   expect(updateCartMock.isDone()).toBe(true)
   expect(res.status).toHaveBeenCalledWith(200)
   expect(send).toHaveBeenCalledWith({ cart: 'updated_cart_data' })
+})
+
+test('addCouponCartRenderer adds a coupon to cart when coupon code is valid', async () => {
+  const req = {
+    signedCookies: {
+      cart: '17'
+    },
+    body: {
+      couponCode: 'ABC-DISCOUNT-XYZ'
+    }
+  }
+
+  const send = jest.fn()
+
+  const res = {
+    status: jest.fn(x => ({
+      send: send
+    }))
+  }
+
+  const expectedSetCouponPayload = {
+    data: {
+      type: 'coupons',
+      attributes: {
+        coupon_code: 'ABC-DISCOUNT-XYZ'
+      }
+    }
+  }
+
+  const updateCartMock = nock(process.env.API_HOST)
+    .post(`/${process.env.API_TENANT}/v1/carts/17/coupons`, expectedSetCouponPayload)
+    .reply(201, { coupon: 'coupon_data' })
+
+  await addCartCouponRenderer()(req, res)
+
+  expect(updateCartMock.isDone()).toBe(true)
+  expect(res.status).toHaveBeenCalledWith(201)
+  expect(send).toHaveBeenCalledWith({ coupon: 'coupon_data' })
+})
+
+test('addCouponCartRenderer returns errors when coupon code is invalid', async () => {
+  const req = {
+    signedCookies: {
+      cart: '17'
+    },
+    body: {
+      couponCode: 'ABC-INVALID-XYZ'
+    }
+  }
+
+  const send = jest.fn()
+
+  const res = {
+    status: jest.fn(x => ({
+      send: send
+    }))
+  }
+
+  const expectedSetCouponPayload = {
+    data: {
+      type: 'coupons',
+      attributes: {
+        coupon_code: 'ABC-INVALID-XYZ'
+      }
+    }
+  }
+
+  const apiError = {
+    errors: [{
+      title: "Invalid promo code 'ABC-INVALID-XYZ'",
+      detail: "base - Invalid promo code 'ABC-INVALID-XYZ'",
+      code: '100',
+      source: {
+        pointer: '/data/attributes/base'
+      },
+      status: '422'
+    }],
+    links: {
+      self: '/[TENANT]/v1/carts/[CART_ID]/coupons'
+    }
+  }
+
+  const updateCartMock = nock(process.env.API_HOST)
+    .post(`/${process.env.API_TENANT}/v1/carts/17/coupons`, expectedSetCouponPayload)
+    .reply(422, apiError)
+
+  await addCartCouponRenderer()(req, res)
+
+  expect(updateCartMock.isDone()).toBe(true)
+  expect(res.status).toHaveBeenCalledWith(422)
+  expect(send).toHaveBeenCalledWith(apiError)
 })

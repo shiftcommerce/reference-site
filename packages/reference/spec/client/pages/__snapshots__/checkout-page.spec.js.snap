@@ -1374,7 +1374,7 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               title="Your Cart"
               updateQuantity={[Function]}
             />
-            <PromoInput />
+            <Connect(CouponForm) />
             <CheckoutCartTotal
               cart={
                 Object {
@@ -3451,7 +3451,7 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               title="Your Cart"
               updateQuantity={[Function]}
             />
-            <PromoInput />
+            <Connect(CouponForm) />
             <CheckoutCartTotal
               cart={
                 Object {
@@ -5606,7 +5606,7 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               title="Your Cart"
               updateQuantity={[Function]}
             />
-            <PromoInput />
+            <Connect(CouponForm) />
             <CheckoutCartTotal
               cart={
                 Object {

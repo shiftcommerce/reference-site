@@ -38,6 +38,20 @@ describe('readCart', () => {
     expect(promiseResult).toEqual('readEndpoint')
 
     cookieSpy.mockRestore()
+    readSpy.mockRestore()
+  })
+
+  test('returns a thunk initiating a cart request when forced', async () => {
+    jest.spyOn(Cookies, 'get').mockImplementation(() => 'cartCookie')
+    const getState = () => ({ cart: { id: 10 } })
+    const readSpy = jest.spyOn(apiActions, 'readEndpoint').mockImplementation(() => 'readEndpoint')
+
+    const thunk = cartActions.readCart({ force: true })
+    const promiseResult = await thunk(jest.fn(value => value), getState)
+    expect(readSpy).toHaveBeenCalledTimes(1)
+    expect(promiseResult).toEqual('readEndpoint')
+
+    readSpy.mockRestore()
   })
 })
 

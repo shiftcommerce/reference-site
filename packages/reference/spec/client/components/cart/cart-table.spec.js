@@ -1,3 +1,6 @@
+import { Provider } from 'react-redux'
+import { createMockStore } from 'redux-test-utils'
+
 import CartTable from '../../../../client/components/cart/cart-table'
 import CartNoData from '../../../../client/components/cart/cart-no-data'
 import LineItems from '../../../../client/components/cart/line-items'
@@ -56,7 +59,9 @@ test('renders the correct message when line items are available in cart', () => 
 
   // act
   const wrapper = mount(
-    <CartTable cart={cart} updateQuantity={updateQuantity} />
+    <Provider store={createMockStore()} >
+      <CartTable cart={cart} updateQuantity={updateQuantity} />
+    </Provider>
   )
 
   // assert

@@ -11,7 +11,7 @@ import LineItems from './line-items'
 import CartSummary from './cart-summary'
 import CartNoData from './cart-no-data'
 import PaymentIcons from './payment-icons'
-import PromoInput from '../promo-input'
+import CouponForm from '../coupon-form'
 
 // Fixtures
 import ShippingMethods from '../../static/shipping-methods.json'
@@ -32,9 +32,7 @@ class CartTable extends Component {
             <LineItems {...this.props} aria-label='Line Items' />
           </div>
           <div className='c-cart-table__grid-item-b'>
-            <div className='c-cart-table__promo'>
-              <PromoInput />
-            </div>
+            <CouponForm />
             <CartSummary {...this.props} aria-label='Cart Summary' />
             <div className='c-cart-table__icons'>
               <PaymentIcons />

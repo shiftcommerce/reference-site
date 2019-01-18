@@ -13,13 +13,14 @@ import {
   createShippingAddressRequest,
   setBillingAddressRequest,
   createBillingAddressRequest,
-  setShippingMethodRequest
+  setShippingMethodRequest,
+  addCartCouponRequest
 } from '../requests/cart-requests'
 
-export function readCart () {
+export function readCart (options = {}) {
   return (dispatch, getState) => {
     // Only fetch the cart if needed, otherwise do nothing
-    if (Cookies.get('cart') && !getState().cart.id) {
+    if ((Cookies.get('cart') && !getState().cart.id) || options.force) {
       return dispatch(readEndpoint(fetchCartRequest()))
     } else {
       return Promise.resolve()
@@ -57,4 +58,8 @@ export function createBillingAddress (address) {
 
 export function setCartShippingMethod (shippingMethodId) {
   return postEndpoint(setShippingMethodRequest(shippingMethodId))
+}
+
+export function setCartCouponCode (couponCode) {
+  return postEndpoint(addCartCouponRequest(couponCode))
 }

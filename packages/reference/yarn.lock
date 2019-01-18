@@ -4765,8 +4765,8 @@ formidable@^1.2.0:
   resolved "https://registry.yarnpkg.com/formidable/-/formidable-1.2.1.tgz#70fb7ca0290ee6ff961090415f4b3df3d2082659"
 
 formik@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/formik/-/formik-1.4.0.tgz#4261769f765dd41b7e791958fde7a08516d5920a"
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/formik/-/formik-1.4.2.tgz#684e6e9fb0c8309a17b0d8f3f57993ee83bf96f2"
   dependencies:
     create-react-context "^0.2.2"
     deepmerge "^2.1.1"
@@ -4775,8 +4775,8 @@ formik@^1.4.0:
     lodash-es "^4.17.11"
     prop-types "^15.6.1"
     react-fast-compare "^2.0.1"
+    tiny-warning "^1.0.2"
     tslib "^1.9.3"
-    warning "^3.0.0"
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -11268,6 +11268,10 @@ timers-browserify@^2.0.2:
   dependencies:
     setimmediate "^1.0.4"
 
+tiny-warning@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.2.tgz#1dfae771ee1a04396bdfde27a3adcebc6b648b28"
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -11857,12 +11861,6 @@ ware@^1.2.0:
   resolved "https://registry.yarnpkg.com/ware/-/ware-1.3.0.tgz#d1b14f39d2e2cb4ab8c4098f756fe4b164e473d4"
   dependencies:
     wrap-fn "^0.1.0"
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  dependencies:
-    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"

@@ -9,6 +9,7 @@ module.exports = {
     CategoryUrl: `/${process.env.API_TENANT}/v1/category_trees/reference:web/categories`,
     AccountUrl: `${process.env.API_TENANT}/v1/customer_accounts`,
     CartByIdUrl: cartId => `${process.env.API_TENANT}/v1/carts/${cartId}`,
+    CartCouponsUrl: cartId => `${process.env.API_TENANT}/v1/carts/${cartId}/coupons`,
     CartUrl: `${process.env.API_TENANT}/v1/carts`,
     CreateOrderUrl: `${process.env.API_TENANT}/v2/create_order`,
     CustomerAccountUrl: customerAccountId => `${process.env.API_TENANT}/v1/customer_accounts/${customerAccountId}`,

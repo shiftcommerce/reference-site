@@ -1,714 +1,885 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the correct message when line items are available in cart 1`] = `
-<CartTable
-  cart={
+<Provider
+  store={
     Object {
-      "discount_summaries": Array [],
-      "line_items": Array [
-        Object {
-          "item": Object {
-            "product": Object {
-              "canonicalPath": "1",
-              "slug": "1",
-            },
-          },
-          "sku": "S2658934_C101_486",
-          "stock_available_level": 10000,
-          "sub_total": 30,
-          "title": "Regular Fit Wool Mix Trousers",
-          "total": 30,
-          "unit_quantity": 2,
-        },
-      ],
-      "line_items_count": 2,
-      "sub_total": 60,
+      "dispatch": [Function],
+      "getAction": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "isActionDispatched": [Function],
+      "isActionTypeDispatched": [Function],
+      "subscribe": [Function],
     }
   }
-  updateQuantity={[Function]}
 >
-  <section
-    className="c-cart-table c-cart-table--margin"
+  <CartTable
+    cart={
+      Object {
+        "discount_summaries": Array [],
+        "line_items": Array [
+          Object {
+            "item": Object {
+              "product": Object {
+                "canonicalPath": "1",
+                "slug": "1",
+              },
+            },
+            "sku": "S2658934_C101_486",
+            "stock_available_level": 10000,
+            "sub_total": 30,
+            "title": "Regular Fit Wool Mix Trousers",
+            "total": 30,
+            "unit_quantity": 2,
+          },
+        ],
+        "line_items_count": 2,
+        "sub_total": 60,
+      }
+    }
+    updateQuantity={[Function]}
   >
     <section
-      className="c-cart-table__header"
+      className="c-cart-table c-cart-table--margin"
     >
-      <div
-        className="c-cart-table__breadcrumb"
-      >
-        <Breadcrumb>
-          <nav>
-            <ol
-              className="o-breadcrumb"
-            >
-              <li
-                className="o-breadcrumb__item"
-              >
-                <Link
-                  as="/"
-                  href="/home/index"
-                >
-                  <a
-                    className="o-breadcrumb__link"
-                    href="/"
-                    onClick={[Function]}
-                  >
-                    Home
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </nav>
-        </Breadcrumb>
-      </div>
-      <div
-        className="c-cart-table__header-grid"
+      <section
+        className="c-cart-table__header"
       >
         <div
-          className="c-cart-table__header-grid-item-a"
+          className="c-cart-table__breadcrumb"
         >
-          <h1
-            className="c-cart-table__title"
-          >
-            Your Shopping Basket 
-            <a
-              className="c-cart-table__amount"
-            >
-              (
-              2
-              )
-            </a>
-          </h1>
+          <Breadcrumb>
+            <nav>
+              <ol
+                className="o-breadcrumb"
+              >
+                <li
+                  className="o-breadcrumb__item"
+                >
+                  <Link
+                    as="/"
+                    href="/home/index"
+                  >
+                    <a
+                      className="o-breadcrumb__link"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      Home
+                    </a>
+                  </Link>
+                </li>
+              </ol>
+            </nav>
+          </Breadcrumb>
+        </div>
+        <div
+          className="c-cart-table__header-grid"
+        >
           <div
-            className="c-cart-table__text"
+            className="c-cart-table__header-grid-item-a"
           >
-            <p
-              className="c-cart-table__description"
+            <h1
+              className="c-cart-table__title"
             >
-              You have 
-              <a>
+              Your Shopping Basket 
+              <a
+                className="c-cart-table__amount"
+              >
+                (
                 2
+                )
               </a>
-               
-              <t
-                className={null}
-                count={2}
-                showCount={false}
-                singular="item"
-                style={Object {}}
-                zero={null}
-              >
-                <span
-                  className={null}
-                  style={Object {}}
-                >
-                  items
-                </span>
-              </t>
-               in your shopping basket
-            </p>
-            <p
-              className="c-cart-table__description"
+            </h1>
+            <div
+              className="c-cart-table__text"
             >
-              <t
-                className={null}
-                count={2}
-                plural="These"
-                showCount={false}
-                singular="This"
-                style={Object {}}
-                zero={null}
+              <p
+                className="c-cart-table__description"
               >
-                <span
+                You have 
+                <a>
+                  2
+                </a>
+                 
+                <t
                   className={null}
+                  count={2}
+                  showCount={false}
+                  singular="item"
                   style={Object {}}
+                  zero={null}
                 >
-                  These
-                </span>
-              </t>
-               
-              <t
-                className={null}
-                count={2}
-                showCount={false}
-                singular="item"
-                style={Object {}}
-                zero={null}
+                  <span
+                    className={null}
+                    style={Object {}}
+                  >
+                    items
+                  </span>
+                </t>
+                 in your shopping basket
+              </p>
+              <p
+                className="c-cart-table__description"
               >
-                <span
+                <t
                   className={null}
+                  count={2}
+                  plural="These"
+                  showCount={false}
+                  singular="This"
                   style={Object {}}
+                  zero={null}
                 >
-                  items
-                </span>
-              </t>
-               will be saved for 48 hours depending on availablility
+                  <span
+                    className={null}
+                    style={Object {}}
+                  >
+                    These
+                  </span>
+                </t>
+                 
+                <t
+                  className={null}
+                  count={2}
+                  showCount={false}
+                  singular="item"
+                  style={Object {}}
+                  zero={null}
+                >
+                  <span
+                    className={null}
+                    style={Object {}}
+                  >
+                    items
+                  </span>
+                </t>
+                 will be saved for 48 hours depending on availablility
+              </p>
+            </div>
+          </div>
+          <div
+            className="c-cart-table__header-grid-item-b"
+          >
+            <h1
+              className="c-cart-table__title"
+            >
+              Estimated Delivery
+            </h1>
+            <p>
+              We will deliver your item: 
+              <a>
+                Sunday 2nd December
+              </a>
             </p>
           </div>
         </div>
         <div
-          className="c-cart-table__header-grid-item-b"
+          className="c-cart-table__header-total"
         >
-          <h1
-            className="c-cart-table__title"
+          <h4
+            className="c-cart-table__total"
           >
-            Estimated Delivery
-          </h1>
-          <p>
-            We will deliver your item: 
-            <a>
-              Sunday 2nd December
-            </a>
-          </p>
+            £
+            0.00
+          </h4>
         </div>
-      </div>
-      <div
-        className="c-cart-table__header-total"
+      </section>
+      <section
+        className="c-cart-table__grid"
       >
-        <h4
-          className="c-cart-table__total"
+        <div
+          className="c-cart-table__grid-item-a"
         >
-          £
-          0.00
-        </h4>
-      </div>
-    </section>
-    <section
-      className="c-cart-table__grid"
-    >
-      <div
-        className="c-cart-table__grid-item-a"
-      >
-        <LineItems
-          aria-label="Line Items"
-          cart={
-            Object {
-              "discount_summaries": Array [],
-              "line_items": Array [
-                Object {
-                  "item": Object {
-                    "product": Object {
-                      "canonicalPath": "1",
-                      "slug": "1",
+          <LineItems
+            aria-label="Line Items"
+            cart={
+              Object {
+                "discount_summaries": Array [],
+                "line_items": Array [
+                  Object {
+                    "item": Object {
+                      "product": Object {
+                        "canonicalPath": "1",
+                        "slug": "1",
+                      },
                     },
+                    "sku": "S2658934_C101_486",
+                    "stock_available_level": 10000,
+                    "sub_total": 30,
+                    "title": "Regular Fit Wool Mix Trousers",
+                    "total": 30,
+                    "unit_quantity": 2,
                   },
-                  "sku": "S2658934_C101_486",
-                  "stock_available_level": 10000,
-                  "sub_total": 30,
-                  "title": "Regular Fit Wool Mix Trousers",
-                  "total": 30,
-                  "unit_quantity": 2,
-                },
-              ],
-              "line_items_count": 2,
-              "sub_total": 60,
+                ],
+                "line_items_count": 2,
+                "sub_total": 60,
+              }
             }
-          }
-          updateQuantity={[Function]}
-        >
-          <div
-            className="c-line-items"
+            updateQuantity={[Function]}
           >
             <div
-              className="c-line-items__sections"
-              key="1"
+              className="c-line-items"
             >
               <div
-                className="c-line-items__images"
-              >
-                <Link
-                  href="/slug?slug=undefined"
-                  key="1"
-                >
-                  <Image
-                    className="c-line-items__image"
-                    key="1"
-                    onClick={[Function]}
-                  >
-                    <div
-                      className="c-dummy_image c-line-items__image"
-                      style={
-                        Object {
-                          "height": undefined,
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </Image>
-                </Link>
-              </div>
-              <div
-                className="c-line-items__information"
+                className="c-line-items__sections"
+                key="1"
               >
                 <div
-                  className="c-line-items__title"
+                  className="c-line-items__images"
+                >
+                  <Link
+                    href="/slug?slug=undefined"
+                    key="1"
+                  >
+                    <Image
+                      className="c-line-items__image"
+                      key="1"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="c-dummy_image c-line-items__image"
+                        style={
+                          Object {
+                            "height": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                    </Image>
+                  </Link>
+                </div>
+                <div
+                  className="c-line-items__information"
                 >
                   <div
-                    className="c-line-items__details"
+                    className="c-line-items__title"
                   >
-                    <h4
-                      className="c-line-items__details-title  u-bold"
-                    >
-                      undefined - undefined
-                    </h4>
                     <div
-                      className="c-line-items__details-sku"
+                      className="c-line-items__details"
+                    >
+                      <h4
+                        className="c-line-items__details-title  u-bold"
+                      >
+                        undefined - undefined
+                      </h4>
+                      <div
+                        className="c-line-items__details-sku"
+                      >
+                        <span>
+                          S2658934_C101_486
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__colour"
+                  >
+                    <div
+                      className="c-line-items__param  u-bold"
                     >
                       <span>
-                        S2658934_C101_486
+                        Colour
                       </span>
                     </div>
                   </div>
-                </div>
-                <div
-                  className="c-line-items__colour"
-                >
                   <div
-                    className="c-line-items__param  u-bold"
+                    className="c-line-items__quantity"
                   >
-                    <span>
-                      Colour
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__quantity"
-                >
-                  <div
-                    className="c-line-items__param u-bold"
-                  >
-                    <span>
-                      Quantity
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className="c-line-items__param  c-line-items__colour-selected"
-                >
-                  <span>
-                    Grey
-                  </span>
-                </div>
-                <div
-                  className="c-line-items__param  c-line-items__quantity-selected"
-                >
-                  <span>
-                    <select
-                      onChange={[Function]}
-                      value={2}
+                    <div
+                      className="c-line-items__param u-bold"
                     >
-                      <option
-                        aria-posinset={2}
-                        aria-setsize={1}
-                        key="1"
-                        value={1}
-                      >
-                        1
-                      </option>
-                      <option
-                        aria-posinset={3}
-                        aria-setsize={2}
-                        key="2"
+                      <span>
+                        Quantity
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__param  c-line-items__colour-selected"
+                  >
+                    <span>
+                      Grey
+                    </span>
+                  </div>
+                  <div
+                    className="c-line-items__param  c-line-items__quantity-selected"
+                  >
+                    <span>
+                      <select
+                        onChange={[Function]}
                         value={2}
                       >
-                        2
-                      </option>
-                      <option
-                        aria-posinset={4}
-                        aria-setsize={3}
-                        key="3"
-                        value={3}
-                      >
-                        3
-                      </option>
-                      <option
-                        aria-posinset={5}
-                        aria-setsize={4}
-                        key="4"
-                        value={4}
-                      >
-                        4
-                      </option>
-                      <option
-                        aria-posinset={6}
-                        aria-setsize={5}
-                        key="5"
-                        value={5}
-                      >
-                        5
-                      </option>
-                      <option
-                        aria-posinset={7}
-                        aria-setsize={6}
-                        key="6"
-                        value={6}
-                      >
-                        6
-                      </option>
-                      <option
-                        aria-posinset={8}
-                        aria-setsize={7}
-                        key="7"
-                        value={7}
-                      >
-                        7
-                      </option>
-                      <option
-                        aria-posinset={9}
-                        aria-setsize={8}
-                        key="8"
-                        value={8}
-                      >
-                        8
-                      </option>
-                      <option
-                        aria-posinset={10}
-                        aria-setsize={9}
-                        key="9"
-                        value={9}
-                      >
-                        9
-                      </option>
-                      <option
-                        aria-posinset={11}
-                        aria-setsize={10}
-                        key="10"
-                        value={10}
-                      >
-                        10
-                      </option>
-                    </select>
-                  </span>
-                </div>
-                <div
-                  className="c-line-items__remove"
-                >
+                        <option
+                          aria-posinset={2}
+                          aria-setsize={1}
+                          key="1"
+                          value={1}
+                        >
+                          1
+                        </option>
+                        <option
+                          aria-posinset={3}
+                          aria-setsize={2}
+                          key="2"
+                          value={2}
+                        >
+                          2
+                        </option>
+                        <option
+                          aria-posinset={4}
+                          aria-setsize={3}
+                          key="3"
+                          value={3}
+                        >
+                          3
+                        </option>
+                        <option
+                          aria-posinset={5}
+                          aria-setsize={4}
+                          key="4"
+                          value={4}
+                        >
+                          4
+                        </option>
+                        <option
+                          aria-posinset={6}
+                          aria-setsize={5}
+                          key="5"
+                          value={5}
+                        >
+                          5
+                        </option>
+                        <option
+                          aria-posinset={7}
+                          aria-setsize={6}
+                          key="6"
+                          value={6}
+                        >
+                          6
+                        </option>
+                        <option
+                          aria-posinset={8}
+                          aria-setsize={7}
+                          key="7"
+                          value={7}
+                        >
+                          7
+                        </option>
+                        <option
+                          aria-posinset={9}
+                          aria-setsize={8}
+                          key="8"
+                          value={8}
+                        >
+                          8
+                        </option>
+                        <option
+                          aria-posinset={10}
+                          aria-setsize={9}
+                          key="9"
+                          value={9}
+                        >
+                          9
+                        </option>
+                        <option
+                          aria-posinset={11}
+                          aria-setsize={10}
+                          key="10"
+                          value={10}
+                        >
+                          10
+                        </option>
+                      </select>
+                    </span>
+                  </div>
                   <div
-                    className="c-line-items__delete"
+                    className="c-line-items__remove"
+                  >
+                    <div
+                      className="c-line-items__delete"
+                    >
+                      <a
+                        className="c-line-items__delete-button"
+                      >
+                        Delete
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className="c-line-items__amounts"
                   >
                     <a
-                      className="c-line-items__delete-button"
+                      className="c-line-items__amount c-line-items__amount--total"
                     >
-                      Delete
+                      £
+                      30.00
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </LineItems>
+        </div>
+        <div
+          className="c-cart-table__grid-item-b"
+        >
+          <Connect(CouponForm)>
+            <CouponForm
+              dispatch={[Function]}
+            >
+              <div
+                className="c-coupon-form"
+              >
                 <div
-                  className="c-line-items__amounts"
+                  aria-label="Use gift card or rewards code"
+                  className="c-gift__wrapper"
                 >
-                  <a
-                    className="c-line-items__amount c-line-items__amount--total"
+                  <p
+                    className="c-coupon-form__title"
                   >
-                    £
-                    30.00
-                  </a>
+                    Promotion Code
+                  </p>
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "couponCode": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    validate={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  >
+                    <Form>
+                      <Component
+                        formik={
+                          Object {
+                            "dirty": false,
+                            "errors": Object {},
+                            "handleBlur": [Function],
+                            "handleChange": [Function],
+                            "handleReset": [Function],
+                            "handleSubmit": [Function],
+                            "initialValues": Object {
+                              "couponCode": "",
+                            },
+                            "isSubmitting": false,
+                            "isValid": false,
+                            "isValidating": false,
+                            "registerField": [Function],
+                            "resetForm": [Function],
+                            "setError": [Function],
+                            "setErrors": [Function],
+                            "setFieldError": [Function],
+                            "setFieldTouched": [Function],
+                            "setFieldValue": [Function],
+                            "setFormikState": [Function],
+                            "setStatus": [Function],
+                            "setSubmitting": [Function],
+                            "setTouched": [Function],
+                            "setValues": [Function],
+                            "submitCount": 0,
+                            "submitForm": [Function],
+                            "touched": Object {},
+                            "unregisterField": [Function],
+                            "validate": [Function],
+                            "validateField": [Function],
+                            "validateForm": [Function],
+                            "validateOnBlur": true,
+                            "validateOnChange": true,
+                            "validationSchema": undefined,
+                            "values": Object {
+                              "couponCode": "",
+                            },
+                          }
+                        }
+                      >
+                        <form
+                          onReset={[Function]}
+                          onSubmit={[Function]}
+                        >
+                          <div
+                            className="c-coupon-form__field"
+                          >
+                            <FormikConnect(FieldInner)
+                              className="c-coupon-form__input"
+                              name="couponCode"
+                              placeholder="Enter Promotion Code"
+                              type="text"
+                            >
+                              <FieldInner
+                                className="c-coupon-form__input"
+                                formik={
+                                  Object {
+                                    "dirty": false,
+                                    "errors": Object {},
+                                    "handleBlur": [Function],
+                                    "handleChange": [Function],
+                                    "handleReset": [Function],
+                                    "handleSubmit": [Function],
+                                    "initialValues": Object {
+                                      "couponCode": "",
+                                    },
+                                    "isSubmitting": false,
+                                    "isValid": false,
+                                    "isValidating": false,
+                                    "registerField": [Function],
+                                    "resetForm": [Function],
+                                    "setError": [Function],
+                                    "setErrors": [Function],
+                                    "setFieldError": [Function],
+                                    "setFieldTouched": [Function],
+                                    "setFieldValue": [Function],
+                                    "setFormikState": [Function],
+                                    "setStatus": [Function],
+                                    "setSubmitting": [Function],
+                                    "setTouched": [Function],
+                                    "setValues": [Function],
+                                    "submitCount": 0,
+                                    "submitForm": [Function],
+                                    "touched": Object {},
+                                    "unregisterField": [Function],
+                                    "validate": [Function],
+                                    "validateField": [Function],
+                                    "validateForm": [Function],
+                                    "validateOnBlur": true,
+                                    "validateOnChange": true,
+                                    "validationSchema": undefined,
+                                    "values": Object {
+                                      "couponCode": "",
+                                    },
+                                  }
+                                }
+                                name="couponCode"
+                                placeholder="Enter Promotion Code"
+                                type="text"
+                              >
+                                <input
+                                  className="c-coupon-form__input"
+                                  name="couponCode"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  placeholder="Enter Promotion Code"
+                                  type="text"
+                                  value=""
+                                />
+                              </FieldInner>
+                            </FormikConnect(FieldInner)>
+                            <Button
+                              aria-label="Apply Gift Code"
+                              className="c-coupon-form__button o-button--sml"
+                              containerClassName="c-coupon-form__button-container"
+                              label="Apply"
+                              status="primary"
+                            >
+                              <div
+                                className="o-button__container c-coupon-form__button-container"
+                              >
+                                <button
+                                  aria-label="Apply Gift Code"
+                                  className="c-coupon-form__button o-button--sml o-button o-button--primary"
+                                  disabled={false}
+                                  role="button"
+                                  tabIndex="0"
+                                >
+                                  Apply
+                                </button>
+                              </div>
+                            </Button>
+                          </div>
+                          <FormikConnect(ErrorMessageImpl)
+                            className="c-coupon-form__error"
+                            component="div"
+                            name="couponCode"
+                          >
+                            <ErrorMessageImpl
+                              className="c-coupon-form__error"
+                              component="div"
+                              formik={
+                                Object {
+                                  "dirty": false,
+                                  "errors": Object {},
+                                  "handleBlur": [Function],
+                                  "handleChange": [Function],
+                                  "handleReset": [Function],
+                                  "handleSubmit": [Function],
+                                  "initialValues": Object {
+                                    "couponCode": "",
+                                  },
+                                  "isSubmitting": false,
+                                  "isValid": false,
+                                  "isValidating": false,
+                                  "registerField": [Function],
+                                  "resetForm": [Function],
+                                  "setError": [Function],
+                                  "setErrors": [Function],
+                                  "setFieldError": [Function],
+                                  "setFieldTouched": [Function],
+                                  "setFieldValue": [Function],
+                                  "setFormikState": [Function],
+                                  "setStatus": [Function],
+                                  "setSubmitting": [Function],
+                                  "setTouched": [Function],
+                                  "setValues": [Function],
+                                  "submitCount": 0,
+                                  "submitForm": [Function],
+                                  "touched": Object {},
+                                  "unregisterField": [Function],
+                                  "validate": [Function],
+                                  "validateField": [Function],
+                                  "validateForm": [Function],
+                                  "validateOnBlur": true,
+                                  "validateOnChange": true,
+                                  "validationSchema": undefined,
+                                  "values": Object {
+                                    "couponCode": "",
+                                  },
+                                }
+                              }
+                              name="couponCode"
+                            />
+                          </FormikConnect(ErrorMessageImpl)>
+                        </form>
+                      </Component>
+                    </Form>
+                  </Formik>
                 </div>
               </div>
-            </div>
-          </div>
-        </LineItems>
-      </div>
-      <div
-        className="c-cart-table__grid-item-b"
-      >
-        <div
-          className="c-cart-table__promo"
-        >
-          <PromoInput>
-            <div
-              aria-label="Use gift card or rewards code"
-              className="c-gift__wrapper"
+            </CouponForm>
+          </Connect(CouponForm)>
+          <CartSummary
+            aria-label="Cart Summary"
+            cart={
+              Object {
+                "discount_summaries": Array [],
+                "line_items": Array [
+                  Object {
+                    "item": Object {
+                      "product": Object {
+                        "canonicalPath": "1",
+                        "slug": "1",
+                      },
+                    },
+                    "sku": "S2658934_C101_486",
+                    "stock_available_level": 10000,
+                    "sub_total": 30,
+                    "title": "Regular Fit Wool Mix Trousers",
+                    "total": 30,
+                    "unit_quantity": 2,
+                  },
+                ],
+                "line_items_count": 2,
+                "sub_total": 60,
+              }
+            }
+            updateQuantity={[Function]}
+          >
+            <section
+              className="c-cart-summary"
             >
-              <p
-                className="c-payment-method__gift-title"
+              <dl>
+                <dt>
+                  <a>
+                    Total Price:
+                  </a>
+                </dt>
+                <dd>
+                  <a>
+                    £
+                    60.00
+                  </a>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <a>
+                    Estimating shipping cost...
+                  </a>
+                </dt>
+              </dl>
+              <dl>
+                <dt>
+                  <p
+                    className="u-bold"
+                  >
+                    TOTAL:
+                  </p>
+                </dt>
+                <dd>
+                  <p
+                    className="u-bold"
+                  >
+                    £
+                  </p>
+                </dd>
+              </dl>
+              <dl>
+                <a>
+                  * Including VAT
+                </a>
+              </dl>
+            </section>
+            <section
+              className="c-cart-summary__buttons"
+            >
+              <Link
+                as="/"
+                href="/slug?slug=/homepage"
               >
-                Promotion Code
-              </p>
-              <span
-                className="c-payment-method__gift"
-              >
-                <_class
-                  className="c-payment-method__gift-input"
-                  placeholder="Enter Promotion Code"
+                <a
+                  className="o-button--sml c-cart-summary__buttons--continue"
+                  href="/"
+                  onClick={[Function]}
                 >
-                  <Input
-                    className="c-payment-method__gift-input"
-                    placeholder="Enter Promotion Code"
-                    renderValidationMessage={[Function]}
+                  continue shopping
+                </a>
+              </Link>
+              <Link
+                href="/checkout"
+              >
+                <a
+                  className="o-button--sml c-cart-summary__buttons--proceed"
+                  href="/checkout"
+                  onClick={[Function]}
+                >
+                  Checkout
+                </a>
+              </Link>
+            </section>
+          </CartSummary>
+          <div
+            className="c-cart-table__icons"
+          >
+            <PaymentIcons>
+              <div
+                className="c-payment-icons"
+              >
+                <p>
+                  We Accept
+                </p>
+                <div
+                  className="c-payment-icons__images"
+                >
+                  <Image
+                    aria-label="VISA"
+                    className="c-payment-icons__image"
+                    src="/static/payments/visa.svg"
                   >
                     <div
-                      className="o-form__input-group"
+                      className="c-payment-icons__image"
                     >
-                      <label
-                        className="o-form__label undefined"
-                      >
-                        <b>
-                           
-                        </b>
-                        <input
-                          checked={false}
-                          className="o-form__input-field c-payment-method__gift-input"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter Promotion Code"
+                      <picture>
+                        <img
+                          aria-label="VISA"
+                          className="c-image"
+                          src="/static/payments/visa.svg"
+                          srcSet="/static/payments/visa.svg 769w"
                         />
-                      </label>
+                      </picture>
                     </div>
-                  </Input>
-                </_class>
-                <Button
-                  aria-label="Apply Gift Code"
-                  className="c-payment-method__gift-button o-button--sml"
-                  label="Apply"
-                  status="primary"
-                >
-                  <div
-                    className="o-button__container"
+                  </Image>
+                  <Image
+                    aria-label="Mastercard"
+                    className="c-payment-icons__image"
+                    src="/static/payments/mastercard.svg"
                   >
-                    <button
-                      aria-label="Apply Gift Code"
-                      className="c-payment-method__gift-button o-button--sml o-button o-button--primary"
-                      disabled={false}
-                      role="button"
-                      tabIndex="0"
+                    <div
+                      className="c-payment-icons__image"
                     >
-                      Apply
-                    </button>
-                  </div>
-                </Button>
-              </span>
-            </div>
-          </PromoInput>
-        </div>
-        <CartSummary
-          aria-label="Cart Summary"
-          cart={
-            Object {
-              "discount_summaries": Array [],
-              "line_items": Array [
-                Object {
-                  "item": Object {
-                    "product": Object {
-                      "canonicalPath": "1",
-                      "slug": "1",
-                    },
-                  },
-                  "sku": "S2658934_C101_486",
-                  "stock_available_level": 10000,
-                  "sub_total": 30,
-                  "title": "Regular Fit Wool Mix Trousers",
-                  "total": 30,
-                  "unit_quantity": 2,
-                },
-              ],
-              "line_items_count": 2,
-              "sub_total": 60,
-            }
-          }
-          updateQuantity={[Function]}
-        >
-          <section
-            className="c-cart-summary"
-          >
-            <dl>
-              <dt>
-                <a>
-                  Total Price:
-                </a>
-              </dt>
-              <dd>
-                <a>
-                  £
-                  60.00
-                </a>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <a>
-                  Estimating shipping cost...
-                </a>
-              </dt>
-            </dl>
-            <dl>
-              <dt>
-                <p
-                  className="u-bold"
-                >
-                  TOTAL:
-                </p>
-              </dt>
-              <dd>
-                <p
-                  className="u-bold"
-                >
-                  £
-                </p>
-              </dd>
-            </dl>
-            <dl>
-              <a>
-                * Including VAT
-              </a>
-            </dl>
-          </section>
-          <section
-            className="c-cart-summary__buttons"
-          >
-            <Link
-              as="/"
-              href="/slug?slug=/homepage"
-            >
-              <a
-                className="o-button--sml c-cart-summary__buttons--continue"
-                href="/"
-                onClick={[Function]}
-              >
-                continue shopping
-              </a>
-            </Link>
-            <Link
-              href="/checkout"
-            >
-              <a
-                className="o-button--sml c-cart-summary__buttons--proceed"
-                href="/checkout"
-                onClick={[Function]}
-              >
-                Checkout
-              </a>
-            </Link>
-          </section>
-        </CartSummary>
-        <div
-          className="c-cart-table__icons"
-        >
-          <PaymentIcons>
-            <div
-              className="c-payment-icons"
-            >
-              <p>
-                We Accept
-              </p>
-              <div
-                className="c-payment-icons__images"
-              >
-                <Image
-                  aria-label="VISA"
-                  className="c-payment-icons__image"
-                  src="/static/payments/visa.svg"
-                >
-                  <div
+                      <picture>
+                        <img
+                          aria-label="Mastercard"
+                          className="c-image"
+                          src="/static/payments/mastercard.svg"
+                          srcSet="/static/payments/mastercard.svg 769w"
+                        />
+                      </picture>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="American Express"
                     className="c-payment-icons__image"
+                    src="/static/payments/american-express.svg"
                   >
-                    <picture>
-                      <img
-                        aria-label="VISA"
-                        className="c-image"
-                        src="/static/payments/visa.svg"
-                        srcSet="/static/payments/visa.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
-                <Image
-                  aria-label="Mastercard"
-                  className="c-payment-icons__image"
-                  src="/static/payments/mastercard.svg"
-                >
-                  <div
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <picture>
+                        <img
+                          aria-label="American Express"
+                          className="c-image"
+                          src="/static/payments/american-express.svg"
+                          srcSet="/static/payments/american-express.svg 769w"
+                        />
+                      </picture>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="Maestro"
                     className="c-payment-icons__image"
+                    src="/static/payments/maestro.svg"
                   >
-                    <picture>
-                      <img
-                        aria-label="Mastercard"
-                        className="c-image"
-                        src="/static/payments/mastercard.svg"
-                        srcSet="/static/payments/mastercard.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
-                <Image
-                  aria-label="American Express"
-                  className="c-payment-icons__image"
-                  src="/static/payments/american-express.svg"
-                >
-                  <div
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <picture>
+                        <img
+                          aria-label="Maestro"
+                          className="c-image"
+                          src="/static/payments/maestro.svg"
+                          srcSet="/static/payments/maestro.svg 769w"
+                        />
+                      </picture>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="PayPal"
                     className="c-payment-icons__image"
+                    src="/static/payments/pay-pal.svg"
                   >
-                    <picture>
-                      <img
-                        aria-label="American Express"
-                        className="c-image"
-                        src="/static/payments/american-express.svg"
-                        srcSet="/static/payments/american-express.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
-                <Image
-                  aria-label="Maestro"
-                  className="c-payment-icons__image"
-                  src="/static/payments/maestro.svg"
-                >
-                  <div
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <picture>
+                        <img
+                          aria-label="PayPal"
+                          className="c-image"
+                          src="/static/payments/pay-pal.svg"
+                          srcSet="/static/payments/pay-pal.svg 769w"
+                        />
+                      </picture>
+                    </div>
+                  </Image>
+                  <Image
+                    aria-label="Apple Pay"
                     className="c-payment-icons__image"
+                    src="/static/payments/apple-pay.svg"
                   >
-                    <picture>
-                      <img
-                        aria-label="Maestro"
-                        className="c-image"
-                        src="/static/payments/maestro.svg"
-                        srcSet="/static/payments/maestro.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
-                <Image
-                  aria-label="PayPal"
-                  className="c-payment-icons__image"
-                  src="/static/payments/pay-pal.svg"
-                >
-                  <div
-                    className="c-payment-icons__image"
-                  >
-                    <picture>
-                      <img
-                        aria-label="PayPal"
-                        className="c-image"
-                        src="/static/payments/pay-pal.svg"
-                        srcSet="/static/payments/pay-pal.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
-                <Image
-                  aria-label="Apple Pay"
-                  className="c-payment-icons__image"
-                  src="/static/payments/apple-pay.svg"
-                >
-                  <div
-                    className="c-payment-icons__image"
-                  >
-                    <picture>
-                      <img
-                        aria-label="Apple Pay"
-                        className="c-image"
-                        src="/static/payments/apple-pay.svg"
-                        srcSet="/static/payments/apple-pay.svg 769w"
-                      />
-                    </picture>
-                  </div>
-                </Image>
+                    <div
+                      className="c-payment-icons__image"
+                    >
+                      <picture>
+                        <img
+                          aria-label="Apple Pay"
+                          className="c-image"
+                          src="/static/payments/apple-pay.svg"
+                          srcSet="/static/payments/apple-pay.svg 769w"
+                        />
+                      </picture>
+                    </div>
+                  </Image>
+                </div>
               </div>
-            </div>
-          </PaymentIcons>
+            </PaymentIcons>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
-  </section>
-</CartTable>
+  </CartTable>
+</Provider>
 `;
 
 exports[`renders the exception messages when no line items are available 1`] = `

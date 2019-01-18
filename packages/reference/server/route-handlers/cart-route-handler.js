@@ -210,6 +210,25 @@ function setCartShippingMethodRenderer () {
   }
 }
 
+function addCartCouponRenderer () {
+  return async (req, res) => {
+    const payload = {
+      data: {
+        type: 'coupons',
+        attributes: {
+          coupon_code: req.body.couponCode
+        }
+      }
+    }
+
+    const cartId = req.signedCookies.cart
+
+    const response = await postData(payload, platform.CartCouponsUrl(cartId))
+
+    return res.status(response.status).send(response.data)
+  }
+}
+
 module.exports = {
   getCartRenderer,
   addToCartRenderer,
@@ -219,5 +238,6 @@ module.exports = {
   setCartShippingAddressRenderer,
   createAddressRenderer,
   getShippingMethodsRenderer,
-  setCartShippingMethodRenderer
+  setCartShippingMethodRenderer,
+  addCartCouponRenderer
 }

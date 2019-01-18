@@ -161,6 +161,7 @@ module.exports = app.prepare().then(() => {
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
   server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
 
+  server.post('/addCartCoupon', cartHandler.addCartCouponRenderer())
   server.post('/addToCart', cartHandler.addToCartRenderer())
   server.post('/createAddress', cartHandler.createAddressRenderer())
   server.post('/deleteLineItem/:lineItemId', cartHandler.deleteLineItemRenderer())
