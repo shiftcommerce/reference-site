@@ -56,13 +56,13 @@ class AlgoliaFilters extends Component {
   renderRefinements (facets) {
     if (facets) {
       return (
-        <div>
+        <>
           { facets.map((facet, index) => {
             return <Panel className='c-product-listing-filter__body-option' key={index} header={header(facet)} >
               <RefinementList attribute={facet} showMore={true} limit={3} transformItems={maintainRefinementOrder} />
             </Panel>
           }) }
-        </div>
+        </>
       )
     }
   }
