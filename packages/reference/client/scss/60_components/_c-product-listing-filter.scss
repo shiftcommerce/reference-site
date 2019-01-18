@@ -26,6 +26,7 @@
 .c-product-listing-filter {
   width: 100%;
   font-size: 0.85em;
+  text-transform: capitalize;
 
   @include breakpoint(mobile-tablet) {
     position: fixed;

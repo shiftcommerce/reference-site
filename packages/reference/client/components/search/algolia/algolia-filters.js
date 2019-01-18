@@ -53,11 +53,25 @@ const maintainRefinementOrder = (items) => (
 const header = (headerText) => (<h2>{ headerText }</h2>)
 
 class AlgoliaFilters extends Component {
+  renderRefinements (facets) {
+    if (facets) {
+      return (
+        <div>
+          { facets.map((facet, index) => {
+            return <Panel className='c-product-listing-filter__body-option' key={index} header={header(facet)} >
+              <RefinementList attribute={facet} showMore={true} limit={3} transformItems={maintainRefinementOrder} />
+            </Panel>
+          }) }
+        </div>
+      )
+    }
+  }
+
   render () {
-    const { filtersShown, toggleFiltering } = this.props
+    const { filtersShown, toggleFiltering, facets } = this.props
 
     return (
-      <div>
+      <>
         <div className={classNames('c-product-listing-filter-heading', { 'c-product-listing-filter-heading--hide': !filtersShown })}>
           <h2>
             Filters
@@ -71,17 +85,15 @@ class AlgoliaFilters extends Component {
               <CurrentRefinements transformItems={tranformRefinementLabels} />
             </div>
           </div>
-          <Panel className="c-product-listing-filter__body-option" header={header('Sub Category')} >
-            <RefinementList attribute='category_ids' showMore={true} limit={3} transformItems={maintainRefinementOrder} />
+          { this.renderRefinements(facets) }
+          <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
+            <AlgoliaRatingFilter attributeName='product_rating' min={0} max={5} />
           </Panel>
-          <Panel className="c-product-listing-filter__body-option" header={header('Rating')}>
-            <AlgoliaRatingFilter attributeName='product_rating' min={0} max={5}/>
-          </Panel>
-          <Panel className="c-product-listing-filter__body-option" header={header('Price')}>
+          <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
             <AlgoliaSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
           </Panel>
         </div>
-      </div>
+      </>
     )
   }
 }

@@ -33,14 +33,14 @@ export class ProductListing extends Component {
   }
 
   render () {
-    const { title } = this.props
+    const { title, facets } = this.props
 
     return (
       <>
         <ProductMenu title={title} />
         <Breadcrumb />
         <div className='c-product-listing-wrapper'>
-          <AlgoliaFilters filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
+          <AlgoliaFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
               <ProductMenuOptions toggleFiltering={this.toggleFiltering} />

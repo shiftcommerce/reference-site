@@ -9,7 +9,6 @@ import equal from 'deep-equal'
 // Components
 import ProductListing from '../components/products/listing/product-listing'
 import Loading from '../components/loading'
-import AlgoliaFilters from '../components/search/algolia/algolia-filters'
 
 // Requests
 import { categoryRequest } from '../requests/category-request'
@@ -140,24 +139,17 @@ export class Category extends Component {
 
     if (loading) {
       return (
-        <>
-          <Loading />
-          {/* Render Algolia filters so that the Algolia request triggered by the spinner
-          matches the default category page request - otherwise an extra call to Algolia is made */}
-          <div className='u-hidden'>
-            <AlgoliaFilters />
-          </div>
-        </>
+        <Loading />
       )
     } else {
-      const { title } = category
+      const { title, facets } = category
 
       return (
         <>
           <Head>
             <title>{ suffixWithStoreName(title) }</title>
           </Head>
-          <ProductListing title={title} />
+          <ProductListing title={title} facets={facets} />
         </>
       )
     }

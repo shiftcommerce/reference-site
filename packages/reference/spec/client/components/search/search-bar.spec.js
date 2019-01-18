@@ -7,7 +7,7 @@ import { SearchBar } from '../../../../client/components/search/search-bar'
 import { InstantSearch } from '../../../../client/components/search/algolia/instant-search'
 
 test('Renders the algolia SearchBox and checks the placeholder', () => {
-  // Arrange - provide an initail state for the search
+  // Arrange - provide an initial state for the search
   const initialState = {
     loading: true,
     error: false,

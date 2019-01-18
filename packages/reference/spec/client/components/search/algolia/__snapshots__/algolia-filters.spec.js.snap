@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the algolia filter component with children 1`] = `
-<div>
+exports[`algolia filters turns every facet into a refinement list 1`] = `
+<React.Fragment>
   <div
     className="c-product-listing-filter-heading"
   >
@@ -27,24 +27,65 @@ exports[`renders the algolia filter component with children 1`] = `
         />
       </div>
     </div>
-    <Panel
-      className="c-product-listing-filter__body-option"
-      footer={null}
-      header={
-        <h2>
-          Sub Category
-        </h2>
-      }
-    >
-      <AlgoliaRefinementList(RefinementListWidget)
-        attribute="category_ids"
-        limit={3}
-        operator="or"
-        showMore={true}
-        showMoreLimit={20}
-        transformItems={[Function]}
-      />
-    </Panel>
+    <div>
+      <Panel
+        className="c-product-listing-filter__body-option"
+        footer={null}
+        header={
+          <h2>
+            volume
+          </h2>
+        }
+        key="0"
+      >
+        <AlgoliaRefinementList(RefinementListWidget)
+          attribute="volume"
+          limit={3}
+          operator="or"
+          showMore={true}
+          showMoreLimit={20}
+          transformItems={[Function]}
+        />
+      </Panel>
+      <Panel
+        className="c-product-listing-filter__body-option"
+        footer={null}
+        header={
+          <h2>
+            diameter
+          </h2>
+        }
+        key="1"
+      >
+        <AlgoliaRefinementList(RefinementListWidget)
+          attribute="diameter"
+          limit={3}
+          operator="or"
+          showMore={true}
+          showMoreLimit={20}
+          transformItems={[Function]}
+        />
+      </Panel>
+      <Panel
+        className="c-product-listing-filter__body-option"
+        footer={null}
+        header={
+          <h2>
+            colour
+          </h2>
+        }
+        key="2"
+      >
+        <AlgoliaRefinementList(RefinementListWidget)
+          attribute="colour"
+          limit={3}
+          operator="or"
+          showMore={true}
+          showMoreLimit={20}
+          transformItems={[Function]}
+        />
+      </Panel>
+    </div>
     <Panel
       className="c-product-listing-filter__body-option"
       footer={null}
@@ -80,5 +121,91 @@ exports[`renders the algolia filter component with children 1`] = `
       />
     </Panel>
   </div>
-</div>
+</React.Fragment>
+`;
+
+exports[`renders the algolia filter component with children 1`] = `
+<React.Fragment>
+  <div
+    className="c-product-listing-filter-heading"
+  >
+    <h2>
+      Filters
+      <button
+        className="c-product-listing-filter-close"
+      />
+    </h2>
+  </div>
+  <div
+    className="c-product-listing-filter"
+  >
+    <div
+      className="c-product-listing-filter__header"
+    >
+      <div
+        className="c-product-listing-filter__header-selection"
+      >
+        <AlgoliaCurrentRefinements(ClearRefinementsWidget) />
+        <AlgoliaCurrentRefinements(CurrentRefinementsWidget)
+          transformItems={[Function]}
+        />
+      </div>
+    </div>
+    <div>
+      <Panel
+        className="c-product-listing-filter__body-option"
+        footer={null}
+        header={
+          <h2>
+            volume
+          </h2>
+        }
+        key="0"
+      >
+        <AlgoliaRefinementList(RefinementListWidget)
+          attribute="volume"
+          limit={3}
+          operator="or"
+          showMore={true}
+          showMoreLimit={20}
+          transformItems={[Function]}
+        />
+      </Panel>
+    </div>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          Rating
+        </h2>
+      }
+    >
+      <AlgoliaRefinementList(AlgoliaRatingFilter)
+        attributeName="product_rating"
+        limitMax={20}
+        limitMin={10}
+        max={5}
+        min={0}
+        operator="or"
+        showMore={false}
+      />
+    </Panel>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          Price
+        </h2>
+      }
+    >
+      <AlgoliaRange(RangeSlider)
+        attribute="variant_meta_data.eu.price"
+        formatLabel={[Function]}
+        precision={0}
+      />
+    </Panel>
+  </div>
+</React.Fragment>
 `;
