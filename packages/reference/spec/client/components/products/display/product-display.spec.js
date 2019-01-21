@@ -34,8 +34,8 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toIncludeText(product.title)
     expect(wrapper).toIncludeText(product.description)
     expect(wrapper).toContainReact(<Carousel assetFiles={product.asset_files} />)
-    expect(wrapper).toContainReact(<VariantSelector onChange={emptyFunction} value={value.sku} name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Variant Selector' />)
-    expect(wrapper.find('Button').at(0)).toMatchElement(<Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={emptyFunction} />)
+    expect(wrapper).toContainReact(<VariantSelector onClick={emptyFunction} value={value.sku} name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Variant Selector' />)
+    expect(wrapper.find('Button').at(3)).toMatchElement(<Button className='c-product-display__buttons-basket-icon' label='ADD TO BASKET' status='primary' size='lrg' aria-label='Add to Basket' onClick={emptyFunction} />)
     expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={97.68} />)
   })
 

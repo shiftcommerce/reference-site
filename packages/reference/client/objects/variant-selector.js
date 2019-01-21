@@ -2,21 +2,48 @@
 import { Component } from 'react'
 import { fixedPrice } from '../lib/fixed-price'
 
+// Objects
+import Button from '../objects/button'
+
 class VariantSelector extends Component {
   constructor (props) {
     super(props)
-    this.renderOptions = this.renderOptions.bind(this)
+
+    this.state = {
+      toggleSelected: ''
+    }
+
+    this.renderOptionButtons = this.renderOptionButtons.bind(this)
+    this.selectVariant = this.selectVariant.bind(this)
   }
 
-  renderOptions (variants) {
+  renderOptionButtons (variants) {
+    const { toggleSelected } = this.state
+
     return (
       // @TODO: Add variant data to algolia
-      variants && variants.map((variant, idx) =>
-        <option role='option' key={idx} value={variant.sku} aria-setsize={variants.length} aria-posinset={idx + 1} data-stock-available-level={variant.stock_available_level} data-price={variant.price} data-variant-id={variant.id}>
-          { variant.title } - &pound;{ fixedPrice(variant.price) } { this.stockMessage(variant) }
-        </option>
-      )
+      variants && variants.map((variant, idx) => {
+        const selected = toggleSelected === variant.id ? 'selected' : ''
+
+        return <Button
+          className={ `c-product-display__option-button ${selected}` }
+          onClick={ this.selectVariant }
+          type='button'
+          key={variant.id}
+          value={variant.sku}
+          aria-setsize={variants.length}
+          aria-posinset={idx + 1}
+          data-stock-available-level={variant.stock_available_level}
+          data-price={variant.price} data-variant-id={variant.id}
+          label={ variant.title + ' - £' + fixedPrice(variant.price) + this.stockMessage(variant) } />
+      })
     )
+  }
+
+  selectVariant (e) {
+    this.setState({
+      toggleSelected: e.target.attributes['data-variant-id'].value
+    })
   }
 
   stockMessage (variant) {
@@ -38,11 +65,8 @@ class VariantSelector extends Component {
     } = this.props
 
     return (
-      <div className='o-variant-selector'>
-        <select name={name} {...otherProps}>
-          <option role='option' value='' aria-setsize={variants.length} aria-posinset='0'>{ prompt }</option>
-          { this.renderOptions(variants) }
-        </select>
+      <div className='o-variant-selector' name={ name } {...otherProps}>
+        { this.renderOptionButtons(variants) }
       </div>
     )
   }

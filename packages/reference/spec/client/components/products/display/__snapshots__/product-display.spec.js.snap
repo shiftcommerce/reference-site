@@ -528,7 +528,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
-              onChange={[Function]}
+              onClick={[Function]}
               prompt="Select a Product"
               value=""
               variants={
@@ -624,70 +624,102 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               }
             >
               <div
+                aria-label="Variant Selector"
                 className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
               >
-                <select
-                  aria-label="Variant Selector"
-                  name="line_item[item_id]"
-                  onChange={[Function]}
-                  value=""
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
                 >
-                  <option
-                    aria-posinset="0"
-                    aria-setsize={3}
-                    role="option"
-                    value=""
-                  >
-                    Select a Product
-                  </option>
-                  <option
+                  <button
                     aria-posinset={1}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={16.95}
                     data-stock-available-level={1}
                     data-variant-id="343"
-                    key="0"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="9337040128595"
                   >
-                    Variant 1
-                     - £
-                    16.95
-                     
-                  </option>
-                  <option
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
                     aria-posinset={2}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="344"
-                    key="1"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530244"
                   >
-                    Variant 2
-                     - £
-                    97.68
-                     
-                    - Out of Stock
-                  </option>
-                  <option
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
                     aria-posinset={3}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="345"
-                    key="2"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530245"
                   >
-                    Variant 3
-                     - £
-                    97.68
-                     
-                    - Email When in Stock
-                  </option>
-                </select>
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
               </div>
             </VariantSelector>
           </div>
@@ -702,20 +734,16 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             onClick={[Function]}
             status="positive"
           >
-            <div
-              className="o-button__container"
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
-              <button
-                aria-label="Add to Basket"
-                className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                ADD TO BASKET
-              </button>
-            </div>
+              ADD TO BASKET
+            </button>
           </Button>
         </div>
         <div
@@ -1286,7 +1314,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
-              onChange={[Function]}
+              onClick={[Function]}
               prompt="Select a Product"
               value=""
               variants={
@@ -1382,70 +1410,102 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               }
             >
               <div
+                aria-label="Variant Selector"
                 className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
               >
-                <select
-                  aria-label="Variant Selector"
-                  name="line_item[item_id]"
-                  onChange={[Function]}
-                  value=""
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
                 >
-                  <option
-                    aria-posinset="0"
-                    aria-setsize={3}
-                    role="option"
-                    value=""
-                  >
-                    Select a Product
-                  </option>
-                  <option
+                  <button
                     aria-posinset={1}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={16.95}
                     data-stock-available-level={1}
                     data-variant-id="343"
-                    key="0"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="9337040128595"
                   >
-                    Variant 1
-                     - £
-                    16.95
-                     
-                  </option>
-                  <option
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
                     aria-posinset={2}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="344"
-                    key="1"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530244"
                   >
-                    Variant 2
-                     - £
-                    97.68
-                     
-                    - Out of Stock
-                  </option>
-                  <option
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
                     aria-posinset={3}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="345"
-                    key="2"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530245"
                   >
-                    Variant 3
-                     - £
-                    97.68
-                     
-                    - Email When in Stock
-                  </option>
-                </select>
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
               </div>
             </VariantSelector>
           </div>
@@ -1460,20 +1520,16 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             onClick={null}
             status="disabled"
           >
-            <div
-              className="o-button__container"
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
+              disabled={false}
+              onClick={null}
+              role="button"
+              tabIndex="0"
             >
-              <button
-                aria-label="Add to Basket"
-                className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
-                disabled={false}
-                onClick={null}
-                role="button"
-                tabIndex="0"
-              >
-                ADD TO BASKET
-              </button>
-            </div>
+              ADD TO BASKET
+            </button>
           </Button>
         </div>
         <div
@@ -2044,7 +2100,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
-              onChange={[Function]}
+              onClick={[Function]}
               prompt="Select a Product"
               value=""
               variants={
@@ -2140,70 +2196,102 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               }
             >
               <div
+                aria-label="Variant Selector"
                 className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
               >
-                <select
-                  aria-label="Variant Selector"
-                  name="line_item[item_id]"
-                  onChange={[Function]}
-                  value=""
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
                 >
-                  <option
-                    aria-posinset="0"
-                    aria-setsize={3}
-                    role="option"
-                    value=""
-                  >
-                    Select a Product
-                  </option>
-                  <option
+                  <button
                     aria-posinset={1}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={16.95}
                     data-stock-available-level={1}
                     data-variant-id="343"
-                    key="0"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="9337040128595"
                   >
-                    Variant 1
-                     - £
-                    16.95
-                     
-                  </option>
-                  <option
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
                     aria-posinset={2}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="344"
-                    key="1"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530244"
                   >
-                    Variant 2
-                     - £
-                    97.68
-                     
-                    - Out of Stock
-                  </option>
-                  <option
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
                     aria-posinset={3}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="345"
-                    key="2"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530245"
                   >
-                    Variant 3
-                     - £
-                    97.68
-                     
-                    - Email When in Stock
-                  </option>
-                </select>
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
               </div>
             </VariantSelector>
           </div>
@@ -2248,20 +2336,16 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               onClick={[Function]}
               status="positive"
             >
-              <div
-                className="o-button__container"
+              <button
+                aria-label="Add to Basket"
+                className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
               >
-                <button
-                  aria-label="Add to Basket"
-                  className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Email When in Stock
-                </button>
-              </div>
+                Email When in Stock
+              </button>
             </Button>
           </EwisForm>
         </div>
@@ -2799,7 +2883,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
-              onChange={[Function]}
+              onClick={[Function]}
               prompt="Select a Product"
               value=""
               variants={
@@ -2895,70 +2979,102 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               }
             >
               <div
+                aria-label="Variant Selector"
                 className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
               >
-                <select
-                  aria-label="Variant Selector"
-                  name="line_item[item_id]"
-                  onChange={[Function]}
-                  value=""
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
                 >
-                  <option
-                    aria-posinset="0"
-                    aria-setsize={3}
-                    role="option"
-                    value=""
-                  >
-                    Select a Product
-                  </option>
-                  <option
+                  <button
                     aria-posinset={1}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={16.95}
                     data-stock-available-level={1}
                     data-variant-id="343"
-                    key="0"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="9337040128595"
                   >
-                    Variant 1
-                     - £
-                    16.95
-                     
-                  </option>
-                  <option
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
                     aria-posinset={2}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="344"
-                    key="1"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530244"
                   >
-                    Variant 2
-                     - £
-                    97.68
-                     
-                    - Out of Stock
-                  </option>
-                  <option
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
                     aria-posinset={3}
                     aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
                     data-price={97.68}
                     data-stock-available-level={0}
                     data-variant-id="345"
-                    key="2"
-                    role="option"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
                     value="0927967530245"
                   >
-                    Variant 3
-                     - £
-                    97.68
-                     
-                    - Email When in Stock
-                  </option>
-                </select>
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
               </div>
             </VariantSelector>
           </div>
@@ -2973,20 +3089,16 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             onClick={null}
             status="disabled"
           >
-            <div
-              className="o-button__container"
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
+              disabled={false}
+              onClick={null}
+              role="button"
+              tabIndex="0"
             >
-              <button
-                aria-label="Add to Basket"
-                className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
-                disabled={false}
-                onClick={null}
-                role="button"
-                tabIndex="0"
-              >
-                ADD TO BASKET
-              </button>
-            </div>
+              ADD TO BASKET
+            </button>
           </Button>
         </div>
         <div

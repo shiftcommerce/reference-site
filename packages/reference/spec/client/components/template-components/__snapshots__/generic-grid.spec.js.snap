@@ -291,18 +291,14 @@ exports[`GenericGrid component renders correctly 1`] = `
           label="Cat Button"
           status="primary"
         >
-          <div
-            className="o-button__container"
+          <button
+            className="c-template-component__cat-button o-button o-button--primary"
+            disabled={false}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              className="c-template-component__cat-button o-button o-button--primary"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              Cat Button
-            </button>
-          </div>
+            Cat Button
+          </button>
         </Button>
       </a>
     </Link>

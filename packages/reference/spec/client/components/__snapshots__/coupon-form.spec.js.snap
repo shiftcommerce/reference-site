@@ -149,19 +149,15 @@ exports[`displays an input and a submit button 1`] = `
                   label="Apply"
                   status="primary"
                 >
-                  <div
-                    className="o-button__container c-coupon-form__button-container"
+                  <button
+                    aria-label="Apply Gift Code"
+                    className="c-coupon-form__button o-button--sml o-button o-button--primary"
+                    disabled={false}
+                    role="button"
+                    tabIndex="0"
                   >
-                    <button
-                      aria-label="Apply Gift Code"
-                      className="c-coupon-form__button o-button--sml o-button o-button--primary"
-                      disabled={false}
-                      role="button"
-                      tabIndex="0"
-                    >
-                      Apply
-                    </button>
-                  </div>
+                    Apply
+                  </button>
                 </Button>
               </div>
               <FormikConnect(ErrorMessageImpl)

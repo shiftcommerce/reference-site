@@ -6,18 +6,14 @@ exports[`Button by default disabled should be false 1`] = `
   size="lrg"
   status="primary"
 >
-  <div
-    className="o-button__container"
+  <button
+    className="o-button o-button--primary o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
   >
-    <button
-      className="o-button o-button--primary o-button--lrg"
-      disabled={false}
-      role="button"
-      tabIndex="0"
-    >
-      Enabled Button
-    </button>
-  </div>
+    Enabled Button
+  </button>
 </Button>
 `;
 
@@ -26,18 +22,14 @@ exports[`Button with props should be of large size 1`] = `
   label="Large Button"
   size="lrg"
 >
-  <div
-    className="o-button__container"
+  <button
+    className="o-button o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
   >
-    <button
-      className="o-button o-button--lrg"
-      disabled={false}
-      role="button"
-      tabIndex="0"
-    >
-      Large Button
-    </button>
-  </div>
+    Large Button
+  </button>
 </Button>
 `;
 
@@ -46,18 +38,14 @@ exports[`Button with props status should be primary 1`] = `
   label="Primary Button"
   status="primary"
 >
-  <div
-    className="o-button__container"
+  <button
+    className="o-button o-button--primary"
+    disabled={false}
+    role="button"
+    tabIndex="0"
   >
-    <button
-      className="o-button o-button--primary"
-      disabled={false}
-      role="button"
-      tabIndex="0"
-    >
-      Primary Button
-    </button>
-  </div>
+    Primary Button
+  </button>
 </Button>
 `;
 
@@ -68,18 +56,14 @@ exports[`disabled button 1`] = `
   size="lrg"
   status="primary"
 >
-  <div
-    className="o-button__container"
+  <button
+    className="o-button o-button--primary o-button--lrg o-button--disabled"
+    disabled={true}
+    role="button"
+    tabIndex="0"
   >
-    <button
-      className="o-button o-button--primary o-button--lrg o-button--disabled"
-      disabled={true}
-      role="button"
-      tabIndex="0"
-    >
-      Testing Button
-    </button>
-  </div>
+    Testing Button
+  </button>
 </Button>
 `;
 
@@ -89,17 +73,13 @@ exports[`renders correctly 1`] = `
   size="lrg"
   status="positive"
 >
-  <div
-    className="o-button__container"
+  <button
+    className="o-button o-button--positive o-button--lrg"
+    disabled={false}
+    role="button"
+    tabIndex="0"
   >
-    <button
-      className="o-button o-button--positive o-button--lrg"
-      disabled={false}
-      role="button"
-      tabIndex="0"
-    >
-      ADD TO BAG
-    </button>
-  </div>
+    ADD TO BAG
+  </button>
 </Button>
 `;

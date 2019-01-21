@@ -38,20 +38,16 @@ exports[`renders correctly 1`] = `
     onClick={[Function]}
     status="positive"
   >
-    <div
-      className="o-button__container"
+    <button
+      aria-label="Add to Basket"
+      className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+      disabled={false}
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
     >
-      <button
-        aria-label="Add to Basket"
-        className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
-        disabled={false}
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        Email When in Stock
-      </button>
-    </div>
+      Email When in Stock
+    </button>
   </Button>
 </EwisForm>
 `;

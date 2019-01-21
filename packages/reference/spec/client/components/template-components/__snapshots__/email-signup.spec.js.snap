@@ -56,24 +56,15 @@ exports[`shows an error message when submitting an invalid email 1`] = `
           size="sml"
           status="primary"
         >
-          <div
-            className="o-button__container"
-            style={
-              Object {
-                "border": "none",
-              }
-            }
+          <button
+            className="c-email-signup__button o-button o-button--primary o-button--sml"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              className="c-email-signup__button o-button o-button--primary o-button--sml"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              Button text
-            </button>
-          </div>
+            Button text
+          </button>
         </Button>
       </div>
       <p
@@ -142,24 +133,15 @@ exports[`shows an error message when submitting and empty form 1`] = `
           size="sml"
           status="primary"
         >
-          <div
-            className="o-button__container"
-            style={
-              Object {
-                "border": "none",
-              }
-            }
+          <button
+            className="c-email-signup__button o-button o-button--primary o-button--sml"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              className="c-email-signup__button o-button o-button--primary o-button--sml"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              Button text
-            </button>
-          </div>
+            Button text
+          </button>
         </Button>
       </div>
       <p

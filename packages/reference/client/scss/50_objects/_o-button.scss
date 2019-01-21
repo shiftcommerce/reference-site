@@ -28,7 +28,6 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   white-space: nowrap;
-
   border-color: $text-primary;
   background: $button-base-color;
   color: $text-primary;

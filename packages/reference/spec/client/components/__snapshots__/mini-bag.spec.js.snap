@@ -65,20 +65,16 @@ exports[`renders a disabled checkout button when cart is empty 1`] = `
           onClick={[Function]}
           status="primary"
         >
-          <div
-            className="o-button__container"
+          <button
+            aria-label="Go to checkout"
+            className="o-button--disabled o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              aria-label="Go to checkout"
-              className="o-button--disabled o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              Checkout
-            </button>
-          </div>
+            Checkout
+          </button>
         </Button>
       </Link>
     </div>
@@ -163,20 +159,16 @@ exports[`renders an active checkout button when cart has items 1`] = `
           onClick={[Function]}
           status="primary"
         >
-          <div
-            className="o-button__container"
+          <button
+            aria-label="Go to checkout"
+            className="o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              aria-label="Go to checkout"
-              className="o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              Checkout
-            </button>
-          </div>
+            Checkout
+          </button>
         </Button>
       </Link>
     </div>

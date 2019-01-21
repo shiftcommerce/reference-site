@@ -88,20 +88,16 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 label="Credit/Debit Card"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use credit or debit card"
+                  className="c-payment-method__button c-payment-method__button--active o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use credit or debit card"
-                    className="c-payment-method__button c-payment-method__button--active o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Credit/Debit Card
-                  </button>
-                </div>
+                  Credit/Debit Card
+                </button>
               </Button>
               <Button
                 aria-label="Use paypal"
@@ -109,20 +105,16 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 label="PayPal"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use paypal"
+                  className="c-payment-method__button  o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use paypal"
-                    className="c-payment-method__button  o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    PayPal
-                  </button>
-                </div>
+                  PayPal
+                </button>
               </Button>
             </div>
             <div
@@ -1106,20 +1098,16 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 label="Credit/Debit Card"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use credit or debit card"
+                  className="c-payment-method__button c-payment-method__button--active o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use credit or debit card"
-                    className="c-payment-method__button c-payment-method__button--active o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Credit/Debit Card
-                  </button>
-                </div>
+                  Credit/Debit Card
+                </button>
               </Button>
               <Button
                 aria-label="Use paypal"
@@ -1127,20 +1115,16 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 label="PayPal"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use paypal"
+                  className="c-payment-method__button  o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use paypal"
-                    className="c-payment-method__button  o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    PayPal
-                  </button>
-                </div>
+                  PayPal
+                </button>
               </Button>
             </div>
             <div
@@ -1505,20 +1489,16 @@ exports[`renders payment summary on collapsing 1`] = `
             onClick={[Function]}
             status="secondary"
           >
-            <div
-              className="o-button__container"
+            <button
+              aria-label="Edit your payment method"
+              className="o-button-edit o-button o-button--secondary"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
-              <button
-                aria-label="Edit your payment method"
-                className="o-button-edit o-button o-button--secondary"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                Edit
-              </button>
-            </div>
+              Edit
+            </button>
           </Button>
         </div>
       </div>
@@ -1583,20 +1563,16 @@ exports[`renders payment summary on collapsing 1`] = `
                 label="Credit/Debit Card"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use credit or debit card"
+                  className="c-payment-method__button c-payment-method__button--active o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use credit or debit card"
-                    className="c-payment-method__button c-payment-method__button--active o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    Credit/Debit Card
-                  </button>
-                </div>
+                  Credit/Debit Card
+                </button>
               </Button>
               <Button
                 aria-label="Use paypal"
@@ -1604,20 +1580,16 @@ exports[`renders payment summary on collapsing 1`] = `
                 label="PayPal"
                 onClick={[Function]}
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Use paypal"
+                  className="c-payment-method__button  o-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
                 >
-                  <button
-                    aria-label="Use paypal"
-                    className="c-payment-method__button  o-button"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    PayPal
-                  </button>
-                </div>
+                  PayPal
+                </button>
               </Button>
             </div>
             <div
@@ -2133,19 +2105,15 @@ exports[`renders payment summary on collapsing 1`] = `
                       onClick={[Function]}
                       status="secondary"
                     >
-                      <div
-                        className="o-button__container"
+                      <button
+                        className="o-button-edit o-button o-button--secondary"
+                        disabled={false}
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex="0"
                       >
-                        <button
-                          className="o-button-edit o-button o-button--secondary"
-                          disabled={false}
-                          onClick={[Function]}
-                          role="button"
-                          tabIndex="0"
-                        >
-                          Edit
-                        </button>
-                      </div>
+                        Edit
+                      </button>
                     </Button>
                   </div>
                 </div>

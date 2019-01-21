@@ -55,11 +55,11 @@ export class Product extends Component {
 
   changeVariant (e) {
     this.setState({
-      stockAvailableLevel: parseInt(e.target.options[e.target.selectedIndex].dataset.stockAvailableLevel, 10),
+      stockAvailableLevel: parseInt(e.target.attributes['data-stock-available-level'].value, 10),
       sku: e.target.value,
-      variant: e.target.options[e.target.selectedIndex].text,
-      variantId: e.target.options[e.target.selectedIndex].dataset.variantId,
-      price: e.target.options[e.target.selectedIndex].dataset.price
+      variant: e.target.text,
+      variantId: e.target.attributes['data-variant-id'].value,
+      price: e.target.attributes['data-price'].value
     })
   }
 

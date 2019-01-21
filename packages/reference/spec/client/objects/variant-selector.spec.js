@@ -10,11 +10,25 @@ test('renders correctly', () => {
 
   // Act
   const wrapper = mount(
-    <VariantSelector name='line_item[item_id]' prompt='Select a Size' onChange={changeVariant} variants={product.variants} />
+    <VariantSelector name='line_item[item_id]' prompt='Select a Size' onClick={changeVariant} variants={product.variants} />
   )
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  wrapper.find('select').simulate('change', { target: { value: 'Variant 1' } })
+  wrapper.find('div.o-variant-selector').simulate('click', { target: { value: 'Variant 1' } })
   expect(changeVariant).toHaveBeenCalled()
+})
+
+test('renders a button for each variant', () => {
+  // Arrange
+  const changeVariant = jest.fn()
+
+  // Act
+  const wrapper = mount(
+    <VariantSelector name='line_item[item_id]' prompt='Select a Size' onClick={changeVariant} variants={product.variants} />
+  )
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find('button.c-product-display__option-button')).toHaveLength(product.variants.length)
 })

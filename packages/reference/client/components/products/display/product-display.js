@@ -140,7 +140,7 @@ class ProductDisplay extends Component {
         { this.renderColourSelector(metaAttributes) }
         <div className='c-product-display__info-variant'>
           <VariantSelector
-            onChange={changeVariant}
+            onClick={changeVariant}
             value={sku}
             name='line_item[item_id]'
             prompt='Select a Product'

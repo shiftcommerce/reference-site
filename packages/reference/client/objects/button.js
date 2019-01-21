@@ -10,22 +10,20 @@ class Button extends Component {
     } = this.props
 
     return (
-      <div className={classNames('o-button__container', containerClassName)} style={hoverStyles}>
-        <button
-          className={classNames(
-            className,
-            'o-button',
-            { [`o-button--${status}`]: status },
-            { [`o-button--${size}`]: size },
-            { 'o-button--disabled': disabled }
-          )}
-          tabIndex='0' role='button'
-          disabled={disabled} onClick={onClick}
-          {...otherProps}
-        >
-          { label }
-        </button>
-      </div>
+      <button
+        className={classNames(
+          className,
+          'o-button',
+          { [`o-button--${status}`]: status },
+          { [`o-button--${size}`]: size },
+          { 'o-button--disabled': disabled }
+        )}
+        tabIndex='0' role='button'
+        disabled={disabled} onClick={onClick}
+        {...otherProps}
+      >
+        { label }
+      </button>
     )
   }
 }

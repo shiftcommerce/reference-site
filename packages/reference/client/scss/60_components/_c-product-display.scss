@@ -381,5 +381,26 @@
       }
     }
   }
-}
 
+  &__option-button {
+    margin: 0;
+    padding: $global-spacing-unit-small;
+    margin-top: $global-spacing-unit-tiny;
+    color: $text-dark;
+    background: $background-white;
+    border: 1px solid $border-default;
+    font-size: 0.6rem;
+    white-space: normal;
+
+    &.selected {
+      border-color: $border-dark;
+      font-weight: bold;
+    }
+
+    @include breakpoint(tablet) {
+      &:hover {
+        border-color: $border-dark;
+      }
+    }
+  }
+}

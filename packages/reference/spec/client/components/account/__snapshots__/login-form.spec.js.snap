@@ -940,20 +940,16 @@ exports[`LoginForm should render the form 1`] = `
                 status="disabled"
                 type="submit"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Continue Securely"
+                  className="c-login__button o-button--sml o-button o-button--disabled o-button--disabled"
+                  disabled={true}
+                  role="button"
+                  tabIndex="0"
+                  type="submit"
                 >
-                  <button
-                    aria-label="Continue Securely"
-                    className="c-login__button o-button--sml o-button o-button--disabled o-button--disabled"
-                    disabled={true}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
-                  >
-                    CONTINUE SECURELY
-                  </button>
-                </div>
+                  CONTINUE SECURELY
+                </button>
               </Button>
             </div>
           </form>

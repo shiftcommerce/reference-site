@@ -60,20 +60,16 @@ exports[`renders correctly when some URLs are not set in the component 1`] = `
               size="lrg"
               status="warning"
             >
-              <div
-                className="o-button__container"
+              <button
+                aria-label="shop bathroom"
+                className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
               >
-                <button
-                  aria-label="shop bathroom"
-                  className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  shop bathroom
-                </button>
-              </div>
+                shop bathroom
+              </button>
             </Button>
           </Link>
         </div>
@@ -159,20 +155,16 @@ exports[`renders the full RelatedLinks component 1`] = `
               size="lrg"
               status="warning"
             >
-              <div
-                className="o-button__container"
+              <button
+                aria-label="shop bathroom"
+                className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
               >
-                <button
-                  aria-label="shop bathroom"
-                  className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  shop bathroom
-                </button>
-              </div>
+                shop bathroom
+              </button>
             </Button>
           </Link>
         </div>
@@ -195,20 +187,16 @@ exports[`renders the full RelatedLinks component 1`] = `
               size="lrg"
               status="warning"
             >
-              <div
-                className="o-button__container"
+              <button
+                aria-label="shop rugs"
+                className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
               >
-                <button
-                  aria-label="shop rugs"
-                  className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  shop rugs
-                </button>
-              </div>
+                shop rugs
+              </button>
             </Button>
           </Link>
         </div>
@@ -231,20 +219,16 @@ exports[`renders the full RelatedLinks component 1`] = `
               size="lrg"
               status="warning"
             >
-              <div
-                className="o-button__container"
+              <button
+                aria-label="shop cushions & throws"
+                className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
               >
-                <button
-                  aria-label="shop cushions & throws"
-                  className="c-links__grid-button-icon o-button o-button--warning o-button--lrg"
-                  disabled={false}
-                  onClick={[Function]}
-                  role="button"
-                  tabIndex="0"
-                >
-                  shop cushions & throws
-                </button>
-              </div>
+                shop cushions & throws
+              </button>
             </Button>
           </Link>
         </div>

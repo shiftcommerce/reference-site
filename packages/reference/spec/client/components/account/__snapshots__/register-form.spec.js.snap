@@ -4397,20 +4397,16 @@ exports[`RegisterForm should render the form 1`] = `
                 status="disabled"
                 type="submit"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Create Account"
+                  className="c-register__button o-button-sml o-button o-button--disabled o-button--disabled"
+                  disabled={true}
+                  role="button"
+                  tabIndex="0"
+                  type="submit"
                 >
-                  <button
-                    aria-label="Create Account"
-                    className="c-register__button o-button-sml o-button o-button--disabled o-button--disabled"
-                    disabled={true}
-                    role="button"
-                    tabIndex="0"
-                    type="submit"
-                  >
-                    Create Account
-                  </button>
-                </div>
+                  Create Account
+                </button>
               </Button>
             </div>
           </form>

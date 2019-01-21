@@ -745,21 +745,17 @@ exports[`Page Rendering: renders correctly 1`] = `
                 status="positive"
                 type="button"
               >
-                <div
-                  className="o-button__container"
+                <button
+                  aria-label="Continue Shopping"
+                  className="c-order__button--continue o-button--sml o-button o-button--positive"
+                  disabled={false}
+                  onClick={[Function]}
+                  role="button"
+                  tabIndex="0"
+                  type="button"
                 >
-                  <button
-                    aria-label="Continue Shopping"
-                    className="c-order__button--continue o-button--sml o-button o-button--positive"
-                    disabled={false}
-                    onClick={[Function]}
-                    role="button"
-                    tabIndex="0"
-                    type="button"
-                  >
-                    Continue shopping
-                  </button>
-                </div>
+                  Continue shopping
+                </button>
               </Button>
             </Link>
           </div>
