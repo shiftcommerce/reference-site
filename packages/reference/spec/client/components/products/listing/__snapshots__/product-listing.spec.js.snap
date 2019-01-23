@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<React.Fragment>
+<Fragment>
   <AlgoliaStateResults(ProductMenu) />
   <Breadcrumb />
   <div
@@ -24,5 +24,5 @@ exports[`renders correctly 1`] = `
       <AlgoliaInfiniteHits(AlgoliaResults) />
     </div>
   </div>
-</React.Fragment>
+</Fragment>
 `;

@@ -1,60 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the children inside it 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <CustomHead />
+<Fragment>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
     <div
-      className="o-header"
+      className="o-header__top"
     >
       <div
-        className="o-header__top"
+        className="o-header__top-wrapper"
       >
-        <div
-          className="o-header__top-wrapper"
+        <Logo
+          className="o-header__logo"
+        />
+        <span
+          className="o-nav u-hidden-d"
         >
-          <Logo
-            className="o-header__logo"
-          />
-          <span
-            className="o-nav u-hidden-d"
+          <Connect(NavBar) />
+        </span>
+        <Link
+          as="/account/myaccount"
+          href="/account/login"
+        >
+          <div
+            className="c-header__account"
           >
-            <Connect(NavBar) />
-          </span>
-          <Link
-            as="/account/myaccount"
-            href="/account/login"
-          >
-            <div
-              className="c-header__account"
+            <Image
+              className="c-header__account-image"
+              src="/static/account-icon.svg"
+            />
+            <a
+              as="/account/myaccount"
+              href="/account/login"
             >
-              <Image
-                className="c-header__account-image"
-                src="/static/account-icon.svg"
-              />
-              <a
-                as="/account/myaccount"
-                href="/account/login"
-              >
-                Account
-              </a>
-            </div>
-          </Link>
-          <Connect(MiniBag) />
-          <span
-            className="c-header__search"
-          >
-            <SearchBar />
-          </span>
-        </div>
+              Account
+            </a>
+          </div>
+        </Link>
+        <Connect(MiniBag) />
+        <span
+          className="c-header__search"
+        >
+          <SearchBar />
+        </span>
       </div>
-      <span
-        className="o-nav u-visible-d"
-      >
-        <Connect(NavBar) />
-      </span>
     </div>
-  </React.Fragment>
+    <span
+      className="o-nav u-visible-d"
+    >
+      <Connect(NavBar) />
+    </span>
+  </div>
   <div
     className="o-body"
   >
@@ -65,64 +63,62 @@ exports[`renders the children inside it 1`] = `
   >
     <Connect(Footer) />
   </div>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`renders the footer 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <CustomHead />
+<Fragment>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
     <div
-      className="o-header"
+      className="o-header__top"
     >
       <div
-        className="o-header__top"
+        className="o-header__top-wrapper"
       >
-        <div
-          className="o-header__top-wrapper"
+        <Logo
+          className="o-header__logo"
+        />
+        <span
+          className="o-nav u-hidden-d"
         >
-          <Logo
-            className="o-header__logo"
-          />
-          <span
-            className="o-nav u-hidden-d"
+          <Connect(NavBar) />
+        </span>
+        <Link
+          as="/account/myaccount"
+          href="/account/login"
+        >
+          <div
+            className="c-header__account"
           >
-            <Connect(NavBar) />
-          </span>
-          <Link
-            as="/account/myaccount"
-            href="/account/login"
-          >
-            <div
-              className="c-header__account"
+            <Image
+              className="c-header__account-image"
+              src="/static/account-icon.svg"
+            />
+            <a
+              as="/account/myaccount"
+              href="/account/login"
             >
-              <Image
-                className="c-header__account-image"
-                src="/static/account-icon.svg"
-              />
-              <a
-                as="/account/myaccount"
-                href="/account/login"
-              >
-                Account
-              </a>
-            </div>
-          </Link>
-          <Connect(MiniBag) />
-          <span
-            className="c-header__search"
-          >
-            <SearchBar />
-          </span>
-        </div>
+              Account
+            </a>
+          </div>
+        </Link>
+        <Connect(MiniBag) />
+        <span
+          className="c-header__search"
+        >
+          <SearchBar />
+        </span>
       </div>
-      <span
-        className="o-nav u-visible-d"
-      >
-        <Connect(NavBar) />
-      </span>
     </div>
-  </React.Fragment>
+    <span
+      className="o-nav u-visible-d"
+    >
+      <Connect(NavBar) />
+    </span>
+  </div>
   <div
     className="o-body"
   />
@@ -131,64 +127,62 @@ exports[`renders the footer 1`] = `
   >
     <Connect(Footer) />
   </div>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`renders the header 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <CustomHead />
+<Fragment>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
     <div
-      className="o-header"
+      className="o-header__top"
     >
       <div
-        className="o-header__top"
+        className="o-header__top-wrapper"
       >
-        <div
-          className="o-header__top-wrapper"
+        <Logo
+          className="o-header__logo"
+        />
+        <span
+          className="o-nav u-hidden-d"
         >
-          <Logo
-            className="o-header__logo"
-          />
-          <span
-            className="o-nav u-hidden-d"
+          <Connect(NavBar) />
+        </span>
+        <Link
+          as="/account/myaccount"
+          href="/account/login"
+        >
+          <div
+            className="c-header__account"
           >
-            <Connect(NavBar) />
-          </span>
-          <Link
-            as="/account/myaccount"
-            href="/account/login"
-          >
-            <div
-              className="c-header__account"
+            <Image
+              className="c-header__account-image"
+              src="/static/account-icon.svg"
+            />
+            <a
+              as="/account/myaccount"
+              href="/account/login"
             >
-              <Image
-                className="c-header__account-image"
-                src="/static/account-icon.svg"
-              />
-              <a
-                as="/account/myaccount"
-                href="/account/login"
-              >
-                Account
-              </a>
-            </div>
-          </Link>
-          <Connect(MiniBag) />
-          <span
-            className="c-header__search"
-          >
-            <SearchBar />
-          </span>
-        </div>
+              Account
+            </a>
+          </div>
+        </Link>
+        <Connect(MiniBag) />
+        <span
+          className="c-header__search"
+        >
+          <SearchBar />
+        </span>
       </div>
-      <span
-        className="o-nav u-visible-d"
-      >
-        <Connect(NavBar) />
-      </span>
     </div>
-  </React.Fragment>
+    <span
+      className="o-nav u-visible-d"
+    >
+      <Connect(NavBar) />
+    </span>
+  </div>
   <div
     className="o-body"
   />
@@ -197,64 +191,62 @@ exports[`renders the header 1`] = `
   >
     <Connect(Footer) />
   </div>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`renders the navbar 1`] = `
-<React.Fragment>
-  <React.Fragment>
-    <CustomHead />
+<Fragment>
+  <CustomHead />
+  <div
+    className="o-header"
+  >
     <div
-      className="o-header"
+      className="o-header__top"
     >
       <div
-        className="o-header__top"
+        className="o-header__top-wrapper"
       >
-        <div
-          className="o-header__top-wrapper"
+        <Logo
+          className="o-header__logo"
+        />
+        <span
+          className="o-nav u-hidden-d"
         >
-          <Logo
-            className="o-header__logo"
-          />
-          <span
-            className="o-nav u-hidden-d"
+          <Connect(NavBar) />
+        </span>
+        <Link
+          as="/account/myaccount"
+          href="/account/login"
+        >
+          <div
+            className="c-header__account"
           >
-            <Connect(NavBar) />
-          </span>
-          <Link
-            as="/account/myaccount"
-            href="/account/login"
-          >
-            <div
-              className="c-header__account"
+            <Image
+              className="c-header__account-image"
+              src="/static/account-icon.svg"
+            />
+            <a
+              as="/account/myaccount"
+              href="/account/login"
             >
-              <Image
-                className="c-header__account-image"
-                src="/static/account-icon.svg"
-              />
-              <a
-                as="/account/myaccount"
-                href="/account/login"
-              >
-                Account
-              </a>
-            </div>
-          </Link>
-          <Connect(MiniBag) />
-          <span
-            className="c-header__search"
-          >
-            <SearchBar />
-          </span>
-        </div>
+              Account
+            </a>
+          </div>
+        </Link>
+        <Connect(MiniBag) />
+        <span
+          className="c-header__search"
+        >
+          <SearchBar />
+        </span>
       </div>
-      <span
-        className="o-nav u-visible-d"
-      >
-        <Connect(NavBar) />
-      </span>
     </div>
-  </React.Fragment>
+    <span
+      className="o-nav u-visible-d"
+    >
+      <Connect(NavBar) />
+    </span>
+  </div>
   <div
     className="o-body"
   />
@@ -263,5 +255,5 @@ exports[`renders the navbar 1`] = `
   >
     <Connect(Footer) />
   </div>
-</React.Fragment>
+</Fragment>
 `;

@@ -62,17 +62,15 @@ export default class ShippingMethods extends Component {
       <div className='o-form__header c-shipping-method__header'>
         <h2>Your Shipping Method</h2>
 
-        <div>
-          { collapsed &&
-            <Button
-              aria-label='Edit your shipping method'
-              label='Edit'
-              status='secondary'
-              className='o-button-edit'
-              onClick={() => onToggleCollapsed('edit', formName)}
-            />
-          }
-        </div>
+        { collapsed &&
+          <Button
+            aria-label='Edit your shipping method'
+            label='Edit'
+            status='secondary'
+            className='o-button-edit'
+            onClick={() => onToggleCollapsed('edit', formName)}
+          />
+        }
       </div>
     )
   }
@@ -82,14 +80,18 @@ export default class ShippingMethods extends Component {
     const { shippingMethod: { collapsed } } = checkout
 
     return (
-      <div>
-        { collapsed &&
+      <>
+        { collapsed && cart.shipping_method &&
           <div className='o-form__wrapper--collapsed c-shipping-method__summary'>
-            <p className='u-bold'>{ cart.shipping_method && cart.shipping_method.label }</p>
-            <p><span className='u-bold'>Estimated Delivery</span>: { businessDaysFromNow(parseInt(cart.shipping_method.meta_attributes.working_days.value)).format('dddd Do MMMM') }</p>
+            <p className='u-bold'>
+              { cart.shipping_method && cart.shipping_method.label }
+            </p>
+            <p>
+              <span className='u-bold'>Estimated Delivery</span>: { businessDaysFromNow(parseInt(cart.shipping_method.meta_attributes.working_days.value)).format('dddd Do MMMM') }
+            </p>
           </div>
         }
-      </div>
+      </>
     )
   }
 
@@ -100,7 +102,7 @@ export default class ShippingMethods extends Component {
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
 
     return (
-      <div>
+      <>
         { !collapsed &&
           <form className='o-form__wrapper o-form__background c-shipping-method-list'>
             <div className='c-shipping-method__list-header'>
@@ -124,7 +126,7 @@ export default class ShippingMethods extends Component {
             </div>
           </form>
         }
-      </div>
+      </>
     )
   }
 
@@ -132,24 +134,26 @@ export default class ShippingMethods extends Component {
     const { shippingMethods } = this.state
     const { cart } = this.props
 
-    const shippingMethodsOutput = shippingMethods.map((method) =>
-      <div className='o-form__input-group c-shipping-method__list-input-group'
-        key={method.id} onClick={() => this.setShippingMethod(method)}
-        aria-label={method.sku}>
-        <label htmlFor={method.sku} className='c-shipping-method__radio'>
-          <input className='c-shipping-method__radio-input' id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
-            name='shipping_method'
-            checked={method.id === cart.shipping_method.id} onChange={() => this.setShippingMethod(method)} />
-          <span className='c-shipping-method__radio-caption' />
-          <span className='c-shipping-method__list-cost'>&pound;{ fixedPrice(method.total) }</span>
-          <span className='c-shipping-method__list-title'>{ method.label }</span>
-          <span className='c-shipping-method__list-delivery-date-label'>Estimated Delivery: </span>
-          <span className='c-shipping-method__list-delivery-date'>{ businessDaysFromNow(parseInt(method.meta_attributes.working_days.value)).format('dddd Do MMMM') }</span>
-        </label>
-      </div>
-    )
+    if (cart.shipping_method) {
+      const shippingMethodsOutput = shippingMethods.map((method) =>
+        <div className='o-form__input-group c-shipping-method__list-input-group'
+          key={method.id} onClick={() => this.setShippingMethod(method)}
+          aria-label={method.sku}>
+          <label htmlFor={method.sku} className='c-shipping-method__radio'>
+            <input className='c-shipping-method__radio-input' id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
+              name='shipping_method'
+              checked={method.id === cart.shipping_method.id} onChange={() => this.setShippingMethod(method)} />
+            <span className='c-shipping-method__radio-caption' />
+            <span className='c-shipping-method__list-cost'>&pound;{ fixedPrice(method.total) }</span>
+            <span className='c-shipping-method__list-title'>{ method.label }</span>
+            <span className='c-shipping-method__list-delivery-date-label'>Estimated Delivery: </span>
+            <span className='c-shipping-method__list-delivery-date'>{ businessDaysFromNow(parseInt(method.meta_attributes.working_days.value)).format('dddd Do MMMM') }</span>
+          </label>
+        </div>
+      )
 
-    return shippingMethodsOutput
+      return shippingMethodsOutput
+    }
   }
 
   render () {

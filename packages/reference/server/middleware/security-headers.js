@@ -88,7 +88,9 @@ const buildContentSecurityPolicy = (imageHosts, scriptHosts) => {
 
     // Only allow first party scripts and those from Stripe. Unsafe inline is
     // required as that's how we load Stripe
-    "script-src 'self' 'unsafe-inline' https://js.stripe.com",
+    // TODO: Added 'unsafe-eval' in order for stripe to load correctly and to stop an webpack error "Uncaught TypeError: __webpack_require__(...) is not a function"
+    // for react index.js next and next-dev.  Is this approach safe?
+    "script-src 'self' 'unsafe-inline' https://js.stripe.com 'unsafe-eval'",
 
     // Allow <frame> and <iframe>'s from third party sources.
     'frame-src https://js.stripe.com',

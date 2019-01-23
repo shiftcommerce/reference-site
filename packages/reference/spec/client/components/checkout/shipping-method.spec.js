@@ -43,8 +43,8 @@ test('render shipping methods as expected', async () => {
   const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
-  expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Loading...')
+  expect(wrapper).toMatchSnapshot()
 
   await wrapper.instance().componentDidMount()
 
@@ -52,6 +52,34 @@ test('render shipping methods as expected', async () => {
   expect(wrapper).toIncludeText('Standard shipping')
 
   fetchShippingSpy.mockRestore()
+})
+
+test('render shipping methods before data has returned, should not error', async () => {
+  // Arrange
+  const cart = {
+    line_items: [
+      {
+        id: '1'
+      }
+    ],
+    line_items_count: 1,
+    shipping_method: null
+  }
+
+  const checkout = {
+    shippingAddress: {
+      collapsed: true,
+      completed: true
+    },
+    shippingMethod: {}
+  }
+
+  // Act
+  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Loading...')
 })
 
 test('render collapsed view as expected', async () => {

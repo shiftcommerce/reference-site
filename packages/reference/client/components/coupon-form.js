@@ -62,7 +62,7 @@ export class CouponForm extends Component {
         { () => (
           <Form>
             <div className='c-coupon-form__field'>
-              <Field type="text" name="couponCode" className='c-coupon-form__input' placeholder='Enter Promotion Code' />
+              <Field type='text' name='couponCode' className='c-coupon-form__input' placeholder='Enter Promotion Code' />
               <Button
                 aria-label='Apply Gift Code'
                 containerClassName='c-coupon-form__button-container'
@@ -70,7 +70,7 @@ export class CouponForm extends Component {
                 label='Apply'
                 status='primary' />
             </div>
-            <ErrorMessage name="couponCode" component="div" className='c-coupon-form__error' />
+            <ErrorMessage name='couponCode' component='div' className='c-coupon-form__error' />
           </Form>
         ) }
       </Formik>

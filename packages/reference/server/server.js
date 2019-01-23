@@ -142,10 +142,6 @@ module.exports = app.prepare().then(() => {
     return handle(req, res)
   })
 
-  server.get('/cart', (req, res) => {
-    return handle(req, res)
-  })
-
   server.get('/serviceWorker.js', (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     createReadStream('./server/service-worker.js').pipe(res)

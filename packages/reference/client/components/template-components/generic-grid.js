@@ -19,7 +19,7 @@ class GenericGrid extends PureComponent {
 
       if (slideImage && slideText && slideLinkURL) {
         slides.push(
-          <div className="o-card-grid__card" key={i}>
+          <div className='o-card-grid__card' key={i}>
             <Link href={slideLinkURL[0].canonical_path}>
               <a>
                 <LazyLoad className='u-image-shadow'
@@ -27,7 +27,7 @@ class GenericGrid extends PureComponent {
                   imageHeight={componentData.image_height}
                   imageWidth={componentData.image_width}
                 />
-                <p className="o-card-grid__title">{ slideText }</p>
+                <p className='o-card-grid__title'>{ slideText }</p>
               </a>
             </Link>
           </div>
@@ -43,9 +43,9 @@ class GenericGrid extends PureComponent {
       <Link href={componentData.cat_url[0].canonical_path}>
         <a>
           <Button
-            className="c-template-component__cat-button"
+            className='c-template-component__cat-button'
             label={componentData.cat_text}
-            status="primary"
+            status='primary'
           />
         </a>
       </Link>
@@ -56,9 +56,9 @@ class GenericGrid extends PureComponent {
     const { componentData } = this.props
 
     return (
-      <section className="o-template-component u-center-align">
-        <h1 className="c-component-header">{ componentData.header }</h1>
-        <div className="o-card-grid o-card-grid--3d-3m">
+      <section className='o-template-component u-center-align'>
+        <h1 className='c-component-header'>{ componentData.header }</h1>
+        <div className='o-card-grid o-card-grid--3d-3m'>
           { this.buildSlides(componentData) }
         </div>
         { componentData.cat_url[0] && componentData.cat_text && this.catButton(componentData) }

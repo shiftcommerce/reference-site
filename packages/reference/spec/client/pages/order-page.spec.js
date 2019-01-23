@@ -28,7 +28,7 @@ describe('Page Rendering:', () => {
     // Act
     const wrapper = mount(
       <Provider store={createMockStore(initialState)}>
-        <OrderPage order={order}/>
+        <OrderPage order={order} />
       </Provider>
     )
 

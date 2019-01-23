@@ -85,7 +85,7 @@ test('groups algolia hits by product_reference', () => {
     }
   ]
 
-  const wrapper = shallow(<AlgoliaResults hits={ hits } hasMore={ false } refine={ jest.fn() } />)
+  const wrapper = shallow(<AlgoliaResults hits={hits} hasMore={false} refine={jest.fn()} />)
 
   expect(wrapper.find(ProductListingCard).length).toEqual(2)
 

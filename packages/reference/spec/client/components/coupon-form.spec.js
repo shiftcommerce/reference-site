@@ -125,7 +125,7 @@ test('updateCart dispatches a force read cart action', () => {
   const dispatch = jest.fn()
 
   const wrapper = mount(
-    <CouponForm dispatch={dispatch}/>
+    <CouponForm dispatch={dispatch} />
   )
 
   const readCartSpy = jest.spyOn(cartActions, 'readCart')

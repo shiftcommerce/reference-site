@@ -73,7 +73,7 @@ class CartTable extends Component {
     const { cart } = this.props
 
     return (
-      <section className='c-cart-table c-cart-table--margin'>
+      <section className='c-cart-table'>
         <section className='c-cart-table__header'>
           <div className='c-cart-table__breadcrumb'>
             <Breadcrumb />

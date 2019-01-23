@@ -15,8 +15,8 @@ test('redirects to myaccount page when account is created', () => {
 
   const wrapper = mount(
     <RegisterPage
-      account = {{ loggedIn: false }}
-      registration = {{ errors: [] }}
+      account={{ loggedIn: false }}
+      registration={{ errors: [] }}
     />
   )
 

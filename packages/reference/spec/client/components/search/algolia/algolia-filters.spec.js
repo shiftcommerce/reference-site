@@ -6,7 +6,7 @@ test('renders the algolia filter component with children', () => {
   const facets = ['volume']
 
   // Act
-  const wrapper = shallow(<AlgoliaFilters filtersShown={true} facets={facets} />)
+  const wrapper = shallow(<AlgoliaFilters filtersShown facets={facets} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -17,7 +17,7 @@ test('algolia filters turns every facet into a refinement list', () => {
   const facets = ['volume', 'diameter', 'colour']
 
   // Act
-  const wrapper = shallow(<AlgoliaFilters filtersShown={true} facets={facets} />)
+  const wrapper = shallow(<AlgoliaFilters filtersShown facets={facets} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()

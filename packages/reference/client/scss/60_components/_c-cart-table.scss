@@ -43,14 +43,6 @@
     }
   }
 
-  &--margin {
-    margin-top: 108px; // height of mobile header without the searchbar
-
-    @include breakpoint(desktop) {
-      margin-top: 0;
-    }
-  }
-
   &__breadcrumb {
 
     @include breakpoint(desktop) {

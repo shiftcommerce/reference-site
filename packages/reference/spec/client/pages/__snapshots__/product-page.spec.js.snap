@@ -622,6 +622,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                           className="dot selected"
                           key=".$0"
                           onClick={[Function]}
+                          onKeyDown={[Function]}
+                          role="button"
+                          tabIndex={0}
                           value={0}
                         />
                       </ul>
@@ -699,6 +702,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                                 className="thumb"
                                 key="0"
                                 onClick={[Function]}
+                                onKeyDown={[Function]}
+                                role="button"
+                                tabIndex={0}
                               >
                                 <img
                                   key=".$0"

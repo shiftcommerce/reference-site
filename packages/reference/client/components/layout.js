@@ -15,6 +15,9 @@ import SearchBar from './search/search-bar'
 import CustomHead from './custom-head'
 import Footer from './footer'
 
+// Stylesheet
+import '../scss/main.scss'
+
 export class Layout extends Component {
   // serviceWorker () {
   //  // Install service worker only in production environment
@@ -130,21 +133,16 @@ export class Layout extends Component {
   }
 
   renderSearch () {
-    const hiddenMobileSearchbar = typeof window !== 'undefined' && window.location.pathname === '/cart'
-    const searchClasses = classNames('c-header__search', {
-      'u-visible-d': hiddenMobileSearchbar
-    })
-
     return (
-      <span className={searchClasses}>
+      <span className={'c-header__search'}>
         <SearchBar query={this.props.query} />
       </span>
     )
   }
 
   render () {
-    const notCartOrCheckout = /^(?!\/cart|\/checkout).*$/
-    const bodyClassApplied = (typeof window === 'undefined' || notCartOrCheckout.test(window.location.pathname))
+    const notCheckout = /^(?!\/checkout).*$/
+    const bodyClassApplied = (typeof window === 'undefined' || notCheckout.test(window.location.pathname))
 
     const bodyClasses = classNames({
       'o-body': bodyClassApplied

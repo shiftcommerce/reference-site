@@ -3,7 +3,7 @@ import Rating from '../../../client/objects/rating'
 
 test('renders correctly without a rating', () => {
   // Act
-  const wrapper = shallow(<Rating/>)
+  const wrapper = shallow(<Rating />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -16,7 +16,7 @@ test('renders correctly when passed a rating', () => {
   const exampleRating = 4
 
   // Act
-  const wrapper = shallow(<Rating rating={ exampleRating } />)
+  const wrapper = shallow(<Rating rating={exampleRating} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()

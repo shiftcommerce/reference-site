@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 class HorizontalDivider extends PureComponent {
   render () {
     return (
-      <div className="o-template-component c-horizontal-divider"></div>
+      <div className='o-template-component c-horizontal-divider' />
     )
   }
 }

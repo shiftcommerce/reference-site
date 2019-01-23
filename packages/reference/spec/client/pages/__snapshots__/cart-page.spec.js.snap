@@ -257,7 +257,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
       updateQuantity={[Function]}
     >
       <section
-        className="c-cart-table c-cart-table--margin"
+        className="c-cart-table"
       >
         <section
           className="c-cart-table__header"
@@ -319,7 +319,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     2
                   </a>
                    
-                  <t
+                  <Plural
                     className={null}
                     count={2}
                     showCount={false}
@@ -333,13 +333,13 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       items
                     </span>
-                  </t>
+                  </Plural>
                    in your shopping basket
                 </p>
                 <p
                   className="c-cart-table__description"
                 >
-                  <t
+                  <Plural
                     className={null}
                     count={2}
                     plural="These"
@@ -354,9 +354,9 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       These
                     </span>
-                  </t>
+                  </Plural>
                    
-                  <t
+                  <Plural
                     className={null}
                     count={2}
                     showCount={false}
@@ -370,7 +370,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       items
                     </span>
-                  </t>
+                  </Plural>
                    will be saved for 48 hours depending on availablility
                 </p>
               </div>

@@ -103,7 +103,7 @@ test('deleteing an address removes it from the address book', async () => {
   // Mount the component wrapped up in the store provider
   const component = mount(
     <Provider store={store}>
-      <AddressBook formName='shippingAddress' onClose={() => {}}/>
+      <AddressBook formName='shippingAddress' onClose={() => {}} />
     </Provider>
   )
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`algolia filters turns every facet into a refinement list 1`] = `
-<React.Fragment>
+<Fragment>
   <div
     className="c-product-listing-filter-heading"
   >
@@ -27,65 +27,63 @@ exports[`algolia filters turns every facet into a refinement list 1`] = `
         />
       </div>
     </div>
-    <React.Fragment>
-      <Panel
-        className="c-product-listing-filter__body-option"
-        footer={null}
-        header={
-          <h2>
-            volume
-          </h2>
-        }
-        key="0"
-      >
-        <AlgoliaRefinementList(RefinementListWidget)
-          attribute="volume"
-          limit={3}
-          operator="or"
-          showMore={true}
-          showMoreLimit={20}
-          transformItems={[Function]}
-        />
-      </Panel>
-      <Panel
-        className="c-product-listing-filter__body-option"
-        footer={null}
-        header={
-          <h2>
-            diameter
-          </h2>
-        }
-        key="1"
-      >
-        <AlgoliaRefinementList(RefinementListWidget)
-          attribute="diameter"
-          limit={3}
-          operator="or"
-          showMore={true}
-          showMoreLimit={20}
-          transformItems={[Function]}
-        />
-      </Panel>
-      <Panel
-        className="c-product-listing-filter__body-option"
-        footer={null}
-        header={
-          <h2>
-            colour
-          </h2>
-        }
-        key="2"
-      >
-        <AlgoliaRefinementList(RefinementListWidget)
-          attribute="colour"
-          limit={3}
-          operator="or"
-          showMore={true}
-          showMoreLimit={20}
-          transformItems={[Function]}
-        />
-      </Panel>
-    </React.Fragment>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          volume
+        </h2>
+      }
+      key="0"
+    >
+      <AlgoliaRefinementList(RefinementListWidget)
+        attribute="volume"
+        limit={3}
+        operator="or"
+        showMore={true}
+        showMoreLimit={20}
+        transformItems={[Function]}
+      />
+    </Panel>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          diameter
+        </h2>
+      }
+      key="1"
+    >
+      <AlgoliaRefinementList(RefinementListWidget)
+        attribute="diameter"
+        limit={3}
+        operator="or"
+        showMore={true}
+        showMoreLimit={20}
+        transformItems={[Function]}
+      />
+    </Panel>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          colour
+        </h2>
+      }
+      key="2"
+    >
+      <AlgoliaRefinementList(RefinementListWidget)
+        attribute="colour"
+        limit={3}
+        operator="or"
+        showMore={true}
+        showMoreLimit={20}
+        transformItems={[Function]}
+      />
+    </Panel>
     <Panel
       className="c-product-listing-filter__body-option"
       footer={null}
@@ -121,11 +119,11 @@ exports[`algolia filters turns every facet into a refinement list 1`] = `
       />
     </Panel>
   </div>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`renders the algolia filter component with children 1`] = `
-<React.Fragment>
+<Fragment>
   <div
     className="c-product-listing-filter-heading"
   >
@@ -151,27 +149,25 @@ exports[`renders the algolia filter component with children 1`] = `
         />
       </div>
     </div>
-    <React.Fragment>
-      <Panel
-        className="c-product-listing-filter__body-option"
-        footer={null}
-        header={
-          <h2>
-            volume
-          </h2>
-        }
-        key="0"
-      >
-        <AlgoliaRefinementList(RefinementListWidget)
-          attribute="volume"
-          limit={3}
-          operator="or"
-          showMore={true}
-          showMoreLimit={20}
-          transformItems={[Function]}
-        />
-      </Panel>
-    </React.Fragment>
+    <Panel
+      className="c-product-listing-filter__body-option"
+      footer={null}
+      header={
+        <h2>
+          volume
+        </h2>
+      }
+      key="0"
+    >
+      <AlgoliaRefinementList(RefinementListWidget)
+        attribute="volume"
+        limit={3}
+        operator="or"
+        showMore={true}
+        showMoreLimit={20}
+        transformItems={[Function]}
+      />
+    </Panel>
     <Panel
       className="c-product-listing-filter__body-option"
       footer={null}
@@ -207,5 +203,5 @@ exports[`renders the algolia filter component with children 1`] = `
       />
     </Panel>
   </div>
-</React.Fragment>
+</Fragment>
 `;

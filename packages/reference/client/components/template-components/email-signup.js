@@ -60,14 +60,14 @@ class EmailSignup extends Component {
         <h1 className='c-email-signup__title u-hidden-m'>{ componentData.desktop_header }</h1>
         <p className='c-email-signup__cat'>{ componentData.cta_text }</p>
         <div className='c-email-signup__form-wrapper'>
-          <input className={ inputClasses } ref={ this.setInputRef }
-            type='email' placeholder={ componentData.placeholder_text }
-            onKeyPress={ this.handleKeyPress } required
+          <input className={inputClasses} ref={this.setInputRef}
+            type='email' placeholder={componentData.placeholder_text}
+            onKeyPress={this.handleKeyPress} required
           />
           <Button
             className='c-email-signup__button' status='primary'
-            size='sml' label={ componentData.button_text }
-            hoverStyles={{ border: 'none' }} onClick={ this.fakeSubmit }
+            size='sml' label={componentData.button_text}
+            hoverStyles={{ border: 'none' }} onClick={this.fakeSubmit}
           />
         </div>
         { this.state.errorMessage && <p className='c-email-signup__error-message'>{ this.state.errorMessage }</p> }

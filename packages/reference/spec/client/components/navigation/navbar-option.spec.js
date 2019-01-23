@@ -14,5 +14,5 @@ test('renders the links', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<Link href="/slug?slug=/categories/mens" as="/categories/mens"><a className="c-nav__option"><div className="c-nav__option-label">Mens</div><div className="c-nav__option-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></a></Link>)
+  expect(wrapper).toContainReact(<Link href='/slug?slug=/categories/mens' as='/categories/mens'><a className='c-nav__option'><div className='c-nav__option-label'>Mens</div><div className='c-nav__option-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></a></Link>)
 })

@@ -34,7 +34,7 @@ export function setCardToken (token) {
       type: types.SET_CARD_TOKEN,
       value: token
     })
-    dispatch(createOrder(getState().cart, getState().checkout, getState().order))
+    return dispatch(createOrder(getState().cart, getState().checkout, getState().order))
   }
 }
 

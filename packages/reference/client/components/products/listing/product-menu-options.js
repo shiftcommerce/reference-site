@@ -26,11 +26,11 @@ class ProductMenuOptions extends PureComponent {
           <div className='c-product-listing__menu-options-filters-applied'>
             <AlgoliaRefinements />
           </div>
-          <Button className='c-product-listing__menu-options-filters-button' onClick={ toggleFiltering } />
+          <Button className='c-product-listing__menu-options-filters-button' onClick={toggleFiltering} />
         </div>
         <div className='c-product-listing__menu-options-sort-by'>
           <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
-          <SortBy defaultRefinement={ ALGOLIA_INDEX_NAME }
+          <SortBy defaultRefinement={ALGOLIA_INDEX_NAME}
             items={[
               { value: ALGOLIA_INDEX_NAME, label: 'Featured' },
               { value: `${ALGOLIA_INDEX_NAME}_product_rating_asc`, label: 'Rating asc.' },

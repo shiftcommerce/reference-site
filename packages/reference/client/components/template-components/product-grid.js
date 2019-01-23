@@ -18,7 +18,7 @@ class ProductGrid extends PureComponent {
 
       products.push(
         <ProductListingCard
-          className="o-card-grid__card"
+          className='o-card-grid__card'
           title={product.title}
           assetFileUrl={product.picture_url}
           assetFileAltText={product.title}
@@ -41,9 +41,9 @@ class ProductGrid extends PureComponent {
       <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject}>
         <a>
           <Button
-            className="c-template-component__cat-button"
+            className='c-template-component__cat-button'
             label={componentData.cat_text}
-            status="primary"
+            status='primary'
           />
         </a>
       </Link>
@@ -54,9 +54,9 @@ class ProductGrid extends PureComponent {
     const { componentData } = this.props
 
     return (
-      <section className="o-template-component u-center-align">
-        <h1 className="c-component-header">{ componentData.header }</h1>
-        <div className="o-card-grid o-card-grid--4d-2m">
+      <section className='o-template-component u-center-align'>
+        <h1 className='c-component-header'>{ componentData.header }</h1>
+        <div className='o-card-grid o-card-grid--4d-2m'>
           { this.products(componentData) }
         </div>
         { componentData.cat_url && componentData.cat_url[0] && componentData.cat_text && this.catButton(componentData) }

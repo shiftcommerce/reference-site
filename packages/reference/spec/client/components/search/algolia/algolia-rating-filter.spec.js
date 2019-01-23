@@ -26,7 +26,7 @@ test('renders rating options correctly', () => {
   // Act
   const wrapper = shallow(
     <Provider store={createMockStore({})} >
-      <AlgoliaRatingFilter { ...props }/>
+      <AlgoliaRatingFilter {...props} />
     </Provider>
   )
 

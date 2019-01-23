@@ -47,169 +47,163 @@ exports[`renders line items correctly, on initial load 1`] = `
           </div>
         </div>
       </div>
-      <React.Fragment>
+      <div
+        className="c-line-items__colour"
+      >
         <div
-          className="c-line-items__colour"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Colour
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__quantity"
-        >
-          <div
-            className="c-line-items__param u-bold"
-          >
-            <span>
-              Quantity
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__colour-selected"
+          className="c-line-items__param  u-bold"
         >
           <span>
-            Grey
+            Colour
           </span>
         </div>
+      </div>
+      <div
+        className="c-line-items__quantity"
+      >
         <div
-          className="c-line-items__param  c-line-items__quantity-selected"
+          className="c-line-items__param u-bold"
         >
           <span>
-            <select
-              data-id="311"
-              onChange={[Function]}
+            Quantity
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__param  c-line-items__colour-selected"
+      >
+        <span>
+          Grey
+        </span>
+      </div>
+      <div
+        className="c-line-items__param  c-line-items__quantity-selected"
+      >
+        <span>
+          <select
+            data-id="311"
+            onChange={[Function]}
+            value={1}
+          >
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              key="1"
               value={1}
             >
-              <option
-                aria-posinset={2}
-                aria-setsize={1}
-                key="1"
-                value={1}
-              >
-                1
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={2}
-                key="2"
-                value={2}
-              >
-                2
-              </option>
-              <option
-                aria-posinset={4}
-                aria-setsize={3}
-                key="3"
-                value={3}
-              >
-                3
-              </option>
-              <option
-                aria-posinset={5}
-                aria-setsize={4}
-                key="4"
-                value={4}
-              >
-                4
-              </option>
-              <option
-                aria-posinset={6}
-                aria-setsize={5}
-                key="5"
-                value={5}
-              >
-                5
-              </option>
-              <option
-                aria-posinset={7}
-                aria-setsize={6}
-                key="6"
-                value={6}
-              >
-                6
-              </option>
-              <option
-                aria-posinset={8}
-                aria-setsize={7}
-                key="7"
-                value={7}
-              >
-                7
-              </option>
-              <option
-                aria-posinset={9}
-                aria-setsize={8}
-                key="8"
-                value={8}
-              >
-                8
-              </option>
-              <option
-                aria-posinset={10}
-                aria-setsize={9}
-                key="9"
-                value={9}
-              >
-                9
-              </option>
-              <option
-                aria-posinset={11}
-                aria-setsize={10}
-                key="10"
-                value={10}
-              >
-                10
-              </option>
-            </select>
-          </span>
-        </div>
-      </React.Fragment>
-      <React.Fragment>
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              key="2"
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              key="3"
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              key="4"
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              key="5"
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              key="6"
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              key="7"
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              key="8"
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              key="9"
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              key="10"
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </span>
+      </div>
+      <div
+        className="c-line-items__remove"
+      >
         <div
-          className="c-line-items__remove"
+          className="c-line-items__delete"
         >
-          <div
-            className="c-line-items__delete"
-          >
-            <a
-              className="c-line-items__delete-button"
-              data-id="311"
-            >
-              Delete
-            </a>
-          </div>
-        </div>
-        <div
-          className="c-line-items__amounts"
-        >
-          <React.Fragment>
-            <a
-              className="c-line-items__amount"
-            >
-              £
-              6.77
-            </a>
-            <a
-              className="c-line-items__amount c-line-items__amount--discount"
-            >
-              - £
-              1.50
-            </a>
-          </React.Fragment>
           <a
-            className="c-line-items__amount c-line-items__amount--total"
+            className="c-line-items__delete-button"
+            data-id="311"
           >
-            £
-            5.27
+            Delete
           </a>
         </div>
-      </React.Fragment>
+      </div>
+      <div
+        className="c-line-items__amounts"
+      >
+        <a
+          className="c-line-items__amount"
+        >
+          £
+          6.77
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--discount"
+        >
+          - £
+          1.50
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--total"
+        >
+          £
+          5.27
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -262,187 +256,181 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
           </div>
         </div>
       </div>
-      <React.Fragment>
+      <div
+        className="c-line-items__colour"
+      >
         <div
-          className="c-line-items__colour"
-        >
-          <div
-            className="c-line-items__param  u-bold"
-          >
-            <span>
-              Colour
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__quantity"
-        >
-          <div
-            className="c-line-items__param u-bold"
-          >
-            <span>
-              Quantity
-            </span>
-          </div>
-        </div>
-        <div
-          className="c-line-items__param  c-line-items__colour-selected"
+          className="c-line-items__param  u-bold"
         >
           <span>
-            Grey
+            Colour
           </span>
         </div>
+      </div>
+      <div
+        className="c-line-items__quantity"
+      >
         <div
-          className="c-line-items__param  c-line-items__quantity-selected"
+          className="c-line-items__param u-bold"
         >
           <span>
-            <select
-              data-id="311"
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "target": Object {
-                          "value": 3,
-                        },
-                      },
-                    ],
-                  ],
-                  "results": Array [
+            Quantity
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__param  c-line-items__colour-selected"
+      >
+        <span>
+          Grey
+        </span>
+      </div>
+      <div
+        className="c-line-items__param  c-line-items__quantity-selected"
+      >
+        <span>
+          <select
+            data-id="311"
+            onChange={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
                     Object {
-                      "isThrow": false,
-                      "value": undefined,
+                      "target": Object {
+                        "value": 3,
+                      },
                     },
                   ],
-                }
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
               }
+            }
+            value={1}
+          >
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              key="1"
               value={1}
             >
-              <option
-                aria-posinset={2}
-                aria-setsize={1}
-                key="1"
-                value={1}
-              >
-                1
-              </option>
-              <option
-                aria-posinset={3}
-                aria-setsize={2}
-                key="2"
-                value={2}
-              >
-                2
-              </option>
-              <option
-                aria-posinset={4}
-                aria-setsize={3}
-                key="3"
-                value={3}
-              >
-                3
-              </option>
-              <option
-                aria-posinset={5}
-                aria-setsize={4}
-                key="4"
-                value={4}
-              >
-                4
-              </option>
-              <option
-                aria-posinset={6}
-                aria-setsize={5}
-                key="5"
-                value={5}
-              >
-                5
-              </option>
-              <option
-                aria-posinset={7}
-                aria-setsize={6}
-                key="6"
-                value={6}
-              >
-                6
-              </option>
-              <option
-                aria-posinset={8}
-                aria-setsize={7}
-                key="7"
-                value={7}
-              >
-                7
-              </option>
-              <option
-                aria-posinset={9}
-                aria-setsize={8}
-                key="8"
-                value={8}
-              >
-                8
-              </option>
-              <option
-                aria-posinset={10}
-                aria-setsize={9}
-                key="9"
-                value={9}
-              >
-                9
-              </option>
-              <option
-                aria-posinset={11}
-                aria-setsize={10}
-                key="10"
-                value={10}
-              >
-                10
-              </option>
-            </select>
-          </span>
-        </div>
-      </React.Fragment>
-      <React.Fragment>
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              key="2"
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              key="3"
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              key="4"
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              key="5"
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              key="6"
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              key="7"
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              key="8"
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              key="9"
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              key="10"
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </span>
+      </div>
+      <div
+        className="c-line-items__remove"
+      >
         <div
-          className="c-line-items__remove"
+          className="c-line-items__delete"
         >
-          <div
-            className="c-line-items__delete"
-          >
-            <a
-              className="c-line-items__delete-button"
-              data-id="311"
-            >
-              Delete
-            </a>
-          </div>
-        </div>
-        <div
-          className="c-line-items__amounts"
-        >
-          <React.Fragment>
-            <a
-              className="c-line-items__amount"
-            >
-              £
-              6.77
-            </a>
-            <a
-              className="c-line-items__amount c-line-items__amount--discount"
-            >
-              - £
-              1.50
-            </a>
-          </React.Fragment>
           <a
-            className="c-line-items__amount c-line-items__amount--total"
+            className="c-line-items__delete-button"
+            data-id="311"
           >
-            £
-            5.27
+            Delete
           </a>
         </div>
-      </React.Fragment>
+      </div>
+      <div
+        className="c-line-items__amounts"
+      >
+        <a
+          className="c-line-items__amount"
+        >
+          £
+          6.77
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--discount"
+        >
+          - £
+          1.50
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--total"
+        >
+          £
+          5.27
+        </a>
+      </div>
     </div>
   </div>
 </div>

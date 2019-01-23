@@ -12,10 +12,10 @@ class AlgoliaRatingFilter extends Component {
     return (
       orderBy(items, ['label'], ['desc']).map((item, index) => {
         return (
-          <li key={ index } className='ais-RefinementList-item'>
+          <li key={index} className='ais-RefinementList-item'>
             <label className='ais-RefinementList-label'>
-              <input className='ais-RefinementList-checkbox' type='checkbox' checked={ item.isRefined } onChange={ () => { refine(item.value) } }/>
-              <span className='ais-RefinementList-labelText'><Rating rating={ item.label }/></span>{ ' ' }
+              <input className='ais-RefinementList-checkbox' type='checkbox' checked={item.isRefined} onChange={() => { refine(item.value) }} />
+              <span className='ais-RefinementList-labelText'><Rating rating={item.label} /></span>{ ' ' }
               <span className='ais-RefinementList-count'>{ item.count.toLocaleString() }</span>
             </label>
           </li>

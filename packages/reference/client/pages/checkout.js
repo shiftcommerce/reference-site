@@ -66,13 +66,6 @@ export class CheckoutPage extends Component {
     this.deleteItem = this.deleteItem.bind(this)
   }
 
-  componentDidMount () {
-    this.props.dispatch(readCheckoutFromLocalStorage())
-    this.props.dispatch(readCart()).then(() => {
-      if (!this.props.cart.line_items_count) Router.push('/cart')
-    })
-  }
-
   componentDidUpdate (prevProps) {
     const prevOrder = prevProps.order
     const newOrder = this.props.order
@@ -81,6 +74,16 @@ export class CheckoutPage extends Component {
     if (newOrder && newOrder.id && newOrder.id !== prevOrder.id) {
       Router.push('/order')
     }
+  }
+
+  // This causes an infinite loop in development when placing an order as HMR runs and rebundles the
+  // client and so tries to redirect to both /cart and /order.  This is fine in production and should
+  // hopefully be fixed in Nextjs 8
+  componentDidMount () {
+    this.props.dispatch(readCheckoutFromLocalStorage())
+    this.props.dispatch(readCart()).then(() => {
+      if (!this.props.cart.line_items_count) Router.push('/cart')
+    })
   }
 
   updateQuantity (e) {
@@ -161,7 +164,9 @@ export class CheckoutPage extends Component {
     if (this.props.checkout.paymentMethod.selectedMethod === 'card') {
       this.props.dispatch(requestCardToken(true))
     } else {
-      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order))
+      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order)).then(() => {
+        Router.push('/order')
+      })
     }
   }
 

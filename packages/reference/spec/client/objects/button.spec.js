@@ -4,7 +4,7 @@ import Button from '../../../client/objects/button'
 test('renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='ADD TO BAG' status='positive' size='lrg'/>
+    <Button label='ADD TO BAG' status='positive' size='lrg' />
   )
 
   // Assert
@@ -14,7 +14,7 @@ test('renders correctly', () => {
 test('disabled button', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Button label='Testing Button' disabled={true} size='lrg' status='primary'/>
+    <Button label='Testing Button' disabled size='lrg' status='primary' />
   )
 
   // Assert
@@ -27,7 +27,7 @@ describe('Button by default', () => {
   test('disabled should be false', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Enabled Button' size='lrg' status='primary'/>
+      <Button label='Enabled Button' size='lrg' status='primary' />
     )
 
     // Assert
@@ -40,7 +40,7 @@ describe('Button with props', () => {
   test('should be of large size', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Large Button' size='lrg'/>
+      <Button label='Large Button' size='lrg' />
     )
 
     // Assert
@@ -51,7 +51,7 @@ describe('Button with props', () => {
   test('status should be primary', () => {
     // Arrange & Act
     const wrapper = mount(
-      <Button label='Primary Button' status='primary'/>
+      <Button label='Primary Button' status='primary' />
     )
 
     // Assert

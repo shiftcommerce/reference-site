@@ -82,6 +82,41 @@ exports[`render shipping methods as expected 1`] = `
 </ShippingMethods>
 `;
 
+exports[`render shipping methods before data has returned, should not error 1`] = `
+<ShippingMethods
+  cart={
+    Object {
+      "line_items": Array [
+        Object {
+          "id": "1",
+        },
+      ],
+      "line_items_count": 1,
+      "shipping_method": null,
+    }
+  }
+  checkout={
+    Object {
+      "shippingAddress": Object {
+        "collapsed": true,
+        "completed": true,
+      },
+      "shippingMethod": Object {},
+    }
+  }
+  dispatch={[MockFunction]}
+>
+  <div
+    aria-label="Shipping Methods"
+    className="o-form c-shipping-method"
+  >
+    <p>
+      Loading...
+    </p>
+  </div>
+</ShippingMethods>
+`;
+
 exports[`renders line item quantity as expected 1`] = `
 <ShippingMethods
   cart={

@@ -41,7 +41,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
     updateQuantity={[Function]}
   >
     <section
-      className="c-cart-table c-cart-table--margin"
+      className="c-cart-table"
     >
       <section
         className="c-cart-table__header"
@@ -103,7 +103,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   2
                 </a>
                  
-                <t
+                <Plural
                   className={null}
                   count={2}
                   showCount={false}
@@ -117,13 +117,13 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   >
                     items
                   </span>
-                </t>
+                </Plural>
                  in your shopping basket
               </p>
               <p
                 className="c-cart-table__description"
               >
-                <t
+                <Plural
                   className={null}
                   count={2}
                   plural="These"
@@ -138,9 +138,9 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   >
                     These
                   </span>
-                </t>
+                </Plural>
                  
-                <t
+                <Plural
                   className={null}
                   count={2}
                   showCount={false}
@@ -154,7 +154,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                   >
                     items
                   </span>
-                </t>
+                </Plural>
                  will be saved for 48 hours depending on availablility
               </p>
             </div>
@@ -880,7 +880,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
 
 exports[`renders the exception messages when no line items are available 1`] = `
 <section
-  className="c-cart-table c-cart-table--margin"
+  className="c-cart-table"
 >
   <section
     className="c-cart-table__header"
@@ -919,7 +919,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
               0
             </a>
              
-            <t
+            <Plural
               className={null}
               count={0}
               showCount={false}
@@ -932,7 +932,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
           <p
             className="c-cart-table__description"
           >
-            <t
+            <Plural
               className={null}
               count={0}
               plural="These"
@@ -942,7 +942,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
               zero={null}
             />
              
-            <t
+            <Plural
               className={null}
               count={0}
               showCount={false}
