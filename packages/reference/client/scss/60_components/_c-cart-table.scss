@@ -4,7 +4,7 @@
   padding-right: $global-spacing-unit-small;
   padding-top: $global-spacing-unit-small;
   margin: auto;
-  max-width: $o-body-max-width;
+  max-width: 100%;
 
   @include breakpoint(tablet) {
     padding-left: $global-spacing-unit;

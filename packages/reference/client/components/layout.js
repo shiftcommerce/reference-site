@@ -134,7 +134,7 @@ export class Layout extends Component {
 
   renderSearch () {
     return (
-      <span className={'c-header__search'}>
+      <span className='c-header__search'>
         <SearchBar query={this.props.query} />
       </span>
     )
