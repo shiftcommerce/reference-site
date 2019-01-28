@@ -1,3 +1,6 @@
+// Libraries
+import React from 'react'
+
 // Objects
 import { Input } from 'shift-react-components'
 

@@ -1,7 +1,6 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
-import zxcvbn from 'zxcvbn'
 
 // HOC
 import { withValidationMessage } from './with-validation-message'
@@ -12,8 +11,6 @@ class Input extends Component {
 
     this.triggerChange = this.triggerChange.bind(this)
     this.triggerBlur = this.triggerBlur.bind(this)
-    this.showHide = this.showHide.bind(this)
-    this.passwordStrength = this.passwordStrength.bind(this)
     this.state = {
       type: props.type,
       score: null
@@ -28,12 +25,8 @@ class Input extends Component {
   }
 
   triggerChange (event) {
-    const { formName, name, onChange, labelClassName } = this.props
+    const { formName, name, onChange } = this.props
     const value = event.target.value
-
-    if (labelClassName === 'password') {
-      this.passwordStrength(event)
-    }
 
     if (onChange) {
       onChange(event, formName, name, value)
@@ -49,32 +42,6 @@ class Input extends Component {
     }
   }
 
-  showHide (e) {
-    e.preventDefault()
-    e.stopPropagation()
-    this.setState({
-      type: this.state.type === 'input' ? 'password' : 'input'
-    })
-
-    // Focus input back into the password input
-    // TODO: Use refs in future once we've upgraded Next:
-    // https://reactjs.org/docs/refs-and-the-dom.html
-    this.passwordInput.focus()
-  }
-
-  passwordStrength (e) {
-    if (e.target.value === '') {
-      this.setState({
-        score: 'null'
-      })
-    } else {
-      const pw = zxcvbn(e.target.value)
-      this.setState({
-        score: pw.score
-      })
-    }
-  }
-
   validateForm () {
     this.setState({ formValid: this.state.emailValid && this.state.passwordValid && this.state.firstNameValid && this.state.lastNameValid && this.state.confirmEmailValid && this.state.confirmPasswordValid })
   }
@@ -84,17 +51,11 @@ class Input extends Component {
   }
 
   renderLabel () {
-    const { name, label, required, type, labelClassName } = this.props
+    const { name, label, required } = this.props
     return (
-      <label htmlFor={name} className={`o-form__label ${labelClassName}`}>
+      <label htmlFor={name} className='o-form__label'>
         <b>{ label } { required && ' *' }</b>
         { this.renderInputField() }
-        { type === 'password' && <>
-          <span className='password__show' onClick={this.showHide}>
-            { this.state.type === 'input' ? 'Hide' : 'Show' }
-          </span>
-          <span className='password__strength' data-score={this.state.score} />
-        </> }
       </label>
     )
   }

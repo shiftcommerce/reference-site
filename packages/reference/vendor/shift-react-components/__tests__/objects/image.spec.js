@@ -1,4 +1,6 @@
+// Libraries
 import React from 'react'
+
 // Objects
 import { Image } from 'shift-react-components'
 

@@ -1,4 +1,6 @@
+// Libraries
 import React from 'react'
+
 // Objects
 import { LazyLoad } from 'shift-react-components'
 

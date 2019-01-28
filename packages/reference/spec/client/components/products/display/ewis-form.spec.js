@@ -2,7 +2,7 @@
 import EwisForm from '../../../../../client/components/products/display/ewis-form'
 
 // Objects
-import Input from '../../../../../client/objects/input'
+import { Input } from 'shift-react-components'
 
 test('renders correctly', () => {
   // Arrange & Act

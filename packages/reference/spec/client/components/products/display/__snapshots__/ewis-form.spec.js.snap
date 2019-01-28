@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <EwisForm>
-  <_class
+  <n
     className="c-ewis-form__input-field"
     placeholder="Email"
   >
-    <Input
+    <t
       className="c-ewis-form__input-field"
       placeholder="Email"
       renderValidationMessage={[Function]}
@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
         className="o-form__input-group"
       >
         <label
-          className="o-form__label undefined"
+          className="o-form__label"
         >
           <b>
              
@@ -29,8 +29,8 @@ exports[`renders correctly 1`] = `
           />
         </label>
       </div>
-    </Input>
-  </_class>
+    </t>
+  </n>
   <t
     aria-label="Add to Basket"
     className="c-product-display__buttons-basket o-button--sml"

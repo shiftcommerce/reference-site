@@ -2348,11 +2348,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           className="c-product-display__buttons"
         >
           <EwisForm>
-            <_class
+            <n
               className="c-ewis-form__input-field"
               placeholder="Email"
             >
-              <Input
+              <t
                 className="c-ewis-form__input-field"
                 placeholder="Email"
                 renderValidationMessage={[Function]}
@@ -2361,7 +2361,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   className="o-form__input-group"
                 >
                   <label
-                    className="o-form__label undefined"
+                    className="o-form__label"
                   >
                     <b>
                        
@@ -2375,8 +2375,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     />
                   </label>
                 </div>
-              </Input>
-            </_class>
+              </t>
+            </n>
             <t
               aria-label="Add to Basket"
               className="c-product-display__buttons-basket o-button--sml"

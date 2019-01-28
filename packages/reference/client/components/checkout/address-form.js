@@ -5,8 +5,7 @@ import classNames from 'classnames'
 import t from 'typy'
 
 // Objects
-import Input from './../../objects/input'
-import { Button, Checkbox, DropdownSelect } from 'shift-react-components'
+import { Button, Checkbox, DropdownSelect, Input } from 'shift-react-components'
 
 // Lib
 import addressFormValidator from '../../lib/address-form-validator'

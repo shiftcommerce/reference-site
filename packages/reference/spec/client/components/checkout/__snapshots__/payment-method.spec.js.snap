@@ -532,7 +532,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         className="o-flex-full-width-s"
                         key="0"
                       >
-                        <_class
+                        <n
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="First Name"
@@ -546,7 +546,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             }
                           }
                         >
-                          <Input
+                          <t
                             className="o-form__input-block"
                             formName="billingAddress"
                             label="First Name"
@@ -565,7 +565,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               className="o-form__input-group"
                             >
                               <label
-                                className="o-form__label undefined"
+                                className="o-form__label"
                                 htmlFor="first_name"
                               >
                                 <b>
@@ -585,14 +585,14 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 />
                               </label>
                             </div>
-                          </Input>
-                        </_class>
+                          </t>
+                        </n>
                       </div>
                       <div
                         className="o-flex-full-width-s"
                         key="1"
                       >
-                        <_class
+                        <n
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Last Name"
@@ -606,7 +606,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             }
                           }
                         >
-                          <Input
+                          <t
                             className="o-form__input-block"
                             formName="billingAddress"
                             label="Last Name"
@@ -625,7 +625,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               className="o-form__input-group"
                             >
                               <label
-                                className="o-form__label undefined"
+                                className="o-form__label"
                                 htmlFor="last_name"
                               >
                                 <b>
@@ -645,8 +645,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 />
                               </label>
                             </div>
-                          </Input>
-                        </_class>
+                          </t>
+                        </n>
                       </div>
                     </div>
                     <a
@@ -657,7 +657,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         + Add Company Name (optional)
                       </p>
                     </a>
-                    <_class
+                    <n
                       className="o-form__input-block"
                       formName="billingAddress"
                       label="Address 1"
@@ -670,7 +670,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <Input
+                      <t
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Address 1"
@@ -688,7 +688,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           className="o-form__input-group"
                         >
                           <label
-                            className="o-form__label undefined"
+                            className="o-form__label"
                             htmlFor="line_1"
                           >
                             <b>
@@ -708,8 +708,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </Input>
-                    </_class>
+                      </t>
+                    </n>
                     <a
                       href="#"
                       onClick={[Function]}
@@ -721,7 +721,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     <div
                       key="0"
                     >
-                      <_class
+                      <n
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Post Code"
@@ -735,7 +735,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           }
                         }
                       >
-                        <Input
+                        <t
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Post Code"
@@ -754,7 +754,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             className="o-form__input-group"
                           >
                             <label
-                              className="o-form__label undefined"
+                              className="o-form__label"
                               htmlFor="zipcode"
                             >
                               <b>
@@ -774,13 +774,13 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </Input>
-                      </_class>
+                        </t>
+                      </n>
                     </div>
                     <div
                       key="1"
                     >
-                      <_class
+                      <n
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="City"
@@ -793,7 +793,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           }
                         }
                       >
-                        <Input
+                        <t
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="City"
@@ -811,7 +811,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             className="o-form__input-group"
                           >
                             <label
-                              className="o-form__label undefined"
+                              className="o-form__label"
                               htmlFor="city"
                             >
                               <b>
@@ -831,20 +831,20 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </Input>
-                      </_class>
+                        </t>
+                      </n>
                     </div>
                     <div
                       key="2"
                     >
-                      <_class
+                      <n
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="County"
                         name="state"
                         placeholder="Enter County"
                       >
-                        <Input
+                        <t
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="County"
@@ -856,7 +856,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             className="o-form__input-group"
                           >
                             <label
-                              className="o-form__label undefined"
+                              className="o-form__label"
                               htmlFor="state"
                             >
                               <b>
@@ -874,15 +874,15 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </Input>
-                      </_class>
+                        </t>
+                      </n>
                     </div>
                     <p
                       className="o-form__additional-label"
                     >
                       Required for any delivery related questions
                     </p>
-                    <_class
+                    <n
                       className="o-form__input-block"
                       formName="billingAddress"
                       label="Phone"
@@ -896,7 +896,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <Input
+                      <t
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Phone"
@@ -915,7 +915,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           className="o-form__input-group"
                         >
                           <label
-                            className="o-form__label undefined"
+                            className="o-form__label"
                             htmlFor="primary_phone"
                           >
                             <b>
@@ -935,14 +935,14 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </Input>
-                    </_class>
+                      </t>
+                    </n>
                     <p
                       className="o-form__additional-label"
                     >
                       Required for Order Confirmation Email
                     </p>
-                    <_class
+                    <n
                       className="o-form__input-block"
                       formName="billingAddress"
                       label="Email"
@@ -957,7 +957,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       }
                       type="email"
                     >
-                      <Input
+                      <t
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Email"
@@ -977,7 +977,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           className="o-form__input-group"
                         >
                           <label
-                            className="o-form__label undefined"
+                            className="o-form__label"
                             htmlFor="email"
                           >
                             <b>
@@ -998,8 +998,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </Input>
-                    </_class>
+                      </t>
+                    </n>
                     <p>
                       * Denotes required fields
                     </p>

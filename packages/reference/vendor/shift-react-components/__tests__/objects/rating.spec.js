@@ -1,4 +1,6 @@
+// Libraries
 import React from 'react'
+
 // Objects
 import { Rating } from 'shift-react-components'
 

@@ -1,4 +1,6 @@
+// Libraries
 import React from 'react'
+
 // Objects
 import { Checkbox } from 'shift-react-components'
 
