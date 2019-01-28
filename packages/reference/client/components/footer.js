@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Objects
-import Image from '../objects/image'
+import { Image } from 'shift-react-components'
 
 export class Footer extends Component {
   renderFooter () {

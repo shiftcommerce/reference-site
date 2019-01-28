@@ -8,8 +8,7 @@ import classNames from 'classnames'
 import { readCart } from '../actions/cart-actions'
 
 // Objects
-import Button from '../objects/button'
-import Image from '../objects/image'
+import { Button, Image } from 'shift-react-components'
 
 export class MiniBag extends Component {
   componentDidMount () {

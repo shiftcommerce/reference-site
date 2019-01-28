@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
       </div>
     </Input>
   </_class>
-  <Button
+  <t
     aria-label="Add to Basket"
     className="c-product-display__buttons-basket o-button--sml"
     label="Email When in Stock"
@@ -48,6 +48,6 @@ exports[`renders correctly 1`] = `
     >
       Email When in Stock
     </button>
-  </Button>
+  </t>
 </EwisForm>
 `;

@@ -90,7 +90,7 @@ test('renders an active checkout button when cart has items', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('Button').first().props().label).toBe('Checkout')
+  expect(wrapper.find('button')).toMatchElement(<button>Checkout</button>)
   expect(wrapper.find('.o-button')).not.toHaveClassName('o-button--disabled')
 })
 
@@ -109,6 +109,6 @@ test('renders a disabled checkout button when cart is empty', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('Button').first().props().label).toBe('Checkout')
+  expect(wrapper.find('button')).toMatchElement(<button>Checkout</button>)
   expect(wrapper.find('.o-button')).toHaveClassName('o-button--disabled')
 })

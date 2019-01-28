@@ -6,7 +6,7 @@ import t from 'typy'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 // Objects
-import Image from '../../objects/image'
+import { Image } from 'shift-react-components'
 
 class LineItems extends PureComponent {
   renderTotal (lineItem) {

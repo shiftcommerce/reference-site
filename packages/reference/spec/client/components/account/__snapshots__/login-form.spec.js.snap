@@ -902,10 +902,10 @@ exports[`LoginForm should render the form 1`] = `
               </div>
             </div>
             <div>
-              <_class
+              <n
                 label="Remember me"
               >
-                <Checkbox
+                <t
                   label="Remember me"
                   renderValidationMessage={[Function]}
                 >
@@ -930,9 +930,9 @@ exports[`LoginForm should render the form 1`] = `
                       </span>
                     </label>
                   </div>
-                </Checkbox>
-              </_class>
-              <Button
+                </t>
+              </n>
+              <t
                 aria-label="Continue Securely"
                 className="c-login__button o-button--sml"
                 disabled={true}
@@ -950,7 +950,7 @@ exports[`LoginForm should render the form 1`] = `
                 >
                   CONTINUE SECURELY
                 </button>
-              </Button>
+              </t>
             </div>
           </form>
         </Component>

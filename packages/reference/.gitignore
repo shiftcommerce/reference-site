@@ -4,8 +4,8 @@
 # Ignore Env file
 .env
 
-# Ignore Yarn
-**/node_modules
+# Ignore Node Modules and Yarn
+node_modules/
 yarn-error.log
 /yarn_cache
 

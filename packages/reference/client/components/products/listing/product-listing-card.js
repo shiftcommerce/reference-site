@@ -7,21 +7,9 @@ import Link from 'next/link'
 import ProductPrice from '../display/product-price'
 
 // Objects
-import LazyLoad from '../../../objects/lazy-load'
+import { Rating, LazyLoad } from 'shift-react-components'
 
 class ProductListingCard extends React.Component {
-  renderRatingStars (productRating) {
-    const rating = (productRating || 0)
-
-    return (
-      [1, 2, 3, 4, 5].map((key, index) =>
-        <span key={key} className={classNames({ 'c-product-listing-card__rating--fill': key <= rating, 'c-product-listing-card__rating--empty': key > rating })}>
-          &#9733;
-        </span>
-      )
-    )
-  }
-
   renderImageAndTitle () {
     const {
       assetFileAltText,
@@ -80,7 +68,7 @@ class ProductListingCard extends React.Component {
             <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>
           <div className='c-product-listing-card__rating'>
-            { this.renderRatingStars(productRating) }
+            <Rating rating={productRating} />
           </div>
         </div>
       </div>

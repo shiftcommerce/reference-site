@@ -4,7 +4,7 @@ import Link from 'next/link'
 import t from 'typy'
 
 // Objects
-import LazyLoad from '../../objects/lazy-load'
+import { LazyLoad } from 'shift-react-components'
 
 export class BannerImage extends PureComponent {
   render () {

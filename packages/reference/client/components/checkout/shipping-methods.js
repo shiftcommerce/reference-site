@@ -3,10 +3,10 @@ import { Component } from 'react'
 import classNames from 'classnames'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 // Libs
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 import ApiClient from '../../lib/api-client'
 import JsonApiParser from '../../lib/json-api-parser'
 import { businessDaysFromNow } from '../../lib/business-days-from-now'
@@ -144,7 +144,7 @@ export default class ShippingMethods extends Component {
               name='shipping_method'
               checked={method.id === cart.shipping_method.id} onChange={() => this.setShippingMethod(method)} />
             <span className='c-shipping-method__radio-caption' />
-            <span className='c-shipping-method__list-cost'>&pound;{ fixedPrice(method.total) }</span>
+            <span className='c-shipping-method__list-cost'>&pound;{ decimalPrice(method.total) }</span>
             <span className='c-shipping-method__list-title'>{ method.label }</span>
             <span className='c-shipping-method__list-delivery-date-label'>Estimated Delivery: </span>
             <span className='c-shipping-method__list-delivery-date'>{ businessDaysFromNow(parseInt(method.meta_attributes.working_days.value)).format('dddd Do MMMM') }</span>

@@ -149,4 +149,4 @@ class Input extends Component {
   }
 }
 
-export default withValidationMessage()(Input)
+export default withValidationMessage(Input)

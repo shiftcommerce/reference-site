@@ -1,5 +1,6 @@
 {
   "name": "shift-front-end-react",
+  "private": true,
   "version": "0.0.1",
   "main": "server/server.js",
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
@@ -125,5 +126,8 @@
     "supertest": "^3.3.0",
     "sync-request": "^6.0.0",
     "url-loader": "^1.0.1"
-  }
+  },
+  "workspaces": [
+    "vendor/shift-react-components"
+  ]
 }

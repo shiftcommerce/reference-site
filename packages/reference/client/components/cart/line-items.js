@@ -3,10 +3,10 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Lib
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 
 // Objects
-import Image from '../../objects/image'
+import { Image } from 'shift-react-components'
 
 class LineItems extends Component {
   // TODO: extract this out into it's own service class
@@ -38,11 +38,11 @@ class LineItems extends Component {
         <div className='c-line-items__amounts'>
           { lineItem.sub_total !== lineItem.total && (
             <>
-              <a className='c-line-items__amount'>&pound;{ fixedPrice(lineItem.sub_total) }</a>
-              <a className='c-line-items__amount c-line-items__amount--discount'>- &pound;{ fixedPrice(lineItem.total_discount) }</a>
+              <a className='c-line-items__amount'>&pound;{ decimalPrice(lineItem.sub_total) }</a>
+              <a className='c-line-items__amount c-line-items__amount--discount'>- &pound;{ decimalPrice(lineItem.total_discount) }</a>
             </>
           ) }
-          <a className='c-line-items__amount c-line-items__amount--total'>&pound;{ fixedPrice(lineItem.total) }</a>
+          <a className='c-line-items__amount c-line-items__amount--total'>&pound;{ decimalPrice(lineItem.total) }</a>
         </div>
       </>
     )

@@ -6,9 +6,7 @@ import t from 'typy'
 
 // Objects
 import Input from './../../objects/input'
-import Checkbox from './../../objects/checkbox'
-import DropdownSelect from './../../objects/dropdown-select'
-import Button from '../../objects/button'
+import { Button, Checkbox, DropdownSelect } from 'shift-react-components'
 
 // Lib
 import addressFormValidator from '../../lib/address-form-validator'

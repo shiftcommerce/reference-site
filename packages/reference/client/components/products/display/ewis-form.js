@@ -3,7 +3,7 @@ import { Component } from 'react'
 
 // Objects
 import Input from '../../../objects/input'
-import Button from '../../../objects/button'
+import { Button } from 'shift-react-components'
 
 class EwisForm extends Component {
   constructor (props) {

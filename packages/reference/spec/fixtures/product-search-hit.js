@@ -1,4 +1,4 @@
-import { fixedPrice } from '../../client/lib/fixed-price'
+import { decimalPrice } from '../../client/lib/decimal-price'
 
 const productSearchHit = {
   'category_ids': [ 59 ],
@@ -28,8 +28,8 @@ const productSearchHit = {
     }
   ],
   'variants': [
-    { price: fixedPrice(19) },
-    { price: fixedPrice(15) }
+    { price: decimalPrice(19) },
+    { price: decimalPrice(15) }
   ],
   'variant_assets': [],
   'product_rating': 0,

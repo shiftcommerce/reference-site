@@ -3,7 +3,7 @@ import { PureComponent } from 'react'
 import Link from 'next/link'
 
 // Objects
-import Image from '../objects/image'
+import { Image } from 'shift-react-components'
 
 class Logo extends PureComponent {
   render () {

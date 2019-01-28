@@ -6,7 +6,7 @@ import t from 'typy'
 
 // Objects
 import ConditionalLink from '../../objects/conditional-link'
-import LazyLoad from '../../objects/lazy-load'
+import { LazyLoad } from 'shift-react-components'
 
 class HeroFull extends Component {
   heroHeading (hero) {

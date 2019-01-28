@@ -8,7 +8,7 @@ import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 import Input from '../../objects/input'
 
 export class ForgotPassword extends Component {

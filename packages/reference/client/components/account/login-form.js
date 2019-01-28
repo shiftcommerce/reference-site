@@ -5,8 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // Objects
-import Button from '../../objects/button'
-import Checkbox from '../../objects/checkbox'
+import { Button, Checkbox } from 'shift-react-components'
 
 // lib
 import AccountFormErrors from '../../lib/form-errors'

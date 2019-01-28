@@ -81,7 +81,9 @@ const buildContentSecurityPolicy = (imageHosts, scriptHosts) => {
     "default-src 'self'",
 
     // Only allow first party images or from configured external hosts
-    `img-src 'self' ${formattedImageHosts}`,
+    // TODO: data: is insecure, If your goal is security you'd be better off using a sha hash of the script trying to be executed rather than opening up this hole
+    // Currently this is a workaround for having inline SVGs https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
+    `img-src 'self' ${formattedImageHosts} data:`,
 
     // Allow inline style attributes
     "style-src 'self' 'unsafe-inline'",

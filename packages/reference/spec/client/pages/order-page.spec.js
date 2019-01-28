@@ -6,7 +6,7 @@ import { createMockStore } from 'redux-test-utils'
 import { OrderPage } from '../../../client/pages/order'
 
 // Lib
-import { fixedPrice } from '../../../client/lib/fixed-price'
+import { decimalPrice } from '../../../client/lib/decimal-price'
 
 // Fixtures
 import order from '../../fixtures/confirmation-order'
@@ -37,7 +37,7 @@ describe('Page Rendering:', () => {
 
     // Verify order summary info
     expect(wrapper).toIncludeText(lineItems[0].title)
-    expect(wrapper).toIncludeText(fixedPrice(order.total))
+    expect(wrapper).toIncludeText(decimalPrice(order.total))
 
     // Verify shipping address info
     expect(wrapper).toIncludeText(shippingAddress.first_name)

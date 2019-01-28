@@ -760,36 +760,46 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               <div
                 className="c-product-display__info-rating"
               >
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="1"
+                <t
+                  className="o-rating__star--has-spacing o-rating__star--fs-small"
+                  rating={0}
                 >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="2"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="3"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="4"
-                >
-                  ★
-                </span>
-                <span
-                  className="c-product-display__info-rating--empty"
-                  key="5"
-                >
-                  ★
-                </span>
+                  <span
+                    className="o-rating"
+                    key="0"
+                  >
+                    <span
+                      className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                      key="1"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                      key="2"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                      key="3"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                      key="4"
+                    >
+                      ★
+                    </span>
+                    <span
+                      className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                      key="5"
+                    >
+                      ★
+                    </span>
+                  </span>
+                </t>
                 <p
                   className="c-product-display__info-reviews"
                 >
@@ -799,7 +809,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               <div
                 className="c-product-display__info-variant"
               >
-                <VariantSelector
+                <t
                   aria-label="Variant Selector"
                   name="line_item[item_id]"
                   onClick={[Function]}
@@ -902,7 +912,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     name="line_item[item_id]"
                     onClick={[Function]}
                   >
-                    <Button
+                    <t
                       aria-posinset={1}
                       aria-setsize={3}
                       className="c-product-display__option-button "
@@ -931,8 +941,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         Variant 1 - £16.95
                       </button>
-                    </Button>
-                    <Button
+                    </t>
+                    <t
                       aria-posinset={2}
                       aria-setsize={3}
                       className="c-product-display__option-button "
@@ -961,8 +971,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         Variant 2 - £97.68- Out of Stock
                       </button>
-                    </Button>
-                    <Button
+                    </t>
+                    <t
                       aria-posinset={3}
                       aria-setsize={3}
                       className="c-product-display__option-button "
@@ -991,18 +1001,18 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         Variant 3 - £97.68- Email When in Stock
                       </button>
-                    </Button>
+                    </t>
                   </div>
-                </VariantSelector>
+                </t>
               </div>
             </div>
             <div
               className="c-product-display__buttons"
             >
-              <Button
+              <t
                 aria-label="Add to Basket"
                 className="c-product-display__buttons-basket o-button--sml"
-                label="ADD TO BASKET"
+                label="add to basket"
                 onClick={null}
                 status="disabled"
               >
@@ -1014,9 +1024,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   role="button"
                   tabIndex="0"
                 >
-                  ADD TO BASKET
+                  add to basket
                 </button>
-              </Button>
+              </t>
             </div>
             <div
               className="c-product-display__body-dropdowns"

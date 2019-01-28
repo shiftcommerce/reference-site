@@ -6,7 +6,7 @@ import StripeWrapper from './stripe-wrapper'
 import AddressForm from './address-form'
 
 // Objects
-import Checkbox from './../../objects/checkbox'
+import { Checkbox } from 'shift-react-components'
 
 class StripePayment extends Component {
   render () {

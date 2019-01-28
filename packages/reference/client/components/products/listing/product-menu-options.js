@@ -7,7 +7,7 @@ import getConfig from 'next/config'
 import AlgoliaRefinements from '../../search/algolia/algolia-refinements'
 
 // Objects
-import Button from '../../../objects/button'
+import { Button } from 'shift-react-components'
 
 const {
   publicRuntimeConfig: {

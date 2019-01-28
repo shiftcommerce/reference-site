@@ -2,11 +2,8 @@
 import { PureComponent } from 'react'
 import Link from 'next/link'
 
-// Components
-import LazyLoad from '../../objects/lazy-load'
-
 // Objects
-import Button from '../../objects/button'
+import { Button, LazyLoad } from 'shift-react-components'
 
 class GenericGrid extends PureComponent {
   buildSlides (componentData) {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Link from 'next/link'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 export class RelatedLinks extends Component {
   styles () {

@@ -27,7 +27,7 @@ exports[`renders the children inside it 1`] = `
           <div
             className="c-header__account"
           >
-            <Image
+            <t
               className="c-header__account-image"
               src="/static/account-icon.svg"
             />
@@ -93,7 +93,7 @@ exports[`renders the footer 1`] = `
           <div
             className="c-header__account"
           >
-            <Image
+            <t
               className="c-header__account-image"
               src="/static/account-icon.svg"
             />
@@ -157,7 +157,7 @@ exports[`renders the header 1`] = `
           <div
             className="c-header__account"
           >
-            <Image
+            <t
               className="c-header__account-image"
               src="/static/account-icon.svg"
             />
@@ -221,7 +221,7 @@ exports[`renders the navbar 1`] = `
           <div
             className="c-header__account"
           >
-            <Image
+            <t
               className="c-header__account-image"
               src="/static/account-icon.svg"
             />

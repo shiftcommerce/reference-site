@@ -1,10 +1,10 @@
 import { Component } from 'react'
 
 // Libs
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 export default class MiniPlaceOrder extends Component {
   miniPlaceOrderButton (convertToOrder) {
@@ -28,16 +28,14 @@ export default class MiniPlaceOrder extends Component {
 
     if (checkout.currentStep === 4) {
       return (
-      <>
-      <div className='c-cart-summary__mini-button-container'>
-        <div className='c-cart-summary__mini-button-container-item'>
-          <div className='u-bold'> Order Total: &pound;{ fixedPrice(cart.total) }  </div>
+        <div className='c-cart-summary__mini-button-container'>
+          <div className='c-cart-summary__mini-button-container-item'>
+            <div className='u-bold'>Order Total: &pound;{ decimalPrice(cart.total) }</div>
+          </div>
+          <div className='c-cart-summary__mini-button-container-item'>
+            { this.miniPlaceOrderButton(convertToOrder) }
+          </div>
         </div>
-        <div className='c-cart-summary__mini-button-container-item'>
-          { this.miniPlaceOrderButton(convertToOrder) }
-        </div>
-      </div>
-      </>
       )
     }
     return (null)

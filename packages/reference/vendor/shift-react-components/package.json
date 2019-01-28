@@ -1,0 +1,32 @@
+{
+  "name": "shift-react-components",
+  "version": "0.0.1",
+  "main": "dist/bundle.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --watch --color -p",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p",
+    "test": "jest"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-lazyload-fadein": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^4.6.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "jest": "^24.0.0",
+    "jest-enzyme": "^7.0.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}

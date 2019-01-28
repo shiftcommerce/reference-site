@@ -1,33 +1,58 @@
-// Libraries
 import { Component } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
 
 class Breadcrumb extends Component {
-  renderBreadcrumbs (trail) {
+  /**
+   * Render the breadcrumb item
+   * @param  {object} crumb
+   * @param  {mixed}  key
+   * @return {string} - HTML markup for the component
+   */
+  renderBreadcrumbItem (crumb, key) {
+    // The href for the Home link is different to the others, which are pulled
+    // from the platform, so handle a direct href differently
+    const href = crumb.href || `${crumb.page}?id=${crumb.id}`
+
     return (
-      trail && trail.map((crumb, idx) =>
-        <li key={idx} className='o-breadcrumb__item'>
-          <Link href={`${crumb.page}?id=${crumb.id}`} as={crumb.canonical_path} >
-            <a className='o-breadcrumb__link'>{ crumb.title }</a>
-          </Link>
-        </li>
-      )
+      <li className='o-breadcrumb__item' key={key}>
+        <Link href={href} as={crumb.canonical_path}>
+          <a className='o-breadcrumb__link'>{ crumb.title }</a>
+        </Link>
+      </li>
     )
   }
 
+  /**
+   * Render the breadcrumb trail
+   * @param  {array} trail
+   * @return {string} - HTML markup for the component
+   */
+  renderBreadcrumbTrail (trail) {
+    return (
+      trail && trail.map((crumb, id) => {
+        return this.renderBreadcrumbItem(crumb, id)
+      })
+    )
+  }
+
+  /**
+   * @return {string} - HTML markup for the component
+   */
   render () {
-    const { trail, ...otherProps } = this.props
+    const { trail, className } = this.props
 
     return (
       <nav>
-        <ol className={'o-breadcrumb'} {...otherProps}>
-          <li className='o-breadcrumb__item'>
-            <Link href='/home/index' as='/'>
-              <a className='o-breadcrumb__link'>Home</a>
-            </Link>
-          </li>
+        <ol className={classNames(className, 'o-breadcrumb')}>
+          { this.renderBreadcrumbItem({
+            href: '/home/index',
+            canonical_path: '/',
+            title: 'Home',
+            key: 0
+          }) }
 
-          { this.renderBreadcrumbs(trail) }
+          { this.renderBreadcrumbTrail(trail) }
         </ol>
       </nav>
     )

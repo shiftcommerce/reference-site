@@ -1,5 +1,5 @@
 // Object
-import VariantSelector from '../../../client/objects/variant-selector'
+import { VariantSelector } from 'shift-react-components'
 
 // Fixtures
 import product from '../../fixtures/product'

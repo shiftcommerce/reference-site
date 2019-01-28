@@ -1,6 +1,9 @@
 $input-checkbox-size: 16px;
 $input-checkbox-spacing: 8px;
 
+@import "../10_settings/__all";
+@import "../20_tools/__all";
+
 .o-form {
   width: 100%;
 
@@ -23,7 +26,7 @@ $input-checkbox-spacing: 8px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 0.7em;
+    font-size: .7em;
     padding: $global-spacing-unit-small $global-spacing-unit-small 0 $global-spacing-unit-small;
     height: 48px;
 
@@ -67,7 +70,7 @@ $input-checkbox-spacing: 8px;
       width: 60px;
       padding: $global-spacing-unit-tiny;
       border: none;
-      font-size: 0.8em;
+      font-size: .8em;
       margin-top: 0;
     }
   }
@@ -96,7 +99,7 @@ $input-checkbox-spacing: 8px;
 
     &--collapsed {
       padding-bottom: $global-spacing-unit-small;
-      font-size: 0.8rem;
+      font-size: .8rem;
       border-bottom: 1px solid $border-default;
       width: 95%;
       margin: auto;
@@ -114,7 +117,7 @@ $input-checkbox-spacing: 8px;
     }
 
     p {
-      font-size: 0.7em;
+      font-size: .7em;
       color: $font-dark-grey;
     }
   }
@@ -131,7 +134,7 @@ $input-checkbox-spacing: 8px;
     }
 
     ::placeholder {
-      font-size: 0.7em;
+      font-size: .7em;
     }
 
     select {
@@ -142,12 +145,12 @@ $input-checkbox-spacing: 8px;
       background-repeat: no-repeat;
       background-position: right center;
       background-color: $background-white;
-      font-size: 0.8em;
+      font-size: .8em;
     }
   }
 
   &__label {
-    font-size: 0.9em;
+    font-size: .9em;
     margin-bottom: $global-spacing-unit-small;
   }
 
@@ -169,7 +172,7 @@ $input-checkbox-spacing: 8px;
     }
 
     &-label {
-      font-size: 0.7em;
+      font-size: .7em;
       display: block;
       width: 100%;
       cursor: pointer;
@@ -231,7 +234,7 @@ $input-checkbox-spacing: 8px;
     &-block {
       display: block;
       width: 100%;
-      border-radius: 0.09rem;
+      border-radius: .09rem;
       background-color: $background-white;
     }
 

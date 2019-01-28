@@ -543,7 +543,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       href="/slug?slug=/jugs/seed_product_40"
                       key="jugs/seed_product_40"
                     >
-                      <Image
+                      <t
                         alt="Variant 1"
                         aria-label="Variant 1"
                         className="c-line-items__image"
@@ -558,14 +558,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                             <img
                               alt="Variant 1"
                               aria-label="Variant 1"
-                              className="c-image"
+                              className="o-image"
                               onClick={[Function]}
                               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
                               srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg 769w"
                             />
                           </picture>
                         </div>
-                      </Image>
+                      </t>
                     </Link>
                   </div>
                   <div
@@ -901,7 +901,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                                   />
                                 </FieldInner>
                               </FormikConnect(FieldInner)>
-                              <Button
+                              <t
                                 aria-label="Apply Gift Code"
                                 className="c-coupon-form__button o-button--sml"
                                 containerClassName="c-coupon-form__button-container"
@@ -911,13 +911,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                                 <button
                                   aria-label="Apply Gift Code"
                                   className="c-coupon-form__button o-button--sml o-button o-button--primary"
+                                  containerClassName="c-coupon-form__button-container"
                                   disabled={false}
                                   role="button"
                                   tabIndex="0"
                                 >
                                   Apply
                                 </button>
-                              </Button>
+                              </t>
                             </div>
                             <FormikConnect(ErrorMessageImpl)
                               className="c-coupon-form__error"
@@ -1199,7 +1200,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   <div
                     className="c-payment-icons__images"
                   >
-                    <Image
+                    <t
                       aria-label="VISA"
                       className="c-payment-icons__image"
                       src="/static/payments/visa.svg"
@@ -1210,14 +1211,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="VISA"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/visa.svg"
                             srcSet="/static/payments/visa.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
-                    <Image
+                    </t>
+                    <t
                       aria-label="Mastercard"
                       className="c-payment-icons__image"
                       src="/static/payments/mastercard.svg"
@@ -1228,14 +1229,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="Mastercard"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/mastercard.svg"
                             srcSet="/static/payments/mastercard.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
-                    <Image
+                    </t>
+                    <t
                       aria-label="American Express"
                       className="c-payment-icons__image"
                       src="/static/payments/american-express.svg"
@@ -1246,14 +1247,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="American Express"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/american-express.svg"
                             srcSet="/static/payments/american-express.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
-                    <Image
+                    </t>
+                    <t
                       aria-label="Maestro"
                       className="c-payment-icons__image"
                       src="/static/payments/maestro.svg"
@@ -1264,14 +1265,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="Maestro"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/maestro.svg"
                             srcSet="/static/payments/maestro.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
-                    <Image
+                    </t>
+                    <t
                       aria-label="PayPal"
                       className="c-payment-icons__image"
                       src="/static/payments/pay-pal.svg"
@@ -1282,14 +1283,14 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="PayPal"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/pay-pal.svg"
                             srcSet="/static/payments/pay-pal.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
-                    <Image
+                    </t>
+                    <t
                       aria-label="Apple Pay"
                       className="c-payment-icons__image"
                       src="/static/payments/apple-pay.svg"
@@ -1300,13 +1301,13 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                         <picture>
                           <img
                             aria-label="Apple Pay"
-                            className="c-image"
+                            className="o-image"
                             src="/static/payments/apple-pay.svg"
                             srcSet="/static/payments/apple-pay.svg 769w"
                           />
                         </picture>
                       </div>
-                    </Image>
+                    </t>
                   </div>
                 </div>
               </PaymentIcons>

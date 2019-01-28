@@ -27,7 +27,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           <div
             className="c-product-listing-card__gallery c-image"
           >
-            <LazyLoad
+            <t
               alt="SEPIA nonslip tray 420×210mm"
               aria-label="SEPIA nonslip tray 420×210mm"
               className="c-product-listing-card__image u-image-shadow"
@@ -38,19 +38,19 @@ exports[`renders ProductListingCard correctly 1`] = `
               <div
                 style={
                   Object {
-                    "background": "#EEEFF3",
+                    "backgroundColor": "#EEEFF3",
                     "height": 0,
                     "paddingBottom": "100.00%",
                     "width": "100%",
                   }
                 }
               >
-                <FadeIn
+                <t
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <LazyLoad
+                  <t
                     offset={150}
                     once={true}
                     overflow={false}
@@ -66,10 +66,10 @@ exports[`renders ProductListingCard correctly 1`] = `
                         }
                       }
                     />
-                  </LazyLoad>
-                </FadeIn>
+                  </t>
+                </t>
               </div>
-            </LazyLoad>
+            </t>
           </div>
           <div
             className="c-product-listing-card__title"
@@ -103,36 +103,45 @@ exports[`renders ProductListingCard correctly 1`] = `
       <div
         className="c-product-listing-card__rating"
       >
-        <span
-          className="c-product-listing-card__rating--empty"
-          key="1"
+        <t
+          rating={0}
         >
-          ★
-        </span>
-        <span
-          className="c-product-listing-card__rating--empty"
-          key="2"
-        >
-          ★
-        </span>
-        <span
-          className="c-product-listing-card__rating--empty"
-          key="3"
-        >
-          ★
-        </span>
-        <span
-          className="c-product-listing-card__rating--empty"
-          key="4"
-        >
-          ★
-        </span>
-        <span
-          className="c-product-listing-card__rating--empty"
-          key="5"
-        >
-          ★
-        </span>
+          <span
+            className="o-rating"
+            key="0"
+          >
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="1"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="2"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="3"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="4"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="5"
+            >
+              ★
+            </span>
+          </span>
+        </t>
       </div>
     </div>
   </div>

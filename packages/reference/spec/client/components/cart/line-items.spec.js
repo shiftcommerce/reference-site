@@ -1,5 +1,5 @@
 import LineItems from '../../../../client/components/cart/line-items'
-import Image from '../../../../client/objects/image'
+import { Image } from 'shift-react-components'
 
 import cartFixture from '../../../fixtures/cart'
 

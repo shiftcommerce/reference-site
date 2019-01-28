@@ -8,6 +8,9 @@
       command: yarn run test:unit
     - service: web
       command: yarn run test:integration
+    - service: web
+      name: shift-react-components
+      command: vendor/shift-react-components/bin/test
 
 - name: deploy
   tag: develop

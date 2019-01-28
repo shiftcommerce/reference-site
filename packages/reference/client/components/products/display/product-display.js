@@ -1,6 +1,5 @@
 // Libraries
 import { Component } from 'react'
-import classNames from 'classnames'
 
 // Components
 import ProductPrice from './product-price'
@@ -8,22 +7,9 @@ import EwisForm from './ewis-form'
 import Carousel from './carousel'
 
 // Objects
-import Button from '../../../objects/button'
-import VariantSelector from '../../../objects/variant-selector'
+import { Button, VariantSelector, Rating } from 'shift-react-components'
 
 class ProductDisplay extends Component {
-  renderRatingStars (product) {
-    const rating = (product.rating || 0)
-
-    return (
-      [1, 2, 3, 4, 5].map((key) =>
-        <span key={key} className={classNames({ 'c-product-display__info-rating--fill': key <= rating, 'c-product-display__info-rating--empty': key > rating })}>
-          &#9733;
-        </span>
-      )
-    )
-  }
-
   renderCarousel (product) {
     return (
       <div className='c-product-display__carousel'>
@@ -47,7 +33,7 @@ class ProductDisplay extends Component {
 
       return (
         <div className='c-product-display__buttons'>
-          <Button className='c-product-display__buttons-basket o-button--sml' label='ADD TO BASKET' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
+          <Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
         </div>
       )
     }
@@ -134,7 +120,10 @@ class ProductDisplay extends Component {
         { this.renderSku(selectedVariant) }
         { this.renderPrice(product, selectedVariant) }
         <div className='c-product-display__info-rating'>
-          { this.renderRatingStars(product) }
+          <Rating
+            rating={product.rating}
+            className='o-rating__star--has-spacing o-rating__star--fs-small'
+          />
           <p className='c-product-display__info-reviews'>Read Reviews</p>
         </div>
         { this.renderColourSelector(metaAttributes) }

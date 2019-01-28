@@ -2,8 +2,7 @@
 import { Component } from 'react'
 
 // Objects
-import Image from '../../objects/image'
-import Button from '../../objects/button'
+import { Button, Image } from 'shift-react-components'
 
 export default class PaymentMethodSelector extends Component {
   buttonClass (paymentType) {

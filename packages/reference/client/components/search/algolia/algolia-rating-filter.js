@@ -4,7 +4,7 @@ import { connectRefinementList } from 'react-instantsearch/connectors'
 import { orderBy } from 'lodash'
 
 // Objects
-import Rating from '../../../objects/rating'
+import { Rating } from 'shift-react-components'
 
 class AlgoliaRatingFilter extends Component {
   renderRatingOptions () {
@@ -15,7 +15,13 @@ class AlgoliaRatingFilter extends Component {
           <li key={index} className='ais-RefinementList-item'>
             <label className='ais-RefinementList-label'>
               <input className='ais-RefinementList-checkbox' type='checkbox' checked={item.isRefined} onChange={() => { refine(item.value) }} />
-              <span className='ais-RefinementList-labelText'><Rating rating={item.label} /></span>{ ' ' }
+              <span className='ais-RefinementList-labelText'>
+                <Rating
+                  rating={item.label}
+                  className='o-rating__star--has-spacing'
+                />
+              </span>
+              { '' }
               <span className='ais-RefinementList-count'>{ item.count.toLocaleString() }</span>
             </label>
           </li>

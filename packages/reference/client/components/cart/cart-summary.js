@@ -3,7 +3,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 
 // Libs
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 import ApiClient from '../../lib/api-client'
 import JsonApiParser from '../../lib/json-api-parser'
 
@@ -56,7 +56,7 @@ class CartSummary extends Component {
       return (
         <dl className='c-cart-summary__promotion' key={ discountSummary.id }>
           <dt>{ discountSummary.name }</dt>
-          <dd>- &pound;{ fixedPrice(discountSummary.total) }</dd>
+          <dd>- &pound;{ decimalPrice(discountSummary.total) }</dd>
         </dl>
       )
     })
@@ -80,7 +80,7 @@ class CartSummary extends Component {
         <section className='c-cart-summary'>
           <dl>
             <dt><a>Total Price:</a></dt>
-            <dd><a>&pound;{ fixedPrice(cart.sub_total) }</a></dd>
+            <dd><a>&pound;{ decimalPrice(cart.sub_total) }</a></dd>
           </dl>
           { this.renderPromotions() }
           <dl>
@@ -88,7 +88,7 @@ class CartSummary extends Component {
           </dl>
           <dl>
             <dt><p className='u-bold'>TOTAL:</p></dt>
-            <dd><p className='u-bold'>&pound;{ !this.state.loading && fixedPrice(this.cartTotal()) }</p></dd>
+            <dd><p className='u-bold'>&pound;{ !this.state.loading && decimalPrice(this.cartTotal()) }</p></dd>
           </dl>
           <dl>
             <a>* Including VAT</a>

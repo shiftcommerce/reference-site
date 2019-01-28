@@ -8,7 +8,7 @@ import StripePayment from './stripe-payment'
 import PayPalPayment from './paypal-payment'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 export default class PaymentMethod extends Component {
   renderFormHeader () {

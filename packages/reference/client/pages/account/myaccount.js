@@ -13,7 +13,7 @@ import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 // Actions
 import { getCustomerOrders } from '../../actions/order-actions'

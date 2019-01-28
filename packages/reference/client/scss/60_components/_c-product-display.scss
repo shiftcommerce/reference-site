@@ -146,6 +146,7 @@
       margin: auto;
       width: 100%;
       font-size: 0.8em;
+      text-transform: uppercase;
     }
   }
 
@@ -185,23 +186,6 @@
       font-weight: 500;
       color: $text-default;
       padding-bottom: $global-spacing-unit-small;
-    }
-
-    &-rating {
-      display: inline;
-      padding-bottom: $global-spacing-unit-small;
-
-      &--fill {
-        color: $background-primary;
-        font-size: 0.75em;
-        padding-right: 3px;
-      }
-
-      &--empty {
-        color: $background-dark;
-        font-size: 0.75em;
-        padding-right: 3px;
-      }
     }
 
     &-reviews {

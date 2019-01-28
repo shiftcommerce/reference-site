@@ -255,7 +255,7 @@ exports[`Page Rendering: renders correctly 1`] = `
               <div
                 className="c-order__detail-payment-method-card"
               >
-                <Image
+                <t
                   className="c-order__detail-payment-method-card-image"
                   src="/static/payments/visa.svg"
                 >
@@ -264,13 +264,13 @@ exports[`Page Rendering: renders correctly 1`] = `
                   >
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/visa.svg"
                         srcSet="/static/payments/visa.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
                 <div
                   className="c-order__detail-payment-method-card-details"
                 >
@@ -484,7 +484,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 <div
                   className="c-order__summary-line-item-image"
                 >
-                  <Image
+                  <t
                     alt="SCS-04-CJ coffee jug 600ml"
                     aria-label="SCS-04-CJ coffee jug 600ml"
                     src="/static/placeholder.png"
@@ -494,13 +494,13 @@ exports[`Page Rendering: renders correctly 1`] = `
                         <img
                           alt="SCS-04-CJ coffee jug 600ml"
                           aria-label="SCS-04-CJ coffee jug 600ml"
-                          className="c-image"
+                          className="o-image"
                           src="/static/placeholder.png"
                           srcSet="/static/placeholder.png 769w"
                         />
                       </picture>
                     </div>
-                  </Image>
+                  </t>
                 </div>
                 <div
                   className="c-order__summary-line-item-details"
@@ -584,7 +584,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 <div
                   className="c-order__summary-line-item-image"
                 >
-                  <Image
+                  <t
                     alt="Brazil Daterra Masterpiece - Curupira"
                     aria-label="Brazil Daterra Masterpiece - Curupira"
                     src="/static/placeholder.png"
@@ -594,13 +594,13 @@ exports[`Page Rendering: renders correctly 1`] = `
                         <img
                           alt="Brazil Daterra Masterpiece - Curupira"
                           aria-label="Brazil Daterra Masterpiece - Curupira"
-                          className="c-image"
+                          className="o-image"
                           src="/static/placeholder.png"
                           srcSet="/static/placeholder.png 769w"
                         />
                       </picture>
                     </div>
-                  </Image>
+                  </t>
                 </div>
                 <div
                   className="c-order__summary-line-item-details"
@@ -737,7 +737,7 @@ exports[`Page Rendering: renders correctly 1`] = `
             <Link
               href="/"
             >
-              <Button
+              <t
                 aria-label="Continue Shopping"
                 className="c-order__button--continue o-button--sml"
                 label="Continue shopping"
@@ -756,7 +756,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 >
                   Continue shopping
                 </button>
-              </Button>
+              </t>
             </Link>
           </div>
         </div>

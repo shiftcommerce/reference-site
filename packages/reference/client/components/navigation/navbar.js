@@ -10,7 +10,7 @@ import NavBarOption from './navbar-option'
 
 // Objects
 import Logo from '../../objects/logo'
-import Image from '../../objects/image'
+import { Image } from 'shift-react-components'
 
 export class NavBar extends Component {
   constructor (props) {

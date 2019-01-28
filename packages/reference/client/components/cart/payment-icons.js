@@ -2,7 +2,7 @@
 import { PureComponent } from 'react'
 
 // Objects
-import Image from '../../objects/image'
+import { Image } from 'shift-react-components'
 
 class PaymentIcons extends PureComponent {
   render () {

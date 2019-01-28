@@ -2,7 +2,7 @@ import { Component } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 class EmailSignup extends Component {
   constructor (props) {
@@ -67,7 +67,7 @@ class EmailSignup extends Component {
           <Button
             className='c-email-signup__button' status='primary'
             size='sml' label={componentData.button_text}
-            hoverStyles={{ border: 'none' }} onClick={this.fakeSubmit}
+            onClick={this.fakeSubmit}
           />
         </div>
         { this.state.errorMessage && <p className='c-email-signup__error-message'>{ this.state.errorMessage }</p> }

@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 // Objects
 import Logo from '../objects/logo'
-import Image from '../objects/image'
+import { Image } from 'shift-react-components'
 
 // Components
 import MiniBag from './mini-bag'

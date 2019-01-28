@@ -11,6 +11,9 @@ module.exports = {
     '^.+\\.(css|scss)$': '<rootDir>/spec/support/jest-file-mock.js'
   },
   testPathIgnorePatterns: [
-    '<rootDir>/spec/integration'
+    '<rootDir>/spec/fixtures',
+    '<rootDir>/spec/integration',
+    '<rootDir>/spec/support',
+    '<rootDir>/vendor'
   ]
 }

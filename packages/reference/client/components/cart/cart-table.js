@@ -4,7 +4,7 @@ import Pluralize from 'react-pluralize'
 import t from 'typy'
 
 // Lib
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 
 // Components
 import LineItems from './line-items'
@@ -83,7 +83,7 @@ class CartTable extends Component {
             { this.renderDeliveryDetails() }
           </div>
           <div className='c-cart-table__header-total'>
-            <h4 className='c-cart-table__total'>&pound;{ fixedPrice(cart.total || 0) }</h4>
+            <h4 className='c-cart-table__total'>&pound;{ decimalPrice(cart.total || 0) }</h4>
           </div>
         </section>
         { this.renderCartData() }

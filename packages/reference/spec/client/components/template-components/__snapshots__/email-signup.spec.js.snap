@@ -44,13 +44,8 @@ exports[`shows an error message when submitting an invalid email 1`] = `
           required={true}
           type="email"
         />
-        <Button
+        <t
           className="c-email-signup__button"
-          hoverStyles={
-            Object {
-              "border": "none",
-            }
-          }
           label="Button text"
           onClick={[Function]}
           size="sml"
@@ -65,7 +60,7 @@ exports[`shows an error message when submitting an invalid email 1`] = `
           >
             Button text
           </button>
-        </Button>
+        </t>
       </div>
       <p
         className="c-email-signup__error-message"
@@ -121,13 +116,8 @@ exports[`shows an error message when submitting and empty form 1`] = `
           required={true}
           type="email"
         />
-        <Button
+        <t
           className="c-email-signup__button"
-          hoverStyles={
-            Object {
-              "border": "none",
-            }
-          }
           label="Button text"
           onClick={[Function]}
           size="sml"
@@ -142,7 +132,7 @@ exports[`shows an error message when submitting and empty form 1`] = `
           >
             Button text
           </button>
-        </Button>
+        </t>
       </div>
       <p
         className="c-email-signup__error-message"

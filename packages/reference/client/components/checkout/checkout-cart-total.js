@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 // Lib
 import addressFormValidator from '../../lib/address-form-validator'
-import { fixedPrice } from '../../lib/fixed-price'
+import { decimalPrice } from '../../lib/decimal-price'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 class CheckoutCartTotal extends Component {
   validOrder (checkout, order) {
@@ -118,7 +118,7 @@ class CheckoutCartTotal extends Component {
       return (
         <dl className='c-cart-summary__promotion' key={ discountSummary.id }>
           <dt>{ discountSummary.name }:</dt>
-          <dd>- &pound;{ fixedPrice(discountSummary.total) }</dd>
+          <dd>- &pound;{ decimalPrice(discountSummary.total) }</dd>
         </dl>
       )
     })
@@ -131,7 +131,7 @@ class CheckoutCartTotal extends Component {
       return (
         <dl className='c-cart-summary__promotion'>
           <dt>{ shippingPromotionName }:</dt>
-          <dd>- &pound;{ fixedPrice(this.props.cart.shipping_total_discount * -1) }</dd>
+          <dd>- &pound;{ decimalPrice(this.props.cart.shipping_total_discount * -1) }</dd>
         </dl>
       )
     }
@@ -139,7 +139,7 @@ class CheckoutCartTotal extends Component {
 
   shippingText (checkout, cart) {
     if (cart.shipping_method) {
-      return `£${fixedPrice(cart.shipping_method.total)}`
+      return `£${decimalPrice(cart.shipping_method.total)}`
     } else {
       return 'Loading shipping cost...'
     }
@@ -154,7 +154,7 @@ class CheckoutCartTotal extends Component {
           <div aria-label='Cart total summary' className='u-sticky c-cart-summary'>
             <dl aria-label='Subtotal'>
               <dt> Total Price: </dt>
-              <dd> &pound;{ fixedPrice(cart.sub_total) } </dd>
+              <dd> &pound;{ decimalPrice(cart.sub_total) } </dd>
             </dl>
             { this.renderPromotions() }
             <dl aria-label='Shipping cost'>
@@ -164,7 +164,7 @@ class CheckoutCartTotal extends Component {
             { this.renderShippingPromotion() }
             <dl aria-label='Total' className='u-bold'>
               <dt> TOTAL: </dt>
-              <dd> &pound;{ fixedPrice(cart.total) } </dd>
+              <dd> &pound;{ decimalPrice(cart.total) } </dd>
             </dl>
             <dl>
               <dt className='c-cart-summary__VAT'>* Including VAT</dt>

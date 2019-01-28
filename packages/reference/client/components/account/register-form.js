@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 // Actions
 import { clearErrors } from '../../actions/account-actions'

@@ -82,7 +82,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <Button
+              <t
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -98,8 +98,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </Button>
-              <Button
+              </t>
+              <t
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -115,7 +115,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 >
                   PayPal
                 </button>
-              </Button>
+              </t>
             </div>
             <div
               className="c-payment-method__images"
@@ -123,75 +123,75 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <Image
+                <t
                   src="/static/payments/visa.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/visa.svg"
                         srcSet="/static/payments/visa.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/mastercard.svg"
                         srcSet="/static/payments/mastercard.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/american-express.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/american-express.svg"
                         srcSet="/static/payments/american-express.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/maestro.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/maestro.svg"
                         srcSet="/static/payments/maestro.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <Image
+                <t
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/pay-pal.svg"
                         srcSet="/static/payments/pay-pal.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
             </div>
           </div>
@@ -286,13 +286,13 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                     Billing address *
                   </label>
                 </div>
-                <_class
+                <n
                   checked={false}
                   label="Same as shipping address"
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <Checkbox
+                  <t
                     checked={false}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -323,8 +323,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         </span>
                       </label>
                     </div>
-                  </Checkbox>
-                </_class>
+                  </t>
+                </n>
               </div>
             </div>
             <Connect(AddressForm)
@@ -421,7 +421,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   <form
                     className="o-form__wrapper o-form__background"
                   >
-                    <_class
+                    <n
                       formName="billingAddress"
                       label="Country"
                       name="country_code"
@@ -447,7 +447,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <DropdownSelect
+                      <t
                         formName="billingAddress"
                         label="Country"
                         name="country_code"
@@ -523,8 +523,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             </option>
                           </select>
                         </div>
-                      </DropdownSelect>
-                    </_class>
+                      </t>
+                    </n>
                     <div
                       className="o-flex o-flex__space-between"
                     >
@@ -1092,7 +1092,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <Button
+              <t
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -1108,8 +1108,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </Button>
-              <Button
+              </t>
+              <t
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -1125,7 +1125,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 >
                   PayPal
                 </button>
-              </Button>
+              </t>
             </div>
             <div
               className="c-payment-method__images"
@@ -1133,75 +1133,75 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <Image
+                <t
                   src="/static/payments/visa.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/visa.svg"
                         srcSet="/static/payments/visa.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/mastercard.svg"
                         srcSet="/static/payments/mastercard.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/american-express.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/american-express.svg"
                         srcSet="/static/payments/american-express.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/maestro.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/maestro.svg"
                         srcSet="/static/payments/maestro.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <Image
+                <t
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/pay-pal.svg"
                         srcSet="/static/payments/pay-pal.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
             </div>
           </div>
@@ -1287,13 +1287,13 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                     Billing address *
                   </label>
                 </div>
-                <_class
+                <n
                   checked={true}
                   label="Same as shipping address"
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <Checkbox
+                  <t
                     checked={true}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -1324,8 +1324,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                         </span>
                       </label>
                     </div>
-                  </Checkbox>
-                </_class>
+                  </t>
+                </n>
                 <div
                   aria-label="Shipping address to be used for billing"
                   className="o-payment-method__address-summary  c-payment-method__address-summary"
@@ -1482,7 +1482,7 @@ exports[`renders payment summary on collapsing 1`] = `
           </h2>
         </div>
         <div>
-          <Button
+          <t
             aria-label="Edit your payment method"
             className="o-button-edit"
             label="Edit"
@@ -1499,7 +1499,7 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               Edit
             </button>
-          </Button>
+          </t>
         </div>
       </div>
       <div
@@ -1557,7 +1557,7 @@ exports[`renders payment summary on collapsing 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <Button
+              <t
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -1573,8 +1573,8 @@ exports[`renders payment summary on collapsing 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </Button>
-              <Button
+              </t>
+              <t
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -1590,7 +1590,7 @@ exports[`renders payment summary on collapsing 1`] = `
                 >
                   PayPal
                 </button>
-              </Button>
+              </t>
             </div>
             <div
               className="c-payment-method__images"
@@ -1598,75 +1598,75 @@ exports[`renders payment summary on collapsing 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <Image
+                <t
                   src="/static/payments/visa.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/visa.svg"
                         srcSet="/static/payments/visa.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/mastercard.svg"
                         srcSet="/static/payments/mastercard.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/american-express.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/american-express.svg"
                         srcSet="/static/payments/american-express.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
-                <Image
+                </t>
+                <t
                   src="/static/payments/maestro.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/maestro.svg"
                         srcSet="/static/payments/maestro.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <Image
+                <t
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
                     <picture>
                       <img
-                        className="c-image"
+                        className="o-image"
                         src="/static/payments/pay-pal.svg"
                         srcSet="/static/payments/pay-pal.svg 769w"
                       />
                     </picture>
                   </div>
-                </Image>
+                </t>
               </span>
             </div>
           </div>
@@ -1870,13 +1870,13 @@ exports[`renders payment summary on collapsing 1`] = `
                     Billing address *
                   </label>
                 </div>
-                <_class
+                <n
                   checked={false}
                   label="Same as shipping address"
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <Checkbox
+                  <t
                     checked={false}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -1907,8 +1907,8 @@ exports[`renders payment summary on collapsing 1`] = `
                         </span>
                       </label>
                     </div>
-                  </Checkbox>
-                </_class>
+                  </t>
+                </n>
               </div>
             </div>
             <Connect(AddressForm)
@@ -2099,7 +2099,7 @@ exports[`renders payment summary on collapsing 1`] = `
                         Billing Address
                       </h2>
                     </div>
-                    <Button
+                    <t
                       className="o-button-edit"
                       label="Edit"
                       onClick={[Function]}
@@ -2114,7 +2114,7 @@ exports[`renders payment summary on collapsing 1`] = `
                       >
                         Edit
                       </button>
-                    </Button>
+                    </t>
                   </div>
                 </div>
               </AddressForm>

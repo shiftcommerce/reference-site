@@ -13,7 +13,7 @@ import { addCartCouponRequest } from '../requests/cart-requests'
 import ApiClient from '../lib/api-client'
 
 // Objects
-import Button from '../objects/button'
+import { Button } from 'shift-react-components'
 
 export class CouponForm extends Component {
   async submitCoupon (couponCode) {

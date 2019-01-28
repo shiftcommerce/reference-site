@@ -4,7 +4,7 @@ import Link from 'next/link'
 import t from 'typy'
 
 // Objects
-import Button from '../../objects/button'
+import { Button } from 'shift-react-components'
 
 // Components
 import ProductListingCard from '../products/listing/product-listing-card'

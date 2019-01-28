@@ -1,6 +1,6 @@
 // Libraries
 import { PureComponent } from 'react'
-import { fixedPrice } from '../../../lib/fixed-price'
+import { decimalPrice } from '../../../lib/decimal-price'
 
 class ProductPrice extends PureComponent {
   // only add two decimal places if the price is not an integer
@@ -9,7 +9,7 @@ class ProductPrice extends PureComponent {
     if (parseFloat(price) === parseInt(price)) {
       return price
     } else {
-      return fixedPrice(price)
+      return decimalPrice(price)
     }
   }
 

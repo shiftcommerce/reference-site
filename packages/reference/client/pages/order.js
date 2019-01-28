@@ -8,8 +8,7 @@ import t from 'typy'
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Objects
-import Button from '../objects/button'
-import Image from '../objects/image'
+import { Button, Image } from 'shift-react-components'
 
 // Components
 import OrderSummary from '../components/orders/order-summary'
