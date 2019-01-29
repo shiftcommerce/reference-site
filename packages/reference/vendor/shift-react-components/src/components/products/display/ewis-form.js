@@ -1,8 +1,9 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 
 // Objects
-import { Button, Input } from 'shift-react-components'
+import Button from '../../../objects/button'
+import Input from '../../../objects/input'
 
 class EwisForm extends Component {
   constructor (props) {
@@ -36,7 +37,7 @@ class EwisForm extends Component {
           className='c-ewis-form__input-field'
         />
         <Button className='c-product-display__buttons-basket o-button--sml' label='Email When in Stock' status='positive' aria-label='Add to Basket' onClick={this.submitFields.bind(this)} />
-        { ewisMessage }
+        {ewisMessage}
       </>
     )
   }

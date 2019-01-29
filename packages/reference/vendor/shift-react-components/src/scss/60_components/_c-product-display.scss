@@ -1,393 +1,388 @@
 @import "../10_settings/__all";
 @import "../20_tools/__all";
 
-.c-product-display {
+.c-product-display__body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $global-spacing-unit;
 
-  &__body {
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    margin-top: $global-spacing-unit;
+    font-size: 1.2em;
+  }
+}
+
+.c-product-display__body-dropdowns {
+  @include breakpoint(desktop) {
+    order: 2;
+    width: 100%;
+    margin-bottom: $global-spacing-unit-huge * 2;
+  }
+}
+
+.c-product-display__content-image {
+  @include breakpoint(desktop) {
+    order: 1;
+    width: 60%;
+  }
+}
+
+.c-product-display__content-details {
+  @include breakpoint(desktop) {
+    order: 2;
     display: flex;
     flex-direction: column;
-    margin-bottom: $global-spacing-unit;
-
-    @include breakpoint(desktop) {
-      flex-direction: row;
-      margin-top: $global-spacing-unit;
-      font-size: 1.2em;
-    }
-
-    &-dropdowns {
-      @include breakpoint(desktop) {
-        order: 2;
-        width: 100%;
-        margin-bottom: $global-spacing-unit-huge * 2;
-      }
-    }
+    width: 40%;
+    margin-top: $global-spacing-unit-large;
+    margin-left: $global-spacing-unit-tiny;
   }
+}
 
-  &__content {
-    &-image {
-
-      @include breakpoint(desktop) {
-        order: 1;
-        width: 60%;
-      }
-    }
-
-    &-details {
-      @include breakpoint(desktop) {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-        margin-top: $global-spacing-unit-large;
-        margin-left: $global-spacing-unit-tiny;
-      }
-    }
+.c-product-display__arrow {
+  &:before {
+    background-image: url('/static/collapse-arrow-up.png');
+    background-repeat: no-repeat;
+    content: '';
+    float: right;
+    height: 20px;
+    width: 20px;
   }
+}
 
-  &__arrow {
-    &:before {
-      background-image: url('/static/collapse-arrow-up.png');
-      background-repeat: no-repeat;
-      content: '';
-      float: right;
-      height: 20px;
-      width: 20px;
-    }
-  }
-
-  &__carousel {
-    img {
-      width: 100%;
-    }
-
-    @include breakpoint(desktop) {
-      margin: auto;
-      max-width: 500px;
-    }
-  }
-
-  &__description {
-    width: 92.5%;
-    border-top: 0.5px solid $border-default;
-    margin: auto;
-    padding: $global-spacing-unit-small 0;
-
-    @include breakpoint(desktop) {
-      width: 100%;
-    }
-
-    &-title {
-      display: inline;
-      font-size: 0.8em;
-      padding-bottom: $global-spacing-unit;
-
-      @include breakpoint(desktop) {
-        font-size: 0.9em
-      }
-    }
-
-    &-text {
-      display: block;
-      font-size: 0.7em;
-      margin-top: $global-spacing-unit-small;
-
-      @include breakpoint(tablet) {
-        font-size: 0.8em;
-        padding-top: $global-spacing-unit-small;
-      }
-    }
-
-    input {
-      visibility: hidden;
-
-      &[type=checkbox]:checked ~.c-product-display__description-text {
-        display: none;
-      }
-
-      &[type=checkbox]:checked ~.c-product-display__arrow:before {
-        background-image: url('/static/collapse-arrow.png');
-      }
-    }
-
-    label {
-      content: '';
-      cursor: pointer;
-      display: block;
-      height: 2.8em;
-      margin-top: -$global-spacing-unit;
-      position: absolute;
-      width: 92.5%;
-
-      @include breakpoint(desktop) {
-        width: 40%;
-      }
-    }
-  }
-
-  &__buttons {
-    background-color: white;
-    padding: $global-spacing-unit-small;
-    padding-top: 0;
-    position: relative;
-    order: 2;
-
-    @include breakpoint(tablet) {
-      margin: auto;
-      padding: 0;
-      padding-bottom: $global-spacing-unit-small;
-      width: 92.5%;
-    }
-
-    @include breakpoint(desktop) {
-      margin-bottom: $global-spacing-unit-small;
-      padding: 0;
-      margin-top: 0;
-      width: 100%;
-    }
-
-    &-basket {
-      margin: auto;
-      width: 100%;
-      font-size: 0.8em;
-      text-transform: uppercase;
-    }
-  }
-
-  &__info {
-    margin-top: $global-spacing-unit;
-    padding: $global-spacing-unit-small;
-    padding-bottom: 0;
+.c-product-display__carousel {
+  img {
     width: 100%;
-    order: 2;
-
-    @include breakpoint(tablet) {
-      margin: auto;
-      padding: 0;
-      padding-bottom: $global-spacing-unit-small;
-      width: 92.5%;
-    }
-
-    @include breakpoint(desktop) {
-      padding: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-      width: 100%;
-    }
-
-    &-title {
-      font-size: 0.9em;
-      font-weight: 700;
-      padding-bottom: $global-spacing-unit-small;
-
-      @include breakpoint(desktop) {
-        font-size: 1em;
-      }
-    }
-
-    &-sku {
-      font-size: 0.8em;
-      font-weight: 500;
-      color: $text-default;
-      padding-bottom: $global-spacing-unit-small;
-    }
-
-    &-reviews {
-      cursor: pointer;
-      display: inline;
-      font-size: 0.6em;
-      padding-left: $global-spacing-unit-tiny;
-      text-decoration: underline;
-    }
-
-    &-colour {
-      padding: 1.2em 0;
-
-      &-title {
-        display: inline;
-        font-size: 0.75em;
-        padding-right: 1em;
-      }
-
-      label {
-        font-size: 0.6em;
-        padding-left: 3.5em;
-      }
-
-      input[type=radio] {
-        -webkit-appearance: none;
-        height: 22px;
-        margin-top: -1px;
-        position: absolute;
-        width: 22px;
-      }
-
-      input[type=radio]:checked {
-        background-image: url('/static/check.png');
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &-variant {
-      font-size: 0.75em;
-      width: 100%;
-      padding-top: $global-spacing-unit-small;
-      padding-bottom: $global-spacing-unit-small;
-
-      p {
-        font-size: 0.8em;
-      }
-
-      @include breakpoint(desktop) {
-        select {
-          font-size: 0.8em;
-        }
-      }
-
-      &-chart {
-        float: right;
-        font-size: 0.6em;
-        text-decoration: underline;
-        margin-top: -3px;
-      }
-    }
   }
 
-  &__care {
-    width: 92.5%;
-    border-top: 0.5px solid $border-default;
+  @include breakpoint(desktop) {
     margin: auto;
-    padding-top: $global-spacing-unit;
-    padding-bottom: $global-spacing-unit;
+    max-width: 500px;
+  }
+}
 
-    @include breakpoint(desktop) {
-      width: 100%;
-    }
+.c-product-display__description {
+  width: 92.5%;
+  border-top: .5px solid $border-default;
+  margin: auto;
+  padding: $global-spacing-unit-small 0;
 
-    &-title {
-      display: inline;
-      font-size: 0.75em;
-      padding-bottom: 0.5em;
-
-      @include breakpoint(desktop) {
-        font-size: 0.9em
-      }
-    }
-
-    &-text {
-      display: block;
-      font-size: 0.6em;
-
-      @include breakpoint(tablet) {
-        font-size: 0.8em;
-      }
-    }
-
-    input {
-      visibility: hidden;
-
-      &[type=checkbox]:checked ~.c-product-display__care-text {
-        display: none;
-      }
-
-      &[type=checkbox]:checked ~.c-product-display__arrow:before {
-        background-image: url('/static/collapse-arrow.png');
-      }
-    }
-
-    label {
-      content: '';
-      cursor: pointer;
-      display: block;
-      height: 2.8em;
-      margin-top: -2em;
-      position: absolute;
-      width: 92.5%;
-      z-index: 1;
-
-      @include breakpoint(desktop) {
-        width: 55%;
-      }
-    }
+  @include breakpoint(desktop) {
+    width: 100%;
   }
 
-  &__size {
-    width: 92.5%;
-    border-top: 0.5px solid $border-default;
-    margin: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+  input {
+    visibility: hidden;
 
-    @include breakpoint(desktop) {
-      width: 100%;
-    }
-
-    &-title {
-      display: inline;
-      font-size: 0.75em;
-      padding-bottom: 0.5em;
-
-      @include breakpoint(desktop) {
-        font-size: 0.9em
-      }
-    }
-
-    &-text {
+    &[type=checkbox]:checked ~.c-product-display__description-text {
       display: none;
-      font-size: 0.6em;
-
-      @include breakpoint(tablet) {
-        font-size: 0.8em;
-        padding-top: 1em;
-      }
     }
 
-    input {
-      visibility: hidden;
-
-      &[type=checkbox]:checked ~.c-product-display__size-text {
-        display: block;
-      }
-
-      &[type=checkbox]:checked ~.c-product-display__arrow:before {
-        background-image: url('/static/collapse-arrow-up.png');
-      }
-    }
-
-    label {
-      content: '';
-      cursor: pointer;
-      display: block;
-      height: 2.8em;
-      margin-top: -2em;
-      position: absolute;
-      width: 92.5%;
-
-      @include breakpoint(desktop) {
-        width: 55%;
-      }
+    &[type=checkbox]:checked ~.c-product-display__arrow:before {
+      background-image: url('/static/collapse-arrow.png');
     }
   }
 
-  &__option-button {
-    margin: 0;
-    padding: $global-spacing-unit-small;
-    margin-top: $global-spacing-unit-tiny;
-    color: $text-dark;
-    background: $background-white;
-    border: 1px solid $border-default;
-    font-size: 0.6rem;
-    white-space: normal;
+  label {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2.8em;
+    margin-top: -$global-spacing-unit;
+    position: absolute;
+    width: 92.5%;
 
-    &.selected {
-      border-color: $border-dark;
-      font-weight: bold;
-    }
-
-    @include breakpoint(tablet) {
-      &:hover {
-        border-color: $border-dark;
-      }
+    @include breakpoint(desktop) {
+      width: 40%;
     }
   }
 }
+
+.c-product-display__description-title {
+  display: inline;
+  font-size: .8em;
+  padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    font-size: .9em
+  }
+}
+
+.c-product-display__description-text {
+  display: block;
+  font-size: .7em;
+  margin-top: $global-spacing-unit-small;
+
+  @include breakpoint(tablet) {
+    font-size: .8em;
+    padding-top: $global-spacing-unit-small;
+  }
+}
+
+.c-product-display__buttons {
+  background-color: white;
+  padding: $global-spacing-unit-small;
+  padding-top: 0;
+  position: relative;
+  order: 2;
+
+  @include breakpoint(tablet) {
+    margin: auto;
+    padding: 0;
+    padding-bottom: $global-spacing-unit-small;
+    width: 92.5%;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: $global-spacing-unit-small;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+.c-product-display__buttons-basket {
+  margin: auto;
+  width: 100%;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+.c-product-display__info {
+  margin-top: $global-spacing-unit;
+  padding: $global-spacing-unit-small;
+  padding-bottom: 0;
+  width: 100%;
+  order: 2;
+
+  @include breakpoint(tablet) {
+    margin: auto;
+    padding: 0;
+    padding-bottom: $global-spacing-unit-small;
+    width: 92.5%;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.c-product-display__info-title {
+  font-size: .9em;
+  font-weight: 700;
+  padding-bottom: $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    font-size: 1em;
+  }
+}
+
+.c-product-display__info-sku {
+  font-size: .8em;
+  font-weight: 500;
+  color: $text-default;
+  padding-bottom: $global-spacing-unit-small;
+}
+
+.c-product-display__info-reviews {
+  cursor: pointer;
+  display: inline;
+  font-size: .6em;
+  padding-left: $global-spacing-unit-tiny;
+  text-decoration: underline;
+}
+
+.c-product-display__info-colour {
+  padding: 1.2em 0;
+
+  label {
+    font-size: .6em;
+    padding-left: 3.5em;
+  }
+
+  input[type=radio] {
+    -webkit-appearance: none;
+    height: 22px;
+    margin-top: -1px;
+    position: absolute;
+    width: 22px;
+  }
+
+  input[type=radio]:checked {
+    background-image: url('/static/check.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.c-product-display__info-colour-title {
+  display: inline;
+  font-size: .75em;
+  padding-right: 1em;
+}
+
+.c-product-display__info-variant {
+  font-size: .75em;
+  width: 100%;
+  padding-top: $global-spacing-unit-small;
+  padding-bottom: $global-spacing-unit-small;
+
+  p {
+    font-size: .8em;
+  }
+
+  @include breakpoint(desktop) {
+    select {
+      font-size: .8em;
+    }
+  }
+}
+
+.c-product-display__info-variant-chart {
+  float: right;
+  font-size: .6em;
+  text-decoration: underline;
+  margin-top: -3px;
+}
+
+.c-product-display__care {
+  width: 92.5%;
+  border-top: .5px solid $border-default;
+  margin: auto;
+  padding-top: $global-spacing-unit;
+  padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
+
+  input {
+    visibility: hidden;
+
+    &[type=checkbox]:checked ~.c-product-display__care-text {
+      display: none;
+    }
+
+    &[type=checkbox]:checked ~.c-product-display__arrow:before {
+      background-image: url('/static/collapse-arrow.png');
+    }
+  }
+
+  label {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2.8em;
+    margin-top: -2em;
+    position: absolute;
+    width: 92.5%;
+    z-index: 1;
+
+    @include breakpoint(desktop) {
+      width: 55%;
+    }
+  }
+}
+
+.c-product-display__title {
+  display: inline;
+  font-size: .75em;
+  padding-bottom: .5em;
+
+  @include breakpoint(desktop) {
+    font-size: .9em
+  }
+}
+
+.c-product-display__care-text {
+  display: block;
+  font-size: .6em;
+
+  @include breakpoint(tablet) {
+    font-size: .8em;
+  }
+}
+
+.c-product-display__size {
+  width: 92.5%;
+  border-top: .5px solid $border-default;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
+
+  input {
+    visibility: hidden;
+
+    &[type=checkbox]:checked ~.c-product-display__size-text {
+      display: block;
+    }
+
+    &[type=checkbox]:checked ~.c-product-display__arrow:before {
+      background-image: url('/static/collapse-arrow-up.png');
+    }
+  }
+
+  label {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2.8em;
+    margin-top: -2em;
+    position: absolute;
+    width: 92.5%;
+
+    @include breakpoint(desktop) {
+      width: 55%;
+    }
+  }
+}
+
+.c-product-display__size-title {
+  display: inline;
+  font-size: .75em;
+  padding-bottom: .5em;
+
+  @include breakpoint(desktop) {
+    font-size: .9em
+  }
+}
+
+.c-product-display__size-text {
+  display: none;
+  font-size: .6em;
+
+  @include breakpoint(tablet) {
+    font-size: .8em;
+    padding-top: 1em;
+  }
+}
+
+.c-product-display__option-button {
+  margin: 0;
+  padding: $global-spacing-unit-small;
+  margin-top: $global-spacing-unit-tiny;
+  color: $text-dark;
+  background: $background-white;
+  border: 1px solid $border-default;
+  font-size: .6rem;
+  white-space: normal;
+
+  &.selected {
+    border-color: $border-dark;
+    font-weight: bold;
+  }
+
+  @include breakpoint(tablet) {
+    &:hover {
+      border-color: $border-dark;
+    }
+  }
+}
+
