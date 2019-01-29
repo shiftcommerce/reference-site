@@ -4,44 +4,6 @@ const { fetchData, postData, patchData } = require('../lib/api-server')
 // Platform api urls
 const { platform } = require('./../constants/api-urls')
 
-function getRenderer (url) {
-  return async (req, res) => {
-    const emptyResponse = {}
-    const { customerId } = req.session
-
-    if (!customerId) {
-      return res.status(200).send(emptyResponse)
-    }
-
-    const accountUrl = `${url}/${customerId}`
-    const params = {
-      fields: {
-        customer_accounts: 'email,meta_attributes'
-      },
-      // There are some default includes in the platform that we need this to ignore.
-      include: ''
-    }
-
-    const response = await fetchData(params, accountUrl)
-
-    if (response.status === 200) {
-      const data = response.data
-
-      return res.status(200).send(data)
-    } else if (response.status === 404) {
-      return res.status(200).send(emptyResponse)
-    } else if (response.status === 422) {
-      const errorData = response.data.errors
-
-      return res.status(response.status).send(errorData)
-    } else {
-      const errorData = response.data
-
-      return res.status(response.status).send(errorData)
-    }
-  }
-}
-
 function postRenderer (url) {
   return async (req, res) => {
     const response = await postData(req.body, url)
@@ -94,4 +56,4 @@ async function assignCartToUser (req, res) {
   }
 }
 
-module.exports = { getRenderer, postRenderer }
+module.exports = { postRenderer }

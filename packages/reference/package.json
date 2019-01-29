@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "shift-front-end-react",
   "private": true,
   "version": "0.0.1",
@@ -128,6 +129,7 @@
     "url-loader": "^1.0.1"
   },
   "workspaces": [
-    "vendor/shift-react-components"
+    "vendor/shift-react-components",
+    "vendor/shift-next"
   ]
 }

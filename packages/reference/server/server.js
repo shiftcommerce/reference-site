@@ -32,6 +32,7 @@ const { fetchData } = require('./lib/api-server')
 const { platform, oms } = require('./constants/api-urls')
 
 // Handlers
+const { shiftRoutes } = require('shift-next')
 const accountHandler = require('./route-handlers/account-route-handler')
 const cartHandler = require('./route-handlers/cart-route-handler')
 const handler = require('./route-handlers/route-handler')
@@ -66,6 +67,8 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
   server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
+
+  shiftRoutes(server)
 
   server.get('/search', (req, res) => {
     return app.render(req, res, '/search', req.query)
@@ -153,7 +156,6 @@ module.exports = app.prepare().then(() => {
   server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/getSlug', handler.getRenderer(platform.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
-  server.get('/getAccount', accountHandler.getRenderer(platform.AccountUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
   server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
 

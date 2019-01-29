@@ -3,52 +3,14 @@ import nock from 'nock'
 import httpAdapter from 'axios/lib/adapters/http'
 
 // fixtures
-import accountPayload from '../../fixtures/account-payload'
 import registerPayload from '../../fixtures/register'
 import registerInvalidPayload from '../../fixtures/register-invalid'
 import loginAccountPayload from '../../fixtures/login-account'
 import loginAccountInvalidPayload from '../../fixtures/login-account-invalid'
 
-import { getRenderer, postRenderer } from '../../../server/route-handlers/account-route-handler'
+import { postRenderer } from '../../../server/route-handlers/account-route-handler'
 
 axios.defaults.adapter = httpAdapter
-
-describe('fetching an account', () => {
-  afterEach(() => { nock.cleanAll() })
-
-  describe('with valid data', () => {
-    const url = 'account'
-
-    it('should return the data and log the user in', async () => {
-      // Arrange
-      const accountID = '23063267'
-
-      nock(process.env.API_HOST)
-        .get(`/${url}/${accountID}`)
-        .query(true)
-        .reply(200, accountPayload)
-
-      const req = {
-        session: {
-          customerId: accountID
-        }
-      }
-
-      const res = {
-        status: jest.fn(x => ({
-          send: jest.fn(y => y)
-        }))
-      }
-
-      // Act
-      const response = await getRenderer(url)(req, res)
-
-      // Assert
-      expect(res.status).toHaveBeenCalledWith(200)
-      expect(response.data.id).toBe(accountID)
-    })
-  })
-})
 
 describe('create an account', () => {
   afterEach(() => { nock.cleanAll() })
