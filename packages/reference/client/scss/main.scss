@@ -1,13 +1,21 @@
-@import '~shift-react-components/dist/scss/50_objects/_o-button';
+// SETTINGS
+@import '~shift-react-components/dist/scss/10_settings/__all';
 
+// TOOLS
+@import '~shift-react-components/dist/scss/20_tools/__all';
+
+// GENERIC
 @import '30_generic/_box_sizing';
 @import '30_generic/_normalize-iphone';
 @import '~normalize-scss/sass/_normalize';
+@import '30_generic/fonts';
 
+// ELEMENTS
 @import '40_elements/_body';
 @import '40_elements/_image';
 @import '40_elements/_links';
 
+// OBJECTS
 @import '50_objects/_o-body';
 @import '50_objects/_o-breadcrumb';
 @import '~shift-react-components/dist/scss/50_objects/o-button';
@@ -25,6 +33,7 @@
 @import '50_objects/_o-template-component';
 @import '~shift-react-components/dist/scss/50_objects/o-variant-selector';
 
+// COMPONENTS
 @import '60_components/_c-account-forgotpassword';
 @import '60_components/_c-account-showpassword';
 @import '60_components/_c-account-login';
@@ -74,10 +83,12 @@
 @import '60_components/_c-step-indicators';
 @import '60_components/_c-title';
 
+// SCOPES
 @import '65_scopes/_algolia-instantsearch.scss';
 
 @import "~react-responsive-carousel/lib/styles/carousel.min.css";
 
+// UTILITIES
 @import '70_utilities/_u-alignment';
 @import '70_utilities/_u-bold';
 @import '70_utilities/_u-float';
