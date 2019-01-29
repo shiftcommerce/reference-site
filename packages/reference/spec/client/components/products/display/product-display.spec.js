@@ -1,10 +1,9 @@
 // Component
 import ProductDisplay from '../../../../../client/components/products/display/product-display'
-import ProductPrice from '../../../../../client/components/products/display/product-price'
 import Carousel from '../../../../../client/components/products/display/carousel'
 
 // Objects
-import { EwisForm, VariantSelector } from 'shift-react-components'
+import { EwisForm, ProductPrice, VariantSelector } from 'shift-react-components'
 
 // Fixtures
 import product from '../../../../fixtures/product'

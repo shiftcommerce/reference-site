@@ -3,11 +3,8 @@ import React from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
 
-// Components
-import ProductPrice from '../display/product-price'
-
 // Objects
-import { Rating, LazyLoad } from 'shift-react-components'
+import { LazyLoad, ProductPrice, Rating } from 'shift-react-components'
 
 class ProductListingCard extends React.Component {
   renderImageAndTitle () {

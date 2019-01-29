@@ -1,5 +1,5 @@
 // Libraries
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import { decimalPrice } from '../../../lib/decimal-price'
 
 class ProductPrice extends PureComponent {

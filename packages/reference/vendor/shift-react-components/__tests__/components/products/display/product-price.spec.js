@@ -1,9 +1,12 @@
-// Components
+// Libraries
+import React from 'react'
+
+// Component
 import { ProductPrice } from 'shift-react-components'
 
 // Fixtures
-import ProductWithVariantsWithSimilarPrice from '../../../../fixtures/product-with-variants-with-similar-price'
-import ProductWithVariantsWithDifferentPrices from '../../../../fixtures/product-with-variants-with-different-prices'
+import ProductWithVariantsWithSimilarPrice from '../../../fixtures/product-with-variants-with-similar-price'
+import ProductWithVariantsWithDifferentPrices from '../../../fixtures/product-with-variants-with-different-prices'
 
 test('renders correctly if variants have similar price', () => {
   // Act

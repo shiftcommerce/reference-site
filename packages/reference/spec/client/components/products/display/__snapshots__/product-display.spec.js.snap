@@ -475,7 +475,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <ProductPrice
+            <t
               maxPrice={16.95}
               minPrice={16.95}
             >
@@ -487,7 +487,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   16.95
                 </span>
               </div>
-            </ProductPrice>
+            </t>
           </div>
           <div
             className="c-product-display__info-rating"
@@ -1277,7 +1277,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <ProductPrice
+            <t
               maxPrice={97.68}
               minPrice={97.68}
             >
@@ -1289,7 +1289,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </ProductPrice>
+            </t>
           </div>
           <div
             className="c-product-display__info-rating"
@@ -2079,7 +2079,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <ProductPrice
+            <t
               maxPrice={97.68}
               minPrice={97.68}
             >
@@ -2091,7 +2091,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </ProductPrice>
+            </t>
           </div>
           <div
             className="c-product-display__info-rating"
@@ -2876,7 +2876,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <ProductPrice
+            <t
               maxPrice={97.68}
               minPrice={16.95}
             >
@@ -2890,7 +2890,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </ProductPrice>
+            </t>
           </div>
           <div
             className="c-product-display__info-rating"

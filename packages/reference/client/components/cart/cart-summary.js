@@ -44,8 +44,8 @@ class CartSummary extends Component {
 
     if (this.state.loading) {
       return <a>Estimating shipping cost...</a>
-    } else if (this.props.cart.shipping_method) {
-      return <a>{ `Shipping : ${cart.shipping_method.total}` }</a>
+    } else if (cart.shipping_method) {
+      return <a>{ `Shipping : £${decimalPrice(cart.shipping_method.total)}` }</a>
     } else {
       return <a>{ `Shipping from: £${this.state.cheapestShipping.total}` }</a>
     }

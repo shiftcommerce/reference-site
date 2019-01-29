@@ -2,15 +2,15 @@
 import { Component } from 'react'
 
 // Components
-import ProductPrice from './product-price'
 import Carousel from './carousel'
 
 // Objects
 import {
   Button,
   EwisForm,
-  VariantSelector,
-  Rating
+  ProductPrice,
+  Rating,
+  VariantSelector
 } from 'shift-react-components'
 
 class ProductDisplay extends Component {

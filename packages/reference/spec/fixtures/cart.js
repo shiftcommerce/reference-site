@@ -102,7 +102,9 @@ const Cart = {
   ],
   line_items_count: 2,
   meta_attributes: {},
-  shipping_method: 3.45,
+  shipping_method: {
+    total: 3.45
+  },
   shipping_total: 3.45,
   shipping_total_discount: 0,
   sub_total: 6.77,

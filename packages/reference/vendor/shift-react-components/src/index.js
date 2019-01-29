@@ -9,4 +9,6 @@ export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
 // PDP Components
+
 export { default as EwisForm } from './components/products/display/ewis-form'
+export { default as ProductPrice } from './components/products/display/product-price'

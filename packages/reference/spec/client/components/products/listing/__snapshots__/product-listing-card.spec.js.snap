@@ -86,7 +86,7 @@ exports[`renders ProductListingCard correctly 1`] = `
       <div
         className="c-product-listing-card__price"
       >
-        <ProductPrice
+        <t
           maxPrice={97.68}
           minPrice={97.68}
         >
@@ -98,7 +98,7 @@ exports[`renders ProductListingCard correctly 1`] = `
               97.68
             </span>
           </div>
-        </ProductPrice>
+        </t>
       </div>
       <div
         className="c-product-listing-card__rating"
