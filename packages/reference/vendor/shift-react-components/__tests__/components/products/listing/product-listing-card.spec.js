@@ -1,8 +1,10 @@
+import React from 'react'
+
 // Components
-import ProductListingCard from '../../../../../client/components/products/listing/product-listing-card'
+import { ProductListingCard } from 'shift-react-components'
 
 // Fixtures
-import productSearchHit from '../../../../fixtures/product-search-hit'
+import productSearchHit from '../../../fixtures/product-search-hit'
 
 test('renders ProductListingCard correctly', () => {
   // Act

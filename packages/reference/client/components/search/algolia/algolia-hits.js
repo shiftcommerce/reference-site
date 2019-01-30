@@ -2,7 +2,7 @@
 import { connectInfiniteHits, connectStateResults } from 'react-instantsearch-dom'
 
 // Components
-import ProductListingCard from '../../products/listing/product-listing-card'
+import { ProductListingCard } from 'shift-react-components'
 
 // This is only exported for testing
 const BaseAlgoliaHits = (variantGroups) => {

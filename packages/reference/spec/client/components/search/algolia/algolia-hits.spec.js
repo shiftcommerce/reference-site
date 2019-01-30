@@ -1,6 +1,6 @@
 // Components
 import { AlgoliaHits, AlgoliaResults } from '../../../../../client/components/search/algolia/algolia-hits'
-import ProductListingCard from '../../../../../client/components/products/listing/product-listing-card'
+import { ProductListingCard } from 'shift-react-components'
 
 // Fixtures
 import resultsState from '../../../../fixtures/search-result-state'

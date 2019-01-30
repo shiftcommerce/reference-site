@@ -12,3 +12,6 @@ export { default as VariantSelector } from './objects/variant-selector'
 export { default as Carousel } from './components/products/display/carousel'
 export { default as EwisForm } from './components/products/display/ewis-form'
 export { default as ProductPrice } from './components/products/display/product-price'
+
+// PLP Components
+export { default as ProductListingCard } from './components/products/listing/product-listing-card'

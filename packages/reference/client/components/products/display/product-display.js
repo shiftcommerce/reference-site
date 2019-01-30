@@ -4,9 +4,9 @@ import {
   Button,
   Carousel,
   EwisForm,
-  ProductPrice,
+  VariantSelector,
   Rating,
-  VariantSelector
+  ProductPrice
 } from 'shift-react-components'
 
 class ProductDisplay extends Component {

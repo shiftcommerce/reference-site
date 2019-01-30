@@ -1,0 +1,27 @@
+@import "../10_settings/__all";
+@import "../20_tools/__all";
+
+.c-product-listing-card {
+  font-size: 0.85rem;
+
+  &__view-details,
+  &__price,
+  &__rating {
+    text-align: center;
+    &--empty {
+      color: $background-light;
+    }
+  }
+
+  &__title {
+    p {
+      text-align: center;
+      margin: 0;
+      padding: $global-spacing-unit-small 0;
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+  }
+}

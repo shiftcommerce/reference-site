@@ -4,10 +4,7 @@ import Link from 'next/link'
 import t from 'typy'
 
 // Objects
-import { Button } from 'shift-react-components'
-
-// Components
-import ProductListingCard from '../products/listing/product-listing-card'
+import { Button, ProductListingCard } from 'shift-react-components'
 
 class ProductGrid extends PureComponent {
   products (componentData) {

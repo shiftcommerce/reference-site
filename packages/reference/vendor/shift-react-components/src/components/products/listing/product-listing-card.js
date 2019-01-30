@@ -1,12 +1,16 @@
 // Libraries
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import Link from 'next/link'
 
 // Objects
-import { LazyLoad, ProductPrice, Rating } from 'shift-react-components'
+import Rating from '../../../objects/rating'
+import LazyLoad from '../../../objects/lazy-load'
 
-class ProductListingCard extends React.Component {
+// Components
+import ProductPrice from '../display/product-price'
+
+class ProductListingCard extends Component {
   renderImageAndTitle () {
     const {
       assetFileAltText,
@@ -26,7 +30,7 @@ class ProductListingCard extends React.Component {
 
     return (
       <>
-        <div className='c-product-listing-card__gallery c-image'>
+        <div className='c-product-listing-card__gallery o-image'>
           <LazyLoad className='c-product-listing-card__image u-image-shadow'
             src={assetFileUrl}
             alt={assetFileAltText || title}
