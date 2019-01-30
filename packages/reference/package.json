@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "shift-front-end-react",
-  "private": true,
   "version": "0.0.1",
   "main": "server/server.js",
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
@@ -130,6 +129,7 @@
   },
   "workspaces": [
     "vendor/shift-react-components",
+    "vendor/shift-api",
     "vendor/shift-next"
   ]
 }

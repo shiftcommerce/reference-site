@@ -11,6 +11,9 @@
       name: integration tests
       command: yarn run test:integration
     - service: web
+      name: shift-api
+      command: vendor/shift-api/bin/test
+    - service: web
       name: shift-react-components
       command: vendor/shift-react-components/bin/test
     - service: web
