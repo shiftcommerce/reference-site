@@ -7,7 +7,7 @@ import { Product } from './../../../client/pages/product'
 
 // Components
 import Loading from './../../../client/components/loading'
-import ProductDisplay from './../../../client/components/products/display/product-display'
+import { ProductDisplay } from 'shift-react-components'
 
 // Fixtures
 import product from './../../fixtures/product'

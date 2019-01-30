@@ -2,12 +2,12 @@
 import React from 'react'
 
 // Components
-import { EwisForm } from 'shift-react-components'
+import ProductEwisForm from '../../../../src/components/products/display/product-ewis-form'
 
 test('renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <EwisForm />
+    <ProductEwisForm />
   )
 
   // Assert

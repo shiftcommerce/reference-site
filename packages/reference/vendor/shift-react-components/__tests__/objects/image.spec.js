@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { Image } from 'shift-react-components'
+import Image from '../../src/objects/image'
 
 // skippable for now, not sure if needed anymore
 test('renders nothing if no url provided', () => {

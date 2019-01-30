@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import { Carousel } from 'shift-react-components'
+import ProductCarousel from '../../../../src/components/products/display/product-carousel'
 
 // Fixtures
 import product from '../../../fixtures/product'
@@ -10,7 +10,7 @@ import product from '../../../fixtures/product'
 test('renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <Carousel assetFiles={product.asset_files} />
+    <ProductCarousel assetFiles={product.asset_files} />
   )
 
   // Assert

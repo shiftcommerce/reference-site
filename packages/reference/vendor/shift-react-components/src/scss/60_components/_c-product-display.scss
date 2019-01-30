@@ -1,5 +1,5 @@
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-product-display__body {
   display: flex;
@@ -41,7 +41,7 @@
 
 .c-product-display__arrow {
   &:before {
-    background-image: url('/static/collapse-arrow-up.png');
+    background-image: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' width='11.175' height='7.295' viewBox='0 0 0 0 11.175 0 7.295' preserveAspectRatio='none'><path fill='none' stroke-linecap='round' d='M.55.55l5.069 5.923L10.625.549' stroke='#000' stroke-miterlimit='10'/></svg>");
     background-repeat: no-repeat;
     content: '';
     float: right;
@@ -79,7 +79,7 @@
     }
 
     &[type=checkbox]:checked ~.c-product-display__arrow:before {
-      background-image: url('/static/collapse-arrow.png');
+      background-image: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' width='11.175' height='7.295' viewBox='0 0 0 0 11.175 0 7.295' preserveAspectRatio='none'><path fill='none' stroke-linecap='round' d='M.55 6.745L5.619.822l5.006 5.923' stroke='#000' stroke-miterlimit='10'/></svg>");
     }
   }
 
@@ -212,7 +212,7 @@
   }
 
   input[type=radio]:checked {
-    background-image: url('/static/check.png');
+    background-image: url("data:image/svg+xml;charset=UTF8,<svg width='100%' height='100%' viewBox='0 0 40 10' version='1.1' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;'><path d='M13.111,1.124L19.492,8.886L25.911,1.105' style='fill:none;stroke:black;stroke-width:2.21px;'/></svg>");
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -246,122 +246,6 @@
   font-size: .6em;
   text-decoration: underline;
   margin-top: -3px;
-}
-
-.c-product-display__care {
-  width: 92.5%;
-  border-top: .5px solid $border-default;
-  margin: auto;
-  padding-top: $global-spacing-unit;
-  padding-bottom: $global-spacing-unit;
-
-  @include breakpoint(desktop) {
-    width: 100%;
-  }
-
-  input {
-    visibility: hidden;
-
-    &[type=checkbox]:checked ~.c-product-display__care-text {
-      display: none;
-    }
-
-    &[type=checkbox]:checked ~.c-product-display__arrow:before {
-      background-image: url('/static/collapse-arrow.png');
-    }
-  }
-
-  label {
-    content: '';
-    cursor: pointer;
-    display: block;
-    height: 2.8em;
-    margin-top: -2em;
-    position: absolute;
-    width: 92.5%;
-    z-index: 1;
-
-    @include breakpoint(desktop) {
-      width: 55%;
-    }
-  }
-}
-
-.c-product-display__title {
-  display: inline;
-  font-size: .75em;
-  padding-bottom: .5em;
-
-  @include breakpoint(desktop) {
-    font-size: .9em
-  }
-}
-
-.c-product-display__care-text {
-  display: block;
-  font-size: .6em;
-
-  @include breakpoint(tablet) {
-    font-size: .8em;
-  }
-}
-
-.c-product-display__size {
-  width: 92.5%;
-  border-top: .5px solid $border-default;
-  margin: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-
-  @include breakpoint(desktop) {
-    width: 100%;
-  }
-
-  input {
-    visibility: hidden;
-
-    &[type=checkbox]:checked ~.c-product-display__size-text {
-      display: block;
-    }
-
-    &[type=checkbox]:checked ~.c-product-display__arrow:before {
-      background-image: url('/static/collapse-arrow-up.png');
-    }
-  }
-
-  label {
-    content: '';
-    cursor: pointer;
-    display: block;
-    height: 2.8em;
-    margin-top: -2em;
-    position: absolute;
-    width: 92.5%;
-
-    @include breakpoint(desktop) {
-      width: 55%;
-    }
-  }
-}
-
-.c-product-display__size-title {
-  display: inline;
-  font-size: .75em;
-  padding-bottom: .5em;
-
-  @include breakpoint(desktop) {
-    font-size: .9em
-  }
-}
-
-.c-product-display__size-text {
-  display: none;
-  font-size: .6em;
-
-  @include breakpoint(tablet) {
-    font-size: .8em;
-    padding-top: 1em;
-  }
 }
 
 .c-product-display__option-button {

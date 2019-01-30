@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { Rating } from 'shift-react-components'
+import Rating from '../../src/objects/rating'
 
 test('renders correctly without a rating', () => {
   // Act

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button by default disabled should be false 1`] = `
-<t
+<Button
   label="Enabled Button"
   size="lrg"
   status="primary"
@@ -14,11 +14,11 @@ exports[`Button by default disabled should be false 1`] = `
   >
     Enabled Button
   </button>
-</t>
+</Button>
 `;
 
 exports[`Button with props should be of large size 1`] = `
-<t
+<Button
   label="Large Button"
   size="lrg"
 >
@@ -30,11 +30,11 @@ exports[`Button with props should be of large size 1`] = `
   >
     Large Button
   </button>
-</t>
+</Button>
 `;
 
 exports[`Button with props status should be primary 1`] = `
-<t
+<Button
   label="Primary Button"
   status="primary"
 >
@@ -46,11 +46,11 @@ exports[`Button with props status should be primary 1`] = `
   >
     Primary Button
   </button>
-</t>
+</Button>
 `;
 
 exports[`disabled button 1`] = `
-<t
+<Button
   disabled={true}
   label="Testing Button"
   size="lrg"
@@ -64,11 +64,11 @@ exports[`disabled button 1`] = `
   >
     Testing Button
   </button>
-</t>
+</Button>
 `;
 
 exports[`renders correctly 1`] = `
-<t
+<Button
   label="ADD TO BAG"
   size="lrg"
   status="positive"
@@ -81,5 +81,5 @@ exports[`renders correctly 1`] = `
   >
     ADD TO BAG
   </button>
-</t>
+</Button>
 `;

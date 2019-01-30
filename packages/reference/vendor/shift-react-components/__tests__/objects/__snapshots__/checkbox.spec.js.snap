@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<n
+<_class
   checked={true}
   label="Sign up for Weekly Newsletters (optional)"
   name="newsletterOptIn"
 >
-  <t
+  <Checkbox
     checked={true}
     label="Sign up for Weekly Newsletters (optional)"
     name="newsletterOptIn"
@@ -36,6 +36,6 @@ exports[`renders correctly 1`] = `
         </span>
       </label>
     </div>
-  </t>
-</n>
+  </Checkbox>
+</_class>
 `;

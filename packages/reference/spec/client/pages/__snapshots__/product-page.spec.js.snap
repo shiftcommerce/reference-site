@@ -309,7 +309,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
     <SideEffect(Head)>
       <Head />
     </SideEffect(Head)>
-    <ProductDisplay
+    <t
       addToBag={[Function]}
       changeVariant={[Function]}
       product={
@@ -1063,7 +1063,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           </div>
         </div>
       </div>
-    </ProductDisplay>
+    </t>
   </Product>
 </Provider>
 `;

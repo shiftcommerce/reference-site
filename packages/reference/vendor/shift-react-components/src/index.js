@@ -9,8 +9,9 @@ export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
 // PDP Components
-export { default as Carousel } from './components/products/display/carousel'
-export { default as EwisForm } from './components/products/display/ewis-form'
+export { default as ProductCarousel } from './components/products/display/product-carousel'
+export { default as ProductEwisForm } from './components/products/display/product-ewis-form'
+export { default as ProductDisplay } from './components/products/display/product-display'
 export { default as ProductPrice } from './components/products/display/product-price'
 
 // PLP Components

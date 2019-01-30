@@ -9,7 +9,7 @@ import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Components
 import Loading from '../components/loading'
-import ProductDisplay from '../components/products/display/product-display'
+import { ProductDisplay } from 'shift-react-components'
 
 // Actions
 import { addToCart } from '../actions/cart-actions'
@@ -88,7 +88,6 @@ export class Product extends Component {
             product={product}
             changeVariant={this.changeVariant}
             addToBag={this.addToBag}
-            clickToBuy={this.clickToBuy}
             selectedVariant={selectedVariant}
           />
           { components && renderComponents(components) }

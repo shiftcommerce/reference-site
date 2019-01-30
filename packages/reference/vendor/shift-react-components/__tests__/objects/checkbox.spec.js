@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { Checkbox } from 'shift-react-components'
+import Checkbox from '../../src/objects/checkbox'
 
 test('renders correctly', () => {
   // Arrange

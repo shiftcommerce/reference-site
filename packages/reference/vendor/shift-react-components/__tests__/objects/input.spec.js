@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { Input } from 'shift-react-components'
+import Input from '../../src/objects/input'
 
 test('renders text input field containing value', () => {
   // arrange

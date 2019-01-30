@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<n
+<_class
   name="line_item[unit_quantity]"
   options={
     Array [
@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
   }
   prompt="Select a Quantity"
 >
-  <t
+  <DropdownSelect
     name="line_item[unit_quantity]"
     options={
       Array [
@@ -94,6 +94,6 @@ exports[`renders correctly 1`] = `
         </option>
       </select>
     </div>
-  </t>
-</n>
+  </DropdownSelect>
+</_class>
 `;

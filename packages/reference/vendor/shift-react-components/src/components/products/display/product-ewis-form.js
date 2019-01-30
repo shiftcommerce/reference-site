@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import Button from '../../../objects/button'
 import Input from '../../../objects/input'
 
-class EwisForm extends Component {
+class ProductEwisForm extends Component {
   constructor (props) {
     super(props)
 
@@ -43,4 +43,4 @@ class EwisForm extends Component {
   }
 }
 
-export default EwisForm
+export default ProductEwisForm

@@ -206,7 +206,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <t
+          <ProductCarousel
             assetFiles={
               Array [
                 Object {
@@ -453,7 +453,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </t>
+          </ProductCarousel>
         </div>
       </div>
       <div
@@ -475,7 +475,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <t
+            <ProductPrice
               maxPrice={16.95}
               minPrice={16.95}
             >
@@ -487,12 +487,12 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   16.95
                 </span>
               </div>
-            </t>
+            </ProductPrice>
           </div>
           <div
             className="c-product-display__info-rating"
           >
-            <t
+            <Rating
               className="o-rating__star--has-spacing o-rating__star--fs-small"
               rating={0}
             >
@@ -531,7 +531,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   ★
                 </span>
               </span>
-            </t>
+            </Rating>
             <p
               className="c-product-display__info-reviews"
             >
@@ -541,7 +541,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-variant"
           >
-            <t
+            <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
               onClick={[Function]}
@@ -646,7 +646,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 onClick={[Function]}
                 value=""
               >
-                <t
+                <Button
                   aria-posinset={1}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -675,8 +675,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 1 - £16.95
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={2}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -705,8 +705,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 2 - £97.68- Out of Stock
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={3}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -735,15 +735,15 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 3 - £97.68- Email When in Stock
                   </button>
-                </t>
+                </Button>
               </div>
-            </t>
+            </VariantSelector>
           </div>
         </div>
         <div
           className="c-product-display__buttons"
         >
-          <t
+          <Button
             aria-label="Add to Basket"
             className="c-product-display__buttons-basket o-button--sml"
             label="add to basket"
@@ -760,7 +760,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             >
               add to basket
             </button>
-          </t>
+          </Button>
         </div>
         <div
           className="c-product-display__body-dropdowns"
@@ -1008,7 +1008,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <t
+          <ProductCarousel
             assetFiles={
               Array [
                 Object {
@@ -1255,7 +1255,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </t>
+          </ProductCarousel>
         </div>
       </div>
       <div
@@ -1277,7 +1277,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <t
+            <ProductPrice
               maxPrice={97.68}
               minPrice={97.68}
             >
@@ -1289,12 +1289,12 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </t>
+            </ProductPrice>
           </div>
           <div
             className="c-product-display__info-rating"
           >
-            <t
+            <Rating
               className="o-rating__star--has-spacing o-rating__star--fs-small"
               rating={0}
             >
@@ -1333,7 +1333,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   ★
                 </span>
               </span>
-            </t>
+            </Rating>
             <p
               className="c-product-display__info-reviews"
             >
@@ -1343,7 +1343,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-variant"
           >
-            <t
+            <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
               onClick={[Function]}
@@ -1448,7 +1448,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 onClick={[Function]}
                 value=""
               >
-                <t
+                <Button
                   aria-posinset={1}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -1477,8 +1477,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 1 - £16.95
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={2}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -1507,8 +1507,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 2 - £97.68- Out of Stock
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={3}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -1537,15 +1537,15 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 3 - £97.68- Email When in Stock
                   </button>
-                </t>
+                </Button>
               </div>
-            </t>
+            </VariantSelector>
           </div>
         </div>
         <div
           className="c-product-display__buttons"
         >
-          <t
+          <Button
             aria-label="Add to Basket"
             className="c-product-display__buttons-basket o-button--sml"
             label="add to basket"
@@ -1562,7 +1562,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             >
               add to basket
             </button>
-          </t>
+          </Button>
         </div>
         <div
           className="c-product-display__body-dropdowns"
@@ -1810,7 +1810,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <t
+          <ProductCarousel
             assetFiles={
               Array [
                 Object {
@@ -2057,7 +2057,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </t>
+          </ProductCarousel>
         </div>
       </div>
       <div
@@ -2079,7 +2079,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <t
+            <ProductPrice
               maxPrice={97.68}
               minPrice={97.68}
             >
@@ -2091,12 +2091,12 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </t>
+            </ProductPrice>
           </div>
           <div
             className="c-product-display__info-rating"
           >
-            <t
+            <Rating
               className="o-rating__star--has-spacing o-rating__star--fs-small"
               rating={0}
             >
@@ -2135,7 +2135,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   ★
                 </span>
               </span>
-            </t>
+            </Rating>
             <p
               className="c-product-display__info-reviews"
             >
@@ -2145,7 +2145,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-variant"
           >
-            <t
+            <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
               onClick={[Function]}
@@ -2250,7 +2250,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 onClick={[Function]}
                 value=""
               >
-                <t
+                <Button
                   aria-posinset={1}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -2279,8 +2279,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 1 - £16.95
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={2}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -2309,8 +2309,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 2 - £97.68- Out of Stock
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={3}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -2339,20 +2339,20 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 3 - £97.68- Email When in Stock
                   </button>
-                </t>
+                </Button>
               </div>
-            </t>
+            </VariantSelector>
           </div>
         </div>
         <div
           className="c-product-display__buttons"
         >
-          <t>
-            <n
+          <ProductEwisForm>
+            <_class
               className="c-ewis-form__input-field"
               placeholder="Email"
             >
-              <t
+              <Input
                 className="c-ewis-form__input-field"
                 placeholder="Email"
                 renderValidationMessage={[Function]}
@@ -2375,9 +2375,9 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                     />
                   </label>
                 </div>
-              </t>
-            </n>
-            <t
+              </Input>
+            </_class>
+            <Button
               aria-label="Add to Basket"
               className="c-product-display__buttons-basket o-button--sml"
               label="Email When in Stock"
@@ -2394,8 +2394,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               >
                 Email When in Stock
               </button>
-            </t>
-          </t>
+            </Button>
+          </ProductEwisForm>
         </div>
         <div
           className="c-product-display__body-dropdowns"
@@ -2612,7 +2612,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <t
+          <ProductCarousel
             assetFiles={
               Array [
                 Object {
@@ -2859,7 +2859,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </t>
+          </ProductCarousel>
         </div>
       </div>
       <div
@@ -2876,7 +2876,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-price"
           >
-            <t
+            <ProductPrice
               maxPrice={97.68}
               minPrice={16.95}
             >
@@ -2890,12 +2890,12 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   97.68
                 </span>
               </div>
-            </t>
+            </ProductPrice>
           </div>
           <div
             className="c-product-display__info-rating"
           >
-            <t
+            <Rating
               className="o-rating__star--has-spacing o-rating__star--fs-small"
               rating={0}
             >
@@ -2934,7 +2934,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   ★
                 </span>
               </span>
-            </t>
+            </Rating>
             <p
               className="c-product-display__info-reviews"
             >
@@ -2944,7 +2944,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
           <div
             className="c-product-display__info-variant"
           >
-            <t
+            <VariantSelector
               aria-label="Variant Selector"
               name="line_item[item_id]"
               onClick={[Function]}
@@ -3049,7 +3049,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 onClick={[Function]}
                 value=""
               >
-                <t
+                <Button
                   aria-posinset={1}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -3078,8 +3078,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 1 - £16.95
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={2}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -3108,8 +3108,8 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 2 - £97.68- Out of Stock
                   </button>
-                </t>
-                <t
+                </Button>
+                <Button
                   aria-posinset={3}
                   aria-setsize={3}
                   className="c-product-display__option-button "
@@ -3138,15 +3138,15 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     Variant 3 - £97.68- Email When in Stock
                   </button>
-                </t>
+                </Button>
               </div>
-            </t>
+            </VariantSelector>
           </div>
         </div>
         <div
           className="c-product-display__buttons"
         >
-          <t
+          <Button
             aria-label="Add to Basket"
             className="c-product-display__buttons-basket o-button--sml"
             label="add to basket"
@@ -3163,7 +3163,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
             >
               add to basket
             </button>
-          </t>
+          </Button>
         </div>
         <div
           className="c-product-display__body-dropdowns"

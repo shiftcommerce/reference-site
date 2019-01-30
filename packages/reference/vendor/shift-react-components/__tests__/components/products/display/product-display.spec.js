@@ -1,11 +1,17 @@
-// Component
-import ProductDisplay from '../../../../../client/components/products/display/product-display'
+// Libraries
+import React from 'react'
 
 // Objects
-import { Carousel, EwisForm, ProductPrice, VariantSelector } from 'shift-react-components'
+import VariantSelector from '../../../../src/objects/variant-selector'
+
+// Components
+import ProductCarousel from '../../../../src/components/products/display/product-carousel'
+import ProductDisplay from '../../../../src/components/products/display/product-display'
+import ProductEwisForm from '../../../../src/components/products/display/product-ewis-form'
+import ProductPrice from '../../../../src/components/products/display/product-price'
 
 // Fixtures
-import product from '../../../../fixtures/product'
+import product from '../../../fixtures/product'
 
 describe('PDP renders correctly', () => {
   test('when no variant is selected', () => {
@@ -29,7 +35,7 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toMatchSnapshot()
     expect(wrapper).toIncludeText(product.title)
     expect(wrapper).toIncludeText(product.description)
-    expect(wrapper).toContainReact(<Carousel assetFiles={product.asset_files} />)
+    expect(wrapper).toContainReact(<ProductCarousel assetFiles={product.asset_files} />)
     expect(wrapper).toContainReact(<VariantSelector onClick={emptyFunction} value={value.sku} name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Variant Selector' />)
     expect(wrapper.find('button.c-product-display__buttons-basket')).toMatchElement(<button>add to basket</button>)
     expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={97.68} />)
@@ -111,6 +117,6 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toIncludeText(selectedVariant.description)
     expect(wrapper).toIncludeText(selectedVariant.sku)
     expect(wrapper).toContainReact(<ProductPrice minPrice={97.68} maxPrice={97.68} />)
-    expect(wrapper).toContainReact(<EwisForm />)
+    expect(wrapper).toContainReact(<ProductEwisForm />)
   })
 })

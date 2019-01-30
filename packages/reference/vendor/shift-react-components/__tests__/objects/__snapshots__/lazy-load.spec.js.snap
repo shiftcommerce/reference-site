@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a placeholder when image is loading 1`] = `
-<t
+<LazyLoad
   height="35px"
   src="test@test.com"
   width="125px"
@@ -16,12 +16,12 @@ exports[`renders a placeholder when image is loading 1`] = `
       }
     }
   >
-    <t
+    <FadeIn
       offset={150}
       once={true}
       render={[Function]}
     >
-      <t
+      <LazyLoad
         offset={150}
         once={true}
         overflow={false}
@@ -37,8 +37,8 @@ exports[`renders a placeholder when image is loading 1`] = `
             }
           }
         />
-      </t>
-    </t>
+      </LazyLoad>
+    </FadeIn>
   </div>
-</t>
+</LazyLoad>
 `;

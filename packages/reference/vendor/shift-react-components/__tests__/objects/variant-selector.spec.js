@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Object
-import { VariantSelector } from 'shift-react-components'
+import VariantSelector from '../../src/objects/variant-selector'
 
 // Fixtures
 import product from '../fixtures/product'

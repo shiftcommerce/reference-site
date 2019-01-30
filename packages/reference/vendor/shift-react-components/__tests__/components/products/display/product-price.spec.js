@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import { ProductPrice } from 'shift-react-components'
+import ProductPrice from '../../../../src/components/products/display/product-price'
 
 // Fixtures
 import ProductWithVariantsWithSimilarPrice from '../../../fixtures/product-with-variants-with-similar-price'

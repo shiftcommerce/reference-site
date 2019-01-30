@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { DropdownSelect } from 'shift-react-components'
+import DropdownSelect from '../../src/objects/dropdown-select'
 
 test('renders correctly', () => {
   // Arrange

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import { LazyLoad } from 'shift-react-components'
+import LazyLoad from '../../src/objects/lazy-load'
 
 test('renders a placeholder when image is loading', () => {
   // act

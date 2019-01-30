@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import { ProductListingCard } from 'shift-react-components'
+import ProductListingCard from '../../../../src/components/products/listing/product-listing-card'
 
 // Fixtures
 import productSearchHit from '../../../fixtures/product-search-hit'

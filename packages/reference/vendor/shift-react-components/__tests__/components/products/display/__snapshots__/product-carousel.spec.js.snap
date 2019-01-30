@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<t
+<ProductCarousel
   assetFiles={
     Array [
       Object {
@@ -248,5 +248,5 @@ exports[`renders correctly 1`] = `
       </Thumbs>
     </div>
   </Carousel>
-</t>
+</ProductCarousel>
 `;

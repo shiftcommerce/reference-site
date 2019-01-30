@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders ProductListingCard correctly 1`] = `
-<t
+<ProductListingCard
   assetFileAltText="SEPIA nonslip tray 420×210mm"
   assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
   maxPrice={97.68}
@@ -16,7 +16,7 @@ exports[`renders ProductListingCard correctly 1`] = `
     <div
       className="c-product-listing-card__body"
     >
-      <t
+      <Link
         as="/products/seed_product_51"
         href="/slug?slug=/products/seed_product_51"
       >
@@ -27,7 +27,7 @@ exports[`renders ProductListingCard correctly 1`] = `
           <div
             className="c-product-listing-card__gallery o-image"
           >
-            <t
+            <LazyLoad
               alt="SEPIA nonslip tray 420×210mm"
               aria-label="SEPIA nonslip tray 420×210mm"
               className="c-product-listing-card__image u-image-shadow"
@@ -45,12 +45,12 @@ exports[`renders ProductListingCard correctly 1`] = `
                   }
                 }
               >
-                <t
+                <FadeIn
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <t
+                  <LazyLoad
                     offset={150}
                     once={true}
                     overflow={false}
@@ -66,10 +66,10 @@ exports[`renders ProductListingCard correctly 1`] = `
                         }
                       }
                     />
-                  </t>
-                </t>
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </t>
+            </LazyLoad>
           </div>
           <div
             className="c-product-listing-card__title"
@@ -82,11 +82,11 @@ exports[`renders ProductListingCard correctly 1`] = `
             </p>
           </div>
         </a>
-      </t>
+      </Link>
       <div
         className="c-product-listing-card__price"
       >
-        <t
+        <ProductPrice
           maxPrice={97.68}
           minPrice={97.68}
         >
@@ -98,12 +98,12 @@ exports[`renders ProductListingCard correctly 1`] = `
               97.68
             </span>
           </div>
-        </t>
+        </ProductPrice>
       </div>
       <div
         className="c-product-listing-card__rating"
       >
-        <t
+        <Rating
           rating={0}
         >
           <span
@@ -141,9 +141,9 @@ exports[`renders ProductListingCard correctly 1`] = `
               ★
             </span>
           </span>
-        </t>
+        </Rating>
       </div>
     </div>
   </div>
-</t>
+</ProductListingCard>
 `;

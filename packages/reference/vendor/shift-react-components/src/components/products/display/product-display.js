@@ -1,19 +1,40 @@
 // Libraries
-import { Component } from 'react'
-import {
-  Button,
-  Carousel,
-  EwisForm,
-  VariantSelector,
-  Rating,
-  ProductPrice
-} from 'shift-react-components'
+import React, { Component } from 'react'
+
+// Components
+import ProductCarousel from './product-carousel'
+import ProductEwisForm from './product-ewis-form'
+import ProductPrice from './product-price'
+
+// Objects
+import Button from '../../../objects/button'
+import Rating from '../../../objects/rating'
+import VariantSelector from '../../../objects/variant-selector'
 
 class ProductDisplay extends Component {
   renderCarousel (product) {
     return (
       <div className='c-product-display__carousel'>
-        <Carousel assetFiles={product.asset_files} />
+        <ProductCarousel assetFiles={product.asset_files} />
+      </div>
+    )
+  }
+
+  renderEwisForm () {
+    return (
+      <div className='c-product-display__buttons'>
+        <ProductEwisForm />
+      </div>
+    )
+  }
+
+  renderAddToBasket (addToBag, selectedVariant) {
+    const buttonStatus = selectedVariant && selectedVariant.stock_available_level > 0 ? 'positive' : 'disabled'
+    const onClick = selectedVariant && selectedVariant.stock_available_level > 0 ? addToBag : null
+
+    return (
+      <div className='c-product-display__buttons'>
+        <Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
       </div>
     )
   }
@@ -22,20 +43,9 @@ class ProductDisplay extends Component {
     const { addToBag, selectedVariant } = this.props
 
     if (selectedVariant && selectedVariant.ewis_eligible && selectedVariant.stock_available_level <= 0) {
-      return (
-        <div className='c-product-display__buttons'>
-          <EwisForm />
-        </div>
-      )
+      return this.renderEwisForm()
     } else {
-      const buttonStatus = selectedVariant && selectedVariant.stock_available_level > 0 ? 'positive' : 'disabled'
-      const onClick = selectedVariant && selectedVariant.stock_available_level > 0 ? addToBag : null
-
-      return (
-        <div className='c-product-display__buttons'>
-          <Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
-        </div>
-      )
+      return this.renderAddToBasket(addToBag, selectedVariant)
     }
   }
 
@@ -70,16 +80,6 @@ class ProductDisplay extends Component {
     }
   }
 
-  renderSku (selectedVariant) {
-    if (selectedVariant) {
-      return (
-        <div className='c-product-display__info-sku'>
-          { selectedVariant.sku }
-        </div>
-      )
-    }
-  }
-
   renderTitle (product, selectedVariant) {
     let title = product.title
 
@@ -92,6 +92,16 @@ class ProductDisplay extends Component {
         { title }
       </div>
     )
+  }
+
+  renderSku (selectedVariant) {
+    if (selectedVariant) {
+      return (
+        <div className='c-product-display__info-sku'>
+          { selectedVariant.sku }
+        </div>
+      )
+    }
   }
 
   renderPrice (product, selectedVariant) {
@@ -111,8 +121,7 @@ class ProductDisplay extends Component {
   }
 
   renderInfo (product, selectedVariant) {
-    const metaAttributes = product.meta_attributes
-    const { changeVariant, sku } = this.props
+    const { changeVariant, sku, product: { meta_attributes } } = this.props
 
     return (
       <div className='c-product-display__info'>
@@ -126,7 +135,7 @@ class ProductDisplay extends Component {
           />
           <p className='c-product-display__info-reviews'>Read Reviews</p>
         </div>
-        { this.renderColourSelector(metaAttributes) }
+        { this.renderColourSelector(meta_attributes) }
         <div className='c-product-display__info-variant'>
           <VariantSelector
             onClick={changeVariant}
@@ -138,72 +147,6 @@ class ProductDisplay extends Component {
         </div>
       </div>
     )
-  }
-
-  renderFit (meta) {
-    if (meta.silhouette) {
-      return (
-        <p className='c-product-display__size-text'>- { meta.silhouette.value }</p>
-      )
-    }
-  }
-
-  renderFeature (meta) {
-    if (meta.product_feature) {
-      return (
-        <p className='c-product-display__size-text'>- { meta.product_feature.value }</p>
-      )
-    }
-  }
-
-  renderSizeAndFit () {
-    const { product: { meta_attributes } } = this.props
-
-    if (meta_attributes.product_feature || meta_attributes.silhouette) {
-      return (
-        <div className='c-product-display__size'>
-          <h1 className='c-product-display__size-title'>Size & Fit</h1>
-          <label htmlFor='size' className='c-product-dispay__label' />
-          <input type='checkbox' id='size' />
-          <span className='c-product-display__arrow' />
-          { this.renderFeature(meta_attributes) }
-          { this.renderFit(meta_attributes) }
-        </div>
-      )
-    }
-  }
-
-  renderCleaning (meta) {
-    if (meta.care_instructions) {
-      return (
-        <p className='c-product-display__care-text'>- { meta.care_instructions.value }</p>
-      )
-    }
-  }
-
-  renderFabric (meta) {
-    if (meta.fabric) {
-      return (
-        <p className='c-product-display__care-text'>- { meta.fabric.value }</p>
-      )
-    }
-  }
-
-  renderDetailsAndCare () {
-    const { product: { meta_attributes } } = this.props
-
-    if (meta_attributes.fabric || meta_attributes.care_instructions) {
-      return (
-        <div className='c-product-display__care'>
-          <h1 className='c-product-display__care-title'>Details & Care</h1>
-          <label htmlFor='care' className='c-product-dispay__label' />
-          <input type='checkbox' id='care' />
-          <span className='c-product-display__arrow' />
-          { this.renderCleaning(meta_attributes) }
-          { this.renderFabric(meta_attributes) }
-        </div>
-      )
-    }
   }
 
   render () {
@@ -220,8 +163,6 @@ class ProductDisplay extends Component {
             { this.renderButtons() }
             <div className='c-product-display__body-dropdowns'>
               { this.renderDescription(product, selectedVariant) }
-              { this.renderSizeAndFit() }
-              { this.renderDetailsAndCare() }
             </div>
           </div>
         </div>

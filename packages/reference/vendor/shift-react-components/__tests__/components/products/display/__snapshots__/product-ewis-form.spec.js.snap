@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<t>
-  <n
+<ProductEwisForm>
+  <_class
     className="c-ewis-form__input-field"
     placeholder="Email"
   >
-    <t
+    <Input
       className="c-ewis-form__input-field"
       placeholder="Email"
       renderValidationMessage={[Function]}
@@ -29,9 +29,9 @@ exports[`renders correctly 1`] = `
           />
         </label>
       </div>
-    </t>
-  </n>
-  <t
+    </Input>
+  </_class>
+  <Button
     aria-label="Add to Basket"
     className="c-product-display__buttons-basket o-button--sml"
     label="Email When in Stock"
@@ -48,6 +48,6 @@ exports[`renders correctly 1`] = `
     >
       Email When in Stock
     </button>
-  </t>
-</t>
+  </Button>
+</ProductEwisForm>
 `;
