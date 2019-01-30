@@ -206,7 +206,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <CarouselComponent
+          <t
             assetFiles={
               Array [
                 Object {
@@ -453,7 +453,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </CarouselComponent>
+          </t>
         </div>
       </div>
       <div
@@ -1008,7 +1008,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <CarouselComponent
+          <t
             assetFiles={
               Array [
                 Object {
@@ -1255,7 +1255,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </CarouselComponent>
+          </t>
         </div>
       </div>
       <div
@@ -1810,7 +1810,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <CarouselComponent
+          <t
             assetFiles={
               Array [
                 Object {
@@ -2057,7 +2057,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </CarouselComponent>
+          </t>
         </div>
       </div>
       <div
@@ -2612,7 +2612,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         <div
           className="c-product-display__carousel"
         >
-          <CarouselComponent
+          <t
             assetFiles={
               Array [
                 Object {
@@ -2859,7 +2859,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                 </Thumbs>
               </div>
             </Carousel>
-          </CarouselComponent>
+          </t>
         </div>
       </div>
       <div

@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react-lazyload-fadein": "^1.1.0"
+    "react-lazyload-fadein": "^1.1.0",
+    "react-responsive-carousel": "^3.1.43"
   },
   "peerDependencies": {
     "react": "^16.7.0"

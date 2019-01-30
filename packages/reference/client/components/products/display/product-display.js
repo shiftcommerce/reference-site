@@ -1,12 +1,8 @@
 // Libraries
 import { Component } from 'react'
-
-// Components
-import Carousel from './carousel'
-
-// Objects
 import {
   Button,
+  Carousel,
   EwisForm,
   ProductPrice,
   Rating,
