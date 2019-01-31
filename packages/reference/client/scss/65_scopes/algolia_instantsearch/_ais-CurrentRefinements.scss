@@ -14,6 +14,8 @@
   &-item {
     display: inline-block;
     list-style: none;
+    background-color: transparent;
+    padding: 0;
   }
 
   &-category {
@@ -28,6 +30,7 @@
 
   &-categoryLabel {
     padding: 0.5rem;
+    color: $text-dark;
   }
 
   &-delete {

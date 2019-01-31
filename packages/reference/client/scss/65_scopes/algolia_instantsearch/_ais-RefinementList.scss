@@ -18,6 +18,7 @@
 
   &-count {
     color: $medium-grey;
+    background-color: transparent;
 
     &:after {
       content:")"

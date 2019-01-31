@@ -41,8 +41,13 @@ const LoadMoreHits = ({ hits, hasMore, refine }) => {
 const productListingInfo = ({ products, allSearchResults }) => {
   return (
     <div className="c-product-listing__info">
-      <p className="c-product-listing__counts">Showing { products.length } of { allSearchResults && allSearchResults.nbHits } products</p>
-      <p className="c-product-listing__grid-toggles u-visible-d">View <a href='#' className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled">2</a> <a href='#' className="c-product-listing__grid-toggle">4</a></p>
+      <p className="c-product-listing__counts">
+        Showing { products.length } of { allSearchResults && allSearchResults.nbHits } products
+      </p>
+      <p className="c-product-listing__grid-toggles u-visible-d">
+        View <a href='#' className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled">2 </a>
+        <a href='#' className="c-product-listing__grid-toggle">4</a>
+      </p>
     </div>
   )
 }

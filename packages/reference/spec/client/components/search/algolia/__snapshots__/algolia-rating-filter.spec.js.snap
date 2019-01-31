@@ -49,12 +49,12 @@ exports[`renders rating options correctly 1`] = `
       },
     ]
   }
-  limitMax={20}
-  limitMin={10}
+  limit={10}
   max={5}
   min={0}
   operator="or"
   refine={[MockFunction]}
   showMore={false}
+  showMoreLimit={20}
 />
 `;

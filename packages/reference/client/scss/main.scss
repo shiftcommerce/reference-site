@@ -4,6 +4,9 @@
 // TOOLS
 @import '~shift-react-components/dist/scss/20_tools/__all';
 
+// 3rd Party
+@import '~instantsearch.css/themes/algolia.css';
+
 // GENERIC
 @import '30_generic/_box_sizing';
 @import '30_generic/_normalize-iphone';

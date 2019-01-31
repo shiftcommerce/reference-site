@@ -1,20 +1,18 @@
 .ais-SearchBox {
-  &__root {
-    width: 100%;
-  }
+  width: 100%;
 
-  &__wrapper {
+  &-form {
     display: flex;
   }
 
 
-  &__input, &__submit {
+  &-input, &-submit {
     border: 1px solid $border-default;
     background-color: white;
     height: 3rem;
   }
 
-  &__input {
+  &-input {
     flex-grow: 1;
     border-right: none;
     border-radius: 6px 0 0 6px;
@@ -31,13 +29,15 @@
     }
   }
 
-  &__submit {
+  &-submit {
     border-left: none;
     border-radius:  0 6px 6px 0;
     background-image: url('/static/magnifying-glass.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 40px;
+    right: -0.6em;
+    left: initial;
     cursor: pointer;
 
     // Don't show the default magnifying glass icon
@@ -47,7 +47,7 @@
   }
 
   // Don't show the reset button
-  &__reset {
+  &-reset {
     display: none;
   }
 }

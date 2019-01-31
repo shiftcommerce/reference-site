@@ -42,9 +42,8 @@
   }
 
   @include breakpoint(desktop) {
-    max-width: 220px;
+    width: 200px;
     float: left;
-    width: auto;
     padding-top: $global-spacing-unit-small;
     padding-bottom: $global-spacing-unit-small;
     margin-right: $global-spacing-unit;

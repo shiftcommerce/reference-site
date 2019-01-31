@@ -94,13 +94,13 @@ exports[`algolia filters turns every facet into a refinement list 1`] = `
       }
     >
       <AlgoliaRefinementList(AlgoliaRatingFilter)
-        attributeName="product_rating"
-        limitMax={20}
-        limitMin={10}
+        attribute="product_rating"
+        limit={10}
         max={5}
         min={0}
         operator="or"
         showMore={false}
+        showMoreLimit={20}
       />
     </Panel>
     <Panel
@@ -178,13 +178,13 @@ exports[`renders the algolia filter component with children 1`] = `
       }
     >
       <AlgoliaRefinementList(AlgoliaRatingFilter)
-        attributeName="product_rating"
-        limitMax={20}
-        limitMin={10}
+        attribute="product_rating"
+        limit={10}
         max={5}
         min={0}
         operator="or"
         showMore={false}
+        showMoreLimit={20}
       />
     </Panel>
     <Panel

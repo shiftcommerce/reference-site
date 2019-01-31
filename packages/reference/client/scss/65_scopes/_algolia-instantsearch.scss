@@ -7,6 +7,35 @@
 
    ========================================================================== */
 
+.ais-Breadcrumb,
+.ais-ClearRefinements,
+.ais-CurrentRefinements,
+.ais-GeoSearch,
+.ais-HierarchicalMenu,
+.ais-Hits,
+.ais-Results,
+.ais-HitsPerPage,
+.ais-ResultsPerPage,
+.ais-InfiniteHits,
+.ais-InfiniteResults,
+.ais-Menu,
+.ais-MenuSelect,
+.ais-NumericMenu,
+.ais-NumericSelector,
+.ais-Pagination,
+.ais-Panel,
+.ais-PoweredBy,
+.ais-RangeInput,
+.ais-RangeSlider,
+.ais-RatingMenu,
+.ais-RefinementList,
+.ais-SearchBox,
+.ais-SortBy,
+.ais-Stats,
+.ais-ToggleRefinement {
+  color: $text-dark;
+}
+
 @mixin custom-checkbox {
   position: relative;
   display: inline-block;
@@ -32,12 +61,11 @@
 
   &:after {
     content: none;
-    height: 3px;
-    width: 7px;
+    height: 4px;
+    width: 8px;
     color: black;
     border-left: 2px solid;
     border-bottom: 2px solid;
-
     transform: rotate(-45deg);
     left: 4px;
     top: 5px;

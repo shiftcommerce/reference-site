@@ -87,7 +87,7 @@ class AlgoliaFilters extends Component {
           </div>
           { this.renderRefinements(facets) }
           <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <AlgoliaRatingFilter attributeName='product_rating' min={0} max={5} />
+            <AlgoliaRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
             <AlgoliaSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />

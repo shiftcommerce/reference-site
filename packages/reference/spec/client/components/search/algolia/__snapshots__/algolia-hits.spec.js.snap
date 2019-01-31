@@ -40,9 +40,8 @@ exports[`renders the algolia hits 1`] = `
               className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled"
               href="#"
             >
-              2
+              2 
             </a>
-             
             <a
               className="c-product-listing__grid-toggle"
               href="#"
