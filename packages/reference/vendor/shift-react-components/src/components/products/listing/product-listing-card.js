@@ -1,7 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Link from 'next/link'
 
 // Objects
 import Rating from '../../../objects/rating'
@@ -10,7 +9,15 @@ import LazyLoad from '../../../objects/lazy-load'
 // Components
 import ProductPrice from '../display/product-price'
 
+import componentMapping from '../../../lib/component-mapping'
+
 class ProductListingCard extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Link = componentMapping('Link')
+  }
+
   renderImageAndTitle () {
     const {
       assetFileAltText,
@@ -60,11 +67,9 @@ class ProductListingCard extends Component {
     return (
       <div className={classNames('c-product-listing-card', className)}>
         <div className='c-product-listing-card__body'>
-          <Link href={`/slug?slug=${productPath}`} as={productPath}>
-            <a>
-              { this.renderImageAndTitle() }
-            </a>
-          </Link>
+          <this.Link href={`/slug?slug=${productPath}`} as={productPath}>
+            { this.renderImageAndTitle() }
+          </this.Link>
           <div className='c-product-listing-card__price'>
             <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>

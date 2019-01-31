@@ -2,7 +2,7 @@
 import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
 
 // Objects
-import Breadcrumb from '../../../../../client/objects/breadcrumb'
+import { Breadcrumb } from 'shift-react-components'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {

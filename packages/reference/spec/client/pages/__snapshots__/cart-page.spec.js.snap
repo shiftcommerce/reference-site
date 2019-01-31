@@ -269,7 +269,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           <div
             className="c-cart-table__breadcrumb"
           >
-            <Breadcrumb>
+            <t>
               <nav>
                 <ol
                   className="o-breadcrumb"
@@ -277,22 +277,22 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   <li
                     className="o-breadcrumb__item"
                   >
-                    <Link
+                    <pe
                       as="/"
+                      className="o-breadcrumb__link"
                       href="/home/index"
                     >
                       <a
                         className="o-breadcrumb__link"
-                        href="/"
-                        onClick={[Function]}
+                        href="/home/index"
                       >
                         Home
                       </a>
-                    </Link>
+                    </pe>
                   </li>
                 </ol>
               </nav>
-            </Breadcrumb>
+            </t>
           </div>
           <div
             className="c-cart-table__header-grid"

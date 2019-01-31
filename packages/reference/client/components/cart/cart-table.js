@@ -17,7 +17,7 @@ import CouponForm from '../coupon-form'
 import ShippingMethods from '../../static/shipping-methods.json'
 
 // Objects
-import Breadcrumb from '../../objects/breadcrumb'
+import { Breadcrumb } from 'shift-react-components'
 
 class CartTable extends Component {
   renderCartData () {

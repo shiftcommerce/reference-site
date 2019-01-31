@@ -1,8 +1,14 @@
-import { Component } from 'react'
-import Link from 'next/link'
+import React, { Component } from 'react'
+import componentMapping from '../lib/component-mapping'
 import classNames from 'classnames'
 
 class Breadcrumb extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Link = componentMapping('Link')
+  }
+
   /**
    * Render the breadcrumb item
    * @param  {object} crumb
@@ -16,9 +22,13 @@ class Breadcrumb extends Component {
 
     return (
       <li className='o-breadcrumb__item' key={key}>
-        <Link href={href} as={crumb.canonical_path}>
-          <a className='o-breadcrumb__link'>{ crumb.title }</a>
-        </Link>
+        <this.Link
+          href={href}
+          as={crumb.canonical_path}
+          className='o-breadcrumb__link'
+        >
+          { crumb.title }
+        </this.Link>
       </li>
     )
   }

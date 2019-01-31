@@ -16,13 +16,12 @@ exports[`renders ProductListingCard correctly 1`] = `
     <div
       className="c-product-listing-card__body"
     >
-      <Link
+      <_default
         as="/products/seed_product_51"
         href="/slug?slug=/products/seed_product_51"
       >
         <a
-          href="/products/seed_product_51"
-          onClick={[Function]}
+          href="/slug?slug=/products/seed_product_51"
         >
           <div
             className="c-product-listing-card__gallery o-image"
@@ -82,7 +81,7 @@ exports[`renders ProductListingCard correctly 1`] = `
             </p>
           </div>
         </a>
-      </Link>
+      </_default>
       <div
         className="c-product-listing-card__price"
       >

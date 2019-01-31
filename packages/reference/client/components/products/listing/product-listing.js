@@ -3,7 +3,7 @@ import { Component } from 'react'
 import classNames from 'classnames'
 
 // Objects
-import Breadcrumb from '../../../objects/breadcrumb'
+import { Breadcrumb } from 'shift-react-components'
 
 // Components
 import { AlgoliaHits } from '../../search/algolia/algolia-hits'

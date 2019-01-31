@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <Fragment>
   <AlgoliaStateResults(ProductMenu) />
-  <Breadcrumb />
+  <t />
   <div
     className="c-product-listing-wrapper"
   >
