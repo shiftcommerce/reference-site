@@ -45,10 +45,12 @@ export class Layout extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      shrunk: false
+      shrunk: false,
+      toggleShowClass: false
     }
 
     this.handleScroll = this.handleScroll.bind(this)
+    this.toggleDropDown = this.toggleDropDown.bind(this)
   }
 
   componentDidMount () {
@@ -88,20 +90,43 @@ export class Layout extends Component {
     )
   }
 
+  toggleDropDown () {
+    const toggleShow = this.state.toggleShowClass
+    this.setState({ toggleShowClass: !toggleShow })
+  }
+
   renderHeaderAccount (loggedIn) {
-    const url = loggedIn ? '/account/myaccount' : '/account/login'
-    const as = '/account/myaccount'
+    const signedIn = loggedIn ? 'My Account' : <Link href='/account/login'>Sign In</Link>
 
     return (
-      <Link href={url} as={as} >
-        <div className='c-header__account'>
-          <Image className='c-header__account-image' src='/static/account-icon.svg' />
-          <a href={url} as={as}>
-            Account
-          </a>
-        </div>
-      </Link>
+      <div className='c-header__account' onClick={ this.toggleDropDown } >
+        <Image className='c-header__account-image' src='/static/account-icon.svg' />
+        { signedIn }
+        { this.renderAccountDropDown() }
+      </div>
     )
+  }
+
+  renderAccountDropDown () {
+    const showClass = this.state.toggleShowClass
+    const { loggedIn } = this.props
+
+    const addShowClass = showClass ? 'show' : ''
+
+    if (loggedIn) {
+      return (
+        <div className={classNames('c-header__dropdown-wrapper', addShowClass)} >
+          <div className={classNames('c-header__account-dropdown', addShowClass)} >
+            <div className='c-header__callout' />
+            <Link href='/account/myaccount'>Order History</Link>
+            <Link href='/account/forgotpassword'>Change Password</Link>
+            <Link href='/account/logout'>Sign Out</Link>
+          </div>
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 
   renderHeader () {

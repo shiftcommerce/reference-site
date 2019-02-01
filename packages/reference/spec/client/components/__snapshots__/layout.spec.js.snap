@@ -20,25 +20,20 @@ exports[`renders the children inside it 1`] = `
         >
           <Connect(NavBar) />
         </span>
-        <Link
-          as="/account/myaccount"
-          href="/account/login"
+        <div
+          className="c-header__account"
+          onClick={[Function]}
         >
-          <div
-            className="c-header__account"
+          <t
+            className="c-header__account-image"
+            src="/static/account-icon.svg"
+          />
+          <Link
+            href="/account/login"
           >
-            <t
-              className="c-header__account-image"
-              src="/static/account-icon.svg"
-            />
-            <a
-              as="/account/myaccount"
-              href="/account/login"
-            >
-              Account
-            </a>
-          </div>
-        </Link>
+            Sign In
+          </Link>
+        </div>
         <Connect(MiniBag) />
         <span
           className="c-header__search"
@@ -86,25 +81,20 @@ exports[`renders the footer 1`] = `
         >
           <Connect(NavBar) />
         </span>
-        <Link
-          as="/account/myaccount"
-          href="/account/login"
+        <div
+          className="c-header__account"
+          onClick={[Function]}
         >
-          <div
-            className="c-header__account"
+          <t
+            className="c-header__account-image"
+            src="/static/account-icon.svg"
+          />
+          <Link
+            href="/account/login"
           >
-            <t
-              className="c-header__account-image"
-              src="/static/account-icon.svg"
-            />
-            <a
-              as="/account/myaccount"
-              href="/account/login"
-            >
-              Account
-            </a>
-          </div>
-        </Link>
+            Sign In
+          </Link>
+        </div>
         <Connect(MiniBag) />
         <span
           className="c-header__search"
@@ -150,25 +140,20 @@ exports[`renders the header 1`] = `
         >
           <Connect(NavBar) />
         </span>
-        <Link
-          as="/account/myaccount"
-          href="/account/login"
+        <div
+          className="c-header__account"
+          onClick={[Function]}
         >
-          <div
-            className="c-header__account"
+          <t
+            className="c-header__account-image"
+            src="/static/account-icon.svg"
+          />
+          <Link
+            href="/account/login"
           >
-            <t
-              className="c-header__account-image"
-              src="/static/account-icon.svg"
-            />
-            <a
-              as="/account/myaccount"
-              href="/account/login"
-            >
-              Account
-            </a>
-          </div>
-        </Link>
+            Sign In
+          </Link>
+        </div>
         <Connect(MiniBag) />
         <span
           className="c-header__search"
@@ -214,25 +199,20 @@ exports[`renders the navbar 1`] = `
         >
           <Connect(NavBar) />
         </span>
-        <Link
-          as="/account/myaccount"
-          href="/account/login"
+        <div
+          className="c-header__account"
+          onClick={[Function]}
         >
-          <div
-            className="c-header__account"
+          <t
+            className="c-header__account-image"
+            src="/static/account-icon.svg"
+          />
+          <Link
+            href="/account/login"
           >
-            <t
-              className="c-header__account-image"
-              src="/static/account-icon.svg"
-            />
-            <a
-              as="/account/myaccount"
-              href="/account/login"
-            >
-              Account
-            </a>
-          </div>
-        </Link>
+            Sign In
+          </Link>
+        </div>
         <Connect(MiniBag) />
         <span
           className="c-header__search"
