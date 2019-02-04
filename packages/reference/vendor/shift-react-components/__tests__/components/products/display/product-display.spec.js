@@ -1,9 +1,6 @@
 // Libraries
 import React from 'react'
 
-// Objects
-import VariantSelector from '../../../../src/objects/variant-selector'
-
 // Components
 import ProductCarousel from '../../../../src/components/products/display/product-carousel'
 import ProductDisplay from '../../../../src/components/products/display/product-display'
@@ -16,6 +13,7 @@ import product from '../../../fixtures/product'
 describe('PDP renders correctly', () => {
   test('when no variant is selected', () => {
     // arrange
+
     const emptyFunction = () => { }
     const value = {
       sku: '',
@@ -36,7 +34,6 @@ describe('PDP renders correctly', () => {
     expect(wrapper).toIncludeText(product.title)
     expect(wrapper).toIncludeText(product.description)
     expect(wrapper).toContainReact(<ProductCarousel assetFiles={product.asset_files} />)
-    expect(wrapper).toContainReact(<VariantSelector onClick={emptyFunction} value={value.sku} name='line_item[item_id]' prompt='Select a Product' variants={product.variants} aria-label='Variant Selector' />)
     expect(wrapper.find('button.c-product-display__buttons-basket')).toMatchElement(<button>add to basket</button>)
     expect(wrapper).toContainReact(<ProductPrice minPrice={16.95} maxPrice={97.68} />)
   })

@@ -154,7 +154,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
     <Link
       href="/"
     >
-      <t
+      <e
         aria-label="Continue Shopping"
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
@@ -173,9 +173,9 @@ exports[`Place Order button should be disabled if there is any error in billing 
         >
           Continue shopping
         </button>
-      </t>
+      </e>
     </Link>
-    <t
+    <e
       aria-label="Place Order"
       className="c-cart-summary__buttons--proceed o-button--sml"
       disabled={true}
@@ -195,7 +195,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
       >
         Place Order
       </button>
-    </t>
+    </e>
   </div>
 </CheckoutCartTotal>
 `;
@@ -352,7 +352,7 @@ exports[`Place Order button should be disabled if there is any error in card det
     <Link
       href="/"
     >
-      <t
+      <e
         aria-label="Continue Shopping"
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
@@ -371,9 +371,9 @@ exports[`Place Order button should be disabled if there is any error in card det
         >
           Continue shopping
         </button>
-      </t>
+      </e>
     </Link>
-    <t
+    <e
       aria-label="Place Order"
       className="c-cart-summary__buttons--proceed o-button--sml"
       disabled={true}
@@ -393,7 +393,7 @@ exports[`Place Order button should be disabled if there is any error in card det
       >
         Place Order
       </button>
-    </t>
+    </e>
   </div>
 </CheckoutCartTotal>
 `;
@@ -483,7 +483,7 @@ exports[`renders payment errors 1`] = `
     <Link
       href="/"
     >
-      <t
+      <e
         aria-label="Continue Shopping"
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
@@ -502,9 +502,9 @@ exports[`renders payment errors 1`] = `
         >
           Continue shopping
         </button>
-      </t>
+      </e>
     </Link>
-    <t
+    <e
       className="c-cart-summary__buttons--proceed o-button--sml"
       type="button"
     >
@@ -515,7 +515,7 @@ exports[`renders payment errors 1`] = `
         tabIndex="0"
         type="button"
       />
-    </t>
+    </e>
   </div>
 </CheckoutCartTotal>
 `;
@@ -597,7 +597,7 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
     <Link
       href="/"
     >
-      <t
+      <e
         aria-label="Continue Shopping"
         className="c-cart-summary__buttons--continue o-button--sml"
         label="Continue shopping"
@@ -616,9 +616,9 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
         >
           Continue shopping
         </button>
-      </t>
+      </e>
     </Link>
-    <t
+    <e
       className="c-cart-summary__buttons--proceed o-button--sml"
       type="button"
     >
@@ -629,7 +629,7 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
         tabIndex="0"
         type="button"
       />
-    </t>
+    </e>
   </div>
 </CheckoutCartTotal>
 `;

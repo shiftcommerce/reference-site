@@ -2,10 +2,16 @@
 import React, { Component } from 'react'
 import FadeIn from 'react-lazyload-fadein'
 
-// Objects
-import Image from './image'
+// Lib
+import componentMapping from '../lib/component-mapping'
 
 class LazyLoad extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Image = componentMapping('Image')
+  }
+
   render () {
     const {
       src,
@@ -34,7 +40,7 @@ class LazyLoad extends Component {
         <FadeIn
           once
           offset={offset}
-          render={onload => (<Image src={src} className={className} onLoad={onload} />)}
+          render={onload => (<this.Image src={src} className={className} onLoad={onload} />)}
         />
       </div>
     )

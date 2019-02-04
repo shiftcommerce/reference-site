@@ -1,14 +1,15 @@
 // Libraries
 import React, { Component } from 'react'
 
-// Objects
-import Button from '../../../objects/button'
-import Input from '../../../objects/input'
+// Lib
+import componentMapping from '../../../lib/component-mapping'
 
 class ProductEwisForm extends Component {
   constructor (props) {
     super(props)
 
+    this.Button = componentMapping('Button')
+    this.Input = componentMapping('Input')
     this.state = {
       ewisSubmitted: false
     }
@@ -32,11 +33,11 @@ class ProductEwisForm extends Component {
 
     return (
       <>
-        <Input
+        <this.Input
           placeholder='Email'
           className='c-ewis-form__input-field'
         />
-        <Button className='c-product-display__buttons-basket o-button--sml' label='Email When in Stock' status='positive' aria-label='Add to Basket' onClick={this.submitFields.bind(this)} />
+        <this.Button className='c-product-display__buttons-basket o-button--sml' label='Email When in Stock' status='positive' aria-label='Add to Basket' onClick={this.submitFields.bind(this)} />
         {ewisMessage}
       </>
     )

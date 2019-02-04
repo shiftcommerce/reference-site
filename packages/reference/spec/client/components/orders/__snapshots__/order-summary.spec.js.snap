@@ -173,7 +173,7 @@ exports[`renders correctly 1`] = `
       <div
         className="c-order__summary-line-item-image"
       >
-        <t
+        <e
           alt="SCS-04-CJ coffee jug 600ml"
           aria-label="SCS-04-CJ coffee jug 600ml"
           src="/static/placeholder.png"
@@ -189,7 +189,7 @@ exports[`renders correctly 1`] = `
               />
             </picture>
           </div>
-        </t>
+        </e>
       </div>
       <div
         className="c-order__summary-line-item-details"
@@ -273,7 +273,7 @@ exports[`renders correctly 1`] = `
       <div
         className="c-order__summary-line-item-image"
       >
-        <t
+        <e
           alt="Brazil Daterra Masterpiece - Curupira"
           aria-label="Brazil Daterra Masterpiece - Curupira"
           src="/static/placeholder.png"
@@ -289,7 +289,7 @@ exports[`renders correctly 1`] = `
               />
             </picture>
           </div>
-        </t>
+        </e>
       </div>
       <div
         className="c-order__summary-line-item-details"

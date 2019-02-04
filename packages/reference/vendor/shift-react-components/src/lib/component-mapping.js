@@ -12,15 +12,27 @@ import Link from '../../src/objects/link'
 import Rating from '../../src/objects/rating'
 import VariantSelector from '../../src/objects/variant-selector'
 
+// Lib
+import FormErrors from './form-errors'
+
+// PDP Components
+import ProductCarousel from '../../src/components/products/display/product-carousel'
+import ProductEwisForm from '../../src/components/products/display/product-ewis-form'
+import ProductPrice from '../../src/components/products/display/product-price'
+
 const mapping = {
   Breadcrumb,
   Button,
   Checkbox,
   DropdownSelect,
+  FormErrors,
   Image,
   Input,
   LazyLoad,
   Link,
+  ProductCarousel,
+  ProductEwisForm,
+  ProductPrice,
   Rating,
   VariantSelector
 }

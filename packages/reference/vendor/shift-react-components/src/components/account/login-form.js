@@ -1,23 +1,19 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
-// Objects
-import { Button, Checkbox } from 'shift-react-components'
-
 // lib
-import AccountFormErrors from '../../lib/form-errors'
-
-// Actions
-import { clearErrors } from '../../actions/account-actions'
+import componentMapping from '../../lib/component-mapping'
 
 class LoginForm extends Component {
-  componentDidMount () {
-    if (this.props.login.errors.length > 0) {
-      this.props.dispatch(clearErrors())
-    }
+  constructor (props) {
+    super(props)
+
+    this.Button = componentMapping('Button')
+    this.Checkbox = componentMapping('Checkbox')
+    this.AccountFormErrors = componentMapping('FormErrors')
   }
 
   renderEmailInputField () {
@@ -50,7 +46,7 @@ class LoginForm extends Component {
 
   renderSubmitButton (props) {
     return (
-      <Button
+      <this.Button
         className='c-login__button o-button--sml'
         aria-label='Continue Securely'
         label='CONTINUE SECURELY'
@@ -69,11 +65,11 @@ class LoginForm extends Component {
         onSubmit={handleSubmit}
         render={props => (
           <Form className='c-login__form'>
-            <AccountFormErrors errors={login.errors} />
+            <this.AccountFormErrors errors={login.errors} />
             { this.renderEmailInputField() }
             { this.renderPasswordInputField() }
             <div>
-              <Checkbox label='Remember me' />
+              <this.Checkbox label='Remember me' />
               { this.renderSubmitButton(props) }
             </div>
           </Form>

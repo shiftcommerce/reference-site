@@ -1,29 +1,33 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import Router from 'next/router'
-import Link from 'next/link'
 import Head from 'next/head'
+import Link from 'next/link'
+import Router from 'next/router'
 
 // Libs
-import { setCookie } from '../../lib/set-cookie'
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
+import { setCookie } from '../../lib/set-cookie'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
-import {
-  createLogin
-} from '../../actions/login-actions'
-import { fetchAccountDetails } from '../../actions/account-actions'
+import { createLogin } from '../../actions/login-actions'
+import { clearErrors, fetchAccountDetails } from '../../actions/account-actions'
 
 // Components
-import LoginForm from '../../components/account/login-form'
+import { LoginForm } from 'shift-react-components'
 
 export class LoginPage extends Component {
   constructor () {
     super()
 
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount () {
+    if (this.props.login.errors.length > 0) {
+      this.props.dispatch(clearErrors())
+    }
   }
 
   static async getInitialProps ({ reduxStore }) {

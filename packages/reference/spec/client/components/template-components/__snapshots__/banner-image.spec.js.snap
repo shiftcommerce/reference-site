@@ -67,7 +67,7 @@ exports[`BannerImage component renders correctly 1`] = `
       href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
       onClick={[Function]}
     >
-      <t
+      <e
         className="c-banner-image"
         mobileSrc="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
         src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
@@ -82,12 +82,12 @@ exports[`BannerImage component renders correctly 1`] = `
             }
           }
         >
-          <t
+          <e
             offset={150}
             once={true}
             render={[Function]}
           >
-            <t
+            <e
               offset={150}
               once={true}
               overflow={false}
@@ -103,10 +103,10 @@ exports[`BannerImage component renders correctly 1`] = `
                   }
                 }
               />
-            </t>
-          </t>
+            </e>
+          </e>
         </div>
-      </t>
+      </e>
     </a>
   </Link>
 </BannerImage>

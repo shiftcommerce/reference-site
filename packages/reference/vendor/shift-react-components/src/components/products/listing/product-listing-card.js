@@ -2,20 +2,17 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-// Objects
-import Rating from '../../../objects/rating'
-import LazyLoad from '../../../objects/lazy-load'
-
-// Components
-import ProductPrice from '../display/product-price'
-
+// Lib
 import componentMapping from '../../../lib/component-mapping'
 
 class ProductListingCard extends Component {
   constructor (props) {
     super(props)
 
+    this.LazyLoad = componentMapping('LazyLoad')
     this.Link = componentMapping('Link')
+    this.ProductPrice = componentMapping('ProductPrice')
+    this.Rating = componentMapping('Rating')
   }
 
   renderImageAndTitle () {
@@ -38,7 +35,7 @@ class ProductListingCard extends Component {
     return (
       <>
         <div className='c-product-listing-card__gallery o-image'>
-          <LazyLoad className='c-product-listing-card__image u-image-shadow'
+          <this.LazyLoad className='c-product-listing-card__image u-image-shadow'
             src={assetFileUrl}
             alt={assetFileAltText || title}
             aria-label={title}
@@ -71,10 +68,10 @@ class ProductListingCard extends Component {
             { this.renderImageAndTitle() }
           </this.Link>
           <div className='c-product-listing-card__price'>
-            <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
+            <this.ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>
           <div className='c-product-listing-card__rating'>
-            <Rating rating={productRating} />
+            <this.Rating rating={productRating} />
           </div>
         </div>
       </div>

@@ -10,6 +10,12 @@ export { default as Link } from './objects/link'
 export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
+// Account Components
+export { default as LoginForm } from './components/account/login-form'
+
+// Lib
+export { default as FormErrors } from './lib/form-errors'
+
 // PDP Components
 export { default as ProductCarousel } from './components/products/display/product-carousel'
 export { default as ProductEwisForm } from './components/products/display/product-ewis-form'

@@ -255,7 +255,7 @@ exports[`Page Rendering: renders correctly 1`] = `
               <div
                 className="c-order__detail-payment-method-card"
               >
-                <t
+                <e
                   className="c-order__detail-payment-method-card-image"
                   src="/static/payments/visa.svg"
                 >
@@ -270,7 +270,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
                 <div
                   className="c-order__detail-payment-method-card-details"
                 >
@@ -484,7 +484,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 <div
                   className="c-order__summary-line-item-image"
                 >
-                  <t
+                  <e
                     alt="SCS-04-CJ coffee jug 600ml"
                     aria-label="SCS-04-CJ coffee jug 600ml"
                     src="/static/placeholder.png"
@@ -500,7 +500,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                         />
                       </picture>
                     </div>
-                  </t>
+                  </e>
                 </div>
                 <div
                   className="c-order__summary-line-item-details"
@@ -584,7 +584,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 <div
                   className="c-order__summary-line-item-image"
                 >
-                  <t
+                  <e
                     alt="Brazil Daterra Masterpiece - Curupira"
                     aria-label="Brazil Daterra Masterpiece - Curupira"
                     src="/static/placeholder.png"
@@ -600,7 +600,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                         />
                       </picture>
                     </div>
-                  </t>
+                  </e>
                 </div>
                 <div
                   className="c-order__summary-line-item-details"
@@ -737,7 +737,7 @@ exports[`Page Rendering: renders correctly 1`] = `
             <Link
               href="/"
             >
-              <t
+              <e
                 aria-label="Continue Shopping"
                 className="c-order__button--continue o-button--sml"
                 label="Continue shopping"
@@ -756,7 +756,7 @@ exports[`Page Rendering: renders correctly 1`] = `
                 >
                   Continue shopping
                 </button>
-              </t>
+              </e>
             </Link>
           </div>
         </div>

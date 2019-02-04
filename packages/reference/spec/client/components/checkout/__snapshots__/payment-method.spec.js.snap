@@ -82,7 +82,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <t
+              <e
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -98,8 +98,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </t>
-              <t
+              </e>
+              <e
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -115,7 +115,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 >
                   PayPal
                 </button>
-              </t>
+              </e>
             </div>
             <div
               className="c-payment-method__images"
@@ -123,7 +123,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <t
+                <e
                   src="/static/payments/visa.svg"
                 >
                   <div>
@@ -135,8 +135,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
@@ -148,8 +148,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/american-express.svg"
                 >
                   <div>
@@ -161,8 +161,8 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/maestro.svg"
                 >
                   <div>
@@ -174,12 +174,12 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <t
+                <e
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
@@ -191,7 +191,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
             </div>
           </div>
@@ -292,7 +292,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <t
+                  <e
                     checked={false}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -323,7 +323,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         </span>
                       </label>
                     </div>
-                  </t>
+                  </e>
                 </n>
               </div>
             </div>
@@ -447,7 +447,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <t
+                      <e
                         formName="billingAddress"
                         label="Country"
                         name="country_code"
@@ -523,7 +523,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             </option>
                           </select>
                         </div>
-                      </t>
+                      </e>
                     </n>
                     <div
                       className="o-flex o-flex__space-between"
@@ -546,7 +546,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             }
                           }
                         >
-                          <t
+                          <e
                             className="o-form__input-block"
                             formName="billingAddress"
                             label="First Name"
@@ -585,7 +585,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 />
                               </label>
                             </div>
-                          </t>
+                          </e>
                         </n>
                       </div>
                       <div
@@ -606,7 +606,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             }
                           }
                         >
-                          <t
+                          <e
                             className="o-form__input-block"
                             formName="billingAddress"
                             label="Last Name"
@@ -645,7 +645,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                                 />
                               </label>
                             </div>
-                          </t>
+                          </e>
                         </n>
                       </div>
                     </div>
@@ -670,7 +670,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <t
+                      <e
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Address 1"
@@ -708,7 +708,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </t>
+                      </e>
                     </n>
                     <a
                       href="#"
@@ -735,7 +735,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           }
                         }
                       >
-                        <t
+                        <e
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="Post Code"
@@ -774,7 +774,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </t>
+                        </e>
                       </n>
                     </div>
                     <div
@@ -793,7 +793,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                           }
                         }
                       >
-                        <t
+                        <e
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="City"
@@ -831,7 +831,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </t>
+                        </e>
                       </n>
                     </div>
                     <div
@@ -844,7 +844,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         name="state"
                         placeholder="Enter County"
                       >
-                        <t
+                        <e
                           className="o-form__input-block"
                           formName="billingAddress"
                           label="County"
@@ -874,7 +874,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                               />
                             </label>
                           </div>
-                        </t>
+                        </e>
                       </n>
                     </div>
                     <p
@@ -896,7 +896,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                         }
                       }
                     >
-                      <t
+                      <e
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Phone"
@@ -935,7 +935,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </t>
+                      </e>
                     </n>
                     <p
                       className="o-form__additional-label"
@@ -957,7 +957,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                       }
                       type="email"
                     >
-                      <t
+                      <e
                         className="o-form__input-block"
                         formName="billingAddress"
                         label="Email"
@@ -998,7 +998,7 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                             />
                           </label>
                         </div>
-                      </t>
+                      </e>
                     </n>
                     <p>
                       * Denotes required fields
@@ -1092,7 +1092,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <t
+              <e
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -1108,8 +1108,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </t>
-              <t
+              </e>
+              <e
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -1125,7 +1125,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                 >
                   PayPal
                 </button>
-              </t>
+              </e>
             </div>
             <div
               className="c-payment-method__images"
@@ -1133,7 +1133,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <t
+                <e
                   src="/static/payments/visa.svg"
                 >
                   <div>
@@ -1145,8 +1145,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
@@ -1158,8 +1158,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/american-express.svg"
                 >
                   <div>
@@ -1171,8 +1171,8 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/maestro.svg"
                 >
                   <div>
@@ -1184,12 +1184,12 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <t
+                <e
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
@@ -1201,7 +1201,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
             </div>
           </div>
@@ -1293,7 +1293,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <t
+                  <e
                     checked={true}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -1324,7 +1324,7 @@ exports[`Renders correct address summary when shippingAsBilling is true 1`] = `
                         </span>
                       </label>
                     </div>
-                  </t>
+                  </e>
                 </n>
                 <div
                   aria-label="Shipping address to be used for billing"
@@ -1482,7 +1482,7 @@ exports[`renders payment summary on collapsing 1`] = `
           </h2>
         </div>
         <div>
-          <t
+          <e
             aria-label="Edit your payment method"
             className="o-button-edit"
             label="Edit"
@@ -1499,7 +1499,7 @@ exports[`renders payment summary on collapsing 1`] = `
             >
               Edit
             </button>
-          </t>
+          </e>
         </div>
       </div>
       <div
@@ -1557,7 +1557,7 @@ exports[`renders payment summary on collapsing 1`] = `
             <div
               className="c-payment-method__button-group"
             >
-              <t
+              <e
                 aria-label="Use credit or debit card"
                 className="c-payment-method__button c-payment-method__button--active"
                 label="Credit/Debit Card"
@@ -1573,8 +1573,8 @@ exports[`renders payment summary on collapsing 1`] = `
                 >
                   Credit/Debit Card
                 </button>
-              </t>
-              <t
+              </e>
+              <e
                 aria-label="Use paypal"
                 className="c-payment-method__button "
                 label="PayPal"
@@ -1590,7 +1590,7 @@ exports[`renders payment summary on collapsing 1`] = `
                 >
                   PayPal
                 </button>
-              </t>
+              </e>
             </div>
             <div
               className="c-payment-method__images"
@@ -1598,7 +1598,7 @@ exports[`renders payment summary on collapsing 1`] = `
               <span
                 className="c-payment-method__images-cardpayment"
               >
-                <t
+                <e
                   src="/static/payments/visa.svg"
                 >
                   <div>
@@ -1610,8 +1610,8 @@ exports[`renders payment summary on collapsing 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/mastercard.svg"
                 >
                   <div>
@@ -1623,8 +1623,8 @@ exports[`renders payment summary on collapsing 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/american-express.svg"
                 >
                   <div>
@@ -1636,8 +1636,8 @@ exports[`renders payment summary on collapsing 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
-                <t
+                </e>
+                <e
                   src="/static/payments/maestro.svg"
                 >
                   <div>
@@ -1649,12 +1649,12 @@ exports[`renders payment summary on collapsing 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
               <span
                 className="c-payment-method__images-paypal"
               >
-                <t
+                <e
                   src="/static/payments/pay-pal.svg"
                 >
                   <div>
@@ -1666,7 +1666,7 @@ exports[`renders payment summary on collapsing 1`] = `
                       />
                     </picture>
                   </div>
-                </t>
+                </e>
               </span>
             </div>
           </div>
@@ -1876,7 +1876,7 @@ exports[`renders payment summary on collapsing 1`] = `
                   name="shippingAddressAsBillingAddress"
                   type="checkbox"
                 >
-                  <t
+                  <e
                     checked={false}
                     label="Same as shipping address"
                     name="shippingAddressAsBillingAddress"
@@ -1907,7 +1907,7 @@ exports[`renders payment summary on collapsing 1`] = `
                         </span>
                       </label>
                     </div>
-                  </t>
+                  </e>
                 </n>
               </div>
             </div>
@@ -2099,7 +2099,7 @@ exports[`renders payment summary on collapsing 1`] = `
                         Billing Address
                       </h2>
                     </div>
-                    <t
+                    <e
                       className="o-button-edit"
                       label="Edit"
                       onClick={[Function]}
@@ -2114,7 +2114,7 @@ exports[`renders payment summary on collapsing 1`] = `
                       >
                         Edit
                       </button>
-                    </t>
+                    </e>
                   </div>
                 </div>
               </AddressForm>

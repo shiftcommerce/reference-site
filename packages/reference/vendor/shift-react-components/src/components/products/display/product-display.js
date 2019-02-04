@@ -1,21 +1,25 @@
 // Libraries
 import React, { Component } from 'react'
 
-// Components
-import ProductCarousel from './product-carousel'
-import ProductEwisForm from './product-ewis-form'
-import ProductPrice from './product-price'
-
-// Objects
-import Button from '../../../objects/button'
-import Rating from '../../../objects/rating'
-import VariantSelector from '../../../objects/variant-selector'
+// Lib
+import componentMapping from '../../../lib/component-mapping'
 
 class ProductDisplay extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Button = componentMapping('Button')
+    this.ProductCarousel = componentMapping('ProductCarousel')
+    this.ProductEwisForm = componentMapping('ProductEwisForm')
+    this.ProductPrice = componentMapping('ProductPrice')
+    this.Rating = componentMapping('Rating')
+    this.VariantSelector = componentMapping('VariantSelector')
+  }
+
   renderCarousel (product) {
     return (
       <div className='c-product-display__carousel'>
-        <ProductCarousel assetFiles={product.asset_files} />
+        <this.ProductCarousel assetFiles={product.asset_files} />
       </div>
     )
   }
@@ -23,7 +27,7 @@ class ProductDisplay extends Component {
   renderEwisForm () {
     return (
       <div className='c-product-display__buttons'>
-        <ProductEwisForm />
+        <this.ProductEwisForm />
       </div>
     )
   }
@@ -34,7 +38,7 @@ class ProductDisplay extends Component {
 
     return (
       <div className='c-product-display__buttons'>
-        <Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
+        <this.Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
       </div>
     )
   }
@@ -115,7 +119,7 @@ class ProductDisplay extends Component {
 
     return (
       <div className='c-product-display__info-price'>
-        <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
+        <this.ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
       </div>
     )
   }
@@ -129,7 +133,7 @@ class ProductDisplay extends Component {
         { this.renderSku(selectedVariant) }
         { this.renderPrice(product, selectedVariant) }
         <div className='c-product-display__info-rating'>
-          <Rating
+          <this.Rating
             rating={product.rating}
             className='o-rating__star--has-spacing o-rating__star--fs-small'
           />
@@ -137,7 +141,7 @@ class ProductDisplay extends Component {
         </div>
         { this.renderColourSelector(meta_attributes) }
         <div className='c-product-display__info-variant'>
-          <VariantSelector
+          <this.VariantSelector
             onClick={changeVariant}
             value={sku}
             name='line_item[item_id]'

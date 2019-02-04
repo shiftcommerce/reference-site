@@ -44,7 +44,7 @@ exports[`shows an error message when submitting an invalid email 1`] = `
           required={true}
           type="email"
         />
-        <t
+        <e
           className="c-email-signup__button"
           label="Button text"
           onClick={[Function]}
@@ -60,7 +60,7 @@ exports[`shows an error message when submitting an invalid email 1`] = `
           >
             Button text
           </button>
-        </t>
+        </e>
       </div>
       <p
         className="c-email-signup__error-message"
@@ -116,7 +116,7 @@ exports[`shows an error message when submitting and empty form 1`] = `
           required={true}
           type="email"
         />
-        <t
+        <e
           className="c-email-signup__button"
           label="Button text"
           onClick={[Function]}
@@ -132,7 +132,7 @@ exports[`shows an error message when submitting and empty form 1`] = `
           >
             Button text
           </button>
-        </t>
+        </e>
       </div>
       <p
         className="c-email-signup__error-message"

@@ -84,7 +84,7 @@ exports[`renders the full HeroImage component 1`] = `
             href="/homeware/dining/glassware"
             onClick={[Function]}
           >
-            <t
+            <e
               className="c-hero__image"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
@@ -98,12 +98,12 @@ exports[`renders the full HeroImage component 1`] = `
                   }
                 }
               >
-                <t
+                <e
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <t
+                  <e
                     offset={150}
                     once={true}
                     overflow={false}
@@ -119,10 +119,10 @@ exports[`renders the full HeroImage component 1`] = `
                         }
                       }
                     />
-                  </t>
-                </t>
+                  </e>
+                </e>
               </div>
-            </t>
+            </e>
           </a>
         </Link>
       </ConditionalLink>

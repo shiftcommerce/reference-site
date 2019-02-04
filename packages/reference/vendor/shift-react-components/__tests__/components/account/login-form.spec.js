@@ -1,5 +1,8 @@
+// Libraries
+import React from 'react'
+
 // Component
-import LoginForm from '../../../../client/components/account/login-form'
+import LoginForm from '../../../src/components/account/login-form'
 
 describe('LoginForm', () => {
   test('should render the form', () => {

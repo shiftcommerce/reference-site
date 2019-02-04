@@ -115,7 +115,7 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware"
             onClick={[Function]}
           >
-            <t
+            <e
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
@@ -129,12 +129,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <t
+                <e
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <t
+                  <e
                     offset={150}
                     once={true}
                     overflow={false}
@@ -150,10 +150,10 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </t>
-                </t>
+                  </e>
+                </e>
               </div>
-            </t>
+            </e>
             <p
               className="o-card-grid__title"
             >
@@ -173,7 +173,7 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware2"
             onClick={[Function]}
           >
-            <t
+            <e
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg"
             >
@@ -187,12 +187,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <t
+                <e
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <t
+                  <e
                     offset={150}
                     once={true}
                     overflow={false}
@@ -208,10 +208,10 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </t>
-                </t>
+                  </e>
+                </e>
               </div>
-            </t>
+            </e>
             <p
               className="o-card-grid__title"
             >
@@ -231,7 +231,7 @@ exports[`GenericGrid component renders correctly 1`] = `
             href="/homeware/dining/glassware3"
             onClick={[Function]}
           >
-            <t
+            <e
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg"
             >
@@ -245,12 +245,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <t
+                <e
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <t
+                  <e
                     offset={150}
                     once={true}
                     overflow={false}
@@ -266,10 +266,10 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </t>
-                </t>
+                  </e>
+                </e>
               </div>
-            </t>
+            </e>
             <p
               className="o-card-grid__title"
             >
@@ -286,7 +286,7 @@ exports[`GenericGrid component renders correctly 1`] = `
         href="/homeware/dining/cat"
         onClick={[Function]}
       >
-        <t
+        <e
           className="c-template-component__cat-button"
           label="Cat Button"
           status="primary"
@@ -299,7 +299,7 @@ exports[`GenericGrid component renders correctly 1`] = `
           >
             Cat Button
           </button>
-        </t>
+        </e>
       </a>
     </Link>
   </section>
