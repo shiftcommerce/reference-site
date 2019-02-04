@@ -1,19 +1,13 @@
-$o-body-container-width: 80%;
-$o-body-max-width: 1200px;
-$o-footer-height: 175px;
-$o-header-height-desktop: 127px;
-$o-header-height-mobile: 176px;
-
 .o-body {
   width: 100%;
-  padding-top: $o-header-height-mobile;
-  min-height: calc(100vh - #{$o-footer-height});
+  padding-top: $global-header-height-mobile;
+  min-height: calc(100vh - #{$global-footer-height});
 
   @include breakpoint (desktop) {
-    width: $o-body-container-width;
+    width: $global-body-container-width;
     margin: auto;
     padding-top: 0;
-    max-width: $o-body-max-width;
-    min-height: calc(100vh - #{$o-footer-height + $o-header-height-desktop});
+    max-width: $global-body-max-width;
+    min-height: calc(100vh - #{$global-footer-height + $global-header-height-desktop});
   }
 }

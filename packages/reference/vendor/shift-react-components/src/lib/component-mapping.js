@@ -4,6 +4,7 @@ import Config from './config'
 import Breadcrumb from '../../src/objects/breadcrumb'
 import Button from '../../src/objects/button'
 import Checkbox from '../../src/objects/checkbox'
+import ConditionalLink from '../../src/objects/conditional-link'
 import DropdownSelect from '../../src/objects/dropdown-select'
 import Image from '../../src/objects/image'
 import Input from '../../src/objects/input'
@@ -24,6 +25,7 @@ const mapping = {
   Breadcrumb,
   Button,
   Checkbox,
+  ConditionalLink,
   DropdownSelect,
   FormErrors,
   Image,

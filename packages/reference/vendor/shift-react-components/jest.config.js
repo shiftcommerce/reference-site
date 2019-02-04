@@ -3,7 +3,7 @@ module.exports = {
   setupFilesAfterEnv: [
     /*
       Once this project has been moved to its own repo, change to:
-      '<rootDir>/jest-enzyme/lib/index.js'
+      '<rootDir>/node_modules/jest-enzyme/lib/index.js'
     */
     '<rootDir>../../node_modules/jest-enzyme/lib/index.js',
     './__tests__/support/setup-after-env.js'

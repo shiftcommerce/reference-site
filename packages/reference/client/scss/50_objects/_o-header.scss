@@ -31,9 +31,9 @@
     justify-content: space-between;
     @include breakpoint(desktop) {
       flex-wrap: nowrap;
-      width: $o-body-container-width;
+      width: $global-body-container-width;
       margin: auto;
-      max-width: $o-body-max-width;
+      max-width: $global-body-max-width;
       padding: 0 $global-spacing-unit;
       padding-right: 0;
     }
@@ -84,7 +84,7 @@
 
     @include breakpoint(desktop) {
       position: static;
-      max-width: $o-body-max-width;
+      max-width: $global-body-max-width;
       margin: auto;
     }
   }

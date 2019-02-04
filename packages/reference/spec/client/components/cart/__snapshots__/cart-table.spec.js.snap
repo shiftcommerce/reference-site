@@ -49,7 +49,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
         <div
           className="c-cart-table__breadcrumb"
         >
-          <e>
+          <t>
             <nav>
               <ol
                 className="o-breadcrumb"
@@ -57,7 +57,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 <li
                   className="o-breadcrumb__item"
                 >
-                  <pt
+                  <be
                     as="/"
                     className="o-breadcrumb__link"
                     href="/home/index"
@@ -68,11 +68,11 @@ exports[`renders the correct message when line items are available in cart 1`] =
                     >
                       Home
                     </a>
-                  </pt>
+                  </be>
                 </li>
               </ol>
             </nav>
-          </e>
+          </t>
         </div>
         <div
           className="c-cart-table__header-grid"
@@ -233,7 +233,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                     href="/slug?slug=undefined"
                     key="1"
                   >
-                    <e
+                    <t
                       className="c-line-items__image"
                       key="1"
                       onClick={[Function]}
@@ -558,7 +558,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                                 />
                               </FieldInner>
                             </FormikConnect(FieldInner)>
-                            <e
+                            <t
                               aria-label="Apply Gift Code"
                               className="c-coupon-form__button o-button--sml"
                               containerClassName="c-coupon-form__button-container"
@@ -575,7 +575,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                               >
                                 Apply
                               </button>
-                            </e>
+                            </t>
                           </div>
                           <FormikConnect(ErrorMessageImpl)
                             className="c-coupon-form__error"
@@ -750,7 +750,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                 <div
                   className="c-payment-icons__images"
                 >
-                  <e
+                  <t
                     aria-label="VISA"
                     className="c-payment-icons__image"
                     src="/static/payments/visa.svg"
@@ -767,8 +767,8 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
-                  <e
+                  </t>
+                  <t
                     aria-label="Mastercard"
                     className="c-payment-icons__image"
                     src="/static/payments/mastercard.svg"
@@ -785,8 +785,8 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
-                  <e
+                  </t>
+                  <t
                     aria-label="American Express"
                     className="c-payment-icons__image"
                     src="/static/payments/american-express.svg"
@@ -803,8 +803,8 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
-                  <e
+                  </t>
+                  <t
                     aria-label="Maestro"
                     className="c-payment-icons__image"
                     src="/static/payments/maestro.svg"
@@ -821,8 +821,8 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
-                  <e
+                  </t>
+                  <t
                     aria-label="PayPal"
                     className="c-payment-icons__image"
                     src="/static/payments/pay-pal.svg"
@@ -839,8 +839,8 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
-                  <e
+                  </t>
+                  <t
                     aria-label="Apple Pay"
                     className="c-payment-icons__image"
                     src="/static/payments/apple-pay.svg"
@@ -857,7 +857,7 @@ exports[`renders the correct message when line items are available in cart 1`] =
                         />
                       </picture>
                     </div>
-                  </e>
+                  </t>
                 </div>
               </div>
             </PaymentIcons>
@@ -879,7 +879,7 @@ exports[`renders the exception messages when no line items are available 1`] = `
     <div
       className="c-cart-table__breadcrumb"
     >
-      <e />
+      <t />
     </div>
     <div
       className="c-cart-table__header-grid"

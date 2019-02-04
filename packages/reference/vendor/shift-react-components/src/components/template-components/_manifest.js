@@ -4,7 +4,6 @@ import GenericGrid from './generic-grid'
 import HeroFull from './hero-full'
 import HorizontalDivider from './horizontal-divider'
 import ProductGrid from './product-grid'
-import RelatedLinks from './related-links'
 
 export default {
   banner_image: BannerImage,
@@ -12,6 +11,5 @@ export default {
   generic_grid: GenericGrid,
   hero_full: HeroFull,
   horizontal_divider: HorizontalDivider,
-  product_grid: ProductGrid,
-  related_links: RelatedLinks
+  product_grid: ProductGrid
 }

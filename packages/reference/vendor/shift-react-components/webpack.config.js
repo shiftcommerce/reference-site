@@ -35,6 +35,12 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
+  stats: {
+    colors: {
+      // yellow on a white terminal doesn't work, so change to magenta
+      yellow: '\u001b[1m\u001b[35m'
+    }
+  },
   plugins: [
     new CopyWebpackPlugin([
       { from: './src/scss/', to: 'scss/' }

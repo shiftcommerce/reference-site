@@ -2,7 +2,7 @@
   @include breakpoint(desktop) {
     width: 80%;
     margin: auto;
-    max-width: $o-body-max-width;
+    max-width: $global-body-max-width;
   }
 
   &__addressform {

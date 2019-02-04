@@ -1,8 +1,11 @@
+// Libraries
+import React from 'react'
+
 // Components
-import EmailSignup from '../../../../client/components/template-components/email-signup'
+import EmailSignup from '../../../src/components/template-components/email-signup'
 
 // Fixtures
-import emailSignupData from '../../../fixtures/email-signup'
+import emailSignupData from '../../fixtures/email-signup'
 
 test('shows an error message when submitting and empty form', () => {
   // Act

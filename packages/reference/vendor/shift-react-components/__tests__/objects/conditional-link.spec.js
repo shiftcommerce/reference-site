@@ -1,11 +1,14 @@
-import ConditionalLink from '../../../client/objects/conditional-link'
-import Link from 'next/link'
+// Libraries
+import React from 'react'
+
+// Objects
+import { Link, ConditionalLink } from 'shift-react-components'
 
 describe('ConditionalLink', () => {
   test('wraps its children in a link if link is present', () => {
     // Arrange
     const childText = 'Test child text'
-    const href = 'https://example.com'
+    const href = '/example'
 
     // Act
     const wrapper = mount(
@@ -17,7 +20,11 @@ describe('ConditionalLink', () => {
     // Assert
     // Check anchor and Link tags are rendered
     expect(wrapper.find(Link).exists()).toBeTruthy()
-    expect(wrapper.find('a')).toHaveProp('href', href)
+
+    // WIP: can probably do without `/slug?slug=` here, but the temporary
+    // Link component, which is used by ConditionalLink adds it for some reason
+    expect(wrapper.find('a')).toHaveProp('href', `/slug?slug=${href}`)
+
     // Check child components are rendered
     expect(wrapper.find('a div')).toHaveText(childText)
   })

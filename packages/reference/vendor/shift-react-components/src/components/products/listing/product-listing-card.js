@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-// Lib
 import componentMapping from '../../../lib/component-mapping'
 
 class ProductListingCard extends Component {

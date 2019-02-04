@@ -24,7 +24,7 @@ exports[`renders the children inside it 1`] = `
           className="c-header__account"
           onClick={[Function]}
         >
-          <e
+          <t
             className="c-header__account-image"
             src="/static/account-icon.svg"
           />
@@ -85,7 +85,7 @@ exports[`renders the footer 1`] = `
           className="c-header__account"
           onClick={[Function]}
         >
-          <e
+          <t
             className="c-header__account-image"
             src="/static/account-icon.svg"
           />
@@ -144,7 +144,7 @@ exports[`renders the header 1`] = `
           className="c-header__account"
           onClick={[Function]}
         >
-          <e
+          <t
             className="c-header__account-image"
             src="/static/account-icon.svg"
           />
@@ -203,7 +203,7 @@ exports[`renders the navbar 1`] = `
           className="c-header__account"
           onClick={[Function]}
         >
-          <e
+          <t
             className="c-header__account-image"
             src="/static/account-icon.svg"
           />

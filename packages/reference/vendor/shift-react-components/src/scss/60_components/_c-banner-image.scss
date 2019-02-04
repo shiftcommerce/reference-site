@@ -1,11 +1,10 @@
 // ==========================================================================
-// # Horizontal Divider Component
+// # Banner Image Component
 // ==========================================================================
 
 @import "../10_settings/__all";
 @import "../20_tools/__all";
 
-.c-horizontal-divider {
-  height: 3px;
-  background-color: $background-light-grey;
+.c-banner-image {
+  width: 100%;
 }

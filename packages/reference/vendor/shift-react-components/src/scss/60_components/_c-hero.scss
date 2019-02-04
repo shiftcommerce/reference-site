@@ -1,16 +1,24 @@
+// ==========================================================================
+// # Hero Component
+// ==========================================================================
+
+@import "../10_settings/__all";
+@import "../20_tools/__all";
+
 .c-hero {
   text-align: center;
   padding-bottom: $global-spacing-unit-tiny;
+}
 
-  &__content {
+  .c-hero__content {
     @include breakpoint(desktop) {
       margin-left: auto;
       margin-right: auto;
-      max-width: $o-body-max-width;
+      max-width: $global-body-max-width;
     }
   }
 
-  &__overlay {
+  .c-hero__overlay {
     display: block;
     background-color: $background-white;
     z-index: 1;
@@ -140,13 +148,13 @@
     }
   }
 
-  &__overlay_title {
+  .c-hero__overlay_title {
     font-size: 1.5rem;
     font-weight: bold;
     margin: $global-spacing-unit-small auto;
   }
 
-  &__overlay_pointer {
+  .c-hero__overlay_pointer {
     position: absolute;
     width: 0;
     height: 0;
@@ -168,16 +176,17 @@
     }
   }
 
-  &__overlay_content {
+  .c-hero__overlay_content {
     padding-top: $global-spacing-unit-tiny;
     margin-bottom: $global-spacing-unit-small;
   }
 
-  &__button {
+  .c-hero__button {
     text-align: center;
     margin-top: $global-spacing-unit-small;
+  }
 
-    &-icon {
+    .c-hero__button-icon {
       display: inline-block;
       background-color: $background-primary;
       color: $text-light;
@@ -196,5 +205,3 @@
         }
       }
     }
-  }
-}

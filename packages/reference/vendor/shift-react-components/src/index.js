@@ -2,6 +2,7 @@
 export { default as Breadcrumb } from './objects/breadcrumb'
 export { default as Button } from './objects/button'
 export { default as Checkbox } from './objects/checkbox'
+export { default as ConditionalLink } from './objects/conditional-link'
 export { default as DropdownSelect } from './objects/dropdown-select'
 export { default as Image } from './objects/image'
 export { default as Input } from './objects/input'
@@ -10,12 +11,12 @@ export { default as Link } from './objects/link'
 export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
+// Template Components
+export { default as TemplateComponentsManifest } from './components/template-components/_manifest'
+
 // Account Components
 export { default as LoginForm } from './components/account/login-form'
 export { default as RegisterForm } from './components/account/register-form'
-
-// Lib
-export { default as FormErrors } from './lib/form-errors'
 
 // PDP Components
 export { default as ProductCarousel } from './components/products/display/product-carousel'
@@ -29,3 +30,4 @@ export { default as ProductListingCard } from './components/products/listing/pro
 // Lib
 export { default as Config } from './lib/config'
 export { default as componentMapping } from './lib/component-mapping'
+export { default as FormErrors } from './lib/form-errors'

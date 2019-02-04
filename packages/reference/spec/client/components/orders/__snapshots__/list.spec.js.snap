@@ -828,7 +828,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -843,7 +843,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"
@@ -931,7 +931,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -946,7 +946,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"
@@ -1034,7 +1034,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -1049,7 +1049,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"
@@ -1538,7 +1538,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -1553,7 +1553,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"
@@ -1641,7 +1641,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -1656,7 +1656,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"
@@ -1744,7 +1744,7 @@ exports[`renders correctly 1`] = `
             <div
               className="c-order-history__line-items_grid_item1"
             >
-              <e
+              <t
                 className="c-order-history__line-items_image"
                 src="/static/placeholder.png"
               >
@@ -1759,7 +1759,7 @@ exports[`renders correctly 1`] = `
                     />
                   </picture>
                 </div>
-              </e>
+              </t>
             </div>
             <div
               className="c-order-history__line-items_grid_item2"

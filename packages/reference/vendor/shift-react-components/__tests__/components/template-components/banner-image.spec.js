@@ -1,13 +1,17 @@
+import React from 'react'
+
 // Components
-import BannerImage from '../../../../client/components/template-components/banner-image'
+import BannerImage from '../../../src/components/template-components/banner-image'
 
 // Fixtures
-import bannerImageData from '../../../fixtures/banner-image'
+import bannerImageData from '../../fixtures/banner-image'
 
 test('BannerImage component renders correctly', () => {
   // Arrange & Act
   const wrapper = mount(
-    <BannerImage componentData={bannerImageData} />
+    <BannerImage
+      componentData={bannerImageData}
+    />
   )
 
   // Assert

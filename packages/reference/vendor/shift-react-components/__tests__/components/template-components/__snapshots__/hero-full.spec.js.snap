@@ -76,15 +76,14 @@ exports[`renders the full HeroImage component 1`] = `
       <ConditionalLink
         href="/homeware/dining/glassware"
       >
-        <Link
+        <_default
           as="/homeware/dining/glassware"
           href="/slug?slug=/homeware/dining/glassware"
         >
           <a
-            href="/homeware/dining/glassware"
-            onClick={[Function]}
+            href="/slug?slug=/homeware/dining/glassware"
           >
-            <e
+            <LazyLoad
               className="c-hero__image"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
@@ -98,12 +97,12 @@ exports[`renders the full HeroImage component 1`] = `
                   }
                 }
               >
-                <e
+                <FadeIn
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <e
+                  <LazyLoad
                     offset={150}
                     once={true}
                     overflow={false}
@@ -119,12 +118,12 @@ exports[`renders the full HeroImage component 1`] = `
                         }
                       }
                     />
-                  </e>
-                </e>
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </e>
+            </LazyLoad>
           </a>
-        </Link>
+        </_default>
       </ConditionalLink>
       <div
         className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_4"
@@ -160,18 +159,18 @@ exports[`renders the full HeroImage component 1`] = `
             className="c-hero__button"
             key="1"
           >
-            <Link
+            <_default
               as="/homeware/dining/glassware"
+              className="c-hero__button-icon"
               href="/slug?slug=/homeware/dining/glassware"
             >
               <a
                 className="c-hero__button-icon"
-                href="/homeware/dining/glassware"
-                onClick={[Function]}
+                href="/slug?slug=/homeware/dining/glassware"
               >
                 Test Product
               </a>
-            </Link>
+            </_default>
           </div>
         </div>
       </div>

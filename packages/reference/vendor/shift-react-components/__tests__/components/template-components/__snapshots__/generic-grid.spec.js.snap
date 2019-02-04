@@ -108,14 +108,13 @@ exports[`GenericGrid component renders correctly 1`] = `
         className="o-card-grid__card"
         key="0"
       >
-        <Link
+        <_default
           href="/homeware/dining/glassware"
         >
           <a
             href="/homeware/dining/glassware"
-            onClick={[Function]}
           >
-            <e
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
             >
@@ -129,12 +128,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <e
+                <FadeIn
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <e
+                  <LazyLoad
                     offset={150}
                     once={true}
                     overflow={false}
@@ -150,30 +149,29 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </e>
-                </e>
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </e>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >
               shop glassware
             </p>
           </a>
-        </Link>
+        </_default>
       </div>
       <div
         className="o-card-grid__card"
         key="1"
       >
-        <Link
+        <_default
           href="/homeware/dining/glassware2"
         >
           <a
             href="/homeware/dining/glassware2"
-            onClick={[Function]}
           >
-            <e
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_25.jpg"
             >
@@ -187,12 +185,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <e
+                <FadeIn
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <e
+                  <LazyLoad
                     offset={150}
                     once={true}
                     overflow={false}
@@ -208,30 +206,29 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </e>
-                </e>
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </e>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >
               shop glassware2
             </p>
           </a>
-        </Link>
+        </_default>
       </div>
       <div
         className="o-card-grid__card"
         key="2"
       >
-        <Link
+        <_default
           href="/homeware/dining/glassware3"
         >
           <a
             href="/homeware/dining/glassware3"
-            onClick={[Function]}
           >
-            <e
+            <LazyLoad
               className="u-image-shadow"
               src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_26.jpg"
             >
@@ -245,12 +242,12 @@ exports[`GenericGrid component renders correctly 1`] = `
                   }
                 }
               >
-                <e
+                <FadeIn
                   offset={150}
                   once={true}
                   render={[Function]}
                 >
-                  <e
+                  <LazyLoad
                     offset={150}
                     once={true}
                     overflow={false}
@@ -266,42 +263,30 @@ exports[`GenericGrid component renders correctly 1`] = `
                         }
                       }
                     />
-                  </e>
-                </e>
+                  </LazyLoad>
+                </FadeIn>
               </div>
-            </e>
+            </LazyLoad>
             <p
               className="o-card-grid__title"
             >
               shop glassware3
             </p>
           </a>
-        </Link>
+        </_default>
       </div>
     </div>
-    <Link
+    <_default
+      className="o-template-component__cat-button o-button o-button--primary"
       href="/homeware/dining/cat"
     >
       <a
+        className="o-template-component__cat-button o-button o-button--primary"
         href="/homeware/dining/cat"
-        onClick={[Function]}
       >
-        <e
-          className="c-template-component__cat-button"
-          label="Cat Button"
-          status="primary"
-        >
-          <button
-            className="c-template-component__cat-button o-button o-button--primary"
-            disabled={false}
-            role="button"
-            tabIndex="0"
-          >
-            Cat Button
-          </button>
-        </e>
+        Cat Button
       </a>
-    </Link>
+    </_default>
   </section>
 </GenericGrid>
 `;

@@ -1,16 +1,25 @@
 // Libraries
-import { Component } from 'react'
-import Link from 'next/link'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-// Objects
-import ConditionalLink from '../../objects/conditional-link'
-import { LazyLoad } from 'shift-react-components'
+import componentMapping from '../../lib/component-mapping'
 
-class HeroFull extends Component {
+class HeroFull extends PureComponent {
+  constructor (props) {
+    super(props)
+
+    this.LazyLoad = componentMapping('LazyLoad')
+    this.Link = componentMapping('Link')
+    this.ConditionalLink = componentMapping('ConditionalLink')
+  }
+
+  /**
+   * Renders the hero heading, if it's available
+   * @param  {Object} hero
+   * @return {string} - HTML markup for the component
+   */
   heroHeading (hero) {
-    // Only render heading if available
     if (hero.heading) {
       return (
         <h1 className='c-component-header u-margin-top-none-des'>{ hero.heading }</h1>
@@ -18,6 +27,12 @@ class HeroFull extends Component {
     }
   }
 
+  /**
+   * Renders the hero overlay, shouldDisplayOverlay returns true
+   * @param  {Object} hero
+   * @param  {string} currentPosition
+   * @return {string} - HTML markup for the component
+   */
   heroOverlay (hero, currentPosition) {
     let overlayPosition = hero.overlay_position ? hero.overlay_position[0] : 'below'
 
@@ -39,6 +54,11 @@ class HeroFull extends Component {
     }
   }
 
+  /**
+   * Returns the number of overlay elements
+   * @param  {Object} hero
+   * @return {number}
+   */
   overlaySize (hero) {
     let count = 0
     if (hero.overlay_title) { count += 2 }
@@ -47,6 +67,14 @@ class HeroFull extends Component {
     return count
   }
 
+  /**
+   * Calculates if the overlay should be displayed, if the overlayPosition and
+   * currentPosition are the same, and if the overlaySize isn't zero
+   * @param  {Object} hero
+   * @param  {string} overlayPosition
+   * @param  {string} currentPosition
+   * @return {boolean}
+   */
   shouldDisplayOverlay (hero, overlayPosition, currentPosition) {
     // only render if the current position matches the component position
     const overlayPositionConditional = (overlayPosition === currentPosition)
@@ -56,6 +84,13 @@ class HeroFull extends Component {
     return overlayPositionConditional && overlayDataConditional
   }
 
+  /**
+   * Displays an triangle, and sets the colour of the triangle
+   * @param  {string} colour
+   * @param  {string} overlayPosition
+   * @param  {string} pointerPosition
+   * @return {string} - HTML markup for the component
+   */
   overlayPointer (colour, overlayPosition, pointerPosition) {
     // only render if the current position matches the component position
     if (overlayPosition !== pointerPosition) {
@@ -71,6 +106,11 @@ class HeroFull extends Component {
     }
   }
 
+  /**
+   * Renders buttons
+   * @param  {object} hero
+   * @return {string} - HTML markup for the component
+   */
   heroButtons (hero) {
     let buttons = []
     let index = 1
@@ -82,9 +122,9 @@ class HeroFull extends Component {
 
         buttons.push(
           <div className='c-hero__button' key={index}>
-            <Link href={`/slug?slug=${url}`} as={url}>
-              <a className='c-hero__button-icon'>{ hero[`overlay_link_${index}_text`] }</a>
-            </Link>
+            <this.Link href={`/slug?slug=${url}`} as={url} className='c-hero__button-icon'>
+              { hero[`overlay_link_${index}_text`] }
+            </this.Link>
           </div>
         )
         index++
@@ -108,9 +148,9 @@ class HeroFull extends Component {
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }
-          <ConditionalLink href={href}>
-            <LazyLoad className='c-hero__image' src={imgSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} mobileSrc={mobileSrc} />
-          </ConditionalLink>
+          <this.ConditionalLink href={href}>
+            <this.LazyLoad className='c-hero__image' src={imgSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} mobileSrc={mobileSrc} />
+          </this.ConditionalLink>
           { this.heroOverlay(componentData, 'below') }
         </div>
       </section>

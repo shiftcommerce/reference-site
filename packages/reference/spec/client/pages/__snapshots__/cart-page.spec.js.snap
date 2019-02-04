@@ -269,7 +269,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
           <div
             className="c-cart-table__breadcrumb"
           >
-            <e>
+            <t>
               <nav>
                 <ol
                   className="o-breadcrumb"
@@ -277,7 +277,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   <li
                     className="o-breadcrumb__item"
                   >
-                    <pt
+                    <be
                       as="/"
                       className="o-breadcrumb__link"
                       href="/home/index"
@@ -288,11 +288,11 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       >
                         Home
                       </a>
-                    </pt>
+                    </be>
                   </li>
                 </ol>
               </nav>
-            </e>
+            </t>
           </div>
           <div
             className="c-cart-table__header-grid"
@@ -549,7 +549,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                       href="/slug?slug=/jugs/seed_product_40"
                       key="jugs/seed_product_40"
                     >
-                      <e
+                      <t
                         alt="Variant 1"
                         aria-label="Variant 1"
                         className="c-line-items__image"
@@ -571,7 +571,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                             />
                           </picture>
                         </div>
-                      </e>
+                      </t>
                     </Link>
                   </div>
                   <div
@@ -907,7 +907,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                                   />
                                 </FieldInner>
                               </FormikConnect(FieldInner)>
-                              <e
+                              <t
                                 aria-label="Apply Gift Code"
                                 className="c-coupon-form__button o-button--sml"
                                 containerClassName="c-coupon-form__button-container"
@@ -924,7 +924,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                                 >
                                   Apply
                                 </button>
-                              </e>
+                              </t>
                             </div>
                             <FormikConnect(ErrorMessageImpl)
                               className="c-coupon-form__error"
@@ -1208,7 +1208,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                   <div
                     className="c-payment-icons__images"
                   >
-                    <e
+                    <t
                       aria-label="VISA"
                       className="c-payment-icons__image"
                       src="/static/payments/visa.svg"
@@ -1225,8 +1225,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
-                    <e
+                    </t>
+                    <t
                       aria-label="Mastercard"
                       className="c-payment-icons__image"
                       src="/static/payments/mastercard.svg"
@@ -1243,8 +1243,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
-                    <e
+                    </t>
+                    <t
                       aria-label="American Express"
                       className="c-payment-icons__image"
                       src="/static/payments/american-express.svg"
@@ -1261,8 +1261,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
-                    <e
+                    </t>
+                    <t
                       aria-label="Maestro"
                       className="c-payment-icons__image"
                       src="/static/payments/maestro.svg"
@@ -1279,8 +1279,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
-                    <e
+                    </t>
+                    <t
                       aria-label="PayPal"
                       className="c-payment-icons__image"
                       src="/static/payments/pay-pal.svg"
@@ -1297,8 +1297,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
-                    <e
+                    </t>
+                    <t
                       aria-label="Apple Pay"
                       className="c-payment-icons__image"
                       src="/static/payments/apple-pay.svg"
@@ -1315,7 +1315,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                           />
                         </picture>
                       </div>
-                    </e>
+                    </t>
                   </div>
                 </div>
               </PaymentIcons>

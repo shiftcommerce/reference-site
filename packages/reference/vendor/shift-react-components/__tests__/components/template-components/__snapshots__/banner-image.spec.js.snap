@@ -59,15 +59,14 @@ exports[`BannerImage component renders correctly 1`] = `
     }
   }
 >
-  <Link
+  <_default
     as="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
     href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
   >
     <a
       href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
-      onClick={[Function]}
     >
-      <e
+      <LazyLoad
         className="c-banner-image"
         mobileSrc="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
         src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
@@ -82,12 +81,12 @@ exports[`BannerImage component renders correctly 1`] = `
             }
           }
         >
-          <e
+          <FadeIn
             offset={150}
             once={true}
             render={[Function]}
           >
-            <e
+            <LazyLoad
               offset={150}
               once={true}
               overflow={false}
@@ -103,11 +102,11 @@ exports[`BannerImage component renders correctly 1`] = `
                   }
                 }
               />
-            </e>
-          </e>
+            </LazyLoad>
+          </FadeIn>
         </div>
-      </e>
+      </LazyLoad>
     </a>
-  </Link>
+  </_default>
 </BannerImage>
 `;

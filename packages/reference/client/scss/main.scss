@@ -22,7 +22,7 @@
 @import '~shift-react-components/dist/scss/50_objects/o-body';
 @import '50_objects/_o-breadcrumb';
 @import '~shift-react-components/dist/scss/50_objects/o-button';
-@import '50_objects/_o-card-grid';
+@import '~shift-react-components/dist/scss/50_objects/o-card-grid';
 @import '~shift-react-components/dist/scss/50_objects/o-flex';
 @import '50_objects/_o-footer';
 @import '~shift-react-components/dist/scss/50_objects/o-form';
@@ -33,7 +33,7 @@
 @import '50_objects/_o-nav';
 @import '50_objects/_o-payment-method';
 @import '~shift-react-components/dist/scss/50_objects/o-rating';
-@import '50_objects/_o-template-component';
+@import '~shift-react-components/dist/scss/50_objects/o-template-component';
 @import '~shift-react-components/dist/scss/50_objects/o-variant-selector';
 
 // COMPONENTS
@@ -43,7 +43,7 @@
 @import '~shift-react-components/dist/scss/60_components/c-account-register';
 @import '60_components/_c-address-book';
 @import '60_components/_c-address-form';
-@import '60_components/_c-banner-image';
+@import '~shift-react-components/dist/scss/60_components/c-banner-image';
 @import '60_components/_c-card-expiry-field';
 @import '60_components/_c-cart-no-data';
 @import '60_components/_c-cart-summary';
@@ -54,7 +54,7 @@
 @import '60_components/_c-component-header';
 @import '60_components/_c-coupon-form';
 @import '60_components/_c-cvv-field';
-@import '60_components/_c-email-signup';
+@import '~shift-react-components/dist/scss/60_components/c-email-signup';
 @import '60_components/_c-footer';
 @import '~shift-react-components/dist/scss/60_components/c-form-errors';
 @import '60_components/_c-gallery-half';
@@ -62,8 +62,8 @@
 @import '60_components/_c-generic-grid';
 @import '60_components/_c-gift';
 @import '60_components/_c-header';
-@import '60_components/_c-hero';
-@import '60_components/_c-horizontal-divider';
+@import '~shift-react-components/dist/scss/60_components/c-hero';
+@import '~shift-react-components/dist/scss/60_components/c-horizontal-divider';
 @import '60_components/_c-line-items';
 @import '60_components/_c-links';
 @import '60_components/_c-loading';

@@ -192,7 +192,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             href="/slug?slug=1"
             key="1"
           >
-            <e
+            <t
               alt="Test Variant"
               aria-label="Test Variant"
               className="c-line-items__image"
@@ -380,7 +380,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             href="/slug?slug=1"
             key="2"
           >
-            <e
+            <t
               alt="Pretend Variant"
               aria-label="Pretend Variant"
               className="c-line-items__image"
@@ -720,7 +720,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             href="/slug?slug=1"
             key="1"
           >
-            <e
+            <t
               alt="Test Variant"
               aria-label="Test Variant"
               className="c-line-items__image"

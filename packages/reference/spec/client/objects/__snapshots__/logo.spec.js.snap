@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
         href="/"
         onClick={[Function]}
       >
-        <e
+        <t
           className="o-logo__image"
           height={40}
           src="/static/shopgo-logo.svg"
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
               />
             </picture>
           </div>
-        </e>
+        </t>
       </a>
     </Link>
   </div>

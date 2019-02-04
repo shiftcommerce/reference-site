@@ -1,7 +1,11 @@
-// Card grid object
+// ==========================================================================
+// # Card Grid Object
+// ==========================================================================
+
+@import "../10_settings/__all";
+@import "../20_tools/__all";
 
 // Displays a grid of titled cards
-
 // Required a modifier, e.g.
 // o-card-grid o-card-grid--4d-2m (4 columns in desktop and tablet, 2 columns in mobile)
 // o-card-grid o-card-grid--3d-3m (3 columns in desktop and tablet, 3 columns in mobile)
@@ -10,8 +14,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-  &__card {
+  .o-card-grid__card {
     flex-grow: 1;
     flex-shrink: 1;
     margin-right: $global-spacing-unit-tiny;
@@ -23,14 +28,13 @@
     }
   }
 
-  &__title {
+  .o-card-grid__title {
     font-size: 1rem;
 
     @include breakpoint(tablet) {
       font-size: 1.2rem;
     }
   }
-}
 
 // Modifiers
 .o-card-grid--3d-3m {
@@ -47,6 +51,7 @@
   /* stylelint-disable no-descending-specificity */
   .o-card-grid__card {
     flex-basis: 40%;
+
     @include breakpoint(tablet) {
       flex-basis: 20%;
     }

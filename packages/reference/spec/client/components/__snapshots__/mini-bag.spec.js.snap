@@ -28,7 +28,7 @@ exports[`renders a disabled checkout button when cart is empty 1`] = `
           >
             0
           </div>
-          <e
+          <t
             className="c-minibag__cart-image-icon"
             src="/static/bag-icon.svg"
           >
@@ -43,7 +43,7 @@ exports[`renders a disabled checkout button when cart is empty 1`] = `
                 />
               </picture>
             </div>
-          </e>
+          </t>
         </div>
         <a
           href="/cart"
@@ -58,7 +58,7 @@ exports[`renders a disabled checkout button when cart is empty 1`] = `
       <Link
         href=""
       >
-        <e
+        <t
           aria-label="Go to checkout"
           className="o-button--disabled"
           label="Checkout"
@@ -75,7 +75,7 @@ exports[`renders a disabled checkout button when cart is empty 1`] = `
           >
             Checkout
           </button>
-        </e>
+        </t>
       </Link>
     </div>
   </div>
@@ -122,7 +122,7 @@ exports[`renders an active checkout button when cart has items 1`] = `
           >
             2
           </div>
-          <e
+          <t
             className="c-minibag__cart-image-icon"
             src="/static/bag-icon.svg"
           >
@@ -137,7 +137,7 @@ exports[`renders an active checkout button when cart has items 1`] = `
                 />
               </picture>
             </div>
-          </e>
+          </t>
         </div>
         <a
           href="/cart"
@@ -152,7 +152,7 @@ exports[`renders an active checkout button when cart has items 1`] = `
       <Link
         href="/checkout"
       >
-        <e
+        <t
           aria-label="Go to checkout"
           className=""
           label="Checkout"
@@ -169,7 +169,7 @@ exports[`renders an active checkout button when cart has items 1`] = `
           >
             Checkout
           </button>
-        </e>
+        </t>
       </Link>
     </div>
   </div>
@@ -194,7 +194,7 @@ exports[`renders the minibag links 1`] = `
         >
           0
         </div>
-        <e
+        <t
           className="c-minibag__cart-image-icon"
           src="/static/bag-icon.svg"
         />
@@ -212,7 +212,7 @@ exports[`renders the minibag links 1`] = `
     <Link
       href=""
     >
-      <e
+      <t
         aria-label="Go to checkout"
         className="o-button--disabled"
         label="Checkout"
