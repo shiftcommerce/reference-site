@@ -12,6 +12,7 @@ export { default as VariantSelector } from './objects/variant-selector'
 
 // Account Components
 export { default as LoginForm } from './components/account/login-form'
+export { default as RegisterForm } from './components/account/register-form'
 
 // Lib
 export { default as FormErrors } from './lib/form-errors'

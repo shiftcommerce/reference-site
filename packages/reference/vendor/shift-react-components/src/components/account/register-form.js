@@ -1,25 +1,19 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
-// Objects
-import { Button } from 'shift-react-components'
-
-// Actions
-import { clearErrors } from '../../actions/account-actions'
-
 // lib
-import AccountFormErrors from '../../lib/form-errors'
+import componentMapping from '../../lib/component-mapping'
 
 class RegisterForm extends Component {
-  componentDidMount () {
-    if (this.props.registration.errors.length > 0) {
-      this.props.dispatch(clearErrors())
-    }
-  }
+  constructor (props) {
+    super(props)
 
+    this.Button = componentMapping('Button')
+    this.AccountFormErrors = componentMapping('FormErrors')
+  }
   renderNameInputs () {
     return (
       <div className='o-flex o-flex__space-between'>
@@ -97,7 +91,7 @@ class RegisterForm extends Component {
 
   renderSubmitButton (props) {
     return (
-      <Button
+      <this.Button
         className='c-register__button o-button-sml'
         aria-label='Create Account'
         label='Create Account'
@@ -152,7 +146,7 @@ class RegisterForm extends Component {
           onSubmit={handleSubmit}
           render={props => (
             <>
-              <AccountFormErrors errors={registration.errors} />
+              <this.AccountFormErrors errors={registration.errors} />
               <Form>
                 <div>
                   { this.renderNameInputs() }

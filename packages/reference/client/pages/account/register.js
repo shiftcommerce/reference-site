@@ -10,16 +10,23 @@ import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Actions
+import { clearErrors } from '../../actions/account-actions'
 import { createAccount } from '../../actions/register-actions'
 
 // Components
-import RegisterForm from '../../components/account/register-form'
+import { RegisterForm } from 'shift-react-components'
 
 export class RegisterPage extends Component {
   constructor () {
     super()
 
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount () {
+    if (this.props.registration.errors.length > 0) {
+      this.props.dispatch(clearErrors())
+    }
   }
 
   static async getInitialProps ({ reduxStore }) {

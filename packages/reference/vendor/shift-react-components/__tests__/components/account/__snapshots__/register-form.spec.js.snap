@@ -4389,7 +4389,7 @@ exports[`RegisterForm should render the form 1`] = `
               <p>
                 * Denotes required fields
               </p>
-              <e
+              <Button
                 aria-label="Create Account"
                 className="c-register__button o-button-sml"
                 disabled={true}
@@ -4407,7 +4407,7 @@ exports[`RegisterForm should render the form 1`] = `
                 >
                   Create Account
                 </button>
-              </e>
+              </Button>
             </div>
           </form>
         </Component>

@@ -1,5 +1,8 @@
+// Libraries
+import React from 'react'
+
 // Component
-import RegisterForm from '../../../../client/components/account/register-form'
+import RegisterForm from '../../../src/components/account/register-form'
 
 describe('RegisterForm', () => {
   test('should render the form', () => {
