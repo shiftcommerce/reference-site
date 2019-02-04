@@ -10,7 +10,7 @@ yarn-error.log
 /yarn_cache
 
 # Ignore Mac files
-**.DS_Store
+**/.DS_Store
 
 # Ignore Codeship files
 codeship.aes

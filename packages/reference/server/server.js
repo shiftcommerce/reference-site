@@ -152,7 +152,6 @@ module.exports = app.prepare().then(() => {
 
   // Routes for local API calls
   server.get('/getCategory/:id', handler.getRenderer(platform.CategoryUrl))
-  server.get('/getMenus', handler.getRenderer(platform.MenuUrl))
   server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/getSlug', handler.getRenderer(platform.SlugUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))

@@ -3,9 +3,9 @@ const nock = require('nock')
 const axios = require('axios')
 const httpAdapter = require('axios/lib/adapters/http')
 
-// Fixture
-const registerPayload = require('../fixtures/register')
-const staticPagePayload = require('../fixtures/staticpage-payload')
+// Fixtures
+const registerPayload = require('../fixtures/register-response-payload')
+const staticPagePayload = require('../fixtures/staticpage-response-payload')
 
 axios.defaults.adapter = httpAdapter
 
@@ -19,7 +19,6 @@ describe('ApiClient', () => {
       const url = `v1/static_pages/56`
 
       nock(process.env.API_HOST)
-        .log(console.log)
         .get(`/${process.env.API_TENANT}/${url}`)
         .reply(200, staticPagePayload)
 

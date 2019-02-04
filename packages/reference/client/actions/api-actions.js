@@ -48,7 +48,9 @@ function processResponse (dispatch, request, expectedStatusCodes) {
     if (expectedStatusCodes.includes(response.status)) {
       if (request.successActionType) {
         const parsedPayload = new JsonApiParser().parse(response.data)
-        dispatch(sendResponse(request.successActionType, parsedPayload))
+        // TODO: remove this when all endpoints have been extracted into shift-api
+        const payload = parsedPayload || response.data
+        dispatch(sendResponse(request.successActionType, payload))
       }
     } else {
       if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, response.data, request))

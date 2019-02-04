@@ -53,7 +53,7 @@ export class NavBar extends Component {
     return (
       <div className='c-nav__menu-header'>
         <Logo className='c-nav__menu-header-logo' />
-        <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown}/>
+        <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown} />
         { this.renderSearchBar() }
       </div>
     )
@@ -71,7 +71,7 @@ export class NavBar extends Component {
     return (
       <>
         <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown} readOnly />
-        <div className='c-nav__menu-button'onClick={this.toggleMenuShown} >
+        <div className='c-nav__menu-button' onClick={this.toggleMenuShown} >
           <Image className='c-nav__menu-button-image' src='/static/burger-menu-icon.svg' />
           <p>Menu</p>
         </div>
@@ -81,7 +81,7 @@ export class NavBar extends Component {
 
   render () {
     const { loading, error } = this.props.menu
-    const menuItems = t(this.props, 'menu.data[0].menu_items').safeObject
+    const menuItems = t(this.props, 'menu.menu_items').safeObject
 
     if (loading) {
       return (<Loading />)
