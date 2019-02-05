@@ -63,12 +63,13 @@ export class CouponForm extends Component {
           <Form>
             <div className='c-coupon-form__field'>
               <Field type='text' name='couponCode' className='c-coupon-form__input' placeholder='Enter Promotion Code' />
-              <Button
-                aria-label='Apply Gift Code'
-                containerClassName='c-coupon-form__button-container'
-                className='c-coupon-form__button o-button--sml'
-                label='Apply'
-                status='primary' />
+              <div className="c-coupon-form__button-container">
+                <Button
+                  aria-label='Apply Gift Code'
+                  className='c-coupon-form__button o-button--sml'
+                  label='Apply'
+                  status='primary' />
+              </div>
             </div>
             <ErrorMessage name='couponCode' component='div' className='c-coupon-form__error' />
           </Form>

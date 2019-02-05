@@ -1,23 +1,26 @@
+// ==========================================================================
+// # Cart Summary Component
+// ==========================================================================
+
+@import "../10_settings/__all";
+@import "../20_tools/__all";
+
 .c-cart-summary {
   overflow: hidden;
   width: 100%;
   text-align: right;
   background-color: $light-grey;
   padding: $global-spacing-unit-small;
-  font-size: 0.9em;
+  font-size: .9em;
 
   @include breakpoint(desktop) {
     padding: 1.5em;
   }
 
-  &__VAT {
-    font-size: 0.6rem;
-  }
-
   dl {
     margin: 0;
     margin-top: $global-spacing-unit-small;
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
 
   p {
@@ -36,12 +39,17 @@
     display: inline-block;
     padding: 0 0 0 .5em;
   }
+}
 
-  &__promotion {
+  .c-cart-summary__VAT {
+    font-size: .6rem;
+  }
+
+  .c-cart-summary__promotion {
     color: $text-error;
   }
 
-  &__mini-button-container {
+  .c-cart-summary__mini-button-container {
     display: flex;
     align-items: center;
     margin-top: $global-spacing-unit-huge;
@@ -50,48 +58,55 @@
     border: 1px solid $border-default;
     justify-content: center;
 
-    &-item {
-      width: 50%;
-      padding: $global-spacing-unit-tiny;
-    }
-
     @include breakpoint(desktop) {
       margin-top: $global-spacing-unit-small;
       margin-bottom: 0;
+    }
+  }
 
-      &-item {
+    .c-cart-summary__mini-button-container-item {
+      width: 50%;
+      padding: $global-spacing-unit-tiny;
+
+      @include breakpoint(desktop) {
         font-size: 1.3rem;
         width: 25%;
       }
     }
-  }
 
-  &__buttons {
-    display: flex;
-    flex-direction: column;
+.c-cart-summary-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: $global-spacing-unit-small 0;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    padding-bottom: $global-spacing-unit-small;
+    margin-top: $global-spacing-unit-small;
+    justify-content:space-between;
+  }
+}
+
+  .c-cart-summary-buttons__cta {
+    display: block;
+    width: 100%;
     margin: $global-spacing-unit-small 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
 
     @include breakpoint(desktop) {
-      flex-direction: row;
-      padding-bottom: $global-spacing-unit-small;
-      margin-top: $global-spacing-unit-small;
-      justify-content:space-between;
+      width: 49%;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
 
     &--proceed {
-      margin: $global-spacing-unit-small 0;
-      width: 100%;
       background: $background-positive;
       color: $text-light;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: .1rem;
-      display: block;
-      white-space: nowrap;
-
-      @include breakpoint(desktop) {
-        width: 49%;
-      }
 
       &:visited {
         color: $text-light;
@@ -99,27 +114,15 @@
 
       &:hover {
         @include breakpoint(desktop) {
-          background: transparentize($background-positive, 0.2);
-          cursor: pointer;
+          background: transparentize($background-positive, .2);
           color: $text-light;
         }
       }
     }
 
     &--continue {
-      margin: $global-spacing-unit-small 0;
-      width: 100%;
       background: $background-secondary;
       color: $text-dark;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: .1rem;
-      display: block;
-      white-space: nowrap;
-
-      @include breakpoint(desktop) {
-        width: 49%;
-      }
 
       &:visited {
         color: $text-dark;
@@ -127,10 +130,8 @@
 
       &:hover {
         @include breakpoint(desktop) {
-          background: transparentize($background-secondary, 0.2);
-          cursor: pointer;
+          background: transparentize($background-secondary, .2);
         }
       }
     }
   }
-}

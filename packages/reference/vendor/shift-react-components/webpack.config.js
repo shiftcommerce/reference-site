@@ -41,6 +41,10 @@ module.exports = {
       yellow: '\u001b[1m\u001b[35m'
     }
   },
+  optimization: {
+    // disable uglify
+    minimize: false
+  },
   plugins: [
     new CopyWebpackPlugin([
       { from: './src/scss/', to: 'scss/' }

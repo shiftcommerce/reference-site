@@ -1,7 +1,10 @@
-import LineItems from '../../../../client/components/cart/line-items'
-import { Image } from 'shift-react-components'
+// Libraries
+import React from 'react'
 
-import cartFixture from '../../../fixtures/cart'
+import Image from '../../../src/objects/image'
+import LineItems from '../../../src/components/cart/line-items'
+
+import cartFixture from '../../fixtures/cart'
 
 test('renders line items correctly, on initial load', () => {
   const updateQuantity = () => {}

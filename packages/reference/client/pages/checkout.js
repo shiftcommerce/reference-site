@@ -38,10 +38,11 @@ import CheckoutCart from '../components/checkout/checkout-cart'
 import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import ShippingMethods from '../components/checkout/shipping-methods'
 import PaymentMethod from '../components/checkout/payment-method'
-import PaymentIcons from '../components/cart/payment-icons'
+
 import CouponForm from '../components/coupon-form'
 import Loading from '../components/loading'
 import MiniPlaceOrder from '../components/checkout/mini-place-order'
+import { PaymentIcons } from 'shift-react-components'
 
 export class CheckoutPage extends Component {
   static async getInitialProps ({ reduxStore }) {

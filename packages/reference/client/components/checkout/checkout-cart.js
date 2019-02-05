@@ -6,7 +6,7 @@ import Pluralize from 'react-pluralize'
 import { decimalPrice } from '../../lib/decimal-price'
 
 // Components
-import LineItems from '../../components/cart/line-items'
+import { LineItems } from 'shift-react-components'
 
 export class CheckoutCart extends Component {
   render () {

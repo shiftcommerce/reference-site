@@ -96,7 +96,7 @@ export class Layout extends Component {
   }
 
   renderHeaderAccount (loggedIn) {
-    const signedIn = loggedIn ? 'My Account' : <Link href='/account/login'>Sign In</Link>
+    const signedIn = loggedIn ? 'My Account' : <Link href='/account/login'><a>Sign In</a></Link>
 
     return (
       <div className='c-header__account' onClick={ this.toggleDropDown } >

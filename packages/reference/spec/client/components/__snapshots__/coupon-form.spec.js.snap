@@ -142,24 +142,26 @@ exports[`displays an input and a submit button 1`] = `
                     />
                   </FieldInner>
                 </FormikConnect(FieldInner)>
-                <t
-                  aria-label="Apply Gift Code"
-                  className="c-coupon-form__button o-button--sml"
-                  containerClassName="c-coupon-form__button-container"
-                  label="Apply"
-                  status="primary"
+                <div
+                  className="c-coupon-form__button-container"
                 >
-                  <button
+                  <Button
                     aria-label="Apply Gift Code"
-                    className="c-coupon-form__button o-button--sml o-button o-button--primary"
-                    containerClassName="c-coupon-form__button-container"
-                    disabled={false}
-                    role="button"
-                    tabIndex="0"
+                    className="c-coupon-form__button o-button--sml"
+                    label="Apply"
+                    status="primary"
                   >
-                    Apply
-                  </button>
-                </t>
+                    <button
+                      aria-label="Apply Gift Code"
+                      className="c-coupon-form__button o-button--sml o-button o-button--primary"
+                      disabled={false}
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Apply
+                    </button>
+                  </Button>
+                </div>
               </div>
               <FormikConnect(ErrorMessageImpl)
                 className="c-coupon-form__error"

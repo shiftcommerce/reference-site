@@ -183,23 +183,24 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
     >
       <div
         className="c-line-items__sections"
-        key="1"
       >
         <div
           className="c-line-items__images"
         >
-          <Link
+          <objects_link
             href="/slug?slug=1"
-            key="1"
           >
-            <t
-              alt="Test Variant"
-              aria-label="Test Variant"
-              className="c-line-items__image"
-              key="1"
-              onClick={[Function]}
-            />
-          </Link>
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Test Variant"
+                aria-label="Test Variant"
+                className="c-line-items__image"
+                key="1"
+              />
+            </a>
+          </objects_link>
         </div>
         <div
           className="c-line-items__information"
@@ -211,7 +212,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               className="c-line-items__details"
             >
               <h4
-                className="c-line-items__details-title  u-bold"
+                className="c-line-items__details-title u-bold"
               >
                 Test Product - Test Variant
               </h4>
@@ -228,7 +229,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             className="c-line-items__colour"
           >
             <div
-              className="c-line-items__param  u-bold"
+              className="c-line-items__param u-bold"
             >
               <span>
                 Colour
@@ -247,14 +248,14 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__param  c-line-items__colour-selected"
+            className="c-line-items__param c-line-items__colour-selected"
           >
             <span>
               Grey
             </span>
           </div>
           <div
-            className="c-line-items__param  c-line-items__quantity-selected"
+            className="c-line-items__param c-line-items__quantity-selected"
           >
             <span>
               <select
@@ -371,23 +372,24 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
       </div>
       <div
         className="c-line-items__sections"
-        key="2"
       >
         <div
           className="c-line-items__images"
         >
-          <Link
+          <objects_link
             href="/slug?slug=1"
-            key="2"
           >
-            <t
-              alt="Pretend Variant"
-              aria-label="Pretend Variant"
-              className="c-line-items__image"
-              key="2"
-              onClick={[Function]}
-            />
-          </Link>
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Pretend Variant"
+                aria-label="Pretend Variant"
+                className="c-line-items__image"
+                key="2"
+              />
+            </a>
+          </objects_link>
         </div>
         <div
           className="c-line-items__information"
@@ -399,7 +401,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               className="c-line-items__details"
             >
               <h4
-                className="c-line-items__details-title  u-bold"
+                className="c-line-items__details-title u-bold"
               >
                 Pretend Product - Pretend Variant
               </h4>
@@ -416,7 +418,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             className="c-line-items__colour"
           >
             <div
-              className="c-line-items__param  u-bold"
+              className="c-line-items__param u-bold"
             >
               <span>
                 Colour
@@ -435,14 +437,14 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             </div>
           </div>
           <div
-            className="c-line-items__param  c-line-items__colour-selected"
+            className="c-line-items__param c-line-items__colour-selected"
           >
             <span>
               Grey
             </span>
           </div>
           <div
-            className="c-line-items__param  c-line-items__quantity-selected"
+            className="c-line-items__param c-line-items__quantity-selected"
           >
             <span>
               <select
@@ -711,23 +713,24 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
     >
       <div
         className="c-line-items__sections"
-        key="1"
       >
         <div
           className="c-line-items__images"
         >
-          <Link
+          <objects_link
             href="/slug?slug=1"
-            key="1"
           >
-            <t
-              alt="Test Variant"
-              aria-label="Test Variant"
-              className="c-line-items__image"
-              key="1"
-              onClick={[Function]}
-            />
-          </Link>
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Test Variant"
+                aria-label="Test Variant"
+                className="c-line-items__image"
+                key="1"
+              />
+            </a>
+          </objects_link>
         </div>
         <div
           className="c-line-items__information"
@@ -739,7 +742,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
               className="c-line-items__details"
             >
               <h4
-                className="c-line-items__details-title  u-bold"
+                className="c-line-items__details-title u-bold"
               >
                 Test Product - Test Variant
               </h4>
@@ -756,7 +759,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             className="c-line-items__colour"
           >
             <div
-              className="c-line-items__param  u-bold"
+              className="c-line-items__param u-bold"
             >
               <span>
                 Colour
@@ -775,14 +778,14 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             </div>
           </div>
           <div
-            className="c-line-items__param  c-line-items__colour-selected"
+            className="c-line-items__param c-line-items__colour-selected"
           >
             <span>
               Grey
             </span>
           </div>
           <div
-            className="c-line-items__param  c-line-items__quantity-selected"
+            className="c-line-items__param c-line-items__quantity-selected"
           >
             <span>
               <select

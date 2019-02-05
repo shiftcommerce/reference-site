@@ -1,8 +1,12 @@
-import CartNoData from '../../../../client/components/cart/cart-no-data'
+// Libraries
+import React from 'react'
+
+// Components
+import CartNoData from '../../../src/components/cart/cart-no-data'
 
 test('renders exception message when component is loaded', () => {
   // act
-  const wrapper = mount(
+  const wrapper = shallow(
     <CartNoData />
   )
 

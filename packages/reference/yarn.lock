@@ -12115,7 +12115,7 @@ react-loading@^2.0.3:
   resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-2.0.3.tgz#e8138fb0c3e4674e481b320802ac7048ae14ffb9"
   integrity sha512-Vdqy79zq+bpeWJqC+xjltUjuGApyoItPgL0vgVfcJHhqwU7bAMKzysfGW/ADu6i0z0JiOCRJjo+IkFNkRNbA3A==
 
-react-pluralize@^1.4.1:
+react-pluralize@^1.4.1, react-pluralize@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/react-pluralize/-/react-pluralize-1.5.0.tgz#082aa9a04394a45faa96cdad29fb7dbaa4767ab7"
   integrity sha512-dD6Tv05meo+436HZmSzf70gwJkx3HUncpFPggaE02vSzUr8vh+l/2kGfJsxWrFezqVaEq9l0jPeMcWe7dZPatw==

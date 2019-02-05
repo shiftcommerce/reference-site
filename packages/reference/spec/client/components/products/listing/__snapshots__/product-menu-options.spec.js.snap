@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
     >
       <AlgoliaCurrentRefinements(UnknownComponent) />
     </div>
-    <t
+    <Button
       className="c-product-listing__menu-options-filters-button"
       onClick={[Function]}
     />
@@ -49,7 +49,7 @@ exports[`renders correctly 1`] = `
         ]
       }
     />
-    <t
+    <Button
       className="c-product-listing__menu-options-sort-by-button u-hidden-d"
     />
   </div>
