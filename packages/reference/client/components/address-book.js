@@ -25,7 +25,8 @@ class AddressBook extends Component {
 
   renderOptions (address) {
     const { id } = this.props
-    const optionLabel = <a><b>{ address.meta_attributes.label.value }</b> -&nbsp; { address.first_name } { address.last_name },&nbsp;
+    const addressLabel = typeof address.meta_attributes.label === 'undefined' ? 'Other' : address.meta_attributes.label.value
+    const optionLabel = <a><b>{ addressLabel }</b> -&nbsp; { address.first_name } { address.last_name },&nbsp;
       { address.address_line_1 },&nbsp; { address.postcode },&nbsp; { address.city },&nbsp; { address.country }
     </a>
 

@@ -29,7 +29,6 @@ export class AddressForm extends Component {
 
   componentDidMount () {
     const { loggedIn, addressBook } = this.props
-
     if (loggedIn && addressBook.length > 0) {
       const preferredAddress = addressBook.find((obj) => { return obj.preferred_shipping === true })
 

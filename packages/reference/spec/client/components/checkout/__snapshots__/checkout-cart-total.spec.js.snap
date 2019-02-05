@@ -149,7 +149,7 @@ exports[`Place Order button should be disabled if there is any error in billing 
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -347,7 +347,7 @@ exports[`Place Order button should be disabled if there is any error in card det
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -478,7 +478,7 @@ exports[`renders payment errors 1`] = `
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"
@@ -592,7 +592,7 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
     </div>
   </Sticker>
   <div
-    className="c-cart-summary-buttons"
+    className="c-cart-summary__buttons"
   >
     <Link
       href="/"

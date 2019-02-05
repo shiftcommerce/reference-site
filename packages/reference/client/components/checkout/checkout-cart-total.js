@@ -106,7 +106,7 @@ class CheckoutCartTotal extends Component {
   }
   renderButtons () {
     return (
-      <div className='c-cart-summary-buttons'>
+      <div className='c-cart-summary__buttons'>
         { this.renderContinueShoppingButton() }
         { this.renderContinueButton() }
       </div>
