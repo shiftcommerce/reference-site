@@ -1,14 +1,15 @@
 // Libraries
+import React from 'react'
 import dateFns from 'date-fns'
 
 // Component
-import OrderList from '../../../../client/components/orders/list'
+import OrderList from '../../../src/components/orders/order-list'
 
 // Lib
-import { penceToPounds } from '../../../../client/lib/pence-to-pounds'
+import { penceToPounds } from '../../../src/lib/pence-to-pounds'
 
 // Fixtures
-import orders from '../../../fixtures/orders'
+import orders from '../../fixtures/orders'
 
 test('renders correctly', () => {
   // Act

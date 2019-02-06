@@ -1,5 +1,5 @@
 // Libraries
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 
 class ShippingAddresses extends PureComponent {
   render () {

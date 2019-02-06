@@ -6,8 +6,7 @@ import { createMockStore } from 'redux-test-utils'
 import { MyAccount } from '../../../../client/pages/account/myaccount'
 
 // Components
-import LineItems from '../../../../client/components/orders/line-items'
-import ShippingAddresses from '../../../../client/components/orders/shipping-addresses'
+import { OrderLineItems, ShippingAddresses } from 'shift-react-components'
 
 // Fixtures
 import orders from '../../../fixtures/orders'
@@ -41,8 +40,8 @@ describe('My Account page', () => {
     expect(wrapper).toIncludeText(`Order Number: ${orders.data[0].reference}`)
     expect(wrapper).toIncludeText(`Order Number: ${orders.data[1].reference}`)
 
-    expect(wrapper).toContainReact(<LineItems items={orders.data[0].line_items} />)
-    expect(wrapper).toContainReact(<LineItems items={orders.data[1].line_items} />)
+    expect(wrapper).toContainReact(<OrderLineItems items={orders.data[0].line_items} />)
+    expect(wrapper).toContainReact(<OrderLineItems items={orders.data[1].line_items} />)
 
     expect(wrapper).toContainReact(<ShippingAddresses addresses={orders.data[0].shipping_addresses} />)
     expect(wrapper).toContainReact(<ShippingAddresses addresses={orders.data[1].shipping_addresses} />)

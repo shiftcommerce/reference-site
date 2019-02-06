@@ -1,8 +1,11 @@
+// Libraries
+import React from 'react'
+
 // Component
-import ShippingAddresses from '../../../../client/components/orders/shipping-addresses'
+import ShippingAddresses from '../../../src/components/orders/shipping-addresses'
 
 // Fixtures
-import orders from '../../../fixtures/orders'
+import orders from '../../fixtures/orders'
 
 test('renders correctly', () => {
   // Arrange

@@ -541,8 +541,6 @@ exports[`renders correctly 1`] = `
     <h4>
       Jan 1, 2018
        - 
-      3
-       - 
       1000
        - £
       1506.00
@@ -622,7 +620,7 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
       </div>
-      <LineItems
+      <OrderLineItems
         items={
           Array [
             Object {
@@ -814,324 +812,111 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="c-order-history__line-items"
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-XXL"
         >
-          <h3
-            className="c-order-history__line-items_title"
-          >
-            Products
-          </h3>
           <div
-            className="c-order-history__line-items_grid"
-            key="WHITE-TSHIRT-XXL"
+            className="c-order-history__line-items_grid_item1"
           >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  WHITE-TSHIRT-XXL
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    WHITE-TSHIRT-XXL
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                5
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Next Day Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  72.00
-                </a>
-              </div>
-            </div>
+            <h5>
+              WHITE-TSHIRT-XXL
+            </h5>
+            <h4>
+              WHITE-TSHIRT-XXL
+            </h4>
+            <span>
+              Quantity: 
+              5
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
           </div>
           <div
-            className="c-order-history__line-items_grid"
-            key="BLACK-SOCKS-001"
+            className="c-order-history__line-items_grid_item2"
           >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  BLACK-SOCKS-001
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    BLACK-SOCKS-001
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                3
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Two-man Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer 2
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  4.80
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="c-order-history__line-items_grid"
-            key="WHITE-TSHIRT-L"
-          >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  WHITE-TSHIRT-L
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    WHITE-TSHIRT-L
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                1
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Next Day Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  1440.00
-                </a>
-              </div>
-            </div>
+            <a>
+              £
+              72.00
+            </a>
           </div>
         </div>
-      </LineItems>
+        <div
+          className="c-order-history__line-items_grid"
+          key="BLACK-SOCKS-001"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              BLACK-SOCKS-001
+            </h5>
+            <h4>
+              BLACK-SOCKS-001
+            </h4>
+            <span>
+              Quantity: 
+              3
+            </span>
+            <span>
+              Delivery: 
+              Two-man Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer 2
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              4.80
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-L"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-L
+            </h5>
+            <h4>
+              WHITE-TSHIRT-L
+            </h4>
+            <span>
+              Quantity: 
+              1
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              1440.00
+            </a>
+          </div>
+        </div>
+      </OrderLineItems>
       <div
         className="c-order-history__totals"
       >
@@ -1251,8 +1036,6 @@ exports[`renders correctly 1`] = `
     <h4>
       Jan 1, 2018
        - 
-      3
-       - 
       1001
        - £
       1606.00
@@ -1332,7 +1115,7 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
       </div>
-      <LineItems
+      <OrderLineItems
         items={
           Array [
             Object {
@@ -1524,324 +1307,111 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="c-order-history__line-items"
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-XXL"
         >
-          <h3
-            className="c-order-history__line-items_title"
-          >
-            Products
-          </h3>
           <div
-            className="c-order-history__line-items_grid"
-            key="WHITE-TSHIRT-XXL"
+            className="c-order-history__line-items_grid_item1"
           >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  WHITE-TSHIRT-XXL
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    WHITE-TSHIRT-XXL
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                5
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Next Day Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  72.00
-                </a>
-              </div>
-            </div>
+            <h5>
+              WHITE-TSHIRT-XXL
+            </h5>
+            <h4>
+              WHITE-TSHIRT-XXL
+            </h4>
+            <span>
+              Quantity: 
+              5
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
           </div>
           <div
-            className="c-order-history__line-items_grid"
-            key="BLACK-SOCKS-001"
+            className="c-order-history__line-items_grid_item2"
           >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  BLACK-SOCKS-001
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    BLACK-SOCKS-001
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                3
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Two-man Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer 2
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  4.80
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="c-order-history__line-items_grid"
-            key="WHITE-TSHIRT-L"
-          >
-            <div
-              className="c-order-history__line-items_grid_item1"
-            >
-              <Image
-                className="c-order-history__line-items_image"
-                src="/static/placeholder.png"
-              >
-                <div
-                  className="c-order-history__line-items_image"
-                >
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/placeholder.png"
-                      srcSet="/static/placeholder.png 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item2"
-            >
-              <div
-                className="c-order-history__line-items_details"
-              >
-                <h5
-                  className="c-order-history__line-items_details_title u-bold"
-                >
-                  WHITE-TSHIRT-L
-                </h5>
-                <div
-                  className="c-order-history__line-items_details_sku"
-                >
-                  <span>
-                    WHITE-TSHIRT-L
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Quantity: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Delivery: 
-                </span>
-              </div>
-              <div
-                className="c-order-history__line-items_params u-bold"
-              >
-                <span>
-                  Address: 
-                </span>
-              </div>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item3"
-            >
-              <span
-                className="c-order-history__line-items_space"
-              >
-                1
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Next Day Delivery
-              </span>
-              <span
-                className="c-order-history__line-items_space"
-              >
-                Test Customer
-              </span>
-            </div>
-            <div
-              className="c-order-history__line-items_grid_item4"
-            >
-              <div
-                className="c-order-history__line-items_total-wrapper"
-              >
-                <a
-                  className="c-order-history__line-items_total"
-                >
-                  £
-                  1440.00
-                </a>
-              </div>
-            </div>
+            <a>
+              £
+              72.00
+            </a>
           </div>
         </div>
-      </LineItems>
+        <div
+          className="c-order-history__line-items_grid"
+          key="BLACK-SOCKS-001"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              BLACK-SOCKS-001
+            </h5>
+            <h4>
+              BLACK-SOCKS-001
+            </h4>
+            <span>
+              Quantity: 
+              3
+            </span>
+            <span>
+              Delivery: 
+              Two-man Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer 2
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              4.80
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-L"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-L
+            </h5>
+            <h4>
+              WHITE-TSHIRT-L
+            </h4>
+            <span>
+              Quantity: 
+              1
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              1440.00
+            </a>
+          </div>
+        </div>
+      </OrderLineItems>
       <div
         className="c-order-history__totals"
       >

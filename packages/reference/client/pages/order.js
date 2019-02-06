@@ -8,10 +8,7 @@ import t from 'typy'
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Objects
-import { Button, Image } from 'shift-react-components'
-
-// Components
-import OrderSummary from '../components/orders/order-summary'
+import { Button, Image, OrderSummary } from 'shift-react-components'
 
 export class OrderPage extends Component {
   renderHeader (order) {

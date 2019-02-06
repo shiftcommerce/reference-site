@@ -1,11 +1,14 @@
-// Comnponent
-import OrderSummary from '../../../../client/components/orders/order-summary'
+// Libraries
+import React from 'react'
+
+// Component
+import OrderSummary from '../../../src/components/orders/order-summary'
 
 // Lib
-import { decimalPrice } from '../../../../client/lib/decimal-price'
+import { decimalPrice } from '../../../src/lib/decimal-price'
 
 // Fixtures
-import order from '../../../fixtures/confirmation-order'
+import order from '../../fixtures/order-confirmation'
 
 test('renders correctly', () => {
   // arrange

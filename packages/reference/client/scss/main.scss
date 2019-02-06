@@ -69,8 +69,9 @@
 @import '60_components/_c-loading';
 @import '60_components/_c-minibag';
 @import '60_components/_c-nav';
-@import '60_components/_c-order-history';
-@import '60_components/_c-order';
+@import '~shift-react-components/dist/scss/60_components/c-order';
+@import '~shift-react-components/dist/scss/60_components/c-order-history';
+@import '~shift-react-components/dist/scss/60_components/c-order-summary';
 @import '60_components/_c-payment-icons';
 @import '60_components/_c-payment-method';
 @import '~shift-react-components/dist/scss/60_components/c-product-carousel';

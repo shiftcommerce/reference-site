@@ -45,6 +45,14 @@ export { default as ProductPrice } from './components/products/display/product-p
 export { default as ProductListingCard } from './components/products/listing/product-listing-card'
 
 /**
+ * Order Components
+ */
+export { default as OrderLineItems } from './components/orders/order-line-items'
+export { default as OrderList } from './components/orders/order-list'
+export { default as OrderSummary } from './components/orders/order-summary'
+export { default as ShippingAddresses } from './components/orders/shipping-addresses'
+
+/**
  * Cart Components
  */
 export { default as CartNoData } from './components/cart/cart-no-data'

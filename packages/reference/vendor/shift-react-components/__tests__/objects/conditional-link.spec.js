@@ -2,7 +2,8 @@
 import React from 'react'
 
 // Objects
-import { Link, ConditionalLink } from 'shift-react-components'
+import ConditionalLink from '../../src/objects/conditional-link'
+import Link from '../../src/objects/link'
 
 describe('ConditionalLink', () => {
   test('wraps its children in a link if link is present', () => {

@@ -21,6 +21,11 @@ import ProductCarousel from '../../src/components/products/display/product-carou
 import ProductEwisForm from '../../src/components/products/display/product-ewis-form'
 import ProductPrice from '../../src/components/products/display/product-price'
 
+// Orders
+import OrderLineItems from '../components/orders/order-line-items'
+import OrderList from '../components/orders/order-list'
+import ShippingAddresses from '../../src/components/orders/shipping-addresses'
+
 const mapping = {
   Breadcrumb,
   Button,
@@ -31,11 +36,14 @@ const mapping = {
   Image,
   Input,
   LazyLoad,
+  OrderLineItems,
   Link,
+  OrderList,
   ProductCarousel,
   ProductEwisForm,
   ProductPrice,
   Rating,
+  ShippingAddresses,
   VariantSelector
 }
 

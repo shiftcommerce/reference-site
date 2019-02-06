@@ -7,7 +7,13 @@ import serverPromise from '../../server/server'
 describe('Server', () => {
   // Server Setup
   let server
-  beforeAll(async () => { server = await serverPromise })
+  beforeAll(async () => {
+    try {
+      server = await serverPromise
+    } catch (error) {
+      console.log(error)
+    }
+  })
   afterAll(() => { server.close() })
 
   describe('GET /order', () => {
@@ -15,12 +21,11 @@ describe('Server', () => {
       // Arrange
       const requestUrl = `http://localhost:${server.address().port}`
 
-      // Act
-      const response = await request(requestUrl).get('/order')
-
-      // Assert
-      expect(response.statusCode).toEqual(302)
-      expect(response.header['location']).toEqual('/account/myaccount')
+      // Act // Assert
+      request(requestUrl).get('/order').then(response => {
+        expect(response.statusCode).toEqual(302)
+        expect(response.header['location']).toEqual('/account/myaccount')
+      })
     })
   })
 })

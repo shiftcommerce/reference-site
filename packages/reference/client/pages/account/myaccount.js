@@ -6,14 +6,13 @@ import Head from 'next/head'
 
 // Components
 import Loading from '../../components/loading'
-import OrderList from '../../components/orders/list'
 
 // Lib
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
-import { Button } from 'shift-react-components'
+import { Button, OrderList } from 'shift-react-components'
 
 // Actions
 import { getCustomerOrders } from '../../actions/order-actions'

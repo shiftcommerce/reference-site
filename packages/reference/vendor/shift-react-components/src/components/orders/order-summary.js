@@ -1,28 +1,43 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import Sticky from 'react-stickyfill'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-
-// Objects
-import { Image } from 'shift-react-components'
+import componentMapping from '../../lib/component-mapping'
 
 class OrderSummary extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Image = componentMapping('Image')
+    this.Link = componentMapping('Link')
+  }
+
+  /**
+  * Render line item image for the order summary
+  * @param  {Object} lineItem
+  * @return {string} - HTML markup for the component
+  */
   renderLineItemImage (lineItem) {
     if (lineItem.imageUrl) {
       return (
-        <Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} key={lineItem.slug}>
-          <Image src={lineItem.imageUrl} alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
-        </Link>
+        <this.Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} >
+          <this.Image src={lineItem.imageUrl} alt={lineItem.title} aria-label={lineItem.title} />
+        </this.Link>
       )
     } else {
       return (
-        <Image src='/static/placeholder.png' alt={lineItem.title} key={lineItem.slug} aria-label={lineItem.title} />
+        <this.Image src='/static/placeholder.png' alt={lineItem.title} aria-label={lineItem.title} />
       )
     }
   }
 
+  /**
+  * Render the line item title for the order summary
+  * @param  {Object} lineItem
+  * @return {string} - HTML markup for the component
+  */
   renderLineItemTitle (lineItem) {
     return (
       <>
@@ -36,6 +51,11 @@ class OrderSummary extends Component {
     )
   }
 
+  /**
+  * Render the line-item meta-data for the order summary
+  * @param  {Object} _lineItem
+  * @return {string} - HTML markup for the component
+  */
   renderLineItemParams (_lineItem) {
     // @TODO: to update this with actual metadata
     const metaData = { colour: 'Grey', size: 'L', quantity: 1 }
@@ -53,9 +73,14 @@ class OrderSummary extends Component {
     )
   }
 
+  /**
+  * Render the line items for the order summary
+  * @param  {Object} order
+  * @return {string} - HTML markup for the component
+  */
   renderLineItems (order) {
     return (
-      order.line_items.map((lineItem, index) =>
+      order.line_items.map((lineItem) =>
         <div className='c-order__summary-line-item' key={lineItem.sku}>
           <div className='c-order__summary-line-item-image'>
             { this.renderLineItemImage(lineItem) }
@@ -70,6 +95,11 @@ class OrderSummary extends Component {
     )
   }
 
+  /**
+  * Render the total prices for the order summary
+  * @param  {Object} order
+  * @return {string} - HTML markup for the component
+  */
   renderOrderTotals (order) {
     return (
       <Sticky>
