@@ -117,6 +117,10 @@ module.exports = {
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
 
+  setupFilesAfterEnv: [
+    './test/support/setup-after-env.js'
+  ],
+
   // The path to a module that runs some code to configure or set up the testing framework before each test
   // setupTestFrameworkScriptFile: null,
 
@@ -124,7 +128,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'node',
+  testEnvironment: 'node'
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -159,9 +163,7 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // This is set to an empty hash because we don't want to use babel yet - babel-jest is present in the main project's node_modules
-  // folder and would be automatically used by jest here due to the way yarn workspaces work.
-  transform: {}
+  // transform: {}
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

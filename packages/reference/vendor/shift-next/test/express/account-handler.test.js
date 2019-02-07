@@ -4,7 +4,7 @@ const nock = require('nock')
 const httpAdapter = require('axios/lib/adapters/http')
 
 // Account handler
-const { getAccount } = require('../../express/account-handler')
+const { getAccount } = require('../../src/express/account-handler')
 
 axios.defaults.adapter = httpAdapter
 

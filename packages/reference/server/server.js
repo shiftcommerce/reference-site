@@ -31,8 +31,9 @@ const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 const { fetchData } = require('./lib/api-server')
 const { platform, oms } = require('./constants/api-urls')
 
-// Handlers
+// ShiftNext
 const { shiftRoutes } = require('shift-next')
+
 const accountHandler = require('./route-handlers/account-route-handler')
 const cartHandler = require('./route-handlers/cart-route-handler')
 const handler = require('./route-handlers/route-handler')

@@ -223,11 +223,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
             ],
             "results": Array [
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
             ],
@@ -447,11 +447,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
         ],
@@ -682,11 +682,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -911,11 +911,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -1135,11 +1135,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -1371,11 +1371,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -1596,11 +1596,11 @@ exports[`redirects to order confirmation page, on creating an order 1`] = `
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -1844,11 +1844,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
             ],
             "results": Array [
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
             ],
@@ -2146,11 +2146,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
         ],
@@ -2459,11 +2459,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -2766,11 +2766,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -3068,11 +3068,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -3382,11 +3382,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -3685,11 +3685,11 @@ exports[`should not redirect to order confirmation page, if no new order got cre
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -4011,11 +4011,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
             ],
             "results": Array [
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": Promise {},
               },
             ],
@@ -4313,11 +4313,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Promise {},
           },
         ],
@@ -4626,11 +4626,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -4933,11 +4933,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -5235,11 +5235,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": Promise {},
                 },
               ],
@@ -5549,11 +5549,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],
@@ -5852,11 +5852,11 @@ exports[`should redirect to order confirmation page, if new order got created 1`
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": Promise {},
                   },
                 ],

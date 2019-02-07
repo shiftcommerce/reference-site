@@ -1,4 +1,4 @@
-const { setCacheHeaders } = require('../../lib/set-cache-headers')
+const { setCacheHeaders } = require('../../src/lib/set-cache-headers')
 
 describe('setCacheHeaders', () => {
   test('Adds surrogate key header to the response', () => {

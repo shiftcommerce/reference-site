@@ -1,8 +1,7 @@
-// Libraries
 import Router from 'next/router'
 
 // Pages
-import { LoginPage } from '../../../../client/pages/account/login'
+import { LoginPage } from '../../src/pages/login'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}

@@ -2,7 +2,7 @@ const axios = require('axios')
 const nock = require('nock')
 const httpAdapter = require('axios/lib/adapters/http')
 
-const { fetchData } = require('../../lib/api-server')
+const { fetchData } = require('../../src/lib/api-server')
 
 axios.defaults.adapter = httpAdapter
 

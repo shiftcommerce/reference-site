@@ -4,7 +4,6 @@ import thunk from 'redux-thunk'
 
 import * as loginActions from '../../../client/actions/login-actions'
 import * as actionTypes from '../../../client/actions/action-types'
-import * as accountActions from '../../../client/actions/account-actions'
 
 afterEach(() => { nock.cleanAll() })
 
@@ -14,14 +13,6 @@ test('return SET_LOGIN action type on calling setLoggedInFromCookies()', () => {
 
   // Assert
   expect(action.type).toEqual(actionTypes.SET_LOGIN)
-})
-
-test('return CLEAR_ACCOUNT_ERRORS action type on calling clearErrors()', () => {
-  // Act
-  const action = accountActions.clearErrors()
-
-  // Assert
-  expect(action.type).toEqual(actionTypes.CLEAR_ACCOUNT_ERRORS)
 })
 
 test('return ERROR_LOGIN action type if errors are returned from API', () => {
