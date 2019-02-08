@@ -15,7 +15,7 @@ import { clearErrors, fetchAccountDetails } from '../actions/account-actions'
 // Components
 import { LoginForm } from 'shift-react-components'
 
-export class LoginPage extends Component {
+class LoginPage extends Component {
   constructor () {
     super()
 

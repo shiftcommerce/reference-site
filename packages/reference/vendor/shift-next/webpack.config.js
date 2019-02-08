@@ -28,6 +28,7 @@ module.exports = {
     'react-dom': 'commonjs react-dom',
     'shift-react-components': 'commonjs shift-react-components',
     'getConfig': 'commonjs next/config',
-    'next/router': 'commonjs next/router'
+    'next/router': 'commonjs next/router',
+    'next/link': 'commonjs next/link'
   }
 }

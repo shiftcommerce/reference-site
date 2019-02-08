@@ -118,7 +118,9 @@ module.exports = {
   // setupFiles: [],
 
   setupFilesAfterEnv: [
-    './test/support/setup-after-env.js'
+    './test/support/setup-after-env.js',
+    './test/support/enzyme-setup.js',
+    '../../node_modules/jest-enzyme/lib/index.js'
   ],
 
   // The path to a module that runs some code to configure or set up the testing framework before each test
@@ -128,7 +130,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'node'
+  testEnvironment: 'enzyme'
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
