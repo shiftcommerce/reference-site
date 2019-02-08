@@ -14,6 +14,7 @@ exports[`renders the children inside it 1`] = `
       >
         <Logo
           className="o-header__logo"
+          logoSrc="../static/shopgo-logo.svg"
         />
         <span
           className="o-nav u-hidden-d"
@@ -77,6 +78,7 @@ exports[`renders the footer 1`] = `
       >
         <Logo
           className="o-header__logo"
+          logoSrc="../static/shopgo-logo.svg"
         />
         <span
           className="o-nav u-hidden-d"
@@ -138,6 +140,7 @@ exports[`renders the header 1`] = `
       >
         <Logo
           className="o-header__logo"
+          logoSrc="../static/shopgo-logo.svg"
         />
         <span
           className="o-nav u-hidden-d"
@@ -199,6 +202,7 @@ exports[`renders the navbar 1`] = `
       >
         <Logo
           className="o-header__logo"
+          logoSrc="../static/shopgo-logo.svg"
         />
         <span
           className="o-nav u-hidden-d"

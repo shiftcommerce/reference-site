@@ -4,7 +4,7 @@ import NavBar from '../../../client/components/navigation/navbar'
 import MiniBag from '../../../client/components/mini-bag'
 
 // Objects
-import Logo from '../../../client/objects/logo'
+import { Logo } from 'shift-react-components'
 
 test('renders the header', () => {
   // Arrange
@@ -18,7 +18,7 @@ test('renders the header', () => {
 
   // Assert
   expect(header).toExist()
-  expect(header).toContainReact(<Logo className='o-header__logo' />)
+  expect(header).toContainReact(<Logo className="o-header__logo" logoSrc="../static/shopgo-logo.svg" />)
   expect(header.find(MiniBag)).toExist()
   expect(wrapper).toMatchSnapshot()
 })

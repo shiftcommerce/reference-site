@@ -1,5 +1,8 @@
+// Libraries
+import React from 'react'
+
 // Object
-import Logo from '../../../client/objects/logo'
+import Logo from '../../src/objects/logo'
 
 test('renders correctly', () => {
   // Arrange & Act

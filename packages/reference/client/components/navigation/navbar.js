@@ -8,8 +8,7 @@ import SearchBar from '../search/search-bar'
 import NavBarOption from './navbar-option'
 
 // Objects
-import Logo from '../../objects/logo'
-import { Image, Loading } from 'shift-react-components'
+import { Image, Loading, Logo } from 'shift-react-components'
 
 export class NavBar extends Component {
   constructor (props) {
@@ -49,9 +48,11 @@ export class NavBar extends Component {
   }
 
   renderNavHeader () {
+    const logoSrc = '../../static/shopgo-logo.svg'
+
     return (
       <div className='c-nav__menu-header'>
-        <Logo className='c-nav__menu-header-logo' />
+        <Logo className='c-nav__menu-header-logo' logoSrc={logoSrc} />
         <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown} />
         { this.renderSearchBar() }
       </div>

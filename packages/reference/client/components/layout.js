@@ -5,8 +5,7 @@ import Link from 'next/link'
 import classNames from 'classnames'
 
 // Objects
-import Logo from '../objects/logo'
-import { Image } from 'shift-react-components'
+import { Image, Logo } from 'shift-react-components'
 
 // Components
 import MiniBag from './mini-bag'
@@ -131,6 +130,7 @@ export class Layout extends Component {
 
   renderHeader () {
     const { loggedIn } = this.props
+    const logoSrc = '../static/shopgo-logo.svg'
 
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
       const headerClasses = classNames('o-header', {
@@ -143,7 +143,7 @@ export class Layout extends Component {
           <div className={ headerClasses }>
             <div className='o-header__top'>
               <div className='o-header__top-wrapper'>
-                <Logo className='o-header__logo' />
+                <Logo className='o-header__logo' logoSrc={logoSrc} />
                 { this.renderMobileNav() }
                 { this.renderHeaderAccount(loggedIn) }
                 <MiniBag />

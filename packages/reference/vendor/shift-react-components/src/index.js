@@ -18,6 +18,7 @@ export { default as Input } from './objects/input'
 export { default as LazyLoad } from './objects/lazy-load'
 export { default as Link } from './objects/link'
 export { default as Loading } from './objects/loading'
+export { default as Logo } from './objects/logo'
 export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 

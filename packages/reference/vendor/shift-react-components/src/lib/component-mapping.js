@@ -11,6 +11,7 @@ import Input from '../../src/objects/input'
 import LazyLoad from '../../src/objects/lazy-load'
 import Link from '../../src/objects/link'
 import Loading from '../../src/objects/loading'
+import Logo from '../../src/objects/logo'
 import Rating from '../../src/objects/rating'
 import VariantSelector from '../../src/objects/variant-selector'
 
@@ -39,6 +40,7 @@ const mapping = {
   LazyLoad,
   Link,
   Loading,
+  Logo,
   OrderLineItems,
   OrderList,
   ProductCarousel,
