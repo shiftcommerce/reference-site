@@ -4,7 +4,7 @@ import { createMockStore } from 'redux-test-utils'
 
 // Components
 import { NavBar } from '../../../../client/components/navigation/navbar'
-import Loading from '../../../../client/components/loading'
+import { Loading } from 'shift-react-components'
 
 // Fixtures
 import menu from '../../../fixtures/menu'

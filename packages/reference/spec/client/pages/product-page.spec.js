@@ -6,8 +6,7 @@ import { createMockStore } from 'redux-test-utils'
 import { Product } from './../../../client/pages/product'
 
 // Components
-import Loading from './../../../client/components/loading'
-import { ProductDisplay } from 'shift-react-components'
+import { Loading, ProductDisplay } from 'shift-react-components'
 
 // Fixtures
 import product from './../../fixtures/product'
@@ -35,7 +34,7 @@ describe('Product page', () => {
 
       // Assert
       expect(wrapper).toMatchSnapshot()
-      expect(wrapper.find('.c-loading')).toHaveClassName('c-loading')
+      expect(wrapper.find('.o-loading')).toHaveClassName('o-loading')
     })
 
     test('displays an error message when there is an error loading the product', () => {

@@ -14,7 +14,7 @@ import ApiClient from '../lib/api-client'
 import JsonApiParser from '../lib/json-api-parser'
 
 // Components
-import Loading from '../components/loading'
+import { Loading } from 'shift-react-components'
 import StaticPageError from '../components/static-page-error'
 
 const fetchPage = async (id) => {

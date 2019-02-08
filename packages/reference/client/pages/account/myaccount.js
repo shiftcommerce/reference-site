@@ -4,15 +4,12 @@ import { connect } from 'react-redux'
 import Link from 'next/link'
 import Head from 'next/head'
 
-// Components
-import Loading from '../../components/loading'
-
 // Lib
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../../lib/suffix-with-store-name'
 
 // Objects
-import { Button, OrderList } from 'shift-react-components'
+import { Button, Loading, OrderList } from 'shift-react-components'
 
 // Actions
 import { getCustomerOrders } from '../../actions/order-actions'

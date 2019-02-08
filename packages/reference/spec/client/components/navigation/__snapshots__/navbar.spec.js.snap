@@ -25,7 +25,7 @@ exports[`The navbar renders loading spinner 1`] = `
   >
     <Loading>
       <Loading
-        className="c-loading u-padding-top-xl"
+        className="o-loading"
         color="#f5c6cb"
         delay={250}
         height={50}
@@ -33,7 +33,7 @@ exports[`The navbar renders loading spinner 1`] = `
         width={50}
       >
         <div
-          className="c-loading u-padding-top-xl"
+          className="o-loading"
           dangerouslySetInnerHTML={
             Object {
               "__html": "<svg class=\\"icon-blank\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 32 32\\"></svg>

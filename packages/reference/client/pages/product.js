@@ -8,8 +8,7 @@ import renderComponents from '../lib/render-components'
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 
 // Components
-import Loading from '../components/loading'
-import { ProductDisplay } from 'shift-react-components'
+import { Loading, ProductDisplay } from 'shift-react-components'
 
 // Actions
 import { addToCart } from '../actions/cart-actions'

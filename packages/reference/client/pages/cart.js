@@ -26,10 +26,9 @@ import {
   CartTableHeader,
   CartTablePaymentIcons,
   CartTableSummary,
-  LineItems
+  LineItems,
+  Loading
 } from 'shift-react-components'
-
-import Loading from '../components/loading'
 import CouponForm from '../components/coupon-form'
 
 // Fixtures

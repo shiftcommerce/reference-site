@@ -7,9 +7,9 @@ import Head from 'next/head'
 import equal from 'deep-equal'
 
 // Components
-import ProductListing from '../components/products/listing/product-listing'
-import Loading from '../components/loading'
 import AlgoliaFilters from '../components/search/algolia/algolia-filters'
+import { Loading } from 'shift-react-components'
+import ProductListing from '../components/products/listing/product-listing'
 
 // Requests
 import { categoryRequest } from '../requests/category-request'
