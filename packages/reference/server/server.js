@@ -35,7 +35,6 @@ const { platform, oms } = require('./constants/api-urls')
 const { shiftRoutes } = require('shift-next')
 
 const accountHandler = require('./route-handlers/account-route-handler')
-const cartHandler = require('./route-handlers/cart-route-handler')
 const handler = require('./route-handlers/route-handler')
 const orderHandler = require('./route-handlers/order-route-handler')
 const customerOrdersHandler = require('./route-handlers/customer-orders-route-handler')
@@ -158,17 +157,6 @@ module.exports = app.prepare().then(() => {
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
   server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
-
-  server.post('/addCartCoupon', cartHandler.addCartCouponRenderer())
-  server.post('/addToCart', cartHandler.addToCartRenderer())
-  server.post('/createAddress', cartHandler.createAddressRenderer())
-  server.post('/deleteLineItem/:lineItemId', cartHandler.deleteLineItemRenderer())
-  server.get('/getCart', cartHandler.getCartRenderer())
-  server.get('/getShippingMethods', cartHandler.getShippingMethodsRenderer())
-  server.post('/setCartBillingAddress', cartHandler.setCartBillingAddressRenderer())
-  server.post('/setCartShippingAddress', cartHandler.setCartShippingAddressRenderer())
-  server.post('/setShippingMethod', cartHandler.setCartShippingMethodRenderer())
-  server.post('/updateLineItem', cartHandler.updateLineItemRenderer())
 
   server.post('/createOrder', orderHandler.createOrderRenderer())
 

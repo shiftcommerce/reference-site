@@ -8,7 +8,6 @@ import { Button } from 'shift-react-components'
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
 import ApiClient from '../../lib/api-client'
-import JsonApiParser from '../../lib/json-api-parser'
 import { businessDaysFromNow } from '../../lib/business-days-from-now'
 
 import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
@@ -21,7 +20,8 @@ export default class ShippingMethods extends Component {
     try {
       const request = fetchShippingMethodsRequest()
       const response = await new ApiClient().read(request.endpoint, request.query)
-      return new JsonApiParser().parse(response.data)
+
+      return response.data
     } catch (error) {
       return { error }
     }
@@ -165,7 +165,7 @@ export default class ShippingMethods extends Component {
           { this.renderFormHeader() }
           { this.renderFormSummary() }
           { this.renderForm() }
-          </>
+        </>
         }
       </div>
     )

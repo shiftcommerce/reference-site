@@ -5,6 +5,7 @@ import loginPage from './pages/login'
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
 import shiftMenuHandler from './express/menu-handler'
+import shiftCartHandler from './express/cart-handler'
 
 // Lib
 import Config from './lib/config'
@@ -13,6 +14,18 @@ module.exports = {
   shiftRoutes: (server) => {
     server.get('/getAccount', shiftAccountHandler.getAccount)
     server.get('/getMenus', shiftMenuHandler.getMenu)
+    server.get('/getAccount', shiftAccountHandler.getAccount)
+    server.get('/getMenus', shiftMenuHandler.getMenu)
+    server.get('/getCart', shiftCartHandler.getCart)
+    server.get('/getShippingMethods', shiftCartHandler.getShippingMethods)
+    server.post('/addToCart', shiftCartHandler.addToCart)
+    server.post('/deleteLineItem/:lineItemId', shiftCartHandler.deleteLineItem)
+    server.post('/updateLineItem', shiftCartHandler.updateLineItem)
+    server.post('/addCartCoupon', shiftCartHandler.addCartCoupon)
+    server.post('/createAddress', shiftCartHandler.createAddress)
+    server.post('/setCartBillingAddress', shiftCartHandler.setCartBillingAddress)
+    server.post('/setCartShippingAddress', shiftCartHandler.setCartShippingAddress)
+    server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
   },
 
   forgottenPasswordPage: forgottenPasswordPage,

@@ -8,7 +8,6 @@ import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 import ApiClient from '../lib/api-client'
-import JsonApiParser from '../lib/json-api-parser'
 
 // Actions
 import { updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
@@ -63,7 +62,7 @@ export class CartPage extends Component {
     try {
       const request = fetchShippingMethodsRequest()
       const response = await new ApiClient().read(request.endpoint, request.query)
-      return new JsonApiParser().parse(response.data)
+      return response.data
     } catch (error) {
       return { error }
     }

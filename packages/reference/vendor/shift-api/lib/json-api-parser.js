@@ -73,7 +73,7 @@ class JsonApiParser {
             )[0]
           }
         } else {
-          parsedRelationships[key] = value
+          parsedRelationships[key] = value.data
         }
       })
     }

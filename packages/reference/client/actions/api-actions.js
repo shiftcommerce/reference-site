@@ -104,7 +104,9 @@ function _determinePostDispatch (dispatch, request, response) {
   if ((response.status === 202 || response.status === 201 || response.status === 200) && validationPassed) {
     if (request.successActionType) {
       const parsedPayload = new JsonApiParser().parse(response.data)
-      dispatch(sendResponse(request.successActionType, parsedPayload))
+      // TODO: remove when all enpoints have been moved to shift-next
+      const payload = parsedPayload || response.data
+      dispatch(sendResponse(request.successActionType, payload))
     }
   } else {
     dispatch(setErroredTo(request.errorActionType, response.data))
