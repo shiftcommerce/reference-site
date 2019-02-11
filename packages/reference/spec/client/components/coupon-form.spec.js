@@ -1,6 +1,6 @@
 import nock from 'nock'
 
-import { CouponForm } from '../../../client/components/coupon-form'
+import CouponForm from '../../../client/components/coupon-form'
 import * as cartActions from '../../../client/actions/cart-actions'
 
 afterEach(() => { nock.cleanAll() })

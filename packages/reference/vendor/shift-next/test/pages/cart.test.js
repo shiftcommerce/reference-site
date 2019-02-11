@@ -1,39 +1,42 @@
-// Libraries
-import { Provider } from 'react-redux'
-import { createMockStore } from 'redux-test-utils'
-
 // Pages
-import { CartPage } from '../../../client/pages/cart'
+import CartPage from '../../src/pages/cart'
 
 // Actions
-import { updateLineItemQuantity } from '../../../client/actions/cart-actions'
+import { updateLineItemQuantity } from '../../src/actions/cart-actions'
 
 // Fixtures
-import cart from '../../fixtures/cart'
-import menu from '../../fixtures/menu'
+import cart from '../fixtures/cart'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
 }))
 
-test('dispatch updateQuantity action on changing line item quantity', () => {
-  // Arrange
-  const initialState = {
-    menu: {
-      loading: false,
-      error: false,
-      data: menu
+const RealDate = Date
+const mockDate = new Date('2019-01-01')
+
+beforeAll(() => {
+  global.Date = class extends Date {
+    constructor () {
+      super()
+      return mockDate
     }
   }
+})
+
+afterAll(() => {
+  global.Date = RealDate
+})
+
+test('dispatch updateQuantity action on changing line item quantity', () => {
+  // Arrange
+
   const expectedFunction = updateLineItemQuantity().toString()
   const updateQuantitySpy = jest.spyOn(CartPage.prototype, 'updateQuantity')
   const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
   // Act
   const wrapper = mount(
-    <Provider store={createMockStore(initialState)}>
-      <CartPage cart={cart} dispatch={dispatch} />
-    </Provider>
+    <CartPage cart={cart} dispatch={dispatch} />
   )
 
   // Assert

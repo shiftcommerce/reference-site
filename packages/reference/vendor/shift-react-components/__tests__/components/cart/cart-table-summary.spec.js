@@ -6,7 +6,6 @@ import CartTableSummary from '../../../src/components/cart/cart-table-summary'
 
 // Fixtures
 import cart from '../../fixtures/cart'
-import shippingMethods from '../../fixtures/shipping-methods'
 
 test('renders correct messages when cart has items', () => {
   const className = 'dummy-classname'
@@ -16,7 +15,6 @@ test('renders correct messages when cart has items', () => {
     <CartTableSummary
       className={className}
       cart={cart}
-      shippingMethods={shippingMethods}
       loading={false}
     />
   )

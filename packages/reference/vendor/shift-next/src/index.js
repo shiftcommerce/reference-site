@@ -1,4 +1,5 @@
 // Pages
+import cartPage from './pages/cart'
 import forgottenPasswordPage from './pages/forgotten-password'
 import loginPage from './pages/login'
 
@@ -28,6 +29,7 @@ module.exports = {
     server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
   },
 
+  cartPage: cartPage,
   forgottenPasswordPage: forgottenPasswordPage,
   loginPage: loginPage,
 

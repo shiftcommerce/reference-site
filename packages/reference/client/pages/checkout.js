@@ -267,7 +267,7 @@ export class CheckoutPage extends Component {
                   <div className='o-col-1-13 o-col-8-13-l'>
                     <div className='c-checkout__cart'>
                       <CheckoutCart title='Your Cart' {...this.props} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
-                      <CouponForm />
+                      <CouponForm dispatch={this.props.dispatch} />
                       <CheckoutCartTotal {...this.props} convertToOrder={this.convertToOrder} onClick={() => { this.nextSection('complete') }} />
                       <div className='c-checkout__payment'>
                         <PaymentIcons />

@@ -1,4 +1,5 @@
 // Action types
+export const CART_UPDATED = 'CART_UPDATED'
 export const ERROR_ACCOUNT = 'ERROR_ACCOUNT'
 export const ERROR_LOGIN = 'ERROR_LOGIN'
 export const GET_ACCOUNT = 'GET_ACCOUNT'

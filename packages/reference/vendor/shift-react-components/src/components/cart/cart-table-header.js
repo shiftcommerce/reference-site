@@ -6,6 +6,7 @@ import t from 'typy'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
+import { businessDaysFromNow } from '../../lib/business-days-from-now'
 
 class CartTableHeader extends PureComponent {
   /**
@@ -31,26 +32,26 @@ class CartTableHeader extends PureComponent {
    * @return {string} - HTML markup for the component
    * @todo update to use actual delivery date, currently using data from fixture
    */
-  renderDeliveryEstimate (shippingMethods) {
-    const deliveryDate = t(shippingMethods, 'shippingMethods[0].delivery_date').safeObject
+  renderDeliveryEstimate (shippingMethod) {
+    const workingDays = parseInt(t(shippingMethod, 'meta_attributes.working_days.value').safeObject)
 
     return (
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--b'>
         <h1 className='c-cart-table__title'>Estimated Delivery</h1>
-        <p>We will deliver your item: <a>{ deliveryDate }</a></p>
+        <p>We will deliver your item: <a>{ businessDaysFromNow(workingDays).format('dddd Do MMMM') }</a></p>
       </div>
     )
   }
 
   render () {
-    const { cart, className, shippingMethods } = this.props
+    const { cart, className, shippingMethod } = this.props
 
     return (
       <section className={classNames(className, 'c-cart-table__header')}>
         { this.props.breadcrumb }
         <div className='c-cart-table__header-grid'>
           { this.renderBasketDetails(cart) }
-          { this.renderDeliveryEstimate(shippingMethods) }
+          { this.renderDeliveryEstimate(shippingMethod) }
         </div>
         <div className='c-cart-table__header-total'>
           <h4 className='c-cart-table__total'>£{ decimalPrice(cart.total || 0) }</h4>

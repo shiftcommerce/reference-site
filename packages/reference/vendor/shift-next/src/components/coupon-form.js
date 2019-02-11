@@ -1,21 +1,22 @@
-// TODO: When moving this component to shift-react-components, remove it
-// from shift-next/src/components too
-
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 // Actions
 import { readCart } from '../actions/cart-actions'
-
-// Request
-import { addCartCouponRequest } from '../requests/cart-requests'
 
 // Lib
 import ApiClient from '../lib/api-client'
 
 // Objects
 import { Button } from 'shift-react-components'
+
+const addCartCouponRequest = (couponCode) => {
+  return {
+    endpoint: '/addCartCoupon',
+    body: { couponCode }
+  }
+}
 
 class CouponForm extends Component {
   async submitCoupon (couponCode) {

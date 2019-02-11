@@ -6,14 +6,16 @@ import CartTableHeader from '../../../src/components/cart/cart-table-header'
 
 // Fixtures
 import cart from '../../fixtures/cart'
-import shippingMethods from '../../fixtures/shipping-methods'
+import shippingMethod from '../../fixtures/shipping-method'
 
 test('renders correct messages when cart has items', () => {
+  const dateSpy = jest.spyOn(Date, 'now').mockImplementation(() => new Date('2018-12-04T06:00:00').getTime())
+
   const className = 'dummy-classname'
 
   // act
   const wrapper = mount(
-    <CartTableHeader className={className} cart={cart} shippingMethods={shippingMethods} />
+    <CartTableHeader className={className} cart={cart} shippingMethod={shippingMethod} />
   )
 
   // assert
@@ -22,9 +24,13 @@ test('renders correct messages when cart has items', () => {
   expect(wrapper).toIncludeText('You have 2 items in your shopping basket')
   expect(wrapper).toIncludeText('£5.27') // cart total price
   expect(wrapper.find('section')).toHaveClassName(className)
+
+  dateSpy.mockRestore()
 })
 
 test('renders correct messages when cart is empty', () => {
+  const dateSpy = jest.spyOn(Date, 'now').mockImplementation(() => new Date('2018-12-04T06:00:00').getTime())
+
   const emptyCart = {
     line_items: [],
     sub_total: 0,
@@ -35,11 +41,13 @@ test('renders correct messages when cart is empty', () => {
 
   // act
   const wrapper = mount(
-    <CartTableHeader cart={emptyCart} shippingMethods={shippingMethods} />
+    <CartTableHeader cart={emptyCart} shippingMethod={shippingMethod} />
   )
 
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('You have 0 items in your shopping basket')
   expect(wrapper).toIncludeText('£0.00')
+
+  dateSpy.mockRestore()
 })

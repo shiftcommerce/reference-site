@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "qs": "^6.6.0"
+    "formik": "^1.4.3",
+    "qs": "^6.6.0",
+    "react-loading": "^2.0.3"
   }
 }

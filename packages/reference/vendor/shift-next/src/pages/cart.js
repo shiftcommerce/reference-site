@@ -1,0 +1,149 @@
+// Libraries
+import React, { Component } from 'react'
+import Head from 'next/head'
+
+// Lib
+import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
+import JsonApiParser from '../lib/json-api-parser'
+
+// Actions
+import { updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
+
+// Components
+import {
+  Breadcrumb,
+  CartNoData,
+  CartTable,
+  CartTableGrid,
+  CartTableGridItem,
+  CartTableHeader,
+  CartTablePaymentIcons,
+  CartTableSummary,
+  LineItems,
+  Loading
+} from 'shift-react-components'
+
+import CouponForm from '../components/coupon-form'
+
+const fetchShippingMethodsRequest = () => {
+  return {
+    endpoint: '/getShippingMethods'
+  }
+}
+
+class CartPage extends Component {
+  constructor (props) {
+    super(props)
+
+    // from cart-summary
+    this.state = {
+      loading: !props.cart.shipping_method
+    }
+
+    this.fetchShippingMethods = this.fetchShippingMethods.bind(this)
+    this.updateQuantity = this.updateQuantity.bind(this)
+    this.deleteItem = this.deleteItem.bind(this)
+  }
+
+  async componentDidMount () {
+    if (this.state.loading) {
+      const cheapestShipping = (await this.fetchShippingMethods()).data.sort((method1, method2) => method1.total - method2.total)[0]
+
+      this.setState({
+        cheapestShipping: cheapestShipping,
+        loading: false
+      })
+    }
+  }
+
+  async fetchShippingMethods () {
+    try {
+      const request = fetchShippingMethodsRequest()
+      const response = await new ApiClient().read(request.endpoint, request.query)
+      return new JsonApiParser().parse(response.data)
+    } catch (error) {
+      return { error }
+    }
+  }
+
+  updateQuantity (event) {
+    this.props.dispatch(updateLineItemQuantity(event.target.dataset.id, parseInt(event.target.value, 10)))
+  }
+
+  deleteItem (event) {
+    event.preventDefault()
+    this.props.dispatch(deleteLineItem(event.target.dataset.id))
+  }
+
+  /**
+   * Render the no-data message, or the cart contents, based on if the cart has
+   * contents or not
+   * @param  {Object} cart
+   * @return {string} - HTML markup for the component
+   */
+  renderCartTableGrid (cart) {
+    if (!cart.line_items_count) {
+      return (
+        <CartNoData />
+      )
+    } else {
+      return (
+        <>
+          <CartTableGridItem item='a'>
+            <LineItems
+              updateQuantity={this.updateQuantity}
+              deleteItem={this.deleteItem}
+              cart={cart}
+              aria-label='Line Items'
+            />
+          </CartTableGridItem>
+          <CartTableGridItem item='b'>
+            <CouponForm dispatch={this.props.dispatch} />
+            <CartTableSummary
+              cart={cart}
+              loading={this.state.loading}
+              cheapestShipping={this.state.cheapestShipping}
+              aria-label='Cart Summary'
+            />
+            <CartTablePaymentIcons />
+          </CartTableGridItem>
+        </>
+      )
+    }
+  }
+
+  render () {
+    const { cart, cart: { loading, error } } = this.props
+
+    if (loading) {
+      return (
+        <Loading />
+      )
+    } else if (error) {
+      return (
+        <p>{ error }</p>
+      )
+    } else {
+      return (
+        <>
+          <Head>
+            <title>{ suffixWithStoreName('Your Shopping Cart') }</title>
+          </Head>
+          <CartTable>
+            <CartTableHeader
+              cart={cart}
+              shippingMethod={cart.shipping_method || this.state.cheapestShipping}
+              breadcrumb={<Breadcrumb />}
+            />
+            <CartTableGrid>
+              { this.renderCartTableGrid(cart) }
+            </CartTableGrid>
+          </CartTable>
+        </>
+      )
+    }
+  }
+}
+
+export default CartPage

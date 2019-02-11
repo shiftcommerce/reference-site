@@ -122,56 +122,6 @@ exports[`renders correct messages when cart has items 1`] = `
   }
   className="dummy-classname"
   loading={false}
-  shippingMethods={
-    Object {
-      "shippingMethods": Array [
-        Object {
-          "delivery_date": "Wednesday 5th December",
-          "id": "1",
-          "name": "Super Saver",
-          "paid_price_inc_tax": 3.45,
-          "reference": "super_saver",
-          "retail_price_inc_tax": 3.45,
-          "sku": "super_saver",
-          "tax_amount": 2,
-          "tax_percentage": 20,
-        },
-        Object {
-          "delivery_date": "Monday 3rd December",
-          "id": "2",
-          "name": "UPS Next Day",
-          "paid_price_inc_tax": 5.45,
-          "reference": "ups_next_day",
-          "retail_price_inc_tax": 5.45,
-          "sku": "ups_next_day",
-          "tax_amount": 2,
-          "tax_percentage": 20,
-        },
-        Object {
-          "delivery_date": "Monday 3rd December",
-          "id": "3",
-          "name": "UPS Next Day Before Noon",
-          "paid_price_inc_tax": 8.45,
-          "reference": "ups_next_day_before_noon",
-          "retail_price_inc_tax": 8.45,
-          "sku": "ups_next_day_before_noon",
-          "tax_amount": 2,
-          "tax_percentage": 20,
-        },
-        Object {
-          "delivery_date": "Sunday 2nd December",
-          "id": "4",
-          "name": "UPS Same Day",
-          "paid_price_inc_tax": 8.45,
-          "reference": "ups_same_day",
-          "retail_price_inc_tax": 8.45,
-          "sku": "ups_same_day",
-          "tax_amount": 2,
-          "tax_percentage": 20,
-        },
-      ],
-    }
-  }
 >
   <section
     className="dummy-classname c-cart-summary"
