@@ -1,0 +1,39 @@
+.ais-SortBy {
+  @include breakpoint(mobile-tablet) {
+    height: 47px;
+    flex-grow: 1;
+  }
+
+  @include breakpoint(desktop) {
+    height: 2.5rem;
+  }
+}
+
+.ais-SortBy-select {
+  width: 100%;
+  background: transparent;
+  -webkit-appearance: none;
+  height: 100%;
+  font-size: .85rem;
+  margin-left: $global-spacing-unit-tiny;
+  border-radius: 0;
+  border-color: $border-shadow;
+  padding: $global-spacing-unit-tiny;
+
+  @include breakpoint(mobile-tablet) {
+    border: 0;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: $global-spacing-unit-small;
+    padding-right: 25px;
+    margin-left: 0;
+    background-image: url('/static/arrow-dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 50%;
+  }
+
+  @media (max-width: 355px) {
+    font-size: .75rem;
+  }
+}

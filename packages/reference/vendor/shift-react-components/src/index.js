@@ -34,6 +34,11 @@ export { default as LoginForm } from './components/account/login-form'
 export { default as RegisterForm } from './components/account/register-form'
 
 /**
+ * Search Components
+ */
+export { default as SearchBar } from './components/search/search-bar'
+
+/**
  * PDP Components
  */
 export { default as ProductCarousel } from './components/products/display/product-carousel'

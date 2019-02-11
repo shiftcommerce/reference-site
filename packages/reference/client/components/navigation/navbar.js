@@ -4,10 +4,7 @@ import { connect } from 'react-redux'
 import t from 'typy'
 
 // Components
-import SearchBar from '../search/search-bar'
-
-// Objects
-import { Image, NavBarOption, Loading, Logo } from 'shift-react-components'
+import { Image, Loading, Logo, NavBarOption, SearchBar } from 'shift-react-components'
 
 export class NavBar extends Component {
   constructor (props) {

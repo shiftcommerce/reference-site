@@ -1,0 +1,20 @@
+/* ==========================================================================
+   # SearchBar Component
+   ========================================================================== */
+
+.c-searchbar {
+  height: 4.5rem;
+}
+
+.c-searchbar__content {
+  margin: auto;
+  padding-top: $global-spacing-unit-small;
+  width: 90%;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    margin-left: $global-spacing-unit;
+    width: auto;
+  }
+}
+
