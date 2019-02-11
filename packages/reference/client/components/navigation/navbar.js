@@ -5,10 +5,9 @@ import t from 'typy'
 
 // Components
 import SearchBar from '../search/search-bar'
-import NavBarOption from './navbar-option'
 
 // Objects
-import { Image, Loading, Logo } from 'shift-react-components'
+import { Image, NavBarOption, Loading, Logo } from 'shift-react-components'
 
 export class NavBar extends Component {
   constructor (props) {

@@ -31,7 +31,7 @@
 @import '~shift-react-components/dist/scss/50_objects/o-image';
 @import '~shift-react-components/dist/scss/50_objects/o-loading';
 @import '50_objects/_o-media';
-@import '50_objects/_o-nav';
+@import '~shift-react-components/dist/scss/50_objects/o-nav';
 @import '50_objects/_o-payment-method';
 @import '~shift-react-components/dist/scss/50_objects/o-rating';
 @import '~shift-react-components/dist/scss/50_objects/o-template-component';
@@ -68,7 +68,7 @@
 @import '~shift-react-components/dist/scss/60_components/c-line-items';
 @import '60_components/_c-links';
 @import '60_components/_c-minibag';
-@import '60_components/_c-nav';
+@import '~shift-react-components/dist/scss/60_components/c-nav';
 @import '~shift-react-components/dist/scss/60_components/c-order';
 @import '~shift-react-components/dist/scss/60_components/c-order-history';
 @import '~shift-react-components/dist/scss/60_components/c-order-summary';
@@ -97,7 +97,7 @@
 @import '70_utilities/_u-bold';
 @import '70_utilities/_u-float';
 @import '70_utilities/_u-image-shadow';
-@import '70_utilities/_u-hidden';
+@import '~shift-react-components/dist/scss/70_utilities/u-hidden';
 @import '70_utilities/_u-inline-block';
 @import '70_utilities/_u-margin';
 @import '70_utilities/_u-padding';

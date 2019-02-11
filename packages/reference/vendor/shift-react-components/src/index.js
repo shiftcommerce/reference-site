@@ -70,3 +70,8 @@ export { default as CartTableSummary } from './components/cart/cart-table-summar
  */
 export { default as LineItems } from './components/cart/line-items'
 export { default as PaymentIcons } from './components/cart/payment-icons'
+
+/**
+ * Navigation Components
+ */
+export { default as NavBarOption } from './components/navigation/navbar-option'

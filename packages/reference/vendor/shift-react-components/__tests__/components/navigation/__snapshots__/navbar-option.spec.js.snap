@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the links 1`] = `
-<Link
+<_default
   as="/categories/mens"
   href="/slug?slug=/categories/mens"
 >
-  <a
+  <div
     className="c-nav__option"
+    onClick={[Function]}
   >
     <div
       className="c-nav__option-label"
@@ -18,6 +19,6 @@ exports[`renders the links 1`] = `
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </div>
-  </a>
-</Link>
+  </div>
+</_default>
 `;
