@@ -9,8 +9,8 @@ class RangeSlider extends Component {
 
   static getDerivedStateFromProps (nextProps, prevState) {
     return nextProps.canRefine && prevState.canRefine
-      ? null
-      : { currentValues: { min: nextProps.min, max: nextProps.max } }
+      ? { currentValues: { min: nextProps.min, max: nextProps.max } }
+      : null
   }
 
   refinementUpdated = sliderState => (
