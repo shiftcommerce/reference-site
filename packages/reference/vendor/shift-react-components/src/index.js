@@ -52,6 +52,13 @@ export { default as ProductPrice } from './components/products/display/product-p
 export { default as ProductListingCard } from './components/products/listing/product-listing-card'
 
 /**
+ * Static Page
+ */
+export { default as StaticPageError } from './components/static-page/error'
+export { default as StaticPageErrorBody } from './components/static-page/error-body'
+export { default as StaticPageErrorDetails } from './components/static-page/error-details'
+
+/**
  * Order Components
  */
 export { default as OrderLineItems } from './components/orders/order-line-items'

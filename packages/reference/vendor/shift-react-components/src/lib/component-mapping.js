@@ -1,32 +1,47 @@
 import Config from './config'
 
-// Objects
-import Breadcrumb from '../../src/objects/breadcrumb'
-import Button from '../../src/objects/button'
-import Checkbox from '../../src/objects/checkbox'
-import ConditionalLink from '../../src/objects/conditional-link'
-import DropdownSelect from '../../src/objects/dropdown-select'
-import Image from '../../src/objects/image'
-import Input from '../../src/objects/input'
-import LazyLoad from '../../src/objects/lazy-load'
-import Link from '../../src/objects/link'
-import Loading from '../../src/objects/loading'
-import Logo from '../../src/objects/logo'
-import Rating from '../../src/objects/rating'
-import VariantSelector from '../../src/objects/variant-selector'
-
-// Lib
+/**
+ * Lib
+ */
 import FormErrors from './form-errors'
 
-// PDP Components
-import ProductCarousel from '../../src/components/products/display/product-carousel'
-import ProductEwisForm from '../../src/components/products/display/product-ewis-form'
-import ProductPrice from '../../src/components/products/display/product-price'
+/**
+ * Objects
+ */
+import Breadcrumb from '../objects/breadcrumb'
+import Button from '../objects/button'
+import Checkbox from '../objects/checkbox'
+import ConditionalLink from '../objects/conditional-link'
+import DropdownSelect from '../objects/dropdown-select'
+import Image from '../objects/image'
+import Input from '../objects/input'
+import LazyLoad from '../objects/lazy-load'
+import Link from '../objects/link'
+import Loading from '../objects/loading'
+import Logo from '../objects/logo'
+import Rating from '../objects/rating'
+import VariantSelector from '../objects/variant-selector'
 
-// Orders
+/**
+ * PDP Components
+ */
+import ProductCarousel from '../components/products/display/product-carousel'
+import ProductEwisForm from '../components/products/display/product-ewis-form'
+import ProductPrice from '../components/products/display/product-price'
+
+/**
+ * Order Components
+ */
 import OrderLineItems from '../components/orders/order-line-items'
 import OrderList from '../components/orders/order-list'
-import ShippingAddresses from '../../src/components/orders/shipping-addresses'
+import ShippingAddresses from '../components/orders/shipping-addresses'
+
+/**
+ * Static Page
+ */
+import StaticPageError from '../components/static-page/error'
+import StaticPageErrorBody from '../components/static-page/error-body'
+import StaticPageErrorDetails from '../components/static-page/error-details'
 
 const mapping = {
   Breadcrumb,
@@ -48,6 +63,9 @@ const mapping = {
   ProductPrice,
   Rating,
   ShippingAddresses,
+  StaticPageError,
+  StaticPageErrorBody,
+  StaticPageErrorDetails,
   VariantSelector
 }
 

@@ -1,57 +1,24 @@
-import React from 'react'
+// Libraries
+import { PureComponent } from 'react'
 
-class StaticPageError extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = { detailsShown: false }
+import { StaticPageError as ShiftStaticPageError } from 'shift-react-components'
 
-    this.toggleDetails = this.toggleDetails.bind(this)
-  }
-
+class StaticPageError extends PureComponent {
   render () {
-    const production = process.env.NODE_ENV === 'production'
+    const isProduction = process.env.NODE_ENV === 'production'
     const { error } = this.props
-    let details
-
-    if (!production) {
-      details = (
-        <>
-          {this.state.detailsShown ? null : (
-            <p className="c-static-page-error__details-toggle" onClick={this.toggleDetails}>Show details</p>
-          )}
-          {this.state.detailsShown ? (
-            <>
-              <p className="c-static-page-error__details-toggle" onClick={this.toggleDetails}>Hide details</p>
-              <div className="c-static-page-error__details">
-                <p className="c-static-page-error__detail-header">Endpoint</p>
-                <p className="c-static-page-error__detail">{ JSON.stringify(error.request.endpoint) }</p>
-                <p className="c-static-page-error__detail-header">Query</p>
-                <p className="c-static-page-error__detail">{ JSON.stringify(error.request.query) }</p>
-                <p className="c-static-page-error__detail-header">Response data</p>
-                <p className="c-static-page-error__detail">{ JSON.stringify(error.data) }</p>
-              </div>
-            </>
-          ) : null}
-        </>
-      )
+    const errorDetails = {
+      Endpoint: JSON.stringify(error.request.endpoint),
+      Query: JSON.stringify(error.request.query),
+      'Response data': JSON.stringify(error.data)
     }
 
     return (
-      <div className="o-media c-static-page-error">
-        <img className="o-media__img c-static-page-error__image" src="/static/placeholder.png" />
-        <div className="o-media__body">
-          <h1>Oh no, something went wrong.</h1>
-          <h2>We weren't able to process your request.</h2>
-          { details }
-        </div>
-      </div>
+      <ShiftStaticPageError
+        errorDetails={errorDetails}
+        isProduction={isProduction}
+      />
     )
-  }
-
-  toggleDetails () {
-    this.setState(prevState => ({
-      detailsShown: !prevState.detailsShown
-    }))
   }
 }
 
