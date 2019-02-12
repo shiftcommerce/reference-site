@@ -17,12 +17,10 @@ beforeEach(() => {
   nock(process.env.API_HOST_PROXY, { 'encodedQueryParams': true })
     .get('/getSlug/')
     .query(true)
-    .reply(200, { 'data': [{
-      'attributes': {
-        'resource_id': 1,
-        'resource_type': 'StaticPage'
-      }
-    }] }, ['access-control-allow-origin', '*'])
+    .reply(200, {
+      'resource_id': 1,
+      'resource_type': 'StaticPage'
+    }, ['access-control-allow-origin', '*'])
 })
 
 afterEach(() => { nock.cleanAll() })

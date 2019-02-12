@@ -182,6 +182,17 @@ class SHIFTClient {
     return HTTPClient.patch(`v1/carts/${cartId}`, payload).then(this.determineResponse)
   }
 
+  fetchSlugDataV1 (queryObject) {
+    return HTTPClient.get(`v1/slugs`, queryObject)
+      .then(response => {
+        const parsedPayload = new ApiParser().parse(response.data)
+        return {
+          status: response.status,
+          data: parsedPayload.data[0]
+        }
+      })
+  }
+
   determineResponse (response) {
     const parsedPayload = new ApiParser().parse(response.data)
     // Fallback if parser returns undefined

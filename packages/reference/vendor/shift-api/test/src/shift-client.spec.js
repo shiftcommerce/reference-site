@@ -8,6 +8,8 @@ const menuResponse = require('../fixtures/menu-response-payload')
 const menuResponseParsed = require('../fixtures/menu-response-payload-parsed')
 const cartResponse = require('../fixtures/new-cart-response')
 const cartResponseParsed = require('../fixtures/new-cart-response-parsed')
+const slugResponse = require('../fixtures/slug-response')
+const slugResponseParsed = require('../fixtures/slug-response-parsed')
 
 axios.defaults.adapter = httpAdapter
 
@@ -338,6 +340,59 @@ describe('SHIFTClient', () => {
         .then(response => {
           expect(response.status).toEqual(201)
           expect(response.data).toEqual({ coupon: 'coupon_data' })
+        })
+    })
+  })
+
+  describe('fetchSlugDataV1', () => {
+    it('endpoint returns a slug', () => {
+      const queryObject = {
+        filter: {
+          path: 'coffee'
+        },
+        page: {
+          number: 1,
+          size: 1
+        },
+        fields: {
+          slugs: 'resource_type,resource_id,active,slug'
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/slugs`)
+        .query(true)
+        .reply(200, slugResponse)
+
+      return SHIFTClient.fetchSlugDataV1(queryObject)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(slugResponseParsed)
+        })
+    })
+
+    it('endpoint errors with incorrect data and returns console.log', () => {
+      const queryObject = {
+        filter: {
+          path: 'incorrectslug'
+        },
+        page: {
+          size: ''
+        },
+        fields: {
+          slugs: 'resource_type,resource_id,active,slug'
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/slugs`)
+        .query(queryObject)
+        .reply(500)
+
+      return SHIFTClient.fetchSlugDataV1(queryObject)
+        .catch(error => {
+          expect.assertions(1)
+          expect(error).toEqual(new Error('Request failed with status code 500'))
         })
     })
   })
