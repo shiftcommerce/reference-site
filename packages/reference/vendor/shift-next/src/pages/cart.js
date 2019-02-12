@@ -5,7 +5,6 @@ import Head from 'next/head'
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
-import JsonApiParser from '../lib/json-api-parser'
 
 // Actions
 import { updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
@@ -48,7 +47,7 @@ class CartPage extends Component {
 
   async componentDidMount () {
     if (this.state.loading) {
-      const cheapestShipping = (await this.fetchShippingMethods()).data.sort((method1, method2) => method1.total - method2.total)[0]
+      const cheapestShipping = (await this.fetchShippingMethods()).sort((method1, method2) => method1.total - method2.total)[0]
 
       this.setState({
         cheapestShipping: cheapestShipping,
@@ -61,7 +60,7 @@ class CartPage extends Component {
     try {
       const request = fetchShippingMethodsRequest()
       const response = await new ApiClient().read(request.endpoint, request.query)
-      return new JsonApiParser().parse(response.data)
+      return response.data.data
     } catch (error) {
       return { error }
     }
@@ -114,15 +113,12 @@ class CartPage extends Component {
   }
 
   render () {
-    const { cart, cart: { loading, error } } = this.props
+    const { cart } = this.props
+    const { loading } = this.state
 
     if (loading) {
       return (
         <Loading />
-      )
-    } else if (error) {
-      return (
-        <p>{ error }</p>
       )
     } else {
       return (
