@@ -1,16 +1,10 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import InputRange from 'react-input-range'
 
 class RangeSlider extends Component {
   constructor (props) {
     super(props)
     this.state = { currentValues: { min: this.props.min, max: this.props.max } }
-  }
-
-  static getDerivedStateFromProps (nextProps, prevState) {
-    return nextProps.canRefine && prevState.canRefine
-      ? { currentValues: { min: nextProps.min, max: nextProps.max } }
-      : null
   }
 
   refinementUpdated = sliderState => (

@@ -112,8 +112,12 @@ export class Category extends Component {
   }
 
   static getDerivedStateFromProps (newProps, prevState) {
-    if (prevState.currentId !== newProps.id) {
-      return { currentId: newProps.id, loading: true }
+    if ((prevState.currentId !== newProps.id) && (newProps.canRefine && prevState.canRefine)) {
+      return {
+        currentId: newProps.id,
+        loading: true,
+        currentValues: { min: newProps.min, max: newProps.max }
+      }
     }
     return null
   }

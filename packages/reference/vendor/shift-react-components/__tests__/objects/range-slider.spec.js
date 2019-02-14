@@ -1,6 +1,9 @@
-// Components
-import RangeSlider from '../../../client/objects/range-slider'
+// Libraries
+import React from 'react'
 import InputRange from 'react-input-range'
+
+// Components
+import RangeSlider from '../../src/objects/range-slider'
 
 test('renders the header', () => {
   // Arrange
