@@ -182,7 +182,7 @@ class SHIFTClient {
     return HTTPClient.patch(`v1/carts/${cartId}`, payload).then(this.determineResponse)
   }
 
-  fetchSlugDataV1 (queryObject) {
+  getSlugDataV1 (queryObject) {
     return HTTPClient.get(`v1/slugs`, queryObject)
       .then(response => {
         const parsedPayload = new ApiParser().parse(response.data)
@@ -191,6 +191,10 @@ class SHIFTClient {
           data: parsedPayload.data[0]
         }
       })
+  }
+
+  getCategoryByIdV1 (id) {
+    return HTTPClient.get(`v1/category_trees/reference:web/categories/${id}`).then(this.determineResponse)
   }
 
   determineResponse (response) {

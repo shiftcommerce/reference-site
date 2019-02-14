@@ -151,7 +151,6 @@ module.exports = app.prepare().then(() => {
   })
 
   // Routes for local API calls
-  server.get('/getCategory/:id', handler.getRenderer(platform.CategoryUrl))
   server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/getStaticPage/:id', handler.getRenderer(platform.PageUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))

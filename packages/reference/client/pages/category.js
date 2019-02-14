@@ -19,12 +19,11 @@ import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
-import JsonApiParser from '../lib/json-api-parser'
 
 const fetchCategory = async (id) => {
   const request = categoryRequest(id)
   const response = await new ApiClient().read(request.endpoint, request.query)
-  return new JsonApiParser().parse(response.data)
+  return response.data
 }
 
 export class Category extends Component {

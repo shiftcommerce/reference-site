@@ -1,8 +1,8 @@
 const { SHIFTClient } = require('shift-api')
 
 module.exports = {
-  getSlug: async (req, res) => {
-    const response = await SHIFTClient.getSlugDataV1(req.query)
+  getCategory: async (req, res) => {
+    const response = await SHIFTClient.getCategoryByIdV1(req.params.id)
 
     switch (response.status) {
       case 404:

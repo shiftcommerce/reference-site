@@ -10,6 +10,8 @@ const cartResponse = require('../fixtures/new-cart-response')
 const cartResponseParsed = require('../fixtures/new-cart-response-parsed')
 const slugResponse = require('../fixtures/slug-response')
 const slugResponseParsed = require('../fixtures/slug-response-parsed')
+const categoryResponse = require('../fixtures/category-response')
+const categoryResponseParsed = require('../fixtures/category-response-parsed')
 
 axios.defaults.adapter = httpAdapter
 
@@ -66,9 +68,10 @@ describe('SHIFTClient', () => {
         .query(true)
         .reply(500)
 
+      expect.assertions(1)
+
       return SHIFTClient.getMenusV1(query)
         .catch(error => {
-          expect.assertions(1)
           expect(error).toEqual(new Error('Request failed with status code 500'))
         })
     })
@@ -344,7 +347,7 @@ describe('SHIFTClient', () => {
     })
   })
 
-  describe('fetchSlugDataV1', () => {
+  describe('getSlugDataV1', () => {
     it('endpoint returns a slug', () => {
       const queryObject = {
         filter: {
@@ -364,7 +367,7 @@ describe('SHIFTClient', () => {
         .query(true)
         .reply(200, slugResponse)
 
-      return SHIFTClient.fetchSlugDataV1(queryObject)
+      return SHIFTClient.getSlugDataV1(queryObject)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(slugResponseParsed)
@@ -389,10 +392,52 @@ describe('SHIFTClient', () => {
         .query(queryObject)
         .reply(500)
 
-      return SHIFTClient.fetchSlugDataV1(queryObject)
+      expect.assertions(1)
+
+      return SHIFTClient.getSlugDataV1(queryObject)
         .catch(error => {
-          expect.assertions(1)
           expect(error).toEqual(new Error('Request failed with status code 500'))
+        })
+    })
+  })
+
+  describe('getCategoryByIdV1', () => {
+    it('returns a category when given a correct id', () => {
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/category_trees/reference:web/categories/56`)
+        .reply(200, categoryResponse)
+
+      return SHIFTClient.getCategoryByIdV1(56)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(categoryResponseParsed)
+        })
+    })
+
+    it('endpoint errors with incorrect id and returns console.log', () => {
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/category_trees/reference:web/categories/1`)
+        .reply(404, {
+          errors: [
+            {
+              title: 'Record not found',
+              detail: 'The record identified by 1 could not be found.',
+              code: '404',
+              status: '404'
+            }
+          ],
+          links: {
+            self: '/reference/v1/category_trees/reference:web/categories/1'
+          }
+        })
+
+      expect.assertions(3)
+
+      return SHIFTClient.getCategoryByIdV1(1)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 404'))
+          expect(error.response.data.errors[0].title).toEqual('Record not found')
+          expect(error.response.data.errors[0].detail).toEqual('The record identified by 1 could not be found.')
         })
     })
   })
