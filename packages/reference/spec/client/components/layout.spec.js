@@ -1,10 +1,9 @@
 // Components
 import { Layout } from '../../../client/components/layout'
-import NavBar from '../../../client/components/navigation/navbar'
 import MiniBag from '../../../client/components/mini-bag'
 
 // Objects
-import { Logo } from 'shift-react-components'
+import { Logo, NavBar } from 'shift-react-components'
 
 test('renders the header', () => {
   // Arrange

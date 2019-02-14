@@ -87,4 +87,5 @@ export { default as PaymentIcons } from './components/cart/payment-icons'
 /**
  * Navigation Components
  */
+export { default as NavBar } from './components/navigation/navbar'
 export { default as NavBarOption } from './components/navigation/navbar-option'

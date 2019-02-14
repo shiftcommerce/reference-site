@@ -5,11 +5,10 @@ import Link from 'next/link'
 import classNames from 'classnames'
 
 // Objects
-import { Image, Logo, SearchBar } from 'shift-react-components'
+import { Image, Logo, NavBar, SearchBar } from 'shift-react-components'
 
 // Components
 import MiniBag from './mini-bag'
-import NavBar from './navigation/navbar'
 import CustomHead from './custom-head'
 import Footer from './footer'
 
@@ -75,7 +74,7 @@ export class Layout extends Component {
   renderNav () {
     return (
       <span className='o-nav u-visible-d'>
-        <NavBar />
+        <NavBar menu={this.props.menu} />
       </span>
     )
   }
@@ -83,7 +82,7 @@ export class Layout extends Component {
   renderMobileNav () {
     return (
       <span className='o-nav u-hidden-d'>
-        <NavBar />
+        <NavBar menu={this.props.menu} />
       </span>
     )
   }
@@ -187,9 +186,9 @@ export class Layout extends Component {
 }
 
 function mapStateToProps (state) {
-  const { login } = state
+  const { login, menu } = state
 
-  return login
+  return { login, menu }
 }
 
 export default connect(mapStateToProps)(Layout)

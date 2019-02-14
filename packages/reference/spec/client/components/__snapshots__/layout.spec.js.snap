@@ -19,7 +19,7 @@ exports[`renders the children inside it 1`] = `
         <span
           className="o-nav u-hidden-d"
         >
-          <Connect(NavBar) />
+          <NavBar />
         </span>
         <div
           className="c-header__account"
@@ -48,7 +48,7 @@ exports[`renders the children inside it 1`] = `
     <span
       className="o-nav u-visible-d"
     >
-      <Connect(NavBar) />
+      <NavBar />
     </span>
   </div>
   <div
@@ -83,7 +83,7 @@ exports[`renders the footer 1`] = `
         <span
           className="o-nav u-hidden-d"
         >
-          <Connect(NavBar) />
+          <NavBar />
         </span>
         <div
           className="c-header__account"
@@ -112,7 +112,7 @@ exports[`renders the footer 1`] = `
     <span
       className="o-nav u-visible-d"
     >
-      <Connect(NavBar) />
+      <NavBar />
     </span>
   </div>
   <div
@@ -145,7 +145,7 @@ exports[`renders the header 1`] = `
         <span
           className="o-nav u-hidden-d"
         >
-          <Connect(NavBar) />
+          <NavBar />
         </span>
         <div
           className="c-header__account"
@@ -174,7 +174,7 @@ exports[`renders the header 1`] = `
     <span
       className="o-nav u-visible-d"
     >
-      <Connect(NavBar) />
+      <NavBar />
     </span>
   </div>
   <div
@@ -207,7 +207,7 @@ exports[`renders the navbar 1`] = `
         <span
           className="o-nav u-hidden-d"
         >
-          <Connect(NavBar) />
+          <NavBar />
         </span>
         <div
           className="c-header__account"
@@ -236,7 +236,7 @@ exports[`renders the navbar 1`] = `
     <span
       className="o-nav u-visible-d"
     >
-      <Connect(NavBar) />
+      <NavBar />
     </span>
   </div>
   <div

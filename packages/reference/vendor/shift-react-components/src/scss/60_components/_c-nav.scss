@@ -18,7 +18,7 @@
     height: 100vh;
     overflow-y: scroll;
     border-right: 1px solid $border-default;
-    background-color: white;
+    background-color: $background-white;
     position: fixed;
     right: 100%;
     transition: right .25s;
@@ -48,11 +48,13 @@
       }
     }
 
-      p {
+      .c-nav__menu-button {
+        p {
         text-decoration: none;
         font-size: .8em;
         display: inline-block;
         padding-left: $global-spacing-unit-small;
+        }
       }
 
       .c-nav__menu-button-image {
@@ -83,10 +85,10 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background-color: white;
+      background-color: $background-white;
       z-index: $nav-z-index + 1;
       right: 100%;
-      transition: right 0.25s;
+      transition: right .25s;
     }
 
       .c-nav__menu-header-logo {
@@ -100,7 +102,7 @@
       }
 
       .c-nav__menu-header-cross {
-        background: url('/static/cross.svg') no-repeat center;
+        background: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' style='isolation:isolate' viewBox='214.188 114.293 16.039 16.056' width='16.039' height='16.056'><g stroke='#FFF' stroke-linecap='square' stroke-miterlimit='3'><path vector-effect='non-scaling-stroke' d='M214.895 115l14.626 14.643M229.521 115l-14.626 14.643'/></g></svg>") no-repeat center;
         height: 4em;
         width: 4em;
         background-color: $background-primary;
@@ -108,7 +110,7 @@
         @include breakpoint(desktop) {
           display: none;
         }
-      }
+      } 
 
       .c-nav__menu-header-search {
         text-align: left;
@@ -167,7 +169,7 @@
           margin: auto;
           height: 3px;
           background: $alert-orange;
-          transition: width 0.2s;
+          transition: width .2s;
           position: absolute;
           bottom: 0;
           left: 50%;

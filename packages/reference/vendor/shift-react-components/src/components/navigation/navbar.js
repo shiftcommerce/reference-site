@@ -1,10 +1,15 @@
 // Libraries
-import { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
 import t from 'typy'
 
 // Components
-import { Image, Loading, Logo, NavBarOption, SearchBar } from 'shift-react-components'
+import SearchBar from '../search/search-bar'
+import NavBarOption from './navbar-option'
+
+// Objects
+import Logo from '../../objects/logo'
+import Image from '../../objects/image'
+import Loading from '../../objects/loading'
 
 export class NavBar extends Component {
   constructor (props) {
@@ -99,9 +104,4 @@ export class NavBar extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  const { menu } = state
-  return { menu }
-}
-
-export default connect(mapStateToProps)(NavBar)
+export default NavBar
