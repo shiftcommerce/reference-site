@@ -11,7 +11,7 @@ import classNames from 'classnames'
 
 // Components
 import AlgoliaSlider from './algolia-slider'
-import AlgoliaRatingFilter from './algolia-rating-filter'
+import { SearchRatingFilter } from 'shift-react-components'
 
 // For refinements such as ratings and prices, we will transform the list
 // so that we put the label within the button. We will also set the value
@@ -80,14 +80,12 @@ class AlgoliaFilters extends Component {
         </div>
         <div className={classNames('c-product-listing-filter', { 'c-product-listing-filter--hide': !filtersShown })}>
           <div className='c-product-listing-filter__header'>
-            <div className='c-product-listing-filter__header-selection'>
-              <ClearRefinements />
-              <CurrentRefinements transformItems={tranformRefinementLabels} />
-            </div>
+            <ClearRefinements />
+            <CurrentRefinements transformItems={tranformRefinementLabels} />
           </div>
           { this.renderRefinements(facets) }
           <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <AlgoliaRatingFilter attribute='product_rating' min={0} max={5} />
+            <SearchRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
             <AlgoliaSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />

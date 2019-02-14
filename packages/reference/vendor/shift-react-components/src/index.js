@@ -37,6 +37,7 @@ export { default as RegisterForm } from './components/account/register-form'
  * Search Components
  */
 export { default as SearchBar } from './components/search/search-bar'
+export { default as SearchRatingFilter } from './components/search/search-rating-filter'
 
 /**
  * PDP Components

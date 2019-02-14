@@ -1,9 +1,10 @@
 // Libraries
+import React from 'react'
 import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Components
-import AlgoliaRatingFilter from '../../../../../client/components/search/algolia/algolia-rating-filter'
+import SearchRatingFilter from '../../../src/components/search/search-rating-filter'
 
 test('renders rating options correctly', () => {
   // Arrange
@@ -16,7 +17,7 @@ test('renders rating options correctly', () => {
   ]
   const refineMockFunction = jest.fn()
   const props = {
-    attributeName: 'product_rating',
+    attribute: 'product_rating',
     min: 0,
     max: 5,
     items: ratings,
@@ -26,12 +27,11 @@ test('renders rating options correctly', () => {
   // Act
   const wrapper = shallow(
     <Provider store={createMockStore({})} >
-      <AlgoliaRatingFilter {...props} />
+      <SearchRatingFilter {...props} />
     </Provider>
   )
 
   // Assert
-  expect(wrapper).toMatchSnapshot()
   expect(wrapper.props().items).toBe(ratings)
   expect(wrapper.props().refine).toBe(refineMockFunction)
 })

@@ -1,16 +1,21 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { connectRefinementList } from 'react-instantsearch/connectors'
-import { orderBy } from 'lodash'
 
 // Objects
-import { Rating } from 'shift-react-components'
+import Rating from '../../objects/rating'
 
-class AlgoliaRatingFilter extends Component {
+class SearchRatingFilter extends Component {
   renderRatingOptions () {
     const { refine, items } = this.props
+
+    // orders Items by label descending
+    const orderedItems = items.reverse((a, b) => {
+      return a['label'] - b['label']
+    })
+
     return (
-      orderBy(items, ['label'], ['desc']).map((item, index) => {
+      orderedItems.map((item, index) => {
         return (
           <li key={index} className='ais-RefinementList-item'>
             <label className='ais-RefinementList-label'>
@@ -41,4 +46,4 @@ class AlgoliaRatingFilter extends Component {
   }
 }
 
-export default connectRefinementList(AlgoliaRatingFilter)
+export default connectRefinementList(SearchRatingFilter)
