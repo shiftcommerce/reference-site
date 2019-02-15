@@ -10,9 +10,9 @@ class SearchRatingFilter extends Component {
     const { refine, items } = this.props
 
     // orders Items by label descending
-    const orderedItems = items.reverse((a, b) => {
+    const orderedItems = items.sort((a, b) => {
       return a['label'] - b['label']
-    })
+    }).reverse()
 
     return (
       orderedItems.map((item, index) => {

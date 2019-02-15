@@ -10,8 +10,7 @@ import {
 import classNames from 'classnames'
 
 // Components
-import AlgoliaSlider from './algolia-slider'
-import { SearchRatingFilter } from 'shift-react-components'
+import { SearchRatingFilter, SearchSlider } from 'shift-react-components'
 
 // For refinements such as ratings and prices, we will transform the list
 // so that we put the label within the button. We will also set the value
@@ -88,7 +87,7 @@ class AlgoliaFilters extends Component {
             <SearchRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <AlgoliaSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
+            <SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
           </Panel>
         </div>
       </>

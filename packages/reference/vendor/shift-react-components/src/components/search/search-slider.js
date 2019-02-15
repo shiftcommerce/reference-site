@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import InputRange from 'react-input-range'
+import { connectRange } from 'react-instantsearch-dom'
 
-class RangeSlider extends Component {
+class SearchSlider extends Component {
   constructor (props) {
     super(props)
     this.state = { currentValues: { min: this.props.min, max: this.props.max } }
@@ -47,4 +48,4 @@ class RangeSlider extends Component {
   }
 }
 
-export default RangeSlider
+export default connectRange(SearchSlider)

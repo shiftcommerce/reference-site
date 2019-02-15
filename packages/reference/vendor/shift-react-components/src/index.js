@@ -19,7 +19,6 @@ export { default as LazyLoad } from './objects/lazy-load'
 export { default as Link } from './objects/link'
 export { default as Loading } from './objects/loading'
 export { default as Logo } from './objects/logo'
-export { default as RangeSlider } from './objects/range-slider'
 export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
@@ -39,6 +38,7 @@ export { default as RegisterForm } from './components/account/register-form'
  */
 export { default as SearchBar } from './components/search/search-bar'
 export { default as SearchRatingFilter } from './components/search/search-rating-filter'
+export { default as SearchSlider } from './components/search/search-slider'
 
 /**
  * PDP Components
