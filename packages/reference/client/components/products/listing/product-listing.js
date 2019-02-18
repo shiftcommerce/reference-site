@@ -3,11 +3,10 @@ import { Component } from 'react'
 import classNames from 'classnames'
 
 // Objects
-import { Breadcrumb } from 'shift-react-components'
+import { Breadcrumb, SearchFilters } from 'shift-react-components'
 
 // Components
 import { AlgoliaHits } from '../../search/algolia/algolia-hits'
-import AlgoliaFilters from '../../search/algolia/algolia-filters'
 
 import ProductMenu from './product-menu'
 import ProductMenuOptions from './product-menu-options'
@@ -40,7 +39,7 @@ export class ProductListing extends Component {
         <ProductMenu title={title} />
         <Breadcrumb />
         <div className='c-product-listing-wrapper'>
-          <AlgoliaFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
+          <SearchFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
               <ProductMenuOptions toggleFiltering={this.toggleFiltering} />

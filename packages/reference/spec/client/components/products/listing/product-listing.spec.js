@@ -1,6 +1,6 @@
 // Component
 import { ProductListing } from '../../../../../client/components/products/listing/product-listing'
-import AlgoliaFilters from '../../../../../client/components/search/algolia/algolia-filters'
+import SearchFilters from 'shift-react-components'
 
 import ProductMenu from '../../../../../client/components/products/listing/product-menu'
 import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
@@ -40,5 +40,5 @@ test('renders correctly', () => {
   expect(wrapper).toMatchSnapshot()
   expect(rootTree.find(ProductMenu))
   expect(rootTree.find(ProductMenuOptions))
-  expect(rootTree.find(AlgoliaFilters))
+  expect(rootTree.find(SearchFilters))
 })

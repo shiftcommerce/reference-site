@@ -1,6 +1,5 @@
 // Libraries
-import { orderBy } from 'lodash'
-import { Component } from 'react'
+import React, { Component } from 'react'
 import {
   RefinementList,
   CurrentRefinements,
@@ -9,8 +8,8 @@ import {
 } from 'react-instantsearch-dom'
 import classNames from 'classnames'
 
-// Components
-import { SearchRatingFilter, SearchSlider } from 'shift-react-components'
+// Lib
+import componentMapping from '../../lib/component-mapping'
 
 // For refinements such as ratings and prices, we will transform the list
 // so that we put the label within the button. We will also set the value
@@ -44,21 +43,27 @@ const formatRefinementLabel = (item) => {
   return newLabel
 }
 
-const maintainRefinementOrder = (items) => (
-  orderBy(items, ['label'], ['asc'])
-)
-
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
 
-class AlgoliaFilters extends Component {
+class SearchFilters extends Component {
+  constructor (props) {
+    super(props)
+
+    this.SearchRatingFilter = componentMapping('SearchRatingFilter')
+    this.SearchSlider = componentMapping('SearchSlider')
+  }
+
   renderRefinements (facets) {
     if (facets) {
+      // Orders facets
+      const orderedFacets = facets.sort()
+
       return (
         <>
-          { facets.map((facet, index) => {
+          {orderedFacets.map((facet, index) => {
             return <Panel className='c-product-listing-filter__body-option' key={index} header={header(facet)} >
-              <RefinementList attribute={facet} showMore={true} limit={3} transformItems={maintainRefinementOrder} />
+              <RefinementList attribute={facet} showMore={true} limit={3} />
             </Panel>
           }) }
         </>
@@ -84,10 +89,10 @@ class AlgoliaFilters extends Component {
           </div>
           { this.renderRefinements(facets) }
           <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <SearchRatingFilter attribute='product_rating' min={0} max={5} />
+            <this.SearchRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
+            <this.SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
           </Panel>
         </div>
       </>
@@ -95,4 +100,4 @@ class AlgoliaFilters extends Component {
   }
 }
 
-export default AlgoliaFilters
+export default SearchFilters

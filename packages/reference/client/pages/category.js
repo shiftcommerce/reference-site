@@ -7,8 +7,7 @@ import Head from 'next/head'
 import equal from 'deep-equal'
 
 // Components
-import AlgoliaFilters from '../components/search/algolia/algolia-filters'
-import { Loading } from 'shift-react-components'
+import { Loading, SearchFilters } from 'shift-react-components'
 import ProductListing from '../components/products/listing/product-listing'
 
 // Requests
@@ -145,10 +144,10 @@ export class Category extends Component {
       return (
         <>
           <Loading />
-          {/* Render Algolia filters so that the Algolia request triggered by the spinner
+          {/* Render Search filters so that the Algolia request triggered by the spinner
           matches the default category page request - otherwise an extra call to Algolia is made */}
           <div className='u-hidden'>
-            <AlgoliaFilters />
+            <SearchFilters />
           </div>
         </>
       )

@@ -37,6 +37,12 @@ import OrderList from '../components/orders/order-list'
 import ShippingAddresses from '../components/orders/shipping-addresses'
 
 /**
+ * Search Components
+ */
+import SearchRatingFilter from '../components/search/search-rating-filter'
+import SearchSlider from '../components/search/search-slider'
+
+/**
  * Static Page
  */
 import StaticPageError from '../components/static-page/error'
@@ -62,6 +68,8 @@ const mapping = {
   ProductEwisForm,
   ProductPrice,
   Rating,
+  SearchRatingFilter,
+  SearchSlider,
   ShippingAddresses,
   StaticPageError,
   StaticPageErrorBody,

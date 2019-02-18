@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <div
     className="c-product-listing-wrapper"
   >
-    <AlgoliaFilters
+    <SearchFilters
       filtersShown={false}
       toggleFiltering={[Function]}
     />
