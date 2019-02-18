@@ -59,7 +59,7 @@ exports[`renders the children inside it 1`] = `
   <div
     className="o-footer"
   >
-    <Connect(Footer) />
+    <Footer />
   </div>
 </Fragment>
 `;
@@ -121,7 +121,7 @@ exports[`renders the footer 1`] = `
   <div
     className="o-footer"
   >
-    <Connect(Footer) />
+    <Footer />
   </div>
 </Fragment>
 `;
@@ -183,7 +183,7 @@ exports[`renders the header 1`] = `
   <div
     className="o-footer"
   >
-    <Connect(Footer) />
+    <Footer />
   </div>
 </Fragment>
 `;
@@ -245,7 +245,7 @@ exports[`renders the navbar 1`] = `
   <div
     className="o-footer"
   >
-    <Connect(Footer) />
+    <Footer />
   </div>
 </Fragment>
 `;

@@ -5,12 +5,11 @@ import Link from 'next/link'
 import classNames from 'classnames'
 
 // Objects
-import { Image, Logo, NavBar, SearchBar } from 'shift-react-components'
+import { Footer, Image, Logo, NavBar, SearchBar } from 'shift-react-components'
 
 // Components
 import MiniBag from './mini-bag'
 import CustomHead from './custom-head'
-import Footer from './footer'
 
 // Stylesheet
 import '../scss/main.scss'
