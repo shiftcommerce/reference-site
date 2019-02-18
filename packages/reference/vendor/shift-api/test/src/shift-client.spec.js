@@ -8,6 +8,8 @@ const menuResponse = require('../fixtures/menu-response-payload')
 const menuResponseParsed = require('../fixtures/menu-response-payload-parsed')
 const cartResponse = require('../fixtures/new-cart-response')
 const cartResponseParsed = require('../fixtures/new-cart-response-parsed')
+const staticPageResponse = require('../fixtures/staticpage-response')
+const staticPageResponseParsed = require('../fixtures/staticpage-response-parsed')
 const slugResponse = require('../fixtures/slug-response')
 const slugResponseParsed = require('../fixtures/slug-response-parsed')
 const categoryResponse = require('../fixtures/category-response')
@@ -343,6 +345,56 @@ describe('SHIFTClient', () => {
         .then(response => {
           expect(response.status).toEqual(201)
           expect(response.data).toEqual({ coupon: 'coupon_data' })
+        })
+    })
+  })
+
+  describe('getStaticPagesV1', () => {
+    test('endpoint returns a static page', () => {
+      const queryObject = {
+        include: 'template,meta.*'
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/static_pages/56`)
+        .query(queryObject)
+        .reply(200, staticPageResponse)
+
+      return SHIFTClient.getStaticPageV1(56, queryObject)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(staticPageResponseParsed)
+        })
+    })
+
+    test('endpoint returns an error with incorrect id', () => {
+      const queryObject = {
+        include: 'template,meta.*'
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/static_pages/1001`)
+        .query(queryObject)
+        .reply(404, {
+          errors: [
+            {
+              title: 'Record not found',
+              detail: 'The record identified by 1001 could not be found.',
+              code: '404',
+              status: '404'
+            }
+          ],
+          links: {
+            self: '/reference/v1/static_pages/1001?include=template,meta.*'
+          }
+        })
+
+      expect.assertions(2)
+
+      return SHIFTClient.getStaticPageV1(1001, queryObject)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 404'))
+          expect(error.response.data.errors[0].title).toEqual('Record not found')
         })
     })
   })

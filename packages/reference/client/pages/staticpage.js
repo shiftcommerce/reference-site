@@ -11,7 +11,6 @@ import renderComponents from '../lib/render-components'
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
-import JsonApiParser from '../lib/json-api-parser'
 
 // Components
 import { Loading } from 'shift-react-components'
@@ -21,7 +20,7 @@ const fetchPage = async (id) => {
   try {
     const request = pageRequest(id)
     const response = await new ApiClient().read(request.endpoint, request.query)
-    return new JsonApiParser().parse(response.data)
+    return response.data
   } catch (error) {
     return { error }
   }

@@ -60,7 +60,6 @@ test('postDataRequest saves and returns data', async () => {
   nock(process.env.API_HOST)
     .post(`/${url}`)
     .reply(201, registerPayload)
-    .log(console.log)
 
   const response = await postData(body, url)
 

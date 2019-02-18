@@ -193,6 +193,17 @@ class SHIFTClient {
       })
   }
 
+  getStaticPageV1 (id, query) {
+    return HTTPClient.get(`v1/static_pages/${id}`, query)
+      .then(response => {
+        const parsedPayload = new ApiParser().parse(response.data)
+        return {
+          status: response.status,
+          data: parsedPayload
+        }
+      })
+  }
+
   getCategoryByIdV1 (id) {
     return HTTPClient.get(`v1/category_trees/reference:web/categories/${id}`).then(this.determineResponse)
   }

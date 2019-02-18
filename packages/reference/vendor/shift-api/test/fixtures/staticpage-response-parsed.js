@@ -8,15 +8,5 @@ module.exports = {
   title: 'Coffee',
   reference: 'coffee',
   body_content: '',
-  published: true,
-  template: {
-    id: '16',
-    reference: 'static_page',
-    sections: [{
-      id: '21',
-      reference: 'section',
-      components: []
-    }],
-    section: { id: '21', reference: 'section', components: [] }
-  }
+  published: true
 }
