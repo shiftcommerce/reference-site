@@ -193,15 +193,12 @@ class SHIFTClient {
       })
   }
 
+  getProductByIdV1 (id, query) {
+    return HTTPClient.get(`v1/products/${id}`, query).then(this.determineResponse)
+  }
+
   getStaticPageV1 (id, query) {
-    return HTTPClient.get(`v1/static_pages/${id}`, query)
-      .then(response => {
-        const parsedPayload = new ApiParser().parse(response.data)
-        return {
-          status: response.status,
-          data: parsedPayload
-        }
-      })
+    return HTTPClient.get(`v1/static_pages/${id}`, query).then(this.determineResponse)
   }
 
   getCategoryByIdV1 (id) {

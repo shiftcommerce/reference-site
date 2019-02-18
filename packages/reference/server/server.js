@@ -35,7 +35,6 @@ const { platform, oms } = require('./constants/api-urls')
 const { shiftRoutes } = require('shift-next')
 
 const accountHandler = require('./route-handlers/account-route-handler')
-const handler = require('./route-handlers/route-handler')
 const orderHandler = require('./route-handlers/order-route-handler')
 const customerOrdersHandler = require('./route-handlers/customer-orders-route-handler')
 const addressBookHandler = require('./route-handlers/address-book-route-handler')
@@ -151,15 +150,11 @@ module.exports = app.prepare().then(() => {
   })
 
   // Routes for local API calls
-  server.get('/getProduct/:id', handler.getRenderer(platform.ProductUrl))
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
   server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
-
   server.post('/createOrder', orderHandler.createOrderRenderer())
-
   server.post('/register', accountHandler.postRenderer(platform.AccountUrl))
   server.post('/login', accountHandler.postRenderer(platform.LoginUrl))
-
   server.post('/createAddressBookAddress', addressBookHandler.postAddressRenderer(platform.AddressesUrl))
   server.delete(/\/deleteAddress\/*/, addressBookHandler.deleteAddressRenderer(platform.AddressUrl))
 

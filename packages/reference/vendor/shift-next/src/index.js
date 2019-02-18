@@ -7,6 +7,7 @@ import loginPage from './pages/login'
 import shiftAccountHandler from './express/account-handler'
 import shiftCartHandler from './express/cart-handler'
 import shiftCategoryHandler from './express/category-handler'
+import shiftProductHandler from './express/product-handler'
 import shiftMenuHandler from './express/menu-handler'
 import shiftSlugHandler from './express/slug-handler'
 import shiftStaticPageHandler from './express/staticpage-handler'
@@ -20,6 +21,7 @@ module.exports = {
     server.get('/getMenus', shiftMenuHandler.getMenu)
     server.get('/getCart', shiftCartHandler.getCart)
     server.get('/getCategory/:id', shiftCategoryHandler.getCategory)
+    server.get('/getProduct/:id', shiftProductHandler.getProductById)
     server.get('/getShippingMethods', shiftCartHandler.getShippingMethods)
     server.get('/getStaticPage/:id', shiftStaticPageHandler.getStaticPage)
     server.get('/getSlug', shiftSlugHandler.getSlug)

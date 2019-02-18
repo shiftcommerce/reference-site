@@ -14,6 +14,8 @@ const slugResponse = require('../fixtures/slug-response')
 const slugResponseParsed = require('../fixtures/slug-response-parsed')
 const categoryResponse = require('../fixtures/category-response')
 const categoryResponseParsed = require('../fixtures/category-response-parsed')
+const productResponse = require('../fixtures/product-response-payload')
+const productResponseParsed = require('../fixtures/product-response-parsed')
 
 axios.defaults.adapter = httpAdapter
 
@@ -400,7 +402,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('getSlugDataV1', () => {
-    it('endpoint returns a slug', () => {
+    test('endpoint returns a slug', () => {
       const queryObject = {
         filter: {
           path: 'coffee'
@@ -426,7 +428,7 @@ describe('SHIFTClient', () => {
         })
     })
 
-    it('endpoint errors with incorrect data and returns console.log', () => {
+    test('endpoint errors with incorrect data and returns console.log', () => {
       const queryObject = {
         filter: {
           path: 'incorrectslug'
@@ -454,7 +456,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('getCategoryByIdV1', () => {
-    it('returns a category when given a correct id', () => {
+    test('returns a category when given a correct id', () => {
       nock(process.env.API_HOST)
         .get(`/${process.env.API_TENANT}/v1/category_trees/reference:web/categories/56`)
         .reply(200, categoryResponse)
@@ -466,7 +468,7 @@ describe('SHIFTClient', () => {
         })
     })
 
-    it('endpoint errors with incorrect id and returns console.log', () => {
+    test('endpoint errors with incorrect id and returns console.log', () => {
       nock(process.env.API_HOST)
         .get(`/${process.env.API_TENANT}/v1/category_trees/reference:web/categories/1`)
         .reply(404, {
@@ -490,6 +492,58 @@ describe('SHIFTClient', () => {
           expect(error).toEqual(new Error('Request failed with status code 404'))
           expect(error.response.data.errors[0].title).toEqual('Record not found')
           expect(error.response.data.errors[0].detail).toEqual('The record identified by 1 could not be found.')
+        })
+    })
+  })
+
+  describe('getProductByIdV1', () => {
+    test('returns a product when given a correct id', () => {
+      const queryObject = {
+        include: 'asset_files,variants,bundles,bundles.asset_files,template,meta.*',
+        fields: { asset_files: 'image_height,image_width,s3_url' }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/products/172`)
+        .query(queryObject)
+        .reply(200, productResponse)
+
+      return SHIFTClient.getProductByIdV1(172, queryObject)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(productResponseParsed)
+        })
+    })
+
+    test('returns an error with incorrect id', () => {
+      const queryObject = {
+        include: 'asset_files,variants,bundles,bundles.asset_files,template,meta.*',
+        fields: { asset_files: 'image_height,image_width,s3_url' }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/products/20000`)
+        .query(queryObject)
+        .reply(404, {
+          'errors': [
+            {
+              'title': 'Record not found',
+              'detail': 'The record identified by 20000 could not be found.',
+              'code': '404',
+              'status': '404'
+            }
+          ],
+          'meta': {
+            'facets': []
+          }
+        })
+
+      expect.assertions(2)
+
+      return SHIFTClient.getProductByIdV1(20000, queryObject)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 404'))
+          expect(error.response.data.errors[0].title).toEqual('Record not found')
         })
     })
   })
