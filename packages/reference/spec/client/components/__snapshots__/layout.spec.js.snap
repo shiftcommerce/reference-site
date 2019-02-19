@@ -37,7 +37,7 @@ exports[`renders the children inside it 1`] = `
             </a>
           </Link>
         </div>
-        <Connect(MiniBag) />
+        <Minibag />
         <span
           className="c-header__search"
         >
@@ -101,7 +101,7 @@ exports[`renders the footer 1`] = `
             </a>
           </Link>
         </div>
-        <Connect(MiniBag) />
+        <Minibag />
         <span
           className="c-header__search"
         >
@@ -163,7 +163,7 @@ exports[`renders the header 1`] = `
             </a>
           </Link>
         </div>
-        <Connect(MiniBag) />
+        <Minibag />
         <span
           className="c-header__search"
         >
@@ -225,7 +225,7 @@ exports[`renders the navbar 1`] = `
             </a>
           </Link>
         </div>
-        <Connect(MiniBag) />
+        <Minibag />
         <span
           className="c-header__search"
         >

@@ -5,11 +5,20 @@ import Link from 'next/link'
 import classNames from 'classnames'
 
 // Objects
-import { Footer, Image, Logo, NavBar, SearchBar } from 'shift-react-components'
+import {
+  Footer,
+  Image,
+  Logo,
+  Minibag,
+  NavBar,
+  SearchBar
+} from 'shift-react-components'
 
 // Components
-import MiniBag from './mini-bag'
 import CustomHead from './custom-head'
+
+// Actions
+import { readCart } from '../actions/cart-actions'
 
 // Stylesheet
 import '../scss/main.scss'
@@ -51,6 +60,11 @@ export class Layout extends Component {
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll)
+
+    // for the minibag
+    if (this.props.dispatch === 'function') {
+      this.props.dispatch(readCart())
+    }
   }
 
   componentWillUnmount () {
@@ -95,7 +109,7 @@ export class Layout extends Component {
     const signedIn = loggedIn ? 'My Account' : <Link href='/account/login'><a>Sign In</a></Link>
 
     return (
-      <div className='c-header__account' onClick={ this.toggleDropDown } >
+      <div className='c-header__account' onClick={this.toggleDropDown}>
         <Image className='c-header__account-image' src='/static/account-icon.svg' />
         { signedIn }
         { this.renderAccountDropDown() }
@@ -126,7 +140,7 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const { loggedIn } = this.props
+    const { cart, loggedIn } = this.props
     const logoSrc = '../static/shopgo-logo.svg'
 
     if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
@@ -137,13 +151,13 @@ export class Layout extends Component {
       return (
         <>
           <CustomHead />
-          <div className={ headerClasses }>
+          <div className={headerClasses}>
             <div className='o-header__top'>
               <div className='o-header__top-wrapper'>
                 <Logo className='o-header__logo' logoSrc={logoSrc} />
                 { this.renderMobileNav() }
                 { this.renderHeaderAccount(loggedIn) }
-                <MiniBag />
+                <Minibag cart={cart} />
                 { this.renderSearch() }
               </div>
             </div>
@@ -185,9 +199,9 @@ export class Layout extends Component {
 }
 
 function mapStateToProps (state) {
-  const { login, menu } = state
+  const { cart, login, menu } = state
 
-  return { login, menu }
+  return { cart, login, menu }
 }
 
 export default connect(mapStateToProps)(Layout)

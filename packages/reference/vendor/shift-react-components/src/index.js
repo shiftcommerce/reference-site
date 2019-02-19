@@ -87,6 +87,11 @@ export { default as LineItems } from './components/cart/line-items'
 export { default as PaymentIcons } from './components/cart/payment-icons'
 
 /**
+ * MiniBag Components
+ */
+export { default as Minibag } from './components/minibag/minibag'
+
+/**
  * Navigation Components
  */
 export { default as NavBar } from './components/navigation/navbar'

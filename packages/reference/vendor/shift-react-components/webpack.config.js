@@ -22,6 +22,13 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(jpe?g|png|svg|gif|ico|webp)$/,
+        loader: 'url-loader',
+        options: {
+          limit: Infinity // everything
+        }
       }
     ]
   },
