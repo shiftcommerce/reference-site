@@ -39,6 +39,7 @@ export { default as RegisterForm } from './components/account/register-form'
 export { default as SearchBar } from './components/search/search-bar'
 export { default as SearchFilters } from './components/search/search-filters'
 export { default as SearchRatingFilter } from './components/search/search-rating-filter'
+export { default as SearchRefinements } from './components/search/search-refinements'
 export { default as SearchSlider } from './components/search/search-slider'
 
 /**

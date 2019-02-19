@@ -3,11 +3,8 @@ import { PureComponent } from 'react'
 import { SortBy } from 'react-instantsearch-dom'
 import getConfig from 'next/config'
 
-// Components
-import AlgoliaRefinements from '../../search/algolia/algolia-refinements'
-
 // Objects
-import { Button } from 'shift-react-components'
+import { Button, SearchRefinements } from 'shift-react-components'
 
 const {
   publicRuntimeConfig: {
@@ -24,7 +21,7 @@ class ProductMenuOptions extends PureComponent {
         <div className='c-product-listing__menu-options-filters'>
           <h2 className='c-product-listing__menu-options-filters-title'>Filters</h2>
           <div className='c-product-listing__menu-options-filters-applied'>
-            <AlgoliaRefinements />
+            <SearchRefinements />
           </div>
           <Button className='c-product-listing__menu-options-filters-button' onClick={toggleFiltering} />
         </div>

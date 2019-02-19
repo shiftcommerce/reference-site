@@ -1,7 +1,7 @@
 import { connectCurrentRefinements } from 'react-instantsearch/connectors'
 
-const AlgoliaRefinements = connectCurrentRefinements(({ items }) => {
+const SearchRefinements = connectCurrentRefinements(({ items }) => {
   return `${items.length} of 3`
 })
 
-export default AlgoliaRefinements
+export default SearchRefinements
