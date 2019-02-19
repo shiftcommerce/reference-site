@@ -136,7 +136,7 @@ describe('SHIFTClient', () => {
       const req = {
         signedCookies: {},
         session: {
-          customerId: null
+          customerId: '123'
         },
         body: {
           variantId: '100',
@@ -151,14 +151,20 @@ describe('SHIFTClient', () => {
         cookie: jest.fn()
       }
 
-      nock(process.env.API_HOST)
+      const createCartRequest = nock(process.env.API_HOST)
         .post(`/${process.env.API_TENANT}/v1/carts`)
         .reply(201, { data: { id: '3' } })
 
+      const updateCartRequest = nock(process.env.API_HOST)
+        .patch(`/${process.env.API_TENANT}/v1/carts/3`)
+        .reply(200, { data: { id: '3' } })
+
       return SHIFTClient.createNewCartWithLineItemV1(req, res)
         .then(response => {
-          expect(response.status).toEqual(201)
+          expect(response.status).toEqual(200)
           expect(response.data).toEqual({ id: '3' })
+          expect(createCartRequest.isDone()).toEqual(true)
+          expect(updateCartRequest.isDone()).toEqual(true)
         })
     })
   })

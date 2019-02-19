@@ -55,15 +55,10 @@ class SHIFTClient {
         if (req.session.customerId) {
           return this.assignCartToCustomerV1(response.data.data.id, req.session.customerId)
         }
-        return response
+        return this.determineResponse(response)
       }).then(response => {
         this.createCartCookie(res, response)
-        const parsedPayload = new ApiParser().parse(response.data)
-        const payload = parsedPayload || response.data
-        return {
-          status: response.status,
-          data: payload
-        }
+        return response
       })
   }
 
@@ -217,8 +212,8 @@ class SHIFTClient {
 
   // TODO: migrate this to shift-next
   createCartCookie (res, response) {
-    if (response.data.data.id) {
-      res.cookie('cart', response.data.data.id, {
+    if (response.data.id) {
+      res.cookie('cart', response.data.id, {
         signed: true,
         expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) // 30 days
       })
