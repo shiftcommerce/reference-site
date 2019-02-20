@@ -62,7 +62,7 @@ export class Layout extends Component {
     window.addEventListener('scroll', this.handleScroll)
 
     // for the minibag
-    if (this.props.dispatch === 'function') {
+    if (this.props.dispatch) {
       this.props.dispatch(readCart())
     }
   }
