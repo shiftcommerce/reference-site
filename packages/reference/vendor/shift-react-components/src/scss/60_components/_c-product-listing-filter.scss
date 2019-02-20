@@ -1,5 +1,5 @@
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-product-listing-filter {
   font-size: .85rem;
@@ -48,12 +48,14 @@
     opacity: 1;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     border-style: none;
     outline: -webkit-focus-ring-color auto 0;
   }
 
-  &:before, &:after {
+  &:before,
+  &:after {
     margin: auto;
     padding: auto;
     position: absolute;

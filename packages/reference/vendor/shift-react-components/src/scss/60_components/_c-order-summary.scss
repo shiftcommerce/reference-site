@@ -65,7 +65,7 @@
 }
 
 .c-order__summary-line-item-details-title {
-  font-size: 0.8em;
+  font-size: .8em;
 
   @include breakpoint(desktop) {
     font-size: 1.2em;
@@ -100,13 +100,15 @@
     margin: $global-spacing-unit-small 0;
   }
 
-  dl, dt, dd {
+  dl,
+  dt,
+  dd {
     margin: 0;
   }
 
   dl {
     padding: $global-spacing-unit-tiny;
-    font-size: 0.8em;
+    font-size: .8em;
 
     @include breakpoint(desktop) {
       font-size: 1em;

@@ -1,5 +1,5 @@
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-login {
   width: 80%;
@@ -57,7 +57,7 @@
 
     &:hover {
       @include breakpoint(desktop) {
-        background: transparentize($background-primary, 0.2);
+        background: transparentize($background-primary, .2);
       }
     }
   }

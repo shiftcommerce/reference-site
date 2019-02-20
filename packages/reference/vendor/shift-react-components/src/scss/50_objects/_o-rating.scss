@@ -2,14 +2,15 @@
    # Rating Object
    ========================================================================== */
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .o-rating {
   display: inline-flex;
   flex-direction: row;
+}
 
-  &__star {
+  .o-rating__star {
     &--has-spacing {
       padding-right: $global-spacing-unit-tiny;
     }
@@ -26,5 +27,3 @@
       color: $background-dark;
     }
   }
-}
-

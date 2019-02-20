@@ -12,7 +12,7 @@
   }
 
   &--selected > a:after {
-    content: "";
+    content: '';
   }
 
   &--selected > a:before {
@@ -37,11 +37,11 @@
   line-height: 1rem;
 
   &:after {
-    content:")"
+    content: ')'
   }
 
   &:before {
-    content:"("
+    content: '('
   }
 }
 

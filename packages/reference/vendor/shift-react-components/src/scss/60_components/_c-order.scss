@@ -4,11 +4,16 @@
   margin: auto;
   padding-bottom: $global-spacing-unit;
 
-  p, h1, h2, h3, h4 {
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
     margin: 0;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     font-size: .9em;
   }
 
@@ -18,7 +23,8 @@
   }
 
   @include breakpoint(desktop) {
-    h2, h3 {
+    h2,
+    h3 {
       font-size: 1.2em;
     }
 

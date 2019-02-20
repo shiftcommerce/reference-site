@@ -51,12 +51,12 @@
   }
 
   &:before {
-    content: "";
+    content: '';
     height: 16px;
     width: 16px;
     border: 1px solid grey;
     border-radius: 10%;
-    left: 0px;
+    left: 0;
   }
 
   &:after {
@@ -74,7 +74,7 @@
   // Only show checkbox hover state on desktop as it doesn't make sense on mobile/tablet
   @include breakpoint(desktop) {
     &:hover:after {
-      content: "";
+      content: '';
       color: grey;
     }
   }
@@ -88,7 +88,7 @@
   &:before,
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     display: inline-block;
   }
 
@@ -98,7 +98,7 @@
 
     border: 1px solid $border-default;
     border-radius: 100%;
-    left: 0px;
+    left: 0;
   }
 
   &:after {
@@ -112,17 +112,16 @@
 
   &:hover:after {
     background-color: $background-positive;
-    content: "";
+    content: '';
     color: red;
   }
 }
 
-@import "./algolia_instantsearch/_ais-ClearRefinements";
-@import "./algolia_instantsearch/_ais-CurrentRefinements";
-@import "./algolia_instantsearch/_ais-Panel";
-@import "./algolia_instantsearch/_ais-RangeSlider";
-@import "./algolia_instantsearch/_ais-RatingMenu";
-@import "./algolia_instantsearch/_ais-RefinementList";
-@import "./algolia_instantsearch/_ais-SearchBox.scss";
-@import "./algolia_instantsearch/_ais-SortBy";
-
+@import './algolia_instantsearch/_ais-ClearRefinements';
+@import './algolia_instantsearch/_ais-CurrentRefinements';
+@import './algolia_instantsearch/_ais-Panel';
+@import './algolia_instantsearch/_ais-RangeSlider';
+@import './algolia_instantsearch/_ais-RatingMenu';
+@import './algolia_instantsearch/_ais-RefinementList';
+@import './algolia_instantsearch/_ais-SearchBox.scss';
+@import './algolia_instantsearch/_ais-SortBy';

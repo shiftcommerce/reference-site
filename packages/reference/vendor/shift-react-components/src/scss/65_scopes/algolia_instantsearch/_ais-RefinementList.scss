@@ -19,11 +19,11 @@
   background-color: transparent;
 
   &:after {
-    content:")"
+    content: ')';
   }
 
   &:before {
-    content:"("
+    content: '(';
   }
 }
 
@@ -47,17 +47,18 @@
   }
 
   input[type='checkbox']:checked + span:after {
-    content: "";
+    content: '';
     color: black;
   }
+
   input[type='checkbox']:checked + span:before {
-    content: "";
+    content: '';
     border-color: black;
   }
 }
 
 .ais-RefinementList-labelText {
   cursor: pointer;
+
   @include custom-checkbox
 }
-

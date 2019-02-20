@@ -1,7 +1,10 @@
 a {
   color: inherit;
-}
 
-a, a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }

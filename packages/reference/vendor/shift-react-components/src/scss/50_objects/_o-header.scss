@@ -17,7 +17,7 @@
   &--shrunk {
     @include breakpoint(mobile-tablet) {
       .o-header__logo {
-        max-height: 0px;
+        max-height: 0;
         margin-bottom: 0;
         overflow: hidden;
       }
@@ -71,7 +71,7 @@
   margin: $global-spacing-unit-small auto;
   max-height: 40px;
   text-align: center;
-  transition: max-height 0.1s;
+  transition: max-height .1s;
   width: auto;
 
   @include breakpoint(desktop) {

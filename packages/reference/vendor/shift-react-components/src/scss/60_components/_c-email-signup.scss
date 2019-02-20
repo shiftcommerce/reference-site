@@ -2,8 +2,8 @@
 // # Email Signup Component
 // ==========================================================================
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-email-signup {
   background-color: $accent-global;
@@ -19,7 +19,7 @@
   }
 
   .c-email-signup__cat {
-    font-size: 0.9rem;
+    font-size: .9rem;
     padding: $global-spacing-unit $global-spacing-unit-tiny;
     margin: 0;
   }
@@ -33,7 +33,7 @@
   .c-email-signup__input {
     height: 100%;
     margin-right: 0;
-    font-size: 0.8rem;
+    font-size: .8rem;
     padding: $global-spacing-unit-small;
     border-width: 1px;
     border-radius: 0;
@@ -51,7 +51,7 @@
   }
 
   .c-email-signup__error-message {
-    font-size: 0.9rem;
+    font-size: .9rem;
     margin: 0;
     margin-top: -$global-spacing-unit-tiny;
     padding: 0 $global-spacing-unit-small;

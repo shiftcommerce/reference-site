@@ -2,8 +2,8 @@
 // # Cart Summary Component
 // ==========================================================================
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-cart-summary {
   overflow: hidden;
@@ -83,7 +83,7 @@
     flex-direction: row;
     padding-bottom: $global-spacing-unit-small;
     margin-top: $global-spacing-unit-small;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 }
 

@@ -2,8 +2,8 @@
 // # Hero Component
 // ==========================================================================
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-hero {
   text-align: center;
@@ -35,6 +35,7 @@
       &--overlap_above_tiny {
         margin-bottom: -$global-spacing-unit-small;
       }
+
       &--overlap_below_tiny {
         margin-top: -$global-spacing-unit-small;
       }
@@ -42,6 +43,7 @@
       &--overlap_above_small {
         margin-bottom: -$global-spacing-unit;
       }
+
       &--overlap_below_small {
         margin-top: -$global-spacing-unit;
       }
@@ -49,6 +51,7 @@
       &--overlap_above_medium {
         margin-bottom: -$global-spacing-unit * 2;
       }
+
       &--overlap_below_medium {
         margin-top: -$global-spacing-unit * 2;
       }
@@ -56,30 +59,39 @@
       &--overlap_above_large {
         margin-bottom: -$global-spacing-unit * 4;
       }
+
       &--offset_above_large_1 {
         margin-top: calc(#{$global-spacing-unit} * 4 - 2rem);
       }
+
       &--offset_above_large_2 {
         margin-top: calc(#{$global-spacing-unit} * 4 - 4rem);
       }
+
       &--offset_above_large_3 {
         margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
+
       &--offset_above_large_4 {
         margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
+
       &--overlap_below_large {
         margin-top: -$global-spacing-unit * 4;
       }
+
       &--offset_below_large_1 {
         margin-bottom: calc(#{$global-spacing-unit} * 4 - 2rem);
       }
+
       &--offset_below_large_2 {
         margin-bottom: calc(#{$global-spacing-unit} * 4 - 4rem);
       }
+
       &--offset_below_large_3 {
         margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
+
       &--offset_below_large_4 {
         // margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
       }
@@ -87,30 +99,39 @@
       &--overlap_above_huge {
         margin-bottom: -$global-spacing-unit * 6;
       }
+
       &--offset_above_huge_1 {
         margin-top: calc(#{$global-spacing-unit} * 6 - 2rem);
       }
+
       &--offset_above_huge_2 {
         margin-top: calc(#{$global-spacing-unit} * 6 - 4rem);
       }
+
       &--offset_above_huge_3 {
         margin-top: calc(#{$global-spacing-unit} * 6 - 7rem);
       }
+
       &--offset_above_huge_4 {
         margin-top: calc(#{$global-spacing-unit} * 6 - 9rem);
       }
+
       &--overlap_below_huge {
         margin-top: -$global-spacing-unit * 6;
       }
+
       &--offset_below_huge_1 {
         margin-bottom: calc(#{$global-spacing-unit} * 6 - 2rem);
       }
+
       &--offset_below_huge_2 {
         margin-bottom: calc(#{$global-spacing-unit} * 6 - 4rem);
       }
+
       &--offset_below_huge_3 {
         margin-bottom: calc(#{$global-spacing-unit} * 6 - 7rem);
       }
+
       &--offset_below_huge_4 {
         margin-bottom: calc(#{$global-spacing-unit} * 6 - 9rem);
       }
@@ -118,30 +139,39 @@
       &--overlap_above_massive {
         margin-bottom: -$global-spacing-unit * 10;
       }
+
       &--offset_above_massive_1 {
         margin-top: calc(#{$global-spacing-unit} * 10 - 2rem);
       }
+
       &--offset_above_massive_2 {
         margin-top: calc(#{$global-spacing-unit} * 10 - 4rem);
       }
+
       &--offset_above_massive_3 {
         margin-top: calc(#{$global-spacing-unit} * 10 - 7rem);
       }
+
       &--offset_above_massive_4 {
         margin-top: calc(#{$global-spacing-unit} * 10 - 9rem);
       }
+
       &--overlap_below_massive {
         margin-top: -$global-spacing-unit * 10;
       }
+
       &--offset_below_massive_1 {
         margin-bottom: calc(#{$global-spacing-unit} * 10 - 2rem);
       }
+
       &--offset_below_massive_2 {
         margin-bottom: calc(#{$global-spacing-unit} * 10 - 4rem);
       }
+
       &--offset_below_massive_3 {
         margin-bottom: calc(#{$global-spacing-unit} * 10 - 7rem);
       }
+
       &--offset_below_massive_4 {
         margin-bottom: calc(#{$global-spacing-unit} * 10 - 9rem);
       }
@@ -190,10 +220,10 @@
       display: inline-block;
       background-color: $background-primary;
       color: $text-light;
-      font-size: 0.8rem;
+      font-size: .8rem;
       padding: $global-spacing-unit-small;
       text-transform: uppercase;
-      letter-spacing: 0.1rem;
+      letter-spacing: .1rem;
 
       &:visited {
         color: $text-light;
@@ -201,7 +231,7 @@
 
       &:hover {
         @include breakpoint(desktop) {
-          background: transparentize($background-primary, 0.2);
+          background: transparentize($background-primary, .2);
         }
       }
     }

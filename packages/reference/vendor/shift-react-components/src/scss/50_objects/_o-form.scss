@@ -1,8 +1,8 @@
 $input-checkbox-size: 16px !default;
 $input-checkbox-spacing: 8px !default;
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .o-form {
   width: 100%;
@@ -66,7 +66,7 @@ $input-checkbox-spacing: 8px !default;
     background-size: contain;
     border: 1px solid black;
     border-radius: 2px;
-    content: "";
+    content: '';
     display: inline-block;
     height: $input-checkbox-size;
     margin-left: -$global-spacing-unit;

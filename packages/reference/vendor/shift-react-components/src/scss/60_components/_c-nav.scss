@@ -1,5 +1,5 @@
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-nav {
   border: none;
@@ -10,6 +10,7 @@
     text-align: left;
   }
 }
+
   .c-nav__checkbox {
     display: none;
   }
@@ -37,6 +38,7 @@
       height: auto;
     }
   }
+
     .c-nav__menu-button {
       flex-basis: 33.3%;
       flex-grow: 1;
@@ -46,16 +48,14 @@
       @include breakpoint(desktop) {
         display: none;
       }
-    }
 
-      .c-nav__menu-button {
-        p {
+      p {
         text-decoration: none;
         font-size: .8em;
         display: inline-block;
         padding-left: $global-spacing-unit-small;
-        }
       }
+    }
 
       .c-nav__menu-button-image {
         display: inline-block;
@@ -110,7 +110,7 @@
         @include breakpoint(desktop) {
           display: none;
         }
-      } 
+      }
 
       .c-nav__menu-header-search {
         text-align: left;
@@ -122,7 +122,8 @@
         }
       }
 
-  .c-nav__checkbox:checked~.c-nav__menu, .c-nav__checkbox:checked~.c-nav__menu-header {
+  .c-nav__checkbox:checked ~ .c-nav__menu,
+  .c-nav__checkbox:checked ~ .c-nav__menu-header {
     right: 0;
   }
 
@@ -161,6 +162,7 @@
         position: relative;
       }
     }
+
       .c-nav__option-label::after {
         @include breakpoint(desktop) {
           content: '';
@@ -173,7 +175,7 @@
           position: absolute;
           bottom: 0;
           left: 50%;
-          transform:translateX(-50%);
+          transform: translateX(-50%);
         }
       }
 

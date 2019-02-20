@@ -2,8 +2,8 @@
 // # Cart Table Component
 // ==========================================================================
 
-@import "../10_settings/__all";
-@import "../20_tools/__all";
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-cart-table {
   display: grid;
@@ -121,7 +121,6 @@
   }
 
   .c-cart-table__title {
-
     @include breakpoint(desktop) {
       margin-top: 0;
     }
