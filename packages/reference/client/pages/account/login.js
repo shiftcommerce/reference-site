@@ -1,7 +1,7 @@
 // Libraries
 import { connect } from 'react-redux'
 
-import { loginPage } from 'shift-next'
+import { LoginPage } from 'shift-next'
 
 // Libs
 import { algoliaReduxWrapper } from '../../lib/algolia-redux-wrapper'
@@ -12,4 +12,4 @@ function mapStateToProps (state) {
   return { login }
 }
 
-export default algoliaReduxWrapper(connect(mapStateToProps)(loginPage), loginPage)
+export default algoliaReduxWrapper(connect(mapStateToProps)(LoginPage), LoginPage)

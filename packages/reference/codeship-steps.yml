@@ -9,7 +9,7 @@
       command: yarn run test:unit
     - service: web
       name: integration tests
-      command: yarn run test:integration
+      command: bash -c "npm rebuild && yarn run test:integration"
     - service: web
       name: shift-api
       command: vendor/shift-api/bin/test

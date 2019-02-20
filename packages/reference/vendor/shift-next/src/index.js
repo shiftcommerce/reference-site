@@ -1,8 +1,9 @@
-// Pages
-import cartPage from './pages/cart'
-import forgottenPasswordPage from './pages/forgotten-password'
-import loginPage from './pages/login'
+// Next Pages
+import CartPage from './pages/cart'
+import ForgottenPasswordPage from './pages/forgotten-password'
+import LoginPage from './pages/login'
 import RegisterPage from './pages/register'
+import OfflinePage from './pages/offline'
 
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
@@ -36,10 +37,11 @@ module.exports = {
     server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
   },
 
-  cartPage: cartPage,
-  forgottenPasswordPage: forgottenPasswordPage,
-  loginPage: loginPage,
+  CartPage: CartPage,
+  ForgottenPasswordPage: ForgottenPasswordPage,
+  LoginPage: LoginPage,
   RegisterPage: RegisterPage,
+  OfflinePage: OfflinePage,
 
   shiftNextConfig: Config
 }
