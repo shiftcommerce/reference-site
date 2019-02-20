@@ -2,6 +2,7 @@
 import cartPage from './pages/cart'
 import forgottenPasswordPage from './pages/forgotten-password'
 import loginPage from './pages/login'
+import RegisterPage from './pages/register'
 
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
@@ -38,6 +39,7 @@ module.exports = {
   cartPage: cartPage,
   forgottenPasswordPage: forgottenPasswordPage,
   loginPage: loginPage,
+  RegisterPage: RegisterPage,
 
   shiftNextConfig: Config
 }
