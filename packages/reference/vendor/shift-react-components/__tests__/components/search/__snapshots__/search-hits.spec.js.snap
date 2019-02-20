@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the algolia hits 1`] = `
-<AlgoliaInfiniteHits(AlgoliaResults)>
-  <AlgoliaResults
+<AlgoliaInfiniteHits(SearchResults)>
+  <SearchResults
     createURL={[Function]}
     hasMore={false}
     hits={Array []}
@@ -36,18 +36,16 @@ exports[`renders the algolia hits 1`] = `
             className="c-product-listing__grid-toggles u-visible-d"
           >
             View 
-            <a
+            <button
               className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled"
-              href="#"
             >
               2 
-            </a>
-            <a
+            </button>
+            <button
               className="c-product-listing__grid-toggle"
-              href="#"
             >
               4
-            </a>
+            </button>
           </p>
         </div>
       </productListingInfo>
@@ -64,6 +62,6 @@ exports[`renders the algolia hits 1`] = `
         There are no results for this search
       </p>
     </div>
-  </AlgoliaResults>
-</AlgoliaInfiniteHits(AlgoliaResults)>
+  </SearchResults>
+</AlgoliaInfiniteHits(SearchResults)>
 `;

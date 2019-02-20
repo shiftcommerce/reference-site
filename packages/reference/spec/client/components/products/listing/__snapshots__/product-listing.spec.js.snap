@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
           toggleFiltering={[Function]}
         />
       </div>
-      <AlgoliaInfiniteHits(AlgoliaResults) />
+      <AlgoliaInfiniteHits(SearchResults) />
     </div>
   </div>
 </Fragment>

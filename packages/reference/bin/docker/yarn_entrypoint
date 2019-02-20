@@ -1,5 +1,5 @@
 #!/bin/bash
 
-yarn install && cd vendor/shift-react-components/ && yarn build && cd /app
+yarn install
 
 exec "$@"

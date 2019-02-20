@@ -1,9 +1,15 @@
+// Libraries
+import React from 'react'
+import { Provider } from 'react-redux'
+import { createMockStore } from 'redux-test-utils'
+import { InstantSearch } from 'react-instantsearch-dom'
+
 // Components
-import { AlgoliaHits, AlgoliaResults } from '../../../../../client/components/search/algolia/algolia-hits'
-import { ProductListingCard } from 'shift-react-components'
+import ProductListingCard from '../../../src/components/products/listing/product-listing-card'
+import SearchHits, { SearchResults } from '../../../src/components/search/search-hits'
 
 // Fixtures
-import resultsState from '../../../../fixtures/search-result-state'
+import resultsState from '../../fixtures/search-results-state'
 
 test('renders the algolia hits', () => {
   // Arrange
@@ -23,7 +29,7 @@ test('renders the algolia hits', () => {
   }
 
   // Act
-  const wrapper = mount(<AlgoliaHits />, { context })
+  const wrapper = mount(<SearchHits />, { context })
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -85,7 +91,18 @@ test('groups algolia hits by product_reference', () => {
     }
   ]
 
-  const wrapper = shallow(<AlgoliaResults hits={hits} hasMore={false} refine={jest.fn()} />)
+  const store = createMockStore(hits)
+
+  const wrapper = mount(
+    <Provider store={store} >
+      <InstantSearch
+        appId='test'
+        apiKey='test'
+        indexName='test'>
+        <SearchResults hits={hits} hasMore={false} refine={jest.fn()} />
+      </InstantSearch>
+    </Provider>
+  )
 
   expect(wrapper.find(ProductListingCard).length).toEqual(2)
 

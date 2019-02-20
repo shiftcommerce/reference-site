@@ -2,12 +2,8 @@
 import { Component } from 'react'
 import classNames from 'classnames'
 
-// Objects
-import { Breadcrumb, SearchFilters } from 'shift-react-components'
-
 // Components
-import { AlgoliaHits } from '../../search/algolia/algolia-hits'
-
+import { Breadcrumb, SearchFilters, SearchHits } from 'shift-react-components'
 import ProductMenu from './product-menu'
 import ProductMenuOptions from './product-menu-options'
 
@@ -44,7 +40,7 @@ export class ProductListing extends Component {
             <div className='c-product-listing__menu'>
               <ProductMenuOptions toggleFiltering={this.toggleFiltering} />
             </div>
-            <AlgoliaHits />
+            <SearchHits />
           </div>
         </div>
       </>
