@@ -4,6 +4,7 @@ import ForgottenPasswordPage from './pages/forgotten-password'
 import LoginPage from './pages/login'
 import RegisterPage from './pages/register'
 import OfflinePage from './pages/offline'
+import SlugPage from './pages/slug'
 
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
@@ -42,6 +43,7 @@ module.exports = {
   LoginPage: LoginPage,
   RegisterPage: RegisterPage,
   OfflinePage: OfflinePage,
+  SlugPage: SlugPage,
 
   shiftNextConfig: Config
 }

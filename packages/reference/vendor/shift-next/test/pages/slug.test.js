@@ -1,9 +1,11 @@
 // Libraries
 import Router from 'next/router'
 import nock from 'nock'
+import axios from 'axios'
+import httpAdapter from 'axios/lib/adapters/http'
 
 // Pages
-import { Slug } from '../../../client/pages/slug'
+import Slug from '../../src/pages/slug'
 
 // Shared constants
 const resourceType = 'staticpage'
@@ -13,8 +15,10 @@ jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
 }))
 
+axios.defaults.adapter = httpAdapter
+
 beforeEach(() => {
-  nock(process.env.API_HOST_PROXY, { 'encodedQueryParams': true })
+  nock('http://localhost', { 'encodedQueryParams': true })
     .get('/getSlug/')
     .query(true)
     .reply(200, {
