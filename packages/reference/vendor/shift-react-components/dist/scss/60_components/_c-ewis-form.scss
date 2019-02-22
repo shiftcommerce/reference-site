@@ -1,0 +1,19 @@
+@import "../10_settings/__all";
+@import "../20_tools/__all";
+
+.c-ewis-form__input-field {
+  width: 100%;
+  margin: 0 0 $global-spacing-unit-small 0;
+  box-sizing: border-box;
+  border-color: $border-default;
+}
+
+.c-ewis-form__submit-message {
+  margin-top: $global-spacing-unit-small;
+  font-size: .8rem;
+
+  @include breakpoint(desktop) {
+    font-size: 1rem;
+  }
+}
+

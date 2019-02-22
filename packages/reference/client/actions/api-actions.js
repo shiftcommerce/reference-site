@@ -49,7 +49,14 @@ function processResponse (dispatch, request, expectedStatusCodes) {
       if (request.successActionType) {
         const parsedPayload = new JsonApiParser().parse(response.data)
         // TODO: remove this when all endpoints have been extracted into shift-api
-        const payload = parsedPayload || response.data
+
+        // If parsedPayload is empty or is an array of objects with only one key (id) it means it had already been parsed.
+        let payload
+        if (!parsedPayload || (Array.isArray(parsedPayload.data) && parsedPayload.data.every(e => Object.keys(e).length === 1))) {
+          payload = response.data
+        } else {
+          payload = parsedPayload
+        }
         dispatch(sendResponse(request.successActionType, payload))
       }
     } else {

@@ -15,7 +15,7 @@ export function saveToAddressBook (address, options = {}) {
 
 export function fetchAddressBook () {
   const request = {
-    endpoint: '/addressBook',
+    endpoint: '/getAddressBook',
     successActionType: actionTypes.SET_ADDRESS_BOOK
   }
   return readEndpoint(request)

@@ -200,6 +200,11 @@ class SHIFTClient {
     return HTTPClient.get(`v1/category_trees/reference:web/categories/${id}`).then(this.determineResponse)
   }
 
+  getAddressBookV1 (customerAccountId) {
+    return HTTPClient.get(`v1/customer_accounts/${customerAccountId}/addresses`)
+      .then(this.determineResponse)
+  }
+
   determineResponse (response) {
     const parsedPayload = new ApiParser().parse(response.data)
     // Fallback if parser returns undefined

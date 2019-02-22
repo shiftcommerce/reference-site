@@ -15,6 +15,7 @@ import shiftProductHandler from './express/product-handler'
 import shiftMenuHandler from './express/menu-handler'
 import shiftSlugHandler from './express/slug-handler'
 import shiftStaticPageHandler from './express/staticpage-handler'
+import shiftAddressBookHandler from './express/addressbook-handler'
 
 // Lib
 import Config from './lib/config'
@@ -22,6 +23,7 @@ import Config from './lib/config'
 module.exports = {
   shiftRoutes: (server) => {
     server.get('/getAccount', shiftAccountHandler.getAccount)
+    server.get('/getAddressBook', shiftAddressBookHandler.getAddressBook)
     server.get('/getMenus', shiftMenuHandler.getMenu)
     server.get('/getCart', shiftCartHandler.getCart)
     server.get('/getCategory/:id', shiftCategoryHandler.getCategory)

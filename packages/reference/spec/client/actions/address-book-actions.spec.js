@@ -87,7 +87,7 @@ test('fetchAddressBook sends a correct get request', () => {
 
   expect(apiActions.readEndpoint).toHaveBeenCalledTimes(1)
   const request = apiActions.readEndpoint.mock.calls[0][0]
-  expect(request.endpoint).toBe('/addressBook')
+  expect(request.endpoint).toBe('/getAddressBook')
 })
 
 test('deleteAddressBookEntry sends a correct delete request', () => {

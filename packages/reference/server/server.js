@@ -151,7 +151,6 @@ module.exports = app.prepare().then(() => {
 
   // Routes for local API calls
   server.get('/customerOrders', customerOrdersHandler.customerOrdersRenderer(oms.customerOrdersUrl))
-  server.get('/addressBook', addressBookHandler.addressBookRenderer(platform.AddressBookUrl))
   server.post('/createOrder', orderHandler.createOrderRenderer())
   server.post('/register', accountHandler.postRenderer(platform.AccountUrl))
   server.post('/login', accountHandler.postRenderer(platform.LoginUrl))
