@@ -35,6 +35,7 @@ class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req }) {
     if (req) { // server-side
       const page = await fetchPage(id)
+
       return { id, page }
     } else { // client side
       return { id }
@@ -43,13 +44,13 @@ class StaticPage extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {}
+    this.state = {
+      loading: true
+    }
   }
 
   static getDerivedStateFromProps (newProps, prevState) {
-    if (!prevState.currentId) { // initial load or SSR
-      return { currentId: newProps.id }
-    } else if (prevState.currentId !== newProps.id) { // navigating client side
+    if (prevState.currentId !== newProps.id) {
       return { currentId: newProps.id, loading: true }
     }
     return null
@@ -67,6 +68,7 @@ class StaticPage extends Component {
 
   async fetchPageIntoState (id) {
     const page = await fetchPage(id)
+
     this.setState({ loading: false, page })
   }
 
