@@ -4,7 +4,7 @@ import getConfig from 'next/config'
 import { Configure } from 'react-instantsearch/dom'
 
 // Components
-import { InstantSearch } from '../components/search/algolia/instant-search'
+import { InstantSearch } from './instant-search'
 
 const {
   publicRuntimeConfig: {

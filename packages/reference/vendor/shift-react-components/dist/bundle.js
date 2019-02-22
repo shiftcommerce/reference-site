@@ -4651,40 +4651,40 @@ if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(510);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(515);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(40);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(103);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(210);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/keys.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/keys.js
 var keys = __webpack_require__(28);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/difference.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/difference.js
 var difference = __webpack_require__(521);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(17);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
 var indexUtils = __webpack_require__(6);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
 
 
 
@@ -4732,7 +4732,7 @@ function getId() {
     return Object(indexUtils["f" /* refineValue */])(searchState, nextValue, this.context);
   }
 }));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
 
 
 /**
@@ -4768,7 +4768,7 @@ function getId() {
 /* harmony default export */ var Configure = (connectConfigure(function () {
   return null;
 }));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
 function connectAutoComplete_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -4858,17 +4858,17 @@ function _cleanUp(props, searchState, context) {
     return searchParameters.setQuery(connectAutoComplete_getCurrentRefinement(props, searchState, this.context));
   }
 }));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(353);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(354);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(33);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
 
 
 function connectGeoSearch_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -5059,58 +5059,58 @@ var connectGeoSearch_refine = function _refine(searchState, nextValue, context) 
     return true;
   }
 }));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(355);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(356);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(357);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(358);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(359);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(360);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(361);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(362);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(363);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(364);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(365);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(366);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(367);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
 var connectSortBy = __webpack_require__(368);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(369);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(370);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(371);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
 /* concated harmony reexport createInstantSearch */__webpack_require__.d(__webpack_exports__, "createInstantSearch", function() { return createInstantSearch["a" /* default */]; });
 /* concated harmony reexport createIndex */__webpack_require__.d(__webpack_exports__, "createIndex", function() { return createIndex["a" /* default */]; });
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return createConnector["a" /* default */]; });
@@ -9079,20 +9079,20 @@ module.exports = function clone(obj) {
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(356);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(149);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -9106,7 +9106,7 @@ var Highlight_Highlight = function Highlight(props) {
 };
 
 /* harmony default export */ var components_Highlight = (Highlight_Highlight);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
 
 
 
@@ -12205,17 +12205,17 @@ function localstorage() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
 var es = __webpack_require__(4);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
 var algoliasearchLite = __webpack_require__(528);
 var algoliasearchLite_default = /*#__PURE__*/__webpack_require__.n(algoliasearchLite);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(510);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
 
 
 
@@ -12227,10 +12227,10 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 });
 
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(515);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
 
 var Index = Object(createIndex["a" /* default */])({
@@ -12245,31 +12245,31 @@ var Index = Object(createIndex["a" /* default */])({
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(353);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(13);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(10);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(210);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(17);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -12323,7 +12323,7 @@ Link_Link.propTypes = {
   onClick: prop_types_default.a.func.isRequired
 };
 /* harmony default export */ var components_Link = (Link_Link);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
 var Breadcrumb_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Breadcrumb_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12446,7 +12446,7 @@ Breadcrumb_Breadcrumb.defaultProps = {
 /* harmony default export */ var components_Breadcrumb = (Object(translatable["a" /* default */])({
   rootLabel: 'Home'
 })(Breadcrumb_Breadcrumb));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
 
 
 
@@ -12544,23 +12544,23 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 };
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
 var ClearRefinements = __webpack_require__(514);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
 var CurrentRefinements = __webpack_require__(513);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(355);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(73);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(41);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
 
 
 var HierarchicalMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -12670,7 +12670,7 @@ HierarchicalMenu_HierarchicalMenu.defaultProps = {
     return extended ? 'Show less' : 'Show more';
   }
 })(HierarchicalMenu_HierarchicalMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
 
 
 
@@ -12770,13 +12770,13 @@ var HierarchicalMenu_HierarchicalMenuWidget = function HierarchicalMenuWidget(pr
 };
 
 /* harmony default export */ var widgets_HierarchicalMenu = (Object(connectHierarchicalMenu["a" /* default */])(HierarchicalMenu_HierarchicalMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(72);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(357);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
 
 
 
@@ -12835,7 +12835,7 @@ Hits_Hits.defaultProps = {
 };
 
 /* harmony default export */ var components_Hits = (Hits_Hits);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
 
 
 
@@ -12869,14 +12869,14 @@ Hits_Hits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Hits = (Object(connectHits["a" /* default */])(components_Hits));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(358);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/has.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/has.js
 var has = __webpack_require__(11);
 var has_default = /*#__PURE__*/__webpack_require__.n(has);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
 
 
 var Select_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12957,7 +12957,7 @@ Select_Select.propTypes = {
   selectedItem: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.number]).isRequired
 };
 /* harmony default export */ var components_Select = (Select_Select);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
 var HitsPerPage_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function HitsPerPage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13024,7 +13024,7 @@ HitsPerPage_HitsPerPage.defaultProps = {
 
 
 /* harmony default export */ var components_HitsPerPage = (HitsPerPage_HitsPerPage);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
 
 
 
@@ -13066,10 +13066,10 @@ HitsPerPage_HitsPerPage.defaultProps = {
  */
 
 /* harmony default export */ var widgets_HitsPerPage = (Object(connectHitsPerPage["a" /* default */])(components_HitsPerPage));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(359);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
 var InfiniteHits_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function InfiniteHits_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13170,7 +13170,7 @@ InfiniteHits_InfiniteHits.defaultProps = {
 /* harmony default export */ var components_InfiniteHits = (Object(translatable["a" /* default */])({
   loadMore: 'Load more'
 })(InfiniteHits_InfiniteHits));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
 
 
 
@@ -13207,10 +13207,10 @@ InfiniteHits_InfiniteHits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_InfiniteHits = (Object(connectInfiniteHits["a" /* default */])(components_InfiniteHits));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(360);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
 
 
 var Menu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -13328,7 +13328,7 @@ Menu_Menu.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(Menu_Menu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
 
 
 
@@ -13387,11 +13387,11 @@ var Menu_MenuWidget = function MenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_Menu = (Object(connectMenu["a" /* default */])(Menu_MenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(24);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
 
 
 var MenuSelect_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13510,7 +13510,7 @@ MenuSelect_MenuSelect.defaultProps = {
 /* harmony default export */ var components_MenuSelect = (Object(translatable["a" /* default */])({
   seeAllOption: 'See all'
 })(MenuSelect_MenuSelect));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
 
 
 
@@ -13555,10 +13555,10 @@ var MenuSelect_MenuSelectWidget = function MenuSelectWidget(props) {
 };
 
 /* harmony default export */ var widgets_MenuSelect = (Object(connectMenu["a" /* default */])(MenuSelect_MenuSelectWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(361);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
 var NumericMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var NumericMenu_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13663,7 +13663,7 @@ NumericMenu_NumericMenu.defaultProps = {
 /* harmony default export */ var components_NumericMenu = (Object(translatable["a" /* default */])({
   all: 'All'
 })(NumericMenu_NumericMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
 
 
 
@@ -13719,14 +13719,14 @@ var NumericMenu_NumericMenuWidget = function NumericMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_NumericMenu = (Object(connectNumericMenu["a" /* default */])(NumericMenu_NumericMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(362);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/range.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/range.js
 var lodash_range = __webpack_require__(212);
 var range_default = /*#__PURE__*/__webpack_require__.n(lodash_range);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
 
 
 var LinkList_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13814,7 +13814,7 @@ LinkList_LinkList.propTypes = {
   canRefine: prop_types_default.a.bool.isRequired
 };
 /* harmony default export */ var components_LinkList = (LinkList_LinkList);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
 
 
 var Pagination_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -14036,7 +14036,7 @@ Pagination_Pagination.defaultProps = {
     return 'Page ' + currentRefinement.toString();
   }
 })(Pagination_Pagination));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
 
 
 
@@ -14100,13 +14100,13 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 };
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
 var Panel = __webpack_require__(512);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(363);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
 var PoweredBy_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function PoweredBy_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14220,7 +14220,7 @@ PoweredBy_PoweredBy.propTypes = {
 /* harmony default export */ var components_PoweredBy = (Object(translatable["a" /* default */])({
   searchBy: 'Search by'
 })(PoweredBy_PoweredBy));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
 
 
 
@@ -14250,10 +14250,10 @@ PoweredBy_PoweredBy.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_PoweredBy = (Object(connectPoweredBy["a" /* default */])(components_PoweredBy));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(364);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
 var RangeInput_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function RangeInput_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14430,7 +14430,7 @@ RangeInput_RawRangeInput.defaultProps = {
   submit: 'ok',
   separator: 'to'
 })(RangeInput_RawRangeInput));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
 
 
 
@@ -14482,7 +14482,7 @@ var RangeInput_RangeInputWidget = function RangeInputWidget(props) {
 };
 
 /* harmony default export */ var widgets_RangeInput = (Object(connectRange["a" /* default */])(RangeInput_RangeInputWidget));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
 
 
 /**
@@ -14584,11 +14584,11 @@ const ConnectedRange = connectRange(Range);
     )
   );
 });
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/fill.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/fill.js
 var fill = __webpack_require__(529);
 var fill_default = /*#__PURE__*/__webpack_require__.n(fill);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
 
 
 
@@ -14808,7 +14808,7 @@ RatingMenu_RatingMenu.defaultProps = {
 /* harmony default export */ var components_RatingMenu = (Object(translatable["a" /* default */])({
   ratingLabel: ' & Up'
 })(RatingMenu_RatingMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
 
 
 
@@ -14866,13 +14866,13 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
 var RefinementList = __webpack_require__(511);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(366);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
 var ScrollTo_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function ScrollTo_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14933,7 +14933,7 @@ ScrollTo_ScrollTo.propTypes = {
 
 
 /* harmony default export */ var components_ScrollTo = (ScrollTo_ScrollTo);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
 
 
 
@@ -14963,13 +14963,13 @@ ScrollTo_ScrollTo.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_ScrollTo = (Object(connectScrollTo["a" /* default */])(components_ScrollTo));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(367);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
 var SearchBox = __webpack_require__(148);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
 
 
 
@@ -15016,13 +15016,13 @@ var SearchBox = __webpack_require__(148);
  */
 
 /* harmony default export */ var widgets_SearchBox = (Object(connectSearchBox["a" /* default */])(SearchBox["a" /* default */]));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(356);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(149);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
 var Snippet_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -15036,7 +15036,7 @@ var Snippet_Snippet = function Snippet(props) {
 };
 
 /* harmony default export */ var components_Snippet = (Snippet_Snippet);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
 
 
 
@@ -15080,10 +15080,10 @@ var Snippet_Snippet = function Snippet(props) {
  */
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
 var connectSortBy = __webpack_require__(368);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
 var SortBy_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function SortBy_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15150,7 +15150,7 @@ SortBy_SortBy.defaultProps = {
 
 
 /* harmony default export */ var components_SortBy = (SortBy_SortBy);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
 
 
 
@@ -15189,10 +15189,10 @@ SortBy_SortBy.defaultProps = {
  */
 
 /* harmony default export */ var widgets_SortBy = (Object(connectSortBy["a" /* default */])(components_SortBy));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(370);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
 var Stats_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Stats_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15259,7 +15259,7 @@ Stats_Stats.defaultProps = {
     return n.toLocaleString() + ' results found in ' + ms.toLocaleString() + 'ms';
   }
 })(Stats_Stats));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
 
 
 
@@ -15287,10 +15287,10 @@ Stats_Stats.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Stats = (Object(connectStats["a" /* default */])(components_Stats));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(371);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
 
 
 
@@ -15340,7 +15340,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
 };
 
 /* harmony default export */ var components_ToggleRefinement = (ToggleRefinement_ToggleRefinement);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
 
 
 
@@ -15383,7 +15383,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
  */
 
 /* harmony default export */ var widgets_ToggleRefinement = (Object(connectToggleRefinement["a" /* default */])(components_ToggleRefinement));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return es["createConnector"]; });
 /* concated harmony reexport HIGHLIGHT_TAGS */__webpack_require__.d(__webpack_exports__, "HIGHLIGHT_TAGS", function() { return es["HIGHLIGHT_TAGS"]; });
 /* concated harmony reexport translatable */__webpack_require__.d(__webpack_exports__, "translatable", function() { return es["translatable"]; });
@@ -45548,30 +45548,30 @@ module.exports = isIterateeCall;
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(24);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(33);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(17);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/algoliasearch-helper/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/algoliasearch-helper/index.js
 var algoliasearch_helper = __webpack_require__(104);
 var algoliasearch_helper_default = /*#__PURE__*/__webpack_require__.n(algoliasearch_helper);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
 var utils = __webpack_require__(34);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
 
 
 function createWidgetsManager(onWidgetsUpdate) {
@@ -45608,7 +45608,7 @@ function createWidgetsManager(onWidgetsUpdate) {
     }
   };
 }
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
 function createStore(initialState) {
   var state = initialState;
   var listeners = [];
@@ -45633,10 +45633,10 @@ function createStore(initialState) {
     }
   };
 }
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(40);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
 
 
 
@@ -45948,7 +45948,7 @@ function createInstantSearchManager(_ref) {
     skipSearch: skipSearch
   };
 }
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
 var InstantSearch_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46182,10 +46182,10 @@ InstantSearch_InstantSearch.childContextTypes = {
 };
 
 /* harmony default export */ var components_InstantSearch = (InstantSearch_InstantSearch);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(103);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createInstantSearch; });
 var createInstantSearch_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -46318,33 +46318,33 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(365);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(13);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(73);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(210);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(72);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(41);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -46466,7 +46466,7 @@ RefinementList_RefinementList.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(RefinementList_RefinementList));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
 
 
 
@@ -46539,18 +46539,18 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(10);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46649,7 +46649,7 @@ Panel_Panel.defaultProps = {
 
 
 /* harmony default export */ var components_Panel = (Panel_Panel);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
 
 
 /**
@@ -46696,27 +46696,27 @@ Panel_Panel.defaultProps = {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(354);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(13);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(10);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(210);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
 
 
 
@@ -46809,7 +46809,7 @@ CurrentRefinements_CurrentRefinements.defaultProps = {
 /* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
   clearFilter: '✕'
 })(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
 
 
 
@@ -46872,27 +46872,27 @@ var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWid
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(354);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(13);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(10);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(210);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46965,7 +46965,7 @@ ClearRefinements_ClearRefinements.defaultProps = {
 /* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
   reset: 'Clear all filters'
 })(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
 
 
 
@@ -47021,11 +47021,11 @@ var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(pr
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47158,7 +47158,7 @@ Index_Index.contextTypes = {
 };
 
 /* harmony default export */ var components_Index = (Index_Index);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
 
 
 
@@ -77896,17 +77896,17 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var input = (withValidationMessage(input_Input));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-lazyload/lib/index.js
 var lib = __webpack_require__(209);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/prop-types/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(18);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-transition-group/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-transition-group/index.js
 var react_transition_group = __webpack_require__(516);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
 var FadeIn_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function FadeIn_objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -78001,7 +78001,7 @@ FadeIn_FadeIn.propTypes =  false ? undefined : {};
 
 
 /* harmony default export */ var es_FadeIn = (FadeIn_FadeIn);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
 
 
 /* harmony default export */ var es = (es_FadeIn);
@@ -78111,7 +78111,7 @@ function (_Component) {
     className: className
   }, children);
 });
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
 var react_loading = __webpack_require__(517);
 var react_loading_default = /*#__PURE__*/__webpack_require__.n(react_loading);
 
@@ -78414,7 +78414,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var variant_selector = (variant_selector_VariantSelector);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
 var react_responsive_carousel_lib = __webpack_require__(518);
 
 // CONCATENATED MODULE: ./src/components/products/display/product-carousel.js
@@ -78619,7 +78619,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var product_price = (product_price_ProductPrice);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/typy/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/typy/lib/index.js
 var typy_lib = __webpack_require__(12);
 var typy_lib_default = /*#__PURE__*/__webpack_require__.n(typy_lib);
 
@@ -78742,7 +78742,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var order_line_items = (order_line_items_OrderLineItems);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/date-fns/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/date-fns/index.js
 var date_fns = __webpack_require__(519);
 var date_fns_default = /*#__PURE__*/__webpack_require__.n(date_fns);
 
@@ -78958,7 +78958,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch/connectors.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch/connectors.js
 var connectors = __webpack_require__(144);
 
 // CONCATENATED MODULE: ./src/components/search/search-rating-filter.js
@@ -79051,11 +79051,11 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var search_rating_filter = (Object(connectors["connectRefinementList"])(search_rating_filter_SearchRatingFilter));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
 var js = __webpack_require__(523);
 var js_default = /*#__PURE__*/__webpack_require__.n(js);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(364);
 
 // CONCATENATED MODULE: ./src/components/search/search-slider.js
@@ -80274,7 +80274,7 @@ function (_PureComponent) {
   horizontal_divider: horizontal_divider,
   product_grid: product_grid
 });
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/tslib/tslib.es6.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -80462,15 +80462,15 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
 var hoist_non_react_statics_cjs = __webpack_require__(211);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/create-react-context/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/create-react-context/lib/index.js
 var create_react_context_lib = __webpack_require__(524);
 var create_react_context_lib_default = /*#__PURE__*/__webpack_require__.n(create_react_context_lib);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -80485,7 +80485,7 @@ function listCacheClear() {
 
 /* harmony default export */ var _listCacheClear = (listCacheClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/eq.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/eq.js
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -80524,7 +80524,7 @@ function eq(value, other) {
 
 /* harmony default export */ var lodash_es_eq = (eq);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
 
 
 /**
@@ -80547,7 +80547,7 @@ function assocIndexOf(array, key) {
 
 /* harmony default export */ var _assocIndexOf = (assocIndexOf);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
 
 
 /** Used for built-in method references. */
@@ -80584,7 +80584,7 @@ function listCacheDelete(key) {
 
 /* harmony default export */ var _listCacheDelete = (listCacheDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
 
 
 /**
@@ -80605,7 +80605,7 @@ function listCacheGet(key) {
 
 /* harmony default export */ var _listCacheGet = (listCacheGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
 
 
 /**
@@ -80623,7 +80623,7 @@ function listCacheHas(key) {
 
 /* harmony default export */ var _listCacheHas = (listCacheHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
 
 
 /**
@@ -80651,7 +80651,7 @@ function listCacheSet(key, value) {
 
 /* harmony default export */ var _listCacheSet = (listCacheSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_ListCache.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_ListCache.js
 
 
 
@@ -80685,7 +80685,7 @@ ListCache.prototype.set = _listCacheSet;
 
 /* harmony default export */ var _ListCache = (ListCache);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackClear.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stackClear.js
 
 
 /**
@@ -80702,7 +80702,7 @@ function stackClear() {
 
 /* harmony default export */ var _stackClear = (stackClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
 /**
  * Removes `key` and its value from the stack.
  *
@@ -80722,7 +80722,7 @@ function stackDelete(key) {
 
 /* harmony default export */ var _stackDelete = (stackDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackGet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stackGet.js
 /**
  * Gets the stack value for `key`.
  *
@@ -80738,7 +80738,7 @@ function stackGet(key) {
 
 /* harmony default export */ var _stackGet = (stackGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackHas.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stackHas.js
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -80754,10 +80754,10 @@ function stackHas(key) {
 
 /* harmony default export */ var _stackHas = (stackHas);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_root.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_root.js
 var _root = __webpack_require__(14);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Symbol.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Symbol.js
 
 
 /** Built-in value references. */
@@ -80765,7 +80765,7 @@ var _Symbol_Symbol = _root["a" /* default */].Symbol;
 
 /* harmony default export */ var _Symbol = (_Symbol_Symbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
 
 
 /** Used for built-in method references. */
@@ -80813,7 +80813,7 @@ function getRawTag(value) {
 
 /* harmony default export */ var _getRawTag = (getRawTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_objectToString.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_objectToString.js
 /** Used for built-in method references. */
 var _objectToString_objectProto = Object.prototype;
 
@@ -80837,7 +80837,7 @@ function objectToString(value) {
 
 /* harmony default export */ var _objectToString = (objectToString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
 
 
 
@@ -80867,7 +80867,7 @@ function baseGetTag(value) {
 
 /* harmony default export */ var _baseGetTag = (baseGetTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isObject.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isObject.js
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -80900,7 +80900,7 @@ function isObject(value) {
 
 /* harmony default export */ var lodash_es_isObject = (isObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isFunction.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isFunction.js
 
 
 
@@ -80939,7 +80939,7 @@ function isFunction(value) {
 
 /* harmony default export */ var lodash_es_isFunction = (isFunction);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
 
 
 /** Used to detect overreaching core-js shims. */
@@ -80947,7 +80947,7 @@ var coreJsData = _root["a" /* default */]['__core-js_shared__'];
 
 /* harmony default export */ var _coreJsData = (coreJsData);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isMasked.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_isMasked.js
 
 
 /** Used to detect methods masquerading as native. */
@@ -80969,7 +80969,7 @@ function isMasked(func) {
 
 /* harmony default export */ var _isMasked = (isMasked);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_toSource.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_toSource.js
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -80997,7 +80997,7 @@ function toSource(func) {
 
 /* harmony default export */ var _toSource = (toSource);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
 
 
 
@@ -81046,7 +81046,7 @@ function baseIsNative(value) {
 
 /* harmony default export */ var _baseIsNative = (baseIsNative);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getValue.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getValue.js
 /**
  * Gets the value at `key` of `object`.
  *
@@ -81061,7 +81061,7 @@ function getValue(object, key) {
 
 /* harmony default export */ var _getValue = (getValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getNative.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getNative.js
 
 
 
@@ -81080,7 +81080,7 @@ function getNative(object, key) {
 
 /* harmony default export */ var _getNative = (getNative);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Map.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Map.js
 
 
 
@@ -81089,7 +81089,7 @@ var Map = _getNative(_root["a" /* default */], 'Map');
 
 /* harmony default export */ var _Map = (Map);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
 
 
 /* Built-in method references that are verified to be native. */
@@ -81097,7 +81097,7 @@ var nativeCreate = _getNative(Object, 'create');
 
 /* harmony default export */ var _nativeCreate = (nativeCreate);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashClear.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_hashClear.js
 
 
 /**
@@ -81114,7 +81114,7 @@ function hashClear() {
 
 /* harmony default export */ var _hashClear = (hashClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
 /**
  * Removes `key` and its value from the hash.
  *
@@ -81133,7 +81133,7 @@ function hashDelete(key) {
 
 /* harmony default export */ var _hashDelete = (hashDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashGet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_hashGet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -81165,7 +81165,7 @@ function hashGet(key) {
 
 /* harmony default export */ var _hashGet = (hashGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashHas.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_hashHas.js
 
 
 /** Used for built-in method references. */
@@ -81190,7 +81190,7 @@ function hashHas(key) {
 
 /* harmony default export */ var _hashHas = (hashHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_hashSet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -81215,7 +81215,7 @@ function hashSet(key, value) {
 
 /* harmony default export */ var _hashSet = (hashSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Hash.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Hash.js
 
 
 
@@ -81249,7 +81249,7 @@ Hash.prototype.set = _hashSet;
 
 /* harmony default export */ var _Hash = (Hash);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
 
 
 
@@ -81272,7 +81272,7 @@ function mapCacheClear() {
 
 /* harmony default export */ var _mapCacheClear = (mapCacheClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -81289,7 +81289,7 @@ function isKeyable(value) {
 
 /* harmony default export */ var _isKeyable = (isKeyable);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getMapData.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getMapData.js
 
 
 /**
@@ -81309,7 +81309,7 @@ function getMapData(map, key) {
 
 /* harmony default export */ var _getMapData = (getMapData);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
 
 
 /**
@@ -81329,7 +81329,7 @@ function mapCacheDelete(key) {
 
 /* harmony default export */ var _mapCacheDelete = (mapCacheDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
 
 
 /**
@@ -81347,7 +81347,7 @@ function mapCacheGet(key) {
 
 /* harmony default export */ var _mapCacheGet = (mapCacheGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
 
 
 /**
@@ -81365,7 +81365,7 @@ function mapCacheHas(key) {
 
 /* harmony default export */ var _mapCacheHas = (mapCacheHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
 
 
 /**
@@ -81389,7 +81389,7 @@ function mapCacheSet(key, value) {
 
 /* harmony default export */ var _mapCacheSet = (mapCacheSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_MapCache.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_MapCache.js
 
 
 
@@ -81423,7 +81423,7 @@ MapCache.prototype.set = _mapCacheSet;
 
 /* harmony default export */ var _MapCache = (MapCache);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stackSet.js
 
 
 
@@ -81459,7 +81459,7 @@ function stackSet(key, value) {
 
 /* harmony default export */ var _stackSet = (stackSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Stack.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Stack.js
 
 
 
@@ -81488,7 +81488,7 @@ Stack.prototype.set = _stackSet;
 
 /* harmony default export */ var _Stack = (Stack);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
 /**
  * A specialized version of `_.forEach` for arrays without support for
  * iteratee shorthands.
@@ -81512,7 +81512,7 @@ function arrayEach(array, iteratee) {
 
 /* harmony default export */ var _arrayEach = (arrayEach);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
 
 
 var defineProperty = (function() {
@@ -81525,7 +81525,7 @@ var defineProperty = (function() {
 
 /* harmony default export */ var lodash_es_defineProperty = (defineProperty);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
 
 
 /**
@@ -81552,7 +81552,7 @@ function baseAssignValue(object, key, value) {
 
 /* harmony default export */ var _baseAssignValue = (baseAssignValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_assignValue.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_assignValue.js
 
 
 
@@ -81582,7 +81582,7 @@ function assignValue(object, key, value) {
 
 /* harmony default export */ var _assignValue = (assignValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copyObject.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_copyObject.js
 
 
 
@@ -81624,7 +81624,7 @@ function copyObject(source, props, object, customizer) {
 
 /* harmony default export */ var _copyObject = (copyObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -81646,7 +81646,7 @@ function baseTimes(n, iteratee) {
 
 /* harmony default export */ var _baseTimes = (baseTimes);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -81677,7 +81677,7 @@ function isObjectLike(value) {
 
 /* harmony default export */ var lodash_es_isObjectLike = (isObjectLike);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
 
 
 
@@ -81697,7 +81697,7 @@ function baseIsArguments(value) {
 
 /* harmony default export */ var _baseIsArguments = (baseIsArguments);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArguments.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isArguments.js
 
 
 
@@ -81735,7 +81735,7 @@ var isArguments = _baseIsArguments(function() { return arguments; }()) ? _baseIs
 
 /* harmony default export */ var lodash_es_isArguments = (isArguments);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isArray.js
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -81763,10 +81763,10 @@ var isArray = Array.isArray;
 
 /* harmony default export */ var lodash_es_isArray = (isArray);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isBuffer.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isBuffer.js
 var isBuffer = __webpack_require__(147);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isIndex.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_isIndex.js
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -81793,7 +81793,7 @@ function isIndex(value, length) {
 
 /* harmony default export */ var _isIndex = (isIndex);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isLength.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isLength.js
 /** Used as references for various `Number` constants. */
 var isLength_MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -81830,7 +81830,7 @@ function isLength(value) {
 
 /* harmony default export */ var lodash_es_isLength = (isLength);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
 
 
 
@@ -81892,7 +81892,7 @@ function baseIsTypedArray(value) {
 
 /* harmony default export */ var _baseIsTypedArray = (baseIsTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -81908,10 +81908,10 @@ function baseUnary(func) {
 
 /* harmony default export */ var _baseUnary = (baseUnary);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
 var _nodeUtil = __webpack_require__(35);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
 
 
 
@@ -81940,7 +81940,7 @@ var isTypedArray = nodeIsTypedArray ? _baseUnary(nodeIsTypedArray) : _baseIsType
 
 /* harmony default export */ var lodash_es_isTypedArray = (isTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
 
 
 
@@ -81991,7 +81991,7 @@ function arrayLikeKeys(value, inherited) {
 
 /* harmony default export */ var _arrayLikeKeys = (arrayLikeKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
 /** Used for built-in method references. */
 var _isPrototype_objectProto = Object.prototype;
 
@@ -82011,7 +82011,7 @@ function isPrototype(value) {
 
 /* harmony default export */ var _isPrototype = (isPrototype);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_overArg.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_overArg.js
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -82028,7 +82028,7 @@ function overArg(func, transform) {
 
 /* harmony default export */ var _overArg = (overArg);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
 
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -82036,7 +82036,7 @@ var nativeKeys = _overArg(Object.keys, Object);
 
 /* harmony default export */ var _nativeKeys = (nativeKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
 
 
 
@@ -82068,7 +82068,7 @@ function baseKeys(object) {
 
 /* harmony default export */ var _baseKeys = (baseKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
 
 
 
@@ -82103,7 +82103,7 @@ function isArrayLike(value) {
 
 /* harmony default export */ var lodash_es_isArrayLike = (isArrayLike);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/keys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/keys.js
 
 
 
@@ -82142,7 +82142,7 @@ function keys(object) {
 
 /* harmony default export */ var lodash_es_keys = (keys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
 
 
 
@@ -82161,7 +82161,7 @@ function baseAssign(object, source) {
 
 /* harmony default export */ var _baseAssign = (baseAssign);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
 /**
  * This function is like
  * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
@@ -82183,7 +82183,7 @@ function nativeKeysIn(object) {
 
 /* harmony default export */ var _nativeKeysIn = (nativeKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
 
 
 
@@ -82218,7 +82218,7 @@ function baseKeysIn(object) {
 
 /* harmony default export */ var _baseKeysIn = (baseKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/keysIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/keysIn.js
 
 
 
@@ -82252,7 +82252,7 @@ function keysIn_keysIn(object) {
 
 /* harmony default export */ var lodash_es_keysIn = (keysIn_keysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
 
 
 
@@ -82271,10 +82271,10 @@ function baseAssignIn(object, source) {
 
 /* harmony default export */ var _baseAssignIn = (baseAssignIn);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
 var _cloneBuffer = __webpack_require__(526);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copyArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_copyArray.js
 /**
  * Copies the values of `source` to `array`.
  *
@@ -82296,7 +82296,7 @@ function copyArray(source, array) {
 
 /* harmony default export */ var _copyArray = (copyArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
 /**
  * A specialized version of `_.filter` for arrays without support for
  * iteratee shorthands.
@@ -82323,7 +82323,7 @@ function arrayFilter(array, predicate) {
 
 /* harmony default export */ var _arrayFilter = (arrayFilter);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/stubArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/stubArray.js
 /**
  * This method returns a new empty array.
  *
@@ -82348,7 +82348,7 @@ function stubArray() {
 
 /* harmony default export */ var lodash_es_stubArray = (stubArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
 
 
 
@@ -82380,7 +82380,7 @@ var getSymbols = !nativeGetSymbols ? lodash_es_stubArray : function(object) {
 
 /* harmony default export */ var _getSymbols = (getSymbols);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
 
 
 
@@ -82398,7 +82398,7 @@ function copySymbols(source, object) {
 
 /* harmony default export */ var _copySymbols = (copySymbols);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -82420,7 +82420,7 @@ function arrayPush(array, values) {
 
 /* harmony default export */ var _arrayPush = (arrayPush);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
 
 
 /** Built-in value references. */
@@ -82428,7 +82428,7 @@ var getPrototype = _overArg(Object.getPrototypeOf, Object);
 
 /* harmony default export */ var _getPrototype = (getPrototype);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
 
 
 
@@ -82455,7 +82455,7 @@ var getSymbolsIn = !_getSymbolsIn_nativeGetSymbols ? lodash_es_stubArray : funct
 
 /* harmony default export */ var _getSymbolsIn = (getSymbolsIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
 
 
 
@@ -82473,7 +82473,7 @@ function copySymbolsIn(source, object) {
 
 /* harmony default export */ var _copySymbolsIn = (copySymbolsIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
 
 
 
@@ -82495,7 +82495,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 /* harmony default export */ var _baseGetAllKeys = (baseGetAllKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
 
 
 
@@ -82513,7 +82513,7 @@ function getAllKeys(object) {
 
 /* harmony default export */ var _getAllKeys = (getAllKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
 
 
 
@@ -82532,7 +82532,7 @@ function getAllKeysIn(object) {
 
 /* harmony default export */ var _getAllKeysIn = (getAllKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_DataView.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_DataView.js
 
 
 
@@ -82541,7 +82541,7 @@ var DataView = _getNative(_root["a" /* default */], 'DataView');
 
 /* harmony default export */ var _DataView = (DataView);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Promise.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Promise.js
 
 
 
@@ -82550,7 +82550,7 @@ var _Promise_Promise = _getNative(_root["a" /* default */], 'Promise');
 
 /* harmony default export */ var _Promise = (_Promise_Promise);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Set.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Set.js
 
 
 
@@ -82559,7 +82559,7 @@ var Set = _getNative(_root["a" /* default */], 'Set');
 
 /* harmony default export */ var _Set = (Set);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
 
 
 
@@ -82568,7 +82568,7 @@ var _WeakMap_WeakMap = _getNative(_root["a" /* default */], 'WeakMap');
 
 /* harmony default export */ var _WeakMap = (_WeakMap_WeakMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getTag.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_getTag.js
 
 
 
@@ -82628,7 +82628,7 @@ if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != _getTag_dataViewT
 
 /* harmony default export */ var _getTag = (getTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
 /** Used for built-in method references. */
 var _initCloneArray_objectProto = Object.prototype;
 
@@ -82656,7 +82656,7 @@ function initCloneArray(array) {
 
 /* harmony default export */ var _initCloneArray = (initCloneArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
 
 
 /** Built-in value references. */
@@ -82664,7 +82664,7 @@ var Uint8Array = _root["a" /* default */].Uint8Array;
 
 /* harmony default export */ var _Uint8Array = (Uint8Array);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
 
 
 /**
@@ -82682,7 +82682,7 @@ function cloneArrayBuffer(arrayBuffer) {
 
 /* harmony default export */ var _cloneArrayBuffer = (cloneArrayBuffer);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
 
 
 /**
@@ -82700,7 +82700,7 @@ function cloneDataView(dataView, isDeep) {
 
 /* harmony default export */ var _cloneDataView = (cloneDataView);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -82719,7 +82719,7 @@ function cloneRegExp(regexp) {
 
 /* harmony default export */ var _cloneRegExp = (cloneRegExp);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
 
 
 /** Used to convert symbols to primitives and strings. */
@@ -82739,7 +82739,7 @@ function cloneSymbol(symbol) {
 
 /* harmony default export */ var _cloneSymbol = (cloneSymbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
 
 
 /**
@@ -82757,7 +82757,7 @@ function cloneTypedArray(typedArray, isDeep) {
 
 /* harmony default export */ var _cloneTypedArray = (cloneTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
 
 
 
@@ -82836,7 +82836,7 @@ function initCloneByTag(object, tag, isDeep) {
 
 /* harmony default export */ var _initCloneByTag = (initCloneByTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
 
 
 /** Built-in value references. */
@@ -82868,7 +82868,7 @@ var baseCreate = (function() {
 
 /* harmony default export */ var _baseCreate = (baseCreate);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
 
 
 
@@ -82888,7 +82888,7 @@ function initCloneObject(object) {
 
 /* harmony default export */ var _initCloneObject = (initCloneObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
 
 
 
@@ -82908,7 +82908,7 @@ function baseIsMap(value) {
 
 /* harmony default export */ var _baseIsMap = (baseIsMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isMap.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isMap.js
 
 
 
@@ -82937,7 +82937,7 @@ var isMap = nodeIsMap ? _baseUnary(nodeIsMap) : _baseIsMap;
 
 /* harmony default export */ var lodash_es_isMap = (isMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
 
 
 
@@ -82957,7 +82957,7 @@ function baseIsSet(value) {
 
 /* harmony default export */ var _baseIsSet = (baseIsSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isSet.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isSet.js
 
 
 
@@ -82986,7 +82986,7 @@ var isSet = nodeIsSet ? _baseUnary(nodeIsSet) : _baseIsSet;
 
 /* harmony default export */ var lodash_es_isSet = (isSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseClone.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseClone.js
 
 
 
@@ -83159,7 +83159,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 
 /* harmony default export */ var _baseClone = (baseClone);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
 
 
 /** Used to compose bitmasks for cloning. */
@@ -83190,7 +83190,7 @@ function cloneDeep(value) {
 
 /* harmony default export */ var lodash_es_cloneDeep = (cloneDeep);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
  * shorthands.
@@ -83213,7 +83213,7 @@ function arrayMap(array, iteratee) {
 
 /* harmony default export */ var _arrayMap = (arrayMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isSymbol.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/isSymbol.js
 
 
 
@@ -83244,7 +83244,7 @@ function isSymbol(value) {
 
 /* harmony default export */ var lodash_es_isSymbol = (isSymbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/memoize.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/memoize.js
 
 
 /** Error message constants. */
@@ -83319,7 +83319,7 @@ memoize.Cache = _MapCache;
 
 /* harmony default export */ var lodash_es_memoize = (memoize);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
 
 
 /** Used as the maximum memoize cache size. */
@@ -83347,7 +83347,7 @@ function memoizeCapped(func) {
 
 /* harmony default export */ var _memoizeCapped = (memoizeCapped);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
 
 
 /** Used to match property names within property paths. */
@@ -83376,7 +83376,7 @@ var stringToPath = _memoizeCapped(function(string) {
 
 /* harmony default export */ var _stringToPath = (stringToPath);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_toKey.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_toKey.js
 
 
 /** Used as references for various `Number` constants. */
@@ -83399,7 +83399,7 @@ function toKey(value) {
 
 /* harmony default export */ var _toKey = (toKey);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseToString.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/_baseToString.js
 
 
 
@@ -83438,7 +83438,7 @@ function baseToString(value) {
 
 /* harmony default export */ var _baseToString = (baseToString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/toString.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/toString.js
 
 
 /**
@@ -83468,7 +83468,7 @@ function toString_toString(value) {
 
 /* harmony default export */ var lodash_es_toString = (toString_toString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/toPath.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/lodash-es/toPath.js
 
 
 
@@ -83503,11 +83503,11 @@ function toPath(value) {
 
 /* harmony default export */ var lodash_es_toPath = (toPath);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-fast-compare/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-fast-compare/index.js
 var react_fast_compare = __webpack_require__(150);
 var react_fast_compare_default = /*#__PURE__*/__webpack_require__.n(react_fast_compare);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/deepmerge/dist/es.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/deepmerge/dist/es.js
 var isMergeableObject = function isMergeableObject(value) {
 	return isNonNullObject(value)
 		&& !isSpecial(value)
@@ -83598,7 +83598,7 @@ var deepmerge_1 = deepmerge;
 
 /* harmony default export */ var dist_es = (deepmerge_1);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/formik/dist/formik.esm.js
+// CONCATENATED MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/formik/dist/formik.esm.js
 
 
 
@@ -84896,7 +84896,7 @@ connect(formik_esm_ErrorMessageImpl);
 
 //# sourceMappingURL=formik.esm.js.map
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/yup/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/yup/lib/index.js
 var yup_lib = __webpack_require__(20);
 
 // CONCATENATED MODULE: ./src/components/account/login-form.js
@@ -85252,7 +85252,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var register_form = (register_form_RegisterForm);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch/dom.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch/dom.js
 var dom = __webpack_require__(527);
 
 // CONCATENATED MODULE: ./src/components/search/search-bar.js
@@ -85302,16 +85302,16 @@ function (_Component) {
   return SearchBar;
 }(external_react_["Component"]);
 /* harmony default export */ var search_bar = (search_bar_SearchBar);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
 var Panel = __webpack_require__(512);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
 var RefinementList = __webpack_require__(511);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
 var ClearRefinements = __webpack_require__(514);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
 var CurrentRefinements = __webpack_require__(513);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
@@ -85462,10 +85462,10 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var search_filters = (search_filters_SearchFilters);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(369);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(359);
 
 // CONCATENATED MODULE: ./src/components/search/search-hits.js
@@ -85846,7 +85846,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var product_display = (product_display_ProductDisplay);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
 var react_stickyfill_lib = __webpack_require__(530);
 var react_stickyfill_lib_default = /*#__PURE__*/__webpack_require__.n(react_stickyfill_lib);
 
@@ -86094,11 +86094,11 @@ var cart_table_grid_item_CartTableGridItem = function CartTableGridItem(props) {
 };
 
 /* harmony default export */ var cart_table_grid_item = (cart_table_grid_item_CartTableGridItem);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-pluralize/build/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/react-pluralize/build/index.js
 var build = __webpack_require__(151);
 var build_default = /*#__PURE__*/__webpack_require__.n(build);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/moment-business-days/index.js
+// EXTERNAL MODULE: C:/Users/kris/workspace/shift-front-end-react/node_modules/moment-business-days/index.js
 var moment_business_days = __webpack_require__(213);
 var moment_business_days_default = /*#__PURE__*/__webpack_require__.n(moment_business_days);
 

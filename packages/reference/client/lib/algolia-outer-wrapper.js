@@ -8,7 +8,7 @@ import InitialPropsDelegator from './initial-props-delegator'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 
 // Components
-import { findResultsState } from '../components/search/algolia/instant-search'
+import { findResultsState } from './instant-search'
 
 const {
   publicRuntimeConfig: {
