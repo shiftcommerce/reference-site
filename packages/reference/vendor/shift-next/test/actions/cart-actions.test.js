@@ -80,3 +80,15 @@ test('deleteLineItem triggers a correct deleteLineItem request', () => {
 
   postSpy.mockRestore()
 })
+
+test('addToCart triggers a correct addToCart request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.addToCart(10, 1)
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/addToCart')
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
+})

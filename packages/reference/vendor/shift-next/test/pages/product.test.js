@@ -2,14 +2,17 @@
 import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
+// Actions
+import * as ProductActions from '../../src/actions/product-actions'
+
 // Page
-import { Product } from './../../../client/pages/product'
+import ProductPage from '../../src/pages/product'
 
 // Components
 import { Loading, ProductDisplay } from 'shift-react-components'
 
 // Fixtures
-import product from './../../fixtures/product'
+import product from '../fixtures/product'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
@@ -50,7 +53,7 @@ describe('Product page', () => {
       // Act
       const wrapper = mount(
         <Provider store={createMockStore()}>
-          <Product product={product} dispatch={dispatch} />
+          <ProductPage product={product} dispatch={dispatch} />
         </Provider>
       )
 
@@ -66,7 +69,7 @@ describe('Product page', () => {
       // Act
       const wrapper = mount(
         <Provider store={createMockStore()}>
-          <Product product={{}} dispatch={dispatch} />
+          <ProductPage product={{}} dispatch={dispatch} />
         </Provider>
       )
 
@@ -83,7 +86,7 @@ describe('Product page', () => {
     // Act
     const wrapper = mount(
       <Provider store={createMockStore()}>
-        <Product product={product} dispatch={dispatch} />
+        <ProductPage product={product} dispatch={dispatch} />
       </Provider>
     )
 
@@ -94,5 +97,41 @@ describe('Product page', () => {
     expect(wrapper).toIncludeText(product.min_current_price)
 
     expect(wrapper.find(ProductDisplay)).toExist()
+  })
+
+  test('getInitialProps() retrieves the product serverside', async () => {
+    // Arrange - mock Redux store
+    const dispatch = jest.fn()
+    const readProductSpy = jest.spyOn(ProductActions, 'readProduct').mockImplementation(() => 'read product action')
+    const req = true
+    const query = {
+      id: 1
+    }
+    const reduxStore = {
+      dispatch: dispatch
+    }
+
+    // Act
+    const getInitialProps = await ProductPage.getInitialProps({ reduxStore, req, query })
+
+    // Assert
+    expect(dispatch).toHaveBeenCalledWith('read product action')
+    expect(readProductSpy).toHaveBeenCalledWith(1)
+    expect(getInitialProps).toEqual({ id: 1 })
+
+    readProductSpy.mockRestore()
+  })
+
+  test('getInitialProps() doesnt retrieve the product clientside', async () => {
+    // Arrange
+    const query = {
+      id: 1
+    }
+
+    // Act
+    const getInitialProps = await ProductPage.getInitialProps({ query })
+
+    // Assert
+    expect(getInitialProps).toEqual({ id: 1 })
   })
 })

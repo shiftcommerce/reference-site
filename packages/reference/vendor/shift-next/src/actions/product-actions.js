@@ -1,6 +1,8 @@
-import * as types from '../actions/action-types'
+// Actions
+import { readEndpoint } from './api-actions'
+import * as types from './action-types'
 
-export const productRequest = (productId) => {
+const productRequest = (productId) => {
   return {
     endpoint: `/getProduct/${productId}`,
     query: {
@@ -10,4 +12,8 @@ export const productRequest = (productId) => {
     requestActionType: types.GET_PRODUCT,
     successActionType: types.SET_PRODUCT
   }
+}
+
+export function readProduct (productId) {
+  return readEndpoint(productRequest(productId))
 }

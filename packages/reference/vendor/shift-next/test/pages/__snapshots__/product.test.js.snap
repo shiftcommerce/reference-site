@@ -14,7 +14,7 @@ exports[`Product page loading and error states displays an error message when th
     }
   }
 >
-  <Product
+  <ProductPage
     dispatch={
       [MockFunction] {
         "calls": Array [
@@ -22,12 +22,7 @@ exports[`Product page loading and error states displays an error message when th
             [Function],
           ],
         ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
+        "results": undefined,
       }
     }
     product={
@@ -41,7 +36,7 @@ exports[`Product page loading and error states displays an error message when th
     <h1>
       Unable to load product.
     </h1>
-  </Product>
+  </ProductPage>
 </Provider>
 `;
 
@@ -98,7 +93,7 @@ exports[`Product page loading and error states displays relevant message, when p
     }
   }
 >
-  <Product
+  <ProductPage
     dispatch={
       [MockFunction] {
         "calls": Array [
@@ -106,12 +101,7 @@ exports[`Product page loading and error states displays relevant message, when p
             [Function],
           ],
         ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
+        "results": undefined,
       }
     }
     product={Object {}}
@@ -119,7 +109,7 @@ exports[`Product page loading and error states displays relevant message, when p
     <h1>
       Unable to load product.
     </h1>
-  </Product>
+  </ProductPage>
 </Provider>
 `;
 
@@ -137,7 +127,7 @@ exports[`Product page renders a product once data is present 1`] = `
     }
   }
 >
-  <Product
+  <ProductPage
     dispatch={
       [MockFunction] {
         "calls": Array [
@@ -145,12 +135,7 @@ exports[`Product page renders a product once data is present 1`] = `
             [Function],
           ],
         ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
+        "results": undefined,
       }
     }
     product={
@@ -1064,6 +1049,6 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
         </div>
       </div>
     </ProductDisplay>
-  </Product>
+  </ProductPage>
 </Provider>
 `;

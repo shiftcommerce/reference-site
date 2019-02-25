@@ -6,6 +6,7 @@ import RegisterPage from './pages/register'
 import OfflinePage from './pages/offline'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
+import ProductPage from './pages/product'
 
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
@@ -51,6 +52,7 @@ module.exports = {
   RegisterPage: RegisterPage,
   OfflinePage: OfflinePage,
   SlugPage: SlugPage,
+  ProductPage: ProductPage,
 
   shiftNextConfig: Config
 }

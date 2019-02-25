@@ -21,6 +21,18 @@ export function readCart (options = {}) {
   }
 }
 
+const addToCartRequest = (variantId, quantity) => {
+  return {
+    endpoint: '/addToCart',
+    body: { variantId, quantity },
+    successActionType: actionTypes.CART_UPDATED
+  }
+}
+
+export function addToCart (variantId, quantity) {
+  return postEndpoint(addToCartRequest(variantId, quantity))
+}
+
 const updateLineItemQuantityRequest = (lineItemId, newQuantity) => {
   return {
     endpoint: '/updateLineItem',
