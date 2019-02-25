@@ -1,7 +1,5 @@
 const SHIFTClient = require('../../src/shift-client')
 const nock = require('nock')
-const axios = require('axios')
-const httpAdapter = require('axios/lib/adapters/http')
 
 // Fixtures
 const menuResponse = require('../fixtures/menu-response-payload')
@@ -14,12 +12,14 @@ const slugResponse = require('../fixtures/slug-response')
 const slugResponseParsed = require('../fixtures/slug-response-parsed')
 const categoryResponse = require('../fixtures/category-response')
 const categoryResponseParsed = require('../fixtures/category-response-parsed')
+const registerResponse = require('../fixtures/register-response')
+const register422response = require('../fixtures/register-422-response')
+const loginResponse = require('../fixtures/login-response')
+const customerOrdersResponse = require('../fixtures/customer-orders-response')
 const addressBookResponse = require('../fixtures/addressbook-response')
 const addressBookResponseParsed = require('../fixtures/addressbook-response-parsed')
 const productResponse = require('../fixtures/product-response-payload')
 const productResponseParsed = require('../fixtures/product-response-parsed')
-
-axios.defaults.adapter = httpAdapter
 
 afterEach(() => { nock.cleanAll() })
 
@@ -605,6 +605,215 @@ describe('SHIFTClient', () => {
         .catch(error => {
           expect(error).toEqual(new Error('Request failed with status code 404'))
           expect(error.response.data.errors[0].title).toEqual('Record not found')
+        })
+    })
+  })
+
+  describe('createCustomerAccountV1', () => {
+    it('allows you to create an account with a correct payload', () => {
+      const body = {
+        'data': {
+          'type': 'customer_accounts',
+          'attributes': {
+            'email': 'testing1234@example.com',
+            'email_confirmation': 'testing1234@example.com',
+            'password': 'Testing1234',
+            'first_name': 'Testing',
+            'last_name': '1234'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_accounts`)
+        .reply(201, registerResponse)
+
+      return SHIFTClient.createCustomerAccountV1(body)
+        .then(response => {
+          expect(response.status).toEqual(201)
+          expect(response.data).toEqual(registerResponse)
+        })
+    })
+
+    it('errors if account already exists', () => {
+      const body = {
+        data: {
+          type: 'customer_accounts',
+          attributes: {
+            email: 'testing1234@example.com',
+            email_confirmation: 'testing1234@example.com',
+            password: 'Testing1234',
+            first_name: 'Testing',
+            last_name: '1234'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_accounts`)
+        .reply(422, register422response)
+
+      expect.assertions(3)
+
+      return SHIFTClient.createCustomerAccountV1(body)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 422'))
+          expect(error.response.data.errors[0].title).toEqual('has already been taken')
+          expect(error.response.data.errors[0].detail).toEqual('email - has already been taken')
+        })
+    })
+  })
+
+  describe('loginCustomerAccountV1', () => {
+    it('allows you to login to an account with a correct payload', () => {
+      const body = {
+        data: {
+          type: 'customer_account_authentications',
+          attributes: {
+            email: 'testing1234@example.com',
+            password: 'qwertyuiop'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_account_authentications`)
+        .reply(201, loginResponse)
+
+      return SHIFTClient.loginCustomerAccountV1(body)
+        .then(response => {
+          expect(response.status).toEqual(201)
+          expect(response.data).toEqual(loginResponse)
+        })
+    })
+
+    it('errors if account doesnt exist', () => {
+      const body = {
+        data: {
+          type: 'customer_account_authentications',
+          attributes: {
+            email: 'iamwrong@example.com',
+            password: 'qwertyuiop'
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_account_authentications`)
+        .reply(404, {
+          errors: [
+            {
+              title: 'Record not found',
+              detail: 'Wrong email/reference/token or password',
+              code: '404',
+              status: '404'
+            }
+          ],
+          links: {
+            self: '/reference/v1/customer_account_authentications'
+          }
+        })
+
+      expect.assertions(3)
+
+      return SHIFTClient.loginCustomerAccountV1(body)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 404'))
+          expect(error.response.data.errors[0].title).toEqual('Record not found')
+          expect(error.response.data.errors[0].detail).toEqual('Wrong email/reference/token or password')
+        })
+    })
+  })
+
+  describe('getAccountV1', () => {
+    it('gets an account if there is a customer id', () => {
+      const customerId = 10
+      const queryObject = {
+        fields: {
+          customer_accounts: 'email,meta_attributes'
+        },
+        include: ''
+      }
+
+      const accountData = {
+        id: '10',
+        attributes: {
+          key: 'value'
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/customer_accounts/${customerId}`)
+        .query(true)
+        .reply(200, accountData)
+
+      return SHIFTClient.getAccountV1(queryObject, customerId)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(accountData)
+        })
+    })
+  })
+
+  describe('getCustomerOrdersV1', () => {
+    it('gets customer orders from oms', () => {
+      const query = {
+        filter: {
+          account_reference: process.env.API_TENANT,
+          customer_reference: '123456'
+        },
+        fields: {
+          customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+          line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+          shipping_methods: 'label,price',
+          shipping_addresses: 'name,company,lines,city,state,postcode,country',
+          discounts: 'label,amount_inc_tax,coupon_code'
+        },
+        include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
+      }
+
+      nock('https://shift-oms-dev.herokuapp.com')
+        .get('/oms/v1/customer_orders/')
+        .query(true)
+        .reply(200, customerOrdersResponse)
+
+      return SHIFTClient.getCustomerOrdersV1(query)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(customerOrdersResponse)
+        })
+    })
+
+    it('should return errors if no customer_reference is present', () => {
+      const query = {
+        fields: {
+          customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+          line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+          shipping_methods: 'label,price',
+          shipping_addresses: 'name,company,lines,city,state,postcode,country',
+          discounts: 'label,amount_inc_tax,coupon_code'
+        },
+        include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
+      }
+
+      nock('https://shift-oms-dev.herokuapp.com')
+        .get('/oms/v1/customer_orders/')
+        .query(true)
+        .reply(422, {
+          errors: [
+            {
+              status: '422',
+              detail: 'No filter[customer_reference] specified'
+            }
+          ]
+        })
+
+      expect.assertions(2)
+
+      return SHIFTClient.getCustomerOrdersV1(query)
+        .catch(error => {
+          expect(error.response.status).toEqual(422)
+          expect(error.response.data.errors[0].detail).toEqual('No filter[customer_reference] specified')
         })
     })
   })

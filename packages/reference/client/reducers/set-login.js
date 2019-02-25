@@ -2,17 +2,11 @@
 import * as types from '../actions/action-types'
 
 export const initialState = {
-  errors: [],
-  loggedIn: false
+  errors: []
 }
 
 export default function setLogin (state = initialState, action) {
   switch (action.type) {
-    case types.SET_LOGIN:
-      return Object.assign({}, state, action.payload, {
-        loggedIn: true
-      })
-
     case types.ERROR_LOGIN:
       return Object.assign({}, state, { errors: action.payload.error.data })
 

@@ -7,7 +7,7 @@ import * as actionTypes from '../../src/actions/action-types'
 
 afterEach(() => { nock.cleanAll() })
 
-test.skip('return ERROR_REGISTRATION action type if errors are returned from API', () => {
+test('return ERROR_REGISTRATION action type if errors are returned from API', () => {
   // Arrange
   const middlewares = [thunk]
   const mockStore = configureMockStore(middlewares)
@@ -22,10 +22,9 @@ test.skip('return ERROR_REGISTRATION action type if errors are returned from API
     status: '422'
   }
 
-  nock('http://localhost:3000')
+  nock('http://localhost')
     .post('/register')
     .reply(404, errorData)
-    .log(console.log)
 
   const account = {
     email: 'homersimpson@test.com',

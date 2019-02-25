@@ -40,8 +40,7 @@ test('clears errors in state when CLEAR_ACCOUNT_ERRORS is called', () => {
         code: '404',
         status: '404'
       }
-    ],
-    loggedIn: false
+    ]
   }
 
   const payload = {

@@ -21,13 +21,13 @@ test('redirects to myaccount page when account is created', () => {
 
   const wrapper = mount(
     <RegisterPage
-      account={{ loggedIn: false }}
+      loggedIn={ false }
       registration={{ errors: [] }}
     />
   )
 
   // Act - pretend a user has just logged in
-  wrapper.setProps({ account: { loggedIn: true, errors: {}, validationErrors: [] } })
+  wrapper.setProps({ loggedIn: true, errors: {}, validationErrors: [] })
 
   // Assert - verify that only one redirect happens
   expect(Router.router.push.mock.calls.length).toBe(1)
@@ -42,9 +42,6 @@ test('redirects to myaccount page when account already exists', async () => {
     getState: function () {
       return {
         account: {
-          loggedIn: false
-        },
-        login: {
           loggedIn: true
         }
       }

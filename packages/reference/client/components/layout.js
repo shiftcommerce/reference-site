@@ -198,10 +198,8 @@ export class Layout extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  const { cart, login, menu } = state
-
-  return { cart, login, menu }
+function mapStateToProps ({ cart, account: { loggedIn }, menu }) {
+  return { cart, loggedIn, menu }
 }
 
 export default connect(mapStateToProps)(Layout)

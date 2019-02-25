@@ -7,14 +7,6 @@ import * as actionTypes from '../../../client/actions/action-types'
 
 afterEach(() => { nock.cleanAll() })
 
-test('return SET_LOGIN action type on calling setLoggedInFromCookies()', () => {
-  // Act
-  const action = loginActions.setLoggedInFromCookies()
-
-  // Assert
-  expect(action.type).toEqual(actionTypes.SET_LOGIN)
-})
-
 test('return ERROR_LOGIN action type if errors are returned from API', () => {
   // Arrange
   const middlewares = [thunk]

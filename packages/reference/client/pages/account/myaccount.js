@@ -93,10 +93,8 @@ export class MyAccount extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  const { login, orders } = state
-
-  return { login, orders }
+function mapStateToProps ({ orders }) {
+  return { orders }
 }
 
 export default algoliaReduxWrapper(connect(mapStateToProps)(MyAccount), MyAccount)

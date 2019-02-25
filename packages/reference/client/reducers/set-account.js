@@ -13,9 +13,9 @@ export default function setAccount (state = initialState, action) {
 
       if (action.payload) {
         accountObject = Object.assign(initialState, {
-          first_name: action.payload.meta_attributes.first_name.value,
-          last_name: action.payload.meta_attributes.last_name.value,
           email: action.payload.email,
+          firstName: action.payload.meta_attributes.first_name.value,
+          lastName: action.payload.meta_attributes.last_name.value,
           loggedIn: true
         })
       }
@@ -24,6 +24,9 @@ export default function setAccount (state = initialState, action) {
 
     case types.ERROR_ACCOUNT:
       return Object.assign({}, state, { errors: action.payload.error.data })
+
+    case types.SET_LOGGED_IN:
+      return Object.assign({}, state, { loggedIn: true, errors: {} })
 
     default:
       return state

@@ -8,8 +8,8 @@ export function registerPayload (account) {
         password: account.password,
         password_confirmation: account.confirmPassword,
         meta_attributes: {
-          first_name: { value: account.first_name },
-          last_name: { value: account.last_name }
+          first_name: { value: account.firstName },
+          last_name: { value: account.lastName }
         }
       }
     }

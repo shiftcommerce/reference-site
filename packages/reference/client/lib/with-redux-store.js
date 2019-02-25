@@ -2,8 +2,7 @@ import React from 'react'
 import Cookies from 'js-cookie'
 import { initializeStore } from '../utils/configure-store'
 import { readMenu } from '../actions/menu-actions'
-import { fetchAccountDetails } from '../actions/account-actions'
-import { setLoggedInFromCookies } from '../actions/login-actions'
+import { fetchAccountDetails, setLoggedInFromCookies } from '../actions/account-actions'
 
 // Lib
 import InitialPropsDelegator from './initial-props-delegator'

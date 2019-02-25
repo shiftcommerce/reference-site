@@ -18,7 +18,6 @@ class HTTPClient {
   }
 
   config (config) {
-
   }
 
   get (url, queryObject) {
@@ -79,8 +78,14 @@ class HTTPClient {
   createRequestUrl (url, query) {
     let requestUrl
 
+    // TODO: remove this when oms platform proxy is live
+    const regex = /shift-oms-dev/i
+
     if (!query) {
       requestUrl = `${this.apiHost}/${this.tenant}/${url}`
+    } else if (regex.test(url)) {
+      // TODO: remove this statement when platform proxy is live
+      requestUrl = `${url}/?${query}`
     } else {
       requestUrl = `${this.apiHost}/${this.tenant}/${url}?${query}`
     }

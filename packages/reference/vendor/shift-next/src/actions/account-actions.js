@@ -14,6 +14,13 @@ export function clearErrors () {
   }
 }
 
+export function setLoggedInFromCookies () {
+  return {
+    type: types.SET_ACCOUNT,
+    payload: {}
+  }
+}
+
 const accountRequest = {
   endpoint: '/getAccount',
   query: {},

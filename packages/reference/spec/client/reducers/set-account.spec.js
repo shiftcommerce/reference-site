@@ -22,9 +22,22 @@ test('sets loggedIn to true and adds account details to state on SET_ACCOUNT', (
   expect(result).toEqual({
     loggedIn: true,
     errors: {},
-    first_name: 'John',
-    last_name: 'Smith',
+    firstName: 'John',
+    lastName: 'Smith',
     email: 'email@example.com'
+  })
+})
+
+test('sets loggedIn to true on SET_LOGGED_IN', () => {
+  const action = {
+    type: actionTypes.SET_LOGGED_IN
+  }
+
+  const result = setAccount({ loggedIn: false }, action)
+
+  expect(result).toEqual({
+    loggedIn: true,
+    errors: {}
   })
 })
 

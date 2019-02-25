@@ -13,9 +13,6 @@ test('redirects to myaccount page when account already exists', async () => {
     getState: function () {
       return {
         account: {
-          loggedIn: false
-        },
-        login: {
           loggedIn: true
         }
       }

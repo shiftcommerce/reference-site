@@ -401,7 +401,6 @@ exports[`Does not render address summary when shippingAsBilling is false 1`] = `
                 className="o-form__billing"
                 dispatch={[Function]}
                 formName="billingAddress"
-                loggedIn={false}
                 title="Billing Address"
               >
                 <div
@@ -2083,7 +2082,6 @@ exports[`renders payment summary on collapsing 1`] = `
                 className="o-form__billing"
                 dispatch={[Function]}
                 formName="billingAddress"
-                loggedIn={false}
                 title="Billing Address"
               >
                 <div

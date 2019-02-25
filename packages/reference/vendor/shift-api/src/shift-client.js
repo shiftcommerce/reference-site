@@ -200,6 +200,42 @@ class SHIFTClient {
     return HTTPClient.get(`v1/category_trees/reference:web/categories/${id}`).then(this.determineResponse)
   }
 
+  getAccountV1 (queryObject, customerId) {
+    return HTTPClient.get(`v1/customer_accounts/${customerId}`, queryObject).then(response => {
+      return {
+        status: response.status,
+        data: response.data
+      }
+    })
+  }
+
+  createCustomerAccountV1 (account) {
+    return HTTPClient.post('v1/customer_accounts', account).then(response => {
+      return {
+        status: response.status,
+        data: response.data
+      }
+    })
+  }
+
+  loginCustomerAccountV1 (account) {
+    return HTTPClient.post('v1/customer_account_authentications', account).then(response => {
+      return {
+        status: response.status,
+        data: response.data
+      }
+    })
+  }
+
+  getCustomerOrdersV1 (query) {
+    return HTTPClient.get('https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders', query).then(response => {
+      return {
+        status: response.status,
+        data: response.data
+      }
+    })
+  }
+
   getAddressBookV1 (customerAccountId) {
     return HTTPClient.get(`v1/customer_accounts/${customerAccountId}/addresses`)
       .then(this.determineResponse)

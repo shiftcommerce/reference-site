@@ -9,7 +9,6 @@ export function createLogin (account) {
     endpoint: '/login',
     body: createLoginPayload(account),
     requestActionType: actionTypes.GET_LOGIN,
-    successActionType: actionTypes.SET_LOGIN,
     errorActionType: actionTypes.ERROR_LOGIN
   }
   return postEndpoint(request)

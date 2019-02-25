@@ -16,3 +16,10 @@ export function clearErrors () {
     type: actionTypes.CLEAR_ACCOUNT_ERRORS
   }
 }
+
+export function setLoggedInFromCookies () {
+  return {
+    type: actionTypes.SET_LOGGED_IN,
+    payload: {}
+  }
+}

@@ -29,16 +29,16 @@ class RegisterPage extends Component {
 
   static async getInitialProps ({ reduxStore }) {
     // Redirect to myaccount if already logged in
-    const { account, login } = reduxStore.getState()
-    if (account.loggedIn || login.loggedIn) Router.push('/account/myaccount')
+    const { account: { loggedIn } } = reduxStore.getState()
+    if (loggedIn) Router.push('/account/myaccount')
     return {}
   }
 
   componentDidUpdate () {
-    const { account } = this.props
+    const { loggedIn } = this.props
 
     // Redirect if account created
-    if (account.loggedIn) {
+    if (loggedIn) {
       setCookie()
       Router.push('/account/myaccount')
     }
