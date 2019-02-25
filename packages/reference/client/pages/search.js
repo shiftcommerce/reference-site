@@ -4,14 +4,21 @@ import { connect } from 'react-redux'
 import Head from 'next/head'
 import qs from 'qs'
 import equal from 'deep-equal'
+import getConfig from 'next/config'
 
 // Components
-import ProductListing from '../components/products/listing/product-listing'
+import { ProductListing } from 'shift-react-components'
 
 // Lib
 import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
+
+const {
+  publicRuntimeConfig: {
+    ALGOLIA_INDEX_NAME
+  }
+} = getConfig()
 
 export class Search extends Component {
   static algoliaEnabled = () => true
@@ -31,7 +38,7 @@ export class Search extends Component {
         <Head>
           <title>{ suffixWithStoreName('Search') }</title>
         </Head>
-        <ProductListing />
+        <ProductListing indexName={ALGOLIA_INDEX_NAME} />
       </>
     )
   }

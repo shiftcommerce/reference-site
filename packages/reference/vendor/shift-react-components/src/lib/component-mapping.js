@@ -30,6 +30,12 @@ import ProductEwisForm from '../components/products/display/product-ewis-form'
 import ProductPrice from '../components/products/display/product-price'
 
 /**
+ * PLP Components
+ */
+import ProductMenu from '../components/products/listing/product-menu'
+import ProductMenuOptions from '../components/products/listing/product-menu-options'
+
+/**
  * Order Components
  */
 import OrderLineItems from '../components/orders/order-line-items'
@@ -39,7 +45,10 @@ import ShippingAddresses from '../components/orders/shipping-addresses'
 /**
  * Search Components
  */
+import SearchFilters from '../components/search/search-filters'
+import SearchHits from '../components/search/search-hits'
 import SearchRatingFilter from '../components/search/search-rating-filter'
+import SearchRefinements from '../components/search/search-refinements'
 import SearchSlider from '../components/search/search-slider'
 
 /**
@@ -66,9 +75,14 @@ const mapping = {
   OrderList,
   ProductCarousel,
   ProductEwisForm,
+  ProductMenu,
+  ProductMenuOptions,
   ProductPrice,
   Rating,
+  SearchFilters,
+  SearchHits,
   SearchRatingFilter,
+  SearchRefinements,
   SearchSlider,
   ShippingAddresses,
   StaticPageError,

@@ -5,10 +5,10 @@ import Router from 'next/router'
 import qs from 'qs'
 import Head from 'next/head'
 import equal from 'deep-equal'
+import getConfig from 'next/config'
 
 // Components
-import { Loading, SearchFilters } from 'shift-react-components'
-import ProductListing from '../components/products/listing/product-listing'
+import { Loading, ProductListing, SearchFilters } from 'shift-react-components'
 
 // Requests
 import { categoryRequest } from '../requests/category-request'
@@ -24,6 +24,12 @@ const fetchCategory = async (id) => {
   const response = await new ApiClient().read(request.endpoint, request.query)
   return response.data
 }
+
+const {
+  publicRuntimeConfig: {
+    ALGOLIA_INDEX_NAME
+  }
+} = getConfig()
 
 export class Category extends Component {
   static algoliaEnabled = () => true
@@ -159,7 +165,7 @@ export class Category extends Component {
           <Head>
             <title>{ suffixWithStoreName(title) }</title>
           </Head>
-          <ProductListing title={title} facets={facets} />
+          <ProductListing title={title} indexName={ALGOLIA_INDEX_NAME} facets={facets} />
         </>
       )
     }

@@ -54,7 +54,10 @@ export { default as ProductPrice } from './components/products/display/product-p
 /**
  * PLP Components
  */
+export { default as ProductListing } from './components/products/listing/product-listing'
 export { default as ProductListingCard } from './components/products/listing/product-listing-card'
+export { default as ProductMenu } from './components/products/listing/product-menu'
+export { default as ProductMenuOptions } from './components/products/listing/product-menu-options'
 
 /**
  * Static Page

@@ -1,20 +1,18 @@
+// Libraries
+import React from 'react'
+
 // Component
-import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
+import ProductMenuOptions from '../../../../src/components/products/listing/product-menu-options'
 
 // Objects
-import { Breadcrumb } from 'shift-react-components'
-
-jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: {
-    ALGOLIA_INDEX_NAME: 'instant_search'
-  }
-}))
+import Breadcrumb from '../../../../src/objects/breadcrumb'
 
 test('renders correctly', () => {
   // Arrange
   const initialProps = {
     toggleFiltering: () => (null),
-    filterCount: 3
+    filterCount: 3,
+    indexName: 'test_index'
   }
 
   // Act

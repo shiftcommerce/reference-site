@@ -31,20 +31,20 @@ exports[`renders correctly 1`] = `
       Sort by:
     </h2>
     <AlgoliaSortBy(SortBy)
-      defaultRefinement="instant_search"
+      defaultRefinement="test_index"
       items={
         Array [
           Object {
             "label": "Featured",
-            "value": "instant_search",
+            "value": "test_index",
           },
           Object {
             "label": "Rating asc.",
-            "value": "instant_search_product_rating_asc",
+            "value": "test_index_product_rating_asc",
           },
           Object {
             "label": "Rating desc.",
-            "value": "instant_search_product_rating_desc",
+            "value": "test_index_product_rating_desc",
           },
         ]
       }

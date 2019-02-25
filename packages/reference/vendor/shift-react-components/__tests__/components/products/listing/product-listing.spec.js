@@ -1,12 +1,14 @@
-// Component
-import { ProductListing } from '../../../../../client/components/products/listing/product-listing'
-import SearchFilters from 'shift-react-components'
+// Libraries
+import React from 'react'
 
-import ProductMenu from '../../../../../client/components/products/listing/product-menu'
-import ProductMenuOptions from '../../../../../client/components/products/listing/product-menu-options'
+// Component
+import ProductListing from '../../../../src/components/products/listing/product-listing'
+import ProductMenu from '../../../../src/components/products/listing/product-menu'
+import ProductMenuOptions from '../../../../src/components/products/listing/product-menu-options'
+import SearchFilters from '../../../../src/components/search/search-filters'
 
 // Fixtures
-import searchResultState from '../../../../fixtures/search-result-state'
+import searchResultState from '../../../fixtures/search-results-state'
 
 // Mock out the next/config
 jest.mock('next/config', () => () => ({
