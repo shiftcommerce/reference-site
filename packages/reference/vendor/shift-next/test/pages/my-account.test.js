@@ -3,13 +3,16 @@ import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Pages
-import { MyAccount } from '../../../../client/pages/account/myaccount'
+import MyAccountPage from '../../src/pages/my-account'
+
+// Actions
+import { getCustomerOrders } from '../../src/actions/account-actions'
 
 // Components
 import { OrderLineItems, ShippingAddresses } from 'shift-react-components'
 
 // Fixtures
-import orders from '../../../fixtures/orders'
+import orders from '../fixtures/orders'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
@@ -20,7 +23,7 @@ describe('My Account page', () => {
     // Act
     const wrapper = mount(
       <Provider store={createMockStore()}>
-        <MyAccount orders={{ data: [], loading: false }} dispatch={jest.fn()} />
+        <MyAccountPage orders={{ data: [], loading: false }} dispatch={jest.fn()} />
       </Provider>
     )
 
@@ -32,7 +35,7 @@ describe('My Account page', () => {
     // Act
     const wrapper = mount(
       <Provider store={createMockStore()}>
-        <MyAccount orders={orders} dispatch={jest.fn()} />
+        <MyAccountPage orders={orders} dispatch={jest.fn()} />
       </Provider>
     )
 
@@ -45,5 +48,22 @@ describe('My Account page', () => {
 
     expect(wrapper).toContainReact(<ShippingAddresses addresses={orders.data[0].shipping_addresses} />)
     expect(wrapper).toContainReact(<ShippingAddresses addresses={orders.data[1].shipping_addresses} />)
+  })
+
+  test('calls getCustomerOrders on componentDidMount', () => {
+    const dispatch = jest.fn()
+    const expectedFunction = getCustomerOrders().toString()
+
+    const wrapper = shallow(<MyAccountPage dispatch={dispatch} orders={{ loading: true }} />, { disableLifecycleMethods: true })
+
+    wrapper.instance().componentDidMount()
+
+    expect(dispatch).toHaveBeenCalled()
+
+    // Verify it dispatch method called a function
+    expect(dispatch.mock.calls[0][0]).toEqual(expect.any(Function))
+
+    // Verify if the dispatch function has dispatched getCustomerOrders action.
+    expect(dispatch.mock.calls[0][0].toString()).toMatch(expectedFunction)
   })
 })
