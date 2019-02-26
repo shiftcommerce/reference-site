@@ -86,17 +86,21 @@ export class CheckoutShippingAddressPage extends Component {
 
     if (this.state.addingNewAddress || !this.cartAddressFromBook()) {
       if (checkout.shippingAddress.saveToAddressBook) {
-        dispatch(saveToAddressBook(checkout.shippingAddress)).then(() => {
-          dispatch(setCartShippingAddress(checkout.shippingAddress.id))
+        return dispatch(saveToAddressBook(checkout.shippingAddress)).then(() => {
+          return dispatch(setCartShippingAddress(checkout.shippingAddress.id)).then(() => {
+            Router.push('/checkout/shipping-method')
+          })
         })
       } else {
-        dispatch(createShippingAddress(checkout.shippingAddress)).then(() => {
-          dispatch(setCartShippingAddress(checkout.shippingAddress.id))
+        return dispatch(createShippingAddress(checkout.shippingAddress)).then(() => {
+          return dispatch(setCartShippingAddress(checkout.shippingAddress.id)).then(() => {
+            Router.push('/checkout/shipping-method')
+          })
         })
       }
+    } else {
+      Router.push('/checkout/shipping-method')
     }
-
-    Router.push('/checkout/shipping-method')
   }
 
   addressFormDisplayed () {

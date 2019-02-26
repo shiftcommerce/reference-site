@@ -291,7 +291,7 @@ describe('cartAddressFromBook()', () => {
   })
 })
 
-test.only('renders address form components', () => {
+test('renders address form components', () => {
   const checkout = {
     addressBook: [],
     shippingAddress: {
