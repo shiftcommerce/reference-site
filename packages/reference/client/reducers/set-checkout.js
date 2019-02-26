@@ -1,9 +1,6 @@
 // actionTypes
 import * as types from '../actions/action-types'
 
-// libs
-import CheckoutStepTransitionManager from '../lib/checkout-step-transition-manager'
-
 const addressFormFields = {
   country_code: '',
   line_1: '',
@@ -39,20 +36,13 @@ export const checkoutInitialState = {
     ...formFields
   },
   shippingMethod: {
-    collapsed: true,
     completed: false
   },
   billingAddress: {
     ...formFields
   },
   shippingAddressAsBillingAddress: true,
-  paymentMethod: {
-    collapsed: true,
-    completed: false,
-    selectedMethod: ''
-  },
   reviewOrder: {
-    collapsed: true,
     completed: false
   },
   currentStep: 1,
@@ -61,7 +51,6 @@ export const checkoutInitialState = {
 
 export default function setCheckout (state = checkoutInitialState, action) {
   let newState = Object.assign({}, state)
-  const { formName } = action
 
   switch (action.type) {
     case types.SET_CHECKOUT_INPUT_VALUE:
@@ -81,21 +70,8 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.updatedAt = new Date()
       return newState
 
-    case types.TOGGLE_CHECKOUT_COMPONENT_COLLAPSED:
-      return new CheckoutStepTransitionManager(action.payload.eventType, action.payload.componentName, newState).call()
-
     case types.SET_SHIPPING_METHOD:
       Object.assign(newState.shippingMethod, action.payload.shippingMethod)
-      newState.updatedAt = new Date()
-      return newState
-
-    case types.CHANGE_BILLING_ADDRESS:
-      newState[action.payload.fieldName] = action.payload.fieldValue
-      if (action.payload.fieldValue) {
-        Object.assign(newState.billingAddress, newState.shippingAddress, { collapsed: false })
-      } else {
-        Object.assign(newState.billingAddress, addressFormFields)
-      }
       newState.updatedAt = new Date()
       return newState
 
@@ -112,10 +88,6 @@ export default function setCheckout (state = checkoutInitialState, action) {
       }
 
       return Object.assign(checkoutInitialState, additionalInfo)
-
-    case types.CHANGE_PAYMENT_METHOD:
-      newState.paymentMethod.selectedMethod = action.paymentMethod
-      return newState
 
     case types.SET_ADDRESS:
       const chosenAddress = action.address
@@ -184,20 +156,6 @@ export default function setCheckout (state = checkoutInitialState, action) {
         collapsed: true,
         errors: {}
       }
-      return newState
-
-    case types.EDIT_FORM:
-      newState[formName].id = ''
-      newState[formName].collapsed = false
-      newState[formName].selected = false
-      newState[formName].preferred_shipping = false
-      newState[formName].preferred_ = false
-      return newState
-
-    case types.EDIT_ADDRESS:
-      newState[formName].collapsed = true
-      newState[formName].completed = false
-      newState.checkoutStep = 1
       return newState
 
     case types.SHIPPING_ADDRESS_CREATED:

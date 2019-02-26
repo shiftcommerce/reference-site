@@ -1,52 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render collapsed view as expected 1`] = `
-<ShippingMethods
-  cart={
-    Object {
-      "line_items": Array [
-        Object {
-          "id": "1",
-        },
-      ],
-      "line_items_count": 1,
-      "shipping_method": Object {
-        "id": 1,
-        "label": "Standard shipping",
-        "meta_attributes": Object {
-          "working_days": Object {
-            "value": 2,
-          },
-        },
-        "sku": "STA_SHIP",
-        "total": 3.75,
-      },
-    }
-  }
-  checkout={
-    Object {
-      "shippingAddress": Object {
-        "collapsed": true,
-        "completed": true,
-      },
-      "shippingMethod": Object {
-        "collapsed": true,
-      },
-    }
-  }
-  dispatch={[MockFunction]}
->
-  <div
-    aria-label="Shipping Methods"
-    className="o-form c-shipping-method"
-  >
-    <p>
-      Loading...
-    </p>
-  </div>
-</ShippingMethods>
-`;
-
 exports[`render shipping methods as expected 1`] = `
 <ShippingMethods
   cart={
@@ -58,41 +11,6 @@ exports[`render shipping methods as expected 1`] = `
       ],
       "line_items_count": 1,
       "shipping_method": Object {},
-    }
-  }
-  checkout={
-    Object {
-      "shippingAddress": Object {
-        "collapsed": true,
-        "completed": true,
-      },
-      "shippingMethod": Object {},
-    }
-  }
-  dispatch={[MockFunction]}
->
-  <div
-    aria-label="Shipping Methods"
-    className="o-form c-shipping-method"
-  >
-    <p>
-      Loading...
-    </p>
-  </div>
-</ShippingMethods>
-`;
-
-exports[`render shipping methods before data has returned, should not error 1`] = `
-<ShippingMethods
-  cart={
-    Object {
-      "line_items": Array [
-        Object {
-          "id": "1",
-        },
-      ],
-      "line_items_count": 1,
-      "shipping_method": null,
     }
   }
   checkout={

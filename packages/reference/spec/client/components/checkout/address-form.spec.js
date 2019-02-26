@@ -1,16 +1,8 @@
-// Libraries
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-
 // Components
 import { AddressForm } from '../../../../client/components/checkout/address-form'
 
-// Reducers
-import rootReducer from '../../../../client/reducers/root-reducer'
-import { checkoutInitialState } from '../../../../client/reducers/set-checkout'
-
-// Fixtures
-import addressBookData from '../../../fixtures/address-book'
+// Actions
+import * as CheckoutActions from '../../../../client/actions/checkout-actions'
 
 test('renders the correct base form elements', () => {
   // Arrange
@@ -99,7 +91,6 @@ test('renders additional elements for shipping form', () => {
 
   // Assert - Additional fields for shipping form:
   expect(wrapper).toIncludeText('Sign up for Weekly Newsletters')
-  expect(wrapper).toIncludeText('View Shipping Options')
 })
 
 test('renders the additional company / address2 fields when enabled', () => {
@@ -152,70 +143,72 @@ test('does not render the additional company / address2 fields when not enabled'
   expect(wrapper.find('#line_2').length).toEqual(0)
 })
 
-test('renders the collapsed version of the form when collapsed = true', () => {
-  // Arrange
-  const address = {
-    collapsed: true,
-    completed: false,
-    errors: {}
-  }
-  const checkout = {
-    testAddress: address
-  }
+describe('componentDidMount()', () => {
+  test('autofills the form when passed a currentAddress', () => {
+    // Arrange
+    const autoFillAddressSpy = jest.spyOn(CheckoutActions, 'autoFillAddress').mockImplementation(() => true)
 
-  // act
-  const wrapper = mount(
-    <AddressForm formName='testAddress' checkout={checkout} />
-  )
-
-  // Assert - Edit button present:
-  expect(wrapper).toHaveText('Edit')
-  // An input field is not rendered:
-  expect(wrapper.find('#full_name').length).toEqual(0)
-})
-
-test('renders the address book when user is logged in and has addresses', () => {
-  // Initialize Redux store with address book data
-  const store = createStore(rootReducer, {
-    checkout: Object.assign(checkoutInitialState, {
-      addressBook: addressBookData
-    })
-  })
-
-  const addressBook = addressBookData
-
-  const checkout = {
-    shippingAddress: {
-      collapsed: true,
+    const address = {
+      companyNameShown: false,
+      address2Shown: false,
+      collapsed: false,
       completed: false,
       errors: {}
-    },
-    addressBook: addressBook
-  }
+    }
+    const checkout = {
+      testAddress: address
+    }
+    const addressBook = []
+    const dispatch = jest.fn()
 
-  const dispatch = jest.fn()
+    // Act
+    const wrapper = shallow(
+      <AddressForm
+        formName='testAddress'
+        checkout={checkout}
+        addressBook={addressBook}
+        currentAddress={'currentAddress'}
+        dispatch={dispatch}
+      />
+    )
 
-  // Render the component
-  const wrapper = mount(
-    <Provider store={store}>
-      <AddressForm formName='shippingAddress' addressType='shipping' checkout={checkout} addressBook={addressBook} dispatch={dispatch} loggedIn />
-    </Provider>
-  )
+    wrapper.instance().componentDidMount()
 
-  // Ensure the Address-book is displayed
-  expect(wrapper).toIncludeText('Your addresses')
+    // Assert
+    expect(autoFillAddressSpy).toHaveBeenCalledWith('currentAddress')
+    expect(dispatch).toHaveBeenCalledWith(true)
 
-  // Check address 1 is correctly rendered
-  expect(wrapper).toIncludeText('Bernard Houseman')
-  expect(wrapper).toIncludeText('84 West Quay Street')
-  expect(wrapper).toIncludeText('Blackpool')
-  expect(wrapper).toIncludeText('LS27EY')
-  expect(wrapper).toIncludeText('GB')
+    autoFillAddressSpy.mockRestore()
+  })
 
-  // Check address 2 is correctly rendered
-  expect(wrapper).toIncludeText('Bob Doe')
-  expect(wrapper).toIncludeText('20 Cardigan Lane')
-  expect(wrapper).toIncludeText('Leeds')
-  expect(wrapper).toIncludeText('LS27EY')
-  expect(wrapper).toIncludeText('GB')
+  test("doesn't autofill when not passed currentAddress", () => {
+    // Arrange
+    const address = {
+      companyNameShown: false,
+      address2Shown: false,
+      collapsed: false,
+      completed: false,
+      errors: {}
+    }
+    const checkout = {
+      testAddress: address
+    }
+    const addressBook = []
+    const dispatch = jest.fn()
+
+    // Act
+    const wrapper = shallow(
+      <AddressForm
+        formName='testAddress'
+        checkout={checkout}
+        addressBook={addressBook}
+        dispatch={dispatch}
+      />
+    )
+
+    wrapper.instance().componentDidMount()
+
+    // Assert
+    expect(dispatch).not.toHaveBeenCalled()
+  })
 })

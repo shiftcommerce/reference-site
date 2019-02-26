@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import { withRouter } from 'next/router'
 import classNames from 'classnames'
 
 // Objects
@@ -143,29 +144,33 @@ export class Layout extends Component {
     const { cart, loggedIn } = this.props
     const logoSrc = '../static/shopgo-logo.svg'
 
-    if (typeof window === 'undefined' || window.location.pathname !== '/checkout') {
-      const headerClasses = classNames('o-header', {
-        'o-header--shrunk': this.state.shrunk
-      })
+    const headerClasses = classNames('o-header', {
+      'o-header--shrunk': this.state.shrunk
+    })
 
-      return (
-        <>
-          <CustomHead />
-          <div className={headerClasses}>
-            <div className='o-header__top'>
-              <div className='o-header__top-wrapper'>
-                <Logo className='o-header__logo' logoSrc={logoSrc} />
-                { this.renderMobileNav() }
-                { this.renderHeaderAccount(loggedIn) }
-                <Minibag cart={cart} />
-                { this.renderSearch() }
-              </div>
+    return (
+      <>
+        <CustomHead />
+        <div className={ headerClasses }>
+          <div className='o-header__top'>
+            <div className='o-header__top-wrapper'>
+              <Logo className='o-header__logo' logoSrc={logoSrc} />
+              { this.renderMobileNav() }
+              { this.renderHeaderAccount(loggedIn) }
+              <Minibag cart={cart} />
+              { this.renderSearch() }
             </div>
-            { this.renderNav() }
           </div>
-        </>
-      )
-    }
+          { this.renderNav() }
+        </div>
+      </>
+    )
+  }
+
+  renderCheckoutHeader () {
+    return (
+      <CustomHead />
+    )
   }
 
   renderSearch () {
@@ -177,16 +182,15 @@ export class Layout extends Component {
   }
 
   render () {
-    const notCheckout = /^(?!\/checkout).*$/
-    const bodyClassApplied = (typeof window === 'undefined' || notCheckout.test(window.location.pathname))
+    const notCheckout = !this.props.router.pathname.includes('/checkout')
 
     const bodyClasses = classNames({
-      'o-body': bodyClassApplied
+      'o-body': notCheckout
     })
 
     return (
       <>
-        { this.renderHeader() }
+        { notCheckout ? this.renderHeader() : this.renderCheckoutHeader() }
         <div className={bodyClasses}>
           { this.props.children }
         </div>
@@ -202,4 +206,4 @@ function mapStateToProps ({ cart, account: { loggedIn }, menu }) {
   return { cart, loggedIn, menu }
 }
 
-export default connect(mapStateToProps)(Layout)
+export default connect(mapStateToProps)(withRouter(Layout))

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct checkout components 1`] = `
+<Fragment>
+  <div
+    className="c-checkout__addressform"
+  >
+    <div
+      className="o-form__address"
+    >
+      <AddressFormSummary />
+    </div>
+  </div>
+  <ShippingMethods
+    cart={
+      Object {
+        "shipping_address": Object {},
+      }
+    }
+    nextSection={[Function]}
+  />
+</Fragment>
+`;

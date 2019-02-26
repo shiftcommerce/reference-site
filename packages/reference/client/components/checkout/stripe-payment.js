@@ -2,32 +2,51 @@
 import { Component } from 'react'
 
 // Components
-import StripeWrapper from './stripe-wrapper'
+import AddressBook from '../address-book'
 import AddressForm from './address-form'
+import StripeWrapper from './stripe-wrapper'
 
 // Objects
-import { Checkbox } from 'shift-react-components'
+import { Button, Checkbox } from 'shift-react-components'
 
 class StripePayment extends Component {
+  renderFormSubmitButton () {
+    return (
+      <div className='o-form__input-group'>
+        <Button
+          aria-label='Review Your Order'
+          className='c-address-form__button o-button--sml'
+          label='Review Your Order'
+          status={(this.props.nextStepAvailable() ? 'positive' : 'disabled')}
+          type='primary'
+          disabled={!this.props.nextStepAvailable()}
+          onClick={() => this.props.nextSection('complete')}
+        />
+      </div>
+    )
+  }
+
   render () {
-    const { checkout,
-      formName,
+    const {
+      billingAddress,
+      billingAsShipping,
+      cardTokenRequested,
+      changeBillingAsShipping,
+      checkout,
       onBlur,
       onChange,
       onShowField,
-      onToggleCollapsed,
       onCardTokenReceived,
-      changeBillingAddress,
       setCardErrors,
-      order } = this.props
-    const shippingAddress = checkout.shippingAddress
+      shippingAddress
+    } = this.props
 
     return (
-      <div>
+      <>
         <div className='o-form__background'>
           <div className='o-form__wrapper'>
             <StripeWrapper
-              cardTokenRequested={order.cardTokenRequested}
+              cardTokenRequested={cardTokenRequested}
               onCardTokenReceived={onCardTokenReceived}
               setCardErrors={setCardErrors}
               checkout={checkout}
@@ -41,39 +60,46 @@ class StripePayment extends Component {
               type='checkbox'
               label='Same as shipping address'
               name='shippingAddressAsBillingAddress'
-              checked={!!checkout.shippingAddressAsBillingAddress}
-              formName={formName}
-              onChange={changeBillingAddress}
-              onBlur={onBlur}
+              checked={billingAsShipping}
+              onChange={changeBillingAsShipping}
             />
 
-            { checkout.shippingAddressAsBillingAddress &&
+            { billingAsShipping &&
               <div aria-label='Shipping address to be used for billing' className='o-payment-method__address-summary  c-payment-method__address-summary'>
                 <p className='u-bold'>{ `${shippingAddress.first_name} ${shippingAddress.last_name}` }</p>
-                <p>{ shippingAddress.line_1 }</p>
-                <p>{ shippingAddress.line_2 }</p>
+                <p>{ shippingAddress.address_line_1 }</p>
+                <p>{ shippingAddress.address_line_2 }</p>
                 <p>{ shippingAddress.city }</p>
-                <p>{ shippingAddress.zipcode }</p>
+                <p>{ shippingAddress.postcode }</p>
               </div>
             }
           </div>
         </div>
 
-        { !(checkout.shippingAddressAsBillingAddress) &&
-          <AddressForm
-            aria-label='Billing address form'
-            checkout={checkout}
-            title='Billing Address'
-            formName='billingAddress'
-            addressType='billing'
-            onChange={onChange}
-            onBlur={onBlur}
-            className='o-form__billing'
-            onShowField={onShowField}
-            onToggleCollapsed={onToggleCollapsed}
-          />
+        { !billingAsShipping &&
+          <>
+            { !this.props.addressBookEmpty() && <AddressBook
+              formName='shippingAddress'
+              currentAddressId={billingAddress.id}
+              onNewAddress={this.props.onNewAddress}
+              onBookAddressSelected={this.props.onBookAddressSelected}
+              addressFormDisplayed={this.props.addressFormDisplayed()}
+            /> }
+            { this.props.addressFormDisplayed() && <AddressForm
+              aria-label='Billing address form'
+              checkout={checkout}
+              title='Billing Address'
+              formName='billingAddress'
+              addressType='billing'
+              onChange={onChange}
+              onBlur={onBlur}
+              className='o-form__billing'
+              onShowField={onShowField}
+            /> }
+          </>
         }
-      </div>
+        { this.renderFormSubmitButton() }
+      </>
     )
   }
 }

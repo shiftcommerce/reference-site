@@ -61,7 +61,12 @@ export default {
     country: 'Shipping country',
     first_name: 'Shipping first name',
     last_name: 'Shipping last name',
-    postcode: 'Shipping postcode'
+    postcode: 'Shipping postcode',
+    meta_attributes: {
+      email: {
+        value: 'john.smith@shiftcommerce.com'
+      }
+    }
   },
   shipping_method: {
     id: '10',

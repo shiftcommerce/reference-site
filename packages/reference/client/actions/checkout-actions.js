@@ -53,16 +53,6 @@ export function showField (formName, fieldName) {
   }
 }
 
-export function toggleCollapsed (eventType, componentName) {
-  return {
-    type: actionTypes.TOGGLE_CHECKOUT_COMPONENT_COLLAPSED,
-    payload: {
-      eventType: eventType,
-      componentName: componentName
-    }
-  }
-}
-
 export function inputComplete () {
   return (dispatch, getState) => {
     const checkout = getState().checkout
@@ -172,41 +162,9 @@ export function initiateCheckout () {
   }
 }
 
-export function changeBillingAddress (formName, fieldName, fieldValue) {
-  return {
-    type: actionTypes.CHANGE_BILLING_ADDRESS,
-    payload: {
-      formName: formName,
-      fieldName: fieldName,
-      fieldValue: fieldValue
-    }
-  }
-}
-
-export function changePaymentMethod (paymentMethod) {
-  return {
-    type: actionTypes.CHANGE_PAYMENT_METHOD,
-    paymentMethod: paymentMethod
-  }
-}
-
 export function autoFillAddress (address) {
   return {
     type: actionTypes.AUTOFILL_ADDRESS,
     address: address
-  }
-}
-
-export function editForm (formName) {
-  return {
-    type: actionTypes.EDIT_FORM,
-    formName: formName
-  }
-}
-
-export function renderSummary (formName) {
-  return {
-    type: actionTypes.EDIT_ADDRESS,
-    formName: formName
   }
 }

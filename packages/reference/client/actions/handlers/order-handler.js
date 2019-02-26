@@ -1,4 +1,4 @@
-export function convertCheckoutToOrder (cart, checkout, order) {
+export function convertCheckoutToOrder (cart, paymentMethod, order) {
   const lineItems = prepareLineItems(cart)
 
   const orderPayload = {
@@ -6,7 +6,7 @@ export function convertCheckoutToOrder (cart, checkout, order) {
       billing_address: prepareBillingAddress(cart.billing_address),
       channel: 'web',
       currency: 'GBP',
-      email: checkout.shippingAddress.email,
+      email: cart.shipping_address.meta_attributes.email.value,
       line_items_resources: prepareLineItems(cart),
       shipping_address: prepareShippingAddress(cart.shipping_address),
       shipping_method: prepareShippingMethod(cart.shipping_method),
@@ -22,7 +22,7 @@ export function convertCheckoutToOrder (cart, checkout, order) {
 
   return {
     data: orderPayload,
-    payment_method: checkout.paymentMethod.selectedMethod,
+    payment_method: paymentMethod,
     card_token: order.cardToken
   }
 }

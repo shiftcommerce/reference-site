@@ -1,155 +1,31 @@
 // Components
 import PaymentMethod from '../../../../client/components/checkout/payment-method'
-// Libraries
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import PaymentMethodHeader from '../../../../client/components/checkout/payment-method-header'
+import PaymentMethodSelector from '../../../../client/components/checkout/payment-method-selector'
+import PayPalPayment from '../../../../client/components/checkout/paypal-payment'
+import '../../../../client/components/checkout/stripe-payment'
 
-// Fixtures
-import order from '../../../fixtures/order'
-import checkoutData from '../../../fixtures/checkout'
+// Mock Stripe payment
+jest.mock('../../../../client/components/checkout/stripe-payment', () => (props) => <p>Stripe payment</p>)
 
-// Reducers
-import rootReducer from '../../../../client/reducers/root-reducer'
+test('renders the payment method header and selector', () => {
+  const wrapper = shallow(<PaymentMethod />)
 
-// Mock Stripe checkout
-jest.mock('../../../../client/components/checkout/stripe-wrapper', () => (props) => <p>Mocked Card Fields</p>)
-
-test('Renders correct address summary when shippingAsBilling is true', () => {
-  // arrange
-  const checkout = {
-    shippingAddress: {
-      first_name: 'Test First Name',
-      last_name: 'Test Last Name',
-      line_1: 'Test Address 1',
-      line_2: 'Test Address 2',
-      city: 'Test City',
-      zipcode: 'Test Postcode',
-      collapsed: true,
-      completed: true,
-      errors: {}
-    },
-    billingAddress: {},
-    shippingAddressAsBillingAddress: true,
-    shippingMethod: {
-      collapsed: true,
-      completed: true
-    },
-    paymentMethod: {
-      collapsed: false,
-      completed: false,
-      selectedMethod: 'card'
-    }
-  }
-  const setShippingBillingAddress = () => {}
-  const order = {
-    cardTokenRequested: false
-  }
-
-  const store = createStore(rootReducer)
-
-  // act
-  const wrapper = mount(
-    <Provider store={store}>
-      <PaymentMethod
-        checkout={checkout}
-        setShippingBillingAddress={setShippingBillingAddress}
-        order={order}
-      />
-    </Provider>
-  )
-
-  // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Test First Name')
-  expect(wrapper).toIncludeText('Test Last Name')
-  expect(wrapper).toIncludeText('Test Address 1')
-  expect(wrapper).toIncludeText('Test Address 2')
-  expect(wrapper).toIncludeText('Test City')
-  expect(wrapper).toIncludeText('Test Postcode')
+  expect(wrapper).toContainReact(<PaymentMethodHeader />)
+  expect(wrapper).toContainReact(<PaymentMethodSelector />)
 })
 
-test('Does not render address summary when shippingAsBilling is false', () => {
-  // arrange
-  const checkout = {
-    shippingAddress: {
-      first_name: 'Test First Name',
-      last_name: 'Test Last Name',
-      line_1: 'Test Address 1',
-      line_2: 'Test Address 2',
-      city: 'Test City',
-      zipcode: 'Test Postcode',
-      collapsed: true,
-      completed: true,
-      errors: {}
-    },
-    billingAddress: {
-      collapsed: false,
-      completed: false,
-      errors: {}
-    },
-    shippingMethod: {
-      collapsed: true,
-      completed: true
-    },
-    shippingAddressAsBillingAddress: false,
-    paymentMethod: {
-      collapsed: false,
-      completed: false,
-      selectedMethod: 'card'
-    }
-  }
-  const setShippingBillingAddress = () => {}
+test('renders StripePayment when card payment is selected', () => {
+  const wrapper = mount(<PaymentMethod selectedPaymentMethod={'card'} cart={{}} order={{}} />)
 
-  const store = createStore(rootReducer)
-
-  // act
-  const wrapper = mount(
-    <Provider store={store}>
-      <PaymentMethod
-        checkout={checkout}
-        setShippingBillingAddress={setShippingBillingAddress}
-        order={order}
-      />
-    </Provider>
-  )
-
-  // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).not.toIncludeText('Test First Name')
-  expect(wrapper).not.toIncludeText('Test Last Name')
+  expect(wrapper).toContainReact(<p>Stripe payment</p>)
 })
 
-test('renders payment summary on collapsing', () => {
-  // Arrange
-  const setShippingBillingAddress = () => {}
-  const checkout = Object.assign({}, checkoutData, {
-    paymentMethod: {
-      ...checkoutData.paymentMethod,
-      collapsed: true,
-      selectedMethod: 'card'
-    }
-  })
-  const cart = {
-    billing_address: {
-      first_name: 'Leon',
-      last_name: 'The Professional',
-      address_line_1: '1 Queen Street',
-      city: 'Leeds',
-      postcode: 'LS27EY'
-    }
-  }
+test('renders PayPalPayment when card payment is selected', () => {
+  const wrapper = mount(<PaymentMethod selectedPaymentMethod={'paypal'} cart={{}} order={{}} />)
 
-  const store = createStore(rootReducer)
-
-  // Act
-  const wrapper = mount(
-    <Provider store={store}>
-      <PaymentMethod cart={cart} checkout={checkout} setShippingBillingAddress={setShippingBillingAddress} order={order} />
-    </Provider>
-  )
-
-  // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Payment Mode:')
-  expect(wrapper).toIncludeText('Credit/Debit Card')
+  expect(wrapper).toContainReact(<PayPalPayment />)
 })

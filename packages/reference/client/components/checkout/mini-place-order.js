@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
@@ -6,9 +7,9 @@ import { decimalPrice } from '../../lib/decimal-price'
 // Objects
 import { Button } from 'shift-react-components'
 
-export default class MiniPlaceOrder extends Component {
-  miniPlaceOrderButton (convertToOrder) {
-    const isValidOrder = this.props
+class MiniPlaceOrder extends Component {
+  miniPlaceOrderButton () {
+    const { convertToOrder, isValidOrder } = this.props
 
     return (
       <Button
@@ -24,20 +25,25 @@ export default class MiniPlaceOrder extends Component {
   }
 
   render () {
-    const { cart, checkout, convertToOrder } = this.props
+    const { total } = this.props
 
-    if (checkout.currentStep === 4) {
-      return (
-        <div className='c-cart-summary__mini-button-container'>
-          <div className='c-cart-summary__mini-button-container-item'>
-            <div className='u-bold'>Order Total: &pound;{ decimalPrice(cart.total) }</div>
-          </div>
-          <div className='c-cart-summary__mini-button-container-item'>
-            { this.miniPlaceOrderButton(convertToOrder) }
-          </div>
+    return (
+      <div className='c-cart-summary__mini-button-container'>
+        <div className='c-cart-summary__mini-button-container-item'>
+          <div className='u-bold'>Order Total: &pound;{ decimalPrice(total) }</div>
         </div>
-      )
-    }
-    return (null)
+        <div className='c-cart-summary__mini-button-container-item'>
+          { this.miniPlaceOrderButton() }
+        </div>
+      </div>
+    )
   }
 }
+
+MiniPlaceOrder.propTypes = {
+  total: PropTypes.number,
+  isValidOrder: PropTypes.bool,
+  convertToOrder: PropTypes.func
+}
+
+export default MiniPlaceOrder

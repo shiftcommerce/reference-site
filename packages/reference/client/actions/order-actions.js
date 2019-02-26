@@ -28,13 +28,13 @@ export function requestCardToken (boolean) {
   }
 }
 
-export function setCardToken (token) {
+export function setCardToken (token, paymentMethod) {
   return (dispatch, getState) => {
     dispatch({
       type: types.SET_CARD_TOKEN,
       value: token
     })
-    return dispatch(createOrder(getState().cart, getState().checkout, getState().order))
+    return dispatch(createOrder(getState().cart, paymentMethod, getState().order))
   }
 }
 

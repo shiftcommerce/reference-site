@@ -17,9 +17,7 @@ export const postEndpoint = (request) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
     return new ApiClient().post(request.endpoint, request.body)
-      .then(response => {
-        _determinePostDispatch(dispatch, request, response)
-      })
+      .then(response => _determinePostDispatch(dispatch, request, response))
       .catch(error => {
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error))
       })
@@ -113,9 +111,9 @@ function _determinePostDispatch (dispatch, request, response) {
       const parsedPayload = new JsonApiParser().parse(response.data)
       // TODO: remove when all enpoints have been moved to shift-next
       const payload = parsedPayload || response.data
-      dispatch(sendResponse(request.successActionType, payload))
+      return dispatch(sendResponse(request.successActionType, payload))
     }
   } else {
-    dispatch(setErroredTo(request.errorActionType, response.data))
+    return dispatch(setErroredTo(request.errorActionType, response.data))
   }
 }

@@ -1,24 +1,14 @@
+// Libraries
+import * as Link from 'next/link'
+
 // Components
 import CheckoutSteps from '../../../../client/components/checkout/checkout-steps'
 
 test('Renders steps correctly', () => {
-  // arrange
-  const checkout = {
-    loading: true,
-    error: false,
-    shippingAddress: { collapsed: true, completed: false },
-    shippingMethod: { collapsed: true, completed: false },
-    billingAddress: { collapsed: true, completed: false },
-    shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
-    reviewOrder: { collapsed: true, completed: false },
-    currentStep: 1
-  }
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={1} />)
 
-  // act
-  const wrapper = shallow(<CheckoutSteps checkout={checkout} />)
-
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Shipping Address')
   expect(wrapper).toIncludeText('Shipping Method')
@@ -27,89 +17,58 @@ test('Renders steps correctly', () => {
 })
 
 test('Renders current step 1 correctly', () => {
-  // arrange
-  const checkout = {
-    loading: true,
-    error: false,
-    shippingAddress: { collapsed: true, completed: false },
-    shippingMethod: { collapsed: true, completed: false },
-    billingAddress: { collapsed: true, completed: false },
-    shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
-    reviewOrder: { collapsed: true, completed: false },
-    currentStep: 1
-  }
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={1} />)
 
-  // act
-  const wrapper = shallow(<CheckoutSteps checkout={checkout} />)
-
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Address')
 })
 
 test('Renders current step 2 correctly', () => {
-  // arrange
-  const checkout = {
-    loading: true,
-    error: false,
-    shippingAddress: { collapsed: true, completed: true },
-    shippingMethod: { collapsed: true, completed: false },
-    billingAddress: { collapsed: true, completed: false },
-    shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
-    reviewOrder: { collapsed: true, completed: false },
-    currentStep: 2
-  }
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={2} />)
 
-  // act
-  const wrapper = shallow(<CheckoutSteps checkout={checkout} />)
-
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find(Link.default).length).toEqual(1)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Method')
 })
 
 test('Renders current step 3 correctly', () => {
-  // arrange
-  const checkout = {
-    loading: true,
-    error: false,
-    shippingAddress: { collapsed: true, completed: true },
-    shippingMethod: { collapsed: true, completed: true },
-    billingAddress: { collapsed: true, completed: false },
-    shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: false, selectedMethod: 'card' },
-    reviewOrder: { collapsed: true, completed: false },
-    currentStep: 3
-  }
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={3} />)
 
-  // act
-  const wrapper = shallow(<CheckoutSteps checkout={checkout} />)
-
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find(Link.default).length).toEqual(2)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment')
 })
 
 test('Renders current step 4 correctly', () => {
-  // arrange
-  const checkout = {
-    loading: true,
-    error: false,
-    shippingAddress: { collapsed: true, completed: true },
-    shippingMethod: { collapsed: true, completed: true },
-    billingAddress: { collapsed: true, completed: true },
-    shippingAddressAsBillingAddress: true,
-    paymentMethod: { collapsed: true, completed: true, selectedMethod: 'card' },
-    reviewOrder: { collapsed: true, completed: false },
-    currentStep: 4
-  }
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={4} />)
 
-  // act
-  const wrapper = shallow(<CheckoutSteps checkout={checkout} />)
-
-  // assert
+  // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find(Link.default).length).toEqual(3)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Review & Submit')
+})
+
+test('Provides onClick handlers to links', () => {
+  // Mock out next link so that it doesn't inject its own onClick logic into anchor tags
+  const linkSpy = jest.spyOn(Link, 'default').mockImplementation(({ children }) => <div>{ children }</div>)
+
+  // Act
+  const wrapper = mount(<CheckoutSteps
+    currentStep={4}
+    stepActions={{
+      3: () => 'onClick test'
+    }}
+  />)
+
+  // Assert
+  expect(wrapper.find('a').at(2).props().onClick()).toEqual('onClick test')
+
+  linkSpy.mockRestore()
 })

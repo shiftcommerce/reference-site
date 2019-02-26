@@ -1,6 +1,5 @@
 // Libraries
 import { Component } from 'react'
-import classNames from 'classnames'
 
 // Objects
 import { Button } from 'shift-react-components'
@@ -14,6 +13,9 @@ import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
 
 // Actions
 import { setCartShippingMethod } from '../../actions/cart-actions'
+
+// Components
+import ShippingMethodsHeader from './shipping-methods-header'
 
 export default class ShippingMethods extends Component {
   static async fetchShippingMethods () {
@@ -55,49 +57,8 @@ export default class ShippingMethods extends Component {
     this.setState({ selectedShippingMethod: shippingMethod })
   }
 
-  renderFormHeader () {
-    const { checkout, onToggleCollapsed, formName } = this.props
-    const { shippingMethod: { collapsed } } = checkout
-    return (
-      <div className='o-form__header c-shipping-method__header'>
-        <h2>Your Shipping Method</h2>
-
-        { collapsed &&
-          <Button
-            aria-label='Edit your shipping method'
-            label='Edit'
-            status='secondary'
-            className='o-button-edit'
-            onClick={() => onToggleCollapsed('edit', formName)}
-          />
-        }
-      </div>
-    )
-  }
-
-  renderFormSummary () {
-    const { checkout, cart } = this.props
-    const { shippingMethod: { collapsed } } = checkout
-
-    return (
-      <>
-        { collapsed && cart.shipping_method &&
-          <div className='o-form__wrapper--collapsed c-shipping-method__summary'>
-            <p className='u-bold'>
-              { cart.shipping_method && cart.shipping_method.label }
-            </p>
-            <p>
-              <span className='u-bold'>Estimated Delivery</span>: { businessDaysFromNow(parseInt(cart.shipping_method.meta_attributes.working_days.value)).format('dddd Do MMMM') }
-            </p>
-          </div>
-        }
-      </>
-    )
-  }
-
   renderForm () {
-    const { checkout, cart, formName, onToggleCollapsed } = this.props
-    const { shippingMethod: { collapsed } } = checkout
+    const { collapsed, cart, nextSection } = this.props
     const itemCount = cart.line_items_count
     const itemCountText = itemCount === 1 ? '1 item' : `${itemCount} items`
 
@@ -121,7 +82,10 @@ export default class ShippingMethods extends Component {
                 label='Continue to Payment'
                 status='positive'
                 type='submit'
-                onClick={() => onToggleCollapsed('complete', formName)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  nextSection('complete')
+                }}
               />
             </div>
           </form>
@@ -157,13 +121,10 @@ export default class ShippingMethods extends Component {
   }
 
   render () {
-    const { checkout } = this.props
-
     return (
-      <div aria-label='Shipping Methods' className={classNames('o-form c-shipping-method', { 'o-form__hidden': !checkout.shippingAddress.completed })}>
+      <div aria-label='Shipping Methods' className='o-form c-shipping-method'>
         { this.state.loading ? <p>Loading...</p> : <>
-          { this.renderFormHeader() }
-          { this.renderFormSummary() }
+          <ShippingMethodsHeader />
           { this.renderForm() }
         </>
         }

@@ -1,0 +1,371 @@
+// Libraries
+import { Component } from 'react'
+import Router from 'next/router'
+import classNames from 'classnames'
+import Cookies from 'js-cookie'
+
+// Libs
+import { reduxWrapper } from '../../lib/algolia-redux-wrapper'
+import addressFormValidator from '../../lib/address-form-validator'
+import InputFieldValidator from '../../lib/input-field-validator'
+
+// Components
+import AddressFormSummary from '../../components/checkout/address-form-summary'
+import PaymentMethod from '../../components/checkout/payment-method'
+import PaymentMethodSummary from '../../components/checkout/payment-method-summary'
+import ShippingMethodsSummary from '../../components/checkout/shipping-methods-summary'
+import withCheckout from '../../components/with-checkout'
+
+// Actions
+import {
+  inputChange,
+  inputComplete,
+  setValidationMessage,
+  showField
+} from '../../actions/checkout-actions'
+import { setCartBillingAddress, createBillingAddress } from '../../actions/cart-actions'
+import {
+  requestCardToken,
+  setCardToken,
+  setPaymentError,
+  setCardErrors,
+  createOrder
+} from '../../actions/order-actions'
+import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
+
+export class CheckoutPaymentPage extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      loading: true,
+      reviewStep: false,
+      selectedPaymentMethod: null
+    }
+
+    this.nextSection = this.nextSection.bind(this)
+    this.onInputChange = this.onInputChange.bind(this)
+    this.onInputBlur = this.onInputBlur.bind(this)
+    this.onShowField = this.onShowField.bind(this)
+
+    this.changeBillingAsShipping = this.changeBillingAsShipping.bind(this)
+    this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
+    this.setCardErrors = this.setCardErrors.bind(this)
+    this.addressBookEmpty = this.addressBookEmpty.bind(this)
+    this.onNewAddress = this.onNewAddress.bind(this)
+    this.onBookAddressSelected = this.onBookAddressSelected.bind(this)
+    this.addressFormDisplayed = this.addressFormDisplayed.bind(this)
+    this.nextStepAvailable = this.nextStepAvailable.bind(this)
+    this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
+    this.showPayment = this.showPayment.bind(this)
+    this.convertToOrder = this.convertToOrder.bind(this)
+    this.continueButtonProps = this.continueButtonProps.bind(this)
+  }
+
+  componentDidMount () {
+    if (!this.props.cart.shipping_address) {
+      return Router.push('/checkout/shipping-address')
+    }
+    if (!this.props.cart.shipping_method) {
+      return Router.push('/checkout/shipping-method')
+    }
+
+    return (this.loggedIn() ? this.props.dispatch(fetchAddressBook()) : Promise.resolve()).then(() => {
+      if (!this.props.cart.billing_address) {
+        return this.onBookAddressSelected(this.props.cart.shipping_address.id).then(() => {
+          this.setState({
+            billingAsShipping: true
+          })
+        })
+      } else if (this.props.cart.shipping_address.id === this.props.cart.billing_address.id) {
+        this.setState({
+          billingAsShipping: true
+        })
+      }
+    }).then(() => {
+      this.setState({
+        loading: false
+      })
+    })
+  }
+
+  // The following two methods enable navigating back and forth using the browser's
+  // back and forward buttons
+  static async getInitialProps ({ req }) {
+    if (!req) {
+      return {
+        propsPath: Router.asPath
+      }
+    }
+  }
+
+  static getDerivedStateFromProps (props, state) {
+    if (state.reviewStep && Router.asPath === '/checkout/payment' && props.propsPath === '/checkout/review') {
+      return {
+        reviewStep: false
+      }
+    } else if (!state.reviewStep && Router.asPath === '/checkout/review' && props.propsPath === '/checkout/payment') {
+      return {
+        reviewStep: true
+      }
+    }
+    return null
+  }
+
+  loggedIn () {
+    return Cookies.get('signedIn')
+  }
+
+  showReview () {
+    const { setCurrentStep } = this.props
+    Router.push('/checkout/payment', '/checkout/review')
+    this.setState({
+      reviewStep: true
+    })
+    setCurrentStep(4)
+  }
+
+  showPayment () {
+    const { setCurrentStep } = this.props
+    Router.push('/checkout/payment', '/checkout/payment')
+    this.setState({
+      reviewStep: false
+    })
+    setCurrentStep(3)
+  }
+
+  onPaymentMethodChanged (paymentMethod) {
+    this.setState({
+      selectedPaymentMethod: paymentMethod
+    })
+  }
+
+  validateInput (formName, fieldName, fieldValue, rules) {
+    let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate()
+    this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
+  }
+
+  onInputChange (event, formName, fieldName, fieldValue) {
+    this.props.dispatch(inputChange(formName, fieldName, fieldValue))
+  }
+
+  onInputBlur (event, formName, fieldName, fieldValue, rules) {
+    this.validateInput(formName, fieldName, fieldValue, rules)
+    this.props.dispatch(inputComplete())
+  }
+
+  onShowField (formName, fieldName) {
+    this.props.dispatch(showField(formName, fieldName))
+  }
+
+  changeBillingAsShipping (event) {
+    const { cart: { shipping_address }, checkout: { addressBook } } = this.props
+
+    if (event.target.checked) {
+      return this.onBookAddressSelected(shipping_address.id).then(() => {
+        this.setState({
+          billingAsShipping: true
+        })
+      })
+    } else if (!this.addressBookEmpty()) {
+      const preferredAddress = addressBook.find(address => address.preferred_billing)
+      return this.props.dispatch(setCartBillingAddress((preferredAddress && preferredAddress.id) || addressBook[0].id)).then(() => {
+        this.setState({
+          billingAsShipping: false
+        })
+      })
+    } else {
+      this.onNewAddress()
+    }
+  }
+
+  onCardTokenReceived ({ error, token }) {
+    const { dispatch } = this.props
+
+    if (error) {
+      return dispatch(setPaymentError(error.message)).then(() => {
+        return dispatch(requestCardToken(false))
+      })
+    } else {
+      return dispatch(setCardToken(token, this.state.selectedPaymentMethod)).then(() => {
+        dispatch(requestCardToken(false))
+        Router.push('/order')
+      })
+    }
+  }
+
+  setCardErrors (error) {
+    this.props.dispatch(setCardErrors(error))
+  }
+
+  addressBookEmpty () {
+    return !this.props.checkout.addressBook.length
+  }
+
+  onNewAddress () {
+    this.setState({
+      addingNewAddress: true,
+      billingAsShipping: false
+    })
+  }
+
+  onBookAddressSelected (id) {
+    return this.props.dispatch(setCartBillingAddress(id)).then(() => {
+      this.setState({
+        addingNewAddress: false
+      })
+    })
+  }
+
+  addressFormDisplayed () {
+    return this.addressBookEmpty() || this.state.addingNewAddress || !this.cartAddressFromBook()
+  }
+
+  cartAddressFromBook () {
+    const { cart, cart: { billing_address }, checkout: { addressBook } } = this.props
+
+    if (!this.loggedIn() || !cart.billing_address) return false
+
+    return addressBook.map(address => parseInt(address.id)).includes(parseInt(billing_address.id))
+  }
+
+  nextStepAvailable () {
+    const { checkout: { billingAddress }, order } = this.props
+    return !order.card_errors && (((this.cartAddressFromBook() || this.props.cart.shipping_address.id === this.props.cart.billing_address.id) && !this.state.addingNewAddress) || addressFormValidator(billingAddress))
+  }
+
+  nextSection (eventType) {
+    const { dispatch, checkout } = this.props
+
+    if (this.state.addingNewAddress || (!this.cartAddressFromBook() && this.props.cart.billing_address.id !== this.props.cart.shipping_address.id)) {
+      if (checkout.billingAddress.saveToAddressBook) {
+        dispatch(saveToAddressBook(checkout.billingAddress)).then(() => {
+          dispatch(setCartBillingAddress(checkout.billingAddress.id))
+        })
+      } else {
+        dispatch(createBillingAddress(checkout.billingAddress)).then(() => {
+          dispatch(setCartBillingAddress(checkout.billingAddress.id))
+        })
+      }
+    }
+
+    this.showReview()
+  }
+
+  isValidOrder (cart, order) {
+    const shippingAddressPresent = !!(cart.shipping_address || {}).id
+    const shippingMethodPresent = !!(cart.shipping_method || {}).id
+    const billingAddressPresent = !!(cart.billing_address || {}).id
+    return !order.card_errors && shippingAddressPresent && shippingMethodPresent && billingAddressPresent
+  }
+
+  convertToOrder () {
+    if (this.state.selectedPaymentMethod === 'card') {
+      this.props.dispatch(requestCardToken(true))
+    } else {
+      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order)).then(() => {
+        Router.push('/order')
+      })
+    }
+  }
+
+  continueButtonProps () {
+    const { cart, order } = this.props
+
+    if (this.state.reviewStep) {
+      return {
+        'aria-label': 'Place Order',
+        label: 'Place Order',
+        status: this.isValidOrder(cart, order) ? 'primary' : 'disabled',
+        disabled: !this.isValidOrder(cart, order),
+        onClick: this.convertToOrder
+      }
+    } else {
+      return {
+        'aria-label': 'Review Order',
+        label: 'Review Your Order',
+        status: 'primary',
+        disabled: !this.nextStepAvailable(),
+        onClick: () => { this.nextSection('complete') }
+      }
+    }
+  }
+
+  pageTitle = () => `Checkout - ${this.state.reviewStep ? 'Review' : 'Payment'}`
+
+  currentStep = () => this.state.reviewStep ? 4 : 3
+
+  stepActions = () => ({
+    3: () => {
+      this.setState({ reviewStep: false })
+      this.props.setCurrentStep(3)
+    }
+  })
+
+  renderPayment () {
+    const { cart, checkout, order } = this.props
+    return (
+      <>
+        <div className={classNames({ 'u-hidden': !this.state.reviewStep })}>
+          <PaymentMethodSummary
+            checkout={checkout}
+            order={order}
+            cart={cart}
+            selectedPaymentMethod={this.state.selectedPaymentMethod}
+            showPayment={this.showPayment}
+          />
+        </div>
+        <div className={classNames({ 'u-hidden': this.state.reviewStep })}>
+          <PaymentMethod
+            addingNewAddress={this.state.addingNewAddress}
+            addressBookEmpty={this.addressBookEmpty}
+            addressFormDisplayed={this.addressFormDisplayed}
+            billingAsShipping={this.state.billingAsShipping}
+            cart={this.props.cart}
+            formName='paymentMethod'
+            changeBillingAsShipping={this.changeBillingAsShipping}
+            nextStepAvailable={this.nextStepAvailable}
+            nextSection={this.nextSection}
+            onChange={this.onInputChange}
+            onBlur={this.onInputBlur}
+            onCardTokenReceived={this.onCardTokenReceived}
+            setCardErrors={this.setCardErrors}
+            onNewAddress={this.onNewAddress}
+            onBookAddressSelected={this.onBookAddressSelected}
+            onPaymentMethodChanged={this.onPaymentMethodChanged}
+            selectedPaymentMethod={this.state.selectedPaymentMethod}
+            {...this.props}
+          />
+        </div>
+      </>
+    )
+  }
+
+  render () {
+    const { cart, cart: { shipping_address } } = this.props
+
+    if (this.state.loading) {
+      return <div>Loading...</div>
+    }
+
+    return (
+      <>
+        <div className='c-checkout__addressform'>
+          <div className='o-form__address'>
+            <AddressFormSummary
+              firstName={shipping_address.first_name}
+              lastName={shipping_address.last_name}
+              addressLine1={shipping_address.address_line_1}
+              city={shipping_address.city}
+              postcode={shipping_address.postcode}
+            />
+          </div>
+        </div>
+        <ShippingMethodsSummary shippingMethod={cart.shipping_method} />
+        { this.renderPayment() }
+      </>
+    )
+  }
+}
+
+export default reduxWrapper(withCheckout(CheckoutPaymentPage), CheckoutPaymentPage)

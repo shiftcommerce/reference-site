@@ -1,43 +1,64 @@
 // Libraries
 import { Component } from 'react'
-import classNames from 'classnames'
 
 // Components
 import PaymentMethodSelector from './payment-method-selector'
 import StripePayment from './stripe-payment'
+import PaymentMethodHeader from './payment-method-header'
 import PayPalPayment from './paypal-payment'
 
-// Objects
-import { Button } from 'shift-react-components'
-
 export default class PaymentMethod extends Component {
-  renderFormHeader () {
-    const { formName, onToggleCollapsed } = this.props
-    return (
-      <Button
-        aria-label='Edit your payment method'
-        className='o-button-edit'
-        label='Edit'
-        status='secondary'
-        onClick={() => onToggleCollapsed('edit', formName)}
-      />
-    )
-  }
-
   renderPaymentMethodSelector () {
-    const { checkout: { paymentMethod: { collapsed, selectedMethod } }, onPaymentMethodChanged } = this.props
+    const { onPaymentMethodChanged, selectedPaymentMethod } = this.props
 
-    const display = !collapsed ? 'block' : 'none'
     return (
-      <div className='c-payment-method__section' style={{ display: display }}>
+      <div className='c-payment-method__section' style={{ display: 'block' }}>
         <PaymentMethodSelector
-          currentMethod={selectedMethod}
+          currentMethod={selectedPaymentMethod}
           onPaymentMethodChanged={onPaymentMethodChanged}
         />
         { (() => {
-          switch (selectedMethod) {
+          switch (selectedPaymentMethod) {
             case 'card':
-              return <StripePayment {...this.props} />
+              const {
+                addingNewAddress,
+                addressBookEmpty,
+                addressFormDisplayed,
+                billingAsShipping,
+                changeBillingAsShipping,
+                cart,
+                checkout,
+                nextStepAvailable,
+                nextSection,
+                onBookAddressSelected,
+                onBlur,
+                onChange,
+                onNewAddress,
+                onShowField,
+                onCardTokenReceived,
+                setCardErrors,
+                order
+              } = this.props
+              return <StripePayment
+                addingNewAddress={addingNewAddress}
+                addressBookEmpty={addressBookEmpty}
+                addressFormDisplayed={addressFormDisplayed}
+                billingAddress={cart.billing_address}
+                billingAsShipping={billingAsShipping}
+                cardTokenRequested={order.cardTokenRequested}
+                changeBillingAsShipping={changeBillingAsShipping}
+                checkout={checkout}
+                nextStepAvailable={nextStepAvailable}
+                nextSection={nextSection}
+                onBookAddressSelected={onBookAddressSelected}
+                onBlur={onBlur}
+                onChange={onChange}
+                onNewAddress={onNewAddress}
+                onShowField={onShowField}
+                onCardTokenReceived={onCardTokenReceived}
+                setCardErrors={setCardErrors}
+                shippingAddress={cart.shipping_address}
+              />
             case 'paypal':
               return <PayPalPayment />
           }
@@ -46,41 +67,10 @@ export default class PaymentMethod extends Component {
     )
   }
 
-  renderFormSummary () {
-    const { checkout: { paymentMethod }, order } = this.props
-    const billingAddress = this.props.cart.billing_address
-    const paymentMode = paymentMethod.selectedMethod === 'card' ? 'Credit/Debit Card' : 'Paypal'
-
-    return (
-      <div className={classNames('c-payment-method__summary', { 'o-form__error': order.paymentError !== null })}>
-        <p>
-          <span className='u-bold'> Payment Mode: </span>
-          <span> { paymentMode } </span>
-        </p>
-        <p>
-          <span className='u-bold'>Billing Address: </span>
-          <span className='u-bold'>{ billingAddress && billingAddress.first_name } { billingAddress && billingAddress.last_name } </span>
-          <span>{ billingAddress && billingAddress.address_line_1 }, { billingAddress && billingAddress.city }, { billingAddress && billingAddress.postcode }</span>
-        </p>
-      </div>
-    )
-  }
-
   render () {
-    const { checkout } = this.props
-    const { collapsed } = checkout.paymentMethod
-
     return (
-      <div aria-label='Payment method' className={classNames('o-form  c-payment-method', { 'o-form__hidden': !checkout.shippingMethod.completed })}>
-        <div className='o-form__header  c-payment-method__header'>
-          <div>
-            <h2>Payment Method</h2>
-          </div>
-          <div>
-            { collapsed && this.renderFormHeader() }
-          </div>
-        </div>
-        { collapsed && this.renderFormSummary() }
+      <div aria-label='Payment method' className='o-form  c-payment-method'>
+        <PaymentMethodHeader />
         { this.renderPaymentMethodSelector() }
       </div>
     )

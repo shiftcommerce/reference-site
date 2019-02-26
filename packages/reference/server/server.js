@@ -75,6 +75,10 @@ module.exports = app.prepare().then(() => {
     return app.render(req, res, '/slug', req.query)
   })
 
+  server.get('/checkout/review', (req, res) => {
+    res.redirect('/checkout/payment')
+  })
+
   server.get('/account/login', (req, res) => {
     const { customerId } = req.session
     const { signedIn } = req.cookies
@@ -136,10 +140,6 @@ module.exports = app.prepare().then(() => {
     // As state is lost on page reload, the logic below redirects to Account page
     // where the user can view their order in the order history.
     res.redirect(302, '/account/myaccount')
-  })
-
-  server.get('/checkout', (req, res) => {
-    return handle(req, res)
   })
 
   server.get('/serviceWorker.js', (req, res) => {

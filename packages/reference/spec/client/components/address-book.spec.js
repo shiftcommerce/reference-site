@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
 // Components
-import AddressBook from '../../../client/components/address-book'
+import AddressBookWithRedux, { AddressBook } from '../../../client/components/address-book'
 import ApiClient from '../../../client/lib/api-client'
 
 // Reducers
@@ -18,19 +18,7 @@ import addressBookData from '../../fixtures/address-book'
 jest.mock('../../../client/lib/api-client')
 
 test('it renders given addresses correctly', () => {
-  // Initialize Redux store with address book data
-  const store = createStore(rootReducer, {
-    checkout: Object.assign(checkoutInitialState, {
-      addressBook: addressBookData
-    })
-  })
-
-  // Mount the address book component wrapped in the store provider
-  const component = mount(
-    <Provider store={store}>
-      <AddressBook addressBook={addressBookData} />
-    </Provider>
-  )
+  const component = mount(<AddressBook addressBook={addressBookData} />)
 
   // Check address 1 is correctly rendered
   expect(component).toIncludeText('Bernard Houseman')
@@ -47,41 +35,23 @@ test('it renders given addresses correctly', () => {
   expect(component).toIncludeText('GB')
 })
 
-test('selecting an address populates address in redux state', () => {
-  // Initialize Redux store with address book data
-  const store = createStore(rootReducer, {
-    checkout: Object.assign(checkoutInitialState, {
-      addressBook: addressBookData
-    })
-  })
+test('selecting an address passess its id to onBookAddressSelected', () => {
+  const onBookAddressSelected = jest.fn()
 
-  // Mount the address book component wrapped in the store provider
-  // Pretend the address book is displayed for the shipping address
-  const component = mount(
-    <Provider store={store}>
-      <AddressBook formName='shippingAddress' />
-    </Provider>
-  )
+  const component = mount(<AddressBook
+    addressBook={addressBookData}
+    onBookAddressSelected={onBookAddressSelected}
+  />)
 
   // Select the last address in the book
   component.find({ type: 'radio' }).last().prop('onChange')()
 
   // Check the Redux store has been correctly populated
-  const updatedShippingAddress = store.getState().checkout.shippingAddress
-  expect(updatedShippingAddress.first_name).toEqual('Bob')
-  expect(updatedShippingAddress.last_name).toEqual('Doe')
-  expect(updatedShippingAddress.companyName).toEqual('Team 18')
-  expect(updatedShippingAddress.companyNameShown).toEqual(true)
-  expect(updatedShippingAddress.line_1).toEqual('20 Cardigan Lane')
-  expect(updatedShippingAddress.line_2).toEqual('Morley')
-  expect(updatedShippingAddress.address2Shown).toEqual(true)
-  expect(updatedShippingAddress.zipcode).toEqual('LS27EY')
-  expect(updatedShippingAddress.city).toEqual('Leeds')
-  expect(updatedShippingAddress.state).toEqual('West Yorkshire')
-  expect(updatedShippingAddress.primary_phone).toEqual('07510756423')
-  expect(updatedShippingAddress.email).toEqual('bob@example.com')
+  expect(onBookAddressSelected).toHaveBeenCalledWith('23')
 })
 
+// This spec can be simplified by removing the mock store and the api client
+// once the address book gets decoupled from Redux
 test('deleteing an address removes it from the address book', async () => {
   // Mocked delete method - always returns a 204 response
   const mockedDelete = jest.fn(() => Promise.resolve({ status: 204 }))
@@ -103,7 +73,7 @@ test('deleteing an address removes it from the address book', async () => {
   // Mount the component wrapped up in the store provider
   const component = mount(
     <Provider store={store}>
-      <AddressBook formName='shippingAddress' onClose={() => {}} />
+      <AddressBookWithRedux formName='shippingAddress' onClose={() => {}} />
     </Provider>
   )
 

@@ -1,38 +1,21 @@
 // Libraries
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import classNames from 'classnames'
 import t from 'typy'
 
 // Objects
-import { Button, Checkbox, DropdownSelect, Input } from 'shift-react-components'
-
-// Lib
-import addressFormValidator from '../../lib/address-form-validator'
+import { Checkbox, DropdownSelect, Input } from 'shift-react-components'
 
 // Json
 import Countries from './../../static/countries.json'
 
-// Components
-import AddressBook from '../address-book'
-
 // Actions
-import { autoFillAddress, renderSummary, editForm } from '../../actions/checkout-actions'
+import { autoFillAddress } from '../../actions/checkout-actions'
 
 export class AddressForm extends Component {
-  constructor (props) {
-    super(props)
-
-    this.submitForm = this.submitForm.bind(this)
-    this.editForm = this.editForm.bind(this)
-  }
-
   componentDidMount () {
-    const { loggedIn, addressBook } = this.props
-    if (loggedIn && addressBook.length > 0) {
-      const preferredAddress = addressBook.find((obj) => { return obj.preferred_shipping === true })
-      this.props.dispatch(autoFillAddress(preferredAddress || addressBook[0]))
-    }
+    const { currentAddress, dispatch } = this.props
+    if (currentAddress) dispatch(autoFillAddress(currentAddress))
   }
 
   formValid (formInput) {
@@ -42,54 +25,22 @@ export class AddressForm extends Component {
     return (requiredFieldsPresent && noFormErrorsPresent)
   }
 
-  renderFormHeader () {
-    const { checkout, title, formName } = this.props
-    const collapsed = checkout[formName].collapsed
+  render () {
     return (
-      <div className='o-form__header c-address-form__header'>
-        <div className='o-form__header-title c-address-form__header-title'>
-          <h2>{ title }</h2>
-        </div>
-        { collapsed && <Button label='Edit' status='secondary' className='o-button-edit' onClick={this.editForm} /> }
-      </div>
+      <form className='o-form__wrapper o-form__background'>
+        { this.renderCountriesDropdown() }
+        { this.renderCustomerNameFields() }
+        { this.renderCompanyNameOption() }
+        { this.renderAddressLine1() }
+        { this.renderAddressLine2() }
+        { this.renderAddressFields() }
+        { this.renderPhone() }
+        { this.renderEmail() }
+        <p>* Denotes required fields</p>
+        { this.renderSaveAddressCheckbox() }
+        { this.renderNewsletterCheckbox() }
+      </form>
     )
-  }
-
-  renderFormSummary () {
-    const { checkout, addressType, formName, onToggleCollapsed } = this.props
-    const collapsed = checkout[formName].collapsed
-    const completed = checkout[formName].completed
-    const form = checkout[formName]
-
-    return (
-      <>
-        { collapsed && (addressType === 'shipping') &&
-          <div className='o-form__wrapper--collapsed c-address-form__summary'>
-            <span className={classNames('u-bold', { 'u-text-color--primary': (form.line_1 && form.zipcode) })} />
-            <p className='u-bold'>{ form.first_name } { form.last_name } </p>
-            <span>{ form.line_1 }, { form.city }, { form.zipcode }</span>
-            { collapsed && !completed && <AddressBook
-              formName={formName}
-              onToggleCollapsed={onToggleCollapsed}
-            /> }
-            { !completed && this.renderFormSubmitButton() }
-          </div>
-        }
-      </>
-    )
-  }
-
-  submitForm (e) {
-    const { nextSection } = this.props
-    e.preventDefault()
-    nextSection('complete')
-  }
-
-  editForm () {
-    const { formName, onToggleCollapsed, loggedIn } = this.props
-    onToggleCollapsed('edit', formName)
-
-    !loggedIn ? this.props.dispatch(editForm(formName)) : this.props.dispatch(renderSummary(formName))
   }
 
   renderCountriesDropdown () {
@@ -306,65 +257,9 @@ export class AddressForm extends Component {
       </>
     )
   }
-
-  renderFormSubmitButton () {
-    const { checkout, addressType, formName } = this.props
-    const formInput = checkout[formName]
-    const isValidForm = addressFormValidator(formInput)
-    return (
-      <>
-        { addressType === 'shipping' &&
-          <div className='o-form__input-group'>
-            <Button
-              aria-label='View Shipping Options'
-              className='c-address-form__button o-button--sml'
-              label='View Shipping Options'
-              status={(isValidForm ? 'positive' : 'disabled')}
-              type='primary'
-              disabled={!isValidForm}
-              onClick={this.submitForm}
-            />
-          </div>
-        }
-      </>
-    )
-  }
-
-  render () {
-    const {
-      formName,
-      checkout,
-      className
-    } = this.props
-
-    const formInput = checkout[formName]
-
-    return (
-      <div className={classNames('o-form__address', className)}>
-        { this.renderFormHeader() }
-        { this.renderFormSummary() }
-        { !formInput.collapsed && !formInput.selected &&
-          <form className='o-form__wrapper o-form__background'>
-            { this.renderCountriesDropdown() }
-            { this.renderCustomerNameFields() }
-            { this.renderCompanyNameOption() }
-            { this.renderAddressLine1() }
-            { this.renderAddressLine2() }
-            { this.renderAddressFields() }
-            { this.renderPhone() }
-            { this.renderEmail() }
-            <p>* Denotes required fields</p>
-            { this.renderSaveAddressCheckbox() }
-            { this.renderNewsletterCheckbox() }
-            { this.renderFormSubmitButton() }
-          </form>
-        }
-      </div>
-    )
-  }
 }
 
-const mapStateToProps = ({ login: { loggedIn }, checkout: { addressBook } }) => {
+const mapStateToProps = ({ account: { loggedIn }, checkout: { addressBook } }) => {
   return {
     addressBook,
     loggedIn

@@ -3,28 +3,15 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Action creators
-import { deleteAddressBookEntry, setAddress } from '../actions/address-book-actions'
-import { editForm } from '../actions/checkout-actions'
+import { deleteAddressBookEntry } from '../actions/address-book-actions'
 
-class AddressBook extends Component {
-  setAddress (address) {
-    const { formName, dispatch } = this.props
-
-    dispatch(setAddress(address, formName))
-  }
-
+export class AddressBook extends Component {
   handleAddressDeleted (address) {
     return this.props.dispatch(deleteAddressBookEntry(address))
   }
 
-  createNewAddress () {
-    const { formName, dispatch, onToggleCollapsed } = this.props
-    onToggleCollapsed('edit', formName)
-    dispatch(editForm(formName))
-  }
-
   renderOptions (address) {
-    const { id } = this.props
+    const { currentAddressId, addressFormDisplayed, onBookAddressSelected } = this.props
     const addressLabel = typeof address.meta_attributes.label === 'undefined' ? 'Other' : address.meta_attributes.label.value
     const optionLabel = <a><b>{ addressLabel }</b> -&nbsp; { address.first_name } { address.last_name },&nbsp;
       { address.address_line_1 },&nbsp; { address.postcode },&nbsp; { address.city },&nbsp; { address.country }
@@ -32,7 +19,7 @@ class AddressBook extends Component {
 
     return (
       <div className='c-address-book__radio-container'>
-        <input type='radio' name='address-book-radio' className='c-address-book__radio' onChange={() => { this.setAddress(address) }} checked={address.id === id} />
+        <input type='radio' name='address-book-radio' className='c-address-book__radio' onChange={() => onBookAddressSelected(address.id)} checked={!addressFormDisplayed && address.id === currentAddressId} />
         <label htmlFor={address.id}>{ optionLabel }</label>
         <a className='c-address-book__delete-address' label='Delete' onClick={() => this.handleAddressDeleted(address)}>Delete</a>
       </div>
@@ -61,26 +48,20 @@ class AddressBook extends Component {
   }
 
   render () {
-    const { formName } = this.props
+    const { onNewAddress, addressFormDisplayed } = this.props
 
     return (
       <div className='c-address-book'>
         <h3>Your addresses</h3>
         { this.renderEntries() }
-        <a className='c-address-book__new-address' onClick={() => this.createNewAddress(formName)}>+ Add a new address</a>
+        { !addressFormDisplayed && <a className='c-address-book__new-address' onClick={onNewAddress}>+ Add a new address</a> }
       </div>
     )
   }
 }
 
-const mapStateToProps = ({ checkout: { addressBook, shippingAddress: { id } } }) => {
-  return { addressBook, id }
+const mapStateToProps = ({ checkout: { addressBook } }) => {
+  return { addressBook }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch: dispatch
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddressBook)
+export default connect(mapStateToProps)(AddressBook)

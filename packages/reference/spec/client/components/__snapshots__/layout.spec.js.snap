@@ -188,7 +188,7 @@ exports[`renders the header 1`] = `
 </Fragment>
 `;
 
-exports[`renders the navbar 1`] = `
+exports[`renders the navbar for non-checkout pages 1`] = `
 <Fragment>
   <CustomHead />
   <div

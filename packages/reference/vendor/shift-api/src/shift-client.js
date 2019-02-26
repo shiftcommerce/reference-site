@@ -143,7 +143,15 @@ class SHIFTClient {
           address_line_2: req.body.line_2,
           city: req.body.city,
           country: req.body.country_code,
-          postcode: req.body.zipcode
+          postcode: req.body.zipcode,
+          meta_attributes: {
+            email: {
+              value: req.body.email
+            },
+            phone_number: {
+              value: req.body.primary_phone
+            }
+          }
         }
       }
     }

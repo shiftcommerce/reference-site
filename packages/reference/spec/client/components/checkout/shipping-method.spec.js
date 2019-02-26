@@ -1,9 +1,11 @@
+// Libraries
+import nock from 'nock'
+
 // Component
 import ShippingMethod from '../../../../client/components/checkout/shipping-methods'
 import * as apiActions from '../../../../client/actions/api-actions'
 
-// Lib
-import { businessDaysFromNow } from '../../../../client/lib/business-days-from-now'
+afterEach(() => { nock.cleanAll() })
 
 test('render shipping methods as expected', async () => {
   // Arrange
@@ -50,87 +52,6 @@ test('render shipping methods as expected', async () => {
 
   expect(wrapper).toIncludeText('1 item')
   expect(wrapper).toIncludeText('Standard shipping')
-
-  fetchShippingSpy.mockRestore()
-})
-
-test('render shipping methods before data has returned, should not error', async () => {
-  // Arrange
-  const cart = {
-    line_items: [
-      {
-        id: '1'
-      }
-    ],
-    line_items_count: 1,
-    shipping_method: null
-  }
-
-  const checkout = {
-    shippingAddress: {
-      collapsed: true,
-      completed: true
-    },
-    shippingMethod: {}
-  }
-
-  // Act
-  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
-
-  // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Loading...')
-})
-
-test('render collapsed view as expected', async () => {
-  // Arrange
-  const checkout = {
-    shippingAddress: {
-      collapsed: true,
-      completed: true
-    },
-    shippingMethod: {
-      collapsed: true
-    }
-  }
-
-  const cart = {
-    line_items: [
-      {
-        id: '1'
-      }
-    ],
-    line_items_count: 1,
-    shipping_method: {
-      id: 1,
-      sku: 'STA_SHIP',
-      label: 'Standard shipping',
-      total: 3.75,
-      meta_attributes: {
-        working_days: {
-          value: 2
-        }
-      }
-    }
-  }
-
-  const fetchShippingSpy = jest.spyOn(ShippingMethod, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({ data: [] }))
-
-  // Act
-  const wrapper = mount(<ShippingMethod cart={cart} checkout={checkout} dispatch={jest.fn()} />)
-
-  // Assert
-  expect(wrapper).toIncludeText('Loading...')
-
-  await wrapper.instance().componentDidMount()
-
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Standard shipping')
-  expect(wrapper).toIncludeText(businessDaysFromNow(2).format('dddd Do MMMM'))
-  expect(wrapper).toIncludeText('Edit')
-  expect(wrapper).not.toIncludeText('Shipping from')
-
-  expect(wrapper).not.toIncludeText('Continue to Payment')
 
   fetchShippingSpy.mockRestore()
 })
@@ -309,4 +230,52 @@ test('selecting a shipping method makes a correct API call', async () => {
 
   fetchShippingSpy.mockRestore()
   postSpy.mockRestore()
+})
+
+test('fetchShippingMethods() returns shipping methods from the API', async () => {
+  nock(process.env.API_HOST_PROXY)
+    .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+    .get('/getShippingMethods')
+    .reply(200, { data: 'shipping methods data' })
+
+  expect(await ShippingMethod.fetchShippingMethods()).toEqual({ data: 'shipping methods data' })
+})
+
+test('fetches shipping methods, sorts them by total and puts them in state', async () => {
+  const shippingMethods = {
+    data: [{
+      id: 1,
+      total: 20,
+      meta_attributes: {
+        working_days: {
+          value: 1
+        }
+      }
+    }, {
+      id: 2,
+      total: 10,
+      meta_attributes: {
+        working_days: {
+          value: 1
+        }
+      }
+    }]
+  }
+
+  const cart = {
+    shipping_method: {}
+  }
+
+  const instance = shallow(<ShippingMethod cart={cart} />).instance()
+
+  const fetchShippingMethodsSpy = jest.spyOn(instance.constructor, 'fetchShippingMethods').mockImplementation(() => shippingMethods)
+
+  await instance.componentDidMount()
+
+  expect(instance.state).toEqual({
+    loading: false,
+    shippingMethods: shippingMethods.data
+  })
+
+  fetchShippingMethodsSpy.mockRestore()
 })
