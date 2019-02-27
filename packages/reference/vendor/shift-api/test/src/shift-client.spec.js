@@ -20,6 +20,8 @@ const addressBookResponse = require('../fixtures/addressbook-response')
 const addressBookResponseParsed = require('../fixtures/addressbook-response-parsed')
 const productResponse = require('../fixtures/product-response-payload')
 const productResponseParsed = require('../fixtures/product-response-parsed')
+const createAddressBookResponse = require('../fixtures/create-addressbook-response')
+const createAddressBookResponseParsed = require('../fixtures/create-addressbook-response-parsed')
 
 afterEach(() => { nock.cleanAll() })
 
@@ -814,6 +816,126 @@ describe('SHIFTClient', () => {
         .catch(error => {
           expect(error.response.status).toEqual(422)
           expect(error.response.data.errors[0].detail).toEqual('No filter[customer_reference] specified')
+        })
+    })
+  })
+
+  describe('createAddressBookEntryV1', () => {
+    test('saves an address to the address book', () => {
+      const body = {
+        'id': '45',
+        'type': 'addresses',
+        'attributes': {
+          'meta_attributes': {
+            'label': {
+              'value': 'Paw address',
+              'data_type': 'text'
+            },
+            'phone_number': {
+              'value': '07123456789',
+              'data_type': 'text'
+            },
+            'email': {
+              'value': 'testaccount@example.com',
+              'data_type': 'text'
+            }
+          },
+          'customer_account_id': 77,
+          'first_name': 'Test',
+          'last_name': 'Testing',
+          'middle_names': '',
+          'address_line_1': '123 Fakeroad',
+          'address_line_2': '',
+          'address_line_3': '',
+          'city': 'Fakefield',
+          'state': null,
+          'postcode': 'WF4 4KE',
+          'country': 'GB',
+          'preferred_shipping': false,
+          'preferred_billing': false
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses`)
+        .reply(201, createAddressBookResponse)
+
+      return SHIFTClient.createAddressBookEntryV1(body, 77)
+        .then(response => {
+          expect(response.status).toEqual(201)
+          expect(response.data).toEqual(createAddressBookResponseParsed)
+        })
+    })
+
+    test('returns an error with a missing field', () => {
+      const body = {
+        'id': '45',
+        'type': 'addresses',
+        'attributes': {
+          'meta_attributes': {
+            'label': {
+              'value': 'Paw address',
+              'data_type': 'text'
+            },
+            'phone_number': {
+              'value': '07123456789',
+              'data_type': 'text'
+            },
+            'email': {
+              'value': 'testaccount@example.com',
+              'data_type': 'text'
+            }
+          },
+          'customer_account_id': 77,
+          'first_name': '',
+          'last_name': 'Testing',
+          'middle_names': '',
+          'address_line_1': '123 Fakeroad',
+          'address_line_2': '',
+          'address_line_3': '',
+          'city': 'Fakefield',
+          'state': null,
+          'postcode': 'WF4 4KE',
+          'country': 'GB',
+          'preferred_shipping': false,
+          'preferred_billing': false
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses`)
+        .reply(422, {
+          'errors': [
+            {
+              'title': "can't be blank",
+              'detail': "first_name - can't be blank",
+              'code': '100',
+              'source': {
+                'pointer': '/data/attributes/first_name'
+              },
+              'status': '422'
+            }
+          ],
+          'meta': {
+            'warnings': [
+              {
+                'title': 'Param not allowed',
+                'detail': 'id is not allowed.',
+                'code': '105'
+              }
+            ]
+          },
+          'links': {
+            'self': '/reference/v1/customer_accounts/77/addresses'
+          }
+        })
+
+      expect.assertions(2)
+
+      return SHIFTClient.createAddressBookEntryV1(body, 77)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 422'))
+          expect(error.response.data.errors[0].title).toEqual("can't be blank")
         })
     })
   })

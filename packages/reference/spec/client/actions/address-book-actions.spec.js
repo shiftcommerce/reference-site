@@ -32,7 +32,7 @@ test('saveToAddressBook posts correct body to correct URL', () => {
 
   expect(apiActions.postEndpoint).toHaveBeenCalledTimes(1)
   const request = apiActions.postEndpoint.mock.calls[0][0]
-  expect(request.endpoint).toBe('/createAddressBookAddress')
+  expect(request.endpoint).toBe('/createAddressBookEntry')
   expect(request.body).toEqual({
     data: {
       type: 'addresses',

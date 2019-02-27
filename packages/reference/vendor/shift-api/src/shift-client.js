@@ -208,6 +208,10 @@ class SHIFTClient {
     return HTTPClient.get(`v1/category_trees/reference:web/categories/${id}`).then(this.determineResponse)
   }
 
+  createAddressBookEntryV1 (body, customerAccountId) {
+    return HTTPClient.post(`v1/customer_accounts/${customerAccountId}/addresses`, body).then(this.determineResponse)
+  }
+
   getAccountV1 (queryObject, customerId) {
     return HTTPClient.get(`v1/customer_accounts/${customerId}`, queryObject).then(response => {
       return {

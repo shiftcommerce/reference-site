@@ -150,7 +150,6 @@ module.exports = app.prepare().then(() => {
   // Routes for local API calls
   server.post('/createOrder', orderHandler.createOrderRenderer())
 
-  server.post('/createAddressBookAddress', addressBookHandler.postAddressRenderer(platform.AddressesUrl))
   server.delete(/\/deleteAddress\/*/, addressBookHandler.deleteAddressRenderer(platform.AddressUrl))
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {

@@ -37,6 +37,7 @@ module.exports = {
     server.get('/getStaticPage/:id', shiftStaticPageHandler.getStaticPage)
     server.get('/getSlug', shiftSlugHandler.getSlug)
     server.post('/addToCart', shiftCartHandler.addToCart)
+    server.post('/createAddressBookEntry', shiftAddressBookHandler.createAddressBookEntry)
     server.post('/deleteLineItem/:lineItemId', shiftCartHandler.deleteLineItem)
     server.post('/updateLineItem', shiftCartHandler.updateLineItem)
     server.post('/addCartCoupon', shiftCartHandler.addCartCoupon)

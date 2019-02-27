@@ -231,7 +231,6 @@ export class AddressForm extends Component {
     const inputOptions = { className: 'o-form__input-block', placeholder: 'A recognisable name, only for your own use, e.g. "Home"', label: 'Address name', name: 'label', type: 'text', value: formInput.label }
     const preferredShippingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred shipping address', name: 'preferred_shipping', value: formInput.setAsPreferredShipping }
     const preferredBillingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred billing address', name: 'preferred_billing', value: formInput.setAsPreferredBilling }
-
     return (
       <>
         { loggedIn && !formInput.formPreFilled && this.renderCheckbox(formInput, checkboxOptions) }
