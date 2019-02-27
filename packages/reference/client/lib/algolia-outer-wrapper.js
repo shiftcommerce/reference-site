@@ -6,6 +6,7 @@ import qs from 'qs'
 // Lib
 import InitialPropsDelegator from './initial-props-delegator'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
+import algoliaInnerWrapper from './algolia-inner-wrapper'
 
 // Components
 import { findResultsState } from './instant-search'
@@ -46,7 +47,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
         }
       }
       if (isServer && Page.algoliaEnabled && Page.algoliaEnabled()) {
-        resultsState = await findResultsState(NextWrapper, { searchState, ...appProps })
+        resultsState = await findResultsState(algoliaInnerWrapper(Page), { searchState, ...appProps })
       }
 
       return {
