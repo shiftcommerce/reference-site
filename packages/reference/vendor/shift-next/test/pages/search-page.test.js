@@ -1,5 +1,5 @@
 // Pages
-import { Search } from '../../../client/pages/search'
+import SearchPage from '../../src/pages/search'
 
 // Mock out the next/config
 jest.mock('next/config', () => () => ({
@@ -20,7 +20,7 @@ describe('algoliaComponentDidUpdate', () => {
       }
     }
 
-    Search.algoliaComponentDidUpdate.call(mockThis, {}, { searchState: { a: 1, b: 2 } })
+    SearchPage.algoliaComponentDidUpdate.call(mockThis, {}, { searchState: { a: 1, b: 2 } })
 
     expect(mockThis.setState).not.toHaveBeenCalled()
   })
@@ -38,7 +38,7 @@ describe('algoliaComponentDidUpdate', () => {
 
     window.history.pushState({}, 'Test Title', '/search?query=600ml')
 
-    Search.algoliaComponentDidUpdate.call(mockThis,
+    SearchPage.algoliaComponentDidUpdate.call(mockThis,
       { id: 20, searchState: { configure: { config: 'config' } } },
       { categoryId: 20, searchState: { query: '300ml' } }
     )

@@ -6,13 +6,19 @@ import { shiftNextConfig } from 'shift-next'
 // Objects
 import NextLink from '../objects/next-link'
 
+// Next config
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig: { API_HOST_PROXY, ALGOLIA_INDEX_NAME } } = getConfig()
+
 Config.set({
   Link: NextLink
 })
 
 shiftNextConfig.set({
-  apiHostProxy: process.env.API_HOST_PROXY,
-  storeName: 'ShopGo'
+  apiHostProxy: API_HOST_PROXY,
+  storeName: 'ShopGo',
+  algoliaIndexName: ALGOLIA_INDEX_NAME
 })
 
 class MyApp extends App {
