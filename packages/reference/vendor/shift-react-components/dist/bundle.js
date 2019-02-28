@@ -4655,7 +4655,7 @@ __webpack_require__.r(__webpack_exports__);
 var createInstantSearch = __webpack_require__(511);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(517);
+var createIndex = __webpack_require__(516);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(9);
@@ -4678,7 +4678,7 @@ var difference = __webpack_require__(523);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
-var omit = __webpack_require__(17);
+var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
@@ -5516,7 +5516,7 @@ module.exports = parse
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cleanUpValue; });
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(17);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_has__WEBPACK_IMPORTED_MODULE_2__);
@@ -6237,6 +6237,24 @@ PanelCallbackHandler.contextTypes = {
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(534)();
+}
+
+
+/***/ }),
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6253,7 +6271,7 @@ var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"] || fre
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 /**
@@ -6285,7 +6303,7 @@ module.exports = isArray;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 function _interopRequireDefault(obj) {
@@ -6297,7 +6315,7 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(80),
@@ -6360,24 +6378,6 @@ module.exports = omit;
 
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(534)();
-}
-
-
-/***/ }),
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6399,7 +6399,7 @@ module.exports = root;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.addMethod = addMethod;
@@ -6683,7 +6683,7 @@ module.exports = isObjectLike;
 var baseMatches = __webpack_require__(794),
     baseMatchesProperty = __webpack_require__(811),
     identity = __webpack_require__(51),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     property = __webpack_require__(817);
 
 /**
@@ -7193,7 +7193,7 @@ module.exports = arrayMap;
 var arrayMap = __webpack_require__(38),
     baseIteratee = __webpack_require__(27),
     baseMap = __webpack_require__(323),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * Creates an array of values by running each element in `collection` thru
@@ -7884,7 +7884,7 @@ module.exports = identity;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = SchemaType;
@@ -8444,7 +8444,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = exports.array = exports.object = exports.boolean = exports.date = exports.number = exports.string = exports.mixed = void 0;
@@ -8833,7 +8833,7 @@ module.exports = baseRest;
 var arrayEach = __webpack_require__(185),
     baseEach = __webpack_require__(129),
     castFunction = __webpack_require__(311),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * Iterates over elements of `collection` and invokes `iteratee` for each element.
@@ -8877,7 +8877,7 @@ module.exports = forEach;
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(15),
+var isArray = __webpack_require__(16),
     isKey = __webpack_require__(190),
     stringToPath = __webpack_require__(812),
     toString = __webpack_require__(191);
@@ -9015,7 +9015,7 @@ module.exports = replaceHolders;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = inherits;
@@ -9103,7 +9103,7 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(517);
+var createIndex = __webpack_require__(516);
 
 // CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
@@ -9141,7 +9141,7 @@ var translatable = __webpack_require__(211);
 var utils = __webpack_require__(8);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
-var omit = __webpack_require__(17);
+var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
@@ -9420,10 +9420,10 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(513);
+var ClearRefinements = __webpack_require__(512);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(512);
+var CurrentRefinements = __webpack_require__(517);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(361);
@@ -10898,7 +10898,7 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(516);
+var Panel = __webpack_require__(514);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(367);
@@ -11878,7 +11878,7 @@ var Snippet_Snippet = function Snippet(props) {
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(514);
+var SortBy = __webpack_require__(513);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(371);
@@ -13137,7 +13137,7 @@ var arrayReduce = __webpack_require__(820),
     baseEach = __webpack_require__(129),
     baseIteratee = __webpack_require__(27),
     baseReduce = __webpack_require__(821),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * Reduces `collection` to a value which is the accumulated result of running
@@ -13304,7 +13304,7 @@ module.exports = toInteger;
 var baseKeys = __webpack_require__(298),
     getTag = __webpack_require__(92),
     isArguments = __webpack_require__(86),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isArrayLike = __webpack_require__(32),
     isBuffer = __webpack_require__(87),
     isPrototype = __webpack_require__(124),
@@ -13385,7 +13385,7 @@ module.exports = isEmpty;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(37),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isObjectLike = __webpack_require__(22);
 
 /** `Object#toString` result references. */
@@ -16114,7 +16114,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(527);
 
 
@@ -20451,7 +20451,7 @@ module.exports = arrayEach;
 var arrayFilter = __webpack_require__(312),
     baseFilter = __webpack_require__(793),
     baseIteratee = __webpack_require__(27),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * Iterates over elements of `collection`, returning an array of all elements
@@ -20598,7 +20598,7 @@ module.exports = getSymbols;
 /* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(15),
+var isArray = __webpack_require__(16),
     isSymbol = __webpack_require__(93);
 
 /** Used to match property names within property paths. */
@@ -20669,7 +20669,7 @@ module.exports = toString;
 
 var Symbol = __webpack_require__(60),
     arrayMap = __webpack_require__(38),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isSymbol = __webpack_require__(93);
 
 /** Used as references for various `Number` constants. */
@@ -21520,7 +21520,7 @@ module.exports = function(originalModule) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.propagateErrors = propagateErrors;
@@ -21656,7 +21656,7 @@ module.exports = _objectWithoutPropertiesLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = ValidationError;
@@ -21732,7 +21732,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -22561,7 +22561,7 @@ if ( true && module.exports) {
 exports.__esModule = true;
 exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
 
-var PropTypes = _interopRequireWildcard(__webpack_require__(18));
+var PropTypes = _interopRequireWildcard(__webpack_require__(14));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -23196,7 +23196,7 @@ exports.__esModule = true;
 exports.transitionTimeout = transitionTimeout;
 exports.classNamesShape = exports.timeoutsShape = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(18));
+var _propTypes = _interopRequireDefault(__webpack_require__(14));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23250,7 +23250,7 @@ exports.classNamesShape = classNamesShape;
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(18));
+var _propTypes = _interopRequireDefault(__webpack_require__(14));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -23535,7 +23535,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -27119,7 +27119,7 @@ function getCurrentRefinement(props, searchState, context) {
 
 var baseTimes = __webpack_require__(753),
     isArguments = __webpack_require__(86),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isBuffer = __webpack_require__(87),
     isIndex = __webpack_require__(88),
     isTypedArray = __webpack_require__(123);
@@ -27747,7 +27747,7 @@ module.exports = getAllKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(188),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -29324,7 +29324,7 @@ module.exports = SearchResults;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseOrderBy = __webpack_require__(868),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /**
  * This method is like `_.sortBy` except that it allows specifying the sort
@@ -32373,7 +32373,7 @@ function _cleanUp(props, searchState, context) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
@@ -32745,7 +32745,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -33259,7 +33259,7 @@ module.exports = mapValues;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.getIn = getIn;
@@ -45469,7 +45469,7 @@ var isEmpty = __webpack_require__(33);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
-var omit = __webpack_require__(17);
+var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/algoliasearch-helper/index.js
@@ -46246,182 +46246,6 @@ var translatable = __webpack_require__(211);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
-
-var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
-  var items = _ref.items,
-      canRefine = _ref.canRefine,
-      refine = _ref.refine,
-      translate = _ref.translate,
-      className = _ref.className;
-  return external_react_default.a.createElement(
-    'div',
-    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
-    external_react_default.a.createElement(
-      'ul',
-      { className: cx('list', !canRefine && 'list--noRefinement') },
-      items.map(function (item) {
-        return external_react_default.a.createElement(
-          'li',
-          { key: item.label, className: cx('item') },
-          external_react_default.a.createElement(
-            'span',
-            { className: cx('label') },
-            item.label
-          ),
-          item.items ? item.items.map(function (nest) {
-            return external_react_default.a.createElement(
-              'span',
-              { key: nest.label, className: cx('category') },
-              external_react_default.a.createElement(
-                'span',
-                { className: cx('categoryLabel') },
-                nest.label
-              ),
-              external_react_default.a.createElement(
-                'button',
-                {
-                  className: cx('delete'),
-                  onClick: function onClick() {
-                    return refine(nest.value);
-                  }
-                },
-                translate('clearFilter', nest)
-              )
-            );
-          }) : external_react_default.a.createElement(
-            'span',
-            { className: cx('category') },
-            external_react_default.a.createElement(
-              'button',
-              {
-                className: cx('delete'),
-                onClick: function onClick() {
-                  return refine(item.value);
-                }
-              },
-              translate('clearFilter', item)
-            )
-          )
-        );
-      })
-    )
-  );
-};
-
-var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
-  label: prop_types_default.a.string.isRequired,
-  value: prop_types_default.a.func.isRequired,
-  items: function items() {
-    return itemPropTypes.apply(undefined, arguments);
-  }
-}));
-
-CurrentRefinements_CurrentRefinements.propTypes = {
-  items: itemPropTypes.isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-
-CurrentRefinements_CurrentRefinements.defaultProps = {
-  className: ''
-};
-
-/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
-  clearFilter: '✕'
-})(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
-
-
-
-
-
-/**
- * The CurrentRefinements widget displays the list of currently applied filters.
- *
- * It allows the user to selectively remove them.
- * @name CurrentRefinements
- * @kind widget
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-CurrentRefinements - the root div of the widget
- * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
- * @themeKey ais-CurrentRefinements-list - the list of all refined items
- * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
- * @themeKey ais-CurrentRefinements-item - the refined list item
- * @themeKey ais-CurrentRefinements-button - the button of each refined list item
- * @themeKey ais-CurrentRefinements-label - the refined list label
- * @themeKey ais-CurrentRefinements-category - the category of each item
- * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
- * @themeKey ais-CurrentRefinements-delete - the delete button of each label
- * @translationKey clearFilter - the remove filter button label
- * @example
- * import React from 'react';
- * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <CurrentRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Colors']}
- *     />
- *   </InstantSearch>
- * );
- */
-
-var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_CurrentRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
-
-/***/ }),
-/* 513 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(294);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(13);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(10);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(211);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(8);
-
 // CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -46542,7 +46366,7 @@ var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(pr
 /* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
 
 /***/ }),
-/* 514 */
+/* 513 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46674,6 +46498,163 @@ SortBy_SortBy.defaultProps = {
  */
 
 /* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
+
+/***/ }),
+/* 514 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(10);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(8);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('Panel');
+
+var Panel_Panel = function (_Component) {
+  _inherits(Panel, _Component);
+
+  function Panel() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Panel);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      canRefine: true
+    }, _this.setCanRefine = function (nextCanRefine) {
+      _this.setState({ canRefine: nextCanRefine });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Panel, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        setCanRefine: this.setCanRefine
+      };
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          className = _props.className,
+          header = _props.header,
+          footer = _props.footer;
+      var canRefine = this.state.canRefine;
+
+
+      return external_react_default.a.createElement(
+        'div',
+        {
+          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
+        },
+        header && external_react_default.a.createElement(
+          'div',
+          { className: cx('header') },
+          header
+        ),
+        external_react_default.a.createElement(
+          'div',
+          { className: cx('body') },
+          children
+        ),
+        footer && external_react_default.a.createElement(
+          'div',
+          { className: cx('footer') },
+          footer
+        )
+      );
+    }
+  }]);
+
+  return Panel;
+}(external_react_["Component"]);
+
+Panel_Panel.propTypes = {
+  children: prop_types_default.a.node.isRequired,
+  className: prop_types_default.a.string,
+  header: prop_types_default.a.node,
+  footer: prop_types_default.a.node
+};
+Panel_Panel.childContextTypes = {
+  setCanRefine: prop_types_default.a.func.isRequired
+};
+Panel_Panel.defaultProps = {
+  className: '',
+  header: null,
+  footer: null
+};
+
+
+/* harmony default export */ var components_Panel = (Panel_Panel);
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
+
+
+/**
+ * The Panel widget wraps other widgets in a consistent panel design.
+ * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
+ * E.g. when a RefinementList becomes empty because of the current search results.
+ *
+ * @name Panel
+ * @kind widget
+ * @propType {string} [className] - Adds a className on the root element.
+ * @propType {node} [header] - Adds a header to the widget.
+ * @propType {node} [footer] - Adds a footer to the widget.
+ * @themeKey ais-Panel - the root div of the Panel
+ * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
+ * @themeKey ais-Panel-header - the header of the Panel (optional)
+ * @themeKey ais-Panel-body - the body of the Panel
+ * @themeKey ais-Panel-footer - the footer of the Panel (optional)
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <Panel header="Categories">
+ *       <RefinementList attribute="categories" />
+ *     </Panel>
+ *   </InstantSearch>
+ * );
+ */
+
+/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
 
 /***/ }),
 /* 515 */
@@ -46906,163 +46887,6 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(10);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(8);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('Panel');
-
-var Panel_Panel = function (_Component) {
-  _inherits(Panel, _Component);
-
-  function Panel() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Panel);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      canRefine: true
-    }, _this.setCanRefine = function (nextCanRefine) {
-      _this.setState({ canRefine: nextCanRefine });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Panel, [{
-    key: 'getChildContext',
-    value: function getChildContext() {
-      return {
-        setCanRefine: this.setCanRefine
-      };
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          children = _props.children,
-          className = _props.className,
-          header = _props.header,
-          footer = _props.footer;
-      var canRefine = this.state.canRefine;
-
-
-      return external_react_default.a.createElement(
-        'div',
-        {
-          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
-        },
-        header && external_react_default.a.createElement(
-          'div',
-          { className: cx('header') },
-          header
-        ),
-        external_react_default.a.createElement(
-          'div',
-          { className: cx('body') },
-          children
-        ),
-        footer && external_react_default.a.createElement(
-          'div',
-          { className: cx('footer') },
-          footer
-        )
-      );
-    }
-  }]);
-
-  return Panel;
-}(external_react_["Component"]);
-
-Panel_Panel.propTypes = {
-  children: prop_types_default.a.node.isRequired,
-  className: prop_types_default.a.string,
-  header: prop_types_default.a.node,
-  footer: prop_types_default.a.node
-};
-Panel_Panel.childContextTypes = {
-  setCanRefine: prop_types_default.a.func.isRequired
-};
-Panel_Panel.defaultProps = {
-  className: '',
-  header: null,
-  footer: null
-};
-
-
-/* harmony default export */ var components_Panel = (Panel_Panel);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
-
-
-/**
- * The Panel widget wraps other widgets in a consistent panel design.
- * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
- * E.g. when a RefinementList becomes empty because of the current search results.
- *
- * @name Panel
- * @kind widget
- * @propType {string} [className] - Adds a className on the root element.
- * @propType {node} [header] - Adds a header to the widget.
- * @propType {node} [footer] - Adds a footer to the widget.
- * @themeKey ais-Panel - the root div of the Panel
- * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
- * @themeKey ais-Panel-header - the header of the Panel (optional)
- * @themeKey ais-Panel-body - the body of the Panel
- * @themeKey ais-Panel-footer - the footer of the Panel (optional)
- * @example
- * import React from 'react';
- * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <Panel header="Categories">
- *       <RefinementList attribute="categories" />
- *     </Panel>
- *   </InstantSearch>
- * );
- */
-
-/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
-
-/***/ }),
-/* 517 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
@@ -47240,6 +47064,182 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 };
 
 /* harmony default export */ var core_createIndex = __webpack_exports__["a"] = (createIndex_createIndex);
+
+/***/ }),
+/* 517 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(294);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(13);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(10);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(211);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(8);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
+
+var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
+  var items = _ref.items,
+      canRefine = _ref.canRefine,
+      refine = _ref.refine,
+      translate = _ref.translate,
+      className = _ref.className;
+  return external_react_default.a.createElement(
+    'div',
+    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
+    external_react_default.a.createElement(
+      'ul',
+      { className: cx('list', !canRefine && 'list--noRefinement') },
+      items.map(function (item) {
+        return external_react_default.a.createElement(
+          'li',
+          { key: item.label, className: cx('item') },
+          external_react_default.a.createElement(
+            'span',
+            { className: cx('label') },
+            item.label
+          ),
+          item.items ? item.items.map(function (nest) {
+            return external_react_default.a.createElement(
+              'span',
+              { key: nest.label, className: cx('category') },
+              external_react_default.a.createElement(
+                'span',
+                { className: cx('categoryLabel') },
+                nest.label
+              ),
+              external_react_default.a.createElement(
+                'button',
+                {
+                  className: cx('delete'),
+                  onClick: function onClick() {
+                    return refine(nest.value);
+                  }
+                },
+                translate('clearFilter', nest)
+              )
+            );
+          }) : external_react_default.a.createElement(
+            'span',
+            { className: cx('category') },
+            external_react_default.a.createElement(
+              'button',
+              {
+                className: cx('delete'),
+                onClick: function onClick() {
+                  return refine(item.value);
+                }
+              },
+              translate('clearFilter', item)
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
+  label: prop_types_default.a.string.isRequired,
+  value: prop_types_default.a.func.isRequired,
+  items: function items() {
+    return itemPropTypes.apply(undefined, arguments);
+  }
+}));
+
+CurrentRefinements_CurrentRefinements.propTypes = {
+  items: itemPropTypes.isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+
+CurrentRefinements_CurrentRefinements.defaultProps = {
+  className: ''
+};
+
+/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
+  clearFilter: '✕'
+})(CurrentRefinements_CurrentRefinements));
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+
+
+
+
+
+/**
+ * The CurrentRefinements widget displays the list of currently applied filters.
+ *
+ * It allows the user to selectively remove them.
+ * @name CurrentRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @themeKey ais-CurrentRefinements - the root div of the widget
+ * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
+ * @themeKey ais-CurrentRefinements-list - the list of all refined items
+ * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
+ * @themeKey ais-CurrentRefinements-item - the refined list item
+ * @themeKey ais-CurrentRefinements-button - the button of each refined list item
+ * @themeKey ais-CurrentRefinements-label - the refined list label
+ * @themeKey ais-CurrentRefinements-category - the category of each item
+ * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
+ * @themeKey ais-CurrentRefinements-delete - the delete button of each label
+ * @translationKey clearFilter - the remove filter button label
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <CurrentRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Colors']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_CurrentRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
 
 /***/ }),
 /* 518 */
@@ -49024,7 +49024,7 @@ function stubFalse() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 
 
 /** Detect free variable `exports`. */
@@ -49776,7 +49776,7 @@ exports.default = function () {
 exports.__esModule = true;
 exports.default = void 0;
 
-var PropTypes = _interopRequireWildcard(__webpack_require__(18));
+var PropTypes = _interopRequireWildcard(__webpack_require__(14));
 
 var _addClass = _interopRequireDefault(__webpack_require__(542));
 
@@ -50048,7 +50048,7 @@ module.exports = function removeClass(element, className) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(18));
+var _propTypes = _interopRequireDefault(__webpack_require__(14));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -50369,7 +50369,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -51156,7 +51156,7 @@ exports.default = Carousel;
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(18)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(14)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -61628,7 +61628,7 @@ var Stack = __webpack_require__(130),
     equalByTag = __webpack_require__(803),
     equalObjects = __webpack_require__(806),
     getTag = __webpack_require__(92),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isBuffer = __webpack_require__(87),
     isTypedArray = __webpack_require__(123);
 
@@ -62275,7 +62275,7 @@ module.exports = baseHasIn;
 
 var castPath = __webpack_require__(65),
     isArguments = __webpack_require__(86),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isIndex = __webpack_require__(88),
     isLength = __webpack_require__(179),
     toKey = __webpack_require__(66);
@@ -62474,7 +62474,7 @@ var Stack = __webpack_require__(130),
     initCloneArray = __webpack_require__(829),
     initCloneByTag = __webpack_require__(830),
     initCloneObject = __webpack_require__(328),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isBuffer = __webpack_require__(87),
     isMap = __webpack_require__(834),
     isObject = __webpack_require__(23),
@@ -63205,7 +63205,7 @@ module.exports = baseFlatten;
 
 var Symbol = __webpack_require__(60),
     isArguments = __webpack_require__(86),
-    isArray = __webpack_require__(15);
+    isArray = __webpack_require__(16);
 
 /** Built-in value references. */
 var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
@@ -63714,7 +63714,7 @@ var assignMergeValue = __webpack_require__(338),
     copyArray = __webpack_require__(132),
     initCloneObject = __webpack_require__(328),
     isArguments = __webpack_require__(86),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isArrayLikeObject = __webpack_require__(309),
     isBuffer = __webpack_require__(87),
     isFunction = __webpack_require__(61),
@@ -64815,7 +64815,7 @@ module.exports = realNames;
 var LazyWrapper = __webpack_require__(201),
     LodashWrapper = __webpack_require__(349),
     baseLodash = __webpack_require__(202),
-    isArray = __webpack_require__(15),
+    isArray = __webpack_require__(16),
     isObjectLike = __webpack_require__(22),
     wrapperClone = __webpack_require__(881);
 
@@ -67381,7 +67381,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -68736,7 +68736,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69140,7 +69140,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69458,7 +69458,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(18);
+var _propTypes = __webpack_require__(14);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69997,7 +69997,7 @@ module.exports = baseValues;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70077,7 +70077,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = merge;
@@ -70119,7 +70119,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = createValidation;
@@ -70244,7 +70244,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70292,7 +70292,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = StringSchema;
@@ -70506,7 +70506,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = NumberSchema;
@@ -70669,7 +70669,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70832,7 +70832,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(379);
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = ObjectSchema;
@@ -71719,7 +71719,7 @@ module.exports = mapKeys;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = sortFields;
@@ -71906,7 +71906,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(379);
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -72115,7 +72115,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -72166,7 +72166,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(16);
+var _interopRequireDefault = __webpack_require__(17);
 
 exports.__esModule = true;
 exports.default = setLocale;
@@ -77943,7 +77943,7 @@ var lib = __webpack_require__(210);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(18);
+var prop_types = __webpack_require__(14);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-transition-group/index.js
@@ -78721,7 +78721,7 @@ function (_Component) {
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(514);
+var SortBy = __webpack_require__(513);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
 function product_menu_options_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_menu_options_typeof = function _typeof(obj) { return typeof obj; }; } else { product_menu_options_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_menu_options_typeof(obj); }
@@ -79147,16 +79147,16 @@ function (_PureComponent) {
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(516);
+var Panel = __webpack_require__(514);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
 var RefinementList = __webpack_require__(515);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(513);
+var ClearRefinements = __webpack_require__(512);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(512);
+var CurrentRefinements = __webpack_require__(517);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
 function search_filters_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { search_filters_typeof = function _typeof(obj) { return typeof obj; }; } else { search_filters_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return search_filters_typeof(obj); }
@@ -81245,7 +81245,7 @@ function stackHas(key) {
 /* harmony default export */ var _stackHas = (stackHas);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_root.js
-var _root = __webpack_require__(14);
+var _root = __webpack_require__(15);
 
 // CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Symbol.js
 
@@ -86787,6 +86787,34 @@ coupon_form_CouponForm.propTypes = {
   handleSubmit: prop_types_default.a.func
 };
 /* harmony default export */ var coupon_form = (coupon_form_CouponForm);
+// CONCATENATED MODULE: ./src/components/checkout/address-form-header.js
+
+
+
+
+function AddressFormHeader(_ref) {
+  var collapsed = _ref.collapsed,
+      title = _ref.title,
+      onClick = _ref.onClick;
+  var Button = component_mapping('Button');
+  return external_react_default.a.createElement("div", {
+    className: "o-form__header c-address-form__header"
+  }, external_react_default.a.createElement("div", {
+    className: "o-form__header-title c-address-form__header-title"
+  }, external_react_default.a.createElement("h2", null, title)), collapsed && external_react_default.a.createElement(Button, {
+    label: "Edit",
+    status: "secondary",
+    className: "o-button-edit",
+    onClick: onClick
+  }));
+}
+
+AddressFormHeader.propTypes = {
+  collapsed: prop_types_default.a.bool,
+  onClick: prop_types_default.a.func,
+  title: prop_types_default.a.string.isRequired
+};
+/* harmony default export */ var address_form_header = (AddressFormHeader);
 // CONCATENATED MODULE: ./src/components/cart/line-items.js
 function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
 
@@ -87779,6 +87807,7 @@ function (_Component) {
 /* concated harmony reexport CartTablePaymentIcons */__webpack_require__.d(__webpack_exports__, "CartTablePaymentIcons", function() { return cart_table_payment_icons; });
 /* concated harmony reexport CartTableSummary */__webpack_require__.d(__webpack_exports__, "CartTableSummary", function() { return cart_table_summary; });
 /* concated harmony reexport CouponForm */__webpack_require__.d(__webpack_exports__, "CouponForm", function() { return coupon_form; });
+/* concated harmony reexport AddressFormHeader */__webpack_require__.d(__webpack_exports__, "AddressFormHeader", function() { return address_form_header; });
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
 /* concated harmony reexport CheckoutAddressForm */__webpack_require__.d(__webpack_exports__, "CheckoutAddressForm", function() { return address_form; });
@@ -87876,6 +87905,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 

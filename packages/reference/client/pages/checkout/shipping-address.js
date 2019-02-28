@@ -10,10 +10,9 @@ import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
 import AddressBook from '../../components/address-book'
-import AddressFormHeader from '../../components/checkout/address-form-header'
 import withCheckout from '../../components/with-checkout'
 
-import { Button, CheckoutAddressForm } from 'shift-react-components'
+import { Button, AddressFormHeader, CheckoutAddressForm } from 'shift-react-components'
 
 // Actions
 import {

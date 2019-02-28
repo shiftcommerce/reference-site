@@ -8,7 +8,9 @@ exports[`render() renders correct checkout components 1`] = `
     <div
       className="o-form__address"
     >
-      <AddressFormSummary />
+      <AddressFormSummary
+        onClick={[Function]}
+      />
     </div>
   </div>
   <ShippingMethodsSummary />

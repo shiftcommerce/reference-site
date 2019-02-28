@@ -50,10 +50,11 @@ export class CheckoutShippingMethodPage extends Component {
         <div className='c-checkout__addressform'>
           <div className='o-form__address'>
             <AddressFormSummary
-              firstName={shipping_address.first_name}
-              lastName={shipping_address.last_name}
               addressLine1={shipping_address.address_line_1}
               city={shipping_address.city}
+              firstName={shipping_address.first_name}
+              lastName={shipping_address.last_name}
+              onClick={() => Router.push('/checkout/shipping-address')}
               postcode={shipping_address.postcode}
             />
           </div>
