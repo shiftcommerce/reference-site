@@ -1,6 +1,9 @@
 // Libraries
 import Cookies from 'js-cookie'
 
+// Lib
+import ApiClient from '../lib/api-client'
+
 // Actions
 import * as actionTypes from './action-types'
 import { readEndpoint, postEndpoint } from './api-actions'
@@ -54,4 +57,24 @@ export function updateLineItemQuantity (lineItemId, newQuantity) {
 
 export function deleteLineItem (lineItemId) {
   return postEndpoint(deleteLineItemRequest(lineItemId))
+}
+
+const addCartCouponRequest = (couponCode) => {
+  return {
+    endpoint: '/addCartCoupon',
+    body: { couponCode }
+  }
+}
+
+export async function submitCoupon (couponCode) {
+  const request = addCartCouponRequest(couponCode)
+  const response = await new ApiClient().post(request.endpoint, request.body)
+  if (response.status === 201) {
+    return response.data
+  }
+  throw response.data
+}
+
+export function setAPIError (error, setErrors) {
+  setErrors({ couponCode: error[0]['title'] })
 }

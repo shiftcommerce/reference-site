@@ -84,6 +84,7 @@ export { default as CartTableGridItem } from './components/cart/cart-table-grid-
 export { default as CartTableHeader } from './components/cart/cart-table-header'
 export { default as CartTablePaymentIcons } from './components/cart/cart-table-payment-icons'
 export { default as CartTableSummary } from './components/cart/cart-table-summary'
+export { default as CouponForm } from './components/cart/coupon-form'
 
 /**
  * Cart/Checkout Components

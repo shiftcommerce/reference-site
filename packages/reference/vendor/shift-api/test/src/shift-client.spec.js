@@ -76,8 +76,6 @@ describe('SHIFTClient', () => {
         .query(true)
         .reply(500)
 
-      expect.assertions(1)
-
       return SHIFTClient.getMenusV1(query)
         .catch(error => {
           expect(error).toEqual(new Error('Request failed with status code 500'))
@@ -401,11 +399,9 @@ describe('SHIFTClient', () => {
           }
         })
 
-      expect.assertions(2)
-
       return SHIFTClient.getStaticPageV1(1001, queryObject)
         .catch(error => {
-          expect(error).toEqual(new Error('Request failed with status code 404'))
+          expect(error.response.status).toBe(404)
           expect(error.response.data.errors[0].title).toEqual('Record not found')
         })
     })
@@ -612,7 +608,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('createCustomerAccountV1', () => {
-    it('allows you to create an account with a correct payload', () => {
+    test('allows you to create an account with a correct payload', () => {
       const body = {
         'data': {
           'type': 'customer_accounts',
@@ -637,7 +633,7 @@ describe('SHIFTClient', () => {
         })
     })
 
-    it('errors if account already exists', () => {
+    test('errors if account already exists', () => {
       const body = {
         data: {
           type: 'customer_accounts',
@@ -667,7 +663,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('loginCustomerAccountV1', () => {
-    it('allows you to login to an account with a correct payload', () => {
+    test('allows you to login to an account with a correct payload', () => {
       const body = {
         data: {
           type: 'customer_account_authentications',
@@ -689,7 +685,7 @@ describe('SHIFTClient', () => {
         })
     })
 
-    it('errors if account doesnt exist', () => {
+    test('errors if account doesnt exist', () => {
       const body = {
         data: {
           type: 'customer_account_authentications',
@@ -728,7 +724,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('getAccountV1', () => {
-    it('gets an account if there is a customer id', () => {
+    test('gets an account if there is a customer id', () => {
       const customerId = 10
       const queryObject = {
         fields: {
@@ -758,7 +754,7 @@ describe('SHIFTClient', () => {
   })
 
   describe('getCustomerOrdersV1', () => {
-    it('gets customer orders from oms', () => {
+    test('gets customer orders from oms', () => {
       const query = {
         filter: {
           account_reference: process.env.API_TENANT,
@@ -786,7 +782,7 @@ describe('SHIFTClient', () => {
         })
     })
 
-    it('should return errors if no customer_reference is present', () => {
+    test('should return errors if no customer_reference is present', () => {
       const query = {
         fields: {
           customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',

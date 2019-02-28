@@ -4,6 +4,9 @@ import Cookies from 'js-cookie'
 // Actions
 import { postEndpoint, readEndpoint } from './api-actions'
 
+// Lib
+import ApiClient from '../lib/api-client'
+
 import {
   addToCartRequest,
   fetchCartRequest,
@@ -13,8 +16,7 @@ import {
   createShippingAddressRequest,
   setBillingAddressRequest,
   createBillingAddressRequest,
-  setShippingMethodRequest,
-  addCartCouponRequest
+  setShippingMethodRequest
 } from '../requests/cart-requests'
 
 export function readCart (options = {}) {
@@ -62,4 +64,24 @@ export function setCartShippingMethod (shippingMethodId) {
 
 export function setCartCouponCode (couponCode) {
   return postEndpoint(addCartCouponRequest(couponCode))
+}
+
+const addCartCouponRequest = (couponCode) => {
+  return {
+    endpoint: '/addCartCoupon',
+    body: { couponCode }
+  }
+}
+
+export async function submitCoupon (couponCode) {
+  const request = addCartCouponRequest(couponCode)
+  const response = await new ApiClient().post(request.endpoint, request.body)
+  if (response.status === 201) {
+    return response.data
+  }
+  throw response.data
+}
+
+export function setAPIError (error, setErrors) {
+  setErrors({ couponCode: error[0]['title'] })
 }

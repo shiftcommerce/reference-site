@@ -11,13 +11,20 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import CheckoutCart from '../components/checkout/checkout-cart'
 import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import CheckoutSteps from '../components/checkout/checkout-steps'
-import CouponForm from '../components/coupon-form'
 import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
-import { PaymentIcons } from 'shift-react-components'
+import { CouponForm, PaymentIcons } from 'shift-react-components'
 
 // Actions
-import { readCart, updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
+import {
+  readCart,
+  updateLineItemQuantity,
+  deleteLineItem,
+  submitCoupon,
+  setAPIError
+} from '../actions/cart-actions'
+// When with-checkout.js is extracted from the reference site submitCoupon and setAPIError can be
+// removed from 'client/actions/cart-actions'. These actions are duplicated in shift-next
 
 export function withCheckout (WrappedComponent) {
   class WithCheckout extends Component {
@@ -35,6 +42,7 @@ export function withCheckout (WrappedComponent) {
       this.setCurrentStep = this.setCurrentStep.bind(this)
       this.updateQuantity = this.updateQuantity.bind(this)
       this.deleteItem = this.deleteItem.bind(this)
+      this.handleCouponSubmit = this.handleCouponSubmit.bind(this)
     }
 
     static async getInitialProps (args) {
@@ -88,6 +96,13 @@ export function withCheckout (WrappedComponent) {
       })
     }
 
+    handleCouponSubmit (values, { setSubmitting, setErrors }) {
+      return submitCoupon(values.couponCode)
+        .then(this.props.dispatch(readCart({ force: true })))
+        .catch((error) => setAPIError(error, setErrors))
+        .finally(() => setSubmitting(false))
+    }
+
     updateQuantity (e) {
       this.props.dispatch(updateLineItemQuantity(e.target.dataset.id, parseInt(e.target.value, 10)))
     }
@@ -100,7 +115,7 @@ export function withCheckout (WrappedComponent) {
     }
 
     render () {
-      const { cart, checkout, order, dispatch } = this.props
+      const { cart, checkout, order } = this.props
 
       if (this.state.loading || !cart.id) {
         return <div>Loading</div>
@@ -132,7 +147,9 @@ export function withCheckout (WrappedComponent) {
               <div className='o-col-1-13 o-col-8-13-l'>
                 <div className='c-checkout__cart'>
                   <CheckoutCart title='Your Cart' cart={cart} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
-                  <CouponForm dispatch={dispatch} />
+                  <CouponForm
+                    handleSubmit={this.handleCouponSubmit}
+                  />
                   <CheckoutCartTotal
                     continueButtonProps={this.state.continueButtonProps}
                     cart={cart}

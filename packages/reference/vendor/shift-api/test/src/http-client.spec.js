@@ -13,7 +13,7 @@ const httpClient = HTTPClient
 
 afterEach(() => { nock.cleanAll() })
 
-describe('ApiClient', () => {
+describe('HTTPClient', () => {
   describe('get', () => {
     it('returns correct data', () => {
       const url = `v1/static_pages/56`

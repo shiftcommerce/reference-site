@@ -70,7 +70,16 @@ module.exports = {
 
     const cartId = req.signedCookies.cart
 
-    const response = await SHIFTClient.addCartCouponV1(couponCode, cartId)
+    let response
+
+    try {
+      response = await SHIFTClient.addCartCouponV1(couponCode, cartId)
+    } catch (error) {
+      response = {
+        status: error.response.status,
+        data: error.response.data
+      }
+    }
 
     switch (response.status) {
       case 404:

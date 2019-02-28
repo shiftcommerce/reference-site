@@ -1,73 +1,48 @@
 // Libraries
 import React, { Component } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-
-// Actions
-import { readCart } from '../actions/cart-actions'
+import PropTypes from 'prop-types'
 
 // Lib
-import ApiClient from '../lib/api-client'
-
-// Objects
-import { Button } from 'shift-react-components'
-
-const addCartCouponRequest = (couponCode) => {
-  return {
-    endpoint: '/addCartCoupon',
-    body: { couponCode }
-  }
-}
+import componentMapping from '../../lib/component-mapping'
 
 class CouponForm extends Component {
-  async submitCoupon (couponCode) {
-    const request = addCartCouponRequest(couponCode)
-    const response = await new ApiClient().post(request.endpoint, request.body)
-    if (response.status === 201) {
-      return response.data
-    }
-    throw response.data
+  constructor (props) {
+    super(props)
+
+    this.Button = componentMapping('Button')
   }
 
-  constructor () {
-    super()
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.updateCart = this.updateCart.bind(this)
-  }
-
-  handleSubmit (values, { setSubmitting, setErrors }) {
-    return this.submitCoupon(values.couponCode)
-      .then(this.updateCart)
-      .catch((error) => this.setAPIError(error, setErrors))
-      .finally(() => setSubmitting(false))
-  }
-
-  updateCart () {
-    this.props.dispatch(readCart({ force: true }))
-  }
-
-  setAPIError (error, setErrors) {
-    setErrors({ couponCode: error.errors[0]['title'] })
-  }
-
+  /**
+   * Renders a vailation message if no coupon code is entered
+   * @param  {Object} values
+   * @return {string} - HTML markup for the component
+   */
   validate (values) {
     let errors = {}
     if (!values.couponCode) errors.couponCode = 'Please enter a coupon code'
     return errors
   }
 
+  /**
+   * Renders the form
+   * @param  {function} validate
+   * @param  {function} handleSubmit
+   * @return {string} - HTML markup for the component
+   */
   renderForm () {
     return (
       <Formik
         initialValues={{ couponCode: '' }}
         validate={this.validate}
-        onSubmit={this.handleSubmit}
+        onSubmit={this.props.handleSubmit}
       >
         { () => (
           <Form>
             <div className='c-coupon-form__field'>
               <Field type='text' name='couponCode' className='c-coupon-form__input' placeholder='Enter Promotion Code' />
               <div className="c-coupon-form__button-container">
-                <Button
+                <this.Button
                   aria-label='Apply Gift Code'
                   className='c-coupon-form__button o-button--sml'
                   label='Apply'
@@ -91,6 +66,10 @@ class CouponForm extends Component {
       </div>
     )
   }
+}
+
+CouponForm.propTypes = {
+  handleSubmit: PropTypes.func
 }
 
 export default CouponForm

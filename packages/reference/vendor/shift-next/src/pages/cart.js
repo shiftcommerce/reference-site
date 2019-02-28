@@ -7,7 +7,13 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
 
 // Actions
-import { updateLineItemQuantity, deleteLineItem } from '../actions/cart-actions'
+import {
+  readCart,
+  setAPIError,
+  submitCoupon,
+  updateLineItemQuantity,
+  deleteLineItem
+} from '../actions/cart-actions'
 
 // Components
 import {
@@ -19,11 +25,10 @@ import {
   CartTableHeader,
   CartTablePaymentIcons,
   CartTableSummary,
+  CouponForm,
   LineItems,
   Loading
 } from 'shift-react-components'
-
-import CouponForm from '../components/coupon-form'
 
 const fetchShippingMethodsRequest = () => {
   return {
@@ -43,6 +48,7 @@ class CartPage extends Component {
     this.fetchShippingMethods = this.fetchShippingMethods.bind(this)
     this.updateQuantity = this.updateQuantity.bind(this)
     this.deleteItem = this.deleteItem.bind(this)
+    this.handleCouponSubmit = this.handleCouponSubmit.bind(this)
   }
 
   async componentDidMount () {
@@ -64,6 +70,13 @@ class CartPage extends Component {
     } catch (error) {
       return { error }
     }
+  }
+
+  handleCouponSubmit (values, { setSubmitting, setErrors }) {
+    return submitCoupon(values.couponCode)
+      .then(this.props.dispatch(readCart({ force: true })))
+      .catch((error) => setAPIError(error, setErrors))
+      .finally(() => setSubmitting(false))
   }
 
   updateQuantity (event) {
@@ -98,7 +111,9 @@ class CartPage extends Component {
             />
           </CartTableGridItem>
           <CartTableGridItem item='b'>
-            <CouponForm dispatch={this.props.dispatch} />
+            <CouponForm
+              handleSubmit={this.handleCouponSubmit}
+            />
             <CartTableSummary
               cart={cart}
               loading={this.state.loading}
@@ -114,7 +129,7 @@ class CartPage extends Component {
 
   render () {
     const { cart } = this.props
-    const { loading } = this.state
+    const { loading, cheapestShipping } = this.state
 
     if (loading) {
       return (
@@ -129,7 +144,7 @@ class CartPage extends Component {
           <CartTable>
             <CartTableHeader
               cart={cart}
-              shippingMethod={cart.shipping_method || this.state.cheapestShipping}
+              shippingMethod={cart.shipping_method || cheapestShipping}
               breadcrumb={<Breadcrumb />}
             />
             <CartTableGrid>
