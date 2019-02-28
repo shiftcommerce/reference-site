@@ -4,8 +4,9 @@ import { Component } from 'react'
 // Components
 import PaymentMethodSelector from './payment-method-selector'
 import StripePayment from './stripe-payment'
-import PaymentMethodHeader from './payment-method-header'
 import PayPalPayment from './paypal-payment'
+
+import { PaymentMethodHeader } from 'shift-react-components'
 
 export default class PaymentMethod extends Component {
   renderPaymentMethodSelector () {

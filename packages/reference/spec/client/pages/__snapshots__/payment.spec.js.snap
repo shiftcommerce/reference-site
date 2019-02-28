@@ -30,8 +30,8 @@ exports[`render() renders correct checkout components 1`] = `
           "addressBook": Array [],
         }
       }
+      onClick={[Function]}
       selectedPaymentMethod={null}
-      showPayment={[Function]}
     />
   </div>
   <div

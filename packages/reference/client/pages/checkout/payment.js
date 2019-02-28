@@ -327,7 +327,7 @@ export class CheckoutPaymentPage extends Component {
             order={order}
             cart={cart}
             selectedPaymentMethod={this.state.selectedPaymentMethod}
-            showPayment={this.showPayment}
+            onClick={this.showPayment}
           />
         </div>
         <div className={classNames({ 'u-hidden': this.state.reviewStep })}>

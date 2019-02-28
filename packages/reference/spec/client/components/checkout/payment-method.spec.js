@@ -1,6 +1,5 @@
 // Components
 import PaymentMethod from '../../../../client/components/checkout/payment-method'
-import PaymentMethodHeader from '../../../../client/components/checkout/payment-method-header'
 import PaymentMethodSelector from '../../../../client/components/checkout/payment-method-selector'
 import PayPalPayment from '../../../../client/components/checkout/paypal-payment'
 import '../../../../client/components/checkout/stripe-payment'
@@ -12,7 +11,7 @@ test('renders the payment method header and selector', () => {
   const wrapper = shallow(<PaymentMethod />)
 
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toContainReact(<PaymentMethodHeader />)
+  expect(wrapper.find('PaymentMethodHeader').length).toEqual(1)
   expect(wrapper).toContainReact(<PaymentMethodSelector />)
 })
 

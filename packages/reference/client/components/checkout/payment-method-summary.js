@@ -2,13 +2,13 @@
 import classNames from 'classnames'
 
 // Components
-import PaymentMethodHeader from './payment-method-header'
+import { PaymentMethodHeader } from 'shift-react-components'
 
-const PaymentMethodSummary = ({ selectedPaymentMethod, order, cart, showPayment }) => (
+const PaymentMethodSummary = ({ cart, onClick, order, selectedPaymentMethod }) => (
   <>
     <PaymentMethodHeader
       collapsed
-      showPayment={showPayment}
+      onClick={onClick}
     />
     <div className={classNames('c-payment-method__summary', { 'o-form__error': order.paymentError !== null })}>
       <p>
