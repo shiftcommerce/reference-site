@@ -81,7 +81,6 @@ exports[`renders line items correctly, on initial load 1`] = `
         <span>
           <select
             data-id="311"
-            onChange={[Function]}
             value={1}
           >
             <option

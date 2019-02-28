@@ -104,10 +104,10 @@ class CartPage extends Component {
         <>
           <CartTableGridItem item='a'>
             <LineItems
-              updateQuantity={this.updateQuantity}
               deleteItem={this.deleteItem}
-              cart={cart}
-              aria-label='Line Items'
+              lineItems={cart.line_items}
+              lineItemsCount={cart.line_items_count}
+              updateQuantity={this.updateQuantity}
             />
           </CartTableGridItem>
           <CartTableGridItem item='b'>

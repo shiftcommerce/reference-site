@@ -8,12 +8,11 @@ import Head from 'next/head'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
-import CheckoutCart from '../components/checkout/checkout-cart'
 import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import CheckoutSteps from '../components/checkout/checkout-steps'
 import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
-import { CouponForm, PaymentIcons } from 'shift-react-components'
+import { CheckoutCart, CouponForm, PaymentIcons } from 'shift-react-components'
 
 // Actions
 import {
@@ -146,7 +145,13 @@ export function withCheckout (WrappedComponent) {
               </div>
               <div className='o-col-1-13 o-col-8-13-l'>
                 <div className='c-checkout__cart'>
-                  <CheckoutCart title='Your Cart' cart={cart} updateQuantity={this.updateQuantity} deleteItem={this.deleteItem} />
+                  <CheckoutCart
+                    deleteItem={this.deleteItem}
+                    lineItems={cart.line_items}
+                    lineItemsCount={cart.line_items_count}
+                    total={cart.total}
+                    updateQuantity={this.updateQuantity}
+                  />
                   <CouponForm
                     handleSubmit={this.handleCouponSubmit}
                   />

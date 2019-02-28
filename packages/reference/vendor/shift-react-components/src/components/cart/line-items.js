@@ -1,5 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
@@ -119,8 +120,8 @@ class LineItems extends Component {
    * @param  {Object} cart
    * @return {string} - HTML markup for the component
    */
-  renderLineItems (cart) {
-    const cartData = cart.line_items.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
+  renderLineItems (lineItems) {
+    const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
       return (
         <div className='c-line-items__sections' key={lineItem.item.sku}>
           <div className='c-line-items__images'>
@@ -141,18 +142,25 @@ class LineItems extends Component {
   }
 
   render () {
-    const { cart } = this.props
+    const { lineItems, lineItemsCount } = this.props
 
-    if (cart.line_items_count && cart.line_items_count === 0) {
+    if (!lineItemsCount) {
       return null
     } else {
       return (
         <div className='c-line-items'>
-          { this.renderLineItems(cart) }
+          { this.renderLineItems(lineItems) }
         </div>
       )
     }
   }
+}
+
+LineItems.propTypes = {
+  deleteItem: PropTypes.func,
+  lineItems: PropTypes.arrayOf(PropTypes.object),
+  lineItemsCount: PropTypes.number,
+  updateQuantity: PropTypes.func
 }
 
 export default LineItems

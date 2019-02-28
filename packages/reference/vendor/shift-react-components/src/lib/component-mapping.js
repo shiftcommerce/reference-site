@@ -36,6 +36,11 @@ import ProductMenu from '../components/products/listing/product-menu'
 import ProductMenuOptions from '../components/products/listing/product-menu-options'
 
 /**
+ * Cart/Checkout components
+ */
+import LineItems from '../components/cart/line-items'
+
+/**
  * Order Components
  */
 import OrderLineItems from '../components/orders/order-line-items'
@@ -68,6 +73,7 @@ const mapping = {
   Image,
   Input,
   LazyLoad,
+  LineItems,
   Link,
   Loading,
   Logo,
