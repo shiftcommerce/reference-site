@@ -90,9 +90,10 @@ export { default as CouponForm } from './components/cart/coupon-form'
  * Cart/Checkout Components
  */
 export { default as AddressFormHeader } from './components/checkout/address-form-header'
+export { default as CheckoutAddressForm } from './components/checkout/address-form'
 export { default as LineItems } from './components/cart/line-items'
 export { default as PaymentIcons } from './components/cart/payment-icons'
-export { default as CheckoutAddressForm } from './components/checkout/address-form'
+export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 
 /**
  * MiniBag Components

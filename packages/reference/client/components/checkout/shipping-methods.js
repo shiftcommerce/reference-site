@@ -1,9 +1,6 @@
 // Libraries
 import { Component } from 'react'
 
-// Objects
-import { Button } from 'shift-react-components'
-
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
 import ApiClient from '../../lib/api-client'
@@ -15,7 +12,7 @@ import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
 import { setCartShippingMethod } from '../../actions/cart-actions'
 
 // Components
-import ShippingMethodsHeader from './shipping-methods-header'
+import { Button, ShippingMethodsHeader } from 'shift-react-components'
 
 export default class ShippingMethods extends Component {
   static async fetchShippingMethods () {

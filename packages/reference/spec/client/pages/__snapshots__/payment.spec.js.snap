@@ -13,7 +13,9 @@ exports[`render() renders correct checkout components 1`] = `
       />
     </div>
   </div>
-  <ShippingMethodsSummary />
+  <ShippingMethodsSummary
+    onClick={[Function]}
+  />
   <div
     className="u-hidden"
   >

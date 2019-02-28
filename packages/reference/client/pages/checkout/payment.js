@@ -380,7 +380,10 @@ export class CheckoutPaymentPage extends Component {
             />
           </div>
         </div>
-        <ShippingMethodsSummary shippingMethod={cart.shipping_method} />
+        <ShippingMethodsSummary
+          onClick={() => Router.push('/checkout/shipping-method')}
+          shippingMethod={cart.shipping_method}
+        />
         { this.renderPayment() }
       </>
     )

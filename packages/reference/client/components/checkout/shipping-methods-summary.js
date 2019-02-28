@@ -1,11 +1,11 @@
 import { businessDaysFromNow } from '../../lib/business-days-from-now'
 
-import ShippingMethodsHeader from './shipping-methods-header'
+import { ShippingMethodsHeader } from 'shift-react-components'
 
-export default function ShippingMethodsSummary ({ shippingMethod }) {
+export default function ShippingMethodsSummary ({ onClick, shippingMethod }) {
   return (
     <div className='o-form c-shipping-method'>
-      <ShippingMethodsHeader collapsed />
+      <ShippingMethodsHeader collapsed onClick={onClick} />
       <div className='o-form__wrapper--collapsed c-shipping-method__summary'>
         <p className='u-bold'>{ shippingMethod.label }</p>
         <p>

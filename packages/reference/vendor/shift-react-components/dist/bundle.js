@@ -6173,6 +6173,24 @@ Object.defineProperty(exports,'__esModule',{value:!0});var _typy=__webpack_requi
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(534)();
+}
+
+
+/***/ }),
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6234,24 +6252,6 @@ PanelCallbackHandler.contextTypes = {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (PanelCallbackHandler);
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(534)();
-}
-
 
 /***/ }),
 /* 15 */
@@ -9124,7 +9124,7 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var connectBreadcrumb = __webpack_require__(360);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(13);
+var PanelCallbackHandler = __webpack_require__(14);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
@@ -9420,10 +9420,10 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(512);
+var ClearRefinements = __webpack_require__(515);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(517);
+var CurrentRefinements = __webpack_require__(513);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(361);
@@ -10898,7 +10898,7 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(514);
+var Panel = __webpack_require__(517);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(367);
@@ -11664,7 +11664,7 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(515);
+var RefinementList = __webpack_require__(512);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(369);
@@ -11878,7 +11878,7 @@ var Snippet_Snippet = function Snippet(props) {
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(513);
+var SortBy = __webpack_require__(514);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(371);
@@ -21732,7 +21732,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -22561,7 +22561,7 @@ if ( true && module.exports) {
 exports.__esModule = true;
 exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
 
-var PropTypes = _interopRequireWildcard(__webpack_require__(14));
+var PropTypes = _interopRequireWildcard(__webpack_require__(13));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -23196,7 +23196,7 @@ exports.__esModule = true;
 exports.transitionTimeout = transitionTimeout;
 exports.classNamesShape = exports.timeoutsShape = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(14));
+var _propTypes = _interopRequireDefault(__webpack_require__(13));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23250,7 +23250,7 @@ exports.classNamesShape = classNamesShape;
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(14));
+var _propTypes = _interopRequireDefault(__webpack_require__(13));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -23535,7 +23535,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -32745,7 +32745,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -46226,451 +46226,11 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(294);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(13);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(10);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(211);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(8);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
-
-var ClearRefinements_ClearRefinements = function (_Component) {
-  _inherits(ClearRefinements, _Component);
-
-  function ClearRefinements() {
-    _classCallCheck(this, ClearRefinements);
-
-    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
-  }
-
-  _createClass(ClearRefinements, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          items = _props.items,
-          canRefine = _props.canRefine,
-          refine = _props.refine,
-          translate = _props.translate,
-          className = _props.className;
-
-
-      return external_react_default.a.createElement(
-        'div',
-        { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(
-          'button',
-          {
-            className: cx('button', !canRefine && 'button--disabled'),
-            onClick: function onClick() {
-              return refine(items);
-            },
-            disabled: !canRefine
-          },
-          translate('reset')
-        )
-      );
-    }
-  }]);
-
-  return ClearRefinements;
-}(external_react_["Component"]);
-
-ClearRefinements_ClearRefinements.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-ClearRefinements_ClearRefinements.defaultProps = {
-  className: ''
-};
-
-
-/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
-  reset: 'Clear all filters'
-})(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
-
-
-
-
-
-/**
- * The ClearRefinements widget displays a button that lets the user clean every refinement applied
- * to the search.
- * @name ClearRefinements
- * @kind widget
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
- * @themeKey ais-ClearRefinements - the root div of the widget
- * @themeKey ais-ClearRefinements-button - the clickable button
- * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
- * @translationKey reset - the clear all button value
- * @example
- * import React from 'react';
- * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <ClearRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Apple']}
- *     />
- *   </InstantSearch>
- * );
- */
-
-var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_ClearRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
-
-/***/ }),
-/* 513 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
-var connectSortBy = __webpack_require__(256);
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(10);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(8);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
-var Select = __webpack_require__(145);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('SortBy');
-
-var SortBy_SortBy = function (_Component) {
-  _inherits(SortBy, _Component);
-
-  function SortBy() {
-    _classCallCheck(this, SortBy);
-
-    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
-  }
-
-  _createClass(SortBy, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          items = _props.items,
-          currentRefinement = _props.currentRefinement,
-          refine = _props.refine,
-          className = _props.className;
-
-
-      return external_react_default.a.createElement(
-        'div',
-        { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(Select["a" /* default */], {
-          cx: cx,
-          items: items,
-          selectedItem: currentRefinement,
-          onSelect: refine
-        })
-      );
-    }
-  }]);
-
-  return SortBy;
-}(external_react_["Component"]);
-
-SortBy_SortBy.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
-    label: prop_types_default.a.string,
-    value: prop_types_default.a.string.isRequired
-  })).isRequired,
-  currentRefinement: prop_types_default.a.string.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-SortBy_SortBy.defaultProps = {
-  className: ''
-};
-
-
-/* harmony default export */ var components_SortBy = (SortBy_SortBy);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
-
-
-
-/**
- * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
- * @name SortBy
- * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
- * the Algolia website.
- * @kind widget
- * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
- * @propType {string} defaultRefinement - The default selected index.
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-SortBy - the root div of the widget
- * @themeKey ais-SortBy-select - the select
- * @themeKey ais-SortBy-option - the select option
- * @example
- * import React from 'react';
- * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <SortBy
- *       defaultRefinement="instant_search"
- *       items={[
- *         { value: 'instant_search', label: 'Featured' },
- *         { value: 'instant_search_price_asc', label: 'Price asc.' },
- *         { value: 'instant_search_price_desc', label: 'Price desc.' },
- *       ]}
- *     />
- *   </InstantSearch>
- * );
- */
-
-/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
-
-/***/ }),
-/* 514 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(10);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(8);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('Panel');
-
-var Panel_Panel = function (_Component) {
-  _inherits(Panel, _Component);
-
-  function Panel() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Panel);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      canRefine: true
-    }, _this.setCanRefine = function (nextCanRefine) {
-      _this.setState({ canRefine: nextCanRefine });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Panel, [{
-    key: 'getChildContext',
-    value: function getChildContext() {
-      return {
-        setCanRefine: this.setCanRefine
-      };
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          children = _props.children,
-          className = _props.className,
-          header = _props.header,
-          footer = _props.footer;
-      var canRefine = this.state.canRefine;
-
-
-      return external_react_default.a.createElement(
-        'div',
-        {
-          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
-        },
-        header && external_react_default.a.createElement(
-          'div',
-          { className: cx('header') },
-          header
-        ),
-        external_react_default.a.createElement(
-          'div',
-          { className: cx('body') },
-          children
-        ),
-        footer && external_react_default.a.createElement(
-          'div',
-          { className: cx('footer') },
-          footer
-        )
-      );
-    }
-  }]);
-
-  return Panel;
-}(external_react_["Component"]);
-
-Panel_Panel.propTypes = {
-  children: prop_types_default.a.node.isRequired,
-  className: prop_types_default.a.string,
-  header: prop_types_default.a.node,
-  footer: prop_types_default.a.node
-};
-Panel_Panel.childContextTypes = {
-  setCanRefine: prop_types_default.a.func.isRequired
-};
-Panel_Panel.defaultProps = {
-  className: '',
-  header: null,
-  footer: null
-};
-
-
-/* harmony default export */ var components_Panel = (Panel_Panel);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
-
-
-/**
- * The Panel widget wraps other widgets in a consistent panel design.
- * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
- * E.g. when a RefinementList becomes empty because of the current search results.
- *
- * @name Panel
- * @kind widget
- * @propType {string} [className] - Adds a className on the root element.
- * @propType {node} [header] - Adds a header to the widget.
- * @propType {node} [footer] - Adds a footer to the widget.
- * @themeKey ais-Panel - the root div of the Panel
- * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
- * @themeKey ais-Panel-header - the header of the Panel (optional)
- * @themeKey ais-Panel-body - the body of the Panel
- * @themeKey ais-Panel-footer - the footer of the Panel (optional)
- * @example
- * import React from 'react';
- * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <Panel header="Categories">
- *       <RefinementList attribute="categories" />
- *     </Panel>
- *   </InstantSearch>
- * );
- */
-
-/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
-
-/***/ }),
-/* 515 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(293);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(13);
+var PanelCallbackHandler = __webpack_require__(14);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(74);
@@ -46878,6 +46438,465 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 /* harmony default export */ var widgets_RefinementList = __webpack_exports__["a"] = (Object(connectRefinementList["a" /* default */])(RefinementList_RefinementListWidget));
 
 /***/ }),
+/* 513 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(294);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(14);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(10);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(211);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(8);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
+
+var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
+  var items = _ref.items,
+      canRefine = _ref.canRefine,
+      refine = _ref.refine,
+      translate = _ref.translate,
+      className = _ref.className;
+  return external_react_default.a.createElement(
+    'div',
+    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
+    external_react_default.a.createElement(
+      'ul',
+      { className: cx('list', !canRefine && 'list--noRefinement') },
+      items.map(function (item) {
+        return external_react_default.a.createElement(
+          'li',
+          { key: item.label, className: cx('item') },
+          external_react_default.a.createElement(
+            'span',
+            { className: cx('label') },
+            item.label
+          ),
+          item.items ? item.items.map(function (nest) {
+            return external_react_default.a.createElement(
+              'span',
+              { key: nest.label, className: cx('category') },
+              external_react_default.a.createElement(
+                'span',
+                { className: cx('categoryLabel') },
+                nest.label
+              ),
+              external_react_default.a.createElement(
+                'button',
+                {
+                  className: cx('delete'),
+                  onClick: function onClick() {
+                    return refine(nest.value);
+                  }
+                },
+                translate('clearFilter', nest)
+              )
+            );
+          }) : external_react_default.a.createElement(
+            'span',
+            { className: cx('category') },
+            external_react_default.a.createElement(
+              'button',
+              {
+                className: cx('delete'),
+                onClick: function onClick() {
+                  return refine(item.value);
+                }
+              },
+              translate('clearFilter', item)
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
+  label: prop_types_default.a.string.isRequired,
+  value: prop_types_default.a.func.isRequired,
+  items: function items() {
+    return itemPropTypes.apply(undefined, arguments);
+  }
+}));
+
+CurrentRefinements_CurrentRefinements.propTypes = {
+  items: itemPropTypes.isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+
+CurrentRefinements_CurrentRefinements.defaultProps = {
+  className: ''
+};
+
+/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
+  clearFilter: '✕'
+})(CurrentRefinements_CurrentRefinements));
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+
+
+
+
+
+/**
+ * The CurrentRefinements widget displays the list of currently applied filters.
+ *
+ * It allows the user to selectively remove them.
+ * @name CurrentRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @themeKey ais-CurrentRefinements - the root div of the widget
+ * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
+ * @themeKey ais-CurrentRefinements-list - the list of all refined items
+ * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
+ * @themeKey ais-CurrentRefinements-item - the refined list item
+ * @themeKey ais-CurrentRefinements-button - the button of each refined list item
+ * @themeKey ais-CurrentRefinements-label - the refined list label
+ * @themeKey ais-CurrentRefinements-category - the category of each item
+ * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
+ * @themeKey ais-CurrentRefinements-delete - the delete button of each label
+ * @translationKey clearFilter - the remove filter button label
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <CurrentRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Colors']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_CurrentRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
+
+/***/ }),
+/* 514 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+var connectSortBy = __webpack_require__(256);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(10);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(8);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+var Select = __webpack_require__(145);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('SortBy');
+
+var SortBy_SortBy = function (_Component) {
+  _inherits(SortBy, _Component);
+
+  function SortBy() {
+    _classCallCheck(this, SortBy);
+
+    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
+  }
+
+  _createClass(SortBy, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          items = _props.items,
+          currentRefinement = _props.currentRefinement,
+          refine = _props.refine,
+          className = _props.className;
+
+
+      return external_react_default.a.createElement(
+        'div',
+        { className: classnames_default()(cx(''), className) },
+        external_react_default.a.createElement(Select["a" /* default */], {
+          cx: cx,
+          items: items,
+          selectedItem: currentRefinement,
+          onSelect: refine
+        })
+      );
+    }
+  }]);
+
+  return SortBy;
+}(external_react_["Component"]);
+
+SortBy_SortBy.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+    label: prop_types_default.a.string,
+    value: prop_types_default.a.string.isRequired
+  })).isRequired,
+  currentRefinement: prop_types_default.a.string.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+SortBy_SortBy.defaultProps = {
+  className: ''
+};
+
+
+/* harmony default export */ var components_SortBy = (SortBy_SortBy);
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
+
+
+
+/**
+ * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
+ * @name SortBy
+ * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
+ * the Algolia website.
+ * @kind widget
+ * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
+ * @propType {string} defaultRefinement - The default selected index.
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @themeKey ais-SortBy - the root div of the widget
+ * @themeKey ais-SortBy-select - the select
+ * @themeKey ais-SortBy-option - the select option
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <SortBy
+ *       defaultRefinement="instant_search"
+ *       items={[
+ *         { value: 'instant_search', label: 'Featured' },
+ *         { value: 'instant_search_price_asc', label: 'Price asc.' },
+ *         { value: 'instant_search_price_desc', label: 'Price desc.' },
+ *       ]}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
+
+/***/ }),
+/* 515 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(294);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(14);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(10);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(211);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(8);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
+
+var ClearRefinements_ClearRefinements = function (_Component) {
+  _inherits(ClearRefinements, _Component);
+
+  function ClearRefinements() {
+    _classCallCheck(this, ClearRefinements);
+
+    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
+  }
+
+  _createClass(ClearRefinements, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          items = _props.items,
+          canRefine = _props.canRefine,
+          refine = _props.refine,
+          translate = _props.translate,
+          className = _props.className;
+
+
+      return external_react_default.a.createElement(
+        'div',
+        { className: classnames_default()(cx(''), className) },
+        external_react_default.a.createElement(
+          'button',
+          {
+            className: cx('button', !canRefine && 'button--disabled'),
+            onClick: function onClick() {
+              return refine(items);
+            },
+            disabled: !canRefine
+          },
+          translate('reset')
+        )
+      );
+    }
+  }]);
+
+  return ClearRefinements;
+}(external_react_["Component"]);
+
+ClearRefinements_ClearRefinements.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+ClearRefinements_ClearRefinements.defaultProps = {
+  className: ''
+};
+
+
+/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
+  reset: 'Clear all filters'
+})(ClearRefinements_ClearRefinements));
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+
+
+
+
+
+/**
+ * The ClearRefinements widget displays a button that lets the user clean every refinement applied
+ * to the search.
+ * @name ClearRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
+ * @themeKey ais-ClearRefinements - the root div of the widget
+ * @themeKey ais-ClearRefinements-button - the clickable button
+ * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
+ * @translationKey reset - the clear all button value
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <ClearRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Apple']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_ClearRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
+
+/***/ }),
 /* 516 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47075,12 +47094,6 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(294);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(13);
-
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
@@ -47089,132 +47102,129 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 var classnames = __webpack_require__(10);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(211);
-
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(8);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
 
 
 
 
-var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
+var cx = Object(utils["b" /* createClassNames */])('Panel');
 
-var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
-  var items = _ref.items,
-      canRefine = _ref.canRefine,
-      refine = _ref.refine,
-      translate = _ref.translate,
-      className = _ref.className;
-  return external_react_default.a.createElement(
-    'div',
-    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
-    external_react_default.a.createElement(
-      'ul',
-      { className: cx('list', !canRefine && 'list--noRefinement') },
-      items.map(function (item) {
-        return external_react_default.a.createElement(
-          'li',
-          { key: item.label, className: cx('item') },
-          external_react_default.a.createElement(
-            'span',
-            { className: cx('label') },
-            item.label
-          ),
-          item.items ? item.items.map(function (nest) {
-            return external_react_default.a.createElement(
-              'span',
-              { key: nest.label, className: cx('category') },
-              external_react_default.a.createElement(
-                'span',
-                { className: cx('categoryLabel') },
-                nest.label
-              ),
-              external_react_default.a.createElement(
-                'button',
-                {
-                  className: cx('delete'),
-                  onClick: function onClick() {
-                    return refine(nest.value);
-                  }
-                },
-                translate('clearFilter', nest)
-              )
-            );
-          }) : external_react_default.a.createElement(
-            'span',
-            { className: cx('category') },
-            external_react_default.a.createElement(
-              'button',
-              {
-                className: cx('delete'),
-                onClick: function onClick() {
-                  return refine(item.value);
-                }
-              },
-              translate('clearFilter', item)
-            )
-          )
-        );
-      })
-    )
-  );
-};
+var Panel_Panel = function (_Component) {
+  _inherits(Panel, _Component);
 
-var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
-  label: prop_types_default.a.string.isRequired,
-  value: prop_types_default.a.func.isRequired,
-  items: function items() {
-    return itemPropTypes.apply(undefined, arguments);
+  function Panel() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Panel);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      canRefine: true
+    }, _this.setCanRefine = function (nextCanRefine) {
+      _this.setState({ canRefine: nextCanRefine });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
-}));
 
-CurrentRefinements_CurrentRefinements.propTypes = {
-  items: itemPropTypes.isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
+  _createClass(Panel, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        setCanRefine: this.setCanRefine
+      };
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          className = _props.className,
+          header = _props.header,
+          footer = _props.footer;
+      var canRefine = this.state.canRefine;
+
+
+      return external_react_default.a.createElement(
+        'div',
+        {
+          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
+        },
+        header && external_react_default.a.createElement(
+          'div',
+          { className: cx('header') },
+          header
+        ),
+        external_react_default.a.createElement(
+          'div',
+          { className: cx('body') },
+          children
+        ),
+        footer && external_react_default.a.createElement(
+          'div',
+          { className: cx('footer') },
+          footer
+        )
+      );
+    }
+  }]);
+
+  return Panel;
+}(external_react_["Component"]);
+
+Panel_Panel.propTypes = {
+  children: prop_types_default.a.node.isRequired,
+  className: prop_types_default.a.string,
+  header: prop_types_default.a.node,
+  footer: prop_types_default.a.node
+};
+Panel_Panel.childContextTypes = {
+  setCanRefine: prop_types_default.a.func.isRequired
+};
+Panel_Panel.defaultProps = {
+  className: '',
+  header: null,
+  footer: null
 };
 
-CurrentRefinements_CurrentRefinements.defaultProps = {
-  className: ''
-};
 
-/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
-  clearFilter: '✕'
-})(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
-
-
-
+/* harmony default export */ var components_Panel = (Panel_Panel);
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
 
 
 /**
- * The CurrentRefinements widget displays the list of currently applied filters.
+ * The Panel widget wraps other widgets in a consistent panel design.
+ * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
+ * E.g. when a RefinementList becomes empty because of the current search results.
  *
- * It allows the user to selectively remove them.
- * @name CurrentRefinements
+ * @name Panel
  * @kind widget
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-CurrentRefinements - the root div of the widget
- * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
- * @themeKey ais-CurrentRefinements-list - the list of all refined items
- * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
- * @themeKey ais-CurrentRefinements-item - the refined list item
- * @themeKey ais-CurrentRefinements-button - the button of each refined list item
- * @themeKey ais-CurrentRefinements-label - the refined list label
- * @themeKey ais-CurrentRefinements-category - the category of each item
- * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
- * @themeKey ais-CurrentRefinements-delete - the delete button of each label
- * @translationKey clearFilter - the remove filter button label
+ * @propType {string} [className] - Adds a className on the root element.
+ * @propType {node} [header] - Adds a header to the widget.
+ * @propType {node} [footer] - Adds a footer to the widget.
+ * @themeKey ais-Panel - the root div of the Panel
+ * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
+ * @themeKey ais-Panel-header - the header of the Panel (optional)
+ * @themeKey ais-Panel-body - the body of the Panel
+ * @themeKey ais-Panel-footer - the footer of the Panel (optional)
  * @example
  * import React from 'react';
- * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
+ * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
  *
  * const App = () => (
  *   <InstantSearch
@@ -47222,24 +47232,14 @@ CurrentRefinements_CurrentRefinements.defaultProps = {
  *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
  *     indexName="instant_search"
  *   >
- *     <CurrentRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Colors']}
- *     />
+ *     <Panel header="Categories">
+ *       <RefinementList attribute="categories" />
+ *     </Panel>
  *   </InstantSearch>
  * );
  */
 
-var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_CurrentRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
+/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
 
 /***/ }),
 /* 518 */
@@ -49776,7 +49776,7 @@ exports.default = function () {
 exports.__esModule = true;
 exports.default = void 0;
 
-var PropTypes = _interopRequireWildcard(__webpack_require__(14));
+var PropTypes = _interopRequireWildcard(__webpack_require__(13));
 
 var _addClass = _interopRequireDefault(__webpack_require__(542));
 
@@ -50048,7 +50048,7 @@ module.exports = function removeClass(element, className) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__(14));
+var _propTypes = _interopRequireDefault(__webpack_require__(13));
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
@@ -50369,7 +50369,7 @@ var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -51156,7 +51156,7 @@ exports.default = Carousel;
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(14)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(13)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -67381,7 +67381,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -68736,7 +68736,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69140,7 +69140,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -69458,7 +69458,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(13);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -77943,7 +77943,7 @@ var lib = __webpack_require__(210);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(14);
+var prop_types = __webpack_require__(13);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-transition-group/index.js
@@ -78721,7 +78721,7 @@ function (_Component) {
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(513);
+var SortBy = __webpack_require__(514);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
 function product_menu_options_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_menu_options_typeof = function _typeof(obj) { return typeof obj; }; } else { product_menu_options_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_menu_options_typeof(obj); }
@@ -79147,16 +79147,16 @@ function (_PureComponent) {
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(514);
+var Panel = __webpack_require__(517);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(515);
+var RefinementList = __webpack_require__(512);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(512);
+var ClearRefinements = __webpack_require__(515);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(517);
+var CurrentRefinements = __webpack_require__(513);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
 function search_filters_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { search_filters_typeof = function _typeof(obj) { return typeof obj; }; } else { search_filters_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return search_filters_typeof(obj); }
@@ -86815,195 +86815,6 @@ AddressFormHeader.propTypes = {
   title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var address_form_header = (AddressFormHeader);
-// CONCATENATED MODULE: ./src/components/cart/line-items.js
-function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
-
-function line_items_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function line_items_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function line_items_createClass(Constructor, protoProps, staticProps) { if (protoProps) line_items_defineProperties(Constructor.prototype, protoProps); if (staticProps) line_items_defineProperties(Constructor, staticProps); return Constructor; }
-
-function line_items_possibleConstructorReturn(self, call) { if (call && (line_items_typeof(call) === "object" || typeof call === "function")) { return call; } return line_items_assertThisInitialized(self); }
-
-function line_items_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function line_items_getPrototypeOf(o) { line_items_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return line_items_getPrototypeOf(o); }
-
-function line_items_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) line_items_setPrototypeOf(subClass, superClass); }
-
-function line_items_setPrototypeOf(o, p) { line_items_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return line_items_setPrototypeOf(o, p); }
-
-// Libraries
- // Lib
-
-
-
-
-var line_items_LineItems =
-/*#__PURE__*/
-function (_Component) {
-  line_items_inherits(LineItems, _Component);
-
-  function LineItems(props) {
-    var _this;
-
-    line_items_classCallCheck(this, LineItems);
-
-    _this = line_items_possibleConstructorReturn(this, line_items_getPrototypeOf(LineItems).call(this, props));
-    _this.Link = component_mapping('Link');
-    _this.Image = component_mapping('Image');
-    return _this;
-  }
-  /**
-   * Render the prices and actions block of the line item
-   * @param  {Object} lineItem
-   * @return {string} - HTML markup for the component
-   * @todo extract this out into it's own service class
-   */
-
-
-  line_items_createClass(LineItems, [{
-    key: "renderOptions",
-    value: function renderOptions(lineItem) {
-      var availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys());
-      availableQuantity.shift();
-      return external_react_default.a.createElement("select", {
-        value: lineItem.unit_quantity,
-        onChange: this.props.updateQuantity,
-        "data-id": lineItem.id
-      }, availableQuantity.map(function (index) {
-        return external_react_default.a.createElement("option", {
-          key: index,
-          value: index,
-          "aria-setsize": index,
-          "aria-posinset": index + 1
-        }, index);
-      }));
-    }
-    /**
-     * Render the prices and actions block of the line item
-     * @param  {Object} lineItem
-     * @return {string} - HTML markup for the component
-     */
-
-  }, {
-    key: "renderButtonsAndTotal",
-    value: function renderButtonsAndTotal(lineItem) {
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__remove"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__delete"
-      }, external_react_default.a.createElement("a", {
-        className: "c-line-items__delete-button",
-        "data-id": lineItem.id,
-        onClick: this.props.deleteItem
-      }, "Delete"))), external_react_default.a.createElement("div", {
-        className: "c-line-items__amounts"
-      }, lineItem.sub_total !== lineItem.total && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("a", {
-        className: "c-line-items__amount"
-      }, "\xA3", decimalPrice(lineItem.sub_total)), external_react_default.a.createElement("a", {
-        className: "c-line-items__amount c-line-items__amount--discount"
-      }, "- \xA3", decimalPrice(lineItem.total_discount))), external_react_default.a.createElement("a", {
-        className: "c-line-items__amount c-line-items__amount--total"
-      }, "\xA3", decimalPrice(lineItem.total))));
-    }
-    /**
-     * Render the title block of the line item
-     * @param  {Object} lineItem
-     * @return {string} - HTML markup for the component
-     */
-
-  }, {
-    key: "renderTitle",
-    value: function renderTitle(lineItem) {
-      return external_react_default.a.createElement("div", {
-        className: "c-line-items__title"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__details"
-      }, external_react_default.a.createElement("h4", {
-        className: "c-line-items__details-title u-bold"
-      }, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("div", {
-        className: "c-line-items__details-sku"
-      }, external_react_default.a.createElement("span", null, lineItem.sku))));
-    }
-    /**
-     * Render the parameters block of the line item, which contains the variants
-     * and the quantities
-     * @param  {Object} lineItem
-     * @return {string} - HTML markup for the component
-     */
-
-  }, {
-    key: "renderParams",
-    value: function renderParams(lineItem) {
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__colour"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Colour"))), external_react_default.a.createElement("div", {
-        className: "c-line-items__quantity"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Quantity"))), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__colour-selected"
-      }, external_react_default.a.createElement("span", null, "Grey")), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__quantity-selected"
-      }, external_react_default.a.createElement("span", null, this.renderOptions(lineItem))));
-    }
-    /**
-     * Render the line item rows
-     * Loop through the items in the cart, sorted by the ID of line item
-     * @param  {Object} cart
-     * @return {string} - HTML markup for the component
-     */
-
-  }, {
-    key: "renderLineItems",
-    value: function renderLineItems(cart) {
-      var _this2 = this;
-
-      var cartData = cart.line_items.sort(function (item1, item2) {
-        return parseInt(item1.id) - parseInt(item2.id);
-      }).map(function (lineItem) {
-        return external_react_default.a.createElement("div", {
-          className: "c-line-items__sections",
-          key: lineItem.item.sku
-        }, external_react_default.a.createElement("div", {
-          className: "c-line-items__images"
-        }, external_react_default.a.createElement(_this2.Link, {
-          href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
-        }, external_react_default.a.createElement(_this2.Image, {
-          className: "c-line-items__image",
-          src: lineItem.item.picture_url,
-          alt: lineItem.item.title,
-          key: lineItem.item.product.slug,
-          "aria-label": lineItem.item.title
-        }))), external_react_default.a.createElement("div", {
-          className: "c-line-items__information"
-        }, _this2.renderTitle(lineItem), _this2.renderParams(lineItem), _this2.renderButtonsAndTotal(lineItem)));
-      });
-      return cartData;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var cart = this.props.cart;
-
-      if (cart.line_items_count && cart.line_items_count === 0) {
-        return null;
-      } else {
-        return external_react_default.a.createElement("div", {
-          className: "c-line-items"
-        }, this.renderLineItems(cart));
-      }
-    }
-  }]);
-
-  return LineItems;
-}(external_react_["Component"]);
-
-/* harmony default export */ var line_items = (line_items_LineItems);
 // CONCATENATED MODULE: ./src/components/checkout/address-form.js
 function address_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_typeof(obj); }
 
@@ -87374,6 +87185,222 @@ function (_Component) {
   return AddressForm;
 }(external_react_["Component"]);
 /* harmony default export */ var address_form = (address_form_AddressForm);
+// CONCATENATED MODULE: ./src/components/cart/line-items.js
+function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
+
+function line_items_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function line_items_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function line_items_createClass(Constructor, protoProps, staticProps) { if (protoProps) line_items_defineProperties(Constructor.prototype, protoProps); if (staticProps) line_items_defineProperties(Constructor, staticProps); return Constructor; }
+
+function line_items_possibleConstructorReturn(self, call) { if (call && (line_items_typeof(call) === "object" || typeof call === "function")) { return call; } return line_items_assertThisInitialized(self); }
+
+function line_items_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function line_items_getPrototypeOf(o) { line_items_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return line_items_getPrototypeOf(o); }
+
+function line_items_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) line_items_setPrototypeOf(subClass, superClass); }
+
+function line_items_setPrototypeOf(o, p) { line_items_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return line_items_setPrototypeOf(o, p); }
+
+// Libraries
+ // Lib
+
+
+
+
+var line_items_LineItems =
+/*#__PURE__*/
+function (_Component) {
+  line_items_inherits(LineItems, _Component);
+
+  function LineItems(props) {
+    var _this;
+
+    line_items_classCallCheck(this, LineItems);
+
+    _this = line_items_possibleConstructorReturn(this, line_items_getPrototypeOf(LineItems).call(this, props));
+    _this.Link = component_mapping('Link');
+    _this.Image = component_mapping('Image');
+    return _this;
+  }
+  /**
+   * Render the prices and actions block of the line item
+   * @param  {Object} lineItem
+   * @return {string} - HTML markup for the component
+   * @todo extract this out into it's own service class
+   */
+
+
+  line_items_createClass(LineItems, [{
+    key: "renderOptions",
+    value: function renderOptions(lineItem) {
+      var availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys());
+      availableQuantity.shift();
+      return external_react_default.a.createElement("select", {
+        value: lineItem.unit_quantity,
+        onChange: this.props.updateQuantity,
+        "data-id": lineItem.id
+      }, availableQuantity.map(function (index) {
+        return external_react_default.a.createElement("option", {
+          key: index,
+          value: index,
+          "aria-setsize": index,
+          "aria-posinset": index + 1
+        }, index);
+      }));
+    }
+    /**
+     * Render the prices and actions block of the line item
+     * @param  {Object} lineItem
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
+    key: "renderButtonsAndTotal",
+    value: function renderButtonsAndTotal(lineItem) {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
+        className: "c-line-items__remove"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__delete"
+      }, external_react_default.a.createElement("a", {
+        className: "c-line-items__delete-button",
+        "data-id": lineItem.id,
+        onClick: this.props.deleteItem
+      }, "Delete"))), external_react_default.a.createElement("div", {
+        className: "c-line-items__amounts"
+      }, lineItem.sub_total !== lineItem.total && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("a", {
+        className: "c-line-items__amount"
+      }, "\xA3", decimalPrice(lineItem.sub_total)), external_react_default.a.createElement("a", {
+        className: "c-line-items__amount c-line-items__amount--discount"
+      }, "- \xA3", decimalPrice(lineItem.total_discount))), external_react_default.a.createElement("a", {
+        className: "c-line-items__amount c-line-items__amount--total"
+      }, "\xA3", decimalPrice(lineItem.total))));
+    }
+    /**
+     * Render the title block of the line item
+     * @param  {Object} lineItem
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
+    key: "renderTitle",
+    value: function renderTitle(lineItem) {
+      return external_react_default.a.createElement("div", {
+        className: "c-line-items__title"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__details"
+      }, external_react_default.a.createElement("h4", {
+        className: "c-line-items__details-title u-bold"
+      }, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("div", {
+        className: "c-line-items__details-sku"
+      }, external_react_default.a.createElement("span", null, lineItem.sku))));
+    }
+    /**
+     * Render the parameters block of the line item, which contains the variants
+     * and the quantities
+     * @param  {Object} lineItem
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
+    key: "renderParams",
+    value: function renderParams(lineItem) {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
+        className: "c-line-items__colour"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__param u-bold"
+      }, external_react_default.a.createElement("span", null, "Colour"))), external_react_default.a.createElement("div", {
+        className: "c-line-items__quantity"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__param u-bold"
+      }, external_react_default.a.createElement("span", null, "Quantity"))), external_react_default.a.createElement("div", {
+        className: "c-line-items__param c-line-items__colour-selected"
+      }, external_react_default.a.createElement("span", null, "Grey")), external_react_default.a.createElement("div", {
+        className: "c-line-items__param c-line-items__quantity-selected"
+      }, external_react_default.a.createElement("span", null, this.renderOptions(lineItem))));
+    }
+    /**
+     * Render the line item rows
+     * Loop through the items in the cart, sorted by the ID of line item
+     * @param  {Object} cart
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
+    key: "renderLineItems",
+    value: function renderLineItems(cart) {
+      var _this2 = this;
+
+      var cartData = cart.line_items.sort(function (item1, item2) {
+        return parseInt(item1.id) - parseInt(item2.id);
+      }).map(function (lineItem) {
+        return external_react_default.a.createElement("div", {
+          className: "c-line-items__sections",
+          key: lineItem.item.sku
+        }, external_react_default.a.createElement("div", {
+          className: "c-line-items__images"
+        }, external_react_default.a.createElement(_this2.Link, {
+          href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
+        }, external_react_default.a.createElement(_this2.Image, {
+          className: "c-line-items__image",
+          src: lineItem.item.picture_url,
+          alt: lineItem.item.title,
+          key: lineItem.item.product.slug,
+          "aria-label": lineItem.item.title
+        }))), external_react_default.a.createElement("div", {
+          className: "c-line-items__information"
+        }, _this2.renderTitle(lineItem), _this2.renderParams(lineItem), _this2.renderButtonsAndTotal(lineItem)));
+      });
+      return cartData;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var cart = this.props.cart;
+
+      if (cart.line_items_count && cart.line_items_count === 0) {
+        return null;
+      } else {
+        return external_react_default.a.createElement("div", {
+          className: "c-line-items"
+        }, this.renderLineItems(cart));
+      }
+    }
+  }]);
+
+  return LineItems;
+}(external_react_["Component"]);
+
+/* harmony default export */ var line_items = (line_items_LineItems);
+// CONCATENATED MODULE: ./src/components/checkout/shipping-methods-header.js
+// Libraries
+
+ // Lib
+
+
+
+function ShippingMethodsHeader(_ref) {
+  var collapsed = _ref.collapsed,
+      onClick = _ref.onClick;
+  var Button = component_mapping('Button');
+  return external_react_default.a.createElement("div", {
+    className: "o-form__header c-shipping-method__header"
+  }, external_react_default.a.createElement("h2", null, "Your Shipping Method"), collapsed && external_react_default.a.createElement(Button, {
+    "aria-label": "Edit your shipping method",
+    label: "Edit",
+    status: "secondary",
+    className: "o-button-edit",
+    onClick: onClick
+  }));
+}
+
+ShippingMethodsHeader.propTypes = {
+  collapsed: prop_types_default.a.bool,
+  onClick: prop_types_default.a.func
+};
+/* harmony default export */ var shipping_methods_header = (ShippingMethodsHeader);
 // EXTERNAL MODULE: ./src/static/bag-icon.svg
 var bag_icon = __webpack_require__(533);
 var bag_icon_default = /*#__PURE__*/__webpack_require__.n(bag_icon);
@@ -87808,9 +87835,10 @@ function (_Component) {
 /* concated harmony reexport CartTableSummary */__webpack_require__.d(__webpack_exports__, "CartTableSummary", function() { return cart_table_summary; });
 /* concated harmony reexport CouponForm */__webpack_require__.d(__webpack_exports__, "CouponForm", function() { return coupon_form; });
 /* concated harmony reexport AddressFormHeader */__webpack_require__.d(__webpack_exports__, "AddressFormHeader", function() { return address_form_header; });
+/* concated harmony reexport CheckoutAddressForm */__webpack_require__.d(__webpack_exports__, "CheckoutAddressForm", function() { return address_form; });
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
-/* concated harmony reexport CheckoutAddressForm */__webpack_require__.d(__webpack_exports__, "CheckoutAddressForm", function() { return address_form; });
+/* concated harmony reexport ShippingMethodsHeader */__webpack_require__.d(__webpack_exports__, "ShippingMethodsHeader", function() { return shipping_methods_header; });
 /* concated harmony reexport Minibag */__webpack_require__.d(__webpack_exports__, "Minibag", function() { return minibag; });
 /* concated harmony reexport NavBar */__webpack_require__.d(__webpack_exports__, "NavBar", function() { return navbar; });
 /* concated harmony reexport NavBarOption */__webpack_require__.d(__webpack_exports__, "NavBarOption", function() { return navbar_option; });
@@ -87905,6 +87933,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 
