@@ -35,6 +35,10 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       const appProps = await Object.getPrototypeOf(this).getInitialProps(appContext)
 
       let searchState = query
+
+      // remove the random undefined key
+      delete searchState.undefined
+
       if (Page.buildAlgoliaStates) {
         searchState = Page.buildAlgoliaStates(appContext)
       }
@@ -77,7 +81,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       clearTimeout(this.debouncedSetState)
       this.debouncedSetState = setTimeout(() => {
         const href = this.searchStateToUrl(searchState)
-        Router.push(href, href, { shallow: true })
+        Router.push(href, href)
       }, this.updateAfter())
       this.setState({ searchState })
     }
@@ -111,6 +115,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
 
     render () {
       const { resultsState, searchState, ...appProps } = this.props
+
       return (
         <NextWrapper
           resultsState={resultsState}

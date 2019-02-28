@@ -1,14 +1,15 @@
 // Next Pages
 import CartPage from './pages/cart'
+import CategoryPage from './pages/category'
 import ForgottenPasswordPage from './pages/forgotten-password'
 import LoginPage from './pages/login'
-import RegisterPage from './pages/register'
+import MyAccountPage from './pages/my-account'
 import OfflinePage from './pages/offline'
+import ProductPage from './pages/product'
+import RegisterPage from './pages/register'
+import SearchPage from './pages/search'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
-import ProductPage from './pages/product'
-import SearchPage from './pages/search'
-import MyAccountPage from './pages/my-account'
 
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
@@ -48,16 +49,17 @@ module.exports = {
     server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
   },
 
+  CategoryPage: CategoryPage,
   CartPage: CartPage,
-  StaticPage: StaticPage,
   ForgottenPasswordPage: ForgottenPasswordPage,
-  LoginPage: LoginPage,
-  RegisterPage: RegisterPage,
-  OfflinePage: OfflinePage,
-  SlugPage: SlugPage,
   ProductPage: ProductPage,
-  SearchPage: SearchPage,
+  LoginPage: LoginPage,
   MyAccountPage: MyAccountPage,
+  OfflinePage: OfflinePage,
+  RegisterPage: RegisterPage,
+  SearchPage: SearchPage,
+  SlugPage: SlugPage,
+  StaticPage: StaticPage,
 
   shiftNextConfig: Config
 }

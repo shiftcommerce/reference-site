@@ -1,5 +1,5 @@
 // Pages
-import { Category } from '../../../client/pages/category'
+import CategoryPage from '../../src/pages/category'
 
 // Mock out the next/config
 jest.mock('next/config', () => () => ({
@@ -7,15 +7,6 @@ jest.mock('next/config', () => () => ({
     ALGOLIA_RESULTS_PER_PAGE: 4
   }
 }))
-
-describe('algoliaGetDerivedStateFromProps', () => {
-  test('updates category id in state when it changes in props', () => {
-    expect(Category.algoliaGetDerivedStateFromProps(
-      { id: 10 },
-      { categoryId: 9 }
-    )).toEqual({ categoryId: 10 })
-  })
-})
 
 describe('algoliaComponentDidUpdate', () => {
   test("doesn't update state when searchState has changed", () => {
@@ -29,7 +20,9 @@ describe('algoliaComponentDidUpdate', () => {
       }
     }
 
-    Category.algoliaComponentDidUpdate.call(mockThis, {}, { searchState: { a: 1, b: 2 } })
+    CategoryPage.algoliaComponentDidUpdate.call(mockThis, { id: 1 }, { searchState: { a: 1, b: 2 } })
+
+    shallow(<CategoryPage id={2} />)
 
     expect(mockThis.setState).not.toHaveBeenCalled()
   })
@@ -37,6 +30,7 @@ describe('algoliaComponentDidUpdate', () => {
   test('updates the category filter and sets page number to 1 when categoryId is set', () => {
     const mockThis = {
       setState: jest.fn(),
+      props: { id: 20 },
       state: {
         categoryId: 20,
         searchState: {
@@ -48,7 +42,7 @@ describe('algoliaComponentDidUpdate', () => {
       }
     }
 
-    Category.algoliaComponentDidUpdate.call(mockThis, {}, { searchState: { categoryId: 10 } })
+    CategoryPage.algoliaComponentDidUpdate.call(mockThis, { id: 2 }, { searchState: { categoryId: 10 } })
 
     expect(mockThis.setState).toHaveBeenCalledWith({
       searchState: {
@@ -62,9 +56,17 @@ describe('algoliaComponentDidUpdate', () => {
     })
   })
 
-  test('when search state and category ids are the same it updates search state to match the state from the url', () => {
+  test('when search state and category ids are the same, it updates search state to match the state from the url', () => {
     const mockThis = {
       setState: jest.fn(),
+      props: {
+        id: 20,
+        searchState: {
+          configure: {
+            config: 'config'
+          }
+        }
+      },
       state: {
         categoryId: 20,
         searchState: {
@@ -75,8 +77,8 @@ describe('algoliaComponentDidUpdate', () => {
 
     window.history.pushState({}, 'Test Title', '/search?query=600ml')
 
-    Category.algoliaComponentDidUpdate.call(mockThis,
-      { id: 20, searchState: { configure: { config: 'config' } } },
+    CategoryPage.algoliaComponentDidUpdate.call(mockThis,
+      { },
       { categoryId: 20, searchState: { query: '300ml' } }
     )
 
