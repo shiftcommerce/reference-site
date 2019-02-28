@@ -1,21 +1,22 @@
 // Libraries
-import { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
 import t from 'typy'
 
-// Objects
-import { Checkbox, DropdownSelect, Input } from 'shift-react-components'
-
-// Json
-import Countries from './../../static/countries.json'
-
-// Actions
-import { autoFillAddress } from '../../actions/checkout-actions'
+// Lib
+import componentMapping from '../../lib/component-mapping'
 
 export class AddressForm extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Checkbox = componentMapping('Checkbox')
+    this.DropdownSelect = componentMapping('DropdownSelect')
+    this.Input = componentMapping('Input')
+  }
+
   componentDidMount () {
-    const { currentAddress, dispatch } = this.props
-    if (currentAddress) dispatch(autoFillAddress(currentAddress))
+    const { currentAddress, autoFillAddress } = this.props
+    if (currentAddress && autoFillAddress) autoFillAddress(currentAddress)
   }
 
   formValid (formInput) {
@@ -44,15 +45,15 @@ export class AddressForm extends Component {
   }
 
   renderCountriesDropdown () {
-    const { checkout, formName, onChange, onBlur } = this.props
+    const { checkout, countries, formName, onChange, onBlur } = this.props
     const formInput = checkout[formName]
     const name = 'country_code'
     const rules = { required: true }
 
     return (
       <>
-        <DropdownSelect
-          options={Countries}
+        <this.DropdownSelect
+          options={countries}
           label='Country'
           name={name}
           value={formInput.country_code}
@@ -71,7 +72,7 @@ export class AddressForm extends Component {
   renderInputField (formInput, fieldOption) {
     return (
       <>
-        <Input
+        <this.Input
           label={fieldOption.label}
           className={fieldOption.className}
           placeholder={fieldOption.placeholder}
@@ -92,7 +93,7 @@ export class AddressForm extends Component {
   renderCheckbox (formInput, fieldOption) {
     return (
       <>
-        <Checkbox
+        <this.Checkbox
           label={fieldOption.label}
           className={fieldOption.className}
           name={fieldOption.name}
@@ -242,7 +243,7 @@ export class AddressForm extends Component {
   }
 
   renderNewsletterCheckbox () {
-    const { checkout, formName, addressType } = this.props
+    const { checkout, formName } = this.props
     const formInput = checkout[formName]
     const fieldOption = {
       label: 'Sign up for Weekly Newsletters (Optional)',
@@ -252,17 +253,10 @@ export class AddressForm extends Component {
     }
     return (
       <>
-        { addressType === 'shipping' && this.renderCheckbox(formInput, fieldOption) }
+        { formName === 'shippingAddress' && this.renderCheckbox(formInput, fieldOption) }
       </>
     )
   }
 }
 
-const mapStateToProps = ({ account: { loggedIn }, checkout: { addressBook } }) => {
-  return {
-    addressBook,
-    loggedIn
-  }
-}
-
-export default connect(mapStateToProps)(AddressForm)
+export default AddressForm

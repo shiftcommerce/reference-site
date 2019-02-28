@@ -10,13 +10,8 @@ exports[`renders address form components 1`] = `
     <AddressFormHeader
       title="Shipping Address"
     />
-    <Connect(AddressForm)
-      addressType="shipping"
-      cart={
-        Object {
-          "line_items_count": 1,
-        }
-      }
+    <AddressForm
+      autoFillAddress={[Function]}
       checkout={
         Object {
           "addressBook": Array [],
@@ -25,8 +20,21 @@ exports[`renders address form components 1`] = `
           },
         }
       }
+      countries={
+        Array [
+          Object {
+            "id": 1,
+            "title": "United Kingdom",
+            "value": "GB",
+          },
+          Object {
+            "id": 2,
+            "title": "United States",
+            "value": "US",
+          },
+        ]
+      }
       formName="shippingAddress"
-      nextSection={[Function]}
       onBlur={[Function]}
       onChange={[Function]}
       onShowField={[Function]}

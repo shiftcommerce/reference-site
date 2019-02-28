@@ -24,10 +24,13 @@ export default class PaymentMethod extends Component {
                 addingNewAddress,
                 addressBookEmpty,
                 addressFormDisplayed,
+                autoFillAddress,
                 billingAsShipping,
                 changeBillingAsShipping,
                 cart,
                 checkout,
+                countries,
+                currentAddress,
                 nextStepAvailable,
                 nextSection,
                 onBookAddressSelected,
@@ -43,11 +46,14 @@ export default class PaymentMethod extends Component {
                 addingNewAddress={addingNewAddress}
                 addressBookEmpty={addressBookEmpty}
                 addressFormDisplayed={addressFormDisplayed}
+                autoFillAddress={autoFillAddress}
                 billingAddress={cart.billing_address}
                 billingAsShipping={billingAsShipping}
                 cardTokenRequested={order.cardTokenRequested}
                 changeBillingAsShipping={changeBillingAsShipping}
                 checkout={checkout}
+                currentAddress={currentAddress}
+                countries={countries}
                 nextStepAvailable={nextStepAvailable}
                 nextSection={nextSection}
                 onBookAddressSelected={onBookAddressSelected}

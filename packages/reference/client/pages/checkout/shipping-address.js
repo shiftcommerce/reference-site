@@ -10,20 +10,23 @@ import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
 import AddressBook from '../../components/address-book'
-import AddressForm from '../../components/checkout/address-form'
 import AddressFormHeader from '../../components/checkout/address-form-header'
 import withCheckout from '../../components/with-checkout'
 
-import { Button } from 'shift-react-components'
+import { Button, CheckoutAddressForm } from 'shift-react-components'
 
 // Actions
 import {
+  autoFillAddress,
   inputChange,
   inputComplete,
   setValidationMessage,
   showField } from '../../actions/checkout-actions'
 import { setCartShippingAddress, createShippingAddress } from '../../actions/cart-actions'
 import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
+
+// Json
+import countries from '../../static/countries.json'
 
 export class CheckoutShippingAddressPage extends Component {
   constructor (props) {
@@ -33,6 +36,7 @@ export class CheckoutShippingAddressPage extends Component {
       loading: true
     }
 
+    this.autoFillAddress = this.autoFillAddress.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
@@ -61,6 +65,10 @@ export class CheckoutShippingAddressPage extends Component {
 
   loggedIn () {
     return Cookies.get('signedIn')
+  }
+
+  autoFillAddress (address) {
+    this.props.dispatch(autoFillAddress(address))
   }
 
   validateInput (formName, fieldName, fieldValue, rules) {
@@ -195,14 +203,16 @@ export class CheckoutShippingAddressPage extends Component {
             onBookAddressSelected={this.onBookAddressSelected}
             addressFormDisplayed={this.addressFormDisplayed()}
           /> }
-          { this.addressFormDisplayed() && <AddressForm {...this.props}
+          { this.addressFormDisplayed() && <CheckoutAddressForm
+            autoFillAddress={this.autoFillAddress}
+            checkout={this.props.checkout}
+            countries={countries}
+            currentAddress={this.addressForForm()}
             formName='shippingAddress'
-            addressType='shipping'
+            loggedIn={this.props.loggedIn}
             onChange={this.onInputChange}
             onBlur={this.onInputBlur}
             onShowField={this.onShowField}
-            nextSection={this.nextSection}
-            currentAddress={this.addressForForm()}
           /> }
           { this.renderFormSubmitButton() }
         </div>

@@ -91,6 +91,7 @@ export { default as CouponForm } from './components/cart/coupon-form'
  */
 export { default as LineItems } from './components/cart/line-items'
 export { default as PaymentIcons } from './components/cart/payment-icons'
+export { default as CheckoutAddressForm } from './components/checkout/address-form'
 
 /**
  * MiniBag Components

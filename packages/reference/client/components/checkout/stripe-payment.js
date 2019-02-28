@@ -3,11 +3,10 @@ import { Component } from 'react'
 
 // Components
 import AddressBook from '../address-book'
-import AddressForm from './address-form'
 import StripeWrapper from './stripe-wrapper'
 
 // Objects
-import { Button, Checkbox } from 'shift-react-components'
+import { Button, Checkbox, CheckoutAddressForm } from 'shift-react-components'
 
 class StripePayment extends Component {
   renderFormSubmitButton () {
@@ -28,11 +27,14 @@ class StripePayment extends Component {
 
   render () {
     const {
+      autoFillAddress,
       billingAddress,
       billingAsShipping,
       cardTokenRequested,
       changeBillingAsShipping,
       checkout,
+      countries,
+      currentAddress,
       onBlur,
       onChange,
       onShowField,
@@ -85,12 +87,14 @@ class StripePayment extends Component {
               onBookAddressSelected={this.props.onBookAddressSelected}
               addressFormDisplayed={this.props.addressFormDisplayed()}
             /> }
-            { this.props.addressFormDisplayed() && <AddressForm
+            { this.props.addressFormDisplayed() && <CheckoutAddressForm
               aria-label='Billing address form'
+              autoFillAddress={autoFillAddress}
               checkout={checkout}
+              countries={countries}
+              currentAddress={currentAddress}
               title='Billing Address'
               formName='billingAddress'
-              addressType='billing'
               onChange={onChange}
               onBlur={onBlur}
               className='o-form__billing'

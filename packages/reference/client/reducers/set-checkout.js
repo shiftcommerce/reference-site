@@ -148,10 +148,31 @@ export default function setCheckout (state = checkoutInitialState, action) {
         line_1: address.address_line_1,
         line_2: address.address_line_2,
         primary_phone: address.meta_attributes.phone_number.value,
-        state: address.state,
+        state: address.state || '',
         zipcode: address.postcode,
         preferred_shipping: address.preferred_shipping,
         preferred_billing: address.preferred_billing,
+        selected: true,
+        collapsed: true,
+        errors: {}
+      }
+      return newState
+
+    case types.AUTOFILL_BILLING_ADDRESS:
+      newState.billingAddress = {
+        id: action.address.id,
+        city: action.address.city,
+        country_code: action.address.country,
+        email: action.address.meta_attributes.email.value,
+        first_name: action.address.first_name,
+        last_name: action.address.last_name,
+        line_1: action.address.address_line_1,
+        line_2: action.address.address_line_2,
+        primary_phone: action.address.meta_attributes.phone_number.value,
+        state: action.address.state || '',
+        zipcode: action.address.postcode,
+        preferred_shipping: action.address.preferred_shipping,
+        preferred_billing: action.address.preferred_billing,
         selected: true,
         collapsed: true,
         errors: {}

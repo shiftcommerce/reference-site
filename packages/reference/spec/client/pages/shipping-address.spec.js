@@ -307,7 +307,7 @@ test('renders address form components', () => {
   wrapper.setState({ loading: false })
 
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find('AddressForm').length).toEqual(1)
   expect(wrapper.find('AddressFormHeader').length).toEqual(1)
-  expect(wrapper.find('Connect(AddressForm)').length).toEqual(1)
   expect(wrapper.find('Button').length).toEqual(1)
 })

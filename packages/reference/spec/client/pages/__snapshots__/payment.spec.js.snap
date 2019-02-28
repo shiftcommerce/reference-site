@@ -21,6 +21,11 @@ exports[`render() renders correct checkout components 1`] = `
           "shipping_address": Object {},
         }
       }
+      checkout={
+        Object {
+          "addressBook": Array [],
+        }
+      }
       selectedPaymentMethod={null}
       showPayment={[Function]}
     />
@@ -31,12 +36,32 @@ exports[`render() renders correct checkout components 1`] = `
     <PaymentMethod
       addressBookEmpty={[Function]}
       addressFormDisplayed={[Function]}
+      autoFillAddress={[Function]}
       cart={
         Object {
           "shipping_address": Object {},
         }
       }
       changeBillingAsShipping={[Function]}
+      checkout={
+        Object {
+          "addressBook": Array [],
+        }
+      }
+      countries={
+        Array [
+          Object {
+            "id": 1,
+            "title": "United Kingdom",
+            "value": "GB",
+          },
+          Object {
+            "id": 2,
+            "title": "United States",
+            "value": "US",
+          },
+        ]
+      }
       formName="paymentMethod"
       nextSection={[Function]}
       nextStepAvailable={[Function]}

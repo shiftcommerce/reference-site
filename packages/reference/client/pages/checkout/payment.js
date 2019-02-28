@@ -18,6 +18,7 @@ import withCheckout from '../../components/with-checkout'
 
 // Actions
 import {
+  autoFillBillingAddress,
   inputChange,
   inputComplete,
   setValidationMessage,
@@ -32,6 +33,9 @@ import {
   createOrder
 } from '../../actions/order-actions'
 import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
+
+// Json
+import countries from '../../static/countries.json'
 
 export class CheckoutPaymentPage extends Component {
   constructor () {
@@ -48,6 +52,7 @@ export class CheckoutPaymentPage extends Component {
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
 
+    this.autoFillAddress = this.autoFillAddress.bind(this)
     this.changeBillingAsShipping = this.changeBillingAsShipping.bind(this)
     this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
     this.setCardErrors = this.setCardErrors.bind(this)
@@ -116,6 +121,10 @@ export class CheckoutPaymentPage extends Component {
     return Cookies.get('signedIn')
   }
 
+  autoFillAddress (address) {
+    this.props.dispatch(autoFillBillingAddress(address))
+  }
+
   showReview () {
     const { setCurrentStep } = this.props
     Router.push('/checkout/payment', '/checkout/review')
@@ -156,6 +165,12 @@ export class CheckoutPaymentPage extends Component {
 
   onShowField (formName, fieldName) {
     this.props.dispatch(showField(formName, fieldName))
+  }
+
+  // Address to prepopulate the form with
+  // We only want to do so if the address is not in the address book
+  addressForForm () {
+    if (!this.state.addingNewAddress && !this.cartAddressFromBook()) return this.props.cart.billing_address
   }
 
   changeBillingAsShipping (event) {
@@ -320,8 +335,11 @@ export class CheckoutPaymentPage extends Component {
             addingNewAddress={this.state.addingNewAddress}
             addressBookEmpty={this.addressBookEmpty}
             addressFormDisplayed={this.addressFormDisplayed}
+            autoFillAddress={this.autoFillAddress}
             billingAsShipping={this.state.billingAsShipping}
             cart={this.props.cart}
+            countries={countries}
+            currentAddress={this.addressForForm()}
             formName='paymentMethod'
             changeBillingAsShipping={this.changeBillingAsShipping}
             nextStepAvailable={this.nextStepAvailable}

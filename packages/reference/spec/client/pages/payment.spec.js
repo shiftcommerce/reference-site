@@ -767,7 +767,11 @@ describe('render()', () => {
     const cart = {
       shipping_address: {}
     }
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} />, { disableLifecycleMethods: true })
+    const checkout = {
+      addressBook: []
+    }
+
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
     wrapper.setState({ loading: false })
 
     expect(wrapper).toMatchSnapshot()
@@ -781,7 +785,11 @@ describe('render()', () => {
     const cart = {
       shipping_address: {}
     }
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} />, { disableLifecycleMethods: true })
+    const checkout = {
+      addressBook: []
+    }
+
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
     wrapper.setState({ loading: false })
 
     expect(wrapper.find('PaymentMethod').parent().props().className).toEqual('')
@@ -792,7 +800,11 @@ describe('render()', () => {
     const cart = {
       shipping_address: {}
     }
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} />, { disableLifecycleMethods: true })
+    const checkout = {
+      addressBook: []
+    }
+
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
     wrapper.setState({
       loading: false,
       reviewStep: true

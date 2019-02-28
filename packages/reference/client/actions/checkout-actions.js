@@ -168,3 +168,10 @@ export function autoFillAddress (address) {
     address: address
   }
 }
+
+export function autoFillBillingAddress (address) {
+  return {
+    type: actionTypes.AUTOFILL_BILLING_ADDRESS,
+    address: address
+  }
+}

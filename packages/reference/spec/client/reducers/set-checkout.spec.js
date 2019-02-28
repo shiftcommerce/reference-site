@@ -176,3 +176,99 @@ test('sets billing address id when a billing address is created', () => {
 
   expect(updatedState.billingAddress.id).toEqual(10)
 })
+
+test('populates shipping address when it is autofilled', () => {
+  const action = {
+    type: actionTypes.AUTOFILL_ADDRESS,
+    address: {
+      id: 20,
+      city: 'Leeds',
+      country: 'UK',
+      first_name: 'Dave',
+      last_name: 'Davis',
+      address_line_1: '10 Queen Street',
+      address_line_2: 'Top Floor',
+      state: 'West Yorkshire',
+      postcode: 'LS27EY',
+      preferred_shipping: true,
+      preferred_billing: false,
+      meta_attributes: {
+        phone_number: { value: '123' },
+        email: { value: 'dave@example.com' }
+      }
+    }
+  }
+
+  const currentState = {
+    shippingAddress: {}
+  }
+
+  const updatedState = setCheckout(currentState, action)
+
+  expect(updatedState.shippingAddress).toEqual({
+    id: 20,
+    city: 'Leeds',
+    country_code: 'UK',
+    email: 'dave@example.com',
+    first_name: 'Dave',
+    last_name: 'Davis',
+    line_1: '10 Queen Street',
+    line_2: 'Top Floor',
+    primary_phone: '123',
+    state: 'West Yorkshire',
+    zipcode: 'LS27EY',
+    preferred_shipping: true,
+    preferred_billing: false,
+    selected: true,
+    collapsed: true,
+    errors: {}
+  })
+})
+
+test('populates billing address when it is autofilled', () => {
+  const action = {
+    type: actionTypes.AUTOFILL_BILLING_ADDRESS,
+    address: {
+      id: 20,
+      city: 'Leeds',
+      country: 'UK',
+      first_name: 'Dave',
+      last_name: 'Davis',
+      address_line_1: '10 Queen Street',
+      address_line_2: 'Top Floor',
+      state: 'West Yorkshire',
+      postcode: 'LS27EY',
+      preferred_shipping: true,
+      preferred_billing: false,
+      meta_attributes: {
+        phone_number: { value: '123' },
+        email: { value: 'dave@example.com' }
+      }
+    }
+  }
+
+  const currentState = {
+    billingAddress: {}
+  }
+
+  const updatedState = setCheckout(currentState, action)
+
+  expect(updatedState.billingAddress).toEqual({
+    id: 20,
+    city: 'Leeds',
+    country_code: 'UK',
+    email: 'dave@example.com',
+    first_name: 'Dave',
+    last_name: 'Davis',
+    line_1: '10 Queen Street',
+    line_2: 'Top Floor',
+    primary_phone: '123',
+    state: 'West Yorkshire',
+    zipcode: 'LS27EY',
+    preferred_shipping: true,
+    preferred_billing: false,
+    selected: true,
+    collapsed: true,
+    errors: {}
+  })
+})
