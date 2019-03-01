@@ -8,11 +8,10 @@ import Head from 'next/head'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
-import CheckoutCartTotal from '../components/checkout/checkout-cart-total'
 import CheckoutSteps from '../components/checkout/checkout-steps'
 import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
-import { CheckoutCart, CouponForm, PaymentIcons } from 'shift-react-components'
+import { CheckoutCart, CheckoutCartTotal, CouponForm, PaymentIcons } from 'shift-react-components'
 
 // Actions
 import {
@@ -114,9 +113,10 @@ export function withCheckout (WrappedComponent) {
     }
 
     render () {
-      const { cart, checkout, order } = this.props
+      const { cart, order } = this.props
+      const { continueButtonProps, currentStep, loading, stepActions } = this.state
 
-      if (this.state.loading || !cart.id) {
+      if (loading || !cart.id) {
         return <div>Loading</div>
       }
 
@@ -126,10 +126,10 @@ export function withCheckout (WrappedComponent) {
             <title>{ suffixWithStoreName(`Checkout - ${this.state.pageTitle}`) }</title>
           </Head>
           <CheckoutSteps
-            currentStep={this.state.currentStep}
-            stepActions={this.state.stepActions}
+            currentStep={currentStep}
+            stepActions={stepActions}
           />
-          { this.state.currentStep === 4 && <MiniPlaceOrder
+          { currentStep === 4 && <MiniPlaceOrder
             convertToOrder={this.wrappedRef.current.convertToOrder}
             total={cart.total}
             isValidOrder={this.wrappedRef.current.isValidOrder(cart, order)}
@@ -156,10 +156,14 @@ export function withCheckout (WrappedComponent) {
                     handleSubmit={this.handleCouponSubmit}
                   />
                   <CheckoutCartTotal
-                    continueButtonProps={this.state.continueButtonProps}
-                    cart={cart}
-                    checkout={checkout}
-                    order={order}
+                    continueButtonProps={continueButtonProps}
+                    discountSummaries={cart.discount_summaries}
+                    paymentError={order.paymentError}
+                    shippingDiscount={cart.shipping_total_discount}
+                    shippingDiscountName={cart.shipping_discount_name}
+                    shippingTotal={cart.shipping_method.total}
+                    subTotal={cart.sub_total}
+                    total={cart.total}
                   />
                   <div className='c-checkout__payment'>
                     <PaymentIcons />

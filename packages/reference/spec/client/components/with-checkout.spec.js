@@ -108,10 +108,13 @@ test('deleteItem() makes a request to delete the line item and redirects to cart
 })
 
 test('renders common checkout elements', () => {
-  const cart = { id: 10 }
+  const cart = {
+    id: 10,
+    shipping_method: {}
+  }
 
   const WrappedComponent = withCheckout(Component)
-  const wrapper = shallow(<WrappedComponent cart={cart} />, { disableLifecycleMethods: true })
+  const wrapper = shallow(<WrappedComponent cart={cart} order={{}} />, { disableLifecycleMethods: true })
   wrapper.setState({ loading: false })
 
   expect(wrapper.find('CheckoutSteps').length).toEqual(1)
@@ -122,10 +125,13 @@ test('renders common checkout elements', () => {
 })
 
 test('renders MiniPlaceOrder for the last checkout step', () => {
-  const cart = { id: 10 }
+  const cart = {
+    id: 10,
+    shipping_method: {}
+  }
 
   const WrappedComponent = withCheckout(Component)
-  const wrapper = shallow(<WrappedComponent cart={cart} />, { disableLifecycleMethods: true })
+  const wrapper = shallow(<WrappedComponent cart={cart} order={{}} />, { disableLifecycleMethods: true })
   wrapper.instance().wrappedRef.current = {
     convertOrder: () => {},
     isValidOrder: () => {}
@@ -136,10 +142,13 @@ test('renders MiniPlaceOrder for the last checkout step', () => {
 })
 
 test("doesn't render MiniPlaceOrder for steps other than last", () => {
-  const cart = { id: 10 }
+  const cart = {
+    id: 10,
+    shipping_method: {}
+  }
 
   const WrappedComponent = withCheckout(Component)
-  const wrapper = shallow(<WrappedComponent cart={cart} />, { disableLifecycleMethods: true })
+  const wrapper = shallow(<WrappedComponent cart={cart} order={{}} />, { disableLifecycleMethods: true })
   wrapper.setState({ loading: false, currentStep: 3 })
 
   expect(wrapper.find('MiniPlaceOrder').length).toEqual(0)
