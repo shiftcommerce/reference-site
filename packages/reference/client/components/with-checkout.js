@@ -9,9 +9,14 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
 import CheckoutSteps from '../components/checkout/checkout-steps'
-import MiniPlaceOrder from '../components/checkout/mini-place-order'
 
-import { CheckoutCart, CheckoutCartTotal, CouponForm, PaymentIcons } from 'shift-react-components'
+import {
+  CheckoutCart,
+  CheckoutCartTotal,
+  CouponForm,
+  MiniPlaceOrder,
+  PaymentIcons
+} from 'shift-react-components'
 
 // Actions
 import {

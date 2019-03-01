@@ -4655,7 +4655,7 @@ __webpack_require__.r(__webpack_exports__);
 var createInstantSearch = __webpack_require__(601);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(602);
+var createIndex = __webpack_require__(606);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(10);
@@ -10760,7 +10760,7 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(602);
+var createIndex = __webpack_require__(606);
 
 // CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
@@ -11077,10 +11077,10 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(603);
+var ClearRefinements = __webpack_require__(607);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(606);
+var CurrentRefinements = __webpack_require__(605);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(419);
@@ -12555,7 +12555,7 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(604);
+var Panel = __webpack_require__(603);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(425);
@@ -13321,7 +13321,7 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(607);
+var RefinementList = __webpack_require__(604);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(427);
@@ -13535,7 +13535,7 @@ var Snippet_Snippet = function Snippet(props) {
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(605);
+var SortBy = __webpack_require__(602);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(429);
@@ -49308,203 +49308,12 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 
 "use strict";
 
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(2);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-/* eslint valid-jsdoc: 0 */
-/**
- * @description
- * `<Index>` is the component that allows you to apply widgets to a dedicated index. It's
- * useful if you want to build an interface that targets multiple indices.
- * @kind widget
- * @name <Index>
- * @propType {string} indexName - index in which to search.
- * @propType {{ Root: string|function, props: object }} [root] - Use this to customize the root element. Default value: `{ Root: 'div' }`
- * @example
- * import React from 'react';
- * import { InstantSearch, Index, SearchBox, Hits, Configure } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <Configure hitsPerPage={5} />
- *     <SearchBox />
- *     <Index indexName="instant_search">
- *       <Hits />
- *     </Index>
- *     <Index indexName="bestbuy">
- *       <Hits />
- *     </Index>
- *   </InstantSearch>
- * );
- */
-
-var Index_Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index(props, context) {
-    _classCallCheck(this, Index);
-
-    var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
-
-    var widgetsManager = context.ais.widgetsManager;
-
-    /*
-     we want <Index> to be seen as a regular widget.
-     It means that with only <Index> present a new query will be sent to Algolia.
-     That way you don't need a virtual hits widget to use the connectAutoComplete.
-    */
-
-    _this.unregisterWidget = widgetsManager.registerWidget(_this);
-    return _this;
-  }
-
-  _createClass(Index, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.context.ais.onSearchParameters(this.getSearchParameters.bind(this), this.getChildContext(), this.props);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if (this.props.indexName !== nextProps.indexName) {
-        this.context.ais.widgetsManager.update();
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.unregisterWidget();
-    }
-  }, {
-    key: 'getChildContext',
-    value: function getChildContext() {
-      return {
-        multiIndexContext: {
-          targetedIndex: this.props.indexName
-        }
-      };
-    }
-  }, {
-    key: 'getSearchParameters',
-    value: function getSearchParameters(searchParameters, props) {
-      return searchParameters.setIndex(this.props ? this.props.indexName : props.indexName);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var childrenCount = external_react_["Children"].count(this.props.children);
-      var _props$root = this.props.root,
-          Root = _props$root.Root,
-          props = _props$root.props;
-
-      if (childrenCount === 0) return null;else return external_react_default.a.createElement(
-        Root,
-        props,
-        this.props.children
-      );
-    }
-  }]);
-
-  return Index;
-}(external_react_["Component"]);
-
-Index_Index.propTypes = {
-  // @TODO: These props are currently constant.
-  indexName: prop_types_default.a.string.isRequired,
-  children: prop_types_default.a.node,
-  root: prop_types_default.a.shape({
-    Root: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.func, prop_types_default.a.object]),
-    props: prop_types_default.a.object
-  }).isRequired
-};
-
-Index_Index.childContextTypes = {
-  multiIndexContext: prop_types_default.a.object.isRequired
-};
-
-Index_Index.contextTypes = {
-  // @TODO: more precise widgets manager propType
-  ais: prop_types_default.a.object.isRequired
-};
-
-/* harmony default export */ var components_Index = (Index_Index);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
-
-
-
-
-/**
- * Creates a specialized root Index component. It accepts
- * a specification of the root Element.
- * @param {object} defaultRoot - the defininition of the root of an Index sub tree.
- * @return {object} a Index root
- */
-var createIndex_createIndex = function createIndex(defaultRoot) {
-  var CreateIndex = function CreateIndex(_ref) {
-    var indexName = _ref.indexName,
-        root = _ref.root,
-        children = _ref.children;
-    return external_react_default.a.createElement(
-      components_Index,
-      { indexName: indexName, root: root },
-      children
-    );
-  };
-
-  CreateIndex.propTypes = {
-    indexName: prop_types_default.a.string.isRequired,
-    root: prop_types_default.a.shape({
-      Root: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.func, prop_types_default.a.object]).isRequired,
-      props: prop_types_default.a.object
-    }),
-    children: prop_types_default.a.node
-  };
-
-  CreateIndex.defaultProps = {
-    root: defaultRoot
-  };
-
-  return CreateIndex;
-};
-
-/* harmony default export */ var core_createIndex = __webpack_exports__["a"] = (createIndex_createIndex);
-
-/***/ }),
-/* 603 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+var connectSortBy = __webpack_require__(314);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(352);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(15);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
@@ -49514,13 +49323,13 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(270);
-
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+var Select = __webpack_require__(180);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49535,84 +49344,77 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
+var cx = Object(utils["b" /* createClassNames */])('SortBy');
 
-var ClearRefinements_ClearRefinements = function (_Component) {
-  _inherits(ClearRefinements, _Component);
+var SortBy_SortBy = function (_Component) {
+  _inherits(SortBy, _Component);
 
-  function ClearRefinements() {
-    _classCallCheck(this, ClearRefinements);
+  function SortBy() {
+    _classCallCheck(this, SortBy);
 
-    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
   }
 
-  _createClass(ClearRefinements, [{
+  _createClass(SortBy, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
           items = _props.items,
-          canRefine = _props.canRefine,
+          currentRefinement = _props.currentRefinement,
           refine = _props.refine,
-          translate = _props.translate,
           className = _props.className;
 
 
       return external_react_default.a.createElement(
         'div',
         { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(
-          'button',
-          {
-            className: cx('button', !canRefine && 'button--disabled'),
-            onClick: function onClick() {
-              return refine(items);
-            },
-            disabled: !canRefine
-          },
-          translate('reset')
-        )
+        external_react_default.a.createElement(Select["a" /* default */], {
+          cx: cx,
+          items: items,
+          selectedItem: currentRefinement,
+          onSelect: refine
+        })
       );
     }
   }]);
 
-  return ClearRefinements;
+  return SortBy;
 }(external_react_["Component"]);
 
-ClearRefinements_ClearRefinements.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
+SortBy_SortBy.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+    label: prop_types_default.a.string,
+    value: prop_types_default.a.string.isRequired
+  })).isRequired,
+  currentRefinement: prop_types_default.a.string.isRequired,
   refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
   className: prop_types_default.a.string
 };
-ClearRefinements_ClearRefinements.defaultProps = {
+SortBy_SortBy.defaultProps = {
   className: ''
 };
 
 
-/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
-  reset: 'Clear all filters'
-})(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
-
-
+/* harmony default export */ var components_SortBy = (SortBy_SortBy);
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
 
 
 
 /**
- * The ClearRefinements widget displays a button that lets the user clean every refinement applied
- * to the search.
- * @name ClearRefinements
+ * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
+ * @name SortBy
+ * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
+ * the Algolia website.
  * @kind widget
+ * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
+ * @propType {string} defaultRefinement - The default selected index.
  * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
- * @themeKey ais-ClearRefinements - the root div of the widget
- * @themeKey ais-ClearRefinements-button - the clickable button
- * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
- * @translationKey reset - the clear all button value
+ * @themeKey ais-SortBy - the root div of the widget
+ * @themeKey ais-SortBy-select - the select
+ * @themeKey ais-SortBy-option - the select option
  * @example
  * import React from 'react';
- * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
+ * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
  *
  * const App = () => (
  *   <InstantSearch
@@ -49620,27 +49422,22 @@ ClearRefinements_ClearRefinements.defaultProps = {
  *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
  *     indexName="instant_search"
  *   >
- *     <ClearRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Apple']}
+ *     <SortBy
+ *       defaultRefinement="instant_search"
+ *       items={[
+ *         { value: 'instant_search', label: 'Featured' },
+ *         { value: 'instant_search_price_asc', label: 'Price asc.' },
+ *         { value: 'instant_search_price_desc', label: 'Price desc.' },
+ *       ]}
  *     />
  *   </InstantSearch>
  * );
  */
 
-var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_ClearRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
+/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
 
 /***/ }),
-/* 604 */
+/* 603 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49797,317 +49594,7 @@ Panel_Panel.defaultProps = {
 /* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
 
 /***/ }),
-/* 605 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
-var connectSortBy = __webpack_require__(314);
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(11);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(9);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
-var Select = __webpack_require__(180);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('SortBy');
-
-var SortBy_SortBy = function (_Component) {
-  _inherits(SortBy, _Component);
-
-  function SortBy() {
-    _classCallCheck(this, SortBy);
-
-    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
-  }
-
-  _createClass(SortBy, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          items = _props.items,
-          currentRefinement = _props.currentRefinement,
-          refine = _props.refine,
-          className = _props.className;
-
-
-      return external_react_default.a.createElement(
-        'div',
-        { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(Select["a" /* default */], {
-          cx: cx,
-          items: items,
-          selectedItem: currentRefinement,
-          onSelect: refine
-        })
-      );
-    }
-  }]);
-
-  return SortBy;
-}(external_react_["Component"]);
-
-SortBy_SortBy.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
-    label: prop_types_default.a.string,
-    value: prop_types_default.a.string.isRequired
-  })).isRequired,
-  currentRefinement: prop_types_default.a.string.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-SortBy_SortBy.defaultProps = {
-  className: ''
-};
-
-
-/* harmony default export */ var components_SortBy = (SortBy_SortBy);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
-
-
-
-/**
- * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
- * @name SortBy
- * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
- * the Algolia website.
- * @kind widget
- * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
- * @propType {string} defaultRefinement - The default selected index.
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-SortBy - the root div of the widget
- * @themeKey ais-SortBy-select - the select
- * @themeKey ais-SortBy-option - the select option
- * @example
- * import React from 'react';
- * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <SortBy
- *       defaultRefinement="instant_search"
- *       items={[
- *         { value: 'instant_search', label: 'Featured' },
- *         { value: 'instant_search_price_asc', label: 'Price asc.' },
- *         { value: 'instant_search_price_desc', label: 'Price desc.' },
- *       ]}
- *     />
- *   </InstantSearch>
- * );
- */
-
-/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
-
-/***/ }),
-/* 606 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(352);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(15);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(11);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(270);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(9);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
-
-var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
-  var items = _ref.items,
-      canRefine = _ref.canRefine,
-      refine = _ref.refine,
-      translate = _ref.translate,
-      className = _ref.className;
-  return external_react_default.a.createElement(
-    'div',
-    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
-    external_react_default.a.createElement(
-      'ul',
-      { className: cx('list', !canRefine && 'list--noRefinement') },
-      items.map(function (item) {
-        return external_react_default.a.createElement(
-          'li',
-          { key: item.label, className: cx('item') },
-          external_react_default.a.createElement(
-            'span',
-            { className: cx('label') },
-            item.label
-          ),
-          item.items ? item.items.map(function (nest) {
-            return external_react_default.a.createElement(
-              'span',
-              { key: nest.label, className: cx('category') },
-              external_react_default.a.createElement(
-                'span',
-                { className: cx('categoryLabel') },
-                nest.label
-              ),
-              external_react_default.a.createElement(
-                'button',
-                {
-                  className: cx('delete'),
-                  onClick: function onClick() {
-                    return refine(nest.value);
-                  }
-                },
-                translate('clearFilter', nest)
-              )
-            );
-          }) : external_react_default.a.createElement(
-            'span',
-            { className: cx('category') },
-            external_react_default.a.createElement(
-              'button',
-              {
-                className: cx('delete'),
-                onClick: function onClick() {
-                  return refine(item.value);
-                }
-              },
-              translate('clearFilter', item)
-            )
-          )
-        );
-      })
-    )
-  );
-};
-
-var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
-  label: prop_types_default.a.string.isRequired,
-  value: prop_types_default.a.func.isRequired,
-  items: function items() {
-    return itemPropTypes.apply(undefined, arguments);
-  }
-}));
-
-CurrentRefinements_CurrentRefinements.propTypes = {
-  items: itemPropTypes.isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-
-CurrentRefinements_CurrentRefinements.defaultProps = {
-  className: ''
-};
-
-/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
-  clearFilter: '✕'
-})(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
-
-
-
-
-
-/**
- * The CurrentRefinements widget displays the list of currently applied filters.
- *
- * It allows the user to selectively remove them.
- * @name CurrentRefinements
- * @kind widget
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-CurrentRefinements - the root div of the widget
- * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
- * @themeKey ais-CurrentRefinements-list - the list of all refined items
- * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
- * @themeKey ais-CurrentRefinements-item - the refined list item
- * @themeKey ais-CurrentRefinements-button - the button of each refined list item
- * @themeKey ais-CurrentRefinements-label - the refined list label
- * @themeKey ais-CurrentRefinements-category - the category of each item
- * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
- * @themeKey ais-CurrentRefinements-delete - the delete button of each label
- * @translationKey clearFilter - the remove filter button label
- * @example
- * import React from 'react';
- * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <CurrentRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Colors']}
- *     />
- *   </InstantSearch>
- * );
- */
-
-var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_CurrentRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
-
-/***/ }),
-/* 607 */
+/* 604 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50326,6 +49813,519 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 };
 
 /* harmony default export */ var widgets_RefinementList = __webpack_exports__["a"] = (Object(connectRefinementList["a" /* default */])(RefinementList_RefinementListWidget));
+
+/***/ }),
+/* 605 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(352);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(15);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(11);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(270);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(9);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
+
+var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
+  var items = _ref.items,
+      canRefine = _ref.canRefine,
+      refine = _ref.refine,
+      translate = _ref.translate,
+      className = _ref.className;
+  return external_react_default.a.createElement(
+    'div',
+    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
+    external_react_default.a.createElement(
+      'ul',
+      { className: cx('list', !canRefine && 'list--noRefinement') },
+      items.map(function (item) {
+        return external_react_default.a.createElement(
+          'li',
+          { key: item.label, className: cx('item') },
+          external_react_default.a.createElement(
+            'span',
+            { className: cx('label') },
+            item.label
+          ),
+          item.items ? item.items.map(function (nest) {
+            return external_react_default.a.createElement(
+              'span',
+              { key: nest.label, className: cx('category') },
+              external_react_default.a.createElement(
+                'span',
+                { className: cx('categoryLabel') },
+                nest.label
+              ),
+              external_react_default.a.createElement(
+                'button',
+                {
+                  className: cx('delete'),
+                  onClick: function onClick() {
+                    return refine(nest.value);
+                  }
+                },
+                translate('clearFilter', nest)
+              )
+            );
+          }) : external_react_default.a.createElement(
+            'span',
+            { className: cx('category') },
+            external_react_default.a.createElement(
+              'button',
+              {
+                className: cx('delete'),
+                onClick: function onClick() {
+                  return refine(item.value);
+                }
+              },
+              translate('clearFilter', item)
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
+  label: prop_types_default.a.string.isRequired,
+  value: prop_types_default.a.func.isRequired,
+  items: function items() {
+    return itemPropTypes.apply(undefined, arguments);
+  }
+}));
+
+CurrentRefinements_CurrentRefinements.propTypes = {
+  items: itemPropTypes.isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+
+CurrentRefinements_CurrentRefinements.defaultProps = {
+  className: ''
+};
+
+/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
+  clearFilter: '✕'
+})(CurrentRefinements_CurrentRefinements));
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+
+
+
+
+
+/**
+ * The CurrentRefinements widget displays the list of currently applied filters.
+ *
+ * It allows the user to selectively remove them.
+ * @name CurrentRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @themeKey ais-CurrentRefinements - the root div of the widget
+ * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
+ * @themeKey ais-CurrentRefinements-list - the list of all refined items
+ * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
+ * @themeKey ais-CurrentRefinements-item - the refined list item
+ * @themeKey ais-CurrentRefinements-button - the button of each refined list item
+ * @themeKey ais-CurrentRefinements-label - the refined list label
+ * @themeKey ais-CurrentRefinements-category - the category of each item
+ * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
+ * @themeKey ais-CurrentRefinements-delete - the delete button of each label
+ * @translationKey clearFilter - the remove filter button label
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <CurrentRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Colors']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_CurrentRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
+
+/***/ }),
+/* 606 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(2);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+/* eslint valid-jsdoc: 0 */
+/**
+ * @description
+ * `<Index>` is the component that allows you to apply widgets to a dedicated index. It's
+ * useful if you want to build an interface that targets multiple indices.
+ * @kind widget
+ * @name <Index>
+ * @propType {string} indexName - index in which to search.
+ * @propType {{ Root: string|function, props: object }} [root] - Use this to customize the root element. Default value: `{ Root: 'div' }`
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, Index, SearchBox, Hits, Configure } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <Configure hitsPerPage={5} />
+ *     <SearchBox />
+ *     <Index indexName="instant_search">
+ *       <Hits />
+ *     </Index>
+ *     <Index indexName="bestbuy">
+ *       <Hits />
+ *     </Index>
+ *   </InstantSearch>
+ * );
+ */
+
+var Index_Index = function (_Component) {
+  _inherits(Index, _Component);
+
+  function Index(props, context) {
+    _classCallCheck(this, Index);
+
+    var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
+
+    var widgetsManager = context.ais.widgetsManager;
+
+    /*
+     we want <Index> to be seen as a regular widget.
+     It means that with only <Index> present a new query will be sent to Algolia.
+     That way you don't need a virtual hits widget to use the connectAutoComplete.
+    */
+
+    _this.unregisterWidget = widgetsManager.registerWidget(_this);
+    return _this;
+  }
+
+  _createClass(Index, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.context.ais.onSearchParameters(this.getSearchParameters.bind(this), this.getChildContext(), this.props);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.props.indexName !== nextProps.indexName) {
+        this.context.ais.widgetsManager.update();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.unregisterWidget();
+    }
+  }, {
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        multiIndexContext: {
+          targetedIndex: this.props.indexName
+        }
+      };
+    }
+  }, {
+    key: 'getSearchParameters',
+    value: function getSearchParameters(searchParameters, props) {
+      return searchParameters.setIndex(this.props ? this.props.indexName : props.indexName);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var childrenCount = external_react_["Children"].count(this.props.children);
+      var _props$root = this.props.root,
+          Root = _props$root.Root,
+          props = _props$root.props;
+
+      if (childrenCount === 0) return null;else return external_react_default.a.createElement(
+        Root,
+        props,
+        this.props.children
+      );
+    }
+  }]);
+
+  return Index;
+}(external_react_["Component"]);
+
+Index_Index.propTypes = {
+  // @TODO: These props are currently constant.
+  indexName: prop_types_default.a.string.isRequired,
+  children: prop_types_default.a.node,
+  root: prop_types_default.a.shape({
+    Root: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.func, prop_types_default.a.object]),
+    props: prop_types_default.a.object
+  }).isRequired
+};
+
+Index_Index.childContextTypes = {
+  multiIndexContext: prop_types_default.a.object.isRequired
+};
+
+Index_Index.contextTypes = {
+  // @TODO: more precise widgets manager propType
+  ais: prop_types_default.a.object.isRequired
+};
+
+/* harmony default export */ var components_Index = (Index_Index);
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
+
+
+
+
+/**
+ * Creates a specialized root Index component. It accepts
+ * a specification of the root Element.
+ * @param {object} defaultRoot - the defininition of the root of an Index sub tree.
+ * @return {object} a Index root
+ */
+var createIndex_createIndex = function createIndex(defaultRoot) {
+  var CreateIndex = function CreateIndex(_ref) {
+    var indexName = _ref.indexName,
+        root = _ref.root,
+        children = _ref.children;
+    return external_react_default.a.createElement(
+      components_Index,
+      { indexName: indexName, root: root },
+      children
+    );
+  };
+
+  CreateIndex.propTypes = {
+    indexName: prop_types_default.a.string.isRequired,
+    root: prop_types_default.a.shape({
+      Root: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.func, prop_types_default.a.object]).isRequired,
+      props: prop_types_default.a.object
+    }),
+    children: prop_types_default.a.node
+  };
+
+  CreateIndex.defaultProps = {
+    root: defaultRoot
+  };
+
+  return CreateIndex;
+};
+
+/* harmony default export */ var core_createIndex = __webpack_exports__["a"] = (createIndex_createIndex);
+
+/***/ }),
+/* 607 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(352);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(15);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(11);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(270);
+
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(9);
+
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
+
+var ClearRefinements_ClearRefinements = function (_Component) {
+  _inherits(ClearRefinements, _Component);
+
+  function ClearRefinements() {
+    _classCallCheck(this, ClearRefinements);
+
+    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
+  }
+
+  _createClass(ClearRefinements, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          items = _props.items,
+          canRefine = _props.canRefine,
+          refine = _props.refine,
+          translate = _props.translate,
+          className = _props.className;
+
+
+      return external_react_default.a.createElement(
+        'div',
+        { className: classnames_default()(cx(''), className) },
+        external_react_default.a.createElement(
+          'button',
+          {
+            className: cx('button', !canRefine && 'button--disabled'),
+            onClick: function onClick() {
+              return refine(items);
+            },
+            disabled: !canRefine
+          },
+          translate('reset')
+        )
+      );
+    }
+  }]);
+
+  return ClearRefinements;
+}(external_react_["Component"]);
+
+ClearRefinements_ClearRefinements.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+ClearRefinements_ClearRefinements.defaultProps = {
+  className: ''
+};
+
+
+/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
+  reset: 'Clear all filters'
+})(ClearRefinements_ClearRefinements));
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+
+
+
+
+
+/**
+ * The ClearRefinements widget displays a button that lets the user clean every refinement applied
+ * to the search.
+ * @name ClearRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
+ * @themeKey ais-ClearRefinements - the root div of the widget
+ * @themeKey ais-ClearRefinements-button - the clickable button
+ * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
+ * @translationKey reset - the clear all button value
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <ClearRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Apple']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_ClearRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
 
 /***/ }),
 /* 608 */
@@ -86056,7 +86056,7 @@ function (_Component) {
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(605);
+var SortBy = __webpack_require__(602);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
 function product_menu_options_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_menu_options_typeof = function _typeof(obj) { return typeof obj; }; } else { product_menu_options_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_menu_options_typeof(obj); }
@@ -86680,16 +86680,16 @@ function (_PureComponent) {
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(604);
+var Panel = __webpack_require__(603);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(607);
+var RefinementList = __webpack_require__(604);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(603);
+var ClearRefinements = __webpack_require__(607);
 
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(606);
+var CurrentRefinements = __webpack_require__(605);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
 function search_filters_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { search_filters_typeof = function _typeof(obj) { return typeof obj; }; } else { search_filters_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return search_filters_typeof(obj); }
@@ -94881,6 +94881,43 @@ CheckoutCartTotal.propTypes = {
   total: prop_types_default.a.number.isRequired
 };
 /* harmony default export */ var checkout_cart_total = (CheckoutCartTotal);
+// CONCATENATED MODULE: ./src/components/checkout/mini-place-order.js
+
+ // Libs
+
+
+
+
+function MiniPlaceOrder(_ref) {
+  var convertToOrder = _ref.convertToOrder,
+      isValidOrder = _ref.isValidOrder,
+      total = _ref.total;
+  var Button = component_mapping('Button');
+  return external_react_default.a.createElement("div", {
+    className: "c-cart-summary__mini-button-container"
+  }, external_react_default.a.createElement("div", {
+    className: "c-cart-summary__mini-button-container-item"
+  }, external_react_default.a.createElement("div", {
+    className: "u-bold"
+  }, "Order Total: \xA3", decimalPrice(total))), external_react_default.a.createElement("div", {
+    className: "c-cart-summary__mini-button-container-item"
+  }, external_react_default.a.createElement(Button, {
+    "aria-label": "Place Order",
+    label: "Place Order",
+    status: isValidOrder ? 'primary' : 'disabled',
+    disabled: !isValidOrder,
+    onClick: convertToOrder,
+    className: "c-cart-summary__buttons--proceed o-button--sml",
+    type: "button"
+  })));
+}
+
+MiniPlaceOrder.propTypes = {
+  total: prop_types_default.a.number,
+  isValidOrder: prop_types_default.a.bool,
+  convertToOrder: prop_types_default.a.func
+};
+/* harmony default export */ var mini_place_order = (MiniPlaceOrder);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method-header.js
 // Objects
 
@@ -95372,6 +95409,7 @@ function (_Component) {
 /* concated harmony reexport CheckoutCart */__webpack_require__.d(__webpack_exports__, "CheckoutCart", function() { return checkout_cart; });
 /* concated harmony reexport CheckoutCartTotal */__webpack_require__.d(__webpack_exports__, "CheckoutCartTotal", function() { return checkout_cart_total; });
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
+/* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport ShippingMethodsHeader */__webpack_require__.d(__webpack_exports__, "ShippingMethodsHeader", function() { return shipping_methods_header; });
@@ -95469,6 +95507,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 

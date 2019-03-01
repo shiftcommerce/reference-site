@@ -94,6 +94,7 @@ export { default as CheckoutAddressForm } from './components/checkout/address-fo
 export { default as CheckoutCart } from './components/checkout/checkout-cart'
 export { default as CheckoutCartTotal } from './components/checkout/checkout-cart-total'
 export { default as LineItems } from './components/cart/line-items'
+export { default as MiniPlaceOrder } from './components/checkout/mini-place-order'
 export { default as PaymentIcons } from './components/cart/payment-icons'
 export { default as PaymentMethodHeader } from './components/checkout/payment-method-header'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
