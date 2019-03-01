@@ -502,59 +502,6 @@ describe('SHIFTClient', () => {
     })
   })
 
-  describe('getAddressBookV1', () => {
-    test('endpoint returns address book with correct id', () => {
-      nock(process.env.API_HOST)
-        .get(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses`)
-        .reply(200, addressBookResponse)
-
-      return SHIFTClient.getAddressBookV1(77)
-        .then(response => {
-          expect(response.status).toEqual(200)
-          expect(response.data).toEqual(addressBookResponseParsed)
-        })
-    })
-
-    test('endpoint returns an empty array with an id that has no addresses or is invalid', () => {
-      const addressBookWrongIdResponse = {
-        'data': [],
-        'meta': {
-          'total_entries': 0,
-          'page_count': 0
-        },
-        'links': {
-          'self': '/reference/v1/customer_accounts/123123123/addresses',
-          'first': '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25',
-          'last': '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25'
-        }
-      }
-
-      const addressBookWrongIdResponseParsed = {
-        data: [],
-        pagination:
-        {
-          total_entries: 0,
-          page_count: 0,
-          self: '/reference/v1/customer_accounts/123123123/addresses',
-          first:
-            '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25',
-          last:
-            '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25'
-        }
-      }
-
-      nock(process.env.API_HOST)
-        .get(`/${process.env.API_TENANT}/v1/customer_accounts/123123123/addresses`)
-        .reply(200, addressBookWrongIdResponse)
-
-      return SHIFTClient.getAddressBookV1(123123123)
-        .then(response => {
-          expect(response.status).toEqual(200)
-          expect(response.data).toEqual(addressBookWrongIdResponseParsed)
-        })
-    })
-  })
-
   describe('getProductByIdV1', () => {
     test('returns a product when given a correct id', () => {
       const queryObject = {
@@ -812,6 +759,85 @@ describe('SHIFTClient', () => {
         .catch(error => {
           expect(error.response.status).toEqual(422)
           expect(error.response.data.errors[0].detail).toEqual('No filter[customer_reference] specified')
+        })
+    })
+  })
+
+  describe('getAddressBookV1', () => {
+    test('endpoint returns address book with correct id', () => {
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses`)
+        .reply(200, addressBookResponse)
+
+      return SHIFTClient.getAddressBookV1(77)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(addressBookResponseParsed)
+        })
+    })
+
+    test('endpoint returns an empty array with an id that has no addresses or is invalid', () => {
+      const addressBookWrongIdResponse = {
+        'data': [],
+        'meta': {
+          'total_entries': 0,
+          'page_count': 0
+        },
+        'links': {
+          'self': '/reference/v1/customer_accounts/123123123/addresses',
+          'first': '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25',
+          'last': '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25'
+        }
+      }
+
+      const addressBookWrongIdResponseParsed = {
+        data: [],
+        pagination:
+        {
+          total_entries: 0,
+          page_count: 0,
+          self: '/reference/v1/customer_accounts/123123123/addresses',
+          first:
+            '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25',
+          last:
+            '/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25'
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .get(`/${process.env.API_TENANT}/v1/customer_accounts/123123123/addresses`)
+        .reply(200, addressBookWrongIdResponse)
+
+      return SHIFTClient.getAddressBookV1(123123123)
+        .then(response => {
+          expect(response.status).toEqual(200)
+          expect(response.data).toEqual(addressBookWrongIdResponseParsed)
+        })
+    })
+  })
+
+  describe('deleteAddressV1', () => {
+    test('deletes an address from the address book', () => {
+      nock(process.env.API_HOST)
+        .delete(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses/434`)
+        .reply(204)
+
+      return SHIFTClient.deleteAddressV1(434, 77)
+        .then(response => {
+          expect(response.status).toEqual(204)
+        })
+    })
+
+    test('returns a 404 and logs it to the console if address being deleted does not exist', () => {
+      nock(process.env.API_HOST)
+        .delete(`/${process.env.API_TENANT}/v1/customer_accounts/77/addresses/123123123`)
+        .reply(404)
+
+      expect.assertions(1)
+
+      return SHIFTClient.deleteAddressV1(123123123, 77)
+        .catch(error => {
+          expect(error).toEqual(new Error('Request failed with status code 404'))
         })
     })
   })

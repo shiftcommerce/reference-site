@@ -2,7 +2,7 @@
 const nock = require('nock')
 
 // Address Book Handler
-const { getAddressBook, createAddressBookEntry } = require('../../src/express/addressbook-handler')
+const { getAddressBook, createAddressBookEntry, deleteAddress } = require('../../src/express/addressbook-handler')
 
 // Fixtures
 const addressBookResponse = require('../fixtures/addressbook-response')
@@ -94,5 +94,55 @@ describe('createAddressBookEntry()', () => {
     const response = await createAddressBookEntry(req, res)
     expect(res.status).toHaveBeenCalledWith(201)
     expect(response).toEqual(createAddressBookResponseParsed)
+  })
+})
+
+describe('deleteAddress()', () => {
+  test('returns an empty response when customerId is not in the session', async () => {
+    const req = {
+      session: {},
+      params: {
+        addressId: '469'
+      }
+    }
+
+    const res = {
+      status: jest.fn(x => ({
+        send: jest.fn(y => y)
+      }))
+    }
+
+    const response = await deleteAddress(req, res)
+    expect(response).toEqual({})
+  })
+
+  test('deletes an address with customerId and addressId', async () => {
+    const req = {
+      session: {
+        customerId: 77
+      },
+      params: {
+        addressId: '469'
+      }
+    }
+
+    const res = {
+      status: jest.fn(x => ({
+        send: jest.fn(y => y)
+      }))
+    }
+
+    nock(process.env.API_HOST)
+      .defaultReplyHeaders({ 'access-control-allow-origin': '*', 'access-control-allow-headers': 'Authorization' })
+      .options('/test_tenant/v1/customer_accounts/77/addresses/469')
+      .reply(200)
+
+    nock(process.env.API_HOST)
+      .delete('/test_tenant/v1/customer_accounts/77/addresses/469')
+      .reply(204)
+
+    const response = await deleteAddress(req, res)
+    expect(res.status).toHaveBeenCalledWith(204)
+    expect(response).toEqual('')
   })
 })

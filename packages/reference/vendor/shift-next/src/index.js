@@ -26,27 +26,28 @@ import Config from './lib/config'
 
 module.exports = {
   shiftRoutes: (server) => {
+    server.get('/customerOrders', shiftAccountHandler.getCustomerOrders)
     server.get('/getAccount', shiftAccountHandler.getAccount)
     server.get('/getAddressBook', shiftAddressBookHandler.getAddressBook)
-    server.get('/getMenus', shiftMenuHandler.getMenu)
     server.get('/getCart', shiftCartHandler.getCart)
     server.get('/getCategory/:id', shiftCategoryHandler.getCategory)
+    server.get('/getMenus', shiftMenuHandler.getMenu)
     server.get('/getProduct/:id', shiftProductHandler.getProductById)
     server.get('/getShippingMethods', shiftCartHandler.getShippingMethods)
-    server.get('/customerOrders', shiftAccountHandler.getCustomerOrders)
-    server.post('/login', shiftAccountHandler.loginAccount)
-    server.post('/register', shiftAccountHandler.registerAccount)
-    server.get('/getStaticPage/:id', shiftStaticPageHandler.getStaticPage)
     server.get('/getSlug', shiftSlugHandler.getSlug)
+    server.get('/getStaticPage/:id', shiftStaticPageHandler.getStaticPage)
+    server.post('/addCartCoupon', shiftCartHandler.addCartCoupon)
     server.post('/addToCart', shiftCartHandler.addToCart)
+    server.post('/createAddress', shiftCartHandler.createAddress)
     server.post('/createAddressBookEntry', shiftAddressBookHandler.createAddressBookEntry)
     server.post('/deleteLineItem/:lineItemId', shiftCartHandler.deleteLineItem)
-    server.post('/updateLineItem', shiftCartHandler.updateLineItem)
-    server.post('/addCartCoupon', shiftCartHandler.addCartCoupon)
-    server.post('/createAddress', shiftCartHandler.createAddress)
+    server.post('/login', shiftAccountHandler.loginAccount)
+    server.post('/register', shiftAccountHandler.registerAccount)
     server.post('/setCartBillingAddress', shiftCartHandler.setCartBillingAddress)
     server.post('/setCartShippingAddress', shiftCartHandler.setCartShippingAddress)
     server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
+    server.post('/updateLineItem', shiftCartHandler.updateLineItem)
+    server.delete('/deleteAddress/:addressId', shiftAddressBookHandler.deleteAddress)
   },
 
   CategoryPage: CategoryPage,

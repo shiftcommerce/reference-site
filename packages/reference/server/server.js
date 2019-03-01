@@ -29,13 +29,11 @@ const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 
 // Api
 const { fetchData } = require('./lib/api-server')
-const { platform } = require('./constants/api-urls')
 
 // ShiftNext
 const { shiftRoutes } = require('shift-next')
 
 const orderHandler = require('./route-handlers/order-route-handler')
-const addressBookHandler = require('./route-handlers/address-book-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -149,9 +147,6 @@ module.exports = app.prepare().then(() => {
 
   // Routes for local API calls
   server.post('/createOrder', orderHandler.createOrderRenderer())
-
-  server.delete(/\/deleteAddress\/*/, addressBookHandler.deleteAddressRenderer(platform.AddressUrl))
-
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist
     // This may be handled by fastly to provided best caching performance
