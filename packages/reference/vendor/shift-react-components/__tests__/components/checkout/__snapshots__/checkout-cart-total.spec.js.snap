@@ -68,30 +68,17 @@ exports[`renders payment errors 1`] = `
       <div
         className="c-cart-summary-buttons"
       >
-        <Link
+        <_default
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
           href="/"
         >
-          <Button
-            aria-label="Continue Shopping"
+          <a
             className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-            label="Continue shopping"
-            onClick={[Function]}
-            status="primary"
-            type="button"
+            href="/"
           >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </Button>
-        </Link>
+            Continue Shopping
+          </a>
+        </_default>
         <Button
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
           type="button"
@@ -172,30 +159,17 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
       <div
         className="c-cart-summary-buttons"
       >
-        <Link
+        <_default
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
           href="/"
         >
-          <Button
-            aria-label="Continue Shopping"
+          <a
             className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-            label="Continue shopping"
-            onClick={[Function]}
-            status="primary"
-            type="button"
+            href="/"
           >
-            <button
-              aria-label="Continue Shopping"
-              className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-              type="button"
-            >
-              Continue shopping
-            </button>
-          </Button>
-        </Link>
+            Continue Shopping
+          </a>
+        </_default>
         <Button
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
           type="button"

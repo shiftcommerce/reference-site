@@ -2,7 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Sticky from 'react-stickyfill'
-import Link from 'next/link'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
@@ -10,6 +9,7 @@ import componentMapping from '../../lib/component-mapping'
 
 function CheckoutCartTotal ({ continueButtonProps, discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total }) {
   const Button = componentMapping('Button')
+  const Link = componentMapping('Link')
 
   const renderButtons = (continueButtonProps) => (
     <div className='c-cart-summary-buttons'>
@@ -27,14 +27,10 @@ function CheckoutCartTotal ({ continueButtonProps, discountSummaries, paymentErr
   )
 
   const renderContinueShoppingButton = () => (
-    <Link href='/'>
-      <Button
-        aria-label='Continue Shopping'
-        label='Continue shopping'
-        status='primary'
-        className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml'
-        type='button'
-      />
+    <Link
+      href='/'
+      className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml'>
+      Continue Shopping
     </Link>
   )
 
