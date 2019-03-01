@@ -166,7 +166,7 @@ export function withCheckout (WrappedComponent) {
                     paymentError={order.paymentError}
                     shippingDiscount={cart.shipping_total_discount}
                     shippingDiscountName={cart.shipping_discount_name}
-                    shippingTotal={cart.shipping_method.total}
+                    shippingTotal={cart.shipping_method && cart.shipping_method.total}
                     subTotal={cart.sub_total}
                     total={cart.total}
                   />

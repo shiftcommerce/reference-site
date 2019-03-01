@@ -143,8 +143,7 @@ test('renders MiniPlaceOrder for the last checkout step', () => {
 
 test("doesn't render MiniPlaceOrder for steps other than last", () => {
   const cart = {
-    id: 10,
-    shipping_method: {}
+    id: 10
   }
 
   const WrappedComponent = withCheckout(Component)
