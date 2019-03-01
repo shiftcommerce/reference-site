@@ -35,6 +35,7 @@ class StripePayment extends Component {
       checkout,
       countries,
       currentAddress,
+      loggedIn,
       onBlur,
       onChange,
       onShowField,
@@ -99,6 +100,7 @@ class StripePayment extends Component {
               onBlur={onBlur}
               className='o-form__billing'
               onShowField={onShowField}
+              loggedIn={loggedIn}
             /> }
           </>
         }

@@ -318,7 +318,7 @@ export class CheckoutPaymentPage extends Component {
   })
 
   renderPayment () {
-    const { cart, checkout, order } = this.props
+    const { cart, checkout, loggedIn, order } = this.props
     return (
       <>
         <div className={classNames({ 'u-hidden': !this.state.reviewStep })}>
@@ -338,20 +338,21 @@ export class CheckoutPaymentPage extends Component {
             autoFillAddress={this.autoFillAddress}
             billingAsShipping={this.state.billingAsShipping}
             cart={this.props.cart}
+            changeBillingAsShipping={this.changeBillingAsShipping}
             countries={countries}
             currentAddress={this.addressForForm()}
             formName='paymentMethod'
-            changeBillingAsShipping={this.changeBillingAsShipping}
+            loggedIn={loggedIn}
             nextStepAvailable={this.nextStepAvailable}
             nextSection={this.nextSection}
             onChange={this.onInputChange}
             onBlur={this.onInputBlur}
             onCardTokenReceived={this.onCardTokenReceived}
-            setCardErrors={this.setCardErrors}
             onNewAddress={this.onNewAddress}
             onBookAddressSelected={this.onBookAddressSelected}
             onPaymentMethodChanged={this.onPaymentMethodChanged}
             selectedPaymentMethod={this.state.selectedPaymentMethod}
+            setCardErrors={this.setCardErrors}
             {...this.props}
           />
         </div>

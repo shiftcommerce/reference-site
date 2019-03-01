@@ -32,6 +32,7 @@ export default class PaymentMethod extends Component {
                 checkout,
                 countries,
                 currentAddress,
+                loggedIn,
                 nextStepAvailable,
                 nextSection,
                 onBookAddressSelected,
@@ -55,6 +56,7 @@ export default class PaymentMethod extends Component {
                 checkout={checkout}
                 currentAddress={currentAddress}
                 countries={countries}
+                loggedIn={loggedIn}
                 nextStepAvailable={nextStepAvailable}
                 nextSection={nextSection}
                 onBookAddressSelected={onBookAddressSelected}

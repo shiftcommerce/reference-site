@@ -177,8 +177,8 @@ export function withCheckout (WrappedComponent) {
 }
 
 const connectedWithCheckout = (WrappedComponent) => {
-  const mapStateToProps = ({ cart, checkout, order }) => {
-    return { cart, checkout, order }
+  const mapStateToProps = ({ account: { loggedIn }, cart, checkout, order }) => {
+    return { cart, checkout, loggedIn, order }
   }
 
   return connect(mapStateToProps)(withCheckout(WrappedComponent))
