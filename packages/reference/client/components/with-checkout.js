@@ -8,11 +8,10 @@ import Head from 'next/head'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
-import CheckoutSteps from '../components/checkout/checkout-steps'
-
 import {
   CheckoutCart,
   CheckoutCartTotal,
+  CheckoutSteps,
   CouponForm,
   MiniPlaceOrder,
   PaymentIcons

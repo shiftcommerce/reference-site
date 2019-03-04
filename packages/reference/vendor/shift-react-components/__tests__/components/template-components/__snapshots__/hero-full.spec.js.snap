@@ -76,7 +76,7 @@ exports[`renders the full HeroImage component 1`] = `
       <ConditionalLink
         href="/homeware/dining/glassware"
       >
-        <_default
+        <Link
           as="/homeware/dining/glassware"
           href="/slug?slug=/homeware/dining/glassware"
         >
@@ -123,7 +123,7 @@ exports[`renders the full HeroImage component 1`] = `
               </div>
             </LazyLoad>
           </a>
-        </_default>
+        </Link>
       </ConditionalLink>
       <div
         className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_4"
@@ -159,7 +159,7 @@ exports[`renders the full HeroImage component 1`] = `
             className="c-hero__button"
             key="1"
           >
-            <_default
+            <Link
               as="/homeware/dining/glassware"
               className="c-hero__button-icon"
               href="/slug?slug=/homeware/dining/glassware"
@@ -170,7 +170,7 @@ exports[`renders the full HeroImage component 1`] = `
               >
                 Test Product
               </a>
-            </_default>
+            </Link>
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ exports[`renders payment errors 1`] = `
       <div
         className="c-cart-summary-buttons"
       >
-        <_default
+        <Link
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
           href="/"
         >
@@ -78,7 +78,7 @@ exports[`renders payment errors 1`] = `
           >
             Continue Shopping
           </a>
-        </_default>
+        </Link>
         <Button
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
           type="button"
@@ -159,7 +159,7 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
       <div
         className="c-cart-summary-buttons"
       >
-        <_default
+        <Link
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
           href="/"
         >
@@ -169,7 +169,7 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
           >
             Continue Shopping
           </a>
-        </_default>
+        </Link>
         <Button
           className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
           type="button"

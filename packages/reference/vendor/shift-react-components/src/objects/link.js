@@ -6,7 +6,7 @@ import React from 'react'
  * @param  {Object} props
  * @return {string} - HTML markup for the component
  */
-export default (props) => {
+export default function Link (props) {
   const { href, className, children, onClick } = props
 
   return (

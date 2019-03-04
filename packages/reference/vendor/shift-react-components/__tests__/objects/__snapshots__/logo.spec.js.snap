@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <div
     className="o-header__logo"
   >
-    <_default
+    <Link
       as="/"
       href="/slug?slug=/homepage"
     >
@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
           width={180}
         />
       </a>
-    </_default>
+    </Link>
   </div>
 </Logo>
 `;

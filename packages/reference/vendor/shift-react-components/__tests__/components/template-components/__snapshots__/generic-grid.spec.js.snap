@@ -108,7 +108,7 @@ exports[`GenericGrid component renders correctly 1`] = `
         className="o-card-grid__card"
         key="0"
       >
-        <_default
+        <Link
           href="/homeware/dining/glassware"
         >
           <a
@@ -159,13 +159,13 @@ exports[`GenericGrid component renders correctly 1`] = `
               shop glassware
             </p>
           </a>
-        </_default>
+        </Link>
       </div>
       <div
         className="o-card-grid__card"
         key="1"
       >
-        <_default
+        <Link
           href="/homeware/dining/glassware2"
         >
           <a
@@ -216,13 +216,13 @@ exports[`GenericGrid component renders correctly 1`] = `
               shop glassware2
             </p>
           </a>
-        </_default>
+        </Link>
       </div>
       <div
         className="o-card-grid__card"
         key="2"
       >
-        <_default
+        <Link
           href="/homeware/dining/glassware3"
         >
           <a
@@ -273,10 +273,10 @@ exports[`GenericGrid component renders correctly 1`] = `
               shop glassware3
             </p>
           </a>
-        </_default>
+        </Link>
       </div>
     </div>
-    <_default
+    <Link
       className="o-template-component__cat-button o-button o-button--primary"
       href="/homeware/dining/cat"
     >
@@ -286,7 +286,7 @@ exports[`GenericGrid component renders correctly 1`] = `
       >
         Cat Button
       </a>
-    </_default>
+    </Link>
   </section>
 </GenericGrid>
 `;

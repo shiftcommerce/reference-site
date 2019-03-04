@@ -59,7 +59,7 @@ exports[`BannerImage component renders correctly 1`] = `
     }
   }
 >
-  <_default
+  <Link
     as="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
     href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
   >
@@ -107,6 +107,6 @@ exports[`BannerImage component renders correctly 1`] = `
         </div>
       </LazyLoad>
     </a>
-  </_default>
+  </Link>
 </BannerImage>
 `;

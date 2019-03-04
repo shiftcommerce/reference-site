@@ -26,7 +26,7 @@ exports[`renders correctly 1`] = `
       <li
         className="o-breadcrumb__item"
       >
-        <_default
+        <Link
           as="/"
           className="o-breadcrumb__link"
           href="/home/index"
@@ -37,13 +37,13 @@ exports[`renders correctly 1`] = `
           >
             Home
           </a>
-        </_default>
+        </Link>
       </li>
       <li
         className="o-breadcrumb__item"
         key="0"
       >
-        <_default
+        <Link
           as="/categories/22bca338-b578-4aee-a302-992764fa3e72"
           className="o-breadcrumb__link"
           href="/categories/category?id=22bca338-b578-4aee-a302-992764fa3e72"
@@ -54,13 +54,13 @@ exports[`renders correctly 1`] = `
           >
             Womens
           </a>
-        </_default>
+        </Link>
       </li>
       <li
         className="o-breadcrumb__item"
         key="1"
       >
-        <_default
+        <Link
           as="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
           className="o-breadcrumb__link"
           href="/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4"
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
           >
             Textured Long T-Shirt
           </a>
-        </_default>
+        </Link>
       </li>
     </ol>
   </nav>

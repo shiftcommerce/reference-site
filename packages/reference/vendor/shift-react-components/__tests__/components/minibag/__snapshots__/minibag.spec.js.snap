@@ -12,7 +12,7 @@ exports[`Minibag renders a disabled checkout button when cart is empty 1`] = `
   <div
     className="c-header__minibag c-minibag"
   >
-    <_default
+    <Link
       className="c-minibag__cart"
       href="/cart"
     >
@@ -51,11 +51,11 @@ exports[`Minibag renders a disabled checkout button when cart is empty 1`] = `
           Basket
         </span>
       </a>
-    </_default>
+    </Link>
     <div
       className="c-minibag__checkout"
     >
-      <_default
+      <Link
         className="o-button o-button--primary o-button--disabled"
         href=""
       >
@@ -65,7 +65,7 @@ exports[`Minibag renders a disabled checkout button when cart is empty 1`] = `
         >
           Checkout
         </a>
-      </_default>
+      </Link>
     </div>
   </div>
 </Minibag>
@@ -95,7 +95,7 @@ exports[`Minibag renders an active checkout button when cart has items 1`] = `
   <div
     className="c-header__minibag c-minibag"
   >
-    <_default
+    <Link
       className="c-minibag__cart"
       href="/cart"
     >
@@ -134,11 +134,11 @@ exports[`Minibag renders an active checkout button when cart has items 1`] = `
           Basket
         </span>
       </a>
-    </_default>
+    </Link>
     <div
       className="c-minibag__checkout"
     >
-      <_default
+      <Link
         className="o-button o-button--primary"
         href="/checkout"
       >
@@ -148,7 +148,7 @@ exports[`Minibag renders an active checkout button when cart has items 1`] = `
         >
           Checkout
         </a>
-      </_default>
+      </Link>
     </div>
   </div>
 </Minibag>
@@ -167,7 +167,7 @@ exports[`Minibag renders the minibag links 1`] = `
   <div
     className="dummy-classname c-header__minibag c-minibag"
   >
-    <_default
+    <Link
       className="c-minibag__cart"
       href="/cart"
     >
@@ -206,11 +206,11 @@ exports[`Minibag renders the minibag links 1`] = `
           Basket
         </span>
       </a>
-    </_default>
+    </Link>
     <div
       className="c-minibag__checkout"
     >
-      <_default
+      <Link
         className="o-button o-button--primary o-button--disabled"
         href=""
       >
@@ -220,7 +220,7 @@ exports[`Minibag renders the minibag links 1`] = `
         >
           Checkout
         </a>
-      </_default>
+      </Link>
     </div>
   </div>
 </Minibag>

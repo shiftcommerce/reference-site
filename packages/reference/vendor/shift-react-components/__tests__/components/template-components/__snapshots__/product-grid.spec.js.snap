@@ -213,7 +213,7 @@ exports[`ProductGrid component renders correctly 1`] = `
           <div
             className="c-product-listing-card__body"
           >
-            <_default
+            <Link
               as="/trending/seed_product_4"
               href="/slug?slug=/trending/seed_product_4"
             >
@@ -278,7 +278,7 @@ exports[`ProductGrid component renders correctly 1`] = `
                   </p>
                 </div>
               </a>
-            </_default>
+            </Link>
             <div
               className="c-product-listing-card__price"
             >
@@ -360,7 +360,7 @@ exports[`ProductGrid component renders correctly 1`] = `
           <div
             className="c-product-listing-card__body"
           >
-            <_default
+            <Link
               as="/cups/seed_product_2"
               href="/slug?slug=/cups/seed_product_2"
             >
@@ -425,7 +425,7 @@ exports[`ProductGrid component renders correctly 1`] = `
                   </p>
                 </div>
               </a>
-            </_default>
+            </Link>
             <div
               className="c-product-listing-card__price"
             >
@@ -507,7 +507,7 @@ exports[`ProductGrid component renders correctly 1`] = `
           <div
             className="c-product-listing-card__body"
           >
-            <_default
+            <Link
               as="/trending/seed_product_11"
               href="/slug?slug=/trending/seed_product_11"
             >
@@ -572,7 +572,7 @@ exports[`ProductGrid component renders correctly 1`] = `
                   </p>
                 </div>
               </a>
-            </_default>
+            </Link>
             <div
               className="c-product-listing-card__price"
             >
@@ -654,7 +654,7 @@ exports[`ProductGrid component renders correctly 1`] = `
           <div
             className="c-product-listing-card__body"
           >
-            <_default
+            <Link
               as="/trending/seed_product_6"
               href="/slug?slug=/trending/seed_product_6"
             >
@@ -719,7 +719,7 @@ exports[`ProductGrid component renders correctly 1`] = `
                   </p>
                 </div>
               </a>
-            </_default>
+            </Link>
             <div
               className="c-product-listing-card__price"
             >
@@ -784,7 +784,7 @@ exports[`ProductGrid component renders correctly 1`] = `
         </div>
       </ProductListingCard>
     </div>
-    <_default
+    <Link
       className="o-template-component__cat-button o-button o-button--primary"
       href="/trending"
     >
@@ -794,7 +794,7 @@ exports[`ProductGrid component renders correctly 1`] = `
       >
         View All
       </a>
-    </_default>
+    </Link>
   </section>
 </ProductGrid>
 `;

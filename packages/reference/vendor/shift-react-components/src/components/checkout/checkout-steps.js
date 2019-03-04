@@ -1,13 +1,14 @@
 // Libraries
-import { Component } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import Link from 'next/link'
 
-class CheckoutSteps extends Component {
-  renderCheckoutSteps () {
-    const { currentStep } = this.props
+import componentMapping from '../../lib/component-mapping'
 
+function CheckoutSteps ({ currentStep, stepActions }) {
+  const Link = componentMapping('Link')
+
+  const renderCheckoutSteps = () => {
     const checkoutSteps = [
       { position: 1, title: 'Shipping Address', href: '/checkout/shipping-address' },
       { position: 2, title: 'Shipping Method', href: '/checkout/shipping-method' },
@@ -17,7 +18,7 @@ class CheckoutSteps extends Component {
 
     const checkoutData = checkoutSteps.map((step, index) =>
       <div className='o-header__step' key={index}>
-        { this.renderCheckoutStep(step, currentStep) }
+        { renderCheckoutStep(step) }
       </div>
     )
 
@@ -28,25 +29,23 @@ class CheckoutSteps extends Component {
     )
   }
 
-  renderCheckoutStep (step, currentStep) {
-    const { stepActions } = this.props
-
+  const renderCheckoutStep = (step) => {
     const stepCompleted = step.position < currentStep
     const content = stepCompleted ? '✔' : step.position
     const active = step.position === currentStep
 
     if (stepCompleted) {
       return (
-        <Link href={step.href} as={step.as} shallow={step.shallow}>
-          <a onClick={stepActions[step.position]}>{ this.renderStepIndicator(stepCompleted, active, content, step.title) }</a>
+        <Link href={step.href} as={step.as} onClick={stepActions[step.position]} shallow={step.shallow}>
+          { renderStepIndicator(stepCompleted, active, content, step.title) }
         </Link>
       )
     } else {
-      return this.renderStepIndicator(stepCompleted, active, content, step.title)
+      return renderStepIndicator(stepCompleted, active, content, step.title)
     }
   }
 
-  renderStepIndicator (stepCompleted, active, content, title) {
+  const renderStepIndicator = (stepCompleted, active, content, title) => {
     return (
       <div className={classNames('c-step-indicator', { 'c-step-indicator--active': active, 'c-step-indicator--completed': stepCompleted })}>
         <div className={classNames('c-step-indicator__position', { 'c-step-indicator__position--active': active, 'c-step-indicator__position--completed': stepCompleted })}>
@@ -60,17 +59,15 @@ class CheckoutSteps extends Component {
     )
   }
 
-  render () {
-    return (
-      <div className='o-header--checkout'>
-        <div className='c-checkout__steps'>
-          <div className='c-step-indicators'>
-            { this.renderCheckoutSteps() }
-          </div>
+  return (
+    <div className='o-header--checkout'>
+      <div className='c-checkout__steps'>
+        <div className='c-step-indicators'>
+          { renderCheckoutSteps() }
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 CheckoutSteps.propTypes = {

@@ -16,7 +16,7 @@ exports[`renders ProductListingCard correctly 1`] = `
     <div
       className="c-product-listing-card__body"
     >
-      <_default
+      <Link
         as="/products/seed_product_51"
         href="/slug?slug=/products/seed_product_51"
       >
@@ -81,7 +81,7 @@ exports[`renders ProductListingCard correctly 1`] = `
             </p>
           </div>
         </a>
-      </_default>
+      </Link>
       <div
         className="c-product-listing-card__price"
       >

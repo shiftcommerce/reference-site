@@ -1,8 +1,8 @@
 // Libraries
-import * as Link from 'next/link'
+import React from 'react'
 
 // Components
-import CheckoutSteps from '../../../../client/components/checkout/checkout-steps'
+import CheckoutSteps from '../../../src/components/checkout/checkout-steps'
 
 test('Renders steps correctly', () => {
   // Act
@@ -31,7 +31,7 @@ test('Renders current step 2 correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find(Link.default).length).toEqual(1)
+  expect(wrapper.find('Link').length).toEqual(1)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Method')
 })
 
@@ -41,7 +41,7 @@ test('Renders current step 3 correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find(Link.default).length).toEqual(2)
+  expect(wrapper.find('Link').length).toEqual(2)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment')
 })
 
@@ -51,14 +51,11 @@ test('Renders current step 4 correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find(Link.default).length).toEqual(3)
+  expect(wrapper.find('Link').length).toEqual(3)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Review & Submit')
 })
 
 test('Provides onClick handlers to links', () => {
-  // Mock out next link so that it doesn't inject its own onClick logic into anchor tags
-  const linkSpy = jest.spyOn(Link, 'default').mockImplementation(({ children }) => <div>{ children }</div>)
-
   // Act
   const wrapper = mount(<CheckoutSteps
     currentStep={4}
@@ -69,6 +66,4 @@ test('Provides onClick handlers to links', () => {
 
   // Assert
   expect(wrapper.find('a').at(2).props().onClick()).toEqual('onClick test')
-
-  linkSpy.mockRestore()
 })

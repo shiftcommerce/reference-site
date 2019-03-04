@@ -93,6 +93,7 @@ export { default as AddressFormHeader } from './components/checkout/address-form
 export { default as CheckoutAddressForm } from './components/checkout/address-form'
 export { default as CheckoutCart } from './components/checkout/checkout-cart'
 export { default as CheckoutCartTotal } from './components/checkout/checkout-cart-total'
+export { default as CheckoutSteps } from './components/checkout/checkout-steps'
 export { default as LineItems } from './components/cart/line-items'
 export { default as MiniPlaceOrder } from './components/checkout/mini-place-order'
 export { default as PaymentIcons } from './components/cart/payment-icons'

@@ -188,7 +188,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
         <div
           className="c-line-items__images"
         >
-          <_default
+          <Link
             href="/slug?slug=1"
           >
             <a
@@ -201,7 +201,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 key="1"
               />
             </a>
-          </_default>
+          </Link>
         </div>
         <div
           className="c-line-items__information"
@@ -376,7 +376,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
         <div
           className="c-line-items__images"
         >
-          <_default
+          <Link
             href="/slug?slug=1"
           >
             <a
@@ -389,7 +389,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 key="2"
               />
             </a>
-          </_default>
+          </Link>
         </div>
         <div
           className="c-line-items__information"
@@ -716,7 +716,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
         <div
           className="c-line-items__images"
         >
-          <_default
+          <Link
             href="/slug?slug=1"
           >
             <a
@@ -729,7 +729,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
                 key="1"
               />
             </a>
-          </_default>
+          </Link>
         </div>
         <div
           className="c-line-items__information"

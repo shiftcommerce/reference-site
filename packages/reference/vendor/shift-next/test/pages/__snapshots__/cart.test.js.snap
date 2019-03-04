@@ -266,7 +266,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 <li
                   className="o-breadcrumb__item"
                 >
-                  <objects_link
+                  <link_Link
                     as="/"
                     className="o-breadcrumb__link"
                     href="/home/index"
@@ -277,7 +277,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       Home
                     </a>
-                  </objects_link>
+                  </link_Link>
                 </li>
               </ol>
             </nav>
@@ -510,7 +510,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     <div
                       className="c-line-items__images"
                     >
-                      <objects_link
+                      <link_Link
                         href="/slug?slug=/jugs/seed_product_40"
                       >
                         <a
@@ -538,7 +538,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                             </div>
                           </Image>
                         </a>
-                      </objects_link>
+                      </link_Link>
                     </div>
                     <div
                       className="c-line-items__information"
@@ -1139,7 +1139,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                 <section
                   className="c-cart-summary-buttons"
                 >
-                  <objects_link
+                  <link_Link
                     as="/"
                     className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
                     href="/slug?slug=/homepage"
@@ -1150,8 +1150,8 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       Continue Shopping
                     </a>
-                  </objects_link>
-                  <objects_link
+                  </link_Link>
+                  <link_Link
                     className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
                     href="/checkout/shipping-address"
                   >
@@ -1161,7 +1161,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       Checkout
                     </a>
-                  </objects_link>
+                  </link_Link>
                 </section>
               </CartTableSummary>
               <CartTablePaymentIcons>
