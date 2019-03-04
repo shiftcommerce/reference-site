@@ -39,6 +39,7 @@ import ProductMenuOptions from '../components/products/listing/product-menu-opti
  * Cart/Checkout components
  */
 import LineItems from '../components/cart/line-items'
+import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
 
 /**
  * Order Components
@@ -91,6 +92,7 @@ const mapping = {
   SearchRefinements,
   SearchSlider,
   ShippingAddresses,
+  ShippingMethodsHeader,
   StaticPageError,
   StaticPageErrorBody,
   StaticPageErrorDetails,

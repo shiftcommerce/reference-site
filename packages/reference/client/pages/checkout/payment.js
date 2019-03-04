@@ -13,8 +13,9 @@ import InputFieldValidator from '../../lib/input-field-validator'
 import AddressFormSummary from '../../components/checkout/address-form-summary'
 import PaymentMethod from '../../components/checkout/payment-method'
 import PaymentMethodSummary from '../../components/checkout/payment-method-summary'
-import ShippingMethodsSummary from '../../components/checkout/shipping-methods-summary'
 import withCheckout from '../../components/with-checkout'
+
+import { ShippingMethodsSummary } from 'shift-react-components'
 
 // Actions
 import {

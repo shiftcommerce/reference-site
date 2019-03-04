@@ -79005,6 +79005,33 @@ line_items_LineItems.propTypes = {
   updateQuantity: prop_types_default.a.func
 };
 /* harmony default export */ var line_items = (line_items_LineItems);
+// CONCATENATED MODULE: ./src/components/checkout/shipping-methods-header.js
+// Libraries
+
+ // Lib
+
+
+
+function shipping_methods_header_ShippingMethodsHeader(_ref) {
+  var collapsed = _ref.collapsed,
+      onClick = _ref.onClick;
+  var Button = component_mapping('Button');
+  return external_react_default.a.createElement("div", {
+    className: "o-form__header c-shipping-method__header"
+  }, external_react_default.a.createElement("h2", null, "Your Shipping Method"), collapsed && external_react_default.a.createElement(Button, {
+    "aria-label": "Edit your shipping method",
+    label: "Edit",
+    status: "secondary",
+    className: "o-button-edit",
+    onClick: onClick
+  }));
+}
+
+shipping_methods_header_ShippingMethodsHeader.propTypes = {
+  collapsed: prop_types_default.a.bool,
+  onClick: prop_types_default.a.func
+};
+/* harmony default export */ var shipping_methods_header = (shipping_methods_header_ShippingMethodsHeader);
 // EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/typy/lib/index.js
 var typy_lib = __webpack_require__(13);
 var typy_lib_default = /*#__PURE__*/__webpack_require__.n(typy_lib);
@@ -80166,6 +80193,7 @@ function (_Component) {
  */
 
 
+
 /**
  * Order Components
  */
@@ -80217,6 +80245,7 @@ var mapping = {
   SearchRefinements: search_refinements,
   SearchSlider: search_slider,
   ShippingAddresses: shipping_addresses,
+  ShippingMethodsHeader: shipping_methods_header,
   StaticPageError: static_page_error,
   StaticPageErrorBody: error_body,
   StaticPageErrorDetails: error_details,
@@ -87700,33 +87729,37 @@ PaymentMethodHeader.propTypes = {
   onClick: prop_types_default.a.func
 };
 /* harmony default export */ var payment_method_header = (PaymentMethodHeader);
-// CONCATENATED MODULE: ./src/components/checkout/shipping-methods-header.js
+// CONCATENATED MODULE: ./src/components/checkout/shipping-methods-summary.js
 // Libraries
 
  // Lib
 
 
 
-function ShippingMethodsHeader(_ref) {
-  var collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
-  var Button = component_mapping('Button');
+
+function ShippingMethodsSummary(_ref) {
+  var onClick = _ref.onClick,
+      shippingMethod = _ref.shippingMethod;
+  var ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
   return external_react_default.a.createElement("div", {
-    className: "o-form__header c-shipping-method__header"
-  }, external_react_default.a.createElement("h2", null, "Your Shipping Method"), collapsed && external_react_default.a.createElement(Button, {
-    "aria-label": "Edit your shipping method",
-    label: "Edit",
-    status: "secondary",
-    className: "o-button-edit",
+    className: "o-form c-shipping-method"
+  }, external_react_default.a.createElement(ShippingMethodsHeader, {
+    collapsed: true,
     onClick: onClick
-  }));
+  }), external_react_default.a.createElement("div", {
+    className: "o-form__wrapper--collapsed c-shipping-method__summary"
+  }, external_react_default.a.createElement("p", {
+    className: "u-bold"
+  }, shippingMethod.label), external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
+    className: "u-bold"
+  }, "Estimated Delivery"), ": ", businessDaysFromNow(parseInt(shippingMethod.meta_attributes.working_days.value)).format('dddd Do MMMM'))));
 }
 
-ShippingMethodsHeader.propTypes = {
-  collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
+ShippingMethodsSummary.propTypes = {
+  onClick: prop_types_default.a.func,
+  shippingMethod: prop_types_default.a.object
 };
-/* harmony default export */ var shipping_methods_header = (ShippingMethodsHeader);
+/* harmony default export */ var shipping_methods_summary = (ShippingMethodsSummary);
 // EXTERNAL MODULE: ./src/static/bag-icon.svg
 var bag_icon = __webpack_require__(533);
 var bag_icon_default = /*#__PURE__*/__webpack_require__.n(bag_icon);
@@ -88170,6 +88203,7 @@ function (_Component) {
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport ShippingMethodsHeader */__webpack_require__.d(__webpack_exports__, "ShippingMethodsHeader", function() { return shipping_methods_header; });
+/* concated harmony reexport ShippingMethodsSummary */__webpack_require__.d(__webpack_exports__, "ShippingMethodsSummary", function() { return shipping_methods_summary; });
 /* concated harmony reexport Minibag */__webpack_require__.d(__webpack_exports__, "Minibag", function() { return minibag; });
 /* concated harmony reexport NavBar */__webpack_require__.d(__webpack_exports__, "NavBar", function() { return navbar; });
 /* concated harmony reexport NavBarOption */__webpack_require__.d(__webpack_exports__, "NavBarOption", function() { return navbar_option; });
@@ -88264,6 +88298,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 

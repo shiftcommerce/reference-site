@@ -1,8 +1,14 @@
+// Libraries
+import React from 'react'
+import PropTypes from 'prop-types'
+
+// Lib
 import { businessDaysFromNow } from '../../lib/business-days-from-now'
+import componentMapping from '../../lib/component-mapping'
 
-import { ShippingMethodsHeader } from 'shift-react-components'
+function ShippingMethodsSummary ({ onClick, shippingMethod }) {
+  const ShippingMethodsHeader = componentMapping('ShippingMethodsHeader')
 
-export default function ShippingMethodsSummary ({ onClick, shippingMethod }) {
   return (
     <div className='o-form c-shipping-method'>
       <ShippingMethodsHeader collapsed onClick={onClick} />
@@ -17,3 +23,10 @@ export default function ShippingMethodsSummary ({ onClick, shippingMethod }) {
     </div>
   )
 }
+
+ShippingMethodsSummary.propTypes = {
+  onClick: PropTypes.func,
+  shippingMethod: PropTypes.object
+}
+
+export default ShippingMethodsSummary
