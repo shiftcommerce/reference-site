@@ -74,7 +74,7 @@ class CartPage extends Component {
 
   handleCouponSubmit (values, { setSubmitting, setErrors }) {
     return submitCoupon(values.couponCode)
-      .then(this.props.dispatch(readCart({ force: true })))
+      .then(() => this.props.dispatch(readCart({ force: true })))
       .catch((error) => setAPIError(error, setErrors))
       .finally(() => setSubmitting(false))
   }
