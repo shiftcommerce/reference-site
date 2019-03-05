@@ -13,6 +13,7 @@ export { default as Button } from './objects/button'
 export { default as Checkbox } from './objects/checkbox'
 export { default as ConditionalLink } from './objects/conditional-link'
 export { default as DropdownSelect } from './objects/dropdown-select'
+export { default as Head } from './objects/head'
 export { default as Image } from './objects/image'
 export { default as Input } from './objects/input'
 export { default as LazyLoad } from './objects/lazy-load'
@@ -90,6 +91,7 @@ export { default as CouponForm } from './components/cart/coupon-form'
  * Cart/Checkout Components
  */
 export { default as AddressFormHeader } from './components/checkout/address-form-header'
+export { default as AddressFormSummary } from './components/checkout/address-form-summary'
 export { default as CheckoutAddressForm } from './components/checkout/address-form'
 export { default as CheckoutCart } from './components/checkout/checkout-cart'
 export { default as CheckoutCartTotal } from './components/checkout/checkout-cart-total'
@@ -98,13 +100,9 @@ export { default as LineItems } from './components/cart/line-items'
 export { default as MiniPlaceOrder } from './components/checkout/mini-place-order'
 export { default as PaymentIcons } from './components/cart/payment-icons'
 export { default as PaymentMethodHeader } from './components/checkout/payment-method-header'
+export { default as PaymentMethodSummary } from './components/checkout/payment-method-summary'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 export { default as ShippingMethodsSummary } from './components/checkout/shipping-methods-summary'
-
-/**
- * MiniBag Components
- */
-export { default as Minibag } from './components/minibag/minibag'
 
 /**
  * Navigation Components
@@ -113,6 +111,9 @@ export { default as NavBar } from './components/navigation/navbar'
 export { default as NavBarOption } from './components/navigation/navbar-option'
 
 /**
- * Top-Level Components
+ * Layout Components
  */
-export { default as Footer } from './components/footer'
+export { default as CustomHead } from './components/layout/custom-head'
+export { default as Footer } from './components/layout/footer'
+export { default as Layout } from './components/layout/layout'
+export { default as Minibag } from './components/layout/minibag'

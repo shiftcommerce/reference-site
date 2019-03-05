@@ -4,7 +4,7 @@ import classNames from 'classnames'
 // Components
 import { PaymentMethodHeader } from 'shift-react-components'
 
-const PaymentMethodSummary = ({ cart, onClick, order, selectedPaymentMethod }) => (
+const PaymentMethodSummary = ({ cart, onClick, order }) => (
   <>
     <PaymentMethodHeader
       collapsed
@@ -13,7 +13,7 @@ const PaymentMethodSummary = ({ cart, onClick, order, selectedPaymentMethod }) =
     <div className={classNames('c-payment-method__summary', { 'o-form__error': order.paymentError !== null })}>
       <p>
         <span className='u-bold'> Payment Mode: </span>
-        <span> { selectedPaymentMethod === 'card' ? 'Credit/Debit Card' : 'Paypal' } </span>
+        <span>Credit/Debit Card</span>
       </p>
       <p>
         <span className='u-bold'>Billing Address: </span>

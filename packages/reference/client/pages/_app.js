@@ -4,14 +4,19 @@ import { Config } from 'shift-react-components'
 import { shiftNextConfig } from 'shift-next'
 
 // Objects
+import NextHead from '../objects/next-head'
 import NextLink from '../objects/next-link'
 
 // Next config
 import getConfig from 'next/config'
 
+// Stylesheet
+import '../scss/main.scss'
+
 const { publicRuntimeConfig: { API_HOST_PROXY, ALGOLIA_INDEX_NAME } } = getConfig()
 
 Config.set({
+  Head: NextHead,
   Link: NextLink
 })
 

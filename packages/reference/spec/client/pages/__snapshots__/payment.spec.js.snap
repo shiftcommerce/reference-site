@@ -20,18 +20,8 @@ exports[`render() renders correct checkout components 1`] = `
     className="u-hidden"
   >
     <PaymentMethodSummary
-      cart={
-        Object {
-          "shipping_address": Object {},
-        }
-      }
-      checkout={
-        Object {
-          "addressBook": Array [],
-        }
-      }
       onClick={[Function]}
-      selectedPaymentMethod={null}
+      withErrors={false}
     />
   </div>
   <div
@@ -74,8 +64,7 @@ exports[`render() renders correct checkout components 1`] = `
       onCardTokenReceived={[Function]}
       onChange={[Function]}
       onNewAddress={[Function]}
-      onPaymentMethodChanged={[Function]}
-      selectedPaymentMethod={null}
+      order={Object {}}
       setCardErrors={[Function]}
     />
   </div>

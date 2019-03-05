@@ -10,12 +10,14 @@ import addressFormValidator from '../../lib/address-form-validator'
 import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
-import AddressFormSummary from '../../components/checkout/address-form-summary'
 import PaymentMethod from '../../components/checkout/payment-method'
-import PaymentMethodSummary from '../../components/checkout/payment-method-summary'
 import withCheckout from '../../components/with-checkout'
 
-import { ShippingMethodsSummary } from 'shift-react-components'
+import {
+  AddressFormSummary,
+  PaymentMethodSummary,
+  ShippingMethodsSummary
+} from 'shift-react-components'
 
 // Actions
 import {
@@ -30,8 +32,7 @@ import {
   requestCardToken,
   setCardToken,
   setPaymentError,
-  setCardErrors,
-  createOrder
+  setCardErrors
 } from '../../actions/order-actions'
 import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
 
@@ -44,8 +45,7 @@ export class CheckoutPaymentPage extends Component {
 
     this.state = {
       loading: true,
-      reviewStep: false,
-      selectedPaymentMethod: null
+      reviewStep: false
     }
 
     this.nextSection = this.nextSection.bind(this)
@@ -62,7 +62,6 @@ export class CheckoutPaymentPage extends Component {
     this.onBookAddressSelected = this.onBookAddressSelected.bind(this)
     this.addressFormDisplayed = this.addressFormDisplayed.bind(this)
     this.nextStepAvailable = this.nextStepAvailable.bind(this)
-    this.onPaymentMethodChanged = this.onPaymentMethodChanged.bind(this)
     this.showPayment = this.showPayment.bind(this)
     this.convertToOrder = this.convertToOrder.bind(this)
     this.continueButtonProps = this.continueButtonProps.bind(this)
@@ -144,12 +143,6 @@ export class CheckoutPaymentPage extends Component {
     setCurrentStep(3)
   }
 
-  onPaymentMethodChanged (paymentMethod) {
-    this.setState({
-      selectedPaymentMethod: paymentMethod
-    })
-  }
-
   validateInput (formName, fieldName, fieldValue, rules) {
     let validationMessage = new InputFieldValidator(fieldName, fieldValue, rules).validate()
     this.props.dispatch(setValidationMessage(formName, fieldName, validationMessage))
@@ -203,7 +196,7 @@ export class CheckoutPaymentPage extends Component {
         return dispatch(requestCardToken(false))
       })
     } else {
-      return dispatch(setCardToken(token, this.state.selectedPaymentMethod)).then(() => {
+      return dispatch(setCardToken(token, 'card')).then(() => {
         dispatch(requestCardToken(false))
         Router.push('/order')
       })
@@ -276,13 +269,7 @@ export class CheckoutPaymentPage extends Component {
   }
 
   convertToOrder () {
-    if (this.state.selectedPaymentMethod === 'card') {
-      this.props.dispatch(requestCardToken(true))
-    } else {
-      this.props.dispatch(createOrder(this.props.cart, this.props.checkout, this.props.order)).then(() => {
-        Router.push('/order')
-      })
-    }
+    this.props.dispatch(requestCardToken(true))
   }
 
   continueButtonProps () {
@@ -319,16 +306,15 @@ export class CheckoutPaymentPage extends Component {
   })
 
   renderPayment () {
-    const { cart, checkout, loggedIn, order } = this.props
+    const { cart, loggedIn, order } = this.props
+
     return (
       <>
         <div className={classNames({ 'u-hidden': !this.state.reviewStep })}>
           <PaymentMethodSummary
-            checkout={checkout}
-            order={order}
-            cart={cart}
-            selectedPaymentMethod={this.state.selectedPaymentMethod}
+            billingAddress={cart.billing_address}
             onClick={this.showPayment}
+            withErrors={!!order.paymentError}
           />
         </div>
         <div className={classNames({ 'u-hidden': this.state.reviewStep })}>
@@ -351,8 +337,6 @@ export class CheckoutPaymentPage extends Component {
             onCardTokenReceived={this.onCardTokenReceived}
             onNewAddress={this.onNewAddress}
             onBookAddressSelected={this.onBookAddressSelected}
-            onPaymentMethodChanged={this.onPaymentMethodChanged}
-            selectedPaymentMethod={this.state.selectedPaymentMethod}
             setCardErrors={this.setCardErrors}
             {...this.props}
           />

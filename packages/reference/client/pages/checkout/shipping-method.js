@@ -6,9 +6,10 @@ import Router from 'next/router'
 import { reduxWrapper } from '../../lib/algolia-redux-wrapper'
 
 // Components
-import AddressFormSummary from '../../components/checkout/address-form-summary'
 import ShippingMethods from '../../components/checkout/shipping-methods'
 import withCheckout from '../../components/with-checkout'
+
+import { AddressFormSummary } from 'shift-react-components'
 
 export class CheckoutShippingMethodPage extends Component {
   constructor (props) {

@@ -645,32 +645,6 @@ describe('convertToOrder()', () => {
 
     requestCardTokenSpy.mockRestore()
   })
-
-  test('immediately creates an order and redirects to /order for any other payment methods', async () => {
-    const createOrderSpy = jest.spyOn(OrderActions, 'createOrder').mockImplementation(() => 'createOrderAction')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
-    const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
-    const cart = { key: 'cart value' }
-    const checkout = { key: 'checkout value' }
-    const order = { key: 'order value' }
-
-    const wrapper = shallow(<CheckoutPaymentPage
-      cart={cart}
-      checkout={checkout}
-      order={order}
-      dispatch={dispatch}
-    />, { disableLifecycleMethods: true })
-    wrapper.setState({ selectedPaymentMethod: 'not card' })
-
-    await wrapper.instance().convertToOrder()
-
-    expect(createOrderSpy).toHaveBeenCalledWith(cart, checkout, order)
-    expect(dispatch).toHaveBeenCalledWith('createOrderAction')
-    expect(pushSpy).toHaveBeenCalledWith('/order')
-
-    createOrderSpy.mockRestore()
-    pushSpy.mockRestore()
-  })
 })
 
 describe('continueButtonProps()', () => {
@@ -771,7 +745,7 @@ describe('render()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} order={{}} />, { disableLifecycleMethods: true })
     wrapper.setState({ loading: false })
 
     expect(wrapper).toMatchSnapshot()
@@ -789,7 +763,7 @@ describe('render()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} order={{}} />, { disableLifecycleMethods: true })
     wrapper.setState({ loading: false })
 
     expect(wrapper.find('PaymentMethod').parent().props().className).toEqual('')
@@ -804,7 +778,7 @@ describe('render()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkout} order={{}} />, { disableLifecycleMethods: true })
     wrapper.setState({
       loading: false,
       reviewStep: true

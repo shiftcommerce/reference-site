@@ -1,4 +1,4 @@
-import buildSearchStateForURL from '../../../client/lib/build-search-state-for-url'
+import buildSearchStateForURL from '../../src/lib/build-search-state-for-url'
 
 test('it does not modify the original searchState argument', () => {
   const searchState = {

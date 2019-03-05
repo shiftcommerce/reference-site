@@ -16,8 +16,21 @@ exports[`renders correctly 1`] = `
       >
         <Image
           height={40}
+          src={Object {}}
           width={180}
-        />
+        >
+          <div>
+            <picture>
+              <img
+                className="o-image"
+                height={40}
+                src={Object {}}
+                srcSet="[object Object] 769w"
+                width={180}
+              />
+            </picture>
+          </div>
+        </Image>
       </a>
     </Link>
   </div>

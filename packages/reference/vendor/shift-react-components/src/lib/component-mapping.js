@@ -6,6 +6,11 @@ import Config from './config'
 import FormErrors from './form-errors'
 
 /**
+ * Navigation Components
+ */
+import NavBar from '../components/navigation/navbar'
+
+/**
  * Objects
  */
 import Breadcrumb from '../objects/breadcrumb'
@@ -13,6 +18,7 @@ import Button from '../objects/button'
 import Checkbox from '../objects/checkbox'
 import ConditionalLink from '../objects/conditional-link'
 import DropdownSelect from '../objects/dropdown-select'
+import Head from '../objects/head'
 import Image from '../objects/image'
 import Input from '../objects/input'
 import LazyLoad from '../objects/lazy-load'
@@ -38,7 +44,9 @@ import ProductMenuOptions from '../components/products/listing/product-menu-opti
 /**
  * Cart/Checkout components
  */
+import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
+import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
 
 /**
@@ -51,6 +59,7 @@ import ShippingAddresses from '../components/orders/shipping-addresses'
 /**
  * Search Components
  */
+import SearchBar from '../components/search/search-bar'
 import SearchFilters from '../components/search/search-filters'
 import SearchHits from '../components/search/search-hits'
 import SearchRatingFilter from '../components/search/search-rating-filter'
@@ -64,13 +73,24 @@ import StaticPageError from '../components/static-page/error'
 import StaticPageErrorBody from '../components/static-page/error-body'
 import StaticPageErrorDetails from '../components/static-page/error-details'
 
+/**
+ * Layout Components
+ */
+import CustomHead from '../components/layout/custom-head'
+import Footer from '../components/layout/footer'
+import Minibag from '../components/layout/minibag'
+
 const mapping = {
+  AddressFormHeader,
   Breadcrumb,
   Button,
   Checkbox,
   ConditionalLink,
+  CustomHead,
   DropdownSelect,
+  Footer,
   FormErrors,
+  Head,
   Image,
   Input,
   LazyLoad,
@@ -78,6 +98,8 @@ const mapping = {
   Link,
   Loading,
   Logo,
+  Minibag,
+  NavBar,
   OrderLineItems,
   OrderList,
   ProductCarousel,
@@ -85,7 +107,9 @@ const mapping = {
   ProductMenu,
   ProductMenuOptions,
   ProductPrice,
+  PaymentMethodHeader,
   Rating,
+  SearchBar,
   SearchFilters,
   SearchHits,
   SearchRatingFilter,

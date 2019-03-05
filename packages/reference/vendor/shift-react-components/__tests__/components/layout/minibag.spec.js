@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import MiniBag from '../../../src/components/minibag/minibag'
+import MiniBag from '../../../src/components/layout/minibag'
 
 describe('Minibag', () => {
   test('renders the minibag links', () => {

@@ -10,10 +10,10 @@ import { convertCheckoutToOrder } from './handlers/order-handler'
 // Request
 import { customerOrdersRequest } from '../requests/customer-orders-request'
 
-export function createOrder (cart, checkout, order) {
+export function createOrder (cart, paymentMethod, order) {
   const request = {
     endpoint: '/createOrder',
-    body: convertCheckoutToOrder(cart, checkout, order),
+    body: convertCheckoutToOrder(cart, paymentMethod, order),
     requestActionType: types.CREATE_ORDER,
     successActionType: types.SET_ORDER,
     errorActionType: types.ERROR_ORDER

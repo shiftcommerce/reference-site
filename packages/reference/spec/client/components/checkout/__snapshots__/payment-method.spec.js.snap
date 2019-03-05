@@ -1,24 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders PayPalPayment when card payment is selected 1`] = `
+exports[`renders the payment method header and stripe payment component 1`] = `
 <PaymentMethod
   cart={Object {}}
   order={Object {}}
-  selectedPaymentMethod="paypal"
 >
   <div
     aria-label="Payment method"
     className="o-form  c-payment-method"
   >
-    <PaymentMethodHeader>
+    <payment_method_header_PaymentMethodHeader>
       <div
         className="o-form__header  c-payment-method__header"
       >
         <h2>
-          Payment Method
+          Payment
         </h2>
       </div>
-    </PaymentMethodHeader>
+    </payment_method_header_PaymentMethodHeader>
     <div
       className="c-payment-method__section"
       style={
@@ -27,293 +26,6 @@ exports[`renders PayPalPayment when card payment is selected 1`] = `
         }
       }
     >
-      <PaymentMethodSelector
-        currentMethod="paypal"
-      >
-        <div
-          className="o-form c-payment-method"
-        >
-          <div
-            className="c-payment-method__button-group"
-          >
-            <Button
-              aria-label="Use credit or debit card"
-              className="c-payment-method__button "
-              label="Credit/Debit Card"
-              onClick={[Function]}
-            >
-              <button
-                aria-label="Use credit or debit card"
-                className="c-payment-method__button  o-button"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                Credit/Debit Card
-              </button>
-            </Button>
-            <Button
-              aria-label="Use paypal"
-              className="c-payment-method__button c-payment-method__button--active"
-              label="PayPal"
-              onClick={[Function]}
-            >
-              <button
-                aria-label="Use paypal"
-                className="c-payment-method__button c-payment-method__button--active o-button"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                PayPal
-              </button>
-            </Button>
-          </div>
-          <div
-            className="c-payment-method__images"
-          >
-            <span
-              className="c-payment-method__images-cardpayment"
-            >
-              <Image
-                src="/static/payments/visa.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/visa.svg"
-                      srcSet="/static/payments/visa.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/mastercard.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/mastercard.svg"
-                      srcSet="/static/payments/mastercard.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/american-express.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/american-express.svg"
-                      srcSet="/static/payments/american-express.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/maestro.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/maestro.svg"
-                      srcSet="/static/payments/maestro.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </span>
-            <span
-              className="c-payment-method__images-paypal"
-            >
-              <Image
-                src="/static/payments/pay-pal.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/pay-pal.svg"
-                      srcSet="/static/payments/pay-pal.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </span>
-          </div>
-        </div>
-      </PaymentMethodSelector>
-      <PayPalPayment>
-        <div
-          className="o-form__wrapper"
-        >
-          <h3>
-            PayPal
-          </h3>
-        </div>
-      </PayPalPayment>
-    </div>
-  </div>
-</PaymentMethod>
-`;
-
-exports[`renders StripePayment when card payment is selected 1`] = `
-<PaymentMethod
-  cart={Object {}}
-  order={Object {}}
-  selectedPaymentMethod="card"
->
-  <div
-    aria-label="Payment method"
-    className="o-form  c-payment-method"
-  >
-    <PaymentMethodHeader>
-      <div
-        className="o-form__header  c-payment-method__header"
-      >
-        <h2>
-          Payment Method
-        </h2>
-      </div>
-    </PaymentMethodHeader>
-    <div
-      className="c-payment-method__section"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      <PaymentMethodSelector
-        currentMethod="card"
-      >
-        <div
-          className="o-form c-payment-method"
-        >
-          <div
-            className="c-payment-method__button-group"
-          >
-            <Button
-              aria-label="Use credit or debit card"
-              className="c-payment-method__button c-payment-method__button--active"
-              label="Credit/Debit Card"
-              onClick={[Function]}
-            >
-              <button
-                aria-label="Use credit or debit card"
-                className="c-payment-method__button c-payment-method__button--active o-button"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                Credit/Debit Card
-              </button>
-            </Button>
-            <Button
-              aria-label="Use paypal"
-              className="c-payment-method__button "
-              label="PayPal"
-              onClick={[Function]}
-            >
-              <button
-                aria-label="Use paypal"
-                className="c-payment-method__button  o-button"
-                disabled={false}
-                onClick={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                PayPal
-              </button>
-            </Button>
-          </div>
-          <div
-            className="c-payment-method__images"
-          >
-            <span
-              className="c-payment-method__images-cardpayment"
-            >
-              <Image
-                src="/static/payments/visa.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/visa.svg"
-                      srcSet="/static/payments/visa.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/mastercard.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/mastercard.svg"
-                      srcSet="/static/payments/mastercard.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/american-express.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/american-express.svg"
-                      srcSet="/static/payments/american-express.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-              <Image
-                src="/static/payments/maestro.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/maestro.svg"
-                      srcSet="/static/payments/maestro.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </span>
-            <span
-              className="c-payment-method__images-paypal"
-            >
-              <Image
-                src="/static/payments/pay-pal.svg"
-              >
-                <div>
-                  <picture>
-                    <img
-                      className="o-image"
-                      src="/static/payments/pay-pal.svg"
-                      srcSet="/static/payments/pay-pal.svg 769w"
-                    />
-                  </picture>
-                </div>
-              </Image>
-            </span>
-          </div>
-        </div>
-      </PaymentMethodSelector>
       <Component>
         <p>
           Stripe payment
@@ -322,23 +34,4 @@ exports[`renders StripePayment when card payment is selected 1`] = `
     </div>
   </div>
 </PaymentMethod>
-`;
-
-exports[`renders the payment method header and selector 1`] = `
-<div
-  aria-label="Payment method"
-  className="o-form  c-payment-method"
->
-  <PaymentMethodHeader />
-  <div
-    className="c-payment-method__section"
-    style={
-      Object {
-        "display": "block",
-      }
-    }
-  >
-    <PaymentMethodSelector />
-  </div>
-</div>
 `;

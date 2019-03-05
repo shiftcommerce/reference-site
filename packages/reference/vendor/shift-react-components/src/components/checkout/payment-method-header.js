@@ -8,7 +8,7 @@ function PaymentMethodHeader ({ collapsed, onClick }) {
 
   return (
     <div className='o-form__header  c-payment-method__header'>
-      <h2>Payment Method</h2>
+      <h2>Payment</h2>
       { collapsed && <Button
         aria-label='Edit your payment method'
         className='o-button-edit'

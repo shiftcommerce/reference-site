@@ -3,13 +3,13 @@ import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Pages
-import { OrderPage } from '../../../client/pages/order'
+import OrderPage from '../../src/pages/order'
 
 // Lib
-import { decimalPrice } from '../../../client/lib/decimal-price'
+import { decimalPrice } from '../../src/lib/decimal-price'
 
 // Fixtures
-import order from '../../fixtures/confirmation-order'
+import order from '../fixtures/confirmation-order'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}

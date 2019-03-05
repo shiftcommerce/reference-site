@@ -2,7 +2,12 @@
 import React, { Component } from 'react'
 
 // Lib
-import componentMapping from '../lib/component-mapping'
+import componentMapping from '../../lib/component-mapping'
+
+// Assets
+import facebookIcon from '../../static/facebook.svg'
+import instagramIcon from '../../static/instagram.svg'
+import twitterIcon from '../../static/twitter.svg'
 
 export class Footer extends Component {
   constructor (props) {
@@ -22,9 +27,9 @@ export class Footer extends Component {
             <a>Connect with ShopGo</a>
           </div>
           <div className='c-footer__social-links'>
-            <this.Image src='/static/facebook.svg' />
-            <this.Image src='/static/instagram.svg' />
-            <this.Image src='/static/twitter.svg' />
+            <this.Image src={facebookIcon} />
+            <this.Image src={instagramIcon} />
+            <this.Image src={twitterIcon} />
           </div>
         </div>
       </>

@@ -5,6 +5,7 @@ import ForgottenPasswordPage from './pages/forgotten-password'
 import LoginPage from './pages/login'
 import MyAccountPage from './pages/my-account'
 import OfflinePage from './pages/offline'
+import OrderPage from './pages/order'
 import ProductPage from './pages/product'
 import RegisterPage from './pages/register'
 import SearchPage from './pages/search'
@@ -57,6 +58,7 @@ module.exports = {
   LoginPage: LoginPage,
   MyAccountPage: MyAccountPage,
   OfflinePage: OfflinePage,
+  OrderPage: OrderPage,
   RegisterPage: RegisterPage,
   SearchPage: SearchPage,
   SlugPage: SlugPage,
