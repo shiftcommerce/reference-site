@@ -18,7 +18,7 @@ jest.mock('next/config', () => () => ({
 
 describe('componentDidMount()', () => {
   test('sets loading to false in state when user is not logged in', () => {
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} />)
+    const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} checkout={{}} />)
 
     wrapper.instance().componentDidMount()
 
@@ -87,7 +87,7 @@ describe('componentDidMount()', () => {
       const dispatch = jest.fn().mockImplementation(value => Promise.resolve(value))
       const cart = { shipping_address: {} }
 
-      const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} dispatch={dispatch} />)
+      const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={{}} dispatch={dispatch} />)
 
       await wrapper.instance().componentDidMount()
 

@@ -34,7 +34,7 @@ import {
   setPaymentError,
   setCardErrors
 } from '../../actions/order-actions'
-import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
+import { deleteAddressBookEntry, fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
 
 // Json
 import countries from '../../static/countries.json'
@@ -57,7 +57,7 @@ export class CheckoutPaymentPage extends Component {
     this.changeBillingAsShipping = this.changeBillingAsShipping.bind(this)
     this.onCardTokenReceived = this.onCardTokenReceived.bind(this)
     this.setCardErrors = this.setCardErrors.bind(this)
-    this.addressBookEmpty = this.addressBookEmpty.bind(this)
+    this.onAddressDeleted = this.onAddressDeleted.bind(this)
     this.onNewAddress = this.onNewAddress.bind(this)
     this.onBookAddressSelected = this.onBookAddressSelected.bind(this)
     this.addressFormDisplayed = this.addressFormDisplayed.bind(this)
@@ -226,6 +226,10 @@ export class CheckoutPaymentPage extends Component {
     })
   }
 
+  onAddressDeleted (address) {
+    this.props.dispatch(deleteAddressBookEntry(address))
+  }
+
   addressFormDisplayed () {
     return this.addressBookEmpty() || this.state.addingNewAddress || !this.cartAddressFromBook()
   }
@@ -306,7 +310,7 @@ export class CheckoutPaymentPage extends Component {
   })
 
   renderPayment () {
-    const { cart, loggedIn, order } = this.props
+    const { cart, checkout: { addressBook }, loggedIn, order } = this.props
 
     return (
       <>
@@ -320,7 +324,7 @@ export class CheckoutPaymentPage extends Component {
         <div className={classNames({ 'u-hidden': this.state.reviewStep })}>
           <PaymentMethod
             addingNewAddress={this.state.addingNewAddress}
-            addressBookEmpty={this.addressBookEmpty}
+            addressBook={addressBook}
             addressFormDisplayed={this.addressFormDisplayed}
             autoFillAddress={this.autoFillAddress}
             billingAsShipping={this.state.billingAsShipping}
@@ -332,6 +336,7 @@ export class CheckoutPaymentPage extends Component {
             loggedIn={loggedIn}
             nextStepAvailable={this.nextStepAvailable}
             nextSection={this.nextSection}
+            onAddressDeleted={this.onAddressDeleted}
             onChange={this.onInputChange}
             onBlur={this.onInputBlur}
             onCardTokenReceived={this.onCardTokenReceived}

@@ -10,7 +10,7 @@ export default class PaymentMethod extends Component {
   render () {
     const {
       addingNewAddress,
-      addressBookEmpty,
+      addressBook,
       addressFormDisplayed,
       autoFillAddress,
       billingAsShipping,
@@ -22,6 +22,7 @@ export default class PaymentMethod extends Component {
       loggedIn,
       nextStepAvailable,
       nextSection,
+      onAddressDeleted,
       onBookAddressSelected,
       onBlur,
       onChange,
@@ -37,7 +38,7 @@ export default class PaymentMethod extends Component {
         <div className='c-payment-method__section' style={{ display: 'block' }}>
           <StripePayment
             addingNewAddress={addingNewAddress}
-            addressBookEmpty={addressBookEmpty}
+            addressBook={addressBook}
             addressFormDisplayed={addressFormDisplayed}
             autoFillAddress={autoFillAddress}
             billingAddress={cart.billing_address}
@@ -50,6 +51,7 @@ export default class PaymentMethod extends Component {
             loggedIn={loggedIn}
             nextStepAvailable={nextStepAvailable}
             nextSection={nextSection}
+            onAddressDeleted={onAddressDeleted}
             onBookAddressSelected={onBookAddressSelected}
             onBlur={onBlur}
             onChange={onChange}

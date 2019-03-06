@@ -2,10 +2,9 @@
 import { Component } from 'react'
 
 // Components
-import AddressBook from '../address-book'
-
-// Objects
-import { Button,
+import {
+  AddressBook,
+  Button,
   Checkbox,
   CheckoutAddressForm,
   StripeWrapper
@@ -30,6 +29,7 @@ class StripePayment extends Component {
 
   render () {
     const {
+      addressBook,
       autoFillAddress,
       billingAddress,
       billingAsShipping,
@@ -39,6 +39,7 @@ class StripePayment extends Component {
       countries,
       currentAddress,
       loggedIn,
+      onAddressDeleted,
       onBlur,
       onChange,
       onShowField,
@@ -84,9 +85,11 @@ class StripePayment extends Component {
 
         { !billingAsShipping &&
           <>
-            { !this.props.addressBookEmpty() && <AddressBook
+            { addressBook.length && <AddressBook
+              addressBook={addressBook}
               formName='shippingAddress'
               currentAddressId={billingAddress.id}
+              onAddressDeleted={onAddressDeleted}
               onNewAddress={this.props.onNewAddress}
               onBookAddressSelected={this.props.onBookAddressSelected}
               addressFormDisplayed={this.props.addressFormDisplayed()}

@@ -90,6 +90,7 @@ export { default as CouponForm } from './components/cart/coupon-form'
 /**
  * Cart/Checkout Components
  */
+export { default as AddressBook } from './components/checkout/address-book'
 export { default as AddressFormHeader } from './components/checkout/address-form-header'
 export { default as AddressFormSummary } from './components/checkout/address-form-summary'
 export { default as CheckoutAddressForm } from './components/checkout/address-form'

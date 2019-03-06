@@ -9,10 +9,14 @@ import addressFormValidator from '../../lib/address-form-validator'
 import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
-import AddressBook from '../../components/address-book'
 import withCheckout from '../../components/with-checkout'
 
-import { Button, AddressFormHeader, CheckoutAddressForm } from 'shift-react-components'
+import {
+  AddressBook,
+  AddressFormHeader,
+  Button,
+  CheckoutAddressForm
+} from 'shift-react-components'
 
 // Actions
 import {
@@ -22,7 +26,7 @@ import {
   setValidationMessage,
   showField } from '../../actions/checkout-actions'
 import { setCartShippingAddress, createShippingAddress } from '../../actions/cart-actions'
-import { fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
+import { deleteAddressBookEntry, fetchAddressBook, saveToAddressBook } from '../../actions/address-book-actions'
 
 // Json
 import countries from '../../static/countries.json'
@@ -36,6 +40,7 @@ export class CheckoutShippingAddressPage extends Component {
     }
 
     this.autoFillAddress = this.autoFillAddress.bind(this)
+    this.onAddressDeleted = this.onAddressDeleted.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
     this.onInputBlur = this.onInputBlur.bind(this)
     this.onShowField = this.onShowField.bind(this)
@@ -138,6 +143,10 @@ export class CheckoutShippingAddressPage extends Component {
     })
   }
 
+  onAddressDeleted (address) {
+    this.props.dispatch(deleteAddressBookEntry(address))
+  }
+
   onNewAddress () {
     this.setState({
       addingNewAddress: true
@@ -186,6 +195,7 @@ export class CheckoutShippingAddressPage extends Component {
   }
 
   render () {
+    const { checkout: { addressBook } } = this.props
     const hasLineItems = this.props.cart.line_items_count > 0
 
     // Don't render anything server-side or when loading data
@@ -196,8 +206,10 @@ export class CheckoutShippingAddressPage extends Component {
         <div className='o-form__address'>
           <AddressFormHeader title='Shipping Address' />
           { !this.addressBookEmpty() && <AddressBook
+            addressBook={addressBook}
             formName='shippingAddress'
             currentAddressId={this.props.cart.shipping_address && this.props.cart.shipping_address.id}
+            onAddressDeleted={this.onAddressDeleted}
             onNewAddress={this.onNewAddress}
             onBookAddressSelected={this.onBookAddressSelected}
             addressFormDisplayed={this.addressFormDisplayed()}

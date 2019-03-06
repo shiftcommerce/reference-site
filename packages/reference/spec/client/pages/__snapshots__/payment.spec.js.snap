@@ -28,7 +28,7 @@ exports[`render() renders correct checkout components 1`] = `
     className=""
   >
     <PaymentMethod
-      addressBookEmpty={[Function]}
+      addressBook={Array []}
       addressFormDisplayed={[Function]}
       autoFillAddress={[Function]}
       cart={
@@ -59,6 +59,7 @@ exports[`render() renders correct checkout components 1`] = `
       formName="paymentMethod"
       nextSection={[Function]}
       nextStepAvailable={[Function]}
+      onAddressDeleted={[Function]}
       onBlur={[Function]}
       onBookAddressSelected={[Function]}
       onCardTokenReceived={[Function]}
