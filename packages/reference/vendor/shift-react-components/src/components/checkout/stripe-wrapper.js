@@ -1,32 +1,35 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { StripeProvider, Elements } from 'react-stripe-elements'
 
-// Next config
-import getConfig from 'next/config'
-
-// Components
-import StripeCardFields from './stripe-card-fields'
-
-const { publicRuntimeConfig: { STRIPE_API_KEY } } = getConfig()
+// Lib
+import Config from '../../lib/config'
+import componentMapping from '../../lib/component-mapping'
 
 class StripeWrapper extends Component {
+  constructor (props) {
+    super(props)
+
+    this.StripeFields = componentMapping('StripeFields')
+  }
+
   renderStripeForm (stripeApiKey) {
     const {
+      billingAddress,
       cardTokenRequested,
       onCardTokenReceived,
-      setCardErrors,
-      checkout
+      setCardErrors
     } = this.props
 
     return (
       <StripeProvider apiKey={stripeApiKey}>
         <Elements>
-          <StripeCardFields
+          <this.StripeFields
+            billingAddress={billingAddress}
             cardTokenRequested={cardTokenRequested}
             onCardTokenReceived={onCardTokenReceived}
             setCardErrors={setCardErrors}
-            billingAddress={checkout.billingAddress}
           />
         </Elements>
       </StripeProvider>
@@ -42,12 +45,19 @@ class StripeWrapper extends Component {
   }
 
   render () {
-    const { stripeApiKey = STRIPE_API_KEY } = this.props
+    const stripeApiKey = Config.get().stripeApiKey
 
     return (
       stripeApiKey ? this.renderStripeForm(stripeApiKey) : this.renderServiceUnavailableMessage()
     )
   }
+}
+
+StripeWrapper.propTypes = {
+  billingAddress: PropTypes.object,
+  cardTokenRequested: PropTypes.bool,
+  onCardTokenReceived: PropTypes.func,
+  setCardErrors: PropTypes.func
 }
 
 export default StripeWrapper

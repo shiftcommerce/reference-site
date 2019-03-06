@@ -5,14 +5,7 @@ exports[`StripeWrapper renders StripeProvider component if the api key is presen
   apiKey="TEST_API_KEY"
 >
   <Elements>
-    <InjectStripe(StripeCardFields)
-      billingAddress={
-        Object {
-          "first_name": "a",
-        }
-      }
-      setCardErrors={[MockFunction]}
-    />
+    <InjectStripe(StripeFields) />
   </Elements>
 </Provider>
 `;

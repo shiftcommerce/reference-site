@@ -48,6 +48,7 @@ import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
+import StripeFields from '../components/checkout/stripe-fields'
 
 /**
  * Order Components
@@ -120,6 +121,7 @@ const mapping = {
   StaticPageError,
   StaticPageErrorBody,
   StaticPageErrorDetails,
+  StripeFields,
   VariantSelector
 }
 

@@ -13,11 +13,18 @@ import getConfig from 'next/config'
 // Stylesheet
 import '../scss/main.scss'
 
-const { publicRuntimeConfig: { API_HOST_PROXY, ALGOLIA_INDEX_NAME } } = getConfig()
+const {
+  publicRuntimeConfig: {
+    API_HOST_PROXY,
+    ALGOLIA_INDEX_NAME,
+    STRIPE_API_KEY
+  }
+} = getConfig()
 
 Config.set({
   Head: NextHead,
-  Link: NextLink
+  Link: NextLink,
+  stripeApiKey: STRIPE_API_KEY
 })
 
 shiftNextConfig.set({

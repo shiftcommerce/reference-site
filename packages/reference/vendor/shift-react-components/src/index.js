@@ -103,6 +103,7 @@ export { default as PaymentMethodHeader } from './components/checkout/payment-me
 export { default as PaymentMethodSummary } from './components/checkout/payment-method-summary'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 export { default as ShippingMethodsSummary } from './components/checkout/shipping-methods-summary'
+export { default as StripeWrapper } from './components/checkout/stripe-wrapper'
 
 /**
  * Navigation Components

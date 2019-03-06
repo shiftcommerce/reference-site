@@ -239,8 +239,8 @@ export class CheckoutPaymentPage extends Component {
   }
 
   nextStepAvailable () {
-    const { checkout: { billingAddress }, order } = this.props
-    return !order.card_errors && (((this.cartAddressFromBook() || this.props.cart.shipping_address.id === this.props.cart.billing_address.id) && !this.state.addingNewAddress) || addressFormValidator(billingAddress))
+    const { cart, checkout: { billingAddress }, order } = this.props
+    return !order.card_errors && (((this.cartAddressFromBook() || cart.shipping_address.id === (cart.billing_address && cart.billing_address.id)) && !this.state.addingNewAddress) || addressFormValidator(billingAddress))
   }
 
   nextSection (eventType) {

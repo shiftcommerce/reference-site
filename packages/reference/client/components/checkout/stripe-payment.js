@@ -3,10 +3,13 @@ import { Component } from 'react'
 
 // Components
 import AddressBook from '../address-book'
-import StripeWrapper from './stripe-wrapper'
 
 // Objects
-import { Button, Checkbox, CheckoutAddressForm } from 'shift-react-components'
+import { Button,
+  Checkbox,
+  CheckoutAddressForm,
+  StripeWrapper
+} from 'shift-react-components'
 
 class StripePayment extends Component {
   renderFormSubmitButton () {
@@ -49,10 +52,10 @@ class StripePayment extends Component {
         <div className='o-form__background'>
           <div className='o-form__wrapper'>
             <StripeWrapper
+              billingAddress={checkout.billingAddress}
               cardTokenRequested={cardTokenRequested}
               onCardTokenReceived={onCardTokenReceived}
               setCardErrors={setCardErrors}
-              checkout={checkout}
             />
 
             <div className='o-form__input-group'>

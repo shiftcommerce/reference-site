@@ -1,5 +1,6 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import {
   injectStripe,
   CardElement
@@ -7,7 +8,7 @@ import {
 
 import classNames from 'classnames'
 
-class StripeCardFields extends Component {
+class StripeFields extends Component {
   constructor () {
     super()
 
@@ -69,7 +70,8 @@ class StripeCardFields extends Component {
 
   render () {
     let { errors } = this.state
-    return <div>
+
+    return <>
       <label>
         Please enter your credit card details *
         <CardElement
@@ -80,8 +82,16 @@ class StripeCardFields extends Component {
       </label>
 
       { this.renderValidationMessageFor('CardElement') }
-    </div>
+    </>
   }
 }
 
-export default injectStripe(StripeCardFields)
+StripeFields.propTypes = {
+  billingAddress: PropTypes.object,
+  cardTokenRequested: PropTypes.bool,
+  onCardTokenReceived: PropTypes.func,
+  setCardErrors: PropTypes.func,
+  stripe: PropTypes.object
+}
+
+export default injectStripe(StripeFields)
