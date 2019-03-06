@@ -4,24 +4,75 @@ import Router from 'next/router'
 
 // Libs
 import { reduxWrapper } from '../../lib/algolia-redux-wrapper'
+import ApiClient from '../../lib/api-client'
+import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
+
+// Actions
+import { setCartShippingMethod } from '../../actions/cart-actions'
 
 // Components
-import ShippingMethods from '../../components/checkout/shipping-methods'
 import withCheckout from '../../components/with-checkout'
 
-import { AddressFormSummary } from 'shift-react-components'
+import { AddressFormSummary, ShippingMethods } from 'shift-react-components'
 
 export class CheckoutShippingMethodPage extends Component {
+  static async fetchShippingMethods () {
+    try {
+      const request = fetchShippingMethodsRequest()
+      const response = await new ApiClient().read(request.endpoint, request.query)
+
+      return response.data
+    } catch (error) {
+      return { error }
+    }
+  }
+
   constructor (props) {
     super(props)
 
+    this.state = {
+      loading: true
+    }
+
+    this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.handleSetShippingMethod = this.handleSetShippingMethod.bind(this)
     this.nextSection = this.nextSection.bind(this)
   }
 
-  componentDidMount () {
+  async componentDidMount () {
     if (!this.props.cart.shipping_address) {
-      Router.push('/checkout/shipping-address')
+      return Router.push('/checkout/shipping-address')
     }
+
+    const shippingMethods = (await this.constructor.fetchShippingMethods()).data.sort((method1, method2) => method1.total - method2.total)
+
+    if (!this.props.cart.shipping_method) {
+      this.props.dispatch(setCartShippingMethod(shippingMethods[0].id))
+    }
+
+    this.setState({
+      shippingMethods: shippingMethods,
+      loading: false
+    })
+  }
+
+  /**
+   * When the form is submitted, move onto the next section
+   * @param  {object} event
+   */
+  handleFormSubmit (event) {
+    event.preventDefault()
+    this.nextSection('complete')
+  }
+
+  /**
+   * When a shipping method is selected, dispatch that to the api, and add the
+   * current shipping method to the state
+   * @param  {object} shippingMethod
+   */
+  handleSetShippingMethod (shippingMethod) {
+    this.props.dispatch(setCartShippingMethod(shippingMethod.id))
+    this.setState({ selectedShippingMethod: shippingMethod })
   }
 
   nextSection (eventType) {
@@ -42,30 +93,32 @@ export class CheckoutShippingMethodPage extends Component {
   currentStep = () => 2
 
   render () {
-    const { cart, cart: { shipping_address } } = this.props
+    const { cart } = this.props
 
     if (!cart.shipping_address) return null
 
     return (
-      <>
+      <div>
         <div className='c-checkout__addressform'>
           <div className='o-form__address'>
             <AddressFormSummary
-              addressLine1={shipping_address.address_line_1}
-              city={shipping_address.city}
-              firstName={shipping_address.first_name}
-              lastName={shipping_address.last_name}
+              addressLine1={cart.shipping_address.address_line_1}
+              city={cart.shipping_address.city}
+              firstName={cart.shipping_address.first_name}
+              lastName={cart.shipping_address.last_name}
               onClick={() => Router.push('/checkout/shipping-address')}
-              postcode={shipping_address.postcode}
+              postcode={cart.shipping_address.postcode}
             />
           </div>
         </div>
-        <ShippingMethods
-          {...this.props}
-          nextSection={this.nextSection}
-          cart={cart}
-        />
-      </>
+        { this.state.loading ? <p>Loading...</p> : <ShippingMethods
+          cartLineItemsCount={cart.line_items_count}
+          cartShippingMethod={cart.shipping_method}
+          handleFormSubmit={this.handleFormSubmit}
+          handleSetShippingMethod={this.handleSetShippingMethod}
+          shippingMethods={this.state.shippingMethods}
+        /> }
+      </div>
     )
   }
 }

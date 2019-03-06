@@ -102,6 +102,7 @@ export { default as MiniPlaceOrder } from './components/checkout/mini-place-orde
 export { default as PaymentIcons } from './components/cart/payment-icons'
 export { default as PaymentMethodHeader } from './components/checkout/payment-method-header'
 export { default as PaymentMethodSummary } from './components/checkout/payment-method-summary'
+export { default as ShippingMethods } from './components/checkout/shipping-methods'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 export { default as ShippingMethodsSummary } from './components/checkout/shipping-methods-summary'
 export { default as StripeWrapper } from './components/checkout/stripe-wrapper'
