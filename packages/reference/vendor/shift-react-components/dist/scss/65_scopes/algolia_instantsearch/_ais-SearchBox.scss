@@ -1,3 +1,6 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
 .ais-SearchBox {
   width: 100%;
 }
@@ -9,7 +12,7 @@
 .ais-SearchBox-input,
 .ais-SearchBox-submit {
   border: 1px solid $border-default;
-  background-color: white;
+  background-color: $background-white;
   height: 3rem;
 }
 

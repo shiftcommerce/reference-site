@@ -1,8 +1,8 @@
 /* ==========================================================================
    # Breakpoints Tool
    ========================================================================== */
-$break-small: 768px;
-$break-large: 1024px;
+$break-small: 768px !default;
+$break-large: 1024px !default;
 
 $breakpoints: (
   mob: mobile,

@@ -1,3 +1,6 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
 .ais-RefinementList-list {
   display: block;
   list-style: none;
@@ -48,12 +51,12 @@
 
   input[type='checkbox']:checked + span:after {
     content: '';
-    color: black;
+    color: $text-dark;
   }
 
   input[type='checkbox']:checked + span:before {
     content: '';
-    border-color: black;
+    border-color: $border-dark;
   }
 }
 

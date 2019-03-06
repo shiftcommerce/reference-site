@@ -62,7 +62,7 @@ export default class ShippingMethods extends Component {
     return (
       <>
         { !collapsed &&
-          <form className='o-form__wrapper o-form__background c-shipping-method-list'>
+          <form className='o-form__wrapper o-form__background c-shipping-method__list'>
             <div className='c-shipping-method__list-header'>
               Shipping from ...
               <span className='c-shipping-method__list-item-count'>

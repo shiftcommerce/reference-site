@@ -1,3 +1,6 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
 .ais-RatingMenu-list {
   list-style: none;
   padding: .1rem;
@@ -16,7 +19,7 @@
   }
 
   &--selected > a:before {
-    border-color: black;
+    border-color: $border-dark;
   }
 
   &--disabled {
