@@ -84,7 +84,7 @@ export default function withLayout (Component) {
           shrunk={this.state.shrunk}
           skipHeader={skipHeader}
           toggleDropDown={this.toggleDropDown}
-          ShowClass={this.state.toggleShowClass}
+          showClass={this.state.toggleShowClass}
           {...this.props}
         >
           <Component {...this.props} />
