@@ -2,10 +2,26 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: path.join(__dirname, '/src/index.js'),
+  externals: {
+    'react': 'commonjs react',
+    'react-dom': 'commonjs react-dom'
+  },
+  resolve: {
+    modules: [
+      path.join(__dirname, '/src'),
+      path.join(__dirname, '/node_modules'),
+      /**
+       * Temporary, until this becomes its own package
+       */
+      path.join(__dirname, '../../node_modules')
+    ],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss']
+  },
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
@@ -30,15 +46,19 @@ module.exports = {
         options: {
           limit: Infinity // everything
         }
+      },
+      {
+        test: /\.(s?)css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader',
+            'sass-loader?outputStyle=uncompressed'
+          ]
+        })
       }
     ]
-  },
-  externals: {
-    'react': 'commonjs react',
-    'react-dom': 'commonjs react-dom'
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
   },
   devServer: {
     contentBase: './dist'
@@ -61,6 +81,7 @@ module.exports = {
       analyzerMode: process.env.ANALYZE_BUNDLE ? 'server' : 'disabled'
     }),
     new DuplicatePackageCheckerPlugin(),
+    new ExtractTextPlugin('bundle.css'),
     new StyleLintPlugin({
       syntax: 'scss'
     })
