@@ -1,20 +1,25 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-// Components
-import {
-  AddressBook,
-  Button,
-  Checkbox,
-  CheckoutAddressForm,
-  StripeWrapper
-} from 'shift-react-components'
+// Lib
+import componentMapping from '../../lib/component-mapping'
 
 class StripePayment extends Component {
+  constructor (props) {
+    super(props)
+
+    this.AddressBook = componentMapping('AddressBook')
+    this.AddressForm = componentMapping('AddressForm')
+    this.Button = componentMapping('Button')
+    this.Checkbox = componentMapping('Checkbox')
+    this.StripeWrapper = componentMapping('StripeWrapper')
+  }
+
   renderFormSubmitButton () {
     return (
       <div className='o-form__input-group'>
-        <Button
+        <this.Button
           aria-label='Review Your Order'
           className='c-address-form__button o-button--sml'
           label='Review Your Order'
@@ -52,7 +57,7 @@ class StripePayment extends Component {
       <>
         <div className='o-form__background'>
           <div className='o-form__wrapper'>
-            <StripeWrapper
+            <this.StripeWrapper
               billingAddress={checkout.billingAddress}
               cardTokenRequested={cardTokenRequested}
               onCardTokenReceived={onCardTokenReceived}
@@ -63,7 +68,7 @@ class StripePayment extends Component {
               <label>Billing address *</label>
             </div>
 
-            <Checkbox
+            <this.Checkbox
               type='checkbox'
               label='Same as shipping address'
               name='shippingAddressAsBillingAddress'
@@ -85,7 +90,7 @@ class StripePayment extends Component {
 
         { !billingAsShipping &&
           <>
-            { addressBook.length && <AddressBook
+            { addressBook.length && <this.AddressBook
               addressBook={addressBook}
               formName='shippingAddress'
               currentAddressId={billingAddress.id}
@@ -94,7 +99,7 @@ class StripePayment extends Component {
               onBookAddressSelected={this.props.onBookAddressSelected}
               addressFormDisplayed={this.props.addressFormDisplayed()}
             /> }
-            { this.props.addressFormDisplayed() && <CheckoutAddressForm
+            { this.props.addressFormDisplayed() && <this.AddressForm
               aria-label='Billing address form'
               autoFillAddress={autoFillAddress}
               checkout={checkout}
@@ -114,6 +119,31 @@ class StripePayment extends Component {
       </>
     )
   }
+}
+
+StripePayment.propTypes = {
+  addressBook: PropTypes.arrayOf(PropTypes.object),
+  addressFormDisplayed: PropTypes.func,
+  autoFillAddress: PropTypes.func,
+  billingAddress: PropTypes.object,
+  billingAsShipping: PropTypes.bool,
+  cardTokenRequested: PropTypes.bool,
+  changeBillingAsShipping: PropTypes.func,
+  checkout: PropTypes.object,
+  countries: PropTypes.arrayOf(PropTypes.object),
+  currentAddress: PropTypes.object,
+  loggedIn: PropTypes.bool,
+  nextSection: PropTypes.func,
+  nextStepAvailable: PropTypes.func,
+  onAddressDeleted: PropTypes.func,
+  onBookAddressSelected: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onNewAddress: PropTypes.func,
+  onShowField: PropTypes.func,
+  onCardTokenReceived: PropTypes.func,
+  setCardErrors: PropTypes.func,
+  shippingAddress: PropTypes.object
 }
 
 export default StripePayment

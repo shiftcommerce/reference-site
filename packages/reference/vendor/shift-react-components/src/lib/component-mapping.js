@@ -44,11 +44,14 @@ import ProductMenuOptions from '../components/products/listing/product-menu-opti
 /**
  * Cart/Checkout components
  */
+import AddressBook from '../components/checkout/address-book'
+import AddressForm from '../components/checkout/address-form'
 import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
 import StripeFields from '../components/checkout/stripe-fields'
+import StripeWrapper from '../components/checkout/stripe-wrapper'
 
 /**
  * Order Components
@@ -82,6 +85,8 @@ import Footer from '../components/layout/footer'
 import Minibag from '../components/layout/minibag'
 
 const mapping = {
+  AddressBook,
+  AddressForm,
   AddressFormHeader,
   Breadcrumb,
   Button,
@@ -122,6 +127,7 @@ const mapping = {
   StaticPageErrorBody,
   StaticPageErrorDetails,
   StripeFields,
+  StripeWrapper,
   VariantSelector
 }
 

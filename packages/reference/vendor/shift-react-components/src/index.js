@@ -105,6 +105,7 @@ export { default as PaymentMethodSummary } from './components/checkout/payment-m
 export { default as ShippingMethods } from './components/checkout/shipping-methods'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 export { default as ShippingMethodsSummary } from './components/checkout/shipping-methods-summary'
+export { default as StripePayment } from './components/checkout/stripe-payment'
 export { default as StripeWrapper } from './components/checkout/stripe-wrapper'
 
 /**

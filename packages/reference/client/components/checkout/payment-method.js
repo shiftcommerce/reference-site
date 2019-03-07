@@ -2,9 +2,7 @@
 import { Component } from 'react'
 
 // Components
-import StripePayment from './stripe-payment'
-
-import { PaymentMethodHeader } from 'shift-react-components'
+import { PaymentMethodHeader, StripePayment } from 'shift-react-components'
 
 export default class PaymentMethod extends Component {
   render () {

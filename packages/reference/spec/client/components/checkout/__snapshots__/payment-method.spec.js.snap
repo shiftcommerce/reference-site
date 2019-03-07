@@ -1,37 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the payment method header and stripe payment component 1`] = `
-<PaymentMethod
-  cart={Object {}}
-  order={Object {}}
+<div
+  aria-label="Payment method"
+  className="o-form  c-payment-method"
 >
+  <payment_method_header_PaymentMethodHeader />
   <div
-    aria-label="Payment method"
-    className="o-form  c-payment-method"
-  >
-    <payment_method_header_PaymentMethodHeader>
-      <div
-        className="o-form__header  c-payment-method__header"
-      >
-        <h2>
-          Payment
-        </h2>
-      </div>
-    </payment_method_header_PaymentMethodHeader>
-    <div
-      className="c-payment-method__section"
-      style={
-        Object {
-          "display": "block",
-        }
+    className="c-payment-method__section"
+    style={
+      Object {
+        "display": "block",
       }
-    >
-      <Component>
-        <p>
-          Stripe payment
-        </p>
-      </Component>
-    </div>
+    }
+  >
+    <StripePayment />
   </div>
-</PaymentMethod>
+</div>
 `;

@@ -4646,45 +4646,63 @@ if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(859)();
+}
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(516);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(521);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(10);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(41);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(108);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/keys.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/keys.js
 var keys = __webpack_require__(29);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/difference.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/difference.js
 var difference = __webpack_require__(525);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
-var indexUtils = __webpack_require__(6);
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
+var indexUtils = __webpack_require__(7);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
 
 
 
@@ -4732,7 +4750,7 @@ function getId() {
     return Object(indexUtils["f" /* refineValue */])(searchState, nextValue, this.context);
   }
 }));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
 
 
 /**
@@ -4768,7 +4786,7 @@ function getId() {
 /* harmony default export */ var Configure = (connectConfigure(function () {
   return null;
 }));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
 function connectAutoComplete_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -4858,17 +4876,17 @@ function _cleanUp(props, searchState, context) {
     return searchParameters.setQuery(connectAutoComplete_getCurrentRefinement(props, searchState, this.context));
   }
 }));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(316);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(317);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(34);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
 
 
 function connectGeoSearch_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -5059,58 +5077,58 @@ var connectGeoSearch_refine = function _refine(searchState, nextValue, context) 
     return true;
   }
 }));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(318);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(320);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(321);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(323);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(324);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(325);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(326);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(328);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(329);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(330);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
 var connectSortBy = __webpack_require__(331);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(332);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(333);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(334);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
 /* concated harmony reexport createInstantSearch */__webpack_require__.d(__webpack_exports__, "createInstantSearch", function() { return createInstantSearch["a" /* default */]; });
 /* concated harmony reexport createIndex */__webpack_require__.d(__webpack_exports__, "createIndex", function() { return createIndex["a" /* default */]; });
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return createConnector["a" /* default */]; });
@@ -5178,7 +5196,7 @@ var connectToggleRefinement = __webpack_require__(334);
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isDate = __webpack_require__(200)
@@ -5504,7 +5522,7 @@ module.exports = parse
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5685,24 +5703,6 @@ function cleanUpValueWithMutliIndex(_ref2) {
 
   return lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(searchState, 'indices.' + indexName + '.' + id);
 }
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(859)();
-}
-
 
 /***/ }),
 /* 8 */
@@ -9189,7 +9189,7 @@ module.exports = identity;
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var startOfISOWeek = __webpack_require__(52)
 
 /**
@@ -9271,7 +9271,7 @@ module.exports = startOfISOWeek
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -10501,17 +10501,17 @@ module.exports = exports["default"];
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
-var es = __webpack_require__(4);
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
+var es = __webpack_require__(5);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
 var algoliasearchLite = __webpack_require__(527);
 var algoliasearchLite_default = /*#__PURE__*/__webpack_require__.n(algoliasearchLite);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(516);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
 
 
 
@@ -10523,10 +10523,10 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 });
 
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(521);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
 
 var Index = Object(createIndex["a" /* default */])({
@@ -10541,31 +10541,31 @@ var Index = Object(createIndex["a" /* default */])({
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(316);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10619,7 +10619,7 @@ Link_Link.propTypes = {
   onClick: prop_types_default.a.func.isRequired
 };
 /* harmony default export */ var components_Link = (Link_Link);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
 var Breadcrumb_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Breadcrumb_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10742,7 +10742,7 @@ Breadcrumb_Breadcrumb.defaultProps = {
 /* harmony default export */ var components_Breadcrumb = (Object(translatable["a" /* default */])({
   rootLabel: 'Home'
 })(Breadcrumb_Breadcrumb));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
 
 
 
@@ -10840,23 +10840,23 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 };
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
 var ClearRefinements = __webpack_require__(519);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
 var CurrentRefinements = __webpack_require__(520);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(318);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(76);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(42);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
 
 
 var HierarchicalMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10966,7 +10966,7 @@ HierarchicalMenu_HierarchicalMenu.defaultProps = {
     return extended ? 'Show less' : 'Show more';
   }
 })(HierarchicalMenu_HierarchicalMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
 
 
 
@@ -11066,13 +11066,13 @@ var HierarchicalMenu_HierarchicalMenuWidget = function HierarchicalMenuWidget(pr
 };
 
 /* harmony default export */ var widgets_HierarchicalMenu = (Object(connectHierarchicalMenu["a" /* default */])(HierarchicalMenu_HierarchicalMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(75);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(320);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
 
 
 
@@ -11131,7 +11131,7 @@ Hits_Hits.defaultProps = {
 };
 
 /* harmony default export */ var components_Hits = (Hits_Hits);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
 
 
 
@@ -11165,13 +11165,13 @@ Hits_Hits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Hits = (Object(connectHits["a" /* default */])(components_Hits));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(321);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
 var Select = __webpack_require__(152);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
 var HitsPerPage_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function HitsPerPage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11238,7 +11238,7 @@ HitsPerPage_HitsPerPage.defaultProps = {
 
 
 /* harmony default export */ var components_HitsPerPage = (HitsPerPage_HitsPerPage);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
 
 
 
@@ -11280,10 +11280,10 @@ HitsPerPage_HitsPerPage.defaultProps = {
  */
 
 /* harmony default export */ var widgets_HitsPerPage = (Object(connectHitsPerPage["a" /* default */])(components_HitsPerPage));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
 var InfiniteHits_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function InfiniteHits_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11384,7 +11384,7 @@ InfiniteHits_InfiniteHits.defaultProps = {
 /* harmony default export */ var components_InfiniteHits = (Object(translatable["a" /* default */])({
   loadMore: 'Load more'
 })(InfiniteHits_InfiniteHits));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
 
 
 
@@ -11421,10 +11421,10 @@ InfiniteHits_InfiniteHits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_InfiniteHits = (Object(connectInfiniteHits["a" /* default */])(components_InfiniteHits));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(323);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
 
 
 var Menu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -11542,7 +11542,7 @@ Menu_Menu.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(Menu_Menu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
 
 
 
@@ -11601,11 +11601,11 @@ var Menu_MenuWidget = function MenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_Menu = (Object(connectMenu["a" /* default */])(Menu_MenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(25);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
 
 
 var MenuSelect_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11724,7 +11724,7 @@ MenuSelect_MenuSelect.defaultProps = {
 /* harmony default export */ var components_MenuSelect = (Object(translatable["a" /* default */])({
   seeAllOption: 'See all'
 })(MenuSelect_MenuSelect));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
 
 
 
@@ -11769,10 +11769,10 @@ var MenuSelect_MenuSelectWidget = function MenuSelectWidget(props) {
 };
 
 /* harmony default export */ var widgets_MenuSelect = (Object(connectMenu["a" /* default */])(MenuSelect_MenuSelectWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(324);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
 var NumericMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var NumericMenu_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11877,7 +11877,7 @@ NumericMenu_NumericMenu.defaultProps = {
 /* harmony default export */ var components_NumericMenu = (Object(translatable["a" /* default */])({
   all: 'All'
 })(NumericMenu_NumericMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
 
 
 
@@ -11933,18 +11933,18 @@ var NumericMenu_NumericMenuWidget = function NumericMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_NumericMenu = (Object(connectNumericMenu["a" /* default */])(NumericMenu_NumericMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(325);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/range.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/range.js
 var lodash_range = __webpack_require__(217);
 var range_default = /*#__PURE__*/__webpack_require__.n(lodash_range);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/has.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/has.js
 var has = __webpack_require__(12);
 var has_default = /*#__PURE__*/__webpack_require__.n(has);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
 
 
 var LinkList_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12032,7 +12032,7 @@ LinkList_LinkList.propTypes = {
   canRefine: prop_types_default.a.bool.isRequired
 };
 /* harmony default export */ var components_LinkList = (LinkList_LinkList);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
 
 
 var Pagination_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -12254,7 +12254,7 @@ Pagination_Pagination.defaultProps = {
     return 'Page ' + currentRefinement.toString();
   }
 })(Pagination_Pagination));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
 
 
 
@@ -12318,13 +12318,13 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 };
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
 var Panel = __webpack_require__(522);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(326);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
 var PoweredBy_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function PoweredBy_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12438,7 +12438,7 @@ PoweredBy_PoweredBy.propTypes = {
 /* harmony default export */ var components_PoweredBy = (Object(translatable["a" /* default */])({
   searchBy: 'Search by'
 })(PoweredBy_PoweredBy));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
 
 
 
@@ -12468,10 +12468,10 @@ PoweredBy_PoweredBy.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_PoweredBy = (Object(connectPoweredBy["a" /* default */])(components_PoweredBy));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
 var RangeInput_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function RangeInput_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12648,7 +12648,7 @@ RangeInput_RawRangeInput.defaultProps = {
   submit: 'ok',
   separator: 'to'
 })(RangeInput_RawRangeInput));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
 
 
 
@@ -12700,7 +12700,7 @@ var RangeInput_RangeInputWidget = function RangeInputWidget(props) {
 };
 
 /* harmony default export */ var widgets_RangeInput = (Object(connectRange["a" /* default */])(RangeInput_RangeInputWidget));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
 
 
 /**
@@ -12802,11 +12802,11 @@ const ConnectedRange = connectRange(Range);
     )
   );
 });
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/fill.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/fill.js
 var fill = __webpack_require__(528);
 var fill_default = /*#__PURE__*/__webpack_require__.n(fill);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
 
 
 
@@ -13026,7 +13026,7 @@ RatingMenu_RatingMenu.defaultProps = {
 /* harmony default export */ var components_RatingMenu = (Object(translatable["a" /* default */])({
   ratingLabel: ' & Up'
 })(RatingMenu_RatingMenu));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
 
 
 
@@ -13084,13 +13084,13 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
 var RefinementList = __webpack_require__(518);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(329);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
 var ScrollTo_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function ScrollTo_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13151,7 +13151,7 @@ ScrollTo_ScrollTo.propTypes = {
 
 
 /* harmony default export */ var components_ScrollTo = (ScrollTo_ScrollTo);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
 
 
 
@@ -13181,13 +13181,13 @@ ScrollTo_ScrollTo.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_ScrollTo = (Object(connectScrollTo["a" /* default */])(components_ScrollTo));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(330);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
 var SearchBox = __webpack_require__(150);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
 
 
 
@@ -13234,13 +13234,13 @@ var SearchBox = __webpack_require__(150);
  */
 
 /* harmony default export */ var widgets_SearchBox = (Object(connectSearchBox["a" /* default */])(SearchBox["a" /* default */]));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(151);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
 var Snippet_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -13254,7 +13254,7 @@ var Snippet_Snippet = function Snippet(props) {
 };
 
 /* harmony default export */ var components_Snippet = (Snippet_Snippet);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
 
 
 
@@ -13298,13 +13298,13 @@ var Snippet_Snippet = function Snippet(props) {
  */
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
 var SortBy = __webpack_require__(517);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(333);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
 var Stats_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Stats_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13371,7 +13371,7 @@ Stats_Stats.defaultProps = {
     return n.toLocaleString() + ' results found in ' + ms.toLocaleString() + 'ms';
   }
 })(Stats_Stats));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
 
 
 
@@ -13399,10 +13399,10 @@ Stats_Stats.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Stats = (Object(connectStats["a" /* default */])(components_Stats));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(334);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
 
 
 
@@ -13452,7 +13452,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
 };
 
 /* harmony default export */ var components_ToggleRefinement = (ToggleRefinement_ToggleRefinement);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
 
 
 
@@ -13495,7 +13495,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
  */
 
 /* harmony default export */ var widgets_ToggleRefinement = (Object(connectToggleRefinement["a" /* default */])(components_ToggleRefinement));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return es["createConnector"]; });
 /* concated harmony reexport HIGHLIGHT_TAGS */__webpack_require__.d(__webpack_exports__, "HIGHLIGHT_TAGS", function() { return es["HIGHLIGHT_TAGS"]; });
 /* concated harmony reexport translatable */__webpack_require__.d(__webpack_exports__, "translatable", function() { return es["translatable"]; });
@@ -13618,20 +13618,20 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(151);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -13645,7 +13645,7 @@ var Highlight_Highlight = function Highlight(props) {
 };
 
 /* harmony default export */ var components_Highlight = (Highlight_Highlight);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
 
 
 
@@ -14820,7 +14820,7 @@ process.umask = function() { return 0; };
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -14852,7 +14852,7 @@ module.exports = addDays
 /* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Millisecond Helpers
@@ -14921,7 +14921,7 @@ module.exports = startOfISOYear
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -16376,7 +16376,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(4);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -16494,7 +16494,7 @@ exports.default = Elements;
 /* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Week Helpers
@@ -16585,7 +16585,7 @@ module.exports = differenceInCalendarDays
 /* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var getDaysInMonth = __webpack_require__(201)
 
 /**
@@ -16625,7 +16625,7 @@ module.exports = addMonths
 /* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Millisecond Helpers
@@ -17644,7 +17644,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactInstantsearchCore = __webpack_require__(4);
+var _reactInstantsearchCore = __webpack_require__(5);
 
 Object.defineProperty(exports, 'connectAutoComplete', {
   enumerable: true,
@@ -21391,7 +21391,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(4);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -21587,7 +21587,7 @@ module.exports = isDate
 /* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -21652,7 +21652,7 @@ module.exports = addWeeks
 /* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -21709,7 +21709,7 @@ module.exports = compareDesc
 /* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInCalendarMonths = __webpack_require__(355)
 var compareAsc = __webpack_require__(104)
 
@@ -21804,7 +21804,7 @@ module.exports = {
 /* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -21835,7 +21835,7 @@ module.exports = endOfDay
 /* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var startOfISOWeek = __webpack_require__(52)
 var startOfISOYear = __webpack_require__(103)
 
@@ -28147,7 +28147,7 @@ module.exports = '2.26.1';
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -28348,7 +28348,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* harmony import */ var algoliasearch_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(109);
 /* harmony import */ var algoliasearch_helper__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(algoliasearch_helper__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -28689,7 +28689,7 @@ var highlight = function highlight(_ref) {
 
 "use strict";
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 
 
 
@@ -28760,7 +28760,7 @@ var highlight = function highlight(_ref) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -28841,7 +28841,7 @@ function getCurrentRefinement(props, searchState, context) {
 
 "use strict";
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -28937,7 +28937,7 @@ function getCurrentRefinement(props, searchState, context) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -29144,7 +29144,7 @@ var sortBy = ['count:desc', 'name:asc'];
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
 
 
 
@@ -29345,7 +29345,7 @@ function _cleanUp(props, searchState, context) {
 
 "use strict";
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -29456,7 +29456,7 @@ function _refine(props, searchState, nextPage, context) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -29766,7 +29766,7 @@ function _cleanUp(props, searchState, context) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -29999,7 +29999,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 /* harmony import */ var _core_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(35);
 
 
@@ -30073,7 +30073,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -30164,7 +30164,7 @@ function _cleanUp(props, searchState, context) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -30248,7 +30248,7 @@ function getCurrentRefinement(props, searchState, context) {
 
 "use strict";
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 
 
 
@@ -30321,7 +30321,7 @@ function getCurrentRefinement(props, searchState, context) {
 
 "use strict";
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 
 
 
@@ -30359,7 +30359,7 @@ function getCurrentRefinement(props, searchState, context) {
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -32101,7 +32101,7 @@ module.exports = addISOYears
 /* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var startOfISOYear = __webpack_require__(103)
 var differenceInCalendarDays = __webpack_require__(143)
 
@@ -32300,7 +32300,7 @@ module.exports = differenceInCalendarISOYears
 /* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -32338,7 +32338,7 @@ module.exports = differenceInCalendarMonths
 /* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Quarter Helpers
@@ -32368,7 +32368,7 @@ module.exports = getQuarter
 /* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -32403,7 +32403,7 @@ module.exports = differenceInCalendarYears
 /* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInCalendarDays = __webpack_require__(143)
 var compareAsc = __webpack_require__(104)
 
@@ -32481,7 +32481,7 @@ module.exports = subISOYears
 /***/ (function(module, exports, __webpack_require__) {
 
 var compareDesc = __webpack_require__(203)
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInSeconds = __webpack_require__(205)
 var differenceInMonths = __webpack_require__(204)
 var enLocale = __webpack_require__(206)
@@ -32689,7 +32689,7 @@ module.exports = distanceInWords
 /* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Week Helpers
@@ -32733,7 +32733,7 @@ module.exports = endOfWeek
 /* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -32766,7 +32766,7 @@ module.exports = endOfMonth
 /* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var startOfYear = __webpack_require__(364)
 var differenceInCalendarDays = __webpack_require__(143)
 
@@ -32799,7 +32799,7 @@ module.exports = getDayOfYear
 /* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -32873,7 +32873,7 @@ module.exports = isValid
 /* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -32903,7 +32903,7 @@ module.exports = isLeapYear
 /* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -32976,7 +32976,7 @@ module.exports = isSameHour
 /* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Hour Helpers
@@ -33114,7 +33114,7 @@ module.exports = isSameMinute
 /* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Minute Helpers
@@ -33145,7 +33145,7 @@ module.exports = startOfMinute
 /* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -33215,7 +33215,7 @@ module.exports = isSameQuarter
 /* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Quarter Helpers
@@ -33285,7 +33285,7 @@ module.exports = isSameSecond
 /* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Second Helpers
@@ -33316,7 +33316,7 @@ module.exports = startOfSecond
 /* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -33350,7 +33350,7 @@ module.exports = isSameYear
 /* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Week Helpers
@@ -33394,7 +33394,7 @@ module.exports = lastDayOfWeek
 /* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var getDaysInMonth = __webpack_require__(201)
 
 /**
@@ -46001,30 +46001,30 @@ module.exports = exports["default"];
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(25);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(34);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/algoliasearch-helper/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/algoliasearch-helper/index.js
 var algoliasearch_helper = __webpack_require__(109);
 var algoliasearch_helper_default = /*#__PURE__*/__webpack_require__.n(algoliasearch_helper);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
 var utils = __webpack_require__(35);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
 
 
 function createWidgetsManager(onWidgetsUpdate) {
@@ -46061,7 +46061,7 @@ function createWidgetsManager(onWidgetsUpdate) {
     }
   };
 }
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
 function createStore(initialState) {
   var state = initialState;
   var listeners = [];
@@ -46086,10 +46086,10 @@ function createStore(initialState) {
     }
   };
 }
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(41);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
 
 
 
@@ -46401,7 +46401,7 @@ function createInstantSearchManager(_ref) {
     skipSearch: skipSearch
   };
 }
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
 var InstantSearch_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46635,10 +46635,10 @@ InstantSearch_InstantSearch.childContextTypes = {
 };
 
 /* harmony default export */ var components_InstantSearch = (InstantSearch_InstantSearch);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(108);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createInstantSearch; });
 var createInstantSearch_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -46767,28 +46767,28 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
 var connectSortBy = __webpack_require__(331);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
 var Select = __webpack_require__(152);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46855,7 +46855,7 @@ SortBy_SortBy.defaultProps = {
 
 
 /* harmony default export */ var components_SortBy = (SortBy_SortBy);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
 
 
 
@@ -46905,33 +46905,33 @@ SortBy_SortBy.defaultProps = {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(328);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(76);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(75);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(42);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -47053,7 +47053,7 @@ RefinementList_RefinementList.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(RefinementList_RefinementList));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
 
 
 
@@ -47126,27 +47126,27 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(317);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47219,7 +47219,7 @@ ClearRefinements_ClearRefinements.defaultProps = {
 /* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
   reset: 'Clear all filters'
 })(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
 
 
 
@@ -47275,27 +47275,27 @@ var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(pr
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(317);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
 
 
 
@@ -47388,7 +47388,7 @@ CurrentRefinements_CurrentRefinements.defaultProps = {
 /* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
   clearFilter: '✕'
 })(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
 
 
 
@@ -47451,11 +47451,11 @@ var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWid
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47588,7 +47588,7 @@ Index_Index.contextTypes = {
 };
 
 /* harmony default export */ var components_Index = (Index_Index);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
 
 
 
@@ -47639,18 +47639,18 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47749,7 +47749,7 @@ Panel_Panel.defaultProps = {
 
 
 /* harmony default export */ var components_Panel = (Panel_Panel);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
 
 
 /**
@@ -49659,7 +49659,7 @@ module.exports = {
   lastDayOfYear: __webpack_require__(940),
   max: __webpack_require__(941),
   min: __webpack_require__(942),
-  parse: __webpack_require__(5),
+  parse: __webpack_require__(6),
   setDate: __webpack_require__(943),
   setDay: __webpack_require__(944),
   setDayOfYear: __webpack_require__(945),
@@ -68028,7 +68028,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(4);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -68257,7 +68257,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(7);
+var _propTypes = __webpack_require__(4);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -68415,7 +68415,7 @@ exports.default = shallowEqual;
 /* 866 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Range Helpers
@@ -68465,7 +68465,7 @@ module.exports = areRangesOverlapping
 /* 867 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -68520,7 +68520,7 @@ module.exports = closestIndexTo
 /* 868 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -68622,7 +68622,7 @@ module.exports = differenceInCalendarISOWeeks
 /***/ (function(module, exports, __webpack_require__) {
 
 var getQuarter = __webpack_require__(356)
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Quarter Helpers
@@ -68753,7 +68753,7 @@ module.exports = differenceInHours
 /* 873 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInCalendarISOYears = __webpack_require__(354)
 var compareAsc = __webpack_require__(104)
 var subISOYears = __webpack_require__(359)
@@ -68902,7 +68902,7 @@ module.exports = differenceInWeeks
 /* 877 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInCalendarYears = __webpack_require__(357)
 var compareAsc = __webpack_require__(104)
 
@@ -69180,7 +69180,7 @@ module.exports = buildFormattingTokensRegExp
 /***/ (function(module, exports, __webpack_require__) {
 
 var compareDesc = __webpack_require__(203)
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var differenceInSeconds = __webpack_require__(205)
 var enLocale = __webpack_require__(206)
 
@@ -69452,7 +69452,7 @@ module.exports = distanceInWordsToNow
 /* 883 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -69512,7 +69512,7 @@ module.exports = eachDay
 /* 884 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Hour Helpers
@@ -69613,7 +69613,7 @@ module.exports = endOfISOYear
 /* 887 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Minute Helpers
@@ -69644,7 +69644,7 @@ module.exports = endOfMinute
 /* 888 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Quarter Helpers
@@ -69678,7 +69678,7 @@ module.exports = endOfQuarter
 /* 889 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Second Helpers
@@ -69769,7 +69769,7 @@ module.exports = endOfTomorrow
 /* 892 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -69838,7 +69838,7 @@ module.exports = endOfYesterday
 var getDayOfYear = __webpack_require__(363)
 var getISOWeek = __webpack_require__(208)
 var getISOYear = __webpack_require__(51)
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var isValid = __webpack_require__(365)
 var enLocale = __webpack_require__(206)
 
@@ -70169,7 +70169,7 @@ module.exports = format
 /* 895 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -70199,7 +70199,7 @@ module.exports = getDate
 /* 896 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -70257,7 +70257,7 @@ module.exports = getDaysInYear
 /* 898 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Hour Helpers
@@ -70326,7 +70326,7 @@ module.exports = getISOWeeksInYear
 /* 900 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Millisecond Helpers
@@ -70356,7 +70356,7 @@ module.exports = getMilliseconds
 /* 901 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Minute Helpers
@@ -70386,7 +70386,7 @@ module.exports = getMinutes
 /* 902 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -70416,7 +70416,7 @@ module.exports = getMonth
 /* 903 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 var MILLISECONDS_IN_DAY = 24 * 60 * 60 * 1000
 
@@ -70484,7 +70484,7 @@ module.exports = getOverlappingDaysInRanges
 /* 904 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Second Helpers
@@ -70514,7 +70514,7 @@ module.exports = getSeconds
 /* 905 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Timestamp Helpers
@@ -70544,7 +70544,7 @@ module.exports = getTime
 /* 906 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -70574,7 +70574,7 @@ module.exports = getYear
 /* 907 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -70605,7 +70605,7 @@ module.exports = isAfter
 /* 908 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -70636,7 +70636,7 @@ module.exports = isBefore
 /* 909 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -70670,7 +70670,7 @@ module.exports = isEqual
 /* 910 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -70698,7 +70698,7 @@ module.exports = isFirstDayOfMonth
 /* 911 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -70726,7 +70726,7 @@ module.exports = isFriday
 /* 912 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -70754,7 +70754,7 @@ module.exports = isFuture
 /* 913 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var endOfDay = __webpack_require__(207)
 var endOfMonth = __webpack_require__(362)
 
@@ -70785,7 +70785,7 @@ module.exports = isLastDayOfMonth
 /* 914 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -70813,7 +70813,7 @@ module.exports = isMonday
 /* 915 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -70876,7 +70876,7 @@ module.exports = isSameDay
 /* 917 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -70904,7 +70904,7 @@ module.exports = isSaturday
 /* 918 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -71200,7 +71200,7 @@ module.exports = isThisYear
 /* 928 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -71286,7 +71286,7 @@ module.exports = isTomorrow
 /* 931 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -71314,7 +71314,7 @@ module.exports = isTuesday
 /* 932 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -71342,7 +71342,7 @@ module.exports = isWednesday
 /* 933 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Weekday Helpers
@@ -71372,7 +71372,7 @@ module.exports = isWeekend
 /* 934 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Range Helpers
@@ -71520,7 +71520,7 @@ module.exports = lastDayOfISOYear
 /* 938 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -71553,7 +71553,7 @@ module.exports = lastDayOfMonth
 /* 939 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Quarter Helpers
@@ -71587,7 +71587,7 @@ module.exports = lastDayOfQuarter
 /* 940 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -71620,7 +71620,7 @@ module.exports = lastDayOfYear
 /* 941 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -71658,7 +71658,7 @@ module.exports = max
 /* 942 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Common Helpers
@@ -71696,7 +71696,7 @@ module.exports = min
 /* 943 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -71728,7 +71728,7 @@ module.exports = setDate
 /* 944 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var addDays = __webpack_require__(101)
 
 /**
@@ -71774,7 +71774,7 @@ module.exports = setDay
 /* 945 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Day Helpers
@@ -71807,7 +71807,7 @@ module.exports = setDayOfYear
 /* 946 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Hour Helpers
@@ -71839,7 +71839,7 @@ module.exports = setHours
 /* 947 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var addDays = __webpack_require__(101)
 var getISODay = __webpack_require__(367)
 
@@ -71876,7 +71876,7 @@ module.exports = setISODay
 /* 948 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var getISOWeek = __webpack_require__(208)
 
 /**
@@ -71912,7 +71912,7 @@ module.exports = setISOWeek
 /* 949 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Millisecond Helpers
@@ -71944,7 +71944,7 @@ module.exports = setMilliseconds
 /* 950 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Minute Helpers
@@ -71976,7 +71976,7 @@ module.exports = setMinutes
 /* 951 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 var setMonth = __webpack_require__(381)
 
 /**
@@ -72010,7 +72010,7 @@ module.exports = setQuarter
 /* 952 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Second Helpers
@@ -72042,7 +72042,7 @@ module.exports = setSeconds
 /* 953 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Year Helpers
@@ -72074,7 +72074,7 @@ module.exports = setYear
 /* 954 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(5)
+var parse = __webpack_require__(6)
 
 /**
  * @category Month Helpers
@@ -78260,11 +78260,11 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var form_errors = (form_errors_FormErrors);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/typy/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/typy/lib/index.js
 var lib = __webpack_require__(13);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch/dom.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch/dom.js
 var dom = __webpack_require__(523);
 
 // CONCATENATED MODULE: ./src/components/search/search-bar.js
@@ -78528,7 +78528,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var objects_image = (image_Image);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
 var react_loading = __webpack_require__(530);
 var react_loading_default = /*#__PURE__*/__webpack_require__.n(react_loading);
 
@@ -79483,17 +79483,17 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var input = (withValidationMessage(input_Input));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload/lib/index.js
 var react_lazyload_lib = __webpack_require__(216);
 var react_lazyload_lib_default = /*#__PURE__*/__webpack_require__.n(react_lazyload_lib);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(19);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-transition-group/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-transition-group/index.js
 var react_transition_group = __webpack_require__(531);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
 var FadeIn_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function FadeIn_objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -79588,7 +79588,7 @@ FadeIn_FadeIn.propTypes =  false ? undefined : {};
 
 
 /* harmony default export */ var es_FadeIn = (FadeIn_FadeIn);
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
 
 
 /* harmony default export */ var es = (es_FadeIn);
@@ -79871,7 +79871,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var variant_selector = (variant_selector_VariantSelector);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
 var react_responsive_carousel_lib = __webpack_require__(532);
 
 // CONCATENATED MODULE: ./src/components/products/display/product-carousel.js
@@ -80076,7 +80076,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var product_price = (product_price_ProductPrice);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(332);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu.js
@@ -80134,7 +80134,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
 var SortBy = __webpack_require__(517);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
@@ -80222,9 +80222,489 @@ function (_PureComponent) {
 
 /* harmony default export */ var product_menu_options = (product_menu_options_ProductMenuOptions);
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var node_modules_prop_types = __webpack_require__(7);
+var node_modules_prop_types = __webpack_require__(4);
 var node_modules_prop_types_default = /*#__PURE__*/__webpack_require__.n(node_modules_prop_types);
 
+// CONCATENATED MODULE: ./src/components/checkout/address-book.js
+function address_book_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_book_typeof = function _typeof(obj) { return typeof obj; }; } else { address_book_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_book_typeof(obj); }
+
+function address_book_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_book_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_book_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_book_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_book_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_book_possibleConstructorReturn(self, call) { if (call && (address_book_typeof(call) === "object" || typeof call === "function")) { return call; } return address_book_assertThisInitialized(self); }
+
+function address_book_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_book_getPrototypeOf(o) { address_book_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_book_getPrototypeOf(o); }
+
+function address_book_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_book_setPrototypeOf(subClass, superClass); }
+
+function address_book_setPrototypeOf(o, p) { address_book_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_book_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+
+var address_book_AddressBook =
+/*#__PURE__*/
+function (_Component) {
+  address_book_inherits(AddressBook, _Component);
+
+  function AddressBook() {
+    address_book_classCallCheck(this, AddressBook);
+
+    return address_book_possibleConstructorReturn(this, address_book_getPrototypeOf(AddressBook).apply(this, arguments));
+  }
+
+  address_book_createClass(AddressBook, [{
+    key: "renderOptions",
+    value: function renderOptions(address) {
+      var _this$props = this.props,
+          currentAddressId = _this$props.currentAddressId,
+          addressFormDisplayed = _this$props.addressFormDisplayed,
+          onAddressDeleted = _this$props.onAddressDeleted,
+          onBookAddressSelected = _this$props.onBookAddressSelected;
+      var addressLabel = typeof address.meta_attributes.label === 'undefined' ? 'Other' : address.meta_attributes.label.value;
+      var optionLabel = external_react_default.a.createElement("a", null, external_react_default.a.createElement("b", null, addressLabel), " -\xA0 ", address.first_name, " ", address.last_name, ",\xA0", address.address_line_1, ",\xA0 ", address.postcode, ",\xA0 ", address.city, ",\xA0 ", address.country);
+      return external_react_default.a.createElement("div", {
+        className: "c-address-book__radio-container"
+      }, external_react_default.a.createElement("input", {
+        type: "radio",
+        name: "address-book-radio",
+        className: "c-address-book__radio",
+        onChange: function onChange() {
+          return onBookAddressSelected(address.id);
+        },
+        checked: !addressFormDisplayed && address.id === currentAddressId
+      }), external_react_default.a.createElement("label", {
+        htmlFor: address.id
+      }, optionLabel), external_react_default.a.createElement("a", {
+        className: "c-address-book__delete-address",
+        label: "Delete",
+        onClick: function onClick() {
+          return onAddressDeleted(address);
+        }
+      }, "Delete"));
+    }
+  }, {
+    key: "renderEntries",
+    value: function renderEntries() {
+      var _this = this;
+
+      // Sort array of objects and return a new array
+      // with the preferred address as the first object.
+      // We always want to display the preferred-address as the first option
+      var entries = this.props.addressBook.sort(function (a, b) {
+        return b.preferred_shipping - a.preferred_shipping;
+      });
+      return external_react_default.a.createElement("div", {
+        className: "c-address-book__entries"
+      }, entries.map(function (address) {
+        return external_react_default.a.createElement("div", {
+          key: address.id
+        }, _this.renderOptions(address));
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          onNewAddress = _this$props2.onNewAddress,
+          addressFormDisplayed = _this$props2.addressFormDisplayed;
+      return external_react_default.a.createElement("div", {
+        className: "c-address-book"
+      }, external_react_default.a.createElement("h3", null, "Your addresses"), this.renderEntries(), !addressFormDisplayed && external_react_default.a.createElement("a", {
+        className: "c-address-book__new-address",
+        onClick: onNewAddress
+      }, "+ Add a new address"));
+    }
+  }]);
+
+  return AddressBook;
+}(external_react_["Component"]);
+
+address_book_AddressBook.propTypes = {
+  addressBook: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
+  addressFormDisplayed: node_modules_prop_types_default.a.bool,
+  currentAddressId: node_modules_prop_types_default.a.string,
+  onAddressDeleted: node_modules_prop_types_default.a.func,
+  onBookAddressSelected: node_modules_prop_types_default.a.func,
+  onNewAddress: node_modules_prop_types_default.a.func
+};
+/* harmony default export */ var address_book = (address_book_AddressBook);
+// CONCATENATED MODULE: ./src/components/checkout/address-form.js
+function address_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_typeof(obj); }
+
+function address_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_form_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_form_possibleConstructorReturn(self, call) { if (call && (address_form_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_assertThisInitialized(self); }
+
+function address_form_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_form_getPrototypeOf(o) { address_form_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_getPrototypeOf(o); }
+
+function address_form_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_setPrototypeOf(subClass, superClass); }
+
+function address_form_setPrototypeOf(o, p) { address_form_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_setPrototypeOf(o, p); }
+
+// Libraries
+
+ // Lib
+
+
+var address_form_AddressForm =
+/*#__PURE__*/
+function (_Component) {
+  address_form_inherits(AddressForm, _Component);
+
+  function AddressForm(props) {
+    var _this;
+
+    address_form_classCallCheck(this, AddressForm);
+
+    _this = address_form_possibleConstructorReturn(this, address_form_getPrototypeOf(AddressForm).call(this, props));
+    _this.Checkbox = component_mapping('Checkbox');
+    _this.DropdownSelect = component_mapping('DropdownSelect');
+    _this.Input = component_mapping('Input');
+    return _this;
+  }
+
+  address_form_createClass(AddressForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this$props = this.props,
+          currentAddress = _this$props.currentAddress,
+          autoFillAddress = _this$props.autoFillAddress;
+      if (currentAddress && autoFillAddress) autoFillAddress(currentAddress);
+    }
+  }, {
+    key: "formValid",
+    value: function formValid(formInput) {
+      var requiredFields = ['line_1', 'zipcode', 'city', 'primary_phone', 'email'];
+      var requiredFieldsPresent = requiredFields().every(function (key) {
+        return formInput[key] !== '' && formInput[key] !== null;
+      }) === true;
+      var noFormErrorsPresent = Object.values(formInput.errors).filter(String).length === 0;
+      return requiredFieldsPresent && noFormErrorsPresent;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return external_react_default.a.createElement("form", {
+        className: "o-form__wrapper o-form__background"
+      }, this.renderCountriesDropdown(), this.renderCustomerNameFields(), this.renderCompanyNameOption(), this.renderAddressLine1(), this.renderAddressLine2(), this.renderAddressFields(), this.renderPhone(), this.renderEmail(), external_react_default.a.createElement("p", null, "* Denotes required fields"), this.renderSaveAddressCheckbox(), this.renderNewsletterCheckbox());
+    }
+  }, {
+    key: "renderCountriesDropdown",
+    value: function renderCountriesDropdown() {
+      var _this$props2 = this.props,
+          checkout = _this$props2.checkout,
+          countries = _this$props2.countries,
+          formName = _this$props2.formName,
+          onChange = _this$props2.onChange,
+          onBlur = _this$props2.onBlur;
+      var formInput = checkout[formName];
+      var name = 'country_code';
+      var rules = {
+        required: true
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.DropdownSelect, {
+        options: countries,
+        label: "Country",
+        name: name,
+        value: formInput.country_code,
+        formName: formName,
+        required: rules.required,
+        rules: rules,
+        validationMessage: formInput.errors[name],
+        onChange: onChange,
+        onBlur: onBlur,
+        prompt: "Select a Country"
+      }));
+    }
+  }, {
+    key: "renderInputField",
+    value: function renderInputField(formInput, fieldOption) {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Input, {
+        label: fieldOption.label,
+        className: fieldOption.className,
+        placeholder: fieldOption.placeholder,
+        name: fieldOption.name,
+        type: fieldOption.type,
+        value: fieldOption.value,
+        required: lib_default()(fieldOption, 'rules.required').safeObject,
+        validationMessage: formInput.errors[fieldOption.name],
+        rules: fieldOption.rules,
+        formName: this.props.formName,
+        onChange: this.props.onChange,
+        onBlur: this.props.onBlur
+      }));
+    }
+  }, {
+    key: "renderCheckbox",
+    value: function renderCheckbox(formInput, fieldOption) {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Checkbox, {
+        label: fieldOption.label,
+        className: fieldOption.className,
+        name: fieldOption.name,
+        checked: !!fieldOption.value,
+        required: lib_default()(fieldOption, 'rules.required').safeObject,
+        validationMessage: formInput.errors[fieldOption.name],
+        rules: fieldOption.rules,
+        formName: this.props.formName,
+        onChange: this.props.onChange,
+        onBlur: this.props.onBlur
+      }));
+    }
+  }, {
+    key: "renderCustomerNameFields",
+    value: function renderCustomerNameFields() {
+      var _this2 = this;
+
+      var _this$props3 = this.props,
+          checkout = _this$props3.checkout,
+          formName = _this$props3.formName;
+      var formInput = checkout[formName];
+      var fieldOptions = [{
+        className: 'o-form__input-block',
+        placeholder: 'Enter First Name',
+        label: 'First Name',
+        name: 'first_name',
+        value: formInput.first_name,
+        rules: {
+          required: true,
+          maxLength: 50
+        }
+      }, {
+        className: 'o-form__input-block',
+        placeholder: 'Enter Last Name',
+        label: 'Last Name',
+        name: 'last_name',
+        value: formInput.last_name,
+        rules: {
+          required: true,
+          maxLength: 50
+        }
+      }];
+      return external_react_default.a.createElement("div", {
+        className: "o-flex o-flex__space-between"
+      }, fieldOptions.map(function (fieldOption, index) {
+        return external_react_default.a.createElement("div", {
+          className: "o-flex-full-width-s",
+          key: index
+        }, _this2.renderInputField(formInput, fieldOption));
+      }));
+    }
+  }, {
+    key: "renderCompanyNameOption",
+    value: function renderCompanyNameOption() {
+      var _this$props4 = this.props,
+          checkout = _this$props4.checkout,
+          formName = _this$props4.formName,
+          onShowField = _this$props4.onShowField;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        className: 'o-form__input-block',
+        label: 'Company Name',
+        name: 'companyName',
+        value: formInput.companyName
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, !formInput.companyNameShown && external_react_default.a.createElement("a", {
+        href: "#",
+        onClick: function onClick() {
+          return onShowField(formName, 'companyNameShown');
+        }
+      }, external_react_default.a.createElement("p", null, "+ Add Company Name (optional)")), formInput.companyNameShown && this.renderInputField(formInput, fieldOption));
+    }
+  }, {
+    key: "renderAddressLine1",
+    value: function renderAddressLine1() {
+      var _this$props5 = this.props,
+          checkout = _this$props5.checkout,
+          formName = _this$props5.formName;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        className: 'o-form__input-block',
+        placeholder: 'Enter Address',
+        label: 'Address 1',
+        name: 'line_1',
+        value: formInput.line_1,
+        rules: {
+          required: true
+        }
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, this.renderInputField(formInput, fieldOption));
+    }
+  }, {
+    key: "renderAddressLine2",
+    value: function renderAddressLine2() {
+      var _this$props6 = this.props,
+          checkout = _this$props6.checkout,
+          formName = _this$props6.formName,
+          onShowField = _this$props6.onShowField;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        className: 'o-form__input-block',
+        label: 'Address 2',
+        name: 'line_2',
+        value: formInput.line_2
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, !formInput.address2Shown && external_react_default.a.createElement("a", {
+        href: "#",
+        onClick: function onClick() {
+          return onShowField(formName, 'address2Shown');
+        }
+      }, external_react_default.a.createElement("p", null, "+ Add Address 2 (optional)")), formInput.address2Shown && this.renderInputField(formInput, fieldOption));
+    }
+  }, {
+    key: "renderAddressFields",
+    value: function renderAddressFields() {
+      var _this3 = this;
+
+      var _this$props7 = this.props,
+          checkout = _this$props7.checkout,
+          formName = _this$props7.formName;
+      var formInput = checkout[formName];
+      var fieldOptions = [{
+        className: 'o-form__input-block',
+        placeholder: 'Enter Post Code',
+        label: 'Post Code',
+        name: 'zipcode',
+        value: formInput.zipcode,
+        rules: {
+          required: true,
+          postcode: true
+        }
+      }, {
+        className: 'o-form__input-block',
+        placeholder: 'Enter City',
+        label: 'City',
+        name: 'city',
+        value: formInput.city,
+        rules: {
+          required: true
+        }
+      }, {
+        className: 'o-form__input-block',
+        placeholder: 'Enter County',
+        label: 'County',
+        name: 'state',
+        value: formInput.state
+      }];
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, fieldOptions.map(function (fieldOption, index) {
+        return external_react_default.a.createElement("div", {
+          key: index
+        }, _this3.renderInputField(formInput, fieldOption));
+      }));
+    }
+  }, {
+    key: "renderPhone",
+    value: function renderPhone() {
+      var _this$props8 = this.props,
+          checkout = _this$props8.checkout,
+          formName = _this$props8.formName;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        className: 'o-form__input-block',
+        placeholder: 'Enter Phone',
+        label: 'Phone',
+        name: 'primary_phone',
+        value: formInput.primary_phone,
+        rules: {
+          required: true,
+          phone: true
+        }
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("p", {
+        className: "o-form__additional-label"
+      }, "Required for any delivery related questions"), this.renderInputField(formInput, fieldOption));
+    }
+  }, {
+    key: "renderEmail",
+    value: function renderEmail() {
+      var _this$props9 = this.props,
+          checkout = _this$props9.checkout,
+          formName = _this$props9.formName;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        className: 'o-form__input-block',
+        placeholder: 'Enter Email',
+        label: 'Email',
+        name: 'email',
+        type: 'email',
+        value: formInput.email,
+        rules: {
+          required: true,
+          email: true
+        }
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("p", {
+        className: "o-form__additional-label"
+      }, "Required for Order Confirmation Email"), this.renderInputField(formInput, fieldOption));
+    }
+  }, {
+    key: "renderSaveAddressCheckbox",
+    value: function renderSaveAddressCheckbox() {
+      var _this$props10 = this.props,
+          loggedIn = _this$props10.loggedIn,
+          checkout = _this$props10.checkout,
+          formName = _this$props10.formName;
+      var formInput = checkout[formName];
+      var checkboxOptions = {
+        label: 'Save address for later',
+        name: 'saveToAddressBook',
+        value: formInput.saveToAddressBook,
+        className: 'o-form__checkbox-label'
+      };
+      var inputOptions = {
+        className: 'o-form__input-block',
+        placeholder: 'A recognisable name, only for your own use, e.g. "Home"',
+        label: 'Address name',
+        name: 'label',
+        type: 'text',
+        value: formInput.label
+      };
+      var preferredShippingCheckboxOptions = {
+        className: 'o-form__checkbox-label',
+        label: 'Set as preferred shipping address',
+        name: 'preferred_shipping',
+        value: formInput.setAsPreferredShipping
+      };
+      var preferredBillingCheckboxOptions = {
+        className: 'o-form__checkbox-label',
+        label: 'Set as preferred billing address',
+        name: 'preferred_billing',
+        value: formInput.setAsPreferredBilling
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, loggedIn && !formInput.formPreFilled && this.renderCheckbox(formInput, checkboxOptions), formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredShippingCheckboxOptions), formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredBillingCheckboxOptions), formInput.saveToAddressBook && this.renderInputField(formInput, inputOptions));
+    }
+  }, {
+    key: "renderNewsletterCheckbox",
+    value: function renderNewsletterCheckbox() {
+      var _this$props11 = this.props,
+          checkout = _this$props11.checkout,
+          formName = _this$props11.formName;
+      var formInput = checkout[formName];
+      var fieldOption = {
+        label: 'Sign up for Weekly Newsletters (Optional)',
+        name: 'newsletterOptIn',
+        value: formInput.newsletterOptIn,
+        className: 'o-form__checkbox-label'
+      };
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, formName === 'shippingAddress' && this.renderCheckbox(formInput, fieldOption));
+    }
+  }]);
+
+  return AddressForm;
+}(external_react_["Component"]);
+/* harmony default export */ var address_form = (address_form_AddressForm);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-header.js
 
 
@@ -80644,6 +81124,90 @@ stripe_fields_StripeFields.propTypes = {
   stripe: node_modules_prop_types_default.a.object
 };
 /* harmony default export */ var stripe_fields = (Object(react_stripe_elements_es["injectStripe"])(stripe_fields_StripeFields));
+// CONCATENATED MODULE: ./src/components/checkout/stripe-wrapper.js
+function stripe_wrapper_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_wrapper_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_wrapper_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_wrapper_typeof(obj); }
+
+function stripe_wrapper_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function stripe_wrapper_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function stripe_wrapper_createClass(Constructor, protoProps, staticProps) { if (protoProps) stripe_wrapper_defineProperties(Constructor.prototype, protoProps); if (staticProps) stripe_wrapper_defineProperties(Constructor, staticProps); return Constructor; }
+
+function stripe_wrapper_possibleConstructorReturn(self, call) { if (call && (stripe_wrapper_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_wrapper_assertThisInitialized(self); }
+
+function stripe_wrapper_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function stripe_wrapper_getPrototypeOf(o) { stripe_wrapper_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_wrapper_getPrototypeOf(o); }
+
+function stripe_wrapper_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_wrapper_setPrototypeOf(subClass, superClass); }
+
+function stripe_wrapper_setPrototypeOf(o, p) { stripe_wrapper_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return stripe_wrapper_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+ // Lib
+
+
+
+
+var stripe_wrapper_StripeWrapper =
+/*#__PURE__*/
+function (_Component) {
+  stripe_wrapper_inherits(StripeWrapper, _Component);
+
+  function StripeWrapper(props) {
+    var _this;
+
+    stripe_wrapper_classCallCheck(this, StripeWrapper);
+
+    _this = stripe_wrapper_possibleConstructorReturn(this, stripe_wrapper_getPrototypeOf(StripeWrapper).call(this, props));
+    _this.StripeFields = component_mapping('StripeFields');
+    return _this;
+  }
+
+  stripe_wrapper_createClass(StripeWrapper, [{
+    key: "renderStripeForm",
+    value: function renderStripeForm(stripeApiKey) {
+      var _this$props = this.props,
+          billingAddress = _this$props.billingAddress,
+          cardTokenRequested = _this$props.cardTokenRequested,
+          onCardTokenReceived = _this$props.onCardTokenReceived,
+          setCardErrors = _this$props.setCardErrors;
+      return external_react_default.a.createElement(react_stripe_elements_es["StripeProvider"], {
+        apiKey: stripeApiKey
+      }, external_react_default.a.createElement(react_stripe_elements_es["Elements"], null, external_react_default.a.createElement(this.StripeFields, {
+        billingAddress: billingAddress,
+        cardTokenRequested: cardTokenRequested,
+        onCardTokenReceived: onCardTokenReceived,
+        setCardErrors: setCardErrors
+      })));
+    }
+  }, {
+    key: "renderServiceUnavailableMessage",
+    value: function renderServiceUnavailableMessage() {
+      return external_react_default.a.createElement("div", {
+        className: "u-bold u-text-color--red"
+      }, "* PAYMENT THROUGH STRIPE IS CURRENTLY NOT AVAILABLE *");
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var stripeApiKey = lib_config.get().stripeApiKey;
+      return stripeApiKey ? this.renderStripeForm(stripeApiKey) : this.renderServiceUnavailableMessage();
+    }
+  }]);
+
+  return StripeWrapper;
+}(external_react_["Component"]);
+
+stripe_wrapper_StripeWrapper.propTypes = {
+  billingAddress: node_modules_prop_types_default.a.object,
+  cardTokenRequested: node_modules_prop_types_default.a.bool,
+  onCardTokenReceived: node_modules_prop_types_default.a.func,
+  setCardErrors: node_modules_prop_types_default.a.func
+};
+/* harmony default export */ var stripe_wrapper = (stripe_wrapper_StripeWrapper);
 // CONCATENATED MODULE: ./src/lib/pence-to-pounds.js
 /**
  * Convert the price from pence to pounds. For example:
@@ -80763,7 +81327,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var order_line_items = (order_line_items_OrderLineItems);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/date-fns/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/date-fns/index.js
 var date_fns = __webpack_require__(533);
 var date_fns_default = /*#__PURE__*/__webpack_require__.n(date_fns);
 
@@ -80979,16 +81543,16 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
 var Panel = __webpack_require__(522);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
 var RefinementList = __webpack_require__(518);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
 var ClearRefinements = __webpack_require__(519);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
 var CurrentRefinements = __webpack_require__(520);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
@@ -81139,7 +81703,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var search_filters = (search_filters_SearchFilters);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-listing-card.js
@@ -81393,7 +81957,7 @@ var groupVariants = function groupVariants(hits) {
 var SearchHits = Object(connectInfiniteHits["a" /* default */])(search_hits_SearchResults);
 
 /* harmony default export */ var search_hits = (SearchHits);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch/connectors.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch/connectors.js
 var connectors = __webpack_require__(153);
 
 // CONCATENATED MODULE: ./src/components/search/search-rating-filter.js
@@ -81493,11 +82057,11 @@ var SearchRefinements = Object(connectors["connectCurrentRefinements"])(function
   return "".concat(items.length, " of 3");
 });
 /* harmony default export */ var search_refinements = (SearchRefinements);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
 var js = __webpack_require__(534);
 var js_default = /*#__PURE__*/__webpack_require__.n(js);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
 // CONCATENATED MODULE: ./src/components/search/search-slider.js
@@ -82062,6 +82626,9 @@ function (_PureComponent) {
 
 
 
+
+
+
 /**
  * Order Components
  */
@@ -82094,6 +82661,8 @@ function (_PureComponent) {
 
 
 var mapping = {
+  AddressBook: address_book,
+  AddressForm: address_form,
   AddressFormHeader: address_form_header,
   Breadcrumb: breadcrumb,
   Button: objects_button,
@@ -82134,6 +82703,7 @@ var mapping = {
   StaticPageErrorBody: error_body,
   StaticPageErrorDetails: error_details,
   StripeFields: stripe_fields,
+  StripeWrapper: stripe_wrapper,
   VariantSelector: variant_selector
 };
 /* harmony default export */ var component_mapping = (function (module) {
@@ -82882,7 +83452,7 @@ function (_PureComponent) {
   horizontal_divider: horizontal_divider,
   product_grid: product_grid
 });
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/tslib/tslib.es6.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -83070,15 +83640,15 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
 var hoist_non_react_statics_cjs = __webpack_require__(218);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/create-react-context/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/create-react-context/lib/index.js
 var create_react_context_lib = __webpack_require__(539);
 var create_react_context_lib_default = /*#__PURE__*/__webpack_require__.n(create_react_context_lib);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -83093,7 +83663,7 @@ function listCacheClear() {
 
 /* harmony default export */ var _listCacheClear = (listCacheClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/eq.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/eq.js
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -83132,7 +83702,7 @@ function eq(value, other) {
 
 /* harmony default export */ var lodash_es_eq = (eq);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
 
 
 /**
@@ -83155,7 +83725,7 @@ function assocIndexOf(array, key) {
 
 /* harmony default export */ var _assocIndexOf = (assocIndexOf);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
 
 
 /** Used for built-in method references. */
@@ -83192,7 +83762,7 @@ function listCacheDelete(key) {
 
 /* harmony default export */ var _listCacheDelete = (listCacheDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
 
 
 /**
@@ -83213,7 +83783,7 @@ function listCacheGet(key) {
 
 /* harmony default export */ var _listCacheGet = (listCacheGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
 
 
 /**
@@ -83231,7 +83801,7 @@ function listCacheHas(key) {
 
 /* harmony default export */ var _listCacheHas = (listCacheHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
 
 
 /**
@@ -83259,7 +83829,7 @@ function listCacheSet(key, value) {
 
 /* harmony default export */ var _listCacheSet = (listCacheSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_ListCache.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_ListCache.js
 
 
 
@@ -83293,7 +83863,7 @@ ListCache.prototype.set = _listCacheSet;
 
 /* harmony default export */ var _ListCache = (ListCache);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackClear.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackClear.js
 
 
 /**
@@ -83310,7 +83880,7 @@ function stackClear() {
 
 /* harmony default export */ var _stackClear = (stackClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
 /**
  * Removes `key` and its value from the stack.
  *
@@ -83330,7 +83900,7 @@ function stackDelete(key) {
 
 /* harmony default export */ var _stackDelete = (stackDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackGet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackGet.js
 /**
  * Gets the stack value for `key`.
  *
@@ -83346,7 +83916,7 @@ function stackGet(key) {
 
 /* harmony default export */ var _stackGet = (stackGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackHas.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackHas.js
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -83362,10 +83932,10 @@ function stackHas(key) {
 
 /* harmony default export */ var _stackHas = (stackHas);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_root.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_root.js
 var _root = __webpack_require__(15);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Symbol.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Symbol.js
 
 
 /** Built-in value references. */
@@ -83373,7 +83943,7 @@ var _Symbol_Symbol = _root["a" /* default */].Symbol;
 
 /* harmony default export */ var _Symbol = (_Symbol_Symbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
 
 
 /** Used for built-in method references. */
@@ -83421,7 +83991,7 @@ function getRawTag(value) {
 
 /* harmony default export */ var _getRawTag = (getRawTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_objectToString.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_objectToString.js
 /** Used for built-in method references. */
 var _objectToString_objectProto = Object.prototype;
 
@@ -83445,7 +84015,7 @@ function objectToString(value) {
 
 /* harmony default export */ var _objectToString = (objectToString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
 
 
 
@@ -83475,7 +84045,7 @@ function baseGetTag(value) {
 
 /* harmony default export */ var _baseGetTag = (baseGetTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isObject.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isObject.js
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -83508,7 +84078,7 @@ function isObject(value) {
 
 /* harmony default export */ var lodash_es_isObject = (isObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isFunction.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isFunction.js
 
 
 
@@ -83547,7 +84117,7 @@ function isFunction(value) {
 
 /* harmony default export */ var lodash_es_isFunction = (isFunction);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
 
 
 /** Used to detect overreaching core-js shims. */
@@ -83555,7 +84125,7 @@ var coreJsData = _root["a" /* default */]['__core-js_shared__'];
 
 /* harmony default export */ var _coreJsData = (coreJsData);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isMasked.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isMasked.js
 
 
 /** Used to detect methods masquerading as native. */
@@ -83577,7 +84147,7 @@ function isMasked(func) {
 
 /* harmony default export */ var _isMasked = (isMasked);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_toSource.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_toSource.js
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -83605,7 +84175,7 @@ function toSource(func) {
 
 /* harmony default export */ var _toSource = (toSource);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
 
 
 
@@ -83654,7 +84224,7 @@ function baseIsNative(value) {
 
 /* harmony default export */ var _baseIsNative = (baseIsNative);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getValue.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getValue.js
 /**
  * Gets the value at `key` of `object`.
  *
@@ -83669,7 +84239,7 @@ function getValue(object, key) {
 
 /* harmony default export */ var _getValue = (getValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getNative.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getNative.js
 
 
 
@@ -83688,7 +84258,7 @@ function getNative(object, key) {
 
 /* harmony default export */ var _getNative = (getNative);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Map.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Map.js
 
 
 
@@ -83697,7 +84267,7 @@ var Map = _getNative(_root["a" /* default */], 'Map');
 
 /* harmony default export */ var _Map = (Map);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
 
 
 /* Built-in method references that are verified to be native. */
@@ -83705,7 +84275,7 @@ var nativeCreate = _getNative(Object, 'create');
 
 /* harmony default export */ var _nativeCreate = (nativeCreate);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashClear.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashClear.js
 
 
 /**
@@ -83722,7 +84292,7 @@ function hashClear() {
 
 /* harmony default export */ var _hashClear = (hashClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
 /**
  * Removes `key` and its value from the hash.
  *
@@ -83741,7 +84311,7 @@ function hashDelete(key) {
 
 /* harmony default export */ var _hashDelete = (hashDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashGet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashGet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -83773,7 +84343,7 @@ function hashGet(key) {
 
 /* harmony default export */ var _hashGet = (hashGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashHas.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashHas.js
 
 
 /** Used for built-in method references. */
@@ -83798,7 +84368,7 @@ function hashHas(key) {
 
 /* harmony default export */ var _hashHas = (hashHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_hashSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashSet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -83823,7 +84393,7 @@ function hashSet(key, value) {
 
 /* harmony default export */ var _hashSet = (hashSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Hash.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Hash.js
 
 
 
@@ -83857,7 +84427,7 @@ Hash.prototype.set = _hashSet;
 
 /* harmony default export */ var _Hash = (Hash);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
 
 
 
@@ -83880,7 +84450,7 @@ function mapCacheClear() {
 
 /* harmony default export */ var _mapCacheClear = (mapCacheClear);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -83897,7 +84467,7 @@ function isKeyable(value) {
 
 /* harmony default export */ var _isKeyable = (isKeyable);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getMapData.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getMapData.js
 
 
 /**
@@ -83917,7 +84487,7 @@ function getMapData(map, key) {
 
 /* harmony default export */ var _getMapData = (getMapData);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
 
 
 /**
@@ -83937,7 +84507,7 @@ function mapCacheDelete(key) {
 
 /* harmony default export */ var _mapCacheDelete = (mapCacheDelete);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
 
 
 /**
@@ -83955,7 +84525,7 @@ function mapCacheGet(key) {
 
 /* harmony default export */ var _mapCacheGet = (mapCacheGet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
 
 
 /**
@@ -83973,7 +84543,7 @@ function mapCacheHas(key) {
 
 /* harmony default export */ var _mapCacheHas = (mapCacheHas);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
 
 
 /**
@@ -83997,7 +84567,7 @@ function mapCacheSet(key, value) {
 
 /* harmony default export */ var _mapCacheSet = (mapCacheSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_MapCache.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_MapCache.js
 
 
 
@@ -84031,7 +84601,7 @@ MapCache.prototype.set = _mapCacheSet;
 
 /* harmony default export */ var _MapCache = (MapCache);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stackSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackSet.js
 
 
 
@@ -84067,7 +84637,7 @@ function stackSet(key, value) {
 
 /* harmony default export */ var _stackSet = (stackSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Stack.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Stack.js
 
 
 
@@ -84096,7 +84666,7 @@ Stack.prototype.set = _stackSet;
 
 /* harmony default export */ var _Stack = (Stack);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
 /**
  * A specialized version of `_.forEach` for arrays without support for
  * iteratee shorthands.
@@ -84120,7 +84690,7 @@ function arrayEach(array, iteratee) {
 
 /* harmony default export */ var _arrayEach = (arrayEach);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
 
 
 var defineProperty = (function() {
@@ -84133,7 +84703,7 @@ var defineProperty = (function() {
 
 /* harmony default export */ var lodash_es_defineProperty = (defineProperty);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
 
 
 /**
@@ -84160,7 +84730,7 @@ function baseAssignValue(object, key, value) {
 
 /* harmony default export */ var _baseAssignValue = (baseAssignValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_assignValue.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_assignValue.js
 
 
 
@@ -84190,7 +84760,7 @@ function assignValue(object, key, value) {
 
 /* harmony default export */ var _assignValue = (assignValue);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copyObject.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copyObject.js
 
 
 
@@ -84232,7 +84802,7 @@ function copyObject(source, props, object, customizer) {
 
 /* harmony default export */ var _copyObject = (copyObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -84254,7 +84824,7 @@ function baseTimes(n, iteratee) {
 
 /* harmony default export */ var _baseTimes = (baseTimes);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -84285,7 +84855,7 @@ function isObjectLike(value) {
 
 /* harmony default export */ var lodash_es_isObjectLike = (isObjectLike);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
 
 
 
@@ -84305,7 +84875,7 @@ function baseIsArguments(value) {
 
 /* harmony default export */ var _baseIsArguments = (baseIsArguments);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArguments.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArguments.js
 
 
 
@@ -84343,7 +84913,7 @@ var isArguments = _baseIsArguments(function() { return arguments; }()) ? _baseIs
 
 /* harmony default export */ var lodash_es_isArguments = (isArguments);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArray.js
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -84371,10 +84941,10 @@ var isArray = Array.isArray;
 
 /* harmony default export */ var lodash_es_isArray = (isArray);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isBuffer.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isBuffer.js
 var isBuffer = __webpack_require__(155);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isIndex.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isIndex.js
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -84401,7 +84971,7 @@ function isIndex(value, length) {
 
 /* harmony default export */ var _isIndex = (isIndex);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isLength.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isLength.js
 /** Used as references for various `Number` constants. */
 var isLength_MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -84438,7 +85008,7 @@ function isLength(value) {
 
 /* harmony default export */ var lodash_es_isLength = (isLength);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
 
 
 
@@ -84500,7 +85070,7 @@ function baseIsTypedArray(value) {
 
 /* harmony default export */ var _baseIsTypedArray = (baseIsTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -84516,10 +85086,10 @@ function baseUnary(func) {
 
 /* harmony default export */ var _baseUnary = (baseUnary);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
 var _nodeUtil = __webpack_require__(36);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
 
 
 
@@ -84548,7 +85118,7 @@ var isTypedArray = nodeIsTypedArray ? _baseUnary(nodeIsTypedArray) : _baseIsType
 
 /* harmony default export */ var lodash_es_isTypedArray = (isTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
 
 
 
@@ -84599,7 +85169,7 @@ function arrayLikeKeys(value, inherited) {
 
 /* harmony default export */ var _arrayLikeKeys = (arrayLikeKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
 /** Used for built-in method references. */
 var _isPrototype_objectProto = Object.prototype;
 
@@ -84619,7 +85189,7 @@ function isPrototype(value) {
 
 /* harmony default export */ var _isPrototype = (isPrototype);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_overArg.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_overArg.js
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -84636,7 +85206,7 @@ function overArg(func, transform) {
 
 /* harmony default export */ var _overArg = (overArg);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
 
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -84644,7 +85214,7 @@ var nativeKeys = _overArg(Object.keys, Object);
 
 /* harmony default export */ var _nativeKeys = (nativeKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
 
 
 
@@ -84676,7 +85246,7 @@ function baseKeys(object) {
 
 /* harmony default export */ var _baseKeys = (baseKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
 
 
 
@@ -84711,7 +85281,7 @@ function isArrayLike(value) {
 
 /* harmony default export */ var lodash_es_isArrayLike = (isArrayLike);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/keys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/keys.js
 
 
 
@@ -84750,7 +85320,7 @@ function keys(object) {
 
 /* harmony default export */ var lodash_es_keys = (keys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
 
 
 
@@ -84769,7 +85339,7 @@ function baseAssign(object, source) {
 
 /* harmony default export */ var _baseAssign = (baseAssign);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
 /**
  * This function is like
  * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
@@ -84791,7 +85361,7 @@ function nativeKeysIn(object) {
 
 /* harmony default export */ var _nativeKeysIn = (nativeKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
 
 
 
@@ -84826,7 +85396,7 @@ function baseKeysIn(object) {
 
 /* harmony default export */ var _baseKeysIn = (baseKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/keysIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/keysIn.js
 
 
 
@@ -84860,7 +85430,7 @@ function keysIn_keysIn(object) {
 
 /* harmony default export */ var lodash_es_keysIn = (keysIn_keysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
 
 
 
@@ -84879,10 +85449,10 @@ function baseAssignIn(object, source) {
 
 /* harmony default export */ var _baseAssignIn = (baseAssignIn);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
 var _cloneBuffer = __webpack_require__(541);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copyArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copyArray.js
 /**
  * Copies the values of `source` to `array`.
  *
@@ -84904,7 +85474,7 @@ function copyArray(source, array) {
 
 /* harmony default export */ var _copyArray = (copyArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
 /**
  * A specialized version of `_.filter` for arrays without support for
  * iteratee shorthands.
@@ -84931,7 +85501,7 @@ function arrayFilter(array, predicate) {
 
 /* harmony default export */ var _arrayFilter = (arrayFilter);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/stubArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/stubArray.js
 /**
  * This method returns a new empty array.
  *
@@ -84956,7 +85526,7 @@ function stubArray() {
 
 /* harmony default export */ var lodash_es_stubArray = (stubArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
 
 
 
@@ -84988,7 +85558,7 @@ var getSymbols = !nativeGetSymbols ? lodash_es_stubArray : function(object) {
 
 /* harmony default export */ var _getSymbols = (getSymbols);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
 
 
 
@@ -85006,7 +85576,7 @@ function copySymbols(source, object) {
 
 /* harmony default export */ var _copySymbols = (copySymbols);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -85028,7 +85598,7 @@ function arrayPush(array, values) {
 
 /* harmony default export */ var _arrayPush = (arrayPush);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
 
 
 /** Built-in value references. */
@@ -85036,7 +85606,7 @@ var getPrototype = _overArg(Object.getPrototypeOf, Object);
 
 /* harmony default export */ var _getPrototype = (getPrototype);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
 
 
 
@@ -85063,7 +85633,7 @@ var getSymbolsIn = !_getSymbolsIn_nativeGetSymbols ? lodash_es_stubArray : funct
 
 /* harmony default export */ var _getSymbolsIn = (getSymbolsIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
 
 
 
@@ -85081,7 +85651,7 @@ function copySymbolsIn(source, object) {
 
 /* harmony default export */ var _copySymbolsIn = (copySymbolsIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
 
 
 
@@ -85103,7 +85673,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 /* harmony default export */ var _baseGetAllKeys = (baseGetAllKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
 
 
 
@@ -85121,7 +85691,7 @@ function getAllKeys(object) {
 
 /* harmony default export */ var _getAllKeys = (getAllKeys);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
 
 
 
@@ -85140,7 +85710,7 @@ function getAllKeysIn(object) {
 
 /* harmony default export */ var _getAllKeysIn = (getAllKeysIn);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_DataView.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_DataView.js
 
 
 
@@ -85149,7 +85719,7 @@ var DataView = _getNative(_root["a" /* default */], 'DataView');
 
 /* harmony default export */ var _DataView = (DataView);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Promise.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Promise.js
 
 
 
@@ -85158,7 +85728,7 @@ var _Promise_Promise = _getNative(_root["a" /* default */], 'Promise');
 
 /* harmony default export */ var _Promise = (_Promise_Promise);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Set.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Set.js
 
 
 
@@ -85167,7 +85737,7 @@ var Set = _getNative(_root["a" /* default */], 'Set');
 
 /* harmony default export */ var _Set = (Set);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
 
 
 
@@ -85176,7 +85746,7 @@ var _WeakMap_WeakMap = _getNative(_root["a" /* default */], 'WeakMap');
 
 /* harmony default export */ var _WeakMap = (_WeakMap_WeakMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_getTag.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getTag.js
 
 
 
@@ -85236,7 +85806,7 @@ if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != _getTag_dataViewT
 
 /* harmony default export */ var _getTag = (getTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
 /** Used for built-in method references. */
 var _initCloneArray_objectProto = Object.prototype;
 
@@ -85264,7 +85834,7 @@ function initCloneArray(array) {
 
 /* harmony default export */ var _initCloneArray = (initCloneArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
 
 
 /** Built-in value references. */
@@ -85272,7 +85842,7 @@ var Uint8Array = _root["a" /* default */].Uint8Array;
 
 /* harmony default export */ var _Uint8Array = (Uint8Array);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
 
 
 /**
@@ -85290,7 +85860,7 @@ function cloneArrayBuffer(arrayBuffer) {
 
 /* harmony default export */ var _cloneArrayBuffer = (cloneArrayBuffer);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
 
 
 /**
@@ -85308,7 +85878,7 @@ function cloneDataView(dataView, isDeep) {
 
 /* harmony default export */ var _cloneDataView = (cloneDataView);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -85327,7 +85897,7 @@ function cloneRegExp(regexp) {
 
 /* harmony default export */ var _cloneRegExp = (cloneRegExp);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
 
 
 /** Used to convert symbols to primitives and strings. */
@@ -85347,7 +85917,7 @@ function cloneSymbol(symbol) {
 
 /* harmony default export */ var _cloneSymbol = (cloneSymbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
 
 
 /**
@@ -85365,7 +85935,7 @@ function cloneTypedArray(typedArray, isDeep) {
 
 /* harmony default export */ var _cloneTypedArray = (cloneTypedArray);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
 
 
 
@@ -85444,7 +86014,7 @@ function initCloneByTag(object, tag, isDeep) {
 
 /* harmony default export */ var _initCloneByTag = (initCloneByTag);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
 
 
 /** Built-in value references. */
@@ -85476,7 +86046,7 @@ var baseCreate = (function() {
 
 /* harmony default export */ var _baseCreate = (baseCreate);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
 
 
 
@@ -85496,7 +86066,7 @@ function initCloneObject(object) {
 
 /* harmony default export */ var _initCloneObject = (initCloneObject);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
 
 
 
@@ -85516,7 +86086,7 @@ function baseIsMap(value) {
 
 /* harmony default export */ var _baseIsMap = (baseIsMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isMap.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isMap.js
 
 
 
@@ -85545,7 +86115,7 @@ var isMap = nodeIsMap ? _baseUnary(nodeIsMap) : _baseIsMap;
 
 /* harmony default export */ var lodash_es_isMap = (isMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
 
 
 
@@ -85565,7 +86135,7 @@ function baseIsSet(value) {
 
 /* harmony default export */ var _baseIsSet = (baseIsSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isSet.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isSet.js
 
 
 
@@ -85594,7 +86164,7 @@ var isSet = nodeIsSet ? _baseUnary(nodeIsSet) : _baseIsSet;
 
 /* harmony default export */ var lodash_es_isSet = (isSet);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseClone.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseClone.js
 
 
 
@@ -85767,7 +86337,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 
 /* harmony default export */ var _baseClone = (baseClone);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
 
 
 /** Used to compose bitmasks for cloning. */
@@ -85798,7 +86368,7 @@ function cloneDeep(value) {
 
 /* harmony default export */ var lodash_es_cloneDeep = (cloneDeep);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
  * shorthands.
@@ -85821,7 +86391,7 @@ function arrayMap(array, iteratee) {
 
 /* harmony default export */ var _arrayMap = (arrayMap);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/isSymbol.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isSymbol.js
 
 
 
@@ -85852,7 +86422,7 @@ function isSymbol(value) {
 
 /* harmony default export */ var lodash_es_isSymbol = (isSymbol);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/memoize.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/memoize.js
 
 
 /** Error message constants. */
@@ -85927,7 +86497,7 @@ memoize.Cache = _MapCache;
 
 /* harmony default export */ var lodash_es_memoize = (memoize);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
 
 
 /** Used as the maximum memoize cache size. */
@@ -85955,7 +86525,7 @@ function memoizeCapped(func) {
 
 /* harmony default export */ var _memoizeCapped = (memoizeCapped);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
 
 
 /** Used to match property names within property paths. */
@@ -85984,7 +86554,7 @@ var stringToPath = _memoizeCapped(function(string) {
 
 /* harmony default export */ var _stringToPath = (stringToPath);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_toKey.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_toKey.js
 
 
 /** Used as references for various `Number` constants. */
@@ -86007,7 +86577,7 @@ function toKey(value) {
 
 /* harmony default export */ var _toKey = (toKey);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/_baseToString.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseToString.js
 
 
 
@@ -86046,7 +86616,7 @@ function baseToString(value) {
 
 /* harmony default export */ var _baseToString = (baseToString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/toString.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/toString.js
 
 
 /**
@@ -86076,7 +86646,7 @@ function toString_toString(value) {
 
 /* harmony default export */ var lodash_es_toString = (toString_toString);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/lodash-es/toPath.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/toPath.js
 
 
 
@@ -86111,11 +86681,11 @@ function toPath(value) {
 
 /* harmony default export */ var lodash_es_toPath = (toPath);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-fast-compare/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-fast-compare/index.js
 var react_fast_compare = __webpack_require__(157);
 var react_fast_compare_default = /*#__PURE__*/__webpack_require__.n(react_fast_compare);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/deepmerge/dist/es.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/deepmerge/dist/es.js
 var isMergeableObject = function isMergeableObject(value) {
 	return isNonNullObject(value)
 		&& !isSpecial(value)
@@ -86206,7 +86776,7 @@ var deepmerge_1 = deepmerge;
 
 /* harmony default export */ var dist_es = (deepmerge_1);
 
-// CONCATENATED MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/formik/dist/formik.esm.js
+// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/formik/dist/formik.esm.js
 
 
 
@@ -87504,7 +88074,7 @@ connect(formik_esm_ErrorMessageImpl);
 
 //# sourceMappingURL=formik.esm.js.map
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/yup/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/yup/lib/index.js
 var yup_lib = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/components/account/login-form.js
@@ -88176,7 +88746,7 @@ function (_Component) {
   return ProductListing;
 }(external_react_["Component"]);
 /* harmony default export */ var product_listing = (product_listing_ProductListing);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
 var react_stickyfill_lib = __webpack_require__(156);
 var react_stickyfill_lib_default = /*#__PURE__*/__webpack_require__.n(react_stickyfill_lib);
 
@@ -88424,11 +88994,11 @@ var cart_table_grid_item_CartTableGridItem = function CartTableGridItem(props) {
 };
 
 /* harmony default export */ var cart_table_grid_item = (cart_table_grid_item_CartTableGridItem);
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/react-pluralize/build/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-pluralize/build/index.js
 var build = __webpack_require__(44);
 var build_default = /*#__PURE__*/__webpack_require__.n(build);
 
-// EXTERNAL MODULE: /Users/arronfletcher/workspace/shift-front-end-react/node_modules/moment-business-days/index.js
+// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/moment-business-days/index.js
 var moment_business_days = __webpack_require__(219);
 var moment_business_days_default = /*#__PURE__*/__webpack_require__.n(moment_business_days);
 
@@ -88855,116 +89425,6 @@ coupon_form_CouponForm.propTypes = {
   handleSubmit: node_modules_prop_types_default.a.func
 };
 /* harmony default export */ var coupon_form = (coupon_form_CouponForm);
-// CONCATENATED MODULE: ./src/components/checkout/address-book.js
-function address_book_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_book_typeof = function _typeof(obj) { return typeof obj; }; } else { address_book_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_book_typeof(obj); }
-
-function address_book_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function address_book_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function address_book_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_book_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_book_defineProperties(Constructor, staticProps); return Constructor; }
-
-function address_book_possibleConstructorReturn(self, call) { if (call && (address_book_typeof(call) === "object" || typeof call === "function")) { return call; } return address_book_assertThisInitialized(self); }
-
-function address_book_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function address_book_getPrototypeOf(o) { address_book_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_book_getPrototypeOf(o); }
-
-function address_book_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_book_setPrototypeOf(subClass, superClass); }
-
-function address_book_setPrototypeOf(o, p) { address_book_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_book_setPrototypeOf(o, p); }
-
-// Libraries
-
-
-
-var address_book_AddressBook =
-/*#__PURE__*/
-function (_Component) {
-  address_book_inherits(AddressBook, _Component);
-
-  function AddressBook() {
-    address_book_classCallCheck(this, AddressBook);
-
-    return address_book_possibleConstructorReturn(this, address_book_getPrototypeOf(AddressBook).apply(this, arguments));
-  }
-
-  address_book_createClass(AddressBook, [{
-    key: "renderOptions",
-    value: function renderOptions(address) {
-      var _this$props = this.props,
-          currentAddressId = _this$props.currentAddressId,
-          addressFormDisplayed = _this$props.addressFormDisplayed,
-          onAddressDeleted = _this$props.onAddressDeleted,
-          onBookAddressSelected = _this$props.onBookAddressSelected;
-      var addressLabel = typeof address.meta_attributes.label === 'undefined' ? 'Other' : address.meta_attributes.label.value;
-      var optionLabel = external_react_default.a.createElement("a", null, external_react_default.a.createElement("b", null, addressLabel), " -\xA0 ", address.first_name, " ", address.last_name, ",\xA0", address.address_line_1, ",\xA0 ", address.postcode, ",\xA0 ", address.city, ",\xA0 ", address.country);
-      return external_react_default.a.createElement("div", {
-        className: "c-address-book__radio-container"
-      }, external_react_default.a.createElement("input", {
-        type: "radio",
-        name: "address-book-radio",
-        className: "c-address-book__radio",
-        onChange: function onChange() {
-          return onBookAddressSelected(address.id);
-        },
-        checked: !addressFormDisplayed && address.id === currentAddressId
-      }), external_react_default.a.createElement("label", {
-        htmlFor: address.id
-      }, optionLabel), external_react_default.a.createElement("a", {
-        className: "c-address-book__delete-address",
-        label: "Delete",
-        onClick: function onClick() {
-          return onAddressDeleted(address);
-        }
-      }, "Delete"));
-    }
-  }, {
-    key: "renderEntries",
-    value: function renderEntries() {
-      var _this = this;
-
-      // Sort array of objects and return a new array
-      // with the preferred address as the first object.
-      // We always want to display the preferred-address as the first option
-      var entries = this.props.addressBook.sort(function (a, b) {
-        return b.preferred_shipping - a.preferred_shipping;
-      });
-      return external_react_default.a.createElement("div", {
-        className: "c-address-book__entries"
-      }, entries.map(function (address) {
-        return external_react_default.a.createElement("div", {
-          key: address.id
-        }, _this.renderOptions(address));
-      }));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          onNewAddress = _this$props2.onNewAddress,
-          addressFormDisplayed = _this$props2.addressFormDisplayed;
-      return external_react_default.a.createElement("div", {
-        className: "c-address-book"
-      }, external_react_default.a.createElement("h3", null, "Your addresses"), this.renderEntries(), !addressFormDisplayed && external_react_default.a.createElement("a", {
-        className: "c-address-book__new-address",
-        onClick: onNewAddress
-      }, "+ Add a new address"));
-    }
-  }]);
-
-  return AddressBook;
-}(external_react_["Component"]);
-
-address_book_AddressBook.propTypes = {
-  addressBook: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
-  addressFormDisplayed: node_modules_prop_types_default.a.bool,
-  currentAddressId: node_modules_prop_types_default.a.string,
-  onAddressDeleted: node_modules_prop_types_default.a.func,
-  onBookAddressSelected: node_modules_prop_types_default.a.func,
-  onNewAddress: node_modules_prop_types_default.a.func
-};
-/* harmony default export */ var address_book = (address_book_AddressBook);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-summary.js
 // Libraries
 
@@ -89000,376 +89460,6 @@ AddressFormSummary.propTypes = {
   postcode: node_modules_prop_types_default.a.string
 };
 /* harmony default export */ var address_form_summary = (AddressFormSummary);
-// CONCATENATED MODULE: ./src/components/checkout/address-form.js
-function address_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_typeof(obj); }
-
-function address_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function address_form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function address_form_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_defineProperties(Constructor, staticProps); return Constructor; }
-
-function address_form_possibleConstructorReturn(self, call) { if (call && (address_form_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_assertThisInitialized(self); }
-
-function address_form_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function address_form_getPrototypeOf(o) { address_form_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_getPrototypeOf(o); }
-
-function address_form_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_setPrototypeOf(subClass, superClass); }
-
-function address_form_setPrototypeOf(o, p) { address_form_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_setPrototypeOf(o, p); }
-
-// Libraries
-
- // Lib
-
-
-var address_form_AddressForm =
-/*#__PURE__*/
-function (_Component) {
-  address_form_inherits(AddressForm, _Component);
-
-  function AddressForm(props) {
-    var _this;
-
-    address_form_classCallCheck(this, AddressForm);
-
-    _this = address_form_possibleConstructorReturn(this, address_form_getPrototypeOf(AddressForm).call(this, props));
-    _this.Checkbox = component_mapping('Checkbox');
-    _this.DropdownSelect = component_mapping('DropdownSelect');
-    _this.Input = component_mapping('Input');
-    return _this;
-  }
-
-  address_form_createClass(AddressForm, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this$props = this.props,
-          currentAddress = _this$props.currentAddress,
-          autoFillAddress = _this$props.autoFillAddress;
-      if (currentAddress && autoFillAddress) autoFillAddress(currentAddress);
-    }
-  }, {
-    key: "formValid",
-    value: function formValid(formInput) {
-      var requiredFields = ['line_1', 'zipcode', 'city', 'primary_phone', 'email'];
-      var requiredFieldsPresent = requiredFields().every(function (key) {
-        return formInput[key] !== '' && formInput[key] !== null;
-      }) === true;
-      var noFormErrorsPresent = Object.values(formInput.errors).filter(String).length === 0;
-      return requiredFieldsPresent && noFormErrorsPresent;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return external_react_default.a.createElement("form", {
-        className: "o-form__wrapper o-form__background"
-      }, this.renderCountriesDropdown(), this.renderCustomerNameFields(), this.renderCompanyNameOption(), this.renderAddressLine1(), this.renderAddressLine2(), this.renderAddressFields(), this.renderPhone(), this.renderEmail(), external_react_default.a.createElement("p", null, "* Denotes required fields"), this.renderSaveAddressCheckbox(), this.renderNewsletterCheckbox());
-    }
-  }, {
-    key: "renderCountriesDropdown",
-    value: function renderCountriesDropdown() {
-      var _this$props2 = this.props,
-          checkout = _this$props2.checkout,
-          countries = _this$props2.countries,
-          formName = _this$props2.formName,
-          onChange = _this$props2.onChange,
-          onBlur = _this$props2.onBlur;
-      var formInput = checkout[formName];
-      var name = 'country_code';
-      var rules = {
-        required: true
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.DropdownSelect, {
-        options: countries,
-        label: "Country",
-        name: name,
-        value: formInput.country_code,
-        formName: formName,
-        required: rules.required,
-        rules: rules,
-        validationMessage: formInput.errors[name],
-        onChange: onChange,
-        onBlur: onBlur,
-        prompt: "Select a Country"
-      }));
-    }
-  }, {
-    key: "renderInputField",
-    value: function renderInputField(formInput, fieldOption) {
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Input, {
-        label: fieldOption.label,
-        className: fieldOption.className,
-        placeholder: fieldOption.placeholder,
-        name: fieldOption.name,
-        type: fieldOption.type,
-        value: fieldOption.value,
-        required: lib_default()(fieldOption, 'rules.required').safeObject,
-        validationMessage: formInput.errors[fieldOption.name],
-        rules: fieldOption.rules,
-        formName: this.props.formName,
-        onChange: this.props.onChange,
-        onBlur: this.props.onBlur
-      }));
-    }
-  }, {
-    key: "renderCheckbox",
-    value: function renderCheckbox(formInput, fieldOption) {
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Checkbox, {
-        label: fieldOption.label,
-        className: fieldOption.className,
-        name: fieldOption.name,
-        checked: !!fieldOption.value,
-        required: lib_default()(fieldOption, 'rules.required').safeObject,
-        validationMessage: formInput.errors[fieldOption.name],
-        rules: fieldOption.rules,
-        formName: this.props.formName,
-        onChange: this.props.onChange,
-        onBlur: this.props.onBlur
-      }));
-    }
-  }, {
-    key: "renderCustomerNameFields",
-    value: function renderCustomerNameFields() {
-      var _this2 = this;
-
-      var _this$props3 = this.props,
-          checkout = _this$props3.checkout,
-          formName = _this$props3.formName;
-      var formInput = checkout[formName];
-      var fieldOptions = [{
-        className: 'o-form__input-block',
-        placeholder: 'Enter First Name',
-        label: 'First Name',
-        name: 'first_name',
-        value: formInput.first_name,
-        rules: {
-          required: true,
-          maxLength: 50
-        }
-      }, {
-        className: 'o-form__input-block',
-        placeholder: 'Enter Last Name',
-        label: 'Last Name',
-        name: 'last_name',
-        value: formInput.last_name,
-        rules: {
-          required: true,
-          maxLength: 50
-        }
-      }];
-      return external_react_default.a.createElement("div", {
-        className: "o-flex o-flex__space-between"
-      }, fieldOptions.map(function (fieldOption, index) {
-        return external_react_default.a.createElement("div", {
-          className: "o-flex-full-width-s",
-          key: index
-        }, _this2.renderInputField(formInput, fieldOption));
-      }));
-    }
-  }, {
-    key: "renderCompanyNameOption",
-    value: function renderCompanyNameOption() {
-      var _this$props4 = this.props,
-          checkout = _this$props4.checkout,
-          formName = _this$props4.formName,
-          onShowField = _this$props4.onShowField;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        className: 'o-form__input-block',
-        label: 'Company Name',
-        name: 'companyName',
-        value: formInput.companyName
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, !formInput.companyNameShown && external_react_default.a.createElement("a", {
-        href: "#",
-        onClick: function onClick() {
-          return onShowField(formName, 'companyNameShown');
-        }
-      }, external_react_default.a.createElement("p", null, "+ Add Company Name (optional)")), formInput.companyNameShown && this.renderInputField(formInput, fieldOption));
-    }
-  }, {
-    key: "renderAddressLine1",
-    value: function renderAddressLine1() {
-      var _this$props5 = this.props,
-          checkout = _this$props5.checkout,
-          formName = _this$props5.formName;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        className: 'o-form__input-block',
-        placeholder: 'Enter Address',
-        label: 'Address 1',
-        name: 'line_1',
-        value: formInput.line_1,
-        rules: {
-          required: true
-        }
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, this.renderInputField(formInput, fieldOption));
-    }
-  }, {
-    key: "renderAddressLine2",
-    value: function renderAddressLine2() {
-      var _this$props6 = this.props,
-          checkout = _this$props6.checkout,
-          formName = _this$props6.formName,
-          onShowField = _this$props6.onShowField;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        className: 'o-form__input-block',
-        label: 'Address 2',
-        name: 'line_2',
-        value: formInput.line_2
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, !formInput.address2Shown && external_react_default.a.createElement("a", {
-        href: "#",
-        onClick: function onClick() {
-          return onShowField(formName, 'address2Shown');
-        }
-      }, external_react_default.a.createElement("p", null, "+ Add Address 2 (optional)")), formInput.address2Shown && this.renderInputField(formInput, fieldOption));
-    }
-  }, {
-    key: "renderAddressFields",
-    value: function renderAddressFields() {
-      var _this3 = this;
-
-      var _this$props7 = this.props,
-          checkout = _this$props7.checkout,
-          formName = _this$props7.formName;
-      var formInput = checkout[formName];
-      var fieldOptions = [{
-        className: 'o-form__input-block',
-        placeholder: 'Enter Post Code',
-        label: 'Post Code',
-        name: 'zipcode',
-        value: formInput.zipcode,
-        rules: {
-          required: true,
-          postcode: true
-        }
-      }, {
-        className: 'o-form__input-block',
-        placeholder: 'Enter City',
-        label: 'City',
-        name: 'city',
-        value: formInput.city,
-        rules: {
-          required: true
-        }
-      }, {
-        className: 'o-form__input-block',
-        placeholder: 'Enter County',
-        label: 'County',
-        name: 'state',
-        value: formInput.state
-      }];
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, fieldOptions.map(function (fieldOption, index) {
-        return external_react_default.a.createElement("div", {
-          key: index
-        }, _this3.renderInputField(formInput, fieldOption));
-      }));
-    }
-  }, {
-    key: "renderPhone",
-    value: function renderPhone() {
-      var _this$props8 = this.props,
-          checkout = _this$props8.checkout,
-          formName = _this$props8.formName;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        className: 'o-form__input-block',
-        placeholder: 'Enter Phone',
-        label: 'Phone',
-        name: 'primary_phone',
-        value: formInput.primary_phone,
-        rules: {
-          required: true,
-          phone: true
-        }
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("p", {
-        className: "o-form__additional-label"
-      }, "Required for any delivery related questions"), this.renderInputField(formInput, fieldOption));
-    }
-  }, {
-    key: "renderEmail",
-    value: function renderEmail() {
-      var _this$props9 = this.props,
-          checkout = _this$props9.checkout,
-          formName = _this$props9.formName;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        className: 'o-form__input-block',
-        placeholder: 'Enter Email',
-        label: 'Email',
-        name: 'email',
-        type: 'email',
-        value: formInput.email,
-        rules: {
-          required: true,
-          email: true
-        }
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("p", {
-        className: "o-form__additional-label"
-      }, "Required for Order Confirmation Email"), this.renderInputField(formInput, fieldOption));
-    }
-  }, {
-    key: "renderSaveAddressCheckbox",
-    value: function renderSaveAddressCheckbox() {
-      var _this$props10 = this.props,
-          loggedIn = _this$props10.loggedIn,
-          checkout = _this$props10.checkout,
-          formName = _this$props10.formName;
-      var formInput = checkout[formName];
-      var checkboxOptions = {
-        label: 'Save address for later',
-        name: 'saveToAddressBook',
-        value: formInput.saveToAddressBook,
-        className: 'o-form__checkbox-label'
-      };
-      var inputOptions = {
-        className: 'o-form__input-block',
-        placeholder: 'A recognisable name, only for your own use, e.g. "Home"',
-        label: 'Address name',
-        name: 'label',
-        type: 'text',
-        value: formInput.label
-      };
-      var preferredShippingCheckboxOptions = {
-        className: 'o-form__checkbox-label',
-        label: 'Set as preferred shipping address',
-        name: 'preferred_shipping',
-        value: formInput.setAsPreferredShipping
-      };
-      var preferredBillingCheckboxOptions = {
-        className: 'o-form__checkbox-label',
-        label: 'Set as preferred billing address',
-        name: 'preferred_billing',
-        value: formInput.setAsPreferredBilling
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, loggedIn && !formInput.formPreFilled && this.renderCheckbox(formInput, checkboxOptions), formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredShippingCheckboxOptions), formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredBillingCheckboxOptions), formInput.saveToAddressBook && this.renderInputField(formInput, inputOptions));
-    }
-  }, {
-    key: "renderNewsletterCheckbox",
-    value: function renderNewsletterCheckbox() {
-      var _this$props11 = this.props,
-          checkout = _this$props11.checkout,
-          formName = _this$props11.formName;
-      var formInput = checkout[formName];
-      var fieldOption = {
-        label: 'Sign up for Weekly Newsletters (Optional)',
-        name: 'newsletterOptIn',
-        value: formInput.newsletterOptIn,
-        className: 'o-form__checkbox-label'
-      };
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, formName === 'shippingAddress' && this.renderCheckbox(formInput, fieldOption));
-    }
-  }]);
-
-  return AddressForm;
-}(external_react_["Component"]);
-/* harmony default export */ var address_form = (address_form_AddressForm);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js
 // Libraries
 
@@ -89868,90 +89958,165 @@ ShippingMethodsSummary.propTypes = {
   shippingMethod: node_modules_prop_types_default.a.object
 };
 /* harmony default export */ var shipping_methods_summary = (ShippingMethodsSummary);
-// CONCATENATED MODULE: ./src/components/checkout/stripe-wrapper.js
-function stripe_wrapper_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_wrapper_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_wrapper_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_wrapper_typeof(obj); }
+// CONCATENATED MODULE: ./src/components/checkout/stripe-payment.js
+function stripe_payment_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_payment_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_payment_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_payment_typeof(obj); }
 
-function stripe_wrapper_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function stripe_payment_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function stripe_wrapper_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function stripe_payment_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function stripe_wrapper_createClass(Constructor, protoProps, staticProps) { if (protoProps) stripe_wrapper_defineProperties(Constructor.prototype, protoProps); if (staticProps) stripe_wrapper_defineProperties(Constructor, staticProps); return Constructor; }
+function stripe_payment_createClass(Constructor, protoProps, staticProps) { if (protoProps) stripe_payment_defineProperties(Constructor.prototype, protoProps); if (staticProps) stripe_payment_defineProperties(Constructor, staticProps); return Constructor; }
 
-function stripe_wrapper_possibleConstructorReturn(self, call) { if (call && (stripe_wrapper_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_wrapper_assertThisInitialized(self); }
+function stripe_payment_possibleConstructorReturn(self, call) { if (call && (stripe_payment_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_payment_assertThisInitialized(self); }
 
-function stripe_wrapper_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function stripe_payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function stripe_wrapper_getPrototypeOf(o) { stripe_wrapper_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_wrapper_getPrototypeOf(o); }
+function stripe_payment_getPrototypeOf(o) { stripe_payment_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_payment_getPrototypeOf(o); }
 
-function stripe_wrapper_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_wrapper_setPrototypeOf(subClass, superClass); }
+function stripe_payment_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_payment_setPrototypeOf(subClass, superClass); }
 
-function stripe_wrapper_setPrototypeOf(o, p) { stripe_wrapper_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return stripe_wrapper_setPrototypeOf(o, p); }
+function stripe_payment_setPrototypeOf(o, p) { stripe_payment_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return stripe_payment_setPrototypeOf(o, p); }
 
 // Libraries
-
 
  // Lib
 
 
 
-
-var stripe_wrapper_StripeWrapper =
+var stripe_payment_StripePayment =
 /*#__PURE__*/
 function (_Component) {
-  stripe_wrapper_inherits(StripeWrapper, _Component);
+  stripe_payment_inherits(StripePayment, _Component);
 
-  function StripeWrapper(props) {
+  function StripePayment(props) {
     var _this;
 
-    stripe_wrapper_classCallCheck(this, StripeWrapper);
+    stripe_payment_classCallCheck(this, StripePayment);
 
-    _this = stripe_wrapper_possibleConstructorReturn(this, stripe_wrapper_getPrototypeOf(StripeWrapper).call(this, props));
-    _this.StripeFields = component_mapping('StripeFields');
+    _this = stripe_payment_possibleConstructorReturn(this, stripe_payment_getPrototypeOf(StripePayment).call(this, props));
+    _this.AddressBook = component_mapping('AddressBook');
+    _this.AddressForm = component_mapping('AddressForm');
+    _this.Button = component_mapping('Button');
+    _this.Checkbox = component_mapping('Checkbox');
+    _this.StripeWrapper = component_mapping('StripeWrapper');
     return _this;
   }
 
-  stripe_wrapper_createClass(StripeWrapper, [{
-    key: "renderStripeForm",
-    value: function renderStripeForm(stripeApiKey) {
-      var _this$props = this.props,
-          billingAddress = _this$props.billingAddress,
-          cardTokenRequested = _this$props.cardTokenRequested,
-          onCardTokenReceived = _this$props.onCardTokenReceived,
-          setCardErrors = _this$props.setCardErrors;
-      return external_react_default.a.createElement(react_stripe_elements_es["StripeProvider"], {
-        apiKey: stripeApiKey
-      }, external_react_default.a.createElement(react_stripe_elements_es["Elements"], null, external_react_default.a.createElement(this.StripeFields, {
-        billingAddress: billingAddress,
-        cardTokenRequested: cardTokenRequested,
-        onCardTokenReceived: onCardTokenReceived,
-        setCardErrors: setCardErrors
-      })));
-    }
-  }, {
-    key: "renderServiceUnavailableMessage",
-    value: function renderServiceUnavailableMessage() {
+  stripe_payment_createClass(StripePayment, [{
+    key: "renderFormSubmitButton",
+    value: function renderFormSubmitButton() {
+      var _this2 = this;
+
       return external_react_default.a.createElement("div", {
-        className: "u-bold u-text-color--red"
-      }, "* PAYMENT THROUGH STRIPE IS CURRENTLY NOT AVAILABLE *");
+        className: "o-form__input-group"
+      }, external_react_default.a.createElement(this.Button, {
+        "aria-label": "Review Your Order",
+        className: "c-address-form__button o-button--sml",
+        label: "Review Your Order",
+        status: this.props.nextStepAvailable() ? 'positive' : 'disabled',
+        type: "primary",
+        disabled: !this.props.nextStepAvailable(),
+        onClick: function onClick() {
+          return _this2.props.nextSection('complete');
+        }
+      }));
     }
   }, {
     key: "render",
     value: function render() {
-      var stripeApiKey = lib_config.get().stripeApiKey;
-      return stripeApiKey ? this.renderStripeForm(stripeApiKey) : this.renderServiceUnavailableMessage();
+      var _this$props = this.props,
+          addressBook = _this$props.addressBook,
+          autoFillAddress = _this$props.autoFillAddress,
+          billingAddress = _this$props.billingAddress,
+          billingAsShipping = _this$props.billingAsShipping,
+          cardTokenRequested = _this$props.cardTokenRequested,
+          changeBillingAsShipping = _this$props.changeBillingAsShipping,
+          checkout = _this$props.checkout,
+          countries = _this$props.countries,
+          currentAddress = _this$props.currentAddress,
+          loggedIn = _this$props.loggedIn,
+          onAddressDeleted = _this$props.onAddressDeleted,
+          onBlur = _this$props.onBlur,
+          onChange = _this$props.onChange,
+          onShowField = _this$props.onShowField,
+          onCardTokenReceived = _this$props.onCardTokenReceived,
+          setCardErrors = _this$props.setCardErrors,
+          shippingAddress = _this$props.shippingAddress;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
+        className: "o-form__background"
+      }, external_react_default.a.createElement("div", {
+        className: "o-form__wrapper"
+      }, external_react_default.a.createElement(this.StripeWrapper, {
+        billingAddress: checkout.billingAddress,
+        cardTokenRequested: cardTokenRequested,
+        onCardTokenReceived: onCardTokenReceived,
+        setCardErrors: setCardErrors
+      }), external_react_default.a.createElement("div", {
+        className: "o-form__input-group"
+      }, external_react_default.a.createElement("label", null, "Billing address *")), external_react_default.a.createElement(this.Checkbox, {
+        type: "checkbox",
+        label: "Same as shipping address",
+        name: "shippingAddressAsBillingAddress",
+        checked: billingAsShipping,
+        onChange: changeBillingAsShipping
+      }), billingAsShipping && external_react_default.a.createElement("div", {
+        "aria-label": "Shipping address to be used for billing",
+        className: "o-payment-method__address-summary  c-payment-method__address-summary"
+      }, external_react_default.a.createElement("p", {
+        className: "u-bold"
+      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length && external_react_default.a.createElement(this.AddressBook, {
+        addressBook: addressBook,
+        formName: "shippingAddress",
+        currentAddressId: billingAddress.id,
+        onAddressDeleted: onAddressDeleted,
+        onNewAddress: this.props.onNewAddress,
+        onBookAddressSelected: this.props.onBookAddressSelected,
+        addressFormDisplayed: this.props.addressFormDisplayed()
+      }), this.props.addressFormDisplayed() && external_react_default.a.createElement(this.AddressForm, {
+        "aria-label": "Billing address form",
+        autoFillAddress: autoFillAddress,
+        checkout: checkout,
+        countries: countries,
+        currentAddress: currentAddress,
+        title: "Billing Address",
+        formName: "billingAddress",
+        onChange: onChange,
+        onBlur: onBlur,
+        className: "o-form__billing",
+        onShowField: onShowField,
+        loggedIn: loggedIn
+      })), this.renderFormSubmitButton());
     }
   }]);
 
-  return StripeWrapper;
+  return StripePayment;
 }(external_react_["Component"]);
 
-stripe_wrapper_StripeWrapper.propTypes = {
+stripe_payment_StripePayment.propTypes = {
+  addressBook: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
+  addressFormDisplayed: node_modules_prop_types_default.a.func,
+  autoFillAddress: node_modules_prop_types_default.a.func,
   billingAddress: node_modules_prop_types_default.a.object,
+  billingAsShipping: node_modules_prop_types_default.a.bool,
   cardTokenRequested: node_modules_prop_types_default.a.bool,
+  changeBillingAsShipping: node_modules_prop_types_default.a.func,
+  checkout: node_modules_prop_types_default.a.object,
+  countries: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
+  currentAddress: node_modules_prop_types_default.a.object,
+  loggedIn: node_modules_prop_types_default.a.bool,
+  nextSection: node_modules_prop_types_default.a.func,
+  nextStepAvailable: node_modules_prop_types_default.a.func,
+  onAddressDeleted: node_modules_prop_types_default.a.func,
+  onBookAddressSelected: node_modules_prop_types_default.a.bool,
+  onBlur: node_modules_prop_types_default.a.func,
+  onChange: node_modules_prop_types_default.a.func,
+  onNewAddress: node_modules_prop_types_default.a.func,
+  onShowField: node_modules_prop_types_default.a.func,
   onCardTokenReceived: node_modules_prop_types_default.a.func,
-  setCardErrors: node_modules_prop_types_default.a.func
+  setCardErrors: node_modules_prop_types_default.a.func,
+  shippingAddress: node_modules_prop_types_default.a.object
 };
-/* harmony default export */ var stripe_wrapper = (stripe_wrapper_StripeWrapper);
+/* harmony default export */ var stripe_payment = (stripe_payment_StripePayment);
 // EXTERNAL MODULE: ./src/static/account-icon.svg
 var account_icon = __webpack_require__(542);
 var account_icon_default = /*#__PURE__*/__webpack_require__.n(account_icon);
@@ -90183,6 +90348,7 @@ function (_Component) {
 /* concated harmony reexport ShippingMethods */__webpack_require__.d(__webpack_exports__, "ShippingMethods", function() { return shipping_methods; });
 /* concated harmony reexport ShippingMethodsHeader */__webpack_require__.d(__webpack_exports__, "ShippingMethodsHeader", function() { return shipping_methods_header; });
 /* concated harmony reexport ShippingMethodsSummary */__webpack_require__.d(__webpack_exports__, "ShippingMethodsSummary", function() { return shipping_methods_summary; });
+/* concated harmony reexport StripePayment */__webpack_require__.d(__webpack_exports__, "StripePayment", function() { return stripe_payment; });
 /* concated harmony reexport StripeWrapper */__webpack_require__.d(__webpack_exports__, "StripeWrapper", function() { return stripe_wrapper; });
 /* concated harmony reexport NavBar */__webpack_require__.d(__webpack_exports__, "NavBar", function() { return navbar; });
 /* concated harmony reexport NavBarOption */__webpack_require__.d(__webpack_exports__, "NavBarOption", function() { return navbar_option; });
@@ -90281,6 +90447,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 
