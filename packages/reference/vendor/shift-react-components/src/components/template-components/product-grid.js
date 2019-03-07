@@ -3,16 +3,15 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
+// Lib
 import componentMapping from '../../lib/component-mapping'
-
-// Components
-import ProductListingCard from '../products/listing/product-listing-card'
 
 class ProductGrid extends PureComponent {
   constructor (props) {
     super(props)
 
     this.Link = componentMapping('Link')
+    this.ProductListingCard = componentMapping('ProductListingCard')
   }
 
   /**
@@ -27,7 +26,7 @@ class ProductGrid extends PureComponent {
       let product = componentData.products[i]
 
       products.push(
-        <ProductListingCard
+        <this.ProductListingCard
           className='o-card-grid__card'
           title={product.title}
           assetFileUrl={product.picture_url}

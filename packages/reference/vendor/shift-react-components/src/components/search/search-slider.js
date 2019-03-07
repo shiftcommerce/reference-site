@@ -1,3 +1,4 @@
+// Libraries
 import React, { Component } from 'react'
 import InputRange from 'react-input-range'
 import { connectRange } from 'react-instantsearch-dom'

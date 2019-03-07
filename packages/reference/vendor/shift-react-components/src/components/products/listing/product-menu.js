@@ -1,3 +1,4 @@
+// Libraries
 import React, { Component } from 'react'
 import { connectStateResults } from 'react-instantsearch-dom'
 

@@ -1,6 +1,8 @@
+// Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// Lib
 import componentMapping from '../../lib/component-mapping'
 
 function AddressFormHeader ({ collapsed, title, onClick }) {

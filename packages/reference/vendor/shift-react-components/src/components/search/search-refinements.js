@@ -1,3 +1,4 @@
+// Libraries
 import { connectCurrentRefinements } from 'react-instantsearch/connectors'
 
 const SearchRefinements = connectCurrentRefinements(({ items }) => {

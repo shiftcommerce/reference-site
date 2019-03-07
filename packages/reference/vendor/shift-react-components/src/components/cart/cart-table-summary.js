@@ -2,9 +2,8 @@
 import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
-import componentMapping from '../../lib/component-mapping'
-
 // Libs
+import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
 class CartTableSummary extends PureComponent {

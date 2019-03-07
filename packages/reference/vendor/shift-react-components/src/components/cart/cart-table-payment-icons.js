@@ -2,8 +2,8 @@
 import React from 'react'
 import classNames from 'classnames'
 
-// Components
-import PaymentIcons from './payment-icons'
+// Lib
+import componentMapping from '../../lib/component-mapping'
 
 /**
  * Renders the payment icons
@@ -11,6 +11,8 @@ import PaymentIcons from './payment-icons'
  * @return {string} - HTML markup for the component
  */
 const CartTablePaymentIcons = (props) => {
+  const PaymentIcons = componentMapping('PaymentIcons')
+
   return (
     <div className={classNames(props.className, 'c-cart-table__icons')}>
       <PaymentIcons />

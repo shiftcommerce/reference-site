@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
+// Lib
 import componentMapping from '../../lib/component-mapping'
 
 // Assets

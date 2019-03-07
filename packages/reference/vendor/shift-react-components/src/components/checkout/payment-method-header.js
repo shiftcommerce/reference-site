@@ -1,4 +1,4 @@
-// Objects
+// Libraries
 import React from 'react'
 import componentMapping from '../../lib/component-mapping'
 import PropTypes from 'prop-types'

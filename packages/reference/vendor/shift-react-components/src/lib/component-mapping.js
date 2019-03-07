@@ -9,6 +9,7 @@ import FormErrors from './form-errors'
  * Navigation Components
  */
 import NavBar from '../components/navigation/navbar'
+import NavBarOption from '../components/navigation/navbar-option'
 
 /**
  * Objects
@@ -38,6 +39,7 @@ import ProductPrice from '../components/products/display/product-price'
 /**
  * PLP Components
  */
+import ProductListingCard from '../components/products/listing/product-listing-card'
 import ProductMenu from '../components/products/listing/product-menu'
 import ProductMenuOptions from '../components/products/listing/product-menu-options'
 
@@ -48,6 +50,7 @@ import AddressBook from '../components/checkout/address-book'
 import AddressForm from '../components/checkout/address-form'
 import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
+import PaymentIcons from '../components/cart/payment-icons'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
@@ -108,15 +111,18 @@ const mapping = {
   Logo,
   Minibag,
   NavBar,
+  NavBarOption,
   OrderLineItems,
   OrderList,
+  PaymentIcons,
+  PaymentMethod,
+  PaymentMethodHeader,
   ProductCarousel,
   ProductEwisForm,
+  ProductListingCard,
   ProductMenu,
   ProductMenuOptions,
   ProductPrice,
-  PaymentMethod,
-  PaymentMethodHeader,
   Rating,
   SearchBar,
   SearchFilters,

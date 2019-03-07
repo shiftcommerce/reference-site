@@ -5,7 +5,6 @@ import {
   injectStripe,
   CardElement
 } from 'react-stripe-elements'
-
 import classNames from 'classnames'
 
 class StripeFields extends Component {
