@@ -78,3 +78,27 @@ export async function submitCoupon (couponCode) {
 export function setAPIError (error, setErrors) {
   setErrors({ couponCode: error[0]['title'] })
 }
+
+const setShippingAddressRequest = (addressId) => {
+  return {
+    endpoint: '/setCartShippingAddress',
+    body: { addressId },
+    successActionType: actionTypes.CART_UPDATED
+  }
+}
+
+export function setCartShippingAddress (addressId) {
+  return postEndpoint(setShippingAddressRequest(addressId))
+}
+
+const createShippingAddressRequest = (address) => {
+  return {
+    endpoint: '/createAddress',
+    body: address,
+    successActionType: actionTypes.SHIPPING_ADDRESS_CREATED
+  }
+}
+
+export function createShippingAddress (address) {
+  return postEndpoint(createShippingAddressRequest(address))
+}

@@ -9,6 +9,7 @@ import OrderPage from './pages/order'
 import ProductPage from './pages/product'
 import RegisterPage from './pages/register'
 import SearchPage from './pages/search'
+import ShippingAddressPage from './pages/shipping-address'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
 
@@ -61,6 +62,7 @@ module.exports = {
   OrderPage: OrderPage,
   RegisterPage: RegisterPage,
   SearchPage: SearchPage,
+  ShippingAddressPage: ShippingAddressPage,
   SlugPage: SlugPage,
   StaticPage: StaticPage,
 

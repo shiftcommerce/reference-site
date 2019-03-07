@@ -3,14 +3,14 @@ import Cookies from 'js-cookie'
 import Router from 'next/router'
 
 // Pages
-import { CheckoutShippingAddressPage } from '../../../client/pages/checkout/shipping-address'
+import ShippingAddressPage from '../../src/pages/shipping-address'
 
 // Components
 import { AddressFormHeader, Button, CheckoutAddressForm } from 'shift-react-components'
 
 // Actions
-import * as AddressBookActions from '../../../client/actions/address-book-actions'
-import * as CartActions from '../../../client/actions/cart-actions'
+import * as AddressBookActions from '../../src/actions/address-book-actions'
+import * as CartActions from '../../src/actions/cart-actions'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
@@ -18,7 +18,7 @@ jest.mock('next/config', () => () => ({
 
 describe('componentDidMount()', () => {
   test('sets loading to false in state when user is not logged in', () => {
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} checkout={{}} />)
+    const wrapper = shallow(<ShippingAddressPage cart={{}} checkout={{}} />)
 
     wrapper.instance().componentDidMount()
 
@@ -40,7 +40,7 @@ describe('componentDidMount()', () => {
         }]
       }
 
-      const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} dispatch={dispatch} checkout={checkout} />)
+      const wrapper = shallow(<ShippingAddressPage cart={{}} dispatch={dispatch} checkout={checkout} />)
 
       await wrapper.instance().componentDidMount()
 
@@ -67,7 +67,7 @@ describe('componentDidMount()', () => {
         }]
       }
 
-      const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} dispatch={dispatch} checkout={checkout} />)
+      const wrapper = shallow(<ShippingAddressPage cart={{}} dispatch={dispatch} checkout={checkout} />)
 
       await wrapper.instance().componentDidMount()
 
@@ -87,7 +87,7 @@ describe('componentDidMount()', () => {
       const dispatch = jest.fn().mockImplementation(value => Promise.resolve(value))
       const cart = { shipping_address: {} }
 
-      const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={{}} dispatch={dispatch} />)
+      const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={{}} dispatch={dispatch} />)
 
       await wrapper.instance().componentDidMount()
 
@@ -115,7 +115,7 @@ describe('nextSection()', () => {
       }]
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
 
     await wrapper.instance().nextSection()
 
@@ -143,7 +143,7 @@ describe('nextSection()', () => {
       }
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} dispatch={dispatch} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} dispatch={dispatch} />, { disableLifecycleMethods: true })
     wrapper.setState({ addingNewAddress: true })
 
     await wrapper.instance().nextSection()
@@ -177,7 +177,7 @@ describe('nextSection()', () => {
       }
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} dispatch={dispatch} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} dispatch={dispatch} />, { disableLifecycleMethods: true })
     wrapper.setState({ addingNewAddress: true })
 
     await wrapper.instance().nextSection()
@@ -201,7 +201,7 @@ describe('addressFormDisplayed()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage checkout={checkout} cart={{}} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage checkout={checkout} cart={{}} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().addressFormDisplayed()).toBe(true)
   })
@@ -211,7 +211,7 @@ describe('addressFormDisplayed()', () => {
       addressBook: [{ id: 1 }]
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage checkout={checkout} cart={{}} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage checkout={checkout} cart={{}} />, { disableLifecycleMethods: true })
     wrapper.setState({ addingNewAddress: true })
 
     expect(wrapper.instance().addressFormDisplayed()).toBe(true)
@@ -227,7 +227,7 @@ describe('addressFormDisplayed()', () => {
       }
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage checkout={checkout} cart={cart} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage checkout={checkout} cart={cart} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().addressFormDisplayed()).toBe(true)
   })
@@ -239,7 +239,7 @@ describe('cartAddressFromBook()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={{}} checkout={checkout} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().cartAddressFromBook()).toBe(false)
   })
@@ -250,7 +250,7 @@ describe('cartAddressFromBook()', () => {
       addressBook: []
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={{}} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={{}} checkout={checkout} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().cartAddressFromBook()).toBe(false)
 
@@ -268,7 +268,7 @@ describe('cartAddressFromBook()', () => {
       }
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().cartAddressFromBook()).toBe(false)
 
@@ -286,7 +286,7 @@ describe('cartAddressFromBook()', () => {
       }
     }
 
-    const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+    const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
 
     expect(wrapper.instance().cartAddressFromBook()).toBe(true)
 
@@ -306,7 +306,7 @@ test('renders address form components', () => {
     line_items_count: 1
   }
 
-  const wrapper = shallow(<CheckoutShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
+  const wrapper = shallow(<ShippingAddressPage cart={cart} checkout={checkout} />, { disableLifecycleMethods: true })
   wrapper.setState({ loading: false })
 
   expect(wrapper).toMatchSnapshot()

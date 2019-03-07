@@ -92,3 +92,29 @@ test('addToCart triggers a correct addToCart request', () => {
 
   postSpy.mockRestore()
 })
+
+test('setCartShippingAddress triggers a correct setCartShippingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.setCartShippingAddress(10)
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/setCartShippingAddress')
+  expect(requestObject.body.addressId).toEqual(10)
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
+})
+
+test('createShippingAddress triggers a correct createShippingAddress request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.createShippingAddress({ addressKey: 'addressValue' })
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/createAddress')
+  expect(requestObject.body.addressKey).toEqual('addressValue')
+  expect(requestObject.successActionType).toEqual(actionTypes.SHIPPING_ADDRESS_CREATED)
+
+  postSpy.mockRestore()
+})
