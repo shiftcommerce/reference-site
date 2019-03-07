@@ -48,9 +48,11 @@ import AddressBook from '../components/checkout/address-book'
 import AddressForm from '../components/checkout/address-form'
 import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
+import PaymentMethod from '../components/checkout/payment-method'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
 import StripeFields from '../components/checkout/stripe-fields'
+import StripePayment from '../components/checkout/stripe-payment'
 import StripeWrapper from '../components/checkout/stripe-wrapper'
 
 /**
@@ -113,6 +115,7 @@ const mapping = {
   ProductMenu,
   ProductMenuOptions,
   ProductPrice,
+  PaymentMethod,
   PaymentMethodHeader,
   Rating,
   SearchBar,
@@ -127,6 +130,7 @@ const mapping = {
   StaticPageErrorBody,
   StaticPageErrorDetails,
   StripeFields,
+  StripePayment,
   StripeWrapper,
   VariantSelector
 }

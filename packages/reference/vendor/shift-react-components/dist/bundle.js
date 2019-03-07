@@ -131,6 +131,24 @@ if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(859)();
+}
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function(module) {var require;//! moment.js
 
 ;(function (global, factory) {
@@ -4645,64 +4663,46 @@ if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(48)(module)))
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(859)();
-}
-
-
-/***/ }),
 /* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(516);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(521);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(10);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(41);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(108);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/keys.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/keys.js
 var keys = __webpack_require__(29);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/difference.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/difference.js
 var difference = __webpack_require__(525);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
 var indexUtils = __webpack_require__(7);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
 
 
 
@@ -4750,7 +4750,7 @@ function getId() {
     return Object(indexUtils["f" /* refineValue */])(searchState, nextValue, this.context);
   }
 }));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/widgets/Configure.js
 
 
 /**
@@ -4786,7 +4786,7 @@ function getId() {
 /* harmony default export */ var Configure = (connectConfigure(function () {
   return null;
 }));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectAutoComplete.js
 function connectAutoComplete_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -4876,17 +4876,17 @@ function _cleanUp(props, searchState, context) {
     return searchParameters.setQuery(connectAutoComplete_getCurrentRefinement(props, searchState, this.context));
   }
 }));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(316);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
 var connectCurrentRefinements = __webpack_require__(317);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(34);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectGeoSearch.js
 
 
 function connectGeoSearch_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -5077,58 +5077,58 @@ var connectGeoSearch_refine = function _refine(searchState, nextValue, context) 
     return true;
   }
 }));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(318);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(320);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(321);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(323);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(324);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(325);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(326);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(328);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(329);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(330);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
 var connectSortBy = __webpack_require__(331);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(332);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(333);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(334);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js
 /* concated harmony reexport createInstantSearch */__webpack_require__.d(__webpack_exports__, "createInstantSearch", function() { return createInstantSearch["a" /* default */]; });
 /* concated harmony reexport createIndex */__webpack_require__.d(__webpack_exports__, "createIndex", function() { return createIndex["a" /* default */]; });
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return createConnector["a" /* default */]; });
@@ -10501,17 +10501,17 @@ module.exports = exports["default"];
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/index.js + 4 modules
 var es = __webpack_require__(5);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/algoliasearch/src/browser/builds/algoliasearchLite.js
 var algoliasearchLite = __webpack_require__(527);
 var algoliasearchLite_default = /*#__PURE__*/__webpack_require__.n(algoliasearchLite);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
 var createInstantSearch = __webpack_require__(516);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
 
 
 
@@ -10523,10 +10523,10 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 });
 
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
 var createIndex = __webpack_require__(521);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
 
 var Index = Object(createIndex["a" /* default */])({
@@ -10541,31 +10541,31 @@ var Index = Object(createIndex["a" /* default */])({
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectBreadcrumb.js
 var connectBreadcrumb = __webpack_require__(316);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Link.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10619,7 +10619,7 @@ Link_Link.propTypes = {
   onClick: prop_types_default.a.func.isRequired
 };
 /* harmony default export */ var components_Link = (Link_Link);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Breadcrumb.js
 var Breadcrumb_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Breadcrumb_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10742,7 +10742,7 @@ Breadcrumb_Breadcrumb.defaultProps = {
 /* harmony default export */ var components_Breadcrumb = (Object(translatable["a" /* default */])({
   rootLabel: 'Home'
 })(Breadcrumb_Breadcrumb));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Breadcrumb.js
 
 
 
@@ -10840,23 +10840,23 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 };
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(519);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+var ClearRefinements = __webpack_require__(522);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(520);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+var CurrentRefinements = __webpack_require__(517);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(318);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(76);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(42);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HierarchicalMenu.js
 
 
 var HierarchicalMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10966,7 +10966,7 @@ HierarchicalMenu_HierarchicalMenu.defaultProps = {
     return extended ? 'Show less' : 'Show more';
   }
 })(HierarchicalMenu_HierarchicalMenu));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HierarchicalMenu.js
 
 
 
@@ -11066,13 +11066,13 @@ var HierarchicalMenu_HierarchicalMenuWidget = function HierarchicalMenuWidget(pr
 };
 
 /* harmony default export */ var widgets_HierarchicalMenu = (Object(connectHierarchicalMenu["a" /* default */])(HierarchicalMenu_HierarchicalMenuWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(75);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHits.js
 var connectHits = __webpack_require__(320);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Hits.js
 
 
 
@@ -11131,7 +11131,7 @@ Hits_Hits.defaultProps = {
 };
 
 /* harmony default export */ var components_Hits = (Hits_Hits);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Hits.js
 
 
 
@@ -11165,13 +11165,13 @@ Hits_Hits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Hits = (Object(connectHits["a" /* default */])(components_Hits));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHitsPerPage.js
 var connectHitsPerPage = __webpack_require__(321);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
 var Select = __webpack_require__(152);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/HitsPerPage.js
 var HitsPerPage_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function HitsPerPage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11238,7 +11238,7 @@ HitsPerPage_HitsPerPage.defaultProps = {
 
 
 /* harmony default export */ var components_HitsPerPage = (HitsPerPage_HitsPerPage);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/HitsPerPage.js
 
 
 
@@ -11280,10 +11280,10 @@ HitsPerPage_HitsPerPage.defaultProps = {
  */
 
 /* harmony default export */ var widgets_HitsPerPage = (Object(connectHitsPerPage["a" /* default */])(components_HitsPerPage));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/InfiniteHits.js
 var InfiniteHits_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function InfiniteHits_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11384,7 +11384,7 @@ InfiniteHits_InfiniteHits.defaultProps = {
 /* harmony default export */ var components_InfiniteHits = (Object(translatable["a" /* default */])({
   loadMore: 'Load more'
 })(InfiniteHits_InfiniteHits));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/InfiniteHits.js
 
 
 
@@ -11421,10 +11421,10 @@ InfiniteHits_InfiniteHits.defaultProps = {
  */
 
 /* harmony default export */ var widgets_InfiniteHits = (Object(connectInfiniteHits["a" /* default */])(components_InfiniteHits));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectMenu.js
 var connectMenu = __webpack_require__(323);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Menu.js
 
 
 var Menu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -11542,7 +11542,7 @@ Menu_Menu.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(Menu_Menu));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Menu.js
 
 
 
@@ -11601,11 +11601,11 @@ var Menu_MenuWidget = function MenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_Menu = (Object(connectMenu["a" /* default */])(Menu_MenuWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(25);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
 
 
 var MenuSelect_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11724,7 +11724,7 @@ MenuSelect_MenuSelect.defaultProps = {
 /* harmony default export */ var components_MenuSelect = (Object(translatable["a" /* default */])({
   seeAllOption: 'See all'
 })(MenuSelect_MenuSelect));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/MenuSelect.js
 
 
 
@@ -11769,10 +11769,10 @@ var MenuSelect_MenuSelectWidget = function MenuSelectWidget(props) {
 };
 
 /* harmony default export */ var widgets_MenuSelect = (Object(connectMenu["a" /* default */])(MenuSelect_MenuSelectWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 var connectNumericMenu = __webpack_require__(324);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/NumericMenu.js
 var NumericMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var NumericMenu_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11877,7 +11877,7 @@ NumericMenu_NumericMenu.defaultProps = {
 /* harmony default export */ var components_NumericMenu = (Object(translatable["a" /* default */])({
   all: 'All'
 })(NumericMenu_NumericMenu));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/NumericMenu.js
 
 
 
@@ -11933,18 +11933,18 @@ var NumericMenu_NumericMenuWidget = function NumericMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_NumericMenu = (Object(connectNumericMenu["a" /* default */])(NumericMenu_NumericMenuWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(325);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/range.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/range.js
 var lodash_range = __webpack_require__(217);
 var range_default = /*#__PURE__*/__webpack_require__.n(lodash_range);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/has.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/has.js
 var has = __webpack_require__(12);
 var has_default = /*#__PURE__*/__webpack_require__.n(has);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/LinkList.js
 
 
 var LinkList_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -12032,7 +12032,7 @@ LinkList_LinkList.propTypes = {
   canRefine: prop_types_default.a.bool.isRequired
 };
 /* harmony default export */ var components_LinkList = (LinkList_LinkList);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Pagination.js
 
 
 var Pagination_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -12254,7 +12254,7 @@ Pagination_Pagination.defaultProps = {
     return 'Page ' + currentRefinement.toString();
   }
 })(Pagination_Pagination));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Pagination.js
 
 
 
@@ -12318,13 +12318,13 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 };
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(522);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+var Panel = __webpack_require__(518);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(326);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PoweredBy.js
 var PoweredBy_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function PoweredBy_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12438,7 +12438,7 @@ PoweredBy_PoweredBy.propTypes = {
 /* harmony default export */ var components_PoweredBy = (Object(translatable["a" /* default */])({
   searchBy: 'Search by'
 })(PoweredBy_PoweredBy));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/PoweredBy.js
 
 
 
@@ -12468,10 +12468,10 @@ PoweredBy_PoweredBy.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_PoweredBy = (Object(connectPoweredBy["a" /* default */])(components_PoweredBy));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RangeInput.js
 var RangeInput_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function RangeInput_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12648,7 +12648,7 @@ RangeInput_RawRangeInput.defaultProps = {
   submit: 'ok',
   separator: 'to'
 })(RangeInput_RawRangeInput));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeInput.js
 
 
 
@@ -12700,7 +12700,7 @@ var RangeInput_RangeInputWidget = function RangeInputWidget(props) {
 };
 
 /* harmony default export */ var widgets_RangeInput = (Object(connectRange["a" /* default */])(RangeInput_RangeInputWidget));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RangeSlider.js
 
 
 /**
@@ -12802,11 +12802,11 @@ const ConnectedRange = connectRange(Range);
     )
   );
 });
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/fill.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/fill.js
 var fill = __webpack_require__(528);
 var fill_default = /*#__PURE__*/__webpack_require__.n(fill);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RatingMenu.js
 
 
 
@@ -13026,7 +13026,7 @@ RatingMenu_RatingMenu.defaultProps = {
 /* harmony default export */ var components_RatingMenu = (Object(translatable["a" /* default */])({
   ratingLabel: ' & Up'
 })(RatingMenu_RatingMenu));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RatingMenu.js
 
 
 
@@ -13084,13 +13084,13 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 };
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(518);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+var RefinementList = __webpack_require__(519);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(329);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ScrollTo.js
 var ScrollTo_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function ScrollTo_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13151,7 +13151,7 @@ ScrollTo_ScrollTo.propTypes = {
 
 
 /* harmony default export */ var components_ScrollTo = (ScrollTo_ScrollTo);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ScrollTo.js
 
 
 
@@ -13181,13 +13181,13 @@ ScrollTo_ScrollTo.propTypes = {
  * );
  */
 /* harmony default export */ var widgets_ScrollTo = (Object(connectScrollTo["a" /* default */])(components_ScrollTo));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSearchBox.js
 var connectSearchBox = __webpack_require__(330);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
 var SearchBox = __webpack_require__(150);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SearchBox.js
 
 
 
@@ -13234,13 +13234,13 @@ var SearchBox = __webpack_require__(150);
  */
 
 /* harmony default export */ var widgets_SearchBox = (Object(connectSearchBox["a" /* default */])(SearchBox["a" /* default */]));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(151);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Snippet.js
 var Snippet_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -13254,7 +13254,7 @@ var Snippet_Snippet = function Snippet(props) {
 };
 
 /* harmony default export */ var components_Snippet = (Snippet_Snippet);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Snippet.js
 
 
 
@@ -13298,13 +13298,13 @@ var Snippet_Snippet = function Snippet(props) {
  */
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(517);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
+var SortBy = __webpack_require__(520);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(333);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Stats.js
 var Stats_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function Stats_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13371,7 +13371,7 @@ Stats_Stats.defaultProps = {
     return n.toLocaleString() + ' results found in ' + ms.toLocaleString() + 'ms';
   }
 })(Stats_Stats));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Stats.js
 
 
 
@@ -13399,10 +13399,10 @@ Stats_Stats.defaultProps = {
  */
 
 /* harmony default export */ var widgets_Stats = (Object(connectStats["a" /* default */])(components_Stats));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectToggleRefinement.js
 var connectToggleRefinement = __webpack_require__(334);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ToggleRefinement.js
 
 
 
@@ -13452,7 +13452,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
 };
 
 /* harmony default export */ var components_ToggleRefinement = (ToggleRefinement_ToggleRefinement);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ToggleRefinement.js
 
 
 
@@ -13495,7 +13495,7 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
  */
 
 /* harmony default export */ var widgets_ToggleRefinement = (Object(connectToggleRefinement["a" /* default */])(components_ToggleRefinement));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/index.js
 /* concated harmony reexport createConnector */__webpack_require__.d(__webpack_exports__, "createConnector", function() { return es["createConnector"]; });
 /* concated harmony reexport HIGHLIGHT_TAGS */__webpack_require__.d(__webpack_exports__, "HIGHLIGHT_TAGS", function() { return es["HIGHLIGHT_TAGS"]; });
 /* concated harmony reexport translatable */__webpack_require__.d(__webpack_exports__, "translatable", function() { return es["translatable"]; });
@@ -13618,20 +13618,20 @@ ToggleRefinement_ToggleRefinement.defaultProps = {
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectHighlight.js
 var connectHighlight = __webpack_require__(319);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlighter.js
 var Highlighter = __webpack_require__(151);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Highlight.js
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -13645,7 +13645,7 @@ var Highlight_Highlight = function Highlight(props) {
 };
 
 /* harmony default export */ var components_Highlight = (Highlight_Highlight);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js
 
 
 
@@ -16376,7 +16376,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(4);
+var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -21391,7 +21391,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(4);
+var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -22873,7 +22873,7 @@ module.exports = hoistNonReactStatics;
 
 
 if (true) {
-  var moment = __webpack_require__(3);
+  var moment = __webpack_require__(4);
 }
 
 moment.fn.isHoliday = function () {
@@ -34154,7 +34154,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34230,7 +34230,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34368,7 +34368,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34430,7 +34430,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34492,7 +34492,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34617,7 +34617,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34679,7 +34679,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34786,7 +34786,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34848,7 +34848,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -34956,7 +34956,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35091,7 +35091,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35184,7 +35184,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35245,7 +35245,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35367,7 +35367,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35489,7 +35489,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35600,7 +35600,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35754,7 +35754,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -35845,7 +35845,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36027,7 +36027,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36093,7 +36093,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36176,7 +36176,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36239,7 +36239,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36318,7 +36318,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36397,7 +36397,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36476,7 +36476,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36578,7 +36578,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36681,7 +36681,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36751,7 +36751,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36817,7 +36817,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36887,7 +36887,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -36957,7 +36957,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37022,7 +37022,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37092,7 +37092,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37166,7 +37166,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37261,7 +37261,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37356,7 +37356,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37442,7 +37442,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37525,7 +37525,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37594,7 +37594,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37703,7 +37703,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37815,7 +37815,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37878,7 +37878,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -37964,7 +37964,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38041,7 +38041,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38122,7 +38122,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38200,7 +38200,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38279,7 +38279,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38359,7 +38359,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38485,7 +38485,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38612,7 +38612,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38712,7 +38712,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38839,7 +38839,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -38996,7 +38996,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39109,7 +39109,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39207,7 +39207,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39292,7 +39292,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39427,7 +39427,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39499,7 +39499,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39594,7 +39594,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39679,7 +39679,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39771,7 +39771,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39861,7 +39861,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -39974,7 +39974,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40103,7 +40103,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40187,7 +40187,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40309,7 +40309,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40399,7 +40399,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40538,7 +40538,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40611,7 +40611,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40732,7 +40732,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40832,7 +40832,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -40947,7 +40947,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41014,7 +41014,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41107,7 +41107,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41191,7 +41191,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41298,7 +41298,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41461,7 +41461,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41546,7 +41546,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41631,7 +41631,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41694,7 +41694,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41790,7 +41790,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41855,7 +41855,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -41981,7 +41981,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42071,7 +42071,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42161,7 +42161,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42224,7 +42224,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42351,7 +42351,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42480,7 +42480,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42548,7 +42548,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42612,7 +42612,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42690,7 +42690,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42875,7 +42875,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -42976,7 +42976,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43039,7 +43039,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43113,7 +43113,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43272,7 +43272,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43448,7 +43448,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43519,7 +43519,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43633,7 +43633,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43747,7 +43747,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43838,7 +43838,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43910,7 +43910,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -43972,7 +43972,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44104,7 +44104,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44196,7 +44196,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44266,7 +44266,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44385,7 +44385,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44455,7 +44455,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44520,7 +44520,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44644,7 +44644,7 @@ module.exports = exports["default"];
 
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44742,7 +44742,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44836,7 +44836,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44897,7 +44897,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -44958,7 +44958,7 @@ module.exports = exports["default"];
 //! moment.js language configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45080,7 +45080,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45234,7 +45234,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45335,7 +45335,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45396,7 +45396,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45457,7 +45457,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45539,7 +45539,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45610,7 +45610,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45673,7 +45673,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45786,7 +45786,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -45892,7 +45892,7 @@ module.exports = exports["default"];
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(3)) :
+    true ? factory(__webpack_require__(4)) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -46001,30 +46001,30 @@ module.exports = exports["default"];
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/find.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/find.js
 var find = __webpack_require__(25);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/isEmpty.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(34);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/omit.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/omit.js
 var omit = __webpack_require__(18);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/algoliasearch-helper/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/algoliasearch-helper/index.js
 var algoliasearch_helper = __webpack_require__(109);
 var algoliasearch_helper_default = /*#__PURE__*/__webpack_require__.n(algoliasearch_helper);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/utils.js
 var utils = __webpack_require__(35);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createWidgetsManager.js
 
 
 function createWidgetsManager(onWidgetsUpdate) {
@@ -46061,7 +46061,7 @@ function createWidgetsManager(onWidgetsUpdate) {
     }
   };
 }
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createStore.js
 function createStore(initialState) {
   var state = initialState;
   var listeners = [];
@@ -46086,10 +46086,10 @@ function createStore(initialState) {
     }
   };
 }
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/highlight.js
 var highlight = __webpack_require__(41);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearchManager.js
 
 
 
@@ -46401,7 +46401,7 @@ function createInstantSearchManager(_ref) {
     skipSearch: skipSearch
   };
 }
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/InstantSearch.js
 var InstantSearch_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46635,10 +46635,10 @@ InstantSearch_InstantSearch.childContextTypes = {
 };
 
 /* harmony default export */ var components_InstantSearch = (InstantSearch_InstantSearch);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/version.js
 var version = __webpack_require__(108);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createInstantSearch; });
 var createInstantSearch_createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -46767,28 +46767,198 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
-var connectSortBy = __webpack_require__(331);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(317);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(14);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/classnames/index.js
+var classnames = __webpack_require__(11);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(215);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(9);
+
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
+
+var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
+  var items = _ref.items,
+      canRefine = _ref.canRefine,
+      refine = _ref.refine,
+      translate = _ref.translate,
+      className = _ref.className;
+  return external_react_default.a.createElement(
+    'div',
+    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
+    external_react_default.a.createElement(
+      'ul',
+      { className: cx('list', !canRefine && 'list--noRefinement') },
+      items.map(function (item) {
+        return external_react_default.a.createElement(
+          'li',
+          { key: item.label, className: cx('item') },
+          external_react_default.a.createElement(
+            'span',
+            { className: cx('label') },
+            item.label
+          ),
+          item.items ? item.items.map(function (nest) {
+            return external_react_default.a.createElement(
+              'span',
+              { key: nest.label, className: cx('category') },
+              external_react_default.a.createElement(
+                'span',
+                { className: cx('categoryLabel') },
+                nest.label
+              ),
+              external_react_default.a.createElement(
+                'button',
+                {
+                  className: cx('delete'),
+                  onClick: function onClick() {
+                    return refine(nest.value);
+                  }
+                },
+                translate('clearFilter', nest)
+              )
+            );
+          }) : external_react_default.a.createElement(
+            'span',
+            { className: cx('category') },
+            external_react_default.a.createElement(
+              'button',
+              {
+                className: cx('delete'),
+                onClick: function onClick() {
+                  return refine(item.value);
+                }
+              },
+              translate('clearFilter', item)
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
+  label: prop_types_default.a.string.isRequired,
+  value: prop_types_default.a.func.isRequired,
+  items: function items() {
+    return itemPropTypes.apply(undefined, arguments);
+  }
+}));
+
+CurrentRefinements_CurrentRefinements.propTypes = {
+  items: itemPropTypes.isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+};
+
+CurrentRefinements_CurrentRefinements.defaultProps = {
+  className: ''
+};
+
+/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
+  clearFilter: '✕'
+})(CurrentRefinements_CurrentRefinements));
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
+
+
+
+
+
+/**
+ * The CurrentRefinements widget displays the list of currently applied filters.
+ *
+ * It allows the user to selectively remove them.
+ * @name CurrentRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @themeKey ais-CurrentRefinements - the root div of the widget
+ * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
+ * @themeKey ais-CurrentRefinements-list - the list of all refined items
+ * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
+ * @themeKey ais-CurrentRefinements-item - the refined list item
+ * @themeKey ais-CurrentRefinements-button - the button of each refined list item
+ * @themeKey ais-CurrentRefinements-label - the refined list label
+ * @themeKey ais-CurrentRefinements-category - the category of each item
+ * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
+ * @themeKey ais-CurrentRefinements-delete - the delete button of each label
+ * @translationKey clearFilter - the remove filter button label
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <CurrentRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Colors']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_CurrentRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
+
+/***/ }),
+/* 518 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
-var Select = __webpack_require__(152);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46802,78 +46972,112 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+var cx = Object(utils["b" /* createClassNames */])('Panel');
 
-var cx = Object(utils["b" /* createClassNames */])('SortBy');
+var Panel_Panel = function (_Component) {
+  _inherits(Panel, _Component);
 
-var SortBy_SortBy = function (_Component) {
-  _inherits(SortBy, _Component);
+  function Panel() {
+    var _ref;
 
-  function SortBy() {
-    _classCallCheck(this, SortBy);
+    var _temp, _this, _ret;
 
-    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
+    _classCallCheck(this, Panel);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      canRefine: true
+    }, _this.setCanRefine = function (nextCanRefine) {
+      _this.setState({ canRefine: nextCanRefine });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(SortBy, [{
+  _createClass(Panel, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        setCanRefine: this.setCanRefine
+      };
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          items = _props.items,
-          currentRefinement = _props.currentRefinement,
-          refine = _props.refine,
-          className = _props.className;
+          children = _props.children,
+          className = _props.className,
+          header = _props.header,
+          footer = _props.footer;
+      var canRefine = this.state.canRefine;
 
 
       return external_react_default.a.createElement(
         'div',
-        { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(Select["a" /* default */], {
-          cx: cx,
-          items: items,
-          selectedItem: currentRefinement,
-          onSelect: refine
-        })
+        {
+          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
+        },
+        header && external_react_default.a.createElement(
+          'div',
+          { className: cx('header') },
+          header
+        ),
+        external_react_default.a.createElement(
+          'div',
+          { className: cx('body') },
+          children
+        ),
+        footer && external_react_default.a.createElement(
+          'div',
+          { className: cx('footer') },
+          footer
+        )
       );
     }
   }]);
 
-  return SortBy;
+  return Panel;
 }(external_react_["Component"]);
 
-SortBy_SortBy.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
-    label: prop_types_default.a.string,
-    value: prop_types_default.a.string.isRequired
-  })).isRequired,
-  currentRefinement: prop_types_default.a.string.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
+Panel_Panel.propTypes = {
+  children: prop_types_default.a.node.isRequired,
+  className: prop_types_default.a.string,
+  header: prop_types_default.a.node,
+  footer: prop_types_default.a.node
 };
-SortBy_SortBy.defaultProps = {
-  className: ''
+Panel_Panel.childContextTypes = {
+  setCanRefine: prop_types_default.a.func.isRequired
+};
+Panel_Panel.defaultProps = {
+  className: '',
+  header: null,
+  footer: null
 };
 
 
-/* harmony default export */ var components_SortBy = (SortBy_SortBy);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
-
+/* harmony default export */ var components_Panel = (Panel_Panel);
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
 
 
 /**
- * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
- * @name SortBy
- * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
- * the Algolia website.
+ * The Panel widget wraps other widgets in a consistent panel design.
+ * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
+ * E.g. when a RefinementList becomes empty because of the current search results.
+ *
+ * @name Panel
  * @kind widget
- * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
- * @propType {string} defaultRefinement - The default selected index.
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-SortBy - the root div of the widget
- * @themeKey ais-SortBy-select - the select
- * @themeKey ais-SortBy-option - the select option
+ * @propType {string} [className] - Adds a className on the root element.
+ * @propType {node} [header] - Adds a header to the widget.
+ * @propType {node} [footer] - Adds a footer to the widget.
+ * @themeKey ais-Panel - the root div of the Panel
+ * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
+ * @themeKey ais-Panel-header - the header of the Panel (optional)
+ * @themeKey ais-Panel-body - the body of the Panel
+ * @themeKey ais-Panel-footer - the footer of the Panel (optional)
  * @example
  * import React from 'react';
- * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
+ * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
  *
  * const App = () => (
  *   <InstantSearch
@@ -46881,22 +47085,17 @@ SortBy_SortBy.defaultProps = {
  *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
  *     indexName="instant_search"
  *   >
- *     <SortBy
- *       defaultRefinement="instant_search"
- *       items={[
- *         { value: 'instant_search', label: 'Featured' },
- *         { value: 'instant_search_price_asc', label: 'Price asc.' },
- *         { value: 'instant_search_price_desc', label: 'Price desc.' },
- *       ]}
- *     />
+ *     <Panel header="Categories">
+ *       <RefinementList attribute="categories" />
+ *     </Panel>
  *   </InstantSearch>
  * );
  */
 
-/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
+/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
 
 /***/ }),
-/* 518 */
+/* 519 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46905,33 +47104,33 @@ SortBy_SortBy.defaultProps = {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRefinementList.js
 var connectRefinementList = __webpack_require__(328);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
 var PanelCallbackHandler = __webpack_require__(14);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash/pick.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash/pick.js
 var pick = __webpack_require__(76);
 var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(215);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Highlight.js + 1 modules
 var Highlight = __webpack_require__(75);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/List.js
 var List = __webpack_require__(42);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/RefinementList.js
 
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -47053,7 +47252,7 @@ RefinementList_RefinementList.defaultProps = {
   submitTitle: 'Submit your search query.',
   placeholder: 'Search here…'
 })(RefinementList_RefinementList));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js
 
 
 
@@ -47117,36 +47316,33 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 /* harmony default export */ var widgets_RefinementList = __webpack_exports__["a"] = (Object(connectRefinementList["a" /* default */])(RefinementList_RefinementListWidget));
 
 /***/ }),
-/* 519 */
+/* 520 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectSortBy.js
+var connectSortBy = __webpack_require__(331);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(317);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(14);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(215);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Select.js
+var Select = __webpack_require__(152);
+
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/SortBy.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47161,84 +47357,77 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
+var cx = Object(utils["b" /* createClassNames */])('SortBy');
 
-var ClearRefinements_ClearRefinements = function (_Component) {
-  _inherits(ClearRefinements, _Component);
+var SortBy_SortBy = function (_Component) {
+  _inherits(SortBy, _Component);
 
-  function ClearRefinements() {
-    _classCallCheck(this, ClearRefinements);
+  function SortBy() {
+    _classCallCheck(this, SortBy);
 
-    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
   }
 
-  _createClass(ClearRefinements, [{
+  _createClass(SortBy, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
           items = _props.items,
-          canRefine = _props.canRefine,
+          currentRefinement = _props.currentRefinement,
           refine = _props.refine,
-          translate = _props.translate,
           className = _props.className;
 
 
       return external_react_default.a.createElement(
         'div',
         { className: classnames_default()(cx(''), className) },
-        external_react_default.a.createElement(
-          'button',
-          {
-            className: cx('button', !canRefine && 'button--disabled'),
-            onClick: function onClick() {
-              return refine(items);
-            },
-            disabled: !canRefine
-          },
-          translate('reset')
-        )
+        external_react_default.a.createElement(Select["a" /* default */], {
+          cx: cx,
+          items: items,
+          selectedItem: currentRefinement,
+          onSelect: refine
+        })
       );
     }
   }]);
 
-  return ClearRefinements;
+  return SortBy;
 }(external_react_["Component"]);
 
-ClearRefinements_ClearRefinements.propTypes = {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
+SortBy_SortBy.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+    label: prop_types_default.a.string,
+    value: prop_types_default.a.string.isRequired
+  })).isRequired,
+  currentRefinement: prop_types_default.a.string.isRequired,
   refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
   className: prop_types_default.a.string
 };
-ClearRefinements_ClearRefinements.defaultProps = {
+SortBy_SortBy.defaultProps = {
   className: ''
 };
 
 
-/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
-  reset: 'Clear all filters'
-})(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
-
-
+/* harmony default export */ var components_SortBy = (SortBy_SortBy);
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js
 
 
 
 /**
- * The ClearRefinements widget displays a button that lets the user clean every refinement applied
- * to the search.
- * @name ClearRefinements
+ * The SortBy component displays a list of indexes allowing a user to change the hits are sorting.
+ * @name SortBy
+ * @requirements Algolia handles sorting by creating replica indices. [Read more about sorting](https://www.algolia.com/doc/guides/relevance/sorting/) on
+ * the Algolia website.
  * @kind widget
+ * @propType {{value: string, label: string}[]} items - The list of indexes to search in.
+ * @propType {string} defaultRefinement - The default selected index.
  * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
- * @themeKey ais-ClearRefinements - the root div of the widget
- * @themeKey ais-ClearRefinements-button - the clickable button
- * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
- * @translationKey reset - the clear all button value
+ * @themeKey ais-SortBy - the root div of the widget
+ * @themeKey ais-SortBy-select - the select
+ * @themeKey ais-SortBy-option - the select option
  * @example
  * import React from 'react';
- * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
+ * import { InstantSearch, SortBy } from 'react-instantsearch-dom';
  *
  * const App = () => (
  *   <InstantSearch
@@ -47246,200 +47435,19 @@ ClearRefinements_ClearRefinements.defaultProps = {
  *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
  *     indexName="instant_search"
  *   >
- *     <ClearRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Apple']}
+ *     <SortBy
+ *       defaultRefinement="instant_search"
+ *       items={[
+ *         { value: 'instant_search', label: 'Featured' },
+ *         { value: 'instant_search_price_asc', label: 'Price asc.' },
+ *         { value: 'instant_search_price_desc', label: 'Price desc.' },
+ *       ]}
  *     />
  *   </InstantSearch>
  * );
  */
 
-var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_ClearRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
-
-/***/ }),
-/* 520 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(317);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(14);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
-var classnames = __webpack_require__(11);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(215);
-
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(9);
-
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/CurrentRefinements.js
-
-
-
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('CurrentRefinements');
-
-var CurrentRefinements_CurrentRefinements = function CurrentRefinements(_ref) {
-  var items = _ref.items,
-      canRefine = _ref.canRefine,
-      refine = _ref.refine,
-      translate = _ref.translate,
-      className = _ref.className;
-  return external_react_default.a.createElement(
-    'div',
-    { className: classnames_default()(cx('', !canRefine && '-noRefinement'), className) },
-    external_react_default.a.createElement(
-      'ul',
-      { className: cx('list', !canRefine && 'list--noRefinement') },
-      items.map(function (item) {
-        return external_react_default.a.createElement(
-          'li',
-          { key: item.label, className: cx('item') },
-          external_react_default.a.createElement(
-            'span',
-            { className: cx('label') },
-            item.label
-          ),
-          item.items ? item.items.map(function (nest) {
-            return external_react_default.a.createElement(
-              'span',
-              { key: nest.label, className: cx('category') },
-              external_react_default.a.createElement(
-                'span',
-                { className: cx('categoryLabel') },
-                nest.label
-              ),
-              external_react_default.a.createElement(
-                'button',
-                {
-                  className: cx('delete'),
-                  onClick: function onClick() {
-                    return refine(nest.value);
-                  }
-                },
-                translate('clearFilter', nest)
-              )
-            );
-          }) : external_react_default.a.createElement(
-            'span',
-            { className: cx('category') },
-            external_react_default.a.createElement(
-              'button',
-              {
-                className: cx('delete'),
-                onClick: function onClick() {
-                  return refine(item.value);
-                }
-              },
-              translate('clearFilter', item)
-            )
-          )
-        );
-      })
-    )
-  );
-};
-
-var itemPropTypes = prop_types_default.a.arrayOf(prop_types_default.a.shape({
-  label: prop_types_default.a.string.isRequired,
-  value: prop_types_default.a.func.isRequired,
-  items: function items() {
-    return itemPropTypes.apply(undefined, arguments);
-  }
-}));
-
-CurrentRefinements_CurrentRefinements.propTypes = {
-  items: itemPropTypes.isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-};
-
-CurrentRefinements_CurrentRefinements.defaultProps = {
-  className: ''
-};
-
-/* harmony default export */ var components_CurrentRefinements = (Object(translatable["a" /* default */])({
-  clearFilter: '✕'
-})(CurrentRefinements_CurrentRefinements));
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js
-
-
-
-
-
-/**
- * The CurrentRefinements widget displays the list of currently applied filters.
- *
- * It allows the user to selectively remove them.
- * @name CurrentRefinements
- * @kind widget
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @themeKey ais-CurrentRefinements - the root div of the widget
- * @themeKey ais-CurrentRefinements--noRefinement - the root div of the widget when there is no refinement
- * @themeKey ais-CurrentRefinements-list - the list of all refined items
- * @themeKey ais-CurrentRefinements-list--noRefinement - the list of all refined items when there is no refinement
- * @themeKey ais-CurrentRefinements-item - the refined list item
- * @themeKey ais-CurrentRefinements-button - the button of each refined list item
- * @themeKey ais-CurrentRefinements-label - the refined list label
- * @themeKey ais-CurrentRefinements-category - the category of each item
- * @themeKey ais-CurrentRefinements-categoryLabel - the label of each catgory
- * @themeKey ais-CurrentRefinements-delete - the delete button of each label
- * @translationKey clearFilter - the remove filter button label
- * @example
- * import React from 'react';
- * import { InstantSearch, CurrentRefinements, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <CurrentRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Colors']}
- *     />
- *   </InstantSearch>
- * );
- */
-
-var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWidget(props) {
-  return external_react_default.a.createElement(
-    PanelCallbackHandler["a" /* default */],
-    props,
-    external_react_default.a.createElement(components_CurrentRefinements, props)
-  );
-};
-
-/* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
+/* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
 
 /***/ }),
 /* 521 */
@@ -47451,11 +47459,11 @@ var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWid
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(2);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/components/Index.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47588,7 +47596,7 @@ Index_Index.contextTypes = {
 };
 
 /* harmony default export */ var components_Index = (Index_Index);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/createIndex.js
 
 
 
@@ -47639,18 +47647,27 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(317);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(14);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/classnames/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/classnames/index.js
 var classnames = __webpack_require__(11);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(215);
+
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/core/utils.js
 var utils = __webpack_require__(9);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/Panel.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47664,112 +47681,85 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var cx = Object(utils["b" /* createClassNames */])('Panel');
 
-var Panel_Panel = function (_Component) {
-  _inherits(Panel, _Component);
+var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
 
-  function Panel() {
-    var _ref;
+var ClearRefinements_ClearRefinements = function (_Component) {
+  _inherits(ClearRefinements, _Component);
 
-    var _temp, _this, _ret;
+  function ClearRefinements() {
+    _classCallCheck(this, ClearRefinements);
 
-    _classCallCheck(this, Panel);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      canRefine: true
-    }, _this.setCanRefine = function (nextCanRefine) {
-      _this.setState({ canRefine: nextCanRefine });
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, (ClearRefinements.__proto__ || Object.getPrototypeOf(ClearRefinements)).apply(this, arguments));
   }
 
-  _createClass(Panel, [{
-    key: 'getChildContext',
-    value: function getChildContext() {
-      return {
-        setCanRefine: this.setCanRefine
-      };
-    }
-  }, {
+  _createClass(ClearRefinements, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
-          children = _props.children,
-          className = _props.className,
-          header = _props.header,
-          footer = _props.footer;
-      var canRefine = this.state.canRefine;
+          items = _props.items,
+          canRefine = _props.canRefine,
+          refine = _props.refine,
+          translate = _props.translate,
+          className = _props.className;
 
 
       return external_react_default.a.createElement(
         'div',
-        {
-          className: classnames_default()(cx('', !canRefine && '-noRefinement'), className)
-        },
-        header && external_react_default.a.createElement(
-          'div',
-          { className: cx('header') },
-          header
-        ),
+        { className: classnames_default()(cx(''), className) },
         external_react_default.a.createElement(
-          'div',
-          { className: cx('body') },
-          children
-        ),
-        footer && external_react_default.a.createElement(
-          'div',
-          { className: cx('footer') },
-          footer
+          'button',
+          {
+            className: cx('button', !canRefine && 'button--disabled'),
+            onClick: function onClick() {
+              return refine(items);
+            },
+            disabled: !canRefine
+          },
+          translate('reset')
         )
       );
     }
   }]);
 
-  return Panel;
+  return ClearRefinements;
 }(external_react_["Component"]);
 
-Panel_Panel.propTypes = {
-  children: prop_types_default.a.node.isRequired,
-  className: prop_types_default.a.string,
-  header: prop_types_default.a.node,
-  footer: prop_types_default.a.node
+ClearRefinements_ClearRefinements.propTypes = {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
 };
-Panel_Panel.childContextTypes = {
-  setCanRefine: prop_types_default.a.func.isRequired
-};
-Panel_Panel.defaultProps = {
-  className: '',
-  header: null,
-  footer: null
+ClearRefinements_ClearRefinements.defaultProps = {
+  className: ''
 };
 
 
-/* harmony default export */ var components_Panel = (Panel_Panel);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js
+/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
+  reset: 'Clear all filters'
+})(ClearRefinements_ClearRefinements));
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+
+
+
 
 
 /**
- * The Panel widget wraps other widgets in a consistent panel design.
- * It also reacts, indicates and set CSS classes when widgets are no more relevant for refining.
- * E.g. when a RefinementList becomes empty because of the current search results.
- *
- * @name Panel
+ * The ClearRefinements widget displays a button that lets the user clean every refinement applied
+ * to the search.
+ * @name ClearRefinements
  * @kind widget
- * @propType {string} [className] - Adds a className on the root element.
- * @propType {node} [header] - Adds a header to the widget.
- * @propType {node} [footer] - Adds a footer to the widget.
- * @themeKey ais-Panel - the root div of the Panel
- * @themeKey ais-Panel--noRefinement - the root div of the Panel without refinement
- * @themeKey ais-Panel-header - the header of the Panel (optional)
- * @themeKey ais-Panel-body - the body of the Panel
- * @themeKey ais-Panel-footer - the footer of the Panel (optional)
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
+ * @themeKey ais-ClearRefinements - the root div of the widget
+ * @themeKey ais-ClearRefinements-button - the clickable button
+ * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
+ * @translationKey reset - the clear all button value
  * @example
  * import React from 'react';
- * import { InstantSearch, Panel, RefinementList } from 'react-instantsearch-dom';
+ * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
  *
  * const App = () => (
  *   <InstantSearch
@@ -47777,14 +47767,24 @@ Panel_Panel.defaultProps = {
  *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
  *     indexName="instant_search"
  *   >
- *     <Panel header="Categories">
- *       <RefinementList attribute="categories" />
- *     </Panel>
+ *     <ClearRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Apple']}
+ *     />
  *   </InstantSearch>
  * );
  */
 
-/* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
+var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
+  return external_react_default.a.createElement(
+    PanelCallbackHandler["a" /* default */],
+    props,
+    external_react_default.a.createElement(components_ClearRefinements, props)
+  );
+};
+
+/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
 
 /***/ }),
 /* 523 */
@@ -68028,7 +68028,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(4);
+var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -68257,7 +68257,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(4);
+var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -78260,11 +78260,11 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var form_errors = (form_errors_FormErrors);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/typy/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/typy/lib/index.js
 var lib = __webpack_require__(13);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch/dom.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch/dom.js
 var dom = __webpack_require__(523);
 
 // CONCATENATED MODULE: ./src/components/search/search-bar.js
@@ -78528,7 +78528,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var objects_image = (image_Image);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-loading/dist/react-loading.js
 var react_loading = __webpack_require__(530);
 var react_loading_default = /*#__PURE__*/__webpack_require__.n(react_loading);
 
@@ -79483,17 +79483,17 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var input = (withValidationMessage(input_Input));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-lazyload/lib/index.js
 var react_lazyload_lib = __webpack_require__(216);
 var react_lazyload_lib_default = /*#__PURE__*/__webpack_require__.n(react_lazyload_lib);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/prop-types/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/prop-types/index.js
 var prop_types = __webpack_require__(19);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-transition-group/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-transition-group/index.js
 var react_transition_group = __webpack_require__(531);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-lazyload-fadein/es/FadeIn.js
 var FadeIn_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function FadeIn_objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -79588,7 +79588,7 @@ FadeIn_FadeIn.propTypes =  false ? undefined : {};
 
 
 /* harmony default export */ var es_FadeIn = (FadeIn_FadeIn);
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-lazyload-fadein/es/index.js
 
 
 /* harmony default export */ var es = (es_FadeIn);
@@ -79871,7 +79871,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var variant_selector = (variant_selector_VariantSelector);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-responsive-carousel/lib/index.js
 var react_responsive_carousel_lib = __webpack_require__(532);
 
 // CONCATENATED MODULE: ./src/components/products/display/product-carousel.js
@@ -80076,7 +80076,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var product_price = (product_price_ProductPrice);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectStateResults.js
 var connectStateResults = __webpack_require__(332);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu.js
@@ -80134,8 +80134,8 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(517);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
+var SortBy = __webpack_require__(520);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
 function product_menu_options_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_menu_options_typeof = function _typeof(obj) { return typeof obj; }; } else { product_menu_options_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_menu_options_typeof(obj); }
@@ -80222,7 +80222,7 @@ function (_PureComponent) {
 
 /* harmony default export */ var product_menu_options = (product_menu_options_ProductMenuOptions);
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var node_modules_prop_types = __webpack_require__(4);
+var node_modules_prop_types = __webpack_require__(3);
 var node_modules_prop_types_default = /*#__PURE__*/__webpack_require__.n(node_modules_prop_types);
 
 // CONCATENATED MODULE: ./src/components/checkout/address-book.js
@@ -80931,6 +80931,140 @@ line_items_LineItems.propTypes = {
   updateQuantity: node_modules_prop_types_default.a.func
 };
 /* harmony default export */ var line_items = (line_items_LineItems);
+// CONCATENATED MODULE: ./src/components/checkout/payment-method.js
+function payment_method_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_method_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_method_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_method_typeof(obj); }
+
+function payment_method_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_method_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_method_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_method_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_method_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_method_possibleConstructorReturn(self, call) { if (call && (payment_method_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_method_assertThisInitialized(self); }
+
+function payment_method_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_method_getPrototypeOf(o) { payment_method_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_method_getPrototypeOf(o); }
+
+function payment_method_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_method_setPrototypeOf(subClass, superClass); }
+
+function payment_method_setPrototypeOf(o, p) { payment_method_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_method_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+ // Lib
+
+
+
+var payment_method_PaymentMethod =
+/*#__PURE__*/
+function (_Component) {
+  payment_method_inherits(PaymentMethod, _Component);
+
+  function PaymentMethod(props) {
+    var _this;
+
+    payment_method_classCallCheck(this, PaymentMethod);
+
+    _this = payment_method_possibleConstructorReturn(this, payment_method_getPrototypeOf(PaymentMethod).call(this, props));
+    _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
+    _this.StripePayment = component_mapping('StripePayment');
+    return _this;
+  }
+
+  payment_method_createClass(PaymentMethod, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          addingNewAddress = _this$props.addingNewAddress,
+          addressBook = _this$props.addressBook,
+          addressFormDisplayed = _this$props.addressFormDisplayed,
+          autoFillAddress = _this$props.autoFillAddress,
+          billingAsShipping = _this$props.billingAsShipping,
+          changeBillingAsShipping = _this$props.changeBillingAsShipping,
+          cart = _this$props.cart,
+          className = _this$props.className,
+          checkout = _this$props.checkout,
+          countries = _this$props.countries,
+          currentAddress = _this$props.currentAddress,
+          loggedIn = _this$props.loggedIn,
+          nextStepAvailable = _this$props.nextStepAvailable,
+          nextSection = _this$props.nextSection,
+          onAddressDeleted = _this$props.onAddressDeleted,
+          onBookAddressSelected = _this$props.onBookAddressSelected,
+          onBlur = _this$props.onBlur,
+          onChange = _this$props.onChange,
+          onNewAddress = _this$props.onNewAddress,
+          onShowField = _this$props.onShowField,
+          onCardTokenReceived = _this$props.onCardTokenReceived,
+          setCardErrors = _this$props.setCardErrors,
+          order = _this$props.order;
+      return external_react_default.a.createElement("div", {
+        "aria-label": "Payment method",
+        className: classnames_default()(className, 'o-form c-payment-method')
+      }, external_react_default.a.createElement(this.PaymentMethodHeader, null), external_react_default.a.createElement("div", {
+        className: "c-payment-method__section",
+        style: {
+          display: 'block'
+        }
+      }, external_react_default.a.createElement(this.StripePayment, {
+        addingNewAddress: addingNewAddress,
+        addressBook: addressBook,
+        addressFormDisplayed: addressFormDisplayed,
+        autoFillAddress: autoFillAddress,
+        billingAddress: cart.billing_address,
+        billingAsShipping: billingAsShipping,
+        cardTokenRequested: order.cardTokenRequested,
+        changeBillingAsShipping: changeBillingAsShipping,
+        checkout: checkout,
+        currentAddress: currentAddress,
+        countries: countries,
+        loggedIn: loggedIn,
+        nextStepAvailable: nextStepAvailable,
+        nextSection: nextSection,
+        onAddressDeleted: onAddressDeleted,
+        onBookAddressSelected: onBookAddressSelected,
+        onBlur: onBlur,
+        onChange: onChange,
+        onNewAddress: onNewAddress,
+        onShowField: onShowField,
+        onCardTokenReceived: onCardTokenReceived,
+        setCardErrors: setCardErrors,
+        shippingAddress: cart.shipping_address
+      })));
+    }
+  }]);
+
+  return PaymentMethod;
+}(external_react_["Component"]);
+
+payment_method_PaymentMethod.propTypes = {
+  addingNewAddress: node_modules_prop_types_default.a.bool,
+  addressBook: node_modules_prop_types_default.a.object,
+  addressFormDisplayed: node_modules_prop_types_default.a.func,
+  autoFillAddress: node_modules_prop_types_default.a.func,
+  billingAsShipping: node_modules_prop_types_default.a.bool,
+  changeBillingAsShipping: node_modules_prop_types_default.a.func,
+  cart: node_modules_prop_types_default.a.object,
+  className: node_modules_prop_types_default.a.string,
+  checkout: node_modules_prop_types_default.a.object,
+  countries: node_modules_prop_types_default.a.array,
+  currentAddress: node_modules_prop_types_default.a.object,
+  loggedIn: node_modules_prop_types_default.a.bool,
+  nextStepAvailable: node_modules_prop_types_default.a.func,
+  nextSection: node_modules_prop_types_default.a.func,
+  onAddressDeleted: node_modules_prop_types_default.a.func,
+  onBookAddressSelected: node_modules_prop_types_default.a.func,
+  onBlur: node_modules_prop_types_default.a.func,
+  onChange: node_modules_prop_types_default.a.func,
+  onNewAddress: node_modules_prop_types_default.a.func,
+  onShowField: node_modules_prop_types_default.a.func,
+  onCardTokenReceived: node_modules_prop_types_default.a.func,
+  setCardErrors: node_modules_prop_types_default.a.func,
+  order: node_modules_prop_types_default.a.object
+};
+/* harmony default export */ var payment_method = (payment_method_PaymentMethod);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method-header.js
 // Objects
 
@@ -81124,6 +81258,165 @@ stripe_fields_StripeFields.propTypes = {
   stripe: node_modules_prop_types_default.a.object
 };
 /* harmony default export */ var stripe_fields = (Object(react_stripe_elements_es["injectStripe"])(stripe_fields_StripeFields));
+// CONCATENATED MODULE: ./src/components/checkout/stripe-payment.js
+function stripe_payment_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_payment_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_payment_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_payment_typeof(obj); }
+
+function stripe_payment_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function stripe_payment_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function stripe_payment_createClass(Constructor, protoProps, staticProps) { if (protoProps) stripe_payment_defineProperties(Constructor.prototype, protoProps); if (staticProps) stripe_payment_defineProperties(Constructor, staticProps); return Constructor; }
+
+function stripe_payment_possibleConstructorReturn(self, call) { if (call && (stripe_payment_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_payment_assertThisInitialized(self); }
+
+function stripe_payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function stripe_payment_getPrototypeOf(o) { stripe_payment_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_payment_getPrototypeOf(o); }
+
+function stripe_payment_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_payment_setPrototypeOf(subClass, superClass); }
+
+function stripe_payment_setPrototypeOf(o, p) { stripe_payment_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return stripe_payment_setPrototypeOf(o, p); }
+
+// Libraries
+
+ // Lib
+
+
+
+var stripe_payment_StripePayment =
+/*#__PURE__*/
+function (_Component) {
+  stripe_payment_inherits(StripePayment, _Component);
+
+  function StripePayment(props) {
+    var _this;
+
+    stripe_payment_classCallCheck(this, StripePayment);
+
+    _this = stripe_payment_possibleConstructorReturn(this, stripe_payment_getPrototypeOf(StripePayment).call(this, props));
+    _this.AddressBook = component_mapping('AddressBook');
+    _this.AddressForm = component_mapping('AddressForm');
+    _this.Button = component_mapping('Button');
+    _this.Checkbox = component_mapping('Checkbox');
+    _this.StripeWrapper = component_mapping('StripeWrapper');
+    return _this;
+  }
+
+  stripe_payment_createClass(StripePayment, [{
+    key: "renderFormSubmitButton",
+    value: function renderFormSubmitButton() {
+      var _this2 = this;
+
+      return external_react_default.a.createElement("div", {
+        className: "o-form__input-group"
+      }, external_react_default.a.createElement(this.Button, {
+        "aria-label": "Review Your Order",
+        className: "c-address-form__button o-button--sml",
+        label: "Review Your Order",
+        status: this.props.nextStepAvailable() ? 'positive' : 'disabled',
+        type: "primary",
+        disabled: !this.props.nextStepAvailable(),
+        onClick: function onClick() {
+          return _this2.props.nextSection('complete');
+        }
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          addressBook = _this$props.addressBook,
+          autoFillAddress = _this$props.autoFillAddress,
+          billingAddress = _this$props.billingAddress,
+          billingAsShipping = _this$props.billingAsShipping,
+          cardTokenRequested = _this$props.cardTokenRequested,
+          changeBillingAsShipping = _this$props.changeBillingAsShipping,
+          checkout = _this$props.checkout,
+          countries = _this$props.countries,
+          currentAddress = _this$props.currentAddress,
+          loggedIn = _this$props.loggedIn,
+          onAddressDeleted = _this$props.onAddressDeleted,
+          onBlur = _this$props.onBlur,
+          onChange = _this$props.onChange,
+          onShowField = _this$props.onShowField,
+          onCardTokenReceived = _this$props.onCardTokenReceived,
+          setCardErrors = _this$props.setCardErrors,
+          shippingAddress = _this$props.shippingAddress;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
+        className: "o-form__background"
+      }, external_react_default.a.createElement("div", {
+        className: "o-form__wrapper"
+      }, external_react_default.a.createElement(this.StripeWrapper, {
+        billingAddress: checkout.billingAddress,
+        cardTokenRequested: cardTokenRequested,
+        onCardTokenReceived: onCardTokenReceived,
+        setCardErrors: setCardErrors
+      }), external_react_default.a.createElement("div", {
+        className: "o-form__input-group"
+      }, external_react_default.a.createElement("label", null, "Billing address *")), external_react_default.a.createElement(this.Checkbox, {
+        type: "checkbox",
+        label: "Same as shipping address",
+        name: "shippingAddressAsBillingAddress",
+        checked: billingAsShipping,
+        onChange: changeBillingAsShipping
+      }), billingAsShipping && external_react_default.a.createElement("div", {
+        "aria-label": "Shipping address to be used for billing",
+        className: "o-payment-method__address-summary  c-payment-method__address-summary"
+      }, external_react_default.a.createElement("p", {
+        className: "u-bold"
+      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length && external_react_default.a.createElement(this.AddressBook, {
+        addressBook: addressBook,
+        formName: "shippingAddress",
+        currentAddressId: billingAddress.id,
+        onAddressDeleted: onAddressDeleted,
+        onNewAddress: this.props.onNewAddress,
+        onBookAddressSelected: this.props.onBookAddressSelected,
+        addressFormDisplayed: this.props.addressFormDisplayed()
+      }), this.props.addressFormDisplayed() && external_react_default.a.createElement(this.AddressForm, {
+        "aria-label": "Billing address form",
+        autoFillAddress: autoFillAddress,
+        checkout: checkout,
+        countries: countries,
+        currentAddress: currentAddress,
+        title: "Billing Address",
+        formName: "billingAddress",
+        onChange: onChange,
+        onBlur: onBlur,
+        className: "o-form__billing",
+        onShowField: onShowField,
+        loggedIn: loggedIn
+      })), this.renderFormSubmitButton());
+    }
+  }]);
+
+  return StripePayment;
+}(external_react_["Component"]);
+
+stripe_payment_StripePayment.propTypes = {
+  addressBook: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
+  addressFormDisplayed: node_modules_prop_types_default.a.func,
+  autoFillAddress: node_modules_prop_types_default.a.func,
+  billingAddress: node_modules_prop_types_default.a.object,
+  billingAsShipping: node_modules_prop_types_default.a.bool,
+  cardTokenRequested: node_modules_prop_types_default.a.bool,
+  changeBillingAsShipping: node_modules_prop_types_default.a.func,
+  checkout: node_modules_prop_types_default.a.object,
+  countries: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
+  currentAddress: node_modules_prop_types_default.a.object,
+  loggedIn: node_modules_prop_types_default.a.bool,
+  nextSection: node_modules_prop_types_default.a.func,
+  nextStepAvailable: node_modules_prop_types_default.a.func,
+  onAddressDeleted: node_modules_prop_types_default.a.func,
+  onBookAddressSelected: node_modules_prop_types_default.a.bool,
+  onBlur: node_modules_prop_types_default.a.func,
+  onChange: node_modules_prop_types_default.a.func,
+  onNewAddress: node_modules_prop_types_default.a.func,
+  onShowField: node_modules_prop_types_default.a.func,
+  onCardTokenReceived: node_modules_prop_types_default.a.func,
+  setCardErrors: node_modules_prop_types_default.a.func,
+  shippingAddress: node_modules_prop_types_default.a.object
+};
+/* harmony default export */ var stripe_payment = (stripe_payment_StripePayment);
 // CONCATENATED MODULE: ./src/components/checkout/stripe-wrapper.js
 function stripe_wrapper_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_wrapper_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_wrapper_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_wrapper_typeof(obj); }
 
@@ -81327,7 +81620,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var order_line_items = (order_line_items_OrderLineItems);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/date-fns/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/date-fns/index.js
 var date_fns = __webpack_require__(533);
 var date_fns_default = /*#__PURE__*/__webpack_require__.n(date_fns);
 
@@ -81543,17 +81836,17 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var shipping_addresses = (shipping_addresses_ShippingAddresses);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(522);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
+var Panel = __webpack_require__(518);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(518);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
+var RefinementList = __webpack_require__(519);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(519);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
+var ClearRefinements = __webpack_require__(522);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(520);
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
+var CurrentRefinements = __webpack_require__(517);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
 function search_filters_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { search_filters_typeof = function _typeof(obj) { return typeof obj; }; } else { search_filters_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return search_filters_typeof(obj); }
@@ -81703,7 +81996,7 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var search_filters = (search_filters_SearchFilters);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectInfiniteHits.js
 var connectInfiniteHits = __webpack_require__(322);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-listing-card.js
@@ -81957,7 +82250,7 @@ var groupVariants = function groupVariants(hits) {
 var SearchHits = Object(connectInfiniteHits["a" /* default */])(search_hits_SearchResults);
 
 /* harmony default export */ var search_hits = (SearchHits);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch/connectors.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch/connectors.js
 var connectors = __webpack_require__(153);
 
 // CONCATENATED MODULE: ./src/components/search/search-rating-filter.js
@@ -82057,11 +82350,11 @@ var SearchRefinements = Object(connectors["connectCurrentRefinements"])(function
   return "".concat(items.length, " of 3");
 });
 /* harmony default export */ var search_refinements = (SearchRefinements);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-input-range/lib/js/index.js
 var js = __webpack_require__(534);
 var js_default = /*#__PURE__*/__webpack_require__.n(js);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
 var connectRange = __webpack_require__(327);
 
 // CONCATENATED MODULE: ./src/components/search/search-slider.js
@@ -82629,6 +82922,8 @@ function (_PureComponent) {
 
 
 
+
+
 /**
  * Order Components
  */
@@ -82689,6 +82984,7 @@ var mapping = {
   ProductMenu: product_menu,
   ProductMenuOptions: product_menu_options,
   ProductPrice: product_price,
+  PaymentMethod: payment_method,
   PaymentMethodHeader: payment_method_header,
   Rating: objects_rating,
   SearchBar: search_bar,
@@ -82703,6 +82999,7 @@ var mapping = {
   StaticPageErrorBody: error_body,
   StaticPageErrorDetails: error_details,
   StripeFields: stripe_fields,
+  StripePayment: stripe_payment,
   StripeWrapper: stripe_wrapper,
   VariantSelector: variant_selector
 };
@@ -83452,7 +83749,7 @@ function (_PureComponent) {
   horizontal_divider: horizontal_divider,
   product_grid: product_grid
 });
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/tslib/tslib.es6.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -83640,15 +83937,15 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
 var hoist_non_react_statics_cjs = __webpack_require__(218);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/create-react-context/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/create-react-context/lib/index.js
 var create_react_context_lib = __webpack_require__(539);
 var create_react_context_lib_default = /*#__PURE__*/__webpack_require__.n(create_react_context_lib);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_listCacheClear.js
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -83663,7 +83960,7 @@ function listCacheClear() {
 
 /* harmony default export */ var _listCacheClear = (listCacheClear);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/eq.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/eq.js
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -83702,7 +83999,7 @@ function eq(value, other) {
 
 /* harmony default export */ var lodash_es_eq = (eq);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_assocIndexOf.js
 
 
 /**
@@ -83725,7 +84022,7 @@ function assocIndexOf(array, key) {
 
 /* harmony default export */ var _assocIndexOf = (assocIndexOf);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_listCacheDelete.js
 
 
 /** Used for built-in method references. */
@@ -83762,7 +84059,7 @@ function listCacheDelete(key) {
 
 /* harmony default export */ var _listCacheDelete = (listCacheDelete);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_listCacheGet.js
 
 
 /**
@@ -83783,7 +84080,7 @@ function listCacheGet(key) {
 
 /* harmony default export */ var _listCacheGet = (listCacheGet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_listCacheHas.js
 
 
 /**
@@ -83801,7 +84098,7 @@ function listCacheHas(key) {
 
 /* harmony default export */ var _listCacheHas = (listCacheHas);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_listCacheSet.js
 
 
 /**
@@ -83829,7 +84126,7 @@ function listCacheSet(key, value) {
 
 /* harmony default export */ var _listCacheSet = (listCacheSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_ListCache.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_ListCache.js
 
 
 
@@ -83863,7 +84160,7 @@ ListCache.prototype.set = _listCacheSet;
 
 /* harmony default export */ var _ListCache = (ListCache);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackClear.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stackClear.js
 
 
 /**
@@ -83880,7 +84177,7 @@ function stackClear() {
 
 /* harmony default export */ var _stackClear = (stackClear);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stackDelete.js
 /**
  * Removes `key` and its value from the stack.
  *
@@ -83900,7 +84197,7 @@ function stackDelete(key) {
 
 /* harmony default export */ var _stackDelete = (stackDelete);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackGet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stackGet.js
 /**
  * Gets the stack value for `key`.
  *
@@ -83916,7 +84213,7 @@ function stackGet(key) {
 
 /* harmony default export */ var _stackGet = (stackGet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackHas.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stackHas.js
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -83932,10 +84229,10 @@ function stackHas(key) {
 
 /* harmony default export */ var _stackHas = (stackHas);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_root.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_root.js
 var _root = __webpack_require__(15);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Symbol.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Symbol.js
 
 
 /** Built-in value references. */
@@ -83943,7 +84240,7 @@ var _Symbol_Symbol = _root["a" /* default */].Symbol;
 
 /* harmony default export */ var _Symbol = (_Symbol_Symbol);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getRawTag.js
 
 
 /** Used for built-in method references. */
@@ -83991,7 +84288,7 @@ function getRawTag(value) {
 
 /* harmony default export */ var _getRawTag = (getRawTag);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_objectToString.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_objectToString.js
 /** Used for built-in method references. */
 var _objectToString_objectProto = Object.prototype;
 
@@ -84015,7 +84312,7 @@ function objectToString(value) {
 
 /* harmony default export */ var _objectToString = (objectToString);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseGetTag.js
 
 
 
@@ -84045,7 +84342,7 @@ function baseGetTag(value) {
 
 /* harmony default export */ var _baseGetTag = (baseGetTag);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isObject.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isObject.js
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -84078,7 +84375,7 @@ function isObject(value) {
 
 /* harmony default export */ var lodash_es_isObject = (isObject);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isFunction.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isFunction.js
 
 
 
@@ -84117,7 +84414,7 @@ function isFunction(value) {
 
 /* harmony default export */ var lodash_es_isFunction = (isFunction);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_coreJsData.js
 
 
 /** Used to detect overreaching core-js shims. */
@@ -84125,7 +84422,7 @@ var coreJsData = _root["a" /* default */]['__core-js_shared__'];
 
 /* harmony default export */ var _coreJsData = (coreJsData);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isMasked.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_isMasked.js
 
 
 /** Used to detect methods masquerading as native. */
@@ -84147,7 +84444,7 @@ function isMasked(func) {
 
 /* harmony default export */ var _isMasked = (isMasked);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_toSource.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_toSource.js
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -84175,7 +84472,7 @@ function toSource(func) {
 
 /* harmony default export */ var _toSource = (toSource);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseIsNative.js
 
 
 
@@ -84224,7 +84521,7 @@ function baseIsNative(value) {
 
 /* harmony default export */ var _baseIsNative = (baseIsNative);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getValue.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getValue.js
 /**
  * Gets the value at `key` of `object`.
  *
@@ -84239,7 +84536,7 @@ function getValue(object, key) {
 
 /* harmony default export */ var _getValue = (getValue);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getNative.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getNative.js
 
 
 
@@ -84258,7 +84555,7 @@ function getNative(object, key) {
 
 /* harmony default export */ var _getNative = (getNative);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Map.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Map.js
 
 
 
@@ -84267,7 +84564,7 @@ var Map = _getNative(_root["a" /* default */], 'Map');
 
 /* harmony default export */ var _Map = (Map);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_nativeCreate.js
 
 
 /* Built-in method references that are verified to be native. */
@@ -84275,7 +84572,7 @@ var nativeCreate = _getNative(Object, 'create');
 
 /* harmony default export */ var _nativeCreate = (nativeCreate);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashClear.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_hashClear.js
 
 
 /**
@@ -84292,7 +84589,7 @@ function hashClear() {
 
 /* harmony default export */ var _hashClear = (hashClear);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_hashDelete.js
 /**
  * Removes `key` and its value from the hash.
  *
@@ -84311,7 +84608,7 @@ function hashDelete(key) {
 
 /* harmony default export */ var _hashDelete = (hashDelete);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashGet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_hashGet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -84343,7 +84640,7 @@ function hashGet(key) {
 
 /* harmony default export */ var _hashGet = (hashGet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashHas.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_hashHas.js
 
 
 /** Used for built-in method references. */
@@ -84368,7 +84665,7 @@ function hashHas(key) {
 
 /* harmony default export */ var _hashHas = (hashHas);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_hashSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_hashSet.js
 
 
 /** Used to stand-in for `undefined` hash values. */
@@ -84393,7 +84690,7 @@ function hashSet(key, value) {
 
 /* harmony default export */ var _hashSet = (hashSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Hash.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Hash.js
 
 
 
@@ -84427,7 +84724,7 @@ Hash.prototype.set = _hashSet;
 
 /* harmony default export */ var _Hash = (Hash);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_mapCacheClear.js
 
 
 
@@ -84450,7 +84747,7 @@ function mapCacheClear() {
 
 /* harmony default export */ var _mapCacheClear = (mapCacheClear);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_isKeyable.js
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -84467,7 +84764,7 @@ function isKeyable(value) {
 
 /* harmony default export */ var _isKeyable = (isKeyable);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getMapData.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getMapData.js
 
 
 /**
@@ -84487,7 +84784,7 @@ function getMapData(map, key) {
 
 /* harmony default export */ var _getMapData = (getMapData);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_mapCacheDelete.js
 
 
 /**
@@ -84507,7 +84804,7 @@ function mapCacheDelete(key) {
 
 /* harmony default export */ var _mapCacheDelete = (mapCacheDelete);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_mapCacheGet.js
 
 
 /**
@@ -84525,7 +84822,7 @@ function mapCacheGet(key) {
 
 /* harmony default export */ var _mapCacheGet = (mapCacheGet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_mapCacheHas.js
 
 
 /**
@@ -84543,7 +84840,7 @@ function mapCacheHas(key) {
 
 /* harmony default export */ var _mapCacheHas = (mapCacheHas);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_mapCacheSet.js
 
 
 /**
@@ -84567,7 +84864,7 @@ function mapCacheSet(key, value) {
 
 /* harmony default export */ var _mapCacheSet = (mapCacheSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_MapCache.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_MapCache.js
 
 
 
@@ -84601,7 +84898,7 @@ MapCache.prototype.set = _mapCacheSet;
 
 /* harmony default export */ var _MapCache = (MapCache);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stackSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stackSet.js
 
 
 
@@ -84637,7 +84934,7 @@ function stackSet(key, value) {
 
 /* harmony default export */ var _stackSet = (stackSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Stack.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Stack.js
 
 
 
@@ -84666,7 +84963,7 @@ Stack.prototype.set = _stackSet;
 
 /* harmony default export */ var _Stack = (Stack);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_arrayEach.js
 /**
  * A specialized version of `_.forEach` for arrays without support for
  * iteratee shorthands.
@@ -84690,7 +84987,7 @@ function arrayEach(array, iteratee) {
 
 /* harmony default export */ var _arrayEach = (arrayEach);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_defineProperty.js
 
 
 var defineProperty = (function() {
@@ -84703,7 +85000,7 @@ var defineProperty = (function() {
 
 /* harmony default export */ var lodash_es_defineProperty = (defineProperty);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseAssignValue.js
 
 
 /**
@@ -84730,7 +85027,7 @@ function baseAssignValue(object, key, value) {
 
 /* harmony default export */ var _baseAssignValue = (baseAssignValue);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_assignValue.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_assignValue.js
 
 
 
@@ -84760,7 +85057,7 @@ function assignValue(object, key, value) {
 
 /* harmony default export */ var _assignValue = (assignValue);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copyObject.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_copyObject.js
 
 
 
@@ -84802,7 +85099,7 @@ function copyObject(source, props, object, customizer) {
 
 /* harmony default export */ var _copyObject = (copyObject);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseTimes.js
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -84824,7 +85121,7 @@ function baseTimes(n, iteratee) {
 
 /* harmony default export */ var _baseTimes = (baseTimes);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isObjectLike.js
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -84855,7 +85152,7 @@ function isObjectLike(value) {
 
 /* harmony default export */ var lodash_es_isObjectLike = (isObjectLike);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseIsArguments.js
 
 
 
@@ -84875,7 +85172,7 @@ function baseIsArguments(value) {
 
 /* harmony default export */ var _baseIsArguments = (baseIsArguments);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArguments.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isArguments.js
 
 
 
@@ -84913,7 +85210,7 @@ var isArguments = _baseIsArguments(function() { return arguments; }()) ? _baseIs
 
 /* harmony default export */ var lodash_es_isArguments = (isArguments);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isArray.js
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -84941,10 +85238,10 @@ var isArray = Array.isArray;
 
 /* harmony default export */ var lodash_es_isArray = (isArray);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isBuffer.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isBuffer.js
 var isBuffer = __webpack_require__(155);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isIndex.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_isIndex.js
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -84971,7 +85268,7 @@ function isIndex(value, length) {
 
 /* harmony default export */ var _isIndex = (isIndex);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isLength.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isLength.js
 /** Used as references for various `Number` constants. */
 var isLength_MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -85008,7 +85305,7 @@ function isLength(value) {
 
 /* harmony default export */ var lodash_es_isLength = (isLength);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseIsTypedArray.js
 
 
 
@@ -85070,7 +85367,7 @@ function baseIsTypedArray(value) {
 
 /* harmony default export */ var _baseIsTypedArray = (baseIsTypedArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseUnary.js
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -85086,10 +85383,10 @@ function baseUnary(func) {
 
 /* harmony default export */ var _baseUnary = (baseUnary);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_nodeUtil.js
 var _nodeUtil = __webpack_require__(36);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isTypedArray.js
 
 
 
@@ -85118,7 +85415,7 @@ var isTypedArray = nodeIsTypedArray ? _baseUnary(nodeIsTypedArray) : _baseIsType
 
 /* harmony default export */ var lodash_es_isTypedArray = (isTypedArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_arrayLikeKeys.js
 
 
 
@@ -85169,7 +85466,7 @@ function arrayLikeKeys(value, inherited) {
 
 /* harmony default export */ var _arrayLikeKeys = (arrayLikeKeys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_isPrototype.js
 /** Used for built-in method references. */
 var _isPrototype_objectProto = Object.prototype;
 
@@ -85189,7 +85486,7 @@ function isPrototype(value) {
 
 /* harmony default export */ var _isPrototype = (isPrototype);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_overArg.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_overArg.js
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -85206,7 +85503,7 @@ function overArg(func, transform) {
 
 /* harmony default export */ var _overArg = (overArg);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_nativeKeys.js
 
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -85214,7 +85511,7 @@ var nativeKeys = _overArg(Object.keys, Object);
 
 /* harmony default export */ var _nativeKeys = (nativeKeys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseKeys.js
 
 
 
@@ -85246,7 +85543,7 @@ function baseKeys(object) {
 
 /* harmony default export */ var _baseKeys = (baseKeys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isArrayLike.js
 
 
 
@@ -85281,7 +85578,7 @@ function isArrayLike(value) {
 
 /* harmony default export */ var lodash_es_isArrayLike = (isArrayLike);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/keys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/keys.js
 
 
 
@@ -85320,7 +85617,7 @@ function keys(object) {
 
 /* harmony default export */ var lodash_es_keys = (keys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseAssign.js
 
 
 
@@ -85339,7 +85636,7 @@ function baseAssign(object, source) {
 
 /* harmony default export */ var _baseAssign = (baseAssign);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_nativeKeysIn.js
 /**
  * This function is like
  * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
@@ -85361,7 +85658,7 @@ function nativeKeysIn(object) {
 
 /* harmony default export */ var _nativeKeysIn = (nativeKeysIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseKeysIn.js
 
 
 
@@ -85396,7 +85693,7 @@ function baseKeysIn(object) {
 
 /* harmony default export */ var _baseKeysIn = (baseKeysIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/keysIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/keysIn.js
 
 
 
@@ -85430,7 +85727,7 @@ function keysIn_keysIn(object) {
 
 /* harmony default export */ var lodash_es_keysIn = (keysIn_keysIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseAssignIn.js
 
 
 
@@ -85449,10 +85746,10 @@ function baseAssignIn(object, source) {
 
 /* harmony default export */ var _baseAssignIn = (baseAssignIn);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneBuffer.js
 var _cloneBuffer = __webpack_require__(541);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copyArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_copyArray.js
 /**
  * Copies the values of `source` to `array`.
  *
@@ -85474,7 +85771,7 @@ function copyArray(source, array) {
 
 /* harmony default export */ var _copyArray = (copyArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_arrayFilter.js
 /**
  * A specialized version of `_.filter` for arrays without support for
  * iteratee shorthands.
@@ -85501,7 +85798,7 @@ function arrayFilter(array, predicate) {
 
 /* harmony default export */ var _arrayFilter = (arrayFilter);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/stubArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/stubArray.js
 /**
  * This method returns a new empty array.
  *
@@ -85526,7 +85823,7 @@ function stubArray() {
 
 /* harmony default export */ var lodash_es_stubArray = (stubArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getSymbols.js
 
 
 
@@ -85558,7 +85855,7 @@ var getSymbols = !nativeGetSymbols ? lodash_es_stubArray : function(object) {
 
 /* harmony default export */ var _getSymbols = (getSymbols);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_copySymbols.js
 
 
 
@@ -85576,7 +85873,7 @@ function copySymbols(source, object) {
 
 /* harmony default export */ var _copySymbols = (copySymbols);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_arrayPush.js
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -85598,7 +85895,7 @@ function arrayPush(array, values) {
 
 /* harmony default export */ var _arrayPush = (arrayPush);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getPrototype.js
 
 
 /** Built-in value references. */
@@ -85606,7 +85903,7 @@ var getPrototype = _overArg(Object.getPrototypeOf, Object);
 
 /* harmony default export */ var _getPrototype = (getPrototype);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getSymbolsIn.js
 
 
 
@@ -85633,7 +85930,7 @@ var getSymbolsIn = !_getSymbolsIn_nativeGetSymbols ? lodash_es_stubArray : funct
 
 /* harmony default export */ var _getSymbolsIn = (getSymbolsIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_copySymbolsIn.js
 
 
 
@@ -85651,7 +85948,7 @@ function copySymbolsIn(source, object) {
 
 /* harmony default export */ var _copySymbolsIn = (copySymbolsIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseGetAllKeys.js
 
 
 
@@ -85673,7 +85970,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 /* harmony default export */ var _baseGetAllKeys = (baseGetAllKeys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getAllKeys.js
 
 
 
@@ -85691,7 +85988,7 @@ function getAllKeys(object) {
 
 /* harmony default export */ var _getAllKeys = (getAllKeys);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getAllKeysIn.js
 
 
 
@@ -85710,7 +86007,7 @@ function getAllKeysIn(object) {
 
 /* harmony default export */ var _getAllKeysIn = (getAllKeysIn);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_DataView.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_DataView.js
 
 
 
@@ -85719,7 +86016,7 @@ var DataView = _getNative(_root["a" /* default */], 'DataView');
 
 /* harmony default export */ var _DataView = (DataView);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Promise.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Promise.js
 
 
 
@@ -85728,7 +86025,7 @@ var _Promise_Promise = _getNative(_root["a" /* default */], 'Promise');
 
 /* harmony default export */ var _Promise = (_Promise_Promise);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Set.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Set.js
 
 
 
@@ -85737,7 +86034,7 @@ var Set = _getNative(_root["a" /* default */], 'Set');
 
 /* harmony default export */ var _Set = (Set);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_WeakMap.js
 
 
 
@@ -85746,7 +86043,7 @@ var _WeakMap_WeakMap = _getNative(_root["a" /* default */], 'WeakMap');
 
 /* harmony default export */ var _WeakMap = (_WeakMap_WeakMap);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_getTag.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_getTag.js
 
 
 
@@ -85806,7 +86103,7 @@ if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != _getTag_dataViewT
 
 /* harmony default export */ var _getTag = (getTag);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_initCloneArray.js
 /** Used for built-in method references. */
 var _initCloneArray_objectProto = Object.prototype;
 
@@ -85834,7 +86131,7 @@ function initCloneArray(array) {
 
 /* harmony default export */ var _initCloneArray = (initCloneArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_Uint8Array.js
 
 
 /** Built-in value references. */
@@ -85842,7 +86139,7 @@ var Uint8Array = _root["a" /* default */].Uint8Array;
 
 /* harmony default export */ var _Uint8Array = (Uint8Array);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneArrayBuffer.js
 
 
 /**
@@ -85860,7 +86157,7 @@ function cloneArrayBuffer(arrayBuffer) {
 
 /* harmony default export */ var _cloneArrayBuffer = (cloneArrayBuffer);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneDataView.js
 
 
 /**
@@ -85878,7 +86175,7 @@ function cloneDataView(dataView, isDeep) {
 
 /* harmony default export */ var _cloneDataView = (cloneDataView);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneRegExp.js
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -85897,7 +86194,7 @@ function cloneRegExp(regexp) {
 
 /* harmony default export */ var _cloneRegExp = (cloneRegExp);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneSymbol.js
 
 
 /** Used to convert symbols to primitives and strings. */
@@ -85917,7 +86214,7 @@ function cloneSymbol(symbol) {
 
 /* harmony default export */ var _cloneSymbol = (cloneSymbol);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_cloneTypedArray.js
 
 
 /**
@@ -85935,7 +86232,7 @@ function cloneTypedArray(typedArray, isDeep) {
 
 /* harmony default export */ var _cloneTypedArray = (cloneTypedArray);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_initCloneByTag.js
 
 
 
@@ -86014,7 +86311,7 @@ function initCloneByTag(object, tag, isDeep) {
 
 /* harmony default export */ var _initCloneByTag = (initCloneByTag);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseCreate.js
 
 
 /** Built-in value references. */
@@ -86046,7 +86343,7 @@ var baseCreate = (function() {
 
 /* harmony default export */ var _baseCreate = (baseCreate);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_initCloneObject.js
 
 
 
@@ -86066,7 +86363,7 @@ function initCloneObject(object) {
 
 /* harmony default export */ var _initCloneObject = (initCloneObject);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseIsMap.js
 
 
 
@@ -86086,7 +86383,7 @@ function baseIsMap(value) {
 
 /* harmony default export */ var _baseIsMap = (baseIsMap);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isMap.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isMap.js
 
 
 
@@ -86115,7 +86412,7 @@ var isMap = nodeIsMap ? _baseUnary(nodeIsMap) : _baseIsMap;
 
 /* harmony default export */ var lodash_es_isMap = (isMap);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseIsSet.js
 
 
 
@@ -86135,7 +86432,7 @@ function baseIsSet(value) {
 
 /* harmony default export */ var _baseIsSet = (baseIsSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isSet.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isSet.js
 
 
 
@@ -86164,7 +86461,7 @@ var isSet = nodeIsSet ? _baseUnary(nodeIsSet) : _baseIsSet;
 
 /* harmony default export */ var lodash_es_isSet = (isSet);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseClone.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseClone.js
 
 
 
@@ -86337,7 +86634,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 
 /* harmony default export */ var _baseClone = (baseClone);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/cloneDeep.js
 
 
 /** Used to compose bitmasks for cloning. */
@@ -86368,7 +86665,7 @@ function cloneDeep(value) {
 
 /* harmony default export */ var lodash_es_cloneDeep = (cloneDeep);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_arrayMap.js
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
  * shorthands.
@@ -86391,7 +86688,7 @@ function arrayMap(array, iteratee) {
 
 /* harmony default export */ var _arrayMap = (arrayMap);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/isSymbol.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/isSymbol.js
 
 
 
@@ -86422,7 +86719,7 @@ function isSymbol(value) {
 
 /* harmony default export */ var lodash_es_isSymbol = (isSymbol);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/memoize.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/memoize.js
 
 
 /** Error message constants. */
@@ -86497,7 +86794,7 @@ memoize.Cache = _MapCache;
 
 /* harmony default export */ var lodash_es_memoize = (memoize);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_memoizeCapped.js
 
 
 /** Used as the maximum memoize cache size. */
@@ -86525,7 +86822,7 @@ function memoizeCapped(func) {
 
 /* harmony default export */ var _memoizeCapped = (memoizeCapped);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_stringToPath.js
 
 
 /** Used to match property names within property paths. */
@@ -86554,7 +86851,7 @@ var stringToPath = _memoizeCapped(function(string) {
 
 /* harmony default export */ var _stringToPath = (stringToPath);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_toKey.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_toKey.js
 
 
 /** Used as references for various `Number` constants. */
@@ -86577,7 +86874,7 @@ function toKey(value) {
 
 /* harmony default export */ var _toKey = (toKey);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/_baseToString.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/_baseToString.js
 
 
 
@@ -86616,7 +86913,7 @@ function baseToString(value) {
 
 /* harmony default export */ var _baseToString = (baseToString);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/toString.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/toString.js
 
 
 /**
@@ -86646,7 +86943,7 @@ function toString_toString(value) {
 
 /* harmony default export */ var lodash_es_toString = (toString_toString);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/lodash-es/toPath.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/lodash-es/toPath.js
 
 
 
@@ -86681,11 +86978,11 @@ function toPath(value) {
 
 /* harmony default export */ var lodash_es_toPath = (toPath);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-fast-compare/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-fast-compare/index.js
 var react_fast_compare = __webpack_require__(157);
 var react_fast_compare_default = /*#__PURE__*/__webpack_require__.n(react_fast_compare);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/deepmerge/dist/es.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/deepmerge/dist/es.js
 var isMergeableObject = function isMergeableObject(value) {
 	return isNonNullObject(value)
 		&& !isSpecial(value)
@@ -86776,7 +87073,7 @@ var deepmerge_1 = deepmerge;
 
 /* harmony default export */ var dist_es = (deepmerge_1);
 
-// CONCATENATED MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/formik/dist/formik.esm.js
+// CONCATENATED MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/formik/dist/formik.esm.js
 
 
 
@@ -88074,7 +88371,7 @@ connect(formik_esm_ErrorMessageImpl);
 
 //# sourceMappingURL=formik.esm.js.map
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/yup/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/yup/lib/index.js
 var yup_lib = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/components/account/login-form.js
@@ -88746,7 +89043,7 @@ function (_Component) {
   return ProductListing;
 }(external_react_["Component"]);
 /* harmony default export */ var product_listing = (product_listing_ProductListing);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-stickyfill/lib/index.js
 var react_stickyfill_lib = __webpack_require__(156);
 var react_stickyfill_lib_default = /*#__PURE__*/__webpack_require__.n(react_stickyfill_lib);
 
@@ -88994,11 +89291,11 @@ var cart_table_grid_item_CartTableGridItem = function CartTableGridItem(props) {
 };
 
 /* harmony default export */ var cart_table_grid_item = (cart_table_grid_item_CartTableGridItem);
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/react-pluralize/build/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/react-pluralize/build/index.js
 var build = __webpack_require__(44);
 var build_default = /*#__PURE__*/__webpack_require__.n(build);
 
-// EXTERNAL MODULE: /Users/hubert/Work/shift-front-end-react/node_modules/moment-business-days/index.js
+// EXTERNAL MODULE: /Users/jameskirkby/Sites/shift-front-end-react/node_modules/moment-business-days/index.js
 var moment_business_days = __webpack_require__(219);
 var moment_business_days_default = /*#__PURE__*/__webpack_require__.n(moment_business_days);
 
@@ -89958,165 +90255,6 @@ ShippingMethodsSummary.propTypes = {
   shippingMethod: node_modules_prop_types_default.a.object
 };
 /* harmony default export */ var shipping_methods_summary = (ShippingMethodsSummary);
-// CONCATENATED MODULE: ./src/components/checkout/stripe-payment.js
-function stripe_payment_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { stripe_payment_typeof = function _typeof(obj) { return typeof obj; }; } else { stripe_payment_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return stripe_payment_typeof(obj); }
-
-function stripe_payment_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function stripe_payment_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function stripe_payment_createClass(Constructor, protoProps, staticProps) { if (protoProps) stripe_payment_defineProperties(Constructor.prototype, protoProps); if (staticProps) stripe_payment_defineProperties(Constructor, staticProps); return Constructor; }
-
-function stripe_payment_possibleConstructorReturn(self, call) { if (call && (stripe_payment_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_payment_assertThisInitialized(self); }
-
-function stripe_payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function stripe_payment_getPrototypeOf(o) { stripe_payment_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_payment_getPrototypeOf(o); }
-
-function stripe_payment_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_payment_setPrototypeOf(subClass, superClass); }
-
-function stripe_payment_setPrototypeOf(o, p) { stripe_payment_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return stripe_payment_setPrototypeOf(o, p); }
-
-// Libraries
-
- // Lib
-
-
-
-var stripe_payment_StripePayment =
-/*#__PURE__*/
-function (_Component) {
-  stripe_payment_inherits(StripePayment, _Component);
-
-  function StripePayment(props) {
-    var _this;
-
-    stripe_payment_classCallCheck(this, StripePayment);
-
-    _this = stripe_payment_possibleConstructorReturn(this, stripe_payment_getPrototypeOf(StripePayment).call(this, props));
-    _this.AddressBook = component_mapping('AddressBook');
-    _this.AddressForm = component_mapping('AddressForm');
-    _this.Button = component_mapping('Button');
-    _this.Checkbox = component_mapping('Checkbox');
-    _this.StripeWrapper = component_mapping('StripeWrapper');
-    return _this;
-  }
-
-  stripe_payment_createClass(StripePayment, [{
-    key: "renderFormSubmitButton",
-    value: function renderFormSubmitButton() {
-      var _this2 = this;
-
-      return external_react_default.a.createElement("div", {
-        className: "o-form__input-group"
-      }, external_react_default.a.createElement(this.Button, {
-        "aria-label": "Review Your Order",
-        className: "c-address-form__button o-button--sml",
-        label: "Review Your Order",
-        status: this.props.nextStepAvailable() ? 'positive' : 'disabled',
-        type: "primary",
-        disabled: !this.props.nextStepAvailable(),
-        onClick: function onClick() {
-          return _this2.props.nextSection('complete');
-        }
-      }));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          addressBook = _this$props.addressBook,
-          autoFillAddress = _this$props.autoFillAddress,
-          billingAddress = _this$props.billingAddress,
-          billingAsShipping = _this$props.billingAsShipping,
-          cardTokenRequested = _this$props.cardTokenRequested,
-          changeBillingAsShipping = _this$props.changeBillingAsShipping,
-          checkout = _this$props.checkout,
-          countries = _this$props.countries,
-          currentAddress = _this$props.currentAddress,
-          loggedIn = _this$props.loggedIn,
-          onAddressDeleted = _this$props.onAddressDeleted,
-          onBlur = _this$props.onBlur,
-          onChange = _this$props.onChange,
-          onShowField = _this$props.onShowField,
-          onCardTokenReceived = _this$props.onCardTokenReceived,
-          setCardErrors = _this$props.setCardErrors,
-          shippingAddress = _this$props.shippingAddress;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "o-form__background"
-      }, external_react_default.a.createElement("div", {
-        className: "o-form__wrapper"
-      }, external_react_default.a.createElement(this.StripeWrapper, {
-        billingAddress: checkout.billingAddress,
-        cardTokenRequested: cardTokenRequested,
-        onCardTokenReceived: onCardTokenReceived,
-        setCardErrors: setCardErrors
-      }), external_react_default.a.createElement("div", {
-        className: "o-form__input-group"
-      }, external_react_default.a.createElement("label", null, "Billing address *")), external_react_default.a.createElement(this.Checkbox, {
-        type: "checkbox",
-        label: "Same as shipping address",
-        name: "shippingAddressAsBillingAddress",
-        checked: billingAsShipping,
-        onChange: changeBillingAsShipping
-      }), billingAsShipping && external_react_default.a.createElement("div", {
-        "aria-label": "Shipping address to be used for billing",
-        className: "o-payment-method__address-summary  c-payment-method__address-summary"
-      }, external_react_default.a.createElement("p", {
-        className: "u-bold"
-      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length && external_react_default.a.createElement(this.AddressBook, {
-        addressBook: addressBook,
-        formName: "shippingAddress",
-        currentAddressId: billingAddress.id,
-        onAddressDeleted: onAddressDeleted,
-        onNewAddress: this.props.onNewAddress,
-        onBookAddressSelected: this.props.onBookAddressSelected,
-        addressFormDisplayed: this.props.addressFormDisplayed()
-      }), this.props.addressFormDisplayed() && external_react_default.a.createElement(this.AddressForm, {
-        "aria-label": "Billing address form",
-        autoFillAddress: autoFillAddress,
-        checkout: checkout,
-        countries: countries,
-        currentAddress: currentAddress,
-        title: "Billing Address",
-        formName: "billingAddress",
-        onChange: onChange,
-        onBlur: onBlur,
-        className: "o-form__billing",
-        onShowField: onShowField,
-        loggedIn: loggedIn
-      })), this.renderFormSubmitButton());
-    }
-  }]);
-
-  return StripePayment;
-}(external_react_["Component"]);
-
-stripe_payment_StripePayment.propTypes = {
-  addressBook: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
-  addressFormDisplayed: node_modules_prop_types_default.a.func,
-  autoFillAddress: node_modules_prop_types_default.a.func,
-  billingAddress: node_modules_prop_types_default.a.object,
-  billingAsShipping: node_modules_prop_types_default.a.bool,
-  cardTokenRequested: node_modules_prop_types_default.a.bool,
-  changeBillingAsShipping: node_modules_prop_types_default.a.func,
-  checkout: node_modules_prop_types_default.a.object,
-  countries: node_modules_prop_types_default.a.arrayOf(node_modules_prop_types_default.a.object),
-  currentAddress: node_modules_prop_types_default.a.object,
-  loggedIn: node_modules_prop_types_default.a.bool,
-  nextSection: node_modules_prop_types_default.a.func,
-  nextStepAvailable: node_modules_prop_types_default.a.func,
-  onAddressDeleted: node_modules_prop_types_default.a.func,
-  onBookAddressSelected: node_modules_prop_types_default.a.bool,
-  onBlur: node_modules_prop_types_default.a.func,
-  onChange: node_modules_prop_types_default.a.func,
-  onNewAddress: node_modules_prop_types_default.a.func,
-  onShowField: node_modules_prop_types_default.a.func,
-  onCardTokenReceived: node_modules_prop_types_default.a.func,
-  setCardErrors: node_modules_prop_types_default.a.func,
-  shippingAddress: node_modules_prop_types_default.a.object
-};
-/* harmony default export */ var stripe_payment = (stripe_payment_StripePayment);
 // EXTERNAL MODULE: ./src/static/account-icon.svg
 var account_icon = __webpack_require__(542);
 var account_icon_default = /*#__PURE__*/__webpack_require__.n(account_icon);
@@ -90343,6 +90481,7 @@ function (_Component) {
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
+/* concated harmony reexport PaymentMethod */__webpack_require__.d(__webpack_exports__, "PaymentMethod", function() { return payment_method; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport PaymentMethodSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodSummary", function() { return payment_method_summary; });
 /* concated harmony reexport ShippingMethods */__webpack_require__.d(__webpack_exports__, "ShippingMethods", function() { return shipping_methods; });
@@ -90447,6 +90586,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 

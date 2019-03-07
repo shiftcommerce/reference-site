@@ -1,10 +1,19 @@
 // Libraries
-import { Component } from 'react'
+import React, { Component } from 'react'
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
-// Components
-import { PaymentMethodHeader, StripePayment } from 'shift-react-components'
+// Lib
+import componentMapping from '../../lib/component-mapping'
 
-export default class PaymentMethod extends Component {
+class PaymentMethod extends Component {
+  constructor (props) {
+    super(props)
+
+    this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
+    this.StripePayment = componentMapping('StripePayment')
+  }
+
   render () {
     const {
       addingNewAddress,
@@ -14,6 +23,7 @@ export default class PaymentMethod extends Component {
       billingAsShipping,
       changeBillingAsShipping,
       cart,
+      className,
       checkout,
       countries,
       currentAddress,
@@ -31,10 +41,10 @@ export default class PaymentMethod extends Component {
       order
     } = this.props
     return (
-      <div aria-label='Payment method' className='o-form  c-payment-method'>
-        <PaymentMethodHeader />
+      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-method')}>
+        <this.PaymentMethodHeader />
         <div className='c-payment-method__section' style={{ display: 'block' }}>
-          <StripePayment
+          <this.StripePayment
             addingNewAddress={addingNewAddress}
             addressBook={addressBook}
             addressFormDisplayed={addressFormDisplayed}
@@ -64,3 +74,31 @@ export default class PaymentMethod extends Component {
     )
   }
 }
+
+PaymentMethod.propTypes = {
+  addingNewAddress: PropTypes.bool,
+  addressBook: PropTypes.object,
+  addressFormDisplayed: PropTypes.func,
+  autoFillAddress: PropTypes.func,
+  billingAsShipping: PropTypes.bool,
+  changeBillingAsShipping: PropTypes.func,
+  cart: PropTypes.object,
+  className: PropTypes.string,
+  checkout: PropTypes.object,
+  countries: PropTypes.array,
+  currentAddress: PropTypes.object,
+  loggedIn: PropTypes.bool,
+  nextStepAvailable: PropTypes.func,
+  nextSection: PropTypes.func,
+  onAddressDeleted: PropTypes.func,
+  onBookAddressSelected: PropTypes.func,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onNewAddress: PropTypes.func,
+  onShowField: PropTypes.func,
+  onCardTokenReceived: PropTypes.func,
+  setCardErrors: PropTypes.func,
+  order: PropTypes.object
+}
+
+export default PaymentMethod

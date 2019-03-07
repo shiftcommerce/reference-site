@@ -10,10 +10,9 @@ import addressFormValidator from '../../lib/address-form-validator'
 import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
-import PaymentMethod from '../../components/checkout/payment-method'
-
 import {
   AddressFormSummary,
+  PaymentMethod,
   PaymentMethodSummary,
   ShippingMethodsSummary
 } from 'shift-react-components'
