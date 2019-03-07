@@ -3,10 +3,10 @@ import { Component } from 'react'
 import Router from 'next/router'
 
 // Components
-import { withCheckout } from '../../../client/components/with-checkout.js'
+import { withCheckout } from '../../src/components/with-checkout.js'
 
 // Actions
-import * as CartActions from '../../../client/actions/cart-actions'
+import * as CartActions from '../../src/actions/cart-actions'
 
 describe('componentDidMount()', () => {
   test('reads the cart and sets loading to false when line items are present', async () => {

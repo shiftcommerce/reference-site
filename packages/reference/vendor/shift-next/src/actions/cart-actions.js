@@ -44,15 +44,15 @@ const updateLineItemQuantityRequest = (lineItemId, newQuantity) => {
   }
 }
 
-export const deleteLineItemRequest = (lineItemId) => {
+export function updateLineItemQuantity (lineItemId, newQuantity) {
+  return postEndpoint(updateLineItemQuantityRequest(lineItemId, newQuantity))
+}
+
+const deleteLineItemRequest = (lineItemId) => {
   return {
     endpoint: `/deleteLineItem/${lineItemId}`,
     successActionType: actionTypes.CART_UPDATED
   }
-}
-
-export function updateLineItemQuantity (lineItemId, newQuantity) {
-  return postEndpoint(updateLineItemQuantityRequest(lineItemId, newQuantity))
 }
 
 export function deleteLineItem (lineItemId) {

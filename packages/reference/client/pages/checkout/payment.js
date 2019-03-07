@@ -11,13 +11,14 @@ import InputFieldValidator from '../../lib/input-field-validator'
 
 // Components
 import PaymentMethod from '../../components/checkout/payment-method'
-import withCheckout from '../../components/with-checkout'
 
 import {
   AddressFormSummary,
   PaymentMethodSummary,
   ShippingMethodsSummary
 } from 'shift-react-components'
+
+import { withCheckout } from 'shift-next'
 
 // Actions
 import {

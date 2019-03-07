@@ -11,9 +11,9 @@ import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
 import { setCartShippingMethod } from '../../actions/cart-actions'
 
 // Components
-import withCheckout from '../../components/with-checkout'
-
 import { AddressFormSummary, ShippingMethods } from 'shift-react-components'
+
+import { withCheckout } from 'shift-next'
 
 export class CheckoutShippingMethodPage extends Component {
   static async fetchShippingMethods () {

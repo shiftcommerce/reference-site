@@ -1,5 +1,5 @@
 // Libraries
-import { Component, createRef } from 'react'
+import React, { Component, createRef } from 'react'
 import { connect } from 'react-redux'
 import Router from 'next/router'
 import Head from 'next/head'

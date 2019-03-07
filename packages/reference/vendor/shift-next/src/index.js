@@ -13,6 +13,9 @@ import ShippingAddressPage from './pages/shipping-address'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
 
+// Components
+import withCheckout from './components/with-checkout'
+
 // Express handlers
 import shiftAccountHandler from './express/account-handler'
 import shiftCartHandler from './express/cart-handler'
@@ -65,6 +68,8 @@ module.exports = {
   ShippingAddressPage: ShippingAddressPage,
   SlugPage: SlugPage,
   StaticPage: StaticPage,
+
+  withCheckout: withCheckout,
 
   shiftNextConfig: Config
 }
