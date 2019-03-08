@@ -3,12 +3,12 @@ import Cookies from 'js-cookie'
 import Router from 'next/router'
 
 // Pages
-import { CheckoutPaymentPage } from '../../../client/pages/checkout/payment'
+import CheckoutPaymentPage from '../../src/pages/payment'
 
 // Actions
-import * as AddressBookActions from '../../../client/actions/address-book-actions'
-import * as CartActions from '../../../client/actions/cart-actions'
-import * as OrderActions from '../../../client/actions/order-actions'
+import * as AddressBookActions from '../../src/actions/address-book-actions'
+import * as CartActions from '../../src/actions/cart-actions'
+import * as OrderActions from '../../src/actions/order-actions'
 
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {}
@@ -730,7 +730,7 @@ describe('render()', () => {
   test('renders a loading indicator when loading data', () => {
     const wrapper = shallow(<CheckoutPaymentPage cart={{}} />, { disableLifecycleMethods: true })
 
-    expect(wrapper).toContainReact(<div>Loading...</div>)
+    expect(wrapper.find('Loading').length).toEqual(1)
     expect(wrapper.find('AddressFormSummary').length).toEqual(0)
     expect(wrapper.find('ShippingMethodsSummary').length).toEqual(0)
     expect(wrapper.find('PaymentMethod').length).toEqual(0)

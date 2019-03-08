@@ -6,6 +6,7 @@ import LoginPage from './pages/login'
 import MyAccountPage from './pages/my-account'
 import OfflinePage from './pages/offline'
 import OrderPage from './pages/order'
+import PaymentPage from './pages/payment'
 import ProductPage from './pages/product'
 import RegisterPage from './pages/register'
 import SearchPage from './pages/search'
@@ -58,6 +59,7 @@ module.exports = {
   CategoryPage: CategoryPage,
   CartPage: CartPage,
   ForgottenPasswordPage: ForgottenPasswordPage,
+  PaymentPage: PaymentPage,
   ProductPage: ProductPage,
   LoginPage: LoginPage,
   MyAccountPage: MyAccountPage,

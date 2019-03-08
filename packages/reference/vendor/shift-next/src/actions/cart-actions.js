@@ -79,6 +79,18 @@ export function setAPIError (error, setErrors) {
   setErrors({ couponCode: error[0]['title'] })
 }
 
+const setBillingAddressRequest = (addressId) => {
+  return {
+    endpoint: '/setCartBillingAddress',
+    body: { addressId },
+    successActionType: actionTypes.CART_UPDATED
+  }
+}
+
+export function setCartBillingAddress (addressId) {
+  return postEndpoint(setBillingAddressRequest(addressId))
+}
+
 const setShippingAddressRequest = (addressId) => {
   return {
     endpoint: '/setCartShippingAddress',
@@ -101,4 +113,16 @@ const createShippingAddressRequest = (address) => {
 
 export function createShippingAddress (address) {
   return postEndpoint(createShippingAddressRequest(address))
+}
+
+const createBillingAddressRequest = (address) => {
+  return {
+    endpoint: '/createAddress',
+    body: address,
+    successActionType: actionTypes.BILLING_ADDRESS_CREATED
+  }
+}
+
+export function createBillingAddress (address) {
+  return postEndpoint(createBillingAddressRequest(address))
 }
