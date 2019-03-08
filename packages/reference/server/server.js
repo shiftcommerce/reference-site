@@ -65,14 +65,6 @@ module.exports = app.prepare().then(() => {
 
   shiftRoutes(server)
 
-  server.get('/search', (req, res) => {
-    return app.render(req, res, '/search', req.query)
-  })
-
-  server.get('/slug', (req, res) => {
-    return app.render(req, res, '/slug', req.query)
-  })
-
   server.get('/checkout/review', (req, res) => {
     res.redirect('/checkout/payment')
   })
@@ -118,10 +110,6 @@ module.exports = app.prepare().then(() => {
       res.redirect('/account/myaccount')
     }
     return app.render(req, res, '/account/register', req.query)
-  })
-
-  server.get('/account/forgotpassword', (req, res) => {
-    return app.render(req, res, '/account/forgotpassword', req.query)
   })
 
   server.get('/account/logout', (req, res) => {
