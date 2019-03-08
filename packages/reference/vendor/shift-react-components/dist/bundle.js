@@ -83056,7 +83056,7 @@ function (_Component) {
         src: account_icon_default.a
       }), external_react_default.a.createElement(this.Link, {
         href: "/account/login"
-      }, external_react_default.a.createElement("a", null, signedIn)), this.renderAccountDropDown());
+      }, signedIn), this.renderAccountDropDown());
     }
   }, {
     key: "renderAccountDropDown",

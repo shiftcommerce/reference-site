@@ -120,9 +120,7 @@ exports[`renders the children inside it 1`] = `
           <Link
             href="/account/login"
           >
-            <a>
-              Sign In
-            </a>
+            Sign In
           </Link>
         </div>
         <Minibag />
@@ -376,9 +374,7 @@ exports[`renders the header 1`] = `
           <Link
             href="/account/login"
           >
-            <a>
-              Sign In
-            </a>
+            Sign In
           </Link>
         </div>
         <Minibag />
@@ -616,9 +612,7 @@ exports[`renders the navbar for non-checkout pages 1`] = `
           <Link
             href="/account/login"
           >
-            <a>
-              Sign In
-            </a>
+            Sign In
           </Link>
         </div>
         <Minibag />

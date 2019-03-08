@@ -44,7 +44,7 @@ export class Layout extends Component {
     return (
       <div className='c-header__account' onClick={this.props.toggleDropDown}>
         <this.Image className='c-header__account-image' src={accountIcon} />
-        <this.Link href='/account/login'><a>{ signedIn }</a></this.Link>
+        <this.Link href='/account/login'>{ signedIn }</this.Link>
         { this.renderAccountDropDown() }
       </div>
     )
