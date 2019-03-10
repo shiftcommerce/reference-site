@@ -1,4 +1,5 @@
 // Lib
+import React from 'react'
 import InitialPropsDelegator from './initial-props-delegator'
 
 // Components

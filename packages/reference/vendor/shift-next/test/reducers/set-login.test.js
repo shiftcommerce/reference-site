@@ -1,5 +1,5 @@
-import setLogin, { initialState } from '../../../client/reducers/set-login'
-import * as actionTypes from '../../../client/actions/action-types'
+import setLogin, { initialState } from '../../src/reducers/set-login'
+import * as actionTypes from '../../src/actions/action-types'
 
 test('fills state with errors when ERROR_LOGIN action is called', () => {
   // Arrange

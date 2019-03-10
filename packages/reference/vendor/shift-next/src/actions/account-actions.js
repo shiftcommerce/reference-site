@@ -4,6 +4,14 @@ import * as types from '../actions/action-types'
 // Actions
 import { readEndpoint } from './api-actions'
 
+const accountRequest = {
+  endpoint: '/getAccount',
+  query: {},
+  errorActionType: types.ERROR_ACCOUNT,
+  requestActionType: types.GET_ACCOUNT,
+  successActionType: types.SET_ACCOUNT
+}
+
 export function fetchAccountDetails (store) {
   return readEndpoint(accountRequest)
 }
@@ -16,25 +24,17 @@ export function clearErrors () {
 
 export function setLoggedInFromCookies () {
   return {
-    type: types.SET_ACCOUNT,
+    type: types.SET_LOGGED_IN,
     payload: {}
   }
-}
-
-export function getCustomerOrders () {
-  return readEndpoint(customerOrdersRequest)
-}
-
-const accountRequest = {
-  endpoint: '/getAccount',
-  query: {},
-  errorActionType: types.ERROR_ACCOUNT,
-  requestActionType: types.GET_ACCOUNT,
-  successActionType: types.SET_ACCOUNT
 }
 
 const customerOrdersRequest = {
   endpoint: `/customerOrders`,
   requestActionType: types.GET_CUSTOMER_ORDERS,
   successActionType: types.SET_CUSTOMER_ORDERS
+}
+
+export function getCustomerOrders () {
+  return readEndpoint(customerOrdersRequest)
 }

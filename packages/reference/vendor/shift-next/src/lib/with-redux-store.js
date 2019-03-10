@@ -1,6 +1,6 @@
 import React from 'react'
 import Cookies from 'js-cookie'
-import { initializeStore } from '../utils/configure-store'
+import { initializeStore } from './configure-store'
 import { readMenu } from '../actions/menu-actions'
 import { fetchAccountDetails, setLoggedInFromCookies } from '../actions/account-actions'
 

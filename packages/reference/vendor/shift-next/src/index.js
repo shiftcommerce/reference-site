@@ -29,6 +29,7 @@ import shiftAddressBookHandler from './express/addressbook-handler'
 
 // Lib
 import Config from './lib/config'
+import { algoliaReduxWrapper, reduxWrapper } from './lib/algolia-redux-wrapper'
 
 module.exports = {
   shiftRoutes: (server) => {
@@ -73,5 +74,7 @@ module.exports = {
 
   withCheckout: withCheckout,
 
+  algoliaReduxWrapper,
+  reduxWrapper,
   shiftNextConfig: Config
 }

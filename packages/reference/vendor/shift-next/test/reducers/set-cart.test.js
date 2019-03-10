@@ -1,5 +1,5 @@
-import setCart from '../../../client/reducers/set-cart'
-import * as actionTypes from '../../../client/actions/action-types'
+import setCart from '../../src/reducers/set-cart'
+import * as actionTypes from '../../src/actions/action-types'
 
 test('returns an empty cart when SET_ORDER is dispatched', () => {
   expect(setCart({ key: 'value' }, { type: actionTypes.SET_ORDER })).toEqual({})

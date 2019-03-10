@@ -15,8 +15,11 @@ import '../scss/main.scss'
 
 const {
   publicRuntimeConfig: {
-    API_HOST_PROXY,
+    ALGOLIA_API_KEY,
+    ALGOLIA_APP_ID,
+    ALGOLIA_RESULTS_PER_PAGE,
     ALGOLIA_INDEX_NAME,
+    API_HOST_PROXY,
     STRIPE_API_KEY
   }
 } = getConfig()
@@ -28,9 +31,12 @@ Config.set({
 })
 
 shiftNextConfig.set({
+  algoliaApiKey: ALGOLIA_API_KEY,
+  algoliaAppId: ALGOLIA_APP_ID,
+  algoliaIndexName: ALGOLIA_INDEX_NAME,
+  algoliaResultsPerPage: ALGOLIA_RESULTS_PER_PAGE,
   apiHostProxy: API_HOST_PROXY,
-  storeName: 'ShopGo',
-  algoliaIndexName: ALGOLIA_INDEX_NAME
+  storeName: 'ShopGo'
 })
 
 class MyApp extends App {

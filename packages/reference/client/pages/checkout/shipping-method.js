@@ -3,7 +3,6 @@ import { Component } from 'react'
 import Router from 'next/router'
 
 // Libs
-import { reduxWrapper } from '../../lib/algolia-redux-wrapper'
 import ApiClient from '../../lib/api-client'
 import { fetchShippingMethodsRequest } from '../../requests/cart-requests'
 
@@ -13,7 +12,7 @@ import { setCartShippingMethod } from '../../actions/cart-actions'
 // Components
 import { AddressFormSummary, ShippingMethods } from 'shift-react-components'
 
-import { withCheckout } from 'shift-next'
+import { reduxWrapper, withCheckout } from 'shift-next'
 
 export class CheckoutShippingMethodPage extends Component {
   static async fetchShippingMethods () {

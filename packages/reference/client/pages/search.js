@@ -2,9 +2,6 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { SearchPage } from 'shift-next'
-
-// Lib
-import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
+import { algoliaReduxWrapper, SearchPage } from 'shift-next'
 
 export default algoliaReduxWrapper(connect()(SearchPage), SearchPage)

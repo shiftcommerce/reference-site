@@ -1,5 +1,5 @@
-import setAccount from '../../../client/reducers/set-account'
-import * as actionTypes from '../../../client/actions/action-types'
+import setAccount from '../../src/reducers/set-account'
+import * as actionTypes from '../../src/actions/action-types'
 
 test('sets loggedIn to true and adds account details to state on SET_ACCOUNT', () => {
   const action = {

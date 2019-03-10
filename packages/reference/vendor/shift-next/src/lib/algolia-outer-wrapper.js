@@ -1,21 +1,16 @@
 // Libraries
+import React from 'react'
 import Router from 'next/router'
-import getConfig from 'next/config'
 import qs from 'qs'
 
 // Lib
+import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
-import buildSearchStateForURL from '../lib/build-search-state-for-url'
+import buildSearchStateForURL from './build-search-state-for-url'
 import algoliaInnerWrapper from './algolia-inner-wrapper'
 
 // Components
 import { findResultsState } from './instant-search'
-
-const {
-  publicRuntimeConfig: {
-    ALGOLIA_RESULTS_PER_PAGE
-  }
-} = getConfig()
 
 const MAX_VARIANTS_PER_PRODUCT = 50
 
@@ -43,7 +38,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
         searchState = Page.buildAlgoliaStates(appContext)
       }
       // We should always configure this in the state to prevent a onSearchStateChange first render
-      searchState.configure = { ...searchState.configure, hitsPerPage: ALGOLIA_RESULTS_PER_PAGE, distinct: MAX_VARIANTS_PER_PRODUCT }
+      searchState.configure = { ...searchState.configure, hitsPerPage: Config.get().algoliaResultsPerPage, distinct: MAX_VARIANTS_PER_PRODUCT }
 
       let resultsState = {
         _originalResponse: {

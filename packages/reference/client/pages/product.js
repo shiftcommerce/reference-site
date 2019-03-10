@@ -1,11 +1,8 @@
 // Libraries
 import { connect } from 'react-redux'
 
-// Lib
-import { algoliaReduxWrapper } from '../lib/algolia-redux-wrapper'
-
 // Pages
-import { ProductPage } from 'shift-next'
+import { algoliaReduxWrapper, ProductPage } from 'shift-next'
 
 function mapStateToProps ({ menu, product, cart }) {
   return { menu, product, cart }

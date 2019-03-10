@@ -30,7 +30,7 @@ const formFields = {
   ...addressFormFields
 }
 
-export const checkoutInitialState = {
+const checkoutInitialState = {
   error: false,
   shippingAddress: {
     ...formFields
@@ -70,24 +70,10 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.updatedAt = new Date()
       return newState
 
-    case types.SET_SHIPPING_METHOD:
-      Object.assign(newState.shippingMethod, action.payload.shippingMethod)
-      newState.updatedAt = new Date()
-      return newState
-
     // For storing checkout loaded from indexedDB
     case types.STORE_CHECKOUT:
       newState = action.checkout
       return newState
-
-    case types.INITIATE_CHECKOUT:
-      let additionalInfo = {}
-
-      if (action.customerDetails) {
-        additionalInfo.shippingAddress = Object.assign(formFields, action.customerDetails)
-      }
-
-      return Object.assign(checkoutInitialState, additionalInfo)
 
     case types.SET_ADDRESS:
       const chosenAddress = action.address

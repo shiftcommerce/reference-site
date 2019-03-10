@@ -1,5 +1,5 @@
-import setRegistration, { initialState } from '../../../client/reducers/set-registration'
-import * as actionTypes from '../../../client/actions/action-types'
+import setRegistration, { initialState } from '../../src/reducers/set-registration'
+import * as actionTypes from '../../src/actions/action-types'
 
 test('fills state with errors when ERROR_LOGIN action is called', () => {
   // Arrange

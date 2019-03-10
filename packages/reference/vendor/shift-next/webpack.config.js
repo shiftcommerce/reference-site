@@ -33,6 +33,8 @@ module.exports = {
     'shift-react-components': 'commonjs shift-react-components',
     'getConfig': 'commonjs next/config',
     'next/router': 'commonjs next/router',
-    'next/link': 'commonjs next/link'
+    'next/link': 'commonjs next/link',
+    'react-instantsearch/server': 'react-instantsearch/server',
+    'react-instantsearch/dom': 'react-instantsearch/dom'
   }
 }
