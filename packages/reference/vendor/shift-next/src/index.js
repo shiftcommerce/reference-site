@@ -28,6 +28,9 @@ import shiftSlugHandler from './express/slug-handler'
 import shiftStaticPageHandler from './express/staticpage-handler'
 import shiftAddressBookHandler from './express/addressbook-handler'
 
+// Routes
+import shiftAccountRoutes from './routes/account-routes.js'
+
 // Lib
 import Config from './lib/config'
 import { algoliaReduxWrapper, reduxWrapper } from './lib/algolia-redux-wrapper'
@@ -56,6 +59,14 @@ module.exports = {
     server.post('/setShippingMethod', shiftCartHandler.setCartShippingMethod)
     server.post('/updateLineItem', shiftCartHandler.updateLineItem)
     server.delete('/deleteAddress/:addressId', shiftAddressBookHandler.deleteAddress)
+
+    /**
+     * Account Routes
+     */
+    server.get('/account/login', shiftAccountRoutes.loginRoute)
+    server.get('/account/myaccount', shiftAccountRoutes.viewRoute)
+    server.get('/account/register', shiftAccountRoutes.registerRoute)
+    server.get('/account/logout', shiftAccountRoutes.logoutRoute)
   },
 
   CategoryPage: CategoryPage,

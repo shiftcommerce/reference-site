@@ -31,13 +31,17 @@ const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes } = require('shift-next')
+const { shiftNextConfig, shiftRoutes } = require('shift-next')
 
 const orderHandler = require('./route-handlers/order-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
 const scriptHosts = process.env.SCRIPT_HOSTS
+
+shiftNextConfig.set({
+  sessionExpirySeconds: expiryInSeconds
+})
 
 module.exports = app.prepare().then(() => {
   const server = express()
@@ -67,56 +71,6 @@ module.exports = app.prepare().then(() => {
 
   server.get('/checkout/review', (req, res) => {
     res.redirect('/checkout/payment')
-  })
-
-  server.get('/account/login', (req, res) => {
-    const { customerId } = req.session
-    const { signedIn } = req.cookies
-
-    // If there is no customerId, clear signedIn cookie and render login.
-    if (!customerId) {
-      res.clearCookie('signedIn')
-      return app.render(req, res, '/account/login', req.query)
-    }
-
-    if (customerId && !signedIn) {
-      req.session.expires = sessionExpiryTime
-      res.cookie('signedIn', true, { expires: sessionExpiryTime })
-    }
-    res.redirect('/account/myaccount')
-  })
-
-  server.get('/account/myaccount', (req, res) => {
-    const { customerId } = req.session
-    const { signedIn } = req.cookies
-
-    // If there is no customerId, clear signedIn cookie and render login.
-    if (!customerId) {
-      res.clearCookie('signedIn')
-      return app.render(req, res, '/account/login', req.query)
-    }
-
-    if (customerId && !signedIn) {
-      req.session.expires = sessionExpiryTime
-      res.cookie('signedIn', true, { expires: sessionExpiryTime })
-    }
-    return app.render(req, res, '/account/myaccount', req.query)
-  })
-
-  server.get('/account/register', (req, res) => {
-    const { customerId } = req.session
-    // If there is a customerId, redirect to my account page.
-    if (customerId) {
-      res.redirect('/account/myaccount')
-    }
-    return app.render(req, res, '/account/register', req.query)
-  })
-
-  server.get('/account/logout', (req, res) => {
-    req.session = null
-    res.clearCookie('signedIn')
-    res.clearCookie('cart', { signed: true })
-    res.redirect('/')
   })
 
   server.get('/order', (req, res) => {
