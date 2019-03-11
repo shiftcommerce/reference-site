@@ -3,8 +3,11 @@ import Router from 'next/router'
 import nock from 'nock'
 
 // Pages
-import { CheckoutShippingMethodPage } from '../../../client/pages/checkout/shipping-method'
-import * as apiActions from '../../../client/actions/api-actions'
+import ShippingMethodPage from '../../src/pages/checkout/shipping-method'
+import * as apiActions from '../../src/actions/api-actions'
+
+// Lib
+import Config from '../../src/lib/config'
 
 const shippingAddress = {
   country_code: 'GB',
@@ -29,13 +32,13 @@ jest.mock('next/config', () => () => ({
 
 test('componentDidMount() redirects to the shipping address page when one is not set', () => {
   const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
-  shallow(<CheckoutShippingMethodPage cart={{}} />)
+  shallow(<ShippingMethodPage cart={{}} />)
   expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-address')
   pushSpy.mockRestore()
 })
 
 test('renders correct checkout components', () => {
-  const wrapper = shallow(<CheckoutShippingMethodPage cart={{ shipping_address: {} }} />, {
+  const wrapper = shallow(<ShippingMethodPage cart={{ shipping_address: {} }} />, {
     disableLifecycleMethods: true
   })
 
@@ -69,7 +72,7 @@ test('render shipping methods as expected', async () => {
     shippingMethod: {}
   }
 
-  const fetchShippingSpy = jest.spyOn(CheckoutShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+  const fetchShippingSpy = jest.spyOn(ShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
     data: [{
       id: 1,
       sku: 'STA_SHIP',
@@ -84,7 +87,7 @@ test('render shipping methods as expected', async () => {
   }))
 
   // Act
-  const wrapper = mount(<CheckoutShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
+  const wrapper = mount(<ShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
   expect(wrapper.find('p').last()).toIncludeText('Loading...')
@@ -127,10 +130,10 @@ test('renders line item quantity as expected', async () => {
     }
   }
 
-  const fetchShippingSpy = jest.spyOn(CheckoutShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({ data: [] }))
+  const fetchShippingSpy = jest.spyOn(ShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({ data: [] }))
 
   // Act
-  const wrapper = mount(<CheckoutShippingMethodPage cart={cart} checkout={checkout} />)
+  const wrapper = mount(<ShippingMethodPage cart={cart} checkout={checkout} />)
 
   // Assert
   expect(wrapper.find('p').last()).toIncludeText('Loading...')
@@ -161,7 +164,7 @@ test('preselects first shipping method when fetching shipping methods and none i
     }
   }
 
-  const fetchShippingSpy = jest.spyOn(CheckoutShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+  const fetchShippingSpy = jest.spyOn(ShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
     data: [{
       id: 1,
       sku: 'STA_SHIP',
@@ -188,7 +191,7 @@ test('preselects first shipping method when fetching shipping methods and none i
   const postSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(() => { cart.shipping_method = { id: 1 } })
 
   // Act
-  const wrapper = mount(<CheckoutShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
+  const wrapper = mount(<ShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
   expect(wrapper.find('p').last()).toIncludeText('Loading...')
@@ -232,7 +235,7 @@ test('selecting a shipping method makes a correct API call', async () => {
     }
   }
 
-  const fetchShippingSpy = jest.spyOn(CheckoutShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
+  const fetchShippingSpy = jest.spyOn(ShippingMethodPage, 'fetchShippingMethods').mockImplementation(() => Promise.resolve({
     data: [{
       id: 1,
       sku: 'STA_SHIP',
@@ -259,7 +262,7 @@ test('selecting a shipping method makes a correct API call', async () => {
   const postSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(() => { cart.shipping_method = { id: 1 } })
 
   // Act
-  const wrapper = mount(<CheckoutShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
+  const wrapper = mount(<ShippingMethodPage cart={cart} checkout={checkout} dispatch={jest.fn()} />)
 
   // Assert
   expect(wrapper.find('p').last()).toIncludeText('Loading...')
@@ -278,12 +281,16 @@ test('selecting a shipping method makes a correct API call', async () => {
 })
 
 test('fetchShippingMethods() returns shipping methods from the API', async () => {
-  nock(process.env.API_HOST_PROXY)
+  Config.set({
+    apiHostProxy: 'http://example.com'
+  })
+
+  nock('http://example.com')
     .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
     .get('/getShippingMethods')
     .reply(200, { data: 'shipping methods data' })
 
-  expect(await CheckoutShippingMethodPage.fetchShippingMethods()).toEqual({ data: 'shipping methods data' })
+  expect(await ShippingMethodPage.fetchShippingMethods()).toEqual({ data: 'shipping methods data' })
 })
 
 test('fetches shipping methods, sorts them by total and puts them in state', async () => {
@@ -312,7 +319,7 @@ test('fetches shipping methods, sorts them by total and puts them in state', asy
     shipping_method: {}
   }
 
-  const instance = shallow(<CheckoutShippingMethodPage cart={cart} />).instance()
+  const instance = shallow(<ShippingMethodPage cart={cart} />).instance()
 
   const fetchShippingMethodsSpy = jest.spyOn(instance.constructor, 'fetchShippingMethods').mockImplementation(() => shippingMethods)
 

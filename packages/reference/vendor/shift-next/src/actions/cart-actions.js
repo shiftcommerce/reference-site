@@ -66,6 +66,24 @@ const addCartCouponRequest = (couponCode) => {
   }
 }
 
+export const fetchShippingMethodsRequest = () => {
+  return {
+    endpoint: '/getShippingMethods'
+  }
+}
+
+const setShippingMethodRequest = (shippingMethodId) => {
+  return {
+    endpoint: '/setShippingMethod',
+    body: { shippingMethodId },
+    successActionType: actionTypes.CART_UPDATED
+  }
+}
+
+export function setCartShippingMethod (shippingMethodId) {
+  return postEndpoint(setShippingMethodRequest(shippingMethodId))
+}
+
 export async function submitCoupon (couponCode) {
   const request = addCartCouponRequest(couponCode)
   const response = await new ApiClient().post(request.endpoint, request.body)

@@ -106,6 +106,18 @@ test('setCartShippingAddress triggers a correct setCartShippingAddress request',
   postSpy.mockRestore()
 })
 
+test('setCartShippingMethod triggers a correct setShippingMethod request', () => {
+  const postSpy = jest.spyOn(apiActions, 'postEndpoint')
+
+  cartActions.setCartShippingMethod(10)
+
+  const requestObject = postSpy.mock.calls[0][0]
+  expect(requestObject.endpoint).toEqual('/setShippingMethod')
+  expect(requestObject.successActionType).toEqual(actionTypes.CART_UPDATED)
+
+  postSpy.mockRestore()
+})
+
 test('createShippingAddress triggers a correct createShippingAddress request', () => {
   const postSpy = jest.spyOn(apiActions, 'postEndpoint')
 
