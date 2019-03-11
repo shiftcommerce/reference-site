@@ -31,6 +31,13 @@ export function autoFillAddress (address) {
   }
 }
 
+export function autoFillBillingAddress (address) {
+  return {
+    type: actionTypes.AUTOFILL_BILLING_ADDRESS,
+    address: address
+  }
+}
+
 export function inputChange (formName, fieldName, fieldValue) {
   return (dispatch) => {
     dispatch(storeInputChange(formName, fieldName, fieldValue))
