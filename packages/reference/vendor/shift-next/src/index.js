@@ -30,6 +30,8 @@ import shiftAddressBookHandler from './express/addressbook-handler'
 
 // Routes
 import shiftAccountRoutes from './routes/account-routes.js'
+import shiftCheckoutRoutes from './routes/checkout-routes.js'
+import shiftOrderRoutes from './routes/order-routes.js'
 
 // Lib
 import Config from './lib/config'
@@ -67,6 +69,16 @@ module.exports = {
     server.get('/account/myaccount', shiftAccountRoutes.viewRoute)
     server.get('/account/register', shiftAccountRoutes.registerRoute)
     server.get('/account/logout', shiftAccountRoutes.logoutRoute)
+
+    /**
+     * Checkout Routes
+     */
+    server.get('/checkout/review', shiftCheckoutRoutes.reviewRoute)
+
+    /**
+     * Order Routes
+     */
+    server.get('/order', shiftOrderRoutes.indexRoute)
   },
 
   CategoryPage: CategoryPage,
