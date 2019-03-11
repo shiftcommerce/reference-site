@@ -1,4 +1,5 @@
 const { SHIFTClient } = require('shift-api')
+const { getSessionExpiryTime } = require('../lib/session')
 
 module.exports = {
   getCart: async (req, res) => {
@@ -23,6 +24,13 @@ module.exports = {
       response = await SHIFTClient.addLineItemToCartV1(req, res, cartId)
     } else {
       response = await SHIFTClient.createNewCartWithLineItemV1(req, res)
+
+      if (response.data.id) {
+        res.cookie('cart', response.data.id, {
+          signed: true,
+          expires: getSessionExpiryTime()
+        })
+      }
     }
 
     switch (response.status) {
