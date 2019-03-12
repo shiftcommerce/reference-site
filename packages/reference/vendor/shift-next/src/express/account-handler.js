@@ -1,6 +1,9 @@
 // Shift-api client
 const { SHIFTClient } = require('shift-api')
 
+// Lib
+const { getSessionExpiryTime } = require('../lib/session')
+
 module.exports = {
   getAccount: async (req, res) => {
     const { customerId } = req.session
@@ -110,7 +113,7 @@ async function assignCartToUser (req, res) {
 
     res.cookie('cart', customerAccountResponse.data.included.find(i => i.type === 'carts').id, {
       signed: true,
-      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) // 30 days
+      expires: getSessionExpiryTime()
     })
   }
 }

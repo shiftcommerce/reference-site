@@ -22,26 +22,17 @@ const handle = app.getRequestHandler()
 // Middleware
 const securityHeaders = require('./middleware/security-headers')
 
-// Session variables
-const defaultExpiryInSeconds = 30 * 24 * 60 * 60 // 30 days in seconds
-const expiryInSeconds = (process.env.SESSSION_EXPIRY || defaultExpiryInSeconds) // user configured time in seconds
-const sessionExpiryTime = new Date(Date.now() + expiryInSeconds * 1000)
-
 // Api
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftNextConfig, shiftRoutes } = require('shift-next')
+const { shiftRoutes, getSessionExpiryTime } = require('shift-next')
 
 const orderHandler = require('./route-handlers/order-route-handler')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
 const scriptHosts = process.env.SCRIPT_HOSTS
-
-shiftNextConfig.set({
-  sessionExpirySeconds: expiryInSeconds
-})
 
 module.exports = app.prepare().then(() => {
   const server = express()
@@ -53,7 +44,7 @@ module.exports = app.prepare().then(() => {
     secret: process.env.SESSION_SECRET,
     secure: production,
     sameSite: 'lax',
-    expires: sessionExpiryTime
+    expires: getSessionExpiryTime()
   }
 
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
