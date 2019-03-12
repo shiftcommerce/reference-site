@@ -246,6 +246,10 @@ class SHIFTClient {
       .then(this.determineResponse)
   }
 
+  createOrderV1 (orderPayload) {
+    return HTTPClient.post('v2/create_order?include=line_items', orderPayload).then(this.determineResponse)
+  }
+
   createAddressBookEntryV1 (body, customerAccountId) {
     return HTTPClient.post(`v1/customer_accounts/${customerAccountId}/addresses`, body)
       .then(this.determineResponse)

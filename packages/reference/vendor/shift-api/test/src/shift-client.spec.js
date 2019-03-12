@@ -20,6 +20,8 @@ const addressBookResponse = require('../fixtures/addressbook-response')
 const addressBookResponseParsed = require('../fixtures/addressbook-response-parsed')
 const productResponse = require('../fixtures/product-response-payload')
 const productResponseParsed = require('../fixtures/product-response-parsed')
+const createOrderResponse = require('../fixtures/create-order-response')
+const createOrderResponseParsed = require('../fixtures/create-order-response-parsed')
 const createAddressBookResponse = require('../fixtures/create-addressbook-response')
 const createAddressBookResponseParsed = require('../fixtures/create-addressbook-response-parsed')
 
@@ -958,6 +960,75 @@ describe('SHIFTClient', () => {
         .catch(error => {
           expect(error).toEqual(new Error('Request failed with status code 422'))
           expect(error.response.data.errors[0].title).toEqual("can't be blank")
+        })
+    })
+  })
+
+  describe('createOrderV1', () => {
+    it('creates an order with valid data', () => {
+      const body = {
+        data: {
+          type: 'create_order',
+          attributes: {
+            billing_address: {},
+            channel: 'web',
+            currency: 'GBP',
+            email: 'guest@order.com',
+            ip_address: '1.1.1.1',
+            line_items_resources: [],
+            shipping_address: {},
+            shipping_method: {},
+            discount_summaries: [],
+            sub_total: 19.45,
+            total: 19.45,
+            placed_at: '2018-10-31T14:37:34.113Z',
+            payment_transactions_resources: []
+          }
+        }
+      }
+
+      nock(process.env.API_HOST)
+        .post(`/${process.env.API_TENANT}/v2/create_order`, body)
+        .query(true)
+        .reply(201, createOrderResponse)
+
+      return SHIFTClient.createOrderV1(body)
+        .then(response => {
+          expect(response.status).toEqual(201)
+          expect(response.data).toEqual(createOrderResponseParsed)
+        })
+    })
+
+    it('should return errors if no customer_reference is present', () => {
+      const query = {
+        fields: {
+          customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+          line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+          shipping_methods: 'label,price',
+          shipping_addresses: 'name,company,lines,city,state,postcode,country',
+          discounts: 'label,amount_inc_tax,coupon_code'
+        },
+        include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
+      }
+
+      nock('https://shift-oms-dev.herokuapp.com')
+        .get('/oms/v1/customer_orders/')
+        .query(true)
+        .reply(422, {
+          errors: [
+            {
+              status: '422',
+              detail: 'No filter[customer_reference] specified'
+            }
+          ]
+        })
+
+      expect.assertions(2)
+
+      return SHIFTClient.getCustomerOrdersV1(query)
+        .catch(error => {
+          expect(error.response.status).toEqual(422)
+          expect(error.response.data.errors[0].detail).toEqual('No filter[customer_reference] specified')
         })
     })
   })

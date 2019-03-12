@@ -35,6 +35,7 @@ module.exports = {
     'next/router': 'commonjs next/router',
     'next/link': 'commonjs next/link',
     'react-instantsearch/server': 'react-instantsearch/server',
-    'react-instantsearch/dom': 'react-instantsearch/dom'
+    'react-instantsearch/dom': 'react-instantsearch/dom',
+    'stripe': 'commonjs stripe'
   }
 }

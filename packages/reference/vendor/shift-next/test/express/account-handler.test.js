@@ -11,10 +11,6 @@ const registerInvalidPayload = require('../fixtures/register-invalid')
 const omsResponse = require('../fixtures/oms-response')
 const omsResponseParsed = require('../fixtures/oms-response-parsed')
 
-beforeEach(() => {
-
-})
-
 afterEach(() => { nock.cleanAll() })
 
 describe('getAccount()', () => {
