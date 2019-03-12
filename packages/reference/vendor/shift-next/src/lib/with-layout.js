@@ -78,7 +78,8 @@ export default function withLayout (Component) {
     }
 
     render () {
-      const skipHeader = !this.props.router.pathname.includes('/checkout')
+      const { router, ...otherProps } = this.props
+      const skipHeader = !router.pathname.includes('/checkout')
 
       return (
         <Layout
@@ -88,7 +89,7 @@ export default function withLayout (Component) {
           showClass={this.state.toggleShowClass}
           {...this.props}
         >
-          <Component {...this.props} />
+          <Component {...otherProps} />
         </Layout>
       )
     }

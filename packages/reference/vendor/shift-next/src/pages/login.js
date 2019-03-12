@@ -35,18 +35,13 @@ class LoginPage extends Component {
     return {}
   }
 
-  componentDidUpdate () {
-    const { loggedIn } = this.props
-    // Redirect if logged in
-    if (loggedIn) {
-      setCookie()
-      Router.push('/account/myaccount')
-    }
-  }
-
   handleSubmit (login) {
     this.props.dispatch(createLogin(login))
       .then(() => { this.props.dispatch(fetchAccountDetails()) })
+      .then(() => {
+        setCookie()
+        Router.push('/account/myaccount')
+      })
   }
 
   render () {
