@@ -37,10 +37,13 @@ class LoginPage extends Component {
 
   handleSubmit (login) {
     this.props.dispatch(createLogin(login))
-      .then(() => { this.props.dispatch(fetchAccountDetails()) })
-      .then(() => {
-        setCookie()
-        Router.push('/account/myaccount')
+      .then(success => {
+        if (success) {
+          this.props.dispatch(fetchAccountDetails()).then(() => {
+            setCookie()
+            Router.push('/account/myaccount')
+          })
+        }
       })
   }
 
