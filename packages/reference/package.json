@@ -28,6 +28,7 @@
     "lint:css:fix": "stylelint client/scss --fix"
   },
   "dependencies": {
+    "@shiftcommerce/shift-react-components": "^1.0.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.16.2",
@@ -128,7 +129,6 @@
     "url-loader": "^1.0.1"
   },
   "workspaces": [
-    "vendor/shift-react-components",
     "vendor/shift-api",
     "vendor/shift-next"
   ]

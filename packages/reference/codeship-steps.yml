@@ -14,9 +14,6 @@
       name: shift-api
       command: vendor/shift-api/bin/test
     - service: web
-      name: shift-react-components
-      command: vendor/shift-react-components/bin/test
-    - service: web
       name: shift-next
       command: vendor/shift-next/bin/test
 
