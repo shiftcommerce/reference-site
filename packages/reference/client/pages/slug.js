@@ -1,4 +1,4 @@
 // Pages
-import { SlugPage } from 'shift-next'
+import { SlugPage } from '@shiftcommerce/shift-next'
 
 export default SlugPage

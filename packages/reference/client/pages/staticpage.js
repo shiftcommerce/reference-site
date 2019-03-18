@@ -1,4 +1,4 @@
 // Pages
-import { algoliaReduxWrapper, StaticPage } from 'shift-next'
+import { algoliaReduxWrapper, StaticPage } from '@shiftcommerce/shift-next'
 
 export default algoliaReduxWrapper(StaticPage, StaticPage)

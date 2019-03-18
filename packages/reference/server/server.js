@@ -26,7 +26,7 @@ const securityHeaders = require('./middleware/security-headers')
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('shift-next')
+const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next')
 
 const orderHandler = require('./route-handlers/order-route-handler')
 

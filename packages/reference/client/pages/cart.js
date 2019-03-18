@@ -1,6 +1,6 @@
 // Libraries
 import { connect } from 'react-redux'
-import { algoliaReduxWrapper, CartPage } from 'shift-next'
+import { algoliaReduxWrapper, CartPage } from '@shiftcommerce/shift-next'
 
 function mapStateToProps (state) {
   const { cart } = state

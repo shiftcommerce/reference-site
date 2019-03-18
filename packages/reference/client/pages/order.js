@@ -2,7 +2,7 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { algoliaReduxWrapper, OrderPage } from 'shift-next'
+import { algoliaReduxWrapper, OrderPage } from '@shiftcommerce/shift-next'
 
 const mapStateToProps = (state) => {
   const { order } = state

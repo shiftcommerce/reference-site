@@ -1,4 +1,4 @@
 // Components
-import { reduxWrapper, ShippingMethodPage, withCheckout } from 'shift-next'
+import { reduxWrapper, ShippingMethodPage, withCheckout } from '@shiftcommerce/shift-next'
 
 export default reduxWrapper(withCheckout(ShippingMethodPage), ShippingMethodPage)

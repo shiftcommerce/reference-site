@@ -2,7 +2,7 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { algoliaReduxWrapper, ProductPage } from 'shift-next'
+import { algoliaReduxWrapper, ProductPage } from '@shiftcommerce/shift-next'
 
 function mapStateToProps ({ menu, product, cart }) {
   return { menu, product, cart }
