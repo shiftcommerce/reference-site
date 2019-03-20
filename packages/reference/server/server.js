@@ -66,7 +66,7 @@ module.exports = app.prepare().then(() => {
   })
 
   // Routes for local API calls
-  server.post('/createOrder', orderHandler.createOrderRenderer())
+  server.post('/createOrder', orderHandler.createOrderRenderer()) // this needs removing when we can test stripe in shift-next
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist
     // This may be handled by fastly to provided best caching performance

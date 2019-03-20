@@ -1,15 +1,6 @@
-- name: stylelint
+- name: specs
   service: web
-  command: yarn run lint:css
-
-- type: parallel
-  steps:
-    - service: web
-      name: unit tests
-      command: yarn run test:unit
-    - service: web
-      name: shift-api
-      command: vendor/shift-api/bin/test
+  command: yarn run jest
 
 - name: deploy
   tag: develop
