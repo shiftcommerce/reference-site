@@ -1,5 +1,6 @@
 web:
-  build: .
+  build:
+    image: web
   cached: true
   default_cache_branch: develop
   dockerfile: Dockerfile
@@ -9,6 +10,16 @@ web:
   encrypted_env_file: .env.encrypted
   volumes:
     - .:/app
+
+cypress-web:
+  build:
+    image: cypress
+    dockerfile: Dockerfile.cypress
+  cached: true
+  encrypted_env_file: .env.cypress.encrypted
+  depends_on:
+    - web
+
 herokudeployment:
   image: codeship/heroku-deployment
   encrypted_env_file: heroku-deployment.env.encrypted

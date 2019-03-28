@@ -11,7 +11,10 @@
   "scripts": {
     "devserver": "npm rebuild node-sass && NODE_ENV=development node server/server.js",
     "build": "next build client",
-    "start": "NODE_ENV=production node server/server.js",
+    "build-and-test-develop": "start-server-and-test devserver http://localhost:3000 cy:run",
+    "build-and-test-production": "build && start-server-and-test start http://localhost:3000 cy:run",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "test:unit": "jest --config=jest-test.config.js",
     "test:integration": "jest --config=jest-puppeteer.config.js",
     "test:integration:head": "JEST_PUPPETEER_CONFIG=jest-puppeteer-head.config.js jest --config=jest-puppeteer-head.config.js",
@@ -24,7 +27,8 @@
     "lint:js": "eslint .",
     "lint:js:fix": "eslint . --fix",
     "lint:css": "stylelint client/scss",
-    "lint:css:fix": "stylelint client/scss --fix"
+    "lint:css:fix": "stylelint client/scss --fix",
+    "start": "NODE_ENV=production PORT=3000 node server/server.js"
   },
   "peerDependencies": {
     "@shiftcommerce/shift-react-components": "0.3.0"
@@ -82,6 +86,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8",
     "babel-jest": "^23.6.0",
+    "cypress": "^3.2.0",
     "dotenv-webpack": "^1.5.7",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
@@ -104,6 +109,7 @@
     "redux-test-utils": "^0.1.3",
     "sass-lint": "^1.12.1",
     "sinon": "^4.0.1",
+    "start-server-and-test": "^1.7.12",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.3.1",

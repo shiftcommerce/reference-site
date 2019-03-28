@@ -21,3 +21,7 @@ coverage/
 
 # VSCODE
 .vscode/
+
+# Cypress Files
+cypress/videos
+cypress/screenshots

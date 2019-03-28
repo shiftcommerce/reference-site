@@ -1,6 +1,15 @@
-- name: specs
-  service: web
-  command: yarn run jest
+- name: "Tests - "
+  type: parallel
+  steps:
+    - name: "Cypress - Build, Start and Test develop application"
+      service: cypress-web
+      command: bash -c 'npm run build-and-test-develop'
+    - name: "Jest - All tests"
+      service: web
+      command: yarn run jest
+    # - name: "Build, Start and Test develop application"
+    #   service: cypress-web
+    #   command: bash -c 'npm run build-and-test-production'
 
 - name: deploy
   tag: develop

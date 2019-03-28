@@ -1,0 +1,8 @@
+# Get the Cypress Image
+FROM cypress/base:10
+# Make a working directory from the image
+WORKDIR /app
+# Copy all files from our web images
+COPY --from=web:latest /app /app
+# Install npm dependencies, can also use "npm ci"
+RUN npm install
