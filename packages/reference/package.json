@@ -28,7 +28,7 @@
     "lint:js:fix": "eslint . --fix",
     "lint:css": "stylelint client/scss",
     "lint:css:fix": "stylelint client/scss --fix",
-    "start": "NODE_ENV=production PORT=3000 node server/server.js"
+    "start": "NODE_ENV=production node server/server.js"
   },
   "peerDependencies": {
     "@shiftcommerce/shift-react-components": "0.3.0"
