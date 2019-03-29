@@ -1006,13 +1006,13 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@shiftcommerce/shift-next@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.2.0.tgz#e0c857cdd8e88c78db25eaa5df3b28bf4870b213"
-  integrity sha512-Sg90VuK3lg3IuudRN380bRqiwwbJILmjMNPROtNzrX0rTTlD5DYLYVZHUGa5s4rjy85aBmA0yHunXbQ3XhTovg==
+"@shiftcommerce/shift-next@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.3.0.tgz#2efcf8528583f3f1be732a4ebee3fbd238e5a9a8"
+  integrity sha512-8QbqKEO0NXjeVp1L5WFqk0hEZlZCdjz5IQ7Nwyzf6C8oIWgWE9sAACUWkENbmVABhMjG78/foi9PvXjm689S8g==
   dependencies:
-    "@shiftcommerce/shift-node-api" "0.2.0"
-    "@shiftcommerce/shift-react-components" "0.3.0"
+    "@shiftcommerce/shift-node-api" "0.2.1"
+    "@shiftcommerce/shift-react-components" "^0.4.0"
     axios "^0.18.0"
     js-cookie "^2.2.0"
     qs "^6.6.0"
@@ -1020,18 +1020,18 @@
     redux-thunk "^2.3.0"
     stripe "^6.25.1"
 
-"@shiftcommerce/shift-node-api@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-node-api/-/shift-node-api-0.2.0.tgz#3743cbdb6c699f7834fcc9c79ec6b698a1da5870"
-  integrity sha512-+jWNznYeO805rHJlGHCJSsH12Hu7ee8Bp9NG7RrwJJlR2YR4IBZFoJU27epl3p7QXTlZZFZFFZ5pqXhH+V+vQA==
+"@shiftcommerce/shift-node-api@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-node-api/-/shift-node-api-0.2.1.tgz#e888ff4371dc6c1de5278258df61807d63241d9b"
+  integrity sha512-cAJOL+Zxi2GDAcxJd8id9lZYCjw83MgulUmIm6qSBvCC9qlnvZXRmE2BWalncHGzYnMD0UAL77u3evNJ0YuqEQ==
   dependencies:
     axios "^0.18.0"
     qs "^6.6.0"
 
-"@shiftcommerce/shift-react-components@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-react-components/-/shift-react-components-0.3.0.tgz#ded5d681a06a47c0d7346bafa15decb57c9a6d62"
-  integrity sha512-hfsAXHA8Xp7r4IAsARim+fokyoxB4DzJw2CKyS6LTAJ3uXNkeZY2hKtdy4luBYFw3SFBFFroeoC+mf5QQfXtTw==
+"@shiftcommerce/shift-react-components@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-react-components/-/shift-react-components-0.4.0.tgz#75534d84f1f09508bb8601ef3e6adca7894c13e7"
+  integrity sha512-+3fkOF7kvMqz5vOis3yMBbAxBremj+4TiH2Dc/t2dI74e4S6VHuQ/EN4uy4IhAJkWRD81ikKfk6GN4tLGuw9/g==
   dependencies:
     classnames "^2.2.6"
     date-fns "^1.29.0"

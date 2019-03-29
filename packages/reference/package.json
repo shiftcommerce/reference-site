@@ -30,12 +30,9 @@
     "lint:css:fix": "stylelint client/scss --fix",
     "start": "NODE_ENV=production node server/server.js"
   },
-  "peerDependencies": {
-    "@shiftcommerce/shift-react-components": "0.3.0"
-  },
   "dependencies": {
-    "@shiftcommerce/shift-next": "^0.2.1",
-    "@shiftcommerce/shift-react-components": "^0.3.0",
+    "@shiftcommerce/shift-next": "^0.3.0",
+    "@shiftcommerce/shift-react-components": "^0.4.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.16.2",
