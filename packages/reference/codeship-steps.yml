@@ -12,6 +12,6 @@
     #   command: bash -c 'npm run build-and-test-production'
 
 - name: deploy
-  tag: develop
+  tag: master
   service: herokudeployment
   command: codeship_heroku_deploy -f /app -N shift-front-end-staging
