@@ -4,8 +4,8 @@ import { Config } from '@shiftcommerce/shift-react-components'
 import { shiftNextConfig } from '@shiftcommerce/shift-next'
 
 // Objects
-import NextHead from '../objects/next-head'
 import NextLink from '../objects/next-link'
+import NextHead from '../objects/next-head'
 
 // Next config
 import getConfig from 'next/config'

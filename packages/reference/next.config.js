@@ -11,7 +11,8 @@ const withConfig = nextRuntimeDotenv({
     'ALGOLIA_API_KEY',
     'ALGOLIA_INDEX_NAME',
     'ALGOLIA_RESULTS_PER_PAGE',
-    'STRIPE_API_KEY'
+    'STRIPE_API_KEY',
+    'PAYPAL_CLIENT_ID'
   ],
   server: [
     'API_TENANT',
