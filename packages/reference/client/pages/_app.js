@@ -20,7 +20,8 @@ const {
     ALGOLIA_RESULTS_PER_PAGE,
     ALGOLIA_INDEX_NAME,
     API_HOST_PROXY,
-    STRIPE_API_KEY
+    STRIPE_API_KEY,
+    PAYPAL_CLIENT_ID
   }
 } = getConfig()
 
@@ -35,6 +36,7 @@ shiftNextConfig.set({
   algoliaIndexName: ALGOLIA_INDEX_NAME,
   algoliaResultsPerPage: ALGOLIA_RESULTS_PER_PAGE,
   apiHostProxy: API_HOST_PROXY,
+  payPalClientID: PAYPAL_CLIENT_ID,
   storeName: 'ShopGo',
   Head: NextHead
 })

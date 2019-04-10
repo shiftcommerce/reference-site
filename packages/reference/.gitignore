@@ -8,6 +8,7 @@
 node_modules/
 yarn-error.log
 /yarn_cache
+yarn.lock
 
 # Ignore Mac files
 **/.DS_Store
@@ -21,6 +22,9 @@ coverage/
 
 # VSCODE
 .vscode/
+
+# Ignore Yalc
+yalc.lock
 
 # Cypress Files
 cypress/videos

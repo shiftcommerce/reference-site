@@ -92,14 +92,14 @@ const buildContentSecurityPolicy = (imageHosts, scriptHosts) => {
     // required as that's how we load Stripe
     // TODO: Added 'unsafe-eval' in order for stripe to load correctly and to stop an webpack error "Uncaught TypeError: __webpack_require__(...) is not a function"
     // for react index.js next and next-dev.  Is this approach safe?
-    "script-src 'self' 'unsafe-inline' https://js.stripe.com 'unsafe-eval'",
+    "script-src 'self' 'unsafe-inline' https://js.stripe.com  https://*.paypal.com https://*.paypalobjects.com 'unsafe-eval'",
 
     // Allow <frame> and <iframe>'s from third party sources.
-    'frame-src https://js.stripe.com',
+    'frame-src https://js.stripe.com https://*.paypal.com',
 
     // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
     // WebSocket and EventSource
-    `connect-src 'self' https://*.algolia.net https://*.algolianet.com ${formattedScriptHosts}`,
+    `connect-src 'self' https://*.algolia.net https://*.algolianet.com https://*.paypal.com ${formattedScriptHosts}`,
 
     // Enforce that forms point to self
     "form-action 'self'",

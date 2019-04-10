@@ -22,7 +22,9 @@ const withConfig = nextRuntimeDotenv({
     'SESSION_SECRET',
     'IMAGE_HOSTS',
     'SCRIPT_HOSTS',
-    'SECRET_STRIPE_API_KEY'
+    'SECRET_STRIPE_API_KEY',
+    'PAYPAL_CLIENT_SECRET',
+    'ENABLE_PAYPAL_LIVE_ENVIRONMENT'
   ]
 })
 
@@ -42,6 +44,9 @@ module.exports = withConfig(withCSS(withSass({
     return config
   },
   webpack (config, { dev }) {
+    config.node = {
+      fs: 'empty'
+    }
     config.module.rules.push({
       test: /\.(jpe?g|png|gif|svg)$/i,
       use: [

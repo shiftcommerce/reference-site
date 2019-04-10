@@ -10,6 +10,7 @@ function createOrderRenderer () {
     const orderPayload = { data: body.data }
     const cardToken = body.card_token
     const paymentMethod = body.payment_method
+    const paymentAuthorizationID = body.payment_authorization_id
 
     if (paymentMethod === 'card') {
       stripe.charges.create({
@@ -41,6 +42,22 @@ function createOrderRenderer () {
           })
         }
       })
+    } else if (paymentMethod === 'PayPal') {
+      orderPayload.data.attributes.payment_transactions_resources = [{
+        attributes: {
+          payment_gateway_reference: 'paypal',
+          transaction_type: 'authorisation',
+          gateway_response: {
+            token: paymentAuthorizationID
+          },
+          status: 'success',
+          amount: orderPayload.data.attributes.total,
+          currency: orderPayload.data.attributes.currency
+        },
+        type: 'payment_transactions'
+      }]
+      orderPayload.data.attributes.ip_address = req.connection.remoteAddress
+      placeOrder(req, res, orderPayload)
     } else {
       return placeOrder(req, res, orderPayload).catch((error) => {
         console.log('Error is ', error)
