@@ -25,7 +25,6 @@ const {
 } = getConfig()
 
 Config.set({
-  Head: NextHead,
   Link: NextLink,
   stripeApiKey: STRIPE_API_KEY
 })
@@ -36,7 +35,8 @@ shiftNextConfig.set({
   algoliaIndexName: ALGOLIA_INDEX_NAME,
   algoliaResultsPerPage: ALGOLIA_RESULTS_PER_PAGE,
   apiHostProxy: API_HOST_PROXY,
-  storeName: 'ShopGo'
+  storeName: 'ShopGo',
+  Head: NextHead
 })
 
 class MyApp extends App {
