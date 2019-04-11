@@ -102,3 +102,20 @@ as required.
 **Note:** if you're working on a new feature and run into issues, check the
 Feature Policy header in the above file as you may need to enable certain features
 (e.g. geolocation)
+
+## Development of related libraries
+
+You are likely to use the reference site to develop and test related Shift libraries, in particular [shift-react-components](https://github.com/shiftcommerce/shift-react-components) and [shift-next](https://github.com/shiftcommerce/shift-next). To make local changes to these packages reflected in your local instance of the reference site use [yarn link](https://yarnpkg.com/en/docs/cli/link) :
+```
+# in ./shift-react-components
+yarn link
+
+# in ./shift-front-end-react
+yarn link @shiftcommerce/shift-react-components
+
+# Now boot the reference site outside of Docker
+nodemon --watch server.js
+```
+**Make sure you run webpack in watch mode** in shift-react-components. It makes compilation significantly faster.
+
+Any changes made to the linked library should now be automatically picked up by Next and pushed to the browser.
