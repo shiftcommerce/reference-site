@@ -15,7 +15,8 @@
     "page": true,
     "browser": true,
     "context": true,
-    "jestPuppeteer": true
+    "jestPuppeteer": true,
+    "cy": true
   },
   "plugins": ["react"],
   "extends": "standard",

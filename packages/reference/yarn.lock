@@ -1044,16 +1044,18 @@
     braintreehttp "^0.4.0"
     npm "^6.4.0"
 
-"@shiftcommerce/shift-next@^0.8.1":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.8.4.tgz#5d1c3b23c753c4e9a2af8c20bb236a5634a12541"
-  integrity sha512-glcKWAN+E8840Km4ICULKBuptpyNQg75N7lPwV/mRt+zBRkQ0QFaUFZzclVQAcSWCtspth+K/OgqCXR2PLVuBg==
+"@shiftcommerce/shift-next@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.9.0.tgz#d902b03bb820a8b868d112a15efc637eb50b1e5e"
+  integrity sha512-H+wCC4OrPdPM4ycxYrMVw8AVDK8vi8a8RZgD/CgwkKFzybD4P6MG24aQl1ui9HaugL5foOydefEX/7STEl7Mhg==
   dependencies:
     "@shiftcommerce/shift-node-api" "^0.4.1"
-    "@shiftcommerce/shift-react-components" "^0.9.1"
+    "@shiftcommerce/shift-react-components" "^0.10.0"
     axios "^0.18.0"
     js-cookie "^2.2.0"
     qs "^6.6.0"
+    react-redux "^5.0.7"
+    redux "^3.7.2"
     redux-devtools-extension "^2.13.8"
     redux-thunk "^2.3.0"
     stripe "^6.25.1"
@@ -1066,35 +1068,10 @@
     axios "^0.18.0"
     qs "^6.6.0"
 
-"@shiftcommerce/shift-react-components@^0.9.1":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-react-components/-/shift-react-components-0.9.2.tgz#1f44d439ecfb2c9c5d6d986decfdbcb01f9c2e89"
-  integrity sha512-DzBTgJgohq/VGAnpxaUkG5FvwwyoxdfebvEq6SmEAFF2jRfrpr/5nNIVaypA2drx0bPF/o3bAKE84RZuYCkgvQ==
-  dependencies:
-    classnames "^2.2.6"
-    date-fns "^1.29.0"
-    formik "^1.4.0"
-    moment-business-days "^1.1.3"
-    react "^16.7.0"
-    react-dom "^16.7.0"
-    react-input-range "^1.3.0"
-    react-instantsearch "^5.3.1"
-    react-instantsearch-dom "^5.3.1"
-    react-lazyload-fadein "^1.1.0"
-    react-loading "^2.0.3"
-    react-pluralize "^1.5.0"
-    react-redux "^5.0.7"
-    react-responsive-carousel "^3.1.43"
-    react-stickyfill "^0.2.3"
-    react-stripe-elements "^2.0.3"
-    redux "^3.7.2"
-    typy "^2.0.1"
-    yup "^0.26.6"
-
-"@shiftcommerce/shift-react-components@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-react-components/-/shift-react-components-0.9.3.tgz#1154a8af94a040c33c8bc653d99480b3dcd856f5"
-  integrity sha512-2oVbD0MwZrNTK0U0SCYwkLN/wju4WcWkVqSDMOx1zXqsYUk1X4/n7apKxnbbXdJwEUNg6oR7Vjq32OEvatOlIw==
+"@shiftcommerce/shift-react-components@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-react-components/-/shift-react-components-0.10.0.tgz#4aeed081abfb4284f018f0b85f16730334b1ea8f"
+  integrity sha512-y+1UrVZbrdXt0+3nDtS/q+Z4ndeHIx+PZfu32cUL2egs9whdlEL6gmM4UCMJdu62Zpv+ovTg/FUj4voUQg0bFg==
   dependencies:
     classnames "^2.2.6"
     formik "^1.4.0"
@@ -3946,7 +3923,7 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns@^1.27.2, date-fns@^1.29.0:
+date-fns@^1.27.2:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==

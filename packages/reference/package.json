@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
-    "@shiftcommerce/shift-next": "^0.8.1",
-    "@shiftcommerce/shift-react-components": "^0.9.3",
+    "@shiftcommerce/shift-next": "^0.9.0",
+    "@shiftcommerce/shift-react-components": "^0.10.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.16.2",
