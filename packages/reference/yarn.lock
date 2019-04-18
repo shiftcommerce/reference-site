@@ -1044,10 +1044,10 @@
     braintreehttp "^0.4.0"
     npm "^6.4.0"
 
-"@shiftcommerce/shift-next@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.8.0.tgz#727dd3d333a4840547540e20c7533a5be5e16f42"
-  integrity sha512-3nkORwGuVgKzbJHnZXqX24+69XRo5UFqRc+3fVs2FvJQLFsyMvl/69t9DdMykbqztZft68669vkpNc00npDCSQ==
+"@shiftcommerce/shift-next@^0.8.1":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@shiftcommerce/shift-next/-/shift-next-0.8.4.tgz#5d1c3b23c753c4e9a2af8c20bb236a5634a12541"
+  integrity sha512-glcKWAN+E8840Km4ICULKBuptpyNQg75N7lPwV/mRt+zBRkQ0QFaUFZzclVQAcSWCtspth+K/OgqCXR2PLVuBg==
   dependencies:
     "@shiftcommerce/shift-node-api" "^0.4.1"
     "@shiftcommerce/shift-react-components" "^0.9.1"
@@ -12167,15 +12167,15 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@16.7.0:
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
-  integrity sha512-StCz3QY8lxTb5cl2HJxjwLFOXPIFQp+p+hxQfc8WE0QiLfCtIlKj8/+5tjjKm8uSTlAW+fCPaavGFS06V9Ar3A==
+react@16.8.6, react@^16.7.0:
+  version "16.8.6"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
+  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0"
+    scheduler "^0.13.6"
 
 react@^15.5.4:
   version "15.6.2"
@@ -12187,16 +12187,6 @@ react@^15.5.4:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
-
-react@^16.7.0:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.13.6"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
