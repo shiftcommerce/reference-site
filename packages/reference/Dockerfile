@@ -34,3 +34,4 @@ ADD . $app
 
 # Use dumb-init to ensure we aren't left with zombie processes
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
+CMD ['yarn', 'devserver']

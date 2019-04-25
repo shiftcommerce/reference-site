@@ -2,7 +2,6 @@ web:
   build:
     image: web
   cached: true
-  default_cache_branch: develop
   dockerfile: Dockerfile
   ports:
     - "3000"
@@ -11,14 +10,31 @@ web:
   volumes:
     - .:/app
 
-cypress-web:
+web-server:
+  build:
+    image: web
+  cached: true
+  command: yarn run devserver
+  dockerfile: Dockerfile
+  ports:
+    - "3000"
+  entrypoint: ./bin/docker/yarn_entrypoint
+  encrypted_env_file: .env.cypress.encrypted
+  volumes:
+    - .:/app
+
+cypress:
   build:
     image: cypress
     dockerfile: Dockerfile.cypress
   cached: true
   encrypted_env_file: .env.cypress.encrypted
+  environment:
+    CYPRESS_BASE_URL: "http://web-server:3000"
+    CYPRESS_VIDEO: false
+    WEB_BOOT_TIMEOUT: 180
   depends_on:
-    - web
+    - web-server
 
 herokudeployment:
   image: codeship/heroku-deployment
