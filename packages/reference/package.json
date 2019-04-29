@@ -1,5 +1,5 @@
 {
-  "name": "shift-front-end-react",
+  "name": "reference",
   "version": "0.0.1",
   "main": "server/server.js",
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
     "@shiftcommerce/shift-next": "^0.9.1",
-    "@shiftcommerce/shift-react-components": "^0.10.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.16.2",
