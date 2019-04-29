@@ -9,7 +9,7 @@
     "node": "^11.13.0"
   },
   "scripts": {
-    "devserver": "npm rebuild node-sass && NODE_ENV=development node server/server.js",
+    "devserver": "NODE_ENV=development node server/server.js",
     "build": "next build client",
     "build-and-test-develop": "start-server-and-test devserver http://localhost:3000 cy:run",
     "build-and-test-production": "build && start-server-and-test start http://localhost:3000 cy:run",
@@ -28,9 +28,7 @@
     "lint:js:fix": "eslint . --fix",
     "lint:css": "stylelint client/scss",
     "lint:css:fix": "stylelint client/scss --fix",
-    "start": "NODE_ENV=production node server/server.js",
-    "yalc": "nodemon -x 'yalc push'",
-    "start-and-watch-yalc": "nodemon --inspect --watch server --watch yalc.lock"
+    "start": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
