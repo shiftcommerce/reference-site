@@ -88,8 +88,9 @@ const config = {
   ]
 }
 
-if (env === 'development') {
-  config.module.resolve.push(path.join(__dirname, '../../node_modules'))
+if (env !== 'production') {
+  console.log("[shift-react-components] - Development mode: pushing yarn workspaces node_modules into Webpack")
+  config.resolve.modules.push(path.join(__dirname, '../../node_modules'))
 }
 
 module.exports = config

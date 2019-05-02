@@ -86,17 +86,6 @@ module.exports = withConfig(withCSS(withSass(withTM({
       }
     )
 
-    config.module.rules.forEach(rule => {
-      console.log(JSON.stringify(rule, undefined, 2))
-      //if (rule.use) {
-        // rule.forEach(peff => {
-        //   console.log(peff)
-        // })
-      //}
-    })
-
-    // console.log(config.module)
-
     return config
   }
 }))))

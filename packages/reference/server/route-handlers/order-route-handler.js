@@ -25,10 +25,10 @@ function createOrderRenderer () {
         } else {
           orderPayload.data.attributes.payment_transactions_resources = [{
             attributes: {
-              payment_gateway_reference: 'secure_trading_payment_pages',
+              payment_gateway_reference: 'stripe',
               transaction_type: 'authorisation',
               gateway_response: {
-                charge: charge
+                token: charge.id
               },
               status: 'success',
               amount: orderPayload.data.attributes.total_inc_tax,
@@ -36,6 +36,7 @@ function createOrderRenderer () {
             },
             type: 'payment_transactions'
           }]
+
           orderPayload.data.attributes.ip_address = cardToken.client_ip
           placeOrder(req, res, orderPayload).catch((error) => {
             console.log('Error is ', error)
