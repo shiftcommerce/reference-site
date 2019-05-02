@@ -141,7 +141,6 @@ test('sets shipping address id when a shipping address is created', () => {
 
   const updatedState = setCheckout(currentState, action)
 
-  console.log({updatedState})
   expect(updatedState.shippingAddress.id).toEqual(10)
 })
 
@@ -285,7 +284,7 @@ test('sets billing address when a PayPal order is created', () => {
     billingAddress: {}
   }
 
-  // Act 
+  // Act
   const updatedState = setCheckout(currentState, action)
 
   // Assert
@@ -319,7 +318,7 @@ test('sets shipping address when a PayPal order is created', () => {
     shippingAddress: {}
   }
 
-  // Act 
+  // Act
   const updatedState = setCheckout(currentState, action)
 
   // Assert

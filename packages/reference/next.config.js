@@ -1,8 +1,8 @@
+const path = require('path')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 const nextRuntimeDotenv = require('next-runtime-dotenv')
-
-const windows = process.env.WINDOWS || false
+const withTM = require('next-transpile-modules')
 
 const withConfig = nextRuntimeDotenv({
   public: [
@@ -28,69 +28,75 @@ const withConfig = nextRuntimeDotenv({
   ]
 })
 
-module.exports = withConfig(withCSS(withSass({
+module.exports = withConfig(withCSS(withSass(withTM({
+  sassLoaderOptions: {
+    includePaths: [`${process.env.INIT_CWD}/node_modules`]
+  },
+  transpileModules: [
+    '@shiftcommerce/shift-next',
+    '@shiftcommerce/shift-react-components'
+  ],
   poweredByHeader: false,
   assetPrefix: process.env.ASSET_HOST || '',
-
-  webpackDevMiddleware: (config) => {
-    if (windows) {
-      config.watchOptions = {
-        ignored: /node_modules/,
-        poll: 500,
-        aggregateTimeout: 300
-      }
+  webpack (config, { dev }) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@shiftcommerce/shift-next': require.resolve('@shiftcommerce/shift-next'),
+      '@shiftcommerce/shift-react-components': require.resolve('@shiftcommerce/shift-react-components'),
     }
 
-    return config
-  },
-  webpack (config, { dev }) {
     config.node = {
       fs: 'empty'
     }
-    config.module.rules.push({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            query: {
-              hash: 'sha512',
-              digest: 'hex',
-              name: '[hash].[ext]'
+
+    config.module.rules.push(
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              query: {
+                hash: 'sha512',
+                digest: 'hex',
+                name: '[hash].[ext]'
+              }
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: { progressive: true, quality: 65 },
+              optipng: { enabled: false },
+              pngquant: { quality: '65-90', speed: 4 },
+              gifsicle: { interlaced: false },
+              webp: { quality: 75 }
             }
           }
-        },
-        {
-          loader: 'image-webpack-loader',
+        ]
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf|jpg)$/,
+        use: {
+          loader: 'url-loader',
           options: {
-            mozjpeg: { progressive: true, quality: 65 },
-            optipng: { enabled: false },
-            pngquant: { quality: '65-90', speed: 4 },
-            gifsicle: { interlaced: false },
-            webp: { quality: 75 }
+            limit: 100000, name: '[name].[ext]'
           }
         }
-      ]
-    },
-    {
-      test: /\.(eot|woff|woff2|ttf|jpg)$/,
-      use: {
-        loader: 'url-loader',
-        options: {
-          limit: 100000, name: '[name].[ext]'
-        }
       }
+    )
+
+    config.module.rules.forEach(rule => {
+      console.log(JSON.stringify(rule, undefined, 2))
+      //if (rule.use) {
+        // rule.forEach(peff => {
+        //   console.log(peff)
+        // })
+      //}
     })
 
-    // Perform customizations to config
-    config.module.rules = config.module.rules.map(rule => {
-      if (rule.loader === 'babel-loader') {
-        rule.options.cacheDirectory = false
-      }
-
-      return rule
-    })
+    // console.log(config.module)
 
     return config
   }
-})))
+}))))

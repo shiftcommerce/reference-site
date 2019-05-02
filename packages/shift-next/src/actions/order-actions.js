@@ -163,7 +163,8 @@ function prepareAddress (address) {
       country: address.country,
       first_name: address.first_name,
       last_name: address.last_name,
-      postcode: address.postcode
+      postcode: address.postcode,
+      state: address.state
     },
     type: 'addresses'
   }

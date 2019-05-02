@@ -116,6 +116,7 @@ function createCustomerAddressV1 (req) {
         city: req.body.city,
         country: req.body.country_code,
         postcode: req.body.zipcode,
+        state: req.body.state,
         meta_attributes: {
           email: {
             value: req.body.email

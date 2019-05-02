@@ -1,4 +1,4 @@
 // Pages
-import { SlugPage } from '@shiftcommerce/shift-next'
+import { SlugPage, reduxWrapper } from '@shiftcommerce/shift-next'
 
-export default SlugPage
+export default reduxWrapper(SlugPage, SlugPage)

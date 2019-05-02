@@ -3,16 +3,16 @@ import { Carousel } from 'react-responsive-carousel'
 
 class ProductCarousel extends Component {
   render () {
-    const {
-      assetFiles
-    } = this.props
+    const { assetFiles } = this.props
 
-    const imageUrls = assetFiles.map(asset => asset.s3_url)
+    const productImages = assetFiles.map(asset => {
+      return { id: asset.id, url: asset.s3_url }
+    })
 
     return (
-      <Carousel showStatus={false} useKeyboardArrows key={imageUrls}>
-        { imageUrls.map((imageUrl, index) => (
-          <img key={index} src={imageUrl} />
+      <Carousel showStatus={false} useKeyboardArrows>
+        { productImages.map((image) => (
+          <img key={image.id} src={image.url} />
         )) }
       </Carousel>
     )

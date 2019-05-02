@@ -6,7 +6,9 @@ const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
-module.exports = {
+const env = process.env.NODE_ENV
+
+const config = {
   entry: path.join(__dirname, '/src/index.js'),
   externals: {
     'react': 'commonjs react',
@@ -85,3 +87,9 @@ module.exports = {
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/)
   ]
 }
+
+if (env === 'development') {
+  config.module.resolve.push(path.join(__dirname, '../../node_modules'))
+}
+
+module.exports = config

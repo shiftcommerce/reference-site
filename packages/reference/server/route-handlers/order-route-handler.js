@@ -14,7 +14,7 @@ function createOrderRenderer () {
 
     if (paymentMethod === 'card') {
       stripe.charges.create({
-        amount: Math.round(orderPayload.data.attributes.total * 100),
+        amount: Math.round(orderPayload.data.attributes.total_inc_tax * 100),
         currency: orderPayload.data.attributes.currency,
         source: cardToken.id,
         capture: false
@@ -31,7 +31,7 @@ function createOrderRenderer () {
                 charge: charge
               },
               status: 'success',
-              amount: orderPayload.data.attributes.total,
+              amount: orderPayload.data.attributes.total_inc_tax,
               currency: orderPayload.data.attributes.currency
             },
             type: 'payment_transactions'
@@ -51,7 +51,7 @@ function createOrderRenderer () {
             token: paymentAuthorizationID
           },
           status: 'success',
-          amount: orderPayload.data.attributes.total,
+          amount: orderPayload.data.attributes.total_inc_tax,
           currency: orderPayload.data.attributes.currency
         },
         type: 'payment_transactions'
