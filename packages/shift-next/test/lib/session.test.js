@@ -1,5 +1,5 @@
 // Libs
-import { getSessionExpiryTime } from '../../src/lib/session'
+import getSessionExpiryTime from '../../src/lib/session'
 
 const RealDate = Date
 

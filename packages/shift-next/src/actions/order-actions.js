@@ -154,6 +154,7 @@ function prepareShippingAddress (address) {
 }
 
 function prepareAddress (address) {
+  console.log(address.state)
   return {
     id: address.id,
     attributes: {
