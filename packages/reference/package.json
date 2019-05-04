@@ -32,7 +32,6 @@
     "start": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
-    "@paypal/checkout-server-sdk": "^1.0.0",
     "@shiftcommerce/shift-next": "^2.0.0",
     "@shiftcommerce/shift-react-components": "^2.0.0",
     "@zeit/next-css": "^1.0.1",
