@@ -1,5 +1,5 @@
 // Libs
-const getSessionExpiryTime = require('../lib/session')
+const { getSessionExpiryTime } = require('@shiftcommerce/shift-next')
 
 /**
  * Sets the user to logged in, by updating the session expiry time, and adding

@@ -238,7 +238,6 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               emulateTouch={false}
               infiniteLoop={false}
               interval={3000}
-              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
               onChange={[Function]}
               onClickItem={[Function]}
               onClickThumb={[Function]}
@@ -328,11 +327,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         <li
                           className="slide selected"
-                          key="itemKey0/.$0"
+                          key="itemKey0/.$139"
                           onClick={[Function]}
                         >
                           <img
-                            key="0"
+                            key="139"
                             src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                           />
                         </li>
@@ -349,7 +348,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     <li
                       className="dot selected"
-                      key=".$0"
+                      key="0/.$139"
                       onClick={[Function]}
                       onKeyDown={[Function]}
                       role="button"
@@ -436,7 +435,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                             tabIndex={0}
                           >
                             <img
-                              key=".$0"
+                              key=".$139"
                               onLoad={[Function]}
                               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                             />
@@ -1040,7 +1039,6 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               emulateTouch={false}
               infiniteLoop={false}
               interval={3000}
-              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
               onChange={[Function]}
               onClickItem={[Function]}
               onClickThumb={[Function]}
@@ -1130,11 +1128,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         <li
                           className="slide selected"
-                          key="itemKey0/.$0"
+                          key="itemKey0/.$139"
                           onClick={[Function]}
                         >
                           <img
-                            key="0"
+                            key="139"
                             src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                           />
                         </li>
@@ -1151,7 +1149,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     <li
                       className="dot selected"
-                      key=".$0"
+                      key="0/.$139"
                       onClick={[Function]}
                       onKeyDown={[Function]}
                       role="button"
@@ -1238,7 +1236,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                             tabIndex={0}
                           >
                             <img
-                              key=".$0"
+                              key=".$139"
                               onLoad={[Function]}
                               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                             />
@@ -1842,7 +1840,6 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               emulateTouch={false}
               infiniteLoop={false}
               interval={3000}
-              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
               onChange={[Function]}
               onClickItem={[Function]}
               onClickThumb={[Function]}
@@ -1932,11 +1929,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         <li
                           className="slide selected"
-                          key="itemKey0/.$0"
+                          key="itemKey0/.$139"
                           onClick={[Function]}
                         >
                           <img
-                            key="0"
+                            key="139"
                             src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                           />
                         </li>
@@ -1953,7 +1950,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     <li
                       className="dot selected"
-                      key=".$0"
+                      key="0/.$139"
                       onClick={[Function]}
                       onKeyDown={[Function]}
                       role="button"
@@ -2040,7 +2037,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                             tabIndex={0}
                           >
                             <img
-                              key=".$0"
+                              key=".$139"
                               onLoad={[Function]}
                               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                             />
@@ -2644,7 +2641,6 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
               emulateTouch={false}
               infiniteLoop={false}
               interval={3000}
-              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
               onChange={[Function]}
               onClickItem={[Function]}
               onClickThumb={[Function]}
@@ -2734,11 +2730,11 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                       >
                         <li
                           className="slide selected"
-                          key="itemKey0/.$0"
+                          key="itemKey0/.$139"
                           onClick={[Function]}
                         >
                           <img
-                            key="0"
+                            key="139"
                             src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                           />
                         </li>
@@ -2755,7 +2751,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                   >
                     <li
                       className="dot selected"
-                      key=".$0"
+                      key="0/.$139"
                       onClick={[Function]}
                       onKeyDown={[Function]}
                       role="button"
@@ -2842,7 +2838,7 @@ Assam in north-eastern India grows exceptional tea in the lush soil of the Brahm
                             tabIndex={0}
                           >
                             <img
-                              key=".$0"
+                              key=".$139"
                               onLoad={[Function]}
                               src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
                             />

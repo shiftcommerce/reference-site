@@ -55,9 +55,7 @@ module.exports = {
       orderPayload.data.attributes.ip_address = req.connection.remoteAddress
       placeOrder(req, res, orderPayload)
     } else {
-      return placeOrder(req, res, orderPayload).catch((error) => {
-        console.log('Error is ', error)
-      })
+      return placeOrder(req, res, orderPayload)
     }
   }
 }
@@ -69,14 +67,7 @@ async function placeOrder (req, res, orderPayload) {
     res.clearCookie('cart', { signed: true })
   }
 
-  switch (response.status) {
-    case 404:
-      return res.status(200).send({})
-    case 422:
-      return res.status(response.status).send(response.data.errors)
-    default:
-      return res.status(response.status).send(response.data)
-  }
+  return res.status(response.status).send(response.data)
 }
 
 

@@ -60,11 +60,6 @@ module.exports = app.prepare().then(() => {
 
   shiftRoutes(server)
 
-  server.get('/serviceWorker.js', (req, res) => {
-    res.setHeader('content-type', 'text/javascript')
-    createReadStream('./server/service-worker.js').pipe(res)
-  })
-
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist
     // This may be handled by fastly to provided best caching performance

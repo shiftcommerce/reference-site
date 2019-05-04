@@ -1,6 +1,6 @@
 // Libraries
-import nock from 'nock'
-import { PayPalClient } from '../../src/lib/paypal-client'
+const nock = require('nock')
+const { PayPalClient } = require('../../src/lib/paypal-client')
 
 // Fixtures
 const payPalOauthResponse = require('../fixtures/paypal-oauth-response')
@@ -47,7 +47,7 @@ test('buildPatchOrderPayload returns correct patch payload', async () => {
   ]
 
   // Act
-  const bodyPayload = PayPalClient.buildPatchOrderPayload(purchaseUnitsReferenceID, cart) 
+  const bodyPayload = PayPalClient.buildPatchOrderPayload(purchaseUnitsReferenceID, cart)
 
   // Assert
   expect(bodyPayload).toEqual(expectedPayload)
@@ -95,10 +95,10 @@ describe('patchOrder()', () => {
     nockScope
       .intercept(`/v2/checkout/orders/${payPalOrderID}?`, 'PATCH')
       .reply(400, payPalInvalidOrderUpdateResponse)
-    
+
     // Act
     const error_response= await PayPalClient.patchOrder(payPalOrderID, purchaseUnitsReferenceID, cartWithInvalidTotal)
-  
+
     // Assert
     expect(error_response.status).toBe(400)
     expect(JSON.parse(error_response.data)).toEqual(payPalInvalidOrderUpdateResponse)
@@ -146,7 +146,7 @@ describe('authorizeOrder()', () => {
 
     // Act
     const error_response = await PayPalClient.authorizeOrder(payPalOrderID)
-  
+
     // Assert
     expect(error_response.status).toBe(422)
     expect(JSON.parse(error_response.data)).toEqual(payPalInvalidOrderAuthorizationResponse)

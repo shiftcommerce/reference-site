@@ -10,7 +10,8 @@
           "country": "GB",
           "first_name": "asda",
           "last_name": "asdas",
-          "postcode": "asdas"
+          "postcode": "asdas",
+          "state": ""
         },
         "type": "addresses"
       },
@@ -91,7 +92,8 @@
           "country": "GB",
           "first_name": "asda",
           "last_name": "asdas",
-          "postcode": "asdas"
+          "postcode": "asdas",
+          "state": ""
         },
         "type": "addresses"
       },
