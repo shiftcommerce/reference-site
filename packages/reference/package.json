@@ -16,6 +16,7 @@
     "build-and-test-production": "build && start-server-and-test start http://localhost:3000 cy:run",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
+    "test": "yarn run test:unit",
     "test:unit": "jest --config=jest-test.config.js",
     "test:integration": "jest --config=jest-puppeteer.config.js",
     "test:integration:head": "JEST_PUPPETEER_CONFIG=jest-puppeteer-head.config.js jest --config=jest-puppeteer-head.config.js",
