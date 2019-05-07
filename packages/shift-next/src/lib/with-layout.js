@@ -17,29 +17,6 @@ import { withRouter } from 'next/router'
 
 export default function withLayout (Component) {
   class LayoutWrapper extends InitialPropsDelegator(Component) {
-    // serviceWorker () {
-    //  // Install service worker only in production environment
-    //   if (process.env.NODE_ENV === 'production') {
-    //    // Registration of service worker
-    //     if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-    //       navigator.serviceWorker.getRegistration('/app').then(registration => {
-    //        // Check if service worker has already registered
-    //        // register only if not yet done
-    //         if (registration === undefined) {
-    //           navigator.serviceWorker.register('/serviceWorker.js', { scope: '/' }).then(registration => {
-    //            // Successfully registered the Service Worker
-    //             console.log('Service Worker registration successful with scope: ', registration.scope)
-    //           }).catch(err => {
-    //            // Failed to register the Service Worker
-    //             console.log('Service Worker registration failed: ', err)
-    //           })
-    //         }
-    //       })
-    //     } else {
-    //       console.log('Service workers are not supported.')
-    //     }
-    //   }
-    // }
     constructor (props) {
       super(props)
 
