@@ -7,7 +7,6 @@ describe('Static pages', () => {
     cy.visit('/')
 
     // Check the home page was loaded
-    cy.wait('@getStaticPage')
     cy.contains(/Test homepage heading/i)
 
     // Go to another static page using the menu
