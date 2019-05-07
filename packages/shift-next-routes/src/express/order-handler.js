@@ -11,28 +11,29 @@ module.exports = {
 
     if (paymentMethod === 'card') {
       stripe.charges.create({
-        amount: Math.round(orderPayload.data.attributes.total * 100),
+        amount: Math.round(orderPayload.data.attributes.total_inc_tax * 100),
         currency: orderPayload.data.attributes.currency,
         source: cardToken.id,
         capture: false
-      }, (error, charge) => {
-        if (error) {
-          console.log(error)
-          res.json(error)
+      }, (err, charge) => {
+        if (err) {
+          console.log(err)
+          res.json(err)
         } else {
           orderPayload.data.attributes.payment_transactions_resources = [{
             attributes: {
-              payment_gateway_reference: 'secure_trading_payment_pages',
+              payment_gateway_reference: 'stripe',
               transaction_type: 'authorisation',
               gateway_response: {
-                charge: charge
+                token: charge.id
               },
               status: 'success',
-              amount: orderPayload.data.attributes.total,
+              amount: orderPayload.data.attributes.total_inc_tax,
               currency: orderPayload.data.attributes.currency
             },
             type: 'payment_transactions'
           }]
+
           orderPayload.data.attributes.ip_address = cardToken.client_ip
           placeOrder(req, res, orderPayload)
         }
@@ -43,10 +44,10 @@ module.exports = {
           payment_gateway_reference: 'paypal',
           transaction_type: 'authorisation',
           gateway_response: {
-            token: paymentAuthorizationID,
+            token: paymentAuthorizationID
           },
           status: 'success',
-          amount: orderPayload.data.attributes.total,
+          amount: orderPayload.data.attributes.total_inc_tax,
           currency: orderPayload.data.attributes.currency
         },
         type: 'payment_transactions'
@@ -66,12 +67,7 @@ async function placeOrder (req, res, orderPayload) {
     res.clearCookie('cart', { signed: true })
   }
 
-  switch (response.status) {
-    case 404:
-      return res.status(200).send({})
-    case 422:
-      return res.status(response.status).send(response.data.errors)
-    default:
-      return res.status(response.status).send(response.data)
-  }
+  return res.status(response.status).send(response.data)
 }
+
+

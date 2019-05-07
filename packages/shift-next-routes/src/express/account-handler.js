@@ -2,7 +2,7 @@
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 
 // Lib
-const { getSessionExpiryTime } = require('../lib/session')
+const { getSessionExpiryTime } = require('@shiftcommerce/shift-next')
 
 module.exports = {
   getAccount: async (req, res) => {

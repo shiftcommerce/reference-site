@@ -26,9 +26,9 @@ const securityHeaders = require('./middleware/security-headers')
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next')
+const { shiftRoutes } = require('@shiftcommerce/shift-next-routes')
 
-const orderHandler = require('./route-handlers/order-route-handler')
+const { getSessionExpiryTime } = require('@shiftcommerce/shift-next')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -60,13 +60,6 @@ module.exports = app.prepare().then(() => {
 
   shiftRoutes(server)
 
-  server.get('/serviceWorker.js', (req, res) => {
-    res.setHeader('content-type', 'text/javascript')
-    createReadStream('./server/service-worker.js').pipe(res)
-  })
-
-  // Routes for local API calls
-  server.post('/createOrder', orderHandler.createOrderRenderer()) // this needs removing when we can test stripe in shift-next
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist
     // This may be handled by fastly to provided best caching performance

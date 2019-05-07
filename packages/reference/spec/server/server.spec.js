@@ -7,6 +7,7 @@ import serverPromise from '../../server/server'
 describe('Server', () => {
   // Server Setup
   let server
+
   beforeAll(async () => {
     try {
       server = await serverPromise
@@ -14,6 +15,7 @@ describe('Server', () => {
       console.log(error)
     }
   })
+
   afterAll(() => { server.close() })
 
   describe('GET /order', () => {
