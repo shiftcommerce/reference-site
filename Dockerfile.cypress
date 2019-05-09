@@ -9,6 +9,6 @@ COPY ./bin/docker/wait-for-it.sh ./bin/docker/wait-for-it.sh
 # Install NPM dependencies and Cypress binary
 RUN yarn add cypress@3.2.0
 # Cypress File
-COPY cypress.json ./cypress.json
+COPY packages/reference/cypress.json ./cypress.json
 # Test files
-COPY cypress ./cypress
+COPY packages/reference/cypress ./cypress
