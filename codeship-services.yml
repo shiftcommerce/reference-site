@@ -32,7 +32,7 @@ cypress:
   environment:
     CYPRESS_BASE_URL: "http://web-server:3000"
     CYPRESS_VIDEO: false
-    WEB_BOOT_TIMEOUT: 240
+    WEB_BOOT_TIMEOUT: 300
   depends_on:
     - web-server
 
