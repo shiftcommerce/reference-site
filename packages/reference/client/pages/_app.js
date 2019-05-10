@@ -21,7 +21,8 @@ const {
     ALGOLIA_INDEX_NAME,
     API_HOST_PROXY,
     STRIPE_API_KEY,
-    PAYPAL_CLIENT_ID
+    PAYPAL_CLIENT_ID,
+    ENABLE_TEST_PAYPAL_BUTTON
   }
 } = getConfig()
 
@@ -38,6 +39,7 @@ shiftNextConfig.set({
   apiHostProxy: API_HOST_PROXY,
   payPalClientID: PAYPAL_CLIENT_ID,
   storeName: 'ShopGo',
+  enableTestPayPalButton: ENABLE_TEST_PAYPAL_BUTTON,
   Head: NextHead
 })
 

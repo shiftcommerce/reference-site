@@ -43927,8 +43927,10 @@ function paypal_button_setPrototypeOf(o, p) { paypal_button_setPrototypeOf = Obj
 // Libraries
 
 
+ // Lib
 
-var Buttons;
+
+var PayPalButtons;
 
 var paypal_button_PayPalButton =
 /*#__PURE__*/
@@ -43944,6 +43946,7 @@ function (_Component) {
     _this.state = {
       showButton: false
     };
+    _this.Button = component_mapping('Button');
     return _this;
   }
 
@@ -43956,7 +43959,7 @@ function (_Component) {
 
       if (window.paypal && paypalCreateOrder && paypalOnApprove) {
         // load paypal Buttons
-        Buttons = window.paypal.Buttons.driver('react', {
+        PayPalButtons = window.paypal.Buttons.driver('react', {
           React: external_react_default.a,
           ReactDOM: external_react_dom_default.a
         }); // display PayPal button
@@ -43970,12 +43973,12 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod,
           paypalCreateOrder = _this$props2.paypalCreateOrder,
           paypalOnApprove = _this$props2.paypalOnApprove,
-          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        id: "o-paypal-button-container"
-      }), this.state.showButton && external_react_default.a.createElement(Buttons, {
+          mockPayPalApproval = _this$props2.mockPayPalApproval,
+          enableTestPayPalButton = _this$props2.enableTestPayPalButton;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, this.state.showButton && external_react_default.a.createElement(PayPalButtons, {
         createOrder: function createOrder(data, actions) {
           return paypalCreateOrder(data, actions);
         },
@@ -43985,6 +43988,11 @@ function (_Component) {
         onClick: function onClick() {
           return handleSetPaymentMethod('PayPal');
         }
+      }), enableTestPayPalButton && external_react_default.a.createElement(this.Button, {
+        label: 'Test PayPal Button',
+        onClick: function onClick() {
+          return mockPayPalApproval();
+        }
       }));
     }
   }]);
@@ -43993,9 +44001,11 @@ function (_Component) {
 }(external_react_["Component"]);
 
 paypal_button_PayPalButton.propTypes = {
+  handleSetPaymentMethod: prop_types_default.a.func,
+  mockPayPalApproval: prop_types_default.a.func,
   paypalCreateOrder: prop_types_default.a.func,
   paypalOnApprove: prop_types_default.a.func,
-  handleSetPaymentMethod: prop_types_default.a.func
+  enableTestPayPalButton: prop_types_default.a.bool
 };
 /* harmony default export */ var paypal_button = (paypal_button_PayPalButton);
 // CONCATENATED MODULE: ./src/objects/rating.js
@@ -45337,35 +45347,74 @@ function (_Component) {
 }(external_react_["Component"]);
 /* harmony default export */ var address_form = (address_form_AddressForm);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-header.js
+function address_form_header_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_header_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_header_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_header_typeof(obj); }
+
+function address_form_header_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_form_header_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_form_header_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_header_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_header_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_form_header_possibleConstructorReturn(self, call) { if (call && (address_form_header_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_header_assertThisInitialized(self); }
+
+function address_form_header_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_form_header_getPrototypeOf(o) { address_form_header_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_header_getPrototypeOf(o); }
+
+function address_form_header_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_header_setPrototypeOf(subClass, superClass); }
+
+function address_form_header_setPrototypeOf(o, p) { address_form_header_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_header_setPrototypeOf(o, p); }
+
 // Libraries
 
  // Lib
 
 
 
-function address_form_header_AddressFormHeader(_ref) {
-  var collapsed = _ref.collapsed,
-      title = _ref.title,
-      onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
-  var Button = component_mapping('Button');
-  return external_react_default.a.createElement("div", {
-    className: "o-form__header c-address-form__header"
-  }, external_react_default.a.createElement("div", {
-    className: "o-form__header-title c-address-form__header-title"
-  }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(Button, {
-    label: "Edit",
-    status: "secondary",
-    className: "o-button-edit",
-    onClick: onClick
-  }));
-}
+var address_form_header_AddressFormHeader =
+/*#__PURE__*/
+function (_PureComponent) {
+  address_form_header_inherits(AddressFormHeader, _PureComponent);
+
+  function AddressFormHeader(props) {
+    var _this;
+
+    address_form_header_classCallCheck(this, AddressFormHeader);
+
+    _this = address_form_header_possibleConstructorReturn(this, address_form_header_getPrototypeOf(AddressFormHeader).call(this, props));
+    _this.Button = component_mapping('Button');
+    return _this;
+  }
+
+  address_form_header_createClass(AddressFormHeader, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          collapsed = _this$props.collapsed,
+          title = _this$props.title,
+          onClick = _this$props.onClick,
+          showEditButton = _this$props.showEditButton;
+      return external_react_default.a.createElement("div", {
+        className: "o-form__header c-address-form__header"
+      }, external_react_default.a.createElement("div", {
+        className: "o-form__header-title c-address-form__header-title"
+      }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(this.Button, {
+        label: "Edit",
+        status: "secondary",
+        className: "o-button-edit",
+        onClick: onClick
+      }));
+    }
+  }]);
+
+  return AddressFormHeader;
+}(external_react_["PureComponent"]);
 
 address_form_header_AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func,
-  title: prop_types_default.a.string.isRequired,
-  showEditButton: prop_types_default.a.bool
+  showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
 // EXTERNAL MODULE: ./src/static/white-check.svg
@@ -45429,7 +45478,7 @@ function (_Component) {
     return _this;
   }
   /**
-   * Render the prices and actions block of the line item
+   * Render the line item quantity
    * @param  {Object} lineItem
    * @return {string} - HTML markup for the component
    * @todo extract this out into it's own service class
@@ -45437,21 +45486,29 @@ function (_Component) {
 
 
   line_items_createClass(LineItems, [{
-    key: "renderOptions",
-    value: function renderOptions(lineItem) {
-      return external_react_default.a.createElement(this.DropdownSelect, {
-        className: "c-line-items__quantity-select",
-        "data-id": lineItem.id,
-        label: "Quantity",
-        onChange: this.props.updateQuantity,
-        options: this.renderQuantityOptions(lineItem),
-        skipLabel: true,
-        skipPrompt: true,
-        value: lineItem.unit_quantity
-      });
+    key: "renderLineItemQuantity",
+    value: function renderLineItemQuantity(lineItem) {
+      var updateQuantity = this.props.updateQuantity;
+
+      if (updateQuantity) {
+        return external_react_default.a.createElement(this.DropdownSelect, {
+          className: "c-line-items__quantity-select",
+          "data-id": lineItem.id,
+          label: "Quantity",
+          onChange: this.props.updateQuantity,
+          options: this.renderQuantityOptions(lineItem),
+          skipLabel: true,
+          skipPrompt: true,
+          value: lineItem.unit_quantity
+        });
+      } else {
+        return external_react_default.a.createElement("span", {
+          className: "c-line-items__quantity-amount"
+        }, lineItem.unit_quantity);
+      }
     }
     /**
-    * Builds options prop for the DropdownSelect component.  
+    * Builds options prop for the DropdownSelect component.
     * @param {Object} lineItem - A line item from cart.
     */
 
@@ -45538,7 +45595,7 @@ function (_Component) {
         className: "c-line-items__quantity"
       }, external_react_default.a.createElement("div", {
         className: "c-line-items__quantity-header"
-      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderOptions(lineItem)));
+      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderLineItemQuantity(lineItem)));
     }
     /**
      * Render the line item rows
@@ -45646,105 +45703,6 @@ var payment_icons_PaymentIcons = function PaymentIcons(props) {
 };
 
 /* harmony default export */ var payment_icons = (payment_icons_PaymentIcons);
-// CONCATENATED MODULE: ./src/components/checkout/payment-methods.js
-function payment_methods_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_methods_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_methods_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_methods_typeof(obj); }
-
-function payment_methods_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function payment_methods_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function payment_methods_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_methods_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_methods_defineProperties(Constructor, staticProps); return Constructor; }
-
-function payment_methods_possibleConstructorReturn(self, call) { if (call && (payment_methods_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_methods_assertThisInitialized(self); }
-
-function payment_methods_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function payment_methods_getPrototypeOf(o) { payment_methods_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_methods_getPrototypeOf(o); }
-
-function payment_methods_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_methods_setPrototypeOf(subClass, superClass); }
-
-function payment_methods_setPrototypeOf(o, p) { payment_methods_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_methods_setPrototypeOf(o, p); }
-
-// Libraries
-
- // Lib
-
-
-
-var payment_methods_PaymentMethods =
-/*#__PURE__*/
-function (_Component) {
-  payment_methods_inherits(PaymentMethods, _Component);
-
-  function PaymentMethods(props) {
-    var _this;
-
-    payment_methods_classCallCheck(this, PaymentMethods);
-
-    _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
-    _this.Button = component_mapping('Button');
-    _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
-    _this.PayPalButton = component_mapping('PayPalButton');
-    return _this;
-  }
-  /**
-   * When a customer selects the default checkout option, this funtion is called and 
-   * it sets the selected payment method in the state and redirects to the next section
-   */
-
-
-  payment_methods_createClass(PaymentMethods, [{
-    key: "handleDefaultPaymentSelection",
-    value: function handleDefaultPaymentSelection(paymentMethod) {
-      var _this$props = this.props,
-          nextSection = _this$props.nextSection,
-          handleSetPaymentMethod = _this$props.handleSetPaymentMethod;
-      handleSetPaymentMethod(paymentMethod);
-      nextSection();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props2 = this.props,
-          paypalCreateOrder = _this$props2.paypalCreateOrder,
-          paypalOnApprove = _this$props2.paypalOnApprove,
-          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
-      return external_react_default.a.createElement("div", {
-        "aria-label": "Payment method",
-        className: "o-form c-payment-methods"
-      }, external_react_default.a.createElement(this.PaymentMethodHeader, {
-        title: 'Payment Method'
-      }), external_react_default.a.createElement("div", {
-        className: "c-payment-methods__options"
-      }, external_react_default.a.createElement(this.PayPalButton, {
-        paypalCreateOrder: paypalCreateOrder,
-        paypalOnApprove: paypalOnApprove,
-        handleSetPaymentMethod: handleSetPaymentMethod
-      }), external_react_default.a.createElement("p", {
-        className: "c-payment-methods__option-text u-bold"
-      }, "OR"), external_react_default.a.createElement(this.Button, {
-        className: "o-button--sml c-payment-methods__button",
-        type: "button",
-        label: 'Pay By Credit/Debit Card',
-        onClick: function onClick() {
-          return _this2.handleDefaultPaymentSelection('Credit/Debit Card');
-        }
-      })));
-    }
-  }]);
-
-  return PaymentMethods;
-}(external_react_["Component"]);
-
-payment_methods_PaymentMethods.propTypes = {
-  nextSection: prop_types_default.a.func,
-  paypalCreateOrder: prop_types_default.a.func,
-  paypalOnApprove: prop_types_default.a.func,
-  handleSetPaymentMethod: prop_types_default.a.func
-};
-/* harmony default export */ var payment_methods = (payment_methods_PaymentMethods);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method.js
 function payment_method_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_method_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_method_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_method_typeof(obj); }
 
@@ -45766,15 +45724,14 @@ function payment_method_setPrototypeOf(o, p) { payment_method_setPrototypeOf = O
 
 // Libraries
 
-
  // Lib
 
 
 
 var payment_method_PaymentMethod =
 /*#__PURE__*/
-function (_Component) {
-  payment_method_inherits(PaymentMethod, _Component);
+function (_PureComponent) {
+  payment_method_inherits(PaymentMethod, _PureComponent);
 
   function PaymentMethod(props) {
     var _this;
@@ -45782,103 +45739,73 @@ function (_Component) {
     payment_method_classCallCheck(this, PaymentMethod);
 
     _this = payment_method_possibleConstructorReturn(this, payment_method_getPrototypeOf(PaymentMethod).call(this, props));
+    _this.Button = component_mapping('Button');
     _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
-    _this.StripePayment = component_mapping('StripePayment');
+    _this.PayPalButton = component_mapping('PayPalButton');
     return _this;
   }
+  /**
+   * When a customer selects the default checkout option, this funtion is called and
+   * it sets the selected payment method in the state and redirects to the next section
+   */
+
 
   payment_method_createClass(PaymentMethod, [{
+    key: "handleDefaultPaymentSelection",
+    value: function handleDefaultPaymentSelection(paymentMethod) {
+      var _this$props = this.props,
+          nextSection = _this$props.nextSection,
+          handleSetPaymentMethod = _this$props.handleSetPaymentMethod;
+      handleSetPaymentMethod(paymentMethod);
+      nextSection();
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          addingNewAddress = _this$props.addingNewAddress,
-          addressBook = _this$props.addressBook,
-          addressFormDisplayed = _this$props.addressFormDisplayed,
-          autoFillAddress = _this$props.autoFillAddress,
-          billingAsShipping = _this$props.billingAsShipping,
-          changeBillingAsShipping = _this$props.changeBillingAsShipping,
-          cart = _this$props.cart,
-          className = _this$props.className,
-          checkout = _this$props.checkout,
-          countries = _this$props.countries,
-          currentAddress = _this$props.currentAddress,
-          loggedIn = _this$props.loggedIn,
-          nextStepAvailable = _this$props.nextStepAvailable,
-          nextSection = _this$props.nextSection,
-          onAddressDeleted = _this$props.onAddressDeleted,
-          onBookAddressSelected = _this$props.onBookAddressSelected,
-          onBlur = _this$props.onBlur,
-          onChange = _this$props.onChange,
-          onNewAddress = _this$props.onNewAddress,
-          onShowField = _this$props.onShowField,
-          onCardTokenReceived = _this$props.onCardTokenReceived,
-          setCardErrors = _this$props.setCardErrors,
-          order = _this$props.order;
+      var _this2 = this;
+
+      var _this$props2 = this.props,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod,
+          mockPayPalApproval = _this$props2.mockPayPalApproval,
+          paypalCreateOrder = _this$props2.paypalCreateOrder,
+          paypalOnApprove = _this$props2.paypalOnApprove,
+          enableTestPayPalButton = _this$props2.enableTestPayPalButton;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
-        className: classnames_default()(className, 'o-form c-payment-method')
+        className: "o-form c-payment-method"
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
-        title: 'Payment'
+        title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
-        className: "c-payment-method__section",
-        style: {
-          display: 'block'
+        className: "c-payment-method__options"
+      }, external_react_default.a.createElement(this.PayPalButton, {
+        paypalCreateOrder: paypalCreateOrder,
+        paypalOnApprove: paypalOnApprove,
+        handleSetPaymentMethod: handleSetPaymentMethod,
+        mockPayPalApproval: mockPayPalApproval,
+        enableTestPayPalButton: enableTestPayPalButton
+      }), external_react_default.a.createElement("p", {
+        className: "c-payment-method__option-text u-bold"
+      }, "OR"), external_react_default.a.createElement(this.Button, {
+        className: "o-button--sml c-payment-method__button",
+        type: "button",
+        label: 'Pay By Credit/Debit Card',
+        onClick: function onClick() {
+          return _this2.handleDefaultPaymentSelection('Credit/Debit Card');
         }
-      }, external_react_default.a.createElement(this.StripePayment, {
-        addingNewAddress: addingNewAddress,
-        addressBook: addressBook,
-        addressFormDisplayed: addressFormDisplayed,
-        autoFillAddress: autoFillAddress,
-        billingAddress: cart.billing_address,
-        billingAsShipping: billingAsShipping,
-        cardTokenRequested: order.cardTokenRequested,
-        changeBillingAsShipping: changeBillingAsShipping,
-        checkout: checkout,
-        currentAddress: currentAddress,
-        countries: countries,
-        loggedIn: loggedIn,
-        nextStepAvailable: nextStepAvailable,
-        nextSection: nextSection,
-        onAddressDeleted: onAddressDeleted,
-        onBookAddressSelected: onBookAddressSelected,
-        onBlur: onBlur,
-        onChange: onChange,
-        onNewAddress: onNewAddress,
-        onShowField: onShowField,
-        onCardTokenReceived: onCardTokenReceived,
-        setCardErrors: setCardErrors,
-        shippingAddress: cart.shipping_address
       })));
     }
   }]);
 
   return PaymentMethod;
-}(external_react_["Component"]);
+}(external_react_["PureComponent"]);
 
 payment_method_PaymentMethod.propTypes = {
-  addingNewAddress: prop_types_default.a.bool,
-  addressBook: prop_types_default.a.object,
-  addressFormDisplayed: prop_types_default.a.func,
-  autoFillAddress: prop_types_default.a.func,
-  billingAsShipping: prop_types_default.a.bool,
-  changeBillingAsShipping: prop_types_default.a.func,
-  cart: prop_types_default.a.object,
-  className: prop_types_default.a.string,
-  checkout: prop_types_default.a.object,
-  countries: prop_types_default.a.array,
-  currentAddress: prop_types_default.a.object,
-  loggedIn: prop_types_default.a.bool,
-  nextStepAvailable: prop_types_default.a.func,
+  handleSetPaymentMethod: prop_types_default.a.func,
+  mockPayPalApproval: prop_types_default.a.func,
   nextSection: prop_types_default.a.func,
-  onAddressDeleted: prop_types_default.a.func,
-  onBookAddressSelected: prop_types_default.a.func,
-  onBlur: prop_types_default.a.func,
-  onChange: prop_types_default.a.func,
-  onNewAddress: prop_types_default.a.func,
-  onShowField: prop_types_default.a.func,
-  onCardTokenReceived: prop_types_default.a.func,
-  setCardErrors: prop_types_default.a.func,
-  order: prop_types_default.a.object
+  paypalCreateOrder: prop_types_default.a.func,
+  paypalOnApprove: prop_types_default.a.func,
+  enableTestPayPalButton: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_method = (payment_method_PaymentMethod);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method-header.js
@@ -45887,14 +45814,14 @@ payment_method_PaymentMethod.propTypes = {
 
 
 
-function payment_method_header_PaymentMethodHeader(_ref) {
-  var title = _ref.title,
-      collapsed = _ref.collapsed,
+function PaymentMethodHeader(_ref) {
+  var collapsed = _ref.collapsed,
       onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
+      showEditButton = _ref.showEditButton,
+      title = _ref.title;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
-    className: "o-form__header  c-payment-method__header"
+    className: "o-form__header c-payment-method__header"
   }, external_react_default.a.createElement("h2", null, title), collapsed && showEditButton && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your payment method",
     className: "o-button-edit",
@@ -45904,12 +45831,83 @@ function payment_method_header_PaymentMethodHeader(_ref) {
   }));
 }
 
-payment_method_header_PaymentMethodHeader.propTypes = {
-  title: prop_types_default.a.string.isRequired,
+PaymentMethodHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
+  onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired
 };
-/* harmony default export */ var payment_method_header = (payment_method_header_PaymentMethodHeader);
+/* harmony default export */ var payment_method_header = (PaymentMethodHeader);
+// CONCATENATED MODULE: ./src/components/checkout/payment-header.js
+function payment_header_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_header_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_header_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_header_typeof(obj); }
+
+function payment_header_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_header_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_header_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_header_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_header_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_header_possibleConstructorReturn(self, call) { if (call && (payment_header_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_header_assertThisInitialized(self); }
+
+function payment_header_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_header_getPrototypeOf(o) { payment_header_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_header_getPrototypeOf(o); }
+
+function payment_header_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_header_setPrototypeOf(subClass, superClass); }
+
+function payment_header_setPrototypeOf(o, p) { payment_header_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_header_setPrototypeOf(o, p); }
+
+// Libraries
+
+ // Lib
+
+
+
+var payment_header_PaymentHeader =
+/*#__PURE__*/
+function (_PureComponent) {
+  payment_header_inherits(PaymentHeader, _PureComponent);
+
+  function PaymentHeader(props) {
+    var _this;
+
+    payment_header_classCallCheck(this, PaymentHeader);
+
+    _this = payment_header_possibleConstructorReturn(this, payment_header_getPrototypeOf(PaymentHeader).call(this, props));
+    _this.Button = component_mapping('Button');
+    return _this;
+  }
+
+  payment_header_createClass(PaymentHeader, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          collapsed = _this$props.collapsed,
+          onClick = _this$props.onClick,
+          showEditButton = _this$props.showEditButton,
+          title = _this$props.title;
+      return external_react_default.a.createElement("div", {
+        className: "o-form__header  c-payment__header"
+      }, external_react_default.a.createElement("h2", null, title), collapsed && showEditButton && external_react_default.a.createElement(this.Button, {
+        "aria-label": "Edit your payment method",
+        className: "o-button-edit",
+        label: "Edit",
+        status: "secondary",
+        onClick: onClick
+      }));
+    }
+  }]);
+
+  return PaymentHeader;
+}(external_react_["PureComponent"]);
+
+payment_header_PaymentHeader.propTypes = {
+  collapsed: prop_types_default.a.bool,
+  onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired
+};
+/* harmony default export */ var payment_header = (payment_header_PaymentHeader);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods-header.js
 // Libraries
 
@@ -45919,11 +45917,12 @@ payment_method_header_PaymentMethodHeader.propTypes = {
 
 function shipping_methods_header_ShippingMethodsHeader(_ref) {
   var collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      title = _ref.title;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header c-shipping-method__header"
-  }, external_react_default.a.createElement("h2", null, "Your Shipping Method"), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title), collapsed && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your shipping method",
     label: "Edit",
     status: "secondary",
@@ -45934,7 +45933,8 @@ function shipping_methods_header_ShippingMethodsHeader(_ref) {
 
 shipping_methods_header_ShippingMethodsHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
+  onClick: prop_types_default.a.func,
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var shipping_methods_header = (shipping_methods_header_ShippingMethodsHeader);
 // EXTERNAL MODULE: /Users/callumbarratt/projects/reference-site/node_modules/react-stripe-elements/es/index.js
@@ -46196,7 +46196,7 @@ function (_Component) {
         className: "o-payment-method__address-summary  c-payment-method__address-summary"
       }, external_react_default.a.createElement("p", {
         className: "u-bold"
-      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length && external_react_default.a.createElement(this.AddressBook, {
+      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length > 0 && external_react_default.a.createElement(this.AddressBook, {
         addressBook: addressBook,
         formName: "shippingAddress",
         currentAddressId: billingAddress.id,
@@ -49014,6 +49014,7 @@ function (_PureComponent) {
 
 
 
+
 /**
  * Order Components
  */
@@ -49072,9 +49073,10 @@ var mapping = {
   OrderList: order_list,
   PayPalButton: paypal_button,
   PaymentIcons: payment_icons,
-  PaymentMethods: payment_methods,
   PaymentMethod: payment_method,
   PaymentMethodHeader: payment_method_header,
+  Payment: payment_method,
+  PaymentHeader: payment_header,
   ProductCarousel: product_carousel,
   ProductEwisForm: product_ewis_form,
   ProductListingCard: product_listing_card,
@@ -56816,43 +56818,90 @@ coupon_form_CouponForm.propTypes = {
 };
 /* harmony default export */ var coupon_form = (coupon_form_CouponForm);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-summary.js
+function address_form_summary_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_summary_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_summary_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_summary_typeof(obj); }
+
+function address_form_summary_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_form_summary_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_form_summary_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_summary_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_summary_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_form_summary_possibleConstructorReturn(self, call) { if (call && (address_form_summary_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_summary_assertThisInitialized(self); }
+
+function address_form_summary_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_form_summary_getPrototypeOf(o) { address_form_summary_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_summary_getPrototypeOf(o); }
+
+function address_form_summary_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_summary_setPrototypeOf(subClass, superClass); }
+
+function address_form_summary_setPrototypeOf(o, p) { address_form_summary_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_summary_setPrototypeOf(o, p); }
+
 // Libraries
 
  // Lib
 
 
 
-function AddressFormSummary(_ref) {
-  var addressLine1 = _ref.addressLine1,
-      city = _ref.city,
-      firstName = _ref.firstName,
-      lastName = _ref.lastName,
-      onClick = _ref.onClick,
-      postcode = _ref.postcode,
-      showEditButton = _ref.showEditButton;
-  var AddressFormHeader = component_mapping('AddressFormHeader');
-  return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(AddressFormHeader, {
-    collapsed: true,
-    onClick: onClick,
-    title: "Shipping Address",
-    showEditButton: showEditButton
-  }), external_react_default.a.createElement("div", {
-    className: "o-form__wrapper--collapsed c-address-form__summary"
-  }, external_react_default.a.createElement("p", {
-    className: "u-bold"
-  }, firstName, " ", lastName, " "), external_react_default.a.createElement("span", null, addressLine1, ", ", city, ", ", postcode)));
-}
+var address_form_summary_AddressFormSummary =
+/*#__PURE__*/
+function (_PureComponent) {
+  address_form_summary_inherits(AddressFormSummary, _PureComponent);
 
-AddressFormSummary.propTypes = {
+  function AddressFormSummary(props) {
+    var _this;
+
+    address_form_summary_classCallCheck(this, AddressFormSummary);
+
+    _this = address_form_summary_possibleConstructorReturn(this, address_form_summary_getPrototypeOf(AddressFormSummary).call(this, props));
+    _this.AddressFormHeader = component_mapping('AddressFormHeader');
+    return _this;
+  }
+
+  address_form_summary_createClass(AddressFormSummary, [{
+    key: "renderAddress",
+    value: function renderAddress() {
+      var _this$props = this.props,
+          addressLine1 = _this$props.addressLine1,
+          city = _this$props.city,
+          firstName = _this$props.firstName,
+          lastName = _this$props.lastName,
+          postcode = _this$props.postcode;
+      return external_react_default.a.createElement("div", {
+        className: "o-form__wrapper--collapsed c-address-form__summary"
+      }, external_react_default.a.createElement("p", {
+        className: "u-bold"
+      }, firstName, " ", lastName, " "), external_react_default.a.createElement("span", null, addressLine1, ", ", city, ", ", postcode));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          headerTitle = _this$props2.headerTitle,
+          onClick = _this$props2.onClick,
+          showEditButton = _this$props2.showEditButton;
+      return external_react_default.a.createElement(external_react_["Fragment"], null, external_react_default.a.createElement(this.AddressFormHeader, {
+        collapsed: true,
+        onClick: onClick,
+        showEditButton: showEditButton,
+        title: headerTitle
+      }), this.renderAddress());
+    }
+  }]);
+
+  return AddressFormSummary;
+}(external_react_["PureComponent"]);
+
+address_form_summary_AddressFormSummary.propTypes = {
   addressLine1: prop_types_default.a.string,
   city: prop_types_default.a.string,
   firstName: prop_types_default.a.string,
+  headerTitle: prop_types_default.a.string.isRequired,
   lastName: prop_types_default.a.string,
   onClick: prop_types_default.a.func,
   postcode: prop_types_default.a.string,
   showEditButton: prop_types_default.a.bool
 };
-/* harmony default export */ var address_form_summary = (AddressFormSummary);
+/* harmony default export */ var address_form_summary = (address_form_summary_AddressFormSummary);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js
 // Libraries
 
@@ -56866,8 +56915,7 @@ function CheckoutCart(_ref) {
   var deleteItem = _ref.deleteItem,
       lineItems = _ref.lineItems,
       lineItemsCount = _ref.lineItemsCount,
-      total = _ref.total,
-      updateQuantity = _ref.updateQuantity;
+      total = _ref.total;
   var LineItems = component_mapping('LineItems');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("section", {
     className: "c-checkout-cart__header"
@@ -56901,8 +56949,7 @@ function CheckoutCart(_ref) {
   }), " will be saved for 48 hours depending on availablility")))), external_react_default.a.createElement(LineItems, {
     deleteItem: deleteItem,
     lineItems: lineItems,
-    lineItemsCount: lineItemsCount,
-    updateQuantity: updateQuantity
+    lineItemsCount: lineItemsCount
   }));
 }
 
@@ -56910,8 +56957,7 @@ CheckoutCart.propTypes = {
   deleteItem: prop_types_default.a.func,
   lineItems: prop_types_default.a.arrayOf(prop_types_default.a.object),
   lineItemsCount: prop_types_default.a.number,
-  total: prop_types_default.a.number,
-  updateQuantity: prop_types_default.a.func
+  total: prop_types_default.a.number
 };
 /* harmony default export */ var checkout_cart = (CheckoutCart);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart-buttons.js
@@ -57157,7 +57203,25 @@ MiniPlaceOrder.propTypes = {
   convertToOrder: prop_types_default.a.func
 };
 /* harmony default export */ var mini_place_order = (MiniPlaceOrder);
-// CONCATENATED MODULE: ./src/components/checkout/payment-method-summary.js
+// CONCATENATED MODULE: ./src/components/checkout/payment.js
+function payment_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_typeof(obj); }
+
+function payment_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_possibleConstructorReturn(self, call) { if (call && (payment_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_assertThisInitialized(self); }
+
+function payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_getPrototypeOf(o) { payment_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_getPrototypeOf(o); }
+
+function payment_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_setPrototypeOf(subClass, superClass); }
+
+function payment_setPrototypeOf(o, p) { payment_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_setPrototypeOf(o, p); }
+
 // Libraries
 
 
@@ -57165,35 +57229,289 @@ MiniPlaceOrder.propTypes = {
 
 
 
-var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(_ref) {
-  var billingAddress = _ref.billingAddress,
-      paymentMethod = _ref.paymentMethod,
-      showEditButton = _ref.showEditButton,
-      onClick = _ref.onClick,
-      withErrors = _ref.withErrors;
-  var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
-  return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
-    title: 'Payment',
-    collapsed: true,
-    onClick: onClick,
-    showEditButton: showEditButton
-  }), external_react_default.a.createElement("div", {
-    className: classnames_default()('c-payment-method__summary', {
-      'o-form__error': withErrors
-    })
-  }, external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
-    className: "u-bold"
-  }, " Payment Mode: "), external_react_default.a.createElement("span", null, paymentMethod)), billingAddress && external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
-    className: "u-bold"
-  }, "Billing Address: "), external_react_default.a.createElement("span", {
-    className: "u-bold"
-  }, billingAddress.first_name, " ", billingAddress.last_name, " "), external_react_default.a.createElement("span", null, billingAddress.address_line_1, ", ", billingAddress.city, ", ", billingAddress.postcode))));
+var payment_Payment =
+/*#__PURE__*/
+function (_PureComponent) {
+  payment_inherits(Payment, _PureComponent);
+
+  function Payment(props) {
+    var _this;
+
+    payment_classCallCheck(this, Payment);
+
+    _this = payment_possibleConstructorReturn(this, payment_getPrototypeOf(Payment).call(this, props));
+    _this.PaymentHeader = component_mapping('PaymentHeader');
+    _this.StripePayment = component_mapping('StripePayment');
+    return _this;
+  }
+
+  payment_createClass(Payment, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          addingNewAddress = _this$props.addingNewAddress,
+          addressBook = _this$props.addressBook,
+          addressFormDisplayed = _this$props.addressFormDisplayed,
+          autoFillAddress = _this$props.autoFillAddress,
+          billingAsShipping = _this$props.billingAsShipping,
+          changeBillingAsShipping = _this$props.changeBillingAsShipping,
+          cart = _this$props.cart,
+          className = _this$props.className,
+          checkout = _this$props.checkout,
+          countries = _this$props.countries,
+          currentAddress = _this$props.currentAddress,
+          headerTitle = _this$props.headerTitle,
+          loggedIn = _this$props.loggedIn,
+          nextStepAvailable = _this$props.nextStepAvailable,
+          nextSection = _this$props.nextSection,
+          onAddressDeleted = _this$props.onAddressDeleted,
+          onBookAddressSelected = _this$props.onBookAddressSelected,
+          onBlur = _this$props.onBlur,
+          onChange = _this$props.onChange,
+          onNewAddress = _this$props.onNewAddress,
+          onShowField = _this$props.onShowField,
+          onCardTokenReceived = _this$props.onCardTokenReceived,
+          setCardErrors = _this$props.setCardErrors,
+          order = _this$props.order;
+      return external_react_default.a.createElement("div", {
+        "aria-label": "Payment method",
+        className: classnames_default()(className, 'o-form c-payment')
+      }, external_react_default.a.createElement(this.PaymentHeader, {
+        title: headerTitle
+      }), external_react_default.a.createElement("div", {
+        className: "c-payment__section",
+        style: {
+          display: 'block'
+        }
+      }, external_react_default.a.createElement(this.StripePayment, {
+        addingNewAddress: addingNewAddress,
+        addressBook: addressBook,
+        addressFormDisplayed: addressFormDisplayed,
+        autoFillAddress: autoFillAddress,
+        billingAddress: cart.billing_address,
+        billingAsShipping: billingAsShipping,
+        cardTokenRequested: order.cardTokenRequested,
+        changeBillingAsShipping: changeBillingAsShipping,
+        checkout: checkout,
+        currentAddress: currentAddress,
+        countries: countries,
+        loggedIn: loggedIn,
+        nextStepAvailable: nextStepAvailable,
+        nextSection: nextSection,
+        onAddressDeleted: onAddressDeleted,
+        onBookAddressSelected: onBookAddressSelected,
+        onBlur: onBlur,
+        onChange: onChange,
+        onNewAddress: onNewAddress,
+        onShowField: onShowField,
+        onCardTokenReceived: onCardTokenReceived,
+        setCardErrors: setCardErrors,
+        shippingAddress: cart.shipping_address
+      })));
+    }
+  }]);
+
+  return Payment;
+}(external_react_["PureComponent"]);
+
+payment_Payment.propTypes = {
+  addingNewAddress: prop_types_default.a.bool,
+  addressBook: prop_types_default.a.object,
+  addressFormDisplayed: prop_types_default.a.func,
+  autoFillAddress: prop_types_default.a.func,
+  billingAsShipping: prop_types_default.a.bool,
+  changeBillingAsShipping: prop_types_default.a.func,
+  cart: prop_types_default.a.object,
+  className: prop_types_default.a.string,
+  checkout: prop_types_default.a.object,
+  countries: prop_types_default.a.array,
+  currentAddress: prop_types_default.a.object,
+  headerTitle: prop_types_default.a.string.isRequired,
+  loggedIn: prop_types_default.a.bool,
+  nextStepAvailable: prop_types_default.a.func,
+  nextSection: prop_types_default.a.func,
+  onAddressDeleted: prop_types_default.a.func,
+  onBookAddressSelected: prop_types_default.a.func,
+  onBlur: prop_types_default.a.func,
+  onChange: prop_types_default.a.func,
+  onNewAddress: prop_types_default.a.func,
+  onShowField: prop_types_default.a.func,
+  onCardTokenReceived: prop_types_default.a.func,
+  order: prop_types_default.a.object,
+  setCardErrors: prop_types_default.a.func
 };
+/* harmony default export */ var payment = (payment_Payment);
+// CONCATENATED MODULE: ./src/components/checkout/payment-summary.js
+function payment_summary_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_summary_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_summary_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_summary_typeof(obj); }
+
+function payment_summary_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_summary_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_summary_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_summary_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_summary_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_summary_possibleConstructorReturn(self, call) { if (call && (payment_summary_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_summary_assertThisInitialized(self); }
+
+function payment_summary_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_summary_getPrototypeOf(o) { payment_summary_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_summary_getPrototypeOf(o); }
+
+function payment_summary_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_summary_setPrototypeOf(subClass, superClass); }
+
+function payment_summary_setPrototypeOf(o, p) { payment_summary_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_summary_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+ // Lib
+
+
+
+var payment_summary_PaymentSummary =
+/*#__PURE__*/
+function (_PureComponent) {
+  payment_summary_inherits(PaymentSummary, _PureComponent);
+
+  function PaymentSummary(props) {
+    var _this;
+
+    payment_summary_classCallCheck(this, PaymentSummary);
+
+    _this = payment_summary_possibleConstructorReturn(this, payment_summary_getPrototypeOf(PaymentSummary).call(this, props));
+    _this.Flash = component_mapping('Flash');
+    _this.PaymentHeader = component_mapping('PaymentHeader');
+    return _this;
+  }
+
+  payment_summary_createClass(PaymentSummary, [{
+    key: "renderBillingAddress",
+    value: function renderBillingAddress() {
+      var billingAddress = this.props.billingAddress;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("span", {
+        className: "u-bold"
+      }, billingAddress.first_name, " ", billingAddress.last_name, " "), external_react_default.a.createElement("span", null, billingAddress.address_line_1, ", ", billingAddress.city, ", ", billingAddress.postcode));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          errorMessage = _this$props.errorMessage,
+          headerTitle = _this$props.headerTitle,
+          onClick = _this$props.onClick,
+          showEditButton = _this$props.showEditButton,
+          withErrors = _this$props.withErrors;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentHeader, {
+        title: headerTitle,
+        collapsed: true,
+        onClick: onClick,
+        showEditButton: showEditButton
+      }), external_react_default.a.createElement("div", {
+        className: classnames_default()('c-payment__summary', {
+          'o-form__error': withErrors
+        })
+      }, errorMessage && external_react_default.a.createElement(this.Flash, {
+        text: errorMessage,
+        modifier: 'error'
+      }), external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
+        className: "u-bold"
+      }, "Billing Address: "), this.renderBillingAddress())));
+    }
+  }]);
+
+  return PaymentSummary;
+}(external_react_["PureComponent"]);
+
+payment_summary_PaymentSummary.propTypes = {
+  billingAddress: prop_types_default.a.object,
+  errorMessage: prop_types_default.a.string,
+  headerTitle: prop_types_default.a.string.isRequired,
+  onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
+  withErrors: prop_types_default.a.bool
+};
+/* harmony default export */ var payment_summary = (payment_summary_PaymentSummary);
+// CONCATENATED MODULE: ./src/components/checkout/payment-method-summary.js
+function payment_method_summary_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_method_summary_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_method_summary_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_method_summary_typeof(obj); }
+
+function payment_method_summary_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_method_summary_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_method_summary_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_method_summary_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_method_summary_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_method_summary_possibleConstructorReturn(self, call) { if (call && (payment_method_summary_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_method_summary_assertThisInitialized(self); }
+
+function payment_method_summary_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_method_summary_getPrototypeOf(o) { payment_method_summary_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_method_summary_getPrototypeOf(o); }
+
+function payment_method_summary_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_method_summary_setPrototypeOf(subClass, superClass); }
+
+function payment_method_summary_setPrototypeOf(o, p) { payment_method_summary_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_method_summary_setPrototypeOf(o, p); }
+
+// Libraries
+
+ // Lib
+
+
+
+var payment_method_summary_PaymentMethodSummary =
+/*#__PURE__*/
+function (_PureComponent) {
+  payment_method_summary_inherits(PaymentMethodSummary, _PureComponent);
+
+  function PaymentMethodSummary(props) {
+    var _this;
+
+    payment_method_summary_classCallCheck(this, PaymentMethodSummary);
+
+    _this = payment_method_summary_possibleConstructorReturn(this, payment_method_summary_getPrototypeOf(PaymentMethodSummary).call(this, props));
+    _this.Image = component_mapping('Image');
+    _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
+    return _this;
+  }
+
+  payment_method_summary_createClass(PaymentMethodSummary, [{
+    key: "renderPaymentMethodInformation",
+    value: function renderPaymentMethodInformation(paymentMethod) {
+      if (paymentMethod === 'PayPal') {
+        return external_react_default.a.createElement(this.Image, {
+          src: "/static/payments/pay-pal.svg",
+          className: "c-payment-method__summary-information-card-image"
+        });
+      } else {
+        return external_react_default.a.createElement("p", null, paymentMethod);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          headerTitle = _this$props.headerTitle,
+          onClick = _this$props.onClick,
+          paymentMethod = _this$props.paymentMethod,
+          showEditButton = _this$props.showEditButton;
+      return external_react_default.a.createElement("div", {
+        className: 'c-payment-method__summary'
+      }, external_react_default.a.createElement(this.PaymentMethodHeader, {
+        collapsed: true,
+        onClick: onClick,
+        title: headerTitle,
+        showEditButton: showEditButton
+      }), external_react_default.a.createElement("div", {
+        className: 'c-payment-method__summary-information'
+      }, this.renderPaymentMethodInformation(paymentMethod)));
+    }
+  }]);
+
+  return PaymentMethodSummary;
+}(external_react_["PureComponent"]);
 
 payment_method_summary_PaymentMethodSummary.propTypes = {
-  billingAddress: prop_types_default.a.object,
   onClick: prop_types_default.a.func,
-  withErrors: prop_types_default.a.bool
+  paymentMethod: prop_types_default.a.string.isRequired,
+  showEditButton: prop_types_default.a.bool,
+  headerTitle: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var payment_method_summary = (payment_method_summary_PaymentMethodSummary);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods.js
@@ -57226,8 +57544,8 @@ function shipping_methods_setPrototypeOf(o, p) { shipping_methods_setPrototypeOf
 
 var shipping_methods_ShippingMethods =
 /*#__PURE__*/
-function (_Component) {
-  shipping_methods_inherits(ShippingMethods, _Component);
+function (_PureComponent) {
+  shipping_methods_inherits(ShippingMethods, _PureComponent);
 
   function ShippingMethods() {
     var _this;
@@ -57236,6 +57554,7 @@ function (_Component) {
 
     _this = shipping_methods_possibleConstructorReturn(this, shipping_methods_getPrototypeOf(ShippingMethods).call(this));
     _this.Button = component_mapping('Button');
+    _this.Flash = component_mapping('Flash');
     _this.ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
     return _this;
   }
@@ -57334,23 +57653,33 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.props.shippingMethods) {
+      var _this$props3 = this.props,
+          errorMessage = _this$props3.errorMessage,
+          shippingMethods = _this$props3.shippingMethods;
+
+      if (!shippingMethods) {
         return null;
       }
 
       return external_react_default.a.createElement("div", {
         "aria-label": "Shipping Methods",
         className: classnames_default()(this.props.className, 'o-form c-shipping-method')
-      }, external_react_default.a.createElement(this.ShippingMethodsHeader, null), this.renderForm());
+      }, external_react_default.a.createElement(this.ShippingMethodsHeader, {
+        title: 'Shipping Method'
+      }), errorMessage && external_react_default.a.createElement(this.Flash, {
+        text: errorMessage,
+        modifier: 'error'
+      }), this.renderForm());
     }
   }]);
 
   return ShippingMethods;
-}(external_react_["Component"]);
+}(external_react_["PureComponent"]);
 
 shipping_methods_ShippingMethods.propTypes = {
   cartLineItemsCount: prop_types_default.a.number,
   cartShippingMethod: prop_types_default.a.object,
+  errorMessage: prop_types_default.a.string,
   handleFormSubmit: prop_types_default.a.func,
   handleSetShippingMethod: prop_types_default.a.func,
   shippingMethods: prop_types_default.a.array,
@@ -57366,14 +57695,16 @@ shipping_methods_ShippingMethods.propTypes = {
 
 
 function ShippingMethodsSummary(_ref) {
-  var onClick = _ref.onClick,
+  var headerTitle = _ref.headerTitle,
+      onClick = _ref.onClick,
       shippingMethod = _ref.shippingMethod;
   var ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
   return external_react_default.a.createElement("div", {
     className: "o-form c-shipping-method"
   }, external_react_default.a.createElement(ShippingMethodsHeader, {
     collapsed: true,
-    onClick: onClick
+    onClick: onClick,
+    title: headerTitle
   }), external_react_default.a.createElement("div", {
     className: "o-form__wrapper--collapsed c-shipping-method__summary"
   }, external_react_default.a.createElement("p", {
@@ -57384,6 +57715,7 @@ function ShippingMethodsSummary(_ref) {
 }
 
 ShippingMethodsSummary.propTypes = {
+  headerTitle: prop_types_default.a.string.isRequired,
   onClick: prop_types_default.a.func,
   shippingMethod: prop_types_default.a.object
 };
@@ -57675,7 +58007,9 @@ function (_Component) {
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
-/* concated harmony reexport PaymentMethods */__webpack_require__.d(__webpack_exports__, "PaymentMethods", function() { return payment_methods; });
+/* concated harmony reexport Payment */__webpack_require__.d(__webpack_exports__, "Payment", function() { return payment; });
+/* concated harmony reexport PaymentHeader */__webpack_require__.d(__webpack_exports__, "PaymentHeader", function() { return payment_header; });
+/* concated harmony reexport PaymentSummary */__webpack_require__.d(__webpack_exports__, "PaymentSummary", function() { return payment_summary; });
 /* concated harmony reexport PaymentMethod */__webpack_require__.d(__webpack_exports__, "PaymentMethod", function() { return payment_method; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport PaymentMethodSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodSummary", function() { return payment_method_summary; });
@@ -57794,6 +58128,8 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
+
 
 
 

@@ -19,8 +19,9 @@ import {
 // Components
 import {
   AddressFormSummary,
-  ShippingMethods,
-  Loading
+  Loading,
+  PaymentMethodSummary,
+  ShippingMethods
 } from '@shiftcommerce/shift-react-components'
 
 export class ShippingMethodPage extends Component {
@@ -42,7 +43,8 @@ export class ShippingMethodPage extends Component {
       loading: true,
       payPalOrderID: Cookies.get('ppOrderID'),
       paymentMethod: Cookies.get('paymentMethod'),
-      purchaseUnitsReferenceID: Cookies.get('purchaseUnitsReferenceID')
+      purchaseUnitsReferenceID: Cookies.get('purchaseUnitsReferenceID'),
+      payPalOrderUpdateError: false
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
@@ -60,7 +62,7 @@ export class ShippingMethodPage extends Component {
       } else {
         return Router.push('/checkout/shipping-address')
       }
-    } 
+    }
 
     if (!cart.billing_address && thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
       // If billing address is not present and customer has used third party payment service
@@ -103,11 +105,28 @@ export class ShippingMethodPage extends Component {
     this.setState({ loading: true })
     // update PayPal order total
     return this.props.dispatch(updatePayPalOrderTotal(this.state.payPalOrderID, this.state.purchaseUnitsReferenceID, this.props.cart)).then(() => {
-      if (!this.props.order.paymentResponseErrors.error.data) {
+      const paymentError = (this.props.order.paymentResponseErrors.error && this.props.order.paymentResponseErrors.error.data)
+      if (!paymentError) {
         // redirect to next step
         this.nextSection()
+      } else {
+        // set loading to false
+        this.setState({ loading: false, payPalOrderUpdateError: true })
       }
     })
+  }
+
+  /**
+   * Formats form errors
+   */
+  formSubmissionError () {
+    // check for any PayPal error messages
+    if (this.state.payPalOrderUpdateError) {
+      // return custom message as PayPal error is not user friendly
+      return 'Sorry! There has been a problem with your selection. Please try again.'
+    } else {
+      return null
+    }
   }
 
   /**
@@ -122,7 +141,7 @@ export class ShippingMethodPage extends Component {
 
   nextSection () {
     const { setCurrentStep, thirdPartyPaymentMethods } = this.props
-  
+
     if (thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
       // If customer has used third party payment service, redirect to the order review page
       Router.push('/checkout/payment', '/checkout/review')
@@ -135,7 +154,7 @@ export class ShippingMethodPage extends Component {
   continueButtonProps () {
     const { thirdPartyPaymentMethods } = this.props
     const label = (thirdPartyPaymentMethods.includes(this.state.paymentMethod) ? 'Review Your Order' : 'Continue to Payment')
-  
+
     return {
       'aria-label': label,
       label: label,
@@ -155,6 +174,12 @@ export class ShippingMethodPage extends Component {
 
     return (
       <div>
+        <PaymentMethodSummary
+          onClick={() => Router.push('/checkout/payment-method')}
+          paymentMethod={this.state.paymentMethod}
+          headerTitle={'Payment Method'}
+          showEditButton={true}
+        />
         <div className='c-checkout__addressform'>
           <div className='o-form__address'>
             <AddressFormSummary
@@ -165,6 +190,7 @@ export class ShippingMethodPage extends Component {
               onClick={() => Router.push('/checkout/shipping-address')}
               postcode={cart.shipping_address.postcode}
               showEditButton={!thirdPartyPaymentMethods.includes(this.state.paymentMethod)}
+              headerTitle={'Shipping Address'}
             />
           </div>
         </div>
@@ -175,6 +201,7 @@ export class ShippingMethodPage extends Component {
           handleSetShippingMethod={this.handleSetShippingMethod}
           shippingMethods={this.state.shippingMethods}
           isThirdPartyPayment={thirdPartyPaymentMethods.includes(this.state.paymentMethod)}
+          errorMessage={ this.formSubmissionError() }
         /> }
       </div>
     )
