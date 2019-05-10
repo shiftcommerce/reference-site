@@ -43748,6 +43748,10 @@ function (_Component) {
 
 /* harmony default export */ var lazy_load = (lazy_load_LazyLoad);
 // CONCATENATED MODULE: ./src/objects/link.js
+function link_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = link_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function link_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 // Libraries
 
 /**
@@ -43757,15 +43761,10 @@ function (_Component) {
  */
 
 function link_Link(props) {
-  var href = props.href,
-      className = props.className,
-      children = props.children,
-      onClick = props.onClick;
-  return external_react_default.a.createElement("a", {
-    href: href,
-    onClick: onClick,
-    className: className
-  }, children);
+  var children = props.children,
+      otherProps = link_objectWithoutProperties(props, ["children"]);
+
+  return external_react_default.a.createElement("a", otherProps, children);
 }
 // EXTERNAL MODULE: /Users/callumbarratt/projects/reference-site/node_modules/react-loading/dist/react-loading.js
 var react_loading = __webpack_require__(232);
@@ -57801,12 +57800,15 @@ function (_Component) {
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
         onMouseEnter: this.props.toggleDropDown
+      }, external_react_default.a.createElement(this.Link, {
+        className: "c-header__account-link",
+        href: "/account/login"
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
-      }), external_react_default.a.createElement(this.Link, {
-        href: "/account/login"
-      }, signedIn), this.renderAccountDropDown());
+      }), external_react_default.a.createElement("div", {
+        className: "c-header__account-text"
+      }, signedIn)), this.renderAccountDropDown());
     }
   }, {
     key: "renderAccountDropDown",
@@ -57825,10 +57827,14 @@ function (_Component) {
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {
-          href: "/account/myaccount"
-        }, "Order History"), external_react_default.a.createElement(this.Link, {
-          href: "/account/forgotpassword"
+          href: "/account/myaccount?menu=details"
+        }, "Details"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=addresses"
+        }, "Addresses"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=password"
         }, "Change Password"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=orders"
+        }, "Order History"), external_react_default.a.createElement(this.Link, {
           href: "/account/logout"
         }, "Sign Out")));
       } else {
