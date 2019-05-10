@@ -51,7 +51,10 @@ module.exports = app.prepare().then(() => {
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
 
-  server.use(sslRedirect())
+  if (!process.env.NO_HTTPS === 'true') {
+    server.use(sslRedirect())
+  }
+
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())

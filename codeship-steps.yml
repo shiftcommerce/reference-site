@@ -6,7 +6,7 @@
       command: bash -c 'bin/docker/wait-for-it.sh web-server:3000 --timeout=$WEB_BOOT_TIMEOUT -- yarn cypress run'
     - name: "Jest - All tests"
       service: web
-      command: yarn workspaces run test
+      command: yarn lerna run test --stream
 
 # - name: deploy
 #   tag: master
