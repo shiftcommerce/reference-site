@@ -14,7 +14,7 @@ web-server:
   build:
     image: web
   cached: true
-  command: yarn dev
+  command: yarn --cwd packages/reference build && yarn --cwd packages/reference start
   dockerfile: Dockerfile
   ports:
     - "3000"
