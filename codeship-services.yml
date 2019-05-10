@@ -14,7 +14,7 @@ web-server:
   build:
     image: web
   cached: true
-  command: yarn --cwd packages/reference build && yarn --cwd packages/reference start
+  command: yarn run cypress:production
   dockerfile: Dockerfile
   ports:
     - "3000"

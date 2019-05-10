@@ -8,6 +8,7 @@
     "lerna": "^3.13.4"
   },
   "scripts": {
-    "dev": "yarn --cwd packages/reference devserver"
+    "dev": "yarn --cwd packages/reference devserver",
+    "cypress:production": "yarn --cwd packages/reference cypress-production"
   }
 }
