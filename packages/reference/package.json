@@ -17,7 +17,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "yarn run test:unit",
-    "cypress:production": "build && start",
+    "cypress:production": "yarn build && yarn start",
     "test:unit": "jest --config=jest-test.config.js",
     "test:integration": "jest --config=jest-puppeteer.config.js",
     "test:integration:head": "JEST_PUPPETEER_CONFIG=jest-puppeteer-head.config.js jest --config=jest-puppeteer-head.config.js",
