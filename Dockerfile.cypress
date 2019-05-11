@@ -1,5 +1,5 @@
 # Use Cypress provided image with all dependencies included
-FROM cypress/base:10
+FROM cypress/base:11.13.0
 WORKDIR /app
 
 # Avoid many lines of progress bars during install
