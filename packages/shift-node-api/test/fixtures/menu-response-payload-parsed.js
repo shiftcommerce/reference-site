@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
   'id': '14',
   'menu_items': [
     {
@@ -95,4 +95,4 @@ module.exports = {
   'reference': 'mega-menu',
   'title': 'Main Menu',
   'updated_at': '2018-11-16T15:19:36Z'
-}
+}]

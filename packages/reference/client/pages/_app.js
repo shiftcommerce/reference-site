@@ -10,6 +10,9 @@ import NextHead from '../objects/next-head'
 // Next config
 import getConfig from 'next/config'
 
+// Requests
+import { menuRequest } from '../requests/menu-request'
+
 // Stylesheet
 import '../scss/main.scss'
 
@@ -40,7 +43,8 @@ shiftNextConfig.set({
   payPalClientID: PAYPAL_CLIENT_ID,
   storeName: 'ShopGo',
   enableTestPayPalButton: ENABLE_TEST_PAYPAL_BUTTON,
-  Head: NextHead
+  Head: NextHead,
+  menuRequest: menuRequest
 })
 
 class MyApp extends App {

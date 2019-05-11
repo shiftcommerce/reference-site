@@ -42611,7 +42611,7 @@ function (_Component) {
       var _this$props$menu = this.props.menu,
           loading = _this$props$menu.loading,
           error = _this$props$menu.error;
-      var menuItems = lib_default()(this.props, 'menu.menu_items').safeObject;
+      var menuItems = lib_default()(this.props, 'menu[0].menu_items').safeObject;
 
       if (loading) {
         return external_react_default.a.createElement(this.Loading, null);
