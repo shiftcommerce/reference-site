@@ -1,26 +1,14 @@
 # Use Cypress provided image with all dependencies included
-FROM cypress/base:11.13.0
+FROM cypress/base:10
 WORKDIR /app
-
 # Avoid many lines of progress bars during install
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1
-
 # Copy across the wait-for-it script
 COPY ./bin/docker/wait-for-it.sh ./bin/docker/wait-for-it.sh
-
 # Install NPM dependencies and Cypress binary
 RUN yarn add cypress@3.2.0
-
 # Cypress File
 COPY packages/reference/cypress.json ./cypress.json
-
 # Test files
 COPY packages/reference/cypress ./cypress
-
-# Copy package.json & yarn.lock
-COPY packages/reference/package.json ./package.json
-# COPY packages/reference/yarn.lock ./yarn.lock
-
-# Install dependencies
-RUN yarn install
