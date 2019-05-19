@@ -25,7 +25,7 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: Execute tests
-          command: yarn workspaces run test --ci
+          command: yarn workspaces run test --maxWorkers=2
   heroku_deploy:
     executor: heroku/default
     steps:
