@@ -9,6 +9,6 @@
   },
   "scripts": {
     "dev": "yarn --cwd packages/reference devserver",
-    "cy:ci": "node .circleci/cypress.js",
+    "cy:ci": "node .circleci/cypress.js"
   }
 }
