@@ -1,7 +1,0 @@
-#!/bin/bash
-# ensure docker-machine won't be used
-unset ${!DOCKER_*}
-
-# spin up our image
-docker-compose -f docker-compose.production.yml up --build
-

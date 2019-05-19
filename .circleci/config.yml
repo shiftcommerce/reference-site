@@ -1,0 +1,85 @@
+version: 2.1
+jobs:
+  jest_test:
+    docker:
+      - image: circleci/node:11.13.0
+    environment:
+      API_HOST: http://example.local
+      API_HOST_PROXY: http://example.proxy.local
+      NO_HTTPS: true
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Execute tests
+          command: yarn lerna run test --stream
+  heroku_deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git:
+          only-branch: master
+
+orbs:
+  cypress: cypress-io/cypress@1.7.0
+  heroku: circleci/heroku@0.0.6
+
+executors:
+  cypress-node-11:
+    docker:
+      - image: 'callumbarratt/cypress:11.13.0'
+    environment:
+      API_HOST: https://shift-platform-dev-api.global.ssl.fastly.net
+      API_HOST_PROXY: http://localhost:3000
+      NO_HTTPS: true
+      ENABLE_PAYPAL_LIVE_ENVIRONMENT: false
+      ENABLE_TEST_PAYPAL_BUTTON: true
+
+workflows:
+  build_and_test:
+    jobs:
+      - jest_test
+      - cypress/install:
+          name: cypress_build
+          executor: cypress-node-11
+          yarn: true
+          build: yarn --cwd packages/reference build
+      - cypress/run:
+          name: cypress_run
+          store_artifacts: true
+          parallelism: 2
+          requires:
+            - cypress_build
+          no-workspace: true
+          executor: cypress-node-11
+          yarn: true
+          start: yarn --cwd packages/reference start
+          parallel: true # Specify we are using parallelism so it uses the shared workspace output from cypress/install (NextJS build)
+          group: All Integration tests
+          wait-on: 'http://localhost:3000'
+          command: |
+            TESTFILES=$(yarn run --silent cy:ci)
+            cd packages/reference npx cypress run --spec $TESTFILES
+      - heroku_deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - jest_test
+            - cypress_build
+            - cypress_run
