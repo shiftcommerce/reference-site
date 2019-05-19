@@ -72,7 +72,7 @@ workflows:
           group: All Integration tests
           wait-on: 'http://localhost:3000'
           command: |
-            TESTFILES=$(yarn run --silent cy:run
+            TESTFILES=$(yarn run --silent cy:run)
             cd packages/reference
             npx cypress run --spec $TESTFILES
       - heroku_deploy:
