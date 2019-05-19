@@ -25,7 +25,7 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: Execute tests
-          command: yarn lerna run test --stream
+          command: yarn workspaces run test --ci
   heroku_deploy:
     executor: heroku/default
     steps:
@@ -73,7 +73,7 @@ workflows:
           wait-on: 'http://localhost:3000'
           command: |
             TESTFILES=$(yarn run --silent cy:ci)
-            cd packages/reference npx cypress run --spec $TESTFILES
+            cd packages/reference && npx cypress run --spec $TESTFILES
       - heroku_deploy:
           filters:
             branches:
