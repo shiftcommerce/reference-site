@@ -75,12 +75,12 @@ workflows:
             TESTFILES=$(yarn run --silent cy:ci)
             cd packages/reference
             npx cypress run --spec $TESTFILES
-      - heroku_deploy:
-          filters:
-            branches:
-              only:
-                - master
-          requires:
-            - jest_test
-            - cypress_build
-            - cypress_run
+      # - heroku_deploy:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
+      #     requires:
+      #       - jest_test
+      #       - cypress_build
+      #       - cypress_run
