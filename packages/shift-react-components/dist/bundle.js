@@ -46396,7 +46396,7 @@ function (_PureComponent) {
   order_line_items_createClass(OrderLineItems, [{
     key: "renderTotal",
     value: function renderTotal(lineItem) {
-      var total = lib_default()(lineItem, 'pricing.line_inc_tax').safeObject;
+      var total = lib_default()(lineItem, 'pricing.line_total_inc_tax').safeObject;
       var formattedTotal = decimalPrice(total);
       return external_react_default.a.createElement("div", {
         className: "c-order-history__line-items_grid_item2"
