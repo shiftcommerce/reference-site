@@ -1,0 +1,164 @@
+{
+  "id": "58",
+  "meta_attributes": {},
+  "updated_at": "2018-12-06T14:54:59Z",
+  "created_at": "2018-12-06T14:53:55Z",
+  "slug": "phones",
+  "canonical_path": "/phones",
+  "title": "Mobile phones",
+  "reference": "phones",
+  "body_content": "",
+  "published": true,
+  "template": {
+    "id": "17",
+    "reference": "static_page",
+    "sections": [
+      {
+        "id": "22",
+        "reference": "section",
+        "components": [
+          {
+            "id": "22_1",
+            "image": [
+              {
+                "id": "252",
+                "meta_attributes": {},
+                "updated_at": "2018-12-06T14:52:46Z",
+                "created_at": "2018-12-06T14:52:45Z",
+                "deleted_at": null,
+                "name": null,
+                "reference": "f00913f1-98b7-4336-9f7e-858ad5a4cc31",
+                "asset_file": "1544107965.9876418-phones.jpg",
+                "file_content_filename": "phones.jpg",
+                "file_content_content_type": "image/jpeg",
+                "file_content_size": 1290475,
+                "image_height": 3456,
+                "image_width": 5184,
+                "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg",
+                "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg"
+              }
+            ],
+            "mobile_image": [
+              {
+                "id": "252",
+                "meta_attributes": {},
+                "updated_at": "2018-12-06T14:52:46Z",
+                "created_at": "2018-12-06T14:52:45Z",
+                "deleted_at": null,
+                "name": null,
+                "reference": "f00913f1-98b7-4336-9f7e-858ad5a4cc31",
+                "asset_file": "1544107965.9876418-phones.jpg",
+                "file_content_filename": "phones.jpg",
+                "file_content_content_type": "image/jpeg",
+                "file_content_size": 1290475,
+                "image_height": 3456,
+                "image_width": 5184,
+                "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg",
+                "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg"
+              }
+            ],
+            "reference": "hero_full",
+            "heading": "Phones",
+            "image_width": 0,
+            "image_height": 0,
+            "overlay_text": "",
+            "overlay_title": "Explore our selection of mobile phones",
+            "overlay_position": [
+              "below"
+            ],
+            "background_colour": "",
+            "overlay_link_1_text": "",
+            "overlay_link_2_text": "",
+            "overlay_link_3_text": "",
+            "overlay_link_4_text": "",
+            "overlay_link_5_text": "",
+            "overlay_text_colour": "",
+            "overlay_image_overlap": [
+              "none"
+            ],
+            "overlay_link_text_colour": "",
+            "overlay_background_colour": "",
+            "overlay_link_border_colour": "",
+            "overlay_link_background_colour": "",
+            "overlay_link_hover_text_colour": "",
+            "overlay_link_hover_border_colour": "",
+            "overlay_link_hover_background_colour": ""
+          }
+        ]
+      }
+    ],
+    "section": {
+      "id": "22",
+      "reference": "section",
+      "components": [
+        {
+          "id": "22_1",
+          "image": [
+            {
+              "id": "252",
+              "meta_attributes": {},
+              "updated_at": "2018-12-06T14:52:46Z",
+              "created_at": "2018-12-06T14:52:45Z",
+              "deleted_at": null,
+              "name": null,
+              "reference": "f00913f1-98b7-4336-9f7e-858ad5a4cc31",
+              "asset_file": "1544107965.9876418-phones.jpg",
+              "file_content_filename": "phones.jpg",
+              "file_content_content_type": "image/jpeg",
+              "file_content_size": 1290475,
+              "image_height": 3456,
+              "image_width": 5184,
+              "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg",
+              "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg"
+            }
+          ],
+          "mobile_image": [
+            {
+              "id": "252",
+              "meta_attributes": {},
+              "updated_at": "2018-12-06T14:52:46Z",
+              "created_at": "2018-12-06T14:52:45Z",
+              "deleted_at": null,
+              "name": null,
+              "reference": "f00913f1-98b7-4336-9f7e-858ad5a4cc31",
+              "asset_file": "1544107965.9876418-phones.jpg",
+              "file_content_filename": "phones.jpg",
+              "file_content_content_type": "image/jpeg",
+              "file_content_size": 1290475,
+              "image_height": 3456,
+              "image_width": 5184,
+              "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg",
+              "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/252/1544107965.9876418-phones.jpg"
+            }
+          ],
+          "reference": "hero_full",
+          "heading": "Phones",
+          "image_width": 0,
+          "image_height": 0,
+          "overlay_text": "",
+          "overlay_title": "Explore our selection of mobile phones",
+          "overlay_position": [
+            "below"
+          ],
+          "background_colour": "",
+          "overlay_link_1_text": "",
+          "overlay_link_2_text": "",
+          "overlay_link_3_text": "",
+          "overlay_link_4_text": "",
+          "overlay_link_5_text": "",
+          "overlay_text_colour": "",
+          "overlay_image_overlap": [
+            "none"
+          ],
+          "overlay_link_text_colour": "",
+          "overlay_background_colour": "",
+          "overlay_link_border_colour": "",
+          "overlay_link_background_colour": "",
+          "overlay_link_hover_text_colour": "",
+          "overlay_link_hover_border_colour": "",
+          "overlay_link_hover_background_colour": ""
+        }
+      ]
+    }
+  }
+}

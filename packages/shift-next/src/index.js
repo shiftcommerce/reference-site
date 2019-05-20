@@ -44,9 +44,7 @@ module.exports = {
   ShippingMethodPage: ShippingMethodPage,
   SlugPage: SlugPage,
   StaticPage: StaticPage,
-
   withCheckout: withCheckout,
-
   algoliaReduxWrapper,
   reduxWrapper,
   renderComponents,

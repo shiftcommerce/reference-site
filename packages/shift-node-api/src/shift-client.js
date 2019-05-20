@@ -9,6 +9,8 @@ const staticPageEndpoints = require('./endpoints/static-page-endpoints')
 const categoryEndpoints = require('./endpoints/category-endpoints')
 const accountEndpoints = require('./endpoints/account-endpoints')
 const orderEndpoints = require('./endpoints/order-endpoints')
+const assetEndpoints = require('./endpoints/asset-endpoints')
+const importEndpoints = require('./endpoints/import-endpoints')
 
 class SHIFTClient {
   getMenusV1 (query) {
@@ -17,7 +19,7 @@ class SHIFTClient {
         const parsedPayload = new ApiParser().parse(response.data)
         return {
           status: response.status,
-          data: parsedPayload.data[0]
+          data: parsedPayload.data
         }
       })
   }
@@ -112,8 +114,8 @@ class SHIFTClient {
       .then(this.determineResponse)
   }
 
-  getCategoryV1 (id) {
-    return categoryEndpoints.getCategoryV1(id)
+  getCategoryV1 (id, query) {
+    return categoryEndpoints.getCategoryV1(id, query)
       .then(this.determineResponse)
   }
 
@@ -179,6 +181,18 @@ class SHIFTClient {
   updateCustomerAccountPasswordV1 (accountId, body) {
     return accountEndpoints.updateCustomerAccountPasswordV1(accountId, body)
       .then(this.determineResponse)
+  }
+
+  createAssetsFilesV1 (assets) {
+    return assetEndpoints.createAssetsFilesV1(assets)
+  }
+
+  createProductAssetFilesV1 (mappings) {
+    return assetEndpoints.createProductAssetFilesV1(mappings)
+  }
+
+  getImport (id, query) {
+    return importEndpoints.getImportV1(id, query)
   }
 
   determineResponse (response) {

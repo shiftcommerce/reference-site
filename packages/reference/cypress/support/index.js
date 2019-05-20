@@ -14,7 +14,37 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands/address-book'
+import './commands/cart'
+import './commands/category'
+import './commands/checkout'
+import './commands/login'
+import './commands/products'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.Screenshot.defaults({
+  videoUploadOnPasses: false,
+  screenshotOnRunFailure: true
+})
+
+beforeEach(function () {
+  // This runs prior to every test
+  // across all files no matter what
+  cy.server()
+
+  cy.route({
+    method: 'POST',
+    url: '/xoplatform/logger/api/logger**',
+    status: 200,
+    response: "{'events': [], 'meta': '{}'}"
+  }).as('payPalLogger')
+
+  cy.route({
+    method: 'GET',
+    url: '/getMenus?**',
+    status: 200,
+    response: 'fixture:menus/get-menus.json'
+  }).as('getMenus')
+})

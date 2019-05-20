@@ -2,8 +2,6 @@ const SHIFTClient = require('../../src/shift-client')
 const nock = require('nock')
 const { shiftApiConfig } = require('../../src/index')
 
-
-
 // Fixtures
 const menuResponse = require('../fixtures/menu-response-payload')
 const menuResponseParsed = require('../fixtures/menu-response-payload-parsed')
@@ -520,7 +518,7 @@ describe('SHIFTClient', () => {
         .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages`)
         .query(queryObject)
         .reply(200, articleStaticPageResponse)
-      
+
       return SHIFTClient.getArticleStaticPageV1(queryObject)
         .then(response => {
           expect(response.status).toEqual(200)
@@ -1098,7 +1096,7 @@ describe('SHIFTClient', () => {
         })
       })
   })
-  
+
   describe('createOrderV1', () => {
     test('creates an order with valid data', () => {
       const body = {

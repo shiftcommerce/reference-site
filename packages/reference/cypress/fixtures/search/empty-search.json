@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "hits": [],
+      "nbHits": 51,
+      "page": 0,
+      "nbPages": 13,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "exhaustiveNbHits": true,
+      "query": "",
+      "params": "query=&hitsPerPage=4&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%5D&tagFilters=",
+      "index": "instant_search"
+    }
+  ]
+}

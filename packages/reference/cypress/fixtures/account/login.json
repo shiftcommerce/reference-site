@@ -1,0 +1,95 @@
+{
+  "data": {
+    "attributes": {
+      "email": "test@example.com",
+      "password": "password123",
+      "reference": null
+    },
+    "id": "18fe7ddd-2a9a-45ad-a908-7156f69b60d2",
+    "links": {
+      "self": "/referencetest/v1/customer_account_authentications/18fe7ddd-2a9a-45ad-a908-7156f69b60d2.json_api"
+    },
+    "relationships": {
+      "customer_account": {
+        "data": {
+          "id": "141",
+          "type": "customer_accounts"
+        },
+        "links": {
+          "related": "/referencetest/v1/customer_account_authentications/18fe7ddd-2a9a-45ad-a908-7156f69b60d2/customer_account.json_api",
+          "self": "/referencetest/v1/customer_account_authentications/18fe7ddd-2a9a-45ad-a908-7156f69b60d2/relationships/customer_account.json_api"
+        }
+      }
+    },
+    "type": "customer_account_authentications"
+  },
+  "included": [
+    {
+      "attributes": {
+        "created_at": "2019-04-23T14:52:49.475Z",
+        "email": "test@example.com",
+        "meta_attributes": {
+          "first_name": {
+            "data_type": "text",
+            "value": "John"
+          },
+          "last_name": {
+            "data_type": "text",
+            "value": "Doe"
+          }
+        },
+        "reference": "141",
+        "updated_at": "2019-04-23T14:52:49.475Z"
+      },
+      "id": "141",
+      "links": {
+        "self": "/referencetest/v1/customer_accounts/141.json_api"
+      },
+      "relationships": {
+        "addresses": {
+          "links": {
+            "related": "/referencetest/v1/customer_accounts/141/addresses.json_api",
+            "self": "/referencetest/v1/customer_accounts/141/relationships/addresses.json_api"
+          }
+        },
+        "cart": {
+          "links": {
+            "related": "/referencetest/v1/customer_accounts/141/cart.json_api",
+            "self": "/referencetest/v1/customer_accounts/141/relationships/cart.json_api"
+          }
+        },
+        "customer_segments": {
+          "links": {
+            "related": "/referencetest/v1/customer_accounts/141/customer_segments.json_api",
+            "self": "/referencetest/v1/customer_accounts/141/relationships/customer_segments.json_api"
+          }
+        },
+        "orders": {
+          "links": {
+            "related": "/referencetest/v1/customer_accounts/141/orders.json_api",
+            "self": "/referencetest/v1/customer_accounts/141/relationships/orders.json_api"
+          }
+        },
+        "password_recovery": {
+          "links": {
+            "related": "/referencetest/v1/customer_accounts/141/password_recovery.json_api",
+            "self": "/referencetest/v1/customer_accounts/141/relationships/password_recovery.json_api"
+          }
+        }
+      },
+      "type": "customer_accounts"
+    }
+  ],
+  "links": {
+    "self": "/referencetest/v1/customer_account_authentications"
+  },
+  "meta": {
+    "warnings": [
+      {
+        "code": "105",
+        "detail": "meta_attributes is not allowed.",
+        "title": "Param not allowed"
+      }
+    ]
+  }
+}

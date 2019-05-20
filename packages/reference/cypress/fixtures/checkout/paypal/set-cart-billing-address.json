@@ -1,0 +1,154 @@
+{
+  "id":"8070",
+  "meta_attributes":{
+
+  },
+  "updated_at":"2019-05-17T07:03:12Z",
+  "created_at":"2019-05-17T07:03:07Z",
+  "email":"",
+  "channel":"web",
+  "line_items_count":1,
+  "shipping_total_discount":0,
+  "shipping_discount_name":null,
+  "free_shipping":false,
+  "test":false,
+  "sub_total":799,
+  "tax":0,
+  "total_discount":0,
+  "total":799,
+  "shipping_total":0,
+  "line_items":[
+    {
+      "id":"9710",
+      "stock_available_level":999999826,
+      "title":"Clock Computer 13''",
+      "unit_quantity":1,
+      "item_type":"Variant",
+      "item_id":27103,
+      "tax_rate":0,
+      "order_status":null,
+      "total":799,
+      "total_discount":0,
+      "tax":0,
+      "sub_total":799,
+      "unit_price":799,
+      "gift":false,
+      "container_id":8071,
+      "sku":"CLOCK_13",
+      "cart_id":8071,
+      "item":{
+        "id":"27103",
+        "meta_attributes":{
+
+        },
+        "updated_at":"2019-05-17T06:53:13Z",
+        "created_at":"2019-04-17T12:32:03Z",
+        "deleted_at":null,
+        "title":"Clock Computer 13''",
+        "description":"A 13'' of the classic clock computer.",
+        "reference":"CLOCK_13",
+        "ewis_eligible":false,
+        "expected_availability_date":null,
+        "ordered_total":173,
+        "position":null,
+        "product_id":181,
+        "sku":"CLOCK_13",
+        "stock_allocated_level":173,
+        "stock_level":999999999,
+        "tax_code":"",
+        "stock_available_level":999999826,
+        "has_assets":true,
+        "price_includes_taxes":true,
+        "available_to_browse":true,
+        "available_to_order":true,
+        "price":799,
+        "current_price":799,
+        "picture_url":"https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/244/1544098373.3502004-clock_computer.jpg",
+        "product":{
+          "id":"181",
+          "meta_attributes":{
+
+          },
+          "updated_at":"2019-05-14T14:37:37Z",
+          "created_at":"2018-12-06T13:51:06Z",
+          "deleted_at":null,
+          "slug":"clock_computer",
+          "canonical_path":"/products/clock_computer",
+          "title":"Clock Computer",
+          "reference":"clock_computer",
+          "description":"A perfect computer for clock fans.",
+          "attribute_merchandising":{
+
+          },
+          "category_ids_cache":[
+
+          ],
+          "content_type":"html",
+          "merged_attribute_merchandising":{
+
+          },
+          "seo_meta_description":"",
+          "seo_meta_keywords":"",
+          "seo_meta_title":"",
+          "rating":0,
+          "total_ratings":null,
+          "web_product_description":"",
+          "web_product_name":"",
+          "picture_url":"https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/244/1544098373.3502004-clock_computer.jpg",
+          "sellable":true,
+          "available_to_browse":true,
+          "merchandised":false,
+          "published":true,
+          "has_assets":true,
+          "ewis_status":"not_ewis_eligible",
+          "breadcrumbs":[
+
+          ],
+          "category_breadcrumb_hierarchy":[
+
+          ],
+          "average_rating":0,
+          "min_price":799,
+          "max_price":999,
+          "min_current_price":799,
+          "max_current_price":999
+        }
+      },
+      "line_item_discounts":[
+
+      ]
+    }
+  ],
+  "discount_summaries":[
+
+  ],
+  "customer_account":null,
+  "billing_address":{
+    "id":"7207",
+    "meta_attributes":{
+      "email":{
+        "value":"testbuyer@flexcommerce.com",
+        "data_type":"text"
+      },
+      "phone_number":{
+        "value":"0352878596",
+        "data_type":"text"
+      }
+    },
+    "customer_account_id":null,
+    "first_name":"test",
+    "last_name":"buyer",
+    "middle_names":"",
+    "address_line_1":"1 Main Terrace",
+    "address_line_2":"",
+    "address_line_3":"",
+    "city":"Wolverhampton",
+    "state":null,
+    "postcode":"W12 4LQ",
+    "country":"GB",
+    "preferred_shipping":false,
+    "preferred_billing":false
+  },
+  "shipping_address":null,
+  "shipping_method":null
+}

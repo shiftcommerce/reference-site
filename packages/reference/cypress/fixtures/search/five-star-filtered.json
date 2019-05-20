@@ -1,0 +1,437 @@
+{
+  "results": [
+    {
+      "hits": [
+        {
+          "category_ids": [
+            74
+          ],
+          "boosted": {
+            "mens": true,
+            "shoes": false
+          },
+          "product_path": "/products/inkjet_printer",
+          "product_title": "Inkjet Printer",
+          "product_reference": "inkjet_printer",
+          "product_meta_data": {
+            "eu": {
+              "description": "A standard inkjet printer"
+            }
+          },
+          "variant_title": "Silver",
+          "variant_meta_data": {
+            "eu": {
+              "price": 200
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/253/1544108665.06589-printer.jpg",
+              "alt_text": "Inkjet Printer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 5,
+          "objectID": "151089581289",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "74",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/inkjet_printer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_title": {
+              "value": "Inkjet Printer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_reference": {
+              "value": "inkjet_printer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "A standard inkjet printer",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Silver",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "200",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/253/1544108665.06589-printer.jpg",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "alt_text": {
+                  "value": "Inkjet Printer",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "5",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
+          "category_ids": [
+            73
+          ],
+          "categories": {
+            "mens": 1,
+            "shoes": 3
+          },
+          "product_path": "/products/geeky_computer",
+          "product_title": "Geeky Computer",
+          "product_reference": "geeky_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "A geeky computer for geeks"
+            }
+          },
+          "variant_title": "Silver",
+          "variant_meta_data": {
+            "eu": {
+              "price": 550
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg",
+              "alt_text": "Geeky Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 5,
+          "objectID": "15108958128",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "categories": {
+              "mens": {
+                "value": "1",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "shoes": {
+                "value": "3",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "product_path": {
+              "value": "/products/geeky_computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_title": {
+              "value": "Geeky Computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_reference": {
+              "value": "geeky_computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "A geeky computer for geeks",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Silver",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "550",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "alt_text": {
+                  "value": "Geeky Computer",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "5",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
+          "category_ids": [
+            73
+          ],
+          "product_path": "/products/hybrid_computer",
+          "product_title": "Hybrid Computer",
+          "product_reference": "hybrid_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "A brand new hybrid computer just for you."
+            }
+          },
+          "variant_title": "Black",
+          "variant_meta_data": {
+            "eu": {
+              "price": 500
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/245/1544098373.8312654-hybrid_computer.jpg",
+              "alt_text": "Hybrid Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 5,
+          "objectID": "15108958122",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/hybrid_computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_title": {
+              "value": "Hybrid Computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_reference": {
+              "value": "hybrid_computer",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "A brand new hybrid computer just for you.",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Black",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "500",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/245/1544098373.8312654-hybrid_computer.jpg",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "alt_text": {
+                  "value": "Hybrid Computer",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "5",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        }
+      ],
+      "nbHits": 3,
+      "page": 0,
+      "nbPages": 1,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "facets": {
+        "product_rating": {
+          "5": 3
+        },
+        "variant_meta_data.eu.price": {
+          "200": 1,
+          "500": 1,
+          "550": 1
+        }
+      },
+      "facets_stats": {
+        "product_rating": {
+          "min": 5,
+          "max": 5,
+          "avg": 5,
+          "sum": 15
+        },
+        "variant_meta_data.eu.price": {
+          "min": 200,
+          "max": 550,
+          "avg": 416,
+          "sum": 1250
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "",
+      "params": "query=&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=&facetFilters=%5B%5B%22product_rating%3A5%22%5D%5D",
+      "index": "reference_test_suite"
+    },
+    {
+      "hits": [
+        {
+          "objectID": "151089581289",
+          "_distinctSeqID": 0
+        }
+      ],
+      "nbHits": 9,
+      "page": 0,
+      "nbPages": 9,
+      "hitsPerPage": 1,
+      "processingTimeMS": 1,
+      "facets": {
+        "product_rating": {
+          "5": 3,
+          "4": 2,
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "facets_stats": {
+        "product_rating": {
+          "min": 0,
+          "max": 5,
+          "avg": 3,
+          "sum": 29
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "",
+      "params": "query=&hitsPerPage=1&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&attributesToRetrieve=%5B%5D&attributesToHighlight=%5B%5D&attributesToSnippet=%5B%5D&tagFilters=&analytics=false&clickAnalytics=false&facets=product_rating",
+      "index": "reference_test_suite"
+    }
+  ]
+}

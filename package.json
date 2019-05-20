@@ -8,6 +8,7 @@
     "lerna": "^3.13.4"
   },
   "scripts": {
-    "dev": "yarn --cwd packages/reference devserver"
+    "dev": "yarn --cwd packages/reference devserver",
+    "cy:ci": "yarn --cwd packages/reference node .circleci/cypress.js"
   }
 }

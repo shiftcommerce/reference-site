@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "15",
+      "title": "Main Menu",
+      "reference": "mega-menu",
+      "updated_at": "2018-12-06T14:58:42Z",
+      "menu_items": [
+        {
+          "id": "65",
+          "title": "Mobliiiiii",
+          "published": true,
+          "canonical_path": "/phones",
+          "meta_attributes": {}
+        },
+        {
+          "id": "66",
+          "title": "Computers",
+          "published": true,
+          "canonical_path": "/categories/computers",
+          "meta_attributes": {}
+        },
+        {
+          "id": "67",
+          "title": "Printers",
+          "published": true,
+          "canonical_path": "/categories/printers",
+          "meta_attributes": {}
+        }
+      ]
+    }
+  ]
+}

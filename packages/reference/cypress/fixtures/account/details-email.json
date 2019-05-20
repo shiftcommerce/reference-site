@@ -1,0 +1,167 @@
+{
+  "data": {
+    "id": "144",
+    "type": "customer_accounts",
+    "links": {
+      "self": "/referencetest/v1/customer_accounts/144.json_api"
+    },
+    "attributes": {
+      "meta_attributes": {
+        "first_name": {
+          "value": "John",
+          "data_type": "string"
+        },
+        "last_name": {
+          "value": "Doe",
+          "data_type": "string"
+        },
+        "mobile_phone": {
+          "value": null,
+          "data_type": "string"
+        },
+        "date_of_birth": {
+          "value": "undefined/undefined/undefined",
+          "data_type": "string"
+        }
+      },
+      "email": "example@test.com",
+      "reference": "144",
+      "created_at": "2019-05-14T10:44:13.806Z",
+      "updated_at": "2019-05-14T13:26:14.736Z"
+    },
+    "relationships": {
+      "addresses": {
+        "links": {
+          "self": "/referencetest/v1/customer_accounts/144/relationships/addresses.json_api",
+          "related": "/referencetest/v1/customer_accounts/144/addresses.json_api"
+        }
+      },
+      "orders": {
+        "links": {
+          "self": "/referencetest/v1/customer_accounts/144/relationships/orders.json_api",
+          "related": "/referencetest/v1/customer_accounts/144/orders.json_api"
+        }
+      },
+      "cart": {
+        "links": {
+          "self": "/referencetest/v1/customer_accounts/144/relationships/cart.json_api",
+          "related": "/referencetest/v1/customer_accounts/144/cart.json_api"
+        },
+        "data": {
+          "type": "carts",
+          "id": "4799"
+        }
+      },
+      "customer_segments": {
+        "links": {
+          "self": "/referencetest/v1/customer_accounts/144/relationships/customer_segments.json_api",
+          "related": "/referencetest/v1/customer_accounts/144/customer_segments.json_api"
+        },
+        "data": []
+      },
+      "password_recovery": {
+        "links": {
+          "self": "/referencetest/v1/customer_accounts/144/relationships/password_recovery.json_api",
+          "related": "/referencetest/v1/customer_accounts/144/password_recovery.json_api"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "4799",
+      "type": "carts",
+      "links": {
+        "self": "/referencetest/v1/carts/4799.json_api"
+      },
+      "attributes": {
+        "meta_attributes": {},
+        "updated_at": "2019-05-14T10:44:13Z",
+        "created_at": "2019-05-14T10:44:13Z",
+        "email": "example@test.com",
+        "channel": "web",
+        "line_items_count": 0,
+        "shipping_total_discount": 0,
+        "shipping_discount_name": null,
+        "free_shipping": false,
+        "test": false,
+        "sub_total": 0,
+        "tax": 0,
+        "total_discount": 0,
+        "total": 0,
+        "shipping_total": 0
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/line_items.json_api",
+            "related": "/referencetest/v1/carts/4799/line_items.json_api"
+          }
+        },
+        "discount_summaries": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/discount_summaries.json_api",
+            "related": "/referencetest/v1/carts/4799/discount_summaries.json_api"
+          }
+        },
+        "customer_account": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/customer_account.json_api",
+            "related": "/referencetest/v1/carts/4799/customer_account.json_api"
+          }
+        },
+        "billing_address": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/billing_address.json_api",
+            "related": "/referencetest/v1/carts/4799/billing_address.json_api"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/shipping_address.json_api",
+            "related": "/referencetest/v1/carts/4799/shipping_address.json_api"
+          }
+        },
+        "shipping_method": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/shipping_method.json_api",
+            "related": "/referencetest/v1/carts/4799/shipping_method.json_api"
+          }
+        },
+        "free_shipping_promotion": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/free_shipping_promotion.json_api",
+            "related": "/referencetest/v1/carts/4799/free_shipping_promotion.json_api"
+          }
+        },
+        "applied_promotions": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/applied_promotions.json_api",
+            "related": "/referencetest/v1/carts/4799/applied_promotions.json_api"
+          }
+        },
+        "available_shipping_methods": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/available_shipping_methods.json_api",
+            "related": "/referencetest/v1/carts/4799/available_shipping_methods.json_api"
+          }
+        },
+        "available_shipping_promotions": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/available_shipping_promotions.json_api",
+            "related": "/referencetest/v1/carts/4799/available_shipping_promotions.json_api"
+          }
+        },
+        "payment_transactions": {
+          "links": {
+            "self": "/referencetest/v1/carts/4799/relationships/payment_transactions.json_api",
+            "related": "/referencetest/v1/carts/4799/payment_transactions.json_api"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "/referencetest/v1/customer_accounts/144"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": "6880",
+      "type": "addresses",
+      "links": {
+        "self": "/reference/v1/addresses/6880.json_api"
+      },
+      "attributes": {
+        "meta_attributes": {
+          "label": {
+            "value": "TEST",
+            "data_type": "text"
+          },
+          "company_name": {
+            "value": "SHIFT Commerce",
+            "data_type": "text"
+          },
+          "phone_number": {
+            "value": "08003029464",
+            "data_type": "text"
+          },
+          "email": {
+            "value": "test@example.com",
+            "data_type": "text"
+          }
+        },
+        "customer_account_id": 104,
+        "first_name": "John",
+        "last_name": "Doe",
+        "middle_names": "",
+        "address_line_1": "Old School Board",
+        "address_line_2": "Calverly St",
+        "address_line_3": "",
+        "city": "Leeds",
+        "state": "West Yorkshire",
+        "postcode": "LS1 3ED",
+        "country": "GB",
+        "preferred_shipping": true,
+        "preferred_billing": true
+      },
+      "relationships": {
+        "customer_account": {
+          "links": {
+            "self": "/reference/v1/addresses/6880/relationships/customer_account.json_api",
+            "related": "/reference/v1/addresses/6880/customer_account.json_api"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "total_entries": 1,
+    "page_count": 1
+  },
+  "links": {
+    "self": "/reference/v1/customer_accounts/104/addresses",
+    "first": "/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "/reference/v1/addresses.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
+}

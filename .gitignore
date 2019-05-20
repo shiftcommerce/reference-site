@@ -8,23 +8,15 @@
 node_modules/
 yarn-error.log
 /yarn_cache
-yarn.lock
 
 # Ignore Mac files
 **/.DS_Store
-
-# Ignore Codeship files
-codeship.aes
-heroku-deployment.env
 
 # Jest code coverage
 coverage/
 
 # VSCODE
 .vscode/
-
-# Ignore Yalc
-yalc.lock
 
 # Cypress Files
 cypress/videos

@@ -1,0 +1,40 @@
+{
+  "id": "1138",
+  "meta_attributes": {},
+  "updated_at": "2019-04-23T14:52:49Z",
+  "created_at": "2019-04-23T14:52:49Z",
+  "email": "test@example.com",
+  "channel": "web",
+  "line_items_count": 0,
+  "shipping_total_discount": 0,
+  "shipping_discount_name": null,
+  "free_shipping": false,
+  "test": false,
+  "sub_total": 0,
+  "tax": 0,
+  "total_discount": 0,
+  "total": 0,
+  "shipping_total": 0,
+  "line_items": [],
+  "discount_summaries": [],
+  "customer_account": {
+    "id": "141",
+    "meta_attributes": {
+      "first_name": {
+        "value": "John",
+        "data_type": "text"
+      },
+      "last_name": {
+        "value": "Doe",
+        "data_type": "text"
+      }
+    },
+    "email": "test@example.com",
+    "reference": "141",
+    "created_at": "2019-04-23T14:52:49.475Z",
+    "updated_at": "2019-04-23T14:52:49.475Z"
+  },
+  "billing_address": null,
+  "shipping_address": null,
+  "shipping_method": null
+}

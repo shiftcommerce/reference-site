@@ -64,16 +64,16 @@ describe('componentDidMount()', () => {
       <CheckoutPaymentPage cart={cartState} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>,
       { disableLifecycleMethods: true }
     )
-  
+
     // Act
     wrapper.instance().componentDidMount()
-  
+
     // Assert
     expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-address')
     cookieSpy.mockRestore()
     pushSpy.mockRestore()
   })
-  
+
   test('redirects to the shipping address page when one is not set when third party payment is used', () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'PayPal')
@@ -86,7 +86,7 @@ describe('componentDidMount()', () => {
       { disableLifecycleMethods: true }
     )
 
-    // Act  
+    // Act
     wrapper.instance().componentDidMount()
 
     // Assert
@@ -113,7 +113,7 @@ describe('componentDidMount()', () => {
       { disableLifecycleMethods: true }
     )
 
-    // Act  
+    // Act
     wrapper.instance().componentDidMount()
 
     // Assert
@@ -135,10 +135,10 @@ describe('componentDidMount()', () => {
       <CheckoutPaymentPage cart={cartState} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions} />,
       { disableLifecycleMethods: true }
     )
-  
+
     // Act
     wrapper.instance().componentDidMount()
-  
+
     // Assert
     expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-method')
     cookieSpy.mockRestore()
@@ -388,7 +388,7 @@ describe('onCardTokenReceived()', () => {
     const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} dispatch={dispatch} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>)
-   
+
     // Act
     wrapper.setState({ selectedPaymentMethod: 'card' })
     await wrapper.instance().onCardTokenReceived({
@@ -432,7 +432,7 @@ describe('addressFormDisplayed()', () => {
     }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage checkout={checkoutState} cart={{}} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-   
+
     // Act
     wrapper.setState({ addingNewAddress: true })
 
@@ -469,7 +469,7 @@ describe('cartAddressFromBook()', () => {
       paymentMethod: 'Credit/Debit Card'
     }
     const thirdPartyPaymentMethodOptions = ['PayPal']
-  
+
     // Act
     const wrapper = shallow(<CheckoutPaymentPage cart={{}} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
 
@@ -488,7 +488,7 @@ describe('cartAddressFromBook()', () => {
 
     // Act
     const wrapper = shallow(<CheckoutPaymentPage cart={{}} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-  
+
     // Assert
     expect(wrapper.instance().cartAddressFromBook()).toBe(false)
     cookieSpy.mockRestore()
@@ -594,7 +594,7 @@ describe('nextStepAvailable()', () => {
       paymentMethod: 'Credit/Debit Card'
     }
     const thirdPartyPaymentMethodOptions = ['PayPal']
-  
+
     // Act
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkoutState} order={{}} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
 
@@ -887,7 +887,7 @@ describe('convertToOrder()', () => {
     const checkoutState = { paymentMethod: 'Credit/Debit Card' }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={{}} dispatch={dispatch} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ selectedPaymentMethod: 'card' })
     wrapper.instance().convertToOrder()
@@ -911,7 +911,7 @@ describe('continueButtonProps()', () => {
     const checkoutState = { paymentMethod: 'Credit/Debit Card' }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} order={order} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ reviewStep: true })
 
@@ -932,7 +932,7 @@ describe('continueButtonProps()', () => {
     const checkoutState = { paymentMethod: 'Credit/Debit Card' }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} order={order} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ reviewStep: true })
 
@@ -1010,7 +1010,7 @@ describe('currentStep()', () => {
     const checkoutState = { paymentMethod: 'Credit/Debit Card' }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={{}} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ reviewStep: true })
 
@@ -1032,8 +1032,10 @@ describe('render()', () => {
     expect(wrapper.find('Loading')).toBeTruthy()
     expect(wrapper.find('AddressFormSummary').length).toEqual(0)
     expect(wrapper.find('ShippingMethodsSummary').length).toEqual(0)
-    expect(wrapper.find('PaymentMethod').length).toEqual(0)
+    expect(wrapper.find('Payment').length).toEqual(0)
+    expect(wrapper.find('PaymentSummary').length).toEqual(0)
     expect(wrapper.find('PaymentMethodSummary').length).toEqual(0)
+
   })
 
   test('renders correct checkout components', () => {
@@ -1047,7 +1049,7 @@ describe('render()', () => {
     }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkoutState} order={{}} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ loading: false })
 
@@ -1055,12 +1057,12 @@ describe('render()', () => {
     expect(wrapper).toMatchSnapshot()
     expect(wrapper.find('AddressFormSummary').length).toEqual(1)
     expect(wrapper.find('ShippingMethodsSummary').length).toEqual(1)
-    expect(wrapper.find('PaymentMethod').length).toEqual(1)
-    expect(wrapper.find('PaymentMethodSummary').length).toEqual(1)
+    expect(wrapper.find('Payment').length).toEqual(1)
+    expect(wrapper.find('PaymentSummary').length).toEqual(1)
   })
 
   test('displays payment method selection when at payment step', () => {
-    // Arrange 
+    // Arrange
     const cart = {
       shipping_address: {}
     }
@@ -1070,15 +1072,15 @@ describe('render()', () => {
     }
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} checkout={checkoutState} order={{}} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>, { disableLifecycleMethods: true })
-    
+
     // Act
     wrapper.setState({ loading: false })
 
     // Assert
-    expect(wrapper.find('PaymentMethod').length).toEqual(1)
+    expect(wrapper.find('Payment').length).toEqual(1)
     // Payment Method Summary should be in the DOM but hidden
-    expect(wrapper.find('PaymentMethodSummary').length).toEqual(1)
-    expect(wrapper.find('PaymentMethodSummary').parent().hasClass('u-hidden')).toBe(true)
+    expect(wrapper.find('PaymentSummary').length).toEqual(1)
+    expect(wrapper.find('PaymentSummary').parent().hasClass('u-hidden')).toBe(true)
   })
 
   test('displays payment method summary when at payment step', () => {
@@ -1100,9 +1102,9 @@ describe('render()', () => {
     })
 
     // Assert
-    expect(wrapper.find('PaymentMethodSummary').length).toEqual(1)
+    expect(wrapper.find('PaymentSummary').length).toEqual(1)
     // Payment Method should be in the DOM but hidden
-    expect(wrapper.find('PaymentMethod').length).toEqual(1)
-    expect(wrapper.find('PaymentMethod').parent().hasClass('u-hidden')).toBe(true)
+    expect(wrapper.find('Payment').length).toEqual(1)
+    expect(wrapper.find('Payment').parent().hasClass('u-hidden')).toBe(true)
   })
 })
