@@ -1,0 +1,133 @@
+{
+  "data": {
+    "id": "153",
+    "type": "create_order",
+    "links": {
+      "self": "/referencetest/v2/create_order/153.json_api"
+    },
+    "attributes": {
+      "email": "testbuyer@flexcommerce.com",
+      "channel": "web",
+      "shipping_discount_name": null,
+      "free_shipping": false,
+      "reference": "153",
+      "status": "pending",
+      "deallocated_at": null,
+      "deallocated": false,
+      "coupons_applied": [],
+      "ip_address": "::ffff:127.0.0.1",
+      "shipping_address": {
+        "id": "5911",
+        "attributes": {
+          "address_line_1": "Shift Commerce Ltd, Old School Boar",
+          "address_line_2": "Calverley Street",
+          "city": "Leeds",
+          "country": "GB",
+          "first_name": "Test",
+          "last_name": "Example",
+          "postcode": "LS1 3ED"
+        },
+        "type": "addresses"
+      },
+      "billing_address": {
+        "id": "5910",
+        "attributes": {
+          "address_line_1": "1 Main Terrace",
+          "address_line_2": "",
+          "city": "Wolverhampton",
+          "country": "GB",
+          "first_name": "test",
+          "last_name": "buyer",
+          "postcode": "W12 4LQ"
+        },
+        "type": "addresses"
+      },
+      "customer_account_id": null,
+      "shipping_method": {
+        "attributes": {
+          "description": "Cheap shipping",
+          "label": "Cheap shipping",
+          "meta_attributes": {
+            "working_days": {
+              "value": "3",
+              "data_type": "text"
+            }
+          },
+          "reference": "cheap_shipping",
+          "sku": "cheap_shipping",
+          "sub_total": 0.83,
+          "tax": 0.17,
+          "tax_rate": 0.2,
+          "total": 1
+        },
+        "id": "26",
+        "type": "shipping_methods"
+      },
+      "currency": "GBP",
+      "discount_summaries": [],
+      "test": true,
+      "placed_at": "2019-05-14T15:28:36.832Z",
+      "settle_payments_immediately": true,
+      "total_ex_tax": 999.83,
+      "total_inc_tax": 1000,
+      "pre_discount_line_items_total_ex_tax": 999,
+      "pre_discount_line_items_total_inc_tax": 999,
+      "order_discount_ex_tax": 0.83,
+      "order_discount_inc_tax": 1,
+      "total_discount_ex_tax": 0.83,
+      "total_discount_inc_tax": 1,
+      "shipping_discount": -1,
+      "shipping_total": 0
+    },
+    "relationships": {
+      "line_items": {
+        "links": {
+          "self": "/referencetest/v2/create_order/153/relationships/line_items.json_api",
+          "related": "/referencetest/v2/create_order/153/line_items.json_api"
+        },
+        "data": [
+          {
+            "type": "line_items",
+            "id": "763"
+          }
+        ]
+      },
+      "payment_transactions": {
+        "links": {
+          "self": "/referencetest/v2/create_order/153/relationships/payment_transactions.json_api",
+          "related": "/referencetest/v2/create_order/153/payment_transactions.json_api"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "763",
+      "type": "line_items",
+      "links": {
+        "self": "/referencetest/v2/line_items/763.json_api"
+      },
+      "attributes": {
+        "title": "Clock Computer 15''",
+        "sku": "CLOCK_15",
+        "unit_quantity": 1,
+        "gift_unit_quantity": 0,
+        "gift": false,
+        "tracking_url": null,
+        "line_item_discounts": [],
+        "each_ex_tax": 999,
+        "each_inc_tax": 999,
+        "line_total_ex_tax": 999,
+        "pre_discount_line_total_ex_tax": 999,
+        "tax_rate": 0,
+        "line_discount_ex_tax": 0,
+        "line_discount_inc_tax": 0,
+        "line_total_inc_tax": 999,
+        "pre_discount_line_total_inc_tax": 999
+      }
+    }
+  ],
+  "links": {
+    "self": "/referencetest/v2/create_order?include=line_items"
+  }
+}

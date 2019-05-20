@@ -82,7 +82,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8",
     "babel-jest": "^23.6.0",
-    "cypress": "^3.2.0",
+    "cypress": "^3.3.0",
     "dotenv-webpack": "^1.5.7",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",

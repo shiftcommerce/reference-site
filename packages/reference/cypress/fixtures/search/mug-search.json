@@ -1,0 +1,437 @@
+{
+  "results": [
+    {
+      "hits": [
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_48",
+          "product_title": "first_product_title",
+          "product_reference": "seed_product_48",
+          "product_meta_data": {
+            "eu": {
+              "description": "Meet our Bedtime Brew - lovingly crafted for cosy evenings. It's the warm, satisfying taste of Yorkshire Tea, gently decaffeinated and blended with lemon balm and nutmeg, for a lovely hot drink that’s seriously snuggly. For extra malty flavour, add plenty of milk. And because it's Yorkshire Tea, you know it’s made properly - by people who believe in quality, trading fairly and doing business in a way that respects people and planet."
+            }
+          },
+          "variant_title": "Variant 2 for SEPIA mug 340ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 24.91
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/118/1537803709.468034-SEPIA_mug_340ml.jpg",
+              "alt_text": "SEPIA mug 340ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 2,
+          "objectID": "1510893932",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "product_title": {
+              "value": "SEPIA <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 340ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 2 for SEPIA <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 340ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_48",
+          "product_title": "second_product_title",
+          "product_reference": "seed_product_48",
+          "product_meta_data": {
+            "eu": {
+              "description": "Meet our Bedtime Brew - lovingly crafted for cosy evenings. It's the warm, satisfying taste of Yorkshire Tea, gently decaffeinated and blended with lemon balm and nutmeg, for a lovely hot drink that’s seriously snuggly. For extra malty flavour, add plenty of milk. And because it's Yorkshire Tea, you know it’s made properly - by people who believe in quality, trading fairly and doing business in a way that respects people and planet."
+            }
+          },
+          "variant_title": "Variant 1 for SEPIA mug 340ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 2.3
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/118/1537803709.468034-SEPIA_mug_340ml.jpg",
+              "alt_text": "SEPIA mug 340ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 1,
+          "objectID": "1510893922",
+          "_distinctSeqID": 1,
+          "_highlightResult": {
+            "product_title": {
+              "value": "SEPIA <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 340ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 1 for SEPIA <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 340ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_26",
+          "product_title": "third_product_title",
+          "product_reference": "seed_product_26",
+          "product_meta_data": {
+            "eu": {
+              "description": "The recipe for our English Breakfast Tea has been handed down through four generations of tea buyers. Finest teas from India and Africa are skilfully combined to give a perfectly balanced blend with a bright, golden colour and a wonderfully rich, invigorating flavour. Our tea buyers travel the world to some of the most remote tea gardens and select the finest hand-plucked teas. By investing in long-term partnerships and paying fair prices, we are able to make a positive difference to local communities whilst improving the quality of our teas."
+            }
+          },
+          "variant_title": "Variant 2 for SCS mug 250ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 69.68
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/136/1537803715.9444022-SCS_mug_250ml.jpg",
+              "alt_text": "SCS mug 250ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 0,
+          "objectID": "1510838642",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "product_title": {
+              "value": "SCS <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 250ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 2 for SCS <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 250ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_26",
+          "product_title": "fourth_product_title",
+          "product_reference": "seed_product_26",
+          "product_meta_data": {
+            "eu": {
+              "description": "The recipe for our English Breakfast Tea has been handed down through four generations of tea buyers. Finest teas from India and Africa are skilfully combined to give a perfectly balanced blend with a bright, golden colour and a wonderfully rich, invigorating flavour. Our tea buyers travel the world to some of the most remote tea gardens and select the finest hand-plucked teas. By investing in long-term partnerships and paying fair prices, we are able to make a positive difference to local communities whilst improving the quality of our teas."
+            }
+          },
+          "variant_title": "Variant 1 for SCS mug 250ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 30.23
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/136/1537803715.9444022-SCS_mug_250ml.jpg",
+              "alt_text": "SCS mug 250ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 4,
+          "objectID": "1510838282",
+          "_distinctSeqID": 1,
+          "_highlightResult": {
+            "product_title": {
+              "value": "SCS <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 250ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 1 for SCS <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 250ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_25",
+          "product_title": "fifth_product_title",
+          "product_reference": "seed_product_25",
+          "product_meta_data": {
+            "eu": {
+              "description": "The recipe for our English Breakfast Tea has been handed down through four generations of tea buyers. Finest teas from India and Africa are skilfully combined to give a perfectly balanced blend with a bright, golden colour and a wonderfully rich, invigorating flavour. Our tea buyers travel the world to some of the most remote tea gardens and select the finest hand-plucked teas. By investing in long-term partnerships and paying fair prices, we are able to make a positive difference to local communities whilst improving the quality of our teas."
+            }
+          },
+          "variant_title": "Variant 2 for OCT mug 300ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 15.89
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/133/1537803714.4669538-OCT_mug_300ml.jpg",
+              "alt_text": "OCT mug 300ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 0,
+          "objectID": "1510838242",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "product_title": {
+              "value": "OCT <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 300ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 2 for OCT <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 300ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_25",
+          "product_title": "sixth_product_title",
+          "product_reference": "seed_product_25",
+          "product_meta_data": {
+            "eu": {
+              "description": "The recipe for our English Breakfast Tea has been handed down through four generations of tea buyers. Finest teas from India and Africa are skilfully combined to give a perfectly balanced blend with a bright, golden colour and a wonderfully rich, invigorating flavour. Our tea buyers travel the world to some of the most remote tea gardens and select the finest hand-plucked teas. By investing in long-term partnerships and paying fair prices, we are able to make a positive difference to local communities whilst improving the quality of our teas."
+            }
+          },
+          "variant_title": "Variant 1 for OCT mug 300ml",
+          "variant_meta_data": {
+            "eu": {
+              "price": 86.5
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/133/1537803714.4669538-OCT_mug_300ml.jpg",
+              "alt_text": "OCT mug 300ml",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 1,
+          "objectID": "1510838232",
+          "_distinctSeqID": 1,
+          "_highlightResult": {
+            "product_title": {
+              "value": "OCT <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 300ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 1 for OCT <ais-highlight-0000000000>mu</ais-highlight-0000000000>g 300ml",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_13",
+          "product_title": "seventh_product_title",
+          "product_reference": "seed_product_13",
+          "product_meta_data": {
+            "eu": {
+              "description": "A blend of coffees from Central and South America, Indonesia and India, specially selected to give a true espresso character, strong and bittersweet with a lovely golden cream. It's the perfect choice for home espresso machines."
+            }
+          },
+          "variant_title": "Variant 2 for CLK-152 mug",
+          "variant_meta_data": {
+            "eu": {
+              "price": 95.47
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/120/1537803709.9103374-CLK-152_mug.jpg",
+              "alt_text": "CLK-152 mug",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 3,
+          "objectID": "1510820532",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "product_title": {
+              "value": "CLK-152 <ais-highlight-0000000000>mu</ais-highlight-0000000000>g",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 2 for CLK-152 <ais-highlight-0000000000>mu</ais-highlight-0000000000>g",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        },
+        {
+          "category_ids": [
+            51
+          ],
+          "product_path": "/products/seed_product_13",
+          "product_title": "eigth_product_title",
+          "product_reference": "seed_product_13",
+          "product_meta_data": {
+            "eu": {
+              "description": "A blend of coffees from Central and South America, Indonesia and India, specially selected to give a true espresso character, strong and bittersweet with a lovely golden cream. It's the perfect choice for home espresso machines."
+            }
+          },
+          "variant_title": "Variant 1 for CLK-152 mug",
+          "variant_meta_data": {
+            "eu": {
+              "price": 44.88
+            }
+          },
+          "product_assets": [
+            {
+              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/120/1537803709.9103374-CLK-152_mug.jpg",
+              "alt_text": "CLK-152 mug",
+              "sort_position": 1
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 3,
+          "objectID": "1510820512",
+          "_distinctSeqID": 1,
+          "_highlightResult": {
+            "product_title": {
+              "value": "CLK-152 <ais-highlight-0000000000>mu</ais-highlight-0000000000>g",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            },
+            "variant_title": {
+              "value": "Variant 1 for CLK-152 <ais-highlight-0000000000>mu</ais-highlight-0000000000>g",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "mu"
+              ]
+            }
+          }
+        }
+      ],
+      "nbHits": 8,
+      "page": 0,
+      "nbPages": 2,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "facets": {
+        "product_rating": {
+          "1": 5,
+          "3": 4,
+          "4": 3,
+          "0": 2,
+          "2": 2
+        },
+        "variant_meta_data.eu.price": {
+          "15.89": 1,
+          "2.3": 1,
+          "24.91": 1,
+          "29.32": 1,
+          "30.23": 1,
+          "31.1": 1,
+          "44.88": 1,
+          "52.38": 1,
+          "69.68": 1,
+          "70.61": 1
+        }
+      },
+      "facets_stats": {
+        "product_rating": {
+          "min": 0,
+          "max": 4,
+          "avg": 2,
+          "sum": 33
+        },
+        "variant_meta_data.eu.price": {
+          "min": 2.3,
+          "max": 97.41,
+          "avg": 55.775,
+          "sum": 892.4
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "mu",
+      "params": "query=mu&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=",
+      "index": "instant_search"
+    }
+  ]
+}

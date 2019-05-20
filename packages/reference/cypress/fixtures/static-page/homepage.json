@@ -1,0 +1,164 @@
+{
+  "id": "57",
+  "meta_attributes": {},
+  "updated_at": "2018-12-06T11:37:31Z",
+  "created_at": "2018-12-06T10:36:49Z",
+  "slug": "homepage",
+  "canonical_path": "/homepage",
+  "title": "Homepage",
+  "reference": "homepage",
+  "body_content": "",
+  "published": true,
+  "template": {
+    "id": "17",
+    "reference": "static_page",
+    "sections": [
+      {
+        "id": "22",
+        "reference": "section",
+        "components": [
+          {
+            "id": "22_1",
+            "image": [
+              {
+                "id": "243",
+                "meta_attributes": {},
+                "updated_at": "2018-12-06T11:36:55Z",
+                "created_at": "2018-12-06T11:36:54Z",
+                "deleted_at": null,
+                "name": null,
+                "reference": "2c658768-307c-400a-ba80-012d0191872e",
+                "asset_file": "1544096214.7620356-view.jpg",
+                "file_content_filename": "view.jpg",
+                "file_content_content_type": "image/jpeg",
+                "file_content_size": 1966478,
+                "image_height": 2000,
+                "image_width": 3000,
+                "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg",
+                "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg"
+              }
+            ],
+            "mobile_image": [
+              {
+                "id": "243",
+                "meta_attributes": {},
+                "updated_at": "2018-12-06T11:36:55Z",
+                "created_at": "2018-12-06T11:36:54Z",
+                "deleted_at": null,
+                "name": null,
+                "reference": "2c658768-307c-400a-ba80-012d0191872e",
+                "asset_file": "1544096214.7620356-view.jpg",
+                "file_content_filename": "view.jpg",
+                "file_content_content_type": "image/jpeg",
+                "file_content_size": 1966478,
+                "image_height": 2000,
+                "image_width": 3000,
+                "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg",
+                "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg"
+              }
+            ],
+            "reference": "hero_full",
+            "heading": "Test homepage fixture heading",
+            "image_width": 0,
+            "image_height": 0,
+            "overlay_text": "",
+            "overlay_title": "",
+            "overlay_position": [
+              "below"
+            ],
+            "background_colour": "",
+            "overlay_link_1_text": "",
+            "overlay_link_2_text": "",
+            "overlay_link_3_text": "",
+            "overlay_link_4_text": "",
+            "overlay_link_5_text": "",
+            "overlay_text_colour": "",
+            "overlay_image_overlap": [
+              "none"
+            ],
+            "overlay_link_text_colour": "",
+            "overlay_background_colour": "",
+            "overlay_link_border_colour": "",
+            "overlay_link_background_colour": "",
+            "overlay_link_hover_text_colour": "",
+            "overlay_link_hover_border_colour": "",
+            "overlay_link_hover_background_colour": ""
+          }
+        ]
+      }
+    ],
+    "section": {
+      "id": "22",
+      "reference": "section",
+      "components": [
+        {
+          "id": "22_1",
+          "image": [
+            {
+              "id": "243",
+              "meta_attributes": {},
+              "updated_at": "2018-12-06T11:36:55Z",
+              "created_at": "2018-12-06T11:36:54Z",
+              "deleted_at": null,
+              "name": null,
+              "reference": "2c658768-307c-400a-ba80-012d0191872e",
+              "asset_file": "1544096214.7620356-view.jpg",
+              "file_content_filename": "view.jpg",
+              "file_content_content_type": "image/jpeg",
+              "file_content_size": 1966478,
+              "image_height": 2000,
+              "image_width": 3000,
+              "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg",
+              "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg"
+            }
+          ],
+          "mobile_image": [
+            {
+              "id": "243",
+              "meta_attributes": {},
+              "updated_at": "2018-12-06T11:36:55Z",
+              "created_at": "2018-12-06T11:36:54Z",
+              "deleted_at": null,
+              "name": null,
+              "reference": "2c658768-307c-400a-ba80-012d0191872e",
+              "asset_file": "1544096214.7620356-view.jpg",
+              "file_content_filename": "view.jpg",
+              "file_content_content_type": "image/jpeg",
+              "file_content_size": 1966478,
+              "image_height": 2000,
+              "image_width": 3000,
+              "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg",
+              "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/243/1544096214.7620356-view.jpg"
+            }
+          ],
+          "reference": "hero_full",
+          "heading": "Test homepage fixture heading",
+          "image_width": 0,
+          "image_height": 0,
+          "overlay_text": "",
+          "overlay_title": "",
+          "overlay_position": [
+            "below"
+          ],
+          "background_colour": "",
+          "overlay_link_1_text": "",
+          "overlay_link_2_text": "",
+          "overlay_link_3_text": "",
+          "overlay_link_4_text": "",
+          "overlay_link_5_text": "",
+          "overlay_text_colour": "",
+          "overlay_image_overlap": [
+            "none"
+          ],
+          "overlay_link_text_colour": "",
+          "overlay_background_colour": "",
+          "overlay_link_border_colour": "",
+          "overlay_link_background_colour": "",
+          "overlay_link_hover_text_colour": "",
+          "overlay_link_hover_border_colour": "",
+          "overlay_link_hover_background_colour": ""
+        }
+      ]
+    }
+  }
+}

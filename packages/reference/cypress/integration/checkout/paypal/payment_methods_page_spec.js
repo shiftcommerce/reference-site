@@ -1,5 +1,43 @@
-describe('PayPal Checkout: Payment Methods Page', () => {
+describe('PayPal Checkout: Navigating To Payment Methods Page', () => {
   beforeEach(() => {
+    // Stub requests
+    cy.server()
+
+    cy.route({
+      method: 'POST',
+      url: '**/1/indexes/**',
+      status: 200,
+      response: 'fixture:search/empty-search.json'
+    }).as('emptySearch')
+
+    cy.route({
+      method: 'GET',
+      url: '/getCart',
+      status: 200,
+      response: 'fixture:cart/get-cart-with-two-line-items.json'
+    }).as('getCart')
+
+    cy.route({
+      method: 'GET',
+      url: '/getMenus?**',
+      status: 200,
+      response: 'fixture:menus/get-menus.json'
+    }).as('getMenus')
+
+    cy.route({
+      method: 'GET',
+      url: '/getShippingMethods',
+      status: 200,
+      response: 'fixture:cart/get-shipping-methods.json'
+    }).as('getShippingMethods')
+
+    cy.route({
+      method: 'POST',
+      url: '/xoplatform/logger/api/logger**',
+      status: 200,
+      response: "{'events': [], 'meta': '{}'}"
+    }).as('payPalLogger')
+
     // Add first item to cart
     cy.addVariantToCart({ variantId: '27104', quantity: 1 })
     // Add second item to cart and proceed to checkout
@@ -44,16 +82,61 @@ describe('PayPal Checkout: Payment Methods Page', () => {
   })
 
   it('allows customers to apply a promotion code', () => {
+    // Stub  coupon and cart requests
+    cy.route({
+      method: 'POST',
+      url: '/addCartCoupon',
+      status: 201,
+      response: 'fixture:checkout/paypal/add-valid-coupon.json'
+    }).as('addCartCoupon')
+
+    cy.route({
+      method: 'GET',
+      url: '/getCart',
+      status: 200,
+      response: 'fixture:checkout/paypal/get-cart-with-single-line-item-and-coupon.json'
+    }).as('getCartWithCoupon')
+
     // Click apply promotion to cart
     cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
+
+    // Check coupon request payload
+    cy.wait('@addCartCoupon')
+      .its('requestBody')
+      .should('include', {
+        couponCode: 'TESTCOUPON'
+      })
+
     // Check the promotion is added to the cart
     cy.contains(/£1 Off/i)
   })
 
   it('renders errors when a promotion code is invalid', () => {
+    // Stub coupon requests
+    cy.route({
+      method: 'POST',
+      url: '/addCartCoupon',
+      status: 422,
+      response: [{
+        title: 'Invalid promo code TESSSSSSSTCOUPONSSSSS',
+        detail: 'base - Invalid promo code TESSSSSSSTCOUPONSSSSS',
+        code: '100',
+        source: { pointer: '/data/attributes/base' },
+        status: '422'
+      }]
+    }).as('addInvalidCartCoupon')
+
     // Click apply promotion to cart
     cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
+
+    // Check coupon request payload
+    cy.wait('@addInvalidCartCoupon')
+      .its('requestBody')
+      .should('include', {
+        couponCode: 'TESSSSSSSTCOUPONSSSSS'
+      })
+
     // Check error message is rendered
-    cy.contains(/Invalid promo code 'TESSSSSSSTCOUPONSSSSS'/i)
+    cy.contains(/Invalid promo code TESSSSSSSTCOUPONSSSSS/i)
   })
 })

@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": "141",
+    "type": "customer_accounts",
+    "links": {
+      "self": "/referencetest/v1/customer_accounts/141.json_api"
+    },
+    "attributes": {
+      "email": "test@example.com",
+      "meta_attributes": {
+        "first_name": {
+          "value": "John",
+          "data_type": "text"
+        },
+        "last_name": {
+          "value": "Doe",
+          "data_type": "text"
+        }
+      }
+    }
+  },
+  "links": {
+    "self": "/referencetest/v1/customer_accounts/141?fields%5Bcustomer_accounts%5D=email%2Cmeta_attributes&include="
+  }
+}

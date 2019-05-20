@@ -1,0 +1,606 @@
+{
+  "results": [
+    {
+      "hits": [
+        {
+          "category_ids": [
+            73
+          ],
+          "product_path": "/products/black_computer",
+          "product_title": "Black Computer",
+          "product_reference": "black_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "A black goes well with all colours"
+            }
+          },
+          "variant_title": "Black",
+          "variant_meta_data": {
+            "eu": {
+              "price": 350
+            }
+          },
+          "product_assets": [
+            {
+              "url": "/static/fixtures/product-image-1.jpg",
+              "alt_text": "Black Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 4,
+          "objectID": "15108958127",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/black_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_title": {
+              "value": "Black <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_reference": {
+              "value": "black_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "A black goes well with all colours",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Black",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "350",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "/static/fixtures/product-image-1.jpg",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "alt_text": {
+                  "value": "Black <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "4",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
+          "category_ids": [
+            73
+          ],
+          "product_path": "/products/regular_computer",
+          "product_title": "Regular Computer",
+          "product_reference": "regular_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "Just a regular computer"
+            }
+          },
+          "variant_title": "Silver",
+          "variant_meta_data": {
+            "eu": {
+              "price": 250
+            }
+          },
+          "product_assets": [
+            {
+              "url": "/static/fixtures/product-image-1.jpg",
+              "alt_text": "Regular Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 4,
+          "objectID": "15108958126",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/regular_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_title": {
+              "value": "Regular <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_reference": {
+              "value": "regular_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "Just a regular <ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Silver",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "250",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "/static/fixtures/product-image-1.jpg",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "alt_text": {
+                  "value": "Regular <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "4",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
+          "category_ids": [
+            73
+          ],
+          "product_path": "/products/old_computer",
+          "product_title": "Old Computer",
+          "product_reference": "old_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "An old computer for retro afficionados"
+            }
+          },
+          "variant_title": "Silver",
+          "variant_meta_data": {
+            "eu": {
+              "price": 150
+            }
+          },
+          "product_assets": [
+            {
+              "url": "/static/fixtures/product-image-1.jpg",
+              "alt_text": "Old Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 3,
+          "objectID": "15108958125",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/old_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_title": {
+              "value": "Old <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_reference": {
+              "value": "old_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "An old <ais-highlight-0000000000>computer</ais-highlight-0000000000> for retro afficionados",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Silver",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "150",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "/static/fixtures/product-image-1.jpg",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "alt_text": {
+                  "value": "Old <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "3",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
+          "category_ids": [
+            73
+          ],
+          "product_path": "/products/portable_computer",
+          "product_title": "Portable Computer",
+          "product_reference": "portable_computer",
+          "product_meta_data": {
+            "eu": {
+              "description": "A portable computer for all your needs"
+            }
+          },
+          "variant_title": "Silver",
+          "variant_meta_data": {
+            "eu": {
+              "price": 400
+            }
+          },
+          "product_assets": [
+            {
+              "url": "/static/fixtures/product-image-1.jpg",
+              "alt_text": "Portable Computer",
+              "sort_position": 1,
+              "image_height": 600,
+              "image_width": 600
+            }
+          ],
+          "variant_assets": [],
+          "product_rating": 1,
+          "objectID": "15108958123",
+          "_distinctSeqID": 0,
+          "_highlightResult": {
+            "category_ids": [
+              {
+                "value": "73",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "product_path": {
+              "value": "/products/portable_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_title": {
+              "value": "Portable <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_reference": {
+              "value": "portable_<ais-highlight-0000000000>computer</ais-highlight-0000000000>",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "product_meta_data": {
+              "eu": {
+                "description": {
+                  "value": "A portable <ais-highlight-0000000000>computer</ais-highlight-0000000000> for all your needs",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                }
+              }
+            },
+            "variant_title": {
+              "value": "Silver",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "variant_meta_data": {
+              "eu": {
+                "price": {
+                  "value": "400",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            },
+            "product_assets": [
+              {
+                "url": {
+                  "value": "/static/fixtures/product-image-1.jpg",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "alt_text": {
+                  "value": "Portable <ais-highlight-0000000000>Computer</ais-highlight-0000000000>",
+                  "matchLevel": "full",
+                  "fullyHighlighted": false,
+                  "matchedWords": [
+                    "computer"
+                  ]
+                },
+                "sort_position": {
+                  "value": "1",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_height": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                },
+                "image_width": {
+                  "value": "600",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "product_rating": {
+              "value": "1",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        }
+      ],
+      "nbHits": 5,
+      "page": 0,
+      "nbPages": 2,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "facets": {
+        "product_rating": {
+          "0": 1,
+          "1": 1,
+          "3": 1,
+          "4": 2
+        },
+        "variant_meta_data.eu.price": {
+          "150": 1,
+          "250": 1,
+          "300": 1,
+          "350": 1,
+          "400": 1
+        }
+      },
+      "facets_stats": {
+        "product_rating": {
+          "min": 0,
+          "max": 4,
+          "avg": 2,
+          "sum": 12
+        },
+        "variant_meta_data.eu.price": {
+          "min": 150,
+          "max": 400,
+          "avg": 290,
+          "sum": 1450
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "computer",
+      "params": "query=computer&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=&numericFilters=%5B%22variant_meta_data.eu.price%3C%3D401%22%5D",
+      "index": "reference_test_suite"
+    },
+    {
+      "hits": [
+        {
+          "objectID": "15108958128",
+          "_distinctSeqID": 0
+        }
+      ],
+      "nbHits": 8,
+      "page": 0,
+      "nbPages": 8,
+      "hitsPerPage": 1,
+      "processingTimeMS": 1,
+      "facets": {
+        "variant_meta_data.eu.price": {
+          "150": 1,
+          "250": 1,
+          "300": 1,
+          "350": 1,
+          "400": 1,
+          "500": 1,
+          "550": 1,
+          "800": 1
+        }
+      },
+      "facets_stats": {
+        "variant_meta_data.eu.price": {
+          "min": 150,
+          "max": 800,
+          "avg": 412,
+          "sum": 3300
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "computer",
+      "params": "query=computer&hitsPerPage=1&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&attributesToRetrieve=%5B%5D&attributesToHighlight=%5B%5D&attributesToSnippet=%5B%5D&tagFilters=&analytics=false&clickAnalytics=false&facets=variant_meta_data.eu.price",
+      "index": "reference_test_suite"
+    }
+  ]
+}
