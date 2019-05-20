@@ -84,18 +84,8 @@ describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
     // Check paypal request payload
     cy.wait('@patchInvalidPayPalOrder')
       .its('requestBody')
-      .should('deep.eq', {
-        cart: {
-          discount: 0,
-          freeShipping: false,
-          shippingDiscount: 1,
-          shippingTotal: 1,
-          subTotal: 799,
-          tax: 0,
-          total: 800
-        },
-        payPalOrderID: '9B29180392286445Y',
-        purchaseUnitsReferenceID: 'default'
+      .should('include', {
+        payPalOrderID: '9B29180392286445Y'
       })
 
     // Check error message is rendered
