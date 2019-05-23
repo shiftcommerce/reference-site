@@ -83,6 +83,18 @@ module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
       }
     )
 
+    if (!dev) {
+      // Enable brotli compression
+      config.plugins.push(
+        new BrotliPlugin({
+          asset: '[path].br[query]',
+          test: /\.(js|css|html|svg)$/,
+          threshold: 10240,
+          minRatio: 0.8
+        })
+      )
+    }
+
     return config
   }
 })))))
