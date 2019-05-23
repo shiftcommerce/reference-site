@@ -55,10 +55,8 @@ module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
   poweredByHeader: false,
   assetPrefix: process.env.ASSET_HOST || '',
   onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 1000 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 50
+    maxInactiveAge: 1000 * 1000, // period (in ms) where the server will keep pages in the buffer
+    pagesBufferLength: 50 // number of pages that should be kept simultaneously without being disposed
   },
   webpack (config, { dev }) {
     config.resolve.alias = {
@@ -75,32 +73,7 @@ module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
 
     config.module.rules.push(
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              query: {
-                hash: 'sha512',
-                digest: 'hex',
-                name: '[hash].[ext]'
-              }
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: { progressive: true, quality: 65 },
-              optipng: { enabled: false },
-              pngquant: { quality: '65-90', speed: 4 },
-              gifsicle: { interlaced: false },
-              webp: { quality: 75 }
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(eot|woff|woff2|ttf|jpg)$/,
+        test: /\.(svg|jpg)$/,
         use: {
           loader: 'url-loader',
           options: {

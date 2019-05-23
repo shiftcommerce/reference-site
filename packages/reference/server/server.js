@@ -1,4 +1,5 @@
 const express = require('express')
+const compression = require('compression')
 const next = require('next')
 const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
@@ -53,6 +54,7 @@ module.exports = app.prepare().then(() => {
     server.use(sslRedirect())
   }
 
+  server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())
