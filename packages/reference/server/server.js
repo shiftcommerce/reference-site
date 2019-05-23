@@ -74,16 +74,23 @@ module.exports = app.prepare().then(() => {
 
     const directRouting = async (page) => {
       if (page.status === 200 && page.data.data.length !== 0) {
-        const { resource_id } = page.data.data[0].attributes
+        const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
+
+        // set surrogate headers on the response (if any were found in platform requests)
+        Object.keys(page.headers)
+        .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
+        .forEach(key => {
+          res.set(key, page.headers[key])
+        })
 
         switch (resourceType) {
           case 'Product':
-            return app.render(req, res, '/product', Object.assign(req.query, { id: resource_id }))
+            return app.render(req, res, '/product', Object.assign(req.query, { id: resourceId }))
           case 'Category':
-            return app.render(req, res, '/category', Object.assign(req.query, { id: resource_id }))
+            return app.render(req, res, '/category', Object.assign(req.query, { id: resourceId }))
           case 'StaticPage':
-            return app.render(req, res, '/staticpage', Object.assign(req.query, { id: resource_id }))
+            return app.render(req, res, '/staticpage', Object.assign(req.query, { id: resourceId }))
         }
       }
 
