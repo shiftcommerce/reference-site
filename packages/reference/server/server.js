@@ -26,9 +26,7 @@ const securityHeaders = require('./middleware/security-headers')
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes } = require('@shiftcommerce/shift-next-routes')
-
-const { getSessionExpiryTime } = require('@shiftcommerce/shift-next')
+const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS

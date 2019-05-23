@@ -11,9 +11,12 @@ const AddressBookHandler = require('./express/addressbook-handler')
 const PayPalHandler = require('./express/paypal-handler')
 
 // Routes
-const AccountRoutes = require('./routes/account-routes.js')
-const CheckoutRoutes = require('./routes/checkout-routes.js')
-const OrderRoutes = require('./routes/order-routes.js')
+const AccountRoutes = require('./routes/account-routes')
+const CheckoutRoutes = require('./routes/checkout-routes')
+const OrderRoutes = require('./routes/order-routes')
+
+// Lib
+const { getSessionExpiryTime } = require('./lib/session')
 
 // Shift-api Config
 const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
@@ -25,6 +28,7 @@ shiftApiConfig.set({
 })
 
 module.exports = {
+  getSessionExpiryTime,
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
