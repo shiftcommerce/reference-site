@@ -5,6 +5,7 @@ import Router from 'next/router'
 
 // Libs
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
 
 // Config
 import Config from '../lib/config'
@@ -30,6 +31,12 @@ import {
 } from '../actions/cart-actions'
 // When with-checkout.js is extracted from the reference site submitCoupon and setAPIError can be
 // removed from 'client/actions/cart-actions'. These actions are duplicated in shift-next
+
+const fetchShippingMethodsRequest = () => {
+  return {
+    endpoint: '/getShippingMethods'
+  }
+}
 
 export function withCheckout (WrappedComponent) {
   class WithCheckout extends Component {
@@ -58,7 +65,14 @@ export function withCheckout (WrappedComponent) {
       }
     }
 
-    componentDidMount () {
+    async componentDidMount () {
+      if (!this.props.cart.shipping_method) {
+        const cheapestShipping = (await this.fetchShippingMethods()).sort((method1, method2) => method1.total - method2.total)[0]
+
+        this.setState({
+          cheapestShipping: cheapestShipping
+        })
+      }
       this.props.dispatch(readCart()).then(() => {
         if (!this.props.cart.line_items_count) {
           return Router.push('/cart')
@@ -94,6 +108,16 @@ export function withCheckout (WrappedComponent) {
             stepActions: this.wrappedRef.current.stepActions()
           })
         }
+      }
+    }
+
+    async fetchShippingMethods () {
+      try {
+        const request = fetchShippingMethodsRequest()
+        const response = await new ApiClient().read(request.endpoint, request.query)
+        return response.data.data
+      } catch (error) {
+        return { error }
       }
     }
 
@@ -174,6 +198,7 @@ export function withCheckout (WrappedComponent) {
                     shippingTotal={cart.shipping_method && cart.shipping_method.total}
                     subTotal={cart.sub_total}
                     total={cart.total}
+                    cheapestShipping={this.state.cheapestShipping}
                   />
                   <CheckoutCartButtons
                     continueButtonProps={continueButtonProps}
