@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@shiftcommerce/shift-next": "^1.0.0",
+    "@shiftcommerce/shift-next-routes": "^0.1.0",
     "@shiftcommerce/shift-react-components": "1.0.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
