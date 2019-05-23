@@ -19,7 +19,9 @@ export function fetchAccountDetails (store) {
 export function updateCustomerAccount (details) {
   const request = {
     endpoint: '/updateCustomerAccount',
-    body: { ...details },
+    body: {
+      ...details
+    },
     successActionType: types.SET_ACCOUNT
   }
 
