@@ -104,7 +104,6 @@ export function authorizePayPalAndCreateOrder (payPalOrderID, paymentMethod) {
     return dispatch(authorizePayPalOrder(payPalOrderID)).then(() => {
       const order = getState().order
       const paymentError = (order.paymentResponseErrors.error && order.paymentResponseErrors.error.data)
-
       if (!paymentError) {
         // create order
         return dispatch(createOrder(getState().cart, paymentMethod, order))
