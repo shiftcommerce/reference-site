@@ -18,7 +18,7 @@ function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
         <p className='u-bold'>{ shippingMethod.label }</p>
         <p>
           <span className='u-bold'>Estimated Delivery</span>: {
-            businessDaysFromNow(parseInt(shippingMethod.meta_attributes.working_days.value)).format('dddd Do MMMM')
+            EstimatedDelivery
           }
         </p>
       </div>
