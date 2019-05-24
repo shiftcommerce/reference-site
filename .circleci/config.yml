@@ -90,7 +90,7 @@ workflows:
   build_and_test:
     jobs:
       - jest_test
-      # - pwmetrics_test
+      - pwmetrics_test
       - cypress/install:
           name: cypress_build
           executor: cypress-node-11
