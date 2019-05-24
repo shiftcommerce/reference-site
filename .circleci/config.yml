@@ -100,7 +100,9 @@ workflows:
           name: cypress_run
           post-steps:
             - store_artifacts:
-                path: packages/reference/cypress
+                path: packages/reference/cypress/screenshots
+            - store_artifacts:
+                path: packages/reference/cypress/videos
           parallelism: 4
           requires:
             - cypress_build
