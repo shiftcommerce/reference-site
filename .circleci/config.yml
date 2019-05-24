@@ -100,7 +100,7 @@ workflows:
           name: cypress_run
           post-steps:
             - store_artifacts:
-              path: packages/reference/cypress
+                path: packages/reference/cypress
           parallelism: 4
           requires:
             - cypress_build
