@@ -5,8 +5,10 @@ import Sticky from 'react-stickyfill'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
+import componentMapping from '../../lib/component-mapping'
 
-function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total, cheapestShipping }) {
+function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total }) {
+
   const renderPromotions = () => discountSummaries.map(discountSummary => (
     <dl className='c-cart-summary__promotion' key={ discountSummary.id }>
       <dt>{ discountSummary.name }:</dt>
@@ -21,7 +23,7 @@ function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount,
     </dl>
   )
 
-  const shippingText = shippingTotal ? `£${decimalPrice(shippingTotal)}` : `£${decimalPrice(cheapestShipping.total)}`
+  const shippingText = shippingTotal ? `£${decimalPrice(shippingTotal)}` : 'Loading shipping cost...'
 
   return (
     <Sticky>
@@ -33,15 +35,13 @@ function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount,
           </dl>
           { renderPromotions() }
           <dl aria-label='Shipping cost'>
-            { shippingTotal ? <dt> Shipping costs: </dt> : <dt> Estimated Shipping: </dt> }
+            <dt> Shipping costs: </dt>
             <dd> { shippingText } </dd>
           </dl>
           { shippingDiscountName && renderShippingPromotion() }
           <dl aria-label='Total' className='u-bold'>
-            <>
-              <dt> TOTAL: </dt>
-              { shippingTotal ? <dd> &pound;{ decimalPrice(total) } </dd> : <dd> &pound;{ decimalPrice(total + cheapestShipping.total) } </dd> }
-            </>
+            <dt> TOTAL: </dt>
+            <dd> &pound;{ decimalPrice(total) } </dd>
           </dl>
           <dl>
             <dt className='c-cart-summary__VAT'>* Including VAT</dt>
