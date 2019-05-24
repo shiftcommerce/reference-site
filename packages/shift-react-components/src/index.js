@@ -1,7 +1,7 @@
 /**
  * SCSS
  */
-import './scss/app'
+import './scss/app.scss'
 
 /**
  * Lib

@@ -73,11 +73,6 @@ export default function setCheckout (state = checkoutInitialState, action) {
       newState.updatedAt = new Date()
       return newState
 
-    // For storing checkout loaded from indexedDB
-    case types.STORE_CHECKOUT:
-      newState = action.checkout
-      return newState
-
     case types.SET_ADDRESS:
       const chosenAddress = action.address
       const meta = chosenAddress.meta_attributes

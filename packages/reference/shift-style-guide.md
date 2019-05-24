@@ -69,8 +69,7 @@ export { foo }
     "mount": true,
     "page": true,
     "browser": true,
-    "context": true,
-    "jestPuppeteer": true
+    "context": true
   },
   "plugins": ["react"],
   "extends": "standard",
