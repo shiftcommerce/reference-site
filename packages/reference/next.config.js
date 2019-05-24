@@ -4,7 +4,6 @@ const withCSS = require('@zeit/next-css')
 const nextRuntimeDotenv = require('next-runtime-dotenv')
 const withTM = require('next-transpile-modules')
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
-const BrotliPlugin = require('brotli-webpack-plugin')
 
 const withConfig = nextRuntimeDotenv({
   public: [
@@ -83,18 +82,6 @@ module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
         }
       }
     )
-
-    if (!dev) {
-      // Enable brotli compression
-      config.plugins.push(
-        new BrotliPlugin({
-          asset: '[path].br[query]',
-          test: /\.(js|css|html|svg)$/,
-          threshold: 10240,
-          minRatio: 0.8
-        })
-      )
-    }
 
     return config
   }
