@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   jest_test:
+    resource_class: medium
     docker:
       - image: circleci/node:11.13.0
     environment:
@@ -77,6 +78,7 @@ orbs:
 
 executors:
   cypress-node-11:
+    resource_class: medium
     docker:
       - image: 'callumbarratt/cypress:11.13.0'
     environment:
