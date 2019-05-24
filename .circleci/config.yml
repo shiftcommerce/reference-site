@@ -62,7 +62,7 @@ jobs:
           name: Start PW metrics
           command: |
             sleep 1
-            yarn run pwmetrics --config=pwmetrics-config.js
+            yarn run pwmetrics --config=packages/reference/pwmetrics-config.js
   heroku_deploy:
     executor: heroku/default
     steps:
