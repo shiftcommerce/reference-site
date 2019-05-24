@@ -4,6 +4,7 @@ const withCSS = require('@zeit/next-css')
 const nextRuntimeDotenv = require('next-runtime-dotenv')
 const withTM = require('next-transpile-modules')
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
+const BrotliPlugin = require('brotli-webpack-plugin')
 
 const withConfig = nextRuntimeDotenv({
   public: [
