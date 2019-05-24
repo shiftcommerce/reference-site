@@ -26,7 +26,7 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: Execute tests
-          command: yarn workspaces run test --silent --maxWorkers=3
+          command: npx lerna run test --stream -- --silent
   pwmetrics_test:
     docker:
       - image: circleci/node:11.13.0-browsers
