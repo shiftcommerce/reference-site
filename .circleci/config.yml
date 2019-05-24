@@ -98,7 +98,9 @@ workflows:
           build: yarn --cwd packages/reference build
       - cypress/run:
           name: cypress_run
-          store_artifacts: true
+          post-steps:
+            - store_artifacts:
+              path: packages/reference/cypress
           parallelism: 4
           requires:
             - cypress_build
