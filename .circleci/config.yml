@@ -24,6 +24,12 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+            - node_modules
+            - packages/reference/node_modules
+            - packages/shift-next/node_modules
+            - packages/shift-next-routes/node_modules
+            - packages/shift-node-api/node_modules
+            - packages/shift-react-components/node_modules
       - run:
           name: Execute tests
           command: npx lerna run test --stream -- --silent
@@ -52,6 +58,12 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+            - node_modules
+            - packages/reference/node_modules
+            - packages/shift-next/node_modules
+            - packages/shift-next-routes/node_modules
+            - packages/shift-node-api/node_modules
+            - packages/shift-react-components/node_modules
       - run:
           name: Create a build
           command: yarn --cwd packages/reference build
