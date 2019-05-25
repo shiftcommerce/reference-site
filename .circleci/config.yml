@@ -10,8 +10,6 @@ jobs:
       NO_HTTPS: true
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
@@ -44,12 +42,11 @@ jobs:
       ENABLE_TEST_PAYPAL_BUTTON: true
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
             - yarn-dependencies-{{ checksum "yarn.lock" }}
+            - next-production-build-{{ .Branch }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
@@ -67,6 +64,10 @@ jobs:
       - run:
           name: Create a build
           command: yarn --cwd packages/reference build
+      - save_cache:
+          key: next-production-build-{{ .Branch }}
+          paths:
+            - packages/reference/client/.next
       - run:
           name: Start the server
           background: true
