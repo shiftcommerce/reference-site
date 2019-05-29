@@ -17,6 +17,10 @@ const OrderRoutes = require('./routes/order-routes')
 
 // Lib
 const { getSessionExpiryTime } = require('./lib/session')
+const helmet = require('helmet')
+
+// Middleware
+const contentSecurityPolicy = require('./middleware/content-security-policy')
 
 // Shift-api Config
 const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
@@ -29,6 +33,9 @@ shiftApiConfig.set({
 
 module.exports = {
   getSessionExpiryTime,
+  shiftContentSecurityPolicy: (server, imageHosts, scriptHosts) => {
+    server.use(contentSecurityPolicy({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
+  },
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
@@ -82,5 +89,13 @@ module.exports = {
      * Order Routes
      */
     server.get('/order', OrderRoutes.indexRoute)
+  },
+  shiftSecurityHeaders: (server) => {
+    // Sets "Referrer-Policy: no-referrer"
+    server.use(helmet.referrerPolicy({ policy: 'no-referrer' }))
+    // Sets 'X-XSS-Protection: 1; mode=block'.
+    server.use(helmet.xssFilter())
+    // Enable Cross-Site Request Forgery (CSRF) Protection
+    server.csrf()
   }
 }

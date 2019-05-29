@@ -20,14 +20,16 @@ const port = test ? testPort : standardPort
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
-// Middleware
-const securityHeaders = require('./middleware/security-headers')
-
 // Api
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
+const {
+  getSessionExpiryTime,
+  shiftContentSecurityPolicy,
+  shiftRoutes,
+  shiftSecurityHeaders
+} = require('@shiftcommerce/shift-next-routes')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -59,8 +61,9 @@ module.exports = app.prepare().then(() => {
   server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-  server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
 
+  shiftContentSecurityPolicy(server, imageHosts, scriptHosts)
+  shiftSecurityHeaders(server)
   shiftRoutes(server)
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {

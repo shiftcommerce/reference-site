@@ -13,7 +13,7 @@ module.exports = (options = {}) => {
     next()
   }
 }
-
+  
 // Build the full set of security headers including the passed in CSP
 // and Feature-Policy
 const buildHeaders = (contentSecurityPolicy) => {
