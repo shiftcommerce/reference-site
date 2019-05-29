@@ -6,7 +6,6 @@ import { readEndpoint, postEndpoint } from './api-actions'
 
 const accountRequest = {
   endpoint: '/getAccount',
-  query: {},
   errorActionType: types.ERROR_ACCOUNT,
   requestActionType: types.GET_ACCOUNT,
   successActionType: types.SET_ACCOUNT
