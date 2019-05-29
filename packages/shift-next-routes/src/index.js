@@ -37,7 +37,7 @@ module.exports = {
   // Enables CSP
   shiftContentSecurityPolicy: (server, imageHosts, scriptHosts) => contentSecurityPolicy(server, imageHosts, scriptHosts),
   // Enables Feature Policy
-  shiftFeaturePolicy: (server) => featurePolicy(server),
+  shiftFeaturePolicy: (server, options = {}) => featurePolicy(server, options),
   // Define Routes
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)

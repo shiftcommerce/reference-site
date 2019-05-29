@@ -27,6 +27,7 @@ const { fetchData } = require('./lib/api-server')
 const {
   getSessionExpiryTime,
   shiftContentSecurityPolicy,
+  shiftFeaturePolicy,
   shiftRoutes,
   shiftSecurityHeaders
 } = require('@shiftcommerce/shift-next-routes')
@@ -63,6 +64,7 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }))
 
   shiftContentSecurityPolicy(server, imageHosts, scriptHosts)
+  shiftFeaturePolicy(server)
   shiftSecurityHeaders(server)
   shiftRoutes(server)
 

@@ -1,4 +1,5 @@
 // Libraries
+const csurf = require('csurf')
 const helmet = require('helmet')
 
 module.exports = (server) => {
@@ -33,9 +34,5 @@ module.exports = (server) => {
   }))
 
   // Enable Cross-Site Request Forgery (CSRF) Protection
-  server.csrf()
-  server.use((req, res, next) => {
-    res.locals.csrftoken = req.session._csrf
-    next()
-  })
+  server.use(csurf({ cookie: true }))
 }
