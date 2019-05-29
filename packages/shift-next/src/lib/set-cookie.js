@@ -3,6 +3,8 @@ const { getSessionExpiryTime } = require('./session')
 
 export function setCookie () {
   Cookies.set('signedIn', true, {
-    expires: getSessionExpiryTime()
+    expires: getSessionExpiryTime(),
+    secure: true
+
   })
 }

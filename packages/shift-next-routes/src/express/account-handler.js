@@ -262,6 +262,7 @@ async function assignCartToUser (req, res) {
 
     res.cookie('cart', customerAccountResponse.data.included.find(i => i.type === 'carts').id, {
       signed: true,
+      secure: true,
       expires: getSessionExpiryTime()
     })
   }

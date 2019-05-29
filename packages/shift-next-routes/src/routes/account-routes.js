@@ -12,7 +12,10 @@ const setUserToLoggedIn = (req, res) => {
   const sessionExpiryTime = getSessionExpiryTime()
 
   req.session.expires = sessionExpiryTime
-  res.cookie('signedIn', true, { expires: sessionExpiryTime })
+  res.cookie('signedIn', true, {
+    expires: sessionExpiryTime,
+    secure: true
+  })
 }
 
 module.exports = {
