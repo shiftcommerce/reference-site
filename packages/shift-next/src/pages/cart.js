@@ -29,8 +29,7 @@ import {
   Loading
 } from '@shiftcommerce/shift-react-components'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 const fetchShippingMethodsRequest = () => {
   return {
@@ -47,7 +46,7 @@ class CartPage extends Component {
       loading: !props.cart.shipping_method
     }
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.fetchShippingMethods = this.fetchShippingMethods.bind(this)
     this.updateQuantity = this.updateQuantity.bind(this)
     this.deleteItem = this.deleteItem.bind(this)

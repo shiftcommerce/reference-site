@@ -13,14 +13,13 @@ import { createAccount } from '../actions/register-actions'
 // Components
 import { RegisterForm } from '@shiftcommerce/shift-react-components'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 class RegisterPage extends Component {
   constructor (props) {
     super(props)
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 

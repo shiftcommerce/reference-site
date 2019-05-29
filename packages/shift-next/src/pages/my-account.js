@@ -23,7 +23,7 @@ import { deleteAddressBookEntry, fetchAddressBook, saveToAddressBook, updateAddr
 // Json
 import countries from '../static/countries.json'
 
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 class MyAccountPage extends Component {
   constructor (props) {
@@ -31,7 +31,7 @@ class MyAccountPage extends Component {
 
     this.state = {}
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.handleClickedMenu = this.handleClickedMenu.bind(this)
   }
 

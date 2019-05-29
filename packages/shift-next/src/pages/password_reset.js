@@ -11,18 +11,17 @@ import { PasswordResetForm } from '@shiftcommerce/shift-react-components'
 // Actions
 import { passwordReset } from '../actions/account-actions'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 export class PasswordReset extends Component {
   constructor (props) {
     super(props)
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  static async getInitialProps({ query }) {
+  static async getInitialProps ({ query }) {
     return { token: query.token }
   }
 

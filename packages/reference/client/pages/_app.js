@@ -1,11 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import { Config } from '@shiftcommerce/shift-react-components'
-import { shiftNextConfig } from '@shiftcommerce/shift-next'
-
-// Objects
-import NextLink from '../objects/next-link'
-import NextHead from '../objects/next-head'
+import { shiftNextConfig, nextLink } from '@shiftcommerce/shift-next'
 
 // Next config
 import getConfig from 'next/config'
@@ -30,7 +26,7 @@ const {
 } = getConfig()
 
 Config.set({
-  Link: NextLink,
+  Link: nextLink,
   stripeApiKey: STRIPE_API_KEY
 })
 
@@ -43,7 +39,6 @@ shiftNextConfig.set({
   payPalClientID: PAYPAL_CLIENT_ID,
   storeName: 'ShopGo',
   enableTestPayPalButton: ENABLE_TEST_PAYPAL_BUTTON,
-  Head: NextHead,
   menuRequest: menuRequest
 })
 

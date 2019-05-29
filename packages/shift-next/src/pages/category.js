@@ -18,6 +18,8 @@ import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
 // Config
 import Config from '../lib/config'
 
+import nextHead from '../objects/next-head'
+
 class CategoryPage extends Component {
   static algoliaEnabled = () => true
 
@@ -113,7 +115,7 @@ class CategoryPage extends Component {
     super(props)
     this.state = {}
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
   }
 
   async componentDidMount () {
@@ -164,8 +166,8 @@ class CategoryPage extends Component {
       return (
         <Fragment>
           <Loading />
-          {/* Render Search filters so that the Algolia request triggered by the spinner
-          matches the default category page request - otherwise an extra call to Algolia is made */}
+          { /* Render Search filters so that the Algolia request triggered by the spinner
+          matches the default category page request - otherwise an extra call to Algolia is made */ }
           <div className='u-hidden'>
             <SearchFilters />
           </div>

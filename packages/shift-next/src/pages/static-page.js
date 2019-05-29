@@ -10,6 +10,9 @@ import Config from '../lib/config'
 // Components
 import { StaticPageError, Loading } from '@shiftcommerce/shift-react-components'
 
+// Objects
+import nextHead from '../objects/next-head'
+
 class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
@@ -20,7 +23,7 @@ class StaticPage extends Component {
   constructor (props) {
     super(props)
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
   }
 
   /**
@@ -61,7 +64,7 @@ class StaticPage extends Component {
 
     return (
       <this.Head>
-        { homepage ? <title>{Config.get().storeName}</title> : <title>{suffixWithStoreName(title)}</title> }
+        { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
       </this.Head>
     )
   }

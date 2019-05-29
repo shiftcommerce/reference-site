@@ -1,12 +1,12 @@
 // Libraries
 import React, { Component, Fragment } from 'react'
-import Link from 'next/link'
+import Link from '../objects/next-link'
 import Router from 'next/router'
 
 // Libs
 import { setCookie } from '../lib/set-cookie'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 // Actions
 import { createLogin } from '../actions/login-actions'
@@ -19,7 +19,7 @@ class LoginPage extends Component {
   constructor () {
     super()
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 

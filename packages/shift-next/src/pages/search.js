@@ -12,6 +12,7 @@ import buildSearchStateForURL from '../lib/build-search-state-for-url'
 
 // Config
 import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 class SearchPage extends Component {
   static algoliaEnabled = () => true
@@ -34,10 +35,10 @@ class SearchPage extends Component {
     this.setState({ searchState })
   }
 
-  constructor(props) {
-    super(props) 
+  constructor (props) {
+    super(props)
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
   }
 
   render () {

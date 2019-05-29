@@ -18,6 +18,8 @@ import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
 import { getSessionExpiryTime } from './lib/session'
 import { suffixWithStoreName } from './lib/suffix-with-store-name'
+import nextHead from './objects/next-head'
+import nextLink from './objects/next-link'
 
 // Components
 import withCheckout from './components/with-checkout'
@@ -51,5 +53,7 @@ module.exports = {
   renderComponents,
   getSessionExpiryTime,
   shiftNextConfig: Config,
-  suffixWithStoreName: suffixWithStoreName
+  suffixWithStoreName: suffixWithStoreName,
+  nextHead: nextHead,
+  nextLink: nextLink
 }

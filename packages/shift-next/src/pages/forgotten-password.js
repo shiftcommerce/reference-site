@@ -10,15 +10,14 @@ import { ForgotPasswordForm } from '@shiftcommerce/shift-react-components'
 // Actions
 import { requestPasswordResetEmail } from '../actions/account-actions'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 export class ForgottenPassword extends Component {
   constructor (props) {
     super(props)
     this.state = { flashMessage: false }
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 

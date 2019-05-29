@@ -12,8 +12,7 @@ import { Loading, ProductDisplay } from '@shiftcommerce/shift-react-components'
 import { addToCart, toggleMiniBag } from '../actions/cart-actions'
 import { readProduct } from '../actions/product-actions'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 class ProductPage extends Component {
   constructor (props) {
@@ -24,7 +23,7 @@ class ProductPage extends Component {
       quantity: 1
     }
 
-    this.Head = Config.get().Head
+    this.Head = nextHead
     this.changeVariant = this.changeVariant.bind(this)
     this.addToBag = this.addToBag.bind(this)
   }

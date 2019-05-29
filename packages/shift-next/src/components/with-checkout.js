@@ -6,8 +6,7 @@ import Router from 'next/router'
 // Libs
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
-// Config
-import Config from '../lib/config'
+import nextHead from '../objects/next-head'
 
 // Components
 import {
@@ -45,7 +44,7 @@ export function withCheckout (WrappedComponent) {
         thirdPartyPaymentMethods: ['PayPal', 'GPay', 'Apple Pay']
       }
 
-      this.Head = Config.get().Head
+      this.Head = nextHead
       this.setCurrentStep = this.setCurrentStep.bind(this)
       this.deleteItem = this.deleteItem.bind(this)
       this.handleCouponSubmit = this.handleCouponSubmit.bind(this)
