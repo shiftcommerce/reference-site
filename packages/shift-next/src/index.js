@@ -17,6 +17,7 @@ import ShippingMethodPage from './pages/checkout/shipping-method'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
 import { getSessionExpiryTime } from './lib/session'
+import { suffixWithStoreName } from './lib/suffix-with-store-name'
 
 // Components
 import withCheckout from './components/with-checkout'
@@ -49,5 +50,6 @@ module.exports = {
   reduxWrapper,
   renderComponents,
   getSessionExpiryTime,
-  shiftNextConfig: Config
+  shiftNextConfig: Config,
+  suffixWithStoreName: suffixWithStoreName
 }
