@@ -1,9 +1,4 @@
 /**
- * SCSS
- */
-import './scss/app.scss'
-
-/**
  * Lib
  */
 export { default as Config } from './lib/config'
