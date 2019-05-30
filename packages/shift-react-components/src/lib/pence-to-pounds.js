@@ -5,6 +5,8 @@
  * @return {Number} - The price
  */
 
-export function penceToPounds (priceInPence) {
+function penceToPounds (priceInPence) {
   return (priceInPence / 100).toFixed(2)
 }
+
+export default penceToPounds

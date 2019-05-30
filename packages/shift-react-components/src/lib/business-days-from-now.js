@@ -2,7 +2,7 @@
 import addDays from 'date-fns/add_days'
 import isWeekend from 'date-fns/is_weekend'
 
-export default function businessDaysFromNow (days) {
+function businessDaysFromNow (days) {
   // Convert number of days to integer
   const parsedDays = parseInt(days)
 
@@ -19,3 +19,5 @@ export default function businessDaysFromNow (days) {
 
   return endDate
 }
+
+export default businessDaysFromNow

@@ -7,10 +7,12 @@ import componentMapping from '../../lib/component-mapping'
 // Assets
 import completedCheck from '../../static/white-check.svg'
 
-export default () => {
+const CheckoutStepIcon = () => {
   const Image = componentMapping('Image')
 
   return (
     <Image className='c-step-indicator__icon' src={completedCheck} />
   )
 }
+
+export default CheckoutStepIcon
