@@ -13,7 +13,7 @@ import { createLogin } from '../actions/login-actions'
 import { clearErrors, fetchAccountDetails } from '../actions/account-actions'
 
 // Components
-import { LoginForm } from '@shiftcommerce/shift-react-components'
+import { LoginForm } from '@shiftcommerce/shift-react-components/src/components/account/login-form'
 
 class LoginPage extends Component {
   constructor () {

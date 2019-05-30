@@ -5,7 +5,9 @@ import t from 'typy'
 import Cookies from 'js-cookie'
 
 // Objects
-import { Button, Image, OrderSummary } from '@shiftcommerce/shift-react-components'
+import { Button } from '@shiftcommerce/shift-react-components/src/objects/button'
+import { Image } from '@shiftcommerce/shift-react-components/objects/image'
+import { OrderSummary } from '@shiftcommerce/shift-react-components/src/components/orders/order-summary'
 
 class OrderPage extends Component {
 
@@ -104,7 +106,7 @@ class OrderPage extends Component {
 
   renderPaymentMethod (order) {
     const billingAddress = t(order, 'billing_address.attributes').safeObject
-  
+
     return (
       <div className='c-order__detail-payment-method'>
         <h2>Payment Method</h2>

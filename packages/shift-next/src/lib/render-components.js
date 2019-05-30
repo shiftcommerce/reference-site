@@ -5,7 +5,7 @@ import React, { Fragment } from 'react'
 import Config from './config'
 
 // Components
-import { buildTemplateComponentsManifest } from '@shiftcommerce/shift-react-components'
+import { buildTemplateComponentsManifest } from '@shiftcommerce/shift-react-components/src/components/template-components/_manifest'
 
 /**
  * Get the relevant templates for the page components

@@ -5,7 +5,9 @@ import qs from 'qs'
 import equal from 'deep-equal'
 
 // Components
-import { Loading, ProductListing, SearchFilters } from '@shiftcommerce/shift-react-components'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { ProductListing } from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing'
+import { SearchFilters } from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
 
 // Lib
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
