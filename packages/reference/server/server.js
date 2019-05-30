@@ -84,10 +84,10 @@ module.exports = app.prepare().then(() => {
 
         // set surrogate headers on the response (if any were found in platform requests)
         Object.keys(page.headers)
-        .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
-        .forEach(key => {
-          res.set(key, page.headers[key])
-        })
+          .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
+          .forEach(key => {
+            res.set(key, page.headers[key])
+          })
 
         switch (resourceType) {
           case 'Product':
