@@ -7,11 +7,23 @@ const helmet = require('helmet')
  * @param {object} server - eg. express
  */
 const httpSecurityHeaders = (server) => {
-  // Sets "Referrer-Policy: no-referrer"
-  server.use(helmet.referrerPolicy({ policy: 'no-referrer' }))
+  // Enable Cross-Site Request Forgery (CSRF) Protection
+  server.use(csurf())
+
+  // Remove 'X-Powered-By:' Express header as this could help attackers
+  server.use(helmet.hidePoweredBy())
+
+  // Sets 'Referrer-Policy: no-referrer'
+  server.use(helmet.referrerPolicy({
+    policy: 'no-referrer'
+  }))
 
   // Sets 'X-XSS-Protection: 1; mode=block'
   server.use(helmet.xssFilter())
+
+  // Sets 'X-Download-Options: noopen'
+  // Prevent Internet Explorer from executing downloads
+  server.use(helmet.ieNoOpen())
 
   // Sets 'Expect-CT: enforce; max-age=600'
   // Enforces Certificate Transparency, see
@@ -23,7 +35,9 @@ const httpSecurityHeaders = (server) => {
 
   // Sets 'X-Frame-Options: DENY'
   // Prevents the site from being embedded within an iframe
-  server.use(helmet.frameguard({ action: 'deny' }))
+  server.use(helmet.frameguard({
+    action: 'deny'
+  }))
 
   // Sets 'X-Content-Type-Options: nosniff'
   // Prevents a browser auto-detecting the type of an asset, meaning it'll only
@@ -36,12 +50,6 @@ const httpSecurityHeaders = (server) => {
     includeSubDomains: true,
     preload: true
   }))
-
-  // Enable Cross-Site Request Forgery (CSRF) Protection
-  server.use(csurf())
-
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.use(helmet.hidePoweredBy())
 }
 
 module.exports = { httpSecurityHeaders: httpSecurityHeaders }
