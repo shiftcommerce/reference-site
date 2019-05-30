@@ -11,7 +11,5 @@ const productRequest = (productId) => {
 }
 
 export function readProduct (productId) {
-  return (dispatch) => {
-    return dispatch(readEndpoint(productRequest(productId)))
-  }
+  return readEndpoint(productRequest(productId))
 }
