@@ -1,7 +1,12 @@
 // Libraries
 const helmet = require('helmet')
 
-module.exports = (server, policyOptions = {}) => {
+/**
+ * Enables the Feature Policy
+ * @param {object} server - eg. express
+ * @param {object} policyOptions - eg. { payment: ['example.com'] }
+ */
+const featurePolicy = (server, policyOptions = {}) => {
   let defaultPolicy = {
     accelerometer: ["'none'"],
     ambientLightSensor: ["'none'"],
@@ -25,3 +30,5 @@ module.exports = (server, policyOptions = {}) => {
     features: Object.assign({}, defaultPolicy, policyOptions)
   }))
 }
+
+module.exports = { featurePolicy: featurePolicy }

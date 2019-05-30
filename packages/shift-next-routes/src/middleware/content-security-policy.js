@@ -1,9 +1,15 @@
 // Libraries
 const helmet = require('helmet')
 
-module.exports = (server, imageHosts, scriptHosts) => {
-  const formattedImageHosts = imageHosts ? imageHosts.split(',') : []
-  const formattedScriptHosts = scriptHosts ? scriptHosts.split(',') : []
+/**
+ * Enables the Content Security Policy
+ * @param {object} server - eg. express
+ * @param {object} options - eg. imageHosts, scriptHosts
+ */
+const contentSecurityPolicy = (server, options = {}) => {
+  // Format image and script hosts if any
+  const formattedImageHosts = options.imageHosts ? options.imageHosts.split(',') : []
+  const formattedScriptHosts = options.scriptHosts ? options.scriptHosts.split(',') : []
   
   server.use(helmet.contentSecurityPolicy({
     directives: {
@@ -11,8 +17,8 @@ module.exports = (server, imageHosts, scriptHosts) => {
       // Allow inline style attributes
       styleSrc: ["'self'", "'unsafe-inline'"],
       // Only allow first party images or from configured external hosts
-      // TODO: data: is insecure, If your goal is security you'd be better off using a sha hash of the script trying to be executed rather than opening up this hole
-      // Currently this is a workaround for having inline SVGs https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
+      // TODO: data: is insecure, currently this is a workaround for having inline SVGs 
+      // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src
       imgSrc: ["'self'", 'data:'].concat(formattedImageHosts),
       // Only allow first party scripts and those from Stripe. Unsafe inline is
       // required as that's how we load Stripe
@@ -33,3 +39,5 @@ module.exports = (server, imageHosts, scriptHosts) => {
     }
   }))
 }
+
+module.exports = { contentSecurityPolicy: contentSecurityPolicy }

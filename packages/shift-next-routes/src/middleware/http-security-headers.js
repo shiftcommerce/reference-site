@@ -2,7 +2,11 @@
 const csurf = require('csurf')
 const helmet = require('helmet')
 
-module.exports = (server) => {
+/**
+ * Set HTTP Security Headers
+ * @param {object} server - eg. express
+ */
+const httpSecurityHeaders = (server) => {
   // Sets "Referrer-Policy: no-referrer"
   server.use(helmet.referrerPolicy({ policy: 'no-referrer' }))
 
@@ -34,5 +38,10 @@ module.exports = (server) => {
   }))
 
   // Enable Cross-Site Request Forgery (CSRF) Protection
-  server.use(csurf({ cookie: true }))
+  server.use(csurf())
+
+  // Remove X-Powered-By: Express header as this could help attackers
+  server.use(helmet.hidePoweredBy())
 }
+
+module.exports = { httpSecurityHeaders: httpSecurityHeaders }

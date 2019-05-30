@@ -39,9 +39,6 @@ const scriptHosts = process.env.SCRIPT_HOSTS
 module.exports = app.prepare().then(() => {
   const server = express()
 
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
-
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
     secure: production,
@@ -63,7 +60,7 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
 
-  shiftContentSecurityPolicy(server, imageHosts, scriptHosts)
+  shiftContentSecurityPolicy(server, { imageHosts: imageHosts, scriptHosts: scriptHosts })
   shiftFeaturePolicy(server)
   shiftSecurityHeaders(server)
   shiftRoutes(server)

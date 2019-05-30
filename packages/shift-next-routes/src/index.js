@@ -19,9 +19,9 @@ const OrderRoutes = require('./routes/order-routes')
 const { getSessionExpiryTime } = require('./lib/session')
 
 // Middleware
-const contentSecurityPolicy = require('./middleware/content-security-policy')
-const featurePolicy = require('./middleware/feature-policy')
-const httpSecurityHeaders = require('./middleware/http-security-headers')
+const { contentSecurityPolicy } = require('./middleware/content-security-policy')
+const { featurePolicy } = require('./middleware/feature-policy')
+const { httpSecurityHeaders } = require('./middleware/http-security-headers')
 
 // Shift-api Config
 const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
@@ -33,12 +33,30 @@ shiftApiConfig.set({
 })
 
 module.exports = {
+  /**
+   * Convert time in seconds to a Date instance
+   * @return {Date} The Date instance for when the session should expire
+   */
   getSessionExpiryTime,
-  // Enables CSP
-  shiftContentSecurityPolicy: (server, imageHosts, scriptHosts) => contentSecurityPolicy(server, imageHosts, scriptHosts),
-  // Enables Feature Policy
+
+  /**
+   * Enables the Content Security Policy
+   * @param {object} server - eg. express
+   * @param {object} options - eg. imageHosts, scriptHosts
+   */
+  shiftContentSecurityPolicy: (server, options = {}) => contentSecurityPolicy(server, options),
+
+  /**
+   * Enables the Feature Policy
+   * @param {object} server - eg. express
+   * @param {object} policyOptions - eg. { payment: ['example.com'] }
+   */
   shiftFeaturePolicy: (server, policyOptions = {}) => featurePolicy(server, policyOptions),
-  // Define Routes
+
+  /**
+   * Defines Routes
+   * @param {object} server - eg. express
+   */
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
@@ -93,6 +111,10 @@ module.exports = {
      */
     server.get('/order', OrderRoutes.indexRoute)
   },
-  // Set HTTP Security Headers
+
+  /**
+   * Set HTTP Security Headers
+   * @param {object} server - eg. express
+   */
   shiftSecurityHeaders: (server) => httpSecurityHeaders(server)
 }
