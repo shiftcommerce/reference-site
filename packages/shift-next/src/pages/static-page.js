@@ -8,7 +8,7 @@ import ApiClient from '../lib/api-client'
 import Config from '../lib/config'
 
 // Components
-import { StaticPageError } from '@shiftcommerce/shift-react-components/src/components/static-page/error'
+import StaticPageError from '@shiftcommerce/shift-react-components/src/components/static-page/error'
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
@@ -62,7 +62,7 @@ class StaticPage extends Component {
 
     return (
       <this.Head>
-        { homepage ? <title>{Config.get().storeName}</title> : <title>{suffixWithStoreName(title)}</title> }
+        { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
       </this.Head>
     )
   }

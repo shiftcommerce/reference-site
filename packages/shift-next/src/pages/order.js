@@ -6,11 +6,10 @@ import Cookies from 'js-cookie'
 
 // Objects
 import { Button } from '@shiftcommerce/shift-react-components/src/objects/button'
-import { Image } from '@shiftcommerce/shift-react-components/objects/image'
+import { Image } from '@shiftcommerce/shift-react-components/src/objects/image'
 import { OrderSummary } from '@shiftcommerce/shift-react-components/src/components/orders/order-summary'
 
 class OrderPage extends Component {
-
   constructor (props) {
     super(props)
 
@@ -19,7 +18,7 @@ class OrderPage extends Component {
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     // clean up cookie data
     Cookies.remove('paymentMethod')
   }
@@ -75,7 +74,7 @@ class OrderPage extends Component {
     if (this.state.paymentMethod === 'PayPal') {
       return <Image src='/static/payments/pay-pal.svg' className='c-order__detail-payment-method-card-image' />
     } else {
-      return this.renderCardInformation (order)
+      return this.renderCardInformation(order)
     }
   }
 
