@@ -5,6 +5,8 @@ import t from 'typy'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
+import logoSrc from '../../static/shopgo-logo.svg'
+
 export class NavBar extends Component {
   constructor (props) {
     super(props)
@@ -49,8 +51,6 @@ export class NavBar extends Component {
   }
 
   renderNavHeader () {
-    const logoSrc = '../../static/shopgo-logo.svg'
-
     return (
       <div className='c-nav__menu-header'>
         <this.Logo className='c-nav__menu-header-logo' logoSrc={logoSrc} />

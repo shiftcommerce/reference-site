@@ -2,9 +2,6 @@
 import React, { PureComponent } from 'react'
 import componentMapping from '../lib/component-mapping'
 
-// Assets
-import logoSrc from '../static/shopgo-logo.svg'
-
 class Logo extends PureComponent {
   constructor (props) {
     super(props)
@@ -13,7 +10,7 @@ class Logo extends PureComponent {
     this.Link = componentMapping('Link')
   }
   render () {
-    let { className } = this.props
+    const { className, logoSrc } = this.props
 
     return (
       <div className={className}>
