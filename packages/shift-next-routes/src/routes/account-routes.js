@@ -14,7 +14,7 @@ const setUserToLoggedIn = (req, res) => {
   req.session.expires = sessionExpiryTime
   res.cookie('signedIn', true, {
     expires: sessionExpiryTime,
-    secure: true
+    secure: process.env.NO_HTTPS ? false : true
   })
 }
 

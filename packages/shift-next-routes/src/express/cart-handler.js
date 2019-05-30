@@ -44,7 +44,7 @@ module.exports = {
       if (response.data.id) {
         res.cookie('cart', response.data.id, {
           signed: true,
-          secure: true,
+          secure: process.env.NO_HTTPS ? false : true,
           expires: getSessionExpiryTime()
         })
       }

@@ -4,7 +4,6 @@ const { getSessionExpiryTime } = require('./session')
 export function setCookie () {
   Cookies.set('signedIn', true, {
     expires: getSessionExpiryTime(),
-    secure: true
-
+    secure: window.location.protocol === 'https'
   })
 }
