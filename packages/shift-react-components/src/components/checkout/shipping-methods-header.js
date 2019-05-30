@@ -2,12 +2,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Component
+import { Button } from '../../objects/button'
 
-function ShippingMethodsHeader ({ collapsed, onClick, title }) {
-  const Button = componentMapping('Button')
-
+export default function ShippingMethodsHeader ({ collapsed, onClick, title }) {
   return (
     <div className='o-form__header c-shipping-method__header'>
       <h2>{title}</h2>
@@ -30,5 +28,3 @@ ShippingMethodsHeader.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.string.isRequired
 }
-
-export default ShippingMethodsHeader

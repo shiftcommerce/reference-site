@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { decimalPrice } from '../../lib/decimal-price'
 import componentMapping from '../../lib/component-mapping'
 
-function MiniPlaceOrder ({ convertToOrder, isValidOrder, total }) {
+export function MiniPlaceOrder ({ convertToOrder, isValidOrder, total }) {
   const Button = componentMapping('Button')
 
   return (
@@ -34,5 +34,3 @@ MiniPlaceOrder.propTypes = {
   isValidOrder: PropTypes.bool,
   convertToOrder: PropTypes.func
 }
-
-export default MiniPlaceOrder

@@ -7,7 +7,7 @@ import t from 'typy'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AccountAddresses extends Component {
+export class AccountAddresses extends Component {
   constructor (props) {
     super(props)
 
@@ -215,5 +215,3 @@ class AccountAddresses extends Component {
     )
   }
 }
-
-export default AccountAddresses

@@ -6,7 +6,7 @@ import classNames from 'classnames'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class PaymentSummary extends PureComponent {
+export class PaymentSummary extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -55,5 +55,3 @@ PaymentSummary.propTypes = {
   showEditButton: PropTypes.bool,
   withErrors: PropTypes.bool
 }
-
-export default PaymentSummary

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function CheckoutSteps ({ currentStep, stepActions }) {
+export function CheckoutSteps ({ currentStep, stepActions }) {
   const CheckoutStepIcon = componentMapping('CheckoutStepIcon')
   const Link = componentMapping('Link')
 
@@ -81,5 +81,3 @@ CheckoutSteps.propTypes = {
 CheckoutSteps.defaultProps = {
   stepActions: {}
 }
-
-export default CheckoutSteps

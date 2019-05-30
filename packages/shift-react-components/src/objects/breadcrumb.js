@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import componentMapping from '../lib/component-mapping'
 import classNames from 'classnames'
 
-class Breadcrumb extends Component {
+export class Breadcrumb extends Component {
   constructor (props) {
     super(props)
 
@@ -68,5 +68,3 @@ class Breadcrumb extends Component {
     )
   }
 }
-
-export default Breadcrumb

@@ -6,7 +6,7 @@ import Sticky from 'react-stickyfill'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function CheckoutCartButtons ({ continueButtonProps }) {
+export function CheckoutCartButtons ({ continueButtonProps }) {
   const Button = componentMapping('Button')
   const Link = componentMapping('Link')
 
@@ -39,5 +39,3 @@ function CheckoutCartButtons ({ continueButtonProps }) {
 CheckoutCartButtons.propTypes = {
   continueButtonProps: PropTypes.object
 }
-
-export default CheckoutCartButtons

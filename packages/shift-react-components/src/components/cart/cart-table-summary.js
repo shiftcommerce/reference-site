@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
-class CartTableSummary extends PureComponent {
+export class CartTableSummary extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -93,5 +93,3 @@ class CartTableSummary extends PureComponent {
     )
   }
 }
-
-export default CartTableSummary

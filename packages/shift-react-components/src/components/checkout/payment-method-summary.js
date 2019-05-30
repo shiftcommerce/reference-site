@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class PaymentMethodSummary extends PureComponent {
+export class PaymentMethodSummary extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -45,5 +45,3 @@ PaymentMethodSummary.propTypes = {
   showEditButton: PropTypes.bool,
   headerTitle: PropTypes.string.isRequired
 }
-
-export default PaymentMethodSummary

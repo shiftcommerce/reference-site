@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class CouponForm extends Component {
+export class CouponForm extends Component {
   constructor (props) {
     super(props)
 
@@ -71,5 +71,3 @@ class CouponForm extends Component {
 CouponForm.propTypes = {
   handleSubmit: PropTypes.func
 }
-
-export default CouponForm

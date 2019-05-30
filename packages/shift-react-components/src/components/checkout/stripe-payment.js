@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class StripePayment extends Component {
+export default class StripePayment extends Component {
   constructor (props) {
     super(props)
 
@@ -157,5 +157,3 @@ StripePayment.propTypes = {
   setCardErrors: PropTypes.func,
   shippingAddress: PropTypes.object
 }
-
-export default StripePayment

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class NavBarOption extends Component {
+export class NavBarOption extends Component {
   constructor (props) {
     super(props)
 
@@ -30,5 +30,3 @@ class NavBarOption extends Component {
     )
   }
 }
-
-export default NavBarOption

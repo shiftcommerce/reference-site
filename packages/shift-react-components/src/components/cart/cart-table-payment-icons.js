@@ -10,7 +10,7 @@ import componentMapping from '../../lib/component-mapping'
  * @param  {Object} props
  * @return {string} - HTML markup for the component
  */
-const CartTablePaymentIcons = (props) => {
+export const CartTablePaymentIcons = (props) => {
   const PaymentIcons = componentMapping('PaymentIcons')
 
   return (
@@ -19,5 +19,3 @@ const CartTablePaymentIcons = (props) => {
     </div>
   )
 }
-
-export default CartTablePaymentIcons

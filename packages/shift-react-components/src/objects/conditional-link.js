@@ -5,7 +5,7 @@ import componentMapping from '../lib/component-mapping'
 
 // This object conditionally wraps children in a link if
 // the passed URL is present
-class ConditionalLink extends Component {
+export default class ConditionalLink extends Component {
   constructor (props) {
     super(props)
 
@@ -26,5 +26,3 @@ class ConditionalLink extends Component {
     }
   }
 }
-
-export default ConditionalLink

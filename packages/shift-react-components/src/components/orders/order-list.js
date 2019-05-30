@@ -7,7 +7,7 @@ import t from 'typy'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 import componentMapping from '../../lib/component-mapping'
 
-class OrderList extends PureComponent {
+export class OrderList extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -118,5 +118,3 @@ class OrderList extends PureComponent {
     )
   }
 }
-
-export default OrderList

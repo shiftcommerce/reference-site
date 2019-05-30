@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
-class LineItems extends Component {
+export class LineItems extends Component {
   constructor (props) {
     super(props)
 
@@ -180,5 +180,3 @@ LineItems.propTypes = {
   lineItemsCount: PropTypes.number,
   updateQuantity: PropTypes.func
 }
-
-export default LineItems

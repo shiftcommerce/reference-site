@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class Payment extends PureComponent {
+export class Payment extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -102,5 +102,3 @@ Payment.propTypes = {
   order: PropTypes.object,
   setCardErrors: PropTypes.func
 }
-
-export default Payment

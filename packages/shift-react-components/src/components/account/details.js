@@ -6,7 +6,7 @@ import * as Yup from 'yup'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AccountDetails extends Component {
+export class AccountDetails extends Component {
   constructor (props) {
     super(props)
 
@@ -97,5 +97,3 @@ class AccountDetails extends Component {
     )
   }
 }
-
-export default AccountDetails

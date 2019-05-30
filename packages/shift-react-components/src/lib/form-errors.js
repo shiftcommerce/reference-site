@@ -1,7 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 
-class FormErrors extends Component {
+export default class FormErrors extends Component {
   render () {
     const { errors } = this.props
     if (errors.length === 0) {
@@ -19,5 +19,3 @@ class FormErrors extends Component {
     )
   }
 }
-
-export default FormErrors

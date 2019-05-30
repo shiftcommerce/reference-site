@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-function withValidationMessage (WrappedComponent) {
+export function withValidationMessage (WrappedComponent) {
   return class extends Component {
     constructor (props) {
       super(props)
@@ -26,5 +26,3 @@ function withValidationMessage (WrappedComponent) {
     }
   }
 }
-
-export default withValidationMessage

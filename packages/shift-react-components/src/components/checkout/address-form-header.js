@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AddressFormHeader extends PureComponent {
+export class AddressFormHeader extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -43,5 +43,3 @@ AddressFormHeader.propTypes = {
   showEditButton: PropTypes.bool,
   title: PropTypes.string.isRequired
 }
-
-export default AddressFormHeader

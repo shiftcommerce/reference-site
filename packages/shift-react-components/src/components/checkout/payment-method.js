@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class PaymentMethod extends PureComponent {
+export class PaymentMethod extends PureComponent {
   constructor (props) {
     super(props)
     this.Button = componentMapping('Button')
@@ -64,5 +64,3 @@ PaymentMethod.propTypes = {
   paypalOnApprove: PropTypes.func,
   enableTestPayPalButton: PropTypes.bool
 }
-
-export default PaymentMethod

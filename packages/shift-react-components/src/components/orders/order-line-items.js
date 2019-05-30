@@ -7,7 +7,7 @@ import { decimalPrice } from '../../lib/decimal-price'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 import componentMapping from '../../lib/component-mapping'
 
-class OrderLineItems extends PureComponent {
+export class OrderLineItems extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -82,5 +82,3 @@ class OrderLineItems extends PureComponent {
     return this.renderLineItems()
   }
 }
-
-export default OrderLineItems

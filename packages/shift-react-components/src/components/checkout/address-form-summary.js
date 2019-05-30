@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AddressFormSummary extends PureComponent {
+export class AddressFormSummary extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -60,5 +60,3 @@ AddressFormSummary.propTypes = {
   postcode: PropTypes.string,
   showEditButton: PropTypes.bool
 }
-
-export default AddressFormSummary

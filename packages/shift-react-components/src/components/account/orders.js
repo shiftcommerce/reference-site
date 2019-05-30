@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AccountOrders extends Component {
+export class AccountOrders extends Component {
   constructor (props) {
     super(props)
 
@@ -56,5 +56,3 @@ class AccountOrders extends Component {
     }
   }
 }
-
-export default AccountOrders

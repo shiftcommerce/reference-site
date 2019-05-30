@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class PaymentHeader extends PureComponent {
+export class PaymentHeader extends PureComponent {
   constructor (props) {
     super(props)
     this.Button = componentMapping('Button')
@@ -40,5 +40,3 @@ PaymentHeader.propTypes = {
   showEditButton: PropTypes.bool,
   title: PropTypes.string.isRequired
 }
-
-export default PaymentHeader

@@ -4,8 +4,8 @@ import React, { PureComponent } from 'react'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
- 
-class Minibag extends PureComponent {
+
+export class Minibag extends PureComponent {
   constructor () {
     super()
 
@@ -50,7 +50,7 @@ class Minibag extends PureComponent {
   }
 
   /**
-  * Builds options prop for the DropdownSelect component.  
+  * Builds options prop for the DropdownSelect component.
   * @param {Object} lineItem - A line item from cart.
   */
   renderQuantityOptions (lineItem) {
@@ -107,7 +107,7 @@ class Minibag extends PureComponent {
             </div>
           </> }
           { lineItemsCount === 0 && <p>
-            Your bag is empty. 
+            Your bag is empty.
           </p> }
             <div className='c-minibag__dropdown-buttons'>
               <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link' onClick={ () => this.props.toggleMiniBag(false) }>
@@ -131,5 +131,3 @@ class Minibag extends PureComponent {
     </>
   }
 }
-
-export default Minibag

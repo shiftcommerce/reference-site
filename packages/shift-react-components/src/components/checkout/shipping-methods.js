@@ -9,7 +9,7 @@ import businessDaysFromNow from '../../lib/business-days-from-now'
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
-class ShippingMethods extends PureComponent {
+export class ShippingMethods extends PureComponent {
   constructor () {
     super()
 
@@ -114,5 +114,3 @@ ShippingMethods.propTypes = {
   shippingMethods: PropTypes.array,
   isThirdPartyPayment: PropTypes.bool
 }
-
-export default ShippingMethods

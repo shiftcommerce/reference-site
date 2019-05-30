@@ -7,7 +7,7 @@ import Pluralize from 'react-pluralize'
 import { decimalPrice } from '../../lib/decimal-price'
 import componentMapping from '../../lib/component-mapping'
 
-function CheckoutCart ({ deleteItem, lineItems, lineItemsCount, total }) {
+export function CheckoutCart ({ deleteItem, lineItems, lineItemsCount, total }) {
   const LineItems = componentMapping('LineItems')
 
   return (
@@ -37,5 +37,3 @@ CheckoutCart.propTypes = {
   lineItemsCount: PropTypes.number,
   total: PropTypes.number
 }
-
-export default CheckoutCart

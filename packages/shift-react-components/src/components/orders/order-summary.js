@@ -6,7 +6,7 @@ import Sticky from 'react-stickyfill'
 import { decimalPrice } from '../../lib/decimal-price'
 import componentMapping from '../../lib/component-mapping'
 
-class OrderSummary extends Component {
+export class OrderSummary extends Component {
   constructor (props) {
     super(props)
 
@@ -150,5 +150,3 @@ class OrderSummary extends Component {
     )
   }
 }
-
-export default OrderSummary
