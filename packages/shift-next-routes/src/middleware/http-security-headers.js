@@ -21,10 +21,6 @@ const httpSecurityHeaders = (server) => {
   // Sets 'X-XSS-Protection: 1; mode=block'
   server.use(helmet.xssFilter())
 
-  // Sets 'X-Download-Options: noopen'
-  // Prevent Internet Explorer from executing downloads
-  server.use(helmet.ieNoOpen())
-
   // Sets 'Expect-CT: enforce; max-age=600'
   // Enforces Certificate Transparency, see
   // https://scotthelme.co.uk/a-new-security-header-expect-ct/
@@ -50,6 +46,14 @@ const httpSecurityHeaders = (server) => {
     includeSubDomains: true,
     preload: true
   }))
+
+  // Sets 'X-Permitted-Cross-Domain-Policies: none'
+  // Prevents Adobe Flash and Adobe Acrobat from loading content on the site
+  server.use(helmet.permittedCrossDomainPolicies())
+
+  // Sets 'X-Download-Options: noopen'
+  // Prevent Internet Explorer from executing downloads
+  server.use(helmet.ieNoOpen())
 }
 
 module.exports = { httpSecurityHeaders: httpSecurityHeaders }
