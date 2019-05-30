@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
+const loggingMiddleware = require('express-pino-logger')
+const logger = require('./lib/logger')
 
 // Environment
 const production = process.env.NODE_ENV === 'production'
@@ -33,8 +35,11 @@ const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next
 const imageHosts = process.env.IMAGE_HOSTS
 const scriptHosts = process.env.SCRIPT_HOSTS
 
+
+
 module.exports = app.prepare().then(() => {
   const server = express()
+  server.use(loggingMiddleware({ logger: logger }))
 
   // Remove X-Powered-By: Express header as this could help attackers
   server.disable('x-powered-by')
@@ -115,7 +120,9 @@ module.exports = app.prepare().then(() => {
     }
 
     const url = `${process.env.API_TENANT}/v1/slugs`
-    return fetchData(queryObject, url).then(directRouting).catch((error) => { console.log('Error is', error) })
+    return fetchData(queryObject, url).then(directRouting).catch((error) => {
+      req.log.error(error)
+    })
   })
 
   server.get('*', (req, res) => {
@@ -124,6 +131,6 @@ module.exports = app.prepare().then(() => {
 
   return server.listen(port, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
+    logger.info(`Ready on http://localhost:${port}`)
   })
 })

@@ -13,9 +13,9 @@ function setCacheHeaders (response) {
     response.headers['Surrogate-Key'] = surrogateKeys
     response.headers['Surrogate-Control'] = 'max-age=3600,stale-if-error=86400,stale-while-revalidate=86400'
 
-    // print a warning when surrogate keys exceed limit
+    // log a warning when surrogate keys exceed limit
     if (surrogateKeys.length > lengthLimit) {
-      console.log('Warning: The following Surrogate keys have exceeded the fastly length limit:', surrogateKeys)
+      //response.log.warn('The following Surrogate keys have exceeded the fastly length limit:', surrogateKeys)
     }
   }
 }
