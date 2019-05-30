@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 // lib
 import componentMapping from '../../lib/component-mapping'
 
-class PasswordResetForm extends Component {
+export class PasswordResetForm extends Component {
   constructor(props) {
     super(props)
 
@@ -86,5 +86,3 @@ class PasswordResetForm extends Component {
     )
   }
 }
-
-export default PasswordResetForm

@@ -18,7 +18,7 @@ import {
 
 // Components
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
-import { PaymentMethod } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method'
+import PaymentMethod from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method'
 
 // Libs
 import Config from '../../lib/config'

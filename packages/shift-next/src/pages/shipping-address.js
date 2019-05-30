@@ -10,7 +10,7 @@ import InputFieldValidator from '../lib/input-field-validator'
 import { AddressBook } from '@shiftcommerce/shift-react-components/src/components/checkout/address-book'
 import { AddressFormHeader } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-header'
 import { Button } from '@shiftcommerce/shift-react-components/src/objects/button'
-import { CheckoutAddressForm } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form'
+import { AddressForm } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form'
 import { PaymentMethodSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method-summary'
 
 // Actions
@@ -223,7 +223,7 @@ export class ShippingAddressPage extends Component {
               onBookAddressSelected={this.onBookAddressSelected}
               addressFormDisplayed={this.addressFormDisplayed()}
             /> }
-            { this.addressFormDisplayed() && <CheckoutAddressForm
+            { this.addressFormDisplayed() && <AddressForm
               autoFillAddress={this.autoFillAddress}
               checkout={this.props.checkout}
               countries={countries}

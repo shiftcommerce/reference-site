@@ -3,29 +3,29 @@ import Config from './config'
 /**
  * Lib
  */
-import FormErrors from './form-errors'
+import { FormErrors } from './form-errors'
 
 /**
  * Navigation Components
  */
-import NavBar from '../components/navigation/navbar'
-import NavBarOption from '../components/navigation/navbar-option'
+import { NavBar } from '../components/navigation/navbar'
+import { NavBarOption } from '../components/navigation/navbar-option'
 
 /**
  * Objects
  */
-import Breadcrumb from '../objects/breadcrumb'
-import Button from '../objects/button'
+import { Breadcrumb } from '../objects/breadcrumb'
+import { Button } from '../objects/button'
 import Checkbox from '../objects/checkbox'
-import ConditionalLink from '../objects/conditional-link'
+import { ConditionalLink } from '../objects/conditional-link'
 import DropdownSelect from '../objects/dropdown-select'
-import Flash from '../objects/flash'
+import { Flash } from '../objects/flash'
 import Head from '../objects/head'
-import Image from '../objects/image'
+import { Image } from '../objects/image'
 import Input from '../objects/input'
 import LazyLoad from '../objects/lazy-load'
 import Link from '../objects/link'
-import Loading from '../objects/loading'
+import { Loading } from '../objects/loading'
 import Logo from '../objects/logo'
 import PayPalButton from '../objects/paypal-button'
 import Rating from '../objects/rating'
@@ -34,7 +34,7 @@ import VariantSelector from '../objects/variant-selector'
 /**
  * PDP Components
  */
-import ProductCarousel from '../components/products/display/product-carousel'
+import { ProductCarousel } from '../components/products/display/product-carousel'
 import ProductEwisForm from '../components/products/display/product-ewis-form'
 import ProductPrice from '../components/products/display/product-price'
 
@@ -48,14 +48,14 @@ import ProductMenuOptions from '../components/products/listing/product-menu-opti
 /**
  * Cart/Checkout components
  */
-import AddressBook from '../components/checkout/address-book'
-import AddressForm from '../components/checkout/address-form'
-import AddressFormHeader from '../components/checkout/address-form-header'
-import CheckoutStepIcon from '../components/checkout/checkout-step-icon'
-import LineItems from '../components/cart/line-items'
-import PaymentIcons from '../components/cart/payment-icons'
+import { AddressBook } from '../components/checkout/address-book'
+import { AddressForm } from '../components/checkout/address-form'
+import { AddressFormHeader } from '../components/checkout/address-form-header'
+import { CheckoutStepIcon } from '../components/checkout/checkout-step-icon'
+import { LineItems } from '../components/cart/line-items'
+import { PaymentIcons } from '../components/cart/payment-icons'
 import PaymentMethod from '../components/checkout/payment-method'
-import PaymentMethodHeader from '../components/checkout/payment-method-header'
+import { PaymentMethodHeader } from '../components/checkout/payment-method-header'
 import Payment from '../components/checkout/payment-method'
 import PaymentHeader from '../components/checkout/payment-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
@@ -66,8 +66,8 @@ import StripeWrapper from '../components/checkout/stripe-wrapper'
 /**
  * Order Components
  */
-import OrderLineItems from '../components/orders/order-line-items'
-import OrderList from '../components/orders/order-list'
+import { OrderLineItems } from '../components/orders/order-line-items'
+import { OrderList } from '../components/orders/order-list'
 import ShippingAddresses from '../components/orders/shipping-addresses'
 
 /**
@@ -90,8 +90,8 @@ import StaticPageErrorDetails from '../components/static-page/error-details'
 /**
  * Layout Components
  */
-import Footer from '../components/layout/footer'
-import Minibag from '../components/layout/minibag'
+import { Footer } from '../components/layout/footer'
+import { Minibag } from '../components/layout/minibag'
 
 const mapping = {
   AddressBook,

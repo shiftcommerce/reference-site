@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 // lib
 import componentMapping from '../../lib/component-mapping'
 
-class LoginForm extends Component {
+export class LoginForm extends Component {
   constructor (props) {
     super(props)
 
@@ -105,5 +105,3 @@ class LoginForm extends Component {
     )
   }
 }
-
-export default LoginForm

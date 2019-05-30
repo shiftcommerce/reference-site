@@ -46,7 +46,7 @@ const formatRefinementLabel = (item) => {
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
 
-class SearchFilters extends Component {
+export default class SearchFilters extends Component {
   constructor (props) {
     super(props)
 
@@ -99,5 +99,3 @@ class SearchFilters extends Component {
     )
   }
 }
-
-export default SearchFilters

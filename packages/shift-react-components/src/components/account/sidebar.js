@@ -5,7 +5,7 @@ import classNames from 'classnames'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class Sidebar extends Component {
+export class Sidebar extends Component {
   constructor (props) {
     super(props)
 
@@ -51,5 +51,3 @@ class Sidebar extends Component {
     )
   }
 }
-
-export default Sidebar

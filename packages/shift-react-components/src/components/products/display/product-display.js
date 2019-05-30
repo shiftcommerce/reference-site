@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // Lib
 import componentMapping from '../../../lib/component-mapping'
 
-class ProductDisplay extends Component {
+export class ProductDisplay extends Component {
   constructor (props) {
     super(props)
 
@@ -174,5 +174,3 @@ class ProductDisplay extends Component {
     )
   }
 }
-
-export default ProductDisplay

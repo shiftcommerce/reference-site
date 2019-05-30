@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-export class PaymentHeader extends PureComponent {
+export default class PaymentHeader extends PureComponent {
   constructor (props) {
     super(props)
     this.Button = componentMapping('Button')

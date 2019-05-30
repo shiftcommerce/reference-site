@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class MyAccountHeader extends Component {
+export class MyAccountHeader extends Component {
   constructor (props) {
     super(props)
 
@@ -34,5 +34,3 @@ class MyAccountHeader extends Component {
     )
   }
 }
-
-export default MyAccountHeader

@@ -1,7 +1,7 @@
 // Libraries
 import React, { PureComponent } from 'react'
 
-export class ShippingAddresses extends PureComponent {
+export default class ShippingAddresses extends PureComponent {
   render () {
     return (
       <>
