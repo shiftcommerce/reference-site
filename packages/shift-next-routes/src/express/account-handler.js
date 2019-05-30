@@ -5,8 +5,7 @@ const { getSessionExpiryTime } = require('../lib/session')
 const accountApiEndpointQuery = {
   fields: {
     customer_accounts: 'email,meta_attributes'
-  },
-  include: ''
+  }
 }
 
 module.exports = {
