@@ -1,10 +1,9 @@
 {
   "name": "@shiftcommerce/shift-next",
-  "version": "0.20.3",
+  "version": "0.20.4",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next.git",
-  "private": true,
   "engines": {
     "node": "^11.13.0"
   },

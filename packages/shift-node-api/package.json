@@ -4,7 +4,6 @@
   "main": "src/index.js",
   "author": "Shift Commerce",
   "license": "ISC",
-  "private": true,
   "scripts": {
     "test": "jest"
   },

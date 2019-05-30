@@ -30,7 +30,7 @@
     "start": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
-    "@shiftcommerce/shift-next": "^0.20.3",
+    "@shiftcommerce/shift-next": "^0.20.4",
     "@shiftcommerce/shift-next-routes": "^0.20.2",
     "@shiftcommerce/shift-react-components": "0.20.2",
     "@zeit/next-css": "^1.0.1",
