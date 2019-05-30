@@ -1,14 +1,12 @@
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
-const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
 const loggingMiddleware = require('express-pino-logger')
-const logger = require('./lib/logger')
-const uuid = require('uuid/v4');
+const uuid = require('uuid/v4')
 
 // Environment
 const production = process.env.NODE_ENV === 'production'
@@ -23,11 +21,15 @@ const port = test ? testPort : standardPort
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
+// Logger
+const logger = require('./lib/logger')
+
 // Middleware
 const securityHeaders = require('./middleware/security-headers')
 
 // Api
 const { fetchData } = require('./lib/api-server')
+const { setSurrogateHeaders } = require('./lib/set-cache-headers')
 
 // ShiftNext
 const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
@@ -84,12 +86,7 @@ module.exports = app.prepare().then(() => {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
-        // set surrogate headers on the response (if any were found in platform requests)
-        Object.keys(page.headers)
-          .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
-          .forEach(key => {
-            res.set(key, page.headers[key])
-          })
+        setSurrogateHeaders(page.headers, res)
 
         switch (resourceType) {
           case 'Product':
@@ -122,7 +119,8 @@ module.exports = app.prepare().then(() => {
     }
 
     const url = `${process.env.API_TENANT}/v1/slugs`
-    return fetchData(queryObject, url).then(directRouting).catch((error) => {
+    const headers = { 'x-request-id': req.id }
+    return fetchData(queryObject, url, headers).then(directRouting).catch((error) => {
       req.log.error(error)
     })
   })

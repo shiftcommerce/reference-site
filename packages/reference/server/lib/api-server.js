@@ -10,35 +10,20 @@ const auth = {
   password: process.env.API_ACCESS_TOKEN
 }
 
-const headers = {
+const defaultHeaders = {
   'Content-Type': 'application/vnd.api+json',
   'Accept': 'application/vnd.api+json'
 }
 
-const fetchData = async (queryObject, url) => {
+const fetchData = async (queryObject, url, headers) => {
   const query = qs.stringify(queryObject)
 
   try {
     const response = await axios.get(`${process.env.API_HOST}/${url}?${query}`, {
       auth: auth,
-      headers: headers
+      headers: { ...defaultHeaders, ...headers }
     })
-
     setCacheHeaders(response)
-    return response
-  } catch (error) {
-    logger.error(error)
-    return error.response
-  }
-}
-
-const fetchOmsData = async (queryObject, url) => {
-  const query = qs.stringify(queryObject)
-
-  try {
-    const response = await axios.get(`${process.env.OMS_HOST}/${url}?${query}`, {
-      headers: headers
-    })
 
     return response
   } catch (error) {
@@ -47,56 +32,4 @@ const fetchOmsData = async (queryObject, url) => {
   }
 }
 
-const postData = async (body, url) => {
-  try {
-    const response = await axios({
-      method: 'post',
-      url: `${process.env.API_HOST}/${url}`,
-      headers: headers,
-      auth: auth,
-      data: body
-    })
-
-    setCacheHeaders(response)
-    return response
-  } catch (error) {
-    logger.error({ response: error.response, data: error.response.data })
-    return error.response
-  }
-}
-
-const patchData = async (body, url) => {
-  try {
-    const response = await axios({
-      method: 'patch',
-      url: `${process.env.API_HOST}/${url}`,
-      headers: headers,
-      auth: auth,
-      data: body
-    })
-
-    setCacheHeaders(response)
-    return response
-  } catch (error) {
-    logger.error({ response: error.response, data: error.response.data })
-    return error.response
-  }
-}
-
-const deleteData = async (url, body = {}) => {
-  try {
-    const response = await axios.delete(`${process.env.API_HOST}/${url}`, {
-      auth: auth,
-      headers: headers,
-      data: body
-    })
-
-    setCacheHeaders(response)
-    return response
-  } catch (error) {
-    logger.error(error)
-    return error.response
-  }
-}
-
-module.exports = { deleteData, fetchData, fetchOmsData, postData, patchData }
+module.exports = { fetchData }
