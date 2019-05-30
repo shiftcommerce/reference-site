@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-react-components",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {

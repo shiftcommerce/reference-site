@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-next",
-  "version": "0.20.4",
+  "version": "0.20.5",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next.git",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@shiftcommerce/shift-node-api": "^0.20.2",
-    "@shiftcommerce/shift-react-components": "^0.20.2",
+    "@shiftcommerce/shift-react-components": "^0.20.3",
     "axios": "^0.18.0",
     "js-cookie": "^2.2.0",
     "deep-equal": "^1.0.0",
