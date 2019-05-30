@@ -141,7 +141,7 @@ module.exports = {
     try {
       getAccount = await SHIFTClient.getCustomerAccountByTokenV1(req.body.data.attributes.token)
     } catch (error) {
-      console.log('error', error.response.data.errors)
+      req.log.error(error.response.data.errors)
       const response = error.response
       switch (response.status) {
         case 404:
@@ -156,7 +156,7 @@ module.exports = {
       const response = await SHIFTClient.updateCustomerAccountPasswordV1(getAccount.data.id, request)
       return res.status(response.status).send(response.data)
     } catch (error) {
-      console.log('error', error.response.data.errors)
+      req.log.error(error.response.data.errors)
       const response = error.response
       switch (response.status) {
         case 404:

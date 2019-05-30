@@ -3,6 +3,7 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getSlug: async (req, res) => {
+    req.log.debug({ msg: 'getSlug handler', args: { query: req.query } })
     const response = await SHIFTClient.getResourceBySlugV1(req.query)
 
     setSurrogateHeaders(response.headers, res)

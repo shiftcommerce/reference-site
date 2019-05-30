@@ -3,6 +3,7 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getMenu: async (req, res) => {
+    req.log.debug({ msg: 'getMenu handler', args: { query: req.query } })
     const response = await SHIFTClient.getMenusV1(req.query)
 
     setSurrogateHeaders(response.headers, res)

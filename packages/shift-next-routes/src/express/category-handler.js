@@ -3,6 +3,7 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getCategory: async (req, res) => {
+    req.log.debug({ msg: 'getCategoryHandler', args: { id: req.params.iq, query: req.query } })
     const response = await SHIFTClient.getCategoryV1(req.params.id, req.query)
 
     setSurrogateHeaders(response.headers, res)
