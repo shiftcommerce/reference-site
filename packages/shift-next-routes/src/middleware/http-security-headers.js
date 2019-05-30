@@ -3,14 +3,30 @@ const csurf = require('csurf')
 const helmet = require('helmet')
 
 /**
- * Set HTTP Security Headers
+ * Sets HTTP Security Headers
+ * 
+ * The following headers are added:
+ *  - Referrer-Policy: no-referrer
+ *  - X-XSS-Protection: 1; mode=block
+ *  - Expect-CT: enforce; max-age=600
+ *  - X-Frame-Options: DENY
+ *  - X-Content-Type-Options: nosniff
+ *  - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+ *  - X-Permitted-Cross-Domain-Policies: none
+ *  - X-Download-Options: noopen
+ * 
+ * The following headers are removed:
+ *  - X-Powered-By: Express
+ * 
+ * Also enables CSRF protection 
+ * 
  * @param {object} server - eg. express
  */
 const httpSecurityHeaders = (server) => {
   // Enable Cross-Site Request Forgery (CSRF) Protection
   server.use(csurf())
 
-  // Remove 'X-Powered-By:' Express header as this could help attackers
+  // Remove 'X-Powered-By: Express' header as this could help attackers
   server.use(helmet.hidePoweredBy())
 
   // Sets 'Referrer-Policy: no-referrer'
