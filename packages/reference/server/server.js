@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
 const loggingMiddleware = require('express-pino-logger')
 const logger = require('./lib/logger')
+const uuid = require('uuid/v4');
 
 // Environment
 const production = process.env.NODE_ENV === 'production'
@@ -35,11 +36,12 @@ const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next
 const imageHosts = process.env.IMAGE_HOSTS
 const scriptHosts = process.env.SCRIPT_HOSTS
 
-
-
 module.exports = app.prepare().then(() => {
   const server = express()
-  server.use(loggingMiddleware({ logger: logger }))
+  server.use(loggingMiddleware({
+    logger: logger,
+    genReqId: req => { return req.header('x-request-id') || uuid() }
+  }))
 
   // Remove X-Powered-By: Express header as this could help attackers
   server.disable('x-powered-by')
