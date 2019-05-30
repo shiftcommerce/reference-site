@@ -2,20 +2,20 @@
 import React, { Component } from 'react'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import Config from '../../lib/config'
 
 export class MyAccountHeader extends Component {
   constructor (props) {
     super(props)
 
-    this.Link = componentMapping('Link')
-    this.Button = componentMapping('Button')
+    this.Link = Config.get().Link
   }
 
   renderLogout () {
     return (
       <this.Link href='/account/logout'>
-        <this.Button
+        <Button
           aria-label='Logout'
           className='c-myaccount-header__logout-button o-button--sml'
           label='Logout'

@@ -5,17 +5,11 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import { Checkbox } from '../../objects/checkbox'
+import { FormErrors } from '../../lib/form-errors'
 
-export class LoginForm extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-    this.Checkbox = componentMapping('Checkbox')
-    this.AccountFormErrors = componentMapping('FormErrors')
-  }
-
+class LoginForm extends Component {
   renderEmailInputField () {
     return (
       <div className='o-flex o-flex__space-between'>
@@ -46,7 +40,7 @@ export class LoginForm extends Component {
 
   renderSubmitButton (props) {
     return (
-      <this.Button
+      <Button
         className='c-login__button o-button--sml'
         aria-label='Continue Securely'
         label='CONTINUE SECURELY'
@@ -65,11 +59,11 @@ export class LoginForm extends Component {
         onSubmit={handleSubmit}
         render={props => (
           <Form className='c-login__form'>
-            <this.AccountFormErrors errors={login.errors} />
+            <FormErrors errors={login.errors} />
             { this.renderEmailInputField() }
             { this.renderPasswordInputField() }
             <div>
-              <this.Checkbox label='Remember me' />
+              <Checkbox label='Remember me' />
               { this.renderSubmitButton(props) }
             </div>
           </Form>

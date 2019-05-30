@@ -2,16 +2,15 @@
 import React, { Component } from 'react'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import Config from '../../lib/config'
+import { Loading } from '../../objects/loading'
+import { OrderList } from '../../components/orders/order-list'
 
 export class AccountOrders extends Component {
   constructor (props) {
     super(props)
 
-    this.Button = componentMapping('Button')
-    this.Link = componentMapping('Link')
-    this.Loading = componentMapping('Loading')
-    this.OrderList = componentMapping('OrderList')
+    this.Link = Config.get().Link
   }
 
   componentDidMount () {
@@ -23,7 +22,7 @@ export class AccountOrders extends Component {
       return (<p>No previous orders found.</p>)
     }
 
-    return (<this.OrderList orders={orders} />)
+    return (<OrderList orders={orders} />)
   }
 
   renderAccountBanner () {
@@ -42,7 +41,7 @@ export class AccountOrders extends Component {
         <>
           <div className='c-order-history'>
             { this.renderAccountBanner() }
-            <this.Loading />
+            <Loading />
           </div>
         </>
       )

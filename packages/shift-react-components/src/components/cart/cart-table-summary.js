@@ -3,14 +3,14 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
 // Libs
-import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
+import Config from '../../lib/config'
 
 export class CartTableSummary extends PureComponent {
   constructor (props) {
     super(props)
 
-    this.Link = componentMapping('Link')
+    this.Link = Config.get().Link
   }
 
   /**

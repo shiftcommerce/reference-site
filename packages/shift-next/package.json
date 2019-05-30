@@ -16,12 +16,6 @@
   },
   "author": "Shift Commerce",
   "license": "ISC",
-  "peerDependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.0",
-    "react-instantsearch": "^5.3.1",
-    "react-instantsearch-dom": "^5.3.1"
-  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -40,6 +34,10 @@
     "mockdate": "^2.0.2",
     "next": "^7.0.2",
     "nock": "^10.0.6",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-instantsearch": "^5.3.1",
+    "react-instantsearch-dom": "^5.3.1",
     "redux-mock-store": "^1.5.3",
     "redux-test-utils": "^0.3.0",
     "webpack": "^4.29.0",
