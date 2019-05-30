@@ -1,5 +1,6 @@
 const axios = require('axios')
 const qs = require('qs')
+const logger = require('./logger')
 
 // libs
 const { setCacheHeaders } = require('./set-cache-headers')
@@ -26,7 +27,7 @@ const fetchData = async (queryObject, url) => {
     setCacheHeaders(response)
     return response
   } catch (error) {
-    console.error(error)
+    logger.error(error)
     return error.response
   }
 }
@@ -41,7 +42,7 @@ const fetchOmsData = async (queryObject, url) => {
 
     return response
   } catch (error) {
-    console.error(error)
+    logger.error(error)
     return error.response
   }
 }
@@ -59,8 +60,7 @@ const postData = async (body, url) => {
     setCacheHeaders(response)
     return response
   } catch (error) {
-    console.error('ERROR', error.response)
-    console.error('ERROR DATA', JSON.stringify(error.response.data))
+    logger.error({ response: error.response, data: error.response.data })
     return error.response
   }
 }
@@ -78,8 +78,7 @@ const patchData = async (body, url) => {
     setCacheHeaders(response)
     return response
   } catch (error) {
-    console.error('ERROR', error.response)
-    console.error('ERROR DATA', JSON.stringify(error.response.data))
+    logger.error({ response: error.response, data: error.response.data })
     return error.response
   }
 }
@@ -95,7 +94,7 @@ const deleteData = async (url, body = {}) => {
     setCacheHeaders(response)
     return response
   } catch (error) {
-    console.error(error)
+    logger.error(error)
     return error.response
   }
 }
