@@ -147,8 +147,8 @@ class SHIFTClient {
     return accountEndpoints.getCustomerOrdersV1(query)
   }
 
-  getAddressBookV1 (customerAccountId) {
-    return accountEndpoints.getAddressBookV1(customerAccountId)
+  getAddressBookV1 (customerAccountId, query) {
+    return accountEndpoints.getAddressBookV1(customerAccountId, query)
       .then(this.determineResponse)
   }
 

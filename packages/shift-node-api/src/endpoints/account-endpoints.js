@@ -40,8 +40,8 @@ function getCustomerOrdersV1 (query) {
   })
 }
 
-function getAddressBookV1 (customerAccountId) {
-  return HTTPClient.get(`v1/customer_accounts/${customerAccountId}/addresses`)
+function getAddressBookV1 (customerAccountId, query) {
+  return HTTPClient.get(`v1/customer_accounts/${customerAccountId}/addresses`, query)
 }
 
 function createAddressBookEntryV1 (body, customerAccountId) {
