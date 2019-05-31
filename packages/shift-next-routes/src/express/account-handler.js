@@ -1,5 +1,6 @@
 // Shift-api client
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
+const { isSecure } = require('../lib/util')
 
 // Lib
 const { getSessionExpiryTime } = require('../lib/session')
@@ -262,7 +263,7 @@ async function assignCartToUser (req, res) {
 
     res.cookie('cart', customerAccountResponse.data.included.find(i => i.type === 'carts').id, {
       signed: true,
-      secure: process.env.NO_HTTPS ? false : true,
+      secure: isSecure(),
       expires: getSessionExpiryTime()
     })
   }

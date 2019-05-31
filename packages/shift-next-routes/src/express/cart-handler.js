@@ -1,5 +1,6 @@
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 const { getSessionExpiryTime } = require('../lib/session')
+const { isSecure } = require('../lib/util')
 
 const cartApiEndpointQuery = {
   fields: {
@@ -44,7 +45,7 @@ module.exports = {
       if (response.data.id) {
         res.cookie('cart', response.data.id, {
           signed: true,
-          secure: process.env.NO_HTTPS ? false : true,
+          secure: isSecure(),
           expires: getSessionExpiryTime()
         })
       }
