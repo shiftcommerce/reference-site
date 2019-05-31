@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import Config from '@shiftcommerce/shift-react-components/src/lib/config'
-import { shiftNextConfig } from '@shiftcommerce/shift-next'
+import shiftNextConfig from '@shiftcommerce/shift-next/src/lib/config'
 
 // Objects
 import NextLink from '../objects/next-link'

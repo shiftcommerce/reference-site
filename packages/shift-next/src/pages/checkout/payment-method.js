@@ -264,5 +264,3 @@ export class PaymentMethodPage extends Component {
     )
   }
 }
-
-export default PaymentMethodPage
