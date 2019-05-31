@@ -5,11 +5,10 @@ import classNames from 'classnames'
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
 import Config from '../../lib/config'
-
-import Link from '../../objects/link'
+import link from '../../objects/link'
+const Link = Config.get().Link || link
 
 export class CartTableSummary extends PureComponent {
-
   /**
    * Renders the promotions
    * @param  {Object}  cart

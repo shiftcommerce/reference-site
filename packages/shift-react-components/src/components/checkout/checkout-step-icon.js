@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Lib
-import Image from '../../objects/image'
+import { Image } from '../../objects/image'
 
 // Assets
 import completedCheck from '../../static/white-check.svg'

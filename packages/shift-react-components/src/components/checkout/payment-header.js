@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import Button from '../../objects/button'
+import { Button } from '../../objects/button'
 
 export default class PaymentHeader extends PureComponent {
   render () {

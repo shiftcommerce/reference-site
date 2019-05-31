@@ -1,8 +1,10 @@
 // Libraries
 import React, { PureComponent } from 'react'
 
-import Link from './link'
 import { Image } from './image'
+import Config from '../lib/config'
+import link from './link'
+const Link = Config.get().Link || link
 
 class Logo extends PureComponent {
   render () {

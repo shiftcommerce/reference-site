@@ -2,11 +2,12 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-// Lib
-import Button from '../../objects/button'
-
-import PaymentMethodHeader from '../checkout/payment-method-header'
+// Objects
+import { Button } from '../../objects/button'
 import PayPalButton from '../../objects/paypal-button'
+
+// Components
+import { PaymentMethodHeader } from '../checkout/payment-method-header'
 
 export default class PaymentMethod extends PureComponent {
   /**

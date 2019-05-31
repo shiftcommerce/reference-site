@@ -7,8 +7,8 @@ import format from 'date-fns/format'
 // Libs
 import businessDaysFromNow from '../../lib/business-days-from-now'
 import { decimalPrice } from '../../lib/decimal-price'
-import Button from '../../objects/button'
-import Flash from '../../objects/flash'
+import { Button } from '../../objects/button'
+import { Flash } from '../../objects/flash'
 import ShippingMethodsHeader from '../checkout/shipping-methods-header'
 
 export class ShippingMethods extends PureComponent {

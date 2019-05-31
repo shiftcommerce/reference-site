@@ -1,7 +1,9 @@
 // Libraries
 import React, { Component } from 'react'
 
-import Link from './link'
+import link from './link'
+import Config from '../lib/config'
+const Link = Config.get().Link || link
 
 // This object conditionally wraps children in a link if
 // the passed URL is present

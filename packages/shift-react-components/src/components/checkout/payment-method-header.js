@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '../../objects/button'
+import { Button } from '../../objects/button'
 
 export function PaymentMethodHeader ({ collapsed, onClick, showEditButton, title }) {
   return (

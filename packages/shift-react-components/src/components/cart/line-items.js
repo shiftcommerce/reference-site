@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-import { DropdownSelect } from '../../objects/dropdown-select'
+import DropdownSelect from '../../objects/dropdown-select'
 import { Image } from '../../objects/image'
 import Config from '../../lib/config'
 

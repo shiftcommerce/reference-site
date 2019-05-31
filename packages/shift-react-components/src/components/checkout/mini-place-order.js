@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
-import Button from '../../objects/button'
+import { Button } from '../../objects/button'
 
 export function MiniPlaceOrder ({ convertToOrder, isValidOrder, total }) {
   return (

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // Lib
 import link from '../../objects/link'
 import Config from '../../lib/config'
-import CheckoutStepIcon from '../checkout/checkout-step-icon'
+import { CheckoutStepIcon } from '../checkout/checkout-step-icon'
 
 export function CheckoutSteps ({ currentStep, stepActions }) {
   const Link = Config.get().Link || link

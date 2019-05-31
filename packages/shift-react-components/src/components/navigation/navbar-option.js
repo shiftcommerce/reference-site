@@ -2,7 +2,9 @@
 import React, { Component } from 'react'
 
 // Components
-import Link from '../../objects/link'
+import Config from '../../lib/config'
+import link from '../../objects/link'
+const Link = Config.get().Link || link
 
 export class NavBarOption extends Component {
   render () {

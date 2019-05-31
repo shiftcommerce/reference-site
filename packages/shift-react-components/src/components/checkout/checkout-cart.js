@@ -5,7 +5,7 @@ import Pluralize from 'react-pluralize'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-import LineItems from '../cart/line-items'
+import { LineItems } from '../cart/line-items'
 
 export function CheckoutCart ({ deleteItem, lineItems, lineItemsCount, total }) {
   return (

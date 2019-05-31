@@ -4,11 +4,13 @@ import classNames from 'classnames'
 
 // Objects
 import LazyLoad from '../../../objects/lazy-load'
-import Link from '../../../objects/link'
 import Rating from '../../../objects/rating'
+import Config from '../../../lib/config'
+import link from '../../../objects/link'
 
 // Components
 import ProductPrice from '../display/product-price'
+const Link = Config.get().Link || link
 
 class ProductListingCard extends Component {
   renderImageAndTitle () {

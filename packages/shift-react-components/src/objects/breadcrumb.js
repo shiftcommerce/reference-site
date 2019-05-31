@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-import Link from './link'
+import Config from '../lib/config'
+import link from './link'
+const Link = Config.get().Link || link
 
 export class Breadcrumb extends Component {
   /**

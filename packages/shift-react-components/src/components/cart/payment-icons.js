@@ -2,7 +2,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import Image from '../../objects/image'
+import { Image } from '../../objects/image'
 
 /**
  * Renders a help message when there is no data for the cart

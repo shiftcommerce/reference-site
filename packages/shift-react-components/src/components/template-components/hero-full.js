@@ -5,8 +5,10 @@ import t from 'typy'
 
 // Components
 import LazyLoad from '../../objects/lazy-load'
-import Link from '../../objects/link'
 import { ConditionalLink } from '../../objects/conditional-link'
+import Config from '../../lib/config'
+import link from '../../objects/link'
+const Link = Config.get().Link || link
 
 class HeroFull extends PureComponent {
   /**

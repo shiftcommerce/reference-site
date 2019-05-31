@@ -4,7 +4,7 @@ import t from 'typy'
 
 // Components
 import { Image } from '../../objects/image'
-import { Logo } from '../../objects/link'
+import Logo from '../../objects/logo'
 import { Loading } from '../../objects/loading'
 import { NavBarOption } from './navbar-option'
 import SearchBar from '../search/search-bar'

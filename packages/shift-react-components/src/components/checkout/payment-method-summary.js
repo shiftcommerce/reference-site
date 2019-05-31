@@ -3,9 +3,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import Image from '../../objects/image'
+import { Image } from '../../objects/image'
 
-import PaymentMethodHeader from '../../components/checkout/payment-method-header'
+import { PaymentMethodHeader } from '../../components/checkout/payment-method-header'
 
 export class PaymentMethodSummary extends PureComponent {
   renderPaymentMethodInformation (paymentMethod) {
