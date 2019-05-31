@@ -8,7 +8,7 @@ import * as Yup from 'yup'
 import { Button } from '../../objects/button'
 import { FormErrors } from '../../lib/form-errors'
 
-class RegisterForm extends Component {
+export class RegisterForm extends Component {
   renderNameInputs () {
     return (
       <div className='o-flex o-flex__space-between'>

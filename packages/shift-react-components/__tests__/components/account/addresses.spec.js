@@ -3,8 +3,8 @@ import React from 'react'
 import { Formik, Form, Field } from 'formik'
 
 // Component
-import AccountAddresses from '../../../src/components/account/addresses'
-import AddressBook from '../../../src/components/checkout/address-book'
+import { AccountAddresses } from '../../../src/components/account/addresses'
+import { AddressBook } from '../../../src/components/checkout/address-book'
 
 // Static
 import countries from '../../fixtures/countries'

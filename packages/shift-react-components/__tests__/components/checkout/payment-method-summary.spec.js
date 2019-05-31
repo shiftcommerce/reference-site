@@ -2,11 +2,11 @@
 import React from 'react'
 
 // Components
-import PaymentMethodSummary from '../../../src/components/checkout/payment-method-summary'
-import PaymentMethodHeader from '../../../src/components/checkout/payment-method-header'
+import { PaymentMethodSummary } from '../../../src/components/checkout/payment-method-summary'
+import { PaymentMethodHeader } from '../../../src/components/checkout/payment-method-header'
 
 // Objects
-import Image from '../../../src/objects/image'
+import { Image } from '../../../src/objects/image'
 
 test("renders the shipping methods summary", () => {
   // Arrange

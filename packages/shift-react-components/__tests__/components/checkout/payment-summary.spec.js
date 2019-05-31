@@ -2,10 +2,10 @@
 import React from 'react'
 
 // Components
-import PaymentSummary from '../../../src/components/checkout/payment-summary'
+import { PaymentSummary } from '../../../src/components/checkout/payment-summary'
 
 // Objects
-import Flash from '../../../src/objects/flash'
+import { Flash } from '../../../src/objects/flash'
 
 test("doesn't add errors class when there are no errors", () => {
   const wrapper = shallow(<PaymentSummary headerTitle={'Paymment'} billingAddress={{}} />)

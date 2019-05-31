@@ -172,7 +172,7 @@ exports[`renders correct messages when cart has items 1`] = `
               2
             </a>
              
-            <Plural
+            <l
               className={null}
               count={2}
               showCount={false}
@@ -186,13 +186,13 @@ exports[`renders correct messages when cart has items 1`] = `
               >
                 items
               </span>
-            </Plural>
+            </l>
              in your shopping basket.
           </p>
           <p
             className="c-cart-table__description"
           >
-            <Plural
+            <l
               className={null}
               count={2}
               plural="These"
@@ -207,9 +207,9 @@ exports[`renders correct messages when cart has items 1`] = `
               >
                 These
               </span>
-            </Plural>
+            </l>
              
-            <Plural
+            <l
               className={null}
               count={2}
               showCount={false}
@@ -223,7 +223,7 @@ exports[`renders correct messages when cart has items 1`] = `
               >
                 items
               </span>
-            </Plural>
+            </l>
              will be saved for 48 hours depending on availability.
           </p>
         </div>
@@ -311,7 +311,7 @@ exports[`renders correct messages when cart is empty 1`] = `
               0
             </a>
              
-            <Plural
+            <l
               className={null}
               count={0}
               showCount={false}
@@ -325,13 +325,13 @@ exports[`renders correct messages when cart is empty 1`] = `
               >
                 items
               </span>
-            </Plural>
+            </l>
              in your shopping basket.
           </p>
           <p
             className="c-cart-table__description"
           >
-            <Plural
+            <l
               className={null}
               count={0}
               plural="These"
@@ -346,9 +346,9 @@ exports[`renders correct messages when cart is empty 1`] = `
               >
                 These
               </span>
-            </Plural>
+            </l>
              
-            <Plural
+            <l
               className={null}
               count={0}
               showCount={false}
@@ -362,7 +362,7 @@ exports[`renders correct messages when cart is empty 1`] = `
               >
                 items
               </span>
-            </Plural>
+            </l>
              will be saved for 48 hours depending on availability.
           </p>
         </div>

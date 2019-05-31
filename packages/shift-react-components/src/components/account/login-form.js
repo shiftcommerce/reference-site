@@ -6,10 +6,10 @@ import * as Yup from 'yup'
 
 // lib
 import { Button } from '../../objects/button'
-import { Checkbox } from '../../objects/checkbox'
+import Checkbox from '../../objects/checkbox'
 import { FormErrors } from '../../lib/form-errors'
 
-class LoginForm extends Component {
+export class LoginForm extends Component {
   renderEmailInputField () {
     return (
       <div className='o-flex o-flex__space-between'>

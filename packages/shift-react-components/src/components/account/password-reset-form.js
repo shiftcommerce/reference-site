@@ -8,7 +8,7 @@ import * as Yup from 'yup'
 import { Button } from '../../objects/button'
 import { FormErrors } from '../../lib/form-errors'
 
-class PasswordResetForm extends Component {
+export class PasswordResetForm extends Component {
   renderSubmitButton (props) {
     return (
       <Button

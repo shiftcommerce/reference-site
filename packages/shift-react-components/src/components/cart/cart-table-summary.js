@@ -6,12 +6,9 @@ import classNames from 'classnames'
 import { decimalPrice } from '../../lib/decimal-price'
 import Config from '../../lib/config'
 
-export class CartTableSummary extends PureComponent {
-  constructor (props) {
-    super(props)
+import Link from '../../objects/link'
 
-    this.Link = Config.get().Link
-  }
+export class CartTableSummary extends PureComponent {
 
   /**
    * Renders the promotions
@@ -82,12 +79,12 @@ export class CartTableSummary extends PureComponent {
           </dl>
         </section>
         <section className={classNames(className, 'c-cart-summary-buttons')}>
-          <this.Link href='/slug?slug=/homepage' as='/' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue'>
+          <Link href='/slug?slug=/homepage' as='/' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue'>
             Continue Shopping
-          </this.Link>
-          <this.Link href='/checkout/payment-method' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
+          </Link>
+          <Link href='/checkout/payment-method' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
             Checkout
-          </this.Link>
+          </Link>
         </section>
       </>
     )

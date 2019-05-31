@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-class Sidebar extends Component {
+export class Sidebar extends Component {
   renderMenus () {
     const { currentMenu, handleClickedMenu, menus } = this.props
     return menus.map((menu, index) => (

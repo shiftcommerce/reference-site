@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Components
-import Image from '../../../src/objects/image'
-import LineItems from '../../../src/components/cart/line-items'
+import { Image } from '../../../src/objects/image'
+import { LineItems } from '../../../src/components/cart/line-items'
 
 // Objects
 import DropdownSelect from '../../../src/objects/dropdown-select'

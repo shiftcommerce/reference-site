@@ -108,7 +108,7 @@ exports[`ShippingMethods renders an error message 1`] = `
         </h2>
       </div>
     </ShippingMethodsHeader>
-    <_default
+    <Flash
       modifier="error"
       text="Something went wrong"
     >
@@ -117,7 +117,7 @@ exports[`ShippingMethods renders an error message 1`] = `
       >
         Something went wrong
       </div>
-    </_default>
+    </Flash>
     <form
       className="o-form__wrapper o-form__background c-shipping-method__list"
     >

@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Component
-import AccountOrders from '../../../src/components/account/orders'
-import OrderList from '../../../src/components/orders/order-list'
+import { AccountOrders } from '../../../src/components/account/orders'
+import { OrderList } from '../../../src/components/orders/order-list'
 
 test('calls fetchOrders on mounting', () => {
   const fetchOrders = jest.fn()

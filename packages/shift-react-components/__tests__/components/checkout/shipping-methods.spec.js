@@ -3,10 +3,10 @@ import React from 'react'
 import MockDate from 'mockdate'
 
 // Components
-import ShippingMethods from '../../../src/components/checkout/shipping-methods'
+import { ShippingMethods } from '../../../src/components/checkout/shipping-methods'
 
 // Objects
-import Flash from '../../../src/objects/flash'
+import { Flash } from '../../../src/objects/flash'
 
 // Fixtures
 import cartFixture from '../../fixtures/cart'

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CartNoData from '../../../src/components/cart/cart-no-data'
+import { CartNoData } from '../../../src/components/cart/cart-no-data'
 
 test('renders exception message when component is loaded', () => {
   // act
