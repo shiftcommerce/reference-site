@@ -21,6 +21,7 @@ import { PaymentMethod, Loading } from '@shiftcommerce/shift-react-components'
 
 // Libs
 import Config from '../../lib/config'
+import { isSecure } from '../../lib/is-secure'
 
 // Json
 // This is required as a workaround when testing PayPal integration using cypress
@@ -81,7 +82,7 @@ export class PaymentMethodPage extends Component {
    */
   handleSetPaymentMethod (paymentMethod) {
     // set PayPal paymentMethod in a cookie
-    Cookies.set('paymentMethod', paymentMethod, { secure: window.location.protocol === 'https' })
+    Cookies.set('paymentMethod', paymentMethod, { secure: isSecure() })
   }
 
   /**
@@ -231,11 +232,10 @@ export class PaymentMethodPage extends Component {
    * @param  {object} payPalOrder
    */
   handlePayPalOrderDetails (payPalOrder) {
-    const isSecure = window.location.protocol === 'https'
     // set PayPal order ID in a cookie
-    Cookies.set('ppOrderID', payPalOrder.id, { secure: isSecure })
+    Cookies.set('ppOrderID', payPalOrder.id, { secure: isSecure() })
     // set purchaseUnitsReferenceID in a cookie
-    Cookies.set('purchaseUnitsReferenceID', payPalOrder.purchase_units[0].reference_id, { secure: isSecure })
+    Cookies.set('purchaseUnitsReferenceID', payPalOrder.purchase_units[0].reference_id, { secure: isSecure() })
   }
 
   /**
