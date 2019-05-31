@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 // Components
-import { Link } from '../../objects/link'
+import Link from '../../objects/link'
 
 export class NavBarOption extends Component {
   render () {

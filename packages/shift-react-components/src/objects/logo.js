@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 
 import Link from './link'
-import Image from './image'
+import { Image } from './image'
 
 class Logo extends PureComponent {
   render () {
