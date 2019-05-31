@@ -33,7 +33,7 @@ export const postEndpoint = (request) => {
 export const deleteEndpoint = (request) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().delete(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
+    return new ApiClient().delete(request.endpoint, request.body, { csrf: Cookies.get('_csrf') })
       .then(processResponse(dispatch, request, [204]))
       .catch(error => {
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error))
