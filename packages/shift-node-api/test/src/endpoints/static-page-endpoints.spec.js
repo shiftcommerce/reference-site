@@ -10,6 +10,10 @@ const parser = require('../../../src/lib/json-api-parser')
 const staticPageResponse = require('../../fixtures/staticpage-response')
 const articleStaticPageResponse = require('../../fixtures/article-staticpage-response')
 
+const staticPageDefaultQuery = {
+  include: 'template,meta.*'
+}
+
 axios.defaults.adapter = httpAdapter
 
 beforeEach(() => {
@@ -23,16 +27,14 @@ afterEach(() => { nock.cleanAll() })
 
 describe('getStaticPagesV1', () => {
   test('endpoint returns a static page with correct id', () => {
-    const queryObject = {
-      include: 'template,meta.*'
-    }
+    const staticPageId = '56'
 
     nock(shiftApiConfig.get().apiHost)
-      .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/56`)
-      .query(queryObject)
+      .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/${staticPageId}`)
+      .query(staticPageDefaultQuery)
       .reply(200, staticPageResponse)
 
-    return getStaticPageV1(56, queryObject)
+    return getStaticPageV1(staticPageId, staticPageDefaultQuery)
       .then(response => {
         expect(response.status).toEqual(200)
         expect(response.data).toEqual(staticPageResponse)
@@ -40,13 +42,11 @@ describe('getStaticPagesV1', () => {
   })
 
   test('endpoint returns an error with incorrect id', () => {
-    const queryObject = {
-      include: 'template,meta.*'
-    }
+    const staticPageId = '1001'
 
     nock(shiftApiConfig.get().apiHost)
-      .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/1001`)
-      .query(queryObject)
+      .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/${staticPageId}`)
+      .query(staticPageDefaultQuery)
       .reply(404, {
         errors: [
           {
@@ -61,7 +61,7 @@ describe('getStaticPagesV1', () => {
         }
       })
 
-    return getStaticPageV1(1001, queryObject)
+    return getStaticPageV1(staticPageId, staticPageDefaultQuery)
       .catch(error => {
         expect(error.response.status).toBe(404)
         expect(error.response.data.errors[0].title).toEqual('Record not found')

@@ -16,6 +16,56 @@ const cartDefaultQuery = {
   include: 'line_items.item.product,line_items.line_item_discounts,discount_summaries,customer_account,billing_address,shipping_address,shipping_method'
 }
 
+const categoryDefaultQuery = {
+  fields: {
+    asset_files: 's3_url,canonical_path',
+    products: 'title,description,slug,canonical_path,reference,asset_files,min_price,max_price,min_current_price,max_current_price,rating,meta_attributes,updated_at',
+    variants: 'price,meta_attributes,sku,asset_files',
+    category_trees: 'path,slug'
+  },
+  include: 'asset_files,variants,bundles'
+}
+
+const addressBookDefaultQuery = {
+  fields: {
+    addresses: 'address_line_1,address_line_2,city,country,first_name,last_name,meta_attributes,postcode,preferred_billing,preferred_shipping,state',
+  }
+}
+
+const menuDefaultQuery = {
+  fields: {
+    menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
+    menus: 'title,reference,updated_at,menu_items'
+  },
+  filter: {
+    filter: {
+      reference: {
+        eq: 'mega-menu'
+      }
+    }
+  },
+  include: 'menu_items'
+}
+
+const productDefaultQuery = {
+  fields: {
+    asset_files: 'id,image_height,image_width,s3_url',
+    variants: 'id,meta_attributes,title,description,reference,ewis_eligible,product_id,sku,stock_allocated_level,stock_level,tax_code,stock_available_level,has_assets,price_includes_taxes,available_to_order,price,current_price,picture_url'
+  },
+  include: 'asset_files,variants,template,meta.*'
+}
+
+const customerOrderDefaultQuery = {
+  fields: {
+    customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+    line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+    shipping_methods: 'label,price',
+    shipping_addresses: 'name,company,lines,city,state,postcode,country',
+    discounts: 'label,amount_inc_tax,coupon_code'
+  },
+  include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
+}
+
 // Fixtures
 const menuResponse = require('../fixtures/menu-response-payload')
 const menuResponseParsed = require('../fixtures/menu-response-payload-parsed')
@@ -61,27 +111,13 @@ afterEach(() => { nock.cleanAll() })
 describe('SHIFTClient', () => {
   describe('getMenusV1()', () => {
     test('should return a parsed response', () => {
-      const query = {
-        fields: {
-          menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
-          menus: 'title,reference,updated_at,menu_items'
-        },
-        filter: {
-          filter: {
-            reference: {
-              eq: 'mega-menu'
-            }
-          }
-        },
-        include: 'menu_items'
-      }
 
       nock(shiftApiConfig.get().apiHost)
         .get(`/${shiftApiConfig.get().apiTenant}/v1/menus`)
-        .query(true)
+        .query(menuDefaultQuery)
         .reply(200, menuResponse)
 
-      return SHIFTClient.getMenusV1(query)
+      return SHIFTClient.getMenusV1(menuDefaultQuery)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(menuResponseParsed)
@@ -449,17 +485,14 @@ describe('SHIFTClient', () => {
 
   describe('getProductV1', () => {
     test('returns a product when given a correct id', () => {
-      const queryObject = {
-        include: 'asset_files,variants,bundles,bundles.asset_files,template,meta.*',
-        fields: { asset_files: 'image_height,image_width,s3_url' }
-      }
+      const productId = '172'
 
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/products/172`)
-        .query(queryObject)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/products/${productId}`)
+        .query(productDefaultQuery)
         .reply(200, productResponse)
 
-      return SHIFTClient.getProductV1(172, queryObject)
+      return SHIFTClient.getProductV1(productId, productDefaultQuery)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(productResponseParsed)
@@ -467,14 +500,11 @@ describe('SHIFTClient', () => {
     })
 
     test('returns an error with incorrect id', () => {
-      const queryObject = {
-        include: 'asset_files,variants,bundles,bundles.asset_files,template,meta.*',
-        fields: { asset_files: 'image_height,image_width,s3_url' }
-      }
+      const productId = '20000'
 
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/products/20000`)
-        .query(queryObject)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/products/${productId}`)
+        .query(productDefaultQuery)
         .reply(404, {
           'errors': [
             {
@@ -491,7 +521,7 @@ describe('SHIFTClient', () => {
 
       expect.assertions(2)
 
-      return SHIFTClient.getProductV1(20000, queryObject)
+      return SHIFTClient.getProductV1(productId, productDefaultQuery)
         .catch(error => {
           expect(error).toEqual(new Error('Request failed with status code 404'))
           expect(error.response.data.errors[0].title).toEqual('Record not found')
@@ -501,16 +531,17 @@ describe('SHIFTClient', () => {
 
   describe('getStaticPagesV1', () => {
     test('endpoint returns a static page', () => {
+      const staticPageId = '56'
       const queryObject = {
         include: 'template,meta.*'
       }
 
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/56`)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/${staticPageId}`)
         .query(queryObject)
         .reply(200, staticPageResponse)
 
-      return SHIFTClient.getStaticPageV1(56, queryObject)
+      return SHIFTClient.getStaticPageV1(staticPageId, queryObject)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(staticPageResponseParsed)
@@ -518,12 +549,13 @@ describe('SHIFTClient', () => {
     })
 
     test('endpoint returns an error with incorrect id', () => {
+      const staticPageId = '1001'
       const queryObject = {
         include: 'template,meta.*'
       }
 
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/1001`)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/static_pages/${staticPageId}`)
         .query(queryObject)
         .reply(404, {
           errors: [
@@ -591,11 +623,14 @@ describe('SHIFTClient', () => {
 
   describe('getCategoryV1', () => {
     test('returns a category when given a correct id', () => {
+      const categoryId = '56'
+
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/category_trees/reference:web/categories/56`)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/category_trees/reference:web/categories/${categoryId}`)
+        .query(categoryDefaultQuery)
         .reply(200, categoryResponse)
 
-      return SHIFTClient.getCategoryV1(56)
+      return SHIFTClient.getCategoryV1(categoryId, categoryDefaultQuery)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(categoryResponseParsed)
@@ -603,8 +638,11 @@ describe('SHIFTClient', () => {
     })
 
     test('endpoint errors with incorrect id and returns console.log', () => {
+      const categoryId = '1'
+
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/category_trees/reference:web/categories/1`)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/category_trees/reference:web/categories/${categoryId}`)
+        .query(categoryDefaultQuery)
         .reply(404, {
           errors: [
             {
@@ -621,7 +659,7 @@ describe('SHIFTClient', () => {
 
       expect.assertions(3)
 
-      return SHIFTClient.getCategoryV1(1)
+      return SHIFTClient.getCategoryV1(categoryId, categoryDefaultQuery)
         .catch(error => {
           expect(error).toEqual(new Error('Request failed with status code 404'))
           expect(error.response.data.errors[0].title).toEqual('Record not found')
@@ -636,8 +674,7 @@ describe('SHIFTClient', () => {
       const queryObject = {
         fields: {
           customer_accounts: 'email,meta_attributes'
-        },
-        include: ''
+        }
       }
 
       const accountData = {
@@ -778,27 +815,12 @@ describe('SHIFTClient', () => {
 
   describe('getCustomerOrdersV1', () => {
     test('gets customer orders from oms', () => {
-      const query = {
-        filter: {
-          account_reference: shiftApiConfig.get().apiTenant,
-          customer_reference: '123456'
-        },
-        fields: {
-          customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
-          line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
-          shipping_methods: 'label,price',
-          shipping_addresses: 'name,company,lines,city,state,postcode,country',
-          discounts: 'label,amount_inc_tax,coupon_code'
-        },
-        include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
-      }
-
       nock('https://shift-oms-dev.herokuapp.com')
         .get('/oms/v1/customer_orders/')
-        .query(true)
+        .query(customerOrderDefaultQuery)
         .reply(200, customerOrdersResponse)
 
-      return SHIFTClient.getCustomerOrdersV1(query)
+      return SHIFTClient.getCustomerOrdersV1(customerOrderDefaultQuery)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(customerOrdersResponse)
@@ -806,20 +828,9 @@ describe('SHIFTClient', () => {
     })
 
     test('should return errors if no customer_reference is present', () => {
-      const query = {
-        fields: {
-          customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
-          line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
-          shipping_methods: 'label,price',
-          shipping_addresses: 'name,company,lines,city,state,postcode,country',
-          discounts: 'label,amount_inc_tax,coupon_code'
-        },
-        include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
-      }
-
       nock('https://shift-oms-dev.herokuapp.com')
         .get('/oms/v1/customer_orders/')
-        .query(true)
+        .query(customerOrderDefaultQuery)
         .reply(422, {
           errors: [
             {
@@ -831,7 +842,7 @@ describe('SHIFTClient', () => {
 
       expect.assertions(2)
 
-      return SHIFTClient.getCustomerOrdersV1(query)
+      return SHIFTClient.getCustomerOrdersV1(customerOrderDefaultQuery)
         .catch(error => {
           expect(error.response.status).toEqual(422)
           expect(error.response.data.errors[0].detail).toEqual('No filter[customer_reference] specified')
@@ -841,11 +852,14 @@ describe('SHIFTClient', () => {
 
   describe('getAddressBookV1', () => {
     test('endpoint returns address book with correct id', () => {
+      const customerId = '77'
+
       nock(shiftApiConfig.get().apiHost)
-        .get(`/${shiftApiConfig.get().apiTenant}/v1/customer_accounts/77/addresses`)
+        .get(`/${shiftApiConfig.get().apiTenant}/v1/customer_accounts/${customerId}/addresses`)
+        .query(addressBookDefaultQuery)
         .reply(200, addressBookResponse)
 
-      return SHIFTClient.getAddressBookV1(77)
+      return SHIFTClient.getAddressBookV1(customerId, addressBookDefaultQuery)
         .then(response => {
           expect(response.status).toEqual(200)
           expect(response.data).toEqual(addressBookResponseParsed)
