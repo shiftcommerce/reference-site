@@ -61,7 +61,7 @@ class StaticPage extends Component {
 
     return (
       <this.Head>
-        { homepage ? <title>{Config.get().storeName}</title> : <title>{suffixWithStoreName(title)}</title> }
+        { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
       </this.Head>
     )
   }

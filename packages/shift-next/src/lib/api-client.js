@@ -35,7 +35,7 @@ class ApiClient {
     }
   }
 
-  async post(endpoint, body = {}, dispatch = null, options = {}) {
+  async post (endpoint, body = {}, dispatch = null, options = {}) {
     try {
       shouldDispatch(dispatch, true)
       const response = await this.client.post(endpoint, body)
@@ -48,7 +48,7 @@ class ApiClient {
     }
   }
 
-  async delete(endpoint, dispatch = null, options = {}) {
+  async delete (endpoint, dispatch = null, options = {}) {
     try {
       shouldDispatch(dispatch, true)
       const response = await this.client.delete(endpoint)

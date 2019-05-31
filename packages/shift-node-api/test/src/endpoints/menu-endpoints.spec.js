@@ -7,6 +7,21 @@ const { shiftApiConfig } = require('../../../src/index')
 // Fixtures
 const menuResponse = require('../../fixtures/menu-response-payload')
 
+const menuDefaultQuery = {
+  fields: {
+    menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
+    menus: 'title,reference,updated_at,menu_items'
+  },
+  filter: {
+    filter: {
+      reference: {
+        eq: 'mega-menu'
+      }
+    }
+  },
+  include: 'menu_items'
+}
+
 axios.defaults.adapter = httpAdapter
 
 beforeEach(() => {
@@ -20,27 +35,13 @@ afterEach(() => { nock.cleanAll() })
 
 describe('getMenusV1', () => {
   test('returns a correct response with a valid query', () => {
-    const query = {
-      fields: {
-        menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
-        menus: 'title,reference,updated_at,menu_items'
-      },
-      filter: {
-        filter: {
-          reference: {
-            eq: 'mega-menu'
-          }
-        }
-      },
-      include: 'menu_items'
-    }
 
     nock(shiftApiConfig.get().apiHost)
       .get(`/${shiftApiConfig.get().apiTenant}/v1/menus`)
-      .query(true)
+      .query(menuDefaultQuery)
       .reply(200, menuResponse)
 
-    return getMenusV1(query)
+    return getMenusV1(menuDefaultQuery)
       .then(response => {
         expect(response.status).toEqual(200)
         expect(response.data).toEqual(menuResponse)
@@ -48,27 +49,13 @@ describe('getMenusV1', () => {
   })
 
   test('returns an error when called with an invalid query', () => {
-    const query = {
-      fields: {
-        menu_items: 'title,slug,menu_items,item,background_image_link,background_image,published,canonical_path,meta_attributes',
-        menus: 'title,reference,updated_at,menu_items'
-      },
-      filter: {
-        filter: {
-          reference: {
-            e: 'mega-menu'
-          }
-        }
-      },
-      include: 'menu_items'
-    }
 
     nock(shiftApiConfig.get().apiHost)
       .get(`/${shiftApiConfig.get().apiTenant}/v1/menus`)
       .query(true)
       .reply(500)
 
-    return getMenusV1(query)
+    return getMenusV1(menuDefaultQuery)
       .catch(error => {
         expect(error).toEqual(new Error('Request failed with status code 500'))
       })
