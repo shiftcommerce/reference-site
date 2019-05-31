@@ -8,8 +8,9 @@ import {
 } from 'react-instantsearch-dom'
 import classNames from 'classnames'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Components
+import SearchRatingFilter from './search-rating-filter'
+import SearchSlider from './search-slider'
 
 // For refinements such as ratings and prices, we will transform the list
 // so that we put the label within the button. We will also set the value
@@ -47,13 +48,6 @@ const formatRefinementLabel = (item) => {
 const header = (headerText) => (<h2>{ headerText }</h2>)
 
 export default class SearchFilters extends Component {
-  constructor (props) {
-    super(props)
-
-    this.SearchRatingFilter = componentMapping('SearchRatingFilter')
-    this.SearchSlider = componentMapping('SearchSlider')
-  }
-
   renderRefinements (facets) {
     if (facets) {
       // Orders facets
@@ -89,10 +83,10 @@ export default class SearchFilters extends Component {
           </div>
           { this.renderRefinements(facets) }
           <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <this.SearchRatingFilter attribute='product_rating' min={0} max={5} />
+            <SearchRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <this.SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
+            <SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
           </Panel>
         </div>
       </>

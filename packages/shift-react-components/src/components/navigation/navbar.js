@@ -2,8 +2,12 @@
 import React, { Component } from 'react'
 import t from 'typy'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Components
+import { Image } from '../../objects/image'
+import { Logo } from '../../objects/link'
+import { Loading } from '../../objects/loading'
+import { NavBarOption } from './navbar-option'
+import SearchBar from '../search/search-bar'
 
 import logoSrc from '../../static/shopgo-logo.svg'
 
@@ -13,12 +17,6 @@ export class NavBar extends Component {
     this.state = {
       menuShown: false
     }
-
-    this.Image = componentMapping('Image')
-    this.Loading = componentMapping('Loading')
-    this.Logo = componentMapping('Logo')
-    this.NavBarOption = componentMapping('NavBarOption')
-    this.SearchBar = componentMapping('SearchBar')
 
     this.toggleMenuShown = this.toggleMenuShown.bind(this)
   }
@@ -38,7 +36,7 @@ export class NavBar extends Component {
   renderNavOptions (menuItems) {
     return (
       menuItems.map((menuItem, index) =>
-        <this.NavBarOption
+        <NavBarOption
           key={index}
           index={index}
           title={menuItem.title}
@@ -53,7 +51,7 @@ export class NavBar extends Component {
   renderNavHeader () {
     return (
       <div className='c-nav__menu-header'>
-        <this.Logo className='c-nav__menu-header-logo' logoSrc={logoSrc} />
+        <Logo className='c-nav__menu-header-logo' logoSrc={logoSrc} />
         <label htmlFor='burger-menu' className='c-nav__menu-header-cross' onClick={this.toggleMenuShown} />
         { this.renderSearchBar() }
       </div>
@@ -63,7 +61,7 @@ export class NavBar extends Component {
   renderSearchBar () {
     return (
       <div className='c-nav__menu-header-search'>
-        <this.SearchBar />
+        <SearchBar />
       </div>
     )
   }
@@ -73,7 +71,7 @@ export class NavBar extends Component {
       <>
         <input id='burger-menu' type='checkbox' className='c-nav__checkbox' checked={this.state.menuShown} readOnly />
         <div className='c-nav__menu-button' onClick={this.toggleMenuShown} >
-          <this.Image className='c-nav__menu-button-image' src='/static/burger-menu-icon.svg' />
+          <Image className='c-nav__menu-button-image' src='/static/burger-menu-icon.svg' />
           <p>Menu</p>
         </div>
       </>
@@ -85,7 +83,7 @@ export class NavBar extends Component {
     const menuItems = t(this.props, 'menu[0].menu_items').safeObject
 
     if (loading) {
-      return (<this.Loading />)
+      return (<Loading />)
     } else if (error) {
       return (<p className='c-nav__error'>Sorry! There is an error in loading menus { error }</p>)
     } else {

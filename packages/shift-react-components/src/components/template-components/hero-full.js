@@ -3,17 +3,12 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-import componentMapping from '../../lib/component-mapping'
+// Components
+import LazyLoad from '../../objects/lazy-load'
+import Link from '../../objects/link'
+import ConditionalLink from '../../objects/conditional-link'
 
 class HeroFull extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.LazyLoad = componentMapping('LazyLoad')
-    this.Link = componentMapping('Link')
-    this.ConditionalLink = componentMapping('ConditionalLink')
-  }
-
   /**
    * Renders the hero heading, if it's available
    * @param  {Object} hero
@@ -122,9 +117,9 @@ class HeroFull extends PureComponent {
 
         buttons.push(
           <div className='c-hero__button' key={index}>
-            <this.Link href={`/slug?slug=${url}`} as={url} className='c-hero__button-icon'>
+            <Link href={`/slug?slug=${url}`} as={url} className='c-hero__button-icon'>
               { hero[`overlay_link_${index}_text`] }
-            </this.Link>
+            </Link>
           </div>
         )
         index++
@@ -148,9 +143,9 @@ class HeroFull extends PureComponent {
         { this.heroHeading(componentData) }
         <div className='c-hero__content'>
           { this.heroOverlay(componentData, 'above') }
-          <this.ConditionalLink href={href}>
-            <this.LazyLoad className='c-hero__image' src={imgSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} mobileSrc={mobileSrc} />
-          </this.ConditionalLink>
+          <ConditionalLink href={href}>
+            <LazyLoad className='c-hero__image' src={imgSrc} imageHeight={componentData.image_height} imageWidth={componentData.image_width} mobileSrc={mobileSrc} />
+          </ConditionalLink>
           { this.heroOverlay(componentData, 'below') }
         </div>
       </section>

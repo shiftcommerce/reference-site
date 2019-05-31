@@ -3,16 +3,11 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-import componentMapping from '../../lib/component-mapping'
+// Components
+import LazyLoad from '../../objects/lazy-load'
+import Link from '../../objects/link'
 
 class GenericGrid extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.LazyLoad = componentMapping('LazyLoad')
-    this.Link = componentMapping('Link')
-  }
-
   /**
    * Use a forloop to build the slides
    * @param  {Object} componentData
@@ -32,14 +27,14 @@ class GenericGrid extends PureComponent {
       if (slideImage && slideText && slideLinkURL) {
         slides.push(
           <div className='o-card-grid__card' key={i}>
-            <this.Link href={slideLinkURL[0].canonical_path}>
-              <this.LazyLoad className='u-image-shadow'
+            <Link href={slideLinkURL[0].canonical_path}>
+              <LazyLoad className='u-image-shadow'
                 src={slideImage[0].canonical_path}
                 imageHeight={componentData.image_height}
                 imageWidth={componentData.image_width}
               />
               <p className='o-card-grid__title'>{ slideText }</p>
-            </this.Link>
+            </Link>
           </div>
 
         )
@@ -55,9 +50,9 @@ class GenericGrid extends PureComponent {
    */
   catButton (componentData) {
     return (
-      <this.Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
+      <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }
-      </this.Link>
+      </Link>
     )
   }
 

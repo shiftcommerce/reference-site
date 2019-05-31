@@ -3,17 +3,11 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Components
+import Link from '../../objects/link'
+import ProductListingCard from '../products/listing/product-listing-card'
 
 class ProductGrid extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Link = componentMapping('Link')
-    this.ProductListingCard = componentMapping('ProductListingCard')
-  }
-
   /**
    * Render up to 4 products, using  the <ProductListingCard /> component
    * @param  {Object} componentData

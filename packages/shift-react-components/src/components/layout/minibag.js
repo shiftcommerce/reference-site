@@ -2,21 +2,18 @@
 import React, { PureComponent } from 'react'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
+// Components
+import { Button } from '../../objects/button'
+import { Image } from '../../objects/image'
+import { Link } from '../../objects/link'
+import { DropdownSelect } from '../../objects/dropdown-select'
+
 export class Minibag extends PureComponent {
-  constructor () {
-    super()
-
-    this.Button = componentMapping('Button')
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
-    this.DropdownSelect = componentMapping('DropdownSelect')
-  }
-
   renderLineItems (lineItems) {
     const { onItemQuantityUpdated } = this.props
+
     return lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
       return (
         <div className='c-minibag__line-item' key={lineItem.item.sku}>
@@ -26,7 +23,7 @@ export class Minibag extends PureComponent {
               <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
               { lineItem.line_item_discounts.length > 0 && <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a> }
             </div>
-            <this.DropdownSelect
+            <DropdownSelect
               className='c-minibag__quantity'
               data-id={lineItem.id}
               label='Quantity'
@@ -40,9 +37,9 @@ export class Minibag extends PureComponent {
             </a>
           </div>
           <div className='c-minibag__line-item-images'>
-            <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
-              <this.Image className='c-minibag__line-item-image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
-            </this.Link>
+            <Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
+              <Image className='c-minibag__line-item-image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
+            </Link>
           </div>
         </div>
       )
@@ -110,10 +107,10 @@ export class Minibag extends PureComponent {
             Your bag is empty.
           </p> }
             <div className='c-minibag__dropdown-buttons'>
-              <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link' onClick={ () => this.props.toggleMiniBag(false) }>
+              <Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link' onClick={ () => this.props.toggleMiniBag(false) }>
                 view shopping basket
-              </this.Link>
-              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag(false)} />
+              </Link>
+              <Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag(false)} />
             </div>
         </div>
       </div>

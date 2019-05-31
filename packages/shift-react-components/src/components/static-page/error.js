@@ -2,17 +2,15 @@
 import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
-import componentMapping from '../../lib/component-mapping'
-
+// Components
+import StaticPageErrorBody from './error-body'
+import StaticPageErrorDetails from './error-details'
 /**
  * Display the wrapper for the static page error, which includes the error
  * body, and the error details
  */
 class StaticPageError extends PureComponent {
   render () {
-    const StaticPageErrorBody = componentMapping('StaticPageErrorBody')
-    const StaticPageErrorDetails = componentMapping('StaticPageErrorDetails')
-
     return (
       <div className={classNames(this.props.className, 'c-static-page-error')}>
         <StaticPageErrorBody
