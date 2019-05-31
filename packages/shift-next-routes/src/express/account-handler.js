@@ -141,7 +141,7 @@ module.exports = {
     try {
       getAccount = await SHIFTClient.getCustomerAccountByTokenV1(req.body.data.attributes.token)
     } catch (error) {
-      req.log.error(error.response.data.errors)
+      console.log('error', error.response.data.errors)
       const response = error.response
       switch (response.status) {
         case 404:
@@ -156,7 +156,7 @@ module.exports = {
       const response = await SHIFTClient.updateCustomerAccountPasswordV1(getAccount.data.id, request)
       return res.status(response.status).send(response.data)
     } catch (error) {
-      req.log.error(error.response.data.errors)
+      console.log('error', error.response.data.errors)
       const response = error.response
       switch (response.status) {
         case 404:
@@ -262,7 +262,7 @@ async function assignCartToUser (req, res) {
 
     res.cookie('cart', customerAccountResponse.data.included.find(i => i.type === 'carts').id, {
       signed: true,
-      secure: true,
+      secure: process.env.NO_HTTPS ? false : true,
       expires: getSessionExpiryTime()
     })
   }
