@@ -23,7 +23,7 @@ export default class StripePayment extends Component {
   renderFormSubmitButton () {
     return (
       <div className='o-form__input-group'>
-        <this.Button
+        <Button
           aria-label='Review Your Order'
           className='c-address-form__button o-button--sml'
           label='Review Your Order'
@@ -67,7 +67,7 @@ export default class StripePayment extends Component {
       <>
         <div className='o-form__background'>
           <div className='o-form__wrapper'>
-            <this.StripeWrapper
+            <StripeWrapper
               billingAddress={checkout.billingAddress}
               cardTokenRequested={cardTokenRequested}
               onCardTokenReceived={onCardTokenReceived}
@@ -79,7 +79,7 @@ export default class StripePayment extends Component {
               <label>Billing address *</label>
             </div>
 
-            <this.Checkbox
+            <Checkbox
               type='checkbox'
               label='Same as shipping address'
               name='shippingAddressAsBillingAddress'
@@ -101,7 +101,7 @@ export default class StripePayment extends Component {
 
         { !billingAsShipping &&
           <>
-            { addressBook.length > 0 && <this.AddressBook
+            { addressBook.length > 0 && <AddressBook
               addressBook={addressBook}
               formName='shippingAddress'
               currentAddressId={billingAddress.id}
@@ -110,7 +110,7 @@ export default class StripePayment extends Component {
               onBookAddressSelected={this.props.onBookAddressSelected}
               addressFormDisplayed={this.props.addressFormDisplayed()}
             /> }
-            { this.props.addressFormDisplayed() && <this.AddressForm
+            { this.props.addressFormDisplayed() && <AddressForm
               aria-label='Billing address form'
               autoFillAddress={autoFillAddress}
               checkout={checkout}
