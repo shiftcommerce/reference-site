@@ -31,7 +31,6 @@ module.exports = {
     }
   },
   addToCart: async (req, res) => {
-    req.query = { ...req.query, ...cartApiEndpointQuery }
     const cartId = req.signedCookies.cart
 
     let response

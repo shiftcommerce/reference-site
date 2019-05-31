@@ -44,6 +44,11 @@ describe('getAddressBook()', () => {
     const req = {
       session: {
         customerId: 77
+      },
+      query: {
+        fields: {
+          addresses: 'address_line_1,address_line_2,city,country,first_name,last_name,meta_attributes,postcode,preferred_billing,preferred_shipping,state',
+        }
       }
     }
 
@@ -55,11 +60,13 @@ describe('getAddressBook()', () => {
 
     nock(process.env.API_HOST)
       .defaultReplyHeaders({ 'access-control-allow-origin': '*', 'access-control-allow-headers': 'Authorization' })
-      .options('/test_tenant/v1/customer_accounts/77/addresses')
+      .options(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses`)
+      .query(req.query)
       .reply(200)
 
     nock(process.env.API_HOST)
-      .get('/test_tenant/v1/customer_accounts/77/addresses')
+      .get(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses`)
+      .query(req.query)
       .reply(200, addressBookResponse)
 
     const response = await getAddressBook(req, res)
@@ -98,11 +105,11 @@ describe('createAddressBookEntry()', () => {
 
     nock(process.env.API_HOST)
       .defaultReplyHeaders({ 'access-control-allow-origin': '*', 'access-control-allow-headers': 'Authorization' })
-      .options('/test_tenant/v1/customer_accounts/77/addresses')
+      .options(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses`)
       .reply(200)
 
     nock(process.env.API_HOST)
-      .post('/test_tenant/v1/customer_accounts/77/addresses')
+      .post(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses`)
       .reply(201, createAddressBookEntryRequest)
 
     const response = await createAddressBookEntry(req, res)
@@ -148,11 +155,11 @@ describe('deleteAddress()', () => {
 
     nock(process.env.API_HOST)
       .defaultReplyHeaders({ 'access-control-allow-origin': '*', 'access-control-allow-headers': 'Authorization' })
-      .options('/test_tenant/v1/customer_accounts/77/addresses/469')
+      .options(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses/${req.params.addressId}`)
       .reply(200)
 
     nock(process.env.API_HOST)
-      .delete('/test_tenant/v1/customer_accounts/77/addresses/469')
+      .delete(`/test_tenant/v1/customer_accounts/${req.session.customerId}/addresses/${req.params.addressId}`)
       .reply(204)
 
     const response = await deleteAddress(req, res)

@@ -77,7 +77,7 @@ Once the config has been defined you should be able to use `SHIFTClient`
 
 **getCustomerOrdersV1(query)**
 
-**getAddressBookV1(customerAccountId)**
+**getAddressBookV1(customerAccountId, query)**
 
 **createAddressBookEntryV1(body, customerAccountId)**
 
