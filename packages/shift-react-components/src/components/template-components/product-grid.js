@@ -20,7 +20,7 @@ class ProductGrid extends PureComponent {
       let product = componentData.products[i]
 
       products.push(
-        <this.ProductListingCard
+        <ProductListingCard
           className='o-card-grid__card'
           title={product.title}
           assetFileUrl={product.picture_url}
@@ -46,9 +46,9 @@ class ProductGrid extends PureComponent {
    */
   catButton (componentData) {
     return (
-      <this.Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
+      <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }
-      </this.Link>
+      </Link>
     )
   }
 
