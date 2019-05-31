@@ -25,6 +25,11 @@ const helmet = require('helmet')
 const httpSecurityHeaders = (server) => {
   // Enable Cross-Site Request Forgery (CSRF) Protection
   server.use(csurf())
+  server.all('*', (req, res, next) => {
+    // set csrf token in cookie
+    res.cookie('_csrf', req.csrfToken())
+    next()
+  })
 
   // Remove 'X-Powered-By: Express' header as this could help attackers
   server.use(helmet.hidePoweredBy())

@@ -1,7 +1,6 @@
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
-const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')

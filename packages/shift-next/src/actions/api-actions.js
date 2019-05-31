@@ -1,3 +1,6 @@
+// Libraries
+import Cookies from 'js-cookie'
+
 // Libs
 import ApiClient from '../lib/api-client'
 import JsonApiParser from '../lib/json-api-parser'
@@ -16,7 +19,7 @@ export const readEndpoint = (request) => {
 export const postEndpoint = (request) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().post(request.endpoint, request.body)
+    return new ApiClient().post(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
       .then(response => {
         return _determinePostDispatch(dispatch, request, response)
       })
@@ -30,7 +33,7 @@ export const postEndpoint = (request) => {
 export const deleteEndpoint = (request) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().delete(request.endpoint, request.body)
+    return new ApiClient().delete(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
       .then(processResponse(dispatch, request, [204]))
       .catch(error => {
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error))
