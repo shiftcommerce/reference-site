@@ -7,12 +7,13 @@ import { decimalPrice } from '../../lib/decimal-price'
 import DropdownSelect from '../../objects/dropdown-select'
 import { Image } from '../../objects/image'
 import Config from '../../lib/config'
+import link from '../../objects/link'
 
 export class LineItems extends Component {
   constructor (props) {
     super(props)
 
-    this.Link = Config.get().Link
+    this.Link = Config.get().Link || link
   }
 
   /**

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 // Lib
-import flash from '../../objects/flash'
+import { Flash } from '../../objects/flash'
 import PaymentHeader from '../checkout/payment-header'
 
 export class PaymentSummary extends PureComponent {
@@ -23,14 +23,14 @@ export class PaymentSummary extends PureComponent {
     const { errorMessage, headerTitle, onClick, showEditButton, withErrors } = this.props
     return (
       <>
-        <this.PaymentHeader
+        <PaymentHeader
           title={headerTitle}
           collapsed
           onClick={onClick}
           showEditButton={showEditButton}
         />
         <div className={classNames('c-payment__summary', { 'o-form__error': withErrors })}>
-          { errorMessage && <this.Flash text={errorMessage} modifier={'error'}/> }
+          { errorMessage && <Flash text={errorMessage} modifier={'error'}/> }
           <p>
             <span className='u-bold'>Billing Address: </span>
             { this.renderBillingAddress() }

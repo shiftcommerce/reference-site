@@ -4,6 +4,7 @@ import t from 'typy'
 
 // Lib
 import Checkbox from '../../objects/checkbox'
+import Input from '../../objects/input'
 import DropdownSelect from '../../objects/dropdown-select'
 
 export class AddressForm extends Component {
