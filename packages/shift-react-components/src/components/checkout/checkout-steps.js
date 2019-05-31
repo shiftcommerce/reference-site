@@ -4,11 +4,12 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import link from '../../objects/link'
+import Config from '../../lib/config'
+import CheckoutStepIcon from '../checkout/checkout-step-icon'
 
 export function CheckoutSteps ({ currentStep, stepActions }) {
-  const CheckoutStepIcon = componentMapping('CheckoutStepIcon')
-  const Link = componentMapping('Link')
+  const Link = Config.get().Link || link
 
   const renderCheckoutSteps = () => {
     const checkoutSteps = [

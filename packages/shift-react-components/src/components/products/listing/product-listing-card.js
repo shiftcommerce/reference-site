@@ -2,19 +2,15 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-// Lib
-import componentMapping from '../../../lib/component-mapping'
+// Objects
+import LazyLoad from '../../../objects/lazy-load'
+import Link from '../../../objects/link'
+import Rating from '../../../objects/rating'
+
+// Components
+import ProductPrice from '../display/product-price'
 
 class ProductListingCard extends Component {
-  constructor (props) {
-    super(props)
-
-    this.LazyLoad = componentMapping('LazyLoad')
-    this.Link = componentMapping('Link')
-    this.ProductPrice = componentMapping('ProductPrice')
-    this.Rating = componentMapping('Rating')
-  }
-
   renderImageAndTitle () {
     const {
       assetFileAltText,
@@ -35,7 +31,7 @@ class ProductListingCard extends Component {
     return (
       <>
         <div className='c-product-listing-card__gallery o-image'>
-          <this.LazyLoad className='c-product-listing-card__image u-image-shadow'
+          <LazyLoad className='c-product-listing-card__image u-image-shadow'
             src={assetFileUrl}
             alt={assetFileAltText || title}
             aria-label={title}
@@ -64,14 +60,14 @@ class ProductListingCard extends Component {
     return (
       <div className={classNames('c-product-listing-card', className)}>
         <div className='c-product-listing-card__body'>
-          <this.Link href={`/slug?slug=${productPath}`} as={productPath}>
+          <Link href={`/slug?slug=${productPath}`} as={productPath}>
             { this.renderImageAndTitle() }
-          </this.Link>
+          </Link>
           <div className='c-product-listing-card__price'>
-            <this.ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
+            <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
           </div>
           <div className='c-product-listing-card__rating'>
-            <this.Rating rating={productRating} />
+            <Rating rating={productRating} />
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 // Libraries
 import React from 'react'
-import componentMapping from '../../lib/component-mapping'
 import PropTypes from 'prop-types'
 
+import Button from '../../objects/button'
+
 export function PaymentMethodHeader ({ collapsed, onClick, showEditButton, title }) {
-  const Button = componentMapping('Button')
   return (
     <div className='o-form__header c-payment-method__header'>
       <h2>{ title }</h2>

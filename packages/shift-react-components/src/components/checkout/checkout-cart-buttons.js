@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import Sticky from 'react-stickyfill'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import link from '../../objects/link'
+import Config from '../../lib/config'
+import { Button } from '../../objects/button'
 
 export function CheckoutCartButtons ({ continueButtonProps }) {
-  const Button = componentMapping('Button')
-  const Link = componentMapping('Link')
-
+  const Link = Config.get().Link || link
   const renderContinueButton = () => (
     <Button
       className='c-checkout-cart-buttons__cta c-checkout-cart-buttons__cta--proceed o-button--sml'

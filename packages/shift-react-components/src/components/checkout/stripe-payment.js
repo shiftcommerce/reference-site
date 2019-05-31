@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { AddressBook } from './address-book'
+import { AddressForm } from './address-form'
+import { Button } from '../../objects/button'
+import Checkbox from '../../objects/checkbox'
+import StripeWrapper from './stripe-wrapper'
 
 export default class StripePayment extends Component {
   constructor (props) {
@@ -13,11 +17,6 @@ export default class StripePayment extends Component {
       stripeFormComplete: false
     }
 
-    this.AddressBook = componentMapping('AddressBook')
-    this.AddressForm = componentMapping('AddressForm')
-    this.Button = componentMapping('Button')
-    this.Checkbox = componentMapping('Checkbox')
-    this.StripeWrapper = componentMapping('StripeWrapper')
     this.setStripeFormComplete = this.setStripeFormComplete.bind(this)
   }
 
@@ -28,7 +27,7 @@ export default class StripePayment extends Component {
           aria-label='Review Your Order'
           className='c-address-form__button o-button--sml'
           label='Review Your Order'
-          status={( this.state.stripeFormComplete ? 'positive' : 'disabled')}
+          status={(this.state.stripeFormComplete ? 'positive' : 'disabled')}
           type='primary'
           disabled={!this.state.stripeFormComplete}
           onClick={() => this.props.nextSection('complete')}

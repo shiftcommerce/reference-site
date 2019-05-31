@@ -2,7 +2,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import componentMapping from '../../lib/component-mapping'
+import Image from '../../objects/image'
 
 /**
  * Renders a help message when there is no data for the cart
@@ -10,8 +10,6 @@ import componentMapping from '../../lib/component-mapping'
  * @return {string} - HTML markup for the component
  */
 export const PaymentIcons = (props) => {
-  const Image = componentMapping('Image')
-
   return (
     <div className={classNames(props.className, 'c-payment-icons')}>
       <p>We Accept</p>

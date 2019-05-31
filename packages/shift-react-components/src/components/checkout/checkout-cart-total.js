@@ -5,7 +5,6 @@ import Sticky from 'react-stickyfill'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-import componentMapping from '../../lib/component-mapping'
 
 export function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total }) {
   const renderPromotions = () => discountSummaries.map(discountSummary => (

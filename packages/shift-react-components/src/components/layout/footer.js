@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Image } from '../../objects/image'
 
 // Assets
 import facebookIcon from '../../static/facebook.svg'
@@ -10,12 +10,6 @@ import instagramIcon from '../../static/instagram.svg'
 import twitterIcon from '../../static/twitter.svg'
 
 export class Footer extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Image = componentMapping('Image')
-  }
-
   renderFooter () {
     return (
       <>
@@ -27,9 +21,9 @@ export class Footer extends Component {
             <a>Connect with ShopGo</a>
           </div>
           <div className='c-footer__social-links'>
-            <this.Image src={facebookIcon} />
-            <this.Image src={instagramIcon} />
-            <this.Image src={twitterIcon} />
+            <Image src={facebookIcon} />
+            <Image src={instagramIcon} />
+            <Image src={twitterIcon} />
           </div>
         </div>
       </>

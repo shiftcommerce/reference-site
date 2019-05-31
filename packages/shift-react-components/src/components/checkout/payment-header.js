@@ -3,14 +3,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import Button from '../../objects/button'
 
 export default class PaymentHeader extends PureComponent {
-  constructor (props) {
-    super(props)
-    this.Button = componentMapping('Button')
-  }
-
   render () {
     const {
       collapsed,
@@ -22,7 +17,7 @@ export default class PaymentHeader extends PureComponent {
     return (
       <div className='o-form__header  c-payment__header'>
         <h2>{ title }</h2>
-        { collapsed && showEditButton && <this.Button
+        { collapsed && showEditButton && <Button
           aria-label='Edit your payment method'
           className='o-button-edit'
           label='Edit'

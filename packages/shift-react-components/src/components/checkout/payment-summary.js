@@ -4,20 +4,14 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import flash from '../../objects/flash'
+import PaymentHeader from '../checkout/payment-header'
 
 export class PaymentSummary extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Flash = componentMapping('Flash')
-    this.PaymentHeader = componentMapping('PaymentHeader')
-  }
-
-  renderBillingAddress() {
+  renderBillingAddress () {
     const { billingAddress } = this.props
 
-    return(
+    return (
       <>
         <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
         <span>{ billingAddress.address_line_1 }, { billingAddress.city }, { billingAddress.postcode }</span>
@@ -36,7 +30,7 @@ export class PaymentSummary extends PureComponent {
           showEditButton={showEditButton}
         />
         <div className={classNames('c-payment__summary', { 'o-form__error': withErrors })}>
-         { errorMessage && <this.Flash text={errorMessage} modifier={'error'}/> }
+          { errorMessage && <this.Flash text={errorMessage} modifier={'error'}/> }
           <p>
             <span className='u-bold'>Billing Address: </span>
             { this.renderBillingAddress() }

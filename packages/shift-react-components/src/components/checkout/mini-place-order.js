@@ -4,11 +4,9 @@ import PropTypes from 'prop-types'
 
 // Libs
 import { decimalPrice } from '../../lib/decimal-price'
-import componentMapping from '../../lib/component-mapping'
+import Button from '../../objects/button'
 
 export function MiniPlaceOrder ({ convertToOrder, isValidOrder, total }) {
-  const Button = componentMapping('Button')
-
   return (
     <div className='c-cart-summary__mini-button-container'>
       <div className='c-cart-summary__mini-button-container-item'>

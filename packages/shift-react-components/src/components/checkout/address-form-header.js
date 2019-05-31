@@ -3,15 +3,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import Button from '../../objects/button'
 
 export class AddressFormHeader extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-  }
-
   render () {
     const {
       collapsed,
@@ -25,12 +19,12 @@ export class AddressFormHeader extends PureComponent {
         <div className='o-form__header-title c-address-form__header-title'>
           <h2>{ title }</h2>
         </div>
-        { collapsed && showEditButton && <this.Button
-            label='Edit'
-            status='secondary'
-            className='o-button-edit'
-            onClick={onClick}
-          />
+        { collapsed && showEditButton && <Button
+          label='Edit'
+          status='secondary'
+          className='o-button-edit'
+          onClick={onClick}
+        />
         }
       </div>
     )
