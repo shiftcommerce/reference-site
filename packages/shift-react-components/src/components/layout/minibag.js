@@ -7,8 +7,8 @@ import { decimalPrice } from '../../lib/decimal-price'
 // Components
 import { Button } from '../../objects/button'
 import { Image } from '../../objects/image'
-import { Link } from '../../objects/link'
-import { DropdownSelect } from '../../objects/dropdown-select'
+import Link from '../../objects/link'
+import DropdownSelect from '../../objects/dropdown-select'
 
 export class Minibag extends PureComponent {
   renderLineItems (lineItems) {

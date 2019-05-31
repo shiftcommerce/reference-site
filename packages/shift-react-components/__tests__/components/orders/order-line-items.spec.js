@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import OrderLineItems from '../../../src/components/orders/order-line-items'
+import { OrderLineItems } from '../../../src/components/orders/order-line-items'
 
 // Lib
 import { penceToPounds } from '../../../src/lib/pence-to-pounds'

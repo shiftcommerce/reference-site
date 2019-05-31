@@ -2,9 +2,9 @@
 import React from 'react'
 
 // Components
-import Layout from '../../../src/components/layout/layout'
-import Minibag from '../../../src/components/layout/minibag'
-import NavBar from '../../../src/components/navigation/navbar'
+import { Layout } from '../../../src/components/layout/layout'
+import { Minibag } from '../../../src/components/layout/minibag'
+import { NavBar } from '../../../src/components/navigation/navbar'
 
 // Objects
 import Logo from '../../../src/objects/logo'

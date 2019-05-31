@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import MiniBag from '../../../src/components/layout/minibag'
+import { Minibag } from '../../../src/components/layout/minibag'
 
 describe('Minibag', () => {
   test('doesnt render when there is no lineitems', () => {
@@ -15,7 +15,7 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} className={className} miniBagDisplayed={true} />
+      <Minibag cart={cart} className={className} miniBagDisplayed={true} />
     )
 
     // assert
@@ -88,7 +88,7 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} miniBagDisplayed={false} />
+      <Minibag cart={cart} miniBagDisplayed={false} />
     )
 
     // assert
@@ -162,7 +162,7 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} miniBagDisplayed={true} onItemQuantityUpdated={jest.fn()} />
+      <Minibag cart={cart} miniBagDisplayed={true} onItemQuantityUpdated={jest.fn()} />
     )
 
     // assert
