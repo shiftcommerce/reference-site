@@ -3,7 +3,7 @@ const helmet = require('helmet')
 
 /**
  * Enables the Content Security Policy
- * @param {object} server - eg. express
+ * @param {Function} server - eg. express
  * @param {object} options - eg. imageHosts, scriptHosts
  */
 const contentSecurityPolicy = (server, options = {}) => {

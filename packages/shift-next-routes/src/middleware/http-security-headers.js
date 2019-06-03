@@ -20,7 +20,7 @@ const helmet = require('helmet')
  * 
  * Also enables CSRF protection 
  * 
- * @param {object} server - eg. express
+ * @param {Function} server - eg. express
  */
 const httpSecurityHeaders = (server) => {
   // Remove 'X-Powered-By: Express' header as this could help attackers

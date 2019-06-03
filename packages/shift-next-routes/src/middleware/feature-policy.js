@@ -3,7 +3,7 @@ const helmet = require('helmet')
 
 /**
  * Enables the Feature Policy
- * @param {object} server - eg. express
+ * @param {Function} server - eg. express
  * @param {object} policyOptions - eg. { payment: ['example.com'] }
  */
 const featurePolicy = (server, policyOptions = {}) => {

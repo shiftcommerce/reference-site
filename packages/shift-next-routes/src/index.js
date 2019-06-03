@@ -41,21 +41,21 @@ module.exports = {
 
   /**
    * Enables the Content Security Policy
-   * @param {object} server - eg. express
+   * @param {Function} server - eg. express
    * @param {object} options - eg. imageHosts, scriptHosts
    */
   shiftContentSecurityPolicy: (server, options = {}) => contentSecurityPolicy(server, options),
 
   /**
    * Enables the Feature Policy
-   * @param {object} server - eg. express
+   * @param {Function} server - eg. express
    * @param {object} policyOptions - eg. { payment: ['example.com'] }
    */
   shiftFeaturePolicy: (server, policyOptions = {}) => featurePolicy(server, policyOptions),
 
   /**
    * Defines Routes
-   * @param {object} server - eg. express
+   * @param {Function} server - eg. express
    */
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
@@ -114,7 +114,7 @@ module.exports = {
 
   /**
    * Set HTTP Security Headers
-   * @param {object} server - eg. express
+   * @param {Function} server - eg. express
    */
   shiftSecurityHeaders: (server) => httpSecurityHeaders(server)
 }
