@@ -1,3 +1,6 @@
+// libs
+const { buildContentSecurityPolicy } = require('../build-content-security-policy')
+
 /**
  * Enables the Checkout Content Security Policy
  * @param {Function} server - eg. express

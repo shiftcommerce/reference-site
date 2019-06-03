@@ -1,3 +1,6 @@
+// libs
+const { buildContentSecurityPolicy } = require('../build-content-security-policy')
+
 /**
  * Enables the Static Page Content Security Policy
  * @param {Function} server - eg. express

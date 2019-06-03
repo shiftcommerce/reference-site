@@ -16,15 +16,6 @@ import { readProduct } from '../actions/product-actions'
 import Config from '../lib/config'
 
 class ProductPage extends Component {
-
-  static async getInitialProps ({ req, res, query }) {
-
-    console.log("query", query)
-    console.log("req:", req)
-    console.log("res:", res)
-  }
-
-
   constructor (props) {
     super(props)
 

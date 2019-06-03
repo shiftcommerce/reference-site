@@ -29,7 +29,7 @@ const slugRequest = (slug) => {
 }
 
 class Slug extends Component {
-  static async getInitialProps ({ res, query, reduxStore }) {
+  static async getInitialProps ({ query, reduxStore }) {
     reduxStore.dispatch(toggleLoading(true))
     const request = slugRequest(query.slug)
     const response = await new ApiClient().read(request.endpoint, request.query)
@@ -42,8 +42,6 @@ class Slug extends Component {
       url = '/'
     }
 
-    console.log("query", query)
-    console.log("clientsideRes:", res)
     Router.push(`/${resourceType.toLowerCase()}?id=${resourceId}`, url)
     return {}
   }
