@@ -12,7 +12,8 @@ const formTranslations = {
   emailInputLabel: 'Email *',
   emailPlaceholder: 'Email',
   passwordInputLabel: 'Password *',
-  passwordPlaceholder: 'Password'
+  passwordPlaceholder: 'Password',
+  resetPasswordLink: 'Reset Password?'
 }
 
 function mapStateToProps ({ login, account: { loggedIn } }) {

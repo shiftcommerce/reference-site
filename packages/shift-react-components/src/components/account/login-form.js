@@ -63,7 +63,7 @@ export class LoginForm extends Component {
     return (
       <Button
         className='c-login__button o-button--sml'
-        aria-label='Continue Securely'
+        aria-label={ loginButtonText }
         label={ loginButtonText }
         status={(props.isValid ? 'positive' : 'disabled')}
         type='submit'
@@ -121,7 +121,7 @@ export class LoginForm extends Component {
         <div className={classNames('o-form', className)}>
           { this.renderFormik(initialValues, loginSchema, handleSubmit, login) }
         </div>
-        <a href='/account/forgotpassword' className='c-login__anchor'>Reset Password?</a>
+        <a href='/account/forgotpassword' className='c-login__anchor'>{ formTranslations.resetPasswordLink }</a>
         <p className='c-login__caption'>Don't have an account?</p>
         <Link href='/account/register'>
           <a className='c-login__register-button'>{ formTranslations.registerButtonText }</a>
