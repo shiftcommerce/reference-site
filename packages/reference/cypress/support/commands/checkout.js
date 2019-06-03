@@ -64,24 +64,10 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
 
   cy.route({
     method: 'GET',
-    url: '/getMenus?**',
-    status: 200,
-    response: 'fixture:menus/get-menus.json'
-  }).as('getMenus')
-
-  cy.route({
-    method: 'GET',
     url: '/getShippingMethods',
     status: 200,
     response: 'fixture:cart/get-shipping-methods.json'
   }).as('getShippingMethods')
-
-  cy.route({
-    method: 'POST',
-    url: '/xoplatform/logger/api/logger**',
-    status: 200,
-    response: "{'events': [], 'meta': '{}'}"
-  }).as('payPalLogger')
 
   cy.route({
     method: 'POST',
@@ -127,13 +113,6 @@ Cypress.Commands.add('navigateToReviewCheckoutPage', () => {
     response: 'fixture:search/empty-search.json'
   }).as('emptySearch')
 
-  // cy.route({
-  //   method: 'GET',
-  //   url: '/getCart',
-  //   status: 200,
-  //   response: 'fixture:cart/get-cart-with-line-item.json'
-  // }).as('getCart')
-
   cy.route({
     method: 'POST',
     url: '/createAddress',
@@ -143,24 +122,10 @@ Cypress.Commands.add('navigateToReviewCheckoutPage', () => {
 
   cy.route({
     method: 'GET',
-    url: '/getMenus?**',
-    status: 200,
-    response: 'fixture:menus/get-menus.json'
-  }).as('getMenus')
-
-  cy.route({
-    method: 'GET',
     url: '/getShippingMethods',
     status: 200,
     response: 'fixture:cart/get-shipping-methods.json'
   }).as('getShippingMethods')
-
-  cy.route({
-    method: 'POST',
-    url: '/xoplatform/logger/api/logger**',
-    status: 200,
-    response: "{'events': [], 'meta': '{}'}"
-  }).as('payPalLogger')
 
   cy.route({
     method: 'POST',
