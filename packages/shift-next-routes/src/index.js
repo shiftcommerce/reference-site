@@ -19,7 +19,7 @@ const OrderRoutes = require('./routes/order-routes')
 const { getSessionExpiryTime } = require('./lib/session')
 
 // Middleware
-const { contentSecurityPolicy } = require('./middleware/content-security-policy')
+const { contentSecurityPolicy } = require('./middleware/content-security-policy/index')
 const { featurePolicy } = require('./middleware/feature-policy')
 const { httpSecurityHeaders } = require('./middleware/http-security-headers')
 
@@ -42,7 +42,7 @@ module.exports = {
   /**
    * Enables the Content Security Policy
    * @param {Function} server - eg. express
-   * @param {object} options - eg. imageHosts, scriptHosts
+   * @param {object} options - eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
    */
   shiftContentSecurityPolicy: (server, options = {}) => contentSecurityPolicy(server, options),
 
