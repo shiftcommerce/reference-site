@@ -13,10 +13,10 @@ import SearchBar from '../search/search-bar'
 import Config from '../../lib/config'
 
 // Assets
+import defaultLogo from '../../static/shopgo-logo.svg'
 import accountIcon from '../../static/account-icon.svg'
 import imgBagIcon from '../../static/bag-icon.svg'
 
-const Link = Config.get().Link || link
 export class Layout extends Component {
   renderNav () {
     return (
@@ -35,6 +35,7 @@ export class Layout extends Component {
   }
 
   renderHeaderAccount (loggedIn) {
+    const Link = Config.get().Link || link
     const signedIn = loggedIn ? 'My Account' : 'Sign In'
 
     return (
@@ -49,6 +50,7 @@ export class Layout extends Component {
   }
 
   renderAccountDropDown () {
+    const Link = Config.get().Link || link
     const { loggedIn, showClass } = this.props
 
     const addShowClass = showClass ? 'show' : ''
@@ -102,7 +104,7 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const { cart, deleteItem, loggedIn, onItemQuantityUpdated, shrunk } = this.props
+    const { cart, deleteItem, loggedIn, onItemQuantityUpdated, shrunk, logoSrc } = this.props
 
     const headerClasses = classNames('o-header', {
       'o-header--shrunk': shrunk || cart.miniBagDisplayed
@@ -113,7 +115,7 @@ export class Layout extends Component {
         <div className={ headerClasses }>
           <div className='o-header__top'>
             <div className='o-header__top-wrapper'>
-              <Logo className='o-header__logo' />
+              <Logo className='o-header__logo' logoSrc={logoSrc || defaultLogo} />
               { this.renderMobileNav() }
               { this.renderHeaderAccount(loggedIn) }
               { this.renderBasket() }

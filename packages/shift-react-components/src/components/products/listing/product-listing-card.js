@@ -10,7 +10,6 @@ import link from '../../../objects/link'
 
 // Components
 import ProductPrice from '../display/product-price'
-const Link = Config.get().Link || link
 
 class ProductListingCard extends Component {
   renderImageAndTitle () {
@@ -58,6 +57,8 @@ class ProductListingCard extends Component {
       productPath,
       productRating
     } = this.props
+
+    const Link = Config.get().Link || link
 
     return (
       <div className={classNames('c-product-listing-card', className)}>

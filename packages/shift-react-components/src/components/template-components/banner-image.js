@@ -6,10 +6,10 @@ import t from 'typy'
 import LazyLoad from '../../objects/lazy-load'
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 class BannerImage extends PureComponent {
   render () {
+    const Link = Config.get().Link || link
     const { componentData, className } = this.props
     const imgSrc = t(componentData, 'image[0].s3_url').safeObject
     const mobileSrc = t(componentData, 'mobile_image[0].s3_url').safeObject

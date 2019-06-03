@@ -8,7 +8,6 @@ import ProductListingCard from '../products/listing/product-listing-card'
 
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 class ProductGrid extends PureComponent {
   /**
@@ -48,6 +47,7 @@ class ProductGrid extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   catButton (componentData) {
+    const Link = Config.get().Link || link
     return (
       <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }

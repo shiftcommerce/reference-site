@@ -6,7 +6,6 @@ import classNames from 'classnames'
 import { decimalPrice } from '../../lib/decimal-price'
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 export class CartTableSummary extends PureComponent {
   /**
@@ -56,6 +55,7 @@ export class CartTableSummary extends PureComponent {
   }
 
   render () {
+    const Link = Config.get().Link || link
     const { cart, className, loading, cheapestShipping } = this.props
 
     return (

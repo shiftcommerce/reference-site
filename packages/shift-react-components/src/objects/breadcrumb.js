@@ -3,7 +3,6 @@ import classNames from 'classnames'
 
 import Config from '../lib/config'
 import link from './link'
-const Link = Config.get().Link || link
 
 export class Breadcrumb extends Component {
   /**
@@ -13,6 +12,7 @@ export class Breadcrumb extends Component {
    * @return {string} - HTML markup for the component
    */
   renderBreadcrumbItem (crumb, key) {
+    const Link = Config.get().Link || link
     // The href for the Home link is different to the others, which are pulled
     // from the platform, so handle a direct href differently
     const href = crumb.href || `${crumb.page}?id=${crumb.id}`
