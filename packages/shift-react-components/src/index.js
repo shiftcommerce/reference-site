@@ -47,7 +47,7 @@ export { default as ForgotPasswordForm } from './components/account/forgot-passw
 export { default as MyAccountHeader } from './components/account/my-account-header'
 export { default as PasswordResetForm } from './components/account/password-reset-form'
 export { default as Sidebar } from './components/account/sidebar'
-
+export { default as SidebarItem } from './components/account/sidebar-item'
 /**
  * Search Components
  */
