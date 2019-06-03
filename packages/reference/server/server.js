@@ -31,13 +31,6 @@ const {
   shiftSecurityHeaders
 } = require('@shiftcommerce/shift-next-routes')
 
-// Config
-const connectHosts = process.env.CONNECT_SCRIPTS
-const frameHosts = process.env.FRAME_HOSTS
-const imageHosts = process.env.IMAGE_HOSTS
-const scriptHosts = process.env.SCRIPT_HOSTS
-const styleHosts = process.env.STYLE_HOSTS
-
 module.exports = app.prepare().then(() => {
   const server = express()
 
@@ -63,11 +56,11 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }))
 
   shiftContentSecurityPolicy(server, {
-    connectHosts: connectHosts,
-    frameHosts: frameHosts,
-    imageHosts: imageHosts,
-    scriptHosts: scriptHosts,
-    styleHosts: styleHosts
+    connectHosts: process.env.CONNECT_SCRIPTS,
+    frameHosts: process.env.FRAME_HOSTS,
+    imageHosts: process.env.IMAGE_HOSTS,
+    scriptHosts: process.env.SCRIPT_HOSTS,
+    styleHosts: process.env.STYLE_HOSTS
   })
   shiftFeaturePolicy(server)
   shiftSecurityHeaders(server)
