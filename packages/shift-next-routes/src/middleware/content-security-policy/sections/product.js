@@ -10,7 +10,7 @@ const productPageContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/product.js)$/, (req, res, next) => {
     console.log('Product PAGE')
     // Build and set the CSP header on the response
-    res.set('content-security-policy', buildContentSecurityPolicy(options))
+    res.set('Content-Security-Policy', buildContentSecurityPolicy(options))
     // Call the next middleware in the stack
     next()
   })

@@ -10,7 +10,7 @@ const categoryPageContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/category.js)$/, (req, res, next) => {
     console.log('Category PAGE')
     // Build and set the CSP header on the response
-    res.set('content-security-policy', buildContentSecurityPolicy(options))
+    res.set('Content-Security-Policy', buildContentSecurityPolicy(options))
     // Call the next middleware in the stack
     next()
   })

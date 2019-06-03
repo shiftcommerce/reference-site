@@ -10,7 +10,7 @@ const searchPageContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/search.js)/, (req, res, next) => {
     console.log('Search PAGE')
     // Build and set the CSP header on the response
-    res.set('content-security-policy', buildContentSecurityPolicy(options))
+    res.set('Content-Security-Policy', buildContentSecurityPolicy(options))
     // Call the next middleware in the stack
     next()
   })
