@@ -10,6 +10,9 @@ import { Button } from '../../objects/button'
 import Checkbox from '../../objects/checkbox'
 import { FormErrors } from '../../lib/form-errors'
 
+// Assets
+import IconClose from '../../static/icon-close.svg'
+
 export class LoginForm extends Component {
   renderEmailInputField () {
     const { emailInputLabel, emailPlaceholder } = this.props.formTranslations
@@ -93,6 +96,25 @@ export class LoginForm extends Component {
     )
   }
 
+  /**
+  * We only want to render a 'close' icon on pages where the form is displayed
+  * in a modal. We can pass a closeButton attribute to the login form at the
+  * page level.
+  * @return {String} - HTML markup for the component
+  */
+  renderCloseButton () {
+    const { onClick, closeButton } = this.props
+
+    if (closeButton) {
+      return (
+        <button className='c-login__close' onClick={onClick}>
+          <span className='u-visually-hidden'>Close</span>
+          <img src={IconClose} />
+        </button>
+      )
+    } else return null
+  }
+
   render () {
     const {
       className,
@@ -115,8 +137,11 @@ export class LoginForm extends Component {
     })
 
     return (
-      <div className ='c-login'>
-        <h1 className='c-login__title'>{ formTranslations.title }</h1>
+      <div className='c-login'>
+        <div className='c-login__headings'>
+          <h1 className='c-login__title'>{ formTranslations.title }</h1>
+          { this.renderCloseButton() }
+        </div>
         <p className='c-login__caption'>{ formTranslations.caption }</p>
         <div className={classNames('o-form', className)}>
           { this.renderFormik(initialValues, loginSchema, handleSubmit, login) }

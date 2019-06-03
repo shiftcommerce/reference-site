@@ -5,7 +5,7 @@ import { algoliaReduxWrapper } from '@shiftcommerce/shift-next/src/lib/algolia-r
 import LoginPage from '@shiftcommerce/shift-next/src/pages/login'
 
 const formTranslations = {
-  title: 'login',
+  title: 'Login',
   caption: 'Please enter your details below',
   loginButtonText: 'continue securely',
   registerButtonText: 'create new account',
