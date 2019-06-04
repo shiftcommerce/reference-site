@@ -56,31 +56,9 @@ exports[`Product page loading and error states displays loading spinner, when th
     }
   }
 >
-  <Loading
+  <div
     className="o-loading"
-    color="#f5c6cb"
-    delay={250}
-    height={50}
-    type="spin"
-    width={50}
-  >
-    <div
-      className="o-loading"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg class=\\"icon-blank\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 32 32\\"></svg>
-",
-        }
-      }
-      style={
-        Object {
-          "fill": "#f5c6cb",
-          "height": 50,
-          "width": 50,
-        }
-      }
-    />
-  </Loading>
+  />
 </Loading>
 `;
 

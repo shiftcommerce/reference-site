@@ -1,6 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
-import { connectRefinementList } from 'react-instantsearch/connectors'
+import { connectRefinementList } from 'react-instantsearch-dom'
 
 // Components
 import Rating from '../../objects/rating'
