@@ -1,6 +1,6 @@
 describe('My Account - Addresses', () => {
   beforeEach(() => {
-    cy.setupMyAccountFixtures()
+    cy.setupAddressBookFixtures()
   })
 
   it('can create a new address and set as preferred shipping and billing address', () => {

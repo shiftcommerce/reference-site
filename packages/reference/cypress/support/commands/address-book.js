@@ -1,4 +1,4 @@
-Cypress.Commands.add('setupMyAccountFixtures', () => {
+Cypress.Commands.add('setupAddressBookFixtures', () => {
   cy.setCookie('signedIn', 'true')
 
   cy.server()
