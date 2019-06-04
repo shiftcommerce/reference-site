@@ -59,7 +59,7 @@ test('redirects to myaccount page when account already exists', async () => {
   expect(Router.router.push.mock.calls.length).toBe(1)
 
   // Assert - verify that the redirect goes to the myaccount page
-  expect(Router.router.push.mock.calls[0][0]).toBe('/account/myaccount')
+  expect(Router.router.push.mock.calls[0][0]).toBe('/account/details')
 })
 
 test('redirects to myaccount page when user already logged in', async () => {
@@ -88,7 +88,7 @@ test('redirects to myaccount page when user already logged in', async () => {
   expect(Router.router.push.mock.calls.length).toBe(1)
 
   // Assert - verify that the redirect goes to the myaccount page
-  expect(Router.router.push.mock.calls[0][0]).toBe('/account/myaccount')
+  expect(Router.router.push.mock.calls[0][0]).toBe('/account/details')
 })
 
 test('should clear errors when the page is mounted', () => {
