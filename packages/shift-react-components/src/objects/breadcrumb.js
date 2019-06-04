@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import componentMapping from '../lib/component-mapping'
 import classNames from 'classnames'
 
-class Breadcrumb extends Component {
-  constructor (props) {
-    super(props)
+import Config from '../lib/config'
+import link from './link'
 
-    this.Link = componentMapping('Link')
-  }
-
+export class Breadcrumb extends Component {
   /**
    * Render the breadcrumb item
    * @param  {object} crumb
@@ -16,19 +12,20 @@ class Breadcrumb extends Component {
    * @return {string} - HTML markup for the component
    */
   renderBreadcrumbItem (crumb, key) {
+    const Link = Config.get().Link || link
     // The href for the Home link is different to the others, which are pulled
     // from the platform, so handle a direct href differently
     const href = crumb.href || `${crumb.page}?id=${crumb.id}`
 
     return (
       <li className='o-breadcrumb__item' key={key}>
-        <this.Link
+        <Link
           href={href}
           as={crumb.canonical_path}
           className='o-breadcrumb__link'
         >
           { crumb.title }
-        </this.Link>
+        </Link>
       </li>
     )
   }
@@ -68,5 +65,3 @@ class Breadcrumb extends Component {
     )
   }
 }
-
-export default Breadcrumb

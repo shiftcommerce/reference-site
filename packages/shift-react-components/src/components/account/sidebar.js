@@ -2,21 +2,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
-
-class Sidebar extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {}
-
-    this.AccountAdresses = componentMapping('AccountDetails')
-    this.AccountDetails = componentMapping('AccountDetails')
-    this.AccountOrders = componentMapping('AccountDetails')
-    this.AccountPassword = componentMapping('AccountDetails')
-  }
-
+export class Sidebar extends Component {
   renderMenus () {
     const { currentMenu, handleClickedMenu, menus } = this.props
     return menus.map((menu, index) => (
@@ -51,5 +37,3 @@ class Sidebar extends Component {
     )
   }
 }
-
-export default Sidebar

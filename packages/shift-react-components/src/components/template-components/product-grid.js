@@ -3,17 +3,13 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Components
+import ProductListingCard from '../products/listing/product-listing-card'
+
+import Config from '../../lib/config'
+import link from '../../objects/link'
 
 class ProductGrid extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Link = componentMapping('Link')
-    this.ProductListingCard = componentMapping('ProductListingCard')
-  }
-
   /**
    * Render up to 4 products, using  the <ProductListingCard /> component
    * @param  {Object} componentData
@@ -26,7 +22,7 @@ class ProductGrid extends PureComponent {
       let product = componentData.products[i]
 
       products.push(
-        <this.ProductListingCard
+        <ProductListingCard
           className='o-card-grid__card'
           title={product.title}
           assetFileUrl={product.picture_url}
@@ -51,10 +47,11 @@ class ProductGrid extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   catButton (componentData) {
+    const Link = Config.get().Link || link
     return (
-      <this.Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
+      <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }
-      </this.Link>
+      </Link>
     )
   }
 

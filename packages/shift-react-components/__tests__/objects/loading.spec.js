@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import Loading from '../../src/objects/loading'
+import { Loading } from '../../src/objects/loading'
 
 test('loading spinner renders correctly', () => {
   // Act

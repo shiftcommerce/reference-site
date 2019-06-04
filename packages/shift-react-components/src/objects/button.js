@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-class Button extends Component {
+export class Button extends Component {
   render () {
     const {
       status, label, size, disabled = false,
@@ -27,5 +27,3 @@ class Button extends Component {
     )
   }
 }
-
-export default Button

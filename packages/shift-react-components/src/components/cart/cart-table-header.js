@@ -8,7 +8,7 @@ import format from 'date-fns/format'
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'
 
-class CartTableHeader extends PureComponent {
+export class CartTableHeader extends PureComponent {
   /**
    * Render the details of the basket, such as how many items are in the basket
    * @param  {Object} cart
@@ -57,5 +57,3 @@ class CartTableHeader extends PureComponent {
     )
   }
 }
-
-export default CartTableHeader

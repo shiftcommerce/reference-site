@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CheckoutCart from '../../../src/components/checkout/checkout-cart'
+import { CheckoutCart } from '../../../src/components/checkout/checkout-cart'
 
 describe('Checkout Cart', () => {
   test('renders the correct cart summary with single line item', () => {

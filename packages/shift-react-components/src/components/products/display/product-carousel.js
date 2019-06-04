@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 
-class ProductCarousel extends Component {
+export class ProductCarousel extends Component {
   render () {
     const { assetFiles } = this.props
 
@@ -18,5 +18,3 @@ class ProductCarousel extends Component {
     )
   }
 }
-
-export default ProductCarousel

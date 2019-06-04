@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-import componentMapping from '../../lib/component-mapping'
+// Components
+import { Button } from '../../objects/button'
 
 class EmailSignup extends Component {
   constructor (props) {
@@ -20,8 +21,6 @@ class EmailSignup extends Component {
     this.setInputRef = this.setInputRef.bind(this)
     this.handleKeyPress = this.handleKeyPress.bind(this)
     this.fakeSubmit = this.fakeSubmit.bind(this)
-
-    this.Button = componentMapping('Button')
   }
 
   /**
@@ -87,7 +86,7 @@ class EmailSignup extends Component {
             type='email' placeholder={componentData.placeholder_text}
             onKeyPress={this.handleKeyPress} required
           />
-          <this.Button
+          <Button
             className='c-email-signup__button' status='primary'
             size='sml' label={componentData.button_text}
             onClick={this.fakeSubmit}

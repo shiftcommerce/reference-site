@@ -1,7 +1,8 @@
 // Libraries
 import { connect } from 'react-redux'
 
-import { algoliaReduxWrapper, PasswordResetPage } from '@shiftcommerce/shift-next'
+import { algoliaReduxWrapper } from '@shiftcommerce/shift-next/src/lib/algolia-redux-wrapper'
+import PasswordResetPage from '@shiftcommerce/shift-next/src/pages/password_reset'
 
 function mapStateToProps ({ account }) {
   return { account }

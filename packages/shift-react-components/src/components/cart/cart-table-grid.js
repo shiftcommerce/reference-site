@@ -7,12 +7,10 @@ import classNames from 'classnames'
  * @param  {Object} props
  * @return {string} - HTML markup for the component
  */
-const CartTableGrid = (props) => {
+export const CartTableGrid = (props) => {
   return (
     <section className={classNames(props.className, 'c-cart-table__grid')}>
       { props.children }
     </section>
   )
 }
-
-export default CartTableGrid

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import Flash from '../../src/objects/flash'
+import { Flash } from '../../src/objects/flash'
 
 test('renders the flash text', () => {
   const wrapper = shallow(<Flash text='Test text' />)

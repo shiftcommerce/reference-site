@@ -10,14 +10,6 @@ describe('Minibag', () => {
       response: 'fixture:search/empty-search.json'
     }).as('emptySearch')
 
-    // Stub menus request
-    cy.route({
-      method: 'GET',
-      url: '/getMenus?**',
-      status: 200,
-      response: 'fixture:menus/get-menus.json'
-    }).as('getMenus')
-
     // Stub shipping methods request
     cy.route({
       method: 'GET',

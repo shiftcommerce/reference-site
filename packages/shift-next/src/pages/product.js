@@ -6,7 +6,8 @@ import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
-import { Loading, ProductDisplay } from '@shiftcommerce/shift-react-components'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { ProductDisplay } from '@shiftcommerce/shift-react-components/src/components/products/display/product-display'
 
 // Actions
 import { addToCart, toggleMiniBag } from '../actions/cart-actions'

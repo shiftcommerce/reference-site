@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import AddressFormHeader from '../../../src/components/checkout/address-form-header'
+import { AddressFormHeader } from '../../../src/components/checkout/address-form-header'
 
 test('renders the navigation button when collapsed', () => {
   // Arrange

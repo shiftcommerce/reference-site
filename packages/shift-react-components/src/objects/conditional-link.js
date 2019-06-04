@@ -1,30 +1,24 @@
 // Libraries
 import React, { Component } from 'react'
 
-import componentMapping from '../lib/component-mapping'
+import link from './link'
+import Config from '../lib/config'
 
 // This object conditionally wraps children in a link if
 // the passed URL is present
-class ConditionalLink extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Link = componentMapping('Link')
-  }
-
+export class ConditionalLink extends Component {
   render () {
+    const Link = Config.get().Link || link
     const { href, children, className } = this.props
 
     if (href) {
       return (
-        <this.Link href={`/slug?slug=${href}`} as={href} className={className}>
+        <Link href={`/slug?slug=${href}`} as={href} className={className}>
           { children }
-        </this.Link>
+        </Link>
       )
     } else {
       return children
     }
   }
 }
-
-export default ConditionalLink

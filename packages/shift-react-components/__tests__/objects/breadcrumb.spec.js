@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import Breadcrumb from '../../src/objects/breadcrumb'
+import { Breadcrumb } from '../../src/objects/breadcrumb'
 
 // Fixtures
 import breadcrumbMenuTrail from '../fixtures/breadcrumbs'

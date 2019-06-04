@@ -8,7 +8,8 @@ import ApiClient from '../lib/api-client'
 import Config from '../lib/config'
 
 // Components
-import { StaticPageError, Loading } from '@shiftcommerce/shift-react-components'
+import StaticPageError from '@shiftcommerce/shift-react-components/src/components/static-page/error'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req, reduxStore }) {
