@@ -1,4 +1,4 @@
-
+// lib
 const { buildContentSecurityPolicy } = require('../../../src/middleware/content-security-policy/build-content-security-policy')
 
 describe('buildContentSecurityPolicy()', () => {
@@ -74,6 +74,56 @@ describe('buildContentSecurityPolicy()', () => {
 
       // Assert
       expect(csp).toContain(`script-src 'self' ${scriptHost1} ${scriptHost2}`)
+    })
+  })
+
+  describe('frame hosts', () => {
+    test('correctly formats content-security-policy with a custom frame host', () => {
+      // Arrange
+      const frameHost = 'https://frame.example.com'
+
+      // Act
+      const csp = buildContentSecurityPolicy({ frameHosts: frameHost })
+
+      // Assert
+      expect(csp).toContain(`frame-src ${frameHost}`)
+    })
+
+    test('correctly formats content-security-policy with several custom frame hosts', () => {
+      // Arrange
+      const frameHost1 = 'https://frame.example1.com'
+      const frameHost2 = 'https://frame.example2.com'
+
+      // Act
+      const csp = buildContentSecurityPolicy({ frameHosts: [frameHost1, frameHost2].join(',') })
+
+      // Assert
+      expect(csp).toContain(`frame-src ${frameHost1} ${frameHost2}`)
+    })
+  })
+
+  describe('connect hosts', () => {
+    test('correctly formats content-security-policy with a custom connect host', () => {
+      // Arrange
+      const connectHost = 'https://connect.example.com'
+
+      // Act
+      const csp = buildContentSecurityPolicy({ connectHosts: connectHost })
+
+      // Assert
+      expect(csp).toContain(`connect-src 'self' ${connectHost}`)
+    })
+
+    test('correctly formats content-security-policy with several custom connect hosts', () => {
+      // Arrange
+      const connectHost1 = 'https://connect.example1.com'
+      const connectHost2 = 'https://connect.example2.com'
+
+      // Act
+      const csp = buildContentSecurityPolicy({ connectHosts: [connectHost1, connectHost2].join(',') })
+
+      // Assert
+      expect(csp).toContain(`connect-src 'self' ${connectHost1} ${connectHost2}`)
     })
   })
 })
