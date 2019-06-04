@@ -2,11 +2,11 @@
 import React, { Component } from 'react'
 
 // Components
-import { AccountOrders } from '@shiftcommerce/shift-react-components'
+import { AccountOrders } from '@shiftcommerce/shift-react-components/src/components/account/orders'
 // Actions
 import { getCustomerOrders } from '../../actions/account-actions'
 
-class AccountOrdersPage extends Component {
+export class AccountOrdersPage extends Component {
   fetchOrders () {
     this.props.dispatch(getCustomerOrders())
   }
@@ -22,5 +22,3 @@ class AccountOrdersPage extends Component {
     )
   }
 }
-
-export default AccountOrdersPage

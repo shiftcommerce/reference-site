@@ -2,8 +2,7 @@
 import React, { Component } from 'react'
 
 // Components
-import { AccountAddresses } from '@shiftcommerce/shift-react-components'
-
+import { AccountAddresses } from '@shiftcommerce/shift-react-components/src/components/account/addresses'
 // Actions
 import { deleteAddressBookEntry, fetchAddressBook, saveToAddressBook, updateAddress } from '../../actions/address-book-actions'
 
@@ -111,8 +110,7 @@ class AccountAddressesPage extends Component {
           onNewAddress={this.onNewAddress.bind(this)}
           onAddressCreated={this.onAddressCreated.bind(this)}
           onAddressDeleted={this.onAddressDeleted.bind(this)}
-          onAddressUpdated={this.onAddressUpdated.bind(this)}
-        />
+          onAddressUpdated={this.onAddressUpdated.bind(this)} />
       </Layout>
     )
   }

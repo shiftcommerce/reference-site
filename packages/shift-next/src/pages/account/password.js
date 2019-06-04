@@ -2,11 +2,11 @@
 import React, { Component } from 'react'
 
 // Components
-import { AccountPassword } from '@shiftcommerce/shift-react-components'
+import { AccountPassword } from '@shiftcommerce/shift-react-components/src/components/account/password'
 
-class AccountPasswordPage extends Component {
+export class AccountPasswordPage extends Component {
   render () {
-    const { account, layout } = this.props
+    const { layout } = this.props
     const Layout = layout.component
     return (
       <Layout {...layout.props}>
@@ -15,5 +15,3 @@ class AccountPasswordPage extends Component {
     )
   }
 }
-
-export default AccountPasswordPage

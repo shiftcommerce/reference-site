@@ -2,12 +2,12 @@
 import React, { Component } from 'react'
 
 // Components
-import { AccountDetails } from '@shiftcommerce/shift-react-components'
+import { AccountDetails } from '@shiftcommerce/shift-react-components/src/components/account/details'
 
 // Actions
 import { updateCustomerAccount } from '../../actions/account-actions'
 
-class AccountDetailsPage extends Component {
+export class AccountDetailsPage extends Component {
   handleUpdateDetailsSubmit (details, { setStatus, setSubmitting }) {
     this.props.dispatch(updateCustomerAccount(details)).then(success => {
       // Display a relevant flash message
@@ -35,5 +35,3 @@ class AccountDetailsPage extends Component {
     )
   }
 }
-
-export default AccountDetailsPage

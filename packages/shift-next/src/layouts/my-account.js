@@ -7,9 +7,10 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import Config from '../lib/config'
 
 // Components
-import { Sidebar, MyAccountHeader } from '@shiftcommerce/shift-react-components'
+import { Sidebar } from '@shiftcommerce/shift-react-components/src/components/account/sidebar'
+import { MyAccountHeader } from '@shiftcommerce/shift-react-components/src/components/account/my-account-header'
 
-class MyAccountLayout extends Component {
+export class MyAccountLayout extends Component {
   constructor (props) {
     super(props)
 
@@ -68,5 +69,3 @@ class MyAccountLayout extends Component {
     )
   }
 }
-
-export default MyAccountLayout
