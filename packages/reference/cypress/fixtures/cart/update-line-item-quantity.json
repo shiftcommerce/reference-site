@@ -1,0 +1,56 @@
+{
+  "id": "9049",
+  "meta_attributes": {},
+  "updated_at": "2019-06-04T12:07:52Z",
+  "created_at": "2019-06-03T14:06:52Z",
+  "email": "",
+  "channel": "web",
+  "line_items_count": 1,
+  "shipping_total_discount": 0,
+  "shipping_discount_name": null,
+  "free_shipping": false,
+  "test": false,
+  "sub_total": 2997,
+  "tax": 0,
+  "total_discount": 0,
+  "total": 2997,
+  "shipping_total": 0,
+  "line_items": [
+    {
+      "id": "14532",
+      "sku": "CLOCK_15",
+      "stock_available_level": 999999881,
+      "sub_total": 2997,
+      "tax_rate": 0,
+      "title": "Clock Computer 15''",
+      "total": 2997,
+      "total_discount": 0,
+      "unit_price": 999,
+      "unit_quantity": 3,
+      "item": {
+        "id": "27104",
+        "title": "Clock Computer 15''",
+        "sku": "CLOCK_15",
+        "price": 999,
+        "price_includes_taxes": true,
+        "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/244/1544098373.3502004-clock_computer.jpg",
+        "stock_allocated_level": 118,
+        "meta_attributes": {},
+        "product": {
+          "id": "181",
+          "title": "Clock Computer",
+          "slug": "clock_computer",
+          "canonical_path": "/products/clock_computer",
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/244/1544098373.3502004-clock_computer.jpg",
+          "meta_attributes": {}
+        }
+      },
+      "line_item_discounts": []
+    }
+  ],
+  "discount_summaries": [],
+  "customer_account": null,
+  "billing_address": null,
+  "shipping_address": null,
+  "shipping_method": null
+}
