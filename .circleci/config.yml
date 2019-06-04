@@ -71,7 +71,6 @@ jobs:
     docker:
       - image: callumbarratt/cypress:11.13.0
     parallelism: 4
-    working_directory: ~/project
     steps:
       - checkout
       - restore_cache:
