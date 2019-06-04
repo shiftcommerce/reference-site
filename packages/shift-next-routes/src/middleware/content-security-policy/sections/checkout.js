@@ -17,7 +17,7 @@ const checkoutContentSecurityPolicy = (server, options = {}) => {
     // for react index.js next and next-dev.
     formattedOptions.scriptHosts = `'unsafe-inline','unsafe-eval',https://js.stripe.com,https://*.paypal.com,https://*.paypalobjects.com,${options.scriptHosts || ''}`
     // Build and set the CSP header on the response
-    res.set('Content-Security-Policy', buildContentSecurityPolicy(formattedOptions))
+    res.set('content-security-policy', buildContentSecurityPolicy(formattedOptions))
     // Call the next middleware in the stack
     next()
   })

@@ -12,7 +12,7 @@ const forgotPasswordPageContentSecurityPolicy = (server, options = {}) => {
     let formattedOptions = Object.assign({}, options)
     formattedOptions.connectHosts = `https://*.algolia.net https://*.algolianet.com,${options.connectHosts || ''}`
     // Build and set the CSP header on the response
-    res.set('Content-Security-Policy', buildContentSecurityPolicy(formattedOptions))
+    res.set('content-security-policy', buildContentSecurityPolicy(formattedOptions))
     // Call the next middleware in the stack
     next()
   })
