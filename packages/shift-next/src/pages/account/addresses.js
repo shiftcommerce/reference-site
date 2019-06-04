@@ -105,7 +105,7 @@ export class AccountAddressesPage extends Component {
           addingNewAddress={addingNewAddress}
           addressBook={addressBook}
           countries={countries}
-          currentAddres={currentAddressId && addressBook.find(a => a.id === currentAddressId)}
+          currentAddress={currentAddressId && addressBook.find(a => a.id === currentAddressId)}
           onBookAddressSelected={this.onBookAddressSelected.bind(this)}
           onNewAddress={this.onNewAddress.bind(this)}
           onAddressCreated={this.onAddressCreated.bind(this)}
