@@ -18,6 +18,11 @@ import ShippingAddressPage from './pages/shipping-address'
 import ShippingMethodPage from './pages/checkout/shipping-method'
 import SlugPage from './pages/slug'
 import StaticPage from './pages/static-page'
+
+// layouts
+import MyAccountLayout from './layouts/my-account'
+
+// session
 import { getSessionExpiryTime } from './lib/session'
 
 // Components
@@ -48,6 +53,7 @@ module.exports = {
   ShippingMethodPage: ShippingMethodPage,
   SlugPage: SlugPage,
   StaticPage: StaticPage,
+  MyAccountLayout,
   withCheckout: withCheckout,
   algoliaReduxWrapper,
   reduxWrapper,

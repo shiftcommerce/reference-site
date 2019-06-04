@@ -4,15 +4,14 @@ import React, { Component } from 'react'
 // Components
 import { AccountPassword } from '@shiftcommerce/shift-react-components'
 
-import MyAccountLayout from '../../layouts/my-account'
-
 class AccountPasswordPage extends Component {
   render () {
-    const { menu } = this.props
+    const { account, layout } = this.props
+    const Layout = layout.component
     return (
-      <MyAccountLayout menu={menu}>
+      <Layout {...layout.props}>
         <AccountPassword />
-      </MyAccountLayout>
+      </Layout>
     )
   }
 }
