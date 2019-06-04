@@ -76,7 +76,7 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore cache (Yarn)
-          key: yarn-dependencies-cypress-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           name: Restore cache (NextJS build)
           key: next-production-build-{{ .Branch }}-{{ .Revision }}
@@ -88,7 +88,7 @@ jobs:
           command: npx cypress verify
       - save_cache:
           name: Save Yarn Package Cache
-          key: yarn-dependencies-cypress-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
             - ~/.cache/Cypress
