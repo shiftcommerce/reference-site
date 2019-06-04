@@ -4,7 +4,7 @@ import { SidebarItem } from './sidebar-item'
 
 export class Sidebar extends Component {
   render () {
-    const { items, currentItem, handleClickedItem } = this.props
+    const { items, currentItem } = this.props
 
     return (
       <ul className='c-sidebar'>
@@ -12,7 +12,7 @@ export class Sidebar extends Component {
           <SidebarItem
             key={index}
             label={item.label}
-            handleClick={handleClickedItem(item)}
+            location={item.location}
             current={item.label.toLowerCase() === (currentItem && currentItem.toLowerCase())}
           />
         )) }

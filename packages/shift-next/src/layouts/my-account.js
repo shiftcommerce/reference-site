@@ -17,7 +17,6 @@ export class MyAccountLayout extends Component {
     this.state = {}
 
     this.Head = Config.get().Head
-    this.handleClickedItem = this.handleClickedItem.bind(this)
   }
 
   componentDidMount () {
@@ -28,16 +27,6 @@ export class MyAccountLayout extends Component {
     this.setState({
       currentItem: selected.length ? selected[0].label : items[0].label
     })
-
-    if (!selected.length) {
-      Router.replace(items[0].location)
-    }
-  }
-
-  handleClickedItem (item) {
-    return () => {
-      Router.push(item.location)
-    }
   }
 
   renderPageTitle () {
@@ -59,7 +48,6 @@ export class MyAccountLayout extends Component {
           <Sidebar
             items={menu}
             currentItem={this.state.currentItem}
-            handleClickedItem={this.handleClickedItem}
           />
           <div className='c-myaccount-main__content'>
             { children }
