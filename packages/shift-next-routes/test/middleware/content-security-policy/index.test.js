@@ -11,8 +11,12 @@ describe('contentSecurityPolicy()', () => {
       return this.headers[header] = value
     }
   }
+  let insertedCSPSectionPaths = []
   let server = {
-    get: jest.fn((_path, callback) => {
+    get: jest.fn((path, callback) => {
+      // collect all called section paths
+      insertedCSPSectionPaths.push(path)
+      // return callback
       return callback(request, response, mockNext)
     })
   }
@@ -26,5 +30,19 @@ describe('contentSecurityPolicy()', () => {
 
     // Assert
     expect(mockNext).toHaveBeenCalledTimes(11)
+    expect(insertedCSPSectionPaths).toEqual([
+      /(\/pages\/account\/myaccount.js)$/,
+      /(\/pages\/cart.js)$/,
+      /(\/pages\/category.js)$/,
+      /(\/pages\/checkout\/*)/,
+      /(\/pages\/account\/forgotpassword.js)$/,
+      /(\/pages\/account\/login.js)$/,
+      /(\/pages\/order.js)$/,
+      /(\/pages\/product.js)$/,
+      /(\/pages\/account\/register.js)$/,
+      /(\/pages\/search.js)/,
+      /(\/pages\/staticpage.js)$/
+    ])
+    mockNext.mockRestore()
   })
 })
