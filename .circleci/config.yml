@@ -129,6 +129,7 @@ workflows:
       - cypress/run:
           name: cypress_run
           pre-steps:
+            - checkout
             - restore_cache:
                 name: Restore NextJS build
                 keys:
