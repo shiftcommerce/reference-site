@@ -17,11 +17,6 @@ describe('categoryPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the plp content-security-policy', () => {
     // Arrange
     const options = {

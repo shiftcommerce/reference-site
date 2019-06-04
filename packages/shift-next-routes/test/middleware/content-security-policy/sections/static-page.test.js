@@ -17,11 +17,6 @@ describe('staticPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the static page section content-security-policy', () => {
     // Arrange
     const options = {

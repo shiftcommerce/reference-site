@@ -8,7 +8,7 @@ describe('buildContentSecurityPolicy()', () => {
       const csp = buildContentSecurityPolicy()
 
       // Assert
-      expect(csp).toContain(`default-src 'self'`)
+      expect(csp).toContain("default-src 'self'")
     })
 
     test('correctly formats content-security-policy to include `form-action` declaration', () => {
@@ -16,7 +16,7 @@ describe('buildContentSecurityPolicy()', () => {
       const csp = buildContentSecurityPolicy()
 
       // Assert
-      expect(csp).toContain(`form-action 'self'`)
+      expect(csp).toContain("form-action 'self'")
     })
 
     test('correctly formats content-security-policy to include `object-src` declaration', () => {
@@ -24,7 +24,7 @@ describe('buildContentSecurityPolicy()', () => {
       const csp = buildContentSecurityPolicy()
 
       // Assert
-      expect(csp).toContain(`object-src 'self'`)
+      expect(csp).toContain("object-src 'self'")
     })
 
     test('correctly formats content-security-policy to include `block-all-mixed-content` declaration', () => {

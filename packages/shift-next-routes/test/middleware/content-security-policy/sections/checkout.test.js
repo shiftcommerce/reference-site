@@ -1,7 +1,7 @@
 // lib
-const { productPageContentSecurityPolicy } = require('../../../../src/middleware/content-security-policy/sections/product')
+const { checkoutContentSecurityPolicy } = require('../../../../src/middleware/content-security-policy/sections/checkout')
 
-describe('productPageContentSecurityPolicy()', () => {
+describe('checkoutContentSecurityPolicy()', () => {
   // Mock request and response objects to help us test the middleware
   const mockNext = jest.fn()
   const request = {}
@@ -17,7 +17,7 @@ describe('productPageContentSecurityPolicy()', () => {
     })
   }
 
-  test('correctly inserts the pdp content-security-policy', () => {
+  test('correctly inserts the checkout section content-security-policy', () => {
     // Arrange
     const options = {
       imageHosts: 'https://image.example.com',
@@ -28,16 +28,16 @@ describe('productPageContentSecurityPolicy()', () => {
     }
 
     // Act
-    productPageContentSecurityPolicy(server, options)
+    checkoutContentSecurityPolicy(server, options)
 
     // Assert
     const csp = response.headers['content-security-policy']
     expect(csp).toContain(`default-src 'self'`)
     expect(csp).toContain(`img-src 'self' ${options.imageHosts}`)
     expect(csp).toContain(`style-src 'self' ${options.styleHosts}`)
-    expect(csp).toContain(`script-src 'self' ${options.scriptHosts}`)
-    expect(csp).toContain(`frame-src ${options.frameHosts}`)
-    expect(csp).toContain(`connect-src 'self' https://*.algolia.net https://*.algolianet.com ${options.connectHosts}`)
+    expect(csp).toContain(`script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://*.paypal.com https://*.paypalobjects.com ${options.scriptHosts}`)
+    expect(csp).toContain(`frame-src https://js.stripe.com https://*.paypal.com ${options.frameHosts}`)
+    expect(csp).toContain(`connect-src 'self' https://*.paypal.com ${options.connectHosts}`)
     expect(mockNext).toHaveBeenCalledTimes(1)
   })
 })

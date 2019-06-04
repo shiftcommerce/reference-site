@@ -17,11 +17,6 @@ describe('searchPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the search section content-security-policy', () => {
     // Arrange
     const options = {

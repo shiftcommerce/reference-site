@@ -17,11 +17,6 @@ describe('forgotPasswordPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the forgot password section content-security-policy', () => {
     // Arrange
     const options = {

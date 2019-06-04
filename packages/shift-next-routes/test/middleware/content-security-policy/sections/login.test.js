@@ -17,11 +17,6 @@ describe('loginPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the login section content-security-policy', () => {
     // Arrange
     const options = {

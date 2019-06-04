@@ -17,11 +17,6 @@ describe('registrationPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the account registration section content-security-policy', () => {
     // Arrange
     const options = {

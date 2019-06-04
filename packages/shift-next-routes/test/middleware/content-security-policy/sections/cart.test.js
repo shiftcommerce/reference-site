@@ -17,11 +17,6 @@ describe('cartPageContentSecurityPolicy()', () => {
     })
   }
 
-  afterEach(() => {
-    mockNext.mockClear()
-    response.headers = {}
-  })
-
   test('correctly inserts the cart section content-security-policy', () => {
     // Arrange
     const options = {
