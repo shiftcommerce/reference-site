@@ -11,7 +11,7 @@ import { clearErrors } from '../actions/account-actions'
 import { createAccount } from '../actions/register-actions'
 
 // Components
-import { RegisterForm } from '@shiftcommerce/shift-react-components'
+import { RegisterForm } from '@shiftcommerce/shift-react-components/src/components/account/register-form'
 
 // Config
 import Config from '../lib/config'

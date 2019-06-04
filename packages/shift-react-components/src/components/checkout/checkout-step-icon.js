@@ -2,14 +2,12 @@
 import React from 'react'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Image } from '../../objects/image'
 
 // Assets
 import completedCheck from '../../static/white-check.svg'
 
-export default () => {
-  const Image = componentMapping('Image')
-
+export const CheckoutStepIcon = () => {
   return (
     <Image className='c-step-indicator__icon' src={completedCheck} />
   )

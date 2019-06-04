@@ -12,6 +12,8 @@ describe('Global search', () => {
     // Visit the homepage
     cy.visit('/')
 
+    cy.wait(1000)
+
     // Do a search
     cy.get('input[type=search]').eq(1).clear().type('mug{enter}')
 

@@ -3,7 +3,7 @@ import Router from 'next/router'
 import Cookies from 'js-cookie'
 
 // Pages
-import PaymentMethodPage from '../../src/pages/checkout/payment-method'
+import { PaymentMethodPage } from '../../src/pages/checkout/payment-method'
 
 // Actions
 import * as CartActions from '../../src/actions/cart-actions'

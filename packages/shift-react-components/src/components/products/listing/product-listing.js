@@ -2,8 +2,14 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-// Lib
-import componentMapping from '../../../lib/component-mapping'
+// Components
+import ProductMenu from '../listing/product-menu'
+import ProductMenuOptions from '../listing/product-menu-options'
+import SearchFilters from '../../search/search-filters'
+import SearchHits from '../../search/search-hits'
+
+// Objects
+import { Breadcrumb } from '../../../objects/breadcrumb'
 
 export class ProductListing extends Component {
   constructor (props) {
@@ -11,12 +17,6 @@ export class ProductListing extends Component {
     this.state = {
       filtersShown: false
     }
-
-    this.Breadcrumb = componentMapping('Breadcrumb')
-    this.ProductMenu = componentMapping('ProductMenu')
-    this.ProductMenuOptions = componentMapping('ProductMenuOptions')
-    this.SearchFilters = componentMapping('SearchFilters')
-    this.SearchHits = componentMapping('SearchHits')
   }
 
   toggleFiltering = () => {
@@ -36,15 +36,15 @@ export class ProductListing extends Component {
 
     return (
       <>
-        <this.ProductMenu title={title} />
-        <this.Breadcrumb />
+        <ProductMenu title={title} />
+        <Breadcrumb />
         <div className='c-product-listing-wrapper'>
-          <this.SearchFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
+          <SearchFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
-              <this.ProductMenuOptions indexName={indexName} toggleFiltering={this.toggleFiltering} />
+              <ProductMenuOptions indexName={indexName} toggleFiltering={this.toggleFiltering} />
             </div>
-            <this.SearchHits />
+            <SearchHits />
           </div>
         </div>
       </>

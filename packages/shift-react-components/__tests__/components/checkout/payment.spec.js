@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import Payment from '../../../src/components/checkout/payment'
+import { Payment } from '../../../src/components/checkout/payment'
 import PaymentHeader from '../../../src/components/checkout/payment-header'
 import StripePayment from '../../../src/components/checkout/stripe-payment'
 

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import PaymentMethodHeader from '../../../src/components/checkout/payment-method-header'
+import { PaymentMethodHeader } from '../../../src/components/checkout/payment-method-header'
 
 test('renders the navigation button when collapsed and `showEditButton` is true', () => {
   // Arrange

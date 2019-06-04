@@ -330,7 +330,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     2
                   </a>
                    
-                  <Plural
+                  <l
                     className={null}
                     count={2}
                     showCount={false}
@@ -344,13 +344,13 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       items
                     </span>
-                  </Plural>
+                  </l>
                    in your shopping basket.
                 </p>
                 <p
                   className="c-cart-table__description"
                 >
-                  <Plural
+                  <l
                     className={null}
                     count={2}
                     plural="These"
@@ -365,9 +365,9 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       These
                     </span>
-                  </Plural>
+                  </l>
                    
-                  <Plural
+                  <l
                     className={null}
                     count={2}
                     showCount={false}
@@ -381,7 +381,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
                     >
                       items
                     </span>
-                  </Plural>
+                  </l>
                    will be saved for 48 hours depending on availability.
                 </p>
               </div>

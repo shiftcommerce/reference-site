@@ -3,16 +3,11 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
 // Libs
-import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
+import Config from '../../lib/config'
+import link from '../../objects/link'
 
-class CartTableSummary extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Link = componentMapping('Link')
-  }
-
+export class CartTableSummary extends PureComponent {
   /**
    * Renders the promotions
    * @param  {Object}  cart
@@ -60,6 +55,7 @@ class CartTableSummary extends PureComponent {
   }
 
   render () {
+    const Link = Config.get().Link || link
     const { cart, className, loading, cheapestShipping } = this.props
 
     return (
@@ -82,16 +78,14 @@ class CartTableSummary extends PureComponent {
           </dl>
         </section>
         <section className={classNames(className, 'c-cart-summary-buttons')}>
-          <this.Link href='/slug?slug=/homepage' as='/' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue'>
+          <Link href='/slug?slug=/homepage' as='/' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue'>
             Continue Shopping
-          </this.Link>
-          <this.Link href='/checkout/payment-method' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
+          </Link>
+          <Link href='/checkout/payment-method' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
             Checkout
-          </this.Link>
+          </Link>
         </section>
       </>
     )
   }
 }
-
-export default CartTableSummary

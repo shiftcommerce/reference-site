@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import Sidebar from '../../../src/components/account/sidebar'
+import { Sidebar } from '../../../src/components/account/sidebar'
 
 test("renders the correct child when currentMenu matches the child's label", () => {
   const Child1 = () => <p>Child1</p>

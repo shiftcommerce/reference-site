@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CartTableGridItem from '../../../src/components/cart/cart-table-grid-item'
+import { CartTableGridItem } from '../../../src/components/cart/cart-table-grid-item'
 
 test('renders correct child elements and classnames', () => {
   const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'

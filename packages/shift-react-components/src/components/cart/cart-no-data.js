@@ -7,7 +7,7 @@ import classNames from 'classnames'
  * @param  {Object} props
  * @return {string} - HTML markup for the component
  */
-const CartNoData = (props) => {
+export const CartNoData = (props) => {
   return (
     <section className={classNames(props.className, 'c-cart-no-data')}>
       <p>
@@ -19,5 +19,3 @@ const CartNoData = (props) => {
     </section>
   )
 }
-
-export default CartNoData

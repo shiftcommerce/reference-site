@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
-export class SearchBar extends Component {
+class SearchBar extends Component {
   render () {
     const { currentRefinement, filterCategory, onCategoryFilterCleared, refine } = this.props
 

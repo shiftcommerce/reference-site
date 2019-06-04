@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CartTable from '../../../src/components/cart/cart-table'
+import { CartTable } from '../../../src/components/cart/cart-table'
 
 test('renders correct child elements and classnames', () => {
   const label = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'

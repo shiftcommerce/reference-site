@@ -6,10 +6,12 @@ import React from 'react'
  * @param  {Object} props
  * @return {string} - HTML markup for the component
  */
-export default function Head (props) {
+function Head (props) {
   const { children } = props
 
   return (
     <head>{ children }</head>
   )
 }
+
+export default Head

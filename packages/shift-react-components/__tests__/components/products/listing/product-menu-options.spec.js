@@ -5,7 +5,7 @@ import React from 'react'
 import ProductMenuOptions from '../../../../src/components/products/listing/product-menu-options'
 
 // Objects
-import Breadcrumb from '../../../../src/objects/breadcrumb'
+import { Breadcrumb } from '../../../../src/objects/breadcrumb'
 
 test('renders correctly', () => {
   // Arrange

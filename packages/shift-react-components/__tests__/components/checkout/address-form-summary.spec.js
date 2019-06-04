@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Components
-import AddressFormSummary from '../../../src/components/checkout/address-form-summary'
-import AddressFormHeader from '../../../src/components/checkout/address-form-header'
+import { AddressFormSummary } from '../../../src/components/checkout/address-form-summary'
+import { AddressFormHeader } from '../../../src/components/checkout/address-form-header'
 
 test("renders the addresss summary", () => {
   // Arrange

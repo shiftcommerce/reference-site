@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Object
-import Button from '../../src/objects/button'
+import { Button } from '../../src/objects/button'
 
 test('renders correctly', () => {
   // Arrange & Act

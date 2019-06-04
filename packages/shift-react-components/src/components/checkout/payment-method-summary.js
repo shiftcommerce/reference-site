@@ -3,19 +3,14 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Image } from '../../objects/image'
 
-class PaymentMethodSummary extends PureComponent {
-  constructor (props) {
-    super(props)
+import { PaymentMethodHeader } from '../../components/checkout/payment-method-header'
 
-    this.Image = componentMapping('Image')
-    this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
-  }
-
+export class PaymentMethodSummary extends PureComponent {
   renderPaymentMethodInformation (paymentMethod) {
     if (paymentMethod === 'PayPal') {
-      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-method__summary-information-card-image' />
+      return <Image src='/static/payments/pay-pal.svg' className='c-payment-method__summary-information-card-image' />
     } else {
       return <p>{ paymentMethod }</p>
     }
@@ -25,14 +20,14 @@ class PaymentMethodSummary extends PureComponent {
     const { headerTitle, onClick, paymentMethod, showEditButton } = this.props
     return (
       <div className={'c-payment-method__summary'}>
-        <this.PaymentMethodHeader
+        <PaymentMethodHeader
           collapsed
           onClick={onClick}
           title={headerTitle}
           showEditButton={showEditButton}
         />
         <div className={'c-payment-method__summary-information'}>
-          {this.renderPaymentMethodInformation(paymentMethod)}
+          { this.renderPaymentMethodInformation(paymentMethod) }
         </div>
       </div>
     )
@@ -45,5 +40,3 @@ PaymentMethodSummary.propTypes = {
   showEditButton: PropTypes.bool,
   headerTitle: PropTypes.string.isRequired
 }
-
-export default PaymentMethodSummary

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CartTableSummary from '../../../src/components/cart/cart-table-summary'
+import { CartTableSummary } from '../../../src/components/cart/cart-table-summary'
 
 // Fixtures
 import cart from '../../fixtures/cart'

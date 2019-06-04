@@ -10,15 +10,13 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import Config from '../lib/config'
 
 // Components
-import {
-  CartTablePaymentIcons,
-  CheckoutCart,
-  CheckoutCartButtons,
-  CheckoutCartTotal,
-  CheckoutSteps,
-  CouponForm,
-  MiniPlaceOrder
-} from '@shiftcommerce/shift-react-components'
+import { CartTablePaymentIcons } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-payment-icons'
+import { CheckoutCart } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-cart'
+import { CheckoutCartButtons } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-cart-buttons'
+import { CheckoutCartTotal } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-cart-total'
+import { CheckoutSteps } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-steps'
+import { CouponForm } from '@shiftcommerce/shift-react-components/src/components/cart/coupon-form'
+import { MiniPlaceOrder } from '@shiftcommerce/shift-react-components/src/components/checkout/mini-place-order'
 
 // Actions
 import {
