@@ -71,6 +71,7 @@ jobs:
     docker:
       - image: callumbarratt/cypress:11.13.0
     parallelism: 4
+    working_directory: ~/project
     steps:
       - checkout
       - restore_cache:
@@ -98,7 +99,7 @@ jobs:
             - packages/shift-node-api/node_modules
             - packages/shift-react-components/node_modules
       - run:
-          name: Start
+          name: Start NextJS Server
           command: |
             pwd
             ls -la packages/reference/client
@@ -164,18 +165,6 @@ jobs:
 
 orbs:
   heroku: circleci/heroku@0.0.6
-
-executors:
-  cypress-node-11:
-    resource_class: large
-    docker:
-      - image: 'callumbarratt/cypress:11.13.0'
-    environment:
-      API_HOST: https://shift-platform-dev-api.global.ssl.fastly.net
-      API_HOST_PROXY: http://localhost:3000
-      NO_HTTPS: true
-      ENABLE_PAYPAL_LIVE_ENVIRONMENT: false
-      ENABLE_TEST_PAYPAL_BUTTON: true
 
 workflows:
   build_and_test:
