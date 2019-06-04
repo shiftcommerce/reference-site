@@ -11,7 +11,7 @@ const formOptions = {
   },
   loginButton: {
     visible: true,
-    translation: 'continue securely'
+    translation: 'CONTINUE SECURELY'
   },
   caption: {
     visible: true,
