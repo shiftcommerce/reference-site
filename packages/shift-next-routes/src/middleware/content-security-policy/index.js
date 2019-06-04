@@ -30,4 +30,4 @@ const contentSecurityPolicy = (server, options = {}) => {
   staticPageContentSecurityPolicy(server, options)
 }
 
-module.exports = { contentSecurityPolicy: contentSecurityPolicy }
+module.exports = { contentSecurityPolicy }

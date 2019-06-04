@@ -18,4 +18,4 @@ const cartPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { cartPageContentSecurityPolicy: cartPageContentSecurityPolicy }
+module.exports = { cartPageContentSecurityPolicy }

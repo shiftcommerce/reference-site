@@ -77,4 +77,4 @@ const httpSecurityHeaders = (server) => {
   })
 }
 
-module.exports = { httpSecurityHeaders: httpSecurityHeaders }
+module.exports = { httpSecurityHeaders }

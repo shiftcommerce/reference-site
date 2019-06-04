@@ -18,4 +18,4 @@ const searchPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { searchPageContentSecurityPolicy: searchPageContentSecurityPolicy }
+module.exports = { searchPageContentSecurityPolicy }

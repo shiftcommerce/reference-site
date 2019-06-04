@@ -18,4 +18,4 @@ const accountPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { accountPageContentSecurityPolicy: accountPageContentSecurityPolicy }
+module.exports = { accountPageContentSecurityPolicy }

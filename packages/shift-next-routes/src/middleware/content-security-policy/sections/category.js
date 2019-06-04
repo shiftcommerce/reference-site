@@ -18,4 +18,4 @@ const categoryPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { categoryPageContentSecurityPolicy: categoryPageContentSecurityPolicy }
+module.exports = { categoryPageContentSecurityPolicy }

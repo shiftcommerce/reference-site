@@ -18,4 +18,4 @@ const forgotPasswordPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { forgotPasswordPageContentSecurityPolicy: forgotPasswordPageContentSecurityPolicy }
+module.exports = { forgotPasswordPageContentSecurityPolicy }

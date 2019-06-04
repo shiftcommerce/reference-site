@@ -18,4 +18,4 @@ const orderPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { orderPageContentSecurityPolicy: orderPageContentSecurityPolicy }
+module.exports = { orderPageContentSecurityPolicy }

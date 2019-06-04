@@ -18,4 +18,4 @@ const loginPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { loginPageContentSecurityPolicy: loginPageContentSecurityPolicy }
+module.exports = { loginPageContentSecurityPolicy }

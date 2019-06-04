@@ -39,4 +39,4 @@ const buildContentSecurityPolicy = (options = {}) => {
   ].join('; ')
 }
 
-module.exports = { buildContentSecurityPolicy: buildContentSecurityPolicy }
+module.exports = { buildContentSecurityPolicy }

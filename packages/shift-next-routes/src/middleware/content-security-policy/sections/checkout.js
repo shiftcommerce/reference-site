@@ -23,4 +23,4 @@ const checkoutContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { checkoutContentSecurityPolicy: checkoutContentSecurityPolicy }
+module.exports = { checkoutContentSecurityPolicy }

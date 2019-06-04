@@ -18,4 +18,4 @@ const staticPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { staticPageContentSecurityPolicy: staticPageContentSecurityPolicy }
+module.exports = { staticPageContentSecurityPolicy }

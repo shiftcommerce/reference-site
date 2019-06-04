@@ -18,4 +18,4 @@ const registrationPageContentSecurityPolicy = (server, options = {}) => {
   })
 }
 
-module.exports = { registrationPageContentSecurityPolicy: registrationPageContentSecurityPolicy }
+module.exports = { registrationPageContentSecurityPolicy }

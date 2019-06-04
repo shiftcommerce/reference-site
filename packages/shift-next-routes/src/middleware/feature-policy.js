@@ -31,4 +31,4 @@ const featurePolicy = (server, policyOptions = {}) => {
   }))
 }
 
-module.exports = { featurePolicy: featurePolicy }
+module.exports = { featurePolicy }
