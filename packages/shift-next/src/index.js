@@ -6,6 +6,8 @@ import LoginPage from './pages/login'
 import MyAccountPage from './pages/my-account'
 import AccountDetailsPage from './pages/account/details'
 import AccountPasswordPage from './pages/account/password'
+import AccountOrdersPage from './pages/account/orders'
+import AccountAddressesPage from './pages/account/addresses'
 import OfflinePage from './pages/offline'
 import OrderPage from './pages/order'
 import PasswordResetPage from './pages/password_reset'
@@ -39,8 +41,10 @@ module.exports = {
   ForgottenPasswordPage: ForgottenPasswordPage,
   LoginPage: LoginPage,
   MyAccountPage: MyAccountPage,
-  AccountDetailsPage: AccountDetailsPage,
-  AccountPasswordPage: AccountPasswordPage,
+  AccountDetailsPage,
+  AccountPasswordPage,
+  AccountOrdersPage,
+  AccountAddressesPage,
   OfflinePage: OfflinePage,
   OrderPage: OrderPage,
   PasswordResetPage: PasswordResetPage,
