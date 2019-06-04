@@ -1,4 +1,4 @@
-Cypress.Commands.add('goToMyAccount', () => {
+Cypress.Commands.add('setupAddressBookFixtures', () => {
   cy.setCookie('signedIn', 'true')
 
   cy.server()
@@ -56,7 +56,7 @@ Cypress.Commands.add('goToMyAccount', () => {
     method: 'POST',
     url: '/updateAddress/**',
     status: 200,
-    response: {}
+    response: 'fixture:account/update-address.json'
   }).as('updateAddress')
 
   // Stub deleteAddress request
@@ -66,10 +66,4 @@ Cypress.Commands.add('goToMyAccount', () => {
     status: 200,
     response: {}
   }).as('deleteAddress')
-
-  // Navigate to the homepage
-  cy.visit('/')
-
-  // Hover over my account to reveal dropdown
-  cy.contains('My Account').trigger('mouseover')
 })
