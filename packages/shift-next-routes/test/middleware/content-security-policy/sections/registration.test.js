@@ -1,7 +1,7 @@
 // lib
-const { accountPageContentSecurityPolicy } = require('../../../../src/middleware/content-security-policy/sections/account')
+const { registrationPageContentSecurityPolicy } = require('../../../../src/middleware/content-security-policy/sections/registration')
 
-describe('accountPageContentSecurityPolicy()', () => {
+describe('registrationPageContentSecurityPolicy()', () => {
   // Mock request and response objects to help us test the middleware
   const mockNext = jest.fn()
   const request = {}
@@ -22,7 +22,7 @@ describe('accountPageContentSecurityPolicy()', () => {
     response.headers = {}
   })
 
-  test('correctly inserts the account section content-security-policy', () => {
+  test('correctly inserts the account registration section content-security-policy', () => {
     // Arrange
     const options = {
       imageHosts: 'https://image.example.com',
@@ -33,7 +33,7 @@ describe('accountPageContentSecurityPolicy()', () => {
     }
 
     // Act
-    accountPageContentSecurityPolicy(server, options)
+    registrationPageContentSecurityPolicy(server, options)
 
     // Assert
     const csp = response.headers['content-security-policy']

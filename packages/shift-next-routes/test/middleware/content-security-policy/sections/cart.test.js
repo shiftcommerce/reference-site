@@ -22,7 +22,7 @@ describe('cartPageContentSecurityPolicy()', () => {
     response.headers = {}
   })
 
-  test('correctly inserts the cart page content-security-policy', () => {
+  test('correctly inserts the cart section content-security-policy', () => {
     // Arrange
     const options = {
       imageHosts: 'https://image.example.com',
