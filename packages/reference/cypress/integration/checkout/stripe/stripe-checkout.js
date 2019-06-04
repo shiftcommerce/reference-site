@@ -57,8 +57,17 @@ describe('Stripe checkout', () => {
     cy.get('#email').type('test@example.com')
     cy.get('#primary_phone').type('07510123456')
 
+    cy.route({
+      method: 'POST',
+      url: '/setCartShippingAddress',
+      status: 200,
+      response: 'fixture:checkout/set-cart-shipping-address.json'
+    }).as('setCartShippingAddress')
+
     // Navigate to next step
     cy.contains(/View Shipping Options/i).click()
+
+    cy.wait(3000)
 
     // Proceed with the preselected shipping method
     cy.contains(/Continue to payment/i).click()
