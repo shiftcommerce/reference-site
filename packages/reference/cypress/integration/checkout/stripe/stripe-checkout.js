@@ -16,6 +16,13 @@ describe('Stripe checkout', () => {
       response: 'fixture:cart/get-shipping-methods.json'
     }).as('getShippingMethods')
 
+    cy.route({
+      method: 'POST',
+      url: '/createOrder',
+      status: 201,
+      response: 'fixture:checkout/stripe-create-order.json'
+    }).as('createOrder')
+
     // Start with an item in the cart
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
 

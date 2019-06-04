@@ -1,6 +1,14 @@
 describe('My Account - Addresses', () => {
-  it('can create a new address and set as preferred shipping and billing address', () => {
+  beforeEach(() => {
     cy.goToMyAccount()
+  })
+
+  it('can create a new address and set as preferred shipping and billing address', () => {
+    // Navigate to the homepage
+    cy.visit('/')
+
+    // Hover over my account to reveal dropdown
+    cy.contains('My Account').trigger('mouseover')
 
     cy.contains('Addresses').click()
 
@@ -37,14 +45,11 @@ describe('My Account - Addresses', () => {
         company_name: { value: '' },
         phone_number: { value: '08003029464' }
       })
+
     cy.contains(/Address saved/i)
   })
 
   it('can update a pre-existing address', () => {
-    cy.goToMyAccount()
-
-    cy.contains('Addresses').click()
-
     // Select the address we want to update
     cy.get('input[name=address-book-radio]').check()
 
@@ -61,21 +66,20 @@ describe('My Account - Addresses', () => {
     }).as('getAddressBook')
 
     cy.contains(/UPDATE ADDRESS/i).click()
+
     cy.wait('@updateAddress')
       .its('requestBody.data.attributes')
       .should('contain', {
         first_name: 'Test',
         last_name: 'User'
       })
+
+    cy.wait(1000)
     cy.contains(/Address updated/i)
     cy.contains(/Test User/i)
   })
 
   it('leaving a required field blank when updating address will disable the submit button', () => {
-    cy.goToMyAccount()
-
-    cy.contains('Addresses').click()
-
     // Select the address we want to update
     cy.get('input[name=address-book-radio]').check()
 
@@ -88,13 +92,6 @@ describe('My Account - Addresses', () => {
   })
 
   it('can delete an address', () => {
-    cy.goToMyAccount()
-
-    cy.contains('Addresses').click()
-
-    // Wait for Addresses before deleting
-    cy.wait('@getAddressBook')
-
     // Delete a saved address
     cy.contains(/Delete/i).click()
     cy.wait('@deleteAddress')

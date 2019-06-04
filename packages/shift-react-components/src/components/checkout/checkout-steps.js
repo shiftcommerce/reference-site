@@ -9,8 +9,6 @@ import Config from '../../lib/config'
 import { CheckoutStepIcon } from '../checkout/checkout-step-icon'
 
 export function CheckoutSteps ({ currentStep, stepActions }) {
-  const Link = Config.get().Link || link
-
   const renderCheckoutSteps = () => {
     const checkoutSteps = [
       { position: 1, title: 'Payment Method', href: '/checkout/payment-method' },
@@ -37,6 +35,8 @@ export function CheckoutSteps ({ currentStep, stepActions }) {
     const stepCompleted = step.position < currentStep
     const content = stepCompleted ? <CheckoutStepIcon /> : step.position
     const active = step.position === currentStep
+
+    const Link = Config.get().Link || link
 
     if (stepCompleted) {
       return (
