@@ -9,7 +9,7 @@ import { deleteAddressBookEntry, fetchAddressBook, saveToAddressBook, updateAddr
 // Json
 import countries from '../../static/countries.json'
 
-class AccountAddressesPage extends Component {
+export class AccountAddressesPage extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -115,5 +115,3 @@ class AccountAddressesPage extends Component {
     )
   }
 }
-
-export default AccountAddressesPage
