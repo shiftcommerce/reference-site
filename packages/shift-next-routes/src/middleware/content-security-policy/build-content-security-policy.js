@@ -4,7 +4,7 @@
  */
 const buildContentSecurityPolicy = (options = {}) => {
   // Formats provided hosts
-  const formatHosts = (hosts) => { return hosts ? hosts.replace(',', ' ') : '' }
+  const formatHosts = (hosts) => { return hosts ? hosts.replace(/,/g, ' ') : '' }
 
   return [
     // Only first party origins are allowed by default
@@ -22,14 +22,14 @@ const buildContentSecurityPolicy = (options = {}) => {
     // required as that's how we load Stripe
     // TODO: Added 'unsafe-eval' in order for stripe to load correctly and to stop an webpack error "Uncaught TypeError: __webpack_require__(...) is not a function"
     // for react index.js next and next-dev.  Is this approach safe?
-    `script-src 'self' 'unsafe-inline' https://js.stripe.com  https://*.paypal.com https://*.paypalobjects.com  ${formatHosts(options.scriptHosts)} 'unsafe-eval'`,
+    `script-src 'self' 'unsafe-inline' https://js.stripe.com ${formatHosts(options.scriptHosts)} 'unsafe-eval'`,
 
     // Allow <frame> and <iframe>'s from third party sources.
-    `frame-src https://js.stripe.com https://*.paypal.com ${formatHosts(options.frameHosts)}`,
+    `frame-src ${formatHosts(options.frameHosts)}`,
 
     // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
     // WebSocket and EventSource
-    `connect-src 'self' https://*.algolia.net https://*.algolianet.com https://*.paypal.com ${formatHosts(options.connectHosts)}`,
+    `connect-src 'self' ${formatHosts(options.connectHosts)}`,
 
     // Enforce that forms point to self
     "form-action 'self'",
