@@ -8,8 +8,8 @@ const { buildContentSecurityPolicy } = require('../build-content-security-policy
  */
 const checkoutContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/checkout\/*)/, (req, res, next) => {
-    // Format CSP options
-    let formattedOptions = options
+    // Clone & format CSP options
+    let formattedOptions = Object.assign({}, options)
     formattedOptions.connectHosts = `https://*.paypal.com,${options.connectHosts || ''}`
     formattedOptions.frameHosts = `https://js.stripe.com,https://*.paypal.com,${options.frameHosts || ''}`
     // Unsafe inline is required as that's how we load Stripe

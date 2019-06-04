@@ -8,8 +8,11 @@ const { buildContentSecurityPolicy } = require('../build-content-security-policy
  */
 const cartPageContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/cart.js)$/, (req, res, next) => {
+    // Clone & format CSP options
+    let formattedOptions = Object.assign({}, options)
+    formattedOptions.connectHosts = `https://*.algolia.net https://*.algolianet.com,${options.connectHosts || ''}`
     // Build and set the CSP header on the response
-    res.set('Content-Security-Policy', buildContentSecurityPolicy(options))
+    res.set('Content-Security-Policy', buildContentSecurityPolicy(formattedOptions))
     // Call the next middleware in the stack
     next()
   })
