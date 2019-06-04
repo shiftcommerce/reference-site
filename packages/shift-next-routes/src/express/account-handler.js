@@ -1,26 +1,23 @@
 // Shift-api client
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
-
-// Lib
 const { getSessionExpiryTime } = require('../lib/session')
+
+const accountApiEndpointQuery = {
+  fields: {
+    customer_accounts: 'email,meta_attributes'
+  }
+}
 
 module.exports = {
   getAccount: async (req, res) => {
     const { customerId } = req.session
+    req.query = { ...req.query, ...accountApiEndpointQuery }
 
     if (!customerId) {
       return res.status(200).send({})
     }
 
-    const params = {
-      fields: {
-        customer_accounts: 'email,meta_attributes'
-      },
-      // There are some default includes in the platform that we need this to ignore.
-      include: ''
-    }
-
-    const response = await SHIFTClient.getAccountV1(params, customerId)
+    const response = await SHIFTClient.getAccountV1(req.query, customerId)
 
     switch (response.status) {
       case 404:
