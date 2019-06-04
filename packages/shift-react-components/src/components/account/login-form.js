@@ -1,11 +1,11 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import Link from 'next/link'
 
-// lib
+// Components
 import { Button } from '../../objects/button'
 import Checkbox from '../../objects/checkbox'
 import { FormErrors } from '../../lib/form-errors'
@@ -14,88 +14,6 @@ import { FormErrors } from '../../lib/form-errors'
 import IconClose from '../../static/icon-close.svg'
 
 export class LoginForm extends Component {
-  renderEmailInputField () {
-    const { emailInputLabel, emailPlaceholder } = this.props.formTranslations
-
-    return (
-      <div className='o-flex o-flex__space-between'>
-        <div className='o-flex-full-width-s'>
-          <label htmlFor='login-email' className='o-form__label'><b>{ emailInputLabel }</b></label>
-          <Field
-            autoComplete='username'
-            className='o-form__input-field o-form__input-block'
-            id='login-email'
-            name='email'
-            placeholder={emailPlaceholder}
-            type='email'
-          />
-          <div className='o-form__input-field__error'>
-            <ErrorMessage name='email' />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  renderPasswordInputField () {
-    const { passwordInputLabel, passwordPlaceholder } = this.props.formTranslations
-
-    return (
-      <div className='o-flex o-flex__space-between'>
-        <div className='o-flex-full-width-s'>
-          <label htmlFor='login-password' className='o-form__label'><b>{ passwordInputLabel }</b></label>
-          <Field
-            autoComplete='current-password'
-            className='o-form__input-field o-form__input-block'
-            id='login-password'
-            name='password'
-            placeholder={passwordPlaceholder}
-            type='password'
-          />
-          <div className='o-form__input-field__error'>
-            <ErrorMessage name='password' />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  renderSubmitButton (props) {
-    const { loginButtonText } = this.props.formTranslations
-
-    return (
-      <Button
-        className='c-login__button o-button--sml'
-        aria-label={ loginButtonText }
-        label={ loginButtonText }
-        status={(props.isValid ? 'positive' : 'disabled')}
-        type='submit'
-        disabled={!props.isValid}
-      />
-    )
-  }
-
-  renderFormik (initialValues, loginSchema, handleSubmit, login) {
-    return (
-      <Formik
-        initialValues={initialValues}
-        validationSchema={loginSchema}
-        onSubmit={handleSubmit}
-        render={props => (
-          <Form className='c-login__form'>
-            <FormErrors errors={login.errors} />
-            { this.renderEmailInputField() }
-            { this.renderPasswordInputField() }
-            <div>
-              <Checkbox label='Remember me' />
-              { this.renderSubmitButton(props) }
-            </div>
-          </Form>
-        )}
-      />
-    )
-  }
-
   /**
   * We only want to render a 'close' icon on pages where the form is displayed
   * in a modal. We can pass a closeButton attribute to the login form at the
@@ -115,12 +33,110 @@ export class LoginForm extends Component {
     } else return null
   }
 
+  renderEmailInputField () {
+    const { emailInputLabel, emailPlaceholder } = this.props.formOptions
+
+    return (
+      <div className='o-flex o-flex__space-between'>
+        <div className='o-flex-full-width-s'>
+          { emailInputLabel.visible ? <label htmlFor='login-email' className='o-form__label'><b>{ emailInputLabel.translation || 'email' }</b></label> : null }
+          <Field
+            autoComplete='username'
+            className='o-form__input-field o-form__input-block'
+            id='login-email'
+            name='email'
+            placeholder={emailPlaceholder}
+            type='email'
+          />
+          <div className='o-form__input-field__error'>
+            <ErrorMessage name='email' />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  renderPasswordInputField () {
+    const { passwordInputLabel, passwordPlaceholder } = this.props.formOptions
+
+    return (
+      <div className='o-flex o-flex__space-between'>
+        <div className='o-flex-full-width-s'>
+          { passwordInputLabel.visible ? <label htmlFor='login-password' className='o-form__label'><b>{ passwordInputLabel.translation || 'password' }</b></label> : null }
+          <Field
+            autoComplete='current-password'
+            className='o-form__input-field o-form__input-block'
+            id='login-password'
+            name='password'
+            placeholder={passwordPlaceholder}
+            type='password'
+          />
+          <div className='o-form__input-field__error'>
+            <ErrorMessage name='password' />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  renderSubmitButton () {
+    const props = this.props
+    const loginButtonText = props.formOptions.loginButton.translation || 'Login'
+
+    return (
+      <Button
+        className='c-login__button o-button--sml'
+        aria-label={ loginButtonText }
+        label={ loginButtonText }
+        status={(props.isValid ? 'positive' : 'disabled')}
+        type='submit'
+        disabled={!props.isValid}
+      />
+    )
+  }
+
+  renderFormik (initialValues, loginSchema, handleSubmit, login) {
+    const formFooter = this.props.formFooter(this.props) || this.defaultFormFooter()
+
+    return (
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginSchema}
+        onSubmit={handleSubmit}
+        render={props => (
+          <Form className='c-login__form'>
+            <FormErrors errors={login.errors} />
+            { this.renderEmailInputField() }
+            { this.renderPasswordInputField() }
+            { formFooter }
+          </Form>
+        )}
+      />
+    )
+  }
+
+  defaultFormFooter () {
+    const { formOptions } = this.props
+
+    return (
+      <Fragment>
+        <Checkbox label='Remember me' />
+        { this.renderSubmitButton() }
+        { formOptions.resetPasswordLink.visible ? <a href='/account/forgotpassword' className='c-login__anchor'>{ formOptions.resetPasswordLink.translation || 'Reset Password?' }</a> : null }
+        { formOptions.caption2.visible ? <p className='c-login__caption'>{ formOptions.caption2.translation }</p> : null }
+        <Link href='/account/register'>
+          { formOptions.registerButton.visible ? <a className='c-login__register-button'>{ formOptions.registerButton.translation || 'Register' }</a> : null }
+        </Link>
+      </Fragment>
+    )
+  }
+
   render () {
     const {
       className,
       handleSubmit,
       login,
-      formTranslations
+      formOptions
     } = this.props
 
     const initialValues = {
@@ -139,18 +155,13 @@ export class LoginForm extends Component {
     return (
       <div className='c-login'>
         <div className='c-login__headings'>
-          <h1 className='c-login__title'>{ formTranslations.title }</h1>
+          { formOptions.title.visible ? <h1 className='c-login__title'>{ formOptions.title.translation || 'Login' }</h1> : null }
           { this.renderCloseButton() }
         </div>
-        <p className='c-login__caption'>{ formTranslations.caption }</p>
+        { formOptions.caption.visible ? <p className='c-login__caption'>{ formOptions.caption.translation }</p> : null }
         <div className={classNames('o-form', className)}>
           { this.renderFormik(initialValues, loginSchema, handleSubmit, login) }
         </div>
-        <a href='/account/forgotpassword' className='c-login__anchor'>{ formTranslations.resetPasswordLink }</a>
-        <p className='c-login__caption'>Don't have an account?</p>
-        <Link href='/account/register'>
-          <a className='c-login__register-button'>{ formTranslations.registerButtonText }</a>
-        </Link>
       </div>
     )
   }
