@@ -32,7 +32,7 @@ jobs:
           name: Create NextJS production build
           command: yarn --cwd packages/reference build
       - save_cache:
-          key: next-production-build-{{ .Branch }}
+          key: next-production-build-{{ .Branch }}-{{ .Revision }}
           paths:
             - packages/reference/client/.next
   jest_test:
@@ -81,7 +81,7 @@ jobs:
           name: Restore Yarn Package Cache
           keys:
             - yarn-dependencies-{{ checksum "yarn.lock" }}
-            - next-production-build-{{ .Branch }}
+            - next-production-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
@@ -131,9 +131,16 @@ workflows:
           pre-steps:
             - checkout
             - restore_cache:
+                name: Restore Yarn Package Cache
+                keys:
+                  - yarn-dependencies-{{ checksum "yarn.lock" }}
+            - run:
+                name: Install Dependencies
+                command: yarn install --frozen-lockfile
+            - restore_cache:
                 name: Restore NextJS build
                 keys:
-                  - next-production-build-{{ .Branch }}
+                  - next-production-build-{{ .Branch }}-{{ .Revision }}
           post-steps:
             - store_artifacts:
                 path: packages/reference/cypress/screenshots
