@@ -64,5 +64,5 @@ Cypress.Commands.add('loginToAccount', () => {
   cy.wait('@getAccount')
 
   // Check the my account page was loaded
-  cy.url().should('includes', '/myaccount')
+  cy.url().should('includes', 'account/details')
 })

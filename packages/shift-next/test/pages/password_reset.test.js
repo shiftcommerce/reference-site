@@ -3,7 +3,7 @@ import React from 'react'
 import Router from 'next/router'
 
 // Pages
-import { PasswordResetPage } from '../../src/pages/password_reset'
+import PasswordResetPage from '../../src/pages/password_reset'
 
 // Actions
 import * as accountActions from '../../src/actions/account-actions'

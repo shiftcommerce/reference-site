@@ -154,8 +154,8 @@ describe('Details', () => {
       cy.get('input[name=firstName]').clear()
       cy.get('input[name=emailConfirmation]').type('test@example.com')
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', '/details')
 
       // Check email input has error message
       cy.get('input[name=firstName] + div').contains('Required')
@@ -176,8 +176,8 @@ describe('Details', () => {
       cy.get('input[name=lastName]').clear()
       cy.get('input[name=emailConfirmation]').type('test@example.com')
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', '/details')
 
       // Check email input has error message
       cy.get('input[name=lastName] + div').contains('Required')
@@ -198,8 +198,8 @@ describe('Details', () => {
       cy.get('input[name=email]').clear().type('test')
       cy.get('input[name=emailConfirmation]').clear().type('test')
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', 'account/details')
 
       // Check email confirmation input has error message
       cy.get('input[name=email] + div').contains('Invalid email')
@@ -220,8 +220,8 @@ describe('Details', () => {
       cy.get('input[name=email]').clear().type('test@example.com')
       cy.get('input[name=emailConfirmation]').clear().type('test@test.com').blur()
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', 'account/details')
 
       // Check email confirmation input has error message
       cy.get('input[name=emailConfirmation] + div').contains('Must match')
@@ -242,8 +242,8 @@ describe('Details', () => {
       cy.get('input[name=email]').clear()
       cy.get('input[name=emailConfirmation]').clear().blur()
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', 'account/details')
 
       // Check email input has error message
       cy.get('input[name=email] + div').contains('Required')
@@ -291,8 +291,8 @@ describe('Details', () => {
       // Check flash message
       cy.contains('Oops, there was an error submitting your form.')
 
-      // Check we are still on the myaccount page
-      cy.url().should('includes', '/myaccount')
+      // Check we are still on the details page
+      cy.url().should('includes', 'account/details')
     })
   })
 })
