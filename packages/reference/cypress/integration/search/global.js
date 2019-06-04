@@ -61,8 +61,6 @@ describe('Global search', () => {
   })
 
   it('clears the category selection properly', () => {
-    cy.server()
-
     // Visit the category page
     cy.visit('/categories/computers')
 
