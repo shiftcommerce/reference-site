@@ -31,7 +31,7 @@ jobs:
           name: Create NextJS production build
           command: |
             yarn --cwd packages/reference build
-            ls -la packages/reference/client/.next
+            cat packages/reference/client/.next/BUILD_ID
       - save_cache:
           key: next-production-build-{{ .Branch }}-{{ .Revision }}
           paths:
@@ -90,7 +90,7 @@ jobs:
           name: Start the server
           background: true
           command: |
-            ls -la packages/reference/client/.next
+            cat packages/reference/client/.next/BUILD_ID
             yarn --cwd packages/reference start
       - run:
           name: Start PW metrics
