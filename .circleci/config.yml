@@ -153,7 +153,9 @@ workflows:
           no-workspace: true
           executor: cypress-node-11
           yarn: true
-          start: yarn --cwd packages/reference start
+          start: |
+            cat packages/reference/client/.next/BUILD_ID
+            yarn --cwd packages/reference start
           parallel: true # Specify we are using parallelism so it uses the shared workspace output from cypress/install (NextJS build)
           group: All Integration tests
           wait-on: 'http://localhost:3000'
