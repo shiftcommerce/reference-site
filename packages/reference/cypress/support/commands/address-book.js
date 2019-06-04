@@ -1,4 +1,4 @@
-Cypress.Commands.add('goToMyAccount', () => {
+Cypress.Commands.add('setupMyAccountFixtures', () => {
   cy.setCookie('signedIn', 'true')
 
   cy.server()
