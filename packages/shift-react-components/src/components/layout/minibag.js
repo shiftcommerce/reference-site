@@ -10,10 +10,10 @@ import { Image } from '../../objects/image'
 import DropdownSelect from '../../objects/dropdown-select'
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 export class Minibag extends PureComponent {
   renderLineItems (lineItems) {
+    const Link = Config.get().Link || link
     const { onItemQuantityUpdated } = this.props
 
     return lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
@@ -72,7 +72,9 @@ export class Minibag extends PureComponent {
   }
 
   renderMiniBagDropdown (lineItemsCount, lineItems, cart) {
+    const Link = Config.get().Link || link
     const miniBagTotal = cart.total - cart.shipping_total
+
     return <>
       <div className='c-minibag__overlay' onClick={() => this.props.toggleMiniBag(false)} />
       <div className='c-minibag__dropdown'>

@@ -7,7 +7,6 @@ import t from 'typy'
 import LazyLoad from '../../objects/lazy-load'
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 class GenericGrid extends PureComponent {
   /**
@@ -16,6 +15,7 @@ class GenericGrid extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   buildSlides (componentData) {
+    const Link = Config.get().Link || link
     const slides = []
 
     // Loop from 1 to 12, and check if each index has a value
@@ -51,6 +51,7 @@ class GenericGrid extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   catButton (componentData) {
+    const Link = Config.get().Link || link
     return (
       <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }

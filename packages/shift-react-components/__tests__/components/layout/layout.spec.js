@@ -36,6 +36,7 @@ test('renders the header', () => {
       skipHeader={initialState.skipHeader}
       minibagDisplayed={initialState.minibagDisplayed}
       cart={initialState.cart}
+      logoSrc='/test.png'
       {...initialState}
     />
   )
@@ -44,7 +45,7 @@ test('renders the header', () => {
 
   // Assert
   expect(header).toExist()
-  expect(header).toContainReact(<Logo className='o-header__logo' />)
+  expect(header).toContainReact(<Logo className='o-header__logo' logoSrc='/test.png' />)
   expect(header.find(Minibag)).toExist()
   expect(wrapper).toMatchSnapshot()
 })

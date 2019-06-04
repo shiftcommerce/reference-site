@@ -143,7 +143,7 @@
           },
           "product_assets": [
             {
-              "url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg",
+              "url": "/static/fixtures/product-image-1.jpg",
               "alt_text": "Geeky Computer",
               "sort_position": 1,
               "image_height": 600,
@@ -215,7 +215,7 @@
             "product_assets": [
               {
                 "url": {
-                  "value": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg",
+                  "value": "/static/fixtures/product-image-1.jpg",
                   "matchLevel": "none",
                   "matchedWords": []
                 },

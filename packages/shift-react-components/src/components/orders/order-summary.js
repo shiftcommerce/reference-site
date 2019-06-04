@@ -10,8 +10,6 @@ import Config from '../../lib/config'
 import link from '../../objects/link'
 import { Image } from '../../objects/image'
 
-const Link = Config.get().Link || link
-
 export class OrderSummary extends Component {
   /**
   * Render line item image for the order summary
@@ -19,6 +17,8 @@ export class OrderSummary extends Component {
   * @return {string} - HTML markup for the component
   */
   renderLineItemImage (lineItem) {
+    const Link = Config.get().Link || link
+
     if (lineItem.imageUrl) {
       return (
         <Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} >

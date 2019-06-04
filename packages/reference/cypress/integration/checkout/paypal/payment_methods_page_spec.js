@@ -19,24 +19,10 @@ describe('PayPal Checkout: Navigating To Payment Methods Page', () => {
 
     cy.route({
       method: 'GET',
-      url: '/getMenus?**',
-      status: 200,
-      response: 'fixture:menus/get-menus.json'
-    }).as('getMenus')
-
-    cy.route({
-      method: 'GET',
       url: '/getShippingMethods',
       status: 200,
       response: 'fixture:cart/get-shipping-methods.json'
     }).as('getShippingMethods')
-
-    cy.route({
-      method: 'POST',
-      url: '/xoplatform/logger/api/logger**',
-      status: 200,
-      response: "{'events': [], 'meta': '{}'}"
-    }).as('payPalLogger')
 
     // Add first item to cart
     cy.addVariantToCart({ variantId: '27104', quantity: 1 })

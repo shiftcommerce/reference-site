@@ -8,7 +8,6 @@ import LazyLoad from '../../objects/lazy-load'
 import { ConditionalLink } from '../../objects/conditional-link'
 import Config from '../../lib/config'
 import link from '../../objects/link'
-const Link = Config.get().Link || link
 
 class HeroFull extends PureComponent {
   /**
@@ -109,6 +108,7 @@ class HeroFull extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   heroButtons (hero) {
+    const Link = Config.get().Link || link
     let buttons = []
     let index = 1
 

@@ -12,20 +12,6 @@ describe('Sorting results', () => {
       }).as('emptySearch')
 
       cy.route({
-        method: 'GET',
-        url: '/getMenus?**',
-        status: 200,
-        response: 'fixture:menus/get-menus.json'
-      }).as('getMenus')
-
-      cy.route({
-        method: 'POST',
-        url: '/xoplatform/logger/api/logger**',
-        status: 200,
-        response: "{'events': [], 'meta': '{}'}"
-      }).as('platformAPILogger')
-
-      cy.route({
         method: 'POST',
         url: '**/1/indexes/**',
         status: 200,
@@ -102,26 +88,12 @@ describe('Sorting results', () => {
       // Stub requests
       cy.server()
 
-      cy.route({
-        method: 'GET',
-        url: '/getMenus?**',
-        status: 200,
-        response: 'fixture:menus/get-menus.json'
-      }).as('getMenus')
-
-      cy.route({
-        method: 'POST',
-        url: '/xoplatform/logger/api/logger**',
-        status: 200,
-        response: "{'events': [], 'meta': '{}'}"
-      }).as('platformAPILogger')
-
       // Navigate to category page
       cy.navigateToCategoryPage()
 
       // Check default sorting (desc) - check rendered first product
       cy.contains(/Geeky Computer/i)
-      cy.get('.c-product-listing-card img').first().should('have.attr', 'src', '/static/fixtures/product-image-1.jpg')
+      cy.get('.c-product-listing-card img').first().should('have.attr', 'src', 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg')
       cy.get('.c-product-listing-card__price').first().contains('£550')
       cy.get('.c-product-listing-card__rating').first().find('span.o-rating__star--fill').should('have.length', 5)
 

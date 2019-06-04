@@ -45,8 +45,7 @@ describe('getAccountV1', () => {
     const queryObject = {
       fields: {
         customer_accounts: 'email,meta_attributes'
-      },
-      include: ''
+      }
     }
 
     const accountData = {
@@ -162,11 +161,19 @@ describe('getCustomerOrdersV1', () => {
 
 describe('getAddressBookV1', () => {
   test('endpoint returns address book with correct id', () => {
+    const customerId = '77'
+    const queryObject = {
+      fields: {
+        addresses: 'address_line_1,address_line_2,city,country,first_name,last_name,meta_attributes,postcode,preferred_billing,preferred_shipping,state',
+      }
+    }
+
     nock(shiftApiConfig.get().apiHost)
-      .get(`/${shiftApiConfig.get().apiTenant}/v1/customer_accounts/77/addresses`)
+      .get(`/${shiftApiConfig.get().apiTenant}/v1/customer_accounts/${customerId}/addresses`)
+      .query(queryObject)
       .reply(200, addressBookResponse)
 
-    return getAddressBookV1(77)
+    return getAddressBookV1(customerId, queryObject)
       .then(response => {
         expect(response.status).toEqual(200)
         expect(response.data).toEqual(addressBookResponse)
