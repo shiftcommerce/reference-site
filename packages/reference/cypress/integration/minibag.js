@@ -65,9 +65,7 @@ describe('Minibag', () => {
     cy.get('.c-minibag__dropdown').should('have.length', 0)
   })
 
-  it('Shows the minibag when clicking the basket, hides the minibag when clicking outside of it', () => {
-    cy.visit('/')
-
+  it('Shows the minibag when clicking the basket', () => {
     // Check that the minibag isn't displayed to start with
     cy.get('.c-minibag__dropdown').should('have.length', 0)
 
@@ -76,13 +74,11 @@ describe('Minibag', () => {
     // Check that the minibag is displayed
     cy.get('.c-minibag__dropdown').should('have.length', 1)
 
-    // Check that the minibag is empty
-    cy.contains('Your bag is empty')
+    // Check that the minibag has one line item and its title matches
+    cy.get('.c-minibag__line-item').contains(/Clock computer - Clock computer 15''/i).should('have.length', 1)
   })
 
   it('Goes to cart page correctly', () => {
-    cy.visit('/')
-
     cy.contains('Basket').click()
 
     // Check that the minibag is empty
@@ -100,9 +96,12 @@ describe('Minibag', () => {
     cy.visit('/')
     cy.contains('Basket').click()
 
-    // Start a mock server to assert on the API request to update line item quantity
-    cy.server()
-    cy.route('POST', '/updateLineItem', {}).as('updateQuantity')
+    cy.route({
+      method: 'POST',
+      url: '/updateLineItem',
+      status: 200,
+      response: 'fixture:cart/update-line-item-quantity.json'
+    }).as('updateQuantity')
 
     // Update the product's quantity with the dropdown
     cy.get('.c-minibag__quantity').select('3')

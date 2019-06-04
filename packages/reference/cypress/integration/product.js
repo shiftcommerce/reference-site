@@ -9,9 +9,6 @@ describe('Product page', () => {
     })
 
     it('renders correctly for variant that is in stock', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Select the instock variant
       cy.contains(/Hybrid Computer 13'' - £699.00/i).click()
 
@@ -28,9 +25,6 @@ describe('Product page', () => {
     })
 
     it('renders correctly for variant that is out of stock', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Select the out of stock variant
       cy.contains(/Hybrid Computer 15'' - £999.00- Email When in Stock/i).click()
 
@@ -47,9 +41,6 @@ describe('Product page', () => {
     })
 
     it('renders details correctly when changing between instock and out of stock variants', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Select the instock variant
       cy.contains(/Hybrid Computer 13'' - £699.00/i).click()
 
@@ -82,9 +73,6 @@ describe('Product page', () => {
 
   context('EWIS', () => {
     it('renders a success message when EWIS form is submitted', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Select the out of stock variant
       cy.get('button[value="HYBRID_15"]').click()
 
@@ -112,9 +100,6 @@ describe('Product page', () => {
         response: 'fixture:cart/add-to-cart.json'
       }).as('addToCart')
 
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Check that the minibag isn't displayed to start with
       cy.get('.c-minibag__dropdown').should('have.length', 0)
 
@@ -136,22 +121,18 @@ describe('Product page', () => {
       cy.contains(/Shopping Basket/i)
       cy.contains(/View Shopping Basket/i)
       cy.contains(/Continue Shopping/i)
+
+      cy.get('.c-minibag__dropdown-cross').click()
     })
   })
 
   context('Product Images', () => {
     it('renders the product image', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Check image is rendered
       cy.get('.c-product-display__carousel img').first().should('have.attr', 'src', '/static/fixtures/product-image-1.jpg')
     })
 
     it('clicking a pagination dot, thumbnails and left/right arrows will change the image', () => {
-      // Navigate to the PDP
-      cy.goToPdpFromPlp()
-
       // Click the second dot
       cy.get('.control-dots .dot:nth-child(2)').click()
 
