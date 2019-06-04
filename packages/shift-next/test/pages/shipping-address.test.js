@@ -6,7 +6,9 @@ import Router from 'next/router'
 import ShippingAddressPage from '../../src/pages/shipping-address'
 
 // Components
-import { AddressFormHeader, Button, CheckoutAddressForm } from '@shiftcommerce/shift-react-components'
+import { Button } from '@shiftcommerce/shift-react-components/src/objects/button'
+import { AddressFormHeader } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-header'
+import { AddressForm } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form'
 
 // Actions
 import * as AddressBookActions from '../../src/actions/address-book-actions'
@@ -325,5 +327,5 @@ test('renders address form components', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find(AddressFormHeader).length).toEqual(1)
   expect(wrapper.find(Button).length).toEqual(1)
-  expect(wrapper.find(CheckoutAddressForm).length).toEqual(1)
+  expect(wrapper.find(AddressForm).length).toEqual(1)
 })

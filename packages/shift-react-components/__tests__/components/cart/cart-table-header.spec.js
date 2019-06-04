@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CartTableHeader from '../../../src/components/cart/cart-table-header'
+import { CartTableHeader } from '../../../src/components/cart/cart-table-header'
 
 // Fixtures
 import cart from '../../fixtures/cart'

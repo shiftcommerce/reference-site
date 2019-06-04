@@ -2,7 +2,8 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { algoliaReduxWrapper, SearchPage } from '@shiftcommerce/shift-next'
+import { algoliaReduxWrapper } from '@shiftcommerce/shift-next/src/lib/algolia-redux-wrapper'
+import SearchPage from '@shiftcommerce/shift-next/src/pages/search'
 
 const mapStateToProps = ({ search }) => {
   return { search }

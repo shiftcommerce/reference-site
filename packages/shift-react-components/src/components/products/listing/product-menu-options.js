@@ -2,17 +2,13 @@
 import React, { PureComponent } from 'react'
 import { SortBy } from 'react-instantsearch-dom'
 
-// Lib
-import componentMapping from '../../../lib/component-mapping'
+// Objects
+import { Button } from '../../../objects/button'
+
+// Components
+import SearchRefinements from '../../search/search-refinements'
 
 class ProductMenuOptions extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-    this.SearchRefinements = componentMapping('SearchRefinements')
-  }
-
   render () {
     const { toggleFiltering, indexName } = this.props
 
@@ -21,9 +17,9 @@ class ProductMenuOptions extends PureComponent {
         <div className='c-product-listing__menu-options-filters'>
           <h2 className='c-product-listing__menu-options-filters-title'>Filters</h2>
           <div className='c-product-listing__menu-options-filters-applied'>
-            <this.SearchRefinements />
+            <SearchRefinements />
           </div>
-          <this.Button className='c-product-listing__menu-options-filters-button' onClick={toggleFiltering} />
+          <Button className='c-product-listing__menu-options-filters-button' onClick={toggleFiltering} />
         </div>
         <div className='c-product-listing__menu-options-sort-by'>
           <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
@@ -34,7 +30,7 @@ class ProductMenuOptions extends PureComponent {
               { value: `${indexName}_product_rating_desc`, label: 'Rating desc.' }
             ]}
           />
-          <this.Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
+          <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
         </div>
       </div>
     )

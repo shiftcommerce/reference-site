@@ -1,10 +1,9 @@
 {
   "name": "@shiftcommerce/shift-next-routes",
-  "version": "1.0.0",
+  "version": "0.21.0",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next-routes.git",
-  "private": true,
   "engines": {
     "node": "^11.13.0"
   },
@@ -13,7 +12,7 @@
   },
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
-    "@shiftcommerce/shift-node-api": "1.0.0",
+    "@shiftcommerce/shift-node-api": "^0.21.0",
     "stripe": "^6.31.2"
   },
   "devDependencies": {

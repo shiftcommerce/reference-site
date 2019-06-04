@@ -3,22 +3,19 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import t from 'typy'
 
-import componentMapping from '../../lib/component-mapping'
+// Components
+import LazyLoad from '../../objects/lazy-load'
+import Config from '../../lib/config'
+import link from '../../objects/link'
 
 class GenericGrid extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.LazyLoad = componentMapping('LazyLoad')
-    this.Link = componentMapping('Link')
-  }
-
   /**
    * Use a forloop to build the slides
    * @param  {Object} componentData
    * @return {string} - HTML markup for the component
    */
   buildSlides (componentData) {
+    const Link = Config.get().Link || link
     const slides = []
 
     // Loop from 1 to 12, and check if each index has a value
@@ -32,14 +29,14 @@ class GenericGrid extends PureComponent {
       if (slideImage && slideText && slideLinkURL) {
         slides.push(
           <div className='o-card-grid__card' key={i}>
-            <this.Link href={slideLinkURL[0].canonical_path}>
-              <this.LazyLoad className='u-image-shadow'
+            <Link href={slideLinkURL[0].canonical_path}>
+              <LazyLoad className='u-image-shadow'
                 src={slideImage[0].canonical_path}
                 imageHeight={componentData.image_height}
                 imageWidth={componentData.image_width}
               />
               <p className='o-card-grid__title'>{ slideText }</p>
-            </this.Link>
+            </Link>
           </div>
 
         )
@@ -54,10 +51,11 @@ class GenericGrid extends PureComponent {
    * @return {string} - HTML markup for the component
    */
   catButton (componentData) {
+    const Link = Config.get().Link || link
     return (
-      <this.Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
+      <Link href={t(componentData, 'cat_url[0].canonical_path').safeObject} className='o-template-component__cat-button o-button o-button--primary'>
         { componentData.cat_text }
-      </this.Link>
+      </Link>
     )
   }
 

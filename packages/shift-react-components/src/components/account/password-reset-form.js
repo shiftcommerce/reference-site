@@ -5,19 +5,13 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import { FormErrors } from '../../lib/form-errors'
 
-class PasswordResetForm extends Component {
-  constructor(props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-    this.AccountFormErrors = componentMapping('FormErrors')
-  }
-
-  renderSubmitButton(props) {
+export class PasswordResetForm extends Component {
+  renderSubmitButton (props) {
     return (
-      <this.Button
+      <Button
         className='c-password__button o-button-sml'
         aria-label='Submit'
         label='submit'
@@ -29,7 +23,7 @@ class PasswordResetForm extends Component {
     )
   }
 
-  renderForm(handleSubmit, account) {
+  renderForm (handleSubmit, account) {
     const initialValues = {
       password: '',
       confirmPassword: ''
@@ -52,7 +46,7 @@ class PasswordResetForm extends Component {
         onSubmit={handleSubmit}
         render={(props) => (
           <Form>
-            <this.AccountFormErrors errors={account.errors} />
+            <FormErrors errors={account.errors} />
             <Field type='password' name='password' placeholder='New Password' className='o-form__input-field o-form__input-block' />
             <div className='o-form__input-field__error'>
               <ErrorMessage name='password' />
@@ -61,14 +55,14 @@ class PasswordResetForm extends Component {
             <div className='o-form__input-field__error'>
               <ErrorMessage name='confirmPassword' />
             </div>
-            {this.renderSubmitButton(props)}
+            { this.renderSubmitButton(props) }
           </Form>
         )}
       />
     )
   }
 
-  render() {
+  render () {
     const {
       className,
       handleSubmit,
@@ -86,5 +80,3 @@ class PasswordResetForm extends Component {
     )
   }
 }
-
-export default PasswordResetForm

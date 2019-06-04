@@ -17,12 +17,10 @@ import {
 } from '../../actions/checkout-actions'
 
 // Components
-import {
-  AddressFormSummary,
-  Loading,
-  PaymentMethodSummary,
-  ShippingMethods
-} from '@shiftcommerce/shift-react-components'
+import { AddressFormSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-summary'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { PaymentMethodSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method-summary'
+import { ShippingMethods } from '@shiftcommerce/shift-react-components/src/components/checkout/shipping-methods'
 
 export class ShippingMethodPage extends Component {
   static async fetchShippingMethods () {

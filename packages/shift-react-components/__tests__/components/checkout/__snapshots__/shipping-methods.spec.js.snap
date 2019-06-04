@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders error messages 1`] = `
+exports[`ShippingMethods renders an error message 1`] = `
 <ShippingMethods
   cartLineItemsCount={2}
   cartShippingMethod={
@@ -108,7 +108,7 @@ exports[`renders error messages 1`] = `
         </h2>
       </div>
     </ShippingMethodsHeader>
-    <_default
+    <Flash
       modifier="error"
       text="Something went wrong"
     >
@@ -117,7 +117,7 @@ exports[`renders error messages 1`] = `
       >
         Something went wrong
       </div>
-    </_default>
+    </Flash>
     <form
       className="o-form__wrapper o-form__background c-shipping-method__list"
     >
@@ -173,7 +173,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 3rd June
+              Tuesday 21st May
             </span>
           </label>
         </div>
@@ -218,7 +218,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 3rd June
+              Wednesday 22nd May
             </span>
           </label>
         </div>
@@ -263,7 +263,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 3rd June
+              Tuesday 21st May
             </span>
           </label>
         </div>
@@ -308,7 +308,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 3rd June
+              Wednesday 22nd May
             </span>
           </label>
         </div>

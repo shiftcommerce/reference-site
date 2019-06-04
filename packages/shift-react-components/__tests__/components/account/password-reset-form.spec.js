@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import PasswordResetForm from '../../../src/components/account/password-reset-form'
+import { PasswordResetForm } from '../../../src/components/account/password-reset-form'
 
 describe('PasswordResetForm', () => {
   test('should render the form', () => {
@@ -17,7 +17,7 @@ describe('PasswordResetForm', () => {
 
     // Assert
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper).toIncludeText('Password Reset') 
+    expect(wrapper).toIncludeText('Password Reset')
     expect(wrapper).toIncludeText('Please enter your new password')
     expect(wrapper).toIncludeText('submit')
   })

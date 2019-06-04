@@ -5,16 +5,12 @@ import t from 'typy'
 
 // Lib
 import { penceToPounds } from '../../lib/pence-to-pounds'
-import componentMapping from '../../lib/component-mapping'
 
-class OrderList extends PureComponent {
-  constructor (props) {
-    super(props)
+// Components
+import { OrderLineItems } from './order-line-items'
+import ShippingAddresses from './shipping-addresses'
 
-    this.OrderLineItems = componentMapping('OrderLineItems')
-    this.ShippingAddresses = componentMapping('ShippingAddresses')
-  }
-
+export class OrderList extends PureComponent {
   /**
   * Render the total shipping costs in the order list
   * @param  {Object} order
@@ -69,13 +65,13 @@ class OrderList extends PureComponent {
     return (
       <div className='c-order-history__details'>
         { this.renderOrderSummary(order, orderDate, total) }
-        <this.OrderLineItems items={order.line_items} />
+        <OrderLineItems items={order.line_items} />
         <div className='c-order-history__totals'>
           <p>Shipping: &pound;{ this.renderShippingTotal(order) } </p>
           <p className='u-bold'>Total: &pound;{ total }</p>
         </div>
         <h3>Shipping Details</h3>
-        <this.ShippingAddresses addresses={order.shipping_addresses} />
+        <ShippingAddresses addresses={order.shipping_addresses} />
       </div>
     )
   }
@@ -103,7 +99,7 @@ class OrderList extends PureComponent {
 
     return (
       <>
-        {orders.data.map((order) => {
+        { orders.data.map((order) => {
           const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
           const total = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
 
@@ -113,10 +109,8 @@ class OrderList extends PureComponent {
               { this.renderOrderDetails(order, orderDate, total) }
             </div>
           )
-        })}
+        }) }
       </>
     )
   }
 }
-
-export default OrderList

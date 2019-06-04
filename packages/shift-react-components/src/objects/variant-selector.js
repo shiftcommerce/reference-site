@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { decimalPrice } from '../lib/decimal-price'
 
 // Objects
-import Button from './button'
+import { Button } from './button'
 
 class VariantSelector extends Component {
   constructor (props) {

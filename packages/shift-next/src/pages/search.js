@@ -4,7 +4,7 @@ import qs from 'qs'
 import equal from 'deep-equal'
 
 // Components
-import { ProductListing } from '@shiftcommerce/shift-react-components'
+import { ProductListing } from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
@@ -35,7 +35,7 @@ class SearchPage extends Component {
   }
 
   constructor(props) {
-    super(props) 
+    super(props)
 
     this.Head = Config.get().Head
   }

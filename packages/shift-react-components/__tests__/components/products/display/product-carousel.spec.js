@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import ProductCarousel from '../../../../src/components/products/display/product-carousel'
+import { ProductCarousel } from '../../../../src/components/products/display/product-carousel'
 
 // Fixtures
 import product from '../../../fixtures/product'

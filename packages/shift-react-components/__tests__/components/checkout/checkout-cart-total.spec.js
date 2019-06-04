@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CheckoutCartTotal from '../../../src/components/checkout/checkout-cart-total'
+import { CheckoutCartTotal } from '../../../src/components/checkout/checkout-cart-total'
 
 test("renders the cart's total, subtotal and shipping cost", () => {
   // Act

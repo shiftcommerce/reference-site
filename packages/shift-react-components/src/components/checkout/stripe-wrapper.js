@@ -5,13 +5,12 @@ import { StripeProvider, Elements } from 'react-stripe-elements'
 
 // Lib
 import Config from '../../lib/config'
-import componentMapping from '../../lib/component-mapping'
 
-class StripeWrapper extends Component {
+import StripeFields from './stripe-fields'
+
+export default class StripeWrapper extends Component {
   constructor (props) {
     super(props)
-
-    this.StripeFields = componentMapping('StripeFields')
   }
 
   renderStripeForm (stripeApiKey) {
@@ -26,7 +25,7 @@ class StripeWrapper extends Component {
     return (
       <StripeProvider apiKey={stripeApiKey}>
         <Elements>
-          <this.StripeFields
+          <StripeFields
             billingAddress={billingAddress}
             cardTokenRequested={cardTokenRequested}
             onCardTokenReceived={onCardTokenReceived}
@@ -61,5 +60,3 @@ StripeWrapper.propTypes = {
   onCardTokenReceived: PropTypes.func,
   setCardErrors: PropTypes.func
 }
-
-export default StripeWrapper

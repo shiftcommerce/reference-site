@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import MiniPlaceOrder from '../../../src/components/checkout/mini-place-order'
+import { MiniPlaceOrder } from '../../../src/components/checkout/mini-place-order'
 
 test('renders a disabled button when order is invalid', () => {
   const wrapper = shallow(<MiniPlaceOrder

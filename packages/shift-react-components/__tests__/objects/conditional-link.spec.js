@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Objects
-import ConditionalLink from '../../src/objects/conditional-link'
+import { ConditionalLink } from '../../src/objects/conditional-link'
 import Link from '../../src/objects/link'
 
 describe('ConditionalLink', () => {

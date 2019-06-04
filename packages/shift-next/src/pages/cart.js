@@ -15,19 +15,17 @@ import {
 } from '../actions/cart-actions'
 
 // Components
-import {
-  Breadcrumb,
-  CartNoData,
-  CartTable,
-  CartTableGrid,
-  CartTableGridItem,
-  CartTableHeader,
-  CartTablePaymentIcons,
-  CartTableSummary,
-  CouponForm,
-  LineItems,
-  Loading
-} from '@shiftcommerce/shift-react-components'
+import { Breadcrumb } from '@shiftcommerce/shift-react-components/src/objects/breadcrumb'
+import { CartNoData } from '@shiftcommerce/shift-react-components/src/components/cart/cart-no-data'
+import { CartTable } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table'
+import { CartTableGrid } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-grid'
+import { CartTableGridItem } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-grid-item'
+import { CartTableHeader } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-header'
+import { CartTablePaymentIcons } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-payment-icons'
+import { CartTableSummary } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-summary'
+import { CouponForm } from '@shiftcommerce/shift-react-components/src/components/cart/coupon-form'
+import { LineItems } from '@shiftcommerce/shift-react-components/src/components/cart/line-items'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 // Config
 import Config from '../lib/config'

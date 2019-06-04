@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import ReactLoading from 'react-loading'
 import classNames from 'classnames'
 
-class Loading extends PureComponent {
+export class Loading extends PureComponent {
   render () {
     const {
       className,
@@ -25,5 +25,3 @@ class Loading extends PureComponent {
     )
   }
 }
-
-export default Loading

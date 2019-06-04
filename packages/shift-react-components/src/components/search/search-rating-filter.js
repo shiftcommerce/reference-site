@@ -2,16 +2,10 @@
 import React, { Component } from 'react'
 import { connectRefinementList } from 'react-instantsearch/connectors'
 
-// Lib
-import componentMapping from '../../lib/component-mapping'
+// Components
+import Rating from '../../objects/rating'
 
 class SearchRatingFilter extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Rating = componentMapping('Rating')
-  }
-
   renderRatingOptions () {
     const { refine, items } = this.props
 
@@ -27,7 +21,7 @@ class SearchRatingFilter extends Component {
             <label className='ais-RefinementList-label'>
               <input className='ais-RefinementList-checkbox' type='checkbox' checked={item.isRefined} onChange={() => { refine(item.value) }} />
               <span className='ais-RefinementList-labelText'>
-                <this.Rating
+                <Rating
                   rating={item.label}
                   className='o-rating__star--has-spacing'
                 />
