@@ -7,7 +7,7 @@ const { buildContentSecurityPolicy } = require('../build-content-security-policy
  * @param {object} options - eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
  */
 const staticPageContentSecurityPolicy = (server, options = {}) => {
-  server.all(/(\/pages\/staticpage.js)$/, (req, res, next) => {
+  server.get(/(\/pages\/staticpage.js)$/, (req, res, next) => {
     // Clone & format CSP options
     let formattedOptions = Object.assign({}, options)
     formattedOptions.connectHosts = `https://*.algolia.net https://*.algolianet.com,${options.connectHosts || ''}` 

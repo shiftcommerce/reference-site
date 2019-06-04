@@ -12,7 +12,7 @@ describe('loginPageContentSecurityPolicy()', () => {
     }
   }
   let server = {
-    all: jest.fn((_path, callback) => {
+    get: jest.fn((_path, callback) => {
       return callback(request, response, mockNext)
     })
   }

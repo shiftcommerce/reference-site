@@ -7,7 +7,7 @@ const { buildContentSecurityPolicy } = require('../build-content-security-policy
  * @param {object} options - eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
  */
 const checkoutContentSecurityPolicy = (server, options = {}) => {
-  server.all(/(\/pages\/checkout\/*)/, (req, res, next) => {
+  server.get(/(\/pages\/checkout\/*)/, (req, res, next) => {
     // Clone & format CSP options
     let formattedOptions = Object.assign({}, options)
     formattedOptions.connectHosts = `https://*.paypal.com,${options.connectHosts || ''}`
