@@ -61,7 +61,6 @@ class LoginPage extends Component {
           <title>{ suffixWithStoreName('Login') }</title>
         </this.Head>
         <LoginForm {...this.props}
-          formTranslations={this.props.formTranslations}
           handleSubmit={this.handleSubmit}
         />
       </Fragment>

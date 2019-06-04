@@ -79,49 +79,55 @@ export class LoginForm extends Component {
     )
   }
 
-  renderSubmitButton () {
-    const props = this.props
-    const loginButtonText = props.formOptions.loginButton.translation || 'Login'
+  renderSubmitButton (formProps, pageProps) {
+    const { formOptions, submitButtonClassName } = pageProps
+    const loginButtonText = formOptions.loginButton.translation || 'Login'
 
     return (
       <Button
-        className='c-login__button o-button--sml'
+        className={ submitButtonClassName }
         aria-label={ loginButtonText }
         label={ loginButtonText }
-        status={(props.isValid ? 'positive' : 'disabled')}
+        status={(formProps.isValid ? 'positive' : 'disabled')}
         type='submit'
-        disabled={!props.isValid}
+        disabled={!formProps.isValid}
       />
     )
   }
 
   renderFormik (initialValues, loginSchema, handleSubmit, login) {
-    const formFooter = this.props.formFooter(this.props) || this.defaultFormFooter()
+    let formFooter
+
+    if (this.props.formFooter) {
+      formFooter = this.props.formFooter
+    } else {
+      formFooter = this.defaultFormFooter
+    }
 
     return (
       <Formik
         initialValues={initialValues}
         validationSchema={loginSchema}
         onSubmit={handleSubmit}
-        render={props => (
+        render={formProps => (
           <Form className='c-login__form'>
             <FormErrors errors={login.errors} />
             { this.renderEmailInputField() }
             { this.renderPasswordInputField() }
-            { formFooter }
+            { formFooter(formProps, this.props, this.renderSubmitButton) }
           </Form>
         )}
       />
     )
   }
 
-  defaultFormFooter () {
-    const { formOptions } = this.props
+  defaultFormFooter (formProps, pageProps, submitButton) {
+    const { formOptions } = pageProps
 
     return (
       <Fragment>
         <Checkbox label='Remember me' />
-        { this.renderSubmitButton() }
+        { submitButton(formProps, pageProps) }
         { formOptions.resetPasswordLink.visible ? <a href='/account/forgotpassword' className='c-login__anchor'>{ formOptions.resetPasswordLink.translation || 'Reset Password?' }</a> : null }
         { formOptions.caption2.visible ? <p className='c-login__caption'>{ formOptions.caption2.translation }</p> : null }
         <Link href='/account/register'>
