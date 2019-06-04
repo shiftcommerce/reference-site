@@ -78,10 +78,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          name: Restore caches (Yarn & NextJS Build)
-          keys:
-            - yarn-dependencies-{{ checksum "yarn.lock" }}
-            - next-production-build-{{ .Branch }}-{{ .Revision }}
+          name: Restore cache (Yarn)
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore cache (NextJS build)
+          key: next-production-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
@@ -133,10 +134,11 @@ workflows:
           pre-steps:
             - checkout
             - restore_cache:
-                name: Restore caches (Yarn & NextJS Build)
-                keys:
-                  - yarn-dependencies-{{ checksum "yarn.lock" }}
-                  - next-production-build-{{ .Branch }}-{{ .Revision }}
+                name: Restore cache (Yarn)
+                key: yarn-dependencies-{{ checksum "yarn.lock" }}
+            - restore_cache:
+                name: Restore cache (NextJS build)
+                key: next-production-build-{{ .Branch }}-{{ .Revision }}
             - run:
                 name: Install Dependencies
                 command: yarn install --frozen-lockfile
