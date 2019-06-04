@@ -18,17 +18,14 @@ const buildContentSecurityPolicy = (options = {}) => {
     // Allow inline style attributes
     `style-src 'self' ${formatHosts(options.styleHosts)} 'unsafe-inline'`,
 
-    // Only allow first party scripts and those from Stripe. Unsafe inline is
-    // required as that's how we load Stripe
-    // TODO: Added 'unsafe-eval' in order for stripe to load correctly and to stop an webpack error "Uncaught TypeError: __webpack_require__(...) is not a function"
-    // for react index.js next and next-dev.  Is this approach safe?
-    `script-src 'self' 'unsafe-inline' https://js.stripe.com ${formatHosts(options.scriptHosts)} 'unsafe-eval'`,
+    // Only allow first party scripts
+    `script-src 'self' ${formatHosts(options.scriptHosts)}`,
 
     // Allow <frame> and <iframe>'s from third party sources.
     `frame-src ${formatHosts(options.frameHosts)}`,
 
-    // Disable loading using script interfaces i.e. <a> pings, Fetch, XHR,
-    // WebSocket and EventSource
+    // Disable loading using script interfaces
+    // i.e. <a> pings, Fetch, XHR, WebSocket and EventSource
     `connect-src 'self' ${formatHosts(options.connectHosts)}`,
 
     // Enforce that forms point to self

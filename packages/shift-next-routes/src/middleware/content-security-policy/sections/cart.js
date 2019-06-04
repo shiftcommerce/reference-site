@@ -8,7 +8,6 @@ const { buildContentSecurityPolicy } = require('../build-content-security-policy
  */
 const cartPageContentSecurityPolicy = (server, options = {}) => {
   server.all(/(\/pages\/cart.js)$/, (req, res, next) => {
-    console.log('CART PAGE')
     // Build and set the CSP header on the response
     res.set('Content-Security-Policy', buildContentSecurityPolicy(options))
     // Call the next middleware in the stack
