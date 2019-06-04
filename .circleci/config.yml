@@ -76,16 +76,20 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore cache (Yarn)
-          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-cy-{{ checksum "yarn.lock" }}
       - restore_cache:
           name: Restore cache (NextJS build)
           key: next-production-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
+      - run:
+          name: Install Cypress
+          command: |
+            npx cypress verify
       - save_cache:
           name: Save Yarn Package Cache
-          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-cy-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
             - ~/.cache/Cypress
@@ -95,9 +99,6 @@ jobs:
             - packages/shift-next-routes/node_modules
             - packages/shift-node-api/node_modules
             - packages/shift-react-components/node_modules
-      - run:
-          name: Install Cypress
-          command: npx cypress verify
       - run:
           name: Start NextJS Server
           command: |
