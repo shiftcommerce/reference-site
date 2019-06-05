@@ -5,6 +5,7 @@ const helmet = require('helmet')
  * Enables the Feature Policy
  * @param {Function} server - eg. express
  * @param {object} policyOptions - eg. { payment: ['example.com'] }
+ * @public
  */
 const featurePolicy = (server, policyOptions = {}) => {
   let defaultPolicy = {
