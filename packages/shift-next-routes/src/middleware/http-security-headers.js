@@ -69,12 +69,13 @@ const httpSecurityHeaders = (server) => {
   server.use(helmet.ieNoOpen())
 
   // Enable Cross-Site Request Forgery (CSRF) Protection
-  // server.use(csurf())
-  // server.all('*', (req, res, next) => {
-  //   // set csrf token in cookie
-  //   res.cookie('_csrf', req.csrfToken())
-  //   next()
-  // })
+  server.use(csurf())
+  server.all('*', (req, res, next) => {
+    // set csrf token in cookie
+    res.cookie('_csrf', req.csrfToken())
+    // call next middleware in the stack
+    next()
+  })
 }
 
 module.exports = { httpSecurityHeaders }
