@@ -34,7 +34,6 @@ class StaticPage extends Component {
     try {
       const request = StaticPage.pageRequest(id)
       const response = await new ApiClient().read(request.endpoint, request.query, dispatch)
-      console.log('res', response)
 
       return response.data
     } catch (error) {
