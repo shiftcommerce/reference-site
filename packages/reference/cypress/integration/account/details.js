@@ -123,158 +123,119 @@ describe('Details', () => {
     })
   })
 
-  // context('Invalid input', () => {
-  //   it('renders a validation message if first name is missing', () => {
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
+  context('Invalid input', () => {
+    it('renders a validation message if first name is missing', () => {
+      // Enter new account first name
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=emailConfirmation]').type('test@example.com')
 
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
 
-  //     // Enter new account first name
-  //     cy.get('input[name=firstName]').clear()
-  //     cy.get('input[name=emailConfirmation]').type('test@example.com')
+      // Check email input has error message
+      cy.get('input[name=firstName] + div').contains('Required')
 
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
+      // Check submit button is disabled
+      cy.get('button[aria-label="Update details"]').should('be.disabled')
+    })
 
-  //     // Check email input has error message
-  //     cy.get('input[name=firstName] + div').contains('Required')
+    it('renders a validation message if last name is missing', () => {
+      // Enter new account first name
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=emailConfirmation]').type('test@example.com')
 
-  //     // Check submit button is disabled
-  //     cy.get('button[aria-label="Update details"]').should('be.disabled')
-  //   })
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
 
-  //   it('renders a validation message if last name is missing', () => {
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
+      // Check email input has error message
+      cy.get('input[name=lastName] + div').contains('Required')
 
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
+      // Check submit button is disabled
+      cy.get('button[aria-label="Update details"]').should('be.disabled')
+    })
 
-  //     // Enter new account first name
-  //     cy.get('input[name=lastName]').clear()
-  //     cy.get('input[name=emailConfirmation]').type('test@example.com')
+    it('renders a validation message if email is invalid', () => {
+      // Enter new account details
+      cy.get('input[name=email]').clear().type('test')
+      cy.get('input[name=emailConfirmation]').clear().type('test')
 
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
 
-  //     // Check email input has error message
-  //     cy.get('input[name=lastName] + div').contains('Required')
+      // Check email confirmation input has error message
+      cy.get('input[name=email] + div').contains('Invalid email')
 
-  //     // Check submit button is disabled
-  //     cy.get('button[aria-label="Update details"]').should('be.disabled')
-  //   })
+      // Check submit button is disabled
+      cy.get('button[aria-label="Update details"]').should('be.disabled')
+    })
 
-  //   it('renders a validation message if email is invalid', () => {
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
+    it('renders a validation message if emails do not match', () => {
+      // Enter new account details
+      cy.get('input[name=email]').clear().type('test@example.com')
+      cy.get('input[name=emailConfirmation]').clear().type('test@test.com').blur()
 
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
 
-  //     // Enter new account details
-  //     cy.get('input[name=email]').clear().type('test')
-  //     cy.get('input[name=emailConfirmation]').clear().type('test')
+      // Check email confirmation input has error message
+      cy.get('input[name=emailConfirmation] + div').contains('Must match')
 
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
+      // Check submit button is disabled
+      cy.get('button[aria-label="Update details"]').should('be.disabled')
+    })
 
-  //     // Check email confirmation input has error message
-  //     cy.get('input[name=email] + div').contains('Invalid email')
+    it('renders a validation message if email is missing', () => {
+      // Clear email field
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=emailConfirmation]').clear().blur()
 
-  //     // Check submit button is disabled
-  //     cy.get('button[aria-label="Update details"]').should('be.disabled')
-  //   })
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
 
-  //   it('renders a validation message if emails do not match', () => {
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
+      // Check email input has error message
+      cy.get('input[name=email] + div').contains('Required')
+      cy.get('input[name=emailConfirmation] + div').contains('Required')
 
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
+      // Check submit button is disabled
+      cy.get('button[aria-label="Update details"]').should('be.disabled')
+    })
 
-  //     // Enter new account details
-  //     cy.get('input[name=email]').clear().type('test@example.com')
-  //     cy.get('input[name=emailConfirmation]').clear().type('test@test.com').blur()
+    it('renders a validation message if email already exists in platform', () => {
+      // Stub requests
+      cy.server()
 
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
+      cy.route({
+        method: 'POST',
+        url: '/updateCustomerAccount',
+        status: 422,
+        response: [{
+          'title': 'has already been taken',
+          'detail': 'email - has already been taken',
+          'code': '100',
+          'source': {
+            'pointer': '/data/attributes/email'
+          }
+        }]
+      }).as('invalideUpdateDetails')
 
-  //     // Check email confirmation input has error message
-  //     cy.get('input[name=emailConfirmation] + div').contains('Must match')
+      cy.get('input[name=firstName]').type('Dan')
+      cy.get('input[name=lastName]').type('Doey')
 
-  //     // Check submit button is disabled
-  //     cy.get('button[aria-label="Update details"]').should('be.disabled')
-  //   })
+      // Enter new email address
+      cy.get('input[name=email]').clear().type('testing@example.com')
+      cy.get('input[name=emailConfirmation]').type('testing@example.com')
 
-  //   it('renders a validation message if email is missing', () => {
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
+      // Submit change
+      cy.contains(/Update Details/i).click()
 
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
+      // Check request has been made
+      cy.wait('@invalideUpdateDetails')
 
-  //     // Clear email field
-  //     cy.get('input[name=email]').clear()
-  //     cy.get('input[name=emailConfirmation]').clear().blur()
+      // Check flash message
+      cy.contains('Oops, there was an error submitting your form.')
 
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
-
-  //     // Check email input has error message
-  //     cy.get('input[name=email] + div').contains('Required')
-  //     cy.get('input[name=emailConfirmation] + div').contains('Required')
-
-  //     // Check submit button is disabled
-  //     cy.get('button[aria-label="Update details"]').should('be.disabled')
-  //   })
-
-  //   it('renders a validation message if email already exists in platform', () => {
-  //     // Stub requests
-  //     cy.server()
-
-  //     cy.route({
-  //       method: 'POST',
-  //       url: '/updateCustomerAccount',
-  //       status: 422,
-  //       response: [{
-  //         'title': 'has already been taken',
-  //         'detail': 'email - has already been taken',
-  //         'code': '100',
-  //         'source': {
-  //           'pointer': '/data/attributes/email'
-  //         }
-  //       }]
-  //     }).as('invalideUpdateDetails')
-
-  //     // Uses custom command
-  //     // Cypress/support/commands/login.js
-  //     cy.loginToAccount()
-
-  //     // Check page heading
-  //     cy.contains(/My Account/i)
-
-  //     // Enter new email address
-  //     cy.get('input[name=email]').clear().type('testing@example.com')
-  //     cy.get('input[name=emailConfirmation]').type('testing@example.com')
-
-  //     // Submit change
-  //     cy.contains(/Update Details/i).click()
-
-  //     // Check request has been made
-  //     cy.wait('@invalideUpdateDetails')
-
-  //     // Check flash message
-  //     cy.contains('Oops, there was an error submitting your form.')
-
-  //     // Check we are still on the myaccount page
-  //     cy.url().should('includes', '/myaccount')
-  //   })
-  // })
+      // Check we are still on the myaccount page
+      cy.url().should('includes', '/myaccount')
+    })
+  })
 })
