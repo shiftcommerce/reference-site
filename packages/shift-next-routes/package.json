@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-next-routes",
-  "version": "0.22.2",
+  "version": "0.22.3",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next-routes.git",
