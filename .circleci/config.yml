@@ -102,8 +102,6 @@ jobs:
       - run:
           name: Start NextJS Server
           command: |
-            pwd
-            ls -la packages/reference/client
             cat packages/reference/client/.next/BUILD_ID
             yarn --cwd packages/reference start
           background: true
@@ -178,13 +176,11 @@ workflows:
       - cypress:
           requires:
             - build
-      # - heroku_deploy:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
-      #     requires:
-      #       - jest_test
-      #       - pwmetrics_test
-      #       - cypress_build
-      #       - cypress_run
+      - heroku_deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - jest_test
+            - cypress

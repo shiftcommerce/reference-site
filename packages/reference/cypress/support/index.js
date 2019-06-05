@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import './commands/empty-search'
 import './commands/address-book'
 import './commands/cart'
 import './commands/category'
