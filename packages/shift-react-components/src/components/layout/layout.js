@@ -60,10 +60,10 @@ export class Layout extends Component {
         <div className={classNames('c-header__dropdown-wrapper', addShowClass)} >
           <div className={classNames('c-header__account-dropdown', addShowClass)} onMouseLeave={this.props.toggleDropDown}>
             <div className='c-header__callout' />
-            <Link href='/account/myaccount?menu=details'>Details</Link>
-            <Link href='/account/myaccount?menu=addresses'>Addresses</Link>
-            <Link href='/account/myaccount?menu=password'>Change Password</Link>
-            <Link href='/account/myaccount?menu=orders'>Order History</Link>
+            <Link href='/account/details'>Details</Link>
+            <Link href='/account/addresses'>Addresses</Link>
+            <Link href='/account/password'>Change Password</Link>
+            <Link href='/account/orders'>Order History</Link>
             <Link href='/account/logout'>Sign Out</Link>
           </div>
         </div>

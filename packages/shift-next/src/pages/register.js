@@ -33,7 +33,7 @@ class RegisterPage extends Component {
   static async getInitialProps ({ reduxStore }) {
     // Redirect to myaccount if already logged in
     const { account: { loggedIn } } = reduxStore.getState()
-    if (loggedIn) Router.push('/account/myaccount')
+    if (loggedIn) Router.push('/account/details')
     return {}
   }
 
@@ -43,7 +43,7 @@ class RegisterPage extends Component {
     // Redirect if account created
     if (loggedIn) {
       setCookie()
-      Router.push('/account/myaccount')
+      Router.push('/account/details')
     }
   }
 
