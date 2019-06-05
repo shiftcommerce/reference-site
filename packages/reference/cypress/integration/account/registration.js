@@ -1,4 +1,8 @@
 describe('Registration', () => {
+  beforeEach(() => {
+    cy.emptySearch()
+  })
+
   context('valid input', () => {
     it('routes us to the my account page with a valid submission', () => {
       // stub requests
@@ -17,6 +21,13 @@ describe('Registration', () => {
         status: 200,
         response: 'fixture:account/get-account.json'
       }).as('getAccount')
+
+      cy.route({
+        method: 'GET',
+        url: '/getAddressBook',
+        status: 200,
+        response: 'fixture:account/get-address-book.json'
+      }).as('getAddressBook')
 
       // Visit the account registration page
       cy.visit('/account/register')
