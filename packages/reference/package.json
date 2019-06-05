@@ -102,10 +102,7 @@
     "jest-runner-stylelint": "^1.0.0",
     "nock": "^9.3.3",
     "node-sass": "^4.11.0",
-<<<<<<< HEAD
     "pino-pretty": "^3.1.0",
-=======
->>>>>>> master
     "pwmetrics": "^4.2.1",
     "react-test-renderer": "^16.0.0",
     "redux-mock-store": "^1.5.3",
