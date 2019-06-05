@@ -9,9 +9,6 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 import { Image } from '@shiftcommerce/shift-react-components/src/objects/image'
 import { OrderSummary } from '@shiftcommerce/shift-react-components/src/components/orders/order-summary'
 
-// Libs
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
-
 class OrderPage extends Component {
   constructor (props) {
     super(props)
@@ -19,11 +16,6 @@ class OrderPage extends Component {
     this.state = {
       paymentMethod: Cookies.get('paymentMethod')
     }
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Order', res)
   }
 
   componentWillUnmount () {

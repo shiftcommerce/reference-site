@@ -12,7 +12,6 @@ import SearchFilters from '@shiftcommerce/shift-react-components/src/components/
 // Lib
 import ApiClient from '../lib/api-client'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
@@ -24,9 +23,7 @@ import Config from '../lib/config'
 class CategoryPage extends Component {
   static algoliaEnabled = () => true
 
-  static async getInitialProps ({ query: { id }, reduxStore, req, res }) {
-    // Set Page Content Security Policy
-    // setPageContentSecurityPolicy('Category', res)
+  static async getInitialProps ({ query: { id }, reduxStore, req }) {
     if (req) { // server-side
       const category = await CategoryPage.fetchCategory(id)
       return { id, category }
