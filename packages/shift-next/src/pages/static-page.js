@@ -34,6 +34,7 @@ class StaticPage extends Component {
     try {
       const request = StaticPage.pageRequest(id)
       const response = await new ApiClient().read(request.endpoint, request.query, dispatch)
+      console.log('res', response)
 
       return response.data
     } catch (error) {
@@ -57,12 +58,13 @@ class StaticPage extends Component {
     }
   }
 
-  renderPageTitle (title) {
+  renderPageHead (canonicalPath, title) {
     const homepage = title === 'Homepage'
 
     return (
       <this.Head>
         { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
+        <link rel='canonical' href={canonicalPath} />
       </this.Head>
     )
   }
@@ -88,17 +90,17 @@ class StaticPage extends Component {
   }
 
   render () {
-    const { page } = this.props
+    const { page: { canonical_path, error, title }, loading, isServer } = this.props
 
-    if (this.props.loading && !this.props.isServer) {
+    if (loading && !isServer) {
       return (
         <Loading />
       )
-    } else if (page.error) {
+    } else if (error) {
       const errorDetails = {
-        Endpoint: JSON.stringify(page.error.request.endpoint),
-        Query: JSON.stringify(page.error.request.query),
-        'Response data': JSON.stringify(page.error.data)
+        Endpoint: JSON.stringify(error.request.endpoint),
+        Query: JSON.stringify(error.request.query),
+        'Response data': JSON.stringify(error.data)
       }
 
       return (
@@ -110,7 +112,7 @@ class StaticPage extends Component {
     } else {
       return (
         <Fragment>
-          { this.renderPageTitle(page.title) }
+          { this.renderPageHead(canonical_path, title) }
           { this.renderLoaded() }
         </Fragment>
       )
