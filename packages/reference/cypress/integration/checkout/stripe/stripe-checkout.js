@@ -73,7 +73,7 @@ describe('Stripe checkout', () => {
     cy.contains(/Continue to payment/i).click()
 
     // Fill in card details
-    cy.wait(3000)
+    cy.wait(5000)
 
     cy.get('.__PrivateStripeElement > iframe').then(element => {
       const body = element.contents().find('body')

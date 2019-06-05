@@ -24,8 +24,7 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('loginToAccount', () => {
-  // stub requests
+Cypress.Commands.add('loginToAccountStubs', () => {
   cy.server()
 
   cy.route({
@@ -41,6 +40,17 @@ Cypress.Commands.add('loginToAccount', () => {
     status: 200,
     response: 'fixture:account/get-account.json'
   }).as('getAccount')
+
+  cy.route({
+    method: 'GET',
+    url: '/getAddressBook',
+    status: 200,
+    response: 'fixture:account/get-address-book.json'
+  }).as('getAddressBook')
+})
+
+Cypress.Commands.add('loginToAccount', () => {
+  cy.loginToAccountStubs()
 
   // Visit the Login page
   cy.visit('/account/login')
