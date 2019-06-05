@@ -10,18 +10,25 @@ describe('Stripe checkout', () => {
     }).as('emptySearch')
 
     cy.route({
-      method: 'GET',
-      url: '/getShippingMethods',
-      status: 200,
-      response: 'fixture:cart/get-shipping-methods.json'
-    }).as('getShippingMethods')
-
-    cy.route({
       method: 'POST',
       url: '/createOrder',
       status: 201,
       response: 'fixture:checkout/stripe-create-order.json'
     }).as('createOrder')
+
+    cy.route({
+      method: 'GET',
+      url: '/getCart',
+      status: 200,
+      response: 'fixture:cart/get-cart-with-line-item.json'
+    }).as('getCart')
+
+    cy.route({
+      method: 'POST',
+      url: '/createAddress',
+      status: 200,
+      response: 'fixture:checkout/create-address.json'
+    }).as('createAddress')
 
     // Start with an item in the cart
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
@@ -49,6 +56,13 @@ describe('Stripe checkout', () => {
     cy.get('#city').type('Leeds')
     cy.get('#email').type('test@example.com')
     cy.get('#primary_phone').type('07510123456')
+
+    cy.route({
+      method: 'POST',
+      url: '/setCartShippingAddress',
+      status: 200,
+      response: 'fixture:checkout/set-cart-shipping-address.json'
+    }).as('setCartShippingAddress')
 
     // Navigate to next step
     cy.contains(/View Shipping Options/i).click()

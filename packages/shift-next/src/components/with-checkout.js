@@ -16,7 +16,6 @@ import { CheckoutCartButtons } from '@shiftcommerce/shift-react-components/src/c
 import { CheckoutCartTotal } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-cart-total'
 import { CheckoutSteps } from '@shiftcommerce/shift-react-components/src/components/checkout/checkout-steps'
 import { CouponForm } from '@shiftcommerce/shift-react-components/src/components/cart/coupon-form'
-import { MiniPlaceOrder } from '@shiftcommerce/shift-react-components/src/components/checkout/mini-place-order'
 
 // Actions
 import {
@@ -131,11 +130,6 @@ export function withCheckout (WrappedComponent) {
             currentStep={currentStep}
             stepActions={stepActions}
           />
-          { currentStep === 5 && <MiniPlaceOrder
-            convertToOrder={this.wrappedRef.current.convertToOrder}
-            total={cart.total}
-            isValidOrder={this.wrappedRef.current.isValidOrder && this.wrappedRef.current.isValidOrder(cart, order)}
-          /> }
           <div className='c-checkout'>
             <div className='o-grid-container'>
               <div className='o-col-1-13 o-col-1-8-l'>
