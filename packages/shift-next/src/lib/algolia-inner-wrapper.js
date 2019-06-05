@@ -2,7 +2,7 @@
 import React from 'react'
 import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
-import { Configure } from 'react-instantsearch/dom'
+import { Configure } from 'react-instantsearch-dom'
 
 // Components
 import { InstantSearch } from './instant-search'

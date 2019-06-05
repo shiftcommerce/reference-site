@@ -1,0 +1,34 @@
+{
+  "id": "6880",
+  "meta_attributes": {
+    "label": {
+      "value": "TEST",
+      "data_type": "text"
+    },
+    "company_name": {
+      "value": "SHIFT Commerce",
+      "data_type": "text"
+    },
+    "phone_number": {
+      "value": "08003029464",
+      "data_type": "text"
+    },
+    "email": {
+      "value": "test@example.com",
+      "data_type": "text"
+    }
+  },
+  "customer_account_id": 104,
+  "first_name": "Test",
+  "last_name": "User",
+  "middle_names": "",
+  "address_line_1": "Old School Board",
+  "address_line_2": "Calverly St",
+  "address_line_3": "",
+  "city": "Leeds",
+  "state": "West Yorkshire",
+  "postcode": "LS1 3ED",
+  "country": "GB",
+  "preferred_shipping": true,
+  "preferred_billing": true
+}
