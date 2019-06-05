@@ -14,12 +14,17 @@ describe('test isSecure', () => {
   })
 
   test('false when not secure', () => {
-    process.env.NO_HTTPS = true
+    process.env.NO_HTTPS = 'true'
     expect(isSecure()).toEqual(false)
   })
 
   test('true when secure', () => {
-    process.env.NO_HTTPS = false
+    process.env.NO_HTTPS = 'false'
+    expect(isSecure()).toEqual(true)
+  })
+
+  test('true when any other value', () => {
+    process.env.NO_HTTPS = 'bacon'
     expect(isSecure()).toEqual(true)
   })
 })
