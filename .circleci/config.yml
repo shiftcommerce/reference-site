@@ -162,9 +162,6 @@ jobs:
       - restore_cache:
           name: Restore cache (Yarn)
           key: yarn-dependencies-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          name: Restore cache (NextJS build)
-          key: next-production-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Scan Reference
           command: npx snyk test --cwd packages/reference
@@ -196,6 +193,7 @@ workflows:
     jobs:
       - build
       - jest_test
+      - synk
       - pwmetrics:
           requires:
             - build
