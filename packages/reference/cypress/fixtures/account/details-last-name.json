@@ -8,7 +8,7 @@
     "attributes": {
       "meta_attributes": {
         "first_name": {
-          "value": "John",
+          "value": "Dan",
           "data_type": "string"
         },
         "last_name": {
