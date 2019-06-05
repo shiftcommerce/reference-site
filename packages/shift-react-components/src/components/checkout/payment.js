@@ -4,16 +4,10 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import PaymentHeader from '../checkout/payment-header'
+import StripePayment from '../checkout/stripe-payment'
 
-class Payment extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.PaymentHeader = componentMapping('PaymentHeader')
-    this.StripePayment = componentMapping('StripePayment')
-  }
-
+export class Payment extends PureComponent {
   render () {
     const {
       addingNewAddress,
@@ -43,9 +37,9 @@ class Payment extends PureComponent {
     } = this.props
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment')}>
-        <this.PaymentHeader title={headerTitle}/>
+        <PaymentHeader title={headerTitle}/>
         <div className='c-payment__section' style={{ display: 'block' }}>
-          <this.StripePayment
+          <StripePayment
             addingNewAddress={addingNewAddress}
             addressBook={addressBook}
             addressFormDisplayed={addressFormDisplayed}
@@ -102,5 +96,3 @@ Payment.propTypes = {
   order: PropTypes.object,
   setCardErrors: PropTypes.func
 }
-
-export default Payment

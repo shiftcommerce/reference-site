@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CouponForm from '../../../src/components/cart/coupon-form'
+import { CouponForm } from '../../../src/components/cart/coupon-form'
 
 test('displays an input and a submit button', () => {
   const wrapper = mount(

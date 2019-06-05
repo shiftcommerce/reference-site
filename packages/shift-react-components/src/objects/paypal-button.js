@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-// Lib
-import componentMapping from '../lib/component-mapping'
+// Components
+import { Button } from './button'
 
 let PayPalButtons;
 
@@ -14,7 +14,6 @@ class PayPalButton extends Component {
     this.state = {
       showButton: false
     }
-    this.Button = componentMapping('Button')
   }
 
   componentDidMount () {
@@ -44,7 +43,7 @@ class PayPalButton extends Component {
           onApprove={(data, actions) => paypalOnApprove(data, actions)}
           onClick={() => handleSetPaymentMethod('PayPal')}
         /> }
-        { enableTestPayPalButton && <this.Button label={'Test PayPal Button'} onClick={() => mockPayPalApproval()} /> }
+        { enableTestPayPalButton && <Button label={'Test PayPal Button'} onClick={() => mockPayPalApproval()} /> }
       </>
     )
   }

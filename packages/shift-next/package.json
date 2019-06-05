@@ -1,10 +1,8 @@
 {
   "name": "@shiftcommerce/shift-next",
-  "version": "1.0.0",
+  "version": "0.22.3",
   "description": "",
-  "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next.git",
-  "private": true,
   "engines": {
     "node": "^11.13.0"
   },
@@ -18,10 +16,9 @@
   "author": "Shift Commerce",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-instantsearch": "^5.3.1",
-    "react-instantsearch-dom": "^5.3.1"
+    "next": "^8.1.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -39,17 +36,19 @@
     "jest": "^24.1.0",
     "jest-enzyme": "^7.0.1",
     "mockdate": "^2.0.2",
-    "next": "^7.0.2",
     "nock": "^10.0.6",
+    "react-instantsearch": "^5.3.1",
+    "react-instantsearch-dom": "^5.3.1",
     "redux-mock-store": "^1.5.3",
     "redux-test-utils": "^0.3.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "@shiftcommerce/shift-node-api": "^1.0.0",
-    "@shiftcommerce/shift-react-components": "^1.0.0",
-    "axios": "^0.18.0",
+    "@shiftcommerce/shift-node-api": "^0.22.2",
+    "@shiftcommerce/shift-react-components": "^0.22.3",
+    "axios": "^0.19.0",
+    "deep-equal": "^1.0.0",
     "js-cookie": "^2.2.0",
     "qs": "^6.6.0",
     "react-redux": "^5.0.7",

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import ForgotPasswordForm from '../../../src/components/account/forgot-password-form'
+import { ForgotPasswordForm } from '../../../src/components/account/forgot-password-form'
 
 describe('ForgotPasswordForm', () => {
   test('should render the form', () => {

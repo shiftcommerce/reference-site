@@ -4,31 +4,30 @@ import Sticky from 'react-stickyfill'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-import componentMapping from '../../lib/component-mapping'
+import Config from '../../lib/config'
 
-class OrderSummary extends Component {
-  constructor (props) {
-    super(props)
+// Objects
+import link from '../../objects/link'
+import { Image } from '../../objects/image'
 
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
-  }
-
+export class OrderSummary extends Component {
   /**
   * Render line item image for the order summary
   * @param  {Object} lineItem
   * @return {string} - HTML markup for the component
   */
   renderLineItemImage (lineItem) {
+    const Link = Config.get().Link || link
+
     if (lineItem.imageUrl) {
       return (
-        <this.Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} >
-          <this.Image src={lineItem.imageUrl} alt={lineItem.title} aria-label={lineItem.title} />
-        </this.Link>
+        <Link href={`/slug?slug=${lineItem.slug}`} as={`${lineItem.canonical_path}`} >
+          <Image src={lineItem.imageUrl} alt={lineItem.title} aria-label={lineItem.title} />
+        </Link>
       )
     } else {
       return (
-        <this.Image src='/static/placeholder.png' alt={lineItem.title} aria-label={lineItem.title} />
+        <Image src='/static/placeholder.png' alt={lineItem.title} aria-label={lineItem.title} />
       )
     }
   }
@@ -150,5 +149,3 @@ class OrderSummary extends Component {
     )
   }
 }
-
-export default OrderSummary

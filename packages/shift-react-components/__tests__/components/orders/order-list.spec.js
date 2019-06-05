@@ -3,7 +3,7 @@ import React from 'react'
 import format from 'date-fns/format'
 
 // Component
-import OrderList from '../../../src/components/orders/order-list'
+import { OrderList } from '../../../src/components/orders/order-list'
 
 // Lib
 import { penceToPounds } from '../../../src/lib/pence-to-pounds'

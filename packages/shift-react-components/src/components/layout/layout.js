@@ -3,29 +3,25 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Footer } from '../layout/footer'
+import { Image } from '../../objects/image'
+import link from '../../objects/link'
+import Logo from '../../objects/logo'
+import { Minibag } from '../layout/minibag'
+import { NavBar } from '../navigation/navbar'
+import SearchBar from '../search/search-bar'
+import Config from '../../lib/config'
 
 // Assets
+import defaultLogo from '../../static/shopgo-logo.svg'
 import accountIcon from '../../static/account-icon.svg'
 import imgBagIcon from '../../static/bag-icon.svg'
 
 export class Layout extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Footer = componentMapping('Footer')
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
-    this.Logo = componentMapping('Logo')
-    this.Minibag = componentMapping('Minibag')
-    this.NavBar = componentMapping('NavBar')
-    this.SearchBar = componentMapping('SearchBar')
-  }
-
   renderNav () {
     return (
       <span className='o-nav u-visible-d'>
-        <this.NavBar menu={this.props.menu} />
+        <NavBar menu={this.props.menu} />
       </span>
     )
   }
@@ -33,26 +29,28 @@ export class Layout extends Component {
   renderMobileNav () {
     return (
       <span className='o-nav u-hidden-d'>
-        <this.NavBar menu={this.props.menu} />
+        <NavBar menu={this.props.menu} />
       </span>
     )
   }
 
   renderHeaderAccount (loggedIn) {
+    const Link = Config.get().Link || link
     const signedIn = loggedIn ? 'My Account' : 'Sign In'
 
     return (
       <div className='c-header__account' onMouseEnter={this.props.toggleDropDown}>
-        <this.Link className='c-header__account-link' href='/account/login'>
-          <this.Image className='c-header__account-image' src={accountIcon} />
-          <div className='c-header__account-text'>{signedIn}</div>
-        </this.Link >
+        <Link className='c-header__account-link' href='/account/login'>
+          <Image className='c-header__account-image' src={accountIcon} />
+          <div className='c-header__account-text'>{ signedIn }</div>
+        </Link >
         { this.renderAccountDropDown() }
       </div>
     )
   }
 
   renderAccountDropDown () {
+    const Link = Config.get().Link || link
     const { loggedIn, showClass } = this.props
 
     const addShowClass = showClass ? 'show' : ''
@@ -62,11 +60,11 @@ export class Layout extends Component {
         <div className={classNames('c-header__dropdown-wrapper', addShowClass)} >
           <div className={classNames('c-header__account-dropdown', addShowClass)} onMouseLeave={this.props.toggleDropDown}>
             <div className='c-header__callout' />
-            <this.Link href='/account/myaccount?menu=details'>Details</this.Link>
-            <this.Link href='/account/myaccount?menu=addresses'>Addresses</this.Link>
-            <this.Link href='/account/myaccount?menu=password'>Change Password</this.Link>
-            <this.Link href='/account/myaccount?menu=orders'>Order History</this.Link>
-            <this.Link href='/account/logout'>Sign Out</this.Link>
+            <Link href='/account/details'>Details</Link>
+            <Link href='/account/addresses'>Addresses</Link>
+            <Link href='/account/password'>Change Password</Link>
+            <Link href='/account/orders'>Order History</Link>
+            <Link href='/account/logout'>Sign Out</Link>
           </div>
         </div>
       )
@@ -80,14 +78,14 @@ export class Layout extends Component {
  * @param  {number} lineItemsCount
  * @return {string} - HTML markup for the component
  */
-  renderCartLink(lineItemsCount) {
+  renderCartLink (lineItemsCount) {
     return (
       <span className='c-minibag__cart' onClick={() => this.props.toggleMiniBag(true)}>
         <div className='c-minibag__cart-image'>
           <span className='c-minibag__cart-image-count' >
-            {lineItemsCount}
+            { lineItemsCount }
           </span>
-          <this.Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
+          <Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
         </div>
         <span className='c-minibag__cart-label'>Basket</span>
       </span>
@@ -106,7 +104,7 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const { cart, deleteItem, loggedIn, onItemQuantityUpdated, shrunk } = this.props
+    const { cart, deleteItem, loggedIn, onItemQuantityUpdated, shrunk, logoSrc } = this.props
 
     const headerClasses = classNames('o-header', {
       'o-header--shrunk': shrunk || cart.miniBagDisplayed
@@ -117,11 +115,11 @@ export class Layout extends Component {
         <div className={ headerClasses }>
           <div className='o-header__top'>
             <div className='o-header__top-wrapper'>
-              <this.Logo className='o-header__logo' />
+              <Logo className='o-header__logo' logoSrc={logoSrc || defaultLogo} />
               { this.renderMobileNav() }
               { this.renderHeaderAccount(loggedIn) }
               { this.renderBasket() }
-              <this.Minibag
+              <Minibag
                 cart={cart}
                 deleteItem={deleteItem}
                 miniBagDisplayed={cart.miniBagDisplayed}
@@ -146,7 +144,7 @@ export class Layout extends Component {
 
     return (
       <span className='c-header__search'>
-        <this.SearchBar
+        <SearchBar
           filterCategory={filterCategory}
           onCategoryFilterCleared={onCategoryFilterCleared}
           query={query}
@@ -169,11 +167,9 @@ export class Layout extends Component {
           { children }
         </div>
         <div className='o-footer'>
-          <this.Footer />
+          <Footer />
         </div>
       </>
     )
   }
 }
-
-export default Layout

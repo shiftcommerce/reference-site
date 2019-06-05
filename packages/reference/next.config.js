@@ -67,7 +67,7 @@ module.exports = withBundleAnalyzer(withCSS(withSass(withTM({
     config.resolve.alias = {
       ...config.resolve.alias,
       '@shiftcommerce/shift-next': path.resolve('../../node_modules/@shiftcommerce/shift-next'),
-      '@shiftcommerce/shift-next-routes': path.resolve('@shiftcommerce/shift-next-routes'),
+      '@shiftcommerce/shift-next-routes': path.resolve('../../node_modules/@shiftcommerce/shift-next-routes'),
       '@shiftcommerce/shift-react-components': path.resolve('../../node_modules/@shiftcommerce/shift-react-components'),
       '@shiftcommerce/shift-node-api': path.resolve('../../node_modules/@shiftcommerce/shift-node-api')
     }

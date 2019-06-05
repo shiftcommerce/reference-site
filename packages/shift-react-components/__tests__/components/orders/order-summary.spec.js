@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import OrderSummary from '../../../src/components/orders/order-summary'
+import { OrderSummary } from '../../../src/components/orders/order-summary'
 
 // Lib
 import { decimalPrice } from '../../../src/lib/decimal-price'

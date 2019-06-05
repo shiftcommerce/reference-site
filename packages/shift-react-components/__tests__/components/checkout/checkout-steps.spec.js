@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CheckoutSteps from '../../../src/components/checkout/checkout-steps'
+import { CheckoutSteps } from '../../../src/components/checkout/checkout-steps'
 
 test('Renders steps correctly', () => {
   // Act

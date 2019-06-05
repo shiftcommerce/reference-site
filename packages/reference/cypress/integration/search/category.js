@@ -27,13 +27,13 @@ describe('Category Page', () => {
 
     // Check rendered first product
     cy.contains(/Geeky Computer/i)
-    cy.get('.c-product-listing-card img').first().should('have.attr', 'src', '/static/fixtures/product-image-1.jpg')
+    cy.get('.c-product-listing-card img').first().should('have.attr', 'src', 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg')
     cy.get('.c-product-listing-card__price').first().contains('£550')
     cy.get('.c-product-listing-card__rating').first().find('span.o-rating__star--fill').should('have.length', 5)
 
     // Check rendered last product
     cy.contains(/Old Computer/i)
-    cy.get('.c-product-listing-card img').last().should('have.attr', 'src', '/static/fixtures/product-image-2.jpg')
+    cy.get('.c-product-listing-card img').last().should('have.attr', 'src', 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/248/1544098375.0540378-old_computer.jpg')
     cy.get('.c-product-listing-card__price').last().contains('£150')
     cy.get('.c-product-listing-card__rating').last().find('span.o-rating__star--fill').should('have.length', 3)
 

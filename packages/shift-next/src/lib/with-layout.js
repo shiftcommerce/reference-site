@@ -7,7 +7,7 @@ import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
 
 // Components
-import { Layout } from '@shiftcommerce/shift-react-components'
+import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
 
 // Actions
 import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'

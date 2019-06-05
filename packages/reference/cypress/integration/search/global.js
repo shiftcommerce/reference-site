@@ -12,8 +12,12 @@ describe('Global search', () => {
     // Visit the homepage
     cy.visit('/')
 
+    cy.wait(1000)
+
     // Do a search
     cy.get('input[type=search]').eq(1).clear().type('mug{enter}')
+
+    cy.wait(1000)
 
     // we fire off a request for each key pressed, we're going to check a few of them
     const searches = Array(5).fill('@postSearch')
@@ -57,8 +61,6 @@ describe('Global search', () => {
   })
 
   it('clears the category selection properly', () => {
-    cy.server()
-
     // Visit the category page
     cy.visit('/categories/computers')
 

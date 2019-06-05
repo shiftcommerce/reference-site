@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import CheckoutCartButtons from '../../../src/components/checkout/checkout-cart-buttons'
+import { CheckoutCartButtons } from '../../../src/components/checkout/checkout-cart-buttons'
 
 test('displays a correct disabled button based on passed props', () => {
   // Act

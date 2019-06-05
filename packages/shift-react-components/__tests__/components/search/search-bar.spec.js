@@ -5,7 +5,7 @@ import { createMockStore } from 'redux-test-utils'
 import { InstantSearch } from 'react-instantsearch-dom'
 
 // Components
-import { SearchBar } from '../../../src/components/search/search-bar'
+import SearchBar from '../../../src/components/search/search-bar'
 
 test('Renders the algolia SearchBox and checks the placeholder', () => {
   // Arrange - provide an initial state for the search

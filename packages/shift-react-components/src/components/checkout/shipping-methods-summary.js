@@ -5,10 +5,9 @@ import format from 'date-fns/format'
 
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'
-import componentMapping from '../../lib/component-mapping'
+import ShippingMethodsHeader from '../checkout/shipping-methods-header'
 
-function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
-  const ShippingMethodsHeader = componentMapping('ShippingMethodsHeader')
+export function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
   const EstimatedDelivery = format(businessDaysFromNow(shippingMethod.meta_attributes.working_days.value), 'dddd Do MMMM')
 
   return (
@@ -31,5 +30,3 @@ ShippingMethodsSummary.propTypes = {
   onClick: PropTypes.func,
   shippingMethod: PropTypes.object
 }
-
-export default ShippingMethodsSummary

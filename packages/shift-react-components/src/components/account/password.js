@@ -1,6 +1,6 @@
 // Libraries
 import React from 'react'
 
-export default () => (
+export const AccountPassword = () => (
   <h1>Password</h1>
 )

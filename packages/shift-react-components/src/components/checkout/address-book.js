@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class AddressBook extends Component {
+export class AddressBook extends Component {
   renderOptions (address) {
     const { currentAddressId, addressFormDisplayed, onAddressDeleted, onBookAddressSelected } = this.props
     const addressLabel = typeof address.meta_attributes.label === 'undefined' ? 'Other' : address.meta_attributes.label.value
@@ -61,5 +61,3 @@ AddressBook.propTypes = {
   onBookAddressSelected: PropTypes.func,
   onNewAddress: PropTypes.func
 }
-
-export default AddressBook

@@ -6,26 +6,20 @@ import format from 'date-fns/format'
 
 // Libs
 import businessDaysFromNow from '../../lib/business-days-from-now'
-import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
+import { Button } from '../../objects/button'
+import { Flash } from '../../objects/flash'
+import ShippingMethodsHeader from '../checkout/shipping-methods-header'
 
-class ShippingMethods extends PureComponent {
-  constructor () {
-    super()
-
-    this.Button = componentMapping('Button')
-    this.Flash = componentMapping('Flash')
-    this.ShippingMethodsHeader = componentMapping('ShippingMethodsHeader')
-  }
-
+export class ShippingMethods extends PureComponent {
   /**
    * Renders the continue button
    */
   renderContinueButton () {
-    const { handleFormSubmit, isThirdPartyPayment} = this.props
+    const { handleFormSubmit, isThirdPartyPayment } = this.props
     const label = isThirdPartyPayment ? 'Review Your Order' : 'Continue To Payment'
     return (
-      <this.Button
+      <Button
         className='o-button--sml'
         aria-label={label}
         label={label}
@@ -97,8 +91,8 @@ class ShippingMethods extends PureComponent {
 
     return (
       <div aria-label='Shipping Methods' className={classNames(this.props.className, 'o-form c-shipping-method')}>
-        <this.ShippingMethodsHeader title={'Shipping Method'}/>
-        { errorMessage && <this.Flash text={errorMessage} modifier={'error'}/> }
+        <ShippingMethodsHeader title={'Shipping Method'}/>
+        { errorMessage && <Flash text={errorMessage} modifier={'error'}/> }
         { this.renderForm() }
       </div>
     )
@@ -114,5 +108,3 @@ ShippingMethods.propTypes = {
   shippingMethods: PropTypes.array,
   isThirdPartyPayment: PropTypes.bool
 }
-
-export default ShippingMethods

@@ -26,7 +26,7 @@ describe('Server', () => {
       // Act // Assert
       request(requestUrl).get('/order').then(response => {
         expect(response.statusCode).toEqual(302)
-        expect(response.header['location']).toEqual('/account/myaccount')
+        expect(response.header['location']).toEqual('/account/details')
       })
     })
   })

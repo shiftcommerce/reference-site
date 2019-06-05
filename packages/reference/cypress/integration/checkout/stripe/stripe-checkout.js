@@ -10,11 +10,25 @@ describe('Stripe checkout', () => {
     }).as('emptySearch')
 
     cy.route({
+      method: 'POST',
+      url: '/createOrder',
+      status: 201,
+      response: 'fixture:checkout/stripe-create-order.json'
+    }).as('createOrder')
+
+    cy.route({
       method: 'GET',
-      url: '/getShippingMethods',
+      url: '/getCart',
       status: 200,
-      response: 'fixture:cart/get-shipping-methods.json'
-    }).as('getShippingMethods')
+      response: 'fixture:cart/get-cart-with-line-item.json'
+    }).as('getCart')
+
+    cy.route({
+      method: 'POST',
+      url: '/createAddress',
+      status: 200,
+      response: 'fixture:checkout/create-address.json'
+    }).as('createAddress')
 
     // Start with an item in the cart
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
@@ -43,6 +57,13 @@ describe('Stripe checkout', () => {
     cy.get('#email').type('test@example.com')
     cy.get('#primary_phone').type('07510123456')
 
+    cy.route({
+      method: 'POST',
+      url: '/setCartShippingAddress',
+      status: 200,
+      response: 'fixture:checkout/set-cart-shipping-address.json'
+    }).as('setCartShippingAddress')
+
     // Navigate to next step
     cy.contains(/View Shipping Options/i).click()
 
@@ -52,7 +73,7 @@ describe('Stripe checkout', () => {
     cy.contains(/Continue to payment/i).click()
 
     // Fill in card details
-    cy.wait(3000)
+    cy.wait(5000)
 
     cy.get('.__PrivateStripeElement > iframe').then(element => {
       const body = element.contents().find('body')

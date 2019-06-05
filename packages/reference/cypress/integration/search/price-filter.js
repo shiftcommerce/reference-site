@@ -10,14 +10,6 @@ describe('Search - Price Filter', () => {
       response: 'fixture:search/all-index.json'
     }).as('algoliaFirstCall')
 
-    // Stub menus request
-    cy.route({
-      method: 'GET',
-      url: '/getMenus?**',
-      status: 200,
-      response: 'fixture:menus/get-menus.json'
-    }).as('getMenus')
-
     cy.visit('/')
 
     // Search

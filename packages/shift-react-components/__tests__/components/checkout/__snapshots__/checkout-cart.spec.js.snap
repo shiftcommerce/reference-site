@@ -78,7 +78,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             3
           </a>
            
-          <Plural
+          <l
             className={null}
             count={3}
             showCount={false}
@@ -92,13 +92,13 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             >
               items
             </span>
-          </Plural>
+          </l>
            in your shopping basket
         </p>
         <p
           className="c-checkout-cart__description"
         >
-          <Plural
+          <l
             className={null}
             count={3}
             plural="These"
@@ -113,9 +113,9 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             >
               These
             </span>
-          </Plural>
+          </l>
            
-          <Plural
+          <l
             className={null}
             count={3}
             showCount={false}
@@ -129,7 +129,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
             >
               items
             </span>
-          </Plural>
+          </l>
            will be saved for 48 hours depending on availablility
         </p>
       </div>
@@ -413,7 +413,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             1
           </a>
            
-          <Plural
+          <l
             className={null}
             count={1}
             showCount={false}
@@ -427,13 +427,13 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             >
               item
             </span>
-          </Plural>
+          </l>
            in your shopping basket
         </p>
         <p
           className="c-checkout-cart__description"
         >
-          <Plural
+          <l
             className={null}
             count={1}
             plural="These"
@@ -448,9 +448,9 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             >
               This
             </span>
-          </Plural>
+          </l>
            
-          <Plural
+          <l
             className={null}
             count={1}
             showCount={false}
@@ -464,7 +464,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
             >
               item
             </span>
-          </Plural>
+          </l>
            will be saved for 48 hours depending on availablility
         </p>
       </div>

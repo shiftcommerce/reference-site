@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Components
-import ProductCarousel from '../../../../src/components/products/display/product-carousel'
-import ProductDisplay from '../../../../src/components/products/display/product-display'
+import { ProductCarousel } from '../../../../src/components/products/display/product-carousel'
+import { ProductDisplay } from '../../../../src/components/products/display/product-display'
 import ProductEwisForm from '../../../../src/components/products/display/product-ewis-form'
 import ProductPrice from '../../../../src/components/products/display/product-price'
 

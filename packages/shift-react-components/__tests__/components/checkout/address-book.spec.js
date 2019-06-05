@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import AddressBook from '../../../src/components/checkout/address-book'
+import { AddressBook } from '../../../src/components/checkout/address-book'
 
 // Fixtures
 import addressBookData from '../../fixtures/address-book'

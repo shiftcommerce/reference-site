@@ -4,12 +4,11 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import link from '../../objects/link'
+import Config from '../../lib/config'
+import { CheckoutStepIcon } from '../checkout/checkout-step-icon'
 
-function CheckoutSteps ({ currentStep, stepActions }) {
-  const CheckoutStepIcon = componentMapping('CheckoutStepIcon')
-  const Link = componentMapping('Link')
-
+export function CheckoutSteps ({ currentStep, stepActions }) {
   const renderCheckoutSteps = () => {
     const checkoutSteps = [
       { position: 1, title: 'Payment Method', href: '/checkout/payment-method' },
@@ -36,6 +35,8 @@ function CheckoutSteps ({ currentStep, stepActions }) {
     const stepCompleted = step.position < currentStep
     const content = stepCompleted ? <CheckoutStepIcon /> : step.position
     const active = step.position === currentStep
+
+    const Link = Config.get().Link || link
 
     if (stepCompleted) {
       return (
@@ -81,5 +82,3 @@ CheckoutSteps.propTypes = {
 CheckoutSteps.defaultProps = {
   stepActions: {}
 }
-
-export default CheckoutSteps

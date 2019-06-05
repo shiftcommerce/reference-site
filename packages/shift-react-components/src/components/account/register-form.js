@@ -5,15 +5,10 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import { FormErrors } from '../../lib/form-errors'
 
-class RegisterForm extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-    this.AccountFormErrors = componentMapping('FormErrors')
-  }
+export class RegisterForm extends Component {
   renderNameInputs () {
     return (
       <div className='o-flex o-flex__space-between'>
@@ -91,7 +86,7 @@ class RegisterForm extends Component {
 
   renderSubmitButton (props) {
     return (
-      <this.Button
+      <Button
         className='c-register__button o-button-sml'
         aria-label='Create Account'
         label='Create Account'
@@ -146,7 +141,7 @@ class RegisterForm extends Component {
           onSubmit={handleSubmit}
           render={props => (
             <>
-              <this.AccountFormErrors errors={registration.errors} />
+              <FormErrors errors={registration.errors} />
               <Form>
                 <div>
                   { this.renderNameInputs() }
@@ -163,5 +158,3 @@ class RegisterForm extends Component {
     )
   }
 }
-
-export default RegisterForm

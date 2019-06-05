@@ -5,17 +5,11 @@ import * as Yup from 'yup'
 import t from 'typy'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import { Flash } from '../../objects/flash'
+import { AddressBook } from '../checkout/address-book'
 
-class AccountAddresses extends Component {
-  constructor (props) {
-    super(props)
-
-    this.AddressBook = componentMapping('AddressBook')
-    this.Button = componentMapping('Button')
-    this.Flash = componentMapping('Flash')
-  }
-
+export class AccountAddresses extends Component {
   getCurrentAddress () {
     const currentAddress = this.props.currentAddress || {}
 
@@ -40,11 +34,11 @@ class AccountAddresses extends Component {
   renderFlash (status) {
     switch (status) {
       case 'success-created':
-        return (<this.Flash modifier='success' text='Address saved.' />)
+        return (<Flash modifier='success' text='Address saved.' />)
       case 'success-updated':
-        return (<this.Flash modifier='success' text='Address updated.' />)
+        return (<Flash modifier='success' text='Address updated.' />)
       case 'error':
-        return (<this.Flash modifier='error' text='Oops, there was an error submitting your form.' />)
+        return (<Flash modifier='error' text='Oops, there was an error submitting your form.' />)
     }
   }
 
@@ -54,7 +48,6 @@ class AccountAddresses extends Component {
       addressBook,
       countries,
       currentAddress,
-      currentAddressId,
       onAddressCreated,
       onAddressDeleted,
       onAddressUpdated,
@@ -94,8 +87,8 @@ class AccountAddresses extends Component {
           const submitEnabled = isValid && !isSubmitting
           return (
             <>
-              {this.renderFlash(status)}
-              <this.AddressBook
+              { this.renderFlash(status) }
+              <AddressBook
                 addressBook={addressBook}
                 addressFormDisplayed={false}
                 currentAddressId={currentAddress && currentAddress.id}
@@ -110,7 +103,7 @@ class AccountAddresses extends Component {
                     <option value=''>Choose…</option>
                     { countries.map(c => {
                       return (
-                        <option value={c.value} key={c.id}>{c.title}</option>
+                        <option value={c.value} key={c.id}>{ c.title }</option>
                       )
                     }) }
                   </Field>
@@ -198,7 +191,7 @@ class AccountAddresses extends Component {
                   </div>
                 </div>
 
-                <this.Button
+                <Button
                   className='c-password__button o-button-sml u-margin-top-none u-margin-bottom-none'
                   aria-label='Update details'
                   label={currentAddress ? 'Update address' : 'Create address'}
@@ -215,5 +208,3 @@ class AccountAddresses extends Component {
     )
   }
 }
-
-export default AccountAddresses
