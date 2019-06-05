@@ -178,13 +178,11 @@ workflows:
       - cypress:
           requires:
             - build
-      # - heroku_deploy:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
-      #     requires:
-      #       - jest_test
-      #       - pwmetrics_test
-      #       - cypress_build
-      #       - cypress_run
+      - heroku_deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - jest_test
+            - cypress
