@@ -5,11 +5,9 @@ const helmet = require('helmet')
  * Enables the Content Security Policy
  * @param {Function} server - App server eg. express
  * @param {object} policyOptions - Policy options eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
+ * @public
  */
-const contentSecurityPolicy = (server, policyOptions = {}) => {
-  // Formats provided hosts
-  const formatHosts = (hosts) => { return hosts ? hosts.split(',') : [] }
-  
+const contentSecurityPolicy = (server, policyOptions = {}) => {  
   // Build and set CSP via Helmet middleware
   server.use(helmet.contentSecurityPolicy({
     directives: {
@@ -46,6 +44,15 @@ const contentSecurityPolicy = (server, policyOptions = {}) => {
       blockAllMixedContent: true
     }
   }))
+}
+
+/**
+ * Formats provided hosts
+ * @param {object} Hosts - Policy option hosts eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
+ * @private
+ */
+const formatHosts = (hosts) => {
+  return hosts ? hosts.split(',') : []
 }
 
 module.exports = { contentSecurityPolicy }
