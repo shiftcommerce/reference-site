@@ -210,4 +210,5 @@ workflows:
                 - master
           requires:
             - jest_test
+            - synk
             - cypress
