@@ -3,17 +3,11 @@ import React, { Component } from 'react'
 import t from 'typy'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import Checkbox from '../../objects/checkbox'
+import Input from '../../objects/input'
+import DropdownSelect from '../../objects/dropdown-select'
 
 export class AddressForm extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Checkbox = componentMapping('Checkbox')
-    this.DropdownSelect = componentMapping('DropdownSelect')
-    this.Input = componentMapping('Input')
-  }
-
   componentDidMount () {
     const { currentAddress, autoFillAddress } = this.props
     if (currentAddress && autoFillAddress) autoFillAddress(currentAddress)
@@ -52,7 +46,7 @@ export class AddressForm extends Component {
 
     return (
       <>
-        <this.DropdownSelect
+        <DropdownSelect
           options={countries}
           label='Country'
           name={name}
@@ -72,7 +66,7 @@ export class AddressForm extends Component {
   renderInputField (formInput, fieldOption) {
     return (
       <>
-        <this.Input
+        <Input
           label={fieldOption.label}
           className={fieldOption.className}
           placeholder={fieldOption.placeholder}
@@ -93,7 +87,7 @@ export class AddressForm extends Component {
   renderCheckbox (formInput, fieldOption) {
     return (
       <>
-        <this.Checkbox
+        <Checkbox
           label={fieldOption.label}
           className={fieldOption.className}
           name={fieldOption.name}
@@ -258,5 +252,3 @@ export class AddressForm extends Component {
     )
   }
 }
-
-export default AddressForm

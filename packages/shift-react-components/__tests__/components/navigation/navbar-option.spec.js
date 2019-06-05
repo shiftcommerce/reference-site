@@ -1,15 +1,13 @@
 import React from 'react'
-
-// Libraries
-import componentMapping from '../../../src/lib/component-mapping'
+import Link from '../../../src/objects/link'
 
 // Components
-import NavBarOption from '../../../src/components/navigation/navbar-option'
+import { NavBarOption } from '../../../src/components/navigation/navbar-option'
 
 test('renders the links', () => {
   // Arrange
   const emptyFunction = () => { }
-  const Link = componentMapping('Link')
+
   // Act
   const wrapper = shallow(
     <NavBarOption title='Mens' href='/slug?slug=/categories/mens' as='/categories/mens' onClick={emptyFunction} />

@@ -7,14 +7,12 @@ import qs from 'qs'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Components
-import {
-  AccountAddresses,
-  AccountDetails,
-  AccountOrders,
-  AccountPassword,
-  MyAccountHeader,
-  Sidebar
-} from '@shiftcommerce/shift-react-components'
+import { AccountAddresses } from '@shiftcommerce/shift-react-components/src/components/account/addresses'
+import { AccountDetails } from '@shiftcommerce/shift-react-components/src/components/account/details'
+import { AccountOrders } from '@shiftcommerce/shift-react-components/src/components/account/orders'
+import { AccountPassword } from '@shiftcommerce/shift-react-components/src/components/account/password'
+import { MyAccountHeader } from '@shiftcommerce/shift-react-components/src/components/account/my-account-header'
+import { Sidebar } from '@shiftcommerce/shift-react-components/src/components/account/sidebar'
 
 // Actions
 import { getCustomerOrders, updateCustomerAccount } from '../actions/account-actions'

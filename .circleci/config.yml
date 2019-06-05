@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
-  jest_test:
+  build:
+    resource_class: large
     docker:
       - image: circleci/node:11.13.0
     environment:
@@ -9,24 +10,120 @@ jobs:
       NO_HTTPS: true
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
           name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+            - node_modules
+            - packages/reference/node_modules
+            - packages/shift-next/node_modules
+            - packages/shift-next-routes/node_modules
+            - packages/shift-node-api/node_modules
+            - packages/shift-react-components/node_modules
+      - run:
+          name: Create NextJS production build
+          command: |
+            yarn --cwd packages/reference build
+            cat packages/reference/client/.next/BUILD_ID
+      - save_cache:
+          key: next-production-build-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - packages/reference/client/.next
+  jest_test:
+    resource_class: large
+    docker:
+      - image: circleci/node:11.13.0
+    environment:
+      API_HOST: http://example.local
+      API_HOST_PROXY: http://example.proxy.local
+      NO_HTTPS: true
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+            - packages/reference/node_modules
+            - packages/shift-next/node_modules
+            - packages/shift-next-routes/node_modules
+            - packages/shift-node-api/node_modules
+            - packages/shift-react-components/node_modules
       - run:
           name: Execute tests
-          command: yarn workspaces run test --silent --maxWorkers=2
-  pwmetrics_test:
+          command: npx lerna run test --stream -- --silent
+  cypress:
+    resource_class: large
+    docker:
+      - image: callumbarratt/cypress:11.13.0
+    parallelism: 4
+    working_directory: /home/circleci/project
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore cache (Yarn)
+          key: yarn-dependencies-cy-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore cache (NextJS build)
+          key: next-production-build-{{ .Branch }}-{{ .Revision }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - run:
+          name: Install Cypress
+          command: |
+            npx cypress verify
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-dependencies-cy-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+            - ~/.cache/Cypress
+            - node_modules
+            - packages/reference/node_modules
+            - packages/shift-next/node_modules
+            - packages/shift-next-routes/node_modules
+            - packages/shift-node-api/node_modules
+            - packages/shift-react-components/node_modules
+      - run:
+          name: Start NextJS Server
+          command: |
+            cat packages/reference/client/.next/BUILD_ID
+            yarn --cwd packages/reference start
+          background: true
+      - run:
+          name: Wait-on http://localhost:3000
+          command: npx wait-on http://localhost:3000
+      - run:
+          command: |
+            TESTFILES=$(yarn run --silent cy:ci)
+            cd packages/reference
+            npx cypress run --spec $TESTFILES
+      - store_artifacts:
+          path: packages/reference/cypress/screenshots
+      - store_artifacts:
+          path: packages/reference/cypress/videos
+    environment:
+      - API_HOST: https://shift-platform-dev-api.global.ssl.fastly.net
+      - API_HOST_PROXY: http://localhost:3000
+      - NO_HTTPS: true
+      - ENABLE_PAYPAL_LIVE_ENVIRONMENT: false
+      - ENABLE_TEST_PAYPAL_BUTTON: true
+  pwmetrics:
     docker:
       - image: circleci/node:11.13.0-browsers
     environment:
@@ -37,32 +134,26 @@ jobs:
       ENABLE_TEST_PAYPAL_BUTTON: true
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/project
       - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+          name: Restore cache (Yarn)
+          key: yarn-dependencies-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore cache (NextJS build)
+          key: next-production-build-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run:
-          name: Create a build
-          command: yarn --cwd packages/reference build
       - run:
           name: Start the server
           background: true
-          command: yarn --cwd packages/reference start
+          command: |
+            cat packages/reference/client/.next/BUILD_ID
+            yarn --cwd packages/reference start
       - run:
           name: Start PW metrics
           command: |
             sleep 1
-            yarn run pwmetrics --config=pwmetrics-config.js
+            yarn run pwmetrics --config=packages/reference/pwmetrics-config.js
   heroku_deploy:
     executor: heroku/default
     steps:
@@ -72,54 +163,24 @@ jobs:
           only-branch: master
 
 orbs:
-  cypress: cypress-io/cypress@1.7.0
   heroku: circleci/heroku@0.0.6
-
-executors:
-  cypress-node-11:
-    docker:
-      - image: 'callumbarratt/cypress:11.13.0'
-    environment:
-      API_HOST: https://shift-platform-dev-api.global.ssl.fastly.net
-      API_HOST_PROXY: http://localhost:3000
-      NO_HTTPS: true
-      ENABLE_PAYPAL_LIVE_ENVIRONMENT: false
-      ENABLE_TEST_PAYPAL_BUTTON: true
 
 workflows:
   build_and_test:
     jobs:
+      - build
       - jest_test
-      # - pwmetrics_test
-      - cypress/install:
-          name: cypress_build
-          executor: cypress-node-11
-          yarn: true
-          build: yarn --cwd packages/reference build
-      - cypress/run:
-          name: cypress_run
-          store_artifacts: true
-          parallelism: 4
+      - pwmetrics:
           requires:
-            - cypress_build
-          no-workspace: true
-          executor: cypress-node-11
-          yarn: true
-          start: yarn --cwd packages/reference start
-          parallel: true # Specify we are using parallelism so it uses the shared workspace output from cypress/install (NextJS build)
-          group: All Integration tests
-          wait-on: 'http://localhost:3000'
-          command: |
-            TESTFILES=$(yarn run --silent cy:ci)
-            cd packages/reference
-            npx cypress run --spec $TESTFILES
-      # - heroku_deploy:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
-      #     requires:
-      #       - jest_test
-      #       - pwmetrics_test
-      #       - cypress_build
-      #       - cypress_run
+            - build
+      - cypress:
+          requires:
+            - build
+      - heroku_deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - jest_test
+            - cypress

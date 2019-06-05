@@ -5,16 +5,8 @@ import t from 'typy'
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
 import { penceToPounds } from '../../lib/pence-to-pounds'
-import componentMapping from '../../lib/component-mapping'
 
-class OrderLineItems extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
-  }
-
+export class OrderLineItems extends PureComponent {
   /**
   * Render the total prices for the line item
   * @param  {Object} lineItem
@@ -82,5 +74,3 @@ class OrderLineItems extends PureComponent {
     return this.renderLineItems()
   }
 }
-
-export default OrderLineItems

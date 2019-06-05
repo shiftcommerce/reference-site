@@ -2,7 +2,8 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { algoliaReduxWrapper, RegisterPage } from '@shiftcommerce/shift-next'
+import { algoliaReduxWrapper } from '@shiftcommerce/shift-next/src/lib/algolia-redux-wrapper'
+import RegisterPage from '@shiftcommerce/shift-next/src/pages/register'
 
 function mapStateToProps ({ registration, account: { loggedIn } }) {
   return { registration, loggedIn }

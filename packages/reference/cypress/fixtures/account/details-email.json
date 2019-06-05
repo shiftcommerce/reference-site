@@ -8,11 +8,11 @@
     "attributes": {
       "meta_attributes": {
         "first_name": {
-          "value": "John",
+          "value": "Dan",
           "data_type": "string"
         },
         "last_name": {
-          "value": "Doe",
+          "value": "Doey",
           "data_type": "string"
         },
         "mobile_phone": {
@@ -24,7 +24,7 @@
           "data_type": "string"
         }
       },
-      "email": "example@test.com",
+      "email": "example123@test.com",
       "reference": "144",
       "created_at": "2019-05-14T10:44:13.806Z",
       "updated_at": "2019-05-14T13:26:14.736Z"

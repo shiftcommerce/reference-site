@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import './commands/empty-search'
 import './commands/address-book'
 import './commands/cart'
 import './commands/category'
@@ -47,4 +48,18 @@ beforeEach(function () {
     status: 200,
     response: 'fixture:menus/get-menus.json'
   }).as('getMenus')
+
+  cy.route({
+    method: 'GET',
+    url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg',
+    status: 200,
+    response: 'fixture:product-image-1.jpg'
+  }).as('geekyComputerImage')
+
+  cy.route({
+    method: 'GET',
+    url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/248/1544098375.0540378-old_computer.jpg',
+    status: 200,
+    response: 'fixture:product-image-1.jpg'
+  }).as('oldComputerImage')
 })

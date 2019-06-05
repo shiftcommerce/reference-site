@@ -3,16 +3,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
+import DropdownSelect from '../../objects/dropdown-select'
+import { Image } from '../../objects/image'
+import Config from '../../lib/config'
+import link from '../../objects/link'
 
-class LineItems extends Component {
+export class LineItems extends Component {
   constructor (props) {
     super(props)
 
-    this.DropdownSelect = componentMapping('DropdownSelect')
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
+    this.Link = Config.get().Link || link
   }
 
   /**
@@ -26,7 +27,7 @@ class LineItems extends Component {
 
     if (updateQuantity) {
       return (
-        <this.DropdownSelect
+        <DropdownSelect
           className='c-line-items__quantity-select'
           data-id={lineItem.id}
           label='Quantity'
@@ -38,7 +39,7 @@ class LineItems extends Component {
         />
       )
     } else {
-      return <span className='c-line-items__quantity-amount'>{lineItem.unit_quantity}</span>
+      return <span className='c-line-items__quantity-amount'>{ lineItem.unit_quantity }</span>
     }
   }
 
@@ -49,9 +50,9 @@ class LineItems extends Component {
   renderQuantityOptions (lineItem) {
     // Render options from 1 to 10 or maximum available stock, whichever is lower.
     const maxStock = Math.min(10, lineItem.stock_available_level)
-    const baseOptions = Array.from({length: maxStock}, (_, i) => ({
-      title: i+1,
-      value: i+1
+    const baseOptions = Array.from({ length: maxStock }, (_, i) => ({
+      title: i + 1,
+      value: i + 1
     }))
 
     // Render an additional option with the current quantity if it is higher than the maximum above.
@@ -144,7 +145,7 @@ class LineItems extends Component {
         <div className='c-line-items__sections' key={lineItem.item.sku}>
           <div className='c-line-items__images'>
             <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
-              <this.Image className='c-line-items__image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
+              <Image className='c-line-items__image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
             </this.Link>
           </div>
           <div className='c-line-items__information'>
@@ -180,5 +181,3 @@ LineItems.propTypes = {
   lineItemsCount: PropTypes.number,
   updateQuantity: PropTypes.func
 }
-
-export default LineItems

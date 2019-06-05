@@ -9,7 +9,8 @@ import * as ProductActions from '../../src/actions/product-actions'
 import ProductPage from '../../src/pages/product'
 
 // Components
-import { Loading, ProductDisplay } from '@shiftcommerce/shift-react-components'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { ProductDisplay } from '@shiftcommerce/shift-react-components/src/components/products/display/product-display'
 
 // Config
 import Config from '../../src/lib/config'

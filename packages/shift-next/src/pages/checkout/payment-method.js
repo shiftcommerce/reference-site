@@ -17,7 +17,8 @@ import {
 } from '../../actions/cart-actions'
 
 // Components
-import { PaymentMethod, Loading } from '@shiftcommerce/shift-react-components'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import PaymentMethod from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method'
 
 // Libs
 import Config from '../../lib/config'
@@ -264,5 +265,3 @@ export class PaymentMethodPage extends Component {
     )
   }
 }
-
-export default PaymentMethodPage

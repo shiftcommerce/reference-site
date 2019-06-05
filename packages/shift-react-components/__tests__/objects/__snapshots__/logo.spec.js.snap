@@ -3,6 +3,7 @@
 exports[`renders correctly 1`] = `
 <Logo
   className="o-header__logo"
+  logoSrc="test.jpg"
 >
   <div
     className="o-header__logo"
@@ -17,7 +18,7 @@ exports[`renders correctly 1`] = `
       >
         <Image
           height={40}
-          src={Object {}}
+          src="test.jpg"
           width={180}
         >
           <div>
@@ -25,8 +26,8 @@ exports[`renders correctly 1`] = `
               <img
                 className="o-image"
                 height={40}
-                src={Object {}}
-                srcSet="[object Object] 769w"
+                src="test.jpg"
+                srcSet="test.jpg 769w"
                 width={180}
               />
             </picture>

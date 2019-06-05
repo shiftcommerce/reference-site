@@ -1,11 +1,16 @@
 describe('Forgotten Password', () => {
+  beforeEach(() => {
+    cy.emptySearch()
+  })
+
   it('sends the correct request to the server', () => {
     cy.server()
 
     cy.route({
       method: 'GET', // this is a GET for Reasons Unknown
-      url: '/forgotPassword*',
-      status: 201
+      url: '**forgotPassword**',
+      status: 201,
+      response: {}
     }).as('postForgot')
 
     // Visit the Forgotten password page
@@ -50,6 +55,10 @@ describe('Forgotten Password', () => {
 })
 
 describe('Reset Password', () => {
+  beforeEach(() => {
+    cy.emptySearch()
+  })
+
   it('sends the correct request to the server', () => {
     cy.server()
 

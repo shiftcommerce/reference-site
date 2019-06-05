@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Image extends Component {
+export class Image extends Component {
   styles () {
     return {
       height: this.props.height,
@@ -39,5 +39,3 @@ class Image extends Component {
     return null
   }
 }
-
-export default Image

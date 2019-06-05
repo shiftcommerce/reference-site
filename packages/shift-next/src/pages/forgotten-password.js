@@ -5,7 +5,7 @@ import React, { Component, Fragment } from 'react'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Component
-import { ForgotPasswordForm } from '@shiftcommerce/shift-react-components'
+import { ForgotPasswordForm } from '@shiftcommerce/shift-react-components/src/components/account/forgot-password-form'
 
 // Actions
 import { requestPasswordResetEmail } from '../actions/account-actions'

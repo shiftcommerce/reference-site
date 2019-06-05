@@ -37,7 +37,7 @@ module.exports = {
       if (!signedIn) {
         setUserToLoggedIn(req, res)
       }
-      return res.redirect('/account/myaccount')
+      return res.redirect('/account/details')
     }
 
     // If the customer is not in the session, go to the next handler
@@ -66,7 +66,7 @@ module.exports = {
     const { customerId } = req.session
     // If there is a customerId, redirect to my account page.
     if (customerId) {
-      return res.redirect('/account/myaccount')
+      return res.redirect('/account/details')
     }
 
     // If the customer is not in the session, go to the next handler

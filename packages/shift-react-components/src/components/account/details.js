@@ -4,22 +4,16 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
+import { Flash } from '../../objects/flash'
 
-class AccountDetails extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-    this.Flash = componentMapping('Flash')
-  }
-
+export class AccountDetails extends Component {
   renderFlash (status) {
     switch (status) {
       case 'success':
-        return (<this.Flash modifier='success' text='Your details were successfully updated.' />)
+        return (<Flash modifier='success' text='Your details were successfully updated.' />)
       case 'error':
-        return (<this.Flash modifier='error' text='Oops, there was an error submitting your form.' />)
+        return (<Flash modifier='error' text='Oops, there was an error submitting your form.' />)
     }
   }
 
@@ -54,7 +48,7 @@ class AccountDetails extends Component {
           const submitEnabled = isValid && !isSubmitting
           return (
             <>
-              {this.renderFlash(status)}
+              { this.renderFlash(status) }
               <Form>
                 <label className='o-form__input-label' htmlFor="firstName">First name</label>
                 <Field type='text' name='firstName' className='o-form__input-field o-form__input-block' />
@@ -80,7 +74,7 @@ class AccountDetails extends Component {
                   <ErrorMessage name='emailConfirmation' />
                 </div>
 
-                <this.Button
+                <Button
                   className='c-password__button o-button-sml u-margin-top-none u-margin-bottom-none'
                   aria-label='Update details'
                   label='Update details'
@@ -97,5 +91,3 @@ class AccountDetails extends Component {
     )
   }
 }
-
-export default AccountDetails

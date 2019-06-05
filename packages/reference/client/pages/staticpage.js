@@ -2,7 +2,8 @@
 import { connect } from 'react-redux'
 
 // Pages
-import { algoliaReduxWrapper, StaticPage } from '@shiftcommerce/shift-next'
+import { algoliaReduxWrapper } from '@shiftcommerce/shift-next/src/lib/algolia-redux-wrapper'
+import StaticPage from '@shiftcommerce/shift-next/src/pages/static-page'
 
 function mapStateToProps ({ global: { loading } }) {
   return { loading }

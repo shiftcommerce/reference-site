@@ -4,15 +4,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { Button } from '../../objects/button'
 
-class CouponForm extends Component {
-  constructor (props) {
-    super(props)
-
-    this.Button = componentMapping('Button')
-  }
-
+export class CouponForm extends Component {
   /**
    * Renders a vailation message if no coupon code is entered
    * @param  {Object} values
@@ -42,7 +36,7 @@ class CouponForm extends Component {
             <div className='c-coupon-form__field'>
               <Field type='text' name='couponCode' className='c-coupon-form__input' placeholder='Enter Promotion Code' />
               <div className="c-coupon-form__button-container">
-                <this.Button
+                <Button
                   aria-label='Apply Gift Code'
                   className='c-coupon-form__button o-button--sml'
                   label='Apply'
@@ -71,5 +65,3 @@ class CouponForm extends Component {
 CouponForm.propTypes = {
   handleSubmit: PropTypes.func
 }
-
-export default CouponForm

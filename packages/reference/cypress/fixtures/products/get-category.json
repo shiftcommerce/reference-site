@@ -1,0 +1,21 @@
+{
+  "id": "73",
+  "meta_attributes": {},
+  "updated_at": "2019-05-14T15:19:31Z",
+  "created_at": "2018-12-06T11:05:43Z",
+  "deleted_at": null,
+  "slug": "computers",
+  "canonical_path": "/categories/computers",
+  "title": "Computers",
+  "reference": "computers",
+  "published": true,
+  "category_tree_id": 11,
+  "products_leading_variants": [],
+  "sorting_rules": [],
+  "search_facets": [],
+  "facet_strings": [],
+  "facets": [],
+  "default_sort_order": null,
+  "breadcrumbs": [],
+  "exclude_from_breadcrumb": false
+}

@@ -4,8 +4,8 @@ import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
 
 // Components
-import NavBar from '../../../src/components/navigation/navbar'
-import Loading from '../../../src/objects/loading'
+import { NavBar } from '../../../src/components/navigation/navbar'
+import { Loading } from '../../../src/objects/loading'
 
 // Fixtures
 import menu from '../../fixtures/menu'

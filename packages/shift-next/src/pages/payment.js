@@ -9,14 +9,12 @@ import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
 
 // Components
-import {
-  AddressFormSummary,
-  Loading,
-  Payment,
-  PaymentSummary,
-  PaymentMethodSummary,
-  ShippingMethodsSummary
-} from '@shiftcommerce/shift-react-components'
+import { AddressFormSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-summary'
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { Payment } from '@shiftcommerce/shift-react-components/src/components/checkout/payment'
+import { PaymentSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-summary'
+import { PaymentMethodSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method-summary'
+import { ShippingMethodsSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/shipping-methods-summary'
 
 // Actions
 import {

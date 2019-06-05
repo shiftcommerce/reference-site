@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Components
-import CartTablePaymentIcons from '../../../src/components/cart/cart-table-payment-icons'
-import PaymentIcons from '../../../src/components/cart/payment-icons'
+import { CartTablePaymentIcons } from '../../../src/components/cart/cart-table-payment-icons'
+import { PaymentIcons } from '../../../src/components/cart/payment-icons'
 
 test('renders correct child elements and classnames', () => {
   const className = 'dummy-classname'

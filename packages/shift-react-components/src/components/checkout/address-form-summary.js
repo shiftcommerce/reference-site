@@ -3,15 +3,9 @@ import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import componentMapping from '../../lib/component-mapping'
+import { AddressFormHeader } from '../checkout/address-form-header'
 
-class AddressFormSummary extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.AddressFormHeader = componentMapping('AddressFormHeader')
-  }
-
+export class AddressFormSummary extends PureComponent {
   renderAddress () {
     const {
       addressLine1,
@@ -21,10 +15,10 @@ class AddressFormSummary extends PureComponent {
       postcode
     } = this.props
 
-    return(
+    return (
       <div className='o-form__wrapper--collapsed c-address-form__summary'>
-        <p className='u-bold'>{firstName} {lastName} </p>
-        <span>{addressLine1}, {city}, {postcode}</span>
+        <p className='u-bold'>{ firstName } { lastName } </p>
+        <span>{ addressLine1 }, { city }, { postcode }</span>
       </div>
     )
   }
@@ -38,13 +32,13 @@ class AddressFormSummary extends PureComponent {
 
     return (
       <Fragment>
-        <this.AddressFormHeader
+        <AddressFormHeader
           collapsed
           onClick={onClick}
           showEditButton={showEditButton}
           title={headerTitle}
         />
-        {this.renderAddress()}
+        { this.renderAddress() }
       </Fragment>
     )
   }
@@ -60,5 +54,3 @@ AddressFormSummary.propTypes = {
   postcode: PropTypes.string,
   showEditButton: PropTypes.bool
 }
-
-export default AddressFormSummary

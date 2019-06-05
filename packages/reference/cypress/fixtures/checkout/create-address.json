@@ -1,0 +1,26 @@
+{
+  "id": "7207",
+  "meta_attributes": {
+    "email": {
+      "value": "test@example.com",
+      "data_type": "text"
+    },
+    "phone_number": {
+      "value": "0352878596",
+      "data_type": "text"
+    }
+  },
+  "customer_account_id": null,
+  "first_name": "test",
+  "last_name": "buyer",
+  "middle_names": "",
+  "address_line_1": "1 Main Terrace",
+  "address_line_2": "",
+  "address_line_3": "",
+  "city": "Wolverhampton",
+  "state": null,
+  "postcode": "W12 4LQ",
+  "country": "GB",
+  "preferred_shipping": false,
+  "preferred_billing": false
+}

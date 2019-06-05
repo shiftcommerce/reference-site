@@ -9,7 +9,7 @@ exports[`renders error messages 1`] = `
   <div
     className="c-payment__summary"
   >
-    <_default
+    <Flash
       modifier="error"
       text="Something went wrong"
     />

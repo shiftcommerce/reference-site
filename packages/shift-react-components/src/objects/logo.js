@@ -1,25 +1,20 @@
 // Libraries
 import React, { PureComponent } from 'react'
-import componentMapping from '../lib/component-mapping'
 
-// Assets
-import logoSrc from '../static/shopgo-logo.svg'
+import { Image } from './image'
+import Config from '../lib/config'
+import link from './link'
 
 class Logo extends PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.Image = componentMapping('Image')
-    this.Link = componentMapping('Link')
-  }
   render () {
-    let { className } = this.props
+    const Link = Config.get().Link || link
+    const { className, logoSrc } = this.props
 
     return (
       <div className={className}>
-        <this.Link href='/slug?slug=/homepage' as='/' >
-          <this.Image width={180} height={40} src={logoSrc} />
-        </this.Link>
+        <Link href='/slug?slug=/homepage' as='/'>
+          <Image width={180} height={40} src={logoSrc} />
+        </Link>
       </div>
     )
   }

@@ -2,6 +2,15 @@ describe('Successful Login', () => {
   it('routes us to the my account page with valid credentials', () => {
     // Uses custom command
     // Cypress/support/commands/login.js
+    cy.emptySearch()
+
+    cy.route({
+      method: 'GET',
+      url: '/getAddressBook',
+      status: 200,
+      response: 'fixture:account/get-address-book.json'
+    }).as('getAddressBook')
+
     cy.loginToAccount()
   })
 })
@@ -9,6 +18,8 @@ describe('Successful Login', () => {
 describe('Unsuccessful Login', () => {
   it('renders error message on login failure', () => {
     cy.server()
+
+    cy.emptySearch()
 
     cy.route({
       method: 'POST',
@@ -36,8 +47,8 @@ describe('Unsuccessful Login', () => {
   })
 
   it('displays/clears error message for invalid email address', () => {
-    // Visit the Login page
-    cy.visit('/account/login')
+    cy.get('input[name=email]').clear()
+    cy.get('input[name=password]').clear()
 
     // Enter login details
     cy.get('input[name=email]').type('test@example').blur() // needs a tld
@@ -46,7 +57,7 @@ describe('Unsuccessful Login', () => {
     cy.contains(/Invalid email/)
 
     // Check submit button is disabled
-    cy.get('button[aria-label="Continue Securely"]').should('be.disabled')
+    cy.get('button[type="submit"]').should('be.disabled')
 
     // check that a correct email clears the error
     cy.get('input[name=email]').clear().type('test@example.com').blur()
@@ -54,8 +65,8 @@ describe('Unsuccessful Login', () => {
   })
 
   it('displays errors for missing fields', () => {
-    // Visit the Login page
-    cy.visit('/account/login')
+    cy.get('input[name=email]').clear()
+    cy.get('input[name=password]').clear()
 
     // Enter login details
     cy.get('input[name=email]').focus().blur()
@@ -66,7 +77,7 @@ describe('Unsuccessful Login', () => {
     cy.contains(/Password is required/)
 
     // Check submit button is disabled
-    cy.get('button[aria-label="Continue Securely"]').should('be.disabled')
+    cy.get('button[type="submit"]').should('be.disabled')
 
     // check that a correct email clears the error
     cy.get('input[name=email]').clear().type('foo@bar.com').blur()
@@ -74,6 +85,6 @@ describe('Unsuccessful Login', () => {
     cy.get('.o-form__input-field__error').should('be.empty')
 
     // Check submit button is enabled
-    cy.get('button[aria-label="Continue Securely"]').should('be.enabled')
+    cy.get('button[type="submit"]').should('be.enabled')
   })
 })

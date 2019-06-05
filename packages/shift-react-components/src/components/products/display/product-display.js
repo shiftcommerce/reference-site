@@ -1,25 +1,21 @@
 // Libraries
 import React, { Component } from 'react'
 
-// Lib
-import componentMapping from '../../../lib/component-mapping'
+// Objects
+import { Button } from '../../../objects/button'
+import Rating from '../../../objects/rating'
+import VariantSelector from '../../../objects/variant-selector'
 
-class ProductDisplay extends Component {
-  constructor (props) {
-    super(props)
+// Components
+import { ProductCarousel } from '../../products/display/product-carousel'
+import ProductEwisForm from '../../products/display/product-ewis-form'
+import ProductPrice from '../../products/display/product-price'
 
-    this.Button = componentMapping('Button')
-    this.ProductCarousel = componentMapping('ProductCarousel')
-    this.ProductEwisForm = componentMapping('ProductEwisForm')
-    this.ProductPrice = componentMapping('ProductPrice')
-    this.Rating = componentMapping('Rating')
-    this.VariantSelector = componentMapping('VariantSelector')
-  }
-
+export class ProductDisplay extends Component {
   renderCarousel (product) {
     return (
       <div className='c-product-display__carousel'>
-        <this.ProductCarousel assetFiles={product.asset_files} />
+        <ProductCarousel assetFiles={product.asset_files} />
       </div>
     )
   }
@@ -27,7 +23,7 @@ class ProductDisplay extends Component {
   renderEwisForm () {
     return (
       <div className='c-product-display__buttons'>
-        <this.ProductEwisForm />
+        <ProductEwisForm />
       </div>
     )
   }
@@ -38,7 +34,7 @@ class ProductDisplay extends Component {
 
     return (
       <div className='c-product-display__buttons'>
-        <this.Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
+        <Button className='c-product-display__buttons-basket o-button--sml' label='add to basket' status={buttonStatus} aria-label='Add to Basket' onClick={onClick} />
       </div>
     )
   }
@@ -119,7 +115,7 @@ class ProductDisplay extends Component {
 
     return (
       <div className='c-product-display__info-price'>
-        <this.ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
+        <ProductPrice minPrice={minPrice} maxPrice={maxPrice} />
       </div>
     )
   }
@@ -133,7 +129,7 @@ class ProductDisplay extends Component {
         { this.renderSku(selectedVariant) }
         { this.renderPrice(product, selectedVariant) }
         <div className='c-product-display__info-rating'>
-          <this.Rating
+          <Rating
             rating={product.rating}
             className='o-rating__star--has-spacing o-rating__star--fs-small'
           />
@@ -141,7 +137,7 @@ class ProductDisplay extends Component {
         </div>
         { this.renderColourSelector(meta_attributes) }
         <div className='c-product-display__info-variant'>
-          <this.VariantSelector
+          <VariantSelector
             onClick={changeVariant}
             value={sku}
             name='line_item[item_id]'
@@ -174,5 +170,3 @@ class ProductDisplay extends Component {
     )
   }
 }
-
-export default ProductDisplay
