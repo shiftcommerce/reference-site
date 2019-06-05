@@ -9,7 +9,6 @@ const defaultHeaders = {
 }
 
 class HTTPClient {
-
   get (url, queryObject, headers = {}) {
     const query = qs.stringify(queryObject)
     const requestUrl = this.createRequestUrl(url, query)

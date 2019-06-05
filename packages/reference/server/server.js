@@ -42,7 +42,8 @@ module.exports = app.prepare().then(() => {
   const server = express()
   server.use(loggingMiddleware({
     logger: logger,
-    genReqId: req => { return req.header('x-request-id') || uuid() }
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
   }))
 
   // Remove X-Powered-By: Express header as this could help attackers
@@ -70,7 +71,7 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }))
   server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
 
-  shiftRoutes(server)
+  shiftRoutes(server, logger)
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
     // @TODO This url sanitiser should be replaced with a whitelist

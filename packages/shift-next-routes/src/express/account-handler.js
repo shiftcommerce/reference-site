@@ -23,6 +23,7 @@ module.exports = {
       case 404:
         return res.status(200).send({})
       case 422:
+        req.log.debug({ status: response.status, errors: response.data.errors })
         return res.status(response.status).send(response.data.errors)
       default:
         return res.status(response.status).send(response.data)
@@ -35,19 +36,13 @@ module.exports = {
 
       if (response.status === 201) {
         extractCustomerId(req, response.data.data)
+        req.log.info(`Login by user ${req.session.customerId}`)
         await assignCartToUser(req, res)
       }
 
       return res.status(response.status).send(response.data)
     } catch (error) {
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   },
 
@@ -62,14 +57,7 @@ module.exports = {
 
       return res.status(response.status).send(response.data)
     } catch (error) {
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   },
 
@@ -119,14 +107,7 @@ module.exports = {
       const response = await SHIFTClient.createPasswordRecoveryV1(emailResponse.data.id, passwordResetRequest)
       return res.status(response.status).send(response.data)
     } catch (error) {
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   },
 
@@ -138,30 +119,14 @@ module.exports = {
     try {
       getAccount = await SHIFTClient.getCustomerAccountByTokenV1(req.body.data.attributes.token)
     } catch (error) {
-      req.log.error(error.response.data.errors)
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
 
     try {
       const response = await SHIFTClient.updateCustomerAccountPasswordV1(getAccount.data.id, request)
       return res.status(response.status).send(response.data)
     } catch (error) {
-      req.log.error(error.response.data.errors)
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   },
 
@@ -169,6 +134,7 @@ module.exports = {
     const { customerId } = req.session
 
     if (!customerId) {
+      req.log.warn('update customer account request with no customerId in session')
       return res.status(401).send({})
     }
 
@@ -206,14 +172,7 @@ module.exports = {
 
       return res.status(response.status).send(response.data)
     } catch (error) {
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   },
 
@@ -221,6 +180,7 @@ module.exports = {
     const { customerId } = req.session
 
     if (!customerId) {
+      req.log.warn('update customer address request with no customerId in session')
       return res.status(401).send({})
     }
 
@@ -228,14 +188,7 @@ module.exports = {
       const response = await SHIFTClient.updateCustomerAddressV1(req.body, req.params.addressId, customerId)
       return res.status(response.status).send(response.data)
     } catch (error) {
-      const response = error.response
-      switch (response.status) {
-        case 404:
-        case 422:
-          return res.status(response.status).send(response.data.errors)
-        default:
-          return res.status(response.status).send(response.data)
-      }
+      return handleErrorResponse(error, req, res)
     }
   }
 }
@@ -248,9 +201,22 @@ function extractCustomerId (req, data) {
   }
 }
 
+function handleErrorResponse(error,req, res) {
+  const response = error.response
+  switch (response.status) {
+    case 404:
+    case 422:
+      req.log.debug({ status: response.status, errors: response.data.errors })
+      return res.status(response.status).send(response.data.errors)
+    default:
+      return res.status(response.status).send(response.data)
+  }
+}
+
 async function assignCartToUser (req, res) {
   if (!req.session.customerId) return
   const cartId = req.signedCookies.cart
+  req.log.info({ msg: 'assigning cart to user', cartId, customerId: req.session.customerId })
 
   if (cartId) {
     await SHIFTClient.assignCartToCustomerV1(cartId, req.session.customerId)

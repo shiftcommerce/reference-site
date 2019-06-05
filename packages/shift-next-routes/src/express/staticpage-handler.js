@@ -3,7 +3,6 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getStaticPage: async (req, res) => {
-    req.log.trace({ msg: 'getStaticPage handler', args: { id: req.params.iq, query: req.query } })
     const response = await SHIFTClient.getStaticPageV1(req.params.id, req.query)
 
     setSurrogateHeaders(response.headers, res)
@@ -12,6 +11,7 @@ module.exports = {
       case 404:
         return res.status(200).send({})
       case 422:
+        req.log.debug({ status: response.status, errors: response.data.errors })
         return res.status(response.status).send(response.data.errors)
       default:
         return res.status(response.status).send(response.data)

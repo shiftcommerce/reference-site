@@ -17,7 +17,7 @@ module.exports = {
         capture: false
       }, (err, charge) => {
         if (err) {
-          console.log(err)
+          req.log.error(err)
           res.json(err)
         } else {
           orderPayload.data.attributes.payment_transactions_resources = [{
@@ -69,5 +69,3 @@ async function placeOrder (req, res, orderPayload) {
 
   return res.status(response.status).send(response.data)
 }
-
-
