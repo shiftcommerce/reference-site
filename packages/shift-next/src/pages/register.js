@@ -5,7 +5,6 @@ import Router from 'next/router'
 // Libs
 import { setCookie } from '../lib/set-cookie'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Actions
 import { clearErrors } from '../actions/account-actions'
@@ -31,12 +30,10 @@ class RegisterPage extends Component {
     }
   }
 
-  static async getInitialProps ({ res, reduxStore }) {
+  static async getInitialProps ({ reduxStore }) {
     // Redirect to myaccount if already logged in
     const { account: { loggedIn } } = reduxStore.getState()
     if (loggedIn) Router.push('/account/myaccount')
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Register', res)
     return {}
   }
 

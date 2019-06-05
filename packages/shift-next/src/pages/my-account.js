@@ -5,7 +5,6 @@ import qs from 'qs'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Components
 import { AccountAddresses } from '@shiftcommerce/shift-react-components/src/components/account/addresses'
@@ -32,11 +31,6 @@ class MyAccountPage extends Component {
 
     this.Head = Config.get().Head
     this.handleClickedMenu = this.handleClickedMenu.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('MyAccount', res)
   }
 
   defaultMenus () {

@@ -22,7 +22,6 @@ import PaymentMethod from '@shiftcommerce/shift-react-components/src/components/
 
 // Libs
 import Config from '../../lib/config'
-import { setPageContentSecurityPolicy } from '../../lib/content-security-policy/index'
 
 // Json
 // This is required as a workaround when testing PayPal integration using cypress
@@ -41,11 +40,6 @@ export class PaymentMethodPage extends Component {
     this.nextSection = this.nextSection.bind(this)
     this.payPalCreateOrder = this.payPalCreateOrder.bind(this)
     this.payPalOnApprove = this.payPalOnApprove.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Checkout', res)
   }
 
   componentDidMount () {

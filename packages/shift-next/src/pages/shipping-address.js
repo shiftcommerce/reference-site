@@ -6,7 +6,6 @@ import Cookies from 'js-cookie'
 // Libs
 import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 import { AddressBook } from '@shiftcommerce/shift-react-components/src/components/checkout/address-book'
 import { AddressFormHeader } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-header'
@@ -42,11 +41,6 @@ export class ShippingAddressPage extends Component {
     this.onShowField = this.onShowField.bind(this)
     this.onBookAddressSelected = this.onBookAddressSelected.bind(this)
     this.onNewAddress = this.onNewAddress.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Checkout', res)
   }
 
   componentDidMount () {

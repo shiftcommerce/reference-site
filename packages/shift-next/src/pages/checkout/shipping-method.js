@@ -5,7 +5,6 @@ import Cookies from 'js-cookie'
 
 // Libs
 import ApiClient from '../../lib/api-client'
-import { setPageContentSecurityPolicy } from '../../lib/content-security-policy/index'
 
 // Actions
 import {
@@ -49,11 +48,6 @@ export class ShippingMethodPage extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.handleSetShippingMethod = this.handleSetShippingMethod.bind(this)
     this.nextSection = this.nextSection.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Checkout', res)
   }
 
   async componentDidMount () {

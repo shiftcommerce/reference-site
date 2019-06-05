@@ -9,7 +9,6 @@ import { ProductListing } from '@shiftcommerce/shift-react-components/src/compon
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Config
 import Config from '../lib/config'
@@ -39,11 +38,6 @@ class SearchPage extends Component {
     super(props)
 
     this.Head = Config.get().Head
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('Search', res)
   }
 
   render () {

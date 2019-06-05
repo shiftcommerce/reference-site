@@ -3,7 +3,6 @@ import React, { Component, Fragment } from 'react'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Component
 import { ForgotPasswordForm } from '@shiftcommerce/shift-react-components/src/components/account/forgot-password-form'
@@ -21,11 +20,6 @@ export class ForgottenPassword extends Component {
 
     this.Head = Config.get().Head
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('ForgottenPassword', res)
   }
 
   handleSubmit (values) {

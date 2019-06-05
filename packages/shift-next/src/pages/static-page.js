@@ -6,17 +6,14 @@ import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
 import Config from '../lib/config'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Components
 import StaticPageError from '@shiftcommerce/shift-react-components/src/components/static-page/error'
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
-  static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
+  static async getInitialProps ({ query: { id }, req, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('StaticPage', res)
     return { id, page, isServer: !!req }
   }
 

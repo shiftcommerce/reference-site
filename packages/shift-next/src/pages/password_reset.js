@@ -4,7 +4,6 @@ import Router from 'next/router'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Component
 import { PasswordResetForm } from '@shiftcommerce/shift-react-components/src/components/account/password-reset-form'
@@ -23,7 +22,7 @@ export class PasswordReset extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  static async getInitialProps({ query, res }) {
+  static async getInitialProps({ query }) {
     // Set Page Content Security Policy
     setPageContentSecurityPolicy('PasswordReset', res)
     return { token: query.token }

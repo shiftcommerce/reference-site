@@ -3,7 +3,6 @@ import React, { Component, Fragment } from 'react'
 
 // Lib
 import ApiClient from '../lib/api-client'
-import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
@@ -51,11 +50,6 @@ class CartPage extends Component {
     this.updateQuantity = this.updateQuantity.bind(this)
     this.deleteItem = this.deleteItem.bind(this)
     this.handleCouponSubmit = this.handleCouponSubmit.bind(this)
-  }
-
-  static async getInitialProps ({ res }) {
-    // Set Page Content Security Policy
-    // setPageContentSecurityPolicy('Cart', res)
   }
 
   async componentDidMount () {
