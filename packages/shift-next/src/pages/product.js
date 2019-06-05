@@ -4,6 +4,7 @@ import React, { Component, Fragment } from 'react'
 // Lib
 import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Components
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
@@ -30,13 +31,16 @@ class ProductPage extends Component {
     this.addToBag = this.addToBag.bind(this)
   }
 
-  static async getInitialProps ({ reduxStore, req, query }) {
+  static async getInitialProps ({ reduxStore, req, res, query }) {
     const { id } = query
     const isServer = !!req
 
     if (isServer) {
       await reduxStore.dispatch(readProduct(id))
     }
+
+    // Set Page Content Security Policy
+    setPageContentSecurityPolicy('Product', res)
 
     return { id: id }
   }

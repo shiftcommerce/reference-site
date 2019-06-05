@@ -7,6 +7,7 @@ import classNames from 'classnames'
 // Libs
 import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
+import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Components
 import { AddressFormSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-summary'
@@ -65,6 +66,11 @@ class CheckoutPaymentPage extends Component {
     this.showPayment = this.showPayment.bind(this)
     this.convertToOrder = this.convertToOrder.bind(this)
     this.continueButtonProps = this.continueButtonProps.bind(this)
+  }
+  
+  static async getInitialProps ({ res }) {
+    // Set Page Content Security Policy
+    setPageContentSecurityPolicy('Checkout', res)
   }
 
   componentDidMount () {

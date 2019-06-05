@@ -4,9 +4,10 @@ import Link from 'next/link'
 import Router from 'next/router'
 
 // Libs
+import Config from '../lib/config'
 import { setCookie } from '../lib/set-cookie'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-import Config from '../lib/config'
+import { setPageContentSecurityPolicy } from '../lib/content-security-policy/index'
 
 // Actions
 import { createLogin } from '../actions/login-actions'
@@ -29,7 +30,7 @@ class LoginPage extends Component {
     }
   }
 
-  static async getInitialProps ({ reduxStore, pathname }) {
+  static async getInitialProps ({ reduxStore, res, pathname }) {
     const { account: { loggedIn } } = reduxStore.getState()
     // Determine where to redirect user if already logged in
     if (loggedIn && pathname === '/checkout/login') {
@@ -37,6 +38,8 @@ class LoginPage extends Component {
     } else if (loggedIn) {
       Router.push('/account/myaccount')
     }
+    // Set Page Content Security Policy
+    setPageContentSecurityPolicy('Login', res)
     return {}
   }
 

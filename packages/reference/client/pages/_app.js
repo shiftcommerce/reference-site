@@ -25,7 +25,12 @@ const {
     API_HOST_PROXY,
     STRIPE_API_KEY,
     PAYPAL_CLIENT_ID,
-    ENABLE_TEST_PAYPAL_BUTTON
+    ENABLE_TEST_PAYPAL_BUTTON,
+    CONNECT_HOSTS,
+    FRAME_HOSTS,
+    IMAGE_HOSTS,
+    SCRIPT_HOSTS,
+    STYLE_HOSTS
   }
 } = getConfig()
 
@@ -44,7 +49,12 @@ shiftNextConfig.set({
   storeName: 'ShopGo',
   enableTestPayPalButton: ENABLE_TEST_PAYPAL_BUTTON,
   Head: NextHead,
-  menuRequest: menuRequest
+  menuRequest: menuRequest,
+  connectHosts: CONNECT_HOSTS,
+  frameHosts: FRAME_HOSTS,
+  imageHosts: IMAGE_HOSTS,
+  scriptHosts: SCRIPT_HOSTS,
+  styleHosts: STYLE_HOSTS
 })
 
 class MyApp extends App {
