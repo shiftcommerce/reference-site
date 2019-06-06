@@ -19,7 +19,7 @@ const OrderRoutes = require('./routes/order-routes')
 const { getSessionExpiryTime } = require('./lib/session')
 
 // Shift-api Config
-const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
+const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
 shiftApiConfig.set({
   apiHost: process.env.API_HOST,
@@ -29,7 +29,15 @@ shiftApiConfig.set({
 
 module.exports = {
   getSessionExpiryTime,
-  shiftRoutes: (server) => {
+  shiftRoutes: (server, logger = null) => {
+
+    if (logger) {
+      shiftApiConfig.set({
+        ...shiftApiConfig.get(),
+        logger: logger.child({ pkg: 'shift-node-api' })
+      })
+    }
+
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
     server.get('/getAddressBook', AddressBookHandler.getAddressBook)

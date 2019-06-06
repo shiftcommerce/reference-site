@@ -1,5 +1,6 @@
-// A function that sets CDN headers
+import shiftApiConfig from './config'
 
+// A function that sets CDN headers
 function setCacheHeaders (response) {
   // fastly limit of 16,384 bytes is equal to 16384 utf-8 characters
   const lengthLimit = 16384
@@ -15,7 +16,8 @@ function setCacheHeaders (response) {
 
     // log a warning when surrogate keys exceed limit
     if (surrogateKeys.length > lengthLimit) {
-      //response.log.warn('The following Surrogate keys have exceeded the fastly length limit:', surrogateKeys)
+      const logger = shiftApiConfig.get().logger
+      logger && logger.warn({ msg: 'Surrogate keys have exceeded the fastly length limit:', keys: surrogateKeys })
     }
   }
 }
