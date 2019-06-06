@@ -10,7 +10,7 @@ import InitialPropsDelegator from './initial-props-delegator'
 import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
 
 // Actions
-import { deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'
+import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'
 
 import { connect } from 'react-redux'
 import { withRouter } from 'next/router'
@@ -96,6 +96,7 @@ export default function withLayout (Component) {
           deleteItem={this.deleteItem}
           toggleMiniBag={this.toggleMiniBag}
           onItemQuantityUpdated={this.onItemQuantityUpdated}
+          readCart={this.props.dispatch(readCart())}
           {...otherProps}
         >
           <Component {...otherProps} />
