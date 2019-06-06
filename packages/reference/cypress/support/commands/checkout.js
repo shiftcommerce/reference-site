@@ -24,26 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('addVariantToCart', ({ variantId, quantity }) => {
-  // visit homepage so we can get cookie
-  cy.visit('/').then(() => {
-    // fetch cookies
-    cy.getCookies().then((cookies) => {
-      const requestOption = {
-        method: 'POST',
-        url: '/addToCart',
-        body: { variantId, quantity },
-        headers: {
-          // extract and set csrf token
-          'x-xsrf-token': cookies.find((cookie) => { return cookie.name === '_csrf' }).value
-        }
-      }
-      // make request to add cart
-      return cy.request(requestOption)
-    })
-  })
-})
-
 Cypress.Commands.add('addVariantToCartAndProceedToCheckout', ({ variantId, quantity }) => {
   // Add a product to cart with an API call
   cy.addVariantToCart({ variantId: variantId, quantity: quantity })
