@@ -1,5 +1,6 @@
 // Libraries
 import React, { Component, Fragment } from 'react'
+import Router from 'next/router'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -12,10 +13,25 @@ import StaticPageError from '@shiftcommerce/shift-react-components/src/component
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
-  static async getInitialProps ({ query: { id }, req, reduxStore }) {
+  static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
+    const isServer = !!req
+    const { published } = page
+    const preview = req.query && req.query.preview ? req.query.preview : false
 
-    return { id, page, isServer: !!req }
+    // Unpublished pages should return a 404 page to the public however we should
+    // be able to preview unpublished pages using a ?preview=true query string
+    if (published === false && preview !== true) {
+      if (isServer) {
+        // server-side
+        res.redirect('/error')
+      } else {
+        // client-side
+        Router.push('/error')
+      }
+    }
+
+    return { id, page, isServer }
   }
 
   constructor (props) {
@@ -57,12 +73,13 @@ class StaticPage extends Component {
     }
   }
 
-  renderPageTitle (title) {
+  renderPageHead (canonicalPath, title) {
     const homepage = title === 'Homepage'
 
     return (
       <this.Head>
         { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
+        { Config.get().storeUrl ? <link rel='canonical' href={`${Config.get().storeUrl}${canonicalPath}`} /> : null }
       </this.Head>
     )
   }
@@ -88,17 +105,17 @@ class StaticPage extends Component {
   }
 
   render () {
-    const { page } = this.props
+    const { page: { canonical_path, error, title }, loading, isServer } = this.props
 
-    if (this.props.loading && !this.props.isServer) {
+    if (loading && !isServer) {
       return (
         <Loading />
       )
-    } else if (page.error) {
+    } else if (error) {
       const errorDetails = {
-        Endpoint: JSON.stringify(page.error.request.endpoint),
-        Query: JSON.stringify(page.error.request.query),
-        'Response data': JSON.stringify(page.error.data)
+        Endpoint: JSON.stringify(error.request.endpoint),
+        Query: JSON.stringify(error.request.query),
+        'Response data': JSON.stringify(error.data)
       }
 
       return (
@@ -110,7 +127,7 @@ class StaticPage extends Component {
     } else {
       return (
         <Fragment>
-          { this.renderPageTitle(page.title) }
+          { this.renderPageHead(canonical_path, title) }
           { this.renderLoaded() }
         </Fragment>
       )
