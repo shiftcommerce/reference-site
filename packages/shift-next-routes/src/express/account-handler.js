@@ -23,7 +23,7 @@ module.exports = {
       case 404:
         return res.status(200).send({})
       case 422:
-        req.log.debug({ status: response.status, errors: response.data.errors })
+        req.log && req.log.debug({ status: response.status, errors: response.data.errors })
         return res.status(response.status).send(response.data.errors)
       default:
         return res.status(response.status).send(response.data)
@@ -36,7 +36,7 @@ module.exports = {
 
       if (response.status === 201) {
         extractCustomerId(req, response.data.data)
-        req.log.info(`Login by user ${req.session.customerId}`)
+        req.log && req.log.info(`Login by user ${req.session.customerId}`)
         await assignCartToUser(req, res)
       }
 
@@ -134,7 +134,7 @@ module.exports = {
     const { customerId } = req.session
 
     if (!customerId) {
-      req.log.warn('update customer account request with no customerId in session')
+      req.log && req.log.warn('update customer account request with no customerId in session')
       return res.status(401).send({})
     }
 
@@ -180,7 +180,7 @@ module.exports = {
     const { customerId } = req.session
 
     if (!customerId) {
-      req.log.warn('update customer address request with no customerId in session')
+      req.log && req.log.warn('update customer address request with no customerId in session')
       return res.status(401).send({})
     }
 
@@ -206,7 +206,7 @@ function handleErrorResponse(error,req, res) {
   switch (response.status) {
     case 404:
     case 422:
-      req.log.debug({ status: response.status, errors: response.data.errors })
+      req.log && req.log.debug({ status: response.status, errors: response.data.errors })
       return res.status(response.status).send(response.data.errors)
     default:
       return res.status(response.status).send(response.data)
@@ -216,7 +216,7 @@ function handleErrorResponse(error,req, res) {
 async function assignCartToUser (req, res) {
   if (!req.session.customerId) return
   const cartId = req.signedCookies.cart
-  req.log.info({ msg: 'assigning cart to user', cartId, customerId: req.session.customerId })
+  req.log && req.log.info({ msg: 'assigning cart to user', cartId, customerId: req.session.customerId })
 
   if (cartId) {
     await SHIFTClient.assignCartToCustomerV1(cartId, req.session.customerId)

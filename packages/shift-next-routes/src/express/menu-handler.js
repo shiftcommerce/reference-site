@@ -11,7 +11,7 @@ module.exports = {
       case 404:
         return res.status(200).send({})
       case 422:
-        req.log.debug({ status: response.status, errors: response.data.errors })
+        req.log && req.log.error({ status: response.status, errors: response.data.errors })
         return res.status(response.status).send(response.data.errors)
       default:
         return res.status(response.status).send(response.data)

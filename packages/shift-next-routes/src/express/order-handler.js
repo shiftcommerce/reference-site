@@ -17,7 +17,7 @@ module.exports = {
         capture: false
       }, (err, charge) => {
         if (err) {
-          req.log.error(err)
+          req.log && req.log.error(err)
           res.json(err)
         } else {
           orderPayload.data.attributes.payment_transactions_resources = [{
