@@ -14772,7 +14772,7 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@16.8.6, react-dom@^16.8.6:
+react-dom@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -14817,7 +14817,7 @@ react-instantsearch-core@^5.6.0:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-instantsearch-dom@^5.3.1, react-instantsearch-dom@^5.6.0:
+react-instantsearch-dom@^5.3.1:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.6.0.tgz#217bf68d959430d6680ee0dca63f7c0f345db3df"
   integrity sha512-d4jWnRl+RF8It+t8crVrWUP6Gsc0VQ44jcbjnjmQRQXZNRIeeOKpJh7QfpWnKrDAY1qjUn/fZFZRB6W1XBHwYg==
@@ -14829,25 +14829,6 @@ react-instantsearch-dom@^5.3.1, react-instantsearch-dom@^5.6.0:
     lodash "^4.17.4"
     prop-types "^15.5.10"
     react-instantsearch-core "^5.6.0"
-
-react-instantsearch-native@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-native/-/react-instantsearch-native-5.6.0.tgz#c25b0a14cb3c5be91868b61110b9ccd3ca6430ef"
-  integrity sha512-7uRMoL8m1FB8nrJ7hxjmH2/GAxOwVemhLAPcakYeSnR6hT14YmWqQIO5n/pNphANa1a+pRUe3LQeXq5nxquGGQ==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    algoliasearch "^3.27.1"
-    react-instantsearch-core "^5.6.0"
-
-react-instantsearch@^5.3.1:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch/-/react-instantsearch-5.6.0.tgz#6832d92c8ee190de9a5f29b409387dfb5d947449"
-  integrity sha512-P7QM9SO89c9wz57F47weJrR2Y2QxycdH1bGv6bJfSkx6Fz0G5AnAHNeofZCnQ7q7e40/oIpy6wRAvTOrzy4ynQ==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    react-instantsearch-core "^5.6.0"
-    react-instantsearch-dom "^5.6.0"
-    react-instantsearch-native "^5.6.0"
 
 react-is@16.8.6, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
@@ -14942,7 +14923,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@16.8.6, react@^16.8.6:
+react@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
