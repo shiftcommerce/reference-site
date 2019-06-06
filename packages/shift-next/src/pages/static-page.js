@@ -63,7 +63,7 @@ class StaticPage extends Component {
     return (
       <this.Head>
         { homepage ? <title>{ Config.get().storeName }</title> : <title>{ suffixWithStoreName(title) }</title> }
-        <link rel='canonical' href={`${Config.get().storeUrl}${canonicalPath}`} />
+        { Config.get().storeUrl ? <link rel='canonical' href={`${Config.get().storeUrl}${canonicalPath}`} /> : null }
       </this.Head>
     )
   }
