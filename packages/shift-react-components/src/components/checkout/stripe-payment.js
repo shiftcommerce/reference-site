@@ -147,7 +147,7 @@ StripePayment.propTypes = {
   nextSection: PropTypes.func,
   nextStepAvailable: PropTypes.func,
   onAddressDeleted: PropTypes.func,
-  onBookAddressSelected: PropTypes.bool,
+  onBookAddressSelected: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onNewAddress: PropTypes.func,

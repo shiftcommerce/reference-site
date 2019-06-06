@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": "26",
+      "meta_attributes": {
+        "working_days": {
+          "value": "3",
+          "data_type": "text"
+        }
+      },
+      "updated_at": "2019-04-29T10:56:09Z",
+      "created_at": "2019-04-29T08:40:48Z",
+      "label": "Cheap shipping",
+      "sku": "cheap_shipping",
+      "reference": "cheap_shipping",
+      "description": "Cheap shipping",
+      "sub_total": 0.83,
+      "tax": 0.17,
+      "total": 1,
+      "tax_rate": 0.2
+    },
+    {
+      "id": "27",
+      "meta_attributes": {
+        "working_days": {
+          "value": "1",
+          "data_type": "text"
+        }
+      },
+      "updated_at": "2019-04-29T10:56:19Z",
+      "created_at": "2019-04-29T08:41:10Z",
+      "label": "Expensive shipping",
+      "sku": "expensive_shipping",
+      "reference": "expensive_shipping",
+      "description": "Expensive shipping",
+      "sub_total": 8.33,
+      "tax": 1.67,
+      "total": 10,
+      "tax_rate": 0.2
+    }
+  ],
+  "pagination": {
+    "total_entries": 2,
+    "page_count": 1,
+    "self": "/referencetest/v1/shipping_methods",
+    "first": "/referencetest/v1/shipping_methods.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "last": "/referencetest/v1/shipping_methods.json_api?page%5Bnumber%5D=1&page%5Bsize%5D=25"
+  }
+}
