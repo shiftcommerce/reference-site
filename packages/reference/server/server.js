@@ -10,7 +10,6 @@ const sslRedirect = require('heroku-ssl-redirect')
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
-const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
@@ -34,6 +33,7 @@ const {
 
 module.exports = app.prepare().then(() => {
   const server = express()
+  const secure = (process.env.NO_HTTPS !== 'true')
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
@@ -46,10 +46,7 @@ module.exports = app.prepare().then(() => {
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
 
-  if (!process.env.NO_HTTPS === 'true') {
-    server.use(sslRedirect())
-  }
-
+  if (secure) server.use(sslRedirect())
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
