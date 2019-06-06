@@ -202,7 +202,7 @@ function extractCustomerId (req, data) {
   }
 }
 
-function handleErrorResponse(error,req, res) {
+function handleErrorResponse(error, req, res) {
   const response = error.response
   switch (response.status) {
     case 404:
