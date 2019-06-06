@@ -54,7 +54,9 @@ module.exports = app.prepare().then(() => {
     server.use(sslRedirect())
   }
 
-  shiftIpFilter(server)
+  if (production) {
+    shiftIpFilter(server)
+  }
 
   server.use(compression())
   server.use(session(sessionParams))
