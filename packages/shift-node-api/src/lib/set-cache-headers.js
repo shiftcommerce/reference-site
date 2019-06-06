@@ -1,4 +1,4 @@
-import shiftApiConfig from './config'
+const shiftApiConfig =require('./config')
 
 // A function that sets CDN headers
 function setCacheHeaders (response) {
