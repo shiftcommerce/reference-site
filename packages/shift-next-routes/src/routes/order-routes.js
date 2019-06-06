@@ -10,6 +10,6 @@ module.exports = {
    * @param  {Object}   res
    */
   indexRoute: (req, res) => {
-    res.redirect('/account/myaccount')
+    res.redirect('/account/details')
   }
 }

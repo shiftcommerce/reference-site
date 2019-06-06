@@ -1,6 +1,6 @@
 {
   "name": "reference",
-  "version": "0.22.2",
+  "version": "0.22.3",
   "main": "server/server.js",
   "repository": "https://github.com/shiftcommerce/shift-front-end-react.git",
   "author": "Shift Commerce",
@@ -30,9 +30,9 @@
     "start": "NODE_ENV=production node server/server.js"
   },
   "dependencies": {
-    "@shiftcommerce/shift-next": "^0.22.2",
-    "@shiftcommerce/shift-next-routes": "^0.22.2",
-    "@shiftcommerce/shift-react-components": "^0.22.2",
+    "@shiftcommerce/shift-next": "^0.22.3",
+    "@shiftcommerce/shift-next-routes": "^0.22.3",
+    "@shiftcommerce/shift-react-components": "^0.22.3",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
