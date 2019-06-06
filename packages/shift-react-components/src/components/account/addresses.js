@@ -48,7 +48,6 @@ export class AccountAddresses extends Component {
       addressBook,
       countries,
       currentAddress,
-      currentAddressId,
       onAddressCreated,
       onAddressDeleted,
       onAddressUpdated,

@@ -34,7 +34,7 @@ class LoginPage extends Component {
     if (loggedIn && pathname === '/checkout/login') {
       Router.push('/checkout/payment-method')
     } else if (loggedIn) {
-      Router.push('/account/myaccount')
+      Router.push('/account/details')
     }
     return {}
   }
@@ -48,7 +48,7 @@ class LoginPage extends Component {
             // Determine where to redirect user after successful log in
             if (window.location.pathname === '/checkout/login') {
               Router.push('/checkout/payment-method')
-            } else Router.push('/account/myaccount')
+            } else Router.push('/account/details')
           })
         }
       })

@@ -90,7 +90,7 @@ module.exports = {
      * Account Routes
      */
     server.get('/account/login', AccountRoutes.loginRoute)
-    server.get('/account/myaccount', AccountRoutes.viewRoute)
+    server.get('/account/details', AccountRoutes.viewRoute)
     server.get('/account/register', AccountRoutes.registerRoute)
     server.get('/account/logout', AccountRoutes.logoutRoute)
 
