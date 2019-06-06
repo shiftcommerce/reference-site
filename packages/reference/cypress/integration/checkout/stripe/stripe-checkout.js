@@ -13,22 +13,50 @@ describe('Stripe checkout', () => {
       method: 'POST',
       url: '/createOrder',
       status: 201,
-      response: 'fixture:checkout/stripe-create-order.json'
+      response: 'fixture:checkout/stripe/create-order.json'
     }).as('createOrder')
 
     cy.route({
       method: 'GET',
       url: '/getCart',
       status: 200,
-      response: 'fixture:cart/get-cart-with-line-item.json'
+      response: 'fixture:checkout/stripe/cart-with-line-item.json'
     }).as('getCart')
 
     cy.route({
       method: 'POST',
       url: '/createAddress',
-      status: 200,
+      status: 201,
       response: 'fixture:checkout/create-address.json'
     }).as('createAddress')
+
+    cy.route({
+      method: 'GET',
+      url: '/getShippingMethods',
+      status: 200,
+      response: 'fixture:checkout/get-shipping-methods.json'
+    }).as('getShippingMethods')
+
+    cy.route({
+      method: 'POST',
+      url: '/setCartShippingAddress',
+      status: 200,
+      response: 'fixture:checkout/set-cart-shipping-address.json'
+    }).as('setCartShippingAddress')
+
+    cy.route({
+      method: 'POST',
+      url: '/setShippingMethod',
+      status: 200,
+      response: 'fixture:checkout/set-shipping-method.json'
+    }).as('setShippingMethod')
+
+    cy.route({
+      method: 'POST',
+      url: '/setCartBillingAddress',
+      status: 200,
+      response: 'fixture:checkout/set-cart-billing-address.json'
+    }).as('setCartBillingAddress')
 
     // Start with an item in the cart
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
@@ -54,23 +82,24 @@ describe('Stripe checkout', () => {
     cy.get('#line_1').type('1 Test Lane')
     cy.get('#zipcode').type('LS1 3ED')
     cy.get('#city').type('Leeds')
-    cy.get('#email').type('test@example.com')
+    cy.get('#state').type('West Yorkshire')
     cy.get('#primary_phone').type('07510123456')
-
-    cy.route({
-      method: 'POST',
-      url: '/setCartShippingAddress',
-      status: 200,
-      response: 'fixture:checkout/set-cart-shipping-address.json'
-    }).as('setCartShippingAddress')
+    cy.get('#email').type('test@example.com')
 
     // Navigate to next step
     cy.contains(/View Shipping Options/i).click()
 
-    cy.wait(3000)
+    cy.url({ timeout: 10000 }).should('include', '/checkout/shipping-method')
+
+    cy.wait('@createAddress')
+    cy.wait('@setCartShippingAddress')
+    cy.wait('@getShippingMethods')
+    cy.wait('@setShippingMethod')
 
     // Proceed with the preselected shipping method
     cy.contains(/Continue to payment/i).click()
+
+    cy.url({ timeout: 10000 }).should('include', '/checkout/payment')
 
     // Fill in card details
     cy.wait(5000)

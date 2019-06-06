@@ -10,6 +10,7 @@ const sslRedirect = require('heroku-ssl-redirect')
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
+const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
