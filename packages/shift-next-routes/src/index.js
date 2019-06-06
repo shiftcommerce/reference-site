@@ -24,7 +24,7 @@ const { featurePolicy } = require('./middleware/feature-policy')
 const { httpSecurityHeaders } = require('./middleware/http-security-headers')
 
 // Shift-api Config
-const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
+const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
 shiftApiConfig.set({
   apiHost: process.env.API_HOST,
@@ -52,6 +52,13 @@ module.exports = {
    * @param {object} policyOptions - eg. { payment: ['example.com'] }
    */
   shiftFeaturePolicy: (server, policyOptions = {}) => featurePolicy(server, policyOptions),
+
+  shiftLogger: (server, logger) => {
+    shiftApiConfig.set({
+      ...shiftApiConfig.get(),
+      logger: logger.child({ pkg: 'shift-node-api' })
+    })
+  },
 
   /**
    * Defines Routes
