@@ -72,7 +72,7 @@ export class Payment extends PureComponent {
 
 Payment.propTypes = {
   addingNewAddress: PropTypes.bool,
-  addressBook: PropTypes.object,
+  addressBook: PropTypes.array,
   addressFormDisplayed: PropTypes.func,
   autoFillAddress: PropTypes.func,
   billingAsShipping: PropTypes.bool,
