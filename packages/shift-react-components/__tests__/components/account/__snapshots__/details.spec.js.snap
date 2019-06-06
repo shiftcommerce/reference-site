@@ -27,7 +27,7 @@ exports[`renders the form 1`] = `
         "_deps": Array [],
         "_excludedEdges": Array [],
         "_exclusive": Object {},
-        "_mutate": undefined,
+        "_mutate": false,
         "_nodes": Array [
           "emailConfirmation",
           "email",
@@ -53,10 +53,10 @@ exports[`renders the form 1`] = `
             "_conditions": Array [],
             "_deps": Array [],
             "_exclusive": Object {
-              "required": true,
+              "required": false,
               "undefined": false,
             },
-            "_mutate": undefined,
+            "_mutate": false,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -68,6 +68,7 @@ exports[`renders the form 1`] = `
               "refs": Map {},
             },
             "tests": Array [
+              [Function],
               [Function],
               [Function],
             ],
@@ -83,9 +84,9 @@ exports[`renders the form 1`] = `
             "_conditions": Array [],
             "_deps": Array [],
             "_exclusive": Object {
-              "required": true,
+              "required": false,
             },
-            "_mutate": undefined,
+            "_mutate": false,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -98,18 +99,19 @@ exports[`renders the form 1`] = `
               },
               "refs": Map {
                 "email" => Reference {
-                  "getter": [Function],
+                  "_get": [Function],
                   "isContext": false,
-                  "isSibling": true,
-                  "isValue": false,
+                  "isSelf": false,
                   "key": "email",
-                  "map": undefined,
+                  "map": [Function],
                   "path": "email",
+                  "prefix": "$",
                 },
               },
             },
             "_whitelistError": [Function],
             "tests": Array [
+              [Function],
               [Function],
             ],
             "transforms": Array [
@@ -124,9 +126,9 @@ exports[`renders the form 1`] = `
             "_conditions": Array [],
             "_deps": Array [],
             "_exclusive": Object {
-              "required": true,
+              "required": false,
             },
-            "_mutate": undefined,
+            "_mutate": false,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -138,6 +140,7 @@ exports[`renders the form 1`] = `
               "refs": Map {},
             },
             "tests": Array [
+              [Function],
               [Function],
             ],
             "transforms": Array [
@@ -152,9 +155,9 @@ exports[`renders the form 1`] = `
             "_conditions": Array [],
             "_deps": Array [],
             "_exclusive": Object {
-              "required": true,
+              "required": false,
             },
-            "_mutate": undefined,
+            "_mutate": false,
             "_options": Object {
               "abortEarly": true,
               "recursive": true,
@@ -166,6 +169,7 @@ exports[`renders the form 1`] = `
               "refs": Map {},
             },
             "tests": Array [
+              [Function],
               [Function],
             ],
             "transforms": Array [
@@ -231,7 +235,7 @@ exports[`renders the form 1`] = `
               "_deps": Array [],
               "_excludedEdges": Array [],
               "_exclusive": Object {},
-              "_mutate": undefined,
+              "_mutate": false,
               "_nodes": Array [
                 "emailConfirmation",
                 "email",
@@ -257,10 +261,10 @@ exports[`renders the form 1`] = `
                   "_conditions": Array [],
                   "_deps": Array [],
                   "_exclusive": Object {
-                    "required": true,
+                    "required": false,
                     "undefined": false,
                   },
-                  "_mutate": undefined,
+                  "_mutate": false,
                   "_options": Object {
                     "abortEarly": true,
                     "recursive": true,
@@ -272,6 +276,7 @@ exports[`renders the form 1`] = `
                     "refs": Map {},
                   },
                   "tests": Array [
+                    [Function],
                     [Function],
                     [Function],
                   ],
@@ -287,9 +292,9 @@ exports[`renders the form 1`] = `
                   "_conditions": Array [],
                   "_deps": Array [],
                   "_exclusive": Object {
-                    "required": true,
+                    "required": false,
                   },
-                  "_mutate": undefined,
+                  "_mutate": false,
                   "_options": Object {
                     "abortEarly": true,
                     "recursive": true,
@@ -302,18 +307,19 @@ exports[`renders the form 1`] = `
                     },
                     "refs": Map {
                       "email" => Reference {
-                        "getter": [Function],
+                        "_get": [Function],
                         "isContext": false,
-                        "isSibling": true,
-                        "isValue": false,
+                        "isSelf": false,
                         "key": "email",
-                        "map": undefined,
+                        "map": [Function],
                         "path": "email",
+                        "prefix": "$",
                       },
                     },
                   },
                   "_whitelistError": [Function],
                   "tests": Array [
+                    [Function],
                     [Function],
                   ],
                   "transforms": Array [
@@ -328,9 +334,9 @@ exports[`renders the form 1`] = `
                   "_conditions": Array [],
                   "_deps": Array [],
                   "_exclusive": Object {
-                    "required": true,
+                    "required": false,
                   },
-                  "_mutate": undefined,
+                  "_mutate": false,
                   "_options": Object {
                     "abortEarly": true,
                     "recursive": true,
@@ -342,6 +348,7 @@ exports[`renders the form 1`] = `
                     "refs": Map {},
                   },
                   "tests": Array [
+                    [Function],
                     [Function],
                   ],
                   "transforms": Array [
@@ -356,9 +363,9 @@ exports[`renders the form 1`] = `
                   "_conditions": Array [],
                   "_deps": Array [],
                   "_exclusive": Object {
-                    "required": true,
+                    "required": false,
                   },
-                  "_mutate": undefined,
+                  "_mutate": false,
                   "_options": Object {
                     "abortEarly": true,
                     "recursive": true,
@@ -370,6 +377,7 @@ exports[`renders the form 1`] = `
                     "refs": Map {},
                   },
                   "tests": Array [
+                    [Function],
                     [Function],
                   ],
                   "transforms": Array [
@@ -457,7 +465,7 @@ exports[`renders the form 1`] = `
                     "_deps": Array [],
                     "_excludedEdges": Array [],
                     "_exclusive": Object {},
-                    "_mutate": undefined,
+                    "_mutate": false,
                     "_nodes": Array [
                       "emailConfirmation",
                       "email",
@@ -483,10 +491,10 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                           "undefined": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -498,6 +506,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                           [Function],
                         ],
@@ -513,9 +522,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -528,18 +537,19 @@ exports[`renders the form 1`] = `
                           },
                           "refs": Map {
                             "email" => Reference {
-                              "getter": [Function],
+                              "_get": [Function],
                               "isContext": false,
-                              "isSibling": true,
-                              "isValue": false,
+                              "isSelf": false,
                               "key": "email",
-                              "map": undefined,
+                              "map": [Function],
                               "path": "email",
+                              "prefix": "$",
                             },
                           },
                         },
                         "_whitelistError": [Function],
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -554,9 +564,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -568,6 +578,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -582,9 +593,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -596,6 +607,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -685,7 +697,7 @@ exports[`renders the form 1`] = `
                       "_deps": Array [],
                       "_excludedEdges": Array [],
                       "_exclusive": Object {},
-                      "_mutate": undefined,
+                      "_mutate": false,
                       "_nodes": Array [
                         "emailConfirmation",
                         "email",
@@ -711,10 +723,10 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                             "undefined": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -726,6 +738,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                             [Function],
                           ],
@@ -741,9 +754,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -756,18 +769,19 @@ exports[`renders the form 1`] = `
                             },
                             "refs": Map {
                               "email" => Reference {
-                                "getter": [Function],
+                                "_get": [Function],
                                 "isContext": false,
-                                "isSibling": true,
-                                "isValue": false,
+                                "isSelf": false,
                                 "key": "email",
-                                "map": undefined,
+                                "map": [Function],
                                 "path": "email",
+                                "prefix": "$",
                               },
                             },
                           },
                           "_whitelistError": [Function],
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -782,9 +796,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -796,6 +810,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -810,9 +825,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -824,6 +839,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -910,7 +926,7 @@ exports[`renders the form 1`] = `
                     "_deps": Array [],
                     "_excludedEdges": Array [],
                     "_exclusive": Object {},
-                    "_mutate": undefined,
+                    "_mutate": false,
                     "_nodes": Array [
                       "emailConfirmation",
                       "email",
@@ -936,10 +952,10 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                           "undefined": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -951,6 +967,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                           [Function],
                         ],
@@ -966,9 +983,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -981,18 +998,19 @@ exports[`renders the form 1`] = `
                           },
                           "refs": Map {
                             "email" => Reference {
-                              "getter": [Function],
+                              "_get": [Function],
                               "isContext": false,
-                              "isSibling": true,
-                              "isValue": false,
+                              "isSelf": false,
                               "key": "email",
-                              "map": undefined,
+                              "map": [Function],
                               "path": "email",
+                              "prefix": "$",
                             },
                           },
                         },
                         "_whitelistError": [Function],
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1007,9 +1025,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1021,6 +1039,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1035,9 +1054,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1049,6 +1068,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1138,7 +1158,7 @@ exports[`renders the form 1`] = `
                       "_deps": Array [],
                       "_excludedEdges": Array [],
                       "_exclusive": Object {},
-                      "_mutate": undefined,
+                      "_mutate": false,
                       "_nodes": Array [
                         "emailConfirmation",
                         "email",
@@ -1164,10 +1184,10 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                             "undefined": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1179,6 +1199,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                             [Function],
                           ],
@@ -1194,9 +1215,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1209,18 +1230,19 @@ exports[`renders the form 1`] = `
                             },
                             "refs": Map {
                               "email" => Reference {
-                                "getter": [Function],
+                                "_get": [Function],
                                 "isContext": false,
-                                "isSibling": true,
-                                "isValue": false,
+                                "isSelf": false,
                                 "key": "email",
-                                "map": undefined,
+                                "map": [Function],
                                 "path": "email",
+                                "prefix": "$",
                               },
                             },
                           },
                           "_whitelistError": [Function],
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1235,9 +1257,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1249,6 +1271,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1263,9 +1286,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1277,6 +1300,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1363,7 +1387,7 @@ exports[`renders the form 1`] = `
                     "_deps": Array [],
                     "_excludedEdges": Array [],
                     "_exclusive": Object {},
-                    "_mutate": undefined,
+                    "_mutate": false,
                     "_nodes": Array [
                       "emailConfirmation",
                       "email",
@@ -1389,10 +1413,10 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                           "undefined": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1404,6 +1428,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                           [Function],
                         ],
@@ -1419,9 +1444,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1434,18 +1459,19 @@ exports[`renders the form 1`] = `
                           },
                           "refs": Map {
                             "email" => Reference {
-                              "getter": [Function],
+                              "_get": [Function],
                               "isContext": false,
-                              "isSibling": true,
-                              "isValue": false,
+                              "isSelf": false,
                               "key": "email",
-                              "map": undefined,
+                              "map": [Function],
                               "path": "email",
+                              "prefix": "$",
                             },
                           },
                         },
                         "_whitelistError": [Function],
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1460,9 +1486,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1474,6 +1500,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1488,9 +1515,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1502,6 +1529,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1591,7 +1619,7 @@ exports[`renders the form 1`] = `
                       "_deps": Array [],
                       "_excludedEdges": Array [],
                       "_exclusive": Object {},
-                      "_mutate": undefined,
+                      "_mutate": false,
                       "_nodes": Array [
                         "emailConfirmation",
                         "email",
@@ -1617,10 +1645,10 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                             "undefined": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1632,6 +1660,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                             [Function],
                           ],
@@ -1647,9 +1676,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1662,18 +1691,19 @@ exports[`renders the form 1`] = `
                             },
                             "refs": Map {
                               "email" => Reference {
-                                "getter": [Function],
+                                "_get": [Function],
                                 "isContext": false,
-                                "isSibling": true,
-                                "isValue": false,
+                                "isSelf": false,
                                 "key": "email",
-                                "map": undefined,
+                                "map": [Function],
                                 "path": "email",
+                                "prefix": "$",
                               },
                             },
                           },
                           "_whitelistError": [Function],
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1688,9 +1718,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1702,6 +1732,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1716,9 +1747,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -1730,6 +1761,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -1816,7 +1848,7 @@ exports[`renders the form 1`] = `
                     "_deps": Array [],
                     "_excludedEdges": Array [],
                     "_exclusive": Object {},
-                    "_mutate": undefined,
+                    "_mutate": false,
                     "_nodes": Array [
                       "emailConfirmation",
                       "email",
@@ -1842,10 +1874,10 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                           "undefined": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1857,6 +1889,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                           [Function],
                         ],
@@ -1872,9 +1905,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1887,18 +1920,19 @@ exports[`renders the form 1`] = `
                           },
                           "refs": Map {
                             "email" => Reference {
-                              "getter": [Function],
+                              "_get": [Function],
                               "isContext": false,
-                              "isSibling": true,
-                              "isValue": false,
+                              "isSelf": false,
                               "key": "email",
-                              "map": undefined,
+                              "map": [Function],
                               "path": "email",
+                              "prefix": "$",
                             },
                           },
                         },
                         "_whitelistError": [Function],
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1913,9 +1947,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1927,6 +1961,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -1941,9 +1976,9 @@ exports[`renders the form 1`] = `
                         "_conditions": Array [],
                         "_deps": Array [],
                         "_exclusive": Object {
-                          "required": true,
+                          "required": false,
                         },
-                        "_mutate": undefined,
+                        "_mutate": false,
                         "_options": Object {
                           "abortEarly": true,
                           "recursive": true,
@@ -1955,6 +1990,7 @@ exports[`renders the form 1`] = `
                           "refs": Map {},
                         },
                         "tests": Array [
+                          [Function],
                           [Function],
                         ],
                         "transforms": Array [
@@ -2044,7 +2080,7 @@ exports[`renders the form 1`] = `
                       "_deps": Array [],
                       "_excludedEdges": Array [],
                       "_exclusive": Object {},
-                      "_mutate": undefined,
+                      "_mutate": false,
                       "_nodes": Array [
                         "emailConfirmation",
                         "email",
@@ -2070,10 +2106,10 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                             "undefined": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -2085,6 +2121,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                             [Function],
                           ],
@@ -2100,9 +2137,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -2115,18 +2152,19 @@ exports[`renders the form 1`] = `
                             },
                             "refs": Map {
                               "email" => Reference {
-                                "getter": [Function],
+                                "_get": [Function],
                                 "isContext": false,
-                                "isSibling": true,
-                                "isValue": false,
+                                "isSelf": false,
                                 "key": "email",
-                                "map": undefined,
+                                "map": [Function],
                                 "path": "email",
+                                "prefix": "$",
                               },
                             },
                           },
                           "_whitelistError": [Function],
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -2141,9 +2179,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -2155,6 +2193,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
@@ -2169,9 +2208,9 @@ exports[`renders the form 1`] = `
                           "_conditions": Array [],
                           "_deps": Array [],
                           "_exclusive": Object {
-                            "required": true,
+                            "required": false,
                           },
-                          "_mutate": undefined,
+                          "_mutate": false,
                           "_options": Object {
                             "abortEarly": true,
                             "recursive": true,
@@ -2183,6 +2222,7 @@ exports[`renders the form 1`] = `
                             "refs": Map {},
                           },
                           "tests": Array [
+                            [Function],
                             [Function],
                           ],
                           "transforms": Array [
