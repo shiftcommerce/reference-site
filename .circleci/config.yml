@@ -154,32 +154,6 @@ jobs:
           command: |
             sleep 1
             yarn run pwmetrics --config=packages/reference/pwmetrics-config.js
-  synk:
-    docker:
-      - image: circleci/node:11.13.0
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore cache (Yarn)
-          key: yarn-dependencies-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          name: Restore cache (NextJS build)
-          key: next-production-build-{{ .Branch }}-{{ .Revision }}
-      - run:
-          name: Scan Reference
-          command: npx snyk test --cwd packages/reference
-      - run:
-          name: Scan Shift Next
-          command: npx snyk test --cwd packages/shift-next
-      - run:
-          name: Scan Shift Next Routes
-          command: npx snyk test --cwd packages/shift-next-routes
-      - run:
-          name: Scan Shift Node Api
-          command: npx snyk test --cwd packages/shift-node-api
-      - run:
-          name: Scan Shift React Components
-          command: npx snyk test --cwd packages/shift-react-components
   heroku_deploy:
     executor: heroku/default
     steps:
@@ -196,7 +170,6 @@ workflows:
     jobs:
       - build
       - jest_test
-      - synk
       - pwmetrics:
           requires:
             - build
@@ -210,5 +183,4 @@ workflows:
                 - master
           requires:
             - jest_test
-            - synk
             - cypress
