@@ -56,7 +56,7 @@ CheckoutCartTotal.propTypes = {
   paymentError: PropTypes.string,
   shippingDiscount: PropTypes.number,
   shippingDiscountName: PropTypes.string,
-  shippingTotal: PropTypes.number.isRequired,
+  shippingTotal: PropTypes.number,
   subTotal: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired
 }

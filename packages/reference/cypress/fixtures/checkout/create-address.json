@@ -1,25 +1,25 @@
 {
-  "id": "7207",
+  "id": "10748",
   "meta_attributes": {
     "email": {
       "value": "test@example.com",
       "data_type": "text"
     },
     "phone_number": {
-      "value": "0352878596",
+      "value": "07510123456",
       "data_type": "text"
     }
   },
   "customer_account_id": null,
-  "first_name": "test",
-  "last_name": "buyer",
+  "first_name": "John (Test)",
+  "last_name": "Smith (Test)",
   "middle_names": "",
-  "address_line_1": "1 Main Terrace",
+  "address_line_1": "1 Test Lane",
   "address_line_2": "",
   "address_line_3": "",
-  "city": "Wolverhampton",
-  "state": null,
-  "postcode": "W12 4LQ",
+  "city": "Leeds",
+  "state": "West Yorkshire",
+  "postcode": "LS1 3ED",
   "country": "GB",
   "preferred_shipping": false,
   "preferred_billing": false
