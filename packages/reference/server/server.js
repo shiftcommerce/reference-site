@@ -11,6 +11,7 @@ const sslRedirect = require('heroku-ssl-redirect')
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
+const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
@@ -41,7 +42,7 @@ module.exports = app.prepare().then(() => {
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
-    secure: production,
+    secure: secure,
     sameSite: 'lax',
     expires: getSessionExpiryTime()
   }
@@ -79,10 +80,10 @@ module.exports = app.prepare().then(() => {
 
         // set surrogate headers on the response (if any were found in platform requests)
         Object.keys(page.headers)
-        .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
-        .forEach(key => {
-          res.set(key, page.headers[key])
-        })
+          .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
+          .forEach(key => {
+            res.set(key, page.headers[key])
+          })
 
         switch (resourceType) {
           case 'Product':
