@@ -74,7 +74,7 @@ class StaticPage extends Component {
   }
 
   renderPageHead (canonicalPath, title) {
-    const homepage = canonicalPath === '/pages/homepage'
+    const homepage = title === 'Homepage'
 
     return (
       <this.Head>
