@@ -6981,6 +6981,20 @@ expect@^24.8.0:
     jest-message-util "^24.8.0"
     jest-regex-util "^24.3.0"
 
+express-ip-filter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/express-ip-filter/-/express-ip-filter-2.0.0.tgz#9375e26f815072b63a9fef149fded054d007db54"
+  integrity sha1-k3Xib4FQcrY6n+8Un97QVNAH21Q=
+  dependencies:
+    ip-filter "^2.0.0"
+
+express-pino-logger@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/express-pino-logger/-/express-pino-logger-4.0.0.tgz#775cf253a4e0e7ee2c24804f8a32900d6d0168ca"
+  integrity sha512-BTJwjQXMSR6tFiyvTOOr6aosJkJOuJpW0mXE+icv3ae/0WXBGnLaumINGHJvWMuDO1RSLHBLfRrJaghMjMhVrg==
+  dependencies:
+    pino-http "^4.0.0"
+
 express@^4.16.2, express@^4.16.3:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
