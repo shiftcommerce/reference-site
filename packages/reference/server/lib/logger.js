@@ -6,11 +6,12 @@ if (!(process.env.NODE_ENV === 'production' || process.env.NODE_END === 'test'))
   prettyPrint = { colorize: true }
 }
 
-console.log('> Log level:', process.env.LOG_LEVEL)
 // Logger
 const config = {
   level: process.env.LOG_LEVEL || 'warn',
   prettyPrint: prettyPrint
 }
+const logger = pino(config)
+logger.info(`logger started at level ${process.env.LOG_LEVEL}`)
 
-module.exports = pino(config)
+module.exports = logger
