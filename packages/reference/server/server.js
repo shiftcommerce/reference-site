@@ -27,7 +27,7 @@ const securityHeaders = require('./middleware/security-headers')
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
+const { shiftIpFilter, shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -53,6 +53,8 @@ module.exports = app.prepare().then(() => {
   if (!process.env.NO_HTTPS === 'true') {
     server.use(sslRedirect())
   }
+
+  shiftIpFilter(server)
 
   server.use(compression())
   server.use(session(sessionParams))

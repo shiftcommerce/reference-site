@@ -1,3 +1,6 @@
+// Express Middleware
+const { ipFilter } = require('./express/middleware/ip-filter')
+
 // Express handlers
 const AccountHandler = require('./express/account-handler')
 const CartHandler = require('./express/cart-handler')
@@ -29,6 +32,7 @@ shiftApiConfig.set({
 
 module.exports = {
   getSessionExpiryTime,
+  shiftIpFilter: (server) => ipFilter(server),
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
