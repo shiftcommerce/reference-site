@@ -2787,6 +2787,13 @@ arr-flatten@^1.0.1, arr-flatten@^1.1.0:
   resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.1.0.tgz#36048bbff4e7b47e136644316c99669ea5ae91f1"
   integrity sha512-L3hKV5R/p5o81R7O02IGnwpDmkp6E982XhtbuwSe3O4qOtMMMtodicASA1Cny2U+aCXcNpml+m4dPsvsJ3jatg==
 
+arr-map@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/arr-map/-/arr-map-2.0.2.tgz#3a77345ffc1cf35e2a91825601f9e58f2e24cac4"
+  integrity sha1-Onc0X/wc814qkYJWAfnljy4kysQ=
+  dependencies:
+    make-iterator "^1.0.0"
+
 arr-union@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
@@ -5654,7 +5661,7 @@ deep-equal-ident@^1.1.1:
   dependencies:
     lodash.isequal "^3.0"
 
-deep-equal@^1.0.0:
+deep-equal@^1.0.0, deep-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
   integrity sha1-9dJgKStmDghO/0zbyfCK0yR0SLU=
@@ -6909,15 +6916,12 @@ expect@^24.8.0:
     jest-message-util "^24.8.0"
     jest-regex-util "^24.3.0"
 
-express-ipfilter@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/express-ipfilter/-/express-ipfilter-1.0.1.tgz#46770182df771e3699d9dd99d6d4743423a9833b"
-  integrity sha512-Jhrk7fC6FEql57icWzmiUuPRpx2Cryp+XEjo1tSbEeiRlpBIAdthreHIoTJGsqUEatmoLNLE8JHYn/T7SVAKog==
+express-ip-filter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/express-ip-filter/-/express-ip-filter-2.0.0.tgz#9375e26f815072b63a9fef149fded054d007db54"
+  integrity sha1-k3Xib4FQcrY6n+8Un97QVNAH21Q=
   dependencies:
-    ip "~1.1.0"
-    lodash "^4.17.11"
-    proxy-addr "^2.0.4"
-    range_check "^1.2.0"
+    ip-filter "^2.0.0"
 
 express@^4.16.2, express@^4.16.3:
   version "4.17.1"
@@ -8987,7 +8991,16 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
-ip-regex@^1.0.1:
+ip-filter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ip-filter/-/ip-filter-2.0.0.tgz#f2cdb0155cb35a4eca2e7c9eeec860ec671bbf4b"
+  integrity sha1-8s2wFVyzWk7KLnye7shg7Gcbv0s=
+  dependencies:
+    ip-regex "^1.0.3"
+    is-match "^0.4.0"
+    to-file-path "^1.0.0"
+
+ip-regex@^1.0.1, ip-regex@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-1.0.3.tgz#dc589076f659f419c222039a33316f1c7387effd"
   integrity sha1-3FiQdvZZ9BnCIgOaMzFvHHOH7/0=
@@ -8997,20 +9010,10 @@ ip-regex@^2.1.0:
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
   integrity sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=
 
-ip6@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/ip6/-/ip6-0.0.4.tgz#44c5a9db79e39d405201b4d78d13b3870e48db31"
-  integrity sha1-RMWp23njnUBSAbTXjROzhw5I2zE=
-
-ip@^1.1.5, ip@~1.1.0:
+ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
   integrity sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
-
-ipaddr.js@1.2:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.2.0.tgz#8aba49c9192799585bdd643e0ccb50e8ae777ba4"
-  integrity sha1-irpJyRknmVhb3WQ+DMtQ6K53e6Q=
 
 ipaddr.js@1.9.0:
   version "1.9.0"
@@ -9060,6 +9063,11 @@ is-alphanumerical@^1.0.0:
   dependencies:
     is-alphabetical "^1.0.0"
     is-decimal "^1.0.0"
+
+is-arguments@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-arguments/-/is-arguments-1.0.4.tgz#3faf966c7cba0ff437fb31f6250082fcf0448cf3"
+  integrity sha512-xPh0Rmt8NE65sNzvyUmWgI1tz3mKq74lGA0mL8LYZcoIzKOzDh6HmrYm3d18k60nHerC8A9Km8kYu87zfSFnLA==
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -9301,6 +9309,16 @@ is-jpg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-jpg/-/is-jpg-1.0.1.tgz#296d57fdd99ce010434a7283e346ab9a1035e975"
   integrity sha1-KW1X/dmc4BBDSnKD40armhA16XU=
+
+is-match@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/is-match/-/is-match-0.4.1.tgz#fb5f6c6709a1543b7c7efa7d9530e5b776f61f83"
+  integrity sha1-+19sZwmhVDt8fvp9lTDlt3b2H4M=
+  dependencies:
+    deep-equal "^1.0.1"
+    is-extendable "^0.1.1"
+    is-glob "^2.0.1"
+    micromatch "^2.3.7"
 
 is-my-ip-valid@^1.0.0:
   version "1.0.0"
@@ -10796,6 +10814,11 @@ lazy-cache@^0.2.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-0.2.7.tgz#7feddf2dcb6edb77d11ef1d117ab5ffdf0ab1b65"
   integrity sha1-f+3fLctu23fRHvHRF6tf/fCrG2U=
 
+lazy-cache@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
+  integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
+
 lazy-property@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lazy-property/-/lazy-property-1.0.0.tgz#84ddc4b370679ba8bd4cdcfa4c06b43d57111147"
@@ -11603,6 +11626,13 @@ make-fetch-happen@^4.0.1:
     promise-retry "^1.1.1"
     socks-proxy-agent "^4.0.0"
     ssri "^6.0.0"
+
+make-iterator@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-1.0.1.tgz#29b33f312aa8f547c4a5e490f56afcec99133ad6"
+  integrity sha512-pxiuXh0iVEq7VM7KMIhs5gxsfxCux2URptUQaXo4iZZJxBAzTPOLE2BumO5dbfVYq/hBJFBR/a1mFDmOx5AGmw==
+  dependencies:
+    kind-of "^6.0.2"
 
 makeerror@1.0.x:
   version "1.0.11"
@@ -14543,7 +14573,7 @@ protoduck@^5.0.1:
   dependencies:
     genfun "^5.0.0"
 
-proxy-addr@^2.0.4, proxy-addr@~2.0.5:
+proxy-addr@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.5.tgz#34cbd64a2d81f4b1fd21e76f9f06c8a45299ee34"
   integrity sha512-t/7RxHXPH6cJtP0pRG6smSr9QJidhB+3kXu0KgXnbGYMgzEnUxRQ4/LDdfOwZEMyIh3/xHb8PX3t+lfL9z+YVQ==
@@ -14760,14 +14790,6 @@ range-parser@^1.0.3, range-parser@~1.2.0, range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
-
-range_check@^1.2.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/range_check/-/range_check-1.4.0.tgz#cd87c7ac62c40ba9df69b8703c604f60c3748635"
-  integrity sha1-zYfHrGLEC6nfabhwPGBPYMN0hjU=
-  dependencies:
-    ip6 "0.0.4"
-    ipaddr.js "1.2"
 
 raven@^2.2.1:
   version "2.6.4"
@@ -17507,6 +17529,16 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
+
+to-file-path@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/to-file-path/-/to-file-path-1.0.0.tgz#4c55a9f2d2755d455d2258314a3411e19106d1d4"
+  integrity sha1-TFWp8tJ1XUVdIlgxSjQR4ZEG0dQ=
+  dependencies:
+    arr-map "^2.0.0"
+    is-arguments "^1.0.2"
+    isarray "^1.0.0"
+    lazy-cache "^1.0.3"
 
 to-object-path@^0.3.0:
   version "0.3.0"

@@ -14,7 +14,7 @@
     "@paypal/checkout-server-sdk": "^1.0.0",
     "@shiftcommerce/shift-node-api": "^0.22.2",
     "stripe": "^6.31.2",
-    "express-ipfilter": "^1.0.1"
+    "express-ip-filter": "^2.0.0"
   },
   "devDependencies": {
     "jest": "^24.7.1",

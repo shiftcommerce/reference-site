@@ -1,26 +1,25 @@
 // Libraries
-const ipfilter = require('express-ipfilter').IpFilter
+const expressIpFilter  = require('express-ip-filter')
+
+// Environment variable
+const whitelistFromEnv = process.env.IP_WHITELIST ? process.env.IP_WHITELIST.split(',') : ''
 
 // Enable local requests
-const localHost = '::1,0.0.0.0,::ffff:127.0.0.1'.split(',')
-
-// Whitelist the following IPs
-const ipWhitelist = [...process.env.IP_WHITELIST.split(','), ...localHost]
+const localHostWhitelist = ['::1', '0.0.0.0', '::ffff:127.0.0.1']
 
 const ipFilter = (server) => {
-  server.use(ipfilter(ipWhitelist, { mode: 'allow', logLevel: 'deny' }))
+  const whiteList = [
+    ...whitelistFromEnv,
+    ...localHostWhitelist,
+  ]
 
-  console.log("> IP's whitelisted", ipWhitelist)
+  console.log("> IP Whitelisting enabled: \n", whiteList)
 
-  server.use((error, req, res, _next) => {
-    if (error.name === 'IpDeniedError') {
-      res.status(401)
-    } else {
-      res.status(error.status || 500)
-    }
-
-    res.json({ error: { message: 'IP not authorised', status: 401 }})
-  })
+  server.use(expressIpFilter({
+    strict: false,
+    forbidden: '403: IP Address not authorised',
+    filter: whiteList
+  }))
 }
 
 module.exports = { ipFilter }
