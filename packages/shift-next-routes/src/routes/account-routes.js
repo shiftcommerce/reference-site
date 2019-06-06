@@ -1,6 +1,6 @@
 // Libs
 const { getSessionExpiryTime } = require('../lib/session')
-
+const { isSecure } = require('../lib/util')
 /**
  * Sets the user to logged in, by updating the session expiry time, and adding
  * the signedIn cookie to the client
@@ -12,7 +12,10 @@ const setUserToLoggedIn = (req, res) => {
   const sessionExpiryTime = getSessionExpiryTime()
 
   req.session.expires = sessionExpiryTime
-  res.cookie('signedIn', true, { expires: sessionExpiryTime })
+  res.cookie('signedIn', true, {
+    expires: sessionExpiryTime,
+    secure: isSecure()
+  })
 }
 
 module.exports = {

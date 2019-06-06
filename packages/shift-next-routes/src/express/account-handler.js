@@ -1,5 +1,6 @@
 // Shift-api client
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
+const { isSecure } = require('../lib/util')
 const { getSessionExpiryTime } = require('../lib/session')
 
 const accountApiEndpointQuery = {
@@ -225,6 +226,7 @@ async function assignCartToUser (req, res) {
 
     res.cookie('cart', customerAccountResponse.data.included.find(i => i.type === 'carts').id, {
       signed: true,
+      secure: isSecure(),
       expires: getSessionExpiryTime()
     })
   }

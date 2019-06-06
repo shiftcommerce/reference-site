@@ -12,6 +12,7 @@ const uuid = require('uuid/v4')
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
+const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
@@ -51,7 +52,7 @@ module.exports = app.prepare().then(() => {
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
-    secure: production,
+    secure: secure,
     sameSite: 'lax',
     expires: getSessionExpiryTime()
   }
