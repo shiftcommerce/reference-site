@@ -73,7 +73,7 @@ const httpSecurityHeaders = (server) => {
   server.use(csurf())
   server.all('*', (req, res, next) => {
     // set csrf token in cookie
-    res.cookie('_csrf', req.csrfToken())
+    res.cookie('_csrf', req.csrfToken(), { httpOnly: true, secure: true, sameSite: 'lax' })
     // call next middleware in the stack
     next()
   })

@@ -4,7 +4,7 @@ const withCSS = require('@zeit/next-css')
 const nextRuntimeDotenv = require('next-runtime-dotenv')
 const withTM = require('next-transpile-modules')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+  enabled: process.env.BUNDLE_ANALYZE === 'true'
 })
 
 const withConfig = nextRuntimeDotenv({
