@@ -1,5 +1,6 @@
 // Libraries
 import React, { Component, Fragment } from 'react'
+import Router from 'next/router'
 
 // Lib
 import renderComponents from '../lib/render-components'
@@ -12,8 +13,22 @@ import StaticPageError from '@shiftcommerce/shift-react-components/src/component
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
-  static async getInitialProps ({ query: { id }, req, reduxStore }) {
+  static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
+    const { published } = page
+    const { preview } = req.query
+
+    // Unpublished pages should return a 404 page to the public however we should
+    // be able to preview unpublished pages using a ?preview=true query string
+    if (published === false && preview !== true) {
+      if (!!req) {
+        // server-side
+        res.redirect('/error')
+      } else {
+        // client-side
+        Router.push('/error')
+      }
+    }
 
     return { id, page, isServer: !!req }
   }
