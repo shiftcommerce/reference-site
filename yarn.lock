@@ -6198,6 +6198,20 @@ enzyme-adapter-react-16@^1.14.0:
     react-test-renderer "^16.0.0-0"
     semver "^5.7.0"
 
+enzyme-adapter-react-16@^1.7.1, enzyme-adapter-react-16@^1.9.1:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.13.2.tgz#8a574d7cbbef7ef0cab2022e9bfc12aeaebb7ae5"
+  integrity sha512-h0neTuAAFfQUgEZ+PPHVIMDFJ9+CGafI8AjojNlSVh4Fd1pLDgtl2OeVkm4yKF7RSgzrPAwugq4JW8Jjo2iRJA==
+  dependencies:
+    enzyme-adapter-utils "^1.12.0"
+    has "^1.0.3"
+    object.assign "^4.1.0"
+    object.values "^1.1.0"
+    prop-types "^15.7.2"
+    react-is "^16.8.6"
+    react-test-renderer "^16.0.0-0"
+    semver "^5.7.0"
+
 enzyme-adapter-utils@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/enzyme-adapter-utils/-/enzyme-adapter-utils-1.12.0.tgz#96e3730d76b872f593e54ce1c51fa3a451422d93"
@@ -6229,6 +6243,33 @@ enzyme@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.10.0.tgz#7218e347c4a7746e133f8e964aada4a3523452f6"
   integrity sha512-p2yy9Y7t/PFbPoTvrWde7JIYB2ZyGC+NgTNbVEGvZ5/EyoYSr9aG/2rSbVvyNvMHEhw9/dmGUJHWtfQIEiX9pg==
+  dependencies:
+    array.prototype.flat "^1.2.1"
+    cheerio "^1.0.0-rc.2"
+    function.prototype.name "^1.1.0"
+    has "^1.0.3"
+    html-element-map "^1.0.0"
+    is-boolean-object "^1.0.0"
+    is-callable "^1.1.4"
+    is-number-object "^1.0.3"
+    is-regex "^1.0.4"
+    is-string "^1.0.4"
+    is-subset "^0.1.1"
+    lodash.escape "^4.0.1"
+    lodash.isequal "^4.5.0"
+    object-inspect "^1.6.0"
+    object-is "^1.0.1"
+    object.assign "^4.1.0"
+    object.entries "^1.0.4"
+    object.values "^1.0.4"
+    raf "^3.4.0"
+    rst-selector-parser "^2.2.3"
+    string.prototype.trim "^1.1.2"
+
+enzyme@^3.8.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.9.0.tgz#2b491f06ca966eb56b6510068c7894a7e0be3909"
+  integrity sha512-JqxI2BRFHbmiP7/UFqvsjxTirWoM1HfeaJrmVSZ9a1EADKkZgdPcAuISPMpoUiHlac9J4dYt81MC5BBIrbJGMg==
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -8421,7 +8462,7 @@ hoek@6.x.x:
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.1.3.tgz#73b7d33952e01fe27a38b0457294b79dd8da242c"
   integrity sha512-YXXAAhmF9zpQbC7LEcREFtXfGq5K1fmd+4PHkBq8NUqmzW3G+Dq10bI/i0KucLRwss3YYFQ0fSfoxBZYiGUqtQ==
 
-hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -11159,7 +11200,7 @@ lockfile@^1.0.4:
   dependencies:
     signal-exit "^3.0.2"
 
-lodash-es@^4.17.11:
+lodash-es@^4.17.11, lodash-es@^4.2.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
   integrity sha512-DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==
@@ -14800,6 +14841,16 @@ react-input-range@^1.3.0:
     autobind-decorator "^1.3.4"
     prop-types "^15.5.8"
 
+react-instantsearch-core@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.6.0.tgz#1d5e9a6c07bc6bbb732953b19f22c4fa584a8405"
+  integrity sha512-dwKF+2XuFnpOaRD0Xnz1cRg26HL7TGhT/PnSyqAUgio8xiKywNQhJUeXL6Rgf6LqKxC0Ey3si8zV+IMxeGDPfA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    algoliasearch-helper "^2.26.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+
 react-instantsearch-core@^5.7.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.7.0.tgz#6979ec419d2711033f6c83181de6cae9e1f064c2"
@@ -14809,6 +14860,19 @@ react-instantsearch-core@^5.7.0:
     algoliasearch-helper "^2.26.0"
     lodash "^4.17.4"
     prop-types "^15.5.10"
+
+react-instantsearch-dom@^5.3.1:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.6.0.tgz#217bf68d959430d6680ee0dca63f7c0f345db3df"
+  integrity sha512-d4jWnRl+RF8It+t8crVrWUP6Gsc0VQ44jcbjnjmQRQXZNRIeeOKpJh7QfpWnKrDAY1qjUn/fZFZRB6W1XBHwYg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    algoliasearch "^3.27.1"
+    algoliasearch-helper "^2.26.0"
+    classnames "^2.2.5"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+    react-instantsearch-core "^5.6.0"
 
 react-instantsearch-dom@^5.7.0:
   version "5.7.0"
@@ -14823,7 +14887,7 @@ react-instantsearch-dom@^5.7.0:
     prop-types "^15.5.10"
     react-instantsearch-core "^5.7.0"
 
-react-is@16.8.6, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
+react-is@16.8.6, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
@@ -14842,7 +14906,7 @@ react-lazyload@^2.3.0:
   resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.6.1.tgz#666d4ca39a30589340dbaff98e9b205efe94ab30"
   integrity sha512-DLQ8R47t6cryyZ5D/qzKuJ3dXu4N8gUwxYlcmk17UvgwG+nVjj9Riq82vWMRC01OGAT9uMNY+md4Ucpn9PmRAg==
 
-react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
@@ -14851,6 +14915,19 @@ react-pluralize@^1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/react-pluralize/-/react-pluralize-1.6.3.tgz#8d7dba3c584001f8c540717d6ba1601fa264a561"
   integrity sha512-TOpCsnMNTpMgEJFsxdwsHHxvChvrWKENsYkK9At5B+0CZTEc40CAMqvXKnz8C3VDt0LBL8491kEnL61IH3CUHA==
+
+react-redux@^5.0.7:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.1.1.tgz#88e368682c7fa80e34e055cd7ac56f5936b0f52f"
+  integrity sha512-LE7Ned+cv5qe7tMV5BPYkGQ5Lpg8gzgItK07c67yHvJ8t0iaD9kPFPAli/mYkiyJYrs2pJgExR2ZgsGqlrOApg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    hoist-non-react-statics "^3.1.0"
+    invariant "^2.2.4"
+    loose-envify "^1.1.0"
+    prop-types "^15.6.1"
+    react-is "^16.6.0"
+    react-lifecycles-compat "^3.0.0"
 
 react-redux@^7.0.3:
   version "7.0.3"
@@ -15192,6 +15269,11 @@ redux-mock-store@^1.5.3:
   dependencies:
     lodash.isplainobject "^4.0.6"
 
+redux-test-utils@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.1.3.tgz#0d89100f100f86c7c7214976eaece88e7e45bf74"
+  integrity sha1-DYkQDxAPhsfHIUl26uzojn5Fv3Q=
+
 redux-test-utils@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.3.0.tgz#0a788c1c7d73f8360af7d2559ffc7c3788fce173"
@@ -15203,6 +15285,16 @@ redux-thunk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
   integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
+
+redux@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  integrity sha512-pNqnf9q1hI5HHZRBkj3bAngGZW/JMCmexDlOxw4XagXY2o1327nHH54LoTjiPJ0gizoqPDRqWyX/00g0hD6w+A==
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
 
 redux@^4.0.1:
   version "4.0.1"
@@ -17089,7 +17181,7 @@ symbol-observable@1.0.1:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
   integrity sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
 
-symbol-observable@^1.2.0:
+symbol-observable@^1.0.3, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
