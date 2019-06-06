@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
+const loggingMiddleware = require('express-pino-logger')
+const uuid = require('uuid/v4')
 
 // Environment
 const production = process.env.NODE_ENV === 'production'
@@ -19,8 +21,12 @@ const port = test ? testPort : standardPort
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
+// Logger
+const logger = require('./lib/logger')
+
 // Api
 const { fetchData } = require('./lib/api-server')
+const { setSurrogateHeaders } = require('./lib/set-cache-headers')
 
 // Config
 const imageHosts = process.env.IMAGE_HOSTS
@@ -32,11 +38,22 @@ const {
   shiftFeaturePolicy,
   shiftRoutes,
   shiftSecurityHeaders,
+  shiftLogger,
   shiftIpFilter
 } = require('@shiftcommerce/shift-next-routes')
 
 module.exports = app.prepare().then(() => {
   const server = express()
+
+  server.use(loggingMiddleware({
+    logger: logger,
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
+  }))
+
+  // Remove X-Powered-By: Express header as this could help attackers
+  server.disable('x-powered-by')
+
   const secure = (process.env.NO_HTTPS !== 'true')
 
   const sessionParams = {
@@ -63,6 +80,7 @@ module.exports = app.prepare().then(() => {
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
 
+  shiftLogger(server, logger)
   shiftContentSecurityPolicy(server, {
     connectHosts: process.env.CONNECT_SCRIPTS,
     frameHosts: process.env.FRAME_HOSTS,
@@ -88,12 +106,7 @@ module.exports = app.prepare().then(() => {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
-        // set surrogate headers on the response (if any were found in platform requests)
-        Object.keys(page.headers)
-          .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
-          .forEach(key => {
-            res.set(key, page.headers[key])
-          })
+        setSurrogateHeaders(page.headers, res)
 
         switch (resourceType) {
           case 'Product':
@@ -126,7 +139,10 @@ module.exports = app.prepare().then(() => {
     }
 
     const url = `${process.env.API_TENANT}/v1/slugs`
-    return fetchData(queryObject, url).then(directRouting).catch((error) => { console.log('Error is', error) })
+    const headers = { 'x-request-id': req.id }
+    return fetchData(queryObject, url, headers).then(directRouting).catch((error) => {
+      req.log.error(error)
+    })
   })
 
   server.get('*', (req, res) => {
@@ -135,6 +151,6 @@ module.exports = app.prepare().then(() => {
 
   return server.listen(port, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
+    logger.info(`Ready on http://localhost:${port}`)
   })
 })
