@@ -39,4 +39,4 @@ function setSurrogateHeaders (headers, response) {
     })
 }
 
-module.exports = { setCacheHeaders, setSurrogateHeaders}
+module.exports = { setCacheHeaders, setSurrogateHeaders }
