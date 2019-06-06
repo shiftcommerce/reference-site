@@ -24,10 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('addVariantToCart', ({ variantId, quantity }) => {
-  cy.request('POST', '/addToCart', { variantId, quantity })
-})
-
 Cypress.Commands.add('addVariantToCartAndProceedToCheckout', ({ variantId, quantity }) => {
   // Add a product to cart with an API call
   cy.addVariantToCart({ variantId: variantId, quantity: quantity })

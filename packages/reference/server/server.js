@@ -1,7 +1,6 @@
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
-const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
@@ -11,7 +10,6 @@ const sslRedirect = require('heroku-ssl-redirect')
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
-const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
@@ -21,24 +19,21 @@ const port = test ? testPort : standardPort
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
-// Middleware
-const securityHeaders = require('./middleware/security-headers')
-
 // Api
 const { fetchData } = require('./lib/api-server')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
-
-// Config
-const imageHosts = process.env.IMAGE_HOSTS
-const scriptHosts = process.env.SCRIPT_HOSTS
+const {
+  getSessionExpiryTime,
+  shiftContentSecurityPolicy,
+  shiftFeaturePolicy,
+  shiftRoutes,
+  shiftSecurityHeaders
+} = require('@shiftcommerce/shift-next-routes')
 
 module.exports = app.prepare().then(() => {
   const server = express()
-
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
+  const secure = (process.env.NO_HTTPS !== 'true')
 
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
@@ -51,17 +46,22 @@ module.exports = app.prepare().then(() => {
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
 
-  if (!process.env.NO_HTTPS === 'true') {
-    server.use(sslRedirect())
-  }
-
+  if (secure) server.use(sslRedirect())
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-  server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
 
+  shiftContentSecurityPolicy(server, {
+    connectHosts: process.env.CONNECT_SCRIPTS,
+    frameHosts: process.env.FRAME_HOSTS,
+    imageHosts: process.env.IMAGE_HOSTS,
+    scriptHosts: process.env.SCRIPT_HOSTS,
+    styleHosts: process.env.STYLE_HOSTS
+  })
+  shiftFeaturePolicy(server)
+  shiftSecurityHeaders(server)
   shiftRoutes(server)
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
