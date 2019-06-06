@@ -16,7 +16,6 @@ class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
     const isServer = !!req
-    console.log('isServer', isServer)
     const { published } = page
     const preview = req.query && req.query.preview ? req.query.preview : false
 
