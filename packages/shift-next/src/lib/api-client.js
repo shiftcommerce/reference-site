@@ -38,7 +38,7 @@ class ApiClient {
   async post (endpoint, body = {}, dispatch = null, options = {}) {
     try {
       shouldDispatch(dispatch, true)
-      const response = await this.client.post(endpoint, body)
+      const response = await this.client.post(endpoint, body, { headers: this.buildHeaders(options) })
       shouldDispatch(dispatch, false)
       return { status: response.status, data: response.data }
     } catch (error) {
@@ -51,7 +51,7 @@ class ApiClient {
   async delete (endpoint, dispatch = null, options = {}) {
     try {
       shouldDispatch(dispatch, true)
-      const response = await this.client.delete(endpoint)
+      const response = await this.client.delete(endpoint, { headers: this.buildHeaders(options) })
       shouldDispatch(dispatch, false)
       return { status: response.status, data: response.data }
     } catch (error) {
@@ -67,6 +67,19 @@ class ApiClient {
       endpoint = `${endpoint}?${query}`
     }
     return endpoint
+  }
+
+  /**
+   * Builds HTTP Headers
+   * @param {object} options - eg. headers, csrf
+   */
+  buildHeaders (options = {}) {
+    let headers = options.headers || {}
+    if (options.csrf) {
+      // set csrf token
+      headers['x-xsrf-token'] = options.csrf
+    }
+    return headers
   }
 }
 

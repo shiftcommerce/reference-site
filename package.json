@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "yarn --cwd packages/reference devserver",
     "cy:ci": "yarn --cwd packages/reference node .circleci/cypress.js",
+    "cy:open": "yarn --cwd packages/reference cy:open",
     "build": "yarn --cwd packages/reference build",
     "start": "yarn --cwd packages/reference start",
     "test": "yarn workspaces run test"
