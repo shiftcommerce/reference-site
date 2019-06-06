@@ -69,5 +69,3 @@ async function placeOrder (req, res, orderPayload) {
 
   return res.status(response.status).send(response.data)
 }
-
-

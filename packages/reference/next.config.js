@@ -3,7 +3,9 @@ const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 const nextRuntimeDotenv = require('next-runtime-dotenv')
 const withTM = require('next-transpile-modules')
-const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.BUNDLE_ANALYZE === 'true'
+})
 
 const withConfig = nextRuntimeDotenv({
   public: [
@@ -31,18 +33,6 @@ const withConfig = nextRuntimeDotenv({
 })
 
 module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
-  analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
-  analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
-  bundleAnalyzerConfig: {
-    server: {
-      analyzerMode: 'static',
-      reportFilename: '../bundles/server.html'
-    },
-    browser: {
-      analyzerMode: 'static',
-      reportFilename: '../bundles/client.html'
-    }
-  },
   sassLoaderOptions: {
     includePaths: [`${process.env.INIT_CWD}/node_modules`]
   },

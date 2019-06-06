@@ -13,8 +13,10 @@
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
     "@shiftcommerce/shift-node-api": "^0.22.2",
-    "stripe": "^6.31.2",
     "express-ip-filter": "^2.0.0"
+    "csurf": "^1.10.0",
+    "helmet": "^3.18.0",
+    "stripe": "^6.31.2"
   },
   "devDependencies": {
     "jest": "^24.7.1",
