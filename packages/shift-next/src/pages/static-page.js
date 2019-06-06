@@ -14,6 +14,7 @@ import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loadi
 class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
+
     return { id, page, isServer: !!req }
   }
 

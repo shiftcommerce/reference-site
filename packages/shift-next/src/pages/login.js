@@ -3,9 +3,9 @@ import React, { Component, Fragment } from 'react'
 import Router from 'next/router'
 
 // Libs
-import Config from '../lib/config'
 import { setCookie } from '../lib/set-cookie'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import Config from '../lib/config'
 
 // Actions
 import { createLogin } from '../actions/login-actions'

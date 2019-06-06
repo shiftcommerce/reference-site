@@ -10,9 +10,9 @@ import { ProductListing } from '@shiftcommerce/shift-react-components/src/compon
 import SearchFilters from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
 
 // Lib
-import ApiClient from '../lib/api-client'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
 
 // Actions
 import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'

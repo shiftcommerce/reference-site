@@ -23,8 +23,6 @@ export class PasswordReset extends Component {
   }
 
   static async getInitialProps({ query }) {
-    // Set Page Content Security Policy
-    setPageContentSecurityPolicy('PasswordReset', res)
     return { token: query.token }
   }
 

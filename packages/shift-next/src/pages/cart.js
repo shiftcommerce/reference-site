@@ -2,8 +2,8 @@
 import React, { Component, Fragment } from 'react'
 
 // Lib
-import ApiClient from '../lib/api-client'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import ApiClient from '../lib/api-client'
 
 // Actions
 import {
