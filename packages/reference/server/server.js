@@ -47,11 +47,7 @@ module.exports = app.prepare().then(() => {
     genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
   }))
 
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
-
   const secure = (process.env.NO_HTTPS !== 'true')
-
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
     secure: secure,
