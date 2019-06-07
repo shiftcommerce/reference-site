@@ -1,3 +1,4 @@
+// Libraries
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
@@ -40,13 +41,6 @@ const {
 
 module.exports = app.prepare().then(() => {
   const server = express()
-
-  server.use(loggingMiddleware({
-    logger: logger,
-    useLevel: 'trace',
-    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
-  }))
-
   const secure = (process.env.NO_HTTPS !== 'true')
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
@@ -55,10 +49,15 @@ module.exports = app.prepare().then(() => {
     expires: getSessionExpiryTime()
   }
 
+  server.use(loggingMiddleware({
+    logger: logger,
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
+  }))
+
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
-
   if (secure) server.use(sslRedirect())
   server.use(compression())
   server.use(session(sessionParams))
