@@ -94,6 +94,7 @@ describe('Minibag', () => {
 
     // Open the minibag
     cy.visit('/')
+    cy.contains('Basket').trigger('mouseover')
     cy.contains('Basket').click()
 
     cy.route({
