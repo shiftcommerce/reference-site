@@ -136,15 +136,14 @@ exports[`renders the children inside it 1`] = `
           <span
             className="c-minibag__cart"
             onClick={[Function]}
+            onMouseEnter={[Function]}
           >
             <div
               className="c-minibag__cart-image"
             >
               <span
                 className="c-minibag__cart-image-count"
-              >
-                0
-              </span>
+              />
               <Image
                 className="c-minibag__cart-image-icon"
                 src={Object {}}
@@ -432,15 +431,14 @@ exports[`renders the header 1`] = `
           <span
             className="c-minibag__cart"
             onClick={[Function]}
+            onMouseEnter={[Function]}
           >
             <div
               className="c-minibag__cart-image"
             >
               <span
                 className="c-minibag__cart-image-count"
-              >
-                0
-              </span>
+              />
               <Image
                 className="c-minibag__cart-image-icon"
                 src={Object {}}
@@ -713,15 +711,14 @@ exports[`renders the navbar for non-checkout pages 1`] = `
           <span
             className="c-minibag__cart"
             onClick={[Function]}
+            onMouseEnter={[Function]}
           >
             <div
               className="c-minibag__cart-image"
             >
               <span
                 className="c-minibag__cart-image-count"
-              >
-                0
-              </span>
+              />
               <Image
                 className="c-minibag__cart-image-icon"
                 src={Object {}}

@@ -192,6 +192,7 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
+        lineItemsCount={0}
         {...initialState}
       />
     )
@@ -236,10 +237,10 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
+        lineItemsCount={2}
         {...initialState}
       />
     )
-
     // Assert
     expect(wrapper.find('.c-minibag__cart-image-count')).toIncludeText('2')
   })
