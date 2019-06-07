@@ -86,7 +86,8 @@ export function setCartShippingMethod (shippingMethodId) {
 
 export async function submitCoupon (couponCode) {
   const request = addCartCouponRequest(couponCode)
-  const response = await new ApiClient().post(request.endpoint, request.body)
+  const dispatch = null
+  const response = await new ApiClient().post(request.endpoint, request.body, dispatch, { csrf: Cookies.get('_csrf') })
   if (response.status === 201) {
     return response.data
   }

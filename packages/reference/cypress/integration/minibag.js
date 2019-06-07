@@ -90,7 +90,7 @@ describe('Minibag', () => {
 
   it('Updates the line item quantity with a dropdown', () => {
     // Add a product to cart with an API call
-    cy.request('POST', '/addToCart', { variantId: '27103', quantity: 1 })
+    cy.addVariantToCart({ variantId: '27103', quantity: 1 })
 
     // Open the minibag
     cy.visit('/')

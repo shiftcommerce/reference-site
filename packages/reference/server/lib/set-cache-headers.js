@@ -1,4 +1,5 @@
 // A function that sets CDN headers
+const logger = require('./logger')
 
 function setCacheHeaders (response) {
   // fastly limit of 16,384 bytes is equal to 16384 utf-8 characters
@@ -15,7 +16,7 @@ function setCacheHeaders (response) {
 
     // print a warning when surrogate keys exceed limit
     if (surrogateKeys.length > lengthLimit) {
-      console.log('Warning: The following Surrogate keys have exceeded the fastly length limit:', surrogateKeys)
+      logger.warn({ msg: 'Surrogate keys have exceeded the fastly length limit', keys: surrogateKeys })
     }
   }
 }
@@ -25,4 +26,17 @@ function uniq (value, index, self) {
   return self.indexOf(value) === index
 }
 
-module.exports = { setCacheHeaders }
+// copy over any CDN cache key response headers from one response to another
+function setSurrogateHeaders (headers, response) {
+  if (!headers) {
+    return false
+  }
+
+  Object.keys(headers)
+    .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
+    .forEach(key => {
+      response.set(key, headers[key])
+    })
+}
+
+module.exports = { setCacheHeaders, setSurrogateHeaders }
