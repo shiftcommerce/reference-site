@@ -36,7 +36,8 @@ const {
   shiftFeaturePolicy,
   shiftRoutes,
   shiftSecurityHeaders,
-  shiftLogger
+  shiftLogger,
+  shiftIpFilter
 } = require('@shiftcommerce/shift-next-routes')
 
 module.exports = app.prepare().then(() => {
@@ -59,6 +60,8 @@ module.exports = app.prepare().then(() => {
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
   if (secure) server.use(sslRedirect())
+  if (production) shiftIpFilter(server)
+
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
