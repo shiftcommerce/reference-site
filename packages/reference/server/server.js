@@ -67,7 +67,7 @@ module.exports = app.prepare().then(() => {
 
   shiftLogger(server, logger)
   shiftContentSecurityPolicy(server, {
-    connectHosts: process.env.CONNECT_SCRIPTS,
+    connectHosts: process.env.CONNECT_HOSTS,
     frameHosts: process.env.FRAME_HOSTS,
     imageHosts: process.env.IMAGE_HOSTS,
     scriptHosts: process.env.SCRIPT_HOSTS,
