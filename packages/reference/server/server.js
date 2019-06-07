@@ -1,3 +1,4 @@
+// Libraries
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
@@ -28,10 +29,7 @@ const logger = require('./lib/logger')
 const { fetchData } = require('./lib/api-server')
 const { setSurrogateHeaders } = require('./lib/set-cache-headers')
 
-// Config
-const imageHosts = process.env.IMAGE_HOSTS
-const scriptHosts = process.env.SCRIPT_HOSTS
-
+// ShiftNext
 const {
   getSessionExpiryTime,
   shiftContentSecurityPolicy,
@@ -44,18 +42,7 @@ const {
 
 module.exports = app.prepare().then(() => {
   const server = express()
-
-  server.use(loggingMiddleware({
-    logger: logger,
-    useLevel: 'trace',
-    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
-  }))
-
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
-
   const secure = (process.env.NO_HTTPS !== 'true')
-
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
     secure: secure,
@@ -63,13 +50,15 @@ module.exports = app.prepare().then(() => {
     expires: getSessionExpiryTime()
   }
 
+  server.use(loggingMiddleware({
+    logger: logger,
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
+  }))
+
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
-
-  if (!process.env.NO_HTTPS === 'true') {
-    server.use(sslRedirect())
-  }
 
   if (secure) server.use(sslRedirect())
   if (production) shiftIpFilter(server)
@@ -82,7 +71,7 @@ module.exports = app.prepare().then(() => {
 
   shiftLogger(server, logger)
   shiftContentSecurityPolicy(server, {
-    connectHosts: process.env.CONNECT_SCRIPTS,
+    connectHosts: process.env.CONNECT_HOSTS,
     frameHosts: process.env.FRAME_HOSTS,
     imageHosts: process.env.IMAGE_HOSTS,
     scriptHosts: process.env.SCRIPT_HOSTS,
