@@ -12,11 +12,16 @@ export default (cart) => {
   let lineItemsCount = Cookies.get(lineItemsCountLabel)
 
   if (lineItemsCount || cart.line_items_count) {
-    if (cart.line_items_count && cart.line_items_count !== lineItemsCount) {
+    // Use `cart.line_items_count >= 0` instead of evaulating
+    // `cart.line_items_count`, as the latter will be false if there are zero
+    // line items
+    if (cart.line_items_count >= 0 && cart.line_items_count !== lineItemsCount) {
       Cookies.set(lineItemsCountLabel, cart.line_items_count, { path: '/' })
       lineItemsCount = cart.line_items_count
     }
 
     return lineItemsCount
   }
+
+  return 0
 }

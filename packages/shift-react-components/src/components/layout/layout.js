@@ -88,20 +88,19 @@ export class Layout extends Component {
 
   /**
    * Renders the basket icon
-   * @param  {number} lineItemsCount
    * @return {string} - HTML markup for the component
    */
-  renderCartLink (lineItemsCount) {
+  renderCartLink () {
+    const { lineItemsCount } = this.props
+
     return (
       <span
         className='c-minibag__cart'
         onClick={() => this.props.toggleMiniBag(true)}
-        onMouseEnter={() => this.props.handleLoadMinibag(true)}
+        onMouseEnter={this.handleLoadMinibag}
       >
         <div className='c-minibag__cart-image'>
-          <span className='c-minibag__cart-image-count' >
-            { lineItemsCount }
-          </span>
+          <span className='c-minibag__cart-image-count'>{ lineItemsCount }</span>
           <Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
         </div>
         <span className='c-minibag__cart-label'>Basket</span>
@@ -110,12 +109,11 @@ export class Layout extends Component {
   }
 
   renderBasket () {
-    const { cart, className } = this.props
-    const lineItemsCount = cart.line_items_count || 0
+    const { className } = this.props
 
     return (
       <div className={classNames(className, 'c-header__minibag c-minibag')}>
-        { this.renderCartLink(lineItemsCount) }
+        { this.renderCartLink() }
       </div>
     )
   }

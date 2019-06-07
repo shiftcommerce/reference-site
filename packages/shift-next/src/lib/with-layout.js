@@ -12,6 +12,9 @@ import { Layout } from '@shiftcommerce/shift-react-components/src/components/lay
 // Actions
 import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'
 
+// Lib
+import lineItemsCount from './line-items-count'
+
 import { connect } from 'react-redux'
 import { withRouter } from 'next/router'
 
@@ -28,6 +31,7 @@ export default function withLayout (Component) {
       this.handleScroll = this.handleScroll.bind(this)
       this.toggleDropDown = this.toggleDropDown.bind(this)
       this.onCategoryFilterCleared = this.onCategoryFilterCleared.bind(this)
+      this.readCart = this.readCart.bind(this)
       this.deleteItem = this.deleteItem.bind(this)
       this.toggleMiniBag = this.toggleMiniBag.bind(this)
       this.onItemQuantityUpdated = this.onItemQuantityUpdated.bind(this)
@@ -58,6 +62,21 @@ export default function withLayout (Component) {
 
     toggleMiniBag (displayed) {
       this.props.dispatch(toggleMiniBag(displayed))
+    }
+
+    /**
+     * Gets the line item count from the cookie or the cart
+     * @return {Number}
+     */
+    getLineItemsCount () {
+      return lineItemsCount(this.props.cart)
+    }
+
+    /**
+     * Read the cart from the redux store
+     */
+    readCart () {
+      this.props.dispatch(readCart())
     }
 
     deleteItem (event) {
@@ -96,8 +115,8 @@ export default function withLayout (Component) {
           deleteItem={this.deleteItem}
           toggleMiniBag={this.toggleMiniBag}
           onItemQuantityUpdated={this.onItemQuantityUpdated}
-          readCart={this.props.dispatch(readCart())}
-          {...otherProps}
+          readCart={this.readCart}
+          lineItemsCount={this.getLineItemsCount()}
         >
           <Component {...otherProps} />
         </AppLayout>
