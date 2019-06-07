@@ -1,17 +1,18 @@
+// Libraries
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
-const { createReadStream } = require('fs')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const sslRedirect = require('heroku-ssl-redirect')
+const loggingMiddleware = require('express-pino-logger')
+const uuid = require('uuid/v4')
 
 // Environment
 const production = process.env.NODE_ENV === 'production'
 const test = process.env.NODE_ENV === 'test'
 const dev = !test && !production
-const secure = (process.env.NO_HTTPS !== 'true')
 
 // Use environment to determine port
 const standardPort = parseInt(process.env.PORT, 10) || 3000
@@ -21,25 +22,27 @@ const port = test ? testPort : standardPort
 const app = next({ dir: './client', dev })
 const handle = app.getRequestHandler()
 
-// Middleware
-const securityHeaders = require('./middleware/security-headers')
+// Logger
+const logger = require('./lib/logger')
 
 // Api
 const { fetchData } = require('./lib/api-server')
+const { setSurrogateHeaders } = require('./lib/set-cache-headers')
 
 // ShiftNext
-const { shiftRoutes, getSessionExpiryTime } = require('@shiftcommerce/shift-next-routes')
-
-// Config
-const imageHosts = process.env.IMAGE_HOSTS
-const scriptHosts = process.env.SCRIPT_HOSTS
+const {
+  getSessionExpiryTime,
+  shiftContentSecurityPolicy,
+  shiftFeaturePolicy,
+  shiftRoutes,
+  shiftSecurityHeaders,
+  shiftLogger,
+  shiftIpFilter
+} = require('@shiftcommerce/shift-next-routes')
 
 module.exports = app.prepare().then(() => {
   const server = express()
-
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
-
+  const secure = (process.env.NO_HTTPS !== 'true')
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
     secure: secure,
@@ -47,21 +50,34 @@ module.exports = app.prepare().then(() => {
     expires: getSessionExpiryTime()
   }
 
+  server.use(loggingMiddleware({
+    logger: logger,
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
+  }))
+
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
-
-  if (!process.env.NO_HTTPS === 'true') {
-    server.use(sslRedirect())
-  }
+  if (secure) server.use(sslRedirect())
+  if (production) shiftIpFilter(server)
 
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
   server.use(bodyParser.json())
   server.use(bodyParser.urlencoded({ extended: true }))
-  server.use(securityHeaders({ imageHosts: imageHosts, scriptHosts: scriptHosts }))
 
+  shiftLogger(server, logger)
+  shiftContentSecurityPolicy(server, {
+    connectHosts: process.env.CONNECT_HOSTS,
+    frameHosts: process.env.FRAME_HOSTS,
+    imageHosts: process.env.IMAGE_HOSTS,
+    scriptHosts: process.env.SCRIPT_HOSTS,
+    styleHosts: process.env.STYLE_HOSTS
+  })
+  shiftFeaturePolicy(server)
+  shiftSecurityHeaders(server)
   shiftRoutes(server)
 
   server.get(/^(?!\/_next|\/static).*$/, (req, res) => {
@@ -78,12 +94,7 @@ module.exports = app.prepare().then(() => {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
-        // set surrogate headers on the response (if any were found in platform requests)
-        Object.keys(page.headers)
-          .filter(name => name.toLowerCase().indexOf('surrogate') === 0)
-          .forEach(key => {
-            res.set(key, page.headers[key])
-          })
+        setSurrogateHeaders(page.headers, res)
 
         switch (resourceType) {
           case 'Product':
@@ -116,7 +127,10 @@ module.exports = app.prepare().then(() => {
     }
 
     const url = `${process.env.API_TENANT}/v1/slugs`
-    return fetchData(queryObject, url).then(directRouting).catch((error) => { console.log('Error is', error) })
+    const headers = { 'x-request-id': req.id }
+    return fetchData(queryObject, url, headers).then(directRouting).catch((error) => {
+      req.log.error(error)
+    })
   })
 
   server.get('*', (req, res) => {
@@ -125,6 +139,6 @@ module.exports = app.prepare().then(() => {
 
   return server.listen(port, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
+    logger.info(`Ready on http://localhost:${port}`)
   })
 })

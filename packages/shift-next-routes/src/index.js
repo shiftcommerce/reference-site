@@ -18,8 +18,14 @@ const OrderRoutes = require('./routes/order-routes')
 // Lib
 const { getSessionExpiryTime } = require('./lib/session')
 
+// Middleware
+const { ipFilter } = require('./middleware/ip-filter')
+const { contentSecurityPolicy } = require('./middleware/content-security-policy')
+const { featurePolicy } = require('./middleware/feature-policy')
+const { httpSecurityHeaders } = require('./middleware/http-security-headers')
+
 // Shift-api Config
-const { shiftApiConfig } =require('@shiftcommerce/shift-node-api')
+const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
 shiftApiConfig.set({
   apiHost: process.env.API_HOST,
@@ -28,7 +34,43 @@ shiftApiConfig.set({
 })
 
 module.exports = {
+  /**
+   * Convert time in seconds to a Date instance
+   * @return {Date} The Date instance for when the session should expire
+   */
   getSessionExpiryTime,
+  
+  /**
+   * Enables the whitelist IP filter,
+   * configurable via IP_WHITELIST environment variable
+   */
+  shiftIpFilter: (server) => ipFilter(server),
+
+  /**
+   * Enables the Content Security Policy
+   * @param {Function} server - App server eg. express
+   * @param {object} policyOptions - Policy options eg. imageHosts, styleHosts, scriptHosts, frameHosts, connectHosts
+   */
+  shiftContentSecurityPolicy: (server, policyOptions = {}) => contentSecurityPolicy(server, policyOptions),
+
+  /**
+   * Enables the Feature Policy
+   * @param {Function} server - eg. express
+   * @param {object} policyOptions - eg. { payment: ['example.com'] }
+   */
+  shiftFeaturePolicy: (server, policyOptions = {}) => featurePolicy(server, policyOptions),
+
+  shiftLogger: (server, logger) => {
+    shiftApiConfig.set({
+      ...shiftApiConfig.get(),
+      logger: logger.child({ pkg: 'shift-node-api' })
+    })
+  },
+
+  /**
+   * Defines Routes
+   * @param {Function} server - eg. express
+   */
   shiftRoutes: (server) => {
     server.get('/customerOrders', AccountHandler.getCustomerOrders)
     server.get('/getAccount', AccountHandler.getAccount)
@@ -82,5 +124,11 @@ module.exports = {
      * Order Routes
      */
     server.get('/order', OrderRoutes.indexRoute)
-  }
+  },
+
+  /**
+   * Set HTTP Security Headers
+   * @param {Function} server - eg. express
+   */
+  shiftSecurityHeaders: (server) => httpSecurityHeaders(server)
 }

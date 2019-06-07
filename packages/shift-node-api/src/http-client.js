@@ -104,7 +104,6 @@ class HTTPClient {
         })
       })
       .catch(error => {
-        console.log('Error is:', error)
         return Promise.reject(error)
       })
   }

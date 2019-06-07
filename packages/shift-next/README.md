@@ -32,6 +32,7 @@ shiftNextConfig.set({
   algoliaIndexName: ALGOLIA_INDEX_NAME,
   algoliaResultsPerPage: ALGOLIA_RESULTS_PER_PAGE,
   apiHostProxy: API_HOST_PROXY,
+  payPalClientID: PAYPAL_CLIENT_ID,
   storeName: 'ShopGo'
 })
 ```

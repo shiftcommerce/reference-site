@@ -133,14 +133,7 @@ module.exports = {
   getShippingMethods: async (req, res) => {
     const response = await SHIFTClient.getShippingMethodsV1()
 
-    switch (response.status) {
-      case 404:
-        return res.status(200).send({})
-      case 422:
-        return res.status(response.status).send(response.data.errors)
-      default:
-        return res.status(response.status).send(response.data)
-    }
+    return handleResponse(response, req, res)
   },
   setCartBillingAddress: async (req, res) => {
     req.query = { ...req.query, ...cartApiEndpointQuery }
@@ -148,14 +141,7 @@ module.exports = {
     const cartId = req.signedCookies.cart
     const response = await SHIFTClient.setCartBillingAddressV1(addressId, cartId, req.query)
 
-    switch (response.status) {
-      case 404:
-        return res.status(200).send({})
-      case 422:
-        return res.status(response.status).send(response.data.errors)
-      default:
-        return res.status(response.status).send(response.data)
-    }
+    return handleResponse(response, req, res)
   },
   setCartShippingAddress: async (req, res) => {
     req.query = { ...req.query, ...cartApiEndpointQuery }
@@ -163,14 +149,7 @@ module.exports = {
     const cartId = req.signedCookies.cart
     const response = await SHIFTClient.setCartShippingAddressV1(addressId, cartId, req.query)
 
-    switch (response.status) {
-      case 404:
-        return res.status(200).send({})
-      case 422:
-        return res.status(response.status).send(response.data.errors)
-      default:
-        return res.status(response.status).send(response.data)
-    }
+    return handleResponse(response, req, res)
   },
   setCartShippingMethod: async (req, res) => {
     req.query = { ...req.query, ...cartApiEndpointQuery }
@@ -179,13 +158,18 @@ module.exports = {
 
     const response = await SHIFTClient.setCartShippingMethodV1(cartId, shippingMethodId, req.query)
 
-    switch (response.status) {
+    return handleResponse(response, req, res)
+  }
+}
+
+function handleResponse(response, req, res) {
+  switch (response.status) {
       case 404:
         return res.status(200).send({})
       case 422:
+        req.log && req.log.error({ status: response.status, errors: response.data.errors })
         return res.status(response.status).send(response.data.errors)
       default:
         return res.status(response.status).send(response.data)
     }
-  }
 }
