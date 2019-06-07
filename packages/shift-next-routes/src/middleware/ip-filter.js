@@ -2,15 +2,17 @@
 const expressIpfilter = require('express-ipfilter').IpFilter
 const IpDeniedError = require('express-ipfilter').IpDeniedError
 
-// Environment variable
-const whitelistFromEnv = process.env.IP_WHITELIST ? process.env.IP_WHITELIST.split(',') : ''
+// Environment variables
+const fastlyListFromEnv = process.env.FASTLY_IP_LIST ? process.env.FASTLY_IP_LIST.split(',') : ''
+const customListFromEnv = process.env.CUSTOM_IP_LIST ? process.env.CUSTOM_IP_LIST.split(',') : ''
 
 // Enable local requests
 const localHostWhitelist = ['::1', '0.0.0.0', '::ffff:127.0.0.1']
 
 const ipFilter = (server) => {
   const whiteList = [
-    ...whitelistFromEnv,
+    ...fastlyListFromEnv,
+    ...customListFromEnv,
     ...localHostWhitelist,
   ]
 
