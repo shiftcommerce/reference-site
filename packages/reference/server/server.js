@@ -59,7 +59,6 @@ module.exports = app.prepare().then(() => {
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
-
   if (secure) server.use(sslRedirect())
   if (production) shiftIpFilter(server)
 
