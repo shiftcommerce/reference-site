@@ -34,9 +34,9 @@ describe('Checkout', () => {
           response: 'fixture:cart/add-cart-coupon.json'
         }).as('addCartCoupon')
 
-        // Mock successful PayPal order authorization
+        // Stub successful PayPal order authorization
         // Uses custom command - Cypress/support/commands/checkout.js
-        cy.mockSuccessfulAuthorizePayPalOrderRequest()
+        cy.stubSuccessfulAuthorizePayPalOrderRequest()
 
         // Add item to cart and proceed to checkout
         // Uses custom command - Cypress/support/commands/checkout.js

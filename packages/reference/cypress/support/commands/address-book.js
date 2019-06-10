@@ -1,6 +1,11 @@
+/**
+ * Sets up address book fixtures
+ */
 Cypress.Commands.add('setupAddressBookFixtures', () => {
+  // Set login cookie
   cy.setCookie('signedIn', 'true')
 
+  // Setup server
   cy.server()
 
   // Stub empty algolia request

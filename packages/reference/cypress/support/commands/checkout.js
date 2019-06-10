@@ -1,29 +1,8 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This is will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
+/**
+ * Adds variant to cart and proceeds to checkout
+ * @param {integer} variantId - the variant ID
+ * @param {integer} quantity - the required quantity
+ */
 Cypress.Commands.add('addVariantToCartAndProceedToCheckout', ({ variantId, quantity }) => {
   // Add a product to cart with an API call
   cy.addVariantToCart({ variantId: variantId, quantity: quantity })
@@ -33,10 +12,14 @@ Cypress.Commands.add('addVariantToCartAndProceedToCheckout', ({ variantId, quant
   cy.get('.c-cart-summary-buttons__cta--proceed').click()
 })
 
+/**
+ * Navigates to the shipping method checkout page
+ */
 Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
-  // Stub requests
+  // Setup server
   cy.server()
 
+  // Stub empty search request
   cy.route({
     method: 'POST',
     url: '**/1/indexes/**',
@@ -44,6 +27,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:search/empty-search.json'
   }).as('emptySearch')
 
+  // Stub get cart request
   cy.route({
     method: 'GET',
     url: '/getCart',
@@ -51,6 +35,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:cart/get-cart-with-line-item.json'
   }).as('getCart')
 
+  // Stub create address request
   cy.route({
     method: 'POST',
     url: '/createAddress',
@@ -58,6 +43,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:checkout/paypal/create-address.json'
   }).as('createAddress')
 
+  // Stub get shipping methods request
   cy.route({
     method: 'GET',
     url: '/getShippingMethods',
@@ -65,6 +51,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:cart/get-shipping-methods.json'
   }).as('getShippingMethods')
 
+  // Stub set cart billing address request
   cy.route({
     method: 'POST',
     url: '/setCartBillingAddress',
@@ -72,6 +59,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:checkout/paypal/set-cart-billing-address.json'
   }).as('setCartBillingAddress')
 
+  // Stub set cart shipping address request
   cy.route({
     method: 'POST',
     url: '/setCartShippingAddress',
@@ -79,6 +67,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
     response: 'fixture:checkout/paypal/set-cart-shipping-address.json'
   }).as('setCartShippingAddress')
 
+  // Stub set shipping method request
   cy.route({
     method: 'POST',
     url: '/setShippingMethod',
@@ -98,52 +87,14 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
   cy.url().should('includes', '/checkout/shipping-method')
 })
 
+/**
+ * Navigates to the review checkout page
+ */
 Cypress.Commands.add('navigateToReviewCheckoutPage', () => {
-  // Stub requests
+  // Setup server
   cy.server()
 
-  cy.route({
-    method: 'POST',
-    url: '**/1/indexes/**',
-    status: 200,
-    response: 'fixture:search/empty-search.json'
-  }).as('emptySearch')
-
-  cy.route({
-    method: 'POST',
-    url: '/createAddress',
-    status: 201,
-    response: 'fixture:checkout/paypal/create-address.json'
-  }).as('createAddress')
-
-  cy.route({
-    method: 'GET',
-    url: '/getShippingMethods',
-    status: 200,
-    response: 'fixture:cart/get-shipping-methods.json'
-  }).as('getShippingMethods')
-
-  cy.route({
-    method: 'POST',
-    url: '/setCartBillingAddress',
-    status: 201,
-    response: 'fixture:checkout/paypal/set-cart-billing-address.json'
-  }).as('setCartBillingAddress')
-
-  cy.route({
-    method: 'POST',
-    url: '/setCartShippingAddress',
-    status: 201,
-    response: 'fixture:checkout/paypal/set-cart-shipping-address.json'
-  }).as('setCartShippingAddress')
-
-  cy.route({
-    method: 'POST',
-    url: '/setShippingMethod',
-    status: 200,
-    response: 'fixture:checkout/paypal/set-shipping-method.json'
-  }).as('setShippingMethod')
-
+  // Stub patch PayPal order request
   cy.route({
     method: 'POST',
     url: '/patchPayPalOrder',
@@ -151,28 +102,28 @@ Cypress.Commands.add('navigateToReviewCheckoutPage', () => {
     response: {}
   }).as('patchPayPalOrder')
 
-  // Add item to cart and proceed to checkout
-  cy.addVariantToCartAndProceedToCheckout({ variantId: '27103', quantity: 1 })
-  // Check we are on the Payment Method Page
-  cy.url().should('includes', '/checkout/payment-method')
-  // Wait for PayPal script and page to be loaded
-  cy.wait(3000)
-  // Click the test PayPal btn
-  cy.contains(/Test PayPal Button/i).click()
-  // Check its the Shipping Methods Page
-  cy.url().should('includes', '/checkout/shipping-method')
+  // Navigate to shipping method checkout page
+  cy.navigateToShippingMethodCheckoutPage()
   // Wait for page to fully load
   cy.wait(3000)
   // Navigate to the Review Page
   cy.contains(/Review Your Order/i).click()
+  // Check patch PayPal order request has been made
+  cy.wait('@patchPayPalOrder')
   // Check its the Review Page Page
   cy.url().should('includes', '/checkout/review')
   // Check Payment Details section header is present
   cy.get('.c-payment__header').contains(/Payment Details/i)
 })
 
-Cypress.Commands.add('mockSuccessfulAuthorizePayPalOrderRequest', () => {
+/**
+ * Stubs the authorize PayPal order request
+ */
+Cypress.Commands.add('stubSuccessfulAuthorizePayPalOrderRequest', () => {
+  // Setup server
   cy.server()
+
+  // Stub authorize PayPal order request
   cy.route('POST', '/authorizePayPalOrder', {
     status: 201,
     data: {
