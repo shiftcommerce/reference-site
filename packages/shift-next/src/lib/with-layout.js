@@ -1,11 +1,11 @@
 // Lib
 import React from 'react'
 import qs from 'qs'
-import Cookies from 'js-cookie'
 
 // Config
 import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
+import { getCartLineItemCookie } from './handle-cookies'
 
 // Components
 import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
@@ -64,8 +64,7 @@ export default function withLayout (Component) {
     }
 
     getCartItemsCount () {
-      // @todo is this the right place to look in the cookie??
-      const lineItemsCount = Cookies.get('lineItemsCount') || 0
+      const lineItemsCount = getCartLineItemCookie()
       this.props.dispatch(setCartItemsCount(lineItemsCount))
     }
 

@@ -186,7 +186,6 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
-        lineItemsCount={0}
         {...initialState} />
      , { disableLifecycleMethods: true })
 
@@ -230,7 +229,6 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
-        lineItemsCount={2}
         {...initialState} />
       , { disableLifecycleMethods: true })
     // Assert
