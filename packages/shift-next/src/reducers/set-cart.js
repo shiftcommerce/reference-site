@@ -1,6 +1,7 @@
 // actionTypes
 import * as types from '../actions/action-types'
-import Cookies from 'js-cookie'
+
+import { setCartLineItemCookie } from '../lib/handle-cookies'
 
 const initialState = {
   miniBagDisplayed: false
@@ -25,15 +26,7 @@ const calculateCartLineItemsCount = (cart) => {
   return cart
 }
 
-/**
- * Set the lineItemsCount cookie
- * @param  {Number} total
- */
-const setLineItemCookie = (total) => {
-  Cookies.set('lineItemsCount', total, { path: '/' })
-}
-
-export default function setCart (state = initialState , action) {
+export default function setCart (state = initialState, action) {
   let newState = Object.assign({}, state)
 
   switch (action.type) {
@@ -42,7 +35,7 @@ export default function setCart (state = initialState , action) {
 
     case types.CART_UPDATED:
       const newCart = calculateCartLineItemsCount(action.payload)
-      setLineItemCookie(newCart.line_items_count)
+      setCartLineItemCookie(newCart.line_items_count)
       return Object.assign({}, newState, newCart)
 
     case types.SET_ORDER:
