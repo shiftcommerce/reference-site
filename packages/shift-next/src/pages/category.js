@@ -146,14 +146,20 @@ class CategoryPage extends Component {
    * @return {String} - HTML markup for the component
    */
   renderLoaded (category) {
-    const { title, facets } = category
+    const { title, search_facets, default_sort_order } = category
+    const { algoliaIndexName } = Config.get()
 
     return (
       <Fragment>
         <this.Head>
           <title>{ suffixWithStoreName(title) }</title>
         </this.Head>
-        <ProductListing title={title} indexName={Config.get().algoliaIndexName} facets={facets} />
+        <ProductListing
+          title={title}
+          indexName={`${algoliaIndexName}_${default_sort_order}`}
+          indexNameWithoutDefaultSortOrder={algoliaIndexName}
+          facets={search_facets}
+        />
       </Fragment>
     )
   }

@@ -32,7 +32,7 @@ export class ProductListing extends Component {
   }
 
   render () {
-    const { title, facets, indexName } = this.props
+    const { title, facets, indexName, indexNameWithoutDefaultSortOrder } = this.props
 
     return (
       <>
@@ -42,7 +42,11 @@ export class ProductListing extends Component {
           <SearchFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
-              <ProductMenuOptions indexName={indexName} toggleFiltering={this.toggleFiltering} />
+              <ProductMenuOptions
+                indexName={indexName}
+                indexNameWithoutDefaultSortOrder={indexNameWithoutDefaultSortOrder}
+                toggleFiltering={this.toggleFiltering}
+              />
             </div>
             <SearchHits />
           </div>
