@@ -1,6 +1,7 @@
 // Lib
 import React from 'react'
 import qs from 'qs'
+import Cookies from 'js-cookie'
 
 // Config
 import Config from './config'
@@ -10,10 +11,7 @@ import InitialPropsDelegator from './initial-props-delegator'
 import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
 
 // Actions
-import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'
-
-// Lib
-import lineItemsCount from './line-items-count'
+import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity, setCartItemsCount } from '../actions/cart-actions'
 
 import { connect } from 'react-redux'
 import { withRouter } from 'next/router'
@@ -35,6 +33,7 @@ export default function withLayout (Component) {
       this.deleteItem = this.deleteItem.bind(this)
       this.toggleMiniBag = this.toggleMiniBag.bind(this)
       this.onItemQuantityUpdated = this.onItemQuantityUpdated.bind(this)
+      this.getCartItemsCount = this.getCartItemsCount.bind(this)
     }
 
     componentDidMount () {
@@ -64,12 +63,10 @@ export default function withLayout (Component) {
       this.props.dispatch(toggleMiniBag(displayed))
     }
 
-    /**
-     * Gets the line item count from the cookie or the cart
-     * @return {Number}
-     */
-    getLineItemsCount () {
-      return lineItemsCount(this.props.cart)
+    getCartItemsCount () {
+      // @todo is this the right place to look in the cookie??
+      const lineItemsCount = Cookies.get('lineItemsCount') || 0
+      this.props.dispatch(setCartItemsCount(lineItemsCount))
     }
 
     /**
@@ -97,6 +94,7 @@ export default function withLayout (Component) {
 
     render () {
       const { cart, router, query, search, menu, loggedIn, ...otherProps } = this.props
+      const cartItemCount = this.props.cart_item_count
       const skipHeader = !router.pathname.includes('/checkout')
       const AppLayout = Config.get().Layout || Layout
 
@@ -116,7 +114,8 @@ export default function withLayout (Component) {
           toggleMiniBag={this.toggleMiniBag}
           onItemQuantityUpdated={this.onItemQuantityUpdated}
           readCart={this.readCart}
-          lineItemsCount={this.getLineItemsCount()}
+          lineItemsCount={cartItemCount}
+          getCartItemsCount={this.getCartItemsCount}
         >
           <Component {...otherProps} />
         </AppLayout>
@@ -124,8 +123,8 @@ export default function withLayout (Component) {
     }
   }
 
-  function mapStateToProps ({ cart, account: { loggedIn }, menu, search }) {
-    return { cart, loggedIn, menu, search }
+  function mapStateToProps ({ cart, account: { loggedIn }, menu, search, cart_item_count }) {
+    return { cart, loggedIn, menu, search, cart_item_count }
   }
 
   return connect(mapStateToProps)(withRouter(LayoutWrapper))

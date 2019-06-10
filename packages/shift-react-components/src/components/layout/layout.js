@@ -24,6 +24,11 @@ export class Layout extends Component {
     this.handleLoadMinibag = this.handleLoadMinibag.bind(this)
   }
 
+  componentDidMount () {
+    const { getCartItemsCount } = this.props
+    getCartItemsCount()
+  }
+
   renderNav () {
     return (
       <span className='o-nav u-visible-d'>

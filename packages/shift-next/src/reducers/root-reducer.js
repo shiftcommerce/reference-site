@@ -12,6 +12,7 @@ import setOrders from './set-orders'
 import setProduct from './set-product'
 import setRegistration from './set-registration'
 import setSearchState from './set-search-state'
+import setCartItemCount from './set-cart-item-count'
 import globalReducer from './global-reducer'
 
 const rootReducer = combineReducers({
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   orders: setOrders,
   product: setProduct,
   registration: setRegistration,
-  search: setSearchState
+  search: setSearchState,
+  cart_item_count: setCartItemCount
 })
 
 export default rootReducer
