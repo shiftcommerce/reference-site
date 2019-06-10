@@ -11,6 +11,10 @@ const initialState = {
  * @return {Object}
  */
 const calculateCartLineItemsCount = (cart) => {
+  if (!cart.line_items) {
+    return cart
+  }
+
   if (cart.line_items.length === 0) {
     cart.line_items_count = 0
   } else {
