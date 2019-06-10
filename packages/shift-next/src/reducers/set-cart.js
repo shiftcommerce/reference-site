@@ -3,7 +3,8 @@ import * as types from '../actions/action-types'
 import Cookies from 'js-cookie'
 
 const initialState = {
-  miniBagDisplayed: false
+  miniBagDisplayed: false,
+  line_items_count: 0
 }
 
 /**

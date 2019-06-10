@@ -2,7 +2,10 @@ import setCart from '../../src/reducers/set-cart'
 import * as actionTypes from '../../src/actions/action-types'
 
 test('sets initial State', () => {
-  expect(setCart(undefined, { type: 'ANYTHING' })).toEqual({ miniBagDisplayed: false })
+  expect(setCart(undefined, { type: 'ANYTHING' })).toEqual({
+    miniBagDisplayed: false,
+    line_items_count: 0
+  })
 })
 
 test('returns an empty cart when SET_ORDER is dispatched', () => {
