@@ -4,15 +4,34 @@ import Cookies from 'js-cookie'
 
 const initialState = 0
 
-export default function setCartItemCount (state = initialState , action) {
+/**
+ * Set the lineItemsCount cookie
+ * @param  {Number} total
+ */
+const setLineItemCookie = (total) => {
+  Cookies.set('lineItemsCount', total, { path: '/' })
+}
+
+/**
+ * Set and return the total items in the cart
+ * @param  {Object} state
+ * @param  {Object} action
+ * @return {Number} - The total items in the cart
+ */
+export default function setCartItemCount (state = initialState, action) {
   switch (action.type) {
     case types.SET_CART_ITEMS_COUNT:
       return action.count
 
     case types.CART_UPDATED:
-      const reducer = (accumulator, currentValue) => accumulator + currentValue
-      const total = action.payload.line_items.map(item => item.unit_quantity).reduce(reducer)
-      Cookies.set('lineItemsCount', total, { path: '/' })
+      // If there are no line items, return zero
+      if (action.payload.line_items_count === 0) {
+        setLineItemCookie(0)
+        return 0
+      }
+
+      const total = action.payload.line_items.map(item => item.unit_quantity).reduce((accumulator, currentValue) => accumulator + currentValue)
+      setLineItemCookie(total)
       return total
 
     case types.SET_ORDER:
