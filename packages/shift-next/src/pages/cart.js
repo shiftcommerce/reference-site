@@ -53,6 +53,9 @@ class CartPage extends Component {
   }
 
   async componentDidMount () {
+    // Get the cart when the page is loaded
+    await this.props.dispatch(readCart())
+
     if (this.state.loading) {
       const cheapestShipping = (await this.fetchShippingMethods()).sort((method1, method2) => method1.total - method2.total)[0]
 

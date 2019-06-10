@@ -20,7 +20,6 @@ import { CouponForm } from '@shiftcommerce/shift-react-components/src/components
 // Actions
 import {
   readCart,
-  updateLineItemQuantity,
   deleteLineItem,
   submitCoupon,
   setAPIError

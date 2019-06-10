@@ -90,7 +90,7 @@ module.exports = app.prepare().then(() => {
     }
 
     const directRouting = async (page) => {
-      if (page.status === 200 && page.data.data.length !== 0) {
+      if (page && page.status === 200 && page.data.data.length !== 0) {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
@@ -106,7 +106,7 @@ module.exports = app.prepare().then(() => {
         }
       }
 
-      if ([301, 302].includes(page.status)) {
+      if (page && [301, 302].includes(page.status)) {
         return res.redirect(page.status, page.redirect.destination)
       }
 
