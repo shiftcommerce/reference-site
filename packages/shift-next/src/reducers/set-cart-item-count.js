@@ -24,15 +24,8 @@ export default function setCartItemCount (state = initialState, action) {
       return action.count
 
     case types.CART_UPDATED:
-      // If there are no line items, return zero
-      if (action.payload.line_items_count === 0) {
-        setLineItemCookie(0)
-        return 0
-      }
-
-      const total = action.payload.line_items.map(item => item.unit_quantity).reduce((accumulator, currentValue) => accumulator + currentValue)
-      setLineItemCookie(total)
-      return total
+      setLineItemCookie(action.payload.line_items_count)
+      return action.payload.line_items_count
 
     case types.SET_ORDER:
       return 0
