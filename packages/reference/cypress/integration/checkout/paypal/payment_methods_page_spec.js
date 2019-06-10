@@ -2,16 +2,13 @@ describe('Checkout', () => {
   describe('PayPal', () => {
     context('Navigating To Payment Methods Page', () => {
       beforeEach(() => {
-        // Stub requests
+        // Setup server
         cy.server()
 
-        cy.route({
-          method: 'POST',
-          url: '**/1/indexes/**',
-          status: 200,
-          response: 'fixture:search/empty-search.json'
-        }).as('emptySearch')
+        // Uses custom command - Cypress/support/commands/empty-search.js
+        cy.emptySearch()
 
+        // Stub get cart request
         cy.route({
           method: 'GET',
           url: '/getCart',
@@ -19,6 +16,7 @@ describe('Checkout', () => {
           response: 'fixture:cart/get-cart-with-two-line-items.json'
         }).as('getCart')
 
+        // Stub get shipping methods request
         cy.route({
           method: 'GET',
           url: '/getShippingMethods',
@@ -72,7 +70,7 @@ describe('Checkout', () => {
       })
 
       it('allows customers to apply a promotion code', () => {
-        // Stub  coupon and cart requests
+        // Stub coupon and cart requests
         cy.route({
           method: 'POST',
           url: '/addCartCoupon',
@@ -80,6 +78,7 @@ describe('Checkout', () => {
           response: 'fixture:checkout/paypal/add-valid-coupon.json'
         }).as('addCartCoupon')
 
+        // Stub cart with single line item and coupon request
         cy.route({
           method: 'GET',
           url: '/getCart',
@@ -103,7 +102,7 @@ describe('Checkout', () => {
       })
 
       it('renders errors when a promotion code is invalid', () => {
-        // Stub coupon requests
+        // Stub invalid coupon requests
         cy.route({
           method: 'POST',
           url: '/addCartCoupon',

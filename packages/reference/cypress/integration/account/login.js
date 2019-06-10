@@ -2,7 +2,6 @@ describe('My Account', () => {
   describe('Login', () => {
     context('Successful Login', () => {
       it('routes us to the my account page with valid credentials', () => {
-        // Clear search
         // Uses custom command - Cypress/support/commands/empty-search.js
         cy.emptySearch()
 
@@ -20,13 +19,13 @@ describe('My Account', () => {
 
     context('Unsuccessful Login', () => {
       it('renders error message on login failure', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
-        // Clear search
         // Uses custom command - Cypress/support/commands/empty-search.js
         cy.emptySearch()
 
+        // Stub invalid login request
         cy.route({
           method: 'POST',
           url: '/login',

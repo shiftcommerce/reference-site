@@ -1,16 +1,13 @@
 describe('Checkout', () => {
   describe('Stripe', () => {
     it('Checks a guest user out', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
-      cy.route({
-        method: 'POST',
-        url: '**/1/indexes/**',
-        status: 200,
-        response: 'fixture:search/empty-search.json'
-      }).as('emptySearch')
+      // Uses custom command - Cypress/support/commands/empty-search.js
+      cy.emptySearch()
 
+      // Stub create order request
       cy.route({
         method: 'POST',
         url: '/createOrder',
@@ -18,6 +15,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/stripe/create-order.json'
       }).as('createOrder')
 
+      // Stub cart request with line item
       cy.route({
         method: 'GET',
         url: '/getCart',
@@ -25,6 +23,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/stripe/cart-with-line-item.json'
       }).as('getCart')
 
+      // Stub create address request
       cy.route({
         method: 'POST',
         url: '/createAddress',
@@ -32,6 +31,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/create-address.json'
       }).as('createAddress')
 
+      // Stub get shipping methods request
       cy.route({
         method: 'GET',
         url: '/getShippingMethods',
@@ -39,6 +39,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/get-shipping-methods.json'
       }).as('getShippingMethods')
 
+      // Stub set cart shipping address request
       cy.route({
         method: 'POST',
         url: '/setCartShippingAddress',
@@ -46,6 +47,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/set-cart-shipping-address.json'
       }).as('setCartShippingAddress')
 
+      // Stub set shipping method request
       cy.route({
         method: 'POST',
         url: '/setShippingMethod',
@@ -53,6 +55,7 @@ describe('Checkout', () => {
         response: 'fixture:checkout/set-shipping-method.json'
       }).as('setShippingMethod')
 
+      // Stub set cart billing address request
       cy.route({
         method: 'POST',
         url: '/setCartBillingAddress',

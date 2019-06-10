@@ -1,15 +1,10 @@
 describe('Minibag', () => {
   beforeEach(() => {
-    // Stub requests
+    // Setup server
     cy.server()
 
-    // Stub empty algolia request
-    cy.route({
-      method: 'POST',
-      url: '**/1/indexes/**',
-      status: 200,
-      response: 'fixture:search/empty-search.json'
-    }).as('emptySearch')
+    // Uses custom command - Cypress/support/commands/empty-search.js
+    cy.emptySearch()
 
     // Stub shipping methods request
     cy.route({
@@ -19,7 +14,7 @@ describe('Minibag', () => {
       response: 'fixture:cart/get-shipping-methods.json'
     }).as('getShippingMethods')
 
-    // stub get cart request
+    // Stub get cart request
     cy.route({
       method: 'GET',
       url: '/getCart',
@@ -27,7 +22,7 @@ describe('Minibag', () => {
       response: 'fixture:cart/get-cart-with-line-item.json'
     }).as('getCart')
 
-    // stub get products
+    // Stub get products
     cy.route({
       method: 'GET',
       url: '/getProduct/*',
@@ -35,6 +30,7 @@ describe('Minibag', () => {
       response: 'fixture:products/clock-computer.json'
     }).as('getProduct')
 
+    // Stub add to cart request
     cy.route({
       method: 'POST',
       url: '/addToCart*',
@@ -98,6 +94,7 @@ describe('Minibag', () => {
     cy.visit('/')
     cy.contains('Basket').click()
 
+    // Stub update line item quantity request
     cy.route({
       method: 'POST',
       url: '/updateLineItem',
@@ -108,6 +105,7 @@ describe('Minibag', () => {
     // Update the product's quantity with the dropdown
     cy.get('.c-minibag__quantity').select('3')
 
+    // Check update line item quantity request has been made
     cy.wait('@updateQuantity')
       .its('request.body')
       .should('include', {

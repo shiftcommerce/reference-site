@@ -22,9 +22,10 @@ describe('My Account', () => {
       })
 
       it('updates the account first name', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
+        // Stub update customer first name request
         cy.route({
           method: 'POST',
           url: '/updateCustomerAccount',
@@ -57,9 +58,10 @@ describe('My Account', () => {
       })
 
       it('updates the account last name', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
+        // Stub update customer last name request
         cy.route({
           method: 'POST',
           url: '/updateCustomerAccount',
@@ -92,9 +94,10 @@ describe('My Account', () => {
       })
 
       it('updates the account email', () => {
-        // Stub requests
+       // Setup server
         cy.server()
 
+        // Stub update customer email request
         cy.route({
           method: 'POST',
           url: '/updateCustomerAccount',
@@ -204,9 +207,10 @@ describe('My Account', () => {
       })
 
       it('renders a validation message if email already exists in platform', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
+        // Stub invalid update customer email request
         cy.route({
           method: 'POST',
           url: '/updateCustomerAccount',

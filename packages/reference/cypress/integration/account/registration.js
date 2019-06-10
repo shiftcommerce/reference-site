@@ -1,16 +1,16 @@
 describe('My Account', () => {
   describe('Registration', () => {
     beforeEach(() => {
-      // Uses custom command
-      // Cypress/support/commands/address-book.js
+      // Uses custom command - Cypress/support/commands/empty-search.js
       cy.emptySearch()
     })
 
     context('valid input', () => {
       it('routes us to the my account page with a valid submission', () => {
-        // stub requests
+        // Setup server
         cy.server()
 
+        // Stub account registration request
         cy.route({
           method: 'POST',
           url: '/register',
@@ -18,6 +18,7 @@ describe('My Account', () => {
           response: 'fixture:account/registration.json'
         }).as('postRegistration')
 
+        // Stub get account request
         cy.route({
           method: 'GET',
           url: '/getAccount',
@@ -25,6 +26,7 @@ describe('My Account', () => {
           response: 'fixture:account/get-account.json'
         }).as('getAccount')
 
+        // Stub get addressbook request
         cy.route({
           method: 'GET',
           url: '/getAddressBook',
@@ -69,9 +71,10 @@ describe('My Account', () => {
 
     context('invalid input', () => {
       it('renders a message when the email is already in use', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
+        // Stub invalid account registration request
         cy.route({
           method: 'POST',
           url: '/register',

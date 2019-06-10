@@ -1,7 +1,7 @@
 describe('Search', () => {
   describe('Price Filters', () => {
     it('Filtering by price sends the correct request', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
       // Stub empty algolia request

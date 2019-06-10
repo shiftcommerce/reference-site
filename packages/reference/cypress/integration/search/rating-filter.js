@@ -1,16 +1,11 @@
 describe('Search', () => {
   describe('Rating Filters', () => {
     beforeEach(() => {
-      // Stub requests
+      // Setup server
       cy.server()
 
-      // Stub initial empty algolia request
-      cy.route({
-        method: 'POST',
-        url: '**/1/indexes/**',
-        status: 200,
-        response: 'fixture:search/empty-search.json'
-      }).as('emptySearch')
+      // Uses custom command - Cypress/support/commands/empty-search.js
+      cy.emptySearch()
     })
 
     it('sends the correct request', () => {

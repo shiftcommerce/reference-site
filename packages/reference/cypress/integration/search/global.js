@@ -1,9 +1,10 @@
 describe('Search', () => {
   describe('Global Search', () => {
     it('sends the correct request to the server from the client', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
+      // Stub product search request
       cy.route({
         method: 'POST',
         url: '*',

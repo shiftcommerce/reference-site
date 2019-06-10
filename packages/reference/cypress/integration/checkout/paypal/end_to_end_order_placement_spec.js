@@ -2,17 +2,13 @@ describe('Checkout', () => {
   describe('PayPal', () => {
     context('End To End Order Placement', () => {
       it('successfully places an order', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
-        // Stub out the Algolia request
-        cy.route({
-          method: 'POST',
-          url: '**/1/indexes/**',
-          status: 200,
-          response: 'fixture:search/empty-search.json'
-        }).as('emptySearch')
+        // Uses custom command - Cypress/support/commands/empty-search.js
+        cy.emptySearch()
 
+        // Stub get shipping methods request
         cy.route({
           method: 'GET',
           url: '/getShippingMethods',
@@ -20,6 +16,7 @@ describe('Checkout', () => {
           response: 'fixture:cart/get-shipping-methods.json'
         }).as('getShippingMethods')
 
+        // Stub get cart request
         cy.route({
           method: 'GET',
           url: '/getCart',
@@ -27,6 +24,7 @@ describe('Checkout', () => {
           response: 'fixture:cart/get-cart-with-line-item.json'
         }).as('getCart')
 
+        // Stub add cart coupon request
         cy.route({
           method: 'POST',
           url: '/addCartCoupon',
@@ -58,6 +56,7 @@ describe('Checkout', () => {
         // Click apply button
         cy.get('.c-coupon-form__button').click()
 
+        // Stub create order request
         cy.route({
           method: 'POST',
           url: '/createOrder**',
@@ -71,6 +70,7 @@ describe('Checkout', () => {
         // Check create order request has been made
         cy.wait('@checkout/paypal-create-order')
 
+        // Stub get empty cart request
         cy.route({
           method: 'GET',
           url: '/getCart',

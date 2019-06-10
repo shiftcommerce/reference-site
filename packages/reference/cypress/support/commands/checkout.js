@@ -19,13 +19,8 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
   // Setup server
   cy.server()
 
-  // Stub empty search request
-  cy.route({
-    method: 'POST',
-    url: '**/1/indexes/**',
-    status: 200,
-    response: 'fixture:search/empty-search.json'
-  }).as('emptySearch')
+  // Uses custom command - Cypress/support/commands/empty-search.js
+  cy.emptySearch()
 
   // Stub get cart request
   cy.route({

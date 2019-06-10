@@ -1,7 +1,7 @@
 describe('Search', () => {
   describe('Pagination', () => {
     it('load more sends correct requests, load more button hides when no more products, correct product counts', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
       // Setup initial request (returns all products)

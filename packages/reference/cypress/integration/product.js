@@ -91,9 +91,10 @@ describe('Product page', () => {
 
   context('Add To Bag', () => {
     it('renders a minibag when a variant is added to the cart', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
+      // Stub add to cart request
       cy.route({
         method: 'POST',
         url: '/addToCart',

@@ -2,15 +2,11 @@ describe('Search', () => {
   describe('Sorting Results', () => {
     context('global search', () => {
       it('renders products using the default sorting and sends the correct requests', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
-        cy.route({
-          method: 'POST',
-          url: '**/1/indexes/**',
-          status: 200,
-          response: 'fixture:search/empty-search.json'
-        }).as('emptySearch')
+        // Uses custom command - Cypress/support/commands/empty-search.js
+        cy.emptySearch()
 
         cy.route({
           method: 'POST',
@@ -86,7 +82,7 @@ describe('Search', () => {
 
     context('category page', () => {
       it('renders products using the default sorting and sends the correct requests', () => {
-        // Stub requests
+        // Setup server
         cy.server()
 
         // Navigate to category page

@@ -1,7 +1,7 @@
 describe('Search', () => {
   describe('Clearing Filters', () => {
     beforeEach(() => {
-      // Stub requests
+      // Setup server
       cy.server()
 
       // Setup initial request (returns all products)
