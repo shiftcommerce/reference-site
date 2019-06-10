@@ -11,14 +11,6 @@ describe('Static pages', () => {
       response: 'fixture:slug/phones.json'
     }).as('getSlug/phones')
 
-    // Stub  homepage slug request
-    cy.route({
-      method: 'GET',
-      url: '/getSlug/**/homepage**',
-      status: 200,
-      response: 'fixture:slug/homepage.json'
-    }).as('getSlug/homepage')
-
     // Uses custom command - Cypress/support/commands/empty-search.js
     cy.emptySearch()
 

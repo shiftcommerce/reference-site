@@ -24,12 +24,9 @@ describe('Checkout', () => {
           response: 'fixture:cart/get-shipping-methods.json'
         }).as('getShippingMethods')
 
-        // Add first item to cart
-        // Uses custom command - Cypress/support/commands/cart.js
-        cy.addVariantToCart({ variantId: '27104', quantity: 1 })
         // Add second item to cart and proceed to checkout
         // Uses custom command - Cypress/support/commands/checkout.js
-        cy.addVariantToCartAndProceedToCheckout({ variantId: '27103', quantity: 1 })
+        cy.addVariantToCartAndProceedToCheckout()
         // Check we are on the Payment Method Page
         cy.url().should('includes', '/checkout/payment-method')
       })

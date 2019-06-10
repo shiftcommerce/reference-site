@@ -1,26 +1,31 @@
 /**
  * Adds variant to cart
- * @param {integer} variantId - the variant ID
- * @param {integer} quantity - the required quantity
  */
-Cypress.Commands.add('addVariantToCart', ({ variantId, quantity }) => {
-  // visit homepage so we can get cookie
-  cy.visit('/').then(() => {
-    // fetch cookies
-    cy.getCookies().then((cookies) => {
-      const requestOption = {
-        method: 'POST',
-        url: '/addToCart',
-        body: { variantId, quantity },
-        headers: {
-          // extract and set csrf token
-          'x-xsrf-token': cookies.find((cookie) => { return cookie.name === '_csrf' }).value
-        }
-      }
-      // make request to add cart
-      return cy.request(requestOption)
-    })
-  })
+Cypress.Commands.add('addVariantToCart', () => {
+  // Navigate to PDP
+  cy.visit('/products/clock_computer')
+  // Select the instock variant
+  cy.contains(/Clock Computer 13'' - £799.00/i).click()
+  // Add item to cart
+  cy.contains(/Add To Basket/i).click()
+})
+
+/**
+ * Adds variants to cart
+ */
+Cypress.Commands.add('addVariantsToCart', () => {
+  // Navigate to PDP
+  cy.visit('/products/clock_computer')
+  // Select the first variant
+  cy.contains(/Clock Computer 13'' - £799.00/i).click()
+  // Add item to cart
+  cy.contains(/Add To Basket/i).click()
+  // Click the cross to close minibag
+  cy.get('.c-minibag__dropdown-cross').click()
+  // Select the second variant
+  cy.contains(/Clock Computer 15'' - £999.00/i).click()
+  // Add item to cart
+  cy.contains(/Add To Basket/i).click()
 })
 
 /**

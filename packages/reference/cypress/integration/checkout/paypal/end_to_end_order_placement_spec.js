@@ -8,6 +8,9 @@ describe('Checkout', () => {
         // Uses custom command - Cypress/support/commands/empty-search.js
         cy.emptySearch()
 
+        // Uses custom command - Cypress/support/commands/checkout.js
+        cy.stubSuccessfulAuthorizePayPalOrderRequest()
+
         // Stub get shipping methods request
         cy.route({
           method: 'GET',
@@ -32,29 +35,15 @@ describe('Checkout', () => {
           response: 'fixture:cart/add-cart-coupon.json'
         }).as('addCartCoupon')
 
-        // Stub successful PayPal order authorization
-        // Uses custom command - Cypress/support/commands/checkout.js
-        cy.stubSuccessfulAuthorizePayPalOrderRequest()
-
-        // Add item to cart and proceed to checkout
-        // Uses custom command - Cypress/support/commands/checkout.js
-        cy.addVariantToCartAndProceedToCheckout({ variantId: '27104', quantity: 1 })
-
-        // Check cart request has been made
-        cy.wait('@getCart')
-
         // Navigate to Review & Submit Checkout Page
         // Uses custom command - Cypress/support/commands/checkout.js
         cy.navigateToReviewCheckoutPage()
 
-        // Check the promotion form title
-        cy.get('.c-coupon-form__title').contains(/Promotion Code/i)
+        // Add promotion code
+        cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
 
-        // Enter a promotion code
-        cy.get('.c-coupon-form__input').type('TESTCOUPON')
-
-        // Click apply button
-        cy.get('.c-coupon-form__button').click()
+        // Check add promotion coupon request has been made
+        cy.wait('@addCartCoupon')
 
         // Stub create order request
         cy.route({
@@ -103,9 +92,6 @@ describe('Checkout', () => {
 
         // Check continue shopping button is present and click
         cy.get('.c-order__button--continue').click()
-
-        // Check cart request has been made
-        cy.wait('@getCart')
 
         // Check we are redirected to the homepage
         cy.contains(/Test Homepage Heading/i)

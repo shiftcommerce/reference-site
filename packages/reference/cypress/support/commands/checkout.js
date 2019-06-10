@@ -3,11 +3,20 @@
  * @param {integer} variantId - the variant ID
  * @param {integer} quantity - the required quantity
  */
-Cypress.Commands.add('addVariantToCartAndProceedToCheckout', ({ variantId, quantity }) => {
-  // Add a product to cart with an API call
-  cy.addVariantToCart({ variantId: variantId, quantity: quantity })
+Cypress.Commands.add('addVariantToCartAndProceedToCheckout', () => {
+  // Setup server
+  cy.server()
+  // Stub add to cart request
+  cy.route({
+    method: 'POST',
+    url: '/addToCart',
+    status: 200,
+    response: 'fixture:cart/add-clock-computer.json'
+  }).as('addToCart')
+  // Add multiple variants to cart
+  cy.addVariantsToCart()
   // visit cart page
-  cy.visit('/cart')
+  cy.contains(/View Shopping Basket/i).click()
   // Click the checkout button
   cy.get('.c-cart-summary-buttons__cta--proceed').click()
 })
@@ -71,7 +80,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
   }).as('setShippingMethod')
 
   // Add item to cart and proceed to checkout
-  cy.addVariantToCartAndProceedToCheckout({ variantId: '27103', quantity: 1 })
+  cy.addVariantToCartAndProceedToCheckout()
   // Check we are on the Payment Method Page
   cy.url().should('includes', '/checkout/payment-method')
   // Wait for PayPal script and page to be loaded
@@ -100,7 +109,7 @@ Cypress.Commands.add('navigateToReviewCheckoutPage', () => {
   // Navigate to shipping method checkout page
   cy.navigateToShippingMethodCheckoutPage()
   // Wait for page to fully load
-  cy.wait(3000)
+  cy.wait(2000)
   // Navigate to the Review Page
   cy.contains(/Review Your Order/i).click()
   // Check patch PayPal order request has been made

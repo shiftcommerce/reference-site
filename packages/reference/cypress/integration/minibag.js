@@ -36,7 +36,7 @@ describe('Minibag', () => {
       url: '/addToCart*',
       status: 200,
       response: 'fixture:cart/add-clock-computer.json'
-    }).as('fetchCategoryProducts')
+    }).as('addToCart')
   })
 
   it('Shows the minibag when adding an item to cart, hides the minibag when cross is clicked', () => {
@@ -88,11 +88,7 @@ describe('Minibag', () => {
   it('Updates the line item quantity with a dropdown', () => {
     // Add a product to cart with an API call
     // Uses custom command - Cypress/support/commands/cart.js
-    cy.addVariantToCart({ variantId: '27103', quantity: 1 })
-
-    // Open the minibag
-    cy.visit('/')
-    cy.contains('Basket').click()
+    cy.addVariantToCart()
 
     // Stub update line item quantity request
     cy.route({

@@ -63,15 +63,9 @@ describe('Checkout', () => {
         response: 'fixture:checkout/set-cart-billing-address.json'
       }).as('setCartBillingAddress')
 
-      // Start with an item in the cart
+      // Navigate to Checkout
       // Uses custom command - Cypress/support/commands/checkout.js
-      cy.addVariantToCart({ variantId: '27103', quantity: 1 })
-
-      // Go to the cart page
-      cy.visit('/cart')
-
-      // Start checkout
-      cy.get('.c-cart-summary-buttons__cta--proceed').click()
+      cy.addVariantToCartAndProceedToCheckout()
 
       // Check that the PayPal button is present
       cy.get('.paypal-buttons-context-iframe').contains('iframe')
