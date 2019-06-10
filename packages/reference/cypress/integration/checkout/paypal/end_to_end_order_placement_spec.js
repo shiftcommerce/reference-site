@@ -1,5 +1,6 @@
 describe('PayPal Checkout: End To End Order Placement', () => {
   it('successfully places an order', () => {
+    // Stub requests
     cy.server()
 
     // Stub out the Algolia request
@@ -32,14 +33,18 @@ describe('PayPal Checkout: End To End Order Placement', () => {
     }).as('addCartCoupon')
 
     // Mock successful PayPal order authorization
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.mockSuccessfulAuthorizePayPalOrderRequest()
 
     // Add item to cart and proceed to checkout
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.addVariantToCartAndProceedToCheckout({ variantId: '27104', quantity: 1 })
 
+    // Check cart request has been made
     cy.wait('@getCart')
 
     // Navigate to Review & Submit Checkout Page
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.navigateToReviewCheckoutPage()
 
     // Check the promotion form title
@@ -61,6 +66,9 @@ describe('PayPal Checkout: End To End Order Placement', () => {
     // Click place order button
     cy.contains(/Place Order/i).click()
 
+    // Check create order request has been made
+    cy.wait('@checkout/paypal-create-order')
+
     cy.route({
       method: 'GET',
       url: '/getCart',
@@ -68,6 +76,7 @@ describe('PayPal Checkout: End To End Order Placement', () => {
       response: 'fixture:cart/get-cart-empty.json'
     })
 
+    // Check authorise PayPal request has been made
     cy.wait('@authorizePayPalOrder')
 
     // Check that the order confirmation page is displayed
@@ -92,6 +101,9 @@ describe('PayPal Checkout: End To End Order Placement', () => {
 
     // Check continue shopping button is present and click
     cy.get('.c-order__button--continue').click()
+
+    // Check cart request has been made
+    cy.wait('@getCart')
 
     // Check we are redirected to the homepage
     cy.contains(/Test Homepage Heading/i)

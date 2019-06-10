@@ -1,7 +1,7 @@
 describe('Successful Login', () => {
   it('routes us to the my account page with valid credentials', () => {
-    // Uses custom command
-    // Cypress/support/commands/login.js
+    // Clear search
+    // Uses custom command - Cypress/support/commands/empty-search.js
     cy.emptySearch()
 
     cy.route({
@@ -11,14 +11,18 @@ describe('Successful Login', () => {
       response: 'fixture:account/get-address-book.json'
     }).as('getAddressBook')
 
+    // Uses custom command - Cypress/support/commands/login.js
     cy.loginToAccount()
   })
 })
 
 describe('Unsuccessful Login', () => {
   it('renders error message on login failure', () => {
+    // Stub requests
     cy.server()
 
+    // Clear search
+    // Uses custom command - Cypress/support/commands/empty-search.js
     cy.emptySearch()
 
     cy.route({
@@ -38,7 +42,11 @@ describe('Unsuccessful Login', () => {
     cy.get('input[name=email]').type('test@example.com')
     cy.get('input[name=password]').type('password123')
 
+    // Submit form
     cy.contains(/CONTINUE SECURELY/i).click()
+
+    // Check login request has been made
+    cy.wait('@postLogin')
 
     // Check we're still on the login page
     cy.contains(/Login/)
@@ -47,11 +55,12 @@ describe('Unsuccessful Login', () => {
   })
 
   it('displays/clears error message for invalid email address', () => {
+    // Clear fields
     cy.get('input[name=email]').clear()
     cy.get('input[name=password]').clear()
 
     // Enter login details
-    cy.get('input[name=email]').type('test@example').blur() // needs a tld
+    cy.get('input[name=email]').type('test@example').blur()
 
     // check for expected form field error
     cy.contains(/Invalid email/)
@@ -65,6 +74,7 @@ describe('Unsuccessful Login', () => {
   })
 
   it('displays errors for missing fields', () => {
+    // Clear fields
     cy.get('input[name=email]').clear()
     cy.get('input[name=password]').clear()
 

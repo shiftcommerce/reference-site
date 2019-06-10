@@ -1,5 +1,6 @@
 describe('Static pages', () => {
   before(() => {
+    // Stub requests
     cy.server()
 
     cy.route({

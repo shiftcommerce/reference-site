@@ -1,12 +1,15 @@
 describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
   beforeEach(() => {
     // Navigate to Shipping Method Checkout Page
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.navigateToShippingMethodCheckoutPage()
   })
 
   it('renders the page correctly', () => {
     // Check Payment Method section header is present
     cy.get('.c-payment-method__header').contains(/Payment Method/i)
+    // Check Payment Method Edit button is present
+    cy.get('.c-payment-method__header').contains(/Edit/i)
     // Check Shipping Address section header is present
     cy.get('.c-address-form__header').contains(/Shipping Address/i)
     // Check Shipping Method section header is present
@@ -26,16 +29,6 @@ describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
   })
 
   it('allows customers to change payment method', () => {
-    // Check Payment Method section header is present
-    cy.get('.c-payment-method__header').contains(/Payment Method/i)
-    // Check Payment Method Edit button is present
-    cy.get('.c-payment-method__header').contains(/Edit/i)
-    // Check that the shopping basket is not empty
-    cy.contains(/You have 1 item in your shopping basket/i)
-    // Check the line item in the shopping basket
-    cy.contains(/Clock Computer 13''/i)
-    // Check shipping methods are rendered
-    cy.contains(/Cheap Shipping/i)
     // Navigate to the Payment Method Page
     cy.get('.c-payment-method__header').contains(/Edit/i).click()
     // Check we have been redirected to the Payment Method Page
@@ -55,8 +48,6 @@ describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
   })
 
   it('does not allow customers to change shipping address', () => {
-    // Check Shipping Address section header is present
-    cy.get('.c-address-form__header').contains(/Shipping Address/i)
     // Check Shipping Address Edit button is not present
     cy.get('.c-address-form__header').find(/Edit/i).should('not.exist')
     // Check that the shopping basket is not empty
@@ -111,6 +102,7 @@ describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
     }).as('getCartWithCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
 
     // Check coupon request payload
@@ -140,6 +132,7 @@ describe('PayPal Checkout: Navigating To Shipping Methods Page', () => {
     }).as('addInvalidCartCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
 
     // Check coupon request payload

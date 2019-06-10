@@ -1,5 +1,7 @@
 describe('My Account - Addresses', () => {
   beforeEach(() => {
+    // Uses custom command
+    // Cypress/support/commands/address-book.js
     cy.setupAddressBookFixtures()
   })
 
@@ -10,6 +12,7 @@ describe('My Account - Addresses', () => {
     // Hover over my account to reveal dropdown
     cy.contains('My Account').trigger('mouseover')
 
+    // Click addresses tab
     cy.contains('Addresses').click()
 
     // Check the component renders & click add a new address
@@ -65,8 +68,10 @@ describe('My Account - Addresses', () => {
       response: 'fixture:account/get-address-book-updated.json'
     }).as('getAddressBook')
 
-    cy.contains(/UPDATE ADDRESS/i).click()
+    // Submit form
+    cy.contains(/Update Address/i).click()
 
+    // Check update address request has been made
     cy.wait('@updateAddress')
       .its('requestBody.data.attributes')
       .should('contain', {
@@ -74,7 +79,6 @@ describe('My Account - Addresses', () => {
         last_name: 'User'
       })
 
-    cy.wait(1000)
     cy.contains(/Address updated/i)
     cy.contains(/Test User/i)
   })
@@ -94,6 +98,8 @@ describe('My Account - Addresses', () => {
   it('can delete an address', () => {
     // Delete a saved address
     cy.contains(/Delete/i).click()
+
+    // Check delete address request has been made
     cy.wait('@deleteAddress')
 
     // Check there are no addresses to delete

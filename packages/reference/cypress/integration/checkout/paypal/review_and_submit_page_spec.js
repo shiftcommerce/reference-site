@@ -1,6 +1,7 @@
 describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
   beforeEach(() => {
     // Navigate to Review & Submit Checkout Page
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.navigateToReviewCheckoutPage()
   })
 
@@ -24,9 +25,7 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
   })
 
   it('allows customers to change payment method', () => {
-    // Check Payment Method section header is present
-    cy.get('.c-payment-method__header').contains(/Payment Method/i)
-    // Check Payment Method Edit button is present and Navigate to the Shipping Method Page
+    // Check Paym`ent Method Edit button is present and Navigate to the Shipping Method Page
     cy.get('.c-payment-method__header').contains(/Edit/i).click()
     // Check we have been redirected to the Payment Method Page
     cy.url().should('includes', '/checkout/payment-method')
@@ -52,8 +51,6 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
       status: 200,
       response: 'fixture:checkout/paypal/set-shipping-method.json'
     }).as('updateShippingMethod')
-    // Check Shipping Method section header is present
-    cy.get('.c-shipping-method__header').contains(/Shipping Method/i)
     // Check Shipping Method Edit button is present and Navigate to the Shipping Method Page
     cy.get('.c-shipping-method__header').contains(/Edit/i).click()
     // Check its the Shipping Methods Page
@@ -72,15 +69,11 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
   })
 
   it('does not allow customers to change shipping address', () => {
-    // Check Shipping Address section header is present
-    cy.get('.c-address-form__header').contains(/Shipping Address/i)
     // Check Shipping Address Edit button is not present
     cy.get('.c-address-form__header').find(/Edit/i).should('not.exist')
   })
 
   it('does not allow customers to change payment details', () => {
-    // Check Shipping Address section header is present
-    cy.get('.c-payment__header').contains(/Payment Details/i)
     // Check Shipping Address Edit button is not present
     cy.get('.c-payment__header').find(/Edit/i).should('not.exist')
   })
@@ -97,13 +90,14 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
     // Click place order button
     cy.contains(/Place Order/i).click()
 
-    // Check paypal request payload
+    // Check authorize paypal order request payload
     cy.wait('@authorizePayPalOrder').then((xhr) => {
       assert.include(xhr.requestBody.payPalOrderID, '9B29180392286445Y')
     })
 
     // Check error message is rendered
     cy.contains(/Sorry! There has been a problem authorising your payment. Please try again./i)
+
     // Check its the Review Page Page
     cy.url().should('includes', '/checkout/review')
   })
@@ -125,6 +119,7 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
     }).as('getCartWithCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
 
     // Check coupon request payload
@@ -154,6 +149,7 @@ describe('PayPal Checkout: Navigating To Review & Submit Page', () => {
     }).as('addInvalidCartCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
 
     // Check coupon request payload

@@ -1,5 +1,7 @@
 describe('Registration', () => {
   beforeEach(() => {
+    // Uses custom command
+    // Cypress/support/commands/address-book.js
     cy.emptySearch()
   })
 
@@ -66,6 +68,7 @@ describe('Registration', () => {
 
   context('invalid input', () => {
     it('renders a message when the email is already in use', () => {
+      // Stub requests
       cy.server()
 
       cy.route({
@@ -78,9 +81,6 @@ describe('Registration', () => {
       // Visit the account registration page
       cy.visit('/account/register')
 
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
-
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
       cy.get('input[name=lastName]').type('Doe')
@@ -92,6 +92,9 @@ describe('Registration', () => {
       // Click the create account button
       cy.contains(/CREATE ACCOUNT/i).click()
 
+      // Check request has been made
+      cy.wait('@postRegistrationError')
+
       // Check we're still on the login page
       cy.contains(/Create your account/)
       cy.contains(/There has been a problem processing your request/)
@@ -101,9 +104,6 @@ describe('Registration', () => {
     it('renders a validation message when first name is missing', () => {
       // Visit the account registration page
       cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
 
       // Enter new account details
       cy.get('input[name=firstName]').focus()
@@ -124,11 +124,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when last name is missing', () => {
-      // Visit the account registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -149,11 +151,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when email is invalid', () => {
-      // Visit the Account Registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -174,11 +178,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when email and email confirmation are missing', () => {
-      // Visit the Account Registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -202,11 +208,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when emails do not match', () => {
-      // Visit the Account Registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -227,11 +235,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when password is missing', () => {
-      // Visit the account registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -252,11 +262,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when password confirmation is missing', () => {
-      // Visit the account registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')
@@ -277,11 +289,13 @@ describe('Registration', () => {
     })
 
     it('renders a validation message when password confirmation does not match', () => {
-      // Visit the account registration page
-      cy.visit('/account/register')
-
-      // Check the account registration page was loaded
-      cy.contains(/Create your account/i)
+      // Clear fields
+      cy.get('input[name=firstName]').clear()
+      cy.get('input[name=lastName]').clear()
+      cy.get('input[name=email]').clear()
+      cy.get('input[name=confirmEmail]').clear()
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').clear()
 
       // Enter new account details
       cy.get('input[name=firstName]').type('John')

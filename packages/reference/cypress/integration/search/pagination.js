@@ -10,7 +10,7 @@ describe('Search', () => {
         url: '**/indexes/**',
         status: 200,
         response: 'fixture:search/default.json'
-      })
+      }).as('defaultSearch')
 
       // Goto search index
       cy.visit('/search')

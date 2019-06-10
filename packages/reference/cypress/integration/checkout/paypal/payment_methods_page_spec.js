@@ -25,8 +25,10 @@ describe('PayPal Checkout: Navigating To Payment Methods Page', () => {
     }).as('getShippingMethods')
 
     // Add first item to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addVariantToCart({ variantId: '27104', quantity: 1 })
     // Add second item to cart and proceed to checkout
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.addVariantToCartAndProceedToCheckout({ variantId: '27103', quantity: 1 })
     // Check we are on the Payment Method Page
     cy.url().should('includes', '/checkout/payment-method')
@@ -84,6 +86,7 @@ describe('PayPal Checkout: Navigating To Payment Methods Page', () => {
     }).as('getCartWithCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
 
     // Check coupon request payload
@@ -113,6 +116,7 @@ describe('PayPal Checkout: Navigating To Payment Methods Page', () => {
     }).as('addInvalidCartCoupon')
 
     // Click apply promotion to cart
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
 
     // Check coupon request payload

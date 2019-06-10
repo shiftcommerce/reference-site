@@ -1,9 +1,12 @@
 describe('Forgotten Password', () => {
   beforeEach(() => {
+    // Uses custom command
+    // Cypress/support/commands/empty-search.js
     cy.emptySearch()
   })
 
   it('sends the correct request to the server', () => {
+    // Stub requests
     cy.server()
 
     cy.route({
@@ -22,21 +25,27 @@ describe('Forgotten Password', () => {
     // Check that submitting the form with a valid email address shows the right message
     cy.get('input[name=email]').type('test@example.com').blur()
     cy.get('button[aria-label="Submit"]').click()
+
+    // Check request has been made
     cy.wait('@postForgot')
+
+    // Check flash message
     cy.contains(/Password reset email sent/)
   })
 
   it('validates the form', () => {
-    cy.visit('/account/forgotpassword')
-
-    // Check the login page was loaded
-    cy.contains(/Forgot Password/i)
+    // Clear field
+    cy.get('input[name=email]').clear()
 
     // validates bad email
     cy.get('input[name=email]')
       .type('test@example')
       .blur()
-    cy.contains(/Invalid email/) // error message
+    
+    // Check error message
+    cy.contains(/Invalid email/)
+
+    // Check submit buitton is disabled
     cy.get('button[aria-label="Submit"]').should('be.disabled')
 
     // validates good email
@@ -49,17 +58,24 @@ describe('Forgotten Password', () => {
 
     // validates required field
     cy.get('input[name=email]').clear().blur()
+  
+    // Check email validation message
     cy.contains(/Email is required/)
+
+    // Check submit button is disabled
     cy.get('button[aria-label="Submit"]').should('be.disabled')
   })
 })
 
 describe('Reset Password', () => {
   beforeEach(() => {
+    // Uses custom command
+    // Cypress/support/commands/empty-search.js
     cy.emptySearch()
   })
 
   it('sends the correct request to the server', () => {
+    // Stub requests
     cy.server()
 
     cy.route({
@@ -93,6 +109,7 @@ describe('Reset Password', () => {
   })
 
   it('displays error message on reset failure', () => {
+    // Stub requests
     cy.server()
 
     cy.route({
@@ -105,20 +122,22 @@ describe('Reset Password', () => {
     // Visit the Forgotten password page
     cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
 
-    // Check the login page was loaded
-    cy.contains(/Password Reset/i)
-
     // Enter new password
     cy.get('input[name=password]').type('password123')
     cy.get('input[name=confirmPassword]').type('password123')
     cy.get('button[aria-label="Submit"]').click()
 
+    // Check reset password request has been made
     cy.wait('@postReset')
+
+    // Check validation message
     cy.contains(/Wrong email\/reference\/token or password/)
   })
 
   it('validates the form correctly', () => {
-    cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
+    // Clear fields
+    cy.get('input[name=password]').clear()
+    cy.get('input[name=confirmPassword]').type('password123').clear()
 
     // should not complain with two valid matching password
     cy.get('input[name=password]').type('password123')

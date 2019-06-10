@@ -1,5 +1,6 @@
 describe('Stripe checkout', () => {
   it('Checks a guest user out', () => {
+    // Stub requests
     cy.server()
 
     cy.route({
@@ -59,6 +60,7 @@ describe('Stripe checkout', () => {
     }).as('setCartBillingAddress')
 
     // Start with an item in the cart
+    // Uses custom command - Cypress/support/commands/checkout.js
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
 
     // Go to the cart page
@@ -91,9 +93,16 @@ describe('Stripe checkout', () => {
 
     cy.url({ timeout: 10000 }).should('include', '/checkout/shipping-method')
 
+    // Check create address request has been made
     cy.wait('@createAddress')
+
+    // Check set cart shipping address request has been made
     cy.wait('@setCartShippingAddress')
+
+    // Check get shipping methods request has been made
     cy.wait('@getShippingMethods')
+
+    // Check set shipping method request has been made
     cy.wait('@setShippingMethod')
 
     // Proceed with the preselected shipping method

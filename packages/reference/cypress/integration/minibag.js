@@ -1,5 +1,6 @@
 describe('Minibag', () => {
   beforeEach(() => {
+    // Stub requests
     cy.server()
 
     // Stub empty algolia request
@@ -43,6 +44,7 @@ describe('Minibag', () => {
   })
 
   it('Shows the minibag when adding an item to cart, hides the minibag when cross is clicked', () => {
+    // Visit PDP
     cy.visit('/products/clock_computer')
 
     // Check that the minibag isn't displayed to start with
@@ -66,9 +68,7 @@ describe('Minibag', () => {
   })
 
   it('Shows the minibag when clicking the basket', () => {
-    // Check that the minibag isn't displayed to start with
-    cy.get('.c-minibag__dropdown').should('have.length', 0)
-
+    // Click basket navigation option 
     cy.contains('Basket').click()
 
     // Check that the minibag is displayed
@@ -79,6 +79,7 @@ describe('Minibag', () => {
   })
 
   it('Goes to cart page correctly', () => {
+    // Click basket navigation option 
     cy.contains('Basket').click()
 
     // Check that the minibag is empty
@@ -90,6 +91,7 @@ describe('Minibag', () => {
 
   it('Updates the line item quantity with a dropdown', () => {
     // Add a product to cart with an API call
+    // Uses custom command - Cypress/support/commands/cart.js
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
 
     // Open the minibag

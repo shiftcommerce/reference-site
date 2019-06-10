@@ -1,5 +1,7 @@
 describe('Details', () => {
   beforeEach(() => {
+    // Uses custom command
+    // Cypress/support/commands/empty-search.js
     cy.emptySearch()
   })
 

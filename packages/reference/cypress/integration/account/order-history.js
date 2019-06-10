@@ -3,6 +3,7 @@ describe('My Account page - Order History', () => {
     // Set loggedIn in cookie
     cy.setCookie('signedIn', 'true')
 
+    // Stub requests
     cy.server()
 
     // Stub empty algolia request

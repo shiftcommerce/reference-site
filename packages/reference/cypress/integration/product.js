@@ -2,6 +2,7 @@ describe('Product page', () => {
   context('Variants', () => {
     it('renders disabled add to basket button is no variant is selected', () => {
       // Navigate to the PDP
+      // Uses custom command - Cypress/support/commands/products.js
       cy.goToPdpFromPlp()
 
       // Check the add to cart button is disabled
