@@ -16,7 +16,10 @@ export function setSignedInCookie () {
  * @param  {Number} total
  */
 export function setCartLineItemCookie (total) {
-  Cookies.set(lineItemsCountLabel, total, { path: '/' })
+  Cookies.set(lineItemsCountLabel, total, {
+    path: '/',
+    secure: isSecure()
+  })
 }
 
 /**
