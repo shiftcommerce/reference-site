@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('price filters', () => {
+  describe('Price Filters', () => {
     it('Filtering by price sends the correct request', () => {
       // Stub requests
       cy.server()

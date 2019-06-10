@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('category page', () => {
+  describe('Category', () => {
     it('renders products correctly and sends correct request', () => {
       // Navigate to category
       // Uses custom command - Cypress/support/commands/category.js

@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('clearing filters', () => {
+  describe('Clearing Filters', () => {
     beforeEach(() => {
       // Stub requests
       cy.server()

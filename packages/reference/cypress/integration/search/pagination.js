@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('pagination', () => {
+  describe('Pagination', () => {
     it('load more sends correct requests, load more button hides when no more products, correct product counts', () => {
       // Stub requests
       cy.server()

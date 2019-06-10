@@ -1,5 +1,5 @@
 describe('Search', () => {
-  describe('sorting results', () => {
+  describe('Sorting Results', () => {
     context('global search', () => {
       it('renders products using the default sorting and sends the correct requests', () => {
         // Stub requests

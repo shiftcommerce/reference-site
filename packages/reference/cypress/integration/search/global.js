@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('global search', () => {
+  describe('Global Search', () => {
     it('sends the correct request to the server from the client', () => {
       // Stub requests
       cy.server()

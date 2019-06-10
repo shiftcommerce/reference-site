@@ -1,5 +1,5 @@
 describe('Search', () => {
-  context('rating filters', () => {
+  describe('Rating Filters', () => {
     beforeEach(() => {
       // Stub requests
       cy.server()

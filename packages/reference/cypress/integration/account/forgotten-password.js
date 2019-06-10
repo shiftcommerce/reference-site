@@ -1,171 +1,173 @@
-describe('Forgotten Password', () => {
-  beforeEach(() => {
-    // Uses custom command
-    // Cypress/support/commands/empty-search.js
-    cy.emptySearch()
-  })
+describe('My Account', () => {
+  describe('Forgotten Password', () => {
+    beforeEach(() => {
+      // Uses custom command
+      // Cypress/support/commands/empty-search.js
+      cy.emptySearch()
+    })
 
-  it('sends the correct request to the server', () => {
-    // Stub requests
-    cy.server()
+    it('sends the correct request to the server', () => {
+      // Stub requests
+      cy.server()
 
-    cy.route({
-      method: 'GET', // this is a GET for Reasons Unknown
-      url: '**forgotPassword**',
-      status: 201,
-      response: {}
-    }).as('postForgot')
+      cy.route({
+        method: 'GET', // this is a GET for Reasons Unknown
+        url: '**forgotPassword**',
+        status: 201,
+        response: {}
+      }).as('postForgot')
 
-    // Visit the Forgotten password page
-    cy.visit('/account/forgotpassword')
+      // Visit the Forgotten password page
+      cy.visit('/account/forgotpassword')
 
-    // Check the forgotten password page was loaded
-    cy.contains(/Forgot Password/i)
+      // Check the forgotten password page was loaded
+      cy.contains(/Forgot Password/i)
 
-    // Check that submitting the form with a valid email address shows the right message
-    cy.get('input[name=email]').type('test@example.com').blur()
-    cy.get('button[aria-label="Submit"]').click()
+      // Check that submitting the form with a valid email address shows the right message
+      cy.get('input[name=email]').type('test@example.com').blur()
+      cy.get('button[aria-label="Submit"]').click()
 
-    // Check request has been made
-    cy.wait('@postForgot')
+      // Check request has been made
+      cy.wait('@postForgot')
 
-    // Check flash message
-    cy.contains(/Password reset email sent/)
-  })
+      // Check flash message
+      cy.contains(/Password reset email sent/)
+    })
 
-  it('validates the form', () => {
-    // Clear field
-    cy.get('input[name=email]').clear()
+    it('validates the form', () => {
+      // Clear field
+      cy.get('input[name=email]').clear()
 
-    // validates bad email
-    cy.get('input[name=email]')
-      .type('test@example')
-      .blur()
+      // validates bad email
+      cy.get('input[name=email]')
+        .type('test@example')
+        .blur()
+      
+      // Check error message
+      cy.contains(/Invalid email/)
+
+      // Check submit buitton is disabled
+      cy.get('button[aria-label="Submit"]').should('be.disabled')
+
+      // validates good email
+      cy.get('input[name=email]')
+        .clear()
+        .type('test@example.com')
+        .blur()
+      cy.get('.o-form__input-field__error').should('be.empty') // no error message
+      cy.get('button[aria-label="Submit"]').should('be.enabled') // button re-enabled
+
+      // validates required field
+      cy.get('input[name=email]').clear().blur()
     
-    // Check error message
-    cy.contains(/Invalid email/)
+      // Check email validation message
+      cy.contains(/Email is required/)
 
-    // Check submit buitton is disabled
-    cy.get('button[aria-label="Submit"]').should('be.disabled')
-
-    // validates good email
-    cy.get('input[name=email]')
-      .clear()
-      .type('test@example.com')
-      .blur()
-    cy.get('.o-form__input-field__error').should('be.empty') // no error message
-    cy.get('button[aria-label="Submit"]').should('be.enabled') // button re-enabled
-
-    // validates required field
-    cy.get('input[name=email]').clear().blur()
-  
-    // Check email validation message
-    cy.contains(/Email is required/)
-
-    // Check submit button is disabled
-    cy.get('button[aria-label="Submit"]').should('be.disabled')
-  })
-})
-
-describe('Reset Password', () => {
-  beforeEach(() => {
-    // Uses custom command
-    // Cypress/support/commands/empty-search.js
-    cy.emptySearch()
+      // Check submit button is disabled
+      cy.get('button[aria-label="Submit"]').should('be.disabled')
+    })
   })
 
-  it('sends the correct request to the server', () => {
-    // Stub requests
-    cy.server()
+  describe('Reset Password', () => {
+    beforeEach(() => {
+      // Uses custom command
+      // Cypress/support/commands/empty-search.js
+      cy.emptySearch()
+    })
 
-    cy.route({
-      method: 'POST',
-      url: '/passwordReset',
-      status: 200,
-      response: 'fixture:account/reset-password-success-response.json'
-    }).as('postReset')
+    it('sends the correct request to the server', () => {
+      // Stub requests
+      cy.server()
 
-    // Visit the Forgotten password page
-    cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
+      cy.route({
+        method: 'POST',
+        url: '/passwordReset',
+        status: 200,
+        response: 'fixture:account/reset-password-success-response.json'
+      }).as('postReset')
 
-    // Check the login page was loaded
-    cy.contains(/Password Reset/i)
+      // Visit the Forgotten password page
+      cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
 
-    // Enter login details
-    cy.get('input[name=password]').type('password123')
-    cy.get('input[name=confirmPassword]').type('password123')
-    cy.get('button[aria-label="Submit"]').click()
+      // Check the login page was loaded
+      cy.contains(/Password Reset/i)
 
-    // check it sent the right stuff
-    cy.wait('@postReset')
-      .its('requestBody.data.attributes')
-      .should('include', {
-        token: 'some-secret-one-time-token',
-        password: 'password123'
-      })
+      // Enter login details
+      cy.get('input[name=password]').type('password123')
+      cy.get('input[name=confirmPassword]').type('password123')
+      cy.get('button[aria-label="Submit"]').click()
 
-    // check we end up on the login page
-    cy.url().should('includes', '/account/login')
-  })
+      // check it sent the right stuff
+      cy.wait('@postReset')
+        .its('requestBody.data.attributes')
+        .should('include', {
+          token: 'some-secret-one-time-token',
+          password: 'password123'
+        })
 
-  it('displays error message on reset failure', () => {
-    // Stub requests
-    cy.server()
+      // check we end up on the login page
+      cy.url().should('includes', '/account/login')
+    })
 
-    cy.route({
-      method: 'POST',
-      url: '/passwordReset',
-      status: 200,
-      response: [{ title: 'Record not found', detail: 'Wrong email/reference/token or password', code: '404', status: '404' }]
-    }).as('postReset')
+    it('displays error message on reset failure', () => {
+      // Stub requests
+      cy.server()
 
-    // Visit the Forgotten password page
-    cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
+      cy.route({
+        method: 'POST',
+        url: '/passwordReset',
+        status: 200,
+        response: [{ title: 'Record not found', detail: 'Wrong email/reference/token or password', code: '404', status: '404' }]
+      }).as('postReset')
 
-    // Enter new password
-    cy.get('input[name=password]').type('password123')
-    cy.get('input[name=confirmPassword]').type('password123')
-    cy.get('button[aria-label="Submit"]').click()
+      // Visit the Forgotten password page
+      cy.visit('/account/password_reset?email=bob@example.net&token=some-secret-one-time-token')
 
-    // Check reset password request has been made
-    cy.wait('@postReset')
+      // Enter new password
+      cy.get('input[name=password]').type('password123')
+      cy.get('input[name=confirmPassword]').type('password123')
+      cy.get('button[aria-label="Submit"]').click()
 
-    // Check validation message
-    cy.contains(/Wrong email\/reference\/token or password/)
-  })
+      // Check reset password request has been made
+      cy.wait('@postReset')
 
-  it('validates the form correctly', () => {
-    // Clear fields
-    cy.get('input[name=password]').clear()
-    cy.get('input[name=confirmPassword]').type('password123').clear()
+      // Check validation message
+      cy.contains(/Wrong email\/reference\/token or password/)
+    })
 
-    // should not complain with two valid matching password
-    cy.get('input[name=password]').type('password123')
-    cy.get('input[name=confirmPassword]').type('password123').blur()
-    cy.get('.o-form__input-field__error').should('be.empty')
-    cy.get('button[aria-label="Submit"]').should('be.enabled')
+    it('validates the form correctly', () => {
+      // Clear fields
+      cy.get('input[name=password]').clear()
+      cy.get('input[name=confirmPassword]').type('password123').clear()
 
-    // confirm password box must match
-    cy.get('input[name=confirmPassword]').clear().type('foo').blur()
-    cy.get('.o-form__input-field__error').last().contains('Must match')
-    cy.get('button[aria-label="Submit"]').should('be.disabled')
+      // should not complain with two valid matching password
+      cy.get('input[name=password]').type('password123')
+      cy.get('input[name=confirmPassword]').type('password123').blur()
+      cy.get('.o-form__input-field__error').should('be.empty')
+      cy.get('button[aria-label="Submit"]').should('be.enabled')
 
-    // check min length
-    cy.get('input[name=password]').clear().type('foo').blur()
-    cy.get('.o-form__input-field__error').first().contains('Password must be at least 5 characters')
-    cy.get('button[aria-label="Submit"]').should('be.disabled')
+      // confirm password box must match
+      cy.get('input[name=confirmPassword]').clear().type('foo').blur()
+      cy.get('.o-form__input-field__error').last().contains('Must match')
+      cy.get('button[aria-label="Submit"]').should('be.disabled')
 
-    // check required fields
-    cy.get('input[name=password]').clear().blur()
-    cy.get('input[name=confirmPassword]').clear().blur()
-    cy.get('.o-form__input-field__error').first().contains('Required')
-    cy.get('.o-form__input-field__error').last().contains('Required')
-    cy.get('button[aria-label="Submit"]').should('be.disabled')
+      // check min length
+      cy.get('input[name=password]').clear().type('foo').blur()
+      cy.get('.o-form__input-field__error').first().contains('Password must be at least 5 characters')
+      cy.get('button[aria-label="Submit"]').should('be.disabled')
 
-    // error should be cleared with valid password
-    cy.get('input[name=password]').clear().type('password123')
-    cy.get('input[name=confirmPassword]').clear().type('password123').blur()
-    cy.get('.o-form__input-field__error').should('be.empty')
-    cy.get('button[aria-label="Submit"]').should('be.enabled')
+      // check required fields
+      cy.get('input[name=password]').clear().blur()
+      cy.get('input[name=confirmPassword]').clear().blur()
+      cy.get('.o-form__input-field__error').first().contains('Required')
+      cy.get('.o-form__input-field__error').last().contains('Required')
+      cy.get('button[aria-label="Submit"]').should('be.disabled')
+
+      // error should be cleared with valid password
+      cy.get('input[name=password]').clear().type('password123')
+      cy.get('input[name=confirmPassword]').clear().type('password123').blur()
+      cy.get('.o-form__input-field__error').should('be.empty')
+      cy.get('button[aria-label="Submit"]').should('be.enabled')
+    })
   })
 })
