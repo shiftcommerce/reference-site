@@ -94,7 +94,6 @@ export default function withLayout (Component) {
 
     render () {
       const { cart, router, query, search, menu, loggedIn, ...otherProps } = this.props
-      const cartItemCount = this.props.cart_item_count
       const skipHeader = !router.pathname.includes('/checkout')
       const AppLayout = Config.get().Layout || Layout
 
@@ -114,7 +113,6 @@ export default function withLayout (Component) {
           toggleMiniBag={this.toggleMiniBag}
           onItemQuantityUpdated={this.onItemQuantityUpdated}
           readCart={this.readCart}
-          lineItemsCount={cartItemCount}
           getCartItemsCount={this.getCartItemsCount}
         >
           <Component {...otherProps} />
@@ -123,8 +121,8 @@ export default function withLayout (Component) {
     }
   }
 
-  function mapStateToProps ({ cart, account: { loggedIn }, menu, search, cart_item_count }) {
-    return { cart, loggedIn, menu, search, cart_item_count }
+  function mapStateToProps ({ cart, account: { loggedIn }, menu, search }) {
+    return { cart, loggedIn, menu, search }
   }
 
   return connect(mapStateToProps)(withRouter(LayoutWrapper))

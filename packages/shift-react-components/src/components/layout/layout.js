@@ -96,7 +96,7 @@ export class Layout extends Component {
    * @return {string} - HTML markup for the component
    */
   renderCartLink () {
-    const { lineItemsCount } = this.props
+    const { cart } = this.props
 
     return (
       <span
@@ -105,7 +105,7 @@ export class Layout extends Component {
         onMouseEnter={this.handleLoadMinibag}
       >
         <div className='c-minibag__cart-image'>
-          <span className='c-minibag__cart-image-count'>{ lineItemsCount }</span>
+          <span className='c-minibag__cart-image-count'>{ cart.line_items_count }</span>
           <Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
         </div>
         <span className='c-minibag__cart-label'>Basket</span>
