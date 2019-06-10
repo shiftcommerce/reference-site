@@ -88,7 +88,7 @@ describe('Minibag', () => {
     cy.url({ timeout: 10000 }).should('include', '/cart')
   })
 
-  it.only('Updates the line item quantity with a dropdown', () => {
+  it('Updates the line item quantity with a dropdown', () => {
     // Add a product to cart with an API call
     cy.addVariantToCart({ variantId: '27103', quantity: 1 })
 
