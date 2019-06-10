@@ -27,5 +27,5 @@ export function setCartLineItemCookie (total) {
  * @return  {Number} total
  */
 export function getCartLineItemCookie () {
-  return Cookies.get(lineItemsCountLabel) || 0
+  return Number(Cookies.get(lineItemsCountLabel)) || 0
 }
