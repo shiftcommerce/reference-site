@@ -18,12 +18,8 @@ describe('Search', () => {
         // Navigate to homepage
         cy.visit('/')
 
-        cy.wait(1000)
-
         // Conduct search
         cy.get('input[type=search]').eq(1).clear().type('computer{enter}')
-  
-        cy.wait(1000)
 
         // Check page url includes query
         cy.url().should('includes', '/search?query=computer')
