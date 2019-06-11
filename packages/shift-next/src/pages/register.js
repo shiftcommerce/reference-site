@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 import Router from 'next/router'
 
 // Libs
-import { setCookie } from '../lib/set-cookie'
+import { setSignedInCookie } from '../lib/handle-cookies'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
@@ -42,7 +42,7 @@ class RegisterPage extends Component {
 
     // Redirect if account created
     if (loggedIn) {
-      setCookie()
+      setSignedInCookie()
       Router.push('/account/details')
     }
   }

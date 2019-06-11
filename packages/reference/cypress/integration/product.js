@@ -2,6 +2,7 @@ describe('Product page', () => {
   context('Variants', () => {
     it('renders disabled add to basket button is no variant is selected', () => {
       // Navigate to the PDP
+      // Uses custom command - Cypress/support/commands/products.js
       cy.goToPdpFromPlp()
 
       // Check the add to cart button is disabled
@@ -90,9 +91,10 @@ describe('Product page', () => {
 
   context('Add To Bag', () => {
     it('renders a minibag when a variant is added to the cart', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
+      // Stub add to cart request
       cy.route({
         method: 'POST',
         url: '/addToCart',

@@ -1,7 +1,7 @@
 describe('Search', () => {
-  context('pagination', () => {
+  describe('Pagination', () => {
     it('load more sends correct requests, load more button hides when no more products, correct product counts', () => {
-      // Stub requests
+      // Setup server
       cy.server()
 
       // Setup initial request (returns all products)
@@ -10,7 +10,7 @@ describe('Search', () => {
         url: '**/indexes/**',
         status: 200,
         response: 'fixture:search/default.json'
-      })
+      }).as('defaultSearch')
 
       // Goto search index
       cy.visit('/search')

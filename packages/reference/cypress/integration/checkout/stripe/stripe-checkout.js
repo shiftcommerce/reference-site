@@ -1,126 +1,134 @@
-describe('Stripe checkout', () => {
-  it('Checks a guest user out', () => {
-    cy.server()
+describe('Checkout', () => {
+  describe('Stripe', () => {
+    it('Checks a guest user out', () => {
+      // Setup server
+      cy.server()
 
-    cy.route({
-      method: 'POST',
-      url: '**/1/indexes/**',
-      status: 200,
-      response: 'fixture:search/empty-search.json'
-    }).as('emptySearch')
+      // Uses custom command - Cypress/support/commands/empty-search.js
+      cy.emptySearch()
 
-    cy.route({
-      method: 'POST',
-      url: '/createOrder',
-      status: 201,
-      response: 'fixture:checkout/stripe/create-order.json'
-    }).as('createOrder')
+      // Stub create order request
+      cy.route({
+        method: 'POST',
+        url: '/createOrder',
+        status: 201,
+        response: 'fixture:checkout/stripe/create-order.json'
+      }).as('createOrder')
 
-    cy.route({
-      method: 'GET',
-      url: '/getCart',
-      status: 200,
-      response: 'fixture:checkout/stripe/cart-with-line-item.json'
-    }).as('getCart')
+      // Stub cart request with line item
+      cy.route({
+        method: 'GET',
+        url: '/getCart',
+        status: 200,
+        response: 'fixture:checkout/stripe/cart-with-line-item.json'
+      }).as('getCart')
 
-    cy.route({
-      method: 'POST',
-      url: '/createAddress',
-      status: 201,
-      response: 'fixture:checkout/create-address.json'
-    }).as('createAddress')
+      // Stub create address request
+      cy.route({
+        method: 'POST',
+        url: '/createAddress',
+        status: 201,
+        response: 'fixture:checkout/create-address.json'
+      }).as('createAddress')
 
-    cy.route({
-      method: 'GET',
-      url: '/getShippingMethods',
-      status: 200,
-      response: 'fixture:checkout/get-shipping-methods.json'
-    }).as('getShippingMethods')
+      // Stub get shipping methods request
+      cy.route({
+        method: 'GET',
+        url: '/getShippingMethods',
+        status: 200,
+        response: 'fixture:checkout/get-shipping-methods.json'
+      }).as('getShippingMethods')
 
-    cy.route({
-      method: 'POST',
-      url: '/setCartShippingAddress',
-      status: 200,
-      response: 'fixture:checkout/set-cart-shipping-address.json'
-    }).as('setCartShippingAddress')
+      // Stub set cart shipping address request
+      cy.route({
+        method: 'POST',
+        url: '/setCartShippingAddress',
+        status: 200,
+        response: 'fixture:checkout/set-cart-shipping-address.json'
+      }).as('setCartShippingAddress')
 
-    cy.route({
-      method: 'POST',
-      url: '/setShippingMethod',
-      status: 200,
-      response: 'fixture:checkout/set-shipping-method.json'
-    }).as('setShippingMethod')
+      // Stub set shipping method request
+      cy.route({
+        method: 'POST',
+        url: '/setShippingMethod',
+        status: 200,
+        response: 'fixture:checkout/set-shipping-method.json'
+      }).as('setShippingMethod')
 
-    cy.route({
-      method: 'POST',
-      url: '/setCartBillingAddress',
-      status: 200,
-      response: 'fixture:checkout/set-cart-billing-address.json'
-    }).as('setCartBillingAddress')
+      // Stub set cart billing address request
+      cy.route({
+        method: 'POST',
+        url: '/setCartBillingAddress',
+        status: 200,
+        response: 'fixture:checkout/set-cart-billing-address.json'
+      }).as('setCartBillingAddress')
 
-    // Start with an item in the cart
-    cy.addVariantToCart({ variantId: '27103', quantity: 1 })
+      // Navigate to Checkout
+      // Uses custom command - Cypress/support/commands/checkout.js
+      cy.addVariantToCartAndProceedToCheckout()
 
-    // Go to the cart page
-    cy.visit('/cart')
+      // Check that the PayPal button is present
+      cy.get('.paypal-buttons-context-iframe').contains('iframe')
 
-    // Start checkout
-    cy.get('.c-cart-summary-buttons__cta--proceed').click()
+      cy.wait(2000)
 
-    // Check that the PayPal button is present
-    cy.get('.paypal-buttons-context-iframe').contains('iframe')
+      // Choose credit card for payment method
+      cy.contains(/Pay by credit\/debit card/i).click()
 
-    cy.wait(2000)
+      // Fill in the shipping address form
+      cy.get('#country_code').select('GB')
+      cy.get('#first_name').type('John (Test)')
+      cy.get('#last_name').type('Smith (Test)')
+      cy.get('#line_1').type('1 Test Lane')
+      cy.get('#zipcode').type('LS1 3ED')
+      cy.get('#city').type('Leeds')
+      cy.get('#state').type('West Yorkshire')
+      cy.get('#primary_phone').type('07510123456')
+      cy.get('#email').type('test@example.com')
 
-    // Choose credit card for payment method
-    cy.contains(/Pay by credit\/debit card/i).click()
+      // Navigate to next step
+      cy.contains(/View Shipping Options/i).click()
 
-    // Fill in the shipping address form
-    cy.get('#country_code').select('GB')
-    cy.get('#first_name').type('John (Test)')
-    cy.get('#last_name').type('Smith (Test)')
-    cy.get('#line_1').type('1 Test Lane')
-    cy.get('#zipcode').type('LS1 3ED')
-    cy.get('#city').type('Leeds')
-    cy.get('#state').type('West Yorkshire')
-    cy.get('#primary_phone').type('07510123456')
-    cy.get('#email').type('test@example.com')
+      cy.url({ timeout: 10000 }).should('include', '/checkout/shipping-method')
 
-    // Navigate to next step
-    cy.contains(/View Shipping Options/i).click()
+      // Check create address request has been made
+      cy.wait('@createAddress')
 
-    cy.url({ timeout: 10000 }).should('include', '/checkout/shipping-method')
+      // Check set cart shipping address request has been made
+      cy.wait('@setCartShippingAddress')
 
-    cy.wait('@createAddress')
-    cy.wait('@setCartShippingAddress')
-    cy.wait('@getShippingMethods')
-    cy.wait('@setShippingMethod')
+      // Check get shipping methods request has been made
+      cy.wait('@getShippingMethods')
 
-    // Proceed with the preselected shipping method
-    cy.contains(/Continue to payment/i).click()
+      // Check set shipping method request has been made
+      cy.wait('@setShippingMethod')
 
-    cy.url({ timeout: 10000 }).should('include', '/checkout/payment')
+      // Proceed with the preselected shipping method
+      cy.contains(/Continue to payment/i).click()
 
-    // Fill in card details
-    cy.wait(5000)
+      cy.url({ timeout: 10000 }).should('include', '/checkout/payment')
 
-    cy.get('.__PrivateStripeElement > iframe').then(element => {
-      const body = element.contents().find('body')
-      let stripe = cy.wrap(body)
-      stripe.find('.CardField-number .InputElement').eq(1).click().type('4242424242424242')
-      stripe = cy.wrap(body)
-      stripe.find('.CardField-expiry .InputElement').click().type('4242')
-      stripe = cy.wrap(body)
-      stripe.find('.CardField-cvc .InputElement').click().type('424')
+      // Fill in card details
+      cy.wait(5000)
+
+      cy.get('.__PrivateStripeElement > iframe').then(element => {
+        const body = element.contents().find('body')
+        let stripe = cy.wrap(body)
+        stripe.find('.CardField-number .InputElement').eq(1).click().type('4242424242424242')
+        stripe = cy.wrap(body)
+        stripe.find('.CardField-expiry .InputElement').click().type('4242')
+        stripe = cy.wrap(body)
+        stripe.find('.CardField-cvc .InputElement').click().type('424')
+      })
+
+      // Navigate to next step
+      cy.contains(/Review your order/i).click()
+
+      // Place the order
+      cy.contains(/Place order/i).click()
+
+      // Check that the order confirmation page is displayed
+      cy.contains(/Your order is confirmed/i)
     })
-
-    // Navigate to next step
-    cy.contains(/Review your order/i).click()
-
-    // Place the order
-    cy.contains(/Place order/i).click()
-
-    // Check that the order confirmation page is displayed
-    cy.contains(/Your order is confirmed/i)
   })
 })

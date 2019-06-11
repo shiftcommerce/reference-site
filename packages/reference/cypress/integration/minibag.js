@@ -1,14 +1,10 @@
 describe('Minibag', () => {
   beforeEach(() => {
+    // Setup server
     cy.server()
 
-    // Stub empty algolia request
-    cy.route({
-      method: 'POST',
-      url: '**/1/indexes/**',
-      status: 200,
-      response: 'fixture:search/empty-search.json'
-    }).as('emptySearch')
+    // Uses custom command - Cypress/support/commands/empty-search.js
+    cy.emptySearch()
 
     // Stub shipping methods request
     cy.route({
@@ -18,7 +14,7 @@ describe('Minibag', () => {
       response: 'fixture:cart/get-shipping-methods.json'
     }).as('getShippingMethods')
 
-    // stub get cart request
+    // Stub get cart request
     cy.route({
       method: 'GET',
       url: '/getCart',
@@ -26,7 +22,7 @@ describe('Minibag', () => {
       response: 'fixture:cart/get-cart-with-line-item.json'
     }).as('getCart')
 
-    // stub get products
+    // Stub get products
     cy.route({
       method: 'GET',
       url: '/getProduct/*',
@@ -34,15 +30,17 @@ describe('Minibag', () => {
       response: 'fixture:products/clock-computer.json'
     }).as('getProduct')
 
+    // Stub add to cart request
     cy.route({
       method: 'POST',
       url: '/addToCart*',
       status: 200,
       response: 'fixture:cart/add-clock-computer.json'
-    }).as('fetchCategoryProducts')
+    }).as('addToCart')
   })
 
   it('Shows the minibag when adding an item to cart, hides the minibag when cross is clicked', () => {
+    // Visit PDP
     cy.visit('/products/clock_computer')
 
     // Check that the minibag isn't displayed to start with
@@ -66,9 +64,7 @@ describe('Minibag', () => {
   })
 
   it('Shows the minibag when clicking the basket', () => {
-    // Check that the minibag isn't displayed to start with
-    cy.get('.c-minibag__dropdown').should('have.length', 0)
-
+    // Click basket navigation option 
     cy.contains('Basket').click()
 
     // Check that the minibag is displayed
@@ -79,6 +75,7 @@ describe('Minibag', () => {
   })
 
   it('Goes to cart page correctly', () => {
+    // Click basket navigation option 
     cy.contains('Basket').click()
 
     // Check that the minibag is empty
@@ -89,13 +86,10 @@ describe('Minibag', () => {
   })
 
   it('Updates the line item quantity with a dropdown', () => {
-    // Add a product to cart with an API call
-    cy.addVariantToCart({ variantId: '27103', quantity: 1 })
+    // Uses custom command - Cypress/support/commands/cart.js
+    cy.addVariantToCart()
 
-    // Open the minibag
-    cy.visit('/')
-    cy.contains('Basket').click()
-
+    // Stub update line item quantity request
     cy.route({
       method: 'POST',
       url: '/updateLineItem',
@@ -106,10 +100,14 @@ describe('Minibag', () => {
     // Update the product's quantity with the dropdown
     cy.get('.c-minibag__quantity').select('3')
 
+    // Check update line item quantity request has been made
     cy.wait('@updateQuantity')
       .its('request.body')
       .should('include', {
         newQuantity: 3
       })
+
+    cy.get('.c-minibag__cart-image-count').should('contain', 3)
+    cy.get('.c-checkout-cart__amount').should('contain', 3)
   })
 })
