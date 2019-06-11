@@ -149,8 +149,6 @@ class CategoryPage extends Component {
     this.props.dispatch(clearSearchFilter())
   }
 
-
-
   toggleFiltering = () => {
     if (this.state.filtersShown) {
       document.body.classList.remove('modal-open')
