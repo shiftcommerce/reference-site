@@ -19,6 +19,7 @@ const OrderRoutes = require('./routes/order-routes')
 const { getSessionExpiryTime } = require('./lib/session')
 
 // Middleware
+const { ipFilter } = require('./middleware/ip-filter')
 const { contentSecurityPolicy } = require('./middleware/content-security-policy')
 const { featurePolicy } = require('./middleware/feature-policy')
 const { httpSecurityHeaders } = require('./middleware/http-security-headers')
@@ -38,6 +39,12 @@ module.exports = {
    * @return {Date} The Date instance for when the session should expire
    */
   getSessionExpiryTime,
+  
+  /**
+   * Enables the whitelist IP filter,
+   * configurable via IP_WHITELIST environment variable
+   */
+  shiftIpFilter: (server) => ipFilter(server),
 
   /**
    * Enables the Content Security Policy

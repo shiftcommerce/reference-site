@@ -126,7 +126,21 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
       "updated_at": "2019-01-07T14:32:05Z",
     }
   }
-  dispatch={[MockFunction]}
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          [Function],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": "first call",
+        },
+      ],
+    }
+  }
 >
   <head>
     <head />

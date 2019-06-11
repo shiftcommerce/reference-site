@@ -94,6 +94,7 @@ describe('Minibag', () => {
 
     // Open the minibag
     cy.visit('/')
+    cy.contains('Basket').trigger('mouseover')
     cy.contains('Basket').click()
 
     cy.route({
@@ -111,5 +112,8 @@ describe('Minibag', () => {
       .should('include', {
         newQuantity: 3
       })
+
+    cy.get('.c-minibag__cart-image-count').should('contain', 3)
+    cy.get('.c-checkout-cart__amount').should('contain', 3)
   })
 })

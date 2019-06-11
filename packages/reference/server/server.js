@@ -1,3 +1,4 @@
+// Libraries
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
@@ -35,23 +36,13 @@ const {
   shiftFeaturePolicy,
   shiftRoutes,
   shiftSecurityHeaders,
-  shiftLogger
+  shiftLogger,
+  shiftIpFilter
 } = require('@shiftcommerce/shift-next-routes')
 
 module.exports = app.prepare().then(() => {
   const server = express()
-
-  server.use(loggingMiddleware({
-    logger: logger,
-    useLevel: 'trace',
-    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
-  }))
-
-  // Remove X-Powered-By: Express header as this could help attackers
-  server.disable('x-powered-by')
-
   const secure = (process.env.NO_HTTPS !== 'true')
-
   const sessionParams = {
     secret: process.env.SESSION_SECRET,
     secure: secure,
@@ -59,11 +50,18 @@ module.exports = app.prepare().then(() => {
     expires: getSessionExpiryTime()
   }
 
+  server.use(loggingMiddleware({
+    logger: logger,
+    useLevel: 'trace',
+    genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
+  }))
+
   // Unique local IPv6 addresses have the same function as private addresses in IPv4
   // They are unique to the private organization and are not internet routable.
   server.set('trust proxy', 'uniquelocal')
-
   if (secure) server.use(sslRedirect())
+  if (production) shiftIpFilter(server)
+
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
@@ -72,7 +70,7 @@ module.exports = app.prepare().then(() => {
 
   shiftLogger(server, logger)
   shiftContentSecurityPolicy(server, {
-    connectHosts: process.env.CONNECT_SCRIPTS,
+    connectHosts: process.env.CONNECT_HOSTS,
     frameHosts: process.env.FRAME_HOSTS,
     imageHosts: process.env.IMAGE_HOSTS,
     scriptHosts: process.env.SCRIPT_HOSTS,
@@ -92,7 +90,7 @@ module.exports = app.prepare().then(() => {
     }
 
     const directRouting = async (page) => {
-      if (page.status === 200 && page.data.data.length !== 0) {
+      if (page && page.status === 200 && page.data.data.length !== 0) {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
@@ -108,7 +106,7 @@ module.exports = app.prepare().then(() => {
         }
       }
 
-      if ([301, 302].includes(page.status)) {
+      if (page && [301, 302].includes(page.status)) {
         return res.redirect(page.status, page.redirect.destination)
       }
 
