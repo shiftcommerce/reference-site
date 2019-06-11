@@ -1,7 +1,7 @@
 describe('Checkout', () => {
   describe('PayPal', () => {
     context('Navigating To Payment Methods Page', () => {
-      beforeEach(() => {
+      it('renders the page correctly', () => {
         // Setup server
         cy.server()
 
@@ -36,9 +36,6 @@ describe('Checkout', () => {
         cy.addVariantsToCartAndProceedToCheckout()
         // Check we are on the Payment Method Page
         cy.url().should('includes', '/checkout/payment-method')
-      })
-
-      it('renders the page correctly', () => {
         // Check page title is present
         cy.get('.c-payment-method__header').contains(/Payment Method/i)
         // Check Shipping Address section header is not present
@@ -62,15 +59,6 @@ describe('Checkout', () => {
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-select').should('not.exist')
         // Check it renders the line item quantity
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-amount').should('exist')
-      })
-
-      it('allows customers to continue shopping', () => {
-        // Check continue shopping button is present and click
-        cy.get('.c-checkout-cart-buttons__cta--continue').click()
-        // Check we are redirected to the homepage
-        cy.contains(/Test Homepage Heading/i)
-        // check url has changed
-        cy.url().should('includes', '/')
       })
 
       it('allows customers to apply a promotion code', () => {
@@ -133,6 +121,15 @@ describe('Checkout', () => {
 
         // Check error message is rendered
         cy.contains(/Invalid promo code TESSSSSSSTCOUPONSSSSS/i)
+      })
+
+      it('allows customers to continue shopping', () => {
+        // Check continue shopping button is present and click
+        cy.get('.c-checkout-cart-buttons__cta--continue').click()
+        // Check we are redirected to the homepage
+        cy.contains(/Test Homepage Heading/i)
+        // check url has changed
+        cy.url().should('includes', '/')
       })
     })
   })

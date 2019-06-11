@@ -73,7 +73,7 @@ Cypress.Commands.add('addPromotionCodeToCart', ({ promoCode }) => {
   // Check the promotion form title
   cy.get('.c-coupon-form__title').contains(/Promotion Code/i)
   // Enter a promotion code
-  cy.get('.c-coupon-form__input').type(promoCode)
+  cy.get('.c-coupon-form__input').clear().type(promoCode)
   // Click apply button
   cy.get('.c-coupon-form__button').click()
 })
