@@ -129,7 +129,6 @@ describe('Product page', () => {
 
     expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: true, reduxStore: { dispatch: jest.fn() } })).toEqual({
       id: 1,
-      isServer: true,
       product: {
         id: 1,
         title: 'Test Product'
@@ -138,16 +137,24 @@ describe('Product page', () => {
     expect(productRequest.isDone()).toBe(true)
   })
 
-  // test('getInitialProps() doesnt retrieve the product clientside', async () => {
-  //   // Arrange
-  //   const query = {
-  //     id: 1
-  //   }
+  test('getInitialProps() retrieves the product clientside', async () => {
+    Config.set({ apiHostProxy: 'http://example.com' })
 
-  //   // Act
-  //   const getInitialProps = await ProductPage.getInitialProps({ query })
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product'
+      })
 
-  //   // Assert
-  //   expect(getInitialProps).toEqual({ id: 1 })
-  // })
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: false, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product'
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
+  })
 })
