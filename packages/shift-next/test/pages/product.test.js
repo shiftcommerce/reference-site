@@ -1,6 +1,7 @@
 // Libraries
 import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
+import nock from 'nock'
 
 // Actions
 import * as ProductActions from '../../src/actions/product-actions'
@@ -116,38 +117,37 @@ describe('Product page', () => {
   })
 
   test('getInitialProps() retrieves the product serverside', async () => {
-    // Arrange - mock Redux store
-    const dispatch = jest.fn()
-    const readProductSpy = jest.spyOn(ProductActions, 'readProduct').mockImplementation(() => 'read product action')
-    const req = true
-    const query = {
-      id: 1
-    }
-    const reduxStore = {
-      dispatch: dispatch
-    }
+    Config.set({ apiHostProxy: 'http://example.com' })
 
-    // Act
-    const getInitialProps = await ProductPage.getInitialProps({ reduxStore, req, query })
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product'
+      })
 
-    // Assert
-    expect(dispatch).toHaveBeenCalledWith('read product action')
-    expect(readProductSpy).toHaveBeenCalledWith(1)
-    expect(getInitialProps).toEqual({ id: 1 })
-
-    readProductSpy.mockRestore()
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: true, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      isServer: true,
+      product: {
+        id: 1,
+        title: 'Test Product'
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
   })
 
-  test('getInitialProps() doesnt retrieve the product clientside', async () => {
-    // Arrange
-    const query = {
-      id: 1
-    }
+  // test('getInitialProps() doesnt retrieve the product clientside', async () => {
+  //   // Arrange
+  //   const query = {
+  //     id: 1
+  //   }
 
-    // Act
-    const getInitialProps = await ProductPage.getInitialProps({ query })
+  //   // Act
+  //   const getInitialProps = await ProductPage.getInitialProps({ query })
 
-    // Assert
-    expect(getInitialProps).toEqual({ id: 1 })
-  })
+  //   // Assert
+  //   expect(getInitialProps).toEqual({ id: 1 })
+  // })
 })
