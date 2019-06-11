@@ -1,18 +1,19 @@
 /**
- * Adds variant to cart and proceeds to checkout
- * @param {integer} variantId - the variant ID
- * @param {integer} quantity - the required quantity
+ * Adds a variant to cart and proceeds to checkout
  */
 Cypress.Commands.add('addVariantToCartAndProceedToCheckout', () => {
-  // Setup server
-  cy.server()
-  // Stub add to cart request
-  cy.route({
-    method: 'POST',
-    url: '/addToCart',
-    status: 200,
-    response: 'fixture:cart/add-clock-computer.json'
-  }).as('addToCart')
+  // Add a variant to cart
+  cy.addVariantToCart()
+  // visit cart page
+  cy.contains(/View Shopping Basket/i).click()
+  // Click the checkout button
+  cy.get('.c-cart-summary-buttons__cta--proceed').click()
+})
+
+/**
+ * Adds multiple variants to cart and proceeds to checkout
+ */
+Cypress.Commands.add('addVariantsToCartAndProceedToCheckout', () => {
   // Add multiple variants to cart
   cy.addVariantsToCart()
   // visit cart page

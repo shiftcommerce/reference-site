@@ -24,9 +24,16 @@ describe('Checkout', () => {
           response: 'fixture:cart/get-shipping-methods.json'
         }).as('getShippingMethods')
 
-        // Add second item to cart and proceed to checkout
+        // Stub get product request
+        cy.route({
+          method: 'GET',
+          url: '/getProduct/*',
+          status: 200,
+          response: 'fixture:products/clock-computer.json'
+        }).as('getProduct')
+
         // Uses custom command - Cypress/support/commands/checkout.js
-        cy.addVariantToCartAndProceedToCheckout()
+        cy.addVariantsToCartAndProceedToCheckout()
         // Check we are on the Payment Method Page
         cy.url().should('includes', '/checkout/payment-method')
       })
