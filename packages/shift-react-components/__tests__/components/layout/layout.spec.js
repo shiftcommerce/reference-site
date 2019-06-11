@@ -37,9 +37,8 @@ test('renders the header', () => {
       minibagDisplayed={initialState.minibagDisplayed}
       cart={initialState.cart}
       logoSrc='/test.png'
-      {...initialState}
-    />
-  )
+      {...initialState} />
+    , { disableLifecycleMethods: true })
 
   const header = wrapper.find('div.o-header')
 
@@ -73,9 +72,8 @@ test('renders the navbar for non-checkout pages', () => {
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}
       minibagDisplayed={initialState.minibagDisplayed}
-      {...initialState}
-    />
-  )
+      {...initialState} />
+    , { disableLifecycleMethods: true })
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -91,11 +89,8 @@ test('renders the footer', () => {
 
   // Act
   const wrapper = shallow(
-    <Layout
-      router={{ pathname: '/' }}
-      search={{}}
-      cart={cart}
-    />
+    <Layout router={{ pathname: '/' }} search={{}} cart={cart} />
+    , { disableLifecycleMethods: true }
   )
 
   // Assert
@@ -127,10 +122,10 @@ test('renders the children inside it', () => {
       skipHeader={initialState.skipHeader}
       minibagDisplayed={initialState.minibagDisplayed}
       cart={initialState.cart}
-      {...initialState} >
+      {...initialState}>
       Content
-    </Layout >
-  )
+    </Layout>
+    , { disableLifecycleMethods: true })
 
   // Assert
   expect(wrapper.find('div.o-body')).toIncludeText('Content')
@@ -160,9 +155,8 @@ test('for checkout pages navbar doesnt render', () => {
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}
       cart={initialState.cart}
-      {...initialState}
-    />
-  )
+      {...initialState} />
+    , { disableLifecycleMethods: true })
 
   // Assert
   expect(wrapper.find(NavBar).exists()).toBe(false)
@@ -192,9 +186,8 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
-        {...initialState}
-      />
-    )
+        {...initialState} />
+     , { disableLifecycleMethods: true })
 
     // Assert
     expect(wrapper).toIncludeText('Basket')
@@ -236,10 +229,8 @@ describe('basket', () => {
         ShowClass={initialState.toggleShowClass}
         skipHeader={initialState.skipHeader}
         cart={initialState.cart}
-        {...initialState}
-      />
-    )
-
+        {...initialState} />
+      , { disableLifecycleMethods: true })
     // Assert
     expect(wrapper.find('.c-minibag__cart-image-count')).toIncludeText('2')
   })

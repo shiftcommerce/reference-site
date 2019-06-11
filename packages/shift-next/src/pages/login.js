@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 import Router from 'next/router'
 
 // Libs
-import { setCookie } from '../lib/set-cookie'
+import { setSignedInCookie } from '../lib/handle-cookies'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import Config from '../lib/config'
 
@@ -44,7 +44,7 @@ class LoginPage extends Component {
       .then(success => {
         if (success) {
           this.props.dispatch(fetchAccountDetails()).then(() => {
-            setCookie()
+            setSignedInCookie()
             // Determine where to redirect user after successful log in
             if (window.location.pathname === '/checkout/login') {
               Router.push('/checkout/payment-method')

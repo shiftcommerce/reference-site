@@ -86,7 +86,6 @@ describe('Minibag', () => {
   })
 
   it('Updates the line item quantity with a dropdown', () => {
-    // Add a product to cart with an API call
     // Uses custom command - Cypress/support/commands/cart.js
     cy.addVariantToCart()
 
@@ -107,5 +106,8 @@ describe('Minibag', () => {
       .should('include', {
         newQuantity: 3
       })
+
+    cy.get('.c-minibag__cart-image-count').should('contain', 3)
+    cy.get('.c-checkout-cart__amount').should('contain', 3)
   })
 })
