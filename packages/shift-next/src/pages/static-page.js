@@ -17,17 +17,11 @@ class StaticPage extends Component {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
     const isServer = !!req
     const { published } = page
-    let preview
-
-    if (req && req.query) {
-      preview = req.query.preview
-    } else {
-      preview = false
-    }
+    const preview = req && req.query && req.query.preview ? true : false
 
     // Unpublished pages should return a 404 page to the public however we should
     // be able to preview unpublished pages using a ?preview=true query string
-    if (published === false && preview !== true) {
+    if (published === false && preview === false) {
       if (isServer) {
         // server-side
         res.redirect('/error')
