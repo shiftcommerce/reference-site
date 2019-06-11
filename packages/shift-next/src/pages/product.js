@@ -36,7 +36,13 @@ class ProductPage extends Component {
     const product = await ProductPage.fetchProduct(id, reduxStore.dispatch)
     const isServer = !!req
     const { sellable } = product
-    const preview = req.query && req.query.preview ? req.query.preview : false
+    let preview
+
+    if (req) {
+      preview = req.query.preview
+    } else {
+      preview = false
+    }
 
     // Unpublished products should return a 404 page to the public however we should
     // be able to preview unpublished products using a ?preview=true query string
