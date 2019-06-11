@@ -5,6 +5,14 @@ Cypress.Commands.add('addVariantToCart', () => {
   // Setup server
   cy.server()
 
+  // Stub get product request
+  cy.route({
+    method: 'GET',
+    url: '/getProduct/*',
+    status: 200,
+    response: 'fixture:products/clock-computer.json'
+  }).as('getProduct')
+
   // Stub add to cart request
   cy.route({
     method: 'POST',
@@ -15,6 +23,8 @@ Cypress.Commands.add('addVariantToCart', () => {
 
   // Navigate to PDP
   cy.visit('/products/clock_computer')
+  // Check request has been made for product
+  cy.wait('@getProduct')
   // Select the instock variant
   cy.contains(/Clock Computer 13'' - £799.00/i).click()
   // Add item to cart
@@ -30,6 +40,14 @@ Cypress.Commands.add('addVariantsToCart', () => {
   // Setup server
   cy.server()
 
+  // Stub get product request
+  cy.route({
+    method: 'GET',
+    url: '/getProduct/*',
+    status: 200,
+    response: 'fixture:products/clock-computer.json'
+  }).as('getProduct')
+
   // Stub first add to cart requests
   cy.route({
     method: 'POST',
@@ -40,6 +58,8 @@ Cypress.Commands.add('addVariantsToCart', () => {
 
   // Navigate to PDP
   cy.visit('/products/clock_computer')
+  // Check request has been made for product
+  cy.wait('@getProduct')
   // Select the first variant
   cy.contains(/Clock Computer 13'' - £799.00/i).click()
   // Add item to cart
