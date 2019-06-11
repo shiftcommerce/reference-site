@@ -27,9 +27,12 @@ describe('Checkout', () => {
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-select').should('not.exist')
         // Check it renders the line item quantity
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-amount').should('exist')
-      })
-
-      it('allows customers to apply a promotion code', () => {
+        
+        /**
+         * 
+         * VALID COUPON SUBMISSION
+         * 
+        */
         // Stub  coupon and cart requests
         cy.route({
           method: 'POST',
@@ -48,19 +51,20 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
-
         // Check coupon request payload
         cy.wait('@addCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESTCOUPON'
           })
-
         // Check the promotion is added to the cart
         cy.contains(/£1 Off/i)
-      })
-
-      it('renders errors when a promotion code is invalid', () => {
+        
+        /**
+         * 
+         * INVALID COUPON SUBMISSION
+         * 
+        */
         // Stub coupon requests
         cy.route({
           method: 'POST',
@@ -78,19 +82,21 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
-
         // Check coupon request payload
         cy.wait('@addInvalidCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESSSSSSSTCOUPONSSSSS'
           })
-
         // Check error message is rendered
         cy.contains(/Invalid promo code TESSSSSSSTCOUPONSSSSS/i)
-      })
 
-      it('displays an error when the PayPal order total cannot be updated after a shipping option has been chosen', () => {
+        /**
+         * 
+         * MOCK FAILED PAYPAL ORDER TOTAL UPDATE
+         * AFTER SHIPPING METHOD HAS BEEN CHOSEN
+         * 
+        */
         // Stub patch PayPal Order request
         cy.route({
           method: 'POST',
@@ -103,21 +109,22 @@ describe('Checkout', () => {
         cy.get('.c-shipping-method__header').contains(/Shipping Method/i)
         // Navigate to the Review Page
         cy.contains(/Review Your Order/i).click()
-
         // Check paypal request payload
         cy.wait('@patchInvalidPayPalOrder')
           .its('requestBody')
           .should('include', {
             payPalOrderID: '9B29180392286445Y'
           })
-
         // Check error message is rendered
         cy.contains(/Sorry! There has been a problem with your selection. Please try again./i)
         // Check shipping methods are rendered
         cy.contains(/Cheap Shipping/i)
-      })
 
-      it('allows customers to change payment method', () => {
+        /**
+         * 
+         * ALLOWS CUSTOMERS TO CHANGE PAYMENT METHOD
+         * 
+        */
         // Navigate to the Payment Method Page
         cy.get('.c-payment-method__header').contains(/Edit/i).click()
         // Check we have been redirected to the Payment Method Page

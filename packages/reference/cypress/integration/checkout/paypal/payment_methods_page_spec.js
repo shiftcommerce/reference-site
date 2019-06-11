@@ -45,15 +45,16 @@ describe('Checkout', () => {
         // Check the line item in the shopping basket
         cy.contains(/Clock Computer 13''/i)
         cy.contains(/Clock Computer 15''/i)
-        // Check continue shopping button is present
-        cy.contains(/Continue Shopping/i)
         // Check it does not allow line item quantity update
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-select').should('not.exist')
         // Check it renders the line item quantity
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-amount').should('exist')
-      })
 
-      it('allows customers to apply a promotion code', () => {
+        /**
+         * 
+         * VALID COUPON SUBMISSION
+         * 
+        */
         // Stub coupon and cart requests
         cy.route({
           method: 'POST',
@@ -73,19 +74,20 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
-
         // Check coupon request payload
         cy.wait('@addCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESTCOUPON'
           })
-
         // Check the promotion is added to the cart
         cy.contains(/£1 Off/i)
-      })
 
-      it('renders errors when a promotion code is invalid', () => {
+        /**
+         * 
+         * INVALID COUPON SUBMISSION
+         * 
+        */
         // Stub invalid coupon requests
         cy.route({
           method: 'POST',
@@ -103,21 +105,20 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
-
         // Check coupon request payload
         cy.wait('@addInvalidCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESSSSSSSTCOUPONSSSSS'
           })
-
         // Check error message is rendered
         cy.contains(/Invalid promo code TESSSSSSSTCOUPONSSSSS/i)
-      })
 
-      it('allows customers to continue shopping', () => {
-        // Uses custom command - Cypress/support/commands/empty-search.js
-        cy.emptySearch()
+        /**
+         * 
+         * CONTINUE SHOPPING
+         * 
+        */
         // Check continue shopping button is present and click
         cy.get('.c-checkout-cart-buttons__cta--continue').click()
         // Check we are redirected to the homepage

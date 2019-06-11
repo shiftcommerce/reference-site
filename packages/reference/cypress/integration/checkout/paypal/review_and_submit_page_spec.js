@@ -1,7 +1,7 @@
 describe('Checkout', () => {
   describe('PayPal', () => {
     context('Navigating To Review & Submit Page', () => {
-      it('renders the page correctly and allows customers to change shipping method', () => {
+      it('renders the page correctly', () => {
         // Navigate to Review & Submit Checkout Page
         // Uses custom command - Cypress/support/commands/checkout.js
         cy.navigateToReviewCheckoutPage()
@@ -27,6 +27,12 @@ describe('Checkout', () => {
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-select').should('not.exist')
         // Check it renders the line item quantity
         cy.get('.c-line-items__quantity').find('.c-line-items__quantity-amount').should('exist')
+
+        /**
+         * 
+         * UPDATE SHIPPING METHOD
+         * 
+        */
         // Stub update shipping method request
         cy.route({
           method: 'POST',
@@ -48,9 +54,12 @@ describe('Checkout', () => {
         })
         // Check its the Review Page Page
         cy.url().should('includes', '/checkout/review')
-      })
 
-      it('displays an error when the PayPal order cannot be authorized', () => {
+        /**
+         * 
+         * MOCK FAILED PAYPAL AUTHORIZATION
+         * 
+        */
         // Stub patch PayPal Order request
         cy.route({
           method: 'POST',
@@ -61,20 +70,20 @@ describe('Checkout', () => {
 
         // Click place order button
         cy.contains(/Place Order/i).click()
-
         // Check authorize paypal order request payload
         cy.wait('@authorizePayPalOrder').then((xhr) => {
           assert.include(xhr.requestBody.payPalOrderID, '9B29180392286445Y')
         })
-
         // Check error message is rendered
         cy.contains(/Sorry! There has been a problem authorising your payment. Please try again./i)
-
         // Check its the Review Page Page
         cy.url().should('includes', '/checkout/review')
-      })
 
-      it('allows customers to apply a promotion code', () => {
+        /**
+         * 
+         * VALID COUPON SUBMISSION
+         * 
+        */
         // Stub  coupon and cart requests
         cy.route({
           method: 'POST',
@@ -93,19 +102,20 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESTCOUPON' })
-
         // Check coupon request payload
         cy.wait('@addCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESTCOUPON'
           })
-
         // Check the promotion is added to the cart
         cy.contains(/£1 Off/i)
-      })
-
-      it('renders errors when a promotion code is invalid', () => {
+        
+        /**
+         * 
+         * INVALID COUPON SUBMISSION
+         * 
+        */
         // Stub coupon requests
         cy.route({
           method: 'POST',
@@ -123,19 +133,20 @@ describe('Checkout', () => {
         // Click apply promotion to cart
         // Uses custom command - Cypress/support/commands/cart.js
         cy.addPromotionCodeToCart({ promoCode: 'TESSSSSSSTCOUPONSSSSS' })
-
         // Check coupon request payload
         cy.wait('@addInvalidCartCoupon')
           .its('requestBody')
           .should('include', {
             couponCode: 'TESSSSSSSTCOUPONSSSSS'
           })
-
         // Check error message is rendered
         cy.contains(/Invalid promo code TESSSSSSSTCOUPONSSSSS/i)
-      })
 
-      it('allows customers to change payment method', () => {
+        /**
+         * 
+         * ALLOWS CUSTOMERS TO CHANGE PAYMENT METHOD
+         * 
+        */
         // Check Paym`ent Method Edit button is present and Navigate to the Shipping Method Page
         cy.get('.c-payment-method__header').contains(/Edit/i).click()
         // Check we have been redirected to the Payment Method Page
