@@ -1,15 +1,14 @@
 describe('My Account', () => {
   describe('Registration', () => {
     beforeEach(() => {
+      // Setup server
+      cy.server()
       // Uses custom command - Cypress/support/commands/empty-search.js
       cy.emptySearch()
     })
 
     context('valid input', () => {
       it('routes us to the my account page with a valid submission', () => {
-        // Setup server
-        cy.server()
-
         // Stub account registration request
         cy.route({
           method: 'POST',
@@ -71,9 +70,6 @@ describe('My Account', () => {
 
     context('invalid input', () => {
       it('renders a message when the email is already in use', () => {
-        // Setup server
-        cy.server()
-
         // Stub invalid account registration request
         cy.route({
           method: 'POST',

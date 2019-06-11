@@ -1,8 +1,9 @@
 describe('My Account', () => {
   describe('Details', () => {
     beforeEach(() => {
-      // Uses custom command
-      // Cypress/support/commands/empty-search.js
+      // Setup server
+      cy.server()
+      // Uses custom command - Cypress/support/commands/empty-search.js
       cy.emptySearch()
     })
 
@@ -22,9 +23,6 @@ describe('My Account', () => {
       })
 
       it('updates the account first name', () => {
-        // Setup server
-        cy.server()
-
         // Stub update customer first name request
         cy.route({
           method: 'POST',
@@ -58,9 +56,6 @@ describe('My Account', () => {
       })
 
       it('updates the account last name', () => {
-        // Setup server
-        cy.server()
-
         // Stub update customer last name request
         cy.route({
           method: 'POST',
@@ -94,9 +89,6 @@ describe('My Account', () => {
       })
 
       it('updates the account email', () => {
-       // Setup server
-        cy.server()
-
         // Stub update customer email request
         cy.route({
           method: 'POST',
@@ -207,9 +199,6 @@ describe('My Account', () => {
       })
 
       it('renders a validation message if email already exists in platform', () => {
-        // Setup server
-        cy.server()
-
         // Stub invalid update customer email request
         cy.route({
           method: 'POST',

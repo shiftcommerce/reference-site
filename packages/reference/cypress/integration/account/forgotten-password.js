@@ -1,14 +1,13 @@
 describe('My Account', () => {
   describe('Forgotten Password', () => {
     beforeEach(() => {
+      // Setup server
+      cy.server()
       // Uses custom command - Cypress/support/commands/empty-search.js
       cy.emptySearch()
     })
 
     it('sends the correct request to the server', () => {
-      // Setup server
-      cy.server()
-
       // Stub forgot password request
       cy.route({
         method: 'GET', // this is a GET for Reasons Unknown
@@ -70,14 +69,13 @@ describe('My Account', () => {
 
   describe('Reset Password', () => {
     beforeEach(() => {
+      // Setup server
+      cy.server()
       // Uses custom command - Cypress/support/commands/empty-search.js
       cy.emptySearch()
     })
 
     it('sends the correct request to the server', () => {
-      // Setup server
-      cy.server()
-
       // Stub reset password request
       cy.route({
         method: 'POST',
@@ -110,9 +108,6 @@ describe('My Account', () => {
     })
 
     it('displays error message on reset failure', () => {
-      // Setup server
-      cy.server()
-
       // Stub invalid password reset request 
       cy.route({
         method: 'POST',
