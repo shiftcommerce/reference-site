@@ -85,7 +85,7 @@ Cypress.Commands.add('navigateToShippingMethodCheckoutPage', () => {
   // Check we are on the Payment Method Page
   cy.url().should('includes', '/checkout/payment-method')
   // Wait for PayPal script and page to be loaded
-  cy.wait(2500)
+  cy.wait(3000)
   // Click the test PayPal btn
   cy.contains(/Test PayPal Button/i).click()
   // Check its the Shipping Methods Page

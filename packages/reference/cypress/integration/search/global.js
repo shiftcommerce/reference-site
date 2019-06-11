@@ -65,8 +65,7 @@ describe('Search', () => {
 
     it('clears the category selection properly', () => {
       // Visit the category page
-      cy.visit('/categories/computers')
-
+      cy.navigateToCategoryPage()
       // clear the category
       cy.get('.c-searchbox__clear-filter').click()
       cy.url().should('include', '/search')

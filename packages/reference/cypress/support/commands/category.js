@@ -5,6 +5,9 @@ Cypress.Commands.add('navigateToCategoryPage', () => {
   // Setup server
   cy.server()
 
+  // Uses custom command - Cypress/support/commands/empty-search.js
+  cy.emptySearch()
+
   // Stub category products request
   cy.route({
     method: 'POST',
