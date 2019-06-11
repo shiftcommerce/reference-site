@@ -122,5 +122,5 @@ const groupVariants = (hits) => {
  */
 const SearchHits = connectInfiniteHits(SearchResults)
 
-export { SearchResults, BaseSearchHits }
+export { LoadMoreHits, ConnectedProductListingInfo }
 export default SearchHits
