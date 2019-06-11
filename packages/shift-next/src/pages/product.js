@@ -38,7 +38,7 @@ class ProductPage extends Component {
     const { sellable } = product
     let preview
 
-    if (req) {
+    if (req && req.query) {
       preview = req.query.preview
     } else {
       preview = false

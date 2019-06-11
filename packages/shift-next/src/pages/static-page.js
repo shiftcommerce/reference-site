@@ -19,7 +19,7 @@ class StaticPage extends Component {
     const { published } = page
     let preview
 
-    if (req) {
+    if (req && req.query) {
       preview = req.query.preview
     } else {
       preview = false
