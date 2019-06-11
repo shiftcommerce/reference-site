@@ -2,8 +2,7 @@
 import React from 'react'
 import { connectInfiniteHits, connectStateResults } from 'react-instantsearch-dom'
 
-// Components
-import ProductListingCard from '../products/listing/product-listing-card'
+import Config from '../../lib/config'
 
 /**
  * This is only exported for testing
@@ -11,8 +10,11 @@ import ProductListingCard from '../products/listing/product-listing-card'
  * @return {string} - HTML markup for the component
  */
 const BaseSearchHits = (hits) => {
+  const ListingCard = Config.get().ProductListingCard || import('../products/listing/product-listing-card')
+
   return hits.map((hit) => {
-    return <ProductListingCard
+    return <ListingCard
+      {...hit}
       title={hit.product_title}
       assetFileUrl={hit.product_asset_files[0].source}
       assetFileAltText={hit.product_asset_files[0].caption}
