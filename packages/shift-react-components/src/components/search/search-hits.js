@@ -14,11 +14,12 @@ const BaseSearchHits = (hits) => {
   const ListingCard = Config.get().ProductListingCard || ProductListingCard
 
   return hits.map((hit) => {
+    console.log()
     return <ListingCard
       {...hit}
       title={hit.product_title}
-      assetFileUrl={hits.product_asset_files ? hit.product_asset_files[0].source : ''}
-      assetFileAltText={hits.product_asset_files ? hit.product_asset_files[0].caption : ''}
+      assetFileUrl={hit.product_asset_files ? hit.product_asset_files[0].source : ''}
+      assetFileAltText={hit.product_asset_files ? hit.product_asset_files[0].caption : ''}
       minPrice={hit.product_min_current_price || 0}
       maxPrice={hit.product_max_current_price || 0}
       productPath={hit.product_path}
