@@ -127,6 +127,7 @@ describe('Product page', () => {
         title: 'Test Product'
       })
 
+    // Assert
     expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: true, reduxStore: { dispatch: jest.fn() } })).toEqual({
       id: 1,
       product: {
@@ -148,6 +149,7 @@ describe('Product page', () => {
         title: 'Test Product'
       })
 
+    // Assert
     expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: false, reduxStore: { dispatch: jest.fn() } })).toEqual({
       id: 1,
       product: {
