@@ -116,6 +116,8 @@ describe('Checkout', () => {
       })
 
       it('allows customers to continue shopping', () => {
+        // Uses custom command - Cypress/support/commands/empty-search.js
+        cy.emptySearch()
         // Check continue shopping button is present and click
         cy.get('.c-checkout-cart-buttons__cta--continue').click()
         // Check we are redirected to the homepage

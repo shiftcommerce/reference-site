@@ -141,7 +141,7 @@ describe('Checkout', () => {
         // Check we have been redirected to the Payment Method Page
         cy.url().should('includes', '/checkout/payment-method')
         // Wait for PayPal script and page to be loaded
-        cy.wait(2500)
+        cy.wait(3000)
         // Check that the PayPal button is present
         cy.get('.paypal-buttons-context-iframe').contains('iframe')
         // Choose credit card for payment method
