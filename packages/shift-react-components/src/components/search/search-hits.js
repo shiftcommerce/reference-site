@@ -14,7 +14,6 @@ const BaseSearchHits = (hits) => {
   const ListingCard = Config.get().ProductListingCard || ProductListingCard
 
   return hits.map((hit) => {
-    console.log()
     return <ListingCard
       {...hit}
       title={hit.product_title}
