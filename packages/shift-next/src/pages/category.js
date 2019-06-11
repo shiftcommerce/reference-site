@@ -1,13 +1,19 @@
 // Libraries
 import React, { Component, Fragment } from 'react'
+import classNames from 'classnames'
 import Router from 'next/router'
 import qs from 'qs'
 import equal from 'deep-equal'
 
 // Components
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
-import { ProductListing } from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing'
 import SearchFilters from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
+import ProductMenu from '@shiftcommerce/shift-react-components/src/components/products/listing/product-menu'
+import ProductMenuOptions from '@shiftcommerce/shift-react-components/src/components/products/listing/product-menu-options'
+import SearchHits from '@shiftcommerce/shift-react-components/src/components/search/search-hits'
+
+// Objects
+import { Breadcrumb } from '@shiftcommerce/shift-react-components/src/objects/breadcrumb'
 
 // Lib
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
@@ -21,6 +27,16 @@ import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
 import Config from '../lib/config'
 
 class CategoryPage extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Head = Config.get().Head
+
+    this.state = {
+      filtersShown: false
+    }
+  }
+
   static algoliaEnabled = () => true
 
   static async getInitialProps ({ query: { id }, reduxStore, req }) {
@@ -111,13 +127,6 @@ class CategoryPage extends Component {
     }
   }
 
-  constructor (props) {
-    super(props)
-    this.state = {}
-
-    this.Head = Config.get().Head
-  }
-
   async componentDidMount () {
     await this.fetchCategoryIntoState(this.props.id)
   }
@@ -140,27 +149,54 @@ class CategoryPage extends Component {
     this.props.dispatch(clearSearchFilter())
   }
 
+
+
+  toggleFiltering = () => {
+    if (this.state.filtersShown) {
+      document.body.classList.remove('modal-open')
+    } else {
+      document.body.classList.add('modal-open')
+    }
+
+    this.setState({
+      filtersShown: !this.state.filtersShown
+    })
+  }
+
   /**
    * Render the loaded content
    * @param  {Object} category
    * @return {String} - HTML markup for the component
    */
   renderLoaded (category) {
-    const { title, search_facets, default_sort_order } = category
     const { algoliaIndexName } = Config.get()
+    const indexName = category.default_sort_order ? `${algoliaIndexName}_${category.default_sort_order}` : algoliaIndexName
 
     return (
-      <Fragment>
+      <>
         <this.Head>
-          <title>{ suffixWithStoreName(title) }</title>
+          <title>{ suffixWithStoreName(category.title) }</title>
         </this.Head>
-        <ProductListing
-          title={title}
-          indexName={`${algoliaIndexName}_${default_sort_order}`}
-          indexNameWithoutDefaultSortOrder={algoliaIndexName}
-          facets={search_facets}
-        />
-      </Fragment>
+        <ProductMenu title={category.title} />
+        <Breadcrumb />
+        <div className='c-product-listing-wrapper'>
+          <SearchFilters
+            facets={category.search_facets}
+            filtersShown={this.state.filtersShown}
+            toggleFiltering={this.toggleFiltering}
+          />
+          <div className={classNames('c-product-listing')}>
+            <div className='c-product-listing__menu'>
+              <ProductMenuOptions
+                indexName={indexName}
+                indexNameWithoutDefaultSortOrder={algoliaIndexName}
+                toggleFiltering={this.toggleFiltering}
+              />
+            </div>
+            <SearchHits />
+          </div>
+        </div>
+      </>
     )
   }
 
