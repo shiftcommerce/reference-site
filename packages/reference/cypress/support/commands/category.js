@@ -1,7 +1,14 @@
+/**
+ * Navigates to the computers category page
+ */
 Cypress.Commands.add('navigateToCategoryPage', () => {
-  // stub requests
+  // Setup server
   cy.server()
 
+  // Uses custom command - Cypress/support/commands/empty-search.js
+  cy.emptySearch()
+
+  // Stub category products request
   cy.route({
     method: 'POST',
     url: '**/1/indexes/**',
@@ -9,6 +16,7 @@ Cypress.Commands.add('navigateToCategoryPage', () => {
     response: 'fixture:search/category/get-category-products.json'
   }).as('fetchCategoryProducts')
 
+  // Stub category request
   cy.route({
     method: 'GET',
     url: '/getCategory/*',

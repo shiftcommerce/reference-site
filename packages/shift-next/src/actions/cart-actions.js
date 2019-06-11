@@ -146,6 +146,13 @@ export function createBillingAddress (address) {
   return postEndpoint(createBillingAddressRequest(address))
 }
 
+export const setCartItemsCount = (count) => {
+  return {
+    type: actionTypes.SET_CART_ITEMS_COUNT,
+    count
+  }
+}
+
 export function toggleMiniBag (displayed) {
   return {
     type: actionTypes.TOGGLE_MINIBAG,

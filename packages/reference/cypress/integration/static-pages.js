@@ -1,7 +1,9 @@
 describe('Static pages', () => {
   before(() => {
+    // Setup server
     cy.server()
 
+    // Stub phones slug request
     cy.route({
       method: 'GET',
       url: '/getSlug/**/phones**',
@@ -9,21 +11,10 @@ describe('Static pages', () => {
       response: 'fixture:slug/phones.json'
     }).as('getSlug/phones')
 
-    cy.route({
-      method: 'GET',
-      url: '/getSlug/**/homepage**',
-      status: 200,
-      response: 'fixture:slug/homepage.json'
-    }).as('getSlug/homepage')
+    // Uses custom command - Cypress/support/commands/empty-search.js
+    cy.emptySearch()
 
-    // Stub out the Algolia request
-    cy.route({
-      method: 'POST',
-      url: '**/1/indexes/**',
-      status: 200,
-      response: 'fixture:search/empty-search.json'
-    }).as('emptySearch')
-
+    // Stub get homepaghe static page request
     cy.route({
       method: 'GET',
       url: '/getStaticPage/57**',
@@ -31,6 +22,7 @@ describe('Static pages', () => {
       response: 'fixture:static-page/homepage.json'
     }).as('getStaticPage/homepage')
 
+    // Stub get phones static page request
     cy.route({
       method: 'GET',
       url: '/getStaticPage/58**',

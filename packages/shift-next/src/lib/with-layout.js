@@ -5,12 +5,13 @@ import qs from 'qs'
 // Config
 import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
+import { getCartLineItemCookie } from './handle-cookies'
 
 // Components
 import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
 
 // Actions
-import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity } from '../actions/cart-actions'
+import { readCart, deleteLineItem, toggleMiniBag, updateLineItemQuantity, setCartItemsCount } from '../actions/cart-actions'
 
 import { connect } from 'react-redux'
 import { withRouter } from 'next/router'
@@ -28,18 +29,15 @@ export default function withLayout (Component) {
       this.handleScroll = this.handleScroll.bind(this)
       this.toggleDropDown = this.toggleDropDown.bind(this)
       this.onCategoryFilterCleared = this.onCategoryFilterCleared.bind(this)
+      this.readCart = this.readCart.bind(this)
       this.deleteItem = this.deleteItem.bind(this)
       this.toggleMiniBag = this.toggleMiniBag.bind(this)
       this.onItemQuantityUpdated = this.onItemQuantityUpdated.bind(this)
+      this.getCartItemsCount = this.getCartItemsCount.bind(this)
     }
 
     componentDidMount () {
       window.addEventListener('scroll', this.handleScroll)
-
-      // for the minibag
-      if (this.props.dispatch) {
-        this.props.dispatch(readCart())
-      }
     }
 
     componentWillUnmount () {
@@ -63,6 +61,18 @@ export default function withLayout (Component) {
 
     toggleMiniBag (displayed) {
       this.props.dispatch(toggleMiniBag(displayed))
+    }
+
+    getCartItemsCount () {
+      const lineItemsCount = getCartLineItemCookie()
+      this.props.dispatch(setCartItemsCount(lineItemsCount))
+    }
+
+    /**
+     * Read the cart from the redux store
+     */
+    readCart () {
+      this.props.dispatch(readCart())
     }
 
     deleteItem (event) {
@@ -101,6 +111,8 @@ export default function withLayout (Component) {
           deleteItem={this.deleteItem}
           toggleMiniBag={this.toggleMiniBag}
           onItemQuantityUpdated={this.onItemQuantityUpdated}
+          readCart={this.readCart}
+          getCartItemsCount={this.getCartItemsCount}
         >
           <Component {...otherProps} />
         </AppLayout>
