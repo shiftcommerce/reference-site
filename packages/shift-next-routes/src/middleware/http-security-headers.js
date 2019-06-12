@@ -4,7 +4,7 @@ const helmet = require('helmet')
 
 /**
  * Sets HTTP Security Headers
- * 
+ *
  * The following headers are added:
  *  - Referrer-Policy: no-referrer
  *  - X-XSS-Protection: 1; mode=block
@@ -14,18 +14,18 @@ const helmet = require('helmet')
  *  - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
  *  - X-Permitted-Cross-Domain-Policies: none
  *  - X-Download-Options: noopen
- * 
+ *
  * The following headers are removed:
  *  - X-Powered-By: Express
- * 
- * Also enables CSRF protection 
- * 
+ *
+ * Also enables CSRF protection
+ *
  * @param {Function} server - eg. express
  * @public
  */
 const httpSecurityHeaders = (server) => {
   // Remove 'X-Powered-By: Express' header as this could help attackers
-  server.use(helmet.hidePoweredBy())
+  server.disable('x-powered-by')
 
   // Sets 'Referrer-Policy: no-referrer'
   server.use(helmet.referrerPolicy({
