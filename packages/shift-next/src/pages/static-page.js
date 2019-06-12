@@ -13,14 +13,15 @@ import StaticPageError from '@shiftcommerce/shift-react-components/src/component
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 
 class StaticPage extends Component {
-  static async getInitialProps ({ query: { id , preview }, req, res, reduxStore }) {
+  static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
     const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
     const isServer = !!req
     const { published } = page
+    const preview = req && req.query && req.query.preview ? true : false
 
     // Unpublished pages should return a 404 page to the public however we should
     // be able to preview unpublished pages using a ?preview=true query string
-    if (published === false && preview !== true) {
+    if (published === false && preview === false) {
       if (isServer) {
         // server-side
         res.redirect('/error')

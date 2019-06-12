@@ -1,9 +1,8 @@
 // Libraries
 import { Provider } from 'react-redux'
 import { createMockStore } from 'redux-test-utils'
-
-// Actions
-import * as ProductActions from '../../src/actions/product-actions'
+import nock from 'nock'
+import Router from 'next/router'
 
 // Page
 import ProductPage from '../../src/pages/product'
@@ -116,38 +115,126 @@ describe('Product page', () => {
   })
 
   test('getInitialProps() retrieves the product serverside', async () => {
-    // Arrange - mock Redux store
-    const dispatch = jest.fn()
-    const readProductSpy = jest.spyOn(ProductActions, 'readProduct').mockImplementation(() => 'read product action')
-    const req = true
-    const query = {
-      id: 1
-    }
-    const reduxStore = {
-      dispatch: dispatch
-    }
+    Config.set({ apiHostProxy: 'http://example.com' })
 
-    // Act
-    const getInitialProps = await ProductPage.getInitialProps({ reduxStore, req, query })
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product'
+      })
 
     // Assert
-    expect(dispatch).toHaveBeenCalledWith('read product action')
-    expect(readProductSpy).toHaveBeenCalledWith(1)
-    expect(getInitialProps).toEqual({ id: 1 })
-
-    readProductSpy.mockRestore()
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: true, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product'
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
   })
 
-  test('getInitialProps() doesnt retrieve the product clientside', async () => {
-    // Arrange
-    const query = {
-      id: 1
-    }
+  test('getInitialProps() retrieves the product clientside', async () => {
+    Config.set({ apiHostProxy: 'http://example.com' })
 
-    // Act
-    const getInitialProps = await ProductPage.getInitialProps({ query })
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product'
+      })
 
     // Assert
-    expect(getInitialProps).toEqual({ id: 1 })
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: false, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product'
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
+  })
+
+  test('getInitialProps() redirects to the error page if a client-side requested product is non-sellable', async () => {
+    Config.set({ apiHostProxy: 'http://example.com' })
+
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => { })
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      })
+
+    // Assert
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: false, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
+    expect(pushSpy).toHaveBeenCalledWith('/error')
+  })
+
+  test('getInitialProps() redirects to the error page if a server-side requested product is non-sellable', async () => {
+    Config.set({ apiHostProxy: 'http://example.com' })
+
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      })
+
+    const res = {
+      redirect: jest.fn()
+    }
+
+    // Assert
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: true, res: res, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
+    expect(res.redirect.mock.calls.length).toEqual(1)
+    expect(res.redirect.mock.calls[0]).toEqual(['/error'])
+  })
+
+  test('Unpublished products should be viewable with a "?preview=true" query string', async () => {
+    Config.set({ apiHostProxy: 'http://example.com' })
+
+    const productRequest = nock(/example\.com/)
+      .get('/getProduct/1')
+      .query(true)
+      .reply(200, {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      })
+
+    // Assert
+    expect(await ProductPage.getInitialProps({ query: { id: 1 }, req: { query: { preview: true } }, reduxStore: { dispatch: jest.fn() } })).toEqual({
+      id: 1,
+      product: {
+        id: 1,
+        title: 'Test Product',
+        sellable: false
+      }
+    })
+    expect(productRequest.isDone()).toBe(true)
   })
 })
