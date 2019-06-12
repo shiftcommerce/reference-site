@@ -59,7 +59,6 @@ module.exports = app.prepare().then(() => {
   if (secure) server.use(sslRedirect())
   if (production) shiftIpFilter(server)
 
-
   server.use(compression())
   server.use(session(sessionParams))
   server.use(cookieParser(process.env.SESSION_SECRET))
