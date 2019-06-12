@@ -183,7 +183,7 @@ jobs:
       - image: hashicorp/terraform:0.10.8
     steps:
       - checkout:
-          path:~/reference-site
+          path: ~/reference-site
       - run:
           name: Terraform Init
           command: terraform init -backend-config=config/production.backend -var-file=config/production.tfvars
