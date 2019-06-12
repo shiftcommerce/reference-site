@@ -21,6 +21,7 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
+import sortOptions from '../lib/sort-options'
 
 // Config
 import Config from '../lib/config'
@@ -53,8 +54,9 @@ class SearchPage extends Component {
   }
 
   render () {
-    const algoliaIndexName = Config.get().algoliaIndexName
+    const indexName = Config.get().algoliaIndexName
     const filtersShown = false
+
     return (
       <>
         <this.Head>
@@ -84,16 +86,7 @@ class SearchPage extends Component {
                 </div>
                 <div className='c-product-listing__menu-options-sort-by'>
                   <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
-                  <SortBy defaultRefinement={algoliaIndexName}
-                    items={[
-                      { value: algoliaIndexName, label: 'Featured' },
-                      { value: `${algoliaIndexName}_price_asc`, label: 'Price asc.' },
-                      { value: `${algoliaIndexName}_price_desc`, label: 'Price desc.' },
-                      { value: `${algoliaIndexName}_created_at_desc`, label: 'Newest' },
-                      { value: `${algoliaIndexName}_total_purchases_desc`, label: 'Most Popular' },
-                      { value: `${algoliaIndexName}_rating_desc`, label: 'Rating desc.' }
-                    ]}
-                  />
+                  <SortBy defaultRefinement={indexName} items={sortOptions(indexName)} />
                   <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
                 </div>
               </div>

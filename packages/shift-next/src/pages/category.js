@@ -24,6 +24,7 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
+import sortOptions from '../lib/sort-options'
 
 // Actions
 import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
@@ -176,10 +177,7 @@ class CategoryPage extends Component {
             <div className='c-product-listing-filter__header'>
               <SearchFiltersClearControls/>
             </div>
-            <SearchFilters
-              facets={category.search_facets}
-              filtersShown={filtersShown}
-            />
+            <SearchFilters facets={category.search_facets} filtersShown={filtersShown} />
           </div>
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
@@ -193,16 +191,7 @@ class CategoryPage extends Component {
                 </div>
                 <div className='c-product-listing__menu-options-sort-by'>
                   <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
-                  <SortBy defaultRefinement={indexName}
-                    items={[
-                      { value: algoliaIndexName, label: 'Featured' },
-                      { value: `${algoliaIndexName}_price_asc`, label: 'Price asc.' },
-                      { value: `${algoliaIndexName}_price_desc`, label: 'Price desc.' },
-                      { value: `${algoliaIndexName}_created_at_desc`, label: 'Newest' },
-                      { value: `${algoliaIndexName}_total_purchases_desc`, label: 'Most Popular' },
-                      { value: `${algoliaIndexName}_rating_desc`, label: 'Rating desc.' }
-                    ]}
-                  />
+                  <SortBy defaultRefinement={indexName} items={sortOptions(algoliaIndexName)} />
                   <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
                 </div>
               </div>
