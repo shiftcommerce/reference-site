@@ -18,7 +18,11 @@ const ipFilter = (server) => {
 
   console.log("> IP Whitelisting enabled:", whiteList)
 
-  server.use(expressIpfilter(whiteList, { mode: 'allow', logLevel: 'deny' }))
+  server.use(expressIpfilter(whiteList, {
+    mode: 'allow',
+    logLevel: 'deny',
+    trustProxy: ['loopback', 'uniquelocal']
+  }))
 
   server.use((err, req, res, next) => {
     if (err instanceof IpDeniedError) {
