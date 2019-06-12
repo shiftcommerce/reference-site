@@ -31,10 +31,6 @@ const herokuFilterMiddlewareErrorHandler = (err, req, res, _next) => {
 
 const herokuFilterMiddleware = (req, res, next) => {
   if (/.herokuapp.com/.test(req.hostname)) {
-    console.log('Header', req.headers['x-forwarded-for'])
-    console.log('IP:', req.ip)
-    console.log('IPS:', req.ips)
-
     ipfilter(mergedWhiteList, { mode: 'allow', logLevel: 'all', trustProxy: mergedWhiteList })(req, res, next)
   } else {
     next()
