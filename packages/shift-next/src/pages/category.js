@@ -9,9 +9,11 @@ import { SortBy } from 'react-instantsearch-dom'
 // Components
 import SearchFilters from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
 import ProductMenu from '@shiftcommerce/shift-react-components/src/components/products/listing/product-menu'
-import SearchHits from '@shiftcommerce/shift-react-components/src/components/search/search-hits'
 import SearchFiltersClearControls from '@shiftcommerce/shift-react-components/src/components/search/search-filters-clear-controls'
 import SearchRefinements from '@shiftcommerce/shift-react-components/src/components/search/search-refinements'
+import ProductListingInfo from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing-info'
+import ProductListingCards from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing-cards'
+import LoadMoreHits from '@shiftcommerce/shift-react-components/src/components/search/load-more'
 
 // Objects
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
@@ -187,7 +189,7 @@ class CategoryPage extends Component {
           </div>
           <div className={classNames('c-product-listing-filter', { 'c-product-listing-filter--hide': !filtersShown })}>
             <div className='c-product-listing-filter__header'>
-
+              <SearchFiltersClearControls/>
             </div>
             <SearchFilters
               facets={category.search_facets}
@@ -218,10 +220,11 @@ class CategoryPage extends Component {
                   />
                   <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
                 </div>
-                <SearchFiltersClearControls/>
               </div>
             </div>
-            <SearchHits />
+            <ProductListingInfo />
+            <ProductListingCards />
+            <LoadMoreHits />
           </div>
         </div>
       </>
