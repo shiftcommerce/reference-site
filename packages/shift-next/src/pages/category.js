@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import Router from 'next/router'
 import qs from 'qs'
@@ -54,27 +54,12 @@ class CategoryPage extends Component {
   }
 
   /**
-   * Generate the category request object. This method can be overridden when
-   * StaticPage is imported, if the query needs to be altered. For example:
-   * CategoryPage.categoryRequest = (categoryId) => { ... }
-   * @param  {Number} categoryId
-   * @return {Object}
-   */
-  static categoryRequest (categoryId) {
-    return {
-      endpoint: `/getCategory/${categoryId}`,
-      query: {}
-    }
-  }
-
-  /**
    * Request the category from the API
    * @param  {Number} id
    * @return {Object} API response or error
    */
   static async fetchCategory (id) {
-    const request = CategoryPage.categoryRequest(id)
-    const response = await new ApiClient().read(request.endpoint, request.query)
+    const response = await new ApiClient().read(`/getCategory/${id}`, {})
     return response.data
   }
 
@@ -237,14 +222,14 @@ class CategoryPage extends Component {
 
     if (loading) {
       return (
-        <Fragment>
+        <>
           <Loading />
-          {/* Render Search filters so that the Algolia request triggered by the spinner
-          matches the default category page request - otherwise an extra call to Algolia is made */}
+          { /* Render Search filters so that the Algolia request triggered by the spinner
+          matches the default category page request - otherwise an extra call to Algolia is made */ }
           <div className='u-hidden'>
             <SearchFilters />
           </div>
-        </Fragment>
+        </>
       )
     } else {
       return this.renderLoaded(category)
