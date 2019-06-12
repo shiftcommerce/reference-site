@@ -1,0 +1,3 @@
+bucket = "shift-terraform"
+key    = "reference-site/production"
+region = "eu-west-1"

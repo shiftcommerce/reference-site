@@ -161,6 +161,38 @@ jobs:
       - heroku/install
       - heroku/deploy-via-git:
           only-branch: master
+  terraform_apply_staging:
+    working_directory: ~/reference-site/packages/reference/terraform/reference-site
+    docker:
+      - image: hashicorp/terraform:0.10.8
+    steps:
+      - checkout:
+          path: ~/reference-site
+      - run:
+          name: Terraform Init
+          command: terraform init -backend-config=config/staging.backend -var-file=config/staging.tfvars
+      - run:
+          name: Terraform Plan
+          command: terraform plan -var-file=config/staging.tfvars
+      - run:
+          name: Terraform Apply
+          command: terraform apply -var-file=config/staging.tfvars
+  terraform_apply_production:
+    working_directory: ~/reference-site/packages/reference/terraform/reference-site
+    docker:
+      - image: hashicorp/terraform:0.10.8
+    steps:
+      - checkout:
+          path: ~/reference-site
+      - run:
+          name: Terraform Init
+          command: terraform init -backend-config=config/production.backend -var-file=config/production.tfvars
+      - run:
+          name: Terraform Plan
+          command: terraform plan -var-file=config/production.tfvars
+      - run:
+          name: Terraform Apply
+          command: terraform apply -var-file=config/production.tfvars
 
 orbs:
   heroku: circleci/heroku@0.0.6
@@ -184,3 +216,14 @@ workflows:
           requires:
             - jest_test
             - cypress
+  update_fastly_ips:
+    jobs:
+      - terraform_apply_staging
+      - terraform_apply_production
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
