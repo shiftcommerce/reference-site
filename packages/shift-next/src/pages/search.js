@@ -21,7 +21,7 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
-import sortOptions from '../lib/sort-options'
+import { sortOptions }from '../lib/sort-options'
 
 // Config
 import Config from '../lib/config'

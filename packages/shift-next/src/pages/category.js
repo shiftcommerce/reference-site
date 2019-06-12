@@ -24,7 +24,7 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
-import sortOptions from '../lib/sort-options'
+import { sortOptions } from '../lib/sort-options'
 
 // Actions
 import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
