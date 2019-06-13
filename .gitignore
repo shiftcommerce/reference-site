@@ -24,3 +24,7 @@ cypress/screenshots
 
 # Procfile
 Procfile
+
+# Terraform
+.terraform
+*.tfstate*

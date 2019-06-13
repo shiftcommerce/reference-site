@@ -18,6 +18,17 @@ import accountIcon from '../../static/account-icon.svg'
 import imgBagIcon from '../../static/bag-icon.svg'
 
 export class Layout extends Component {
+  constructor (props) {
+    super(props)
+
+    this.handleLoadMinibag = this.handleLoadMinibag.bind(this)
+  }
+
+  componentDidMount () {
+    const { getCartItemsCount } = this.props
+    getCartItemsCount()
+  }
+
   renderNav () {
     return (
       <span className='o-nav u-visible-d'>
@@ -43,7 +54,7 @@ export class Layout extends Component {
         <Link className='c-header__account-link' href='/account/login'>
           <Image className='c-header__account-image' src={accountIcon} />
           <div className='c-header__account-text'>{ signedIn }</div>
-        </Link >
+        </Link>
         { this.renderAccountDropDown() }
       </div>
     )
@@ -74,17 +85,27 @@ export class Layout extends Component {
   }
 
   /**
- * Renders the basket icon
- * @param  {number} lineItemsCount
- * @return {string} - HTML markup for the component
- */
-  renderCartLink (lineItemsCount) {
+   * Get the cart when the minibag is hovered
+   */
+  handleLoadMinibag () {
+    this.props.readCart()
+  }
+
+  /**
+   * Renders the basket icon
+   * @return {string} - HTML markup for the component
+   */
+  renderCartLink () {
+    const { cart } = this.props
+
     return (
-      <span className='c-minibag__cart' onClick={() => this.props.toggleMiniBag(true)}>
+      <span
+        className='c-minibag__cart'
+        onClick={() => this.props.toggleMiniBag(true)}
+        onMouseEnter={this.handleLoadMinibag}
+      >
         <div className='c-minibag__cart-image'>
-          <span className='c-minibag__cart-image-count' >
-            { lineItemsCount }
-          </span>
+          <span className='c-minibag__cart-image-count'>{ cart.line_items_count }</span>
           <Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
         </div>
         <span className='c-minibag__cart-label'>Basket</span>
@@ -93,12 +114,11 @@ export class Layout extends Component {
   }
 
   renderBasket () {
-    const { cart, className } = this.props
-    const lineItemsCount = cart.line_items_count || 0
+    const { className } = this.props
 
     return (
       <div className={classNames(className, 'c-header__minibag c-minibag')}>
-        { this.renderCartLink(lineItemsCount) }
+        { this.renderCartLink() }
       </div>
     )
   }
@@ -111,27 +131,25 @@ export class Layout extends Component {
     })
 
     return (
-      <>
-        <div className={ headerClasses }>
-          <div className='o-header__top'>
-            <div className='o-header__top-wrapper'>
-              <Logo className='o-header__logo' logoSrc={logoSrc || defaultLogo} />
-              { this.renderMobileNav() }
-              { this.renderHeaderAccount(loggedIn) }
-              { this.renderBasket() }
-              <Minibag
-                cart={cart}
-                deleteItem={deleteItem}
-                miniBagDisplayed={cart.miniBagDisplayed}
-                onItemQuantityUpdated={onItemQuantityUpdated}
-                toggleMiniBag={this.props.toggleMiniBag}
-              />
-              { this.renderSearch() }
-            </div>
+      <div className={headerClasses}>
+        <div className='o-header__top'>
+          <div className='o-header__top-wrapper'>
+            <Logo className='o-header__logo' logoSrc={logoSrc || defaultLogo} />
+            { this.renderMobileNav() }
+            { this.renderHeaderAccount(loggedIn) }
+            { this.renderBasket() }
+            <Minibag
+              cart={cart}
+              deleteItem={deleteItem}
+              miniBagDisplayed={cart.miniBagDisplayed}
+              onItemQuantityUpdated={onItemQuantityUpdated}
+              toggleMiniBag={this.props.toggleMiniBag}
+            />
+            { this.renderSearch() }
           </div>
-          { this.renderNav() }
         </div>
-      </>
+        { this.renderNav() }
+      </div>
     )
   }
 

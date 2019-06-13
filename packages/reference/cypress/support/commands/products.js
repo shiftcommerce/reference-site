@@ -1,6 +1,11 @@
+/**
+ * Navigates to a PDP from the PLP
+ */
 Cypress.Commands.add('goToPdpFromPlp', () => {
+  // Setup server
   cy.server()
 
+  // Stub products request
   cy.route({
     method: 'POST',
     url: '**/1/indexes/**',
@@ -8,6 +13,7 @@ Cypress.Commands.add('goToPdpFromPlp', () => {
     response: 'fixture:products/product-listing.json'
   }).as('getProducts')
 
+  // Stub product request
   cy.route({
     method: 'GET',
     url: '/getProduct/*',
@@ -15,6 +21,7 @@ Cypress.Commands.add('goToPdpFromPlp', () => {
     response: 'fixture:products/product.json'
   }).as('getProduct')
 
+  // Stub category request
   cy.route({
     method: 'GET',
     url: '/getCategory/*',
@@ -25,6 +32,7 @@ Cypress.Commands.add('goToPdpFromPlp', () => {
   // Visit the PLP
   cy.visit('/categories/computers')
 
+  // Stub slug request
   cy.route({
     method: 'GET',
     url: '/getSlug/**',

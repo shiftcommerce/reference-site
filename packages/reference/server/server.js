@@ -56,9 +56,6 @@ module.exports = app.prepare().then(() => {
     genReqId: req => { return req.header('x-request-id') || uuid() } // either been told an id already, or create one
   }))
 
-  // Unique local IPv6 addresses have the same function as private addresses in IPv4
-  // They are unique to the private organization and are not internet routable.
-  server.set('trust proxy', 'uniquelocal')
   if (secure) server.use(sslRedirect())
   if (production) shiftIpFilter(server)
 
@@ -90,7 +87,7 @@ module.exports = app.prepare().then(() => {
     }
 
     const directRouting = async (page) => {
-      if (page.status === 200 && page.data.data.length !== 0) {
+      if (page && page.status === 200 && page.data.data.length !== 0) {
         const resourceId = page.data.data[0].attributes.resource_id
         const resourceType = page.data.data[0].attributes.resource_type
 
@@ -106,7 +103,7 @@ module.exports = app.prepare().then(() => {
         }
       }
 
-      if ([301, 302].includes(page.status)) {
+      if (page && [301, 302].includes(page.status)) {
         return res.redirect(page.status, page.redirect.destination)
       }
 
