@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import Router from 'next/router'
 import qs from 'qs'
@@ -163,7 +163,7 @@ class CategoryPage extends Component {
     const indexName = category.default_sort_order ? `${algoliaIndexName}_${category.default_sort_order}` : algoliaIndexName
 
     return (
-      <>
+      <Fragment>
         <this.Head>
           <title>{ suffixWithStoreName(category.title) }</title>
         </this.Head>
@@ -179,7 +179,7 @@ class CategoryPage extends Component {
             </div>
             <SearchFilters facets={category.search_facets} filtersShown={filtersShown} />
           </div>
-          <div className={classNames('c-product-listing')}>
+          <div className='c-product-listing'>
             <div className='c-product-listing__menu'>
               <div className='c-product-listing__menu-options'>
                 <div className='c-product-listing__menu-options-filters'>
@@ -201,7 +201,7 @@ class CategoryPage extends Component {
             <LoadMoreHits />
           </div>
         </div>
-      </>
+      </Fragment>
     )
   }
 
@@ -211,14 +211,14 @@ class CategoryPage extends Component {
 
     if (loading) {
       return (
-        <>
+        <Fragment>
           <Loading />
           { /* Render Search filters so that the Algolia request triggered by the spinner
           matches the default category page request - otherwise an extra call to Algolia is made */ }
           <div className='u-hidden'>
             <SearchFilters />
           </div>
-        </>
+        </Fragment>
       )
     } else {
       return this.renderLoaded(category)
