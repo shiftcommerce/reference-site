@@ -2,7 +2,7 @@ const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 const categoryApiEndpointQuery = {
-  include: 'template'
+  include: 'template,children'
 }
 
 module.exports = {
