@@ -1,0 +1,284 @@
+{
+  "results": [
+    {
+      "hits": [
+        {
+          "id": 27251,
+          "product_id": 185,
+          "archived": false,
+          "title": "Old Computer 13\"",
+          "description": "Old Computer 13\"",
+          "sku": "OLD_AF",
+          "price": 150,
+          "stock_level": 1000,
+          "reference": "OLD_AF",
+          "position": null,
+          "stock_allocated_level": 0,
+          "tax_code": "",
+          "price_includes_taxes": true,
+          "ewis_eligible": false,
+          "ordered_total": 0,
+          "in_stock": true,
+          "current_price": 150,
+          "product_title": "Old Computer",
+          "product_description": "An old computer for retro afficionados",
+          "product_reference": "old_computer",
+          "product_total_ratings": null,
+          "product_average_rating": 3,
+          "product_rating": 3,
+          "product_min_price": 150,
+          "product_min_current_price": 150,
+          "product_max_price": 150,
+          "product_max_current_price": 150,
+          "product_meta_data": {
+            "rating": 3
+          },
+          "visible": true,
+          "product_path": "/products/old_computer",
+          "category_ids": [
+            73
+          ],
+          "product_asset_files": [
+            {
+              "caption": null,
+              "source": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/248/1544098375.0540378-old_computer.jpg"
+            }
+          ],
+          "objectID": "27251",
+          "_highlightResult": {
+            "title": {
+              "value": "Old <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "description": {
+              "value": "Old <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            }
+          }
+        },
+        {
+          "id": 27250,
+          "product_id": 188,
+          "archived": false,
+          "title": "Geeky Computer 13\"",
+          "description": "Geeky Computer 13\"",
+          "sku": "GEEKY_AF",
+          "price": 550,
+          "stock_level": 1000,
+          "reference": "GEEKY_AF",
+          "position": null,
+          "stock_allocated_level": 0,
+          "tax_code": "",
+          "price_includes_taxes": true,
+          "ewis_eligible": false,
+          "ordered_total": 0,
+          "in_stock": true,
+          "current_price": 550,
+          "product_title": "Geeky Computer",
+          "product_description": "A geeky computer for geeks. UPDATED again",
+          "product_reference": "geeky_computer",
+          "product_total_ratings": null,
+          "product_average_rating": 5,
+          "product_rating": 5,
+          "product_min_price": 550,
+          "product_min_current_price": 550,
+          "product_max_price": 550,
+          "product_max_current_price": 550,
+          "visible": true,
+          "product_path": "/products/geeky_computer",
+          "category_ids": [
+            73
+          ],
+          "product_asset_files": [
+            {
+              "caption": null,
+              "source": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-geeky_computer.jpg"
+            }
+          ],
+          "objectID": "27250",
+          "_highlightResult": {
+            "title": {
+              "value": "Geeky <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "description": {
+              "value": "Geeky <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            }
+          }
+        },
+        {
+          "id": 27249,
+          "product_id": 186,
+          "archived": false,
+          "title": "Regular Computer 13\"",
+          "description": "Regular Computer 13\"",
+          "sku": "REGULAR_AF",
+          "price": 799.99,
+          "stock_level": 0,
+          "reference": "REGULAR_AF",
+          "position": null,
+          "stock_allocated_level": 0,
+          "tax_code": "",
+          "price_includes_taxes": true,
+          "ewis_eligible": false,
+          "ordered_total": 0,
+          "in_stock": false,
+          "current_price": 799.99,
+          "product_title": "Regular Computer",
+          "product_description": "Just a regular computer.",
+          "product_reference": "regular_computer",
+          "product_total_ratings": null,
+          "product_average_rating": 0,
+          "product_rating": 0,
+          "product_min_price": 799.99,
+          "product_min_current_price": 799.99,
+          "product_max_price": 799.99,
+          "product_max_current_price": 799.99,
+          "visible": true,
+          "product_path": "/products/regular_computer",
+          "category_ids": [
+            73
+          ],
+          "product_asset_files": [
+            {
+              "caption": null,
+              "source": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/249/1544098375.3199387-regular_computer.jpg"
+            }
+          ],
+          "objectID": "27249",
+          "_highlightResult": {
+            "title": {
+              "value": "Regular <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "description": {
+              "value": "Regular <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            }
+          }
+        },
+        {
+          "id": 27248,
+          "product_id": 183,
+          "archived": false,
+          "title": "Portable Computer 13''",
+          "description": "Portable AF",
+          "sku": "PORTABLE_AF_13",
+          "price": 24.99,
+          "stock_level": 2000,
+          "reference": "PORTABLE_AF_13",
+          "position": null,
+          "stock_allocated_level": 0,
+          "tax_code": "",
+          "price_includes_taxes": true,
+          "ewis_eligible": false,
+          "ordered_total": 0,
+          "in_stock": true,
+          "current_price": 24.99,
+          "product_title": "Portable Computer",
+          "product_description": "A portable computer for all your needs.",
+          "product_reference": "portable_computer",
+          "product_total_ratings": null,
+          "product_average_rating": 0,
+          "product_rating": 0,
+          "product_min_price": 24.99,
+          "product_min_current_price": 24.99,
+          "product_max_price": 24.99,
+          "product_max_current_price": 24.99,
+          "visible": true,
+          "product_path": "/products/portable_computer",
+          "category_ids": [
+            73
+          ],
+          "product_asset_files": [
+            {
+              "caption": null,
+              "source": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/246/1544098374.1740267-portable_computer.jpg"
+            }
+          ],
+          "objectID": "27248",
+          "_highlightResult": {
+            "title": {
+              "value": "Portable <ais-highlight-0000000000>Computer</ais-highlight-0000000000> 13''",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "computer"
+              ]
+            },
+            "description": {
+              "value": "Portable AF",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        }
+      ],
+      "nbHits": 6,
+      "page": 0,
+      "nbPages": 2,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "facets": {
+        "current_price": {
+          "150": 1,
+          "550": 1,
+          "699": 1,
+          "799": 1,
+          "999": 2,
+          "24.99": 1,
+          "799.99": 1
+        },
+        "product_rating": {
+          "0": 6,
+          "3": 1,
+          "5": 1
+        }
+      },
+      "facets_stats": {
+        "current_price": {
+          "min": 24.99,
+          "max": 999,
+          "avg": 627.622,
+          "sum": 5020.98
+        },
+        "product_rating": {
+          "min": 0,
+          "max": 5,
+          "avg": 1,
+          "sum": 8
+        }
+      },
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "computer",
+      "params": "query=computer&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D",
+      "index": "referencetest_catalogue"
+    }
+  ]
+}
