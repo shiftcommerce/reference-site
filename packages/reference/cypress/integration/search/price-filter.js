@@ -62,8 +62,6 @@ describe('Search', () => {
         .trigger('mousemove', { which: 1, clientX: 200 })
         .trigger('mouseup')
 
-      cy.wait(1000)
-
       // Check the request is correct
       cy.wait('@algoliaPriceFiltered').then((xhr) => {
         const decodedQuery = decodeURI(xhr.requestBody.requests[0].params).replace(/%3A/, ':')
@@ -80,12 +78,8 @@ describe('Search', () => {
       cy.get('.ais-CurrentRefinements').should('exist')
       cy.get('.ais-ClearRefinements').contains(/clear all filters/i)
 
-      cy.wait(1000)
-
       // Clear Refinements
       cy.get('.ais-ClearRefinements-button').click()
-
-      cy.wait(1000)
 
       // Check the number of products has reset
       cy.get('.c-product-listing__counts').contains(/showing 4 of 6 products/i)
