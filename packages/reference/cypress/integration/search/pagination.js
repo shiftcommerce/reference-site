@@ -33,8 +33,8 @@ describe('Search', () => {
       cy.wait('@getSearchProducts')
         .its('requestBody.requests')
         .should('include', {
-          indexName: 'reference_test_suite',
-          params: 'query=&hitsPerPage=4&maxValuesPerFacet=10&page=1&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters='
+          indexName: 'referencetest_catalogue',
+          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=1&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D'
         })
 
       // Check product count is correct
@@ -55,8 +55,8 @@ describe('Search', () => {
       cy.wait('@getSearchProducts')
         .its('requestBody.requests')
         .should('include', {
-          indexName: 'reference_test_suite',
-          params: 'query=&hitsPerPage=4&maxValuesPerFacet=10&page=2&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters='
+          indexName: 'referencetest_catalogue',
+          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=2&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D'
         })
 
       // Check product count is correct

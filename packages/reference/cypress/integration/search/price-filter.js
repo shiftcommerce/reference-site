@@ -29,7 +29,7 @@ describe('Search', () => {
       // Wait for page to load
       cy.wait('@getMenus')
       cy.wait('@algoliaSearch').then((xhr) => {
-        assert.equal(xhr.responseBody.results[0].nbHits, 8, 'values equal')
+        assert.equal(xhr.responseBody.results[0].nbHits, 6, 'values equal')
       })
 
       // Check page has loaded
@@ -39,11 +39,11 @@ describe('Search', () => {
       cy.url().should('includes', '/search?query=computer')
 
       // Check the number of products
-      cy.get('.c-product-listing__counts').contains(/showing 4 of 8 products/i)
+      cy.get('.c-product-listing__counts').contains(/showing 4 of 6 products/i)
 
       // Renders correct hi-lo values
-      cy.get('.ais-RangeSlider').contains('£150')
-      cy.get('.ais-RangeSlider').contains('£800')
+      cy.get('.ais-RangeSlider').contains('£24')
+      cy.get('.ais-RangeSlider').contains('£999')
 
       // Check that there is no current refinement
       cy.get('.ais-CurrentRefinements--noRefinement').should('exist')
@@ -62,27 +62,33 @@ describe('Search', () => {
         .trigger('mousemove', { which: 1, clientX: 200 })
         .trigger('mouseup')
 
+      cy.wait(1000)
+
       // Check the request is correct
       cy.wait('@algoliaPriceFiltered').then((xhr) => {
         const decodedQuery = decodeURI(xhr.requestBody.requests[0].params).replace(/%3A/, ':')
         assert.include(decodedQuery, 'query=computer')
         assert.include(decodedQuery, 'numericFilters')
-        assert.equal(xhr.responseBody.results[0].nbHits, 5, 'values equal')
+        assert.equal(xhr.responseBody.results[0].nbHits, 2, 'values equal')
       })
 
       // Check the number of products have changed
-      cy.get('.c-product-listing__counts').contains(/showing 4 of 5 products/i)
+      cy.get('.c-product-listing__counts').contains(/showing 2 of 2 products/i)
 
       // Check that filter has been added and removal button is rendered
       cy.get('.ais-CurrentRefinements--noRefinement').should('not.exist')
       cy.get('.ais-CurrentRefinements').should('exist')
       cy.get('.ais-ClearRefinements').contains(/clear all filters/i)
 
+      cy.wait(1000)
+
       // Clear Refinements
       cy.get('.ais-ClearRefinements-button').click()
 
+      cy.wait(1000)
+
       // Check the number of products has reset
-      cy.get('.c-product-listing__counts').contains(/showing 4 of 8 products/i)
+      cy.get('.c-product-listing__counts').contains(/showing 4 of 6 products/i)
     })
   })
 })
