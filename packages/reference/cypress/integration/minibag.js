@@ -46,6 +46,8 @@ describe('Minibag', () => {
     // Check that the minibag isn't displayed to start with
     cy.get('.c-minibag__dropdown').should('have.length', 0)
 
+    cy.wait(1000)
+
     // Add an item to cart
     cy.contains(/Clock computer 15''/i).click()
     cy.contains(/Add to basket/i).click()
