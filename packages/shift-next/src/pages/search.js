@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import qs from 'qs'
 import equal from 'deep-equal'
 import classNames from 'classnames'
@@ -58,7 +58,7 @@ class SearchPage extends Component {
     const filtersShown = false
 
     return (
-      <Fragment>
+      <>
         <this.Head>
           <title>{ suffixWithStoreName('Search') }</title>
         </this.Head>
@@ -74,7 +74,7 @@ class SearchPage extends Component {
             </div>
             <SearchFilters />
           </div>
-          <div className='c-product-listing'>
+          <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
               <div className='c-product-listing__menu-options'>
                 <div className='c-product-listing__menu-options-filters'>
@@ -96,7 +96,7 @@ class SearchPage extends Component {
             <LoadMoreHits />
           </div>
         </div>
-      </Fragment>
+      </>
     )
   }
 }
