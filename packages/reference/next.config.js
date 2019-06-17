@@ -1,39 +1,35 @@
 const path = require('path')
 const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
-const nextRuntimeDotenv = require('next-runtime-dotenv')
 const withTM = require('next-transpile-modules')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.BUNDLE_ANALYZE === 'true'
 })
 
-const withConfig = nextRuntimeDotenv({
-  public: [
-    'API_HOST_PROXY',
-    'ALGOLIA_APP_ID',
-    'ALGOLIA_API_KEY',
-    'ALGOLIA_INDEX_NAME',
-    'ALGOLIA_RESULTS_PER_PAGE',
-    'ALGOLIA_DISTINCT_VARIANTS',
-    'STRIPE_API_KEY',
-    'PAYPAL_CLIENT_ID',
-    'ENABLE_TEST_PAYPAL_BUTTON'
-  ],
-  server: [
-    'API_TENANT',
-    'API_ACCESS_TOKEN',
-    'API_HOST',
-    'OMS_HOST',
-    'SESSION_SECRET',
-    'IMAGE_HOSTS',
-    'SCRIPT_HOSTS',
-    'SECRET_STRIPE_API_KEY',
-    'PAYPAL_CLIENT_SECRET',
-    'ENABLE_PAYPAL_LIVE_ENVIRONMENT'
-  ]
-})
-
-module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
+module.exports = withBundleAnalyzer(withCSS(withSass(withTM({
+    publicRuntimeConfig: {
+    'API_HOST_PROXY': process.env.API_HOST_PROXY,
+    'ALGOLIA_APP_ID': process.env.ALGOLIA_APP_ID,
+    'ALGOLIA_API_KEY': process.env.ALGOLIA_API_KEY,
+    'ALGOLIA_INDEX_NAME': process.env.ALGOLIA_INDEX_NAME,
+    'ALGOLIA_RESULTS_PER_PAGE': process.env.ALGOLIA_RESULTS_PER_PAGE,
+    'ALGOLIA_DISTINCT_VARIANTS': process.env.ALGOLIA_DISTINCT_VARIANTS,
+    'STRIPE_API_KEY': process.env.STRIPE_API_KEY,
+    'PAYPAL_CLIENT_ID': process.env.PAYPAL_CLIENT_ID,
+    'ENABLE_TEST_PAYPAL_BUTTON': process.env.ENABLE_TEST_PAYPAL_BUTTON
+  },
+  serverRuntimeConfig: {
+    'API_TENANT': process.env.API_TENANT,
+    'API_ACCESS_TOKEN': process.env.API_ACCESS_TOKEN,
+    'API_HOST': process.env.API_HOST,
+    'OMS_HOST': process.env.OMS_HOST,
+    'SESSION_SECRET': process.env.SESSION_SECRET,
+    'IMAGE_HOSTS': process.env.IMAGE_HOSTS,
+    'SCRIPT_HOSTS': process.env.SCRIPT_HOSTS,
+    'SECRET_STRIPE_API_KEY': process.env.SECRET_STRIPE_API_KEY,
+    'PAYPAL_CLIENT_SECRET': process.env.PAYPAL_CLIENT_SECRET,
+    'ENABLE_PAYPAL_LIVE_ENVIRONMENT': process.env.ENABLE_PAYPAL_LIVE_ENVIRONMENT
+  },
   sassLoaderOptions: {
     includePaths: [`${process.env.INIT_CWD}/node_modules`]
   },
@@ -76,4 +72,4 @@ module.exports = withConfig(withBundleAnalyzer(withCSS(withSass(withTM({
 
     return config
   }
-})))))
+}))))
