@@ -36,7 +36,6 @@ class MenuCache {
    * Sets the received API menu response
    * @param {object} response - menu API response
    * @param {number} cacheDuration - the cache duration
-   * @return {boolean}
    */
   set (response, cacheDuration) {
     return this.cache.set(this.cacheKey, response, cacheDuration, (error) => {

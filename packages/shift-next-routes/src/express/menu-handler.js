@@ -6,20 +6,14 @@ module.exports = {
   getMenu: async (req, res) => {
     // fetch cached menus
     let response = MenuCache.read()
-
-    console.log("cache response", response)
     // check if there are no cached menu response
     if (!response || Object.keys(response).length === 0) {
-      console.log({response})
       // fetch menus from API
       response = await SHIFTClient.getMenusV1(req.query)
       // set Surrogate headers
       setSurrogateHeaders(response.headers, res)
       // cache API response
       MenuCache.set(response, 300)
-      console.log("FETCHED FROM API")
-    } else {
-      console.log("FETCHED FROM CACHE")
     }
 
     switch (response.status) {
