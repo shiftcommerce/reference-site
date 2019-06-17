@@ -5,7 +5,7 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 module.exports = {
   getMenu: async (req, res) => {
     // fetch cached menus
-    let response = MenuCache.read()
+    let response = await MenuCache.read()
     // check if there are no cached menu response
     if (!response || Object.keys(response).length === 0) {
       // fetch menus from API

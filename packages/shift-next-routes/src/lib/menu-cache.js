@@ -1,9 +1,20 @@
 // Libraries
-const Memcached = require('memcached')
+const Memcached = require('memcache-client')
 
 // Config
-Memcached.config.timeout = 1500
-const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',')
+const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',').map((server) => {
+  return { server:server, maxConnections: 3 }
+})
+const memcachedServerConfig = {
+  server: {
+    servers: memcachedServers,
+    config: {
+      retryFailedServerInterval: 1000,
+      failedServerOutTime: 30000,
+      keepLastServer: false
+    }
+  }
+}
 
 /**
  *  MenuCache service
@@ -16,7 +27,7 @@ class MenuCache {
    * Initializes the class.
    * @constructor
    */
-  constructor (cacheClient = new Memcached(memcachedServers)) {
+  constructor (cacheClient = new Memcached(memcachedServerConfig)) {
     this.cache = cacheClient
     this.cacheKey = 'menus/data'
   }
@@ -25,11 +36,12 @@ class MenuCache {
    * Reads the cached menu response
    * @return {object} - the cached menu API response
    */
-  read () {
-    return this.cache.get(this.cacheKey, (error, data) => {
+  async read () {
+    const data = await this.cache.get(this.cacheKey, (error, data) => {
       if (error) console.error('Error fetching menu cache', error)
       return data
     })
+    return data ? data.value : {}
   }
 
   /**
@@ -38,7 +50,7 @@ class MenuCache {
    * @param {number} cacheDuration - the cache duration
    */
   set (response, cacheDuration) {
-    return this.cache.set(this.cacheKey, response, cacheDuration, (error) => {
+    return this.cache.set(this.cacheKey, response, { lifetime: cacheDuration }, (error) => {
       if (error) console.log('Error setting menu cache', error)
     })
   }
