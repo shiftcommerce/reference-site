@@ -38,11 +38,13 @@ class MenuCache {
    * @return {object} - the cached menu API response
    */
   async read () {
-    const data = await this.cache.get(this.cacheKey, (error, data) => {
-      if (error) console.error('Error fetching menu cache', error)
-      return data
-    })
-    return data ? data.value : {}
+    try {
+      const data = await this.cache.get(this.cacheKey)
+      return data ? data.value : {}
+    } catch (error) {
+      console.error('Error fetching menu cache', error)
+      return {}
+    }
   }
 
   /**
@@ -51,9 +53,12 @@ class MenuCache {
    * @param {number} cacheDuration - the cache duration
    */
   set (response, cacheDuration) {
-    return this.cache.set(this.cacheKey, response, { lifetime: cacheDuration }, (error) => {
-      if (error) console.log('Error setting menu cache', error)
-    })
+    try {
+      return this.cache.set(this.cacheKey, response, { lifetime: cacheDuration })
+    } catch (error) {
+      console.log('Error setting menu cache', error)
+      return false
+    }
   }
 }
 
