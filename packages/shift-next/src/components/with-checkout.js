@@ -8,7 +8,7 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Next config
 import getConfig from 'next/config'
-const { publicRuntimeConfig: { PAYPAL_CLIENT_ID } } = getConfig()
+const { publicRuntimeConfig: { PAYPAL_CLIENT_ID: payPalClientID } } = getConfig()
 
 // Config
 import Config from '../lib/config'
@@ -119,7 +119,6 @@ export function withCheckout (WrappedComponent) {
     render () {
       const { cart, order } = this.props
       const { continueButtonProps, currentStep, loading, stepActions } = this.state
-      const payPalClientID = PAYPAL_CLIENT_ID
 
       if (loading || !cart.id) {
         return <div>Loading</div>
