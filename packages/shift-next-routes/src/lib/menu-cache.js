@@ -1,17 +1,24 @@
+// Libraries
+const Memcached = require('memcached')
+
+// Config
+Memcached.config.timeout = 1500
+const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',')
+
 /**
  *  MenuCache service
  *
  * Responsibility: Facilitating the setting and retrieval
  *                 of menu response from cache store
- *
  */
 class MenuCache {
   /**
    * Initializes the class.
    * @constructor
    */
-  constructor () {
-    this.client = [] //initialise memcached client & set expiration to 5 mins
+  constructor (cacheClient = new Memcached(memcachedServers)) {
+    this.cache = cacheClient
+    this.cacheKey = 'menus/data'
   }
 
   /**
@@ -19,21 +26,22 @@ class MenuCache {
    * @return {object} - the cached menu API response
    */
   read () {
-    // fetch menu response in memcache via `this.client`
-    console.log('FETCHED FROM CACHE')
-    return this.client[0]
+    return this.cache.get(this.cacheKey, (error, data) => {
+      if (error) console.error('Error fetching menu cache', error)
+      return data
+    })
   }
 
   /**
    * Sets the received API menu response
    * @param {object} response - menu API response
+   * @param {number} cacheDuration - the cache duration
    * @return {boolean}
    */
-  set (response) {
-    // set menu response in memcache via `this.client`
-    console.log('SET IN CACHE')
-    this.client.push(response)
-    return true
+  set (response, cacheDuration) {
+    return this.cache.set(this.cacheKey, response, cacheDuration, (error) => {
+      if (error) console.log('Error setting menu cache', error)
+    })
   }
 }
 
