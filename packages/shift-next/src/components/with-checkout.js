@@ -8,7 +8,7 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Next config
 import getConfig from 'next/config'
-const { publicRuntimeConfig: { PAYPAL_CLIENT_ID: payPalClientID } } = getConfig()
+const { publicRuntimeConfig: { PAYPAL_CLIENT_ID: paypalClientID } } = getConfig()
 
 // Config
 import Config from '../lib/config'
@@ -128,7 +128,7 @@ export function withCheckout (WrappedComponent) {
         <>
           <this.Head>
             <title>{ suffixWithStoreName(`Checkout - ${this.state.pageTitle}`) }</title>
-            { payPalClientID && <script src={`https://www.paypal.com/sdk/js?client-id=${payPalClientID}&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa,card`} /> }
+            { paypalClientID && <script src={`https://www.paypal.com/sdk/js?client-id=${paypalClientID}&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa,card`} /> }
           </this.Head>
           <CheckoutSteps
             currentStep={currentStep}
