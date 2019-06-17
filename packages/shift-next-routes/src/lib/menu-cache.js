@@ -2,12 +2,13 @@
 const Memcached = require('memcache-client')
 
 // Config
-const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',').map((server) => {
-  return { server:server, maxConnections: 3 }
+const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',')
+const memcachedServerConfigs = memcachedServers.map((server) => {
+  return { server: server, maxConnections: 3 }
 })
-const memcachedServerConfig = {
+const memcachedConfig = {
   server: {
-    servers: memcachedServers,
+    servers: memcachedServerConfigs,
     config: {
       retryFailedServerInterval: 1000,
       failedServerOutTime: 30000,
@@ -27,7 +28,7 @@ class MenuCache {
    * Initializes the class.
    * @constructor
    */
-  constructor (cacheClient = new Memcached(memcachedServerConfig)) {
+  constructor (cacheClient = new Memcached(memcachedConfig)) {
     this.cache = cacheClient
     this.cacheKey = 'menus/data'
   }
