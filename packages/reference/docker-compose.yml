@@ -10,11 +10,21 @@ services:
       - "3001:3001"
     entrypoint: ./bin/docker/yarn_entrypoint
     env_file: .env
+    environment:
+      MEMCACHE_SERVERS: 'memcached:11211'
     volumes:
       - .:/app
       - yarn_cache:/app/node_modules
+    depends_on:
+      - memcached
     networks:
       - shift_net
+
+  memcached:
+      container_name: shift-front-end-react-memcached
+      image: 'memcached:1.5-alpine'
+      ports:
+        - '11211'
 
 volumes:
   yarn_cache:
