@@ -13,7 +13,7 @@ module.exports = {
       // set Surrogate headers
       setSurrogateHeaders(response.headers, res)
       // cache API response
-      MenuCache.set(response, 300)
+      MenuCache.set(response)
     }
 
     switch (response.status) {

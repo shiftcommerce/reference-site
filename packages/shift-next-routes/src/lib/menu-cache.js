@@ -50,9 +50,9 @@ class MenuCache {
   /**
    * Sets the received API menu response
    * @param {object} response - menu API response
-   * @param {number} cacheDuration - the cache duration
+   * @param {number} cacheDuration - the cache duration in seconds
    */
-  set (response, cacheDuration) {
+  set (response, cacheDuration = process.env.MENUS_CACHE_DURATION) {
     try {
       return this.cache.set(this.cacheKey, response, { lifetime: cacheDuration })
     } catch (error) {
