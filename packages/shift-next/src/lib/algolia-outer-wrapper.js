@@ -38,7 +38,12 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
         searchState = Page.buildAlgoliaStates(appContext)
       }
       // We should always configure this in the state to prevent a onSearchStateChange first render
-      searchState.configure = { ...searchState.configure, hitsPerPage: Config.get().algoliaResultsPerPage, distinct: MAX_VARIANTS_PER_PRODUCT }
+      searchState.configure = {
+        ...searchState.configure,
+        hitsPerPage: Config.get().algoliaResultsPerPage,
+        distinct: Config.get().algoliaDistinctVariants || true,
+        tagFilters: "-redirect"
+      }
 
       let resultsState = {
         _originalResponse: {
@@ -82,7 +87,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
           Router.push(href, href)
         }, this.updateAfter())
       }
-      
+
       this.setState({ searchState })
     }
 

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the algolia hits 1`] = `
+<AlgoliaInfiniteHits(ProductListingCards)>
+  <ProductListingCards
+    createURL={[Function]}
+    hasMore={false}
+    hasPrevious={false}
+    hits={Array []}
+    refine={[Function]}
+    refineNext={[Function]}
+    refinePrevious={[Function]}
+  >
+    <div
+      className="c-product-listing__products"
+    />
+  </ProductListingCards>
+</AlgoliaInfiniteHits(ProductListingCards)>
+`;
