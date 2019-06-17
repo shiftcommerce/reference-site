@@ -1,11 +1,20 @@
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
+const { MenuCache } = require('../lib/menu-cache')
 const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getMenu: async (req, res) => {
-    const response = await SHIFTClient.getMenusV1(req.query)
-
-    setSurrogateHeaders(response.headers, res)
+    // fetch cached menus
+    let response = MenuCache.read()
+    // check if there are no cached menus
+    if (!response || Object.keys(response).length === 0) {
+      // fetch menus from API
+      response = await SHIFTClient.getMenusV1(req.query)
+      // set Surrogate headers
+      setSurrogateHeaders(response.headers, res)
+      // cache API response
+      MenuCache.set(response)
+    }
 
     switch (response.status) {
       case 404:
