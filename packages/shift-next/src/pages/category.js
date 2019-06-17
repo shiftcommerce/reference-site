@@ -1,18 +1,30 @@
 // Libraries
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
+import classNames from 'classnames'
 import Router from 'next/router'
 import qs from 'qs'
 import equal from 'deep-equal'
+import { SortBy } from 'react-instantsearch-dom'
 
 // Components
-import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
-import { ProductListing } from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing'
 import SearchFilters from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
+import ProductMenu from '@shiftcommerce/shift-react-components/src/components/products/listing/product-menu'
+import SearchFiltersClearControls from '@shiftcommerce/shift-react-components/src/components/search/search-filters-clear-controls'
+import SearchRefinements from '@shiftcommerce/shift-react-components/src/components/search/search-refinements'
+import ProductListingInfo from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing-info'
+import ProductListingCards from '@shiftcommerce/shift-react-components/src/components/products/listing/product-listing-cards'
+import LoadMoreHits from '@shiftcommerce/shift-react-components/src/components/search/load-more'
+
+// Objects
+import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
+import { Breadcrumb } from '@shiftcommerce/shift-react-components/src/objects/breadcrumb'
+import { Button } from '@shiftcommerce/shift-react-components/src/objects/button'
 
 // Lib
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
+import { sortOptions } from '../lib/sort-options'
 
 // Actions
 import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
@@ -21,6 +33,16 @@ import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
 import Config from '../lib/config'
 
 class CategoryPage extends Component {
+  constructor (props) {
+    super(props)
+
+    this.Head = Config.get().Head
+
+    this.state = {
+      filtersShown: false
+    }
+  }
+
   static algoliaEnabled = () => true
 
   static async getInitialProps ({ query: { id }, reduxStore, req }) {
@@ -33,27 +55,12 @@ class CategoryPage extends Component {
   }
 
   /**
-   * Generate the category request object. This method can be overridden when
-   * StaticPage is imported, if the query needs to be altered. For example:
-   * CategoryPage.categoryRequest = (categoryId) => { ... }
-   * @param  {Number} categoryId
-   * @return {Object}
-   */
-  static categoryRequest (categoryId) {
-    return {
-      endpoint: `/getCategory/${categoryId}`,
-      query: {}
-    }
-  }
-
-  /**
    * Request the category from the API
    * @param  {Number} id
    * @return {Object} API response or error
    */
   static async fetchCategory (id) {
-    const request = CategoryPage.categoryRequest(id)
-    const response = await new ApiClient().read(request.endpoint, request.query)
+    const response = await new ApiClient().read(`/getCategory/${id}`, {})
     return response.data
   }
 
@@ -111,13 +118,6 @@ class CategoryPage extends Component {
     }
   }
 
-  constructor (props) {
-    super(props)
-    this.state = {}
-
-    this.Head = Config.get().Head
-  }
-
   async componentDidMount () {
     await this.fetchCategoryIntoState(this.props.id)
   }
@@ -140,21 +140,68 @@ class CategoryPage extends Component {
     this.props.dispatch(clearSearchFilter())
   }
 
+  toggleFiltering = () => {
+    if (this.state.filtersShown) {
+      document.body.classList.remove('modal-open')
+    } else {
+      document.body.classList.add('modal-open')
+    }
+
+    this.setState({
+      filtersShown: !this.state.filtersShown
+    })
+  }
+
   /**
    * Render the loaded content
    * @param  {Object} category
    * @return {String} - HTML markup for the component
    */
   renderLoaded (category) {
-    const { title, facets } = category
+    const { algoliaIndexName } = Config.get()
+    const { filtersShown } = this.state
+    const indexName = category.default_sort_order ? `${algoliaIndexName}_${category.default_sort_order}` : algoliaIndexName
 
     return (
-      <Fragment>
+      <>
         <this.Head>
-          <title>{ suffixWithStoreName(title) }</title>
+          <title>{ suffixWithStoreName(category.title) }</title>
         </this.Head>
-        <ProductListing title={title} indexName={Config.get().algoliaIndexName} facets={facets} />
-      </Fragment>
+        <ProductMenu title={category.title} />
+        <Breadcrumb />
+        <div className='c-product-listing-wrapper'>
+          <div className={classNames('c-product-listing-filter-heading', { 'c-product-listing-filter-heading--hide': !filtersShown })}>
+            <h2> Filters <button className='c-product-listing-filter-close' onClick={this.toggleFiltering} /></h2>
+          </div>
+          <div className={classNames('c-product-listing-filter', { 'c-product-listing-filter--hide': !filtersShown })}>
+            <div className='c-product-listing-filter__header'>
+              <SearchFiltersClearControls/>
+            </div>
+            <SearchFilters facets={category.search_facets} filtersShown={filtersShown} />
+          </div>
+          <div className={classNames('c-product-listing')}>
+            <div className='c-product-listing__menu'>
+              <div className='c-product-listing__menu-options'>
+                <div className='c-product-listing__menu-options-filters'>
+                  <h2 className='c-product-listing__menu-options-filters-title'>Filters</h2>
+                  <div className='c-product-listing__menu-options-filters-applied'>
+                    <SearchRefinements />
+                  </div>
+                  <Button className='c-product-listing__menu-options-filters-button' onClick={this.toggleFiltering} />
+                </div>
+                <div className='c-product-listing__menu-options-sort-by'>
+                  <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
+                  <SortBy defaultRefinement={indexName} items={sortOptions(algoliaIndexName)} />
+                  <Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
+                </div>
+              </div>
+            </div>
+            <ProductListingInfo />
+            <ProductListingCards />
+            <LoadMoreHits />
+          </div>
+        </div>
+      </>
     )
   }
 
@@ -164,14 +211,14 @@ class CategoryPage extends Component {
 
     if (loading) {
       return (
-        <Fragment>
+        <>
           <Loading />
-          {/* Render Search filters so that the Algolia request triggered by the spinner
-          matches the default category page request - otherwise an extra call to Algolia is made */}
+          { /* Render Search filters so that the Algolia request triggered by the spinner
+          matches the default category page request - otherwise an extra call to Algolia is made */ }
           <div className='u-hidden'>
             <SearchFilters />
           </div>
-        </Fragment>
+        </>
       )
     } else {
       return this.renderLoaded(category)

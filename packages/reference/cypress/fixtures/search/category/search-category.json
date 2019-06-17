@@ -1,207 +1,99 @@
 {
-  "results":[
+  "results": [
     {
-      "hits":[
+      "hits": [
         {
-          "category_ids":[
+          "id": 27250,
+          "product_id": 188,
+          "archived": false,
+          "title": "Geeky Computer 13\"",
+          "description": "Geeky Computer 13\"",
+          "sku": "GEEKY_AF",
+          "price": 550,
+          "stock_level": 1000,
+          "reference": "GEEKY_AF",
+          "position": null,
+          "stock_allocated_level": 0,
+          "tax_code": "",
+          "price_includes_taxes": true,
+          "ewis_eligible": false,
+          "ordered_total": 0,
+          "in_stock": true,
+          "current_price": 550,
+          "product_title": "Geeky Computer",
+          "product_description": "A geeky computer for geeks. UPDATED again",
+          "product_reference": "geeky_computer",
+          "product_total_ratings": null,
+          "product_average_rating": 5,
+          "product_rating": 5,
+          "product_min_price": 550,
+          "product_min_current_price": 550,
+          "product_max_price": 550,
+          "product_max_current_price": 550,
+          "visible": true,
+          "product_path": "/products/geeky_computer",
+          "category_ids": [
             73
           ],
-          "categories":{
-            "mens":1,
-            "shoes":3
-          },
-          "product_path":"/products/geeky_computer",
-          "product_title":"Geeky Computer",
-          "product_reference":"geeky_computer",
-          "product_meta_data":{
-            "eu":{
-              "description":"A geeky computer for geeks"
-            }
-          },
-          "variant_title":"Silver",
-          "variant_meta_data":{
-            "eu":{
-              "price":550
-            }
-          },
-          "product_assets":[
+          "product_asset_files": [
             {
-              "url":"/static/fixtures/product-image-1.jpg",
-              "alt_text":"Geeky Computer",
-              "sort_position":1,
-              "image_height":600,
-              "image_width":600
+              "caption": null,
+              "source": "/static/fixtures/product-image-1.jpg"
             }
           ],
-          "variant_assets":[
-
-          ],
-          "product_rating":5,
-          "objectID":"15108958128",
-          "_distinctSeqID":0,
-          "_highlightResult":{
-            "category_ids":[
-              {
-                "value":"73",
-                "matchLevel":"none",
-                "matchedWords":[
-
-                ]
-              }
-            ],
-            "categories":{
-              "mens":{
-                "value":"1",
-                "matchLevel":"none",
-                "matchedWords":[
-
-                ]
-              },
-              "shoes":{
-                "value":"3",
-                "matchLevel":"none",
-                "matchedWords":[
-
-                ]
-              }
-            },
-            "product_path":{
-              "value":"/products/<ais-highlight-0000000000>geeky</ais-highlight-0000000000>_computer",
-              "matchLevel":"full",
-              "fullyHighlighted":false,
-              "matchedWords":[
+          "objectID": "27250",
+          "_highlightResult": {
+            "title": {
+              "value": "<ais-highlight-0000000000>Geeky</ais-highlight-0000000000> Computer 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
                 "geeky"
               ]
             },
-            "product_title":{
-              "value":"<ais-highlight-0000000000>Geeky</ais-highlight-0000000000> Computer",
-              "matchLevel":"full",
-              "fullyHighlighted":false,
-              "matchedWords":[
+            "description": {
+              "value": "<ais-highlight-0000000000>Geeky</ais-highlight-0000000000> Computer 13\"",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
                 "geeky"
-              ]
-            },
-            "product_reference":{
-              "value":"<ais-highlight-0000000000>geeky</ais-highlight-0000000000>_computer",
-              "matchLevel":"full",
-              "fullyHighlighted":false,
-              "matchedWords":[
-                "geeky"
-              ]
-            },
-            "product_meta_data":{
-              "eu":{
-                "description":{
-                  "value":"A <ais-highlight-0000000000>geeky</ais-highlight-0000000000> computer for geeks",
-                  "matchLevel":"full",
-                  "fullyHighlighted":false,
-                  "matchedWords":[
-                    "geeky"
-                  ]
-                }
-              }
-            },
-            "variant_title":{
-              "value":"Silver",
-              "matchLevel":"none",
-              "matchedWords":[
-
-              ]
-            },
-            "variant_meta_data":{
-              "eu":{
-                "price":{
-                  "value":"550",
-                  "matchLevel":"none",
-                  "matchedWords":[
-
-                  ]
-                }
-              }
-            },
-            "product_assets":[
-              {
-                "url":{
-                  "value":"https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/251/1544098376.2380257-<ais-highlight-0000000000>geeky</ais-highlight-0000000000>_computer.jpg",
-                  "matchLevel":"full",
-                  "fullyHighlighted":false,
-                  "matchedWords":[
-                    "geeky"
-                  ]
-                },
-                "alt_text":{
-                  "value":"<ais-highlight-0000000000>Geeky</ais-highlight-0000000000> Computer",
-                  "matchLevel":"full",
-                  "fullyHighlighted":false,
-                  "matchedWords":[
-                    "geeky"
-                  ]
-                },
-                "sort_position":{
-                  "value":"1",
-                  "matchLevel":"none",
-                  "matchedWords":[
-
-                  ]
-                },
-                "image_height":{
-                  "value":"600",
-                  "matchLevel":"none",
-                  "matchedWords":[
-
-                  ]
-                },
-                "image_width":{
-                  "value":"600",
-                  "matchLevel":"none",
-                  "matchedWords":[
-
-                  ]
-                }
-              }
-            ],
-            "product_rating":{
-              "value":"5",
-              "matchLevel":"none",
-              "matchedWords":[
-
               ]
             }
           }
         }
       ],
-      "nbHits":1,
-      "page":0,
-      "nbPages":1,
-      "hitsPerPage":4,
-      "processingTimeMS":1,
-      "facets":{
-        "product_rating":{
-          "5":1
+      "nbHits": 1,
+      "page": 0,
+      "nbPages": 1,
+      "hitsPerPage": 4,
+      "processingTimeMS": 1,
+      "facets": {
+        "current_price": {
+          "550": 1
         },
-        "variant_meta_data.eu.price":{
-          "550":1
+        "product_rating": {
+          "5": 1
         }
       },
-      "facets_stats":{
-        "product_rating":{
-          "min":5,
-          "max":5,
-          "avg":5,
-          "sum":5
+      "facets_stats": {
+        "current_price": {
+          "min": 550,
+          "max": 550,
+          "avg": 550,
+          "sum": 550
         },
-        "variant_meta_data.eu.price":{
-          "min":550,
-          "max":550,
-          "avg":550,
-          "sum":550
+        "product_rating": {
+          "min": 5,
+          "max": 5,
+          "avg": 5,
+          "sum": 5
         }
       },
-      "exhaustiveFacetsCount":false,
-      "exhaustiveNbHits":true,
-      "query":"geeky",
-      "params":"query=geeky&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&filters=category_ids%3A73&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=",
-      "index":"reference_test_suite"
+      "exhaustiveFacetsCount": false,
+      "exhaustiveNbHits": true,
+      "query": "geeky",
+      "params": "query=geeky&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&filters=category_ids%3A73&facets=%5B%22product_rating%22%2C%22current_price%22%5D",
+      "index": "referencetest_catalogue_created_at_desc"
     }
   ]
 }

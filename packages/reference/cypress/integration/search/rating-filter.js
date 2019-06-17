@@ -47,7 +47,7 @@ describe('Search', () => {
       cy.wait('@ratingFilterApplied').then((xhr) => {
         const decodedQuery = decodeURI(xhr.requestBody.requests[0].params).replace(/%3A/, ':')
         assert.include(decodedQuery, 'query=computer')
-        assert.include(decodedQuery, 'facetFilters=[["product_rating:4"]]')
+        assert.include(decodedQuery, 'facetFilters=[["product_rating:3"]]')
       })
     })
 
@@ -138,9 +138,9 @@ describe('Search', () => {
       }).as('ratingFilterApplied')
 
       // Select the first rating filter containing 2 products
-      cy.get('ul>li').eq(1).should('contain', 2).click()
+      cy.get('ul>li').eq(1).should('contain', 1).click()
 
-      // Expect just 2 products to be displayed
+      // Expect just 1 products to be displayed
       cy.contains(/Showing 2 of 2 products/i)
 
       // Check response contains just 2 results
