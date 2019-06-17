@@ -9,7 +9,9 @@ import { withCheckout } from '../../src/components/with-checkout.js'
 import * as CartActions from '../../src/actions/cart-actions'
 
 jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: {}
+  publicRuntimeConfig: {
+    PAYPAL_CLIENT_ID: 'test'
+  }
 }))
 
 describe('componentDidMount()', () => {
