@@ -22,9 +22,10 @@ const slugRequest = (slug) => {
       slugs: 'resource_type,resource_id,active,slug'
     }
   }
-  const query = qs.stringify(queryObject)
+
   return {
-    endpoint: `/getSlug/?${query}`
+    endpoint: '/getSlug',
+    query: queryObject
   }
 }
 
@@ -37,6 +38,11 @@ class Slug extends Component {
     const resourceType = t(response, 'data.resource_type').safeObject.toLowerCase()
     const resourceId = t(response, 'data.resource_id').safeObject
     let url = query.slug
+
+    // Temporary fix for Trendy
+    if (url === 'pages/homepage') {
+      url = '/'
+    }
 
     if (url === '/homepage') {
       url = '/'
