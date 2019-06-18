@@ -27,9 +27,9 @@ class MenuCache {
    * Initializes the class.
    * @constructor
    */
-  constructor (cache = new Memcached(memcachedConfig)) {
+  constructor (cache = new Memcached(memcachedConfig), cacheKey = 'menus/data') {
     this.cache = cache
-    this.cacheKey = 'menus/data'
+    this.cacheKey = cacheKey
   }
 
   /**
@@ -61,6 +61,4 @@ class MenuCache {
   }
 }
 
-module.exports = {
-  MenuCache: new MenuCache()
-}
+module.exports = { MenuCache }
