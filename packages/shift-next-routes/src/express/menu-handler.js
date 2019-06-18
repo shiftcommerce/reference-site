@@ -4,11 +4,11 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getMenu: async (req, res) => {
-    // initialise cache client
+    // initialize MenuCache client
     const menuCache = new MenuCache()
     // fetch cached menus
     let response = await menuCache.read()
-    // check if there are no cached menu response
+    // check if there are no cached menus
     if (!response || Object.keys(response).length === 0) {
       // fetch menus from API
       response = await SHIFTClient.getMenusV1(req.query)
