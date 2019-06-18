@@ -39,10 +39,9 @@ describe('read()', () => {
 
     // Act
     const menuCache = new MenuCache(exampleCacheClient, exampleCacheKey)
-    menuCache.read(exampleCacheKey)
 
     // Assert
-    menuCache.read(exampleCacheKey).then((data) => {
+    menuCache.read().then((data) => {
       expect(data).toEqual('testData')
     })
     expect(exampleCacheClient.get).toHaveBeenCalled()
@@ -56,7 +55,7 @@ describe('read()', () => {
     const menuCache = new MenuCache(exampleCacheClient, exampleCacheKey)
 
     // Assert
-    menuCache.read('testing').then((data) => {
+    menuCache.read().then((data) => {
       expect(data).toEqual({})
     })
   })
