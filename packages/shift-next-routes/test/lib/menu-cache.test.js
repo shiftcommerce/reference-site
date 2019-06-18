@@ -3,7 +3,7 @@ const { MenuCache } = require('../../src/lib/menu-cache')
 
 const exampleCacheClient = {
   get: jest.fn((key) => {
-    const store = { test: { value: 'data' }}
+    const store = { test: { value: 'testData' }}
     return store[key]
   }),
   set: jest.fn((key, data, options) => {
@@ -35,7 +35,7 @@ describe('initialisation', () => {
 describe('read()', () => {
   test('reads the cached data', async () => {
     // Arrange
-    const exampleCacheKey = 'testCacheKey'
+    const exampleCacheKey = 'test'
 
     // Act
     const menuCache = new MenuCache(exampleCacheClient, exampleCacheKey)
@@ -43,9 +43,9 @@ describe('read()', () => {
 
     // Assert
     menuCache.read(exampleCacheKey).then((data) => {
-      expect(data).toEqual('data')
+      expect(data).toEqual('testData')
     })
-    expect(exampleCacheClient.get).toHaveBeenCalledWith(exampleCacheKey)
+    expect(exampleCacheClient.get).toHaveBeenCalled()
   })
 
   test('returns an empty object if cache does not exist', async () => {
