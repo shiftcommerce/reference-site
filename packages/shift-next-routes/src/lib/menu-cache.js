@@ -63,4 +63,4 @@ class MenuCache {
   }
 }
 
-module.exports = { MenuCache }
+module.exports = MenuCache

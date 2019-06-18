@@ -1,5 +1,5 @@
 // Libraries
-const { MenuCache } = require('../../src/lib/menu-cache')
+const MenuCache = require('../../src/lib/menu-cache')
 
 const exampleCacheClient = {
   get: jest.fn((key) => {
