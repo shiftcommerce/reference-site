@@ -6,14 +6,14 @@ const memcachedServers = (process.env.MEMCACHED_SERVERS || '').split(',')
 const memcachedConfig = {
   server: {
     servers: memcachedServers.map((server) => {
-      return { server: server, maxConnections: 3 }
+      return { server: server, maxConnections: 5 }
     }),
     config: {
-      retryFailedServerInterval: 1000,
-      failedServerOutTime: 30000,
-      keepLastServer: false
+      retryFailedServerInterval: 1000, // (ms) - how often to check failed servers
+      failedServerOutTime: 30000 // (ms) how long a failed server should be out before retrying it
     }
-  }
+  },
+  cmdTimeout: 1500 // (ms) command timeout
 }
 
 /**
