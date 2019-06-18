@@ -7,10 +7,11 @@ import Config from '../../src/lib/config'
 describe('Root Reducer', () => {    
   test('it merges custom reducers', () => {
     // Arrange
-    const customReducer = jest.fn(() => { return { test: true } })
+    const customReducer1 = jest.fn(() => { return { test: true } })
+    const customReducer2 = jest.fn(() => { return { testing: true } })
 
     Config.set({
-      customReducers: { customReducer }
+      customReducers: { customReducer1, customReducer2 }
     })
 
     // require reducer after config setup
@@ -22,8 +23,7 @@ describe('Root Reducer', () => {
 
     // Assert
     // check the customReducer initial state has been set
-    expect(state.customReducer).toEqual({
-      test: true
-    })
+    expect(state.customReducer1).toEqual({ test: true })
+    expect(state.customReducer2).toEqual({ testing: true })
   })
 })
