@@ -43,8 +43,6 @@ Cypress.Commands.add('goToPdpFromPlp', () => {
   // Click product
   cy.contains(/Regular Computer/i).click()
 
-  cy.wait('@getSlug')
-
   // Check the PDP was loaded
   cy.contains(/Product Details/i)
 })
