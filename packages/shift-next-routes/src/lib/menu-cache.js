@@ -26,6 +26,8 @@ class MenuCache {
   /**
    * Initializes the class.
    * @constructor
+   * @param {function} cache - cache client, eg. memcached
+   * @param {string} cacheKey - the cache key to be used
    */
   constructor (cache = new Memcached(memcachedConfig), cacheKey = 'menus/data') {
     this.cache = cache
