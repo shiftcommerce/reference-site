@@ -5,7 +5,7 @@ import HeroFull from './hero-full'
 import HorizontalDivider from './horizontal-divider'
 import ProductGrid from './product-grid'
 
-import Config from '../../lib/config'
+import shiftNextConfig from '@shiftcommerce/shift-next/src/lib/config'
 
 const defaultTemplates = {
   banner_image: BannerImage,
@@ -16,4 +16,4 @@ const defaultTemplates = {
   product_grid: ProductGrid
 }
 
-export default () => Object.assign({}, defaultTemplates, Config.get().customTemplateComponents)
+export default () => Object.assign({}, defaultTemplates, shiftNextConfig.get().customTemplateComponents)

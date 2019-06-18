@@ -30,7 +30,7 @@ describe('Search', () => {
 
       // Check filter five star products request has been made
       cy.wait('@filterFiveStarProducts')
-      
+
       // Button to clear all filters should enabled
       cy.get('button.ais-ClearRefinements-button').should('not.be.disabled')
 
@@ -126,8 +126,8 @@ describe('Search', () => {
       cy.wait('@getSearchProducts')
         .its('requestBody.requests')
         .should('include', {
-          indexName: 'reference_test_suite',
-          params: 'query=&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=50&facets=%5B%22product_rating%22%2C%22variant_meta_data.eu.price%22%5D&tagFilters=&facetFilters=%5B%5B%22product_rating%3A4%22%5D%5D'
+          indexName: 'referencetest_catalogue',
+          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=0&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D&facetFilters=%5B%5B%22product_rating%3A4%22%5D%5D'
         })
     })
   })

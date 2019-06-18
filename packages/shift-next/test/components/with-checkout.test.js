@@ -8,6 +8,12 @@ import { withCheckout } from '../../src/components/with-checkout.js'
 // Actions
 import * as CartActions from '../../src/actions/cart-actions'
 
+jest.mock('next/config', () => () => ({
+  publicRuntimeConfig: {
+    PAYPAL_CLIENT_ID: 'test'
+  }
+}))
+
 describe('componentDidMount()', () => {
   test('reads the cart and sets loading to false when line items are present', async () => {
     const WrappedComponent = withCheckout(Component)

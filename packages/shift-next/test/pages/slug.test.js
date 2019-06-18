@@ -4,26 +4,26 @@ import nock from 'nock'
 import axios from 'axios'
 import httpAdapter from 'axios/lib/adapters/http'
 
+import Config from '../../src/lib/config'
+
 // Pages
 import Slug from '../../src/pages/slug'
 
 // Shared constants
-const resourceType = 'staticpage'
+const resourceType = 'StaticPage'
 const resourceId = 1
-
-jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: {}
-}))
 
 axios.defaults.adapter = httpAdapter
 
 beforeEach(() => {
-  nock('http://localhost', { 'encodedQueryParams': true })
-    .get('/getSlug/')
+  Config.set({ apiHostProxy: 'http://example.com' })
+
+  nock(/example\.com/)
+    .get('/getSlug')
     .query(true)
     .reply(200, {
-      'resource_id': 1,
-      'resource_type': 'StaticPage'
+      'resource_id': resourceId,
+      'resource_type': resourceType
     }, ['access-control-allow-origin', '*'])
 })
 
