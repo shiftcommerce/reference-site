@@ -18,6 +18,7 @@ export default function setAccount (state = initialState, action) {
         const dateOfBirth = t(action, 'payload.meta_attributes.date_of_birth.value').safeString.split('/')
 
         accountObject = Object.assign(initialState, {
+          customer_account_id: action.payload.id,
           email: action.payload.email,
           firstName: action.payload.meta_attributes.first_name.value,
           lastName: action.payload.meta_attributes.last_name.value,

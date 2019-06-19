@@ -32,11 +32,13 @@ function loginCustomerAccountV1 (account) {
 }
 
 function getCustomerOrdersV1 (query) {
-  return HTTPClient.get('https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders', query).then(response => {
+  return HTTPClient.get('https://shift-oms.herokuapp.com/oms/v1/customer_orders', query).then(response => {
     return {
       status: response.status,
       data: response.data
     }
+  }).catch(error => {
+    console.log(error)
   })
 }
 

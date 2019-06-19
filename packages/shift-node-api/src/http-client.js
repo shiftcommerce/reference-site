@@ -1,7 +1,9 @@
-const axios = require('axios')
 const qs = require('qs')
+const axios = require('axios')
+
 const shiftApiConfig = require('./lib/config')
 const { setCacheHeaders } = require('./lib/set-cache-headers')
+const { generateTimeBasedToken } = require('./lib/time-based-token')
 
 const defaultHeaders = {
   'Content-Type': 'application/vnd.api+json',
@@ -13,15 +15,24 @@ class HTTPClient {
     const query = qs.stringify(queryObject)
     const requestUrl = this.createRequestUrl(url, query)
 
+    let omsHmacRequest = null
+    let omsHmacToken = null
+
+    if (url == 'https://shift-oms.herokuapp.com/oms/v1/customer_orders') {
+      omsHmacRequest = true
+      omsHmacToken = generateTimeBasedToken(shiftApiConfig.get().servicesSharedSecret)
+    }
+
     const response = axios({
       method: 'get',
       url: requestUrl,
       headers: { ...defaultHeaders, ...headers },
       auth: {
         username: shiftApiConfig.get().apiTenant,
-        password: shiftApiConfig.get().apiAccessToken
+        password: omsHmacRequest ? omsHmacToken : shiftApiConfig.get().apiAccessToken
       }
     })
+
     return this.determineResponse(response)
   }
 
@@ -79,7 +90,7 @@ class HTTPClient {
     let requestUrl
 
     // TODO: remove this when oms platform proxy is live
-    const regex = /shift-oms-dev/i
+    const regex = /(shift-oms-dev|shift-oms-staging|shift-oms)/i
 
     if (!query) {
       requestUrl = `${shiftApiConfig.get().apiHost}/${shiftApiConfig.get().apiTenant}/${url}`

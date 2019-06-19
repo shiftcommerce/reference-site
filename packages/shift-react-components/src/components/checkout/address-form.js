@@ -177,7 +177,7 @@ export class AddressForm extends Component {
     const fieldOptions = [
       { className: 'o-form__input-block', placeholder: 'Enter Post Code', label: 'Post Code', name: 'zipcode', value: formInput.zipcode, rules: { required: true, postcode: true } },
       { className: 'o-form__input-block', placeholder: 'Enter City', label: 'City', name: 'city', value: formInput.city, rules: { required: true } },
-      { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: formInput.state }
+      { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: formInput.state, rules: { required: true } }
     ]
 
     return (
