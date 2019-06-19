@@ -815,6 +815,10 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="WHITE-TSHIRT-XXL"
         >
+          <img
+            src="https://example.com/path/to/image.jpg"
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
@@ -850,6 +854,9 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="BLACK-SOCKS-001"
         >
+          <img
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
@@ -885,6 +892,9 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="WHITE-TSHIRT-L"
         >
+          <img
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
@@ -1310,6 +1320,10 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="WHITE-TSHIRT-XXL"
         >
+          <img
+            src="https://example.com/path/to/image.jpg"
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
@@ -1345,6 +1359,9 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="BLACK-SOCKS-001"
         >
+          <img
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
@@ -1380,6 +1397,9 @@ exports[`renders correctly 1`] = `
           className="c-order-history__line-items_grid"
           key="WHITE-TSHIRT-L"
         >
+          <img
+            width={300}
+          />
           <div
             className="c-order-history__line-items_grid_item1"
           >
