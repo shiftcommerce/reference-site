@@ -1,4 +1,5 @@
 const HTTPClient = require('../http-client')
+const shiftApiConfig = require('../lib/config')
 
 function getAccountV1 (queryObject, customerId) {
   return HTTPClient.get(`v1/customer_accounts/${customerId}`, queryObject).then(response => {
@@ -32,7 +33,7 @@ function loginCustomerAccountV1 (account) {
 }
 
 function getCustomerOrdersV1 (query) {
-  return HTTPClient.get('https://shift-oms.herokuapp.com/oms/v1/customer_orders', query).then(response => {
+  return HTTPClient.get(`${shiftApiConfig.get().omsHost}/oms/v1/customer_orders`, query).then(response => {
     return {
       status: response.status,
       data: response.data

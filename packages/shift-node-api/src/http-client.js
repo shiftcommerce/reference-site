@@ -18,7 +18,7 @@ class HTTPClient {
     let omsHmacRequest = null
     let omsHmacToken = null
 
-    if (url == 'https://shift-oms.herokuapp.com/oms/v1/customer_orders') {
+    if (url == shiftApiConfig.get().omsHost) {
       omsHmacRequest = true
       omsHmacToken = generateTimeBasedToken(shiftApiConfig.get().servicesSharedSecret)
     }
@@ -89,12 +89,9 @@ class HTTPClient {
   createRequestUrl (url, query) {
     let requestUrl
 
-    // TODO: remove this when oms platform proxy is live
-    const regex = /(shift-oms-dev|shift-oms-staging|shift-oms)/i
-
     if (!query) {
       requestUrl = `${shiftApiConfig.get().apiHost}/${shiftApiConfig.get().apiTenant}/${url}`
-    } else if (regex.test(url)) {
+    } else if (url.includes(shiftApiConfig.get().omsHost)) {
       // TODO: remove this statement when platform proxy is live
       requestUrl = `${url}/?${query}`
     } else {
