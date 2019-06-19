@@ -18,6 +18,8 @@
       "channel": "web",
       "currency": "GBP",
       "email": "asdasd@dasda.as",
+      "test": false,
+      "customer_account_id": 1,
       "line_items_resources": [
         {
           "attributes": {
