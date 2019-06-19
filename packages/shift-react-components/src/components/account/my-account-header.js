@@ -4,12 +4,13 @@ import React, { Component } from 'react'
 // Lib
 import { Button } from '../../objects/button'
 import Config from '../../lib/config'
+import Link from '../../objects/link'
 
 export class MyAccountHeader extends Component {
   constructor (props) {
     super(props)
 
-    this.Link = Config.get().Link
+    this.Link = Config.get().Link || Link
   }
 
   renderLogout () {

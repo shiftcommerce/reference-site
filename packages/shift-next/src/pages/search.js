@@ -56,14 +56,16 @@ class SearchPage extends Component {
   render () {
     const indexName = Config.get().algoliaIndexName
     const filtersShown = false
+    const { CustomListingCard, CustomBreadCrumb } = this.props
 
     return (
       <>
         <this.Head>
           <title>{ suffixWithStoreName('Search') }</title>
         </this.Head>
-        <ProductMenu />
-        <Breadcrumb />
+        <div className='o-container'>
+          <ProductMenu />
+        { CustomBreadCrumb ? <CustomBreadCrumb items={[{ label: 'Search' }]} /> : <Breadcrumb /> }
         <div className='c-product-listing-wrapper'>
           <div className={classNames('c-product-listing-filter-heading', { 'c-product-listing-filter-heading--hide': !filtersShown })}>
             <h2> Filters <button className='c-product-listing-filter-close' onClick={this.toggleFiltering} /></h2>
@@ -92,9 +94,10 @@ class SearchPage extends Component {
               </div>
             </div>
             <ProductListingInfo />
-            <ProductListingCards />
+            { CustomListingCard ? <CustomListingCard /> : <ProductListingCards /> }
             <LoadMoreHits />
           </div>
+        </div>
         </div>
       </>
     )
