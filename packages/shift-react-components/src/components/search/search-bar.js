@@ -5,7 +5,7 @@ import { connectSearchBox } from 'react-instantsearch-dom'
 
 class SearchBar extends Component {
   render () {
-    const { currentRefinement, filterCategory, onCategoryFilterCleared, refine } = this.props
+    const { currentRefinement, filterCategory, onCategoryFilterCleared, refine, placeHolder, className, buttonClassName, formClassName, children, renderCustomSubmit } = this.props
 
     return (
       <div className='c-searchbar'>
@@ -13,7 +13,7 @@ class SearchBar extends Component {
           <div className='c-searchbox'>
             <form
               action=''
-              className='c-searchbox__form'
+              className={classNames(formClassName, 'c-searchbox__form')}
               noValidate
               onSubmit={e => e.preventDefault()}
               role='search'
@@ -28,19 +28,19 @@ class SearchBar extends Component {
                 ></div>
               </div> }
               <input
-                className={classNames('c-searchbox__input', {
+                className={classNames(className, 'c-searchbox__input', {
                   'c-searchbox__input--with-filter': filterCategory
                 })}
                 onChange={event => refine(event.currentTarget.value)}
-                placeholder={'Search here…'}
+                placeholder={placeHolder || 'Search here…'}
                 type='search'
                 value={currentRefinement}
               />
-              <button
-                className='c-searchbox__submit'
+              { renderCustomSubmit ? <>{ children }</> : <button
+                className={classNames(buttonClassName ? buttonClassName : '', 'c-searchbox__submit')}
                 title='Submit your search query.'
                 type='submit'
-              />
+              /> }
             </form>
           </div>
         </div>
