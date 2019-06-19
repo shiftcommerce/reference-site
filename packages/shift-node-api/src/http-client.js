@@ -18,7 +18,7 @@ class HTTPClient {
     let omsHmacRequest = null
     let omsHmacToken = null
 
-    if (url == shiftApiConfig.get().omsHost) {
+    if (url.includes(shiftApiConfig.get().omsHost)) {
       omsHmacRequest = true
       omsHmacToken = generateTimeBasedToken(shiftApiConfig.get().servicesSharedSecret)
     }

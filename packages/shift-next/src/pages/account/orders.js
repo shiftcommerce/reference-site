@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 // Components
 import { AccountOrders } from '@shiftcommerce/shift-react-components/src/components/account/orders'
+
 // Actions
 import { getCustomerOrders } from '../../actions/account-actions'
 
