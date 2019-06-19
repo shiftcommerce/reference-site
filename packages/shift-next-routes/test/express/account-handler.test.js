@@ -25,7 +25,8 @@ beforeAll(() => {
   shiftApiConfig.set({
     apiHost: 'http://example.com',
     apiTenant: 'test_tenant',
-    omsHost: 'http://oms.example.com'
+    omsHost: 'http://oms.example.com',
+    servicesSharedSecret: 'super_secret'
   })
 })
 
