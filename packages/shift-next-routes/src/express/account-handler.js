@@ -75,6 +75,7 @@ module.exports = {
         shipping_addresses: 'name,company,lines,city,state,postcode,country',
         discounts: 'label,amount_inc_tax,coupon_code'
       },
+      sort: '-placed_at',
       include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
     }
 
