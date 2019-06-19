@@ -104,6 +104,7 @@ beforeEach(() => {
     apiHost: 'http://example.com',
     apiTenant: 'test_tenant',
     omsHost: 'http://oms.example.com',
+    servicesSharedSecret: 'super_secret'
   })
 })
 
