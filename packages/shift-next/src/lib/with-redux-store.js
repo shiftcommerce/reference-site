@@ -34,9 +34,13 @@ export default (App) => {
       // This allows you to set a custom default initialState
       const reduxStore = getOrCreateStore()
       reduxStore.dispatch(toggleLoading(true))
-      await reduxStore.dispatch(readMenu(Config.get().menuRequest))
+
       // Provide the store to getInitialProps of pages
       appContext.reduxStore = reduxStore
+
+      if (!reduxStore.getState().menu.loaded) {
+        await reduxStore.dispatch(readMenu(Config.get().menuRequest))
+      }
 
       // Get initial props from the parent
       let appProps = await Object.getPrototypeOf(this).getInitialProps(appContext)
