@@ -37,8 +37,6 @@ function getCustomerOrdersV1 (query) {
       status: response.status,
       data: response.data
     }
-  }).catch(error => {
-    console.log(error)
   })
 }
 

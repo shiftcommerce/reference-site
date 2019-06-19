@@ -60,8 +60,6 @@ export function getCustomerOrders () {
 export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
   const customer_account_id = account.customer_account_id ? account.customer_account_id : cart.shipping_address.meta_attributes.email.value
 
-  console.log('Customer Account ID', customer_account_id)
-
   const lineItems = prepareLineItems(cart)
   const discountSummaries = prepareDiscountSummaries(cart, lineItems)
   const orderDiscountIncTax = cart.shipping_total_discount * -1
@@ -93,7 +91,7 @@ export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
       settle_payments_immediately: true,
       shipping_discount_name: cart.shipping_discount_name,
       shipping_discount: cart.shipping_total_discount,
-      test: true
+      test: process.env.TEST_ORDERS ? true : false
     },
     type: 'create_order'
   }
