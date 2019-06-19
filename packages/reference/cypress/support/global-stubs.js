@@ -14,6 +14,14 @@ beforeEach(() => {
     response: "{'events': [], 'meta': '{}'}"
   }).as('payPalLogger')
 
+  // Stub get menus request
+  cy.route({
+    method: 'GET',
+    url: '/getMenus?**',
+    status: 200,
+    response: 'fixture:menus/get-menus.json'
+  }).as('getMenus')
+
   // Stub geeky computer image request
   cy.route({
     method: 'GET',
