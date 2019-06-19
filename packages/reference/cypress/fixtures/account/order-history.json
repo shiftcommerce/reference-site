@@ -1,3441 +1,835 @@
 {
   "data": [
     {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6",
+      "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69",
       "type": "customer_orders",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69"
       },
       "attributes": {
-        "account_reference": "integration",
-        "reference": "i4WCBoRQdm",
-        "placed_at": "2019-03-07T15:34:54.000Z",
+        "account_reference": "trendygolf",
+        "reference": "13",
+        "placed_at": "2019-06-19T14:37:07.000Z",
         "pricing": {
           "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
+          "total_ex_tax": 23657,
+          "total_inc_tax": 23990,
+          "pre_discount_line_items_total_ex_tax": 21990,
+          "pre_discount_line_items_total_inc_tax": 21990,
+          "total_discount_ex_tax": 1667,
+          "total_discount_inc_tax": 2000,
+          "order_discount_ex_tax": 1667,
+          "order_discount_inc_tax": 2000
         }
       },
       "relationships": {
         "line_items": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/line_items"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/relationships/line_items",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/line_items"
           },
           "data": [
             {
               "type": "line_items",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_0"
-            },
-            {
-              "type": "line_items",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
-            },
-            {
-              "type": "line_items",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
+              "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0"
             }
           ]
         },
         "shipping_methods": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/shipping_methods"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/relationships/shipping_methods",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/shipping_methods"
           },
           "data": [
             {
               "type": "shipping_methods",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
+              "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_3"
             }
           ]
         },
         "shipping_addresses": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/shipping_addresses"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/relationships/shipping_addresses",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/shipping_addresses"
           },
           "data": [
             {
               "type": "shipping_addresses",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
+              "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_2001286"
             }
           ]
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/0764ccff-6c22-411f-8b5b-bc069c028fd6/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69/discounts"
           },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_0"
-            }
-          ]
+          "data": []
         }
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e",
+      "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43",
       "type": "customer_orders",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43"
       },
       "attributes": {
-        "account_reference": "integration",
-        "reference": "EXG6LoUayF",
-        "placed_at": "2019-03-07T15:32:42.000Z",
+        "account_reference": "trendygolf",
+        "reference": "8",
+        "placed_at": "2019-06-18T16:22:26.000Z",
         "pricing": {
           "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
+          "total_ex_tax": 12662,
+          "total_inc_tax": 12995,
+          "pre_discount_line_items_total_ex_tax": 10995,
+          "pre_discount_line_items_total_inc_tax": 10995,
+          "total_discount_ex_tax": 1667,
+          "total_discount_inc_tax": 2000,
+          "order_discount_ex_tax": 1667,
+          "order_discount_inc_tax": 2000
         }
       },
       "relationships": {
         "line_items": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/line_items"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/relationships/line_items",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/line_items"
           },
           "data": [
             {
               "type": "line_items",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_0"
-            },
-            {
-              "type": "line_items",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-            },
-            {
-              "type": "line_items",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
+              "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0"
             }
           ]
         },
         "shipping_methods": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/shipping_methods"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/relationships/shipping_methods",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/shipping_methods"
           },
           "data": [
             {
               "type": "shipping_methods",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
+              "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_3"
             }
           ]
         },
         "shipping_addresses": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/shipping_addresses"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/relationships/shipping_addresses",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/shipping_addresses"
           },
           "data": [
             {
               "type": "shipping_addresses",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
+              "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_2001286"
             }
           ]
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/301a6a29-3111-4d82-9894-e3bbd94b1f1e/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/31b12b3e-50d9-4fe1-a48c-0d0682f8df43/discounts"
           },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_0"
-            }
-          ]
+          "data": []
         }
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459",
+      "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec",
       "type": "customer_orders",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec"
       },
       "attributes": {
-        "account_reference": "integration",
-        "reference": "PUWvRE147r",
-        "placed_at": "2019-03-07T15:33:52.000Z",
+        "account_reference": "trendygolf",
+        "reference": "6",
+        "placed_at": "2019-06-18T16:16:02.000Z",
         "pricing": {
           "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
+          "total_ex_tax": 12662,
+          "total_inc_tax": 12995,
+          "pre_discount_line_items_total_ex_tax": 10995,
+          "pre_discount_line_items_total_inc_tax": 10995,
+          "total_discount_ex_tax": 1667,
+          "total_discount_inc_tax": 2000,
+          "order_discount_ex_tax": 1667,
+          "order_discount_inc_tax": 2000
         }
       },
       "relationships": {
         "line_items": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/line_items"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/relationships/line_items",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/line_items"
           },
           "data": [
             {
               "type": "line_items",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_0"
-            },
-            {
-              "type": "line_items",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2"
-            },
-            {
-              "type": "line_items",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
+              "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0"
             }
           ]
         },
         "shipping_methods": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/shipping_methods"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/relationships/shipping_methods",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/shipping_methods"
           },
           "data": [
             {
               "type": "shipping_methods",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2"
+              "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_3"
             }
           ]
         },
         "shipping_addresses": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/shipping_addresses"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/relationships/shipping_addresses",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/shipping_addresses"
           },
           "data": [
             {
               "type": "shipping_addresses",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2"
+              "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_2001286"
             }
           ]
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/4605bd93-2b34-4653-85f0-2e9f6f164459/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec/discounts"
           },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_0"
-            }
-          ]
+          "data": []
         }
       }
     },
     {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e",
+      "id": "beb56db1-4632-4007-b971-b90bda7a61f0",
       "type": "customer_orders",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0"
       },
       "attributes": {
-        "account_reference": "integration",
-        "reference": "RrlyXWb6zM",
-        "placed_at": "2019-03-07T15:35:19.000Z",
+        "account_reference": "trendygolf",
+        "reference": "5",
+        "placed_at": "2019-06-18T16:07:13.000Z",
         "pricing": {
           "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
+          "total_ex_tax": 12662,
+          "total_inc_tax": 12995,
+          "pre_discount_line_items_total_ex_tax": 10995,
+          "pre_discount_line_items_total_inc_tax": 10995,
+          "total_discount_ex_tax": 1667,
+          "total_discount_inc_tax": 2000,
+          "order_discount_ex_tax": 1667,
+          "order_discount_inc_tax": 2000
         }
       },
       "relationships": {
         "line_items": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/line_items"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/relationships/line_items",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/line_items"
           },
           "data": [
             {
               "type": "line_items",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
-            },
-            {
-              "type": "line_items",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-            },
-            {
-              "type": "line_items",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0"
+              "id": "beb56db1-4632-4007-b971-b90bda7a61f0_0"
             }
           ]
         },
         "shipping_methods": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/shipping_methods"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/relationships/shipping_methods",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/shipping_methods"
           },
           "data": [
             {
               "type": "shipping_methods",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
+              "id": "beb56db1-4632-4007-b971-b90bda7a61f0_3"
             }
           ]
         },
         "shipping_addresses": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/shipping_addresses"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/relationships/shipping_addresses",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/shipping_addresses"
           },
           "data": [
             {
               "type": "shipping_addresses",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
+              "id": "beb56db1-4632-4007-b971-b90bda7a61f0_2001286"
             }
           ]
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/527e2bc3-2df7-410e-a6f9-6f9af6a1571e/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/beb56db1-4632-4007-b971-b90bda7a61f0/discounts"
           },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0"
-            }
-          ]
+          "data": []
         }
       }
     },
     {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f",
+      "id": "77790f05-8313-41c9-9c23-989125e4823a",
       "type": "customer_orders",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a"
       },
       "attributes": {
-        "account_reference": "integration",
-        "reference": "uAM1uv6ADK",
-        "placed_at": "2019-03-07T15:34:23.000Z",
+        "account_reference": "trendygolf",
+        "reference": "4",
+        "placed_at": "2019-06-18T15:51:02.000Z",
         "pricing": {
           "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
+          "total_ex_tax": 12662,
+          "total_inc_tax": 12995,
+          "pre_discount_line_items_total_ex_tax": 10995,
+          "pre_discount_line_items_total_inc_tax": 10995,
+          "total_discount_ex_tax": 1667,
+          "total_discount_inc_tax": 2000,
+          "order_discount_ex_tax": 1667,
+          "order_discount_inc_tax": 2000
         }
       },
       "relationships": {
         "line_items": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/line_items"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/relationships/line_items",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/line_items"
           },
           "data": [
             {
               "type": "line_items",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-            },
-            {
-              "type": "line_items",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_0"
-            },
-            {
-              "type": "line_items",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
+              "id": "77790f05-8313-41c9-9c23-989125e4823a_0"
             }
           ]
         },
         "shipping_methods": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/shipping_methods"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/relationships/shipping_methods",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/shipping_methods"
           },
           "data": [
             {
               "type": "shipping_methods",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2"
+              "id": "77790f05-8313-41c9-9c23-989125e4823a_3"
             }
           ]
         },
         "shipping_addresses": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/shipping_addresses"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/relationships/shipping_addresses",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/shipping_addresses"
           },
           "data": [
             {
               "type": "shipping_addresses",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2"
+              "id": "77790f05-8313-41c9-9c23-989125e4823a_2001286"
             }
           ]
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/666dbe9e-cef0-4198-8470-7ed909f8302f/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/customer_orders/77790f05-8313-41c9-9c23-989125e4823a/discounts"
           },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22",
-      "type": "customer_orders",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22"
-      },
-      "attributes": {
-        "account_reference": "integration",
-        "reference": "U9tzxu2HEH",
-        "placed_at": "2019-03-07T15:32:23.000Z",
-        "pricing": {
-          "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
-        }
-      },
-      "relationships": {
-        "line_items": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/line_items"
-          },
-          "data": [
-            {
-              "type": "line_items",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_0"
-            },
-            {
-              "type": "line_items",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-            },
-            {
-              "type": "line_items",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-            }
-          ]
-        },
-        "shipping_methods": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/shipping_methods"
-          },
-          "data": [
-            {
-              "type": "shipping_methods",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-            }
-          ]
-        },
-        "shipping_addresses": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/shipping_addresses"
-          },
-          "data": [
-            {
-              "type": "shipping_addresses",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-            }
-          ]
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/71b1741a-beda-4ba9-bce4-26d9ac794a22/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323",
-      "type": "customer_orders",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323"
-      },
-      "attributes": {
-        "account_reference": "integration",
-        "reference": "xT3E7Qe61l",
-        "placed_at": "2019-03-07T15:33:01.000Z",
-        "pricing": {
-          "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
-        }
-      },
-      "relationships": {
-        "line_items": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/line_items"
-          },
-          "data": [
-            {
-              "type": "line_items",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2"
-            },
-            {
-              "type": "line_items",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-            },
-            {
-              "type": "line_items",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_0"
-            }
-          ]
-        },
-        "shipping_methods": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/shipping_methods"
-          },
-          "data": [
-            {
-              "type": "shipping_methods",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2"
-            }
-          ]
-        },
-        "shipping_addresses": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/shipping_addresses"
-          },
-          "data": [
-            {
-              "type": "shipping_addresses",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2"
-            }
-          ]
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/7c842d90-08eb-467d-9538-e0fa02e55323/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289",
-      "type": "customer_orders",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289"
-      },
-      "attributes": {
-        "account_reference": "integration",
-        "reference": "jbvxmOs0o7",
-        "placed_at": "2019-03-07T15:36:22.000Z",
-        "pricing": {
-          "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
-        }
-      },
-      "relationships": {
-        "line_items": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/line_items"
-          },
-          "data": [
-            {
-              "type": "line_items",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_0"
-            },
-            {
-              "type": "line_items",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-            },
-            {
-              "type": "line_items",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-            }
-          ]
-        },
-        "shipping_methods": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/shipping_methods"
-          },
-          "data": [
-            {
-              "type": "shipping_methods",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-            }
-          ]
-        },
-        "shipping_addresses": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/shipping_addresses"
-          },
-          "data": [
-            {
-              "type": "shipping_addresses",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-            }
-          ]
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8b8d25f0-9345-4f7f-8930-bc2745540289/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c",
-      "type": "customer_orders",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c"
-      },
-      "attributes": {
-        "account_reference": "integration",
-        "reference": "9jsd3sMgm5",
-        "placed_at": "2019-03-07T15:34:08.000Z",
-        "pricing": {
-          "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
-        }
-      },
-      "relationships": {
-        "line_items": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/line_items"
-          },
-          "data": [
-            {
-              "type": "line_items",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0"
-            },
-            {
-              "type": "line_items",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-            },
-            {
-              "type": "line_items",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-            }
-          ]
-        },
-        "shipping_methods": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/shipping_methods"
-          },
-          "data": [
-            {
-              "type": "shipping_methods",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-            }
-          ]
-        },
-        "shipping_addresses": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/shipping_addresses"
-          },
-          "data": [
-            {
-              "type": "shipping_addresses",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-            }
-          ]
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/8dbcff87-43df-4269-8e3d-ba5ae693ff6c/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72",
-      "type": "customer_orders",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72"
-      },
-      "attributes": {
-        "account_reference": "integration",
-        "reference": "5zUhtQipAU",
-        "placed_at": "2019-03-07T15:34:38.000Z",
-        "pricing": {
-          "currency": "GBP",
-          "total_ex_tax": 11050,
-          "total_inc_tax": 13260,
-          "pre_discount_line_items_total_ex_tax": 9400,
-          "pre_discount_line_items_total_inc_tax": 11280,
-          "total_discount_ex_tax": 600,
-          "total_discount_inc_tax": 720,
-          "order_discount_ex_tax": 500,
-          "order_discount_inc_tax": 600
-        }
-      },
-      "relationships": {
-        "line_items": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/relationships/line_items",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/line_items"
-          },
-          "data": [
-            {
-              "type": "line_items",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0"
-            },
-            {
-              "type": "line_items",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-            },
-            {
-              "type": "line_items",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-            }
-          ]
-        },
-        "shipping_methods": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/relationships/shipping_methods",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/shipping_methods"
-          },
-          "data": [
-            {
-              "type": "shipping_methods",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-            },
-            {
-              "type": "shipping_methods",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-            }
-          ]
-        },
-        "shipping_addresses": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/relationships/shipping_addresses",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/shipping_addresses"
-          },
-          "data": [
-            {
-              "type": "shipping_addresses",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-            },
-            {
-              "type": "shipping_addresses",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-            }
-          ]
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0"
-            }
-          ]
+          "data": []
         }
       }
     }
   ],
   "included": [
     {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6",
+      "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69",
       "type": "customers",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/0764ccff-6c22-411f-8b5b-bc069c028fd6"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customers/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69"
       },
       "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
+        "reference": "20000020",
+        "email": "callum@barratt.me",
+        "name": "test customer",
         "meta_attributes": {}
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e",
+      "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43",
       "type": "customers",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/301a6a29-3111-4d82-9894-e3bbd94b1f1e"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customers/31b12b3e-50d9-4fe1-a48c-0d0682f8df43"
       },
       "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
+        "reference": "20000020",
+        "email": "callum@barratt.me",
+        "name": "test customer",
         "meta_attributes": {}
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459",
+      "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec",
       "type": "customers",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/4605bd93-2b34-4653-85f0-2e9f6f164459"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customers/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec"
       },
       "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
+        "reference": "20000020",
+        "email": "callum@barratt.me",
+        "name": "test customer",
         "meta_attributes": {}
       }
     },
     {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e",
+      "id": "beb56db1-4632-4007-b971-b90bda7a61f0",
       "type": "customers",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/527e2bc3-2df7-410e-a6f9-6f9af6a1571e"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customers/beb56db1-4632-4007-b971-b90bda7a61f0"
       },
       "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
+        "reference": "20000020",
+        "email": "callum@barratt.me",
+        "name": "test customer",
         "meta_attributes": {}
       }
     },
     {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f",
+      "id": "77790f05-8313-41c9-9c23-989125e4823a",
       "type": "customers",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/666dbe9e-cef0-4198-8470-7ed909f8302f"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/customers/77790f05-8313-41c9-9c23-989125e4823a"
       },
       "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
+        "reference": "20000020",
+        "email": "callum@barratt.me",
+        "name": "test customer",
         "meta_attributes": {}
       }
     },
     {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22",
-      "type": "customers",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/71b1741a-beda-4ba9-bce4-26d9ac794a22"
-      },
-      "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
-        "meta_attributes": {}
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323",
-      "type": "customers",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/7c842d90-08eb-467d-9538-e0fa02e55323"
-      },
-      "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
-        "meta_attributes": {}
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289",
-      "type": "customers",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/8b8d25f0-9345-4f7f-8930-bc2745540289"
-      },
-      "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "Mufudzi Masaire",
-        "meta_attributes": {}
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c",
-      "type": "customers",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/8dbcff87-43df-4269-8e3d-ba5ae693ff6c"
-      },
-      "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
-        "meta_attributes": {}
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72",
-      "type": "customers",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/customers/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72"
-      },
-      "attributes": {
-        "reference": "CUSTOMER-REFERENCE",
-        "email": "test@shiftcommerce.com",
-        "name": "SHIFT",
-        "meta_attributes": {}
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_0",
+      "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0",
       "type": "line_items",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0"
       },
       "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
+        "quantity": 2,
+        "sku": "H2155-88-small",
         "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
+          "each_ex_tax": 10995,
+          "each_inc_tax": 10995,
+          "line_total_ex_tax": 21990,
+          "line_total_inc_tax": 21990,
           "line_discount_ex_tax": 0,
           "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
+          "pre_discount_line_total_ex_tax": 21990,
+          "pre_discount_line_total_inc_tax": 21990,
+          "tax_rate": 0
+        },
+        "image_urls": [
+          "https://production-trendygolf-1556104155.s3.amazonaws.com/uploads/asset_file/asset_file/30/1556281352.8761528-H2155-88-1.jpg"
+        ]
       },
       "relationships": {
         "shipping_method": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/shipping_method"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/relationships/shipping_method",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/shipping_method"
           },
           "data": {
             "type": "shipping_methods",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+            "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_3"
           }
         },
         "shipping_address": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/shipping_address"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/relationships/shipping_address",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/shipping_address"
           },
           "data": {
             "type": "shipping_addresses",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+            "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_2001286"
           }
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_0/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_0/discounts"
           },
           "data": []
         }
       }
     },
     {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1",
+      "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0",
       "type": "line_items",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0"
       },
       "attributes": {
         "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
+        "sku": "H2155-88-small",
         "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
+          "each_ex_tax": 10995,
+          "each_inc_tax": 10995,
+          "line_total_ex_tax": 10995,
+          "line_total_inc_tax": 10995,
           "line_discount_ex_tax": 0,
           "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
+          "pre_discount_line_total_ex_tax": 10995,
+          "pre_discount_line_total_inc_tax": 10995,
+          "tax_rate": 0
+        },
+        "image_urls": [
+          "https://production-trendygolf-1556104155.s3.amazonaws.com/uploads/asset_file/asset_file/30/1556281352.8761528-H2155-88-1.jpg"
+        ]
       },
       "relationships": {
         "shipping_method": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/shipping_method"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/relationships/shipping_method",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/shipping_method"
           },
           "data": {
             "type": "shipping_methods",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+            "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_3"
           }
         },
         "shipping_address": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/shipping_address"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/relationships/shipping_address",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/shipping_address"
           },
           "data": {
             "type": "shipping_addresses",
-            "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+            "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_2001286"
           }
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/0764ccff-6c22-411f-8b5b-bc069c028fd6_2/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_0/discounts"
           },
           "data": []
         }
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_0",
+      "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0",
       "type": "line_items",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0"
       },
       "attributes": {
         "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
+        "sku": "H2155-88-small",
         "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
+          "each_ex_tax": 10995,
+          "each_inc_tax": 10995,
+          "line_total_ex_tax": 10995,
+          "line_total_inc_tax": 10995,
           "line_discount_ex_tax": 0,
           "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
+          "pre_discount_line_total_ex_tax": 10995,
+          "pre_discount_line_total_inc_tax": 10995,
+          "tax_rate": 0
+        },
+        "image_urls": [
+          "https://production-trendygolf-1556104155.s3.amazonaws.com/uploads/asset_file/asset_file/30/1556281352.8761528-H2155-88-1.jpg"
+        ]
       },
       "relationships": {
         "shipping_method": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/shipping_method"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/relationships/shipping_method",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/shipping_method"
           },
           "data": {
             "type": "shipping_methods",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
+            "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_3"
           }
         },
         "shipping_address": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/shipping_address"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/relationships/shipping_address",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/shipping_address"
           },
           "data": {
             "type": "shipping_addresses",
-            "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
+            "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_2001286"
           }
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_0/discounts"
           },
           "data": []
         }
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_0",
+      "id": "beb56db1-4632-4007-b971-b90bda7a61f0_0",
       "type": "line_items",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0"
       },
       "attributes": {
         "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
+        "sku": "H2155-88-small",
         "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
+          "each_ex_tax": 10995,
+          "each_inc_tax": 10995,
+          "line_total_ex_tax": 10995,
+          "line_total_inc_tax": 10995,
           "line_discount_ex_tax": 0,
           "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
+          "pre_discount_line_total_ex_tax": 10995,
+          "pre_discount_line_total_inc_tax": 10995,
+          "tax_rate": 0
+        },
+        "image_urls": [
+          "https://production-trendygolf-1556104155.s3.amazonaws.com/uploads/asset_file/asset_file/30/1556281352.8761528-H2155-88-1.jpg"
+        ]
       },
       "relationships": {
         "shipping_method": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/shipping_method"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/relationships/shipping_method",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/shipping_method"
           },
           "data": {
             "type": "shipping_methods",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
+            "id": "beb56db1-4632-4007-b971-b90bda7a61f0_3"
           }
         },
         "shipping_address": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/shipping_address"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/relationships/shipping_address",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/shipping_address"
           },
           "data": {
             "type": "shipping_addresses",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1"
+            "id": "beb56db1-4632-4007-b971-b90bda7a61f0_2001286"
           }
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_2/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/beb56db1-4632-4007-b971-b90bda7a61f0_0/discounts"
           },
           "data": []
         }
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1",
+      "id": "77790f05-8313-41c9-9c23-989125e4823a_0",
       "type": "line_items",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/4605bd93-2b34-4653-85f0-2e9f6f164459_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0"
       },
       "attributes": {
         "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
+        "sku": "H2155-88-small",
         "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
+          "each_ex_tax": 10995,
+          "each_inc_tax": 10995,
+          "line_total_ex_tax": 10995,
+          "line_total_inc_tax": 10995,
           "line_discount_ex_tax": 0,
           "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
+          "pre_discount_line_total_ex_tax": 10995,
+          "pre_discount_line_total_inc_tax": 10995,
+          "tax_rate": 0
+        },
+        "image_urls": [
+          "https://production-trendygolf-1556104155.s3.amazonaws.com/uploads/asset_file/asset_file/30/1556281352.8761528-H2155-88-1.jpg"
+        ]
       },
       "relationships": {
         "shipping_method": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/shipping_method"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/relationships/shipping_method",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/shipping_method"
           },
           "data": {
             "type": "shipping_methods",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
+            "id": "77790f05-8313-41c9-9c23-989125e4823a_3"
           }
         },
         "shipping_address": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/shipping_address"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/relationships/shipping_address",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/shipping_address"
           },
           "data": {
             "type": "shipping_addresses",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
+            "id": "77790f05-8313-41c9-9c23-989125e4823a_2001286"
           }
         },
         "discounts": {
           "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2/discounts"
+            "self": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/relationships/discounts",
+            "related": "https://shift-oms.herokuapp.com/oms/v1/line_items/77790f05-8313-41c9-9c23-989125e4823a_0/discounts"
           },
           "data": []
         }
       }
     },
     {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/666dbe9e-cef0-4198-8470-7ed909f8302f_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/71b1741a-beda-4ba9-bce4-26d9ac794a22_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/7c842d90-08eb-467d-9538-e0fa02e55323_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8b8d25f0-9345-4f7f-8930-bc2745540289_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0"
-      },
-      "attributes": {
-        "quantity": 5,
-        "sku": "WHITE-TSHIRT-XXL",
-        "pricing": {
-          "each_ex_tax": 1200,
-          "each_inc_tax": 1440,
-          "line_total_ex_tax": 6000,
-          "line_total_inc_tax": 7200,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 6000,
-          "pre_discount_line_total_inc_tax": 7200,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-      },
-      "attributes": {
-        "quantity": 1,
-        "sku": "WHITE-TSHIRT-L",
-        "pricing": {
-          "each_ex_tax": 200,
-          "each_inc_tax": 240,
-          "line_total_ex_tax": 200,
-          "line_total_inc_tax": 240,
-          "line_discount_ex_tax": 0,
-          "line_discount_inc_tax": 0,
-          "pre_discount_line_total_ex_tax": 200,
-          "pre_discount_line_total_inc_tax": 240,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2/discounts"
-          },
-          "data": []
-        }
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1",
-      "type": "line_items",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-      },
-      "attributes": {
-        "quantity": 4,
-        "sku": "BLACK-SOCKS-001",
-        "pricing": {
-          "each_ex_tax": 800,
-          "each_inc_tax": 960,
-          "line_total_ex_tax": 3100,
-          "line_total_inc_tax": 3720,
-          "line_discount_ex_tax": 100,
-          "line_discount_inc_tax": 120,
-          "pre_discount_line_total_ex_tax": 3200,
-          "pre_discount_line_total_inc_tax": 3840,
-          "tax_rate": 2000
-        }
-      },
-      "relationships": {
-        "shipping_method": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/relationships/shipping_method",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/shipping_method"
-          },
-          "data": {
-            "type": "shipping_methods",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-          }
-        },
-        "shipping_address": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/relationships/shipping_address",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/shipping_address"
-          },
-          "data": {
-            "type": "shipping_addresses",
-            "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-          }
-        },
-        "discounts": {
-          "links": {
-            "self": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/relationships/discounts",
-            "related": "https://shift-oms-dev.herokuapp.com/oms/v1/line_items/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1/discounts"
-          },
-          "data": [
-            {
-              "type": "discounts",
-              "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1_0"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1",
+      "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_3",
       "type": "shipping_methods",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_methods/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_3"
       },
       "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
+        "label": "Demo UK Delivery",
+        "price": 2000
       }
     },
     {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2",
+      "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_3",
       "type": "shipping_methods",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_methods/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_3"
       },
       "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
+        "label": "Demo UK Delivery",
+        "price": 2000
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1",
+      "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_3",
       "type": "shipping_methods",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_methods/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_3"
       },
       "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
+        "label": "Demo UK Delivery",
+        "price": 2000
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2",
+      "id": "beb56db1-4632-4007-b971-b90bda7a61f0_3",
       "type": "shipping_methods",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_methods/beb56db1-4632-4007-b971-b90bda7a61f0_3"
       },
       "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
+        "label": "Demo UK Delivery",
+        "price": 2000
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1",
+      "id": "77790f05-8313-41c9-9c23-989125e4823a_3",
       "type": "shipping_methods",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/4605bd93-2b34-4653-85f0-2e9f6f164459_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_methods/77790f05-8313-41c9-9c23-989125e4823a_3"
       },
       "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
+        "label": "Demo UK Delivery",
+        "price": 2000
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/4605bd93-2b34-4653-85f0-2e9f6f164459_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/666dbe9e-cef0-4198-8470-7ed909f8302f_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/7c842d90-08eb-467d-9538-e0fa02e55323_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/7c842d90-08eb-467d-9538-e0fa02e55323_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-      },
-      "attributes": {
-        "label": "Next Day Delivery",
-        "price": 600
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2",
-      "type": "shipping_methods",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_methods/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-      },
-      "attributes": {
-        "label": "Two-man Delivery",
-        "price": 2100
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1",
+      "id": "b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_2001286",
       "type": "shipping_addresses",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/0764ccff-6c22-411f-8b5b-bc069c028fd6_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_addresses/b91b6d74-3f4e-431b-ab6c-c6dcdf4d4b69_2001286"
       },
       "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/0764ccff-6c22-411f-8b5b-bc069c028fd6_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
+        "name": "test customer",
         "company": null,
         "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
+          "1 Scott Drive",
+          "Crofton"
         ],
-        "city": "Leeds",
+        "city": "Wakefield",
         "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
+        "postcode": "WF4 1TD",
+        "country": "GB"
       }
     },
     {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1",
+      "id": "31b12b3e-50d9-4fe1-a48c-0d0682f8df43_2001286",
       "type": "shipping_addresses",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_addresses/31b12b3e-50d9-4fe1-a48c-0d0682f8df43_2001286"
       },
       "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/301a6a29-3111-4d82-9894-e3bbd94b1f1e_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
+        "name": "test customer",
         "company": null,
         "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
+          "1 Scott Drive",
+          "Crofton"
         ],
-        "city": "Leeds",
+        "city": "Wakefield",
         "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
+        "postcode": "WF4 1TD",
+        "country": "GB"
       }
     },
     {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1",
+      "id": "029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_2001286",
       "type": "shipping_addresses",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/4605bd93-2b34-4653-85f0-2e9f6f164459_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_addresses/029db8ae-afb0-4ff2-b8d6-37eccf7d74ec_2001286"
       },
       "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/4605bd93-2b34-4653-85f0-2e9f6f164459_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
+        "name": "test customer",
         "company": null,
         "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
+          "1 Scott Drive",
+          "Crofton"
         ],
-        "city": "Leeds",
+        "city": "Wakefield",
         "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
+        "postcode": "WF4 1TD",
+        "country": "GB"
       }
     },
     {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1",
+      "id": "beb56db1-4632-4007-b971-b90bda7a61f0_2001286",
       "type": "shipping_addresses",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_addresses/beb56db1-4632-4007-b971-b90bda7a61f0_2001286"
       },
       "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
+        "name": "test customer",
         "company": null,
         "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
+          "1 Scott Drive",
+          "Crofton"
         ],
-        "city": "Leeds",
+        "city": "Wakefield",
         "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
+        "postcode": "WF4 1TD",
+        "country": "GB"
       }
     },
     {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1",
+      "id": "77790f05-8313-41c9-9c23-989125e4823a_2001286",
       "type": "shipping_addresses",
       "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/666dbe9e-cef0-4198-8470-7ed909f8302f_1"
+        "self": "https://shift-oms.herokuapp.com/oms/v1/shipping_addresses/77790f05-8313-41c9-9c23-989125e4823a_2001286"
       },
       "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/666dbe9e-cef0-4198-8470-7ed909f8302f_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
+        "name": "test customer",
         "company": null,
         "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
+          "1 Scott Drive",
+          "Crofton"
         ],
-        "city": "Leeds",
+        "city": "Wakefield",
         "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/71b1741a-beda-4ba9-bce4-26d9ac794a22_1"
-      },
-      "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/71b1741a-beda-4ba9-bce4-26d9ac794a22_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
-        "company": null,
-        "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/7c842d90-08eb-467d-9538-e0fa02e55323_1"
-      },
-      "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/7c842d90-08eb-467d-9538-e0fa02e55323_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
-        "company": null,
-        "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/8b8d25f0-9345-4f7f-8930-bc2745540289_1"
-      },
-      "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/8b8d25f0-9345-4f7f-8930-bc2745540289_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
-        "company": null,
-        "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1"
-      },
-      "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
-        "company": null,
-        "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1"
-      },
-      "attributes": {
-        "name": "Test Customer",
-        "company": "SHIFT Commerce",
-        "lines": [
-          "The Calls"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2",
-      "type": "shipping_addresses",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/shipping_addresses/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_2"
-      },
-      "attributes": {
-        "name": "Test Customer 2",
-        "company": null,
-        "lines": [
-          "SHIFT Commerce",
-          "The Calls Landing"
-        ],
-        "city": "Leeds",
-        "state": "West Yorkshire",
-        "postcode": "LS2 7EY",
-        "country": "United Kingdom"
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/0764ccff-6c22-411f-8b5b-bc069c028fd6_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "0764ccff-6c22-411f-8b5b-bc069c028fd6_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/0764ccff-6c22-411f-8b5b-bc069c028fd6_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/301a6a29-3111-4d82-9894-e3bbd94b1f1e_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "301a6a29-3111-4d82-9894-e3bbd94b1f1e_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/301a6a29-3111-4d82-9894-e3bbd94b1f1e_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/4605bd93-2b34-4653-85f0-2e9f6f164459_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "4605bd93-2b34-4653-85f0-2e9f6f164459_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/4605bd93-2b34-4653-85f0-2e9f6f164459_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/527e2bc3-2df7-410e-a6f9-6f9af6a1571e_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/666dbe9e-cef0-4198-8470-7ed909f8302f_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "666dbe9e-cef0-4198-8470-7ed909f8302f_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/666dbe9e-cef0-4198-8470-7ed909f8302f_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/71b1741a-beda-4ba9-bce4-26d9ac794a22_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "71b1741a-beda-4ba9-bce4-26d9ac794a22_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/71b1741a-beda-4ba9-bce4-26d9ac794a22_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/7c842d90-08eb-467d-9538-e0fa02e55323_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "7c842d90-08eb-467d-9538-e0fa02e55323_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/7c842d90-08eb-467d-9538-e0fa02e55323_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/8b8d25f0-9345-4f7f-8930-bc2745540289_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "8b8d25f0-9345-4f7f-8930-bc2745540289_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/8b8d25f0-9345-4f7f-8930-bc2745540289_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/8dbcff87-43df-4269-8e3d-ba5ae693ff6c_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_1_0"
-      },
-      "attributes": {
-        "label": "1O% 0FF SOCKS",
-        "amount_inc_tax": 144,
-        "coupon_code": "1OFFSOCKS"
-      }
-    },
-    {
-      "id": "ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0",
-      "type": "discounts",
-      "links": {
-        "self": "https://shift-oms-dev.herokuapp.com/oms/v1/discounts/ad8a3c62-4e65-4b44-b5e5-8c8e5eedce72_0"
-      },
-      "attributes": {
-        "label": "Staff Discount",
-        "amount_inc_tax": 600,
-        "coupon_code": "STAFF"
+        "postcode": "WF4 1TD",
+        "country": "GB"
       }
     }
   ],
   "links": {
-    "first": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders?fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=quantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=integration&filter%5Bcustomer_reference%5D=CUSTOMER-REFERENCE&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts&page%5Blimit%5D=10&page%5Boffset%5D=0",
-    "next": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders?fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=quantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=integration&filter%5Bcustomer_reference%5D=CUSTOMER-REFERENCE&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts&page%5Blimit%5D=10&page%5Boffset%5D=10",
-    "last": "https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders?fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=quantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=integration&filter%5Bcustomer_reference%5D=CUSTOMER-REFERENCE&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts&page%5Blimit%5D=10&page%5Boffset%5D=3"
+    "first": "https://shift-oms.herokuapp.com/oms/v1/customer_orders?fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=quantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=trendygolf&filter%5Bcustomer_reference%5D=20000020&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-placed_at",
+    "last": "https://shift-oms.herokuapp.com/oms/v1/customer_orders?fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=quantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=trendygolf&filter%5Bcustomer_reference%5D=20000020&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-placed_at"
   }
 }
