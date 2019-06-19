@@ -58,8 +58,6 @@ export function getCustomerOrders () {
 }
 
 export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
-  const customer_account_id = account.customer_account_id ? account.customer_account_id : cart.shipping_address.meta_attributes.email.value
-
   const lineItems = prepareLineItems(cart)
   const discountSummaries = prepareDiscountSummaries(cart, lineItems)
   const orderDiscountIncTax = cart.shipping_total_discount * -1
@@ -68,7 +66,7 @@ export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
 
   const orderPayload = {
     attributes: {
-      customer_account_id: customer_account_id,
+      customer_account_id: account.customer_account_id ? account.customer_account_id : null,
       billing_address: prepareBillingAddress(cart.billing_address),
       channel: 'web',
       currency: 'GBP',
