@@ -70,7 +70,7 @@ module.exports = {
       },
       fields: {
         customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
-        line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts',
+        line_items: 'quantity,sku,pricing,shipping_method,shipping_address,discounts,image_urls',
         shipping_methods: 'label,price',
         shipping_addresses: 'name,company,lines,city,state,postcode,country',
         discounts: 'label,amount_inc_tax,coupon_code'
