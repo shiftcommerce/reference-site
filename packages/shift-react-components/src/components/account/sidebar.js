@@ -17,7 +17,6 @@ export class Sidebar extends Component {
           />
         )) }
       </ul>
-
     )
   }
 }
