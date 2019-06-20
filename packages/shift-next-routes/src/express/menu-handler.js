@@ -10,6 +10,7 @@ module.exports = {
     let response = await menuCache.read()
     // check if there are no cached menus
     if (!response || Object.keys(response).length === 0) {
+      console.log('*** FETCHING FROM API')
       // fetch menus from API
       response = await SHIFTClient.getMenusV1(req.query)
       // set Surrogate headers
