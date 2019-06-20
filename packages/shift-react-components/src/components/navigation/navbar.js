@@ -1,6 +1,10 @@
 // Libraries
 import React, { Component } from 'react'
 import t from 'typy'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+
+import isEqual from 'lodash/isEqual'
 
 // Components
 import { Image } from '../../objects/image'
@@ -78,6 +82,10 @@ export class NavBar extends Component {
     )
   }
 
+  shouldComponentUpdate (nextProps) {
+    return !isEqual(this.props.menu, nextProps.menu)
+  }
+
   render () {
     const { loading, error } = this.props.menu
     const menuItems = t(this.props, 'menu[0].menu_items').safeObject
@@ -100,4 +108,8 @@ export class NavBar extends Component {
       )
     }
   }
+}
+
+NavBar.propTypes = {
+  menu: PropTypes.object.isRequired
 }
