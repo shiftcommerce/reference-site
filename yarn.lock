@@ -10964,11 +10964,6 @@ lodash.create@3.1.1:
     lodash._basecreate "^3.0.0"
     lodash._isiterateecall "^3.0.0"
 
-lodash.defaults@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
-  integrity sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
-
 lodash.escape@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.escape/-/lodash.escape-4.0.1.tgz#c9044690c21e04294beaa517712fded1fa88de98"
@@ -11380,19 +11375,10 @@ mem@^4.0.0:
     mimic-fn "^2.0.0"
     p-is-promise "^2.0.0"
 
-memcache-client@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/memcache-client/-/memcache-client-0.10.1.tgz#99e44d6fc59c9d78568f3c5d10e46ba4e64b9c2a"
-  integrity sha512-FwKvPmfdce2Pv5qQy/373zsYnU/Wo4SZWOpwXkp49R25NYbwaWOHqzUqgWSLAr/Iyk7hp9sIZnf9j6rVxQmB2A==
-  dependencies:
-    lodash.defaults "^4.2.0"
-    memcache-parser "^0.2.7"
-    optional-require "^1.0.0"
-
-memcache-parser@^0.2.7:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/memcache-parser/-/memcache-parser-0.2.8.tgz#1b1ff7be55d5d5baf624bcd4fe03a2b4c9236a64"
-  integrity sha1-Gx/3vlXV1br2JLzU/gOitMkjamQ=
+memjs@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/memjs/-/memjs-1.2.0.tgz#3c2a28d9105f26ff37d69254bef35c804b3c6f5b"
+  integrity sha512-FLdqY/9aRcU0i/gfYHdzzuN6BNa7ZrVgVT/xeVr4Y+nV5f1IzOPzDdV+LLqWK0hWv4mBjRPOjciq3V8s3C8ajg==
 
 memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
   version "0.4.1"
@@ -12639,11 +12625,6 @@ optimist@^0.6.1:
   dependencies:
     minimist "~0.0.1"
     wordwrap "~0.0.2"
-
-optional-require@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/optional-require/-/optional-require-1.0.0.tgz#168d3619843acc0fbcd6d6cc5da4cbe538663af2"
-  integrity sha1-Fo02GYQ6zA+81tbMXaTL5ThmOvI=
 
 optionator@^0.8.1, optionator@^0.8.2:
   version "0.8.2"
