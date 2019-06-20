@@ -15,7 +15,8 @@
     "@shiftcommerce/shift-node-api": "^0.22.12",
     "csurf": "^1.10.0",
     "express-ipfilter": "^1.0.1",
-    "helmet": "^3.18.0",
+    "helmet": "^3.18.0", 
+    "memjs": "^1.2.0",
     "stripe": "^6.31.2"
   },
   "devDependencies": {

@@ -52,7 +52,6 @@
     "image-webpack-loader": "^5.0.0",
     "instantsearch.css": "^7.1.0",
     "js-cookie": "^2.2.0",
-    "memjs": "^1.2.0",
     "next": "^8.0.4",
     "next-transpile-modules": "^2.3.1",
     "pino": "^5.12.6",
