@@ -4,6 +4,7 @@ import qs from 'qs'
 import equal from 'deep-equal'
 import classNames from 'classnames'
 import { SortBy } from 'react-instantsearch-dom'
+import Router from 'next/router'
 
 // Components
 import SearchFilters from '@shiftcommerce/shift-react-components/src/components/search/search-filters'
@@ -47,6 +48,14 @@ class SearchPage extends Component {
     this.setState({ searchState })
   }
 
+  // fix SSR
+  static buildAlgoliaStates (params) {
+    const searchState = params.asPath.includes('?')
+      ? qs.parse(params.asPath.substring(params.asPath.indexOf('?') + 1))
+      : {}
+    return Object.assign({ ...searchState })
+  }
+
   constructor (props) {
     super(props)
 
@@ -71,9 +80,6 @@ class SearchPage extends Component {
             <h2> Filters <button className='c-product-listing-filter-close' onClick={this.toggleFiltering} /></h2>
           </div>
           <div className={classNames('c-product-listing-filter', { 'c-product-listing-filter--hide': !filtersShown })}>
-            <div className='c-product-listing-filter__header'>
-              <SearchFiltersClearControls/>
-            </div>
             <SearchFilters />
           </div>
           <div className={classNames('c-product-listing')}>
@@ -94,6 +100,9 @@ class SearchPage extends Component {
               </div>
             </div>
             <ProductListingInfo />
+            <div className='c-product-listing-filter__header'>
+              <SearchFiltersClearControls/>
+            </div>
             { CustomListingCard ? <CustomListingCard /> : <ProductListingCards /> }
             <LoadMoreHits />
           </div>
