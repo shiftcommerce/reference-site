@@ -36,22 +36,11 @@ export class AccountOrders extends Component {
   render () {
     const { orders, orders: { loading } } = this.props
 
-    if (loading) {
-      return (
-        <>
-          <div className='c-order-history'>
-            { this.renderAccountBanner() }
-            <Loading />
-          </div>
-        </>
-      )
-    } else {
-      return (
-        <div className='c-order-history'>
-          { this.renderAccountBanner() }
-          { this.renderOrdersList(orders) }
-        </div>
-      )
-    }
+    return (
+      <div className='c-order-history'>
+        { this.renderAccountBanner() }
+        { loading ? <Loading /> : this.renderOrdersList(orders) }
+      </div>
+    )
   }
 }
