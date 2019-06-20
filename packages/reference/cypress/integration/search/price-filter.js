@@ -27,7 +27,6 @@ describe('Search', () => {
       }).as('algoliaSearch')
 
       // Wait for page to load
-      cy.wait('@getMenus')
       cy.wait('@algoliaSearch').then((xhr) => {
         assert.equal(xhr.responseBody.results[0].nbHits, 6, 'values equal')
       })
