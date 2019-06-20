@@ -1,10 +1,11 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 // Lib
 import Config from '../../lib/config'
 import { Loading } from '../../objects/loading'
 import { OrderList } from '../../components/orders/order-list'
+import { OrderSingle } from '../../components/orders/order-single'
 
 export class AccountOrders extends Component {
   constructor (props) {
@@ -22,7 +23,19 @@ export class AccountOrders extends Component {
       return (<p>No previous orders found.</p>)
     }
 
-    return (<OrderList orders={orders} />)
+    return (
+      <Fragment>
+        <OrderList orders={orders} />
+        { orders.data.map((order) => {
+          return (
+            <OrderSingle
+              key={order.id}
+              order={order}
+            />
+          )
+        })}
+      </Fragment>
+    )
   }
 
   renderAccountBanner () {
