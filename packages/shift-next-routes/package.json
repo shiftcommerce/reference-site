@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-next-routes",
-  "version": "0.22.12",
+  "version": "0.22.13",
   "description": "",
   "main": "src/index.js",
   "repository": "https://github.com/shiftcommerce/shift-next-routes.git",
@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.0",
-    "@shiftcommerce/shift-node-api": "^0.22.12",
+    "@shiftcommerce/shift-node-api": "^0.22.13",
     "csurf": "^1.10.0",
     "express-ipfilter": "^1.0.1",
-    "helmet": "^3.18.0", 
+    "helmet": "^3.18.0",
     "memjs": "^1.2.0",
     "stripe": "^6.31.2"
   },
