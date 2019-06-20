@@ -17,10 +17,10 @@ const memcachedConfigs = {
  }
 
 /**
- *  MemcachedClient
+ *  MemcachedStore
  *
- * Responsibility: Initialising the Memcached client
+ * Responsibility: Initialising the Memcached store
  */
 module.exports = {
-  MemcachedClient: memjs.Client.create(memcachedServers, memcachedConfigs)
+  MemcachedStore: memjs.Client.create(memcachedServers, memcachedConfigs)
 }

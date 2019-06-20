@@ -1,5 +1,5 @@
 // Libs
-const { MemcachedClient } = require('./memcached-client')
+const { MemcachedStore } = require('./memcached-store')
 
 /**
  *  MenuCache service
@@ -14,7 +14,7 @@ class MenuCache {
    * @param {function} cache - cache client, eg. memcached
    * @param {string} cacheKey - the cache key to be used
    */
-  constructor (cache = MemcachedClient, cacheKey = 'menus/data') {
+  constructor (cache = MemcachedStore, cacheKey = 'menus/data') {
     this.cache = cache
     this.cacheKey = cacheKey
   }
