@@ -26,7 +26,6 @@ class MenuCache {
   async read () {
     try {
       const data = await this.cache.get(this.cacheKey)
-      console.log('*** FETCHING FROM CACHE: ', JSON.parse(data.value))
       return data ? JSON.parse(data.value) : {}
     } catch (error) {
       console.error('Error fetching menu cache', error)
@@ -42,7 +41,6 @@ class MenuCache {
   async set (response, cacheDuration = process.env.MENUS_CACHE_DURATION) {
     try {
       const result = await this.cache.set(this.cacheKey, JSON.stringify(response), { expires: cacheDuration })
-      console.log('*** SETTING IN CACHE: ', result)
       return result
     } catch (error) {
       console.log('Error setting menu cache', error)
