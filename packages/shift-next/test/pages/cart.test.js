@@ -29,9 +29,10 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
   const updateQuantitySpy = jest.spyOn(CartPage.prototype, 'updateQuantity')
   const dispatch = jest.fn().mockImplementation((updateSpy) => 'first call')
 
-  const head = () => {
+  const head = (props) => {
     return (
       <head>
+        { props.children }
       </head>
     )
   }
@@ -47,6 +48,9 @@ test('dispatch updateQuantity action on changing line item quantity', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+
+  // Check that crawlers should be intructed to ignore this page
+  expect(wrapper.find('meta[name="robots"]').props().content).toEqual('noindex,nofollow')
 
   // Verify if cart line items are available
   expect(wrapper.find('.c-cart-table__header-grid-item--a')).toIncludeText('2 items in your shopping basket')
