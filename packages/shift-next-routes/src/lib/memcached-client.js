@@ -3,15 +3,22 @@
 const memjs = require('memjs')
 
 // Config
+// The current setup supports env vars for the following services - Memcachier & MemcachedCloud
 const memcachedServers = (process.env.MEMCACHE_SERVERS || process.env.MEMCACHIER_SERVERS || process.env.MEMCACHEDCLOUD_SERVERS)
 const username = (process.env.MEMCACHE_USERNAME || process.env.MEMCACHIER_USERNAME || process.env.MEMCACHEDCLOUD_USERNAME)
 const password = (process.env.MEMCACHE_PASSWORD || process.env.MEMCACHIER_PASSWORD || process.env.MEMCACHEDCLOUD_PASSWORD)
-
+const memcachedConfigs = { 
+  username: username,
+  password: password,
+  failover: true,  // default: false
+  timeout: 1,      // default: 0.5 (seconds)
+  keepAlive: true  // default: false
+ }
 /**
  *  MemcachedClient
  *
  * Responsibility: Initialising the Memcached client
  */
 module.exports = {
-  MemcachedClient: memjs.Client.create(memcachedServers, { username, password })
+  MemcachedClient: memjs.Client.create(memcachedServers, memcachedConfigs)
 }
