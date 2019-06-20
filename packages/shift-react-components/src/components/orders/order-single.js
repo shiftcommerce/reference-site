@@ -1,5 +1,5 @@
 // Libraries
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import format from 'date-fns/format'
 import t from 'typy'
 
@@ -8,6 +8,7 @@ import { penceToPounds } from '../../lib/pence-to-pounds'
 
 // Components
 import ShippingAddresses from './shipping-addresses'
+import { LineItems } from '../cart/line-items'
 
 import Link from '../../objects/link'
 
@@ -25,76 +26,87 @@ export class OrderSingle extends PureComponent {
     return penceToPounds(shippingTotal)
   }
 
-  /**
-  * Render the total prices for the line item
-  * @param  {Object} order
-  * @param  {Object} orderDate
-  * @param  {Object} total
-  * @return {string} - HTML markup for the component
-  */
-  renderOrderSummary (order, orderDate, total) {
-    return (
-      <div className='c-order-history__order-summary'>
-        <div className='c-order-history__order-summary_params'>
-          <p className='u-bold u-inline-block'>Date of Order: </p>
-          <a className='u-inline-block'>{ orderDate }</a>
-        </div>
-        <div className='c-order-history__order-summary_params'>
-          <p className='u-bold u-inline-block'>Items: </p>
-          <a className='u-inline-block'>{ order.line_items.length }</a>
-        </div>
-        <div className='c-order-history__order-summary_params'>
-          <p className='u-bold u-inline-block'>Order Number: </p>
-          <a className='u-inline-block'>{ order.reference }</a>
-        </div>
-        <div className='c-order-history__order-summary_params'>
-          <p className='u-bold u-inline-block'>Total: </p>
-          <a className='u-inline-block'>&pound;{ total }</a>
-        </div>
-      </div>
-    )
-  }
-
-  /**
-  * Render the order details
-  * @param  {Object} order
-  * @param  {Object} orderDate
-  * @param  {Object} total
-  * @return {string} - HTML markup for the component
-  */
-  renderOrderDetails (order) {
-    const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
-    const orderTotal = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
-
-    return [{
-      label: 'Order No.',
-      value: order.reference
-    }, {
-      label: 'Order Date',
-      value: orderDate
-    }, {
-      label: 'Cost',
-      value: orderTotal
-    }, {
-      value: <Link href={`/account/orders/${order.id}`} className='o-button o-button--primary'>View Details</Link>
-    }].map((column, columnIndex) => {
-      return (
-        <div
-          key={columnIndex}
-          className='c-order-history-table__col'
-        >
-          { column.label && <span className='c-order-history-table__label'>{ column.label }</span> }
-          { column.value }
-        </div>
-      )
+  formatLineItems (lineItems) {
+    return lineItems.map((lineItem, lineItemIndex) => {
+      return {
+        id: lineItemIndex,
+        item: {
+          sku: lineItem.sku,
+          title: 'item title',
+          picture_url: lineItem.image_urls[0],
+          product: {
+            title: 'product title',
+            slug: 'slug'
+          }
+        },
+        unit_quantity: lineItem.quantity,
+        total: (lineItem.pricing.line_total_inc_tax / 100),
+        sub_total: (lineItem.pricing.line_total_inc_tax / 100)
+      }
     })
   }
 
   render () {
     const { order } = this.props
+    const lineItems = this.formatLineItems(order.line_items)
 
     return (
-      <h1>{ order.id }</h1>
+      <Fragment>
+        <div className='c-order-history__nav'>
+          <h2>Order { order.reference }</h2>
+        </div>
+        <div className='c-order-single'>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Order No.</h5>
+            <div className='c-order-single__body'>{ order.reference }</div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Order Date</h5>
+            <div className='c-order-single__body'>{ format(new Date(order.placed_at), 'MMM D, YYYY') }</div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Cost</h5>
+            <div className='c-order-single__body'>{ penceToPounds(t(order, 'pricing.total_inc_tax').safeObject) }</div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Shipping Method</h5>
+            <div className='c-order-single__body'>{ order.shipping_methods[0].label }</div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Billing Address</h5>
+            <div className='c-order-single__body'>
+              <ShippingAddresses addresses={order.shipping_addresses} />
+            </div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Shipping Address</h5>
+            <div className='c-order-single__body'>
+              <ShippingAddresses addresses={order.shipping_addresses} />
+            </div>
+          </div>
+          <div className='c-order-single__item'>
+            <h5 className='c-order-single__header'>Currency</h5>
+            <div className='c-order-single__body'>
+              { order.pricing.currency }
+            </div>
+          </div>
+          <div className='c-order-single__item c-order-single__item--full'>
+            <h5 className='c-order-single__header'>Order Summary</h5>
+            <div className='c-order-single__body'>
+              <LineItems
+                lineItems={lineItems}
+                lineItemsCount={lineItems.length}
+              />
+            </div>
+          </div>
+          <div className='c-order-single__item c-order-single__item--full'>
+            <div className='c-order-single__body'>
+              <Link href='/account/orders' className='o-button o-button--primary'>View all orders</Link>
+            </div>
+          </div>
+
+        </div>
+      </Fragment>
     )
   }
 }
