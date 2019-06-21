@@ -53,16 +53,16 @@ describe('My Account', () => {
       cy.wait('@getCustomerOrders')
 
       // Check that the data returned is rendered in a list
-      cy.get('.c-order-history__header').should('have.length', 5)
+      cy.get('.c-order-history-table__row--body').should('have.length', 5)
 
       // Expand the first order in the list
-      cy.get('.c-order-history__header').first().click()
+      cy.get('.c-order-history-table__row--body a').first().click()
 
       // Expect first order to contain values
       cy.contains(/H2155-88-small/i)
-      cy.contains(/quantity: 2/i)
-      cy.contains(/delivery: Demo UK Delivery/i)
-      cy.contains(/address: test customer/i)
+      cy.contains(/quantity2/i)
+      cy.contains(/shipping methodDemo UK Delivery/i)
+      cy.contains(/shipping addresstest customer/i)
       cy.contains(/£219.90/i)
     })
   })
