@@ -592,7 +592,7 @@ exports[`renders correctly 1`] = `
                         "title": "product title",
                       },
                       "sku": "WHITE-TSHIRT-XXL",
-                      "title": "item title",
+                      "title": "WHITE-TSHIRT-XXL",
                     },
                     "sub_total": 72,
                     "total": 72,
@@ -607,7 +607,7 @@ exports[`renders correctly 1`] = `
                         "title": "product title",
                       },
                       "sku": "BLACK-SOCKS-001",
-                      "title": "item title",
+                      "title": "BLACK-SOCKS-001",
                     },
                     "sub_total": 4.8,
                     "total": 4.8,
@@ -622,7 +622,7 @@ exports[`renders correctly 1`] = `
                         "title": "product title",
                       },
                       "sku": "WHITE-TSHIRT-L",
-                      "title": "item title",
+                      "title": "WHITE-TSHIRT-L",
                     },
                     "sub_total": 1440,
                     "total": 1440,
@@ -649,8 +649,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="item title"
-                          aria-label="item title"
+                          alt="WHITE-TSHIRT-XXL"
+                          aria-label="WHITE-TSHIRT-XXL"
                           className="c-line-items__image"
                           key="slug"
                           src="https://example.com/path/to/image.jpg"
@@ -660,8 +660,8 @@ exports[`renders correctly 1`] = `
                           >
                             <picture>
                               <img
-                                alt="item title"
-                                aria-label="item title"
+                                alt="WHITE-TSHIRT-XXL"
+                                aria-label="WHITE-TSHIRT-XXL"
                                 className="o-image"
                                 src="https://example.com/path/to/image.jpg"
                                 srcSet="https://example.com/path/to/image.jpg 769w"
@@ -684,7 +684,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - item title
+                          product title - WHITE-TSHIRT-XXL
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -735,8 +735,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="item title"
-                          aria-label="item title"
+                          alt="BLACK-SOCKS-001"
+                          aria-label="BLACK-SOCKS-001"
                           className="c-line-items__image"
                           key="slug"
                         />
@@ -755,7 +755,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - item title
+                          product title - BLACK-SOCKS-001
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -806,8 +806,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="item title"
-                          aria-label="item title"
+                          alt="WHITE-TSHIRT-L"
+                          aria-label="WHITE-TSHIRT-L"
                           className="c-line-items__image"
                           key="slug"
                         />
@@ -826,7 +826,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - item title
+                          product title - WHITE-TSHIRT-L
                         </h4>
                         <div
                           className="c-line-items__details-sku"
