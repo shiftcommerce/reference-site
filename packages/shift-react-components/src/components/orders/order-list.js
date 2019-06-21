@@ -6,10 +6,6 @@ import t from 'typy'
 // Lib
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
-// Components
-
-import Link from '../../objects/link'
-
 export class OrderList extends PureComponent {
   /**
   * Render the order details

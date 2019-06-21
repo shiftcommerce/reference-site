@@ -9,8 +9,6 @@ import { penceToPounds } from '../../lib/pence-to-pounds'
 import ShippingAddresses from './shipping-addresses'
 import { LineItems } from '../cart/line-items'
 
-import Link from '../../objects/link'
-
 export class OrderSingle extends PureComponent {
   /**
    * Calculate the subtotal based on each line item price

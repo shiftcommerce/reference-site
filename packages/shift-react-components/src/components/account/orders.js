@@ -18,7 +18,12 @@ export class AccountOrders extends Component {
     this.props.fetchOrders()
   }
 
-  renderOrdersList (orders) {
+  /**
+   * Render the list of orders, or the individual order
+   * @param  {Object} orders
+   * @return {string} - HTML markup for the component
+   */
+  renderOrders (orders) {
     const { currentOrderRef, updateCurrentOrder } = this.props
 
     if (orders.data.length === 0) {
@@ -56,7 +61,7 @@ export class AccountOrders extends Component {
 
     return (
       <div className='c-order-history'>
-        { loading ? <Loading /> : this.renderOrdersList(orders) }
+        { loading ? <Loading /> : this.renderOrders(orders) }
       </div>
     )
   }
