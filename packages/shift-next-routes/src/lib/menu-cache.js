@@ -38,7 +38,7 @@ class MenuCache {
    * @param {object} response - menu API response
    * @param {number} cacheDuration - the cache duration in seconds
    */
-  async set (response, cacheDuration = process.env.MENUS_CACHE_DURATION) {
+  async set (response, cacheDuration = (process.env.MENUS_CACHE_DURATION || 300)) {
     try {
       const result = await this.cache.set(this.cacheKey, JSON.stringify(response), { expires: cacheDuration })
       return result
