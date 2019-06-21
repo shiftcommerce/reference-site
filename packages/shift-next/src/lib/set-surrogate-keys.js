@@ -1,3 +1,12 @@
+/**
+ * SERVER SIDE ONLY
+ * Merges any surrogate keys (space delimited list) from the given headers,
+ * with what's already on the request, ensuring uniqueness.
+ *
+ * @param {*} headers
+ * @param {*} req express request
+ * @param {*} res express response
+ */
 const setSurrogateKeys = (headers, req, res) => {
   if (req && res) {
     const currentKey = res.get('surrogate-key')
