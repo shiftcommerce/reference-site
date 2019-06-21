@@ -158,20 +158,15 @@ class CartPage extends Component {
   render () {
     const { loading } = this.state
 
-    if (loading) {
-      return (
-        <Loading />
-      )
-    } else {
-      return (
-        <Fragment>
-          <this.Head>
-            <title>{ suffixWithStoreName('Your Shopping Cart') }</title>
-          </this.Head>
-          { this.renderLoaded() }
-        </Fragment>
-      )
-    }
+    return (
+      <Fragment>
+        <this.Head>
+          <title>{ suffixWithStoreName('Your Shopping Cart') }</title>
+          <meta name='robots' content='noindex,nofollow' />
+        </this.Head>
+        { loading ? <Loading /> : this.renderLoaded() }
+      </Fragment>
+    )
   }
 }
 
