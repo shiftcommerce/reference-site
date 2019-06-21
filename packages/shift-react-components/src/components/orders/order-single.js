@@ -12,11 +12,17 @@ import { LineItems } from '../cart/line-items'
 import Link from '../../objects/link'
 
 export class OrderSingle extends PureComponent {
+  /**
+   * Calculate the subtotal based on each line item price
+   * @param  {Object} order
+   * @return {Number}
+   */
   calculateSubTotal (order) {
     return order.line_items.reduce(
       (accumulator, currentValue) => accumulator + currentValue.pricing.line_total_inc_tax, 0
     )
   }
+
   /**
    * Render the total shipping costs in the order list
    * @param  {Object} order
@@ -28,10 +34,20 @@ export class OrderSingle extends PureComponent {
     )
   }
 
+  /**
+   * Get the tax amount based on the totals
+   * @param  {Object} order
+   * @return {Number}
+   */
   calculateTax (order) {
     return order.pricing.total_inc_tax - order.pricing.total_ex_tax
   }
 
+  /**
+   * Reformat the line items to they'll work with the <LineItems /> component
+   * @param  {Array} lineItems
+   * @return {Array}
+   */
   formatLineItems (lineItems) {
     return lineItems.map((lineItem, lineItemIndex) => {
       return {
@@ -52,9 +68,47 @@ export class OrderSingle extends PureComponent {
     })
   }
 
+  /**
+   * Render each part of the order items
+   * @param  {String}                 options.header
+   * @param  {String|Number|Element0} options.body
+   * @return {String} - HTML markup for the component
+   */
+  renderItem ({ header, body }) {
+    return (
+      <Fragment>
+        { header && <h5 className='c-order-single__header'>{ header }</h5> }
+        { body && <div className='c-order-single__body'>{ body }</div> }
+      </Fragment>
+    )
+  }
+
   render () {
     const { order } = this.props
     const lineItems = this.formatLineItems(order.line_items)
+
+    const items = [{
+      header: 'Order No.',
+      body: order.reference
+    }, {
+      header: 'Order Date',
+      body: format(new Date(order.placed_at), 'MMM D, YYYY')
+    }, {
+      header: 'Cost',
+      body: `&pound;${penceToPounds(order.pricing.total_inc_tax)}`
+    }, {
+      header: 'Shipping Method',
+      body: order.shipping_methods[0].label
+    }, {
+      header: 'Billing Address',
+      body: <ShippingAddresses addresses={order.shipping_addresses} />
+    }, {
+      header: 'Shipping Address',
+      body: <ShippingAddresses addresses={order.shipping_addresses} />
+    }, {
+      header: 'Currency',
+      body: order.pricing.currency
+    }]
 
     return (
       <Fragment>
@@ -62,40 +116,13 @@ export class OrderSingle extends PureComponent {
           <h2>Order { order.reference }</h2>
         </div>
         <div className='c-order-single'>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Order No.</h5>
-            <div className='c-order-single__body'>{ order.reference }</div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Order Date</h5>
-            <div className='c-order-single__body'>{ format(new Date(order.placed_at), 'MMM D, YYYY') }</div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Cost</h5>
-            <div className='c-order-single__body'>&pound;{ penceToPounds(order.pricing.total_inc_tax) }</div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Shipping Method</h5>
-            <div className='c-order-single__body'>{ order.shipping_methods[0].label }</div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Billing Address</h5>
-            <div className='c-order-single__body'>
-              <ShippingAddresses addresses={order.shipping_addresses} />
-            </div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Shipping Address</h5>
-            <div className='c-order-single__body'>
-              <ShippingAddresses addresses={order.shipping_addresses} />
-            </div>
-          </div>
-          <div className='c-order-single__item'>
-            <h5 className='c-order-single__header'>Currency</h5>
-            <div className='c-order-single__body'>
-              { order.pricing.currency }
-            </div>
-          </div>
+          { items.map((item, itemIndex) => {
+            return (
+              <div key={itemIndex} className='c-order-single__item'>
+                { this.renderItem(item) }
+              </div>
+            )
+          }) }
           <div className='c-order-single__item c-order-single__item--full'>
             <h5 className='c-order-single__header'>Order Summary</h5>
             <div className='c-order-single__body'>
