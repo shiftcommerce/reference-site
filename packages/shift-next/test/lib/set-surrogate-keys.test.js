@@ -1,5 +1,6 @@
 // Libs
 import setSurrogateKeys from '../../src/lib/set-surrogate-keys'
+import { jsxText } from '@babel/types';
 
 describe('#setSurrogateKeys()', () => {
   test('sets the surrogate keys to the response when there are no keys on the response', () => {
@@ -8,55 +9,43 @@ describe('#setSurrogateKeys()', () => {
       'surrogate-key': 'responseSurrogateKey1 responseSurrogateKey2 responseSurrogateKey3',
       'surrogate-control': 'responseSurrogateControl'
     }
-    let headers = {
-      'surrogate-key': ''
-    }
     const res = {
-      get: (key) => {
-        return headers[key]
-      },
-      set: (key, value) => {
-        return headers[key] = value
-      }
+      get: jest.fn(() => {}),
+      set: jest.fn(() => {})
     }
     const req = { server: true }
+    const resGetSpy = jest.spyOn(res, 'get')
+    const resSetSpy = jest.spyOn(res, 'set')
 
     // Act
     setSurrogateKeys(responseHeaders, req, res)
 
     // Assert
-    expect(headers['surrogate-key']).toEqual(responseHeaders['surrogate-key'])
-    expect(headers['surrogate-control']).toEqual(responseHeaders['surrogate-control'])
+    expect(resGetSpy).toHaveBeenCalledTimes(1)
+    expect(resSetSpy).toHaveBeenCalledTimes(2)
   })
 
   test('appends the surrogate keys to the response when there are keys on the response', () => {
-     // Arrange
-     const responseHeaders = {
-      'surrogate-key': 'responseSurrogateKey1 responseSurrogateKey2',
-      'surrogate-control': 'testSurrogateControl'
-    }
-    let headers = {
-      'surrogate-key': 'existingKey1 existingKey2',
-      'surrogate-control': 'existingSurrogateControl'
+    // Arrange
+    const responseHeaders = {
+      'surrogate-key': 'responseSurrogateKey1 responseSurrogateKey2 responseSurrogateKey3',
+      'surrogate-control': 'responseSurrogateControl'
     }
     const res = {
-      get: (key) => {
-        return headers[key]
-      },
-      set: (key, value) => {
-        return headers[key] = value
-      }
+      get: jest.fn(() => {
+        return 'existingKey1 existingKey2'
+      }),
+      set: jest.fn(() => {})
     }
     const req = { server: true }
+    const resGetSpy = jest.spyOn(res, 'get')
+    const resSetSpy = jest.spyOn(res, 'set')
 
     // Act
     setSurrogateKeys(responseHeaders, req, res)
 
     // Assert
-    expect(headers['surrogate-key']).toContain('responseSurrogateKey1')
-    expect(headers['surrogate-key']).toContain('responseSurrogateKey2')
-    expect(headers['surrogate-key']).toContain('existingKey1')
-    expect(headers['surrogate-key']).toContain('existingKey2')
-    expect(headers['surrogate-control']).toEqual('existingSurrogateControl')
+    expect(resGetSpy).toHaveBeenCalledTimes(1)
+    expect(resSetSpy).toHaveBeenCalledTimes(1)
   })
 })
