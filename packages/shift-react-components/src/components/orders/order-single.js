@@ -84,7 +84,7 @@ export class OrderSingle extends PureComponent {
   }
 
   render () {
-    const { order } = this.props
+    const { order, updateCurrentOrder } = this.props
     const lineItems = this.formatLineItems(order.line_items)
 
     const items = [{
@@ -95,7 +95,7 @@ export class OrderSingle extends PureComponent {
       body: format(new Date(order.placed_at), 'MMM D, YYYY')
     }, {
       header: 'Cost',
-      body: `&pound;${penceToPounds(order.pricing.total_inc_tax)}`
+      body: `£${penceToPounds(order.pricing.total_inc_tax)}`
     }, {
       header: 'Shipping Method',
       body: order.shipping_methods[0].label
@@ -137,19 +137,19 @@ export class OrderSingle extends PureComponent {
                   <div className='c-cart-summary'>
                     <dl aria-label='Subtotal'>
                       <dt> Subtotal: </dt>
-                      <dd> &pound;{ penceToPounds(this.calculateSubTotal(order)) } </dd>
+                      <dd> £{ penceToPounds(this.calculateSubTotal(order)) } </dd>
                     </dl>
                     <dl aria-label='Taxes'>
                       <dt> UK VAT 20% (Included in Price): </dt>
-                      <dd> &pound;{ penceToPounds(this.calculateTax(order)) } </dd>
+                      <dd> £{ penceToPounds(this.calculateTax(order)) } </dd>
                     </dl>
                     <dl aria-label='Shipping'>
                       <dt> Shipping Total: </dt>
-                      <dd> &pound;{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
+                      <dd> £{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
                     </dl>
                     <dl aria-label='Total' className='c-cart-summary__total'>
                       <dt> Total: </dt>
-                      <dd> &pound;{ penceToPounds(order.pricing.total_inc_tax) } </dd>
+                      <dd> £{ penceToPounds(order.pricing.total_inc_tax) } </dd>
                     </dl>
                   </div>
                 </div>
@@ -158,7 +158,13 @@ export class OrderSingle extends PureComponent {
           </div>
           <div className='c-order-single__item c-order-single__item--full'>
             <div className='c-order-single__body'>
-              <Link href='/account/orders' className='o-button o-button--primary'>View all orders</Link>
+              <a
+                href='/account/orders'
+                className='o-button o-button--primary'
+                onClick={updateCurrentOrder}
+              >
+                View all orders
+              </a>
             </div>
           </div>
 

@@ -19,30 +19,35 @@ export class AccountOrders extends Component {
   }
 
   renderOrdersList (orders) {
+    const { currentOrderRef, updateCurrentOrder } = this.props
+
     if (orders.data.length === 0) {
       return (<p>No previous orders found.</p>)
     }
 
+    if (currentOrderRef) {
+      const currentOrder = orders.data.find((order) => {
+        return order.reference === currentOrderRef
+      })
+
+      return (
+        <OrderSingle
+          order={currentOrder}
+          updateCurrentOrder={updateCurrentOrder}
+        />
+      )
+    }
+
     return (
       <Fragment>
-        <OrderList orders={orders} />
-        { orders.data.map((order) => {
-          return (
-            <OrderSingle
-              key={order.id}
-              order={order}
-            />
-          )
-        })}
+        <div className='c-order-history__nav'>
+          <h2>Order History</h2>
+        </div>
+        <OrderList
+          orders={orders}
+          updateCurrentOrder={updateCurrentOrder}
+        />
       </Fragment>
-    )
-  }
-
-  renderAccountBanner () {
-    return (
-      <div className='c-order-history__nav'>
-        <h2>Order History</h2>
-      </div>
     )
   }
 
@@ -51,7 +56,6 @@ export class AccountOrders extends Component {
 
     return (
       <div className='c-order-history'>
-        { this.renderAccountBanner() }
         { loading ? <Loading /> : this.renderOrdersList(orders) }
       </div>
     )

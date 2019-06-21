@@ -8,17 +8,38 @@ import { AccountOrders } from '@shiftcommerce/shift-react-components/src/compone
 import { getCustomerOrders } from '../../actions/account-actions'
 
 export class AccountOrdersPage extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      currentOrderRef: null
+    }
+
+    this.updateCurrentOrder = this.updateCurrentOrder.bind(this)
+  }
+
+  updateCurrentOrder (event, currentOrderRef = null) {
+    event.preventDefault()
+    this.setState({ currentOrderRef })
+  }
+
   fetchOrders () {
     this.props.dispatch(getCustomerOrders())
   }
 
   render () {
     const { layout, orders } = this.props
+    const { currentOrderRef } = this.state
     const Layout = layout.component
 
     return (
       <Layout {...layout.props}>
-        <AccountOrders orders={orders} fetchOrders={this.fetchOrders.bind(this)} />
+        <AccountOrders
+          currentOrderRef={currentOrderRef}
+          fetchOrders={this.fetchOrders.bind(this)}
+          orders={orders}
+          updateCurrentOrder={this.updateCurrentOrder}
+        />
       </Layout>
     )
   }

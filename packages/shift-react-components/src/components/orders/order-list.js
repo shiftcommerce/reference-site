@@ -19,6 +19,8 @@ export class OrderList extends PureComponent {
   * @return {string} - HTML markup for the component
   */
   renderOrderDetails (order) {
+    const { updateCurrentOrder } = this.props
+
     const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
     const orderTotal = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
 
@@ -32,7 +34,7 @@ export class OrderList extends PureComponent {
       label: 'Cost',
       value: orderTotal
     }, {
-      value: <Link href={`/account/orders/${order.id}`} className='o-button o-button--primary'>View Details</Link>
+      value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
     }].map((column, columnIndex) => {
       return (
         <div
