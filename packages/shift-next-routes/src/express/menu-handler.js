@@ -4,18 +4,23 @@ const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
   getMenu: async (req, res) => {
-    // initialize MenuCache client
-    const menuCache = new MenuCache()
-    // fetch cached menus
-    let response = await menuCache.read()
-    // check if there are no cached menus
-    if (!response || Object.keys(response).length === 0) {
-      // fetch menus from API
-      response = await SHIFTClient.getMenusV1(req.query)
-      // set Surrogate headers
-      setSurrogateHeaders(response.headers, res)
-      // cache API response
-      menuCache.set(response)
+    let response = {}
+    // check preview state and skip catching if `preview: true`
+    if (req.query && req.query.preview === 'true') {
+      // fetch menus from API and skip caching
+      response = await fetchMenuFromAPI(req, res)
+    } else {
+      // initialize MenuCache client
+      const menuCache = new MenuCache()
+      // fetch cached menus
+      response = await menuCache.read()
+      // check if there are no cached menus
+      if (!response || Object.keys(response).length === 0) {
+        // fetch menus from API
+        response = await fetchMenuFromAPI(req, res)
+        // cache API response
+        menuCache.set(response)
+      }
     }
 
     switch (response.status) {
@@ -28,4 +33,13 @@ module.exports = {
         return res.status(response.status).send(response.data)
     }
   }
+}
+
+const fetchMenuFromAPI = async (req, res) => {
+  // fetch menus from API
+  let response = await SHIFTClient.getMenusV1(req.query)
+  // set Surrogate headers
+  setSurrogateHeaders(response.headers, res)
+  // return response
+  return response
 }

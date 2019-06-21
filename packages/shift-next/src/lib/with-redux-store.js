@@ -39,7 +39,11 @@ export default (App) => {
       appContext.reduxStore = reduxStore
 
       if (!reduxStore.getState().menu.loaded) {
-        await reduxStore.dispatch(readMenu(Config.get().menuRequest))
+        // clone menu request
+        const menuRequest = Object.assign({}, Config.get().menuRequest)
+        // merge `preview` param as this is needed for disabling menu cache in the menu handler
+        menuRequest.query['preview'] = appContext.req.query.preview
+        await reduxStore.dispatch(readMenu(menuRequest))
       }
 
       // Get initial props from the parent
