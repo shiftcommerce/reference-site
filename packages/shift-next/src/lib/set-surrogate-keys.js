@@ -1,5 +1,5 @@
 const setSurrogateKeys = (headers, req, res) => {
-  if (req) {
+  if (req && res) {
     const currentKey = res.get('surrogate-key')
     const responseKey = headers['surrogate-key']
 

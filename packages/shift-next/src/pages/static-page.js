@@ -57,7 +57,6 @@ class StaticPage extends Component {
 
       return response.data
     } catch (error) {
-      console.log(error)
       return { error }
     }
   }
