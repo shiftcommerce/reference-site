@@ -1,6 +1,5 @@
 // Libs
 import setSurrogateKeys from '../../src/lib/set-surrogate-keys'
-import { jsxText } from '@babel/types';
 
 describe('#setSurrogateKeys()', () => {
   test('sets the surrogate keys to the response when there are no keys on the response', () => {
