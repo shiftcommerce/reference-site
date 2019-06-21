@@ -7,7 +7,7 @@ import * as types from './action-types'
 // Actions
 import { readEndpoint, postEndpoint } from './api-actions'
 
-export function createOrder (cart, paymentMethod, order) {
+export function createOrder (cart, paymentMethod, order, options) {
   const request = {
     endpoint: '/createOrder',
     body: convertCheckoutToOrder(cart, paymentMethod, order),
@@ -15,7 +15,7 @@ export function createOrder (cart, paymentMethod, order) {
     successActionType: types.SET_ORDER,
     errorActionType: types.ERROR_ORDER
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
 export function requestCardToken (boolean) {
@@ -49,12 +49,12 @@ export function setCardErrors (boolean) {
   }
 }
 
-export function getCustomerOrders () {
+export function getCustomerOrders (options) {
   return readEndpoint({
     endpoint: `/customerOrders`,
     requestActionType: types.GET_CUSTOMER_ORDERS,
     successActionType: types.SET_CUSTOMER_ORDERS
-  })
+  }, options)
 }
 
 export function convertCheckoutToOrder (cart, paymentMethod, order) {

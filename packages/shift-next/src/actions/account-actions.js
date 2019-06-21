@@ -11,11 +11,11 @@ const accountRequest = {
   successActionType: types.SET_ACCOUNT
 }
 
-export function fetchAccountDetails (store) {
-  return readEndpoint(accountRequest)
+export function fetchAccountDetails (options) {
+  return readEndpoint(accountRequest, options)
 }
 
-export function updateCustomerAccount (details) {
+export function updateCustomerAccount (details, options) {
   const request = {
     endpoint: '/updateCustomerAccount',
     body: {
@@ -24,7 +24,7 @@ export function updateCustomerAccount (details) {
     successActionType: types.SET_ACCOUNT
   }
 
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
 export function clearErrors () {
@@ -46,8 +46,8 @@ const customerOrdersRequest = {
   successActionType: types.SET_CUSTOMER_ORDERS
 }
 
-export function getCustomerOrders () {
-  return readEndpoint(customerOrdersRequest)
+export function getCustomerOrders (options) {
+  return readEndpoint(customerOrdersRequest, options)
 }
 
 const forgottenPasswordRequest = (email) => {
@@ -61,7 +61,7 @@ export function requestPasswordResetEmail (email) {
   return readEndpoint(forgottenPasswordRequest(email))
 }
 
-export function passwordReset (token, password) {
+export function passwordReset (token, password, options) {
   const request = {
     endpoint: '/passwordReset',
     body: {
@@ -77,5 +77,5 @@ export function passwordReset (token, password) {
     errorActionType: types.ERROR_ACCOUNT
   }
 
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }

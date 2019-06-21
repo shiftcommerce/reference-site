@@ -7,6 +7,7 @@ import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
 import Config from '../lib/config'
+import setSurrogateKeys from '../lib/set-surrogate-keys'
 
 // Components
 import StaticPageError from '@shiftcommerce/shift-react-components/src/components/static-page/error'
@@ -14,7 +15,7 @@ import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loadi
 
 class StaticPage extends Component {
   static async getInitialProps ({ query: { id }, req, res, reduxStore }) {
-    const page = await StaticPage.fetchPage(id, reduxStore.dispatch)
+    const page = await StaticPage.fetchPage(id, reduxStore.dispatch, req, res)
     const isServer = !!req
     const { published } = page
     const preview = req && req.query && req.query.preview ? true : false
@@ -46,13 +47,17 @@ class StaticPage extends Component {
    * @param  {Function} dispatch
    * @return {Object} API response or error
    */
-  static async fetchPage (id, dispatch) {
+  static async fetchPage (id, dispatch, req, res) {
     try {
       const request = StaticPage.pageRequest(id)
-      const response = await new ApiClient().read(request.endpoint, request.query, dispatch)
+      const postRequestHook = (response) => {
+        return setSurrogateKeys(response.headers, req, res)
+      }
+      const response = await new ApiClient({ postRequestHook }).read(request.endpoint, request.query, dispatch)
 
       return response.data
     } catch (error) {
+      console.log(error)
       return { error }
     }
   }
