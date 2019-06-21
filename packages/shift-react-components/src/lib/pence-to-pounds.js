@@ -6,5 +6,5 @@
  */
 
 export function penceToPounds (priceInPence) {
-  return (priceInPence / 100).toFixed(2)
+  return (Number(priceInPence) / 100).toFixed(2)
 }
