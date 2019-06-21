@@ -9,8 +9,8 @@ describe('setCacheHeaders', () => {
     const result = {
       headers: {
         'external-surrogate-key': 'key_1 key_2 key_3',
-        'Surrogate-Key': 'key_1 key_2 key_3',
-        'Surrogate-Control': 'max-age=3600,stale-if-error=86400,stale-while-revalidate=86400'
+        'surrogate-key': 'key_1 key_2 key_3',
+        'surrogate-control': 'max-age=3600,stale-if-error=86400,stale-while-revalidate=86400'
       }
     }
 
@@ -22,7 +22,7 @@ describe('setCacheHeaders', () => {
 
     setCacheHeaders(response)
 
-    expect(response.headers['Surrogate-Key']).toEqual('key_1 key_2')
+    expect(response.headers['surrogate-key']).toEqual('key_1 key_2')
   })
 
   test('filters menu item keys from external-surrogate-key', () => {
@@ -30,6 +30,6 @@ describe('setCacheHeaders', () => {
 
     setCacheHeaders(response)
 
-    expect(response.headers['Surrogate-Key']).toEqual('key_1 key_2')
+    expect(response.headers['surrogate-key']).toEqual('key_1 key_2')
   })
 })
