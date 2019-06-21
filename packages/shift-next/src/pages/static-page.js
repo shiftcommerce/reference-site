@@ -5,9 +5,9 @@ import Router from 'next/router'
 // Lib
 import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import setSurrogateKeys from '../lib/set-surrogate-keys'
 import ApiClient from '../lib/api-client'
 import Config from '../lib/config'
-import setSurrogateKeys from '../lib/set-surrogate-keys'
 
 // Components
 import StaticPageError from '@shiftcommerce/shift-react-components/src/components/static-page/error'
@@ -50,14 +50,16 @@ class StaticPage extends Component {
   static async fetchPage (id, dispatch, req, res) {
     try {
       const request = StaticPage.pageRequest(id)
-      const postRequestHook = (response) => {
-        return setSurrogateKeys(response.headers, req, res)
+      const options = {}
+      if (req && res) {
+        options.postRequestHook = (response) => {
+          return setSurrogateKeys(response.headers, req, res)
+        }
       }
-      const response = await new ApiClient({ postRequestHook }).read(request.endpoint, request.query, dispatch)
+      const response = await new ApiClient(options).read(request.endpoint, request.query, dispatch)
 
       return response.data
     } catch (error) {
-      console.log(error)
       return { error }
     }
   }
