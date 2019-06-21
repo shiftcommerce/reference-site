@@ -7,10 +7,14 @@
 
   .c-order-single__item {
     display: inline-block;
-    width: 25%;
+    width: 50%;
     vertical-align: top;
     font-size: 16px;
     margin-bottom: $global-spacing-unit;
+
+    @include breakpoint(tablet) {
+      width: 25%;
+    }
 
     &--full {
       width: 100%;
@@ -34,5 +38,38 @@
 
       .o-button {
         margin: 0;
+      }
+
+      .o-grid-container {
+        @include breakpoint(mobile) {
+          display: block;
+        }
+      }
+
+      .c-cart-summary {
+        padding: 0;
+        background-color: transparent;
+        margin-top: $global-spacing-unit-small;
+
+        @include breakpoint(tablet) {
+          margin-top: 0;
+        }
+
+        dl {
+          display: flex;
+          justify-content: space-between;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        dt {
+          margin-left: 0;
+        }
+      }
+
+      .c-cart-summary__total {
+        font-weight: 700;
       }
     }

@@ -1,7 +1,6 @@
 // Libraries
 import React, { PureComponent, Fragment } from 'react'
 import format from 'date-fns/format'
-import t from 'typy'
 
 // Lib
 import { penceToPounds } from '../../lib/pence-to-pounds'
@@ -13,17 +12,24 @@ import { LineItems } from '../cart/line-items'
 import Link from '../../objects/link'
 
 export class OrderSingle extends PureComponent {
+  calculateSubTotal (order) {
+    return order.line_items.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.pricing.line_total_inc_tax, 0
+    )
+  }
   /**
-  * Render the total shipping costs in the order list
-  * @param  {Object} order
-  * @return {string} - HTML markup for the component
-  */
-  renderShippingTotal (order) {
-    const shippingTotal = order.shipping_methods.reduce(
+   * Render the total shipping costs in the order list
+   * @param  {Object} order
+   * @return {string} - HTML markup for the component
+   */
+  calculateShippingTotal (order) {
+    return order.shipping_methods.reduce(
       (accumulator, currentValue) => accumulator + currentValue.price, 0
     )
+  }
 
-    return penceToPounds(shippingTotal)
+  calculateTax (order) {
+    return order.pricing.total_inc_tax - order.pricing.total_ex_tax
   }
 
   formatLineItems (lineItems) {
@@ -66,7 +72,7 @@ export class OrderSingle extends PureComponent {
           </div>
           <div className='c-order-single__item'>
             <h5 className='c-order-single__header'>Cost</h5>
-            <div className='c-order-single__body'>{ penceToPounds(t(order, 'pricing.total_inc_tax').safeObject) }</div>
+            <div className='c-order-single__body'>&pound;{ penceToPounds(order.pricing.total_inc_tax) }</div>
           </div>
           <div className='c-order-single__item'>
             <h5 className='c-order-single__header'>Shipping Method</h5>
@@ -93,10 +99,34 @@ export class OrderSingle extends PureComponent {
           <div className='c-order-single__item c-order-single__item--full'>
             <h5 className='c-order-single__header'>Order Summary</h5>
             <div className='c-order-single__body'>
-              <LineItems
-                lineItems={lineItems}
-                lineItemsCount={lineItems.length}
-              />
+              <div className='o-grid-container'>
+                <div className='o-col-1-7'>
+                  <LineItems
+                    lineItems={lineItems}
+                    lineItemsCount={lineItems.length}
+                  />
+                </div>
+                <div className='o-col-8-13'>
+                  <div className='c-cart-summary'>
+                    <dl aria-label='Subtotal'>
+                      <dt> Subtotal: </dt>
+                      <dd> &pound;{ penceToPounds(this.calculateSubTotal(order)) } </dd>
+                    </dl>
+                    <dl aria-label='Taxes'>
+                      <dt> UK VAT 20% (Included in Price): </dt>
+                      <dd> &pound;{ penceToPounds(this.calculateTax(order)) } </dd>
+                    </dl>
+                    <dl aria-label='Shipping'>
+                      <dt> Shipping Total: </dt>
+                      <dd> &pound;{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
+                    </dl>
+                    <dl aria-label='Total' className='c-cart-summary__total'>
+                      <dt> Total: </dt>
+                      <dd> &pound;{ penceToPounds(order.pricing.total_inc_tax) } </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className='c-order-single__item c-order-single__item--full'>
