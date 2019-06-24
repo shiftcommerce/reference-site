@@ -146,7 +146,9 @@ exports[`renders line item quantity if updateQuantity function is not provided 1
             <h4
               className="c-line-items__details-title u-bold"
             >
-              SCS-04-CJ coffee jug 600ml - Variant 1
+              SCS-04-CJ coffee jug 600ml
+               - 
+              Variant 1
             </h4>
             <div
               className="c-line-items__details-sku"
@@ -348,7 +350,9 @@ exports[`renders line items correctly, on initial load 1`] = `
             <h4
               className="c-line-items__details-title u-bold"
             >
-              SCS-04-CJ coffee jug 600ml - Variant 1
+              SCS-04-CJ coffee jug 600ml
+               - 
+              Variant 1
             </h4>
             <div
               className="c-line-items__details-sku"
@@ -779,7 +783,9 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             <h4
               className="c-line-items__details-title u-bold"
             >
-              SCS-04-CJ coffee jug 600ml - Variant 1
+              SCS-04-CJ coffee jug 600ml
+               - 
+              Variant 1
             </h4>
             <div
               className="c-line-items__details-sku"

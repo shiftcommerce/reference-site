@@ -95,7 +95,7 @@ export class LineItems extends Component {
       <div className='c-line-items__title'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title u-bold'>
-            { `${lineItem.item.product.title} - ${lineItem.item.title}` }
+            { lineItem.item.product.title }{ (lineItem.item.product.title && lineItem.item.title) && ' - '}{ lineItem.item.title }
           </h4>
           <div className='c-line-items__details-sku'>
             <span>

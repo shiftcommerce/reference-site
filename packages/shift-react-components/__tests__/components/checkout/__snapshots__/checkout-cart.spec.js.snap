@@ -213,7 +213,9 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               <h4
                 className="c-line-items__details-title u-bold"
               >
-                Test Product - Test Variant
+                Test Product
+                 - 
+                Test Variant
               </h4>
               <div
                 className="c-line-items__details-sku"
@@ -284,7 +286,9 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
               <h4
                 className="c-line-items__details-title u-bold"
               >
-                Pretend Product - Pretend Variant
+                Pretend Product
+                 - 
+                Pretend Variant
               </h4>
               <div
                 className="c-line-items__details-sku"
@@ -505,7 +509,9 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
               <h4
                 className="c-line-items__details-title u-bold"
               >
-                Test Product - Test Variant
+                Test Product
+                 - 
+                Test Variant
               </h4>
               <div
                 className="c-line-items__details-sku"

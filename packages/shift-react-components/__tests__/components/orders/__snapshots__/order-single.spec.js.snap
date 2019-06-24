@@ -589,10 +589,10 @@ exports[`renders correctly 1`] = `
                       "picture_url": "https://example.com/path/to/image.jpg",
                       "product": Object {
                         "slug": "slug",
-                        "title": "product title",
+                        "title": "",
                       },
                       "sku": "WHITE-TSHIRT-XXL",
-                      "title": "WHITE-TSHIRT-XXL",
+                      "title": "undefined - WHITE-TSHIRT-XXL",
                     },
                     "sub_total": 72,
                     "total": 72,
@@ -604,10 +604,10 @@ exports[`renders correctly 1`] = `
                       "picture_url": undefined,
                       "product": Object {
                         "slug": "slug",
-                        "title": "product title",
+                        "title": "",
                       },
                       "sku": "BLACK-SOCKS-001",
-                      "title": "BLACK-SOCKS-001",
+                      "title": "undefined - BLACK-SOCKS-001",
                     },
                     "sub_total": 4.8,
                     "total": 4.8,
@@ -619,10 +619,10 @@ exports[`renders correctly 1`] = `
                       "picture_url": undefined,
                       "product": Object {
                         "slug": "slug",
-                        "title": "product title",
+                        "title": "",
                       },
                       "sku": "WHITE-TSHIRT-L",
-                      "title": "WHITE-TSHIRT-L",
+                      "title": "undefined - WHITE-TSHIRT-L",
                     },
                     "sub_total": 1440,
                     "total": 1440,
@@ -649,8 +649,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="WHITE-TSHIRT-XXL"
-                          aria-label="WHITE-TSHIRT-XXL"
+                          alt="undefined - WHITE-TSHIRT-XXL"
+                          aria-label="undefined - WHITE-TSHIRT-XXL"
                           className="c-line-items__image"
                           key="slug"
                           src="https://example.com/path/to/image.jpg"
@@ -660,8 +660,8 @@ exports[`renders correctly 1`] = `
                           >
                             <picture>
                               <img
-                                alt="WHITE-TSHIRT-XXL"
-                                aria-label="WHITE-TSHIRT-XXL"
+                                alt="undefined - WHITE-TSHIRT-XXL"
+                                aria-label="undefined - WHITE-TSHIRT-XXL"
                                 className="o-image"
                                 src="https://example.com/path/to/image.jpg"
                                 srcSet="https://example.com/path/to/image.jpg 769w"
@@ -684,7 +684,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - WHITE-TSHIRT-XXL
+                          undefined - WHITE-TSHIRT-XXL
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -735,8 +735,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="BLACK-SOCKS-001"
-                          aria-label="BLACK-SOCKS-001"
+                          alt="undefined - BLACK-SOCKS-001"
+                          aria-label="undefined - BLACK-SOCKS-001"
                           className="c-line-items__image"
                           key="slug"
                         />
@@ -755,7 +755,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - BLACK-SOCKS-001
+                          undefined - BLACK-SOCKS-001
                         </h4>
                         <div
                           className="c-line-items__details-sku"
@@ -806,8 +806,8 @@ exports[`renders correctly 1`] = `
                         href="/slug?slug=undefined"
                       >
                         <Image
-                          alt="WHITE-TSHIRT-L"
-                          aria-label="WHITE-TSHIRT-L"
+                          alt="undefined - WHITE-TSHIRT-L"
+                          aria-label="undefined - WHITE-TSHIRT-L"
                           className="c-line-items__image"
                           key="slug"
                         />
@@ -826,7 +826,7 @@ exports[`renders correctly 1`] = `
                         <h4
                           className="c-line-items__details-title u-bold"
                         >
-                          product title - WHITE-TSHIRT-L
+                          undefined - WHITE-TSHIRT-L
                         </h4>
                         <div
                           className="c-line-items__details-sku"

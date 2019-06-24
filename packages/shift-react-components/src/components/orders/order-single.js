@@ -52,10 +52,10 @@ export class OrderSingle extends PureComponent {
         id: lineItemIndex,
         item: {
           sku: lineItem.sku,
-          title: lineItem.sku,
+          title: `${lineItem.title} - ${lineItem.sku}`,
           picture_url: lineItem.image_urls[0],
           product: {
-            title: 'product title',
+            title: '',
             slug: 'slug'
           }
         },
