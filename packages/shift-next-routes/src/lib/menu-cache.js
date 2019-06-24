@@ -29,8 +29,9 @@ class MenuCache {
   async read () {
     try {
       const data = await this.cache.get(this.cacheKey)
-      this.log.debug('Reading API menu response from cache')
-      return data ? JSON.parse(data.value) : {}
+      const response = (data ? JSON.parse(data.value) : {})
+      this.log.debug('Reading API menu response from cache', response)
+      return response
     } catch (error) {
       this.log.error('Error fetching menu cache', error)
       return {}
