@@ -5,6 +5,7 @@ import Router from 'next/router'
 // Lib
 import renderComponents from '../lib/render-components'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import setSurrogateKeys from '../lib/set-surrogate-keys'
 
 // Components
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
@@ -33,7 +34,7 @@ class ProductPage extends Component {
   }
 
   static async getInitialProps ({ reduxStore, req, res, query: { id } }) {
-    const product = await ProductPage.fetchProduct(id, reduxStore.dispatch)
+    const product = await ProductPage.fetchProduct(id, reduxStore.dispatch, req, res)
     const isServer = !!req
     const { sellable } = product
     const preview = req && req.query && req.query.preview ? true : false
@@ -53,10 +54,14 @@ class ProductPage extends Component {
     return { id: id, product }
   }
 
-  static async fetchProduct (id, dispatch) {
+  static async fetchProduct (id, dispatch, req, res) {
     try {
+      let options = {}
+      if (req && res) {
+        options.postRequestHook = (response) => { setSurrogateKeys(response.headers, req, res) }
+      }
       const request = ProductPage.productRequest(id)
-      const response = await new ApiClient().read(request.endpoint, request.query, dispatch)
+      const response = await new ApiClient().read(request.endpoint, request.query, dispatch, options)
 
       return response.data
     } catch (error) {

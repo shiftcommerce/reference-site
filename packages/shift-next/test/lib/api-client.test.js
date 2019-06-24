@@ -19,122 +19,220 @@ afterEach(() => { nock.cleanAll() })
 
 const nockScope = nock('http://example.com')
 
-test('read returns correct response status and data when successful', async () => {
-  // Prepare the request query object
-  const queryObject = {
-    fields: {
-      include: 'asset_files,variants,bundles,template,meta.*'
+describe('#read()', () => {
+  test('read returns correct response status and data when successful', async () => {
+    // Prepare the request query object
+    const queryObject = {
+      fields: {
+        include: 'asset_files,variants,bundles,template,meta.*'
+      }
     }
-  }
+  
+    // Initialize the client
+    const client = new ApiClient()
+  
+    // Mock out a successful get request
+    nockScope
+      .get('/products')
+      .query(queryObject)
+      .reply(200, payload)
+  
+    // Make the request
+    const response = await client.read('/products', queryObject)
+  
+    // Assert response comes back as expected
+    expect(response.status).toBe(200)
+    expect(response.data).toEqual(payload)
+  })
 
-  // Initialize the client
-  const client = new ApiClient()
-
-  // Mock out a successful get request
-  nockScope
-    .get('/products')
-    .query(queryObject)
-    .reply(200, payload)
-
-  // Make the request
-  const response = await client.read('/products', queryObject)
-
-  // Assert response comes back as expected
-  expect(response.status).toBe(200)
-  expect(response.data).toEqual(payload)
-})
-
-test('post returns correct response status and data when successful', async () => {
-  // Prepare the request query object
-  const body = {
-    key: 'value'
-  }
-
-  // Initialize the client
-  const client = new ApiClient()
-
-  // Mock out a successful get request
-  nockScope
-    .post('/postEndpoint', body)
-    .reply(201, payload)
-
-  // Make the request
-  const response = await client.post('/postEndpoint', body)
-
-  // Assert response comes back as expected
-  expect(response.status).toBe(201)
-  expect(response.data).toEqual(payload)
-})
-
-test('delete returns correct response status and data when successful', async () => {
-  // Initialize the client
-  const client = new ApiClient()
-
-  // Mock out a successful delete request
-  nockScope
-    .delete('/deleteEndpoint')
-    .reply(204, { key: 'value' })
-
-  // Make the request
-  const response = await client.delete('/deleteEndpoint')
-
-  // Assert response comes back as expected
-  expect(response.status).toEqual(204)
-  expect(response.data).toEqual({ key: 'value' })
-})
-
-test('delete returns correct response and status and logs when request fails', async () => {
-  // Mock out the error logger and silence it
-  const spy = jest.spyOn(console, 'error').mockImplementation(() => {})
-
-  // Initialize the client
-  const client = new ApiClient()
-
-  // Mock out a failing delete request
-  nockScope
-    .delete('/deleteEndpoint')
-    .reply(503, { error: 'not enough pandas' })
-
-  // Make the request
-  const response = await client.delete('/deleteEndpoint')
-
-  // Assert response comes back as expected
-  expect(response.status).toEqual(503)
-  expect(response.data).toEqual({ error: 'not enough pandas' })
-
-  // Assert an error has been logged
-  expect(spy).toHaveBeenCalledTimes(1)
-
-  // Clean up after mocking out the error logger
-  spy.mockRestore()
-})
-
-test('if dispatch is passed through it dispatches toggle loading action', async () => {
-  // Prepare the request query object
-  const queryObject = {
-    fields: {
-      include: 'asset_files,variants,bundles,template,meta.*'
+  test('executes the provided postRequestHook', async () => {
+    // Prepare the request query object
+    const queryObject = {
+      fields: {
+        include: 'asset_files,variants,bundles,template,meta.*'
+      }
     }
-  }
 
-  // Initialize the client
-  const client = new ApiClient()
+    let responseCollector = []
+    
+    const postRequestHook = (response) => {
+      return responseCollector.push(response)
+    }
 
-  const toggleLoadingSpy = jest.spyOn(globalActions, 'toggleLoading').mockImplementation(() => 'toggleLoadingAction')
-  const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
+    // Mock out a successful get request
+    nockScope
+      .get('/products')
+      .query(queryObject)
+      .reply(200, payload)
+    
+    // Initialize the client
+    const client = new ApiClient({ postRequestHook })
 
-  // Mock out a successful get request
-  nockScope
-    .get('/products')
-    .query(queryObject)
-    .reply(200, payload)
+    // Make the request
+    const response = await client.read('/products', queryObject)
+  
+    // Assert response comes back as expected
+    expect(response.status).toBe(200)
+    expect(response.data).toEqual(payload)
+    expect(responseCollector[0].status).toEqual(response.status)
+    expect(responseCollector[0].headers).toEqual(response.headers)
+    expect(responseCollector[0].data).toEqual(response.data)
+  })
 
-  // Make the request
-  await client.read('/products', queryObject, dispatch)
+  test('if dispatch is passed through it dispatches toggle loading action', async () => {
+    // Prepare the request query object
+    const queryObject = {
+      fields: {
+        include: 'asset_files,variants,bundles,template,meta.*'
+      }
+    }
+  
+    // Initialize the client
+    const client = new ApiClient()
+  
+    const toggleLoadingSpy = jest.spyOn(globalActions, 'toggleLoading').mockImplementation(() => 'toggleLoadingAction')
+    const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
+  
+    // Mock out a successful get request
+    nockScope
+      .get('/products')
+      .query(queryObject)
+      .reply(200, payload)
+  
+    // Make the request
+    await client.read('/products', queryObject, dispatch)
+  
+    expect(dispatch).toHaveBeenCalledWith('toggleLoadingAction')
+    // expect to set loading to true when making api call
+    expect(toggleLoadingSpy).toHaveBeenCalledWith(true)
+    // expect to set loading to false when data is recieved
+    expect(toggleLoadingSpy).toHaveBeenCalledWith(false)
+  })
+})
 
-  expect(dispatch).toHaveBeenCalledWith('toggleLoadingAction')
-  // expect to set loading to true when making api call
-  expect(toggleLoadingSpy).toHaveBeenCalledWith(true)
-  // expect to set loading to false when data is recieved
-  expect(toggleLoadingSpy).toHaveBeenCalledWith(false)
+describe('#post()', () => {
+  test('post returns correct response status and data when successful', async () => {
+    // Prepare the request query object
+    const body = {
+      key: 'value'
+    }
+  
+    // Initialize the client
+    const client = new ApiClient()
+  
+    // Mock out a successful post request
+    nockScope
+      .post('/postEndpoint', body)
+      .reply(201, payload)
+  
+    // Make the request
+    const response = await client.post('/postEndpoint', body)
+  
+    // Assert response comes back as expected
+    expect(response.status).toBe(201)
+    expect(response.data).toEqual(payload)
+  })
+
+  test('executes the provided postRequestHook', async () => {
+    // Prepare the request query object
+    const body = {
+      key: 'value'
+    }
+
+    let responseCollector = []
+    
+    const postRequestHook = (response) => {
+      return responseCollector.push(response)
+    }
+
+    // Mock out a successful post request
+    nockScope
+      .post('/postEndpoint', body)
+      .reply(201, payload)
+
+    // Initialize the client
+    const client = new ApiClient({ postRequestHook })
+
+    // Make the request
+    const response = await client.post('/postEndpoint', body)
+  
+    // Assert response comes back as expected
+    expect(response.status).toBe(201)
+    expect(response.data).toEqual(payload)
+    expect(responseCollector[0].status).toEqual(response.status)
+    expect(responseCollector[0].headers).toEqual(response.headers)
+    expect(responseCollector[0].data).toEqual(response.data)
+  })
+})
+
+describe('#delete()', () => {
+  test('delete returns correct response status and data when successful', async () => {
+    // Initialize the client
+    const client = new ApiClient()
+  
+    // Mock out a successful delete request
+    nockScope
+      .delete('/deleteEndpoint')
+      .reply(204, { key: 'value' })
+  
+    // Make the request
+    const response = await client.delete('/deleteEndpoint')
+  
+    // Assert response comes back as expected
+    expect(response.status).toEqual(204)
+    expect(response.data).toEqual({ key: 'value' })
+  })
+  
+  test('delete returns correct response and status and logs when request fails', async () => {
+    // Mock out the error logger and silence it
+    const spy = jest.spyOn(console, 'error').mockImplementation(() => {})
+  
+    // Initialize the client
+    const client = new ApiClient()
+  
+    // Mock out a failing delete request
+    nockScope
+      .delete('/deleteEndpoint')
+      .reply(503, { error: 'not enough pandas' })
+  
+    // Make the request
+    const response = await client.delete('/deleteEndpoint')
+  
+    // Assert response comes back as expected
+    expect(response.status).toEqual(503)
+    expect(response.data).toEqual({ error: 'not enough pandas' })
+  
+    // Assert an error has been logged
+    expect(spy).toHaveBeenCalledTimes(1)
+  
+    // Clean up after mocking out the error logger
+    spy.mockRestore()
+  })
+
+  test('executes the provided postRequestHook', async () => {
+    // Arrange
+    let responseCollector = []
+    
+    const postRequestHook = (response) => {
+      return responseCollector.push(response)
+    }
+
+    // Mock out a successful post request
+    nockScope
+      .delete('/deleteEndpoint')
+      .reply(204, { key: 'value' })
+
+    // Initialize the client
+    const client = new ApiClient({ postRequestHook })
+
+    // Make the request
+    const response = await client.delete('/deleteEndpoint')
+  
+    // Assert response comes back as expected
+    expect(response.status).toEqual(204)
+    expect(response.data).toEqual({ key: 'value' })
+    expect(responseCollector[0].status).toEqual(response.status)
+    expect(responseCollector[0].headers).toEqual(response.headers)
+    expect(responseCollector[0].data).toEqual(response.data)
+  })
 })

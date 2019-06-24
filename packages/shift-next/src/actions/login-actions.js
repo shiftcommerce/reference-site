@@ -4,14 +4,14 @@ import * as actionTypes from './action-types'
 // Actions
 import { postEndpoint } from './api-actions'
 
-export function createLogin (account) {
+export function createLogin (account, options) {
   const request = {
     endpoint: '/login',
     body: createLoginPayload(account),
     requestActionType: actionTypes.GET_LOGIN,
     errorActionType: actionTypes.ERROR_LOGIN
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
 function createLoginPayload (login) {
