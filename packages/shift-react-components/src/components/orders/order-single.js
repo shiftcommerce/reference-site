@@ -98,10 +98,10 @@ export class OrderSingle extends PureComponent {
       header: 'Shipping Method',
       body: order.shipping_methods[0].label
     }, {
-      header: 'Billing Address',
+      header: 'Invoice Address',
       body: <ShippingAddresses addresses={order.shipping_addresses} />
     }, {
-      header: 'Shipping Address',
+      header: 'Delivery Address',
       body: <ShippingAddresses addresses={order.shipping_addresses} />
     }, {
       header: 'Currency',

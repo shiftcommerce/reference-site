@@ -343,7 +343,7 @@ exports[`renders correctly 1`] = `
       <h5
         className="c-order-single__header"
       >
-        Billing Address
+        Invoice Address
       </h5>
       <div
         className="c-order-single__body"
@@ -449,7 +449,7 @@ exports[`renders correctly 1`] = `
       <h5
         className="c-order-single__header"
       >
-        Shipping Address
+        Delivery Address
       </h5>
       <div
         className="c-order-single__body"
