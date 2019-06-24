@@ -80,14 +80,22 @@ describe('getInitialProps()', () => {
         title: 'Test Page'
       })
 
-    expect(await StaticPage.getInitialProps({ query: { id: 10 }, req: true, reduxStore: { dispatch: jest.fn() }})).toEqual({
+    const expected = {
       id: 10,
       page: {
         id: 10,
         title: 'Test Page'
       },
       isServer: true
-    })
+    }
+
+    const context = {
+      query: { id: 10 },
+      req: true,
+      reduxStore: { dispatch: jest.fn() }
+    }
+
+    expect(await StaticPage.getInitialProps(context)).toEqual(expected)
     expect(pageRequest.isDone()).toBe(true)
   })
 

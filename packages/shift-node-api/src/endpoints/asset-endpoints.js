@@ -1,4 +1,5 @@
 const HTTPClient = require('../http-client')
+const filterResponse = require('../lib/filter-response')
 
 const bulkHeaders = {
   'Content-Type': 'application/vnd.api+json; ext=bulk',
@@ -43,12 +44,7 @@ function createAssetsFilesV1 (assets) {
     }
   }
 
-  return HTTPClient.post('v1/asset_files', payload, bulkHeaders).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.post('v1/asset_files', payload, bulkHeaders).then(filterResponse)
 }
 
 /**
@@ -79,12 +75,7 @@ function createProductAssetFilesV1 (mappings) {
       }
     }
   }
-  return HTTPClient.post('v1/product_asset_files', payload, bulkHeaders).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.post('v1/product_asset_files', payload, bulkHeaders).then(filterResponse)
 }
 
 module.exports = {

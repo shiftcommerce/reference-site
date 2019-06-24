@@ -4,32 +4,32 @@ import * as actionTypes from './action-types'
 // Actions
 import { readEndpoint, postEndpoint, deleteEndpoint } from './api-actions'
 
-export function saveToAddressBook (address, options = {}) {
+export function saveToAddressBook (address, params = {}, options) {
   const request = {
     endpoint: '/createAddressBookEntry',
     body: newAddressBookEntryPayload(address),
-    successActionType: options.billing ? actionTypes.SET_ADDRESS_BOOK_ENTRY_BILLING : actionTypes.SET_ADDRESS_BOOK_ENTRY_SHIPPING
+    successActionType: params.billing ? actionTypes.SET_ADDRESS_BOOK_ENTRY_BILLING : actionTypes.SET_ADDRESS_BOOK_ENTRY_SHIPPING
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
-export function fetchAddressBook () {
+export function fetchAddressBook (options) {
   const request = {
     endpoint: '/getAddressBook',
     successActionType: actionTypes.SET_ADDRESS_BOOK
   }
-  return readEndpoint(request)
+  return readEndpoint(request, options)
 }
 
-export function updateAddress (id, addressData) {
+export function updateAddress (id, addressData, options) {
   const request = {
     endpoint: `/updateAddress/${id}`,
     body: newAddressBookEntryPayload(addressData)
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
-export function deleteAddressBookEntry (address) {
+export function deleteAddressBookEntry (address, options) {
   const request = {
     endpoint: `/deleteAddress/${address.id}`,
     requestActionType: actionTypes.DELETE_ADDRESS,
@@ -37,7 +37,7 @@ export function deleteAddressBookEntry (address) {
       addressId: address.id
     }
   }
-  return deleteEndpoint(request)
+  return deleteEndpoint(request, options)
 }
 
 export function setAddress (address, formName) {

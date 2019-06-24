@@ -11,8 +11,8 @@ function setCacheHeaders (response) {
     const surrogateKeys = externalSurrogateKeys.split(' ').filter(word => !word.match('menu_item')).join(' ')
 
     // set surrogate headers
-    response.headers['Surrogate-Key'] = surrogateKeys
-    response.headers['Surrogate-Control'] = 'max-age=3600,stale-if-error=86400,stale-while-revalidate=86400'
+    response.headers['surrogate-key'] = surrogateKeys
+    response.headers['surrogate-control'] = 'max-age=3600,stale-if-error=86400,stale-while-revalidate=86400'
 
     // log a warning when surrogate keys exceed limit
     if (surrogateKeys.length > lengthLimit) {

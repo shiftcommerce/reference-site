@@ -10,6 +10,7 @@ import Config from './config'
 
 // Lib
 import InitialPropsDelegator from './initial-props-delegator'
+import setSurrogateKeys from './set-surrogate-keys'
 
 const isServer = typeof window === 'undefined'
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__'
@@ -39,7 +40,11 @@ export default (App) => {
       appContext.reduxStore = reduxStore
 
       if (!reduxStore.getState().menu.loaded) {
-        await reduxStore.dispatch(readMenu(Config.get().menuRequest))
+        let options = {}
+        if (appContext.req) {
+          options.postRequestHook = response => { setSurrogateKeys(response.headers, appContext.req, appContext.res) }
+        }
+        await reduxStore.dispatch(readMenu(Config.get().menuRequest, options))
       }
 
       // Get initial props from the parent

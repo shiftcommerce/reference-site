@@ -5,10 +5,10 @@ import Cookies from 'js-cookie'
 import ApiClient from '../lib/api-client'
 import JsonApiParser from '../lib/json-api-parser'
 
-export const readEndpoint = (request) => {
+export const readEndpoint = (request, options) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().read(request.endpoint, request.query)
+    return new ApiClient(options).read(request.endpoint, request.query)
       .then(processResponse(dispatch, request, [200, 304]))
       .catch((error) => {
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error, request))
@@ -16,10 +16,10 @@ export const readEndpoint = (request) => {
   }
 }
 
-export const postEndpoint = (request) => {
+export const postEndpoint = (request, options) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().post(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
+    return new ApiClient(options).post(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
       .then(response => {
         return _determinePostDispatch(dispatch, request, response)
       })
@@ -30,10 +30,10 @@ export const postEndpoint = (request) => {
   }
 }
 
-export const deleteEndpoint = (request) => {
+export const deleteEndpoint = (request, options) => {
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
-    return new ApiClient().delete(request.endpoint, request.body, { csrf: Cookies.get('_csrf') })
+    return new ApiClient(options).delete(request.endpoint, request.body, { csrf: Cookies.get('_csrf') })
       .then(processResponse(dispatch, request, [204]))
       .catch(error => {
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error))
