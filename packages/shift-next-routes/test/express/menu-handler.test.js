@@ -7,17 +7,8 @@ const { getMenu } = require('../../src/express/menu-handler')
 // Config
 const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
-beforeAll(() => {
-  shiftApiConfig.set({
-    apiHost: 'http://example.com',
-    apiTenant: 'test_tenant'
-  })
-})
-
-afterAll(() => shiftApiConfig.reset())
-afterEach(() => nock.cleanAll())
-
 describe('#getMenu()', () => {
+  // Shared set up
   const menuCache = {
     read: jest.fn(),
     set: jest.fn()
@@ -29,6 +20,16 @@ describe('#getMenu()', () => {
   }
   const next =jest.fn()
   const dummyData = [{ id: '338' }]
+
+  beforeAll(() => {
+    shiftApiConfig.set({
+      apiHost: 'http://example.com',
+      apiTenant: 'test_tenant'
+    })
+  })
+  
+  afterAll(() => shiftApiConfig.reset())
+  afterEach(() => nock.cleanAll())  
 
   test('skips menu caching when `preview: true`', async () => {
     // Arrange
