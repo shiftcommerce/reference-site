@@ -37,6 +37,10 @@ export class MyAccountLayout extends Component {
     )
   }
 
+  handleItemClick (location) {
+    Router.push(location)
+  }
+
   render () {
     const { menu, children } = this.props
 
@@ -47,6 +51,7 @@ export class MyAccountLayout extends Component {
         <div className='c-myaccount-main'>
           <Sidebar
             items={menu}
+            handleItemClick={this.handleItemClick}
             currentItem={this.state.currentItem}
           />
           <div className='c-myaccount-main__content'>
