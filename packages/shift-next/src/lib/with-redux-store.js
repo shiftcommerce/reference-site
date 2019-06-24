@@ -44,7 +44,12 @@ export default (App) => {
         if (appContext.req) {
           options.postRequestHook = response => { setSurrogateKeys(response.headers, appContext.req, appContext.res) }
         }
-        await reduxStore.dispatch(readMenu(Config.get().menuRequest, options))
+        // clone menu request
+        const menuRequest = Object.assign({}, Config.get().menuRequest)
+        // merge `preview` param as this is needed for disabling menu cache in the menu handler
+        menuRequest.query['preview'] = appContext.req.query.preview
+        // dispatch action for menus
+        await reduxStore.dispatch(readMenu(menuRequest, options))
       }
 
       // Get initial props from the parent
