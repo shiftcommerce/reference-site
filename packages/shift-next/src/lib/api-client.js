@@ -18,6 +18,12 @@ class ApiClient {
     this.client = axios.create({
       baseURL: Config.get().apiHostProxy
     })
+
+    if (options.postRequestHook) {
+      this.postRequestHook = options.postRequestHook
+    } else {
+      this.postRequestHook = () => {}
+    }
   }
 
   async read (endpoint, queryObject = {}, dispatch = null, options = {}) {
@@ -26,8 +32,9 @@ class ApiClient {
     try {
       shouldDispatch(dispatch, true)
       const response = await this.client.get(formattedEndpoint)
+      this.postRequestHook(response)
       shouldDispatch(dispatch, false)
-      return { status: response.status, data: response.data }
+      return { status: response.status, data: response.data, headers: response.headers }
     } catch (error) {
       shouldDispatch(dispatch, false)
       console.error('API CLIENT: Error while fetching data', error)
@@ -39,8 +46,9 @@ class ApiClient {
     try {
       shouldDispatch(dispatch, true)
       const response = await this.client.post(endpoint, body, { headers: this.buildHeaders(options) })
+      this.postRequestHook(response)
       shouldDispatch(dispatch, false)
-      return { status: response.status, data: response.data }
+      return { status: response.status, data: response.data, headers: response.headers }
     } catch (error) {
       shouldDispatch(dispatch, false)
       console.error('Error while posting data', error)
@@ -52,8 +60,9 @@ class ApiClient {
     try {
       shouldDispatch(dispatch, true)
       const response = await this.client.delete(endpoint, { headers: this.buildHeaders(options) })
+      this.postRequestHook(response)
       shouldDispatch(dispatch, false)
-      return { status: response.status, data: response.data }
+      return { status: response.status, data: response.data, headers: response.headers }
     } catch (error) {
       shouldDispatch(dispatch, false)
       console.error('Error during delete request', error)

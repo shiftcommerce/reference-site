@@ -10,6 +10,6 @@ const productRequest = (productId) => {
   }
 }
 
-export function readProduct (productId) {
-  return readEndpoint(productRequest(productId))
+export function readProduct (productId, options) {
+  return readEndpoint(productRequest(productId, options))
 }

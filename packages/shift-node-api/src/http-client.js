@@ -13,6 +13,9 @@ class HTTPClient {
     const query = qs.stringify(queryObject)
     const requestUrl = this.createRequestUrl(url, query)
 
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug(`GET ${requestUrl}`)
+
     const response = axios({
       method: 'get',
       url: requestUrl,
@@ -27,6 +30,9 @@ class HTTPClient {
 
   post (url, body, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
+
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug({ msg: `POST ${requestUrl}`, body })
 
     const response = axios({
       method: 'post',
@@ -45,6 +51,9 @@ class HTTPClient {
   patch (url, body, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
 
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug({ msg: `PATCH ${requestUrl}`, body })
+
     const response = axios({
       method: 'patch',
       url: requestUrl,
@@ -61,6 +70,9 @@ class HTTPClient {
 
   delete (url, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
+
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug(`DELETE ${requestUrl}`)
 
     const response = axios({
       method: 'delete',
