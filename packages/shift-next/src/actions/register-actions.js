@@ -22,7 +22,7 @@ function registerPayload (account) {
   }
 }
 
-export function createAccount (account) {
+export function createAccount (account, options) {
   const request = {
     endpoint: '/register',
     body: registerPayload(account),
@@ -30,5 +30,5 @@ export function createAccount (account) {
     successActionType: actionTypes.SET_ACCOUNT,
     errorActionType: actionTypes.ERROR_REGISTRATION
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
