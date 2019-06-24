@@ -17,6 +17,7 @@
     "express-ipfilter": "^1.0.1",
     "helmet": "^3.18.0",
     "memjs": "^1.2.0",
+    "pino": "^5.12.6",
     "stripe": "^6.31.2"
   },
   "devDependencies": {

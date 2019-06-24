@@ -1,5 +1,6 @@
-const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
+// Libs
 const MenuCache = require('../lib/menu-cache')
+const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
