@@ -13,11 +13,11 @@ const fetchCartRequest = {
   successActionType: actionTypes.CART_UPDATED
 }
 
-export function readCart (options = {}) {
+export function readCart (params = {}, options) {
   return (dispatch, getState) => {
     // Only fetch the cart if needed, otherwise do nothing
-    if ((Cookies.get('cart') && !getState().cart.id) || options.force) {
-      return dispatch(readEndpoint(fetchCartRequest))
+    if ((Cookies.get('cart') && !getState().cart.id) || params.force) {
+      return dispatch(readEndpoint(fetchCartRequest, options))
     } else {
       return Promise.resolve()
     }
@@ -32,8 +32,8 @@ const addToCartRequest = (variantId, quantity) => {
   }
 }
 
-export function addToCart (variantId, quantity) {
-  return postEndpoint(addToCartRequest(variantId, quantity))
+export function addToCart (variantId, quantity, options) {
+  return postEndpoint(addToCartRequest(variantId, quantity), options)
 }
 
 const updateLineItemQuantityRequest = (lineItemId, newQuantity) => {
@@ -44,8 +44,8 @@ const updateLineItemQuantityRequest = (lineItemId, newQuantity) => {
   }
 }
 
-export function updateLineItemQuantity (lineItemId, newQuantity) {
-  return postEndpoint(updateLineItemQuantityRequest(lineItemId, newQuantity))
+export function updateLineItemQuantity (lineItemId, newQuantity, options) {
+  return postEndpoint(updateLineItemQuantityRequest(lineItemId, newQuantity), options)
 }
 
 const deleteLineItemRequest = (lineItemId) => {
@@ -55,8 +55,8 @@ const deleteLineItemRequest = (lineItemId) => {
   }
 }
 
-export function deleteLineItem (lineItemId) {
-  return postEndpoint(deleteLineItemRequest(lineItemId))
+export function deleteLineItem (lineItemId, options) {
+  return postEndpoint(deleteLineItemRequest(lineItemId), options)
 }
 
 const addCartCouponRequest = (couponCode) => {
@@ -80,8 +80,8 @@ const setShippingMethodRequest = (shippingMethodId) => {
   }
 }
 
-export function setCartShippingMethod (shippingMethodId) {
-  return postEndpoint(setShippingMethodRequest(shippingMethodId))
+export function setCartShippingMethod (shippingMethodId, options) {
+  return postEndpoint(setShippingMethodRequest(shippingMethodId), options)
 }
 
 export async function submitCoupon (couponCode) {
@@ -106,8 +106,8 @@ const setBillingAddressRequest = (addressId) => {
   }
 }
 
-export function setCartBillingAddress (addressId) {
-  return postEndpoint(setBillingAddressRequest(addressId))
+export function setCartBillingAddress (addressId, options) {
+  return postEndpoint(setBillingAddressRequest(addressId), options)
 }
 
 const setShippingAddressRequest = (addressId) => {
@@ -118,8 +118,8 @@ const setShippingAddressRequest = (addressId) => {
   }
 }
 
-export function setCartShippingAddress (addressId) {
-  return postEndpoint(setShippingAddressRequest(addressId))
+export function setCartShippingAddress (addressId, options) {
+  return postEndpoint(setShippingAddressRequest(addressId), options)
 }
 
 const createShippingAddressRequest = (address) => {
@@ -130,8 +130,8 @@ const createShippingAddressRequest = (address) => {
   }
 }
 
-export function createShippingAddress (address) {
-  return postEndpoint(createShippingAddressRequest(address))
+export function createShippingAddress (address, options) {
+  return postEndpoint(createShippingAddressRequest(address), options)
 }
 
 const createBillingAddressRequest = (address) => {
@@ -142,8 +142,8 @@ const createBillingAddressRequest = (address) => {
   }
 }
 
-export function createBillingAddress (address) {
-  return postEndpoint(createBillingAddressRequest(address))
+export function createBillingAddress (address, options) {
+  return postEndpoint(createBillingAddressRequest(address), options)
 }
 
 export const setCartItemsCount = (count) => {

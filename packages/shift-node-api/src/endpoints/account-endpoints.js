@@ -1,13 +1,9 @@
 const HTTPClient = require('../http-client')
 const shiftApiConfig = require('../lib/config')
+const filterResponse = require('../lib/filter-response')
 
 function getAccountV1 (queryObject, customerId) {
-  return HTTPClient.get(`v1/customer_accounts/${customerId}`, queryObject).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.get(`v1/customer_accounts/${customerId}`, queryObject).then(filterResponse)
 }
 
 function updateCustomerAccountV1 (body, customerAccountId) {
@@ -15,30 +11,15 @@ function updateCustomerAccountV1 (body, customerAccountId) {
 }
 
 function createCustomerAccountV1 (account) {
-  return HTTPClient.post('v1/customer_accounts', account).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.post('v1/customer_accounts', account).then(filterResponse)
 }
 
 function loginCustomerAccountV1 (account) {
-  return HTTPClient.post('v1/customer_account_authentications', account).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.post('v1/customer_account_authentications', account).then(filterResponse)
 }
 
 function getCustomerOrdersV1 (query) {
-  return HTTPClient.get(`${shiftApiConfig.get().omsHost}/oms/v1/customer_orders`, query).then(response => {
-    return {
-      status: response.status,
-      data: response.data
-    }
-  })
+  return HTTPClient.get(`${shiftApiConfig.get().omsHost}/oms/v1/customer_orders`, query).then(filterResponse)
 }
 
 function getAddressBookV1 (customerAccountId, query) {

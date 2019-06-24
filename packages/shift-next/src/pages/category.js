@@ -25,6 +25,7 @@ import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
 import { sortOptions } from '../lib/sort-options'
+import setSurrogateKeys from '../lib/set-surrogate-keys'
 
 // Actions
 import { clearSearchFilter, setSearchFilter } from '../actions/search-actions'
@@ -59,8 +60,12 @@ class CategoryPage extends Component {
    * @param  {Number} id
    * @return {Object} API response or error
    */
-  static async fetchCategory (id) {
-    const response = await new ApiClient().read(`/getCategory/${id}`, {})
+  static async fetchCategory (id, req, res) {
+    let options = {}
+    if (req && res) {
+      options.postRequestHook = (response) => { setSurrogateKeys(response.headers, req, res) }
+    }
+    const response = await new ApiClient().read(`/getCategory/${id}`, {}, null, options)
     return response.data
   }
 

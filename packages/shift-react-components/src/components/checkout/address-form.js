@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import t from 'typy'
 
 // Lib
@@ -45,61 +45,55 @@ export class AddressForm extends Component {
     const rules = { required: true }
 
     return (
-      <>
-        <DropdownSelect
-          options={countries}
-          label='Country'
-          name={name}
-          value={formInput.country_code}
-          formName={formName}
-          required={rules.required}
-          rules={rules}
-          validationMessage={formInput.errors[name]}
-          onChange={onChange}
-          onBlur={onBlur}
-          prompt='Select a Country'
-        />
-      </>
+      <DropdownSelect
+        options={countries}
+        label='Country'
+        name={name}
+        value={formInput.country_code}
+        formName={formName}
+        required={rules.required}
+        rules={rules}
+        validationMessage={formInput.errors[name]}
+        onChange={onChange}
+        onBlur={onBlur}
+        prompt='Select a Country'
+      />
     )
   }
 
   renderInputField (formInput, fieldOption) {
     return (
-      <>
-        <Input
-          label={fieldOption.label}
-          className={fieldOption.className}
-          placeholder={fieldOption.placeholder}
-          name={fieldOption.name}
-          type={fieldOption.type}
-          value={fieldOption.value}
-          required={t(fieldOption, 'rules.required').safeObject}
-          validationMessage={formInput.errors[fieldOption.name]}
-          rules={fieldOption.rules}
-          formName={this.props.formName}
-          onChange={this.props.onChange}
-          onBlur={this.props.onBlur}
-        />
-      </>
+      <Input
+        label={fieldOption.label}
+        className={fieldOption.className}
+        placeholder={fieldOption.placeholder}
+        name={fieldOption.name}
+        type={fieldOption.type}
+        value={fieldOption.value}
+        required={t(fieldOption, 'rules.required').safeObject}
+        validationMessage={formInput.errors[fieldOption.name]}
+        rules={fieldOption.rules}
+        formName={this.props.formName}
+        onChange={this.props.onChange}
+        onBlur={this.props.onBlur}
+      />
     )
   }
 
   renderCheckbox (formInput, fieldOption) {
     return (
-      <>
-        <Checkbox
-          label={fieldOption.label}
-          className={fieldOption.className}
-          name={fieldOption.name}
-          checked={!!fieldOption.value}
-          required={t(fieldOption, 'rules.required').safeObject}
-          validationMessage={formInput.errors[fieldOption.name]}
-          rules={fieldOption.rules}
-          formName={this.props.formName}
-          onChange={this.props.onChange}
-          onBlur={this.props.onBlur}
-        />
-      </>
+      <Checkbox
+        label={fieldOption.label}
+        className={fieldOption.className}
+        name={fieldOption.name}
+        checked={!!fieldOption.value}
+        required={t(fieldOption, 'rules.required').safeObject}
+        validationMessage={formInput.errors[fieldOption.name]}
+        rules={fieldOption.rules}
+        formName={this.props.formName}
+        onChange={this.props.onChange}
+        onBlur={this.props.onBlur}
+      />
     )
   }
 
@@ -131,14 +125,14 @@ export class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', label: 'Company Name', name: 'companyName', value: formInput.companyName }
 
     return (
-      <>
+      <Fragment>
         { !(formInput.companyNameShown) &&
           <a href='#' onClick={() => onShowField(formName, 'companyNameShown')}>
             <p>+ Add Company Name (optional)</p>
           </a>
         }
         { formInput.companyNameShown && this.renderInputField(formInput, fieldOption) }
-      </>
+      </Fragment>
     )
   }
 
@@ -147,11 +141,7 @@ export class AddressForm extends Component {
     const formInput = checkout[formName]
     const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Address', label: 'Address 1', name: 'line_1', value: formInput.line_1, rules: { required: true } }
 
-    return (
-      <>
-        { this.renderInputField(formInput, fieldOption) }
-      </>
-    )
+    return this.renderInputField(formInput, fieldOption)
   }
 
   renderAddressLine2 () {
@@ -160,14 +150,14 @@ export class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', label: 'Address 2', name: 'line_2', value: formInput.line_2 }
 
     return (
-      <>
+      <Fragment>
         { !(formInput.address2Shown) &&
           <a href='#' onClick={() => onShowField(formName, 'address2Shown')}>
             <p>+ Add Address 2 (optional)</p>
           </a>
         }
         { formInput.address2Shown && this.renderInputField(formInput, fieldOption) }
-      </>
+      </Fragment>
     )
   }
 
@@ -180,17 +170,13 @@ export class AddressForm extends Component {
       { className: 'o-form__input-block', placeholder: 'Enter County', label: 'County', name: 'state', value: formInput.state, rules: { required: true } }
     ]
 
-    return (
-      <>
-        { fieldOptions.map((fieldOption, index) => {
-          return (
-            <div key={index}>
-              { this.renderInputField(formInput, fieldOption) }
-            </div>
-          )
-        }) }
-      </>
-    )
+    return fieldOptions.map((fieldOption, index) => {
+      return (
+        <div key={index}>
+          { this.renderInputField(formInput, fieldOption) }
+        </div>
+      )
+    })
   }
 
   renderPhone () {
@@ -199,10 +185,10 @@ export class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Phone', label: 'Phone', name: 'primary_phone', value: formInput.primary_phone, rules: { required: true, phone: true } }
 
     return (
-      <>
+      <Fragment>
         <p className='o-form__additional-label'>Required for any delivery related questions</p>
         { this.renderInputField(formInput, fieldOption) }
-      </>
+      </Fragment>
     )
   }
 
@@ -212,10 +198,10 @@ export class AddressForm extends Component {
     const fieldOption = { className: 'o-form__input-block', placeholder: 'Enter Email', label: 'Email', name: 'email', type: 'email', value: formInput.email, rules: { required: true, email: true } }
 
     return (
-      <>
+      <Fragment>
         <p className='o-form__additional-label'>Required for Order Confirmation Email</p>
         { this.renderInputField(formInput, fieldOption) }
-      </>
+      </Fragment>
     )
   }
 
@@ -227,12 +213,12 @@ export class AddressForm extends Component {
     const preferredShippingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred shipping address', name: 'preferred_shipping', value: formInput.setAsPreferredShipping }
     const preferredBillingCheckboxOptions = { className: 'o-form__checkbox-label', label: 'Set as preferred billing address', name: 'preferred_billing', value: formInput.setAsPreferredBilling }
     return (
-      <>
+      <Fragment>
         { loggedIn && !formInput.formPreFilled && this.renderCheckbox(formInput, checkboxOptions) }
         { formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredShippingCheckboxOptions) }
         { formInput.saveToAddressBook && this.renderCheckbox(formInput, preferredBillingCheckboxOptions) }
         { formInput.saveToAddressBook && this.renderInputField(formInput, inputOptions) }
-      </>
+      </Fragment>
     )
   }
 
@@ -245,10 +231,11 @@ export class AddressForm extends Component {
       value: formInput.newsletterOptIn,
       className: 'o-form__checkbox-label'
     }
+
     return (
-      <>
+      <Fragment>
         { formName === 'shippingAddress' && this.renderCheckbox(formInput, fieldOption) }
-      </>
+      </Fragment>
     )
   }
 }

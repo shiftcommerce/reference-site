@@ -62,7 +62,7 @@ export function showField (formName, fieldName) {
   }
 }
 
-export function updatePayPalOrderTotal (payPalOrderID, purchaseUnitsReferenceID, cart) {
+export function updatePayPalOrderTotal (payPalOrderID, purchaseUnitsReferenceID, cart, options) {
   const request = {
     endpoint: '/patchPayPalOrder',
     body: {
@@ -82,10 +82,10 @@ export function updatePayPalOrderTotal (payPalOrderID, purchaseUnitsReferenceID,
     requestActionType: actionTypes.PATCH_PAYPAL_ORDER,
     errorActionType: actionTypes.SET_PAYMENT_RESPONSE_ERRORS
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
-export function authorizePayPalOrder (payPalOrderID) {
+export function authorizePayPalOrder (payPalOrderID, options) {
   const request = {
     endpoint: '/authorizePayPalOrder',
     body: {
@@ -95,7 +95,7 @@ export function authorizePayPalOrder (payPalOrderID) {
     successActionType: actionTypes.SET_ORDER_PAYPAL_AUTHORIZATION_DETAILS,
     errorActionType: actionTypes.SET_PAYMENT_RESPONSE_ERRORS
   }
-  return postEndpoint(request)
+  return postEndpoint(request, options)
 }
 
 export function authorizePayPalAndCreateOrder (payPalOrderID, paymentMethod) {

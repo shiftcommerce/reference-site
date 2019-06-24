@@ -61,7 +61,8 @@ class InputFieldValidator {
   }
 
   postcode () {
-    const regex = /^[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}$/i
+    // https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom
+    const regex = /^[A-Z]{1,2}[0-9]{1,2}[A-Z]{0,1} ?[0-9][A-Z]{2}$/i
     const validPostcode = (regex.test(this.value))
     return (validPostcode ? '' : `${this.value} - is not a valid ${this.formattedFieldName()}.`)
   }

@@ -1,9 +1,3 @@
-// Libraries
-import { combineReducers } from 'redux'
-
-// Libs
-import Config from '../lib/config'
-
 // Reducers
 import setAccount from './set-account'
 import setCart from './set-cart'
@@ -17,9 +11,7 @@ import setRegistration from './set-registration'
 import setSearchState from './set-search-state'
 import globalReducer from './global-reducer'
 
-const customReducers = Config.get().customReducers || {}
-
-const rootReducer = combineReducers({
+const rootReducers = {
   account: setAccount,
   cart: setCart,
   checkout: setCheckout,
@@ -30,8 +22,7 @@ const rootReducer = combineReducers({
   orders: setOrders,
   product: setProduct,
   registration: setRegistration,
-  search: setSearchState,
-  ...customReducers
-})
+  search: setSearchState
+}
 
-export default rootReducer
+export default rootReducers

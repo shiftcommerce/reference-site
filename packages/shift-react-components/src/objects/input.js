@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 
 // HOC
@@ -91,14 +91,12 @@ class Input extends Component {
     let inputFields = ''
 
     if (type === 'checkbox') {
-      inputFields = <>
+      inputFields = <Fragment>
         { this.renderInputField() }
         { this.renderLabel() }
-      </>
+      </Fragment>
     } else {
-      inputFields = <>
-        { this.renderLabel() }
-      </>
+      inputFields = this.renderLabel()
     }
 
     return (

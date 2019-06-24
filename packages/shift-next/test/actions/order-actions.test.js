@@ -14,12 +14,12 @@ test('createOrder() converts cart into a valid request', () => {
       id: '10'
     }
   }
-
+ 
   const account = {
     customer_account_id: 1
   }
 
-  orderActions.createOrder(mockCart, 'card', order, account)
+  orderActions.createOrder(mockCart, 'card', order, account, {})
 
   // Allow placed_at to be any date
   mockOrder.data.attributes.placed_at = expect.anything()
@@ -30,7 +30,7 @@ test('createOrder() converts cart into a valid request', () => {
     requestActionType: actionTypes.CREATE_ORDER,
     successActionType: actionTypes.SET_ORDER,
     errorActionType: actionTypes.ERROR_ORDER
-  }))
+  }), {})
 
   postOrderSpy.mockRestore()
 })
