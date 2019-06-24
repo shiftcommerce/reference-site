@@ -21,6 +21,8 @@ module.exports = {
         menuCache.set(response)
       }
     }
+    // set Surrogate headers
+    setSurrogateHeaders(response.headers, res)
 
     switch (response.status) {
       case 404:
@@ -36,9 +38,7 @@ module.exports = {
 
 const fetchMenuFromAPI = async (req, res) => {
   // fetch menus from API
-  let response = await SHIFTClient.getMenusV1(req.query)
-  // set Surrogate headers
-  setSurrogateHeaders(response.headers, res)
+  const response = await SHIFTClient.getMenusV1(req.query)
   // return response
   return response
 }
