@@ -1,11 +1,10 @@
 // Libraries
 import React from 'react'
 import classNames from 'classnames'
-import Router from 'next/router'
 
-export const SidebarItem = ({ label, location, current }) => {
+export const SidebarItem = ({ label, location, current, handleItemClick }) => {
   return (
-    <li onClick={() => Router.push(location)} className={classNames('c-sidebar__item', { 'c-sidebar__item--current': current })}>
+    <li onClick={() => handleItemClick(location)} className={classNames('c-sidebar__item', { 'c-sidebar__item--current': current })}>
       { label }
     </li>
   )
