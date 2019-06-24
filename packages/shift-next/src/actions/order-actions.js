@@ -7,10 +7,10 @@ import * as types from './action-types'
 // Actions
 import { readEndpoint, postEndpoint } from './api-actions'
 
-export function createOrder (cart, paymentMethod, order, options) {
+export function createOrder (cart, paymentMethod, order, account, options) {
   const request = {
     endpoint: '/createOrder',
-    body: convertCheckoutToOrder(cart, paymentMethod, order),
+    body: convertCheckoutToOrder(cart, paymentMethod, order, account),
     requestActionType: types.CREATE_ORDER,
     successActionType: types.SET_ORDER,
     errorActionType: types.ERROR_ORDER
@@ -31,7 +31,7 @@ export function setCardToken (token, paymentMethod) {
       type: types.SET_CARD_TOKEN,
       value: token
     })
-    return dispatch(createOrder(getState().cart, paymentMethod, getState().order))
+    return dispatch(createOrder(getState().cart, paymentMethod, getState().order, getState().account))
   }
 }
 
@@ -57,7 +57,7 @@ export function getCustomerOrders (options) {
   }, options)
 }
 
-export function convertCheckoutToOrder (cart, paymentMethod, order) {
+export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
   const lineItems = prepareLineItems(cart)
   const discountSummaries = prepareDiscountSummaries(cart, lineItems)
   const orderDiscountIncTax = cart.shipping_total_discount * -1
@@ -66,6 +66,7 @@ export function convertCheckoutToOrder (cart, paymentMethod, order) {
 
   const orderPayload = {
     attributes: {
+      customer_account_id: account.customer_account_id ? account.customer_account_id : null,
       billing_address: prepareBillingAddress(cart.billing_address),
       channel: 'web',
       currency: 'GBP',
@@ -87,7 +88,8 @@ export function convertCheckoutToOrder (cart, paymentMethod, order) {
       free_shipping: cart.free_shipping,
       settle_payments_immediately: true,
       shipping_discount_name: cart.shipping_discount_name,
-      shipping_discount: cart.shipping_total_discount
+      shipping_discount: cart.shipping_total_discount,
+      test: process.env.TEST_ORDERS ? true : false
     },
     type: 'create_order'
   }

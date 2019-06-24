@@ -1,0 +1,945 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<OrderSingle
+  order={
+    Object {
+      "account_reference": "shiftacc",
+      "customer": Object {
+        "email": "test@shiftcommerce.com",
+        "id": "61c40964-4b4c-4f54-b580-958798087312",
+        "meta_attributes": Object {},
+        "name": "SHIFT",
+        "reference": "23063301",
+      },
+      "id": "61c40964-4b4c-4f54-b580-958798087312",
+      "line_items": Array [
+        Object {
+          "discounts": Array [],
+          "id": "61c40964-4b4c-4f54-b580-958798087312_0",
+          "image_urls": Array [
+            "https://example.com/path/to/image.jpg",
+            "https://example.com/path/to/image1.jpg",
+          ],
+          "individual_prices": Array [],
+          "pricing": Object {
+            "each_ex_tax": 1200,
+            "each_inc_tax": 1440,
+            "line_discount_ex_tax": 0,
+            "line_discount_inc_tax": 0,
+            "line_ex_tax": 6000,
+            "line_total_inc_tax": 7200,
+            "tax_rate": 12000,
+          },
+          "quantity": 5,
+          "shipping_address": Object {
+            "city": "Leeds",
+            "company": "SHIFT Commerce",
+            "country": "United Kingdom",
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+            "lines": Array [
+              "The Calls",
+            ],
+            "meta_attributes": Object {
+              "further": "information",
+            },
+            "name": "Test Customer",
+            "postcode": "LS2 7EY",
+            "state": "West Yorkshire",
+          },
+          "shipping_method": Object {
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+            "label": "Next Day Delivery",
+            "meta_attributes": Object {
+              "sku": "NEXTDAY",
+            },
+            "price": 599,
+          },
+          "sku": "WHITE-TSHIRT-XXL",
+        },
+        Object {
+          "discounts": Array [
+            Object {
+              "amount_ex_tax": 200,
+              "amount_inc_tax": 240,
+              "coupon_code": "3FOR2SOCKS",
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+              "label": "3 for 2 on Socks",
+              "meta_attributes": Object {},
+            },
+          ],
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "image_urls": Array [],
+          "individual_prices": Array [
+            Object {
+              "discount_ex_tax": 67,
+              "discount_inc_tax": 80,
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 67,
+                  "amount_inc_tax": 80,
+                  "coupon_code": null,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_0_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "ex_tax": 133,
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+              "inc_tax": 160,
+            },
+            Object {
+              "discount_ex_tax": 67,
+              "discount_inc_tax": 80,
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 67,
+                  "amount_inc_tax": 80,
+                  "coupon_code": null,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_1_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "ex_tax": 133,
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1_1",
+              "inc_tax": 160,
+            },
+            Object {
+              "discount_ex_tax": 66,
+              "discount_inc_tax": 80,
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 66,
+                  "amount_inc_tax": 80,
+                  "coupon_code": null,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_2_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "ex_tax": 134,
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1_2",
+              "inc_tax": 160,
+            },
+          ],
+          "pricing": Object {
+            "each_ex_tax": 200,
+            "each_inc_tax": 240,
+            "line_discount_ex_tax": 200,
+            "line_discount_inc_tax": 240,
+            "line_ex_tax": 400,
+            "line_total_inc_tax": 480,
+            "tax_rate": 12000,
+          },
+          "quantity": 3,
+          "shipping_address": Object {
+            "city": "Leeds",
+            "company": null,
+            "country": "United Kingdom",
+            "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+            "lines": Array [
+              "SHIFT Commerce",
+              "The Calls Landing",
+            ],
+            "meta_attributes": Object {
+              "further": "information",
+            },
+            "name": "Test Customer 2",
+            "postcode": "LS2 7EY",
+            "state": "West Yorkshire",
+          },
+          "shipping_method": Object {
+            "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+            "label": "Two-man Delivery",
+            "meta_attributes": Object {
+              "sku": "DROPSHIP",
+            },
+            "price": 2499,
+          },
+          "sku": "BLACK-SOCKS-001",
+        },
+        Object {
+          "discounts": Array [],
+          "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+          "image_urls": Array [],
+          "individual_prices": Array [],
+          "pricing": Object {
+            "each_ex_tax": 120000,
+            "each_inc_tax": 144000,
+            "line_discount_ex_tax": 0,
+            "line_discount_inc_tax": 0,
+            "line_ex_tax": 120000,
+            "line_total_inc_tax": 144000,
+            "tax_rate": 12000,
+          },
+          "quantity": 1,
+          "shipping_address": Object {
+            "city": "Leeds",
+            "company": "SHIFT Commerce",
+            "country": "United Kingdom",
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+            "lines": Array [
+              "The Calls",
+            ],
+            "meta_attributes": Object {
+              "further": "information",
+            },
+            "name": "Test Customer",
+            "postcode": "LS2 7EY",
+            "state": "West Yorkshire",
+          },
+          "shipping_method": Object {
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+            "label": "Next Day Delivery",
+            "meta_attributes": Object {
+              "sku": "NEXTDAY",
+            },
+            "price": 599,
+          },
+          "sku": "WHITE-TSHIRT-L",
+        },
+      ],
+      "placed_at": "2018-01-01T12:00:00.000Z",
+      "pricing": Object {
+        "currency": "GBP",
+        "pre_discount_total_ex_tax": 126600,
+        "pre_discount_total_inc_tax": 151440,
+        "total_discount_ex_tax": 700,
+        "total_discount_inc_tax": 840,
+        "total_ex_tax": 125900,
+        "total_inc_tax": 150600,
+      },
+      "reference": "1000",
+      "shipping_addresses": Array [
+        Object {
+          "city": "Leeds",
+          "company": "SHIFT Commerce",
+          "country": "United Kingdom",
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "lines": Array [
+            "The Calls",
+          ],
+          "meta_attributes": Object {
+            "further": "information",
+          },
+          "name": "Test Customer",
+          "postcode": "LS2 7EY",
+          "state": "West Yorkshire",
+        },
+        Object {
+          "city": "Leeds",
+          "company": null,
+          "country": "United Kingdom",
+          "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+          "lines": Array [
+            "SHIFT Commerce",
+            "The Calls Landing",
+          ],
+          "meta_attributes": Object {
+            "further": "information",
+          },
+          "name": "Test Customer 2",
+          "postcode": "LS2 7EY",
+          "state": "West Yorkshire",
+        },
+      ],
+      "shipping_methods": Array [
+        Object {
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "label": "Next Day Delivery",
+          "meta_attributes": Object {
+            "sku": "NEXTDAY",
+          },
+          "price": 599,
+        },
+        Object {
+          "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+          "label": "Two-man Delivery",
+          "meta_attributes": Object {
+            "sku": "DROPSHIP",
+          },
+          "price": 2499,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="c-order-history__nav"
+  >
+    <h2>
+      Order 
+      1000
+    </h2>
+  </div>
+  <div
+    className="c-order-single"
+  >
+    <div
+      className="c-order-single__item"
+      key="0"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Order No.
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        1000
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="1"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Order Date
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        Jan 1, 2018
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="2"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Cost
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        £1506.00
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="3"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Shipping Method
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        Next Day Delivery
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="4"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Invoice Address
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        <ShippingAddresses
+          addresses={
+            Array [
+              Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+            ]
+          }
+        >
+          <div
+            className="c-order-history__shipping-address"
+            key="61c40964-4b4c-4f54-b580-958798087312_1"
+          >
+            <p
+              className="u-bold"
+            >
+              Test Customer
+            </p>
+            <p>
+              SHIFT Commerce
+            </p>
+            <p>
+              The Calls
+            </p>
+            <p>
+              Leeds
+            </p>
+            <p>
+              West Yorkshire
+            </p>
+            <p>
+              LS2 7EY
+            </p>
+            <p>
+              United Kingdom
+            </p>
+          </div>
+          <div
+            className="c-order-history__shipping-address"
+            key="61c40964-4b4c-4f54-b580-958798087312_2"
+          >
+            <p
+              className="u-bold"
+            >
+              Test Customer 2
+            </p>
+            <p />
+            <p>
+              SHIFT Commerce,The Calls Landing
+            </p>
+            <p>
+              Leeds
+            </p>
+            <p>
+              West Yorkshire
+            </p>
+            <p>
+              LS2 7EY
+            </p>
+            <p>
+              United Kingdom
+            </p>
+          </div>
+        </ShippingAddresses>
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="5"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Delivery Address
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        <ShippingAddresses
+          addresses={
+            Array [
+              Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+            ]
+          }
+        >
+          <div
+            className="c-order-history__shipping-address"
+            key="61c40964-4b4c-4f54-b580-958798087312_1"
+          >
+            <p
+              className="u-bold"
+            >
+              Test Customer
+            </p>
+            <p>
+              SHIFT Commerce
+            </p>
+            <p>
+              The Calls
+            </p>
+            <p>
+              Leeds
+            </p>
+            <p>
+              West Yorkshire
+            </p>
+            <p>
+              LS2 7EY
+            </p>
+            <p>
+              United Kingdom
+            </p>
+          </div>
+          <div
+            className="c-order-history__shipping-address"
+            key="61c40964-4b4c-4f54-b580-958798087312_2"
+          >
+            <p
+              className="u-bold"
+            >
+              Test Customer 2
+            </p>
+            <p />
+            <p>
+              SHIFT Commerce,The Calls Landing
+            </p>
+            <p>
+              Leeds
+            </p>
+            <p>
+              West Yorkshire
+            </p>
+            <p>
+              LS2 7EY
+            </p>
+            <p>
+              United Kingdom
+            </p>
+          </div>
+        </ShippingAddresses>
+      </div>
+    </div>
+    <div
+      className="c-order-single__item"
+      key="6"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Currency
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        GBP
+      </div>
+    </div>
+    <div
+      className="c-order-single__item c-order-single__item--full"
+    >
+      <h5
+        className="c-order-single__header"
+      >
+        Order Summary
+      </h5>
+      <div
+        className="c-order-single__body"
+      >
+        <div
+          className="o-grid-container"
+        >
+          <div
+            className="o-col-1-7"
+          >
+            <LineItems
+              lineItems={
+                Array [
+                  Object {
+                    "id": 0,
+                    "item": Object {
+                      "picture_url": "https://example.com/path/to/image.jpg",
+                      "product": Object {
+                        "slug": "slug",
+                        "title": "",
+                      },
+                      "sku": "WHITE-TSHIRT-XXL",
+                      "title": "undefined - WHITE-TSHIRT-XXL",
+                    },
+                    "sub_total": 72,
+                    "total": 72,
+                    "unit_quantity": 5,
+                  },
+                  Object {
+                    "id": 1,
+                    "item": Object {
+                      "picture_url": undefined,
+                      "product": Object {
+                        "slug": "slug",
+                        "title": "",
+                      },
+                      "sku": "BLACK-SOCKS-001",
+                      "title": "undefined - BLACK-SOCKS-001",
+                    },
+                    "sub_total": 4.8,
+                    "total": 4.8,
+                    "unit_quantity": 3,
+                  },
+                  Object {
+                    "id": 2,
+                    "item": Object {
+                      "picture_url": undefined,
+                      "product": Object {
+                        "slug": "slug",
+                        "title": "",
+                      },
+                      "sku": "WHITE-TSHIRT-L",
+                      "title": "undefined - WHITE-TSHIRT-L",
+                    },
+                    "sub_total": 1440,
+                    "total": 1440,
+                    "unit_quantity": 1,
+                  },
+                ]
+              }
+              lineItemsCount={3}
+            >
+              <div
+                className="c-line-items"
+              >
+                <div
+                  className="c-line-items__sections"
+                  key="WHITE-TSHIRT-XXL"
+                >
+                  <div
+                    className="c-line-items__images"
+                  >
+                    <Link
+                      href="/slug?slug=undefined"
+                    >
+                      <a
+                        href="/slug?slug=undefined"
+                      >
+                        <Image
+                          alt="undefined - WHITE-TSHIRT-XXL"
+                          aria-label="undefined - WHITE-TSHIRT-XXL"
+                          className="c-line-items__image"
+                          key="slug"
+                          src="https://example.com/path/to/image.jpg"
+                        >
+                          <div
+                            className="c-line-items__image"
+                          >
+                            <picture>
+                              <img
+                                alt="undefined - WHITE-TSHIRT-XXL"
+                                aria-label="undefined - WHITE-TSHIRT-XXL"
+                                className="o-image"
+                                src="https://example.com/path/to/image.jpg"
+                                srcSet="https://example.com/path/to/image.jpg 769w"
+                              />
+                            </picture>
+                          </div>
+                        </Image>
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="c-line-items__information"
+                  >
+                    <div
+                      className="c-line-items__title"
+                    >
+                      <div
+                        className="c-line-items__details"
+                      >
+                        <h4
+                          className="c-line-items__details-title u-bold"
+                        >
+                          undefined - WHITE-TSHIRT-XXL
+                        </h4>
+                        <div
+                          className="c-line-items__details-sku"
+                        >
+                          <span />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__quantity"
+                    >
+                      <div
+                        className="c-line-items__quantity-header"
+                      >
+                        <span>
+                          Quantity
+                        </span>
+                      </div>
+                      <span
+                        className="c-line-items__quantity-amount"
+                      >
+                        5
+                      </span>
+                    </div>
+                    <div
+                      className="c-line-items__amounts"
+                    >
+                      <a
+                        className="c-line-items__amount c-line-items__amount--total"
+                      >
+                        £
+                        72.00
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c-line-items__sections"
+                  key="BLACK-SOCKS-001"
+                >
+                  <div
+                    className="c-line-items__images"
+                  >
+                    <Link
+                      href="/slug?slug=undefined"
+                    >
+                      <a
+                        href="/slug?slug=undefined"
+                      >
+                        <Image
+                          alt="undefined - BLACK-SOCKS-001"
+                          aria-label="undefined - BLACK-SOCKS-001"
+                          className="c-line-items__image"
+                          key="slug"
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="c-line-items__information"
+                  >
+                    <div
+                      className="c-line-items__title"
+                    >
+                      <div
+                        className="c-line-items__details"
+                      >
+                        <h4
+                          className="c-line-items__details-title u-bold"
+                        >
+                          undefined - BLACK-SOCKS-001
+                        </h4>
+                        <div
+                          className="c-line-items__details-sku"
+                        >
+                          <span />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__quantity"
+                    >
+                      <div
+                        className="c-line-items__quantity-header"
+                      >
+                        <span>
+                          Quantity
+                        </span>
+                      </div>
+                      <span
+                        className="c-line-items__quantity-amount"
+                      >
+                        3
+                      </span>
+                    </div>
+                    <div
+                      className="c-line-items__amounts"
+                    >
+                      <a
+                        className="c-line-items__amount c-line-items__amount--total"
+                      >
+                        £
+                        4.80
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c-line-items__sections"
+                  key="WHITE-TSHIRT-L"
+                >
+                  <div
+                    className="c-line-items__images"
+                  >
+                    <Link
+                      href="/slug?slug=undefined"
+                    >
+                      <a
+                        href="/slug?slug=undefined"
+                      >
+                        <Image
+                          alt="undefined - WHITE-TSHIRT-L"
+                          aria-label="undefined - WHITE-TSHIRT-L"
+                          className="c-line-items__image"
+                          key="slug"
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className="c-line-items__information"
+                  >
+                    <div
+                      className="c-line-items__title"
+                    >
+                      <div
+                        className="c-line-items__details"
+                      >
+                        <h4
+                          className="c-line-items__details-title u-bold"
+                        >
+                          undefined - WHITE-TSHIRT-L
+                        </h4>
+                        <div
+                          className="c-line-items__details-sku"
+                        >
+                          <span />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="c-line-items__quantity"
+                    >
+                      <div
+                        className="c-line-items__quantity-header"
+                      >
+                        <span>
+                          Quantity
+                        </span>
+                      </div>
+                      <span
+                        className="c-line-items__quantity-amount"
+                      >
+                        1
+                      </span>
+                    </div>
+                    <div
+                      className="c-line-items__amounts"
+                    >
+                      <a
+                        className="c-line-items__amount c-line-items__amount--total"
+                      >
+                        £
+                        1440.00
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </LineItems>
+          </div>
+          <div
+            className="o-col-8-13"
+          >
+            <div
+              className="c-cart-summary"
+            >
+              <dl
+                aria-label="Subtotal"
+              >
+                <dt>
+                   Subtotal: 
+                </dt>
+                <dd>
+                   £
+                  1516.80
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="Taxes"
+              >
+                <dt>
+                   UK VAT 20% (Included in Price): 
+                </dt>
+                <dd>
+                   £
+                  247.00
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="Shipping"
+              >
+                <dt>
+                   Shipping Total: 
+                </dt>
+                <dd>
+                   £
+                  30.98
+                   
+                </dd>
+              </dl>
+              <dl
+                aria-label="Total"
+                className="c-cart-summary__total"
+              >
+                <dt>
+                   Total: 
+                </dt>
+                <dd>
+                   £
+                  1506.00
+                   
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c-order-single__item c-order-single__item--full"
+    >
+      <div
+        className="c-order-single__body"
+      >
+        <a
+          className="o-button o-button--primary"
+          href="/account/orders"
+        >
+          View all orders
+        </a>
+      </div>
+    </div>
+  </div>
+</OrderSingle>
+`;

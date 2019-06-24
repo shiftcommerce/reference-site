@@ -63,6 +63,7 @@ export class OrderLineItems extends PureComponent {
     return (
       items.map((lineItem) =>
         <div className='c-order-history__line-items_grid' key={lineItem.sku}>
+          <img width={300} src={lineItem.image_urls[0]} />
           { this.renderParams(lineItem) }
           { this.renderTotal(lineItem) }
         </div>

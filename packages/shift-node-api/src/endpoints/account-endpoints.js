@@ -1,4 +1,5 @@
 const HTTPClient = require('../http-client')
+const shiftApiConfig = require('../lib/config')
 const filterResponse = require('../lib/filter-response')
 
 function getAccountV1 (queryObject, customerId) {
@@ -18,7 +19,7 @@ function loginCustomerAccountV1 (account) {
 }
 
 function getCustomerOrdersV1 (query) {
-  return HTTPClient.get('https://shift-oms-dev.herokuapp.com/oms/v1/customer_orders', query).then(filterResponse)
+  return HTTPClient.get(`${shiftApiConfig.get().omsHost}/oms/v1/customer_orders`, query).then(filterResponse)
 }
 
 function getAddressBookV1 (customerAccountId, query) {

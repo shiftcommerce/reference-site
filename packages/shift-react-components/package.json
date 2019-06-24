@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-react-components",
-  "version": "0.22.15",
+  "version": "0.22.16",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=production ANALYZE_BUNDLE=true ./node_modules/webpack/bin/webpack.js --watch --color -p",
