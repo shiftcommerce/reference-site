@@ -173,9 +173,66 @@ describe('InputFieldValidator', () => {
   })
 
   describe('Postcode validation', () => {
-    test('with valid postcode', () => {
+    let data = { name: 'postcode', rules: { postcode: true } }
+
+    test('with valid postcode - format: AA9A 9AA', () => {
       // Arrange
-      const data = { name: 'postcode', value: 'ls98ds', rules: { postcode: true } }
+      data.value = 'EC1A 1BB'
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid postcode - format: A9A 9AA', () => {
+      // Arrange
+      data.value = 'W1A 0AX'
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid postcode - format: A9 9AA', () => {
+      // Arrange
+      data.value = 'M1 1AE'
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid postcode - format: A99 9AA', () => {
+      // Arrange
+      data.value = 'B33 8TH'
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid postcode - format: AA9 9AA', () => {
+      // Arrange
+      data.value = 'CR2 6XH'
+
+      // Act
+      const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
+
+      // Assert
+      expect(validationMessage).toBe('')
+    })
+
+    test('with valid postcode - format: AA99 9AA', () => {
+      // Arrange
+      data.value = 'DN55 1PT'
 
       // Act
       const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
@@ -186,7 +243,7 @@ describe('InputFieldValidator', () => {
 
     test('with invalid postcode', () => {
       // Arrange
-      const data = { name: 'postcode', value: 'ls9', rules: { postcode: true } }
+      data = { name: 'postcode', value: 'ls9', rules: { postcode: true } }
 
       // Act
       const validationMessage = new InputFieldValidator(data.name, data.value, data.rules).validate()
