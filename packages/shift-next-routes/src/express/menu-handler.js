@@ -3,15 +3,13 @@ const MenuCache = require('../lib/menu-cache')
 const { setSurrogateHeaders } = require('../lib/set-cache-headers')
 
 module.exports = {
-  getMenu: async (req, res) => {
+  getMenu: async (req, res, next, menuCache = new MenuCache()) => {
     let response = {}
     // check preview state and skip catching if `preview: true`
     if (req.query && req.query.preview === 'true') {
       // fetch menus from API and skip caching
       response = await fetchMenuFromAPI(req, res)
     } else {
-      // initialize MenuCache client
-      const menuCache = new MenuCache()
       // fetch cached menus
       response = await menuCache.read()
       // check if there are no cached menus
