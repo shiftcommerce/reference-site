@@ -62,7 +62,7 @@ describe('My Account', () => {
       cy.contains(/H2155-88-small/i)
       cy.contains(/quantity2/i)
       cy.contains(/shipping methodDemo UK Delivery/i)
-      cy.contains(/shipping addresstest customer/i)
+      cy.contains(/delivery addresstest customer/i)
       cy.contains(/£219.90/i)
     })
   })
