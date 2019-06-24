@@ -30,10 +30,14 @@ const getAccountByTokenResponse = require('../../fixtures/account-by-token-respo
 
 axios.defaults.adapter = httpAdapter
 
+nock.disableNetConnect()
+
 beforeEach(() => {
   shiftApiConfig.set({
     apiHost: 'http://example.com',
-    apiTenant: 'test_tenant'
+    apiTenant: 'test_tenant',
+    omsHost: 'http://oms.example.com',
+    servicesSharedSecret: 'super_secret'
   })
 })
 
@@ -113,7 +117,7 @@ describe('getCustomerOrdersV1', () => {
       include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
     }
 
-    nock('https://shift-oms-dev.herokuapp.com')
+    nock(shiftApiConfig.get().omsHost)
       .get('/oms/v1/customer_orders/')
       .query(true)
       .reply(200, customerOrdersResponse)
@@ -137,7 +141,7 @@ describe('getCustomerOrdersV1', () => {
       include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
     }
 
-    nock('https://shift-oms-dev.herokuapp.com')
+    nock(shiftApiConfig.get().omsHost)
       .get('/oms/v1/customer_orders/')
       .query(true)
       .reply(422, {

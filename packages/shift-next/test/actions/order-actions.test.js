@@ -14,8 +14,12 @@ test('createOrder() converts cart into a valid request', () => {
       id: '10'
     }
   }
+ 
+  const account = {
+    customer_account_id: 1
+  }
 
-  orderActions.createOrder(mockCart, 'card', order, {})
+  orderActions.createOrder(mockCart, 'card', order, account, {})
 
   // Allow placed_at to be any date
   mockOrder.data.attributes.placed_at = expect.anything()
