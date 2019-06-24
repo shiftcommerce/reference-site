@@ -24,6 +24,8 @@ import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import buildSearchStateForURL from '../lib/build-search-state-for-url'
 import { sortOptions } from '../lib/sort-options'
 
+import { connectStateResults } from 'react-instantsearch-dom'
+
 // Config
 import Config from '../lib/config'
 
@@ -40,6 +42,7 @@ class SearchPage extends Component {
   }
 
   static onSearchStateChange (searchState) {
+    console.log({searchState})
     clearTimeout(this.debouncedSetState)
     this.debouncedSetState = setTimeout(() => {
       const href = this.searchStateToUrl(searchState)
@@ -73,7 +76,7 @@ class SearchPage extends Component {
           <title>{ suffixWithStoreName('Search') }</title>
         </this.Head>
         <div className='o-container'>
-          <ProductMenu />
+        <ProductMenu />
         { CustomBreadCrumb ? <CustomBreadCrumb items={[{ label: 'Search' }]} /> : <Breadcrumb /> }
         <div className='c-product-listing-wrapper'>
           <div className={classNames('c-product-listing-filter-heading', { 'c-product-listing-filter-heading--hide': !filtersShown })}>

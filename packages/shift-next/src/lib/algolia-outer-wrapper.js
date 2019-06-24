@@ -40,6 +40,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       // We should always configure this in the state to prevent a onSearchStateChange first render
       searchState.configure = {
         ...searchState.configure,
+        facets: '*',
         hitsPerPage: Config.get().algoliaResultsPerPage,
         distinct: Config.get().algoliaDistinctVariants || true,
         tagFilters: "-redirect"

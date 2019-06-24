@@ -5,8 +5,10 @@ import {
   Panel,
   RangeInput,
   RatingMenu,
-  RefinementList
+  RefinementList,
+  connectStateResults
 } from 'react-instantsearch-dom'
+
 
 // Components
 import SearchRatingFilter from './search-rating-filter'
@@ -14,8 +16,26 @@ import SearchSlider from './search-slider'
 
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
+  let facets
+const AlgoliaFacets = ({ searchResults }) => {
 
-export default class SearchFilters extends Component {
+  if (searchResults) {
+    console.log("searchResults._rawResults", searchResults._rawResults)
+    if (searchResults._rawResults[0].facets) {
+      facets =  [searchResults._rawResults[0].facets]
+    }
+  }
+  console.log(facets)
+   return (
+    (facets && facets.length) ? facets.map(facet => <RefinementList attribute={facet} /> ) : <div>
+      No results has been found
+    </div>
+    )
+}
+
+const ConnectedAlgoliaFacets = connectStateResults(AlgoliaFacets)
+
+class SearchFilters extends Component {
   renderRefinements (facets) {
     if (facets) {
       return (
@@ -51,6 +71,8 @@ export default class SearchFilters extends Component {
           }
         </>
       )
+    } else {
+      return (<ConnectedAlgoliaFacets />)
     }
   }
 
@@ -60,13 +82,9 @@ export default class SearchFilters extends Component {
     return (
       <>
           { this.renderRefinements(facets) }
-          <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <SearchRatingFilter attribute='product_rating' min={0} max={5} />
-          </Panel>
-          <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <SearchSlider attribute='current_price' precision={0} formatLabel={value => `£${value}`} />
-          </Panel>
       </>
     )
   }
 }
+
+export default SearchFilters
