@@ -7,6 +7,11 @@ import t from 'typy'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 export class OrderList extends PureComponent {
+  constructor (props) {
+    super(props)
+
+    this.headers = props.headers || ['Order No.', 'Order Date', 'Cost', 'Shipping Status', '']
+  }
   /**
   * Render the order details
   * @param  {Object} order
@@ -20,26 +25,25 @@ export class OrderList extends PureComponent {
     const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
     const orderTotal = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
 
-    console.log(order)
-
     return [
       {
-        label: 'Order No.',
+        label: this.headers[0],
         value: order.reference
       },
       {
-        label: 'Order Date',
+        label: this.headers[1],
         value: orderDate
       },
       {
-        label: 'Cost',
+        label: this.headers[2],
         value: `${order.pricing.currency}${orderTotal}`
       },
       {
-        label: 'Shipping Status',
+        label: this.headers[3],
         value: order.fulfillment_status
       },
       {
+        label: this.headers[4],
         value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
       }
     ].map((column, columnIndex) => {
@@ -74,7 +78,7 @@ export class OrderList extends PureComponent {
   }
 
   renderTableHeader () {
-    return ['Order No.', 'Order Date', 'Cost', ''].map((column, columnIndex) => {
+    return this.headers.map((column, columnIndex) => {
       return (
         <div
           key={columnIndex}
