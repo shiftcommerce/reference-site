@@ -14,7 +14,6 @@ export class LineItems extends Component {
     super(props)
 
     this.Link = Config.get().Link || Link
-    this.LineItems = Config.get().LineItems
   }
 
   /**
@@ -163,14 +162,6 @@ export class LineItems extends Component {
     if (!lineItemsCount) {
       return null
     } else {
-      if (this.LineItems) {
-        return (
-          <this.LineItems
-            lineItems={lineItems}
-            lineItemsCount={lineItemsCount}
-          />
-        )
-      }
       return (
         <div className='c-line-items'>
           { this.renderLineItems(lineItems) }
