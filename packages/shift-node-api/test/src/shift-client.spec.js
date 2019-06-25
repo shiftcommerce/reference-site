@@ -102,7 +102,9 @@ const createOrderResponseParsed = require('../fixtures/create-order-response-par
 beforeEach(() => {
   shiftApiConfig.set({
     apiHost: 'http://example.com',
-    apiTenant: 'test_tenant'
+    apiTenant: 'test_tenant',
+    omsHost: 'http://oms.example.com',
+    servicesSharedSecret: 'super_secret'
   })
 })
 
@@ -815,7 +817,7 @@ describe('SHIFTClient', () => {
 
   describe('getCustomerOrdersV1', () => {
     test('gets customer orders from oms', () => {
-      nock('https://shift-oms-dev.herokuapp.com')
+      nock(shiftApiConfig.get().omsHost)
         .get('/oms/v1/customer_orders/')
         .query(customerOrderDefaultQuery)
         .reply(200, customerOrdersResponse)
@@ -828,7 +830,7 @@ describe('SHIFTClient', () => {
     })
 
     test('should return errors if no customer_reference is present', () => {
-      nock('https://shift-oms-dev.herokuapp.com')
+      nock(shiftApiConfig.get().omsHost)
         .get('/oms/v1/customer_orders/')
         .query(customerOrderDefaultQuery)
         .reply(422, {

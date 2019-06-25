@@ -10,6 +10,7 @@ import Config from './config'
 
 // Lib
 import InitialPropsDelegator from './initial-props-delegator'
+import setSurrogateKeys from './set-surrogate-keys'
 
 const isServer = typeof window === 'undefined'
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__'
@@ -39,7 +40,16 @@ export default (App) => {
       appContext.reduxStore = reduxStore
 
       if (!reduxStore.getState().menu.loaded) {
-        await reduxStore.dispatch(readMenu(Config.get().menuRequest))
+        let options = {}
+        if (appContext.req) {
+          options.postRequestHook = response => { setSurrogateKeys(response.headers, appContext.req, appContext.res) }
+        }
+        // clone menu request
+        const menuRequest = Object.assign({}, Config.get().menuRequest)
+        // merge `preview` param as this is needed for disabling menu cache in the menu handler
+        menuRequest.query['preview'] = appContext.req.query.preview
+        // dispatch action for menus
+        await reduxStore.dispatch(readMenu(menuRequest, options))
       }
 
       // Get initial props from the parent

@@ -29,6 +29,17 @@ const logger = require('./lib/logger')
 const { fetchData } = require('./lib/api-server')
 const { setSurrogateHeaders } = require('./lib/set-cache-headers')
 
+// shift-node-api Config
+const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
+
+shiftApiConfig.set({
+  apiHost: process.env.API_HOST,
+  apiTenant: process.env.API_TENANT,
+  apiAccessToken: process.env.API_ACCESS_TOKEN,
+  omsHost: process.env.OMS_HOST,
+  servicesSharedSecret: process.env.SERVICES_SHARED_SECRET
+})
+
 // ShiftNext
 const {
   getSessionExpiryTime,

@@ -1,18 +1,24 @@
 // Libraries
-import React from 'react'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
-
 import Config from '../../lib/config'
-import link from '../../objects/link'
+import Link from '../../objects/link'
 
-export const SidebarItem = ({ label, location, current }) => {
-  const Link = Config.get().Link || link
+export class SidebarItem extends PureComponent {
+  constructor (props) {
+    super(props)
 
-  return (
-    <Link href={location}>
+    this.Link = Config.get().Link || Link
+  }
+
+  render () {
+    const { label, location, current } = this.props
+    return (
       <li className={classNames('c-sidebar__item', { 'c-sidebar__item--current': current })}>
-        { label }
+        <this.Link href={location} className='c-sidebar__link'>
+          { label }
+        </this.Link>
       </li>
-    </Link>
-  )
+    )
+  }
 }

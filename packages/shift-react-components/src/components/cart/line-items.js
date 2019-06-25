@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
@@ -73,17 +73,15 @@ export class LineItems extends Component {
    */
   renderButtonsAndTotal (lineItem) {
     return (
-      <>
-        <div className='c-line-items__amounts'>
-          { lineItem.sub_total !== lineItem.total && (
-            <>
-              <a className='c-line-items__amount'>&pound;{ decimalPrice(lineItem.sub_total) }</a>
-              <a className='c-line-items__amount c-line-items__amount--discount'>- &pound;{ decimalPrice(lineItem.total_discount) }</a>
-            </>
-          ) }
-          <a className='c-line-items__amount c-line-items__amount--total'>&pound;{ decimalPrice(lineItem.total) }</a>
-        </div>
-      </>
+      <div className='c-line-items__amounts'>
+        { lineItem.sub_total !== lineItem.total && (
+          <Fragment>
+            <a className='c-line-items__amount'>&pound;{ decimalPrice(lineItem.sub_total) }</a>
+            <a className='c-line-items__amount c-line-items__amount--discount'>- &pound;{ decimalPrice(lineItem.total_discount) }</a>
+          </Fragment>
+        ) }
+        <a className='c-line-items__amount c-line-items__amount--total'>&pound;{ decimalPrice(lineItem.total) }</a>
+      </div>
     )
   }
 
@@ -97,7 +95,7 @@ export class LineItems extends Component {
       <div className='c-line-items__title'>
         <div className='c-line-items__details'>
           <h4 className='c-line-items__details-title u-bold'>
-            { `${lineItem.item.product.title} - ${lineItem.item.title}` }
+            { lineItem.item.product.title }{ (lineItem.item.product.title && lineItem.item.title) && ' - '}{ lineItem.item.title }
           </h4>
           <div className='c-line-items__details-sku'>
             <span>
@@ -105,13 +103,13 @@ export class LineItems extends Component {
             </span>
           </div>
         </div>
-        <div className='c-line-items__remove'>
+        { this.props.deleteItem && <div className='c-line-items__remove'>
           <div className='c-line-items__delete'>
             <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
               Delete
             </a>
           </div>
-        </div>
+        </div> }
       </div>
     )
   }
@@ -124,12 +122,10 @@ export class LineItems extends Component {
    */
   renderParams (lineItem) {
     return (
-      <>
-        <div className='c-line-items__quantity'>
-          <div className='c-line-items__quantity-header'><span>Quantity</span></div>
-          { this.renderLineItemQuantity(lineItem) }
-        </div>
-      </>
+      <div className='c-line-items__quantity'>
+        <div className='c-line-items__quantity-header'><span>Quantity</span></div>
+        { this.renderLineItemQuantity(lineItem) }
+      </div>
     )
   }
 

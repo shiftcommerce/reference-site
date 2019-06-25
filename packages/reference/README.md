@@ -28,6 +28,15 @@ cd shift-front-end-react
 ```bash
 yarn install
 ```
+
+* **Install dependencies:**
+The system utilises the Memcached in-memory store for caching. As such, ensure you have it
+installed before booting eg.:
+
+```
+brew install memcached
+```
+
 * **Add .env:**
 
 [.env example](https://github.com/shiftcommerce/shift-front-end-react/blob/master/.env.example)
@@ -104,11 +113,21 @@ yarn test -u
 The reference site has a default set of best-practice security headers.
 
 If external image hosts are used then these will need to be included in the
-Content Security Policy - this can be done by setting the `IMAGE_HOSTS` environment
+Content Security Policy (CSP) - this can be done by setting the `IMAGE_HOSTS` environment
 variable to a comma-separated list of hosts, e.g.:
 
 ```
 IMAGE_HOSTS=https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com
+```
+
+Similarly, if external frame, connect, script or style hosts are used, they can be included
+in the CSP by setting the following environment variables:
+
+```
+CONNECT_HOSTS=<https://host1.example.com,https://host2.example.com>
+FRAME_HOSTS=<https://host1.example.com,https://host2.example.com>
+SCRIPT_HOSTS=<https://host1.example.com,https://host2.example.com>
+STYLE_HOSTS=<https://host1.example.com,https://host2.example.com>
 ```
 
 While working on the site you may find you need to update these headers depending

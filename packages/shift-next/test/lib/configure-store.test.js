@@ -1,10 +1,7 @@
-// Libraries
-import { createStore } from 'redux'
-
 // Config
 import Config from '../../src/lib/config'
 
-describe('Root Reducer', () => {    
+describe('fetchReducers', () => {
   test('it merges custom reducers', () => {
     // Arrange
     const customReducer1 = jest.fn(() => { return { test: true } })
@@ -15,10 +12,10 @@ describe('Root Reducer', () => {
     })
 
     // require reducer after config setup
-    const rootReducer = require('../../src/reducers/root-reducer').default
+    const initializeStore = require('../../src/lib/configure-store').initializeStore
 
     // Act
-    const store = createStore(rootReducer)
+    const store = initializeStore({})
     const state = store.getState()
 
     // Assert

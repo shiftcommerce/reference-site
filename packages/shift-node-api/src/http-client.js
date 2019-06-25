@@ -1,7 +1,9 @@
-const axios = require('axios')
 const qs = require('qs')
+const axios = require('axios')
+
 const shiftApiConfig = require('./lib/config')
 const { setCacheHeaders } = require('./lib/set-cache-headers')
+const { generateTimeBasedToken } = require('./lib/time-based-token')
 
 const defaultHeaders = {
   'Content-Type': 'application/vnd.api+json',
@@ -13,20 +15,35 @@ class HTTPClient {
     const query = qs.stringify(queryObject)
     const requestUrl = this.createRequestUrl(url, query)
 
+    let omsHmacRequest = null
+    let omsHmacToken = null
+
+    if (url.includes(shiftApiConfig.get().omsHost)) {
+      omsHmacRequest = true
+      omsHmacToken = generateTimeBasedToken(shiftApiConfig.get().servicesSharedSecret)
+    }
+
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug(`GET ${requestUrl}`)
+
     const response = axios({
       method: 'get',
       url: requestUrl,
       headers: { ...defaultHeaders, ...headers },
       auth: {
         username: shiftApiConfig.get().apiTenant,
-        password: shiftApiConfig.get().apiAccessToken
+        password: omsHmacRequest ? omsHmacToken : shiftApiConfig.get().apiAccessToken
       }
     })
+
     return this.determineResponse(response)
   }
 
   post (url, body, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
+
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug({ msg: `POST ${requestUrl}`, body })
 
     const response = axios({
       method: 'post',
@@ -45,6 +62,9 @@ class HTTPClient {
   patch (url, body, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
 
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug({ msg: `PATCH ${requestUrl}`, body })
+
     const response = axios({
       method: 'patch',
       url: requestUrl,
@@ -62,6 +82,9 @@ class HTTPClient {
   delete (url, headers = {}) {
     const requestUrl = this.createRequestUrl(url)
 
+    const logger = shiftApiConfig.get().logger
+    logger && logger.debug(`DELETE ${requestUrl}`)
+
     const response = axios({
       method: 'delete',
       url: requestUrl,
@@ -78,12 +101,9 @@ class HTTPClient {
   createRequestUrl (url, query) {
     let requestUrl
 
-    // TODO: remove this when oms platform proxy is live
-    const regex = /shift-oms-dev/i
-
     if (!query) {
       requestUrl = `${shiftApiConfig.get().apiHost}/${shiftApiConfig.get().apiTenant}/${url}`
-    } else if (regex.test(url)) {
+    } else if (url.includes(shiftApiConfig.get().omsHost)) {
       // TODO: remove this statement when platform proxy is live
       requestUrl = `${url}/?${query}`
     } else {
