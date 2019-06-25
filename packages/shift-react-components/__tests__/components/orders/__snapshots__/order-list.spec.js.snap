@@ -7,6 +7,23 @@ exports[`renders correctly 1`] = `
       "data": Array [
         Object {
           "account_reference": "shiftacc",
+          "billing_addresses": Array [
+            Object {
+              "city": "Leeds",
+              "company": "SHIFT Commerce",
+              "country": "United Kingdom",
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "lines": Array [
+                "The Calls",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+          ],
           "customer": Object {
             "email": "test@shiftcommerce.com",
             "id": "61c40964-4b4c-4f54-b580-958798087312",
@@ -561,6 +578,12 @@ exports[`renders correctly 1`] = `
       <div
         className="c-order-history-table__col c-order-history-table__col--header"
         key="3"
+      >
+        Shipping Status
+      </div>
+      <div
+        className="c-order-history-table__col c-order-history-table__col--header"
+        key="4"
       />
     </div>
     <div
@@ -587,7 +610,7 @@ exports[`renders correctly 1`] = `
         >
           Order Date
         </span>
-        Jan 1, 2018
+        1 Jan 2018
       </div>
       <div
         className="c-order-history-table__col"
@@ -598,11 +621,21 @@ exports[`renders correctly 1`] = `
         >
           Cost
         </span>
-        1506.00
+        GBP1506.00
       </div>
       <div
         className="c-order-history-table__col"
         key="3"
+      >
+        <span
+          className="c-order-history-table__label"
+        >
+          Shipping Status
+        </span>
+      </div>
+      <div
+        className="c-order-history-table__col"
+        key="4"
       >
         <a
           className="o-button o-button--primary"
@@ -637,7 +670,7 @@ exports[`renders correctly 1`] = `
         >
           Order Date
         </span>
-        Jan 1, 2018
+        1 Jan 2018
       </div>
       <div
         className="c-order-history-table__col"
@@ -648,11 +681,21 @@ exports[`renders correctly 1`] = `
         >
           Cost
         </span>
-        1606.00
+        GBP1606.00
       </div>
       <div
         className="c-order-history-table__col"
         key="3"
+      >
+        <span
+          className="c-order-history-table__label"
+        >
+          Shipping Status
+        </span>
+      </div>
+      <div
+        className="c-order-history-table__col"
+        key="4"
       >
         <a
           className="o-button o-button--primary"

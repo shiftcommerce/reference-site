@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<ShippingAddresses
+<OrderAddresses
   addresses={
     Array [
       Object {
@@ -39,7 +39,7 @@ exports[`renders correctly 1`] = `
   }
 >
   <div
-    className="c-order-history__shipping-address"
+    className="c-order-history__address"
     key="61c40964-4b4c-4f54-b580-958798087312_1"
   >
     <p
@@ -50,7 +50,9 @@ exports[`renders correctly 1`] = `
     <p>
       SHIFT Commerce
     </p>
-    <p>
+    <p
+      key="0"
+    >
       The Calls
     </p>
     <p>
@@ -67,7 +69,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="c-order-history__shipping-address"
+    className="c-order-history__address"
     key="61c40964-4b4c-4f54-b580-958798087312_2"
   >
     <p
@@ -76,8 +78,15 @@ exports[`renders correctly 1`] = `
       Test Customer 2
     </p>
     <p />
-    <p>
-      SHIFT Commerce,The Calls Landing
+    <p
+      key="0"
+    >
+      SHIFT Commerce
+    </p>
+    <p
+      key="1"
+    >
+      The Calls Landing
     </p>
     <p>
       Leeds
@@ -92,5 +101,5 @@ exports[`renders correctly 1`] = `
       United Kingdom
     </p>
   </div>
-</ShippingAddresses>
+</OrderAddresses>
 `;

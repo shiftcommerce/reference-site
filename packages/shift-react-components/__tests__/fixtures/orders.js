@@ -22,6 +22,23 @@ const orders = {
         name: 'SHIFT',
         meta_attributes: {}
       },
+      billing_addresses: [
+        {
+          id: 'fda3fcff-92c7-414a-bdea-156cde21a926_1',
+          name: 'Test Customer',
+          company: 'SHIFT Commerce',
+          lines: [
+            'The Calls'
+          ],
+          city: 'Leeds',
+          state: 'West Yorkshire',
+          postcode: 'LS2 7EY',
+          country: 'United Kingdom',
+          meta_attributes: {
+            further: 'information'
+          }
+        }
+      ],
       line_items: [
         {
           id: '61c40964-4b4c-4f54-b580-958798087312_0',

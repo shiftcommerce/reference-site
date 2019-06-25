@@ -21,7 +21,7 @@ test('renders correctly', () => {
 
   const order = orders.data[0]
   const orderTotal = penceToPounds(order.pricing.total_inc_tax)
-  const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
+  const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
   // Assert
   expect(wrapper).toMatchSnapshot()
