@@ -22,18 +22,27 @@ export class OrderList extends PureComponent {
 
     console.log(order)
 
-    return [{
-      label: 'Order No.',
-      value: order.reference
-    }, {
-      label: 'Order Date',
-      value: orderDate
-    }, {
-      label: 'Cost',
-      value: `${order.pricing.currency}${orderTotal}`
-    }, {
-      value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
-    }].map((column, columnIndex) => {
+    return [
+      {
+        label: 'Order No.',
+        value: order.reference
+      },
+      {
+        label: 'Order Date',
+        value: orderDate
+      },
+      {
+        label: 'Cost',
+        value: `${order.pricing.currency}${orderTotal}`
+      },
+      {
+        label: 'Shipping Status',
+        value: order.fulfillment_status
+      },
+      {
+        value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
+      }
+    ].map((column, columnIndex) => {
       return (
         <div
           key={columnIndex}
