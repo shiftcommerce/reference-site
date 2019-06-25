@@ -7,6 +7,20 @@ import t from 'typy'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 export class OrderList extends PureComponent {
+  // pending_approval unfulfilled short_shipped partially_shipped fully_shipped
+
+  fulfillmentStatus(status) {
+    const mappedStatuses = {
+      pending_approval: 'Awaiting shipment',
+      unfulfilled: 'Awaiting shipment',
+      short_shipped: 'Short shipped',
+      partially_shipped: 'Partially shipped',
+      fully_shipped: 'Shipped'
+    }
+
+    return mappedStatuses[status]
+  }
+
   /**
   * Render the order details
   * @param  {Object} order
@@ -37,7 +51,7 @@ export class OrderList extends PureComponent {
       },
       {
         label: 'Shipping Status',
-        value: order.fulfillment_status
+        value: this.fulfillmentStatus(order.fulfillment_status)
       },
       {
         value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
