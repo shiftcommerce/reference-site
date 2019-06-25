@@ -132,7 +132,7 @@ module.exports = {
     }
   },
 
-  changePassword: async (req, res) => {
+  updateCustomerPassword: async (req, res) => {
     try {
       const response = await SHIFTClient.updateCustomerAccountPasswordV1(getAccount.data.id, request)
       return res.status(response.status).send(response.data)

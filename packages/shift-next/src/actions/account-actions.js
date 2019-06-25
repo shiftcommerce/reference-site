@@ -15,6 +15,18 @@ export function fetchAccountDetails (options) {
   return readEndpoint(accountRequest, options)
 }
 
+export function updateCustomerPassword (details, options) {
+  const request = {
+    endpoint: '/updateCustomerPassword',
+    body: {
+      ...details
+    },
+    successActionType: types.SET_ACCOUNT
+  }
+
+  return postEndpoint(request, options)
+}
+
 export function updateCustomerAccount (details, options) {
   const request = {
     endpoint: '/updateCustomerAccount',
