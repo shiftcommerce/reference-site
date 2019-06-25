@@ -30,7 +30,7 @@ class MenuCache {
     try {
       const data = await this.cache.get(this.cacheKey)
       const response = (data ? JSON.parse(data.value) : {})
-      this.log.debug('Reading API menu response from cache', response)
+      this.log.trace('Reading API menu response from cache')
       return response
     } catch (error) {
       this.log.error('Error fetching menu cache', error)
@@ -46,7 +46,7 @@ class MenuCache {
   async set (response, cacheDuration = this.defaultCacheDuration) {
     try {
       const result = await this.cache.set(this.cacheKey, JSON.stringify(response), { expires: cacheDuration })
-      this.log.debug('Writing API menu response in cache: ', result)
+      this.log.info('Writing API menu response in cache: ', result)
       return result
     } catch (error) {
       this.log.error('Error setting menu cache', error)

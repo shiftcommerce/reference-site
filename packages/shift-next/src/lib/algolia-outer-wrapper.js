@@ -40,10 +40,10 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       // We should always configure this in the state to prevent a onSearchStateChange first render
       searchState.configure = {
         ...searchState.configure,
-        facets: '*',
+        facets: ['*'],
         hitsPerPage: Config.get().algoliaResultsPerPage,
         distinct: Config.get().algoliaDistinctVariants || true,
-        tagFilters: "-redirect"
+        tagFilters: '-redirect'
       }
 
       let resultsState = {
@@ -69,7 +69,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       }
 
       // Default implementation
-      return 700
+      return 2000
     }
 
     onSearchStateChange (searchState) {
@@ -102,21 +102,6 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       const urlSearchState = buildSearchStateForURL(searchState)
       // Build the query string and append it to search path
       return searchState.query ? `/search?${qs.stringify(urlSearchState)}` : '/search'
-    }
-
-    static getDerivedStateFromProps (newProps, prevState) {
-      if (Page.algoliaGetDerivedStateFromProps) {
-        return Page.algoliaGetDerivedStateFromProps.call(this, newProps, prevState)
-      }
-      return null
-    }
-
-    componentDidUpdate (prevProps, prevState) {
-      return Page.algoliaComponentDidUpdate && Page.algoliaComponentDidUpdate.call(this, prevProps, prevState)
-    }
-
-    componentDidMount () {
-      return Page.algoliaComponentDidMount && Page.algoliaComponentDidMount.call(this)
     }
 
     render () {
