@@ -1,6 +1,6 @@
 describe('My Account', () => {
   describe('Order History', () => {
-    it('renders a list of previous orders and expands an individual order', () => {
+    it('renders a list of previous orders', () => {
       // Set loggedIn in cookie
       cy.setCookie('signedIn', 'true')
 
@@ -53,17 +53,34 @@ describe('My Account', () => {
       cy.wait('@getCustomerOrders')
 
       // Check that the data returned is rendered in a list
-      cy.get('.c-order-history-table__row--body').should('have.length', 5)
+      cy.get('.c-order-history-table__row--body').should('have.length', 2)
 
       // Expand the first order in the list
       cy.get('.c-order-history-table__row--body a').first().click()
 
       // Expect first order to contain values
-      cy.contains(/H2155-88-small/i)
-      cy.contains(/quantity2/i)
-      cy.contains(/shipping methodDemo UK Delivery/i)
+      cy.contains(/OCT BREWER JUG SET 2CUPS - VARIANT 2 - 8254088166147/i)
+      cy.contains(/quantity1/i)
+      cy.contains(/shipping methodStandard/i)
       cy.contains(/delivery addresstest customer/i)
-      cy.contains(/£219.90/i)
+      cy.contains(/£77.71/i)
+
+      cy.contains(/View all orders/).click()
+    })
+
+    it('expands an orders details and back again', () => {
+      cy.get('.c-myaccount-main').within(($myaccount) => {
+        // Click 'VIEW DETAILS' on the last order
+        cy.get('.c-order-history-table__row--body a').last().click()
+
+        cy.contains(/£28.26/i)
+        cy.contains(/Standard/)
+
+        cy.contains(/View all orders/).click()
+
+        // Check that we've landed back on the main orders index list
+        cy.get('.c-order-history-table__row--body').should('have.length', 2)
+      })
     })
   })
 })
