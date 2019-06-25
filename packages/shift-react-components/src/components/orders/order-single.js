@@ -6,7 +6,7 @@ import format from 'date-fns/format'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 // Components
-import ShippingAddresses from './shipping-addresses'
+import { OrderAddresses } from './order-addresses'
 import { LineItems } from '../cart/line-items'
 
 export class OrderSingle extends PureComponent {
@@ -99,10 +99,10 @@ export class OrderSingle extends PureComponent {
       body: order.shipping_methods[0].label
     }, {
       header: 'Invoice Address',
-      body: <ShippingAddresses addresses={order.shipping_addresses} />
+      body: <OrderAddresses addresses={order.billing_addresses} />
     }, {
       header: 'Delivery Address',
-      body: <ShippingAddresses addresses={order.shipping_addresses} />
+      body: <OrderAddresses addresses={order.shipping_addresses} />
     }, {
       header: 'Currency',
       body: order.pricing.currency
