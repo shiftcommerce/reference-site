@@ -7,13 +7,14 @@ import { decimalPrice } from '../../lib/decimal-price'
 import DropdownSelect from '../../objects/dropdown-select'
 import { Image } from '../../objects/image'
 import Config from '../../lib/config'
-import link from '../../objects/link'
+import Link from '../../objects/link'
 
 export class LineItems extends Component {
   constructor (props) {
     super(props)
 
-    this.Link = Config.get().Link || link
+    this.Link = Config.get().Link || Link
+    this.LineItems = Config.get().LineItems
   }
 
   /**
@@ -162,6 +163,14 @@ export class LineItems extends Component {
     if (!lineItemsCount) {
       return null
     } else {
+      if (this.LineItems) {
+        return (
+          <this.LineItems
+            lineItems={lineItems}
+            lineItemsCount={lineItemsCount}
+          />
+        )
+      }
       return (
         <div className='c-line-items'>
           { this.renderLineItems(lineItems) }

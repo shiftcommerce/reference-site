@@ -3,6 +3,7 @@ import React, { PureComponent, Fragment } from 'react'
 import format from 'date-fns/format'
 
 // Lib
+import { fulfillmentStatus } from '../../lib/fulfillment-status'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 // Components
@@ -90,22 +91,25 @@ export class OrderSingle extends PureComponent {
       body: order.reference
     }, {
       header: 'Order Date',
-      body: format(new Date(order.placed_at), 'MMM D, YYYY')
+      body: format(new Date(order.placed_at), 'D MMM YYYY')
     }, {
       header: 'Cost',
       body: `£${penceToPounds(order.pricing.total_inc_tax)}`
     }, {
-      header: 'Shipping Method',
-      body: order.shipping_methods[0].label
-    }, {
+      header: 'Currency',
+      body: order.pricing.currency
+    },{
       header: 'Invoice Address',
       body: <OrderAddresses addresses={order.billing_addresses} />
     }, {
       header: 'Delivery Address',
       body: <OrderAddresses addresses={order.shipping_addresses} />
     }, {
-      header: 'Currency',
-      body: order.pricing.currency
+      header: 'Shipping Method',
+      body: order.shipping_methods[0].label
+    }, {
+      header: 'Shipping Status',
+      body: fulfillmentStatus(order.fulfillment_status)
     }]
 
     return (
