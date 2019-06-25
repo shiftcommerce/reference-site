@@ -114,7 +114,7 @@ function prepareLineItems (cart) {
     return {
       attributes: {
         sku: lineItem.sku,
-        title: lineItem.title,
+        title: `${lineItem.item.product.title} - ${lineItem.title}`,
         unit_quantity: lineItem.unit_quantity,
         each_ex_tax: eachExTax,
         each_inc_tax: eachIncTax,
