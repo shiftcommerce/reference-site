@@ -28,7 +28,7 @@ const contentSecurityPolicy = (server, policyOptions = {}) => {
       scriptSrc: ["'self'", "'unsafe-inline'", 'https://js.stripe.com', 'https://*.paypal.com', 'https://*.paypalobjects.com', "'unsafe-eval'"].concat(formatHosts(policyOptions.scriptHosts)),
       
       // Allow <frame> and <iframe>'s from third party sources.
-      frameSrc: ['https://js.stripe.com', 'https://*.paypal.com'].concat(formatHosts(policyOptions.frameHosts)),
+      frameSrc: ['https://js.stripe.com', 'https://*.youtube.com', 'https://*.paypal.com'].concat(formatHosts(policyOptions.frameHosts)),
       
       // Disable loading using script interfaces
       // i.e. <a> pings, Fetch, XHR, WebSocket and EventSource
