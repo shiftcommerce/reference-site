@@ -61,6 +61,25 @@ export function requestPasswordResetEmail (email) {
   return readEndpoint(forgottenPasswordRequest(email))
 }
 
+export function changePassword (token, password, options) {
+  const request = {
+    endpoint: '/changePassword',
+    body: {
+      data: {
+        type: 'password_recoveries',
+        attributes: {
+          token: token,
+          password: password
+        }
+      }
+    },
+    successActionType: types.PASSWORD_RESET,
+    errorActionType: types.ERROR_ACCOUNT
+  }
+
+  return postEndpoint(request, options)
+}
+
 export function passwordReset (token, password, options) {
   const request = {
     endpoint: '/passwordReset',
