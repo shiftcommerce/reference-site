@@ -12,6 +12,19 @@ export class OrderList extends PureComponent {
 
     this.headers = props.headers || ['Order No.', 'Order Date', 'Cost', 'Shipping Status', '']
   }
+  // pending_approval unfulfilled short_shipped partially_shipped fully_shipped
+
+  fulfillmentStatus(status) {
+    const mappedStatuses = {
+      pending_approval: 'Awaiting shipment',
+      unfulfilled: 'Awaiting shipment',
+      short_shipped: 'Short shipped',
+      partially_shipped: 'Partially shipped',
+      fully_shipped: 'Shipped'
+    }
+
+    return mappedStatuses[status]
+  }
   /**
   * Render the order details
   * @param  {Object} order
@@ -40,7 +53,7 @@ export class OrderList extends PureComponent {
       },
       {
         label: this.headers[3],
-        value: order.fulfillment_status
+        value: this.fulfillmentStatus(order.fulfillment_status)
       },
       {
         label: this.headers[4],
