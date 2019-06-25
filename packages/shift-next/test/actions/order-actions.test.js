@@ -14,7 +14,7 @@ test('createOrder() converts cart into a valid request', () => {
       id: '10'
     }
   }
- 
+
   const account = {
     customer_account_id: 1
   }
