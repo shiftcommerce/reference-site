@@ -4,6 +4,7 @@ import qs from 'qs'
 import classNames from 'classnames'
 import { SortBy } from 'react-instantsearch-dom'
 import Router from 'next/router'
+import equal from 'deep-equal'
 
 // Components
 import GlobalSearchFilters from '@shiftcommerce/shift-react-components/src/components/search/global-search-filters'
@@ -21,6 +22,7 @@ import { Button } from '@shiftcommerce/shift-react-components/src/objects/button
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import { sortOptions } from '../lib/sort-options'
+import buildSearchStateForURL from '../lib/build-search-state-for-url'
 
 // Config
 import Config from '../lib/config'
