@@ -52,7 +52,7 @@ export class OrderList extends PureComponent {
       },
       {
         label: this.headers[4],
-        value: <a href={`${pagePath}${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
+        value: <a href={`${pagePath}/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
       }
     ].map((column, columnIndex) => {
       return (
