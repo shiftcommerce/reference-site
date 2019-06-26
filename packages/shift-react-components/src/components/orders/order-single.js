@@ -18,7 +18,7 @@ export class OrderSingle extends PureComponent {
    */
   calculateSubTotal (order) {
     return order.line_items.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.pricing.pre_discount_line_total_ex_tax, 0
+      (accumulator, currentValue) => accumulator + currentValue.pricing.pre_discount_line_total_inc_tax, 0
     )
   }
 
@@ -80,6 +80,17 @@ export class OrderSingle extends PureComponent {
         { body && <div className='c-order-single__body'>{ body }</div> }
       </Fragment>
     )
+  }
+
+  renderOrderDiscount (order) {
+    if (order.pricing.order_discount_inc_tax > 0) {
+      return (
+        <dl aria-label='Order discount'>
+          <dt> Discount: </dt>
+          <dd> -£{ penceToPounds(order.pricing.order_discount_inc_tax) } </dd>
+        </dl>
+      )
+    } else { null }
   }
 
   render () {
@@ -145,14 +156,23 @@ export class OrderSingle extends PureComponent {
                       <dt> UK VAT 20% (Included in Price): </dt>
                       <dd> £{ penceToPounds(this.calculateTax(order)) } </dd>
                     </dl>
-                    <dl aria-label='Discounts'>
-                      <dt> { order.discounts[0].label } </dt>
-                      <dd> -£{ penceToPounds(order.discounts[0].amount_inc_tax) } </dd>
-                    </dl>
+
+                    { order.discounts.map((discount) => {
+                      return (
+                        <dl key={discount.label} aria-label='Discounts'>
+                          <dt> { discount.label } </dt>
+                          <dd> -£{ penceToPounds(discount.amount_inc_tax) } </dd>
+                        </dl>
+                      )
+                    })}
+
                     <dl aria-label='Shipping'>
                       <dt> Shipping Total: </dt>
                       <dd> £{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
                     </dl>
+
+                    { this.renderOrderDiscount(order) }
+
                     <dl aria-label='Total' className='c-cart-summary__total'>
                       <dt> Total: </dt>
                       <dd> £{ penceToPounds(order.pricing.total_inc_tax) } </dd>

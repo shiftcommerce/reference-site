@@ -55,7 +55,6 @@ export class AccountOrders extends Component {
           <h2>Order History</h2>
         </div>
         <OrderList
-          fetchOrders={fetchOrders}
           orders={orders}
           pageNumber={pageNumber}
           pagePath={pagePath}
