@@ -44,17 +44,16 @@ export function setLoggedInFromCookies () {
 }
 
 export function getCustomerOrders (pageNumber, options) {
-  // set offset & limit
-  const pageLimit = parseInt(Config.get().customerOrdersPageLimit || 10)
-  const pageOffset = parseInt(Config.get().customerOrdersPageOffset || 10)
+  // set limit
+  const pageLimit = parseInt(Config.get().orderHistoryPageLimit || 10)
   // build request params
   const customerOrdersRequest = {
     endpoint: `/customerOrders`,
     query: {
       page: { 
         limit: pageLimit,
-        // calculate the page offset using pageNumber & page offset
-        offset: (pageOffset * (parseInt(pageNumber) - 1))
+        // calculate the page offset using pageNumber & page limit
+        offset: (pageLimit * (parseInt(pageNumber) - 1))
       }
     },
     requestActionType: types.GET_CUSTOMER_ORDERS,
