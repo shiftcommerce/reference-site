@@ -70,7 +70,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       }
 
       // Default implementation
-      return 2000
+      return 700
     }
 
     onSearchStateChange (searchState) {
@@ -102,7 +102,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       // Default implementation
       const urlSearchState = buildSearchStateForURL(searchState)
       // Build the query string and append it to search path
-      return searchState.query ? `/search?${qs.stringify(urlSearchState)}` : '/search'
+      return `/search?${qs.stringify(urlSearchState)}`
     }
 
     render () {

@@ -69,11 +69,8 @@ class CategoryPage extends Component {
     return response.data
   }
 
-  static buildAlgoliaStates (params) {
-    const searchState = params.asPath.includes('?')
-      ? qs.parse(params.asPath.substring(params.asPath.indexOf('?') + 1))
-      : {}
-    return Object.assign({ ...searchState })
+  static buildAlgoliaStates ({ query: { id, ...options } }) {
+    return Object.assign({ configure: { filters: `category_ids:${id}` } }, options)
   }
 
   static onSearchStateChange (searchState) {

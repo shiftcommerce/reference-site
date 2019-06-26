@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import qs from 'qs'
 import classNames from 'classnames'
 import { SortBy } from 'react-instantsearch-dom'
+import Router from 'next/router'
 
 // Components
 import GlobalSearchFilters from '@shiftcommerce/shift-react-components/src/components/search/global-search-filters'
@@ -26,6 +27,24 @@ import Config from '../lib/config'
 
 class SearchPage extends Component {
   static algoliaEnabled = () => true
+
+  static algoliaComponentDidUpdate (prevProps, prevState) {
+    if (!equal(prevState.searchState, this.state.searchState)) return
+
+    const urlSearchState = qs.parse(window.location.search.slice(1))
+    if (!equal(buildSearchStateForURL(this.state.searchState), urlSearchState)) {
+      this.setState({ searchState: Object.assign(urlSearchState, { configure: prevProps.searchState.configure }) })
+    }
+  }
+
+  static onSearchStateChange (searchState) {
+    clearTimeout(this.debouncedSetState)
+    this.debouncedSetState = setTimeout(() => {
+      const href = this.searchStateToUrl(searchState)
+      Router.push(href, href)
+    }, this.updateAfter())
+    this.setState({ searchState })
+  }
 
   // fix SSR
   static buildAlgoliaStates (params) {

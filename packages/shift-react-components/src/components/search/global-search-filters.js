@@ -36,7 +36,7 @@ export class GlobalSearchFilters extends Component {
       },
       {
         label: 'Rating',
-        aggregation_type: 'list',
+        aggregation_type: 'rating',
         searchable: false,
         source: 'product_rating'
       },

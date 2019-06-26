@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import {
   HierarchicalMenu,
   Panel,
-  RatingMenu,
   RefinementList
 } from 'react-instantsearch-dom'
 import SearchSlider from './search-slider'
+import SearchRatingFilter from './search-rating-filter'
 
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
@@ -29,10 +29,10 @@ class SearchFilters extends Component {
                   filter = <HierarchicalMenu attribute={source} searchable={searchable} />
                   break
                 case 'range':
-                  filter = <><SearchSlider attribute={source} precision={0} /></>
+                  filter = <SearchSlider attribute={source} precision={0} formatLabel={value => `£${value}`} />
                   break
                 case 'rating':
-                  filter = <RatingMenu attribute={source} />
+                  filter = <SearchRatingFilter attribute={source} min={0} max={5} />
                   break
                 default:
                   // no-op
@@ -55,7 +55,7 @@ class SearchFilters extends Component {
 
     return (
       <>
-          { this.renderRefinements(facets) }
+        { this.renderRefinements(facets) }
       </>
     )
   }
