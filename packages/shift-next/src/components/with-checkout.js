@@ -5,10 +5,10 @@ import Router from 'next/router'
 
 // Libs
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import { canCheckout } from '../lib/cart-helpers'
 
 // Next config
 import getConfig from 'next/config'
-const { publicRuntimeConfig: { PAYPAL_CLIENT_ID: paypalClientID } } = getConfig()
 
 // Config
 import Config from '../lib/config'
@@ -30,6 +30,8 @@ import {
 } from '../actions/cart-actions'
 // When with-checkout.js is extracted from the reference site submitCoupon and setAPIError can be
 // removed from 'client/actions/cart-actions'. These actions are duplicated in shift-next
+
+const { publicRuntimeConfig: { PAYPAL_CLIENT_ID: paypalClientID } } = getConfig()
 
 export function withCheckout (WrappedComponent) {
   class WithCheckout extends Component {
@@ -59,7 +61,7 @@ export function withCheckout (WrappedComponent) {
 
     componentDidMount () {
       this.props.dispatch(readCart()).then(() => {
-        if (!this.props.cart.line_items_count) {
+        if (!this.props.cart.line_items_count || !canCheckout(this.props.cart)) {
           return Router.push('/cart')
         }
         this.setState({
