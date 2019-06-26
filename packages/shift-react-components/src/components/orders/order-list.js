@@ -1,5 +1,6 @@
 // Libraries
 import React, { PureComponent, Fragment } from 'react'
+import classNames from 'classnames'
 import format from 'date-fns/format'
 import t from 'typy'
 
@@ -101,13 +102,13 @@ export class OrderList extends PureComponent {
    * @param  {Number} page
    * @return {String} - HTML markup for the component
    */
-  renderPageLink (label, page) {
+  renderPageLink (label, page, className) {
     const { fetchOrders, pagePath } = this.props
     return (
       <Link
         children={label}
         href={`${pagePath}?page=${page}`}
-        className='o-button o-button--primary'
+        className={classNames('o-button o-button--primary', className)}
         onClick={() => fetchOrders()}
       />
     )
@@ -123,7 +124,7 @@ export class OrderList extends PureComponent {
       // calculate next page number
       const nextPage = parseInt(pageNumber) + 1
       // render next page link
-      return this.renderPageLink('Next', nextPage)
+      return this.renderPageLink('Next', nextPage, 'u-float--right')
     }
   }
 
@@ -137,7 +138,7 @@ export class OrderList extends PureComponent {
       // calculate previous page number
       const previousPage = parseInt(pageNumber) - 1
       // render previous page link
-      return this.renderPageLink('Previous', previousPage)
+      return this.renderPageLink('Previous', previousPage, 'u-float--left')
     }
   }
 
@@ -161,8 +162,10 @@ export class OrderList extends PureComponent {
             )
           }) }
         </div>
-        { this.renderNextPageLink() }
-        { this.renderPreviousPageLink() }
+        <div className='clearfix'>
+          { this.renderNextPageLink() }
+          { this.renderPreviousPageLink() }
+        </div>
       </Fragment>
     )
   }
