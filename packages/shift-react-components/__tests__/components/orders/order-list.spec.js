@@ -3,7 +3,7 @@ import React from 'react'
 import format from 'date-fns/format'
 
 // Components
-import OrderList from '../../../src/components/orders/order-list'
+import { OrderList } from '../../../src/components/orders/order-list'
 
 // Libs
 import { penceToPounds } from '../../../src/lib/pence-to-pounds'
@@ -46,7 +46,7 @@ describe('Order List', () => {
     const updateCurrentOrder = jest.fn()
 
     // Act
-    const wrapper = shallow(
+    const wrapper = mount(
       <OrderList
         orders={page_1_orders}
         pageNumber={pageNumber}
@@ -67,7 +67,7 @@ describe('Order List', () => {
     const updateCurrentOrder = jest.fn()
 
     // Act
-    const wrapper = shallow(
+    const wrapper = mount(
       <OrderList
         orders={page_2_orders}
         pageNumber={pageNumber}

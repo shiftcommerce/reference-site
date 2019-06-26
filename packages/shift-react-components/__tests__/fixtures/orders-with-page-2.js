@@ -2,555 +2,277 @@ export default {
   "data":[
     {
       "id":"7cf19276-fa99-4389-97a4-44488215d772",
-      "type":"customer_orders",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772"
+      "account_reference":"shift",
+      "reference":"4",
+      "placed_at":"2019-06-26T12:36:23.000Z",
+      "pricing":{
+        "currency":"GBP",
+        "total_ex_tax":3432,
+        "total_inc_tax":4118,
+        "pre_discount_line_items_total_ex_tax":3592,
+        "pre_discount_line_items_total_inc_tax":4310,
+        "total_discount_ex_tax":160,
+        "total_discount_inc_tax":192,
+        "order_discount_ex_tax":0,
+        "order_discount_inc_tax":0
       },
-      "attributes":{
-        "account_reference":"shift",
-        "reference":"4",
-        "placed_at":"2019-06-26T12:36:23.000Z",
-        "pricing":{
-          "currency":"GBP",
-          "total_ex_tax":3432,
-          "total_inc_tax":4118,
-          "pre_discount_line_items_total_ex_tax":3592,
-          "pre_discount_line_items_total_inc_tax":4310,
-          "total_discount_ex_tax":160,
-          "total_discount_inc_tax":192,
-          "order_discount_ex_tax":0,
-          "order_discount_inc_tax":0
-        },
-        "fulfillment_status":"unfulfilled"
-      },
-      "relationships":{
-        "line_items":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/line_items",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/line_items"
+      "fulfillment_status":"unfulfilled",
+      "line_items":[
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_0",
+          "title":"Product 2 - Mediocre Leather Shirt - Variant 1 for Product 2 - Mediocre Leather Shirt",
+          "quantity":1,
+          "sku":"4845404676040",
+          "pricing":{
+            "each_ex_tax":3592,
+            "each_inc_tax":4310,
+            "line_total_ex_tax":3432,
+            "line_total_inc_tax":4118,
+            "line_discount_ex_tax":160,
+            "line_discount_inc_tax":192,
+            "pre_discount_line_total_ex_tax":3592,
+            "pre_discount_line_total_inc_tax":4310,
+            "tax_rate":20
           },
-          "data":[
-            {
-              "type":"line_items",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_0"
-            }
-          ]
-        },
-        "shipping_methods":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/shipping_methods",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/shipping_methods"
+          "image_urls":[
+            "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/1/1561548218.9313056-8.jpg"
+          ],
+          "shipping_method":{
+            "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+            "label":"Click & Collect Next Day",
+            "price":0
           },
-          "data":[
-            {
-              "type":"shipping_methods",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-            }
-          ]
-        },
-        "shipping_addresses":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/shipping_addresses",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/shipping_addresses"
+          "shipping_address":{
+            "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+            "name":"Test User",
+            "company":null,
+            "lines":[
+              "1 Test Drive",
+              "Leeds"
+            ],
+            "city":"Leeds",
+            "state":"West Yorkshire",
+            "postcode":"WF4 1TD",
+            "country":"GB"
           },
-          "data":[
-            {
-              "type":"shipping_addresses",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-            }
-          ]
-        },
-        "billing_addresses":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/billing_addresses",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/billing_addresses"
-          },
-          "data":[
-            {
-              "type":"billing_addresses",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-            }
-          ]
-        },
-        "discounts":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/discounts",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/discounts"
-          },
-          "data":[
-            {
-              "type":"discounts",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_0"
-            },
-            {
-              "type":"discounts",
-              "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-            }
+          "discounts":[
+
           ]
         }
-      }
+      ],
+      "shipping_methods":[
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+          "label":"Click & Collect Next Day",
+          "price":0
+        }
+      ],
+      "shipping_addresses":[
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+          "name":"Test User",
+          "company":null,
+          "lines":[
+            "1 Test Drive",
+            "Leeds"
+          ],
+          "city":"Leeds",
+          "state":"West Yorkshire",
+          "postcode":"WF4 1TD",
+          "country":"GB"
+        }
+      ],
+      "billing_addresses":[
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+          "name":"Test User",
+          "company":null,
+          "lines":[
+            "1 Test Drive",
+            "Leeds"
+          ],
+          "city":"Leeds",
+          "state":"West Yorkshire",
+          "postcode":"WF4 1TD",
+          "country":"GB"
+        }
+      ],
+      "discounts":[
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_0",
+          "label":"£1.50 off all orders",
+          "amount_inc_tax":150,
+          "coupon_code":null
+        },
+        {
+          "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
+          "label":"1% off all orders",
+          "amount_inc_tax":42,
+          "coupon_code":null
+        }
+      ]
     },
     {
       "id":"32b36edc-a299-435d-940b-ba85a42cdf84",
-      "type":"customer_orders",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84"
+      "account_reference":"shift",
+      "reference":"3",
+      "placed_at":"2019-06-26T12:35:11.000Z",
+      "pricing":{
+        "currency":"GBP",
+        "total_ex_tax":10007,
+        "total_inc_tax":11908,
+        "pre_discount_line_items_total_ex_tax":10561,
+        "pre_discount_line_items_total_inc_tax":12673,
+        "total_discount_ex_tax":1554,
+        "total_discount_inc_tax":1765,
+        "order_discount_ex_tax":500,
+        "order_discount_inc_tax":500
       },
-      "attributes":{
-        "account_reference":"shift",
-        "reference":"3",
-        "placed_at":"2019-06-26T12:35:11.000Z",
-        "pricing":{
-          "currency":"GBP",
-          "total_ex_tax":10007,
-          "total_inc_tax":11908,
-          "pre_discount_line_items_total_ex_tax":10561,
-          "pre_discount_line_items_total_inc_tax":12673,
-          "total_discount_ex_tax":1554,
-          "total_discount_inc_tax":1765,
-          "order_discount_ex_tax":500,
-          "order_discount_inc_tax":500
-        },
-        "fulfillment_status":"unfulfilled"
-      },
-      "relationships":{
-        "line_items":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/line_items",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/line_items"
+      "fulfillment_status":"unfulfilled",
+      "line_items":[
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0",
+          "title":"Product 4 - Incredible Wooden Car - Variant 1 for Product 4 - Incredible Wooden Car",
+          "quantity":1,
+          "sku":"6170377133251",
+          "pricing":{
+            "each_ex_tax":7546,
+            "each_inc_tax":9055,
+            "line_total_ex_tax":6792,
+            "line_total_inc_tax":8151,
+            "line_discount_ex_tax":753,
+            "line_discount_inc_tax":904,
+            "pre_discount_line_total_ex_tax":7546,
+            "pre_discount_line_total_inc_tax":9055,
+            "tax_rate":20
           },
-          "data":[
-            {
-              "type":"line_items",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0"
-            },
-            {
-              "type":"line_items",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-            }
+          "image_urls":[
+            "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+          ],
+          "shipping_method":{
+            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
+            "label":"Click & Collect Standard",
+            "price":500
+          },
+          "shipping_address":{
+            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+            "name":"Test User",
+            "company":null,
+            "lines":[
+              "1 Test Drive",
+              "Leeds"
+            ],
+            "city":"Leeds",
+            "state":"West Yorkshire",
+            "postcode":"WF4 1TD",
+            "country":"GB"
+          },
+          "discounts":[
+
           ]
         },
-        "shipping_methods":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/shipping_methods",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/shipping_methods"
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+          "title":"Product 4 - Incredible Wooden Car - Variant 2 for Product 4 - Incredible Wooden Car",
+          "quantity":1,
+          "sku":"2190404599946",
+          "pricing":{
+            "each_ex_tax":3015,
+            "each_inc_tax":3618,
+            "line_total_ex_tax":2714,
+            "line_total_inc_tax":3257,
+            "line_discount_ex_tax":301,
+            "line_discount_inc_tax":361,
+            "pre_discount_line_total_ex_tax":3015,
+            "pre_discount_line_total_inc_tax":3618,
+            "tax_rate":20
           },
-          "data":[
-            {
-              "type":"shipping_methods",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2"
-            }
-          ]
-        },
-        "shipping_addresses":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/shipping_addresses",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/shipping_addresses"
+          "image_urls":[
+            "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+          ],
+          "shipping_method":{
+            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
+            "label":"Click & Collect Standard",
+            "price":500
           },
-          "data":[
-            {
-              "type":"shipping_addresses",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-            }
-          ]
-        },
-        "billing_addresses":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/billing_addresses",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/billing_addresses"
+          "shipping_address":{
+            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+            "name":"Test User",
+            "company":null,
+            "lines":[
+              "1 Test Drive",
+              "Leeds"
+            ],
+            "city":"Leeds",
+            "state":"West Yorkshire",
+            "postcode":"WF4 1TD",
+            "country":"GB"
           },
-          "data":[
-            {
-              "type":"billing_addresses",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-            }
-          ]
-        },
-        "discounts":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/discounts",
-            "related":"https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/discounts"
-          },
-          "data":[
-            {
-              "type":"discounts",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0"
-            },
-            {
-              "type":"discounts",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-            },
-            {
-              "type":"discounts",
-              "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2"
-            }
+          "discounts":[
+
           ]
         }
-      }
+      ],
+      "shipping_methods":[
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
+          "label":"Click & Collect Standard",
+          "price":500
+        }
+      ],
+      "shipping_addresses":[
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+          "name":"Test User",
+          "company":null,
+          "lines":[
+            "1 Test Drive",
+            "Leeds"
+          ],
+          "city":"Leeds",
+          "state":"West Yorkshire",
+          "postcode":"WF4 1TD",
+          "country":"GB"
+        }
+      ],
+      "billing_addresses":[
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+          "name":"Test User",
+          "company":null,
+          "lines":[
+            "1 Test Drive",
+            "Leeds"
+          ],
+          "city":"Leeds",
+          "state":"West Yorkshire",
+          "postcode":"WF4 1TD",
+          "country":"GB"
+        }
+      ],
+      "discounts":[
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0",
+          "label":"£1.50 off all orders",
+          "amount_inc_tax":150,
+          "coupon_code":null
+        },
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
+          "label":"£10 off orders overs over £50",
+          "amount_inc_tax":1000,
+          "coupon_code":null
+        },
+        {
+          "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
+          "label":"1% off all orders",
+          "amount_inc_tax":115,
+          "coupon_code":null
+        }
+      ]
     }
   ],
-  "included":[
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772",
-      "type":"customers",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/customers/7cf19276-fa99-4389-97a4-44488215d772"
-      },
-      "attributes":{
-        "reference":"1",
-        "email":"test@test.com",
-        "name":"Test User",
-        "meta_attributes":{
-
-        }
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84",
-      "type":"customers",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/customers/32b36edc-a299-435d-940b-ba85a42cdf84"
-      },
-      "attributes":{
-        "reference":"1",
-        "email":"test@test.com",
-        "name":"Test User",
-        "meta_attributes":{
-
-        }
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_0",
-      "type":"line_items",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0"
-      },
-      "attributes":{
-        "title":"Product 2 - Mediocre Leather Shirt - Variant 1 for Product 2 - Mediocre Leather Shirt",
-        "quantity":1,
-        "sku":"4845404676040",
-        "pricing":{
-          "each_ex_tax":3592,
-          "each_inc_tax":4310,
-          "line_total_ex_tax":3432,
-          "line_total_inc_tax":4118,
-          "line_discount_ex_tax":160,
-          "line_discount_inc_tax":192,
-          "pre_discount_line_total_ex_tax":3592,
-          "pre_discount_line_total_inc_tax":4310,
-          "tax_rate":20
-        },
-        "image_urls":[
-          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/1/1561548218.9313056-8.jpg"
-        ]
-      },
-      "relationships":{
-        "shipping_method":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/shipping_method",
-            "related":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/shipping_method"
-          },
-          "data":{
-            "type":"shipping_methods",
-            "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-          }
-        },
-        "shipping_address":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/shipping_address",
-            "related":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/shipping_address"
-          },
-          "data":{
-            "type":"shipping_addresses",
-            "id":"7cf19276-fa99-4389-97a4-44488215d772_1"
-          }
-        },
-        "discounts":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/discounts",
-            "related":"https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/discounts"
-          },
-          "data":[
-
-          ]
-        }
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0",
-      "type":"line_items",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0"
-      },
-      "attributes":{
-        "title":"Product 4 - Incredible Wooden Car - Variant 1 for Product 4 - Incredible Wooden Car",
-        "quantity":1,
-        "sku":"6170377133251",
-        "pricing":{
-          "each_ex_tax":7546,
-          "each_inc_tax":9055,
-          "line_total_ex_tax":6792,
-          "line_total_inc_tax":8151,
-          "line_discount_ex_tax":753,
-          "line_discount_inc_tax":904,
-          "pre_discount_line_total_ex_tax":7546,
-          "pre_discount_line_total_inc_tax":9055,
-          "tax_rate":20
-        },
-        "image_urls":[
-          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
-        ]
-      },
-      "relationships":{
-        "shipping_method":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/shipping_method",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/shipping_method"
-          },
-          "data":{
-            "type":"shipping_methods",
-            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2"
-          }
-        },
-        "shipping_address":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/shipping_address",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/shipping_address"
-          },
-          "data":{
-            "type":"shipping_addresses",
-            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-          }
-        },
-        "discounts":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/discounts",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/discounts"
-          },
-          "data":[
-
-          ]
-        }
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
-      "type":"line_items",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1"
-      },
-      "attributes":{
-        "title":"Product 4 - Incredible Wooden Car - Variant 2 for Product 4 - Incredible Wooden Car",
-        "quantity":1,
-        "sku":"2190404599946",
-        "pricing":{
-          "each_ex_tax":3015,
-          "each_inc_tax":3618,
-          "line_total_ex_tax":2714,
-          "line_total_inc_tax":3257,
-          "line_discount_ex_tax":301,
-          "line_discount_inc_tax":361,
-          "pre_discount_line_total_ex_tax":3015,
-          "pre_discount_line_total_inc_tax":3618,
-          "tax_rate":20
-        },
-        "image_urls":[
-          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
-        ]
-      },
-      "relationships":{
-        "shipping_method":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/shipping_method",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/shipping_method"
-          },
-          "data":{
-            "type":"shipping_methods",
-            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2"
-          }
-        },
-        "shipping_address":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/shipping_address",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/shipping_address"
-          },
-          "data":{
-            "type":"shipping_addresses",
-            "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1"
-          }
-        },
-        "discounts":{
-          "links":{
-            "self":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/discounts",
-            "related":"https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/discounts"
-          },
-          "data":[
-
-          ]
-        }
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
-      "type":"shipping_methods",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/shipping_methods/7cf19276-fa99-4389-97a4-44488215d772_1"
-      },
-      "attributes":{
-        "label":"Click & Collect Next Day",
-        "price":0
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
-      "type":"shipping_methods",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/shipping_methods/32b36edc-a299-435d-940b-ba85a42cdf84_2"
-      },
-      "attributes":{
-        "label":"Click & Collect Standard",
-        "price":500
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
-      "type":"shipping_addresses",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/shipping_addresses/7cf19276-fa99-4389-97a4-44488215d772_1"
-      },
-      "attributes":{
-        "name":"Test User",
-        "company":null,
-        "lines":[
-          "1 Test Drive",
-          "Leeds"
-        ],
-        "city":"Leeds",
-        "state":"West Yorkshire",
-        "postcode":"WF4 1TD",
-        "country":"GB"
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
-      "type":"shipping_addresses",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/shipping_addresses/32b36edc-a299-435d-940b-ba85a42cdf84_1"
-      },
-      "attributes":{
-        "name":"Test User",
-        "company":null,
-        "lines":[
-          "1 Test Drive",
-          "Leeds"
-        ],
-        "city":"Leeds",
-        "state":"West Yorkshire",
-        "postcode":"WF4 1TD",
-        "country":"GB"
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
-      "type":"billing_addresses",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/billing_addresses/7cf19276-fa99-4389-97a4-44488215d772_1"
-      },
-      "attributes":{
-        "name":"Test User",
-        "company":null,
-        "lines":[
-          "1 Test Drive",
-          "Leeds"
-        ],
-        "city":"Leeds",
-        "state":"West Yorkshire",
-        "postcode":"WF4 1TD",
-        "country":"GB"
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
-      "type":"billing_addresses",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/billing_addresses/32b36edc-a299-435d-940b-ba85a42cdf84_1"
-      },
-      "attributes":{
-        "name":"Test User",
-        "company":null,
-        "lines":[
-          "1 Test Drive",
-          "Leeds"
-        ],
-        "city":"Leeds",
-        "state":"West Yorkshire",
-        "postcode":"WF4 1TD",
-        "country":"GB"
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_0",
-      "type":"discounts",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/discounts/7cf19276-fa99-4389-97a4-44488215d772_0"
-      },
-      "attributes":{
-        "label":"£1.50 off all orders",
-        "amount_inc_tax":150,
-        "coupon_code":null
-      }
-    },
-    {
-      "id":"7cf19276-fa99-4389-97a4-44488215d772_1",
-      "type":"discounts",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/discounts/7cf19276-fa99-4389-97a4-44488215d772_1"
-      },
-      "attributes":{
-        "label":"1% off all orders",
-        "amount_inc_tax":42,
-        "coupon_code":null
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_0",
-      "type":"discounts",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_0"
-      },
-      "attributes":{
-        "label":"£1.50 off all orders",
-        "amount_inc_tax":150,
-        "coupon_code":null
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_1",
-      "type":"discounts",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_1"
-      },
-      "attributes":{
-        "label":"£10 off orders overs over £50",
-        "amount_inc_tax":1000,
-        "coupon_code":null
-      }
-    },
-    {
-      "id":"32b36edc-a299-435d-940b-ba85a42cdf84_2",
-      "type":"discounts",
-      "links":{
-        "self":"https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_2"
-      },
-      "attributes":{
-        "label":"1% off all orders",
-        "amount_inc_tax":115,
-        "coupon_code":null
-      }
-    }
-  ],
-  "links":{
+  "pagination":{
     "first":"https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=2&page%5Boffset%5D=0&sort=-placed_at",
     "prev":"https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=2&page%5Boffset%5D=0&sort=-placed_at",
     "next":"https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=2&page%5Boffset%5D=4&sort=-placed_at",
