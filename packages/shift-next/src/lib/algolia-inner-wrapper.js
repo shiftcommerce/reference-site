@@ -31,7 +31,7 @@ export default function algoliaInnerWrapper (Component) {
           searchState={searchState}
         >
           <Configure {...searchState.configure} />
-          <Component {...otherProps} resultsState={resultsState} />
+          <Component {...otherProps} />
         </InstantSearch>
       )
     }
