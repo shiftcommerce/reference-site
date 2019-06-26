@@ -43,7 +43,8 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
         facets: ['*'],
         hitsPerPage: Config.get().algoliaResultsPerPage,
         distinct: Config.get().algoliaDistinctVariants || true,
-        tagFilters: '-redirect'
+        tagFilters: '-redirect',
+        facetingAfterDistinct: true
       }
 
       let resultsState = {

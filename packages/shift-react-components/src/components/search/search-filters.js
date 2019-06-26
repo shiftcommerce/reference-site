@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import {
   HierarchicalMenu,
   Panel,
-  RangeInput,
   RatingMenu,
   RefinementList
 } from 'react-instantsearch-dom'
+import SearchSlider from './search-slider'
 
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
@@ -29,7 +29,7 @@ class SearchFilters extends Component {
                   filter = <HierarchicalMenu attribute={source} searchable={searchable} />
                   break
                 case 'range':
-                  filter = <RangeInput attribute={source} />
+                  filter = <><SearchSlider attribute={source} precision={0} /></>
                   break
                 case 'rating':
                   filter = <RatingMenu attribute={source} />
