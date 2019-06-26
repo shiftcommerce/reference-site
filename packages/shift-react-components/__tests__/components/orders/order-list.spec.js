@@ -35,7 +35,6 @@ describe('Order List', () => {
     // Arrange
     const pageNumber = 1
     const pagePath = '/account/orders'
-    const fetchOrders = jest.fn()
 
     // Act
     const wrapper = shallow(
@@ -43,7 +42,6 @@ describe('Order List', () => {
         orders={page_1_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
-        fetchOrders={fetchOrders}
       />
     )
 
@@ -56,7 +54,6 @@ describe('Order List', () => {
     // Arrange
     const pageNumber = 1
     const pagePath = '/account/orders'
-    const fetchOrders = jest.fn()
 
     // Act
     const wrapper = shallow(
@@ -64,7 +61,6 @@ describe('Order List', () => {
         orders={page_2_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
-        fetchOrders={fetchOrders}
       />
     )
 
