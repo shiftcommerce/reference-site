@@ -24,8 +24,8 @@ const {
     ALGOLIA_INDEX_NAME,
     ALGOLIA_DISTINCT_VARIANTS,
     API_HOST_PROXY,
-    ORDER_HISTORY_PAGE_LIMIT,
     ENABLE_TEST_PAYPAL_BUTTON,
+    ORDER_HISTORY_PAGE_LIMIT,
     PAYPAL_CLIENT_ID,
     STRIPE_API_KEY
   }
@@ -43,12 +43,12 @@ shiftNextConfig.set({
   algoliaResultsPerPage: ALGOLIA_RESULTS_PER_PAGE,
   algoliaDistinctVariants: ALGOLIA_DISTINCT_VARIANTS,
   apiHostProxy: API_HOST_PROXY,
-  orderHistoryPageLimit: ORDER_HISTORY_PAGE_LIMIT,
-  payPalClientID: PAYPAL_CLIENT_ID,
-  storeName: 'ShopGo',
   enableTestPayPalButton: ENABLE_TEST_PAYPAL_BUTTON,
   Head: NextHead,
-  menuRequest: menuRequest
+  menuRequest: menuRequest,
+  orderHistoryPageLimit: ORDER_HISTORY_PAGE_LIMIT,
+  payPalClientID: PAYPAL_CLIENT_ID,
+  storeName: 'ShopGo'
 })
 
 class MyApp extends App {
