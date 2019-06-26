@@ -7,14 +7,16 @@ import t from 'typy'
 // Lib
 import { fulfillmentStatus } from '../../lib/fulfillment-status'
 import { penceToPounds } from '../../lib/pence-to-pounds'
+import Config from '../../lib/config'
 
 // Objects
-import Link from '../../objects/link'
+import link from '../../objects/link'
 
 export class OrderList extends PureComponent {
   constructor (props) {
     super(props)
 
+    this.Link = Config.get().Link || link
     this.headers = props.headers || ['Order No.', 'Order Date', 'Cost', 'Shipping Status', '']
   }
 
@@ -26,7 +28,7 @@ export class OrderList extends PureComponent {
   * @return {string} - HTML markup for the component
   */
   renderOrderDetails (order) {
-    const { updateCurrentOrder } = this.props
+    const { pagePath, updateCurrentOrder } = this.props
 
     const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
     const orderTotal = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
@@ -50,7 +52,7 @@ export class OrderList extends PureComponent {
       },
       {
         label: this.headers[4],
-        value: <a href={`/account/orders/${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
+        value: <a href={`${pagePath}${order.reference}`} className='o-button o-button--primary' onClick={(event) => updateCurrentOrder(event, order.reference)}>View Details</a>
       }
     ].map((column, columnIndex) => {
       return (
@@ -103,13 +105,13 @@ export class OrderList extends PureComponent {
    * @return {String} - HTML markup for the component
    */
   renderPageLink (label, page, className) {
-    const { fetchOrders, pagePath } = this.props
+    const { pagePath } = this.props
+
     return (
-      <Link
+      <this.Link
         children={label}
         href={`${pagePath}?page=${page}`}
         className={classNames('o-button o-button--primary', className)}
-        onClick={() => fetchOrders()}
       />
     )
   }

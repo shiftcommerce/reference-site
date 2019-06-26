@@ -19,10 +19,17 @@ export class AccountOrdersPage extends Component {
     this.updateCurrentOrder = this.updateCurrentOrder.bind(this)
   }
 
-  static async getInitialProps (appContext) {
+  static async getInitialProps ({ pathname, query: { page } }) {
     // extracts page number from query or set default
     return {
-      pageNumber: (appContext.query.page || 1)
+      pageNumber: (page || 1),
+      pagePath: pathname
+    }
+  }
+
+  componentDidUpdate (prevProps) {
+    if (this.props.pageNumber !== prevProps.pageNumber) {
+      this.fetchOrders()
     }
   }
 
@@ -51,7 +58,7 @@ export class AccountOrdersPage extends Component {
           fetchOrders={this.fetchOrders}
           orders={orders}
           pageNumber={pageNumber}
-          pagePath={'/account/orders'}
+          pagePath={this.props.pagePath}
           updateCurrentOrder={this.updateCurrentOrder}
         />
       </Layout>

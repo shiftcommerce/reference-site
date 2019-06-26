@@ -82,6 +82,17 @@ export class OrderSingle extends PureComponent {
     )
   }
 
+  renderOrderDiscount (order) {
+    if (order.pricing.order_discount_inc_tax > 0) {
+      return (
+        <dl aria-label='Order discount'>
+          <dt> Discount: </dt>
+          <dd> -£{ penceToPounds(order.pricing.order_discount_inc_tax) } </dd>
+        </dl>
+      )
+    } else { null }
+  }
+
   render () {
     const { order, updateCurrentOrder } = this.props
     const lineItems = this.formatLineItems(order.line_items)
@@ -160,10 +171,7 @@ export class OrderSingle extends PureComponent {
                       <dd> £{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
                     </dl>
 
-                    <dl aria-label='Order discount'>
-                      <dt> Discount: </dt>
-                      <dd> -£{ penceToPounds(order.pricing.order_discount_inc_tax) } </dd>
-                    </dl>
+                    { this.renderOrderDiscount(order) }
 
                     <dl aria-label='Total' className='c-cart-summary__total'>
                       <dt> Total: </dt>
