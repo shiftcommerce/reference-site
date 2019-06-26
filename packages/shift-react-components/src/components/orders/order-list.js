@@ -114,18 +114,12 @@ export class OrderList extends PureComponent {
   }
 
   /*
-   * Render the pagination links
+   * Render the next page links
    * @return {String} - HTML markup for the component
    */
-  renderPagination () {
+  renderNextPageLink () {
     const { orders: { pagination }, pageNumber } = this.props
-
-    if (pagination.prev) {
-      // calculate previous page number
-      const previousPage = parseInt(pageNumber) - 1
-      // render previous page link
-      return this.renderPageLink('Previous', previousPage)
-    } else if (pagination.next) {
+    if (pagination.next) {
       // calculate next page number
       const nextPage = parseInt(pageNumber) + 1
       // render next page link
@@ -133,11 +127,25 @@ export class OrderList extends PureComponent {
     }
   }
 
+  /*
+   * Render the previous page links
+   * @return {String} - HTML markup for the component
+   */
+  renderPreviousPageLink () {
+    const { orders: { pagination }, pageNumber } = this.props
+    if (pagination.prev) {
+      // calculate previous page number
+      const previousPage = parseInt(pageNumber) - 1
+      // render previous page link
+      return this.renderPageLink('Previous', previousPage)
+    }
+  }
+
   render () {
     const { orders } = this.props
 
     return (
-      <>
+      <Fragment>
         <div className='c-order-history-table'>
           <div className='c-order-history-table__row c-order-history-table__row--header'>
             { this.renderTableHeader() }
@@ -153,8 +161,9 @@ export class OrderList extends PureComponent {
             )
           }) }
         </div>
-        { this.renderPagination() }
-      </>
+        { this.renderNextPageLink() }
+        { this.renderPreviousPageLink() }
+      </Fragment>
     )
   }
 }
