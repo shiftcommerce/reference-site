@@ -39,7 +39,7 @@ exports[`Order List renders correctly 1`] = `
     </div>
     <div
       className="c-order-history-table__row c-order-history-table__row--body"
-      key="61c40964-4b4c-4f54-b580-958798087312"
+      key="f52d57e1-5960-4bd6-8cd4-3f6b856b365d"
     >
       <div
         className="c-order-history-table__col"
@@ -50,7 +50,7 @@ exports[`Order List renders correctly 1`] = `
         >
           Order No.
         </span>
-        1000
+        7
       </div>
       <div
         className="c-order-history-table__col"
@@ -61,7 +61,7 @@ exports[`Order List renders correctly 1`] = `
         >
           Order Date
         </span>
-        1 Jan 2018
+        26 Jun 2019
       </div>
       <div
         className="c-order-history-table__col"
@@ -72,7 +72,7 @@ exports[`Order List renders correctly 1`] = `
         >
           Cost
         </span>
-        GBP1506.00
+        GBP51.18
       </div>
       <div
         className="c-order-history-table__col"
@@ -83,6 +83,7 @@ exports[`Order List renders correctly 1`] = `
         >
           Shipping Status
         </span>
+        Awaiting shipment
       </div>
       <div
         className="c-order-history-table__col"
@@ -90,7 +91,7 @@ exports[`Order List renders correctly 1`] = `
       >
         <a
           className="o-button o-button--primary"
-          href="/account/orders/1000"
+          href="/account/orders/7"
           onClick={[Function]}
         >
           View Details
