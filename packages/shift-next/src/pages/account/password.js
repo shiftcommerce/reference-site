@@ -7,18 +7,29 @@ import { AccountPassword } from '@shiftcommerce/shift-react-components/src/compo
 // Actions
 import { updateCustomerPassword } from '../../actions/account-actions'
 export class AccountPasswordPage extends Component {
-  handleUpdatePasswordSubmit () {
+  handleUpdatePasswordSubmit (token, password, { setStatus, setSubmitting }) {
+    console.log('HERE')
     this.props.dispatch(updateCustomerPassword()).then(success => {
-
+      // Display a relevant flash message
+      setStatus(success ? 'success' : 'error')
+      setTimeout(() => {
+        // Clear flash message after 3 seconds
+        setStatus(null)
+        // Re-enable the submit button
+        setSubmitting(false)
+      }, 3000)
     })
   }
 
   render () {
-    const { layout } = this.props
+    const { account, layout } = this.props
     const Layout = layout.component
     return (
       <Layout {...layout.props}>
-        <AccountPassword />
+        <AccountPassword
+          {...account}
+          handleSubmit={this.handleUpdatePasswordSubmit.bind(this)}
+        />
       </Layout>
     )
   }

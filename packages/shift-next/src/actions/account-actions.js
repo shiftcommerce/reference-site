@@ -15,13 +15,20 @@ export function fetchAccountDetails (options) {
   return readEndpoint(accountRequest, options)
 }
 
-export function updateCustomerPassword (details, options) {
+export function updateCustomerPassword (token, password, options) {
   const request = {
     endpoint: '/updateCustomerPassword',
     body: {
-      ...details
+      data: {
+        type: 'password_recoveries',
+        attributes: {
+          token: token,
+          password: password
+        }
+      }
     },
-    successActionType: types.SET_ACCOUNT
+    successActionType: types.PASSWORD_RESET,
+    errorActionType: types.ERROR_ACCOUNT
   }
 
   return postEndpoint(request, options)
@@ -71,25 +78,6 @@ const forgottenPasswordRequest = (email) => {
 
 export function requestPasswordResetEmail (email) {
   return readEndpoint(forgottenPasswordRequest(email))
-}
-
-export function changePassword (token, password, options) {
-  const request = {
-    endpoint: '/changePassword',
-    body: {
-      data: {
-        type: 'password_recoveries',
-        attributes: {
-          token: token,
-          password: password
-        }
-      }
-    },
-    successActionType: types.PASSWORD_RESET,
-    errorActionType: types.ERROR_ACCOUNT
-  }
-
-  return postEndpoint(request, options)
 }
 
 export function passwordReset (token, password, options) {
