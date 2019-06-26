@@ -108,7 +108,7 @@ export class OrderList extends PureComponent {
         children={label}
         href={`${pagePath}?page=${page}`}
         className='o-button o-button--primary'
-        onClick={() => fetchOrders(page)}
+        onClick={() => fetchOrders()}
       />
     )
   }
