@@ -8,8 +8,13 @@ import { Button } from '../../objects/button'
 import { Flash } from '../../objects/flash'
 
 export class AccountPassword extends Component {
-  renderFlash (status, errorText) {
-    return (<Flash modifier='error' text={errorText} />)
+  renderFlash (status) {
+    switch (status) {
+      case 'success':
+        return (<Flash modifier='success' text='Your details were successfully updated.' />)
+      case 'error':
+        return (<Flash modifier='error' text='Oops, there was an error submitting your form.' />)
+    }
   }
 
   render () {
@@ -39,7 +44,7 @@ export class AccountPassword extends Component {
           const submitEnabled = isValid & !isSubmitting
           return (
             <Fragment>
-              { this.renderFlash(status, errorText) }
+              { this.renderFlash(status) }
               <Form errors={errorText}>
                 <label className='o-form__input-label' htmlFor="oldPassword">Old Password</label>
                 <Field type='password' name='oldPassword' className='o-form__input-field o-form__input-block' />

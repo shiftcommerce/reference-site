@@ -9,12 +9,20 @@ import { AccountPassword } from '@shiftcommerce/shift-react-components/src/compo
 import { createLogin } from '../../actions/login-actions'
 import { updateCustomerAccount } from '../../actions/account-actions'
 export class AccountPasswordPage extends Component {
-  updateCustomerPassword (accountDetails, setStatus) {
+  updateCustomerPassword (accountDetails, { setStatus, setSubmitting }) {
     this.props.dispatch(updateCustomerAccount(accountDetails)).then(response => {
       if (response) {
+        // On successful update retrun to detail
         Router.push('/account/details')
       } else {
-        return null
+        // Display an error flash message
+        setStatus('error')
+        setTimeout(() => {
+          // Clear flash message after 3 seconds
+          setStatus(null)
+          // Re-enable the submit button
+          setSubmitting(false)
+        }, 3000)
       }
     })
   }
@@ -54,7 +62,6 @@ export class AccountPasswordPage extends Component {
         <AccountPassword
           {...account}
           handleSubmit={this.handleUpdatePasswordSubmit.bind(this)}
-          errorText={this.props.login.errors.map((error) => error.detail).join('\n')}
         />
       </Layout>
     )
