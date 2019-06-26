@@ -15,7 +15,7 @@ test('renders correct messages when cart has items', () => {
 
   // act
   const wrapper = mount(
-    <CartTableHeader className={className} cart={cart} shippingMethod={shippingMethod} />
+    <CartTableHeader className={className} cart={cart} shippingMethod={shippingMethod} canCheckout={true} />
   )
 
   // assert
@@ -25,6 +25,17 @@ test('renders correct messages when cart has items', () => {
   expect(wrapper.find('section')).toHaveClassName(className)
 
   dateSpy.mockRestore()
+})
+
+test('renders flash message when cart has invalid items', () => {
+  // act
+  const wrapper = mount(
+    <CartTableHeader cart={cart} shippingMethod={shippingMethod} canCheckout={false} />
+  )
+
+  // assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('The items highlighted in your basket are out of stock. Please reduce quantity or remove before proceeding.')
 })
 
 test('renders correct messages when cart is empty', () => {
@@ -40,7 +51,7 @@ test('renders correct messages when cart is empty', () => {
 
   // act
   const wrapper = mount(
-    <CartTableHeader cart={emptyCart} shippingMethod={shippingMethod} />
+    <CartTableHeader cart={emptyCart} shippingMethod={shippingMethod} canCheckout={true} />
   )
 
   // assert
