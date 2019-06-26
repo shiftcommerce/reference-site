@@ -1,5 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
+import Router from 'next/router'
 
 // Components
 import { AccountPassword } from '@shiftcommerce/shift-react-components/src/components/account/password'
@@ -8,6 +9,16 @@ import { AccountPassword } from '@shiftcommerce/shift-react-components/src/compo
 import { createLogin } from '../../actions/login-actions'
 import { updateCustomerAccount } from '../../actions/account-actions'
 export class AccountPasswordPage extends Component {
+  updateCustomerPassword (accountDetails, setStatus) {
+    this.props.dispatch(updateCustomerAccount(accountDetails)).then(response => {
+      if (response) {
+        Router.push('/account/details')
+      } else {
+        return null
+      }
+    })
+  }
+
   handleUpdatePasswordSubmit (account, { setStatus, setSubmitting }) {
     const loginBody = {
       firstName: this.props.account.firstName,
@@ -20,17 +31,19 @@ export class AccountPasswordPage extends Component {
 
     this.props.dispatch(createLogin(loginBody)).then(success => {
       console.log(success)
-    }).catch(error => { console.log('error', error) }).then(success => {
-      this.props.dispatch(updateCustomerAccount({ ...this.props.account, password: account.newPassword }))
-    }).catch(error => { console.log('error', error) })
-      // // Display a relevant flash message
-      // setStatus(success ? 'success' : 'error')
-      // setTimeout(() => {
-      //   // Clear flash message after 3 seconds
-      //   setStatus(null)
-      //   // Re-enable the submit button
-      //   setSubmitting(false)
-      // }, 3000)
+      if (success) {
+        return this.updateCustomerPassword({ ...this.props.account, password: account.newPassword }, { setStatus, setSubmitting })
+      } else {
+        // Display an error flash message
+        setStatus('error')
+        setTimeout(() => {
+          // Clear flash message after 3 seconds
+          setStatus(null)
+          // Re-enable the submit button
+          setSubmitting(false)
+        }, 3000)
+      }
+    })
   }
 
   render () {
@@ -41,6 +54,7 @@ export class AccountPasswordPage extends Component {
         <AccountPassword
           {...account}
           handleSubmit={this.handleUpdatePasswordSubmit.bind(this)}
+          errorText={this.props.login.errors.map((error) => error.detail).join('\n')}
         />
       </Layout>
     )

@@ -8,17 +8,12 @@ import { Button } from '../../objects/button'
 import { Flash } from '../../objects/flash'
 
 export class AccountPassword extends Component {
-  renderFlash (status) {
-    switch (status) {
-      case 'success':
-        return (<Flash modifier='success' text='Your details were successfully updated.' />)
-      case 'error':
-        return (<Flash modifier='error' text='Oops, there was an error submitting your form.' />)
-    }
+  renderFlash (status, errorText) {
+    return (<Flash modifier='error' text={errorText} />)
   }
 
   render () {
-    const { handleSubmit } = this.props
+    const { handleSubmit, errorText } = this.props
 
     const validationSchema = Yup.object().shape({
       newPassword: Yup.string()
@@ -44,8 +39,8 @@ export class AccountPassword extends Component {
           const submitEnabled = isValid & !isSubmitting
           return (
             <Fragment>
-              { this.renderFlash(status) }
-              <Form>
+              { this.renderFlash(status, errorText) }
+              <Form errors={errorText}>
                 <label className='o-form__input-label' htmlFor="oldPassword">Old Password</label>
                 <Field type='password' name='oldPassword' className='o-form__input-field o-form__input-block' />
 

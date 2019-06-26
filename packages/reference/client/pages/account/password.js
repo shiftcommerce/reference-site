@@ -13,6 +13,6 @@ const layout = {
   props: { menu }
 }
 
-function mapStateToProps ({ account }) { return { account, layout } }
+function mapStateToProps ({ account, login }) { return { account, layout, login } }
 
 export default algoliaReduxWrapper(connect(mapStateToProps)(AccountPasswordPage), AccountPasswordPage)

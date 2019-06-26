@@ -42,6 +42,7 @@ export function updateCustomerAccount (details, options) {
     },
     successActionType: types.SET_ACCOUNT
   }
+  console.log(request.body)
   return postEndpoint(request, options)
 }
 
