@@ -18,7 +18,7 @@ export class OrderSingle extends PureComponent {
    */
   calculateSubTotal (order) {
     return order.line_items.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.pricing.line_total_inc_tax, 0
+      (accumulator, currentValue) => accumulator + currentValue.pricing.pre_discount_line_total_ex_tax, 0
     )
   }
 
@@ -144,6 +144,10 @@ export class OrderSingle extends PureComponent {
                     <dl aria-label='Taxes'>
                       <dt> UK VAT 20% (Included in Price): </dt>
                       <dd> £{ penceToPounds(this.calculateTax(order)) } </dd>
+                    </dl>
+                    <dl aria-label='Discounts'>
+                      <dt> { order.discounts[0].label } </dt>
+                      <dd> -£{ penceToPounds(order.discounts[0].amount_inc_tax) } </dd>
                     </dl>
                     <dl aria-label='Shipping'>
                       <dt> Shipping Total: </dt>

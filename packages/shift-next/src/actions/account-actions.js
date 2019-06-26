@@ -42,6 +42,9 @@ export function setLoggedInFromCookies () {
 
 const customerOrdersRequest = {
   endpoint: `/customerOrders`,
+  query: {
+    page: { limit: 1 }
+  },
   requestActionType: types.GET_CUSTOMER_ORDERS,
   successActionType: types.SET_CUSTOMER_ORDERS
 }

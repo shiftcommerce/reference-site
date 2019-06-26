@@ -92,25 +92,42 @@ export class OrderList extends PureComponent {
     })
   }
 
+  renderPagination () {
+    if (this.props.orders.pagination.next) {
+      return (
+        <p>Next ></p>
+      )
+    }
+
+    if (this.props.orders.pagination.prev) {
+      return (
+        <p>Previous ></p>
+      )
+    }
+  }
+
   render () {
     const { orders } = this.props
 
     return (
-      <div className='c-order-history-table'>
-        <div className='c-order-history-table__row c-order-history-table__row--header'>
-          { this.renderTableHeader() }
+      <>
+        <div className='c-order-history-table'>
+          <div className='c-order-history-table__row c-order-history-table__row--header'>
+            { this.renderTableHeader() }
+          </div>
+          { orders.data.map((order) => {
+            return (
+              <div
+                key={order.id}
+                className='c-order-history-table__row c-order-history-table__row--body'
+              >
+                { this.renderOrderDetails(order) }
+              </div>
+            )
+          }) }
         </div>
-        { orders.data.map((order) => {
-          return (
-            <div
-              key={order.id}
-              className='c-order-history-table__row c-order-history-table__row--body'
-            >
-              { this.renderOrderDetails(order) }
-            </div>
-          )
-        }) }
-      </div>
+        { this.renderPagination() }
+      </>
     )
   }
 }

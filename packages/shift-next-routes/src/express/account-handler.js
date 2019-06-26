@@ -63,6 +63,8 @@ module.exports = {
   },
 
   getCustomerOrders: async (req, res) => {
+    console.log('req', req.query)
+
     const query = {
       filter: {
         account_reference: process.env.API_TENANT,
@@ -77,8 +79,11 @@ module.exports = {
         discounts: 'label,amount_inc_tax,coupon_code'
       },
       sort: '-placed_at',
-      include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts,billing_addresses'
+      include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts,billing_addresses',
+      ...req.query
     }
+
+    console.log('final', query)
 
     const response = await SHIFTClient.getCustomerOrdersV1(query)
 
