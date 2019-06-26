@@ -10,8 +10,8 @@ import { penceToPounds } from '../../../src/lib/pence-to-pounds'
 
 // Fixtures
 import orders from '../../fixtures/orders'
-import orders_with_next_page from '../../fixtures/orders-with-next-page'
-import orders_with_previous_page from '../../fixtures/orders-with-previous-page'
+import page_1_orders from '../../fixtures/orders-with-page-1'
+import page_2_orders from '../../fixtures/orders-with-page-2'
 
 describe('Order List', () => {
   test('renders correctly', () => {
@@ -21,7 +21,7 @@ describe('Order List', () => {
     const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
     // Act
-    const wrapper = mount(
+    const wrapper = shallow(
       <OrderList orders={orders} />
     )
 
@@ -40,7 +40,7 @@ describe('Order List', () => {
     // Act
     const wrapper = shallow(
       <OrderList
-        orders={orders_with_next_page}
+        orders={page_1_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
         fetchOrders={fetchOrders}
@@ -52,7 +52,7 @@ describe('Order List', () => {
     expect(wrapper).toIncludeText('Next')
   })
 
-  test('renders previous page link', () => {
+  test('renders next and previous page link on second page', () => {
     // Arrange
     const pageNumber = 1
     const pagePath = '/account/orders'
@@ -61,7 +61,7 @@ describe('Order List', () => {
     // Act
     const wrapper = shallow(
       <OrderList
-        orders={orders_with_previous_page}
+        orders={page_2_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
         fetchOrders={fetchOrders}
@@ -70,6 +70,7 @@ describe('Order List', () => {
 
     // Assert
     expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText('Next')
     expect(wrapper).toIncludeText('Previous')
   })
 })
