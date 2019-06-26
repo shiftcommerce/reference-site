@@ -2,29 +2,74 @@
 import React from 'react'
 import format from 'date-fns/format'
 
-// Component
-import { OrderList } from '../../../src/components/orders/order-list'
+// Components
+import OrderList from '../../../src/components/orders/order-list'
 
-// Lib
+// Libs
 import { penceToPounds } from '../../../src/lib/pence-to-pounds'
 
 // Fixtures
 import orders from '../../fixtures/orders'
+import orders_with_next_page from '../../fixtures/orders-with-next-page'
+import orders_with_previous_page from '../../fixtures/orders-with-previous-page'
 
-test('renders correctly', () => {
-  // Act
-  const wrapper = mount(
-    <OrderList orders={orders} />
-  )
+describe('Order List', () => {
+  test('renders correctly', () => {
+    // Arrange
+    const order = orders.data[0]
+    const orderTotal = penceToPounds(order.pricing.total_inc_tax)
+    const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
-  const instance = wrapper.instance()
+    // Act
+    const wrapper = mount(
+      <OrderList orders={orders} />
+    )
 
-  const order = orders.data[0]
-  const orderTotal = penceToPounds(order.pricing.total_inc_tax)
-  const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText(orderTotal)
+    expect(wrapper).toIncludeText(orderDate)
+  })
 
-  // Assert
-  expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText(orderTotal)
-  expect(wrapper).toIncludeText(orderDate)
+  test('renders next page link', () => {
+    // Arrange
+    const pageNumber = 1
+    const pagePath = '/account/orders'
+    const fetchOrders = jest.fn()
+
+    // Act
+    const wrapper = shallow(
+      <OrderList
+        orders={orders_with_next_page}
+        pageNumber={pageNumber}
+        pagePath={pagePath}
+        fetchOrders={fetchOrders}
+      />
+    )
+
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText('Next')
+  })
+
+  test('renders previous page link', () => {
+    // Arrange
+    const pageNumber = 1
+    const pagePath = '/account/orders'
+    const fetchOrders = jest.fn()
+
+    // Act
+    const wrapper = shallow(
+      <OrderList
+        orders={orders_with_previous_page}
+        pageNumber={pageNumber}
+        pagePath={pagePath}
+        fetchOrders={fetchOrders}
+      />
+    )
+
+    // Assert
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toIncludeText('Previous')
+  })
 })
