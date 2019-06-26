@@ -16,13 +16,21 @@ import page_2_orders from '../../fixtures/orders-with-page-2'
 describe('Order List', () => {
   test('renders correctly', () => {
     // Arrange
+    const pageNumber = '1'
+    const pagePath = '/account/orders'
+    const updateCurrentOrder = jest.fn()
     const order = orders.data[0]
     const orderTotal = penceToPounds(order.pricing.total_inc_tax)
     const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
     // Act
     const wrapper = shallow(
-      <OrderList orders={orders} />
+      <OrderList
+        orders={orders}
+        pageNumber={pageNumber}
+        pagePath={pagePath}
+        updateCurrentOrder={updateCurrentOrder}
+      />
     )
 
     // Assert
@@ -35,7 +43,7 @@ describe('Order List', () => {
     // Arrange
     const pageNumber = 1
     const pagePath = '/account/orders'
-    const fetchOrders = jest.fn()
+    const updateCurrentOrder = jest.fn()
 
     // Act
     const wrapper = shallow(
@@ -43,7 +51,7 @@ describe('Order List', () => {
         orders={page_1_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
-        fetchOrders={fetchOrders}
+        updateCurrentOrder={updateCurrentOrder}
       />
     )
 
@@ -56,7 +64,7 @@ describe('Order List', () => {
     // Arrange
     const pageNumber = 1
     const pagePath = '/account/orders'
-    const fetchOrders = jest.fn()
+    const updateCurrentOrder = jest.fn()
 
     // Act
     const wrapper = shallow(
@@ -64,7 +72,7 @@ describe('Order List', () => {
         orders={page_2_orders}
         pageNumber={pageNumber}
         pagePath={pagePath}
-        fetchOrders={fetchOrders}
+        updateCurrentOrder={updateCurrentOrder}
       />
     )
 
