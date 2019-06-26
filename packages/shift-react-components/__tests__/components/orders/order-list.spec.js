@@ -10,8 +10,8 @@ import { penceToPounds } from '../../../src/lib/pence-to-pounds'
 
 // Fixtures
 import orders from '../../fixtures/orders'
-import orders_with_next_page from '../../fixtures/orders-with-next-page'
-import orders_with_previous_page from '../../fixtures/orders-with-previous-page'
+import orders_with_next_page from '../../fixtures/orders-with-page-1'
+import orders_with_previous_page from '../../fixtures/orders-with-page-2'
 
 describe('Order List', () => {
   test('renders correctly', () => {
@@ -21,7 +21,7 @@ describe('Order List', () => {
     const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
     // Act
-    const wrapper = mount(
+    const wrapper = shallow(
       <OrderList orders={orders} />
     )
 
