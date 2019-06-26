@@ -7,6 +7,9 @@ import t from 'typy'
 import { fulfillmentStatus } from '../../lib/fulfillment-status'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
+// Objects
+import Link from '../../objects/link'
+
 export class OrderList extends PureComponent {
   constructor (props) {
     super(props)
@@ -92,17 +95,41 @@ export class OrderList extends PureComponent {
     })
   }
 
-  renderPagination () {
-    if (this.props.orders.pagination.next) {
-      return (
-        <p>Next ></p>
-      )
-    }
+  /*
+   * Renders the page link
+   * @param  {String} label
+   * @param  {Number} page
+   * @return {String} - HTML markup for the component
+   */
+  renderPageLink (label, page) {
+    const { fetchOrders, pagePath } = this.props
+    return (
+      <Link
+        children={label}
+        href={`${pagePath}?page=${page}`}
+        className='o-button o-button--primary'
+        onClick={() => fetchOrders(page)}
+      />
+    )
+  }
 
-    if (this.props.orders.pagination.prev) {
-      return (
-        <p>Previous ></p>
-      )
+  /*
+   * Render the pagination links
+   * @return {String} - HTML markup for the component
+   */
+  renderPagination () {
+    const { orders: { pagination }, pageNumber } = this.props
+
+    if (pagination.prev) {
+      // calculate previous page number
+      const previousPage = parseInt(pageNumber) - 1
+      // render previous page link
+      return this.renderPageLink('Previous', previousPage)
+    } else if (pagination.next) {
+      // calculate next page number
+      const nextPage = parseInt(pageNumber) + 1
+      // render next page link
+      return this.renderPageLink('Next', nextPage)
     }
   }
 
