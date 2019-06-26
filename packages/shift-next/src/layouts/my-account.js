@@ -21,7 +21,7 @@ export class MyAccountLayout extends Component {
 
   componentDidMount () {
     const items = this.props.menu
-    const path = Router.asPath
+    const path = Router.pathname
     const selected = items.filter(item => item.location.toLowerCase() === (path && path.toLowerCase()))
 
     this.setState({
