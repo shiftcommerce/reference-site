@@ -26,7 +26,6 @@ export class AccountOrders extends Component {
   renderOrders (orders) {
     const {
       currentOrderRef,
-      fetchOrders,
       pageNumber,
       pagePath,
       updateCurrentOrder
