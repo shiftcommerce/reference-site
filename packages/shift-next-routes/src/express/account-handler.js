@@ -1,4 +1,5 @@
 // Shift-api client
+const util = require('util')
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 const { isSecure } = require('../lib/util')
 const { getSessionExpiryTime } = require('../lib/session')
@@ -19,7 +20,7 @@ module.exports = {
     }
 
     const response = await SHIFTClient.getAccountV1(req.query, customerId)
-
+    console.log(util.inspect(response, false, null, true))
     switch (response.status) {
       case 404:
         return res.status(200).send({})
@@ -149,7 +150,7 @@ module.exports = {
       return res.status(401).send({})
     }
 
-    const { firstName, lastName, email, mobilePhone, day, month, year } = req.body
+    const { firstName, lastName, email, mobilePhone, day, month, year, password } = req.body
 
     const body = {
       data: {
@@ -173,10 +174,12 @@ module.exports = {
               data_type: 'string'
             }
           },
-          email
+          email,
+          password
         }
       }
     }
+    console.log('body', body)
 
     try {
       const response = await SHIFTClient.updateCustomerAccountV1(body, customerId)
