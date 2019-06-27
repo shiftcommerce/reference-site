@@ -2,10 +2,29 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import { connectSearchBox } from 'react-instantsearch-dom'
+import debounce from 'lodash/debounce'
 
 class SearchBar extends Component {
+  constructor (props) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.state = { searchTerm: props.currentRefinement }
+  }
+
+  handleChange (event) {
+    const { refine } = this.props
+    const doRefine = val => {
+      refine(this.state.searchTerm)
+    }
+
+    event.persist()
+    this.setState({ searchTerm: event.target.value })
+    debounce(doRefine, 500)()
+  }
+
   render () {
-    const { currentRefinement, filterCategory, onCategoryFilterCleared, refine, placeHolder } = this.props
+    const { filterCategory, onCategoryFilterCleared, placeHolder } = this.props
+    const { searchTerm } = this.state
 
     return (
       <form
@@ -28,10 +47,10 @@ class SearchBar extends Component {
           className={classNames('c-searchbox__input', {
             'c-searchbox__input--with-filter': filterCategory
           })}
-          onChange={event => refine(event.currentTarget.value)}
+          onChange={this.handleChange}
           placeholder={ placeHolder || 'Search here…'}
           type='search'
-          value={currentRefinement}
+          value={searchTerm}
         />
         <button
           className='c-searchbox__submit'
