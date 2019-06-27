@@ -27,7 +27,7 @@ import buildSearchStateForURL from '../lib/build-search-state-for-url'
 // Config
 import Config from '../lib/config'
 
-class SearchPage extends Component {
+export class SearchPage extends Component {
   static algoliaEnabled = () => true
 
   static algoliaComponentDidUpdate (prevProps, prevState) {

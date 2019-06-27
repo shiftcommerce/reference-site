@@ -1,5 +1,5 @@
 // Pages
-import SearchPage from '../../src/pages/search'
+import { SearchPage } from '../../src/pages/search'
 
 // Mock out the next/config
 jest.mock('next/config', () => () => ({
