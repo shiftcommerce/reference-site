@@ -26,6 +26,7 @@ class SearchBar extends Component {
     return (
       <form
         action='/search'
+        method="get"
         className='c-searchbox__form'
         noValidate
         onSubmit={e => e.preventDefault()}
