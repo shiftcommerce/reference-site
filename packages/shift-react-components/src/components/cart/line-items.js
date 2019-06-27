@@ -138,7 +138,7 @@ export class LineItems extends Component {
    */
   renderLineItems (lineItems) {
     const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
-      const picture_url = '/static/placeholder.png'
+      const picture_url = lineItem.item.picture_url ? lineItem.item.picture_url : '/static/placeholder.png'
 
       return (
         <div className={classNames('c-line-items__sections', { 'c-line-items__sections--error': (lineItem.unit_quantity > lineItem.stock_available_level) })} key={lineItem.item.sku}>
