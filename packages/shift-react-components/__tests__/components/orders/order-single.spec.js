@@ -23,7 +23,7 @@ test('renders correctly', () => {
   const shippingTotal = penceToPounds(instance.calculateShippingTotal(order))
   const orderSubTotal = penceToPounds(instance.calculateSubTotal(order))
   const orderTotal = penceToPounds(order.pricing.total_inc_tax)
-  const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
+  const orderDate = format(new Date(order.placed_at), 'D MMM YYYY')
 
   // Assert
   expect(wrapper).toMatchSnapshot()

@@ -1,0 +1,258 @@
+{
+  "data": [
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "2",
+        "placed_at": "2019-06-26T12:25:19.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 10355,
+          "total_inc_tax": 12426,
+          "pre_discount_line_items_total_ex_tax": 11418,
+          "pre_discount_line_items_total_inc_tax": 13702,
+          "total_discount_ex_tax": 1063,
+          "total_discount_inc_tax": 1276,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/4e13ffa4-84e5-4d05-be5f-118d941a35ea/discounts"
+          },
+          "data": [
+            {
+              "type": "discounts",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_0"
+            },
+            {
+              "type": "discounts",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+            },
+            {
+              "type": "discounts",
+              "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_2"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/4e13ffa4-84e5-4d05-be5f-118d941a35ea"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0"
+      },
+      "attributes": {
+        "title": "Product 5 - Small Granite Knife - Variant 2 for Product 5 - Small Granite Knife",
+        "quantity": 2,
+        "sku": "5879215469392",
+        "pricing": {
+          "each_ex_tax": 5709,
+          "each_inc_tax": 6851,
+          "line_total_ex_tax": 10355,
+          "line_total_inc_tax": 12426,
+          "line_discount_ex_tax": 1063,
+          "line_discount_inc_tax": 1276,
+          "pre_discount_line_total_ex_tax": 11418,
+          "pre_discount_line_total_inc_tax": 13702,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/5/1561548220.4408648-15.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_0",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/4e13ffa4-84e5-4d05-be5f-118d941a35ea_0"
+      },
+      "attributes": {
+        "label": "£1.50 off all orders",
+        "amount_inc_tax": 150,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_1",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/4e13ffa4-84e5-4d05-be5f-118d941a35ea_1"
+      },
+      "attributes": {
+        "label": "£10 off orders overs over £50",
+        "amount_inc_tax": 1000,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "4e13ffa4-84e5-4d05-be5f-118d941a35ea_2",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/4e13ffa4-84e5-4d05-be5f-118d941a35ea_2"
+      },
+      "attributes": {
+        "label": "1% off all orders",
+        "amount_inc_tax": 126,
+        "coupon_code": null
+      }
+    }
+  ],
+  "links": {
+    "first": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-placed_at",
+    "prev": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-placed_at",
+    "last": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=1&sort=-placed_at"
+  }
+}
