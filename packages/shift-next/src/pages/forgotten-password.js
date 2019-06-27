@@ -22,6 +22,10 @@ export class ForgottenPassword extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   handleSubmit (values) {
     this.props.dispatch(requestPasswordResetEmail(values.email))
     this.setState({ flashMessage: true })

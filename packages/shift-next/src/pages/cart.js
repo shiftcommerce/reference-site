@@ -2,6 +2,7 @@
 import React, { Component, Fragment } from 'react'
 
 // Lib
+import { canCheckout } from '../lib/cart-helpers'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import ApiClient from '../lib/api-client'
 
@@ -144,6 +145,7 @@ class CartPage extends Component {
     return (
       <CartTable>
         <CartTableHeader
+          canCheckout={canCheckout(cart)}
           cart={cart}
           shippingMethod={cart.shipping_method || cheapestShipping}
           breadcrumb={<Breadcrumb />}
