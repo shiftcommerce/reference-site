@@ -3,19 +3,15 @@ import React, { Component } from 'react'
 import {
   HierarchicalMenu,
   Panel,
-  RangeInput,
-  RatingMenu,
   RefinementList
 } from 'react-instantsearch-dom'
-
-// Components
-import SearchRatingFilter from './search-rating-filter'
 import SearchSlider from './search-slider'
+import SearchRatingFilter from './search-rating-filter'
 
 // Simple header element for category Panels
 const header = (headerText) => (<h2>{ headerText }</h2>)
 
-export default class SearchFilters extends Component {
+class SearchFilters extends Component {
   renderRefinements (facets) {
     if (facets) {
       return (
@@ -33,10 +29,10 @@ export default class SearchFilters extends Component {
                   filter = <HierarchicalMenu attribute={source} searchable={searchable} />
                   break
                 case 'range':
-                  filter = <RangeInput attribute={source} />
+                  filter = <SearchSlider attribute={source} precision={0} formatLabel={value => `£${value}`} />
                   break
                 case 'rating':
-                  filter = <RatingMenu attribute={source} />
+                  filter = <SearchRatingFilter attribute={source} min={0} max={5} />
                   break
                 default:
                   // no-op
@@ -59,14 +55,10 @@ export default class SearchFilters extends Component {
 
     return (
       <>
-          { this.renderRefinements(facets) }
-          <Panel className='c-product-listing-filter__body-option' header={header('Rating')}>
-            <SearchRatingFilter attribute='product_rating' min={0} max={5} />
-          </Panel>
-          <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <SearchSlider attribute='current_price' precision={0} formatLabel={value => `£${value}`} />
-          </Panel>
+        { this.renderRefinements(facets) }
       </>
     )
   }
 }
+
+export default SearchFilters

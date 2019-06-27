@@ -34,7 +34,7 @@ describe('Search', () => {
         .its('requestBody.requests')
         .should('include', {
           indexName: 'referencetest_catalogue',
-          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=1&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D'
+          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=20&page=1&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facetingAfterDistinct=true&facets=%5B%22*%22%2C%22product_meta_data.gender%22%2C%22category_id%22%2C%22current_price%22%2C%22product_meta_data.brand%22%2C%22meta_data.short_size%22%2C%22product_rating%22%2C%22product_meta_data.season%22%2C%22product_meta_data.technical%22%2C%22product_meta_data.waterproof%22%2C%22product_meta_data.wind_resistant%22%5D'
         })
 
       // Check product count is correct
@@ -56,7 +56,7 @@ describe('Search', () => {
         .its('requestBody.requests')
         .should('include', {
           indexName: 'referencetest_catalogue',
-          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=10&page=2&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facets=%5B%22product_rating%22%2C%22current_price%22%5D'
+          params: 'query=&tagFilters=-redirect&hitsPerPage=4&maxValuesPerFacet=20&page=2&highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&distinct=true&facetingAfterDistinct=true&facets=%5B%22*%22%2C%22product_meta_data.gender%22%2C%22category_id%22%2C%22current_price%22%2C%22product_meta_data.brand%22%2C%22meta_data.short_size%22%2C%22product_rating%22%2C%22product_meta_data.season%22%2C%22product_meta_data.technical%22%2C%22product_meta_data.waterproof%22%2C%22product_meta_data.wind_resistant%22%5D'
         })
 
       // Check product count is correct
