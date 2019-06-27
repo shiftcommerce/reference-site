@@ -18,7 +18,7 @@ export function fetchAccountDetails (options) {
   return readEndpoint(accountRequest, options)
 }
 
-export function updateCustomerPassword (details, options) {
+export function updateCustomerPassword (formData, options) {
   const { password, newPassword, newPasswordConfirmation, email } = details
 
   const request = {
