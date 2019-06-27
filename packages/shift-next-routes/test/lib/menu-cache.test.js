@@ -11,6 +11,8 @@ const exampleCacheClient = {
   })
 }
 
+const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
+
 describe('initialisation', () => {
   test('instantialises the service with the given client', async () => {
     // Act
@@ -29,6 +31,17 @@ describe('initialisation', () => {
 
     // Assert
     expect(menuCache.cacheKey).toEqual(exampleCacheKey)
+  })
+
+  test('instantialises the service with a namespaced cache key', async () => {
+    // Arrange
+    const expectedCacheKey = `menus/${shiftApiConfig.get().apiTenant}/data`
+
+    // Act
+    const menuCache = new MenuCache(exampleCacheClient)
+
+    // Assert
+    expect(menuCache.cacheKey).toEqual(expectedCacheKey)
   })
 })
 
