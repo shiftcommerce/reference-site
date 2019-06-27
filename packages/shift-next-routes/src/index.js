@@ -98,6 +98,7 @@ module.exports = {
     server.post('/setShippingMethod', CartHandler.setCartShippingMethod)
     server.post('/updateLineItem', CartHandler.updateLineItem)
     server.post('/updateCustomerAccount', AccountHandler.updateCustomerAccount)
+    server.post('/updateCustomerPassword', AccountHandler.updateCustomerPassword)
     server.delete('/deleteAddress/:addressId', AddressBookHandler.deleteAddress)
 
     /**

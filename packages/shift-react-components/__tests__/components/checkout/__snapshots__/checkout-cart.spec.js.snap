@@ -197,7 +197,22 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 aria-label="Test Variant"
                 className="c-line-items__image"
                 key="1"
-              />
+                src="/static/placeholder.png"
+              >
+                <div
+                  className="c-line-items__image"
+                >
+                  <picture>
+                    <img
+                      alt="Test Variant"
+                      aria-label="Test Variant"
+                      className="o-image"
+                      src="/static/placeholder.png"
+                      srcSet="/static/placeholder.png 769w"
+                    />
+                  </picture>
+                </div>
+              </Image>
             </a>
           </Link>
         </div>
@@ -270,7 +285,22 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 aria-label="Pretend Variant"
                 className="c-line-items__image"
                 key="2"
-              />
+                src="/static/placeholder.png"
+              >
+                <div
+                  className="c-line-items__image"
+                >
+                  <picture>
+                    <img
+                      alt="Pretend Variant"
+                      aria-label="Pretend Variant"
+                      className="o-image"
+                      src="/static/placeholder.png"
+                      srcSet="/static/placeholder.png 769w"
+                    />
+                  </picture>
+                </div>
+              </Image>
             </a>
           </Link>
         </div>
@@ -493,7 +523,22 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
                 aria-label="Test Variant"
                 className="c-line-items__image"
                 key="1"
-              />
+                src="/static/placeholder.png"
+              >
+                <div
+                  className="c-line-items__image"
+                >
+                  <picture>
+                    <img
+                      alt="Test Variant"
+                      aria-label="Test Variant"
+                      className="o-image"
+                      src="/static/placeholder.png"
+                      srcSet="/static/placeholder.png 769w"
+                    />
+                  </picture>
+                </div>
+              </Image>
             </a>
           </Link>
         </div>
