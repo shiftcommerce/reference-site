@@ -29,7 +29,7 @@ export default function algoliaOuterWrapper (NextWrapper, Page) {
       // Get initial props from the parent
       const appProps = await Object.getPrototypeOf(this).getInitialProps(appContext)
 
-      let searchState = query
+      let searchState = { query: query.query }
 
       // remove the random undefined key
       delete searchState.undefined
