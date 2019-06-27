@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import qs from 'qs'
 import classNames from 'classnames'
 import { SortBy } from 'react-instantsearch-dom'
-import Router from 'next/router'
+import Router, { withRouter } from 'next/router'
 import equal from 'deep-equal'
 
 // Components
@@ -65,12 +65,13 @@ class SearchPage extends Component {
   render () {
     const indexName = Config.get().algoliaIndexName
     const filtersShown = false
-    const { CustomListingCard, CustomBreadCrumb } = this.props
+    const { CustomListingCard, CustomBreadCrumb, router } = this.props
 
     return (
       <>
         <this.Head>
           <title>{ suffixWithStoreName('Search') }</title>
+          { Config.get().storeUrl ? <link rel='canonical' href={`${Config.get().storeUrl}${router.pathname}?query=${router.query.query}`} /> : null }
         </this.Head>
         <div className='o-container'>
           <ProductMenu />
@@ -113,4 +114,4 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage
+export default withRouter(SearchPage)
