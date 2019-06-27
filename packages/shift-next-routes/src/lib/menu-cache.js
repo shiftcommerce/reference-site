@@ -2,6 +2,9 @@
 const { MemcachedStore } = require('./memcached-store')
 const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
+// Constants
+const defaultCacheKey = `menus/${shiftApiConfig.get().apiTenant}/data`
+
 /**
  *  MenuCache service
  *
@@ -15,7 +18,7 @@ class MenuCache {
    * @param {function} cache - cache client, eg. memcached
    * @param {string} cacheKey - the cache key to be used
    */
-  constructor (cache = MemcachedStore, cacheKey = 'menus/data', logger = shiftApiConfig.get().logger) {
+  constructor (cache = MemcachedStore, cacheKey = defaultCacheKey, logger = shiftApiConfig.get().logger) {
     this.cache = cache
     this.cacheKey = cacheKey
     this.defaultCacheDuration = parseInt(process.env.MENUS_CACHE_DURATION) || 300
