@@ -11,7 +11,7 @@ export class AccountPassword extends Component {
   renderFlash (status) {
     switch (status) {
       case 'success':
-        return (<Flash modifier='success' text='Your password was successfully updated.' />)
+        return (<Flash modifier='success' text='Your Password was successfully updated.' />)
       case 'error':
         return (<Flash modifier='error' text='Oops, there was an error updating your password.' />)
     }

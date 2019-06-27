@@ -7,65 +7,50 @@ describe('My Account', () => {
       cy.emptySearch()
     })
 
-    context('Valid input', () => {
-      it('updates the account password', () => {
-        // Stub update customer password request
-        cy.route({
-          method: 'POST',
-          url: '/updateCustomerPassword',
-          status: 200,
-          response: 'fixture:account/details-email.json'
-        }).as('updatePassword')
+    it('updates the account password', () => {
+      // Stub update customer password request
+      cy.route({
+        method: 'POST',
+        url: '/updateCustomerPassword',
+        status: 200,
+        response: 'fixture:account/details-email.json'
+      }).as('updatePassword')
 
-        cy.visit('/account/password')
+      cy.visit('/account/password')
 
-        // Enter new password
-        cy.get('label[name=oldPassword]').type('oldsupersecurepassword')
-        cy.get('label[name=newPassword]').type('newsupersecurepassword')
-        cy.get('label[name=newPasswordConfirmation]').type('newsupersecurepassword')
+      // Enter new password
+      cy.get('input[name=oldPassword]').type('oldsupersecurepassword')
+      cy.get('input[name=newPassword]').type('newsupersecurepassword')
+      cy.get('input[name=newPasswordConfirmation]').type('newsupersecurepassword')
 
+      // Submit change
+      cy.contains(/UPDATE PASSWORD/i).click()
 
-        // Submit change
-        cy.contains(/UPDATE PASSWORD/i).click()
+      // Check flash message
+      cy.contains('Your Password was successfully updated.')
+    })
 
-        // Check flash message
-        cy.contains('Your Password were successfully updated.')
+    it('does not successfully update the password', () => {
+      // Stub update customer password request
+      cy.route({
+        method: 'POST',
+        url: '/updateCustomerPassword',
+        status: 404,
+        response: 'fixture:account/customer-account-auth-failed.json'
+      }).as('updatePassword')
 
-        // Check submitted request data
-        cy.wait('@updatePassword')
-          .its('requestBody')
-          .should('include', {
-            firstName: 'Dan',
-            lastName: 'Doe',
-            email: 'example123@test.com'
-          })
+      cy.visit('/account/password')
 
-        // Check first name has been updated
-        cy.get('input[name=firstName]').should('have.value', 'Dan')
-      })
+      // Enter new password
+      cy.get('input[name=oldPassword]').type('oldsupersecurepassword')
+      cy.get('input[name=newPassword]').type('newsupersecurepassword')
+      cy.get('input[name=newPasswordConfirmation]').type('newsupersecurepassword')
 
-      it('does not successfully update the password', () => {
-        // Stub update customer password request
-        cy.route({
-          method: 'POST',
-          url: '/updateCustomerPassword',
-          status: 200,
-          response: 'fixture:account/customer-account-auth-failed.json'
-        }).as('updatePassword')
+      // Submit change
+      cy.contains(/UPDATE PASSWORD/i).click()
 
-        cy.visit('/account/password')
-
-        // Enter new password
-        cy.get('label[name=oldPassword]').type('oldsupersecurepassword')
-        cy.get('label[name=newPassword]').type('newsupersecurepassword')
-        cy.get('label[name=newPasswordConfirmation]').type('newsupersecurepassword')
-
-        // Submit change
-        cy.contains(/UPDATE PASSWORD/i).click()
-
-        // Check flash message
-        cy.contains('Password reset failed')
-      })
+      // Check flash message
+      cy.contains('Oops, there was an error updating your password.')
     })
   })
 })
