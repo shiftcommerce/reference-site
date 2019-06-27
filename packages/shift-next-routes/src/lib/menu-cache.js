@@ -4,7 +4,7 @@ const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
 // Constants
 // Namespace menu cache key based on tenant
-const defaultCacheKey = `menus/${shiftApiConfig.get().apiTenant}/data`
+const defaultCacheKey = `${shiftApiConfig.get().apiTenant}/menus`
 
 /**
  *  MenuCache service
@@ -50,7 +50,7 @@ class MenuCache {
   async set (response, cacheDuration = this.defaultCacheDuration) {
     try {
       const result = await this.cache.set(this.cacheKey, JSON.stringify(response), { expires: cacheDuration })
-      this.log.info('Writing API menu response in cache: ', result)
+      this.log.info(`Writing API menu response in ${this.cacheKey} cache: `, result)
       return result
     } catch (error) {
       this.log.error('Error setting menu cache', error)

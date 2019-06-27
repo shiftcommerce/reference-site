@@ -35,7 +35,7 @@ describe('initialisation', () => {
 
   test('instantialises the service with a namespaced cache key', async () => {
     // Arrange
-    const expectedCacheKey = `menus/${shiftApiConfig.get().apiTenant}/data`
+    const expectedCacheKey = `${shiftApiConfig.get().apiTenant}/menus`
 
     // Act
     const menuCache = new MenuCache(exampleCacheClient)
