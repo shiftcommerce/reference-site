@@ -25,7 +25,7 @@ class SearchBar extends Component {
 
     return (
       <form
-        action=''
+        action='/search'
         className='c-searchbox__form'
         noValidate
         onSubmit={e => e.preventDefault()}
@@ -42,6 +42,7 @@ class SearchBar extends Component {
           className={classNames('c-searchbox__input', {
             'c-searchbox__input--with-filter': filterCategory
           })}
+          name="query"
           onChange={this.handleChange}
           placeholder={ placeHolder || 'Search here…'}
           type='search'
