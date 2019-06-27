@@ -217,12 +217,12 @@ exports[`renders correctly 1`] = `
               COMPANY
             </p>
             <p
-              key="0"
+              key="f52d57e1-5960-4bd6-8cd4-3f6b856b365d_10"
             >
               1 Scott Drive
             </p>
             <p
-              key="1"
+              key="f52d57e1-5960-4bd6-8cd4-3f6b856b365d_11"
             >
               Crofton
             </p>
@@ -286,12 +286,12 @@ exports[`renders correctly 1`] = `
               COMPANY
             </p>
             <p
-              key="0"
+              key="f52d57e1-5960-4bd6-8cd4-3f6b856b365d_10"
             >
               1 Scott Drive
             </p>
             <p
-              key="1"
+              key="f52d57e1-5960-4bd6-8cd4-3f6b856b365d_11"
             >
               Crofton
             </p>
