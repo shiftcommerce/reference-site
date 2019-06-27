@@ -4,6 +4,8 @@ import classNames from 'classnames'
 import { connectSearchBox } from 'react-instantsearch-dom'
 import debounce from 'lodash/debounce'
 
+const REFINE_DEBOUNCE_MS = 700
+
 class SearchBar extends Component {
   constructor (props) {
     super(props)
@@ -13,13 +15,8 @@ class SearchBar extends Component {
 
   handleChange (event) {
     const { refine } = this.props
-    const doRefine = () => {
-      refine(this.state.searchTerm)
-    }
-
-    event.persist()
     this.setState({ searchTerm: event.target.value })
-    debounce(doRefine, 500)()
+    debounce(() => refine(this.state.searchTerm), REFINE_DEBOUNCE_MS)()
   }
 
   render () {
@@ -34,10 +31,7 @@ class SearchBar extends Component {
         onSubmit={e => e.preventDefault()}
         role='search'
       >
-        { filterCategory && <div
-
-          className='c-searchbox__filter'
-        >
+        { filterCategory && <div className='c-searchbox__filter'>
           <span className='c-searchbox__category-name'>{ filterCategory }</span>
           <div
             className='c-searchbox__clear-filter'
