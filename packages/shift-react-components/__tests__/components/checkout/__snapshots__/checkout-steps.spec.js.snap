@@ -97,7 +97,7 @@ exports[`Renders current step 1 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Payment Details
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ exports[`Renders current step 2 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Payment Details
             </div>
           </div>
         </div>
@@ -367,7 +367,7 @@ exports[`Renders current step 3 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Payment Details
             </div>
           </div>
         </div>
@@ -508,7 +508,7 @@ exports[`Renders current step 4 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
             >
-              Payment
+              Payment Details
             </div>
           </div>
         </div>
@@ -654,7 +654,7 @@ exports[`Renders current step 5 correctly 1`] = `
               <div
                 className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
               >
-                Payment
+                Payment Details
               </div>
             </div>
           </Link>
@@ -784,7 +784,7 @@ exports[`Renders steps correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Payment Details
             </div>
           </div>
         </div>
