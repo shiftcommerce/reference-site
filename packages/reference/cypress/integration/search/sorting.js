@@ -43,9 +43,9 @@ describe('Search', () => {
 
         // Check request payload
         cy.wait('@sortGlobalSearchResultsDESC').then((xhr) => {
-          const requestParams = decodeURI(xhr.requestBody.requests[0].params).replace(/%2C/, ',')
+          const requestParams = decodeURI(xhr.requestBody.requests[0].params)
           assert.include(requestParams, 'query=computer')
-          assert.include(requestParams, 'facets=["product_rating","current_price"]')
+          assert.include(requestParams, 'facets=["*"%2C"product_meta_data.gender"%2C"category_id"%2C"current_price"%2C"product_meta_data.brand"%2C"meta_data.short_size"%2C"product_rating"%2C"product_meta_data.season"%2C"product_meta_data.technical"%2C"product_meta_data.waterproof"%2C"product_meta_data.wind_resistant"]')
         })
 
         // Check sorting (desc) is applied - check rendered first product
@@ -87,7 +87,7 @@ describe('Search', () => {
           const requestParams = decodeURI(xhr.requestBody.requests[0].params)
           assert.include(requestParams, 'query=')
           assert.include(requestParams.replace(/%3A/g, ':'), 'filters=category_ids:73')
-          assert.include(requestParams.replace(/%2C/, ','), 'facets=["product_rating","current_price"]')
+          assert.include(requestParams.replace(/%2C/, ','), 'facets=["*"]')
         })
 
         // Check page url includes params
