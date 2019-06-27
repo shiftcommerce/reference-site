@@ -164,7 +164,7 @@ export class OrderList extends PureComponent {
             )
           }) }
         </div>
-        <div className='clearfix'>
+        <div className='u-clearfix'>
           { this.renderNextPageLink() }
           { this.renderPreviousPageLink() }
         </div>
