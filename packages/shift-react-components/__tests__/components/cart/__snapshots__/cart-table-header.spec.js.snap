@@ -640,7 +640,7 @@ exports[`renders flash message when cart has invalid items 1`] = `
           className="c-cart-table__description"
         >
           We will deliver your item: 
-          Thursday 27th June
+          Wednesday 5th December
           .
         </p>
       </div>

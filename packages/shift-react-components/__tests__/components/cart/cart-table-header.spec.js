@@ -28,6 +28,8 @@ test('renders correct messages when cart has items', () => {
 })
 
 test('renders flash message when cart has invalid items', () => {
+  const dateSpy = jest.spyOn(Date, 'now').mockImplementation(() => new Date('2018-12-04T06:00:00').getTime())
+
   // act
   const wrapper = mount(
     <CartTableHeader cart={cart} shippingMethod={shippingMethod} canCheckout={false} />
@@ -36,6 +38,8 @@ test('renders flash message when cart has invalid items', () => {
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('The items highlighted in your basket are out of stock. Please reduce quantity or remove before proceeding.')
+
+  dateSpy.mockRestore()
 })
 
 test('renders correct messages when cart is empty', () => {
