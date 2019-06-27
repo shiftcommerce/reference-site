@@ -18,6 +18,10 @@ export class AccountOrdersPage extends Component {
     this.updateCurrentOrder = this.updateCurrentOrder.bind(this)
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   updateCurrentOrder (event, currentOrderRef = null) {
     event.preventDefault()
     this.setState({ currentOrderRef })
