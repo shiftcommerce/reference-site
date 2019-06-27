@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { connectSearchBox } from 'react-instantsearch-dom'
 import debounce from 'lodash/debounce'
-
-const REFINE_DEBOUNCE_MS = 700
+import Config from '../../lib/config'
 
 class SearchBar extends Component {
   constructor (props) {
@@ -15,8 +14,10 @@ class SearchBar extends Component {
 
   handleChange (event) {
     const { refine } = this.props
+    const debounceTime = Config.get().searchDebounceMillisecs
+
     this.setState({ searchTerm: event.target.value })
-    debounce(() => refine(this.state.searchTerm), REFINE_DEBOUNCE_MS)()
+    debounce(() => refine(this.state.searchTerm), debounceTime)()
   }
 
   render () {
