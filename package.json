@@ -19,8 +19,5 @@
     "test": "yarn workspaces run test",
     "bump-versions": "yarn run lerna version --no-push --force-publish",
     "publish-versions": "yarn run lerna publish from-package"
-  },
-  "dependencies": {
-    "dotenv": "^8.0.0"
   }
 }
