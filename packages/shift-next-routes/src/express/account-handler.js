@@ -1,5 +1,4 @@
 // Shift-api client
-const util = require('util')
 const { SHIFTClient } = require('@shiftcommerce/shift-node-api')
 const { isSecure } = require('../lib/util')
 const { getSessionExpiryTime } = require('../lib/session')

@@ -33,8 +33,6 @@ export default function setAccount (state = initialState, action) {
       return Object.assign({}, initialState, accountObject)
 
     case types.ERROR_ACCOUNT:
-      console.log('payload', action.payload)
-      console.log('error', action.payload.error)
       return Object.assign({}, state, { errors: action.payload.error.data })
 
     case types.SET_LOGGED_IN:
