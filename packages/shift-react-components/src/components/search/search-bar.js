@@ -13,7 +13,7 @@ class SearchBar extends Component {
 
   handleChange (event) {
     const { refine } = this.props
-    const doRefine = val => {
+    const doRefine = () => {
       refine(this.state.searchTerm)
     }
 
@@ -35,6 +35,7 @@ class SearchBar extends Component {
         role='search'
       >
         { filterCategory && <div
+
           className='c-searchbox__filter'
         >
           <span className='c-searchbox__category-name'>{ filterCategory }</span>
