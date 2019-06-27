@@ -3,6 +3,7 @@ const { MemcachedStore } = require('./memcached-store')
 const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
 // Constants
+// Namespace menu cache key based on tenant
 const defaultCacheKey = `menus/${shiftApiConfig.get().apiTenant}/data`
 
 /**
