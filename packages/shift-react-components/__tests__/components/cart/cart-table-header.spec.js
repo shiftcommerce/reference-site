@@ -15,7 +15,7 @@ test('renders correct messages when cart has items', () => {
 
   // act
   const wrapper = mount(
-    <CartTableHeader className={className} cart={cart} shippingMethod={shippingMethod} />
+    <CartTableHeader className={className} cart={cart} shippingMethod={shippingMethod} canCheckout={true} />
   )
 
   // assert
@@ -23,6 +23,21 @@ test('renders correct messages when cart has items', () => {
   expect(wrapper).toIncludeText('Wednesday 5th December') // estimated delivery date
   expect(wrapper).toIncludeText('You have 2 items in your shopping basket')
   expect(wrapper.find('section')).toHaveClassName(className)
+
+  dateSpy.mockRestore()
+})
+
+test('renders flash message when cart has invalid items', () => {
+  const dateSpy = jest.spyOn(Date, 'now').mockImplementation(() => new Date('2018-12-04T06:00:00').getTime())
+
+  // act
+  const wrapper = mount(
+    <CartTableHeader cart={cart} shippingMethod={shippingMethod} canCheckout={false} />
+  )
+
+  // assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('The items highlighted in your basket are out of stock. Please reduce quantity or remove before proceeding.')
 
   dateSpy.mockRestore()
 })
@@ -40,7 +55,7 @@ test('renders correct messages when cart is empty', () => {
 
   // act
   const wrapper = mount(
-    <CartTableHeader cart={emptyCart} shippingMethod={shippingMethod} />
+    <CartTableHeader cart={emptyCart} shippingMethod={shippingMethod} canCheckout={true} />
   )
 
   // assert

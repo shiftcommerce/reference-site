@@ -24,6 +24,10 @@ class RegisterPage extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   componentDidMount () {
     if (this.props.registration.errors.length > 0) {
       this.props.dispatch(clearErrors())
