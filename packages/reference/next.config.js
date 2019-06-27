@@ -19,8 +19,7 @@ module.exports = withBundleAnalyzer(withCSS(withSass(withTM({
     'ENABLE_TEST_PAYPAL_BUTTON': process.env.ENABLE_TEST_PAYPAL_BUTTON,
     'ORDER_HISTORY_PAGE_LIMIT': process.env.ORDER_HISTORY_PAGE_LIMIT,
     'PAYPAL_CLIENT_ID': process.env.PAYPAL_CLIENT_ID,
-    'STRIPE_API_KEY': process.env.STRIPE_API_KEY,
-    'SEARCH_DEBOUNCE_MS': process.env.SEARCH_DEBOUNCE_MS || 700
+    'STRIPE_API_KEY': process.env.STRIPE_API_KEY
   },
   serverRuntimeConfig: {
     'API_TENANT': process.env.API_TENANT,
