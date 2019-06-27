@@ -24,7 +24,12 @@ export class AccountOrders extends Component {
    * @return {string} - HTML markup for the component
    */
   renderOrders (orders) {
-    const { currentOrderRef, updateCurrentOrder } = this.props
+    const {
+      currentOrderRef,
+      pageNumber,
+      pagePath,
+      updateCurrentOrder
+    } = this.props
 
     if (orders.data.length === 0) {
       return (<p>No previous orders found.</p>)
@@ -50,6 +55,8 @@ export class AccountOrders extends Component {
         </div>
         <OrderList
           orders={orders}
+          pageNumber={pageNumber}
+          pagePath={pagePath}
           updateCurrentOrder={updateCurrentOrder}
         />
       </Fragment>

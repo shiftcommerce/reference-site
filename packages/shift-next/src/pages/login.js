@@ -28,6 +28,10 @@ class LoginPage extends Component {
     }
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   static async getInitialProps ({ reduxStore, pathname }) {
     const { account: { loggedIn } } = reduxStore.getState()
     // Determine where to redirect user if already logged in

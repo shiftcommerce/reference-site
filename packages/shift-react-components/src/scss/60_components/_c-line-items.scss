@@ -15,6 +15,11 @@
     &:last-child {
       border-bottom: none;
     }
+
+    &--error {
+      border: 1px solid $border-error;
+      padding: $global-spacing-unit-small;
+    }
   }
 
   .c-line-items__images {

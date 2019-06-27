@@ -15,6 +15,10 @@ export class AccountAddressesPage extends Component {
     this.state = {}
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   componentDidMount () {
     this.props.dispatch(fetchAddressBook())
   }

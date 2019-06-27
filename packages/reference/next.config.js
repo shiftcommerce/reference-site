@@ -9,16 +9,17 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer(withCSS(withSass(withTM({
-    publicRuntimeConfig: {
+  publicRuntimeConfig: {
     'API_HOST_PROXY': process.env.API_HOST_PROXY,
     'ALGOLIA_APP_ID': process.env.ALGOLIA_APP_ID,
     'ALGOLIA_API_KEY': process.env.ALGOLIA_API_KEY,
     'ALGOLIA_INDEX_NAME': process.env.ALGOLIA_INDEX_NAME,
     'ALGOLIA_RESULTS_PER_PAGE': process.env.ALGOLIA_RESULTS_PER_PAGE,
     'ALGOLIA_DISTINCT_VARIANTS': process.env.ALGOLIA_DISTINCT_VARIANTS,
-    'STRIPE_API_KEY': process.env.STRIPE_API_KEY,
+    'ENABLE_TEST_PAYPAL_BUTTON': process.env.ENABLE_TEST_PAYPAL_BUTTON,
+    'ORDER_HISTORY_PAGE_LIMIT': process.env.ORDER_HISTORY_PAGE_LIMIT,
     'PAYPAL_CLIENT_ID': process.env.PAYPAL_CLIENT_ID,
-    'ENABLE_TEST_PAYPAL_BUTTON': process.env.ENABLE_TEST_PAYPAL_BUTTON
+    'STRIPE_API_KEY': process.env.STRIPE_API_KEY
   },
   serverRuntimeConfig: {
     'API_TENANT': process.env.API_TENANT,

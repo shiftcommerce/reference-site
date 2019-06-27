@@ -49,14 +49,6 @@ export function setCardErrors (boolean) {
   }
 }
 
-export function getCustomerOrders (options) {
-  return readEndpoint({
-    endpoint: `/customerOrders`,
-    requestActionType: types.GET_CUSTOMER_ORDERS,
-    successActionType: types.SET_CUSTOMER_ORDERS
-  }, options)
-}
-
 export function convertCheckoutToOrder (cart, paymentMethod, order, account) {
   const lineItems = prepareLineItems(cart)
   const discountSummaries = prepareDiscountSummaries(cart, lineItems)
