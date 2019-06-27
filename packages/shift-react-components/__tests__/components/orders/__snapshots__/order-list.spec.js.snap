@@ -160,7 +160,7 @@ exports[`Order List renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="clearfix"
+    className="u-clearfix"
   />
 </Fragment>
 `;
@@ -607,7 +607,7 @@ exports[`Order List renders next and previous page link on second page 1`] = `
     </div>
   </div>
   <div
-    className="clearfix"
+    className="u-clearfix"
   >
     <Link
       className="o-button o-button--primary u-float--right"
@@ -1005,7 +1005,7 @@ exports[`Order List renders next page link 1`] = `
     </div>
   </div>
   <div
-    className="clearfix"
+    className="u-clearfix"
   >
     <Link
       className="o-button o-button--primary u-float--right"
