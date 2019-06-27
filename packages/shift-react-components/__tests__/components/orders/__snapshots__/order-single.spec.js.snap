@@ -374,6 +374,7 @@ exports[`renders correctly 1`] = `
                     },
                     "sub_total": 36.18,
                     "total": 36.18,
+                    "total_discount": 0,
                     "unit_quantity": 1,
                   },
                 ]
@@ -518,7 +519,7 @@ exports[`renders correctly 1`] = `
                 aria-label="Order discount"
               >
                 <dt>
-                   Discount: 
+                   Shipping Discount: 
                 </dt>
                 <dd>
                    -£
