@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Component
-import ShippingAddresses from '../../../src/components/orders/shipping-addresses'
+import { OrderAddresses } from '../../../src/components/orders/order-addresses'
 
 // Fixtures
 import orders from '../../fixtures/orders'
@@ -13,7 +13,7 @@ test('renders correctly', () => {
 
   // Act
   const wrapper = mount(
-    <ShippingAddresses addresses={shippingAddresses} />
+    <OrderAddresses addresses={shippingAddresses} />
   )
 
   // Assert
