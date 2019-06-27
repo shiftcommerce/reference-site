@@ -48,6 +48,45 @@ module.exports = {
     }
   },
 
+  // 1. Login the customer with the old password (old password - prop, account.email prop)
+  //     1.1 Success => Execute the second update account v1 with the new password
+  //          1.1.1 Success => Return success 201
+  //          1.1.2 Failure => Return an error that the update failed
+  //     1.2 Failure => Return an error that login failed
+  updateCustomerPassword: async (req, res) => {
+    console.log('Welcome to the update function')
+    const { customerId } = req.session
+
+    if (!customerId) {
+      req.log && req.log.warn('update customer account request with no customerId in session')
+      return res.status(401).send({})
+    }
+
+    try {
+      const response = await SHIFTClient.loginCustomerAccountV1(req.body.login)
+
+      if (response.status === 201) {
+        console.log("You logged in mate!")
+        try {
+          console.log('customerID', customerId)
+          const updateResponse = await SHIFTClient.updateCustomerAccountV1(req.body.updatePassword, customerId)
+          console.log("updateResponse", updateResponse)
+          if (updateResponse.status === 200) {
+            console.log("You updated your password pal!")
+            return res.status(updateResponse.status).send(updateResponse.data)
+          } 
+        } catch (error) {
+          console.log('We caught a big error!')
+          return handleErrorResponse(error, req, res)
+        }
+      }
+
+      return res.status(response.status).send(response.data)
+    } catch (error) {
+      return handleErrorResponse(error, req, res)
+    }
+  },
+
   registerAccount: async (req, res) => {
     try {
       const response = await SHIFTClient.createCustomerAccountV1(req.body)
@@ -133,15 +172,6 @@ module.exports = {
     }
   },
 
-  updateCustomerPassword: async (req, res) => {
-    try {
-      const response = await SHIFTClient.updateCustomerAccountPasswordV1(getAccount.data.id, request)
-      return res.status(response.status).send(response.data)
-    } catch (error) {
-      return handleErrorResponse(error, req, res)
-    }
-  },
-
   updateCustomerAccount: async (req, res) => {
     const { customerId } = req.session
 
@@ -150,7 +180,7 @@ module.exports = {
       return res.status(401).send({})
     }
 
-    const { firstName, lastName, email, mobilePhone, day, month, year, password } = req.body
+    const { firstName, lastName, email, mobilePhone, day, month, year } = req.body
 
     const body = {
       data: {
@@ -174,12 +204,10 @@ module.exports = {
               data_type: 'string'
             }
           },
-          email,
-          password
+          email
         }
       }
     }
-    console.log('body', body)
 
     try {
       const response = await SHIFTClient.updateCustomerAccountV1(body, customerId)

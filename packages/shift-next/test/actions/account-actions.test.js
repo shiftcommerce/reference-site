@@ -2,6 +2,8 @@ import * as accountActions from '../../src/actions/account-actions'
 import * as actionTypes from '../../src/actions/action-types'
 import * as apiActions from '../../src/actions/api-actions'
 
+import post200 from '../fixtures/actions/register'
+
 test('fetchAccountDetails() makes an account request', () => {
   const getAccountSpy = jest.spyOn(apiActions, 'readEndpoint')
 
@@ -66,4 +68,22 @@ test('updateCustomerAccount() makes a correct request', () => {
   })
 
   updateAccountSpy.mockRestore()
+})
+
+test('updateCustomerPassword() make a successful call to login', () => {
+  jest.mock('../../src/lib/api-client')
+
+  const updatePasswordSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(async () => post200)
+
+  const details = {
+    email: 'user@example.com',
+    password: 'currentpassword',
+    newPassword: 'newpassword',
+    newPasswordConfirmation: 'newpassword'
+  }
+
+  accountActions.updateCustomerPassword(details)
+
+  expect(updatePasswordSpy).toHaveBeenCalledTimes(1)
+  
 })

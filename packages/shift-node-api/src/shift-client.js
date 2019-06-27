@@ -189,6 +189,7 @@ class SHIFTClient {
   }
 
   updateCustomerAccountPasswordV1 (accountId, body) {
+    console.log("SHIFT Client", { accountId, body } )
     return accountEndpoints.updateCustomerAccountPasswordV1(accountId, body)
       .then(this.determineResponse)
   }

@@ -15,22 +15,42 @@ export function fetchAccountDetails (options) {
   return readEndpoint(accountRequest, options)
 }
 
-export function updateCustomerPassword (token, password, options) {
+export function updateCustomerPassword (details, options) {
+  // 1. Login here and return directly the response
+  // 2. If successful send on the postEndpoint for account update
+  //
+  // 
+  console.log(details)
+  const { password, newPassword, newPasswordConfirmation, email } = details
+
   const request = {
     endpoint: '/updateCustomerPassword',
     body: {
-      data: {
-        type: 'password_recoveries',
-        attributes: {
-          token: token,
-          password: password
+      login: {
+        data: {
+          type: 'customer_account_authentications',
+          attributes: {
+            email,
+            password
+          }
+        }
+      },
+      updatePassword: {
+        data: {
+          type: 'customer_accounts',
+          attributes: {
+            email: email,
+            password: newPassword,
+            password_confirmation: newPasswordConfirmation
+          }
         }
       }
     },
-    successActionType: types.PASSWORD_RESET,
     errorActionType: types.ERROR_ACCOUNT
   }
 
+  console.log('request in action updateCustomerPassword', request)
+  console.log('request body', request.body)
   return postEndpoint(request, options)
 }
 
@@ -42,7 +62,7 @@ export function updateCustomerAccount (details, options) {
     },
     successActionType: types.SET_ACCOUNT
   }
-  console.log(request.body)
+  console.log('request body', request.body)
   return postEndpoint(request, options)
 }
 
