@@ -21,6 +21,10 @@ export class AccountDetailsPage extends Component {
     })
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   render () {
     const { account, layout } = this.props
     const Layout = layout.component

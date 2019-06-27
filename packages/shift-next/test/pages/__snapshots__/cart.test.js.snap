@@ -159,6 +159,7 @@ exports[`dispatch updateQuantity action on changing line item quantity 1`] = `
     >
       <CartTableHeader
         breadcrumb={<Breadcrumb />}
+        canCheckout={true}
         cart={
           Object {
             "channel": "web",
