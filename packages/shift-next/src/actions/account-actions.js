@@ -19,7 +19,7 @@ export function fetchAccountDetails (options) {
 }
 
 export function updateCustomerPassword (formData, options) {
-  const { password, newPassword, newPasswordConfirmation, email } = details
+  const { password, newPassword, newPasswordConfirmation, email } = formData
 
   const request = {
     endpoint: '/updateCustomerPassword',
