@@ -14,7 +14,7 @@ export function CheckoutSteps ({ currentStep, stepActions }) {
       { position: 1, title: 'Payment Method', href: '/checkout/payment-method' },
       { position: 2, title: 'Shipping Address', href: '/checkout/shipping-address' },
       { position: 3, title: 'Shipping Method', href: '/checkout/shipping-method' },
-      { position: 4, title: 'Payment', href: '/checkout/payment', as: '/checkout/payment', shallow: true },
+      { position: 4, title: 'Payment Details', href: '/checkout/payment', as: '/checkout/payment', shallow: true },
       { position: 5, title: 'Review & Submit' }
     ]
 
