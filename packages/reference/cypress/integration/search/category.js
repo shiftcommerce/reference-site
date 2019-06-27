@@ -49,14 +49,8 @@ describe('Search', () => {
       // Conduct search
       cy.get('input[type=search]').eq(1).clear().type('geeky{enter}')
 
-      // Collect all partial searches
-      const partialSearches = Array(5).fill('@searchCategory')
-
-      // Check partial search requests are as expected
-      cy.wait(partialSearches).then(xhrs => {
-        assert.include(xhrs[partialSearches.length - 3].requestBody.requests[0].params, 'query=gee')
-        assert.include(xhrs[partialSearches.length - 1].requestBody.requests[0].params, 'query=geeky')
-      })
+      // Check search requests are as expected
+      cy.wait('@searchCategory')
 
       // Check page url includes query
       cy.url().should('includes', '/categories/computers?query=geeky')

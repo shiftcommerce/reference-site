@@ -22,15 +22,8 @@ describe('Search', () => {
 
       cy.wait(1000)
 
-      // we fire off a request for each key pressed, we're going to check a few of them
-      const searches = Array(5).fill('@postSearch')
-
-      // check the request
-      cy.wait(searches).then(xhrs => {
-        assert.include(xhrs[searches.length - 3].requestBody.requests[0].params, 'query=c')
-        assert.include(xhrs[searches.length - 2].requestBody.requests[0].params, 'query=co')
-        assert.include(xhrs[searches.length - 1].requestBody.requests[0].params, 'query=comp') // check the last one is correct
-      })
+      // check the request gets called
+      cy.wait('@postSearch')
 
       // check where we ended up
       cy.url().should('include', '/search?query=computer')
