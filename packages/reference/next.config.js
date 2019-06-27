@@ -9,7 +9,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer(withCSS(withSass(withTM({
-    publicRuntimeConfig: {
+  publicRuntimeConfig: {
     'API_HOST_PROXY': process.env.API_HOST_PROXY,
     'ALGOLIA_APP_ID': process.env.ALGOLIA_APP_ID,
     'ALGOLIA_API_KEY': process.env.ALGOLIA_API_KEY,

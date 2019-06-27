@@ -162,11 +162,15 @@ export class Layout extends Component {
 
     return (
       <span className='c-header__search'>
-        <SearchBar
-          filterCategory={filterCategory}
-          onCategoryFilterCleared={onCategoryFilterCleared}
-          query={query}
-        />
+        <div className='c-searchbar'>
+          <div className='c-searchbar__content'>
+            <SearchBar
+              filterCategory={filterCategory}
+              onCategoryFilterCleared={onCategoryFilterCleared}
+              query={query}
+            />
+          </div>
+        </div>
       </span>
     )
   }
