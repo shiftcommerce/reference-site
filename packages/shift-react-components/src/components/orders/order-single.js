@@ -62,7 +62,8 @@ export class OrderSingle extends PureComponent {
         },
         unit_quantity: lineItem.quantity,
         total: (lineItem.pricing.line_total_inc_tax / 100),
-        sub_total: (lineItem.pricing.line_total_inc_tax / 100)
+        sub_total: (lineItem.pricing.pre_discount_line_total_inc_tax / 100),
+        total_discount: (lineItem.pricing.line_discount_inc_tax / 100)
       }
     })
   }
@@ -86,7 +87,7 @@ export class OrderSingle extends PureComponent {
     if (order.pricing.order_discount_inc_tax > 0) {
       return (
         <dl aria-label='Order discount'>
-          <dt> Discount: </dt>
+          <dt> Shipping Discount: </dt>
           <dd> -£{ penceToPounds(order.pricing.order_discount_inc_tax) } </dd>
         </dl>
       )
