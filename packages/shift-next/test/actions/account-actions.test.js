@@ -2,7 +2,8 @@ import * as accountActions from '../../src/actions/account-actions'
 import * as actionTypes from '../../src/actions/action-types'
 import * as apiActions from '../../src/actions/api-actions'
 
-import post200 from '../fixtures/actions/register'
+// Fixtures
+import post200 from '../fixtures/actions/api-actions/post-200'
 
 test('fetchAccountDetails() makes an account request', () => {
   const getAccountSpy = jest.spyOn(apiActions, 'readEndpoint')
@@ -70,9 +71,7 @@ test('updateCustomerAccount() makes a correct request', () => {
   updateAccountSpy.mockRestore()
 })
 
-test('updateCustomerPassword() make a successful call to login', () => {
-  jest.mock('../../src/lib/api-client')
-
+test('updateCustomerPassword() makes a correct request', () => {
   const updatePasswordSpy = jest.spyOn(apiActions, 'postEndpoint').mockImplementation(async () => post200)
 
   const details = {
@@ -85,5 +84,29 @@ test('updateCustomerPassword() make a successful call to login', () => {
   accountActions.updateCustomerPassword(details)
 
   expect(updatePasswordSpy).toHaveBeenCalledTimes(1)
-  
+  const request = updatePasswordSpy.mock.calls[0][0]
+  expect(request.endpoint).toEqual('/updateCustomerPassword')
+  expect(request.body).toEqual({
+    login: {
+      data: {
+        type: 'customer_account_authentications',
+        attributes: {
+          email: 'user@example.com',
+          password: 'currentpassword'
+        }
+      }
+    },
+    updatePassword: {
+      data: {
+        type: 'customer_accounts',
+        attributes: {
+          email: 'user@example.com',
+          password: 'newpassword',
+          password_confirmation: 'newpassword'
+        }
+      }
+    }
+  })
+
+  updatePasswordSpy.mockRestore()
 })

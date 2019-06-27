@@ -17,16 +17,13 @@ export const readEndpoint = (request, options) => {
 }
 
 export const postEndpoint = (request, options) => {
-  console.log('postEndpoint', { request, options })
   return (dispatch) => {
     dispatchInitialAction(dispatch, request)
     return new ApiClient(options).post(request.endpoint, request.body, null, { csrf: Cookies.get('_csrf') })
       .then(response => {
-        console.log('postEndpoint => Success', response)
         return _determinePostDispatch(dispatch, request, response)
       })
       .catch(error => {
-        console.log('postEndpoint => Error')
         if (request.errorActionType) dispatch(setErroredTo(request.errorActionType, error))
         return false
       })
@@ -114,7 +111,7 @@ function processResponse (dispatch, request, expectedStatusCodes) {
 
 function _determinePostDispatch (dispatch, request, response) {
   const validationPassed = _checkForErrors(response)
-  console.log('_determinePostDispatch', { dispatch, request, response })
+
   if ((response.status === 202 || response.status === 201 || response.status === 200) && validationPassed) {
     if (request.successActionType) {
       const parsedPayload = new JsonApiParser().parse(response.data)

@@ -20,7 +20,7 @@ module.exports = {
     }
 
     const response = await SHIFTClient.getAccountV1(req.query, customerId)
-    console.log(util.inspect(response, false, null, true))
+
     switch (response.status) {
       case 404:
         return res.status(200).send({})
@@ -48,13 +48,7 @@ module.exports = {
     }
   },
 
-  // 1. Login the customer with the old password (old password - prop, account.email prop)
-  //     1.1 Success => Execute the second update account v1 with the new password
-  //          1.1.1 Success => Return success 201
-  //          1.1.2 Failure => Return an error that the update failed
-  //     1.2 Failure => Return an error that login failed
   updateCustomerPassword: async (req, res) => {
-    console.log('Welcome to the update function')
     const { customerId } = req.session
 
     if (!customerId) {
@@ -66,17 +60,13 @@ module.exports = {
       const response = await SHIFTClient.loginCustomerAccountV1(req.body.login)
 
       if (response.status === 201) {
-        console.log("You logged in mate!")
         try {
-          console.log('customerID', customerId)
           const updateResponse = await SHIFTClient.updateCustomerAccountV1(req.body.updatePassword, customerId)
-          console.log("updateResponse", updateResponse)
+
           if (updateResponse.status === 200) {
-            console.log("You updated your password pal!")
             return res.status(updateResponse.status).send(updateResponse.data)
           } 
         } catch (error) {
-          console.log('We caught a big error!')
           return handleErrorResponse(error, req, res)
         }
       }

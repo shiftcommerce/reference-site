@@ -9,7 +9,6 @@ import { updateCustomerAccount } from '../../actions/account-actions'
 
 export class AccountDetailsPage extends Component {
   handleUpdateDetailsSubmit (details, { setStatus, setSubmitting }) {
-    console.log('details', details)
     this.props.dispatch(updateCustomerAccount(details)).then(success => {
       // Display a relevant flash message
       setStatus(success ? 'success' : 'error')
