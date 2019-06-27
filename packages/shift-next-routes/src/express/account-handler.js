@@ -63,22 +63,25 @@ module.exports = {
   },
 
   getCustomerOrders: async (req, res) => {
+    // Build request query
     const query = {
       filter: {
         account_reference: process.env.API_TENANT,
         customer_reference: req.session.customerId
       },
       fields: {
-        customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts',
+        customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts,fulfillment_status,billing_addresses',
         line_items: 'title,quantity,sku,pricing,shipping_method,shipping_address,discounts,image_urls',
         shipping_methods: 'label,price',
         shipping_addresses: 'name,company,lines,city,state,postcode,country',
+        billing_addresses: 'name,company,lines,city,state,postcode,country',
         discounts: 'label,amount_inc_tax,coupon_code'
       },
       sort: '-placed_at',
-      include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts'
+      include: 'customer,shipping_methods,shipping_addresses,discounts,line_items,line_items.shipping_method,line_items.shipping_address,line_items.discounts,billing_addresses',
+      ...req.query // merge offset & limit params
     }
-
+    // make API request
     const response = await SHIFTClient.getCustomerOrdersV1(query)
 
     switch (response.status) {

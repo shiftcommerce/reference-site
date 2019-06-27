@@ -3,10 +3,11 @@ import React, { PureComponent, Fragment } from 'react'
 import format from 'date-fns/format'
 
 // Lib
+import { fulfillmentStatus } from '../../lib/fulfillment-status'
 import { penceToPounds } from '../../lib/pence-to-pounds'
 
 // Components
-import ShippingAddresses from './shipping-addresses'
+import { OrderAddresses } from './order-addresses'
 import { LineItems } from '../cart/line-items'
 
 export class OrderSingle extends PureComponent {
@@ -17,7 +18,7 @@ export class OrderSingle extends PureComponent {
    */
   calculateSubTotal (order) {
     return order.line_items.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.pricing.line_total_inc_tax, 0
+      (accumulator, currentValue) => accumulator + currentValue.pricing.pre_discount_line_total_inc_tax, 0
     )
   }
 
@@ -61,7 +62,8 @@ export class OrderSingle extends PureComponent {
         },
         unit_quantity: lineItem.quantity,
         total: (lineItem.pricing.line_total_inc_tax / 100),
-        sub_total: (lineItem.pricing.line_total_inc_tax / 100)
+        sub_total: (lineItem.pricing.pre_discount_line_total_inc_tax / 100),
+        total_discount: (lineItem.pricing.line_discount_inc_tax / 100)
       }
     })
   }
@@ -81,6 +83,17 @@ export class OrderSingle extends PureComponent {
     )
   }
 
+  renderOrderDiscount (order) {
+    if (order.pricing.order_discount_inc_tax > 0) {
+      return (
+        <dl aria-label='Order discount'>
+          <dt> Shipping Discount: </dt>
+          <dd> -£{ penceToPounds(order.pricing.order_discount_inc_tax) } </dd>
+        </dl>
+      )
+    } else { null }
+  }
+
   render () {
     const { order, updateCurrentOrder } = this.props
     const lineItems = this.formatLineItems(order.line_items)
@@ -90,22 +103,25 @@ export class OrderSingle extends PureComponent {
       body: order.reference
     }, {
       header: 'Order Date',
-      body: format(new Date(order.placed_at), 'MMM D, YYYY')
+      body: format(new Date(order.placed_at), 'D MMM YYYY')
     }, {
       header: 'Cost',
       body: `£${penceToPounds(order.pricing.total_inc_tax)}`
     }, {
+      header: 'Currency',
+      body: order.pricing.currency
+    },{
+      header: 'Invoice Address',
+      body: <OrderAddresses addresses={order.billing_addresses} />
+    }, {
+      header: 'Delivery Address',
+      body: <OrderAddresses addresses={order.shipping_addresses} />
+    }, {
       header: 'Shipping Method',
       body: order.shipping_methods[0].label
     }, {
-      header: 'Invoice Address',
-      body: <ShippingAddresses addresses={order.shipping_addresses} />
-    }, {
-      header: 'Delivery Address',
-      body: <ShippingAddresses addresses={order.shipping_addresses} />
-    }, {
-      header: 'Currency',
-      body: order.pricing.currency
+      header: 'Shipping Status',
+      body: fulfillmentStatus(order.fulfillment_status)
     }]
 
     return (
@@ -141,10 +157,23 @@ export class OrderSingle extends PureComponent {
                       <dt> UK VAT 20% (Included in Price): </dt>
                       <dd> £{ penceToPounds(this.calculateTax(order)) } </dd>
                     </dl>
+
+                    { order.discounts.map((discount) => {
+                      return (
+                        <dl key={discount.label} aria-label='Discounts'>
+                          <dt> { discount.label } </dt>
+                          <dd> -£{ penceToPounds(discount.amount_inc_tax) } </dd>
+                        </dl>
+                      )
+                    })}
+
                     <dl aria-label='Shipping'>
                       <dt> Shipping Total: </dt>
                       <dd> £{ penceToPounds(this.calculateShippingTotal(order)) } </dd>
                     </dl>
+
+                    { this.renderOrderDiscount(order) }
+
                     <dl aria-label='Total' className='c-cart-summary__total'>
                       <dt> Total: </dt>
                       <dd> £{ penceToPounds(order.pricing.total_inc_tax) } </dd>
