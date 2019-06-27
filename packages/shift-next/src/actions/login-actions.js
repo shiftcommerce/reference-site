@@ -11,6 +11,7 @@ export function createLogin (account, options) {
     requestActionType: actionTypes.GET_LOGIN,
     errorActionType: actionTypes.ERROR_LOGIN
   }
+
   return postEndpoint(request, options)
 }
 

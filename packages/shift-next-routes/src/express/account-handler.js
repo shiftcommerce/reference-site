@@ -47,6 +47,35 @@ module.exports = {
     }
   },
 
+  updateCustomerPassword: async (req, res) => {
+    const { customerId } = req.session
+
+    if (!customerId) {
+      req.log && req.log.warn('update customer account request with no customerId in session')
+      return res.status(401).send({})
+    }
+
+    try {
+      const response = await SHIFTClient.loginCustomerAccountV1(req.body.login)
+
+      if (response.status === 201) {
+        try {
+          const updateResponse = await SHIFTClient.updateCustomerAccountV1(req.body.updatePassword, customerId)
+
+          if (updateResponse.status === 200) {
+            return res.status(updateResponse.status).send(updateResponse.data)
+          } 
+        } catch (error) {
+          return handleErrorResponse(error, req, res)
+        }
+      }
+
+      return res.status(response.status).send(response.data)
+    } catch (error) {
+      return handleErrorResponse(error, req, res)
+    }
+  },
+
   registerAccount: async (req, res) => {
     try {
       const response = await SHIFTClient.createCustomerAccountV1(req.body)

@@ -18,6 +18,37 @@ export function fetchAccountDetails (options) {
   return readEndpoint(accountRequest, options)
 }
 
+export function updateCustomerPassword (formData, options) {
+  const { password, newPassword, newPasswordConfirmation, email } = formData
+
+  const request = {
+    endpoint: '/updateCustomerPassword',
+    body: {
+      login: {
+        data: {
+          type: 'customer_account_authentications',
+          attributes: {
+            email,
+            password
+          }
+        }
+      },
+      updatePassword: {
+        data: {
+          type: 'customer_accounts',
+          attributes: {
+            email: email,
+            password: newPassword,
+            password_confirmation: newPasswordConfirmation
+          }
+        }
+      }
+    },
+    errorActionType: types.ERROR_ACCOUNT
+  }
+  return postEndpoint(request, options)
+}
+
 export function updateCustomerAccount (details, options) {
   const request = {
     endpoint: '/updateCustomerAccount',
@@ -26,7 +57,6 @@ export function updateCustomerAccount (details, options) {
     },
     successActionType: types.SET_ACCOUNT
   }
-
   return postEndpoint(request, options)
 }
 
