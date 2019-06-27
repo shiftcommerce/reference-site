@@ -2,6 +2,10 @@
 const { MemcachedStore } = require('./memcached-store')
 const { shiftApiConfig } = require('@shiftcommerce/shift-node-api')
 
+// Constants
+// Namespace menu cache key based on tenant
+const defaultCacheKey = `${shiftApiConfig.get().apiTenant}/menus`
+
 /**
  *  MenuCache service
  *
@@ -15,7 +19,7 @@ class MenuCache {
    * @param {function} cache - cache client, eg. memcached
    * @param {string} cacheKey - the cache key to be used
    */
-  constructor (cache = MemcachedStore, cacheKey = 'menus/data', logger = shiftApiConfig.get().logger) {
+  constructor (cache = MemcachedStore, cacheKey = defaultCacheKey, logger = shiftApiConfig.get().logger) {
     this.cache = cache
     this.cacheKey = cacheKey
     this.defaultCacheDuration = parseInt(process.env.MENUS_CACHE_DURATION) || 300
@@ -30,7 +34,7 @@ class MenuCache {
     try {
       const data = await this.cache.get(this.cacheKey)
       const response = (data ? JSON.parse(data.value) : {})
-      this.log.debug('Reading API menu response from cache', response)
+      this.log.trace('Reading API menu response from cache')
       return response
     } catch (error) {
       this.log.error('Error fetching menu cache', error)
@@ -46,7 +50,7 @@ class MenuCache {
   async set (response, cacheDuration = this.defaultCacheDuration) {
     try {
       const result = await this.cache.set(this.cacheKey, JSON.stringify(response), { expires: cacheDuration })
-      this.log.debug('Writing API menu response in cache: ', result)
+      this.log.info(`Writing API menu response in ${this.cacheKey} cache: `, result)
       return result
     } catch (error) {
       this.log.error('Error setting menu cache', error)

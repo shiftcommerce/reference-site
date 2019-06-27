@@ -4,6 +4,9 @@ import * as types from '../actions/action-types'
 // Actions
 import { readEndpoint, postEndpoint } from './api-actions'
 
+// libs
+import Config from '../lib/config'
+
 const accountRequest = {
   endpoint: '/getAccount',
   errorActionType: types.ERROR_ACCOUNT,
@@ -70,13 +73,22 @@ export function setLoggedInFromCookies () {
   }
 }
 
-const customerOrdersRequest = {
-  endpoint: `/customerOrders`,
-  requestActionType: types.GET_CUSTOMER_ORDERS,
-  successActionType: types.SET_CUSTOMER_ORDERS
-}
-
-export function getCustomerOrders (options) {
+export function getCustomerOrders (pageNumber, options) {
+  // set limit
+  const pageLimit = parseInt(Config.get().orderHistoryPageLimit || 10)
+  // build request params
+  const customerOrdersRequest = {
+    endpoint: `/customerOrders`,
+    query: {
+      page: { 
+        limit: pageLimit,
+        // calculate the page offset using pageNumber & page limit
+        offset: (pageLimit * (parseInt(pageNumber) - 1))
+      }
+    },
+    requestActionType: types.GET_CUSTOMER_ORDERS,
+    successActionType: types.SET_CUSTOMER_ORDERS
+  }
   return readEndpoint(customerOrdersRequest, options)
 }
 

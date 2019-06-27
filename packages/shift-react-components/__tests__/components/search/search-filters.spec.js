@@ -18,7 +18,7 @@ test('renders the algolia filter component with children', () => {
   const wrapper = shallow(<SearchFilters facets={facets} />)
 
   // Assert
-  expect(wrapper.find('.c-product-listing-filter__body-option')).toHaveLength(3)
+  expect(wrapper.find('.c-product-listing-filter__body-option')).toHaveLength(1)
   expect(wrapper.find('.c-product-listing-filter__body-option').at(0).dive()).toIncludeText('volume')
 })
 
@@ -48,7 +48,7 @@ test('algolia filters turns every facet into a refinement list', () => {
   // Assert
   // We add 2 to the expected length here to account for Rating and Price which are
   // not facets returned from the API, they are hardcoded into algolia-filters.js
-  expect(wrapper.find('.c-product-listing-filter__body-option')).toHaveLength(5)
+  expect(wrapper.find('.c-product-listing-filter__body-option')).toHaveLength(3)
   expect(wrapper.find('.c-product-listing-filter__body-option').at(0).dive()).toIncludeText('volume')
   expect(wrapper.find('.c-product-listing-filter__body-option').at(1).dive()).toIncludeText('diameter')
   expect(wrapper.find('.c-product-listing-filter__body-option').at(2).dive()).toIncludeText('colour')

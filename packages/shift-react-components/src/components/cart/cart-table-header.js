@@ -8,13 +8,17 @@ import format from 'date-fns/format'
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'
 
+// Components
+import { Flash } from '../../objects/flash'
+
 export class CartTableHeader extends PureComponent {
   /**
    * Render the details of the basket, such as how many items are in the basket
-   * @param  {Object} cart
    * @return {string} - HTML markup for the component
    */
-  renderBasketDetails (cart) {
+  renderBasketDetails () {
+    const { canCheckout, cart } = this.props
+
     return (
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--a'>
         <h1 className='c-cart-table__title'>Your Shopping Basket <a className='c-cart-table__amount'>({ cart.line_items_count || 0 })</a></h1>
@@ -22,6 +26,7 @@ export class CartTableHeader extends PureComponent {
           <p className='c-cart-table__description'>You have <a>{ cart.line_items_count || 0 }</a> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> in your shopping basket.</p>
           <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.line_items_count || 0} showCount={false} /> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> will be saved for 48 hours depending on availability.</p>
         </div>
+        { !canCheckout && <Flash text='The items highlighted in your basket are out of stock. Please reduce quantity or remove before proceeding.' modifier='error' /> }
       </div>
     )
   }
@@ -44,13 +49,13 @@ export class CartTableHeader extends PureComponent {
   }
 
   render () {
-    const { cart, className, shippingMethod } = this.props
+    const { className, shippingMethod } = this.props
 
     return (
       <section className={classNames(className, 'c-cart-table__header')}>
         { this.props.breadcrumb }
         <div className='c-cart-table__header-grid'>
-          { this.renderBasketDetails(cart) }
+          { this.renderBasketDetails() }
           { this.renderDeliveryEstimate(shippingMethod) }
         </div>
       </section>

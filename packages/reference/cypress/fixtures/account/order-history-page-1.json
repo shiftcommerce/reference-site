@@ -1,0 +1,2257 @@
+{
+  "data": [
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "12",
+        "placed_at": "2019-06-27T08:57:35.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 4351,
+          "total_inc_tax": 5221,
+          "pre_discount_line_items_total_ex_tax": 5353,
+          "pre_discount_line_items_total_inc_tax": 6424,
+          "total_discount_ex_tax": 1003,
+          "total_discount_inc_tax": 1203,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/1a999750-194d-4ab5-b263-ce53656bf73e/discounts"
+          },
+          "data": [
+            {
+              "type": "discounts",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_0"
+            },
+            {
+              "type": "discounts",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+            },
+            {
+              "type": "discounts",
+              "id": "1a999750-194d-4ab5-b263-ce53656bf73e_2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "11",
+        "placed_at": "2019-06-27T08:56:20.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 7735,
+          "total_inc_tax": 9282,
+          "pre_discount_line_items_total_ex_tax": 7815,
+          "pre_discount_line_items_total_inc_tax": 9378,
+          "total_discount_ex_tax": 80,
+          "total_discount_inc_tax": 96,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_0"
+            },
+            {
+              "type": "line_items",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/59977c7e-75ae-4c9a-ac74-e58671516311/discounts"
+          },
+          "data": [
+            {
+              "type": "discounts",
+              "id": "59977c7e-75ae-4c9a-ac74-e58671516311_0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "10",
+        "placed_at": "2019-06-27T08:53:44.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 7546,
+          "total_inc_tax": 9055,
+          "pre_discount_line_items_total_ex_tax": 7546,
+          "pre_discount_line_items_total_inc_tax": 9055,
+          "total_discount_ex_tax": 0,
+          "total_discount_inc_tax": 0,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/45a640bf-35d5-4872-bf82-337e8b22c4d2/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "9",
+        "placed_at": "2019-06-27T08:52:03.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 3592,
+          "total_inc_tax": 4310,
+          "pre_discount_line_items_total_ex_tax": 3592,
+          "pre_discount_line_items_total_inc_tax": 4310,
+          "total_discount_ex_tax": 0,
+          "total_discount_inc_tax": 0,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/a0a62e52-4cf2-4147-b52b-3be33915a4c4/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "8",
+        "placed_at": "2019-06-27T08:50:34.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 3015,
+          "total_inc_tax": 3618,
+          "pre_discount_line_items_total_ex_tax": 3015,
+          "pre_discount_line_items_total_inc_tax": 3618,
+          "total_discount_ex_tax": 0,
+          "total_discount_inc_tax": 0,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "25a73728-c263-4831-9369-7b5bd04cf207_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "25a73728-c263-4831-9369-7b5bd04cf207_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "25a73728-c263-4831-9369-7b5bd04cf207_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "25a73728-c263-4831-9369-7b5bd04cf207_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/25a73728-c263-4831-9369-7b5bd04cf207/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "7",
+        "placed_at": "2019-06-26T15:53:49.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 4515,
+          "total_inc_tax": 5118,
+          "pre_discount_line_items_total_ex_tax": 3015,
+          "pre_discount_line_items_total_inc_tax": 3618,
+          "total_discount_ex_tax": 1500,
+          "total_discount_inc_tax": 1500,
+          "order_discount_ex_tax": 1500,
+          "order_discount_inc_tax": 1500
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_4"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/f52d57e1-5960-4bd6-8cd4-3f6b856b365d/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "6",
+        "placed_at": "2019-06-26T13:13:22.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 6709,
+          "total_inc_tax": 7851,
+          "pre_discount_line_items_total_ex_tax": 5709,
+          "pre_discount_line_items_total_inc_tax": 6851,
+          "total_discount_ex_tax": 1000,
+          "total_discount_inc_tax": 1000,
+          "order_discount_ex_tax": 1000,
+          "order_discount_inc_tax": 1000
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_3"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "5",
+        "placed_at": "2019-06-26T13:01:52.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 9046,
+          "total_inc_tax": 10555,
+          "pre_discount_line_items_total_ex_tax": 7546,
+          "pre_discount_line_items_total_inc_tax": 9055,
+          "total_discount_ex_tax": 1500,
+          "total_discount_inc_tax": 1500,
+          "order_discount_ex_tax": 1500,
+          "order_discount_inc_tax": 1500
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "e94392c5-1565-48ac-be77-edea09d335c3_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "e94392c5-1565-48ac-be77-edea09d335c3_4"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "e94392c5-1565-48ac-be77-edea09d335c3_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "e94392c5-1565-48ac-be77-edea09d335c3_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/e94392c5-1565-48ac-be77-edea09d335c3/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "4",
+        "placed_at": "2019-06-26T12:36:23.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 3432,
+          "total_inc_tax": 4118,
+          "pre_discount_line_items_total_ex_tax": 3592,
+          "pre_discount_line_items_total_inc_tax": 4310,
+          "total_discount_ex_tax": 160,
+          "total_discount_inc_tax": 192,
+          "order_discount_ex_tax": 0,
+          "order_discount_inc_tax": 0
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_0"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/7cf19276-fa99-4389-97a4-44488215d772/discounts"
+          },
+          "data": [
+            {
+              "type": "discounts",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_0"
+            },
+            {
+              "type": "discounts",
+              "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84",
+      "type": "customer_orders",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84"
+      },
+      "attributes": {
+        "account_reference": "shift",
+        "reference": "3",
+        "placed_at": "2019-06-26T12:35:11.000Z",
+        "pricing": {
+          "currency": "GBP",
+          "total_ex_tax": 10007,
+          "total_inc_tax": 11908,
+          "pre_discount_line_items_total_ex_tax": 10561,
+          "pre_discount_line_items_total_inc_tax": 12673,
+          "total_discount_ex_tax": 1554,
+          "total_discount_inc_tax": 1765,
+          "order_discount_ex_tax": 500,
+          "order_discount_inc_tax": 500
+        },
+        "fulfillment_status": "unfulfilled"
+      },
+      "relationships": {
+        "line_items": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/line_items",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/line_items"
+          },
+          "data": [
+            {
+              "type": "line_items",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_0"
+            },
+            {
+              "type": "line_items",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+            }
+          ]
+        },
+        "shipping_methods": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/shipping_methods",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/shipping_methods"
+          },
+          "data": [
+            {
+              "type": "shipping_methods",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2"
+            }
+          ]
+        },
+        "shipping_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/shipping_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/shipping_addresses"
+          },
+          "data": [
+            {
+              "type": "shipping_addresses",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+            }
+          ]
+        },
+        "billing_addresses": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/billing_addresses",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/billing_addresses"
+          },
+          "data": [
+            {
+              "type": "billing_addresses",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+            }
+          ]
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/customer_orders/32b36edc-a299-435d-940b-ba85a42cdf84/discounts"
+          },
+          "data": [
+            {
+              "type": "discounts",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_0"
+            },
+            {
+              "type": "discounts",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+            },
+            {
+              "type": "discounts",
+              "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/1a999750-194d-4ab5-b263-ce53656bf73e"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/59977c7e-75ae-4c9a-ac74-e58671516311"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/45a640bf-35d5-4872-bf82-337e8b22c4d2"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/a0a62e52-4cf2-4147-b52b-3be33915a4c4"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/25a73728-c263-4831-9369-7b5bd04cf207"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/f52d57e1-5960-4bd6-8cd4-3f6b856b365d"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/e94392c5-1565-48ac-be77-edea09d335c3"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/7cf19276-fa99-4389-97a4-44488215d772"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84",
+      "type": "customers",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/customers/32b36edc-a299-435d-940b-ba85a42cdf84"
+      },
+      "attributes": {
+        "reference": "1",
+        "email": "callum@barratt.me",
+        "name": "Callum Barratt",
+        "meta_attributes": {}
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0"
+      },
+      "attributes": {
+        "title": "Product 10 - Sleek Bronze Shirt - Variant 1 for Product 10 - Sleek Bronze Shirt",
+        "quantity": 1,
+        "sku": "5878872459838",
+        "pricing": {
+          "each_ex_tax": 5353,
+          "each_inc_tax": 6424,
+          "line_total_ex_tax": 4351,
+          "line_total_inc_tax": 5221,
+          "line_discount_ex_tax": 1003,
+          "line_discount_inc_tax": 1203,
+          "pre_discount_line_total_ex_tax": 5353,
+          "pre_discount_line_total_inc_tax": 6424,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/3/1561548219.957756-9.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/1a999750-194d-4ab5-b263-ce53656bf73e_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0"
+      },
+      "attributes": {
+        "title": "Product 1 - Durable Marble Wallet lol - Variant 1 for Product 1 - Durable Marble Wallet",
+        "quantity": 1,
+        "sku": "8554015102249",
+        "pricing": {
+          "each_ex_tax": 7735,
+          "each_inc_tax": 9282,
+          "line_total_ex_tax": 7735,
+          "line_total_inc_tax": 9282,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 7735,
+          "pre_discount_line_total_inc_tax": 9282,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/10/1561548221.5921264-11.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1"
+      },
+      "attributes": {
+        "title": "Product 8 - Synergistic Concrete Shirt - Variant 1 for Product 8 - Synergistic Concrete Shirt",
+        "quantity": 1,
+        "sku": "3730158281507",
+        "pricing": {
+          "each_ex_tax": 80,
+          "each_inc_tax": 96,
+          "line_total_ex_tax": 0,
+          "line_total_inc_tax": 0,
+          "line_discount_ex_tax": 80,
+          "line_discount_inc_tax": 96,
+          "pre_discount_line_total_ex_tax": 80,
+          "pre_discount_line_total_inc_tax": 96,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/9/1561548221.3650434-13.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/59977c7e-75ae-4c9a-ac74-e58671516311_1/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 1 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "6170377133251",
+        "pricing": {
+          "each_ex_tax": 7546,
+          "each_inc_tax": 9055,
+          "line_total_ex_tax": 7546,
+          "line_total_inc_tax": 9055,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 7546,
+          "pre_discount_line_total_inc_tax": 9055,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/45a640bf-35d5-4872-bf82-337e8b22c4d2_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0"
+      },
+      "attributes": {
+        "title": "Product 2 - Mediocre Leather Shirt - Variant 1 for Product 2 - Mediocre Leather Shirt",
+        "quantity": 1,
+        "sku": "4845404676040",
+        "pricing": {
+          "each_ex_tax": 3592,
+          "each_inc_tax": 4310,
+          "line_total_ex_tax": 3592,
+          "line_total_inc_tax": 4310,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 3592,
+          "pre_discount_line_total_inc_tax": 4310,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/1/1561548218.9313056-8.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/a0a62e52-4cf2-4147-b52b-3be33915a4c4_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 2 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "2190404599946",
+        "pricing": {
+          "each_ex_tax": 3015,
+          "each_inc_tax": 3618,
+          "line_total_ex_tax": 3015,
+          "line_total_inc_tax": 3618,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 3015,
+          "pre_discount_line_total_inc_tax": 3618,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "25a73728-c263-4831-9369-7b5bd04cf207_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "25a73728-c263-4831-9369-7b5bd04cf207_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/25a73728-c263-4831-9369-7b5bd04cf207_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 2 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "2190404599946",
+        "pricing": {
+          "each_ex_tax": 3015,
+          "each_inc_tax": 3618,
+          "line_total_ex_tax": 3015,
+          "line_total_inc_tax": 3618,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 3015,
+          "pre_discount_line_total_inc_tax": 3618,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_4"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0"
+      },
+      "attributes": {
+        "title": "Product 5 - Small Granite Knife - Variant 2 for Product 5 - Small Granite Knife",
+        "quantity": 1,
+        "sku": "5879215469392",
+        "pricing": {
+          "each_ex_tax": 5709,
+          "each_inc_tax": 6851,
+          "line_total_ex_tax": 5709,
+          "line_total_inc_tax": 6851,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 5709,
+          "pre_discount_line_total_inc_tax": 6851,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/5/1561548220.4408648-15.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_3"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 1 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "6170377133251",
+        "pricing": {
+          "each_ex_tax": 7546,
+          "each_inc_tax": 9055,
+          "line_total_ex_tax": 7546,
+          "line_total_inc_tax": 9055,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "pre_discount_line_total_ex_tax": 7546,
+          "pre_discount_line_total_inc_tax": 9055,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "e94392c5-1565-48ac-be77-edea09d335c3_4"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "e94392c5-1565-48ac-be77-edea09d335c3_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/e94392c5-1565-48ac-be77-edea09d335c3_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0"
+      },
+      "attributes": {
+        "title": "Product 2 - Mediocre Leather Shirt - Variant 1 for Product 2 - Mediocre Leather Shirt",
+        "quantity": 1,
+        "sku": "4845404676040",
+        "pricing": {
+          "each_ex_tax": 3592,
+          "each_inc_tax": 4310,
+          "line_total_ex_tax": 3432,
+          "line_total_inc_tax": 4118,
+          "line_discount_ex_tax": 160,
+          "line_discount_inc_tax": 192,
+          "pre_discount_line_total_ex_tax": 3592,
+          "pre_discount_line_total_inc_tax": 4310,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/1/1561548218.9313056-8.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "7cf19276-fa99-4389-97a4-44488215d772_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/7cf19276-fa99-4389-97a4-44488215d772_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_0",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 1 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "6170377133251",
+        "pricing": {
+          "each_ex_tax": 7546,
+          "each_inc_tax": 9055,
+          "line_total_ex_tax": 6792,
+          "line_total_inc_tax": 8151,
+          "line_discount_ex_tax": 753,
+          "line_discount_inc_tax": 904,
+          "pre_discount_line_total_ex_tax": 7546,
+          "pre_discount_line_total_inc_tax": 9055,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_0/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1",
+      "type": "line_items",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1"
+      },
+      "attributes": {
+        "title": "Product 4 - Incredible Wooden Car - Variant 2 for Product 4 - Incredible Wooden Car",
+        "quantity": 1,
+        "sku": "2190404599946",
+        "pricing": {
+          "each_ex_tax": 3015,
+          "each_inc_tax": 3618,
+          "line_total_ex_tax": 2714,
+          "line_total_inc_tax": 3257,
+          "line_discount_ex_tax": 301,
+          "line_discount_inc_tax": 361,
+          "pre_discount_line_total_ex_tax": 3015,
+          "pre_discount_line_total_inc_tax": 3618,
+          "tax_rate": 20
+        },
+        "image_urls": [
+          "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg"
+        ]
+      },
+      "relationships": {
+        "shipping_method": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/shipping_method",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/shipping_method"
+          },
+          "data": {
+            "type": "shipping_methods",
+            "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2"
+          }
+        },
+        "shipping_address": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/shipping_address",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/shipping_address"
+          },
+          "data": {
+            "type": "shipping_addresses",
+            "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1"
+          }
+        },
+        "discounts": {
+          "links": {
+            "self": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/relationships/discounts",
+            "related": "https://oms.shift.test/oms/v1/line_items/32b36edc-a299-435d-940b-ba85a42cdf84_1/discounts"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/1a999750-194d-4ab5-b263-ce53656bf73e_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/59977c7e-75ae-4c9a-ac74-e58671516311_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/25a73728-c263-4831-9369-7b5bd04cf207_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_4",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_4"
+      },
+      "attributes": {
+        "label": "Standard",
+        "price": 1500
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_3",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_3"
+      },
+      "attributes": {
+        "label": "Next Day",
+        "price": 1000
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3_4",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/e94392c5-1565-48ac-be77-edea09d335c3_4"
+      },
+      "attributes": {
+        "label": "Standard",
+        "price": 1500
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_1",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/7cf19276-fa99-4389-97a4-44488215d772_1"
+      },
+      "attributes": {
+        "label": "Click & Collect Next Day",
+        "price": 0
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2",
+      "type": "shipping_methods",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_methods/32b36edc-a299-435d-940b-ba85a42cdf84_2"
+      },
+      "attributes": {
+        "label": "Click & Collect Standard",
+        "price": 500
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/1a999750-194d-4ab5-b263-ce53656bf73e_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/59977c7e-75ae-4c9a-ac74-e58671516311_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/25a73728-c263-4831-9369-7b5bd04cf207_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/e94392c5-1565-48ac-be77-edea09d335c3_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/7cf19276-fa99-4389-97a4-44488215d772_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1",
+      "type": "shipping_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/shipping_addresses/32b36edc-a299-435d-940b-ba85a42cdf84_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/1a999750-194d-4ab5-b263-ce53656bf73e_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/59977c7e-75ae-4c9a-ac74-e58671516311_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "45a640bf-35d5-4872-bf82-337e8b22c4d2_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/45a640bf-35d5-4872-bf82-337e8b22c4d2_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "a0a62e52-4cf2-4147-b52b-3be33915a4c4_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/a0a62e52-4cf2-4147-b52b-3be33915a4c4_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "25a73728-c263-4831-9369-7b5bd04cf207_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/25a73728-c263-4831-9369-7b5bd04cf207_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/f52d57e1-5960-4bd6-8cd4-3f6b856b365d_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/9f736e9a-0ffa-404d-bfd3-1bea4276a3fa_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "e94392c5-1565-48ac-be77-edea09d335c3_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/e94392c5-1565-48ac-be77-edea09d335c3_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/7cf19276-fa99-4389-97a4-44488215d772_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1",
+      "type": "billing_addresses",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/billing_addresses/32b36edc-a299-435d-940b-ba85a42cdf84_1"
+      },
+      "attributes": {
+        "name": "Callum Barratt",
+        "company": null,
+        "lines": [
+          "1 Scott Drive",
+          "Crofton"
+        ],
+        "city": "Wakefield",
+        "state": "West Yorkshire",
+        "postcode": "WF4 1TD",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_0",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/1a999750-194d-4ab5-b263-ce53656bf73e_0"
+      },
+      "attributes": {
+        "label": "£1.50 off all orders",
+        "amount_inc_tax": 150,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_1",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/1a999750-194d-4ab5-b263-ce53656bf73e_1"
+      },
+      "attributes": {
+        "label": "£10 off orders overs over £50",
+        "amount_inc_tax": 1000,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "1a999750-194d-4ab5-b263-ce53656bf73e_2",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/1a999750-194d-4ab5-b263-ce53656bf73e_2"
+      },
+      "attributes": {
+        "label": "1% off all orders",
+        "amount_inc_tax": 53,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "59977c7e-75ae-4c9a-ac74-e58671516311_0",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/59977c7e-75ae-4c9a-ac74-e58671516311_0"
+      },
+      "attributes": {
+        "label": "£1.50 off all orders",
+        "amount_inc_tax": 96,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_0",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/7cf19276-fa99-4389-97a4-44488215d772_0"
+      },
+      "attributes": {
+        "label": "£1.50 off all orders",
+        "amount_inc_tax": 150,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "7cf19276-fa99-4389-97a4-44488215d772_1",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/7cf19276-fa99-4389-97a4-44488215d772_1"
+      },
+      "attributes": {
+        "label": "1% off all orders",
+        "amount_inc_tax": 42,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_0",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_0"
+      },
+      "attributes": {
+        "label": "£1.50 off all orders",
+        "amount_inc_tax": 150,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_1",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_1"
+      },
+      "attributes": {
+        "label": "£10 off orders overs over £50",
+        "amount_inc_tax": 1000,
+        "coupon_code": null
+      }
+    },
+    {
+      "id": "32b36edc-a299-435d-940b-ba85a42cdf84_2",
+      "type": "discounts",
+      "links": {
+        "self": "https://oms.shift.test/oms/v1/discounts/32b36edc-a299-435d-940b-ba85a42cdf84_2"
+      },
+      "attributes": {
+        "label": "1% off all orders",
+        "amount_inc_tax": 115,
+        "coupon_code": null
+      }
+    }
+  ],
+  "links": {
+    "first": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-placed_at",
+    "next": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=10&sort=-placed_at",
+    "last": "https://oms.shift.test/oms/v1/customer_orders?fields%5Bbilling_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bcustomer_orders%5D=account_reference%2Creference%2Cplaced_at%2Cline_items%2Cpricing%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cfulfillment_status%2Cbilling_addresses&fields%5Bdiscounts%5D=label%2Camount_inc_tax%2Ccoupon_code&fields%5Bline_items%5D=title%2Cquantity%2Csku%2Cpricing%2Cshipping_method%2Cshipping_address%2Cdiscounts%2Cimage_urls&fields%5Bshipping_addresses%5D=name%2Ccompany%2Clines%2Ccity%2Cstate%2Cpostcode%2Ccountry&fields%5Bshipping_methods%5D=label%2Cprice&filter%5Baccount_reference%5D=shift&filter%5Bcustomer_reference%5D=1&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cbilling_addresses&page%5Blimit%5D=10&page%5Boffset%5D=1&sort=-placed_at"
+  }
+}

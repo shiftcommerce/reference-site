@@ -26,6 +26,10 @@ export class PasswordReset extends Component {
     return { token: query.token }
   }
 
+  static buildAlgoliaStates () {
+    return {}
+  }
+
   handleSubmit (values) {
     this.props.dispatch(passwordReset(this.props.token, values.password))
       .then(success => {
