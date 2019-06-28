@@ -17,7 +17,7 @@ export class AccountPassword extends Component {
     }
   }
 
-  renderFormik (validationSchema, handleSubmit) {
+  renderFormik (validationSchema, handleSubmit, formOptions) {
     return (
       <Formik
         enableReinitialize
@@ -35,21 +35,39 @@ export class AccountPassword extends Component {
               { this.renderFlash(status) }
               <Form className='c-account-password__form'>
                 <div className='c-account-password__old-input'>
-                  <label className='o-form__input-label' htmlFor="oldPassword">Old Password</label>
-                  <Field type='password' name='oldPassword' className='o-form__input-field o-form__input-block' />
+                  <label className='o-form__input-label' htmlFor='oldPassword'>Old Password</label>
+                  <Field
+                    autoComplete='current-password'
+                    type='password'
+                    name='oldPassword'
+                    className='o-form__input-field o-form__input-block'
+                    placeholder={formOptions.oldPasswordPlaceholder}
+                  />
                 </div>
 
                 <div className='c-account-password__new-inputs-group'>
                   <div className='c-account-password__new-inputs'>
-                    <label className='o-form__input-label' htmlFor="newPassword">New Password</label>
-                    <Field type='password' name='newPassword' className='o-form__input-field o-form__input-block' />
+                    <label className='o-form__input-label' htmlFor='newPassword'>New Password</label>
+                    <Field
+                      autoComplete='new-password'
+                      type='password'
+                      name='newPassword'
+                      className='o-form__input-field o-form__input-block'
+                      placeholder={formOptions.newPasswordPlaceholder}
+                    />
                     <div className='o-form__input-field__error'>
                       <ErrorMessage name='newPassword' />
                     </div>
                   </div>
                   <div className='c-account-password__new-inputs'>
-                    <label className='o-form__input-label' htmlFor="newPasswordConfirmation">Confirm New Password</label>
-                    <Field type='password' name='newPasswordConfirmation' className='o-form__input-field o-form__input-block' />
+                    <label className='o-form__input-label' htmlFor='newPasswordConfirmation'>Confirm New Password</label>
+                    <Field
+                      autoComplete='confirm-password'
+                      type='password'
+                      name='newPasswordConfirmation'
+                      className='o-form__input-field o-form__input-block'
+                      placeholder={formOptions.confirmationPlaceholder}
+                    />
                     <div className='o-form__input-field__error'>
                       <ErrorMessage name='newPasswordConfirmation' />
                     </div>
@@ -92,7 +110,7 @@ export class AccountPassword extends Component {
     return (
       <div className='c-account-password'>
         { formOptions.title.visible ? <h1 className='c-account-password__title'>{ formOptions.title.translation || 'Password' }</h1> : null }
-        { this.renderFormik(validationSchema, handleSubmit) }
+        { this.renderFormik(validationSchema, handleSubmit, formOptions) }
       </div>
     )
   }
