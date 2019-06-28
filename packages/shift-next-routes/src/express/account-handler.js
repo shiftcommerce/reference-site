@@ -64,7 +64,7 @@ module.exports = {
 
           if (updateResponse.status === 200) {
             return res.status(updateResponse.status).send(updateResponse.data)
-          } 
+          }
         } catch (error) {
           return handleErrorResponse(error, req, res)
         }
@@ -100,7 +100,7 @@ module.exports = {
       },
       fields: {
         customer_orders: 'account_reference,reference,placed_at,line_items,pricing,shipping_methods,shipping_addresses,discounts,fulfillment_status,billing_addresses',
-        line_items: 'title,quantity,sku,pricing,shipping_method,shipping_address,discounts,image_urls',
+        line_items: 'title,quantity,sku,pricing,shipping_method,shipping_address,discounts,image_urls,canonical_path',
         shipping_methods: 'label,price',
         shipping_addresses: 'name,company,lines,city,state,postcode,country',
         billing_addresses: 'name,company,lines,city,state,postcode,country',

@@ -57,8 +57,9 @@ export class OrderSingle extends PureComponent {
           picture_url: lineItem.image_urls[0],
           product: {
             title: '',
-            slug: 'slug'
-          }
+            slug: 'slug',
+            canonical_path: lineItem.canonical_path
+          },
         },
         unit_quantity: lineItem.quantity,
         total: (lineItem.pricing.line_total_inc_tax / 100),
