@@ -13,6 +13,16 @@ const layout = {
   props: { menu }
 }
 
-function mapStateToProps ({ account, login }) { return { account, layout, login } }
+const formOptions = {
+  title: {
+    visible: false,
+    translation: 'password'
+  },
+  oldPasswordPlaceholder: '',
+  newPasswordPlaceholder: '',
+  confirmationPlaceholder: ''
+}
+
+function mapStateToProps ({ account, login }) { return { account, layout, login, formOptions } }
 
 export default algoliaReduxWrapper(connect(mapStateToProps)(AccountPasswordPage), AccountPasswordPage)
