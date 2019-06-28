@@ -366,6 +366,7 @@ exports[`renders correctly 1`] = `
                     "item": Object {
                       "picture_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/4/1561548220.1977956-14.jpg",
                       "product": Object {
+                        "canonical_path": undefined,
                         "slug": "slug",
                         "title": "",
                       },
