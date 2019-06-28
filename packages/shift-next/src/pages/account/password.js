@@ -30,8 +30,8 @@ export class AccountPasswordPage extends Component {
 
   render () {
     const { account, layout, formOptions } = this.props
-    console.log(this.props)
     const Layout = layout.component
+
     return (
       <Layout {...layout.props}>
         <AccountPassword
