@@ -6,6 +6,7 @@ import qs from 'qs'
 
 // Lib
 import ApiClient from '../lib/api-client'
+import navigateTo from '../lib/navigate-to'
 
 import { toggleLoading } from '../actions/global-actions'
 
@@ -49,9 +50,9 @@ class Slug extends Component {
     }
 
     if (resourceType === 'staticpage' && url === '/pages/articles') {
-      Router.push(`/articles?id=${resourceId}`, url)
+      navigateTo(`/articles?id=${resourceId}`, url)
     } else {
-      Router.push(`/${resourceType}?id=${resourceId}`, url)
+      navigateTo(`/${resourceType}?id=${resourceId}`, url)
     }
 
     return {}

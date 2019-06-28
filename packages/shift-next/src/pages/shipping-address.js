@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 // Libs
 import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
+import navigateTo from '../lib/navigate-to'
 
 import { AddressBook } from '@shiftcommerce/shift-react-components/src/components/checkout/address-book'
 import { AddressFormHeader } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-header'
@@ -206,7 +207,7 @@ export class ShippingAddressPage extends Component {
     return (
       <>
         <PaymentMethodSummary
-          onClick={() => Router.push('/checkout/payment-method')}
+          onClick={() => navigateTo('/checkout/payment-method')}
           paymentMethod={this.state.paymentMethod}
           headerTitle={'Payment Method'}
           showEditButton={true}

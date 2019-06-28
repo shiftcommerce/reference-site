@@ -4,6 +4,7 @@ import Router from 'next/router'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
+import navigateTo from '../lib/navigate-to'
 
 // Component
 import { PasswordResetForm } from '@shiftcommerce/shift-react-components/src/components/account/password-reset-form'
@@ -34,7 +35,7 @@ export class PasswordReset extends Component {
     this.props.dispatch(passwordReset(this.props.token, values.password))
       .then(success => {
         if (success) {
-          Router.push('/account/login')
+          navigateTo('/account/login')
         }
       })
   }

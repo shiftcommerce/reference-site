@@ -7,6 +7,7 @@ import classNames from 'classnames'
 // Libs
 import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
+import navigateTo from '../lib/navigate-to'
 
 // Components
 import { AddressFormSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-summary'
@@ -73,14 +74,14 @@ class CheckoutPaymentPage extends Component {
       if (thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
         // If shipping address is not present and customer has used third
         // party payment service redirect to the payment method page
-        return Router.push('/checkout/payment-method')
+        return navigateTo('/checkout/payment-method')
       } else {
-        return Router.push('/checkout/shipping-address')
+        return navigateTo('/checkout/shipping-address')
       }
     }
 
     if (!cart.shipping_method) {
-      return Router.push('/checkout/shipping-method')
+      return navigateTo('/checkout/shipping-method')
     }
 
     // If customer has used third party payment service only show review page
@@ -142,7 +143,7 @@ class CheckoutPaymentPage extends Component {
 
   showReview () {
     const { setCurrentStep } = this.props
-    Router.push('/checkout/payment', '/checkout/review')
+    navigateTo('/checkout/payment', '/checkout/review')
     this.setState({
       reviewStep: true
     })
@@ -151,7 +152,7 @@ class CheckoutPaymentPage extends Component {
 
   showPayment () {
     const { setCurrentStep } = this.props
-    Router.push('/checkout/payment', '/checkout/payment')
+    navigateTo('/checkout/payment', '/checkout/payment')
     this.setState({
       reviewStep: false
     })
@@ -212,7 +213,7 @@ class CheckoutPaymentPage extends Component {
     } else {
       return dispatch(setCardToken(token, 'card')).then(() => {
         dispatch(requestCardToken(false))
-        Router.push('/order')
+        navigateTo('/order')
       })
     }
   }
@@ -298,7 +299,7 @@ class CheckoutPaymentPage extends Component {
         // clean up cookie data
         Cookies.remove('ppOrderID')
         // redirect to order page
-        Router.push('/order')
+        navigateTo('/order')
       }).catch((error) => {
         // set loading to false
         this.setState({ loading: false, payPalAuthorizationError: true })
@@ -431,7 +432,7 @@ class CheckoutPaymentPage extends Component {
     return (
       <>
         <PaymentMethodSummary
-          onClick={() => Router.push('/checkout/payment-method')}
+          onClick={() => navigateTo('/checkout/payment-method')}
           paymentMethod={this.state.paymentMethod}
           headerTitle={'Payment Method'}
           showEditButton={true}
@@ -443,7 +444,7 @@ class CheckoutPaymentPage extends Component {
               city={shipping_address.city}
               firstName={shipping_address.first_name}
               lastName={shipping_address.last_name}
-              onClick={() => Router.push('/checkout/shipping-address')}
+              onClick={() => navigateTo('/checkout/shipping-address')}
               postcode={shipping_address.postcode}
               showEditButton={!thirdPartyPaymentMethods.includes(this.state.paymentMethod)}
               headerTitle={'Shipping Address'}
@@ -451,7 +452,7 @@ class CheckoutPaymentPage extends Component {
           </div>
         </div>
         <ShippingMethodsSummary
-          onClick={() => Router.push('/checkout/shipping-method')}
+          onClick={() => navigateTo('/checkout/shipping-method')}
           shippingMethod={cart.shipping_method}
           headerTitle={'Shipping Method'}
         />

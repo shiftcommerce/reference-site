@@ -21,6 +21,7 @@ import { AddressFormSummary } from '@shiftcommerce/shift-react-components/src/co
 import { Loading } from '@shiftcommerce/shift-react-components/src/objects/loading'
 import { PaymentMethodSummary } from '@shiftcommerce/shift-react-components/src/components/checkout/payment-method-summary'
 import { ShippingMethods } from '@shiftcommerce/shift-react-components/src/components/checkout/shipping-methods'
+import navigateTo from '../../lib/navigate-to';
 
 export class ShippingMethodPage extends Component {
   static async fetchShippingMethods () {
@@ -56,16 +57,16 @@ export class ShippingMethodPage extends Component {
       if (thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
         // If shipping address is not present and customer has used third party payment service
         // redirect to the payment method page
-        return Router.push('/checkout/payment-method')
+        return navigateTo('/checkout/payment-method')
       } else {
-        return Router.push('/checkout/shipping-address')
+        return navigateTo('/checkout/shipping-address')
       }
     }
 
     if (!cart.billing_address && thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
       // If billing address is not present and customer has used third party payment service
       // redirect to the payment method page
-      return Router.push('/checkout/payment-method')
+      return navigateTo('/checkout/payment-method')
     }
 
     const shippingMethods = (await this.constructor.fetchShippingMethods()).data.sort((method1, method2) => method1.total - method2.total)
@@ -142,10 +143,10 @@ export class ShippingMethodPage extends Component {
 
     if (thirdPartyPaymentMethods.includes(this.state.paymentMethod)) {
       // If customer has used third party payment service, redirect to the order review page
-      Router.push('/checkout/payment', '/checkout/review')
+      navigateTo('/checkout/payment', '/checkout/review')
       setCurrentStep(5)
     } else {
-      Router.push('/checkout/payment')
+      navigateTo('/checkout/payment')
     }
   }
 
@@ -173,7 +174,7 @@ export class ShippingMethodPage extends Component {
     return (
       <div>
         <PaymentMethodSummary
-          onClick={() => Router.push('/checkout/payment-method')}
+          onClick={() => navigateTo('/checkout/payment-method')}
           paymentMethod={this.state.paymentMethod}
           headerTitle={'Payment Method'}
           showEditButton={true}
@@ -185,7 +186,7 @@ export class ShippingMethodPage extends Component {
               city={cart.shipping_address.city}
               firstName={cart.shipping_address.first_name}
               lastName={cart.shipping_address.last_name}
-              onClick={() => Router.push('/checkout/shipping-address')}
+              onClick={() => navigateTo('/checkout/shipping-address')}
               postcode={cart.shipping_address.postcode}
               showEditButton={!thirdPartyPaymentMethods.includes(this.state.paymentMethod)}
               headerTitle={'Shipping Address'}

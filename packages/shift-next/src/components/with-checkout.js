@@ -12,6 +12,7 @@ import getConfig from 'next/config'
 
 // Config
 import Config from '../lib/config'
+import navigateTo from '../lib/navigate-to'
 
 // Components
 import { CartTablePaymentIcons } from '@shiftcommerce/shift-react-components/src/components/cart/cart-table-payment-icons'
@@ -28,6 +29,7 @@ import {
   submitCoupon,
   setAPIError
 } from '../actions/cart-actions'
+
 // When with-checkout.js is extracted from the reference site submitCoupon and setAPIError can be
 // removed from 'client/actions/cart-actions'. These actions are duplicated in shift-next
 
@@ -62,7 +64,7 @@ export function withCheckout (WrappedComponent) {
     componentDidMount () {
       this.props.dispatch(readCart()).then(() => {
         if (!this.props.cart.line_items_count || !canCheckout(this.props.cart)) {
-          return Router.push('/cart')
+          navigateTo('/cart')
         }
         this.setState({
           loading: false
@@ -114,7 +116,9 @@ export function withCheckout (WrappedComponent) {
     deleteItem (e) {
       e.preventDefault()
       this.props.dispatch(deleteLineItem(e.target.dataset.id)).then(() => {
-        if (!this.props.cart.line_items_count) Router.push('/cart')
+        if (!this.props.cart.line_items_count) {
+          navigateTo('/cart')
+        }
       })
     }
 
