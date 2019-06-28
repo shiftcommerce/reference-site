@@ -27,7 +27,8 @@ const {
     ENABLE_TEST_PAYPAL_BUTTON,
     ORDER_HISTORY_PAGE_LIMIT,
     PAYPAL_CLIENT_ID,
-    STRIPE_API_KEY
+    STRIPE_API_KEY,
+    SEARCH_DEBOUNCE_MS
   }
 } = getConfig()
 
@@ -48,7 +49,8 @@ shiftNextConfig.set({
   menuRequest: menuRequest,
   orderHistoryPageLimit: ORDER_HISTORY_PAGE_LIMIT,
   payPalClientID: PAYPAL_CLIENT_ID,
-  storeName: 'ShopGo'
+  storeName: 'ShopGo',
+  searchDebounceMillisecs: SEARCH_DEBOUNCE_MS
 })
 
 class MyApp extends App {

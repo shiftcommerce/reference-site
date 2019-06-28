@@ -52,7 +52,7 @@ test('Renders current step 4 correctly', () => {
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('Link').length).toEqual(3)
-  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment')
+  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment Details')
 })
 
 test('Renders current step 5 correctly', () => {
