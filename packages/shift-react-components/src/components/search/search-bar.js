@@ -5,7 +5,7 @@ import { connectSearchBox } from 'react-instantsearch-dom'
 import debounce from 'lodash/debounce'
 import Config from '../../lib/config'
 
-const SEARCH_DEBOUNCE_MS = 1000
+const SEARCH_DEBOUNCE_MS = 800
 
 class SearchBar extends Component {
   constructor (props) {
