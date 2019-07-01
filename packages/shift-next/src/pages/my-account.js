@@ -5,7 +5,7 @@ import qs from 'qs'
 
 // Lib
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
-
+import navigateTo from '../lib/navigate-to'
 // Components
 import { AccountAddresses } from '@shiftcommerce/shift-react-components/src/components/account/addresses'
 import { AccountDetails } from '@shiftcommerce/shift-react-components/src/components/account/details'
@@ -182,7 +182,7 @@ class MyAccountPage extends Component {
       this.setState({
         currentMenu: menu.label
       })
-      Router.push(`${Router.asPath.split('?')[0]}?menu=${menu.label.toLowerCase()}`)
+      navigateTo(`${Router.asPath.split('?')[0]}?menu=${menu.label.toLowerCase()}`)
     }
   }
 

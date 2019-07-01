@@ -6,6 +6,7 @@ import Router from 'next/router'
 import { setSignedInCookie } from '../lib/handle-cookies'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 import Config from '../lib/config'
+import navigateTo from '../lib/navigate-to'
 
 // Actions
 import { createLogin } from '../actions/login-actions'
@@ -51,8 +52,8 @@ class LoginPage extends Component {
             setSignedInCookie()
             // Determine where to redirect user after successful log in
             if (window.location.pathname === '/checkout/login') {
-              Router.push('/checkout/payment-method')
-            } else Router.push('/account/details')
+              navigateTo('/checkout/payment-method')
+            } else navigateTo('/account/details')
           })
         }
       })

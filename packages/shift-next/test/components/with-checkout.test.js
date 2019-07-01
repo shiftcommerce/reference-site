@@ -42,18 +42,18 @@ describe('componentDidMount()', () => {
     }
 
     const readCartSpy = jest.spyOn(CartActions, 'readCart').mockImplementation(() => 'readCartAction')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    Router.push = jest.fn(() => Promise.resolve())
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
     const wrapper = mount(<WrappedComponent cart={cart} dispatch={dispatch} />, { disableLifecycleMethods: true })
 
     await wrapper.instance().componentDidMount()
 
     expect(readCartSpy).toHaveBeenCalled()
+    expect(Router.push).toHaveBeenCalledWith('/cart', '/cart', {})
     expect(dispatch).toHaveBeenCalledWith('readCartAction')
-    expect(pushSpy).toHaveBeenCalledWith('/cart')
 
     readCartSpy.mockRestore()
-    pushSpy.mockRestore()
+    Router.push.mockRestore()
   })
 })
 
@@ -91,7 +91,7 @@ test('deleteItem() makes a request to delete the line item and redirects to cart
     line_items_count: 0
   }
   const deleteLineItemSpy = jest.spyOn(CartActions, 'deleteLineItem').mockImplementation(() => 'deleteLineItemAction')
-  const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+  Router.push = jest.fn(() => Promise.resolve())
   const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
 
   const wrapper = mount(<WrappedComponent cart={cart} dispatch={dispatch} />, { disableLifecycleMethods: true })
@@ -108,10 +108,10 @@ test('deleteItem() makes a request to delete the line item and redirects to cart
 
   expect(deleteLineItemSpy).toHaveBeenCalledWith(10)
   expect(dispatch).toHaveBeenCalledWith('deleteLineItemAction')
-  expect(pushSpy).toHaveBeenCalledWith('/cart')
+  expect(Router.push).toHaveBeenCalledWith('/cart', '/cart', {})
 
   deleteLineItemSpy.mockRestore()
-  pushSpy.mockRestore()
+  Router.push.mockRestore()
 })
 
 test('renders common checkout elements', () => {

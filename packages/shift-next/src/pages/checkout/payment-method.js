@@ -23,6 +23,7 @@ import PaymentMethod from '@shiftcommerce/shift-react-components/src/components/
 // Libs
 import Config from '../../lib/config'
 import { isSecure } from '../../lib/is-secure'
+import navigateTo from '../../lib/navigate-to'
 
 // Json
 // This is required as a workaround when testing PayPal integration using cypress
@@ -56,7 +57,7 @@ export class PaymentMethodPage extends Component {
    * Returns route for next checkout section
    */
   nextSection () {
-    Router.push('/checkout/shipping-address')
+    navigateTo('/checkout/shipping-address')
   }
 
   /**
@@ -245,7 +246,7 @@ export class PaymentMethodPage extends Component {
   transitionToShippingMethodSection () {
     const { setCurrentStep } = this.props
     // redirect to shipping method checkout step
-    Router.push('/checkout/shipping-method')
+    navigateTo('/checkout/shipping-method')
     // set state for shipping method
     setCurrentStep(3)
   }

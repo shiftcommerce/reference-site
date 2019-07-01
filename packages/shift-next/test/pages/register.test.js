@@ -16,8 +16,7 @@ jest.mock('next/config', () => () => ({
 
 test('redirects to myaccount page when account is created', () => {
   // Arrange - mock next.js router
-  const mockedRouter = { push: jest.fn() }
-  Router.router = mockedRouter
+  Router.push = jest.fn(() => Promise.resolve())
 
   const wrapper = shallow(
     <RegisterPage
@@ -30,10 +29,10 @@ test('redirects to myaccount page when account is created', () => {
   wrapper.setProps({ loggedIn: true, errors: {}, validationErrors: [] })
 
   // Assert - verify that only one redirect happens
-  expect(Router.router.push.mock.calls.length).toBe(1)
+  expect(Router.push).toHaveBeenCalledTimes(1)
 
   // Assert - verify that the redirect goes to the myaccount page
-  expect(Router.router.push.mock.calls[0][0]).toBe('/account/details')
+  expect(Router.push).toHaveBeenCalledWith('/account/details', '/account/details', {})
 })
 
 test('redirects to myaccount page when account already exists', async () => {
@@ -49,17 +48,16 @@ test('redirects to myaccount page when account already exists', async () => {
   }
 
   // Arrange - mock next.js router
-  const mockedRouter = { push: jest.fn() }
-  Router.router = mockedRouter
+  Router.push = jest.fn(() => Promise.resolve())
 
   // Act
   await RegisterPage.getInitialProps({ reduxStore })
 
   // Assert - verify that only one redirect happens
-  expect(Router.router.push.mock.calls.length).toBe(1)
+  expect(Router.push).toHaveBeenCalledTimes(1)
 
   // Assert - verify that the redirect goes to the myaccount page
-  expect(Router.router.push.mock.calls[0][0]).toBe('/account/details')
+  expect(Router.push).toHaveBeenCalledWith('/account/details')
 })
 
 test('redirects to myaccount page when user already logged in', async () => {
@@ -78,17 +76,16 @@ test('redirects to myaccount page when user already logged in', async () => {
   }
 
   // Arrange - mock next.js router
-  const mockedRouter = { push: jest.fn() }
-  Router.router = mockedRouter
+  Router.push = jest.fn(() => Promise.resolve())
 
   // Act
   await RegisterPage.getInitialProps({ reduxStore })
 
   // Assert - verify that only one redirect happens
-  expect(Router.router.push.mock.calls.length).toBe(1)
+  expect(Router.push).toHaveBeenCalledTimes(1)
 
   // Assert - verify that the redirect goes to the myaccount page
-  expect(Router.router.push.mock.calls[0][0]).toBe('/account/details')
+  expect(Router.push).toHaveBeenCalledWith('/account/details')
 })
 
 test('should clear errors when the page is mounted', () => {

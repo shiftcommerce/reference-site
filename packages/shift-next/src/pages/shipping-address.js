@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 // Libs
 import addressFormValidator from '../lib/address-form-validator'
 import InputFieldValidator from '../lib/input-field-validator'
+import navigateTo from '../lib/navigate-to'
 
 import { AddressBook } from '@shiftcommerce/shift-react-components/src/components/checkout/address-book'
 import { AddressFormHeader } from '@shiftcommerce/shift-react-components/src/components/checkout/address-form-header'
@@ -49,7 +50,7 @@ export class ShippingAddressPage extends Component {
     if (cart.shipping_address && (thirdPartyPaymentMethods.includes(this.state.paymentMethod))) {
       // If shipping address is present and customer has used third party payment service
       // redirect to the payment method page
-      return Router.push('/checkout/payment-method')
+      return navigateTo('/checkout/payment-method')
     }
 
     if (this.loggedIn()) {
@@ -102,18 +103,18 @@ export class ShippingAddressPage extends Component {
       if (checkout.shippingAddress.saveToAddressBook) {
         return dispatch(saveToAddressBook(checkout.shippingAddress)).then(() => {
           return dispatch(setCartShippingAddress(checkout.shippingAddress.id)).then(() => {
-            Router.push('/checkout/shipping-method')
+            navigateTo('/checkout/shipping-method')
           })
         })
       } else {
         return dispatch(createShippingAddress(checkout.shippingAddress)).then(() => {
           return dispatch(setCartShippingAddress(checkout.shippingAddress.id)).then(() => {
-            Router.push('/checkout/shipping-method')
+            navigateTo('/checkout/shipping-method')
           })
         })
       }
     } else {
-      Router.push('/checkout/shipping-method')
+      navigateTo('/checkout/shipping-method')
     }
   }
 
@@ -206,7 +207,7 @@ export class ShippingAddressPage extends Component {
     return (
       <>
         <PaymentMethodSummary
-          onClick={() => Router.push('/checkout/payment-method')}
+          onClick={() => navigateTo('/checkout/payment-method')}
           paymentMethod={this.state.paymentMethod}
           headerTitle={'Payment Method'}
           showEditButton={true}

@@ -6,6 +6,7 @@ import qs from 'qs'
 import Config from './config'
 import InitialPropsDelegator from './initial-props-delegator'
 import { getCartLineItemCookie } from './handle-cookies'
+import navigateTo from './navigate-to'
 
 // Components
 import { Layout } from '@shiftcommerce/shift-react-components/src/components/layout/layout'
@@ -88,7 +89,7 @@ export default function withLayout (Component) {
       // clear any filters redirect to the search page
       const router = this.props.router
       const query = qs.parse(window.location.search.slice(1)).query
-      router.push(`/search?${qs.stringify({ query })}`)
+      navigateTo(`/search?${qs.stringify({ query })}`)
     }
 
     render () {

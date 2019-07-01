@@ -4,6 +4,7 @@ import Router from 'next/router'
 
 // Libs
 import { setSignedInCookie } from '../lib/handle-cookies'
+import navigateTo from '../lib/navigate-to'
 import { suffixWithStoreName } from '../lib/suffix-with-store-name'
 
 // Actions
@@ -47,7 +48,7 @@ class RegisterPage extends Component {
     // Redirect if account created
     if (loggedIn) {
       setSignedInCookie()
-      Router.push('/account/details')
+      navigateTo('/account/details')
     }
   }
 
