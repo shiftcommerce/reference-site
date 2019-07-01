@@ -78,7 +78,7 @@ describe('nextSection()', () => {
     // Arrange
     const cartState = cart
     const checkoutState = {}
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => )
     const wrapper = shallow(<PaymentMethodPage cart={cartState} checkout={checkoutState} />, { disableLifecycleMethods: true })
 
     // Act
@@ -395,7 +395,7 @@ describe('transitionToShippingMethodSection()', () => {
     // Arrange
     const cartState = cart
     const checkoutState = {}
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    Router.push = jest.fn(() => Promise.resolve())
     const setCurrentStep = jest.fn()
     const wrapper = shallow(<PaymentMethodPage cart={cartState} checkout={checkoutState} setCurrentStep={setCurrentStep}/>, { disableLifecycleMethods: true })
 
@@ -403,8 +403,8 @@ describe('transitionToShippingMethodSection()', () => {
     await wrapper.instance().transitionToShippingMethodSection()
 
     // Assert
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-method')
+    expect(Router.push).toHaveBeenCalledWith('/checkout/shipping-method', '/checkout/shipping-method', {})
     expect(setCurrentStep).toHaveBeenCalledWith(3)
-    pushSpy.mockRestore()
+    Router.push.mockRestore()
   })
 })

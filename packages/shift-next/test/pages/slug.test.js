@@ -35,7 +35,7 @@ test('Performs router replace to homepage when given /', async () => {
   const reduxStore = { dispatch: jest.fn() }
 
   // Mock next.js router
-  const mockedRouter = { push: jest.fn() }
+  const mockedRouter = { push: jest.fn(() => Promise.resolve()) }
   Router.router = mockedRouter
 
   await Slug.getInitialProps({ query, reduxStore })
@@ -54,7 +54,7 @@ test('Performs router push to resource when given slug', async () => {
   const reduxStore = { dispatch: jest.fn() }
 
   // Mock next.js router
-  const mockedRouter = { push: jest.fn() }
+  const mockedRouter = { push: jest.fn(() => Promise.resolve()) }
   Router.router = mockedRouter
 
   await Slug.getInitialProps({ query, reduxStore })

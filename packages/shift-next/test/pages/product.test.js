@@ -161,7 +161,7 @@ describe('Product page', () => {
   test('getInitialProps() redirects to the error page if a client-side requested product is non-sellable', async () => {
     Config.set({ apiHostProxy: 'http://example.com' })
 
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => { })
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const productRequest = nock(/example\.com/)
       .get('/getProduct/1')
       .query(true)

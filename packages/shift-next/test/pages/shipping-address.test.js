@@ -112,7 +112,7 @@ describe('nextSection()', () => {
   test('navigates to shipping method selection when shipping address is from the address book', async () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    Router.push = jest.fn(() => Promise.resolve())
     const cart = {
       shipping_address: {
         id: 10
@@ -131,15 +131,15 @@ describe('nextSection()', () => {
     await wrapper.instance().nextSection()
 
     // Assert
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-method')
+    expect(Router.push).toHaveBeenCalledWith('/checkout/shipping-method')
 
     cookieSpy.mockRestore()
-    pushSpy.mockRestore()
+    Router.push.mockRestore()
   })
 
   test('saves new address to address book and sets it on cart', async () => {
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    Router.push = jest.fn(() => Promise.resolve())
     const saveToAddressBookSpy = jest.spyOn(AddressBookActions, 'saveToAddressBook').mockImplementation(() => 'saveToAddressBookAction')
     const setCartShippingAddressSpy = jest.spyOn(CartActions, 'setCartShippingAddress').mockImplementation(() => 'setCartShippingAddressAction')
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
@@ -165,17 +165,17 @@ describe('nextSection()', () => {
     expect(setCartShippingAddressSpy).toHaveBeenCalledWith(20)
     expect(dispatch).toHaveBeenCalledWith('saveToAddressBookAction')
     expect(dispatch).toHaveBeenCalledWith('setCartShippingAddressAction')
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-method')
+    expect(Router.push).toHaveBeenCalledWith('/checkout/shipping-method', '/checkout/shipping-method', {})
 
     cookieSpy.mockRestore()
-    pushSpy.mockRestore()
+    Router.push.mockRestore()
     saveToAddressBookSpy.mockRestore()
     setCartShippingAddressSpy.mockRestore()
   })
 
-  test('creates new addresses and sets them on cart', async () => {
+  test.only('creates new addresses and sets them on cart', async () => {
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    Router.push = jest.fn(() => Promise.resolve())
     const createShippingAddressSpy = jest.spyOn(CartActions, 'createShippingAddress').mockImplementation(() => 'createShippingAddressAction')
     const setCartShippingAddressSpy = jest.spyOn(CartActions, 'setCartShippingAddress').mockImplementation(() => 'setCartShippingAddressAction')
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
@@ -200,10 +200,10 @@ describe('nextSection()', () => {
     expect(setCartShippingAddressSpy).toHaveBeenCalledWith(20)
     expect(dispatch).toHaveBeenCalledWith('createShippingAddressAction')
     expect(dispatch).toHaveBeenCalledWith('setCartShippingAddressAction')
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-method')
+    expect(Router.push).toHaveBeenCalledWith('/checkout/shipping-method', '/checkout/shipping-method', {})
 
     cookieSpy.mockRestore()
-    pushSpy.mockRestore()
+    Router.push.mockRestore()
     createShippingAddressSpy.mockRestore()
     setCartShippingAddressSpy.mockRestore()
   })

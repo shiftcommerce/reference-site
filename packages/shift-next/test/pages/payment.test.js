@@ -30,7 +30,7 @@ afterAll(() => {
 test('sets paymentMethod in state when instantiated', () => {
   // Arrange
   const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'PayPal')
-  const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+  const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
   const cartState = {
     shipping_address: { id: 99 },
     billing_address: { id: 99 },
@@ -56,7 +56,7 @@ describe('componentDidMount()', () => {
   test('redirects to the shipping address page when one is not set when the default payment option is used', () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'Credit/Debit Card')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const cartState = {}
     const checkoutState = {}
     const thirdPartyPaymentMethodOptions = ['PayPal']
@@ -77,7 +77,7 @@ describe('componentDidMount()', () => {
   test('redirects to the shipping address page when one is not set when third party payment is used', () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'PayPal')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const cartState = {}
     const checkoutState = {}
     const thirdPartyPaymentMethodOptions = ['PayPal']
@@ -98,7 +98,7 @@ describe('componentDidMount()', () => {
   test('redirects to the order review page when when third party payment is used', () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'PayPal')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
     const cartState = {
       shipping_address: { id: 99 },
@@ -129,7 +129,7 @@ describe('componentDidMount()', () => {
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => 'Credit/Debit Card')
     const cartState = { shipping_address: {} }
     const checkoutState = {}
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const wrapper = shallow(
       <CheckoutPaymentPage cart={cartState} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions} />,
@@ -385,7 +385,7 @@ describe('onCardTokenReceived()', () => {
     const thirdPartyPaymentMethodOptions = ['PayPal']
     const setCardTokenSpy = jest.spyOn(OrderActions, 'setCardToken').mockImplementation(() => 'setCardTokenAction')
     const requestCardTokenSpy = jest.spyOn(OrderActions, 'requestCardToken').mockImplementation(() => 'requestCardTokenAction')
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
     const wrapper = shallow(<CheckoutPaymentPage cart={cart} dispatch={dispatch} checkout={checkoutState} thirdPartyPaymentMethods={thirdPartyPaymentMethodOptions}/>)
 
@@ -666,7 +666,7 @@ describe('nextSection()', () => {
   test('navigates to the review step when shipping address is from the address book', async () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const cart = {
       billing_address: {
         id: 10
@@ -701,7 +701,7 @@ describe('nextSection()', () => {
   test('saves new address to address book and sets it on cart', async () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const saveToAddressBookSpy = jest.spyOn(AddressBookActions, 'saveToAddressBook').mockImplementation(() => 'saveToAddressBookAction')
     const setCartBillingAddressSpy = jest.spyOn(CartActions, 'setCartBillingAddress').mockImplementation(() => 'setCartBillingAddressAction')
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
@@ -746,7 +746,7 @@ describe('nextSection()', () => {
   test('creates new addresses and sets them on cart', async () => {
     // Arrange
     const cookieSpy = jest.spyOn(Cookies, 'get').mockImplementation(() => true)
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => {})
+    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => Promise.resolve())
     const createBillingAddressSpy = jest.spyOn(CartActions, 'createBillingAddress').mockImplementation(() => 'createBillingAddressAction')
     const setCartBillingAddressSpy = jest.spyOn(CartActions, 'setCartBillingAddress').mockImplementation(() => 'setCartBillingAddressAction')
     const dispatch = jest.fn().mockImplementation(() => Promise.resolve())
@@ -780,7 +780,7 @@ describe('nextSection()', () => {
     expect(setCartBillingAddressSpy).toHaveBeenCalledWith(20)
     expect(dispatch).toHaveBeenCalledWith('createBillingAddressAction')
     expect(dispatch).toHaveBeenCalledWith('setCartBillingAddressAction')
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/payment', '/checkout/review')
+    expect(pushSpy).toHaveBeenCalledWith('/checkout/payment', '/checkout/review', {})
     cookieSpy.mockRestore()
     pushSpy.mockRestore()
     createBillingAddressSpy.mockRestore()

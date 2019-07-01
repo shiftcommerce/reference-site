@@ -23,7 +23,7 @@ import PaymentMethod from '@shiftcommerce/shift-react-components/src/components/
 // Libs
 import Config from '../../lib/config'
 import { isSecure } from '../../lib/is-secure'
-import navigateTo from '../../navigate-to'
+import navigateTo from '../../lib/navigate-to'
 
 // Json
 // This is required as a workaround when testing PayPal integration using cypress
