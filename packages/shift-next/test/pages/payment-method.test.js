@@ -78,15 +78,15 @@ describe('nextSection()', () => {
     // Arrange
     const cartState = cart
     const checkoutState = {}
-    const pushSpy = jest.spyOn(Router, 'push').mockImplementation(() => )
+    Router.push = jest.fn(() => Promise.resolve())
     const wrapper = shallow(<PaymentMethodPage cart={cartState} checkout={checkoutState} />, { disableLifecycleMethods: true })
 
     // Act
     await wrapper.instance().nextSection()
 
     // Assert
-    expect(pushSpy).toHaveBeenCalledWith('/checkout/shipping-address')
-    pushSpy.mockRestore()
+    expect(Router.push).toHaveBeenCalledWith('/checkout/shipping-address', '/checkout/shipping-address', {})
+    Router.push.mockRestore()
   })
 })
 
