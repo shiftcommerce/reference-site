@@ -1,0 +1,66 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - next > @babel/core > @babel/types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - redux > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - css-loader > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > redux > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@next/bundle-analyzer > webpack-bundle-analyzer > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > autodll-webpack-plugin > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next-routes > express-ipfilter > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > react-instantsearch-dom > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > yup > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/core > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > formik > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > styled-jsx > babel-types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > yup > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > autodll-webpack-plugin > webpack-merge > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > react-instantsearch-dom > algoliasearch-helper > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - babel-plugin-transform-define > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@zeit/next-sass > sass-loader > async > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > react-instantsearch-dom > react-instantsearch-core > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > formik > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > react-instantsearch-dom > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > react-instantsearch-dom > react-instantsearch-core > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-react-components > react-instantsearch-dom > react-instantsearch-core > algoliasearch-helper > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > react-instantsearch-dom > algoliasearch-helper > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - '@shiftcommerce/shift-next > @shiftcommerce/shift-react-components > react-instantsearch-dom > react-instantsearch-core > algoliasearch-helper > lodash':
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
+    - next > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T04:18:43.428Z'
