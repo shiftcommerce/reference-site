@@ -27,7 +27,9 @@
     "lint:js:fix": "eslint . --fix",
     "lint:css": "stylelint client/scss",
     "lint:css:fix": "stylelint client/scss --fix",
-    "start": "NODE_ENV=production node server/server.js"
+    "start": "NODE_ENV=production node server/server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^8.1.1-canary.44",
@@ -67,7 +69,8 @@
     "stripe": "^5.1.1",
     "style-loader": "^0.23.1",
     "typy": "^2.0.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "verbose": true,
@@ -116,5 +119,6 @@
     "supertest": "^3.3.0",
     "sync-request": "^6.0.0",
     "url-loader": "^1.0.1"
-  }
+  },
+  "snyk": true
 }
